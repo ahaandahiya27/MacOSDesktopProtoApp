@@ -5686,3 +5686,24 @@ auto-wired); ci-build-test.sh → BUILD SUCCEEDED + TEST SUCCEEDED, 712 XCTest
 cases, 0 failures (was 706). Sanskrit pack steady at 367 concepts / 276 topic-Qs;
 +45 deepDive. Additive only. Phase 5 is now open for ALL FOUR subjects. Zero
 regressions, zero STOP_AND_ASK. NEXT: P1-C — Maths bossQuestions fill (≥6/ch).
+
+---
+
+## v6 Learning Journey — Cycle 4 (2026-06-01): Phase 1 · P1-C Maths bossQuestions
+
+Phase 0 re-confirmed green on the iMac (Release build + 712 XCTest, 0 fail)
+before any change. Then landed P1-C: added 90 chapter-level `bossQuestions`
+to `maths_class7.json` (6 per chapter × 15) via the new re-runnable
+`scripts/inject_maths_boss.py`. Each is a 4-option MCQ at boss-tier difficulty
+3–5 with worked `solutionSteps`, ≥1 `commonMistakes` note, ≥1 re-drill
+`variation`, canonical id `bossquiz_mchNN_qII`, `source: boss_quiz`, and
+`pageRefs` inside the chapter's real NCERT page range. NCERT Ganita Prakash
+Grade-7 faithful; every numerical answer hand-verified. Added
+`desktopAhaanTests/MathsBossQuestionsTests.swift` (7 ratchet tests). Renders +
+reviews through the existing boss-quiz surface — additive data + tests, no new
+view code. All content lints + `test_lints.py` clean; roundtrip + check_pack_schema
+clean on all four packs; pbxproj regenerated (new test file auto-wired);
+ci-build-test.sh → BUILD SUCCEEDED + TEST SUCCEEDED, 719 XCTest cases, 0 failures
+(was 712, +7). Maths pack now 90 concepts / 148 topic-Qs + 90 boss Qs. Additive
+only. Zero regressions, zero STOP_AND_ASK. Phase 3 adaptive ceiling raised for
+Maths. NEXT: P1-D — Sanskrit bossQuestions fill (≥6/ch, bossquiz_schNN_qII).

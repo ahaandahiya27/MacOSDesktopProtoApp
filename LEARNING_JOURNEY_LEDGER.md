@@ -26,7 +26,7 @@
 | Phase | State | Notes |
 |-------|-------|-------|
 | 0 | ✅ DONE | Baseline green: Release build + 700 XCTest pass, 0 fail; 13 core lints clean. |
-| 1 | 🟡 IN PROGRESS | Audit landed. **P1-A + P1-B DONE** (Maths + Sanskrit `deepDive`: 45 each, 3/ch, +12 tests, 712 XCTest green). Backlog P1-C…P1-J pending. |
+| 1 | 🟡 IN PROGRESS | Audit landed. **P1-A + P1-B + P1-C DONE** (Maths + Sanskrit `deepDive`: 45 each; Maths `bossQuestions`: 90, 6/ch; +19 tests total, 719 XCTest green). Backlog P1-D…P1-J pending. |
 | 2 | ⬜ NOT STARTED | Note: `MasteryDashboard` + `DataStore+Mastery` + `MasteryLevel` already exist (per-chapter, single-subject). MasteryEngine must aggregate **cross-subject** concept→subject→overall on top of these. |
 | 3 | ⬜ NOT STARTED | `AdaptiveDifficultyEngine` already exists — extend, don't replace. |
 | 4 | ⬜ NOT STARTED | `WeeklyReportPDFExporter` already exists — extend to a report card. |
@@ -115,3 +115,36 @@ required before declaring the mission complete (Phase 6).
 - **NEXT:** P1-C — Maths `bossQuestions` fill (≥6/ch) to raise the Phase 3
   adaptive difficulty ceiling, then P1-D (Sanskrit `bossQuestions`). Same
   loop: author → lint → pbxproj → ci-build-test green → commit/push → ledger.
+
+### Cycle 4 (2026-06-01) — Phase 1 · P1-C complete (Maths `bossQuestions`)
+- Confirmed Phase 0 still green here (Release build + 712 XCTest, 0 fail) before
+  any change.
+- Added **90 chapter-level `bossQuestions`** to the Maths pack (6 per chapter ×
+  15) via the new re-runnable `scripts/inject_maths_boss.py`. Each is:
+  * a 4-option MCQ at **boss-tier difficulty 3–5** (the high pool the Phase-3
+    adaptive engine escalates into, and a Phase-5 ladder feeder),
+  * given the canonical collision-free id `bossquiz_mchNN_qII` (namespace token
+    `mch` keeps Maths review state distinct from Science's `bossquiz_chNN_qII`,
+    so SM-2 history never orphans across packs — enforced by
+    `check_quiz_id_format.py` + the SubjectRegistry global question index),
+  * carries worked `solutionSteps`, ≥1 `commonMistakes` note (each naming a
+    specific distractor trap), and ≥1 re-drill `variation`,
+  * NCERT Ganita Prakash Grade-7 faithful, with every numerical answer
+    hand-verified; `pageRefs` inside the chapter's real page range,
+  * tagged `source: "boss_quiz"`, `needsHumanReview: false`.
+- Added `desktopAhaanTests/MathsBossQuestionsTests.swift` (7 ratchet tests:
+  ≥6/ch floor, total ≥90, canonical+unique ids, difficulty 3–5, mcq answer ∈
+  options, steps+mistakes+variation present, `.bossQuiz` source), mirroring the
+  Science `BossQuizMigrationRatchetTests` contract scoped to Maths.
+- Renders + reviews natively through the existing boss-quiz surface
+  (`Chapter.bossQuestionsList` → SubjectRegistry index → Daily Practice /
+  Recently-Missed). No new view code; additive data + tests only.
+- Green here: all content lints + `test_lints.py` pass; roundtrip +
+  `check_pack_schema` clean on all four packs; pbxproj regenerated (new test
+  file auto-wired); `ci-build-test.sh` → **BUILD + 719 XCTest, 0 failures**
+  (was 712, +7). Zero regressions; zero STOP_AND_ASK.
+- **Phase 3 adaptive ceiling is now raised for Maths.** Additive only.
+- **NEXT:** P1-D — Sanskrit `bossQuestions` fill (15 NEP chapters `sch01`–`sch15`,
+  ≥6/ch, `bossquiz_schNN_qII`), the last subject capping the Phase-3 ceiling.
+  Same loop: author → lint → pbxproj → ci-build-test green → commit/push →
+  ledger.

@@ -2511,6 +2511,232 @@
           "bonusQuestions": null,
           "nextStepHint": "In Class 11 you will use the same factor-chaining when you estimate quantities in physics and chemistry, and meet the logarithm — the exact tool for measuring orders of magnitude."
         }
+      ],
+      "bossQuestions": [
+        {
+          "id": "bossquiz_mch01_q00",
+          "prompt": "Write 'three crore five lakh seven thousand two hundred' in figures using the Indian system.",
+          "questionType": "mcq",
+          "options": [
+            "3,05,07,200",
+            "30,57,200",
+            "3,50,07,200",
+            "3,05,70,200"
+          ],
+          "answer": "3,05,07,200",
+          "solutionSteps": [
+            "Three crore = 3,00,00,000; five lakh = 5,00,000; seven thousand = 7,000; two hundred = 200.",
+            "Add the place values: 3,00,00,000 + 5,00,000 + 7,000 + 200 = 3,05,07,200.",
+            "Group right-to-left in the Indian 3-2-2-2 pattern to place the commas."
+          ],
+          "commonMistakes": [
+            "Writing 3,50,07,200 puts 50 lakh instead of 5 lakh — read each named group separately before combining.",
+            "Dropping a zero gives 30,57,200, which is only thirty lakh — count the place of every word."
+          ],
+          "variations": [
+            {
+              "prompt": "Write 'two crore ten lakh forty thousand five' in figures (Indian system).",
+              "answer": "2,10,40,005",
+              "solutionSteps": [
+                "2 crore = 2,00,00,000; 10 lakh = 10,00,000; 40 thousand = 40,000; five = 5.",
+                "Sum: 2,00,00,000 + 10,00,000 + 40,000 + 5 = 2,10,40,005."
+              ]
+            }
+          ],
+          "difficulty": 3,
+          "pageRefs": [
+            3,
+            4
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch01_q01",
+          "prompt": "The number 9,07,06,005 is written in the Indian system. How is the SAME number grouped in the International system?",
+          "questionType": "mcq",
+          "options": [
+            "90,706,005",
+            "9,070,6005",
+            "907,06,005",
+            "90,76,005"
+          ],
+          "answer": "90,706,005",
+          "solutionSteps": [
+            "Read the Indian number: 9 crore, 7 lakh, 6 thousand, 5 = 90,000,000 + 700,000 + 6,000 + 5.",
+            "That total is 90,706,005.",
+            "Regroup right-to-left in 3s for the International system: 90,706,005."
+          ],
+          "commonMistakes": [
+            "The digits don't change between systems — only the comma positions do. Re-grouping in 3s, not re-reading the value, is all that's needed."
+          ],
+          "variations": [
+            {
+              "prompt": "Group 5,04,03,002 (Indian) in the International system.",
+              "answer": "50,403,002",
+              "solutionSteps": [
+                "Value = 5 crore 4 lakh 3 thousand 2 = 50,403,002.",
+                "Comma every 3 digits from the right: 50,403,002."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            10,
+            11
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch01_q02",
+          "prompt": "What is the smallest 8-digit number, and the largest number that comes just before it?",
+          "questionType": "mcq",
+          "options": [
+            "1,00,00,000 and 99,99,999",
+            "10,00,000 and 9,99,999",
+            "1,00,00,000 and 9,99,999",
+            "10,00,00,000 and 99,99,999"
+          ],
+          "answer": "1,00,00,000 and 99,99,999",
+          "solutionSteps": [
+            "The smallest 8-digit number is 1 followed by seven zeros: 1,00,00,000 (one crore).",
+            "The number one less is the largest 7-digit number: 99,99,999.",
+            "Adding 1 to the largest n-digit number always rolls over to the smallest (n+1)-digit number."
+          ],
+          "commonMistakes": [
+            "Confusing one crore (8 digits) with ten lakh (7 digits, 10,00,000) — count the zeros: one crore has seven."
+          ],
+          "variations": [
+            {
+              "prompt": "What is the smallest 6-digit number and the number just before it?",
+              "answer": "1,00,000 and 99,999",
+              "solutionSteps": [
+                "Smallest 6-digit number = 1,00,000 (one lakh).",
+                "One less is the largest 5-digit number, 99,999."
+              ]
+            }
+          ],
+          "difficulty": 3,
+          "pageRefs": [
+            2,
+            3
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch01_q03",
+          "prompt": "A factory made 4,87,650 toys. A report rounds this to the nearest ten-thousand. What value does it print?",
+          "questionType": "mcq",
+          "options": [
+            "4,90,000",
+            "4,80,000",
+            "4,88,000",
+            "5,00,000"
+          ],
+          "answer": "4,90,000",
+          "solutionSteps": [
+            "To round to the nearest ten-thousand, look at the thousands digit of 4,87,650 — it is 7.",
+            "Since 7 is 5 or more, round the ten-thousands place up: 8 ten-thousands becomes 9.",
+            "Result: 4,90,000."
+          ],
+          "commonMistakes": [
+            "Rounding DOWN to 4,80,000 ignores that 87 thousand is closer to 90 thousand than to 80 thousand.",
+            "Rounding to the nearest thousand (4,88,000) answers a different question — read the required precision."
+          ],
+          "variations": [
+            {
+              "prompt": "Round 2,34,500 to the nearest ten-thousand.",
+              "answer": "2,30,000",
+              "solutionSteps": [
+                "Thousands digit is 4 (less than 5), so round down.",
+                "3 ten-thousands stays 3: 2,30,000."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            13,
+            14
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch01_q04",
+          "prompt": "Without multiplying it out exactly, how many digits does the product 8,000 × 7,000 have?",
+          "questionType": "mcq",
+          "options": [
+            "8",
+            "7",
+            "6",
+            "9"
+          ],
+          "answer": "8",
+          "solutionSteps": [
+            "Write each as a single digit times a power of ten: 8,000 = 8 × 10^3 and 7,000 = 7 × 10^3.",
+            "Multiply: (8 × 7) × 10^(3+3) = 56 × 10^6 = 56,000,000.",
+            "56 contributes 2 digits and 10^6 adds 6 zeros: 2 + 6 = 8 digits."
+          ],
+          "commonMistakes": [
+            "Just adding the zero-counts (3 + 3 = 6) forgets that 8 × 7 = 56 itself carries an extra digit, so the answer is 8 digits, not 7."
+          ],
+          "variations": [
+            {
+              "prompt": "How many digits does 50 × 4,000 have?",
+              "answer": "6",
+              "solutionSteps": [
+                "50 × 4,000 = 200,000 = 2 × 10^5.",
+                "That is 2 followed by five zeros — 6 digits."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            18,
+            19
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch01_q05",
+          "prompt": "Ahaan's pulse is about 75 beats per minute. Roughly how many times does his heart beat in one full day?",
+          "questionType": "mcq",
+          "options": [
+            "about 1,00,000",
+            "about 10,000",
+            "about 10,00,000",
+            "about 4,500"
+          ],
+          "answer": "about 1,00,000",
+          "solutionSteps": [
+            "Beats per hour ≈ 75 × 60 = 4,500.",
+            "Beats per day ≈ 4,500 × 24 = 1,08,000.",
+            "Rounded to the nearest convenient large number, that is about one lakh (1,00,000)."
+          ],
+          "commonMistakes": [
+            "Stopping at 75 × 60 = 4,500 gives beats per HOUR, not per day — the estimate still needs the × 24 step."
+          ],
+          "variations": [
+            {
+              "prompt": "If he breathes about 18 times a minute, roughly how many breaths in a day?",
+              "answer": "about 26,000",
+              "solutionSteps": [
+                "Per hour ≈ 18 × 60 = 1,080.",
+                "Per day ≈ 1,080 × 24 = 25,920 ≈ 26,000."
+              ]
+            }
+          ],
+          "difficulty": 5,
+          "pageRefs": [
+            20,
+            21
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        }
       ]
     },
     {
@@ -4117,6 +4343,230 @@
           "bonusQuestions": null,
           "nextStepHint": "In Class 12 you meet matrix multiplication, the classic operation where AB ≠ BA, and the order of steps changes the result."
         }
+      ],
+      "bossQuestions": [
+        {
+          "id": "bossquiz_mch02_q00",
+          "prompt": "Evaluate 30 − 5 × 4 + 2.",
+          "questionType": "mcq",
+          "options": [
+            "12",
+            "102",
+            "100",
+            "22"
+          ],
+          "answer": "12",
+          "solutionSteps": [
+            "Order of operations: do the multiplication first. 5 × 4 = 20.",
+            "Now evaluate left to right: 30 − 20 + 2.",
+            "30 − 20 = 10, then 10 + 2 = 12."
+          ],
+          "commonMistakes": [
+            "Working strictly left to right (30 − 5 = 25, × 4 = 100, + 2 = 102) breaks the rule that × is done before + and −."
+          ],
+          "variations": [
+            {
+              "prompt": "Evaluate 40 − 3 × 6 + 5.",
+              "answer": "27",
+              "solutionSteps": [
+                "3 × 6 = 18 first.",
+                "40 − 18 + 5 = 22 + 5 = 27."
+              ]
+            }
+          ],
+          "difficulty": 3,
+          "pageRefs": [
+            26,
+            27
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch02_q01",
+          "prompt": "Which is greater: 23 × 99, or 23 × 100 − 23?",
+          "questionType": "mcq",
+          "options": [
+            "They are equal",
+            "23 × 99",
+            "23 × 100 − 23",
+            "Cannot be decided"
+          ],
+          "answer": "They are equal",
+          "solutionSteps": [
+            "By the distributive property, 23 × 100 − 23 = 23 × (100 − 1) = 23 × 99.",
+            "So both expressions name the same number.",
+            "No multiplication is needed — recognising the distributive pattern decides it."
+          ],
+          "commonMistakes": [
+            "Computing both sides risks an arithmetic slip; the point is to SEE that 100 − 1 = 99 makes them identical."
+          ],
+          "variations": [
+            {
+              "prompt": "Which is greater: 47 × 100 − 47, or 47 × 98?",
+              "answer": "47 × 100 − 47 is greater",
+              "solutionSteps": [
+                "47 × 100 − 47 = 47 × 99.",
+                "47 × 99 > 47 × 98, so the first is greater by 47."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            30,
+            31
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch02_q02",
+          "prompt": "Simplify 50 − (18 − 6 + 4).",
+          "questionType": "mcq",
+          "options": [
+            "34",
+            "30",
+            "22",
+            "42"
+          ],
+          "answer": "34",
+          "solutionSteps": [
+            "First evaluate inside the bracket: 18 − 6 + 4 = 16.",
+            "Then 50 − 16 = 34.",
+            "Equivalently, remove the bracket after the minus by flipping every sign: 50 − 18 + 6 − 4 = 34."
+          ],
+          "commonMistakes": [
+            "A common slip is 50 − 18 − 6 + 4 = 30 — when a minus sits in front of a bracket, EVERY sign inside must flip, not just the first."
+          ],
+          "variations": [
+            {
+              "prompt": "Simplify 80 − (25 − 10 + 5).",
+              "answer": "60",
+              "solutionSteps": [
+                "Inside: 25 − 10 + 5 = 20.",
+                "80 − 20 = 60."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            33,
+            34
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch02_q03",
+          "prompt": "Use the distributive property to compute 102 × 45 mentally.",
+          "questionType": "mcq",
+          "options": [
+            "4590",
+            "4545",
+            "4950",
+            "459"
+          ],
+          "answer": "4590",
+          "solutionSteps": [
+            "Split 102 as 100 + 2.",
+            "102 × 45 = 100 × 45 + 2 × 45 = 4500 + 90.",
+            "4500 + 90 = 4590."
+          ],
+          "commonMistakes": [
+            "Forgetting the 2 × 45 = 90 piece and just writing 4500 (or 4545) loses part of the product."
+          ],
+          "variations": [
+            {
+              "prompt": "Compute 99 × 36 by splitting 99 as 100 − 1.",
+              "answer": "3564",
+              "solutionSteps": [
+                "99 × 36 = 100 × 36 − 1 × 36 = 3600 − 36.",
+                "3600 − 36 = 3564."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            35,
+            36
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch02_q04",
+          "prompt": "Which regrouping makes 25 × 17 × 4 easiest to do mentally, and what is the product?",
+          "questionType": "mcq",
+          "options": [
+            "(25 × 4) × 17 = 1700",
+            "(25 × 17) × 4 = 1700",
+            "(17 × 4) × 25 = 680",
+            "25 × (17 × 4) = 425"
+          ],
+          "answer": "(25 × 4) × 17 = 1700",
+          "solutionSteps": [
+            "Multiplication is associative, so the factors may be grouped any way.",
+            "Pairing 25 × 4 = 100 first turns the rest into 100 × 17 = 1700, an easy mental step.",
+            "The product is 1700."
+          ],
+          "commonMistakes": [
+            "The product is the same whatever the grouping — only the EASE differs. Options giving 680 or 425 are arithmetic errors, not just slower groupings."
+          ],
+          "variations": [
+            {
+              "prompt": "Group 2 × 39 × 50 to compute it mentally.",
+              "answer": "3900",
+              "solutionSteps": [
+                "Pair 2 × 50 = 100 first.",
+                "100 × 39 = 3900."
+              ]
+            }
+          ],
+          "difficulty": 3,
+          "pageRefs": [
+            28,
+            29
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch02_q05",
+          "prompt": "Evaluate 6 + 2 × (15 − 3 × 4) ÷ 2.",
+          "questionType": "mcq",
+          "options": [
+            "9",
+            "12",
+            "6",
+            "15"
+          ],
+          "answer": "9",
+          "solutionSteps": [
+            "Brackets first; inside, do × before −: 3 × 4 = 12, so 15 − 12 = 3.",
+            "Now 6 + 2 × 3 ÷ 2. Do × and ÷ left to right: 2 × 3 = 6, then 6 ÷ 2 = 3.",
+            "Finally 6 + 3 = 9."
+          ],
+          "commonMistakes": [
+            "Doing the ÷ before the × inside (or adding the 6 too early) scrambles the order — resolve the bracket completely, then × and ÷ left to right, then +."
+          ],
+          "variations": [
+            {
+              "prompt": "Evaluate 10 + 3 × (8 − 2 × 3) ÷ 2.",
+              "answer": "13",
+              "solutionSteps": [
+                "Inside: 2 × 3 = 6, 8 − 6 = 2.",
+                "3 × 2 = 6, 6 ÷ 2 = 3, then 10 + 3 = 13."
+              ]
+            }
+          ],
+          "difficulty": 5,
+          "pageRefs": [
+            32,
+            33
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        }
       ]
     },
     {
@@ -5504,6 +5954,230 @@
           "bonusQuestions": null,
           "nextStepHint": "In Class 9 you extend standard form to small numbers, where counting these place-holding zeros gives the negative exponent."
         }
+      ],
+      "bossQuestions": [
+        {
+          "id": "bossquiz_mch03_q00",
+          "prompt": "In the number 47.305, what is the value of the digit 3?",
+          "questionType": "mcq",
+          "options": [
+            "0.3",
+            "0.03",
+            "3",
+            "0.003"
+          ],
+          "answer": "0.3",
+          "solutionSteps": [
+            "The first place after the decimal point is the tenths place.",
+            "The digit 3 sits in the tenths place, so its value is 3 tenths.",
+            "3 tenths = 3/10 = 0.3."
+          ],
+          "commonMistakes": [
+            "Reading the 3 as 0.03 confuses tenths with hundredths — the FIRST place after the point is tenths."
+          ],
+          "variations": [
+            {
+              "prompt": "In 9.207, what is the value of the digit 7?",
+              "answer": "0.007",
+              "solutionSteps": [
+                "7 is in the third place after the point, the thousandths place.",
+                "Its value is 7/1000 = 0.007."
+              ]
+            }
+          ],
+          "difficulty": 3,
+          "pageRefs": [
+            52,
+            53
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch03_q01",
+          "prompt": "Arrange in increasing order: 0.5, 0.45, 0.405, 0.054.",
+          "questionType": "mcq",
+          "options": [
+            "0.054, 0.405, 0.45, 0.5",
+            "0.5, 0.45, 0.405, 0.054",
+            "0.054, 0.45, 0.405, 0.5",
+            "0.405, 0.45, 0.5, 0.054"
+          ],
+          "answer": "0.054, 0.405, 0.45, 0.5",
+          "solutionSteps": [
+            "Compare tenths first: 0.054 has 0 tenths (smallest); the others have 4 or 5 tenths.",
+            "Among 4-tenths numbers, compare hundredths: 0.405 (0 hundredths) < 0.45 (5 hundredths).",
+            "0.5 has 5 tenths, the largest. Order: 0.054, 0.405, 0.45, 0.5."
+          ],
+          "commonMistakes": [
+            "Treating 'more digits = bigger' wrongly ranks 0.405 above 0.5 — compare place by place from the tenths, not by length."
+          ],
+          "variations": [
+            {
+              "prompt": "Arrange 0.7, 0.07, 0.77, 0.707 in increasing order.",
+              "answer": "0.07, 0.7, 0.707, 0.77",
+              "solutionSteps": [
+                "Tenths: 0.07 has 0 tenths (smallest).",
+                "Among 7-tenths: 0.7 = 0.700 < 0.707 < 0.77."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            62,
+            63
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch03_q02",
+          "prompt": "Add 12.7 + 3.45 + 0.8.",
+          "questionType": "mcq",
+          "options": [
+            "16.95",
+            "16.15",
+            "25.5",
+            "15.95"
+          ],
+          "answer": "16.95",
+          "solutionSteps": [
+            "Line up the decimal points and pad to equal places: 12.70 + 3.45 + 0.80.",
+            "Add: 12.70 + 3.45 = 16.15.",
+            "16.15 + 0.80 = 16.95."
+          ],
+          "commonMistakes": [
+            "Adding without aligning the points (e.g. lining up the right-hand digits) mixes tenths with hundredths and gives a wrong total."
+          ],
+          "variations": [
+            {
+              "prompt": "Add 5.6 + 0.75 + 13.2.",
+              "answer": "19.55",
+              "solutionSteps": [
+                "Align: 5.60 + 0.75 + 13.20.",
+                "5.60 + 0.75 = 6.35; 6.35 + 13.20 = 19.55."
+              ]
+            }
+          ],
+          "difficulty": 3,
+          "pageRefs": [
+            73,
+            74
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch03_q03",
+          "prompt": "A ribbon is 2.5 m long. Pieces of 0.85 m and 1.2 m are cut off. How much ribbon remains?",
+          "questionType": "mcq",
+          "options": [
+            "0.45 m",
+            "0.55 m",
+            "1.45 m",
+            "0.35 m"
+          ],
+          "answer": "0.45 m",
+          "solutionSteps": [
+            "Total cut = 0.85 + 1.20 = 2.05 m.",
+            "Remaining = 2.50 − 2.05.",
+            "2.50 − 2.05 = 0.45 m."
+          ],
+          "commonMistakes": [
+            "Subtracting only one piece (2.5 − 1.2 = 1.3, or 2.5 − 0.85) forgets that BOTH pieces are removed."
+          ],
+          "variations": [
+            {
+              "prompt": "From a 5 m rope, lengths 1.75 m and 2.4 m are cut. How much is left?",
+              "answer": "0.85 m",
+              "solutionSteps": [
+                "Cut = 1.75 + 2.40 = 4.15 m.",
+                "5.00 − 4.15 = 0.85 m."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            72,
+            73
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch03_q04",
+          "prompt": "Which fraction is equal to the decimal 0.08?",
+          "questionType": "mcq",
+          "options": [
+            "2/25",
+            "8/10",
+            "4/5",
+            "1/8"
+          ],
+          "answer": "2/25",
+          "solutionSteps": [
+            "0.08 means 8 hundredths = 8/100.",
+            "Simplify 8/100 by dividing top and bottom by 4: 2/25.",
+            "So 0.08 = 2/25."
+          ],
+          "commonMistakes": [
+            "Reading 0.08 as 8 tenths gives 8/10 — but the 8 sits in the hundredths place, so the denominator is 100, not 10."
+          ],
+          "variations": [
+            {
+              "prompt": "Which fraction equals 0.25?",
+              "answer": "1/4",
+              "solutionSteps": [
+                "0.25 = 25/100.",
+                "Divide by 25: 25/100 = 1/4."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            50,
+            51
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch03_q05",
+          "prompt": "A number is '4 ones, 0 tenths, 7 hundredths, 2 thousandths'. Add 0.5 to it. What is the result?",
+          "questionType": "mcq",
+          "options": [
+            "4.572",
+            "9.072",
+            "4.122",
+            "4.077"
+          ],
+          "answer": "4.572",
+          "solutionSteps": [
+            "Build the number place by place: 4 + 0.0 + 0.07 + 0.002 = 4.072.",
+            "Add 0.5 (5 tenths): align as 4.072 + 0.500.",
+            "4.072 + 0.500 = 4.572."
+          ],
+          "commonMistakes": [
+            "Adding 0.5 into the wrong column (e.g. making it 4.077 or 4.122) ignores that 0.5 is 5 TENTHS and must land in the tenths place."
+          ],
+          "variations": [
+            {
+              "prompt": "Build '6 ones, 3 tenths, 0 hundredths, 9 thousandths' and add 0.04.",
+              "answer": "6.349",
+              "solutionSteps": [
+                "The number is 6.309.",
+                "6.309 + 0.040 = 6.349."
+              ]
+            }
+          ],
+          "difficulty": 5,
+          "pageRefs": [
+            54,
+            55
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        }
       ]
     },
     {
@@ -6609,6 +7283,231 @@
           "prerequisite": "Tackle this once dropping the × sign and substituting values into a formula feel routine.",
           "bonusQuestions": null,
           "nextStepHint": "In Class 9 and 10 you plot functions as graphs, and in Class 11 functions become the central object of all higher mathematics."
+        }
+      ],
+      "bossQuestions": [
+        {
+          "id": "bossquiz_mch04_q00",
+          "prompt": "If x = 4, find the value of 3x + 7.",
+          "questionType": "mcq",
+          "options": [
+            "19",
+            "12",
+            "21",
+            "14"
+          ],
+          "answer": "19",
+          "solutionSteps": [
+            "Substitute x = 4: 3 × 4 + 7.",
+            "3 × 4 = 12 (do the multiplication first).",
+            "12 + 7 = 19."
+          ],
+          "commonMistakes": [
+            "Reading 3x as 3 followed by 4 (giving 34) or adding before multiplying (3 × 11) both misuse the order of operations."
+          ],
+          "variations": [
+            {
+              "prompt": "If y = 6, find 2y − 5.",
+              "answer": "7",
+              "solutionSteps": [
+                "2 × 6 = 12.",
+                "12 − 5 = 7."
+              ]
+            }
+          ],
+          "difficulty": 3,
+          "pageRefs": [
+            85,
+            86
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch04_q01",
+          "prompt": "Simplify 5a + 3b − 2a + 7b − b.",
+          "questionType": "mcq",
+          "options": [
+            "3a + 9b",
+            "3a + 11b",
+            "12ab",
+            "3a + 9"
+          ],
+          "answer": "3a + 9b",
+          "solutionSteps": [
+            "Collect the a-terms: 5a − 2a = 3a.",
+            "Collect the b-terms: 3b + 7b − b = 9b.",
+            "Unlike terms can't be merged, so the simplified expression is 3a + 9b."
+          ],
+          "commonMistakes": [
+            "Merging a-terms with b-terms into '12ab' is wrong — only LIKE terms (same letter) may be added together.",
+            "Dropping the letter from 9b to get '3a + 9' loses what is being counted."
+          ],
+          "variations": [
+            {
+              "prompt": "Simplify 4m + 2n − m + 5n.",
+              "answer": "3m + 7n",
+              "solutionSteps": [
+                "m-terms: 4m − m = 3m.",
+                "n-terms: 2n + 5n = 7n. Result 3m + 7n."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            90,
+            91
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch04_q02",
+          "prompt": "A matchstick pattern uses 3n + 1 sticks for the n-th figure. How many sticks does the 10th figure need?",
+          "questionType": "mcq",
+          "options": [
+            "31",
+            "30",
+            "34",
+            "301"
+          ],
+          "answer": "31",
+          "solutionSteps": [
+            "Substitute n = 10 into 3n + 1.",
+            "3 × 10 = 30.",
+            "30 + 1 = 31 sticks."
+          ],
+          "commonMistakes": [
+            "Writing 301 reads '3n' as the digits 3 and 0 side by side — 3n means 3 multiplied by n."
+          ],
+          "variations": [
+            {
+              "prompt": "Using 2n + 3, how many sticks for the 8th figure?",
+              "answer": "19",
+              "solutionSteps": [
+                "2 × 8 = 16.",
+                "16 + 3 = 19."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            88,
+            89
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch04_q03",
+          "prompt": "If p = 3 and q = 5, evaluate 2pq − p².",
+          "questionType": "mcq",
+          "options": [
+            "21",
+            "39",
+            "24",
+            "51"
+          ],
+          "answer": "21",
+          "solutionSteps": [
+            "2pq means 2 × p × q = 2 × 3 × 5 = 30.",
+            "p² means p × p = 3 × 3 = 9.",
+            "30 − 9 = 21."
+          ],
+          "commonMistakes": [
+            "Reading p² as 2p (giving 6) is a classic slip — a square multiplies the number by itself, it does not double it."
+          ],
+          "variations": [
+            {
+              "prompt": "If a = 2 and b = 4, evaluate 3ab − b².",
+              "answer": "8",
+              "solutionSteps": [
+                "3ab = 3 × 2 × 4 = 24.",
+                "b² = 16, so 24 − 16 = 8."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            86,
+            87
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch04_q04",
+          "prompt": "The sum of any three consecutive whole numbers (n, n+1, n+2) is always divisible by which number?",
+          "questionType": "mcq",
+          "options": [
+            "3",
+            "2",
+            "6",
+            "4"
+          ],
+          "answer": "3",
+          "solutionSteps": [
+            "Add the three: n + (n + 1) + (n + 2) = 3n + 3.",
+            "Factor out 3: 3n + 3 = 3(n + 1).",
+            "A multiple of 3 is always divisible by 3, whatever n is."
+          ],
+          "commonMistakes": [
+            "Checking one example (like 1 + 2 + 3 = 6) and concluding 'divisible by 6' over-generalises — 2 + 3 + 4 = 9 is not divisible by 6, but 9 IS divisible by 3."
+          ],
+          "variations": [
+            {
+              "prompt": "The sum of two consecutive odd numbers (2n+1 and 2n+3) is always divisible by what?",
+              "answer": "4",
+              "solutionSteps": [
+                "(2n+1) + (2n+3) = 4n + 4 = 4(n + 1).",
+                "So the sum is always a multiple of 4."
+              ]
+            }
+          ],
+          "difficulty": 5,
+          "pageRefs": [
+            91,
+            92
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch04_q05",
+          "prompt": "A rectangle has length (x + 5) and width x. Write its perimeter as a simplified expression.",
+          "questionType": "mcq",
+          "options": [
+            "4x + 10",
+            "2x + 5",
+            "4x + 5",
+            "x² + 5x"
+          ],
+          "answer": "4x + 10",
+          "solutionSteps": [
+            "Perimeter = 2 × (length + width) = 2 × ((x + 5) + x).",
+            "Inside the bracket: x + 5 + x = 2x + 5.",
+            "Multiply by 2: 2(2x + 5) = 4x + 10."
+          ],
+          "commonMistakes": [
+            "Writing x² + 5x computes the AREA, not the perimeter; perimeter adds the side lengths, it does not multiply them."
+          ],
+          "variations": [
+            {
+              "prompt": "A square has side (y + 2). Write its perimeter simplified.",
+              "answer": "4y + 8",
+              "solutionSteps": [
+                "Perimeter of a square = 4 × side = 4(y + 2).",
+                "4(y + 2) = 4y + 8."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            89,
+            90
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
         }
       ]
     },
@@ -7912,6 +8811,230 @@
           "bonusQuestions": null,
           "nextStepHint": "In Class 10 you write the equation of a line from its slope and a point, and decide whether two given lines meet, never meet, or cross at right angles."
         }
+      ],
+      "bossQuestions": [
+        {
+          "id": "bossquiz_mch05_q00",
+          "prompt": "Two lines cross. One of the four angles is 35°. What are the angle vertically opposite it and the angle next to it (its linear pair)?",
+          "questionType": "mcq",
+          "options": [
+            "35° and 145°",
+            "35° and 35°",
+            "145° and 145°",
+            "55° and 145°"
+          ],
+          "answer": "35° and 145°",
+          "solutionSteps": [
+            "Vertically opposite angles are equal, so the opposite angle is also 35°.",
+            "A linear pair sits on a straight line and sums to 180°.",
+            "So the adjacent angle is 180° − 35° = 145°."
+          ],
+          "commonMistakes": [
+            "Assuming the adjacent angle is also 35° forgets that neighbouring angles on a straight line are supplementary (add to 180°)."
+          ],
+          "variations": [
+            {
+              "prompt": "One of four angles where two lines cross is 110°. Find its vertically opposite and adjacent angles.",
+              "answer": "110° and 70°",
+              "solutionSteps": [
+                "Vertically opposite = 110°.",
+                "Adjacent = 180° − 110° = 70°."
+              ]
+            }
+          ],
+          "difficulty": 3,
+          "pageRefs": [
+            108,
+            109
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch05_q01",
+          "prompt": "Two angles form a linear pair. One is 4 times the other. Find the larger angle.",
+          "questionType": "mcq",
+          "options": [
+            "144°",
+            "36°",
+            "120°",
+            "150°"
+          ],
+          "answer": "144°",
+          "solutionSteps": [
+            "Let the smaller angle be x; the larger is 4x. A linear pair adds to 180°.",
+            "x + 4x = 180°, so 5x = 180° and x = 36°.",
+            "The larger angle is 4x = 4 × 36° = 144°."
+          ],
+          "commonMistakes": [
+            "Giving 36° answers for the SMALLER angle — the question asks for the larger, which is 4x."
+          ],
+          "variations": [
+            {
+              "prompt": "Two angles of a linear pair are in the ratio 2 : 3. Find both angles.",
+              "answer": "72° and 108°",
+              "solutionSteps": [
+                "2x + 3x = 180°, so 5x = 180°, x = 36°.",
+                "Angles are 72° and 108°."
+              ]
+            }
+          ],
+          "difficulty": 3,
+          "pageRefs": [
+            109,
+            110
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch05_q02",
+          "prompt": "A transversal cuts two parallel lines. One of a pair of co-interior (allied) angles is 110°. Find the other.",
+          "questionType": "mcq",
+          "options": [
+            "70°",
+            "110°",
+            "90°",
+            "250°"
+          ],
+          "answer": "70°",
+          "solutionSteps": [
+            "Co-interior (allied) angles between two parallel lines are supplementary — they add to 180°.",
+            "So the other angle = 180° − 110°.",
+            "180° − 110° = 70°."
+          ],
+          "commonMistakes": [
+            "Treating co-interior angles as EQUAL (answering 110°) confuses them with alternate or corresponding angles; co-interior angles add to 180°."
+          ],
+          "variations": [
+            {
+              "prompt": "Co-interior angles between parallels: one is 125°. Find the other.",
+              "answer": "55°",
+              "solutionSteps": [
+                "They sum to 180°.",
+                "180° − 125° = 55°."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            121,
+            122
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch05_q03",
+          "prompt": "Two parallel lines are cut by a transversal. A pair of alternate interior angles measure (2x + 10)° and (3x − 20)°. Find x.",
+          "questionType": "mcq",
+          "options": [
+            "30",
+            "6",
+            "38",
+            "10"
+          ],
+          "answer": "30",
+          "solutionSteps": [
+            "Alternate interior angles between parallel lines are equal.",
+            "Set them equal: 2x + 10 = 3x − 20.",
+            "Solve: 10 + 20 = 3x − 2x, so x = 30."
+          ],
+          "commonMistakes": [
+            "Setting the two expressions to sum to 180° treats them as co-interior angles — but ALTERNATE interior angles are equal, not supplementary."
+          ],
+          "variations": [
+            {
+              "prompt": "Corresponding angles on parallels are (4x − 5)° and (3x + 15)°. Find x.",
+              "answer": "20",
+              "solutionSteps": [
+                "Corresponding angles are equal: 4x − 5 = 3x + 15.",
+                "x = 20."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            114,
+            115
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch05_q04",
+          "prompt": "Two parallel lines are cut by a transversal, making just two distinct angle measures. If one of them is 72°, what are the two measures?",
+          "questionType": "mcq",
+          "options": [
+            "72° and 108°",
+            "72° only",
+            "72° and 18°",
+            "72° and 90°"
+          ],
+          "answer": "72° and 108°",
+          "solutionSteps": [
+            "A transversal across two parallel lines makes eight angles, but only two different sizes appear.",
+            "Every angle is either equal to 72° (vertically opposite / corresponding / alternate) or supplementary to it.",
+            "The supplement is 180° − 72° = 108°, so the two measures are 72° and 108°."
+          ],
+          "commonMistakes": [
+            "Pairing 72° with 18° uses the complement (sums to 90°) instead of the supplement; the partner angle here lies on a straight line and sums to 180°."
+          ],
+          "variations": [
+            {
+              "prompt": "On parallels cut by a transversal one angle is 115°. Give the two distinct measures.",
+              "answer": "115° and 65°",
+              "solutionSteps": [
+                "The supplement is 180° − 115° = 65°.",
+                "So the measures are 115° and 65°."
+              ]
+            }
+          ],
+          "difficulty": 5,
+          "pageRefs": [
+            110,
+            111
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch05_q05",
+          "prompt": "Line a is perpendicular to line b, and line b is parallel to line c. What is the angle between line a and line c?",
+          "questionType": "mcq",
+          "options": [
+            "90°",
+            "0°",
+            "45°",
+            "180°"
+          ],
+          "answer": "90°",
+          "solutionSteps": [
+            "a ⟂ b means a meets b at 90°.",
+            "b ∥ c means c runs in the same direction as b.",
+            "A line perpendicular to one of two parallel lines is perpendicular to the other, so a meets c at 90°."
+          ],
+          "commonMistakes": [
+            "Thinking a and c are parallel (0°) confuses the relationships — a is perpendicular to b, and c is parallel to b, so a stays perpendicular to c."
+          ],
+          "variations": [
+            {
+              "prompt": "If p ⟂ q and q ⟂ r, what is the relationship between p and r?",
+              "answer": "p is parallel to r",
+              "solutionSteps": [
+                "p and r are both perpendicular to q.",
+                "Two lines perpendicular to the same line are parallel to each other."
+              ]
+            }
+          ],
+          "difficulty": 3,
+          "pageRefs": [
+            112,
+            113
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        }
       ]
     },
     {
@@ -9064,6 +10187,230 @@
           "bonusQuestions": null,
           "nextStepHint": "In higher classes and computer science, modular arithmetic (clock arithmetic) underpins divisibility tests, calendars, and the cryptography that secures online payments."
         }
+      ],
+      "bossQuestions": [
+        {
+          "id": "bossquiz_mch06_q00",
+          "prompt": "Can the sum of five odd numbers ever equal 30?",
+          "questionType": "mcq",
+          "options": [
+            "No — five odd numbers always add to an odd number",
+            "Yes, for example 2 + 4 + 6 + 8 + 10",
+            "Yes, 1 + 3 + 5 + 7 + 14",
+            "Only if one of them is zero"
+          ],
+          "answer": "No — five odd numbers always add to an odd number",
+          "solutionSteps": [
+            "Odd + odd = even, and even + odd = odd; tracking parity, the sum of an ODD count of odd numbers is odd.",
+            "Five is an odd count, so five odd numbers always sum to an odd number.",
+            "30 is even, so it can never be such a sum."
+          ],
+          "commonMistakes": [
+            "Trying to 'find an example' wastes effort — the parity argument proves it is impossible without testing any case. (2+4+6+8+10 uses even numbers, not odd.)"
+          ],
+          "variations": [
+            {
+              "prompt": "Can three odd numbers add up to 20?",
+              "answer": "No — three odds always sum to an odd number, but 20 is even",
+              "solutionSteps": [
+                "An odd count (three) of odd numbers gives an odd total.",
+                "20 is even, so it is impossible."
+              ]
+            }
+          ],
+          "difficulty": 3,
+          "pageRefs": [
+            134,
+            135
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch06_q01",
+          "prompt": "In the Virahāṅka–Fibonacci sequence 1, 1, 2, 3, 5, 8, 13, …, what is the 9th term?",
+          "questionType": "mcq",
+          "options": [
+            "34",
+            "21",
+            "55",
+            "13"
+          ],
+          "answer": "34",
+          "solutionSteps": [
+            "Each term is the sum of the two before it.",
+            "Continue: …8 (6th), 13 (7th), 8 + 13 = 21 (8th).",
+            "Next: 13 + 21 = 34, the 9th term."
+          ],
+          "commonMistakes": [
+            "Mis-counting the position (calling 21 the 9th term) is the usual slip — list the terms with their position numbers as you go."
+          ],
+          "variations": [
+            {
+              "prompt": "What is the 7th term of 2, 2, 4, 6, 10, … (same add-the-previous-two rule)?",
+              "answer": "26",
+              "solutionSteps": [
+                "6th term = 10 + 6 = 16.",
+                "7th term = 16 + 10 = 26."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            138,
+            139
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch06_q02",
+          "prompt": "In the cryptarithm AB + BA = 132, where A and B are digits, find A + B.",
+          "questionType": "mcq",
+          "options": [
+            "12",
+            "11",
+            "6",
+            "13"
+          ],
+          "answer": "12",
+          "solutionSteps": [
+            "AB means 10A + B, and BA means 10B + A.",
+            "Their sum is 11A + 11B = 11(A + B).",
+            "So 11(A + B) = 132, giving A + B = 132 ÷ 11 = 12."
+          ],
+          "commonMistakes": [
+            "Trying to find A and B separately is unnecessary — the sum of a two-digit number and its reverse is always 11 times the digit-sum."
+          ],
+          "variations": [
+            {
+              "prompt": "If CD + DC = 99, find C + D.",
+              "answer": "9",
+              "solutionSteps": [
+                "CD + DC = 11(C + D) = 99.",
+                "C + D = 99 ÷ 11 = 9."
+              ]
+            }
+          ],
+          "difficulty": 5,
+          "pageRefs": [
+            142,
+            143
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch06_q03",
+          "prompt": "Which of these numbers is divisible by 9: 234, 343, 512, 700?",
+          "questionType": "mcq",
+          "options": [
+            "234",
+            "343",
+            "512",
+            "700"
+          ],
+          "answer": "234",
+          "solutionSteps": [
+            "A number is divisible by 9 exactly when the sum of its digits is divisible by 9.",
+            "Digit sums: 234 → 2+3+4 = 9 ✓; 343 → 10; 512 → 8; 700 → 7.",
+            "Only 234 has a digit sum that is a multiple of 9."
+          ],
+          "commonMistakes": [
+            "Checking divisibility by 9 by looking only at the last digit (as you would for 2, 5 or 10) doesn't work — you must add ALL the digits."
+          ],
+          "variations": [
+            {
+              "prompt": "Which is divisible by 3: 124, 232, 411, 505?",
+              "answer": "411",
+              "solutionSteps": [
+                "Digit sums: 124→7, 232→7, 411→6 ✓, 505→10.",
+                "Only 411 has a digit sum divisible by 3."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            126,
+            127
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch06_q04",
+          "prompt": "Ahaan says he wrote 7 whole numbers that add to an EVEN total, and exactly 3 of them are odd. Is that possible?",
+          "questionType": "mcq",
+          "options": [
+            "No — an odd count of odd numbers makes the total odd",
+            "Yes, if the even numbers are large enough",
+            "Yes, if one of them is zero",
+            "Only if all 7 numbers are odd"
+          ],
+          "answer": "No — an odd count of odd numbers makes the total odd",
+          "solutionSteps": [
+            "The even numbers contribute an even amount no matter their size.",
+            "Three odd numbers contribute odd + odd + odd = odd.",
+            "even + odd = odd, so the total must be odd — it cannot be even."
+          ],
+          "commonMistakes": [
+            "Believing big even numbers can 'fix' the parity is wrong — only the COUNT of odd addends decides whether the sum is odd or even."
+          ],
+          "variations": [
+            {
+              "prompt": "Is it possible for 4 numbers, exactly one of them odd, to add to an even total?",
+              "answer": "No — one odd addend makes the sum odd",
+              "solutionSteps": [
+                "Three evens give an even amount.",
+                "Adding one odd makes the total odd, so an even total is impossible."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            136,
+            137
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch06_q05",
+          "prompt": "Using the rule 1 + 1 + 2 + 3 + … + Fₙ = Fₙ₊₂ − 1, find 1 + 1 + 2 + 3 + 5 + 8 + 13 + 21.",
+          "questionType": "mcq",
+          "options": [
+            "54",
+            "55",
+            "53",
+            "88"
+          ],
+          "answer": "54",
+          "solutionSteps": [
+            "The sum runs over the first 8 Fibonacci terms (up to F₈ = 21).",
+            "By the rule, this equals F₁₀ − 1.",
+            "The sequence is 1,1,2,3,5,8,13,21,34,55, so F₁₀ = 55 and the sum is 55 − 1 = 54."
+          ],
+          "commonMistakes": [
+            "Forgetting the '− 1' and answering 55 (which is F₁₀ itself) misuses the identity; the running sum is always ONE LESS than F₁₀."
+          ],
+          "variations": [
+            {
+              "prompt": "Find 1 + 1 + 2 + 3 + 5 using the same rule.",
+              "answer": "12",
+              "solutionSteps": [
+                "This is the first 5 terms (up to F₅ = 5), so it equals F₇ − 1.",
+                "F₇ = 13, so the sum is 13 − 1 = 12."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            139,
+            140
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        }
       ]
     },
     {
@@ -10068,6 +11415,230 @@
           "bonusQuestions": null,
           "nextStepHint": "In Class 9 and 10 you prove these concurrency results and use the centroid and circumcentre in coordinate geometry."
         }
+      ],
+      "bossQuestions": [
+        {
+          "id": "bossquiz_mch07_q00",
+          "prompt": "Can a triangle have sides 5 cm, 8 cm and 13 cm?",
+          "questionType": "mcq",
+          "options": [
+            "No — 5 + 8 = 13 is not greater than 13",
+            "Yes, the sides are all different",
+            "Yes, because 8 + 13 > 5",
+            "No — the sides are too long"
+          ],
+          "answer": "No — 5 + 8 = 13 is not greater than 13",
+          "solutionSteps": [
+            "The triangle inequality says any two sides together must be GREATER than the third.",
+            "Here 5 + 8 = 13, which equals (not exceeds) the third side.",
+            "The two short sides would lie flat along the long one, so no triangle closes."
+          ],
+          "commonMistakes": [
+            "Checking only the easy pair (8 + 13 > 5) and stopping misses the binding case — you must check the TWO SHORTEST sides against the longest."
+          ],
+          "variations": [
+            {
+              "prompt": "Can a triangle have sides 4 cm, 5 cm and 10 cm?",
+              "answer": "No — 4 + 5 = 9 is less than 10",
+              "solutionSteps": [
+                "The two shortest sides sum to 9.",
+                "9 < 10, so the triangle cannot close."
+              ]
+            }
+          ],
+          "difficulty": 3,
+          "pageRefs": [
+            150,
+            151
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch07_q01",
+          "prompt": "Two sides of a triangle measure 7 cm and 10 cm. What range must the third side x lie in?",
+          "questionType": "mcq",
+          "options": [
+            "3 < x < 17",
+            "7 < x < 10",
+            "x < 17",
+            "3 ≤ x ≤ 17"
+          ],
+          "answer": "3 < x < 17",
+          "solutionSteps": [
+            "The third side must be less than the sum of the other two: x < 7 + 10 = 17.",
+            "It must also be more than their difference: x > 10 − 7 = 3.",
+            "So 3 < x < 17 (strict inequalities — equality gives a flat, degenerate triangle)."
+          ],
+          "commonMistakes": [
+            "Using ≤ instead of < wrongly allows x = 3 or x = 17, which collapse the triangle into a straight line."
+          ],
+          "variations": [
+            {
+              "prompt": "Two sides are 6 cm and 6 cm. Give the range for the third side x.",
+              "answer": "0 < x < 12",
+              "solutionSteps": [
+                "x < 6 + 6 = 12 and x > 6 − 6 = 0.",
+                "So 0 < x < 12."
+              ]
+            }
+          ],
+          "difficulty": 5,
+          "pageRefs": [
+            152,
+            153
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch07_q02",
+          "prompt": "Two angles of a triangle are 48° and 67°. Find the third angle.",
+          "questionType": "mcq",
+          "options": [
+            "65°",
+            "115°",
+            "75°",
+            "55°"
+          ],
+          "answer": "65°",
+          "solutionSteps": [
+            "The three angles of any triangle add to 180°.",
+            "48° + 67° = 115°.",
+            "Third angle = 180° − 115° = 65°."
+          ],
+          "commonMistakes": [
+            "Stopping at 48° + 67° = 115° reports the sum of the first two, not the missing third angle."
+          ],
+          "variations": [
+            {
+              "prompt": "Two angles of a triangle are 90° and 35°. Find the third.",
+              "answer": "55°",
+              "solutionSteps": [
+                "90° + 35° = 125°.",
+                "180° − 125° = 55°."
+              ]
+            }
+          ],
+          "difficulty": 3,
+          "pageRefs": [
+            154,
+            155
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch07_q03",
+          "prompt": "A triangle has angles 90°, 45° and 45°. Classify it by its sides AND by its angles.",
+          "questionType": "mcq",
+          "options": [
+            "Right-angled and isosceles",
+            "Acute and scalene",
+            "Right-angled and scalene",
+            "Obtuse and isosceles"
+          ],
+          "answer": "Right-angled and isosceles",
+          "solutionSteps": [
+            "One angle is exactly 90°, so by angles it is right-angled.",
+            "Two angles are equal (45° each), so the sides facing them are equal — by sides it is isosceles.",
+            "Hence it is a right-angled isosceles triangle."
+          ],
+          "commonMistakes": [
+            "Calling it scalene ignores the two equal 45° angles, which force two equal sides."
+          ],
+          "variations": [
+            {
+              "prompt": "Classify a triangle with angles 70°, 70°, 40° by its sides and angles.",
+              "answer": "Acute and isosceles",
+              "solutionSteps": [
+                "All angles are below 90°, so it is acute.",
+                "Two equal angles (70°) make it isosceles."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            168,
+            169
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch07_q04",
+          "prompt": "An exterior angle of a triangle measures 120°. One of the two angles NOT next to it is 70°. Find the other.",
+          "questionType": "mcq",
+          "options": [
+            "50°",
+            "60°",
+            "70°",
+            "110°"
+          ],
+          "answer": "50°",
+          "solutionSteps": [
+            "The interior angle at that vertex = 180° − 120° = 60° (linear pair).",
+            "The three interior angles add to 180°, so the other two sum to 180° − 60° = 120°.",
+            "Given one is 70°, the other = 120° − 70° = 50°."
+          ],
+          "commonMistakes": [
+            "Treating 120° as an interior angle (and subtracting 70° from it) forgets it is the EXTERIOR angle, so its interior partner is 60°, not 120°."
+          ],
+          "variations": [
+            {
+              "prompt": "An exterior angle is 100°; one remote interior angle is 30°. Find the other remote interior angle.",
+              "answer": "70°",
+              "solutionSteps": [
+                "The two remote interior angles add to the exterior angle: 100°.",
+                "100° − 30° = 70°."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            156,
+            157
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch07_q05",
+          "prompt": "In a right-angled triangle, which two of the lines act as altitudes without being drawn separately?",
+          "questionType": "mcq",
+          "options": [
+            "The two legs (the sides meeting at the right angle)",
+            "The hypotenuse and one leg",
+            "All three medians",
+            "None — altitudes must always be drawn inside"
+          ],
+          "answer": "The two legs (the sides meeting at the right angle)",
+          "solutionSteps": [
+            "An altitude is a perpendicular from a vertex to the opposite side.",
+            "In a right-angled triangle the two legs are already perpendicular to each other.",
+            "So each leg is the altitude from one acute vertex to the opposite leg — two of the three altitudes are the legs themselves."
+          ],
+          "commonMistakes": [
+            "Assuming every altitude must be a fresh line inside the triangle misses that a right-angle's two legs already serve as altitudes."
+          ],
+          "variations": [
+            {
+              "prompt": "In a right-angled triangle, where do all three altitudes meet?",
+              "answer": "At the right-angle vertex",
+              "solutionSteps": [
+                "Two altitudes are the legs, which meet at the right angle.",
+                "The third altitude (from the right angle to the hypotenuse) also passes through that vertex, so all three meet there."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            160,
+            161
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        }
       ]
     },
     {
@@ -11041,6 +12612,230 @@
           "bonusQuestions": null,
           "nextStepHint": "These 'Egyptian fractions' connect to number theory and to the study of greedy algorithms in higher mathematics and computer science."
         }
+      ],
+      "bossQuestions": [
+        {
+          "id": "bossquiz_mch08_q00",
+          "prompt": "Find 3/4 × 20.",
+          "questionType": "mcq",
+          "options": [
+            "15",
+            "60",
+            "5",
+            "80"
+          ],
+          "answer": "15",
+          "solutionSteps": [
+            "Multiplying a fraction by a whole number: 3/4 × 20 = (3 × 20)/4.",
+            "= 60/4.",
+            "60 ÷ 4 = 15."
+          ],
+          "commonMistakes": [
+            "Multiplying only the numerator and forgetting to divide by 4 gives 60 — the denominator still divides the result."
+          ],
+          "variations": [
+            {
+              "prompt": "Find 2/5 × 35.",
+              "answer": "14",
+              "solutionSteps": [
+                "(2 × 35)/5 = 70/5.",
+                "70 ÷ 5 = 14."
+              ]
+            }
+          ],
+          "difficulty": 3,
+          "pageRefs": [
+            175,
+            176
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch08_q01",
+          "prompt": "What is 2/3 of 3/5?",
+          "questionType": "mcq",
+          "options": [
+            "2/5",
+            "5/8",
+            "6/8",
+            "2/15"
+          ],
+          "answer": "2/5",
+          "solutionSteps": [
+            "'Of' means multiply: 2/3 × 3/5.",
+            "Multiply across: (2 × 3)/(3 × 5) = 6/15.",
+            "Simplify 6/15 by dividing by 3: 2/5."
+          ],
+          "commonMistakes": [
+            "Adding the fractions instead of multiplying ('of' = ×, not +) gives a wrong, larger answer like 5/8."
+          ],
+          "variations": [
+            {
+              "prompt": "What is 3/4 of 8/9?",
+              "answer": "2/3",
+              "solutionSteps": [
+                "3/4 × 8/9 = 24/36.",
+                "24/36 = 2/3 after dividing by 12."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            180,
+            181
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch08_q02",
+          "prompt": "Compute 5/6 ÷ 2/3.",
+          "questionType": "mcq",
+          "options": [
+            "5/4",
+            "10/18",
+            "5/9",
+            "4/5"
+          ],
+          "answer": "5/4",
+          "solutionSteps": [
+            "Dividing by a fraction means multiplying by its reciprocal.",
+            "5/6 ÷ 2/3 = 5/6 × 3/2 = 15/12.",
+            "Simplify 15/12 by dividing by 3: 5/4 (which is 1¼)."
+          ],
+          "commonMistakes": [
+            "Multiplying straight across (5/6 × 2/3 = 10/18) skips the 'flip the divisor' step that division requires."
+          ],
+          "variations": [
+            {
+              "prompt": "Compute 3/8 ÷ 1/4.",
+              "answer": "3/2",
+              "solutionSteps": [
+                "3/8 × 4/1 = 12/8.",
+                "12/8 = 3/2."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            186,
+            187
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch08_q03",
+          "prompt": "A recipe needs 1½ cups of flour per cake. How many cups are needed for 2⅔ cakes?",
+          "questionType": "mcq",
+          "options": [
+            "4",
+            "4⅙",
+            "3",
+            "4½"
+          ],
+          "answer": "4",
+          "solutionSteps": [
+            "Write the mixed numbers as improper fractions: 1½ = 3/2 and 2⅔ = 8/3.",
+            "Multiply: 3/2 × 8/3 = 24/6.",
+            "24 ÷ 6 = 4 cups."
+          ],
+          "commonMistakes": [
+            "Multiplying only the whole-number parts (1 × 2 = 2) ignores the fractional cups; convert to improper fractions first."
+          ],
+          "variations": [
+            {
+              "prompt": "Each box weighs 2¼ kg. What do 1⅓ boxes weigh?",
+              "answer": "3 kg",
+              "solutionSteps": [
+                "2¼ = 9/4 and 1⅓ = 4/3.",
+                "9/4 × 4/3 = 36/12 = 3 kg."
+              ]
+            }
+          ],
+          "difficulty": 5,
+          "pageRefs": [
+            182,
+            183
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch08_q04",
+          "prompt": "Ahaan spends 1/3 of his money on a book, then 1/4 of what remains on a pen. What fraction of his original money is left?",
+          "questionType": "mcq",
+          "options": [
+            "1/2",
+            "5/12",
+            "1/4",
+            "2/3"
+          ],
+          "answer": "1/2",
+          "solutionSteps": [
+            "After the book, the remaining money is 1 − 1/3 = 2/3.",
+            "The pen costs 1/4 OF that remainder: 1/4 × 2/3 = 1/6.",
+            "Money left = 2/3 − 1/6 = 4/6 − 1/6 = 3/6 = 1/2."
+          ],
+          "commonMistakes": [
+            "Taking 1/4 of the ORIGINAL money (instead of of the remainder) is the classic error — the second fraction acts on what is left, 2/3, not on the whole."
+          ],
+          "variations": [
+            {
+              "prompt": "She gives away 1/2 her sweets, then eats 1/3 of the rest. What fraction of all the sweets is left?",
+              "answer": "1/3",
+              "solutionSteps": [
+                "After giving away half, 1/2 remains.",
+                "She eats 1/3 of 1/2 = 1/6, leaving 1/2 − 1/6 = 1/3."
+              ]
+            }
+          ],
+          "difficulty": 5,
+          "pageRefs": [
+            184,
+            185
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch08_q05",
+          "prompt": "Dividing by which number gives the same result as multiplying by 4/5?",
+          "questionType": "mcq",
+          "options": [
+            "5/4",
+            "4/5",
+            "5",
+            "20"
+          ],
+          "answer": "5/4",
+          "solutionSteps": [
+            "Dividing by a number n is the same as multiplying by its reciprocal 1/n.",
+            "So multiplying by 4/5 must match dividing by the reciprocal of 4/5.",
+            "The reciprocal of 4/5 is 5/4, so dividing by 5/4 = multiplying by 4/5."
+          ],
+          "commonMistakes": [
+            "Answering 4/5 confuses the operation — dividing by 4/5 is the same as MULTIPLYING by 5/4, the opposite of what's asked."
+          ],
+          "variations": [
+            {
+              "prompt": "Multiplying by 2/3 is the same as dividing by what?",
+              "answer": "3/2",
+              "solutionSteps": [
+                "Dividing by 3/2 = multiplying by its reciprocal 2/3.",
+                "So the answer is 3/2."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            186,
+            187
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        }
       ]
     },
     {
@@ -11942,6 +13737,230 @@
           "prerequisite": "Tackle this once you accept that equal sides face equal angles and equilateral angles are 60°.",
           "bonusQuestions": null,
           "nextStepHint": "In Class 9 you prove both the theorem and its converse formally and use them throughout your geometry problems."
+        }
+      ],
+      "bossQuestions": [
+        {
+          "id": "bossquiz_mch09_q00",
+          "prompt": "Two triangles have all three pairs of corresponding sides equal. Which congruence rule applies?",
+          "questionType": "mcq",
+          "options": [
+            "SSS",
+            "SAS",
+            "ASA",
+            "RHS"
+          ],
+          "answer": "SSS",
+          "solutionSteps": [
+            "The three matching pieces given are all sides.",
+            "Side-Side-Side (SSS) says three equal pairs of sides fix a triangle completely.",
+            "So the triangles are congruent by SSS."
+          ],
+          "commonMistakes": [
+            "Choosing SAS or ASA assumes an angle is given; here only the three sides are stated, which is exactly the SSS case."
+          ],
+          "variations": [
+            {
+              "prompt": "Two triangles share two equal sides and the equal angle BETWEEN them. Which rule applies?",
+              "answer": "SAS",
+              "solutionSteps": [
+                "Two sides and the included angle are equal.",
+                "That is the Side-Angle-Side (SAS) criterion."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            10,
+            11
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch09_q01",
+          "prompt": "Which set of equal parts does NOT guarantee that two triangles are congruent?",
+          "questionType": "mcq",
+          "options": [
+            "Three pairs of equal angles (AAA)",
+            "SSS",
+            "SAS",
+            "ASA"
+          ],
+          "answer": "Three pairs of equal angles (AAA)",
+          "solutionSteps": [
+            "SSS, SAS and ASA each pin a triangle's size and shape completely.",
+            "Equal angles (AAA) fix only the SHAPE — the triangles can still be different sizes (one a scaled copy of the other).",
+            "So AAA gives similar, not necessarily congruent, triangles."
+          ],
+          "commonMistakes": [
+            "Believing 'same angles means same triangle' confuses congruence (same shape AND size) with similarity (same shape only)."
+          ],
+          "variations": [
+            {
+              "prompt": "Does knowing two angles and the side BETWEEN them (ASA) guarantee congruence?",
+              "answer": "Yes",
+              "solutionSteps": [
+                "ASA fixes the triangle uniquely.",
+                "Two triangles meeting ASA are congruent."
+              ]
+            }
+          ],
+          "difficulty": 5,
+          "pageRefs": [
+            12,
+            13
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch09_q02",
+          "prompt": "How many degrees is each angle of an equilateral triangle?",
+          "questionType": "mcq",
+          "options": [
+            "60°",
+            "90°",
+            "45°",
+            "180°"
+          ],
+          "answer": "60°",
+          "solutionSteps": [
+            "An equilateral triangle has three equal sides, so all three angles are equal.",
+            "The angles add to 180°, so each is 180° ÷ 3.",
+            "180° ÷ 3 = 60°."
+          ],
+          "commonMistakes": [
+            "Answering 180° gives the SUM of the three angles, not the size of one."
+          ],
+          "variations": [
+            {
+              "prompt": "Each angle of an equilateral triangle is 60°. What is the sum of any two of them?",
+              "answer": "120°",
+              "solutionSteps": [
+                "Each angle is 60°.",
+                "Two of them: 60° + 60° = 120°."
+              ]
+            }
+          ],
+          "difficulty": 3,
+          "pageRefs": [
+            16,
+            17
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch09_q03",
+          "prompt": "An isosceles triangle has an apex (vertex) angle of 40°. Find each base angle.",
+          "questionType": "mcq",
+          "options": [
+            "70°",
+            "40°",
+            "140°",
+            "100°"
+          ],
+          "answer": "70°",
+          "solutionSteps": [
+            "The two base angles of an isosceles triangle are equal.",
+            "They share what's left after the apex: 180° − 40° = 140°.",
+            "Split equally: 140° ÷ 2 = 70° each."
+          ],
+          "commonMistakes": [
+            "Forgetting to halve and answering 140° gives the COMBINED base angles, not one of them."
+          ],
+          "variations": [
+            {
+              "prompt": "An isosceles triangle has base angles of 50° each. Find the apex angle.",
+              "answer": "80°",
+              "solutionSteps": [
+                "Base angles total 50° + 50° = 100°.",
+                "Apex = 180° − 100° = 80°."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            17,
+            18
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch09_q04",
+          "prompt": "In triangle ABC, angle B = angle C = 50°. Which two sides must be equal?",
+          "questionType": "mcq",
+          "options": [
+            "AB = AC",
+            "AB = BC",
+            "BC = AC",
+            "All three are equal"
+          ],
+          "answer": "AB = AC",
+          "solutionSteps": [
+            "Equal angles face equal sides (the converse of the isosceles theorem).",
+            "Angle B faces side AC; angle C faces side AB.",
+            "Since angle B = angle C, the sides facing them are equal: AB = AC."
+          ],
+          "commonMistakes": [
+            "Pairing the equal angles with the side BETWEEN them (BC) is wrong — a side is matched with the angle OPPOSITE it, not the one between the two equal angles."
+          ],
+          "variations": [
+            {
+              "prompt": "In triangle PQR, angle P = angle R. Which sides are equal?",
+              "answer": "PQ = QR",
+              "solutionSteps": [
+                "Angle P faces QR; angle R faces PQ.",
+                "Equal angles face equal sides, so QR = PQ."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            17,
+            18
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch09_q05",
+          "prompt": "Two right-angled triangles have equal hypotenuses and one pair of equal legs. Which rule proves them congruent?",
+          "questionType": "mcq",
+          "options": [
+            "RHS",
+            "SSS",
+            "ASA",
+            "SAS"
+          ],
+          "answer": "RHS",
+          "solutionSteps": [
+            "Both triangles have a right angle (R), equal hypotenuses (H) and one equal side (S).",
+            "That matches the Right angle–Hypotenuse–Side criterion.",
+            "So they are congruent by RHS."
+          ],
+          "commonMistakes": [
+            "Trying SAS fails: the equal angle (the right angle) is not BETWEEN the hypotenuse and the equal leg, so the special RHS rule is the one that applies."
+          ],
+          "variations": [
+            {
+              "prompt": "Two right triangles share an equal hypotenuse and an equal acute angle. Which rule fits?",
+              "answer": "ASA (or AAS)",
+              "solutionSteps": [
+                "The right angle, the acute angle and the hypotenuse give two angles and a side.",
+                "That is the ASA/AAS situation, which guarantees congruence."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            13,
+            14
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
         }
       ]
     },
@@ -12908,6 +14927,230 @@
           "prerequisite": "Tackle this once adding integers with same and opposite signs feels natural on the number line.",
           "bonusQuestions": null,
           "nextStepHint": "In Class 9 you plot points and lines in all four quadrants, the foundation of coordinate geometry and graphing."
+        }
+      ],
+      "bossQuestions": [
+        {
+          "id": "bossquiz_mch10_q00",
+          "prompt": "Compute (−7) + (+12) + (−5).",
+          "questionType": "mcq",
+          "options": [
+            "0",
+            "−24",
+            "10",
+            "−10"
+          ],
+          "answer": "0",
+          "solutionSteps": [
+            "Group the negatives: (−7) + (−5) = −12.",
+            "Add the positive: −12 + 12.",
+            "−12 + 12 = 0."
+          ],
+          "commonMistakes": [
+            "Adding the digits and keeping a minus sign (−24) ignores that +12 cancels the negative total."
+          ],
+          "variations": [
+            {
+              "prompt": "Compute (−9) + (+4) + (+5).",
+              "answer": "0",
+              "solutionSteps": [
+                "Positives: 4 + 5 = 9.",
+                "−9 + 9 = 0."
+              ]
+            }
+          ],
+          "difficulty": 3,
+          "pageRefs": [
+            25,
+            26
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch10_q01",
+          "prompt": "Compute (−8) − (−15).",
+          "questionType": "mcq",
+          "options": [
+            "7",
+            "−23",
+            "−7",
+            "23"
+          ],
+          "answer": "7",
+          "solutionSteps": [
+            "Subtracting a negative means adding its opposite.",
+            "(−8) − (−15) = −8 + 15.",
+            "−8 + 15 = 7."
+          ],
+          "commonMistakes": [
+            "Reading the double minus as a single minus (−8 − 15 = −23) skips the rule that subtracting a negative is addition."
+          ],
+          "variations": [
+            {
+              "prompt": "Compute (−5) − (−12).",
+              "answer": "7",
+              "solutionSteps": [
+                "−5 − (−12) = −5 + 12.",
+                "= 7."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            29,
+            30
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch10_q02",
+          "prompt": "Compute (−6) × (−4) × (−2).",
+          "questionType": "mcq",
+          "options": [
+            "−48",
+            "48",
+            "−12",
+            "12"
+          ],
+          "answer": "−48",
+          "solutionSteps": [
+            "Multiply the first two: (−6) × (−4) = +24 (negative × negative = positive).",
+            "Multiply by the third: 24 × (−2) = −48.",
+            "Three negative factors give a negative product."
+          ],
+          "commonMistakes": [
+            "Stopping after two negatives and keeping it positive (48) forgets the THIRD negative factor flips the sign back."
+          ],
+          "variations": [
+            {
+              "prompt": "Compute (−2) × (−3) × (−5).",
+              "answer": "−30",
+              "solutionSteps": [
+                "(−2)×(−3) = 6.",
+                "6 × (−5) = −30 (an odd number of negatives → negative)."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            40,
+            41
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch10_q03",
+          "prompt": "The product of several non-zero integers is negative. What does this tell you about the negative factors?",
+          "questionType": "mcq",
+          "options": [
+            "There is an odd number of negative factors",
+            "There is an even number of negative factors",
+            "There is exactly one negative factor",
+            "All the factors are negative"
+          ],
+          "answer": "There is an odd number of negative factors",
+          "solutionSteps": [
+            "Each pair of negative factors multiplies to a positive, cancelling its sign.",
+            "If the negatives pair up evenly the product is positive; one left over makes it negative.",
+            "So a negative product means an ODD number of negative factors."
+          ],
+          "commonMistakes": [
+            "Concluding 'exactly one' is too strong — three or five negatives also give a negative product; the rule is about the count being odd, not equal to one."
+          ],
+          "variations": [
+            {
+              "prompt": "The product of several non-zero integers is positive. What about the negative factors?",
+              "answer": "There is an even number of them (possibly zero)",
+              "solutionSteps": [
+                "Negatives cancel in pairs.",
+                "A positive product means an even count of negative factors."
+              ]
+            }
+          ],
+          "difficulty": 5,
+          "pageRefs": [
+            42,
+            43
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch10_q04",
+          "prompt": "A diver is 18 m below sea level (−18 m). She rises 7 m, then descends 12 m. What is her final depth?",
+          "questionType": "mcq",
+          "options": [
+            "−23 m",
+            "−13 m",
+            "−7 m",
+            "−37 m"
+          ],
+          "answer": "−23 m",
+          "solutionSteps": [
+            "Start at −18. Rising 7 m adds: −18 + 7 = −11.",
+            "Descending 12 m subtracts: −11 − 12 = −23.",
+            "Her final depth is −23 m (23 m below sea level)."
+          ],
+          "commonMistakes": [
+            "Adding the 12 m descent (−11 + 12) instead of subtracting it confuses 'down' with 'up' — descending makes the depth more negative."
+          ],
+          "variations": [
+            {
+              "prompt": "A lift starts at −2 (basement 2), goes up 5 floors, then down 3. Where is it?",
+              "answer": "0 (ground floor)",
+              "solutionSteps": [
+                "−2 + 5 = 3.",
+                "3 − 3 = 0, the ground floor."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            27,
+            28
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch10_q05",
+          "prompt": "Evaluate (−3) × (5 − 8) + (−2) × (−4).",
+          "questionType": "mcq",
+          "options": [
+            "17",
+            "1",
+            "−17",
+            "25"
+          ],
+          "answer": "17",
+          "solutionSteps": [
+            "Brackets first: 5 − 8 = −3.",
+            "Now (−3) × (−3) = 9 and (−2) × (−4) = 8.",
+            "Add: 9 + 8 = 17."
+          ],
+          "commonMistakes": [
+            "Getting the sign of (−3) × (−3) wrong (writing −9) flips the answer — negative times negative is positive."
+          ],
+          "variations": [
+            {
+              "prompt": "Evaluate (−4) × (2 − 5) + (−3) × (−1).",
+              "answer": "15",
+              "solutionSteps": [
+                "2 − 5 = −3, so (−4) × (−3) = 12.",
+                "(−3) × (−1) = 3; 12 + 3 = 15."
+              ]
+            }
+          ],
+          "difficulty": 5,
+          "pageRefs": [
+            41,
+            42
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
         }
       ]
     },
@@ -13877,6 +16120,230 @@
           "bonusQuestions": null,
           "nextStepHint": "In Class 8 you use the LCM constantly to add and subtract unlike fractions and rational expressions."
         }
+      ],
+      "bossQuestions": [
+        {
+          "id": "bossquiz_mch11_q00",
+          "prompt": "Find the HCF (highest common factor) of 24 and 36.",
+          "questionType": "mcq",
+          "options": [
+            "12",
+            "6",
+            "72",
+            "4"
+          ],
+          "answer": "12",
+          "solutionSteps": [
+            "Prime-factorise: 24 = 2³ × 3 and 36 = 2² × 3².",
+            "Take each shared prime to its LOWEST power: 2² × 3 = 4 × 3.",
+            "4 × 3 = 12, the HCF."
+          ],
+          "commonMistakes": [
+            "Choosing 72 confuses the HCF (the largest common FACTOR) with the LCM (the smallest common multiple)."
+          ],
+          "variations": [
+            {
+              "prompt": "Find the HCF of 18 and 30.",
+              "answer": "6",
+              "solutionSteps": [
+                "18 = 2 × 3², 30 = 2 × 3 × 5.",
+                "Shared at lowest power: 2 × 3 = 6."
+              ]
+            }
+          ],
+          "difficulty": 3,
+          "pageRefs": [
+            42,
+            43
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch11_q01",
+          "prompt": "Find the LCM (least common multiple) of 12 and 18.",
+          "questionType": "mcq",
+          "options": [
+            "36",
+            "6",
+            "72",
+            "216"
+          ],
+          "answer": "36",
+          "solutionSteps": [
+            "Prime-factorise: 12 = 2² × 3 and 18 = 2 × 3².",
+            "Take each prime to its HIGHEST power: 2² × 3² = 4 × 9.",
+            "4 × 9 = 36, the LCM."
+          ],
+          "commonMistakes": [
+            "Multiplying the two numbers (12 × 18 = 216) gives a common multiple but not the LEAST one — divide by the HCF (6) to get 36."
+          ],
+          "variations": [
+            {
+              "prompt": "Find the LCM of 8 and 12.",
+              "answer": "24",
+              "solutionSteps": [
+                "8 = 2³, 12 = 2² × 3.",
+                "Highest powers: 2³ × 3 = 24."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            48,
+            49
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch11_q02",
+          "prompt": "For two numbers, HCF = 6 and LCM = 72. If one number is 24, find the other.",
+          "questionType": "mcq",
+          "options": [
+            "18",
+            "12",
+            "36",
+            "8"
+          ],
+          "answer": "18",
+          "solutionSteps": [
+            "For any two numbers, (first) × (second) = HCF × LCM.",
+            "So 24 × (other) = 6 × 72 = 432.",
+            "Other = 432 ÷ 24 = 18."
+          ],
+          "commonMistakes": [
+            "Adding or subtracting HCF and LCM instead of using the product rule (HCF × LCM = product of the numbers) gives a wrong value."
+          ],
+          "variations": [
+            {
+              "prompt": "HCF = 4, LCM = 48, one number is 16. Find the other.",
+              "answer": "12",
+              "solutionSteps": [
+                "Product = 4 × 48 = 192.",
+                "192 ÷ 16 = 12."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            56,
+            57
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch11_q03",
+          "prompt": "Which pair of numbers is co-prime (HCF = 1)?",
+          "questionType": "mcq",
+          "options": [
+            "8 and 15",
+            "8 and 12",
+            "9 and 15",
+            "10 and 25"
+          ],
+          "answer": "8 and 15",
+          "solutionSteps": [
+            "Co-prime numbers share no common factor except 1.",
+            "8 = 2³ and 15 = 3 × 5 — no shared prime, so HCF = 1.",
+            "The other pairs share a factor (4, 3 and 5 respectively), so they are not co-prime."
+          ],
+          "commonMistakes": [
+            "Assuming co-prime means 'both prime' is wrong — 8 and 15 are co-prime even though neither is prime, because they share no common factor."
+          ],
+          "variations": [
+            {
+              "prompt": "Which pair is co-prime: 14 and 25, or 14 and 21?",
+              "answer": "14 and 25",
+              "solutionSteps": [
+                "14 = 2 × 7, 25 = 5², share nothing → HCF 1.",
+                "14 and 21 share 7, so they are not co-prime."
+              ]
+            }
+          ],
+          "difficulty": 3,
+          "pageRefs": [
+            44,
+            45
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch11_q04",
+          "prompt": "Two bells ring at intervals of 18 minutes and 24 minutes. If they ring together at 9:00 am, when do they next ring together?",
+          "questionType": "mcq",
+          "options": [
+            "10:12 am",
+            "9:42 am",
+            "10:00 am",
+            "11:00 am"
+          ],
+          "answer": "10:12 am",
+          "solutionSteps": [
+            "They coincide again after LCM(18, 24) minutes.",
+            "18 = 2 × 3², 24 = 2³ × 3 → LCM = 2³ × 3² = 72 minutes.",
+            "72 minutes = 1 hour 12 minutes after 9:00 am, i.e. 10:12 am."
+          ],
+          "commonMistakes": [
+            "Using the HCF (6 minutes) instead of the LCM finds a wrong, too-small interval — synchronising cycles is always an LCM question."
+          ],
+          "variations": [
+            {
+              "prompt": "Two lights flash every 8 s and 12 s, together now. When do they next flash together?",
+              "answer": "after 24 seconds",
+              "solutionSteps": [
+                "LCM(8, 12) = 24.",
+                "They next coincide 24 seconds later."
+              ]
+            }
+          ],
+          "difficulty": 5,
+          "pageRefs": [
+            50,
+            51
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch11_q05",
+          "prompt": "What is the longest tape length that can exactly measure 7 m, 3.85 m and 12.95 m?",
+          "questionType": "mcq",
+          "options": [
+            "35 cm",
+            "5 cm",
+            "7 cm",
+            "70 cm"
+          ],
+          "answer": "35 cm",
+          "solutionSteps": [
+            "Convert to centimetres: 700 cm, 385 cm and 1295 cm.",
+            "Factorise: 700 = 2² × 5² × 7, 385 = 5 × 7 × 11, 1295 = 5 × 7 × 37.",
+            "Common primes at lowest power: 5 × 7 = 35 cm, the HCF."
+          ],
+          "commonMistakes": [
+            "Finding the LARGEST exact measure is an HCF problem, not LCM — the tape must divide all three lengths, so take the highest COMMON factor."
+          ],
+          "variations": [
+            {
+              "prompt": "Largest tape to exactly measure 6 m and 9 m?",
+              "answer": "300 cm (3 m)",
+              "solutionSteps": [
+                "600 cm and 900 cm; HCF = 300 cm.",
+                "So a 3 m tape measures both exactly."
+              ]
+            }
+          ],
+          "difficulty": 5,
+          "pageRefs": [
+            46,
+            47
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        }
       ]
     },
     {
@@ -14776,6 +17243,230 @@
           "prerequisite": "Tackle this once you can estimate a decimal product to check where the point belongs.",
           "bonusQuestions": null,
           "nextStepHint": "In Class 11 physics this becomes the formal study of significant figures, absolute error, and propagation of uncertainty."
+        }
+      ],
+      "bossQuestions": [
+        {
+          "id": "bossquiz_mch12_q00",
+          "prompt": "Compute 0.6 × 0.4.",
+          "questionType": "mcq",
+          "options": [
+            "0.24",
+            "2.4",
+            "0.024",
+            "24"
+          ],
+          "answer": "0.24",
+          "solutionSteps": [
+            "Multiply as whole numbers: 6 × 4 = 24.",
+            "Count decimal places in the factors: 0.6 has 1 and 0.4 has 1, so 2 in total.",
+            "Place the point 2 digits from the right: 0.24."
+          ],
+          "commonMistakes": [
+            "Answering 2.4 uses only one decimal place — the two factors together contribute TWO places, so the product is 0.24."
+          ],
+          "variations": [
+            {
+              "prompt": "Compute 0.3 × 0.7.",
+              "answer": "0.21",
+              "solutionSteps": [
+                "3 × 7 = 21, two decimal places total.",
+                "Point 2 from the right: 0.21."
+              ]
+            }
+          ],
+          "difficulty": 3,
+          "pageRefs": [
+            68,
+            69
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch12_q01",
+          "prompt": "Compute 3.45 × 1000.",
+          "questionType": "mcq",
+          "options": [
+            "3450",
+            "345",
+            "34500",
+            "3.45000"
+          ],
+          "answer": "3450",
+          "solutionSteps": [
+            "Multiplying by 1000 shifts the decimal point 3 places to the right.",
+            "3.45 → 34.5 → 345. → 3450. (filling a zero for the missing place).",
+            "The result is 3450."
+          ],
+          "commonMistakes": [
+            "Adding three zeros to the end (3.45000) confuses multiplying by 1000 with simply appending zeros — the POINT must move, not the digits stay put."
+          ],
+          "variations": [
+            {
+              "prompt": "Compute 0.072 × 100.",
+              "answer": "7.2",
+              "solutionSteps": [
+                "× 100 shifts the point 2 places right.",
+                "0.072 → 7.2."
+              ]
+            }
+          ],
+          "difficulty": 3,
+          "pageRefs": [
+            70,
+            71
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch12_q02",
+          "prompt": "Compute 4.8 ÷ 0.6.",
+          "questionType": "mcq",
+          "options": [
+            "8",
+            "0.8",
+            "80",
+            "0.08"
+          ],
+          "answer": "8",
+          "solutionSteps": [
+            "Multiply both numbers by 10 to clear the divisor's decimal: 48 ÷ 6.",
+            "48 ÷ 6 = 8.",
+            "Since both were scaled the same way, the quotient is unchanged: 8."
+          ],
+          "commonMistakes": [
+            "Dividing 4.8 by 6 (giving 0.8) forgets that the divisor is 0.6, not 6 — scale both numbers up by 10 first."
+          ],
+          "variations": [
+            {
+              "prompt": "Compute 1.5 ÷ 0.3.",
+              "answer": "5",
+              "solutionSteps": [
+                "Scale by 10: 15 ÷ 3.",
+                "= 5."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            74,
+            75
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch12_q03",
+          "prompt": "A product was computed and gave the digits '900'. If the calculation was 2.5 × 3.6, where does the decimal point go?",
+          "questionType": "mcq",
+          "options": [
+            "9.00",
+            "90.0",
+            "0.900",
+            "900"
+          ],
+          "answer": "9.00",
+          "solutionSteps": [
+            "Estimate first: 2.5 × 3.6 is about 2.5 × 4 = 10, so the answer is near 9 or 10.",
+            "Only 9.00 is in that range; 90 and 0.9 are ten times off.",
+            "(Exactly, 2.5 × 3.6 = 9.00.)"
+          ],
+          "commonMistakes": [
+            "Just counting decimal places without a sanity-check can misplace the point — estimating that the answer should be 'about 10' confirms 9.00."
+          ],
+          "variations": [
+            {
+              "prompt": "The digits '144' came from 4.8 × 3. Where does the point go?",
+              "answer": "14.4",
+              "solutionSteps": [
+                "Estimate: 4.8 × 3 ≈ 15.",
+                "So the answer near 15 is 14.4."
+              ]
+            }
+          ],
+          "difficulty": 5,
+          "pageRefs": [
+            80,
+            81
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch12_q04",
+          "prompt": "Compute 57.3 ÷ 100.",
+          "questionType": "mcq",
+          "options": [
+            "0.573",
+            "5.73",
+            "5730",
+            "0.0573"
+          ],
+          "answer": "0.573",
+          "solutionSteps": [
+            "Dividing by 100 shifts the decimal point 2 places to the LEFT.",
+            "57.3 → 5.73 → 0.573.",
+            "The result is 0.573."
+          ],
+          "commonMistakes": [
+            "Shifting the point right (giving 5730) is what MULTIPLYING by 100 does — division moves it the other way."
+          ],
+          "variations": [
+            {
+              "prompt": "Compute 8.4 ÷ 1000.",
+              "answer": "0.0084",
+              "solutionSteps": [
+                "× by 1/1000 shifts the point 3 places left.",
+                "8.4 → 0.0084."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            70,
+            71
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch12_q05",
+          "prompt": "Apples cost ₹85.50 per kg. What do 2.4 kg cost?",
+          "questionType": "mcq",
+          "options": [
+            "₹205.20",
+            "₹2052",
+            "₹20.52",
+            "₹171"
+          ],
+          "answer": "₹205.20",
+          "solutionSteps": [
+            "Multiply as whole numbers: 855 × 24 = 20520.",
+            "Count decimal places: 85.5 has 1 and 2.4 has 1, so 2 in total.",
+            "Place the point 2 digits from the right: 205.20, so 2.4 kg cost ₹205.20."
+          ],
+          "commonMistakes": [
+            "Multiplying only the whole-kilogram price (85.5 × 2 = 171) ignores the extra 0.4 kg; the full 2.4 kg must be used."
+          ],
+          "variations": [
+            {
+              "prompt": "Rice costs ₹42.50 per kg. Cost of 3.2 kg?",
+              "answer": "₹136",
+              "solutionSteps": [
+                "42.5 × 3.2: 425 × 32 = 13600, two decimal places → 136.00.",
+                "So ₹136."
+              ]
+            }
+          ],
+          "difficulty": 5,
+          "pageRefs": [
+            72,
+            73
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
         }
       ]
     },
@@ -15713,6 +18404,230 @@
           "bonusQuestions": null,
           "nextStepHint": "In Class 9 you meet histograms and frequency polygons and learn the conventions that keep statistical graphics honest."
         }
+      ],
+      "bossQuestions": [
+        {
+          "id": "bossquiz_mch13_q00",
+          "prompt": "Find the mean of 12, 15, 18, 11, 14.",
+          "questionType": "mcq",
+          "options": [
+            "14",
+            "15",
+            "12",
+            "70"
+          ],
+          "answer": "14",
+          "solutionSteps": [
+            "Add all the values: 12 + 15 + 18 + 11 + 14 = 70.",
+            "Divide by how many there are: 70 ÷ 5.",
+            "70 ÷ 5 = 14, the mean."
+          ],
+          "commonMistakes": [
+            "Reporting the total (70) instead of dividing by 5 confuses the SUM with the mean."
+          ],
+          "variations": [
+            {
+              "prompt": "Find the mean of 6, 9, 12, 13.",
+              "answer": "10",
+              "solutionSteps": [
+                "Sum = 40.",
+                "40 ÷ 4 = 10."
+              ]
+            }
+          ],
+          "difficulty": 3,
+          "pageRefs": [
+            104,
+            105
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch13_q01",
+          "prompt": "Find the median of 7, 3, 9, 5, 11, 4.",
+          "questionType": "mcq",
+          "options": [
+            "6",
+            "5",
+            "7",
+            "5.5"
+          ],
+          "answer": "6",
+          "solutionSteps": [
+            "Sort the data: 3, 4, 5, 7, 9, 11.",
+            "With an even count (6 values), the median is the average of the two middle values, 5 and 7.",
+            "(5 + 7) ÷ 2 = 6."
+          ],
+          "commonMistakes": [
+            "Forgetting to SORT first (and just taking the middle of the unsorted list) gives the wrong median; the median is positional and needs order."
+          ],
+          "variations": [
+            {
+              "prompt": "Find the median of 8, 2, 5, 10.",
+              "answer": "6.5",
+              "solutionSteps": [
+                "Sorted: 2, 5, 8, 10.",
+                "Middle two are 5 and 8: (5 + 8)/2 = 6.5."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            105,
+            106
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch13_q02",
+          "prompt": "Find the mode of 4, 7, 4, 9, 7, 4, 2.",
+          "questionType": "mcq",
+          "options": [
+            "4",
+            "7",
+            "9",
+            "2"
+          ],
+          "answer": "4",
+          "solutionSteps": [
+            "The mode is the most frequently occurring value.",
+            "Count: 4 appears 3 times, 7 appears twice, 9 and 2 once each.",
+            "4 occurs most often, so the mode is 4."
+          ],
+          "commonMistakes": [
+            "Picking 7 (the next-most-common) or the largest value misreads 'mode' — it is the value with the HIGHEST frequency."
+          ],
+          "variations": [
+            {
+              "prompt": "Find the mode of 5, 5, 8, 8, 8, 1.",
+              "answer": "8",
+              "solutionSteps": [
+                "8 appears 3 times, more than any other.",
+                "So the mode is 8."
+              ]
+            }
+          ],
+          "difficulty": 3,
+          "pageRefs": [
+            104,
+            105
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch13_q03",
+          "prompt": "The marks are 45, 78, 33, 90, 60. Find the range.",
+          "questionType": "mcq",
+          "options": [
+            "57",
+            "90",
+            "45",
+            "33"
+          ],
+          "answer": "57",
+          "solutionSteps": [
+            "The range is the largest value minus the smallest.",
+            "Largest = 90, smallest = 33.",
+            "90 − 33 = 57."
+          ],
+          "commonMistakes": [
+            "Reporting the maximum (90) instead of the difference confuses the range with the largest value."
+          ],
+          "variations": [
+            {
+              "prompt": "Find the range of 12, 19, 7, 25, 14.",
+              "answer": "18",
+              "solutionSteps": [
+                "Largest 25, smallest 7.",
+                "25 − 7 = 18."
+              ]
+            }
+          ],
+          "difficulty": 3,
+          "pageRefs": [
+            106,
+            107
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch13_q04",
+          "prompt": "The mean of five numbers is 20. Four of them are 18, 22, 15 and 25. Find the fifth.",
+          "questionType": "mcq",
+          "options": [
+            "20",
+            "80",
+            "18",
+            "25"
+          ],
+          "answer": "20",
+          "solutionSteps": [
+            "If the mean of five numbers is 20, their total is 5 × 20 = 100.",
+            "The four known numbers add to 18 + 22 + 15 + 25 = 80.",
+            "The fifth = 100 − 80 = 20."
+          ],
+          "commonMistakes": [
+            "Averaging just the four known numbers ignores the fixed total the mean implies — reconstruct the SUM (100) first, then subtract."
+          ],
+          "variations": [
+            {
+              "prompt": "The mean of four numbers is 10. Three are 8, 12, 6. Find the fourth.",
+              "answer": "14",
+              "solutionSteps": [
+                "Total = 4 × 10 = 40.",
+                "Known sum = 26, so fourth = 40 − 26 = 14."
+              ]
+            }
+          ],
+          "difficulty": 5,
+          "pageRefs": [
+            105,
+            106
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch13_q05",
+          "prompt": "A shopkeeper wants to know which shoe size to stock the most. Which measure of central tendency should he use?",
+          "questionType": "mcq",
+          "options": [
+            "Mode",
+            "Mean",
+            "Median",
+            "Range"
+          ],
+          "answer": "Mode",
+          "solutionSteps": [
+            "He needs the size that the most customers buy — the most frequent value.",
+            "The most frequent value in a data set is the mode.",
+            "So he should use the mode."
+          ],
+          "commonMistakes": [
+            "The mean shoe size could be a value (like 7.4) that no one actually wears — for 'most common', the mode is the right measure, not the average."
+          ],
+          "variations": [
+            {
+              "prompt": "Which measure best summarises the 'typical' family income in a town with a few billionaires?",
+              "answer": "Median",
+              "solutionSteps": [
+                "A few huge incomes drag the mean upward.",
+                "The median (middle value) resists those outliers, so it best reflects a typical family."
+              ]
+            }
+          ],
+          "difficulty": 5,
+          "pageRefs": [
+            101,
+            102
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        }
       ]
     },
     {
@@ -16604,6 +19519,230 @@
           "prerequisite": "Tackle this once you can construct a perpendicular bisector with equal arcs.",
           "bonusQuestions": null,
           "nextStepHint": "In Class 9 and 10 you use loci and the circumcentre in proofs and in coordinate geometry."
+        }
+      ],
+      "bossQuestions": [
+        {
+          "id": "bossquiz_mch14_q00",
+          "prompt": "Regular hexagons tile the plane. How many of them meet at each vertex?",
+          "questionType": "mcq",
+          "options": [
+            "3",
+            "4",
+            "6",
+            "2"
+          ],
+          "answer": "3",
+          "solutionSteps": [
+            "A regular hexagon's interior angle is 120°.",
+            "The shapes around a vertex must fill exactly 360°.",
+            "360° ÷ 120° = 3, so three hexagons meet at each vertex."
+          ],
+          "commonMistakes": [
+            "Confusing the number of SIDES (6) with the number meeting at a vertex (3) — the count comes from 360° ÷ interior angle."
+          ],
+          "variations": [
+            {
+              "prompt": "How many squares meet at a vertex when squares tile the plane?",
+              "answer": "4",
+              "solutionSteps": [
+                "A square's interior angle is 90°.",
+                "360° ÷ 90° = 4."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            164,
+            165
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch14_q01",
+          "prompt": "Which of these regular polygons CANNOT tile the plane by itself?",
+          "questionType": "mcq",
+          "options": [
+            "Regular pentagon",
+            "Equilateral triangle",
+            "Square",
+            "Regular hexagon"
+          ],
+          "answer": "Regular pentagon",
+          "solutionSteps": [
+            "A regular polygon tiles alone only if its interior angle divides 360° a whole number of times.",
+            "Triangle 60° (×6), square 90° (×4), hexagon 120° (×3) all divide 360° exactly.",
+            "A regular pentagon's angle is 108°, and 360 ÷ 108 ≈ 3.33 — not a whole number, so pentagons leave gaps."
+          ],
+          "commonMistakes": [
+            "Assuming any regular shape can tile is wrong — only the triangle, square and hexagon do, because only their angles divide 360° evenly."
+          ],
+          "variations": [
+            {
+              "prompt": "Does a regular octagon (interior angle 135°) tile the plane by itself?",
+              "answer": "No",
+              "solutionSteps": [
+                "360 ÷ 135 ≈ 2.67, not a whole number.",
+                "So octagons alone leave gaps and cannot tile."
+              ]
+            }
+          ],
+          "difficulty": 5,
+          "pageRefs": [
+            164,
+            165
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch14_q02",
+          "prompt": "Bisecting a 60° angle with only a compass and straightedge produces which angle?",
+          "questionType": "mcq",
+          "options": [
+            "30°",
+            "45°",
+            "20°",
+            "50°"
+          ],
+          "answer": "30°",
+          "solutionSteps": [
+            "Bisecting means cutting an angle into two equal halves.",
+            "Half of 60° is 60° ÷ 2.",
+            "60° ÷ 2 = 30°."
+          ],
+          "commonMistakes": [
+            "Trying to TRISECT a 60° angle to get 20° is impossible with compass and straightedge — only bisection (halving) is constructible here, giving 30°."
+          ],
+          "variations": [
+            {
+              "prompt": "Bisecting a right angle gives what angle?",
+              "answer": "45°",
+              "solutionSteps": [
+                "A right angle is 90°.",
+                "Half of 90° is 45°."
+              ]
+            }
+          ],
+          "difficulty": 3,
+          "pageRefs": [
+            158,
+            159
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch14_q03",
+          "prompt": "Every point on the perpendicular bisector of segment AB is …",
+          "questionType": "mcq",
+          "options": [
+            "equidistant from A and B",
+            "closer to A than to B",
+            "the midpoint of AB only",
+            "somewhere on segment AB"
+          ],
+          "answer": "equidistant from A and B",
+          "solutionSteps": [
+            "The perpendicular bisector is the set (locus) of all points the same distance from both ends.",
+            "That is exactly why the equal-arc construction works — each arc-crossing is an equal radius from A and from B.",
+            "So every point on it is equidistant from A and B."
+          ],
+          "commonMistakes": [
+            "Thinking only the MIDPOINT is equidistant misses that the WHOLE perpendicular bisector line shares this equal-distance property."
+          ],
+          "variations": [
+            {
+              "prompt": "To place a flagpole equally far from two trees, where should it go?",
+              "answer": "Anywhere on the perpendicular bisector of the segment joining the trees",
+              "solutionSteps": [
+                "Points equidistant from two fixed points form the perpendicular bisector.",
+                "So the pole goes somewhere on that line."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            150,
+            151
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch14_q04",
+          "prompt": "At a vertex in a tiling, two regular octagons (interior angle 135°) meet along with one more regular polygon. What is that polygon, and its interior angle?",
+          "questionType": "mcq",
+          "options": [
+            "A square, 90°",
+            "An octagon, 45°",
+            "A triangle, 60°",
+            "A hexagon, 120°"
+          ],
+          "answer": "A square, 90°",
+          "solutionSteps": [
+            "The angles at a vertex must total 360°.",
+            "Two octagons use 2 × 135° = 270°.",
+            "The third angle = 360° − 270° = 90°, which is a square."
+          ],
+          "commonMistakes": [
+            "Forgetting the 360°-at-a-vertex rule (or using only one octagon's 135°) gives the wrong leftover angle."
+          ],
+          "variations": [
+            {
+              "prompt": "A square (90°) and two identical regular polygons meet at a vertex. What is each of their angles?",
+              "answer": "135° each",
+              "solutionSteps": [
+                "360° − 90° = 270° shared by two equal angles.",
+                "270° ÷ 2 = 135°, the angle of a regular octagon."
+              ]
+            }
+          ],
+          "difficulty": 5,
+          "pageRefs": [
+            164,
+            165
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch14_q05",
+          "prompt": "A tangram's 7 pieces are rearranged from a square into a swan shape. How does the total area change?",
+          "questionType": "mcq",
+          "options": [
+            "It stays the same",
+            "It doubles",
+            "It halves",
+            "It depends on the shape made"
+          ],
+          "answer": "It stays the same",
+          "solutionSteps": [
+            "The same 7 pieces are used, just moved around.",
+            "Rearranging pieces never creates or destroys area — area is conserved.",
+            "So the swan has exactly the same total area as the original square."
+          ],
+          "commonMistakes": [
+            "Assuming a 'bigger-looking' shape has more area confuses appearance with area — moving pieces keeps the total area fixed."
+          ],
+          "variations": [
+            {
+              "prompt": "Two figures are made from the SAME set of tangram pieces. Compare their areas.",
+              "answer": "They are equal",
+              "solutionSteps": [
+                "Both use every piece exactly once.",
+                "Conservation of area makes the totals equal."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            166,
+            167
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
         }
       ]
     },
@@ -17567,6 +20706,230 @@
           "prerequisite": "Tackle this once you are clear on what it means for a value to satisfy an equation.",
           "bonusQuestions": null,
           "nextStepHint": "In Class 10 you solve quadratic equations by factorising, completing the square, and the quadratic formula."
+        }
+      ],
+      "bossQuestions": [
+        {
+          "id": "bossquiz_mch15_q00",
+          "prompt": "Solve 3x − 5 = 16.",
+          "questionType": "mcq",
+          "options": [
+            "7",
+            "21",
+            "11",
+            "3"
+          ],
+          "answer": "7",
+          "solutionSteps": [
+            "Add 5 to both sides to undo the −5: 3x = 21.",
+            "Divide both sides by 3 to undo the ×3: x = 21 ÷ 3.",
+            "x = 7."
+          ],
+          "commonMistakes": [
+            "Dividing by 3 before adding 5 (or only doing one side) breaks the balance — undo the +/− first, then the ×/÷."
+          ],
+          "variations": [
+            {
+              "prompt": "Solve 4x + 3 = 23.",
+              "answer": "5",
+              "solutionSteps": [
+                "Subtract 3: 4x = 20.",
+                "Divide by 4: x = 5."
+              ]
+            }
+          ],
+          "difficulty": 3,
+          "pageRefs": [
+            178,
+            179
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch15_q01",
+          "prompt": "Solve 2(x + 3) = 14.",
+          "questionType": "mcq",
+          "options": [
+            "4",
+            "7",
+            "5",
+            "8"
+          ],
+          "answer": "4",
+          "solutionSteps": [
+            "Divide both sides by 2: x + 3 = 7. (Or expand: 2x + 6 = 14.)",
+            "Subtract 3 from both sides: x = 4.",
+            "Check: 2(4 + 3) = 2 × 7 = 14. ✓"
+          ],
+          "commonMistakes": [
+            "Distributing the 2 to only the x (writing 2x + 3 = 14) forgets it also multiplies the 3 — the bracket means 2 × (x + 3)."
+          ],
+          "variations": [
+            {
+              "prompt": "Solve 3(x − 2) = 18.",
+              "answer": "8",
+              "solutionSteps": [
+                "Divide by 3: x − 2 = 6.",
+                "Add 2: x = 8."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            180,
+            181
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch15_q02",
+          "prompt": "Solve 5x + 2 = 3x + 14.",
+          "questionType": "mcq",
+          "options": [
+            "6",
+            "8",
+            "2",
+            "16"
+          ],
+          "answer": "6",
+          "solutionSteps": [
+            "Gather the x-terms on one side: subtract 3x from both sides → 2x + 2 = 14.",
+            "Subtract 2 from both sides: 2x = 12.",
+            "Divide by 2: x = 6."
+          ],
+          "commonMistakes": [
+            "Moving the 3x without changing its sign (or subtracting it from only one side) unbalances the equation — do the same operation to BOTH sides."
+          ],
+          "variations": [
+            {
+              "prompt": "Solve 7x − 4 = 2x + 11.",
+              "answer": "3",
+              "solutionSteps": [
+                "Subtract 2x: 5x − 4 = 11.",
+                "Add 4: 5x = 15, so x = 3."
+              ]
+            }
+          ],
+          "difficulty": 5,
+          "pageRefs": [
+            182,
+            183
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch15_q03",
+          "prompt": "Is x = 5 a solution of 4x − 3 = 17?",
+          "questionType": "mcq",
+          "options": [
+            "Yes",
+            "No, x should be 4",
+            "No, x should be 6",
+            "Cannot be decided"
+          ],
+          "answer": "Yes",
+          "solutionSteps": [
+            "Substitute x = 5 into the left side: 4 × 5 − 3.",
+            "= 20 − 3 = 17.",
+            "The left side equals the right side (17), so x = 5 IS a solution."
+          ],
+          "commonMistakes": [
+            "Skipping the substitution check and guessing is risky — verifying by plugging the value back in is the reliable test of a solution."
+          ],
+          "variations": [
+            {
+              "prompt": "Is x = 3 a solution of 2x + 5 = 12?",
+              "answer": "No — it gives 11, not 12",
+              "solutionSteps": [
+                "2 × 3 + 5 = 11.",
+                "11 ≠ 12, so x = 3 is not a solution."
+              ]
+            }
+          ],
+          "difficulty": 4,
+          "pageRefs": [
+            186,
+            187
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch15_q04",
+          "prompt": "Ahaan is 4 years older than his sister. The sum of their ages is 26. How old is Ahaan?",
+          "questionType": "mcq",
+          "options": [
+            "15",
+            "11",
+            "13",
+            "22"
+          ],
+          "answer": "15",
+          "solutionSteps": [
+            "Let the sister's age be s; Ahaan's age is s + 4.",
+            "Their sum: s + (s + 4) = 26, so 2s + 4 = 26, giving 2s = 22 and s = 11.",
+            "Ahaan = s + 4 = 11 + 4 = 15."
+          ],
+          "commonMistakes": [
+            "Splitting 26 evenly into 13 and 13 ignores the 4-year gap; set up the equation with s and s + 4 first."
+          ],
+          "variations": [
+            {
+              "prompt": "Two numbers differ by 6 and add to 30. Find the larger.",
+              "answer": "18",
+              "solutionSteps": [
+                "Let the smaller be n; n + (n + 6) = 30, so 2n = 24, n = 12.",
+                "The larger is 12 + 6 = 18."
+              ]
+            }
+          ],
+          "difficulty": 5,
+          "pageRefs": [
+            184,
+            185
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
+        },
+        {
+          "id": "bossquiz_mch15_q05",
+          "prompt": "Solve x/3 + 4 = 10.",
+          "questionType": "mcq",
+          "options": [
+            "18",
+            "6",
+            "42",
+            "2"
+          ],
+          "answer": "18",
+          "solutionSteps": [
+            "Subtract 4 from both sides: x/3 = 6.",
+            "Multiply both sides by 3 to undo the division: x = 6 × 3.",
+            "x = 18."
+          ],
+          "commonMistakes": [
+            "Multiplying only the x by 3 (and not the whole side) or subtracting 4 after multiplying breaks the balance — undo the +4 first, then the ÷3."
+          ],
+          "variations": [
+            {
+              "prompt": "Solve x/5 − 2 = 3.",
+              "answer": "25",
+              "solutionSteps": [
+                "Add 2: x/5 = 5.",
+                "Multiply by 5: x = 25."
+              ]
+            }
+          ],
+          "difficulty": 5,
+          "pageRefs": [
+            186,
+            187
+          ],
+          "needsHumanReview": false,
+          "source": "boss_quiz"
         }
       ]
     }
