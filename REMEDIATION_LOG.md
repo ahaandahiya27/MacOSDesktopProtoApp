@@ -5392,3 +5392,18 @@ Rebuilt the pack; regenerated articles with --write. All 7 content lints green;
 pre-push ci-build-test PASSED. Index/HTML steady at 180/907. Additive only.
 Pushed a28a0d5. 2nd DEEPDIVE pass now half done (ssch01-10). Zero regressions,
 zero STOP_AND_ASK.
+
+## 2026-06-01 — Social Science DEEPEN cycle 89: ssch11 second DEEPDIVE pass
+
+From Barter to Money — deepDive 4->6, crossChapterRefs 4->6.
+- dv05 "The double coincidence of wants: barter's biggest headache" (class_9,
+  anchor t02_c01): money splits one awkward swap into a sale + a purchase.
+- dv06 "Why a ₹100 note is worth ₹100" (class_10, anchor t04_c03): fiat money,
+  the RBI 'I promise to pay' line, trust as the real backing; why only the RBI
+  may print currency.
+- cc05 -> ssch05 (guilds/śhrenīs as India's early bankers).
+- cc06 -> ssch19 (UPI/QR-code payments ride on telecom/power infrastructure).
+
+Rebuilt the pack; regenerated articles with --write. All 7 content lints green;
+pre-push ci-build-test PASSED. Index/HTML steady at 180/907. Additive only.
+Pushed 99730e8. Zero regressions, zero STOP_AND_ASK.
