@@ -5407,3 +5407,17 @@ From Barter to Money — deepDive 4->6, crossChapterRefs 4->6.
 Rebuilt the pack; regenerated articles with --write. All 7 content lints green;
 pre-push ci-build-test PASSED. Index/HTML steady at 180/907. Additive only.
 Pushed 99730e8. Zero regressions, zero STOP_AND_ASK.
+
+## 2026-06-01 — Social Science DEEPEN cycle 90: ssch12 second DEEPDIVE pass
+
+Understanding Markets — deepDive 4->6, crossChapterRefs 4->6.
+- dv05 "How an online market changes the rules" (class_9, anchor t03_c01): same
+  buyer/seller/price core, but no place, endless shelf, trust via reviews/ratings.
+- dv06 "Why countries buy from each other" (class_10, anchor t03_c02): each place
+  makes some things best -> export/import leaves both sides better off.
+- cc05 -> ssch14 (international markets -> India's place in the world).
+- cc06 -> ssch18 (the government as the market's referee/regulator).
+
+Rebuilt the pack; regenerated articles with --write. All 7 content lints green;
+pre-push ci-build-test PASSED. Index/HTML steady at 180/907. Additive only.
+Pushed 081280b. Zero regressions, zero STOP_AND_ASK.
