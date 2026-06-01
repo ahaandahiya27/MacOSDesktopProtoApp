@@ -6077,3 +6077,55 @@ STOP_AND_ASK.
 JourneyPlanner / Daily Plan + AdaptiveDifficultyEngine into a cross-subject
 "Whole Journey" mode, sampling by the mastery gaps this engine now exposes
 (weakestStartedSubject + per-subject coverage/mastery).
+
+---
+
+## 2026-06-02 — v6 Learning Journey · Phase 3 (start) · JourneyPlanner engine
+
+Baseline re-confirmed green here first (Release build + 751 XCTest, 0 fail;
+pbxproj in sync; 8 Big-Sur static lints clean) before any change.
+
+Added the cross-subject, mastery-gap-weighted **Whole Journey** plan — an
+EXTENSION of the Daily Plan, not a replacement. It reuses the `DailyPlanItem`/
+`DailyPlan` model and the existing persistence + reconcile + auto-Done + streak
+plumbing and the `AdaptiveDifficultyEngine` due-ordering; the only thing it adds
+is the Phase-3 promise of sampling by mastery gaps so the weakest *started*
+subject is served first.
+
+Files:
+  • desktopAhaan/Services/JourneyPlanner.swift — a READ-ONLY pure core (mirrors
+    MasteryEngine): `JourneyMode` (`today` | `wholeJourney`) + storage;
+    `subjectFocusOrder` (started subjects weakest-first by mastery, ties →
+    coverage → registry order, then unstarted in registry order); `focusRank`;
+    and `roundRobinReviews` (weak-first round-robin over per-subject due queues —
+    guarantees cross-subject spread without starving a weak subject, while
+    preserving each subject's internal adaptive order). FS-free, no DataStore.
+  • desktopAhaan/Services/Persistence/DataStore+JourneyPlan.swift — the
+    @MainActor `buildWholeJourneyPlan`: snapshot → ≤3 reviews spread weak-first,
+    1 unmastered concept from the weakest started subject (falling through the
+    gap order), 1 open Discover chapter from the gap order over COLLISION-SAFE
+    packs only. Maths Discover is excluded because `DiscoverProgress` carries no
+    packId and Maths shares the bare `chNN` chapter-id space with Science (a
+    Maths Discover row can't be distinguished from a Science one → ambiguous
+    auto-Done). READ-ONLY over the SRS.
+  • currentDailyPlan now dispatches via `buildPlan(mode:)` and reuses a stored
+    plan only if it still covers today AND matches the selected JourneyMode
+    (toggling rebuilds). `DailyPlan` gained a backward-compatible optional
+    `planMode` (old files decode as nil → `.today`).
+
+Tests (+12): JourneyPlannerTests (9 pure) + JourneyPlanIntegrationTests
+(3 @MainActor over the live registry on an isolated temp store — cross-subject
+review spread, ≤5-item shape, unique ids, collision-safe Discover,
+read-only-over-SRS, and the mode-switch rebuild + persistence). Two first-pass
+integration-test failures were diagnosed and fixed as TEST bugs (coalesced
+saveDailyPlan needed a `flushSavesBeforeQuit` before reloading; and the Sanskrit
+legacy `ch01` deck shares the `ch01_*` id space with Science, so seeded ids
+needed dedup) — not engine bugs.
+
+Green here: all 8 Big-Sur lints + test_lints.py pass; pbxproj regenerated;
+ci-build-test.sh → BUILD + 763 XCTest, 0 failures (was 751, +12). Additive;
+zero regressions; zero STOP_AND_ASK.
+
+NEXT: Phase 3 Milestone 2 — surface the mode as a "Today / Whole Journey"
+picker in DailyPlanView (bound to JourneyPlannerStorage, reload on change) under
+the Big-Sur invariants, + a view/routing test.

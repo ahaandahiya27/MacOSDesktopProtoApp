@@ -78,6 +78,15 @@ struct DailyPlan: Codable, Hashable {
     let planDay: Date
     var items: [DailyPlanItem]
 
+    /// Which `JourneyMode` built this plan. Optional + defaulted so old
+    /// `dailyplan.json` files (written before Phase 3) decode cleanly as
+    /// `nil` → `.today`. `currentDailyPlan` rebuilds when the stored plan's
+    /// mode no longer matches the kid's selected mode.
+    var planMode: JourneyMode? = nil
+
+    /// The effective mode (legacy/`nil` plans read as the classic `.today`).
+    var mode: JourneyMode { planMode ?? .today }
+
     /// Items the kid actually finished (Done — skipped doesn't count).
     var doneCount: Int { items.filter { $0.isDone }.count }
 

@@ -45,15 +45,40 @@ extension DataStore {
         now: Date = Date(),
         calendar: Calendar = .current
     ) -> DailyPlan {
-        if let stored = loadDailyPlan(), stored.covers(now, calendar: calendar) {
+        // Reuse the stored plan only if it still covers today AND was built in
+        // the mode the kid currently has selected — toggling Today ↔ Whole
+        // Journey rebuilds the day's plan through the new lens (their real
+        // SRS / concept / Discover progress is untouched, so reconcile
+        // immediately re-ticks anything already done today).
+        let mode = JourneyPlannerStorage.currentMode()
+        if let stored = loadDailyPlan(),
+           stored.covers(now, calendar: calendar),
+           stored.mode == mode {
             let reconciled = reconcileDailyPlan(stored, now: now, calendar: calendar)
             if reconciled != stored { saveDailyPlan(reconciled) }
             creditDailyPlanStreakIfComplete(reconciled, calendar: calendar)
             return reconciled
         }
-        let fresh = buildDailyPlan(registry: registry, now: now, calendar: calendar)
+        let fresh = buildPlan(mode: mode, registry: registry, now: now, calendar: calendar)
         saveDailyPlan(fresh)
         return fresh
+    }
+
+    /// Build a fresh plan for the given mode. `.today` keeps the classic
+    /// registry-order plan; `.wholeJourney` delegates to the cross-subject,
+    /// mastery-gap-weighted builder in `DataStore+JourneyPlan`.
+    func buildPlan(
+        mode: JourneyMode,
+        registry: SubjectRegistry?,
+        now: Date = Date(),
+        calendar: Calendar = .current
+    ) -> DailyPlan {
+        switch mode {
+        case .today:
+            return buildDailyPlan(registry: registry, now: now, calendar: calendar)
+        case .wholeJourney:
+            return buildWholeJourneyPlan(registry: registry, now: now, calendar: calendar)
+        }
     }
 
     // MARK: - Build
@@ -103,7 +128,9 @@ extension DataStore {
             items.append(discover)
         }
 
-        return DailyPlan(planDay: DailyPlan.planDay(for: now, calendar: calendar), items: items)
+        return DailyPlan(
+            planDay: DailyPlan.planDay(for: now, calendar: calendar),
+            items: items, planMode: .today)
     }
 
     /// First concept (walking packs → chapters → topics in authored order)
