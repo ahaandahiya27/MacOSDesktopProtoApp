@@ -5311,3 +5311,20 @@ The Rise of Empires — deepDive 4->6, crossChapterRefs 4->6.
 Rebuilt the pack; regenerated articles with --write. All 7 content lints green;
 pre-push ci-build-test PASSED. Index/HTML steady at 180/907. Additive only.
 Pushed 73ed226. Zero regressions, zero STOP_AND_ASK.
+
+## 2026-06-01 — Social Science DEEPEN cycle 84: ssch06 second DEEPDIVE pass
+
+The Age of Reorganisation — deepDive 4->6, crossChapterRefs 4->6.
+- dv05 "The Grand Anicut: a dam still working after 1,800 years" (class_9,
+  anchor t03_c03): Karikala Chola's Kallanai as a water-diversion (not storage)
+  structure still irrigating the Kaveri delta.
+- dv06 "The Kushanas and the Silk Route: India plugged into the world"
+  (class_10, anchor t05_c01): Silk Route control, Kanishka's multi-faith coinage,
+  Buddhism's spread north; trade routes move ideas, not just goods.
+- cc05 -> ssch13 (Grand Anicut -> river irrigation in Indian farming).
+- cc06 -> ssch14 (Silk Route + Roman sea trade -> India's links with neighbours
+  and the wider world).
+
+Rebuilt the pack; regenerated articles with --write. All 7 content lints green;
+pre-push ci-build-test PASSED. Index/HTML steady at 180/907. Additive only.
+Pushed f2ce564. Zero regressions, zero STOP_AND_ASK.
