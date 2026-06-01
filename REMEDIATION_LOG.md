@@ -5167,3 +5167,33 @@ a stale regen, e.g. one run without `--write`, fails immediately) and
 so its Beyond-the-Book article must render the "Connect across chapters" links
 section). Bundled HTML loaded the same way the existing article-bundle tests do.
 Test-target-only; Release build + full suite green. Pushed 45374e1.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 77 (new "Challenge Problems" article type — ARTICLES)
+
+ARTICLES track. Added a 9th read-mode article type per chapter, `_olympiad`
+("Challenge Problems"), gathering the ~130 diff>=4 questions — which already
+carry full `solutionSteps`, `commonMistakes` and >=1 `variation` — into the
+Read-mode flow for the first time. These Olympiad-tier worked solutions had
+previously been reachable only on the in-app quiz surface.
+
+New `b_olympiad` builder in `generate_socialscience_articles.py` renders, per
+question: the prompt, a "try first" collapsible answer, a "How to crack it"
+step list, a "Traps to avoid" warning box, and each variation as a "Now try
+this twist" panel — reusing existing CSS classes, so no style change. Added to
+`TYPES` after `_beyond` and a "Challenge Problems" pill to the overview nav.
+Regenerated all articles with `--write`: 20 new `ssch{nn}_olympiad.html`, the 20
+`_overview.html` pages gained the pill, and the index grew 160 -> 180 entries
+(9 x 20). Every chapter has 4-12 challenges, so none is empty.
+
+A discoverable "Challenge Problems" chip (flag.fill via SFSymbolCompat,
+compatPurple) was added to `socialScienceRows` in `ChapterDetailView+ExtraReading
+Row.swift`, and `SocialScienceArticleRoutingTests` bumped its chip sentinel 8 -> 9
+and matrix floor 160 -> 180. pbxproj regenerated (os.walk auto-discovered the 20
+new HTML resources; bundled SS HTML 887 -> 907, app sources steady at 454).
+
+Full content + Big-Sur lint family green; Release build + full suite (incl. the
+updated routing tests) PASSED via ci-build-test, both for the manual Swift-slice
+run and again at the pre-push gate. Additive only; no other subject touched.
+Pushed b4dc5f6. Zero regressions, zero STOP_AND_ASK.
