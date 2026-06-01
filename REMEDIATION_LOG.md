@@ -5235,3 +5235,26 @@ ssch01's Beyond-the-Book now renders 6 deep-dives and 6 Connect links (read-time
 Index/HTML still 180 entries / 907 bundled files. Additive only. Pushed ca4df44.
 Confirms second-pass headroom: the depth ratchets use >= floors, so adding beyond
 the milestone count is safe. Zero regressions, zero STOP_AND_ASK.
+
+---
+
+## 2026-06-01 — Social Science DEEPEN cycle 80 (ssch02 second DEEPDIVE pass — DEEPDIVE)
+
+DEEPDIVE track, second pass round-robin. ssch02 "Understanding the Weather"
+deepDive 4 -> 6, crossChapterRefs 4 -> 6, all grounded in the chapter's
+instruments:
+- dv05 "Why a thermometer lives in a white box in the shade" (class_9, anchor
+  t02_c01): the Stevenson screen, standard height and free airflow, and why fair
+  comparison needs every station to measure the air the same way.
+- dv06 "What a rain-gauge reading really means" (class_10, anchor t02_c03):
+  rainfall as a depth, why the funnel concentrates the catch into the tube, and
+  turning millimetres into litres.
+- cc05 -> ssch14 (cyclones and the monsoon cross borders -> shared warnings).
+- cc06 -> ssch16 (wind on the ocean scale = the monsoon winds that timed
+  Indian Ocean sea trade).
+
+Rebuilt the pack via ss_build_pack.py and regenerated articles with --write.
+All content lints green; pre-push ci-build-test PASSED. Index/HTML steady at 180
+entries / 907 bundled files. Additive only. Pushed acb2861. Zero regressions,
+zero STOP_AND_ASK. (Run cycles 77-80: new _olympiad article type + its ratchet +
+ssch01/ssch02 second DEEPDIVE pass; all green.)
