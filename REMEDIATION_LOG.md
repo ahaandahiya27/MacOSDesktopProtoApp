@@ -5510,3 +5510,18 @@ The State, the Government, and You — deepDive 4->6, crossChapterRefs 5->7.
 Rebuilt the pack; regenerated articles with --write. All 7 content lints green;
 pre-push ci-build-test PASSED. Index/HTML steady at 180/907. Additive only.
 Pushed 21baeae. Zero regressions, zero STOP_AND_ASK.
+
+## 2026-06-01 — Social Science DEEPEN cycle 97: ssch19 second DEEPDIVE pass
+
+Infrastructure: Engine of India's Development — deepDive 4->6, ccRefs 5->7.
+- dv05 "Energy: the infrastructure every other one runs on" (class_9, anchor
+  t01_c03): power behind the infrastructure; Bhakra Nangal, Cochin solar airport,
+  Muppandal wind; clean vs polluting sources.
+- dv06 "Why almost everything you own once travelled by ship" (class_10, anchor
+  t03_c02): sea as cheapest bulk transport, ports, TEUs, choosing the right mode.
+- cc06 -> ssch01 (geography decides where infrastructure can be built).
+- cc07 -> ssch03 (solar/wind harness the climate; clean energy fights climate change).
+
+Rebuilt the pack; regenerated articles with --write. All 7 content lints green;
+pre-push ci-build-test PASSED. Index/HTML steady at 180/907. Additive only.
+Pushed 36109fc. Zero regressions, zero STOP_AND_ASK.
