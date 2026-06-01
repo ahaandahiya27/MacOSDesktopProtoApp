@@ -49,7 +49,7 @@ extension ArticleIndex {
         "ssch05_overview": ArticleEntry(id: "ssch05_overview", filename: "ssch05_overview.html", title: "Chapter Overview — The Rise of Empires", chapterFolder: "Articles/SocialScienceChapter5", estimatedMinutes: 8),
         "ssch05_glossary": ArticleEntry(id: "ssch05_glossary", filename: "ssch05_glossary.html", title: "Vocabulary Deck — The Rise of Empires", chapterFolder: "Articles/SocialScienceChapter5", estimatedMinutes: 8),
         "ssch05_ncert_qa": ArticleEntry(id: "ssch05_ncert_qa", filename: "ssch05_ncert_qa.html", title: "NCERT Q&A — The Rise of Empires", chapterFolder: "Articles/SocialScienceChapter5", estimatedMinutes: 8),
-        "ssch05_beyond": ArticleEntry(id: "ssch05_beyond", filename: "ssch05_beyond.html", title: "Beyond the Book — The Rise of Empires", chapterFolder: "Articles/SocialScienceChapter5", estimatedMinutes: 12),
+        "ssch05_beyond": ArticleEntry(id: "ssch05_beyond", filename: "ssch05_beyond.html", title: "Beyond the Book — The Rise of Empires", chapterFolder: "Articles/SocialScienceChapter5", estimatedMinutes: 18),
         "ssch05_olympiad": ArticleEntry(id: "ssch05_olympiad", filename: "ssch05_olympiad.html", title: "Challenge Problems — The Rise of Empires", chapterFolder: "Articles/SocialScienceChapter5", estimatedMinutes: 18),
         "ssch05_whatif": ArticleEntry(id: "ssch05_whatif", filename: "ssch05_whatif.html", title: "What If? — The Rise of Empires", chapterFolder: "Articles/SocialScienceChapter5", estimatedMinutes: 6),
         "ssch05_mistakes": ArticleEntry(id: "ssch05_mistakes", filename: "ssch05_mistakes.html", title: "Common Mistakes — The Rise of Empires", chapterFolder: "Articles/SocialScienceChapter5", estimatedMinutes: 10),
