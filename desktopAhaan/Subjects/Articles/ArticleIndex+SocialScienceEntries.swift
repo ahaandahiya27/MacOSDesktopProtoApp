@@ -157,7 +157,7 @@ extension ArticleIndex {
         "ssch17_overview": ArticleEntry(id: "ssch17_overview", filename: "ssch17_overview.html", title: "Chapter Overview — India, a Home to Many", chapterFolder: "Articles/SocialScienceChapter17", estimatedMinutes: 7),
         "ssch17_glossary": ArticleEntry(id: "ssch17_glossary", filename: "ssch17_glossary.html", title: "Vocabulary Deck — India, a Home to Many", chapterFolder: "Articles/SocialScienceChapter17", estimatedMinutes: 8),
         "ssch17_ncert_qa": ArticleEntry(id: "ssch17_ncert_qa", filename: "ssch17_ncert_qa.html", title: "NCERT Q&A — India, a Home to Many", chapterFolder: "Articles/SocialScienceChapter17", estimatedMinutes: 10),
-        "ssch17_beyond": ArticleEntry(id: "ssch17_beyond", filename: "ssch17_beyond.html", title: "Beyond the Book — India, a Home to Many", chapterFolder: "Articles/SocialScienceChapter17", estimatedMinutes: 12),
+        "ssch17_beyond": ArticleEntry(id: "ssch17_beyond", filename: "ssch17_beyond.html", title: "Beyond the Book — India, a Home to Many", chapterFolder: "Articles/SocialScienceChapter17", estimatedMinutes: 18),
         "ssch17_olympiad": ArticleEntry(id: "ssch17_olympiad", filename: "ssch17_olympiad.html", title: "Challenge Problems — India, a Home to Many", chapterFolder: "Articles/SocialScienceChapter17", estimatedMinutes: 27),
         "ssch17_whatif": ArticleEntry(id: "ssch17_whatif", filename: "ssch17_whatif.html", title: "What If? — India, a Home to Many", chapterFolder: "Articles/SocialScienceChapter17", estimatedMinutes: 6),
         "ssch17_mistakes": ArticleEntry(id: "ssch17_mistakes", filename: "ssch17_mistakes.html", title: "Common Mistakes — India, a Home to Many", chapterFolder: "Articles/SocialScienceChapter17", estimatedMinutes: 10),
