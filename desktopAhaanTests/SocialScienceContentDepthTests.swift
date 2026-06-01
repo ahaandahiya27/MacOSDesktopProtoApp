@@ -136,6 +136,65 @@ final class SocialScienceContentDepthTests: XCTestCase {
             "Total Social Science topic questions \(total) fell below the \(Self.minTotalTopicQuestions) floor.")
     }
 
+    // MARK: - ARTICLES-in-sync ratchet
+    //
+    // The article HTML is a GENERATED artifact (generate_socialscience_articles.py
+    // --write). It once drifted stale: the generator was run in its default
+    // dry-run mode, so glossary/deepDive enrichment never reached the bundled
+    // reading articles. These tests pin the articles to the pack so that gap
+    // can never silently reopen.
+
+    /// Each chapter's Vocabulary Deck article must reflect the CURRENT pack
+    /// glossary size — the generator emits "The N terms to know" with N =
+    /// glossary count. A stale article (regenerated without --write after the
+    /// pack grew) would carry the old N and fail here.
+    func testGlossaryArticlesReflectPackTermCount() throws {
+        let pack = try loadSocialSciencePack()
+        var stale: [String] = []
+        for ch in pack.chapters {
+            guard let html = loadArticleHTML(chapterId: ch.id, suffix: "_glossary", number: ch.number) else {
+                throw XCTSkip("\(ch.id)_glossary.html not in test bundle.")
+            }
+            let needle = "The \(ch.glossaryList.count) terms to know"
+            if !html.contains(needle) {
+                stale.append("\(ch.id) (expected \"\(needle)\")")
+            }
+        }
+        XCTAssertTrue(stale.isEmpty,
+            "Glossary articles out of sync with the pack (re-run generate_socialscience_articles.py --write): " +
+            stale.joined(separator: ", "))
+    }
+
+    /// Every chapter carries ≥4 crossChapterRefs, so its Beyond-the-Book
+    /// article must render the "Connect across chapters" section that links
+    /// them. Pins the cross-strand reading-flow enhancement.
+    func testBeyondArticlesCarryConnectSection() throws {
+        let pack = try loadSocialSciencePack()
+        var missing: [String] = []
+        for ch in pack.chapters where !ch.crossChapterRefsList.isEmpty {
+            guard let html = loadArticleHTML(chapterId: ch.id, suffix: "_beyond", number: ch.number) else {
+                throw XCTSkip("\(ch.id)_beyond.html not in test bundle.")
+            }
+            if !html.contains("Connect across chapters") {
+                missing.append(ch.id)
+            }
+        }
+        XCTAssertTrue(missing.isEmpty,
+            "Beyond-the-Book articles missing the cross-chapter links section: " +
+            missing.joined(separator: ", "))
+    }
+
+    private func loadArticleHTML(chapterId: String, suffix: String, number: Int) -> String? {
+        let name = "\(chapterId)\(suffix)"
+        let url = Bundle.main.url(forResource: name, withExtension: "html",
+                                  subdirectory: "Articles/SocialScienceChapter\(number)")
+            ?? Bundle.main.url(forResource: name, withExtension: "html")
+        guard let url = url, let text = try? String(contentsOf: url, encoding: .utf8) else {
+            return nil
+        }
+        return text
+    }
+
     // MARK: - Helper
 
     private func loadSocialSciencePack() throws -> SubjectPack {
