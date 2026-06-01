@@ -586,3 +586,54 @@ required before declaring the mission complete (Phase 6).
   legacy-GPU invariants, + a render/routing test. Then M3 — extend the
   Weekly-Progress PDF into a parent **report card** folding in the mastery
   snapshot + latest assessment score.
+
+### Cycle 17 (2026-06-02) — Phase 4 · M2 · Milestone Checkpoint UI + MCQ refinement
+- Confirmed M1 still green here before any change (777 XCTest, 0 fail).
+- **Builder refinement (M2a):** a milestone assessment is now defined as a
+  **single-tap-gradable multiple-choice checkpoint**. `DataStore.isAssessableMCQ`
+  gates the sampler pool to `.mcq` questions whose options include the canonical
+  answer (`AnswerValidator.matches`); free-text / numerical / match-the-following
+  items are out of scope (they keep their richer practice UX). MCQ is 64% of the
+  question bank (1501 items) — pools stay ample. Updated the M1 integration tests
+  to seed assessable-MCQ ids accordingly.
+- **The Milestone Checkpoint UI (M2b):**
+  - `desktopAhaan/Views/Progress/MilestoneAssessmentView.swift` (~430 LOC) — a
+    pure-SwiftUI three-phase flow held entirely in local `@State`: intro → one
+    question at a time (tap an option · Check · see correct/your-answer + the
+    first solution step) → a result screen with score, a static `ScoreBar`, and a
+    per-subject correct/total breakdown in quiz order. Scoring is local via
+    `AnswerValidator.matches`; it **never writes the SRS** (a check-in, not a
+    teaching surface — retaking can't distort the schedule), stated to the kid on
+    the intro card. Welcoming empty state when nothing assessable is reviewed yet.
+  - `desktopAhaan/Views/Progress/MilestoneAssessmentWindow.swift` —
+    `MilestoneAssessmentWindowPresenter` (NSHostingController singleton, proven
+    WeeklyProgress/MasteryMap pattern). Help → Milestone Checkpoint (⌘⇧K) added
+    to the dashboards Group in `desktopAhaanApp.swift`.
+- Big-Sur invariants honoured: `@MainActor` view; colours via DesignTokens
+  (success/danger/primaryAction/canvasText…, no raw mint/indigo/teal/cyan/brown);
+  SF-Symbol-free (emoji + ✓/✗/●/○ glyphs); ViewBuilder ≤10 (Group + extracted
+  subviews); transitions only through `withAnimationRespectingReduceMotion`;
+  static `ScoreBar` (no animation/particles → legacy-GPU-free); every interactive
+  button carries an explicit a11y label, each card a combined label, bars
+  accessibility-hidden. **The `check_mainactor_closure_refs` lint caught a real
+  Big-Sur hard-error** — `Button(action: begin)` passing a @MainActor method by
+  bare reference — fixed to `Button(action: { begin() })` before any build.
+- Tests (+4): `MilestoneAssessmentViewTests.swift` — `isAssessableMCQ` accept
+  (incl. case/whitespace-normalised) + reject (no-match, empty, nil, non-MCQ)
+  cases, and `NSHostingView` render-smoke of the view over both an empty world
+  and a seeded one (no crash under Big-Sur layout).
+- **Caught + fixed a test-coverage regression:** after the MCQ filter the
+  gap-weighting integration test began *skipping* (couldn't find 6 *disjoint*
+  MCQ ids across Science+Maths, which share the bare `chNN` id space). Switched
+  its strong subject to **Social Science** (`sschNN_…` — a disjoint id prefix
+  from Science's `chNN_…`), so the test reliably runs again (was 1 skipped → 0
+  skipped). The pure planner test already proves the gap→more-slots property
+  deterministically; this confirms it end-to-end with real mastery fractions.
+- Green here: all 8 Big-Sur lints + `test_lints.py` pass; pbxproj regenerated (2
+  source + 1 test file auto-wired); `ci-build-test.sh` → **BUILD + 781 XCTest, 0
+  failures, 0 skipped** (was 777, +4). Additive (sole existing-file edit is the
+  one new menu Button); zero regressions; zero STOP_AND_ASK.
+- **The Milestone Checkpoint is now end-to-end reachable** — sampler + UI + menu.
+- **NEXT:** Phase 4 M3 — extend the Weekly-Progress PDF into a parent **report
+  card** folding in the `MasteryEngine` snapshot (per-subject coverage/mastery)
+  and the latest checkpoint score, then wire its export + a test.

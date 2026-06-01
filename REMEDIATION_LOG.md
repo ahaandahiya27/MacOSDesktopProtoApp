@@ -6156,3 +6156,25 @@ zero regressions; zero STOP_AND_ASK.
 NEXT: Phase 4 M2 — the assessment-taking UI (pure-SwiftUI window: intro → answer
 → result breakdown, reusing AnswerValidator + the window-presenter pattern), + a
 render test. Then M3 — extend the Weekly-Progress PDF into a parent report card.
+
+## 2026-06-02 — Phase 4 M2 · Milestone Checkpoint UI + MCQ refinement
+
+Refined the assessment to a single-tap-gradable multiple-choice checkpoint
+(DataStore.isAssessableMCQ gates the sampler to MCQs whose options include the
+answer; AnswerValidator.matches). Built the pure-SwiftUI MilestoneAssessmentView
+(intro → answer/check → per-subject result), local scoring, READ-ONLY over SRS;
+MilestoneAssessmentWindowPresenter + Help → Milestone Checkpoint (⌘⇧K). All
+Big-Sur invariants honoured; the check_mainactor_closure_refs lint caught a real
+Button(action: begin) hard-error, fixed to a wrapped closure pre-build.
+
++4 tests (isAssessableMCQ accept/reject; render-smoke empty + seeded). Fixed a
+post-filter coverage regression where the gap-weighting integration test began
+skipping (Science+Maths share the bare chNN id space) by switching its strong
+subject to Social Science (disjoint sschNN prefix) — 1 skipped → 0 skipped.
+
+Green here: all 8 Big-Sur lints + test_lints.py pass; pbxproj regenerated;
+ci-build-test.sh → BUILD + 781 XCTest, 0 failures, 0 skipped (was 777, +4).
+Additive; zero regressions; zero STOP_AND_ASK.
+
+NEXT: Phase 4 M3 — extend the Weekly-Progress PDF into a parent report card
+folding in the MasteryEngine snapshot + latest checkpoint score.

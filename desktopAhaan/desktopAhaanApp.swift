@@ -402,6 +402,16 @@ struct SanskritKoshApp: App {
                     )
                 }
                 .keyboardShortcut("m", modifiers: [.command, .shift])
+
+                // Milestone Checkpoint — a short mixed quiz sampled by mastery
+                // gaps (v6 Phase 4). Own AppKit window, same pattern. ⌘⇧K is
+                // free in AppKit defaults.
+                Button("Milestone Checkpoint") {
+                    MilestoneAssessmentWindowPresenter.shared.present(
+                        dataStore: dataStore, registry: subjectRegistry
+                    )
+                }
+                .keyboardShortcut("k", modifiers: [.command, .shift])
                 }
 
                 Divider()

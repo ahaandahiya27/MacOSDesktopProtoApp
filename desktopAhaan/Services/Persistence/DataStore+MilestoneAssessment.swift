@@ -19,11 +19,15 @@ import Foundation
 //   • Only STARTED subjects (≥1 reviewed topic question) contribute — a
 //     milestone assessment re-tests studied material; it never quizzes a
 //     subject the kid has never opened.
-//   • Only REVIEWED topic questions are eligible — never unseen content, and
-//     never the scene-embedded boss / quick-check ids (those resolve through
-//     their own surfaces). The pool is resolved against the pack's own question
-//     objects, so a colliding bare id is credited only to the subject the kid
-//     actually answered it in (matches MasteryEngine's locator contract).
+//   • Only REVIEWED, SINGLE-TAP-GRADABLE topic questions are eligible — a
+//     multiple-choice question whose options include its canonical answer
+//     (`isAssessableMCQ`). Free-text / match-the-following items are out of
+//     scope for the checkpoint quiz: a milestone assessment is a multiple-choice
+//     test, scored unambiguously without lenient phrase matching. Unseen content
+//     and the scene-embedded boss / quick-check ids are likewise excluded. The
+//     pool is resolved against the pack's own question objects, so a colliding
+//     bare id is credited only to the subject the kid answered it in (matches
+//     MasteryEngine's locator contract).
 //   • A thin profile yields a SHORTER assessment rather than filler.
 //
 // READ-ONLY over the SRS: reads `questionReviews` + the immutable packs only —
@@ -37,6 +41,19 @@ extension DataStore {
     /// Default number of questions in a milestone assessment. Clamped down to
     /// the eligible pool size, so a young profile simply gets a shorter quiz.
     static let milestoneAssessmentDefaultCount = 10
+
+    /// A question is eligible for a milestone assessment only if it can be
+    /// scored unambiguously by a single tap: a multiple-choice question whose
+    /// options include its canonical answer. Everything else (free-text,
+    /// numerical, match-the-following) routes through the normal practice
+    /// surfaces, which keep their richer answer + grading UX.
+    static func isAssessableMCQ(_ question: Question) -> Bool {
+        guard question.questionType == .mcq,
+              let options = question.options, !options.isEmpty else { return false }
+        return options.contains {
+            AnswerValidator.matches(userInput: $0, truth: question.answer)
+        }
+    }
 
     /// Build a fresh mixed, cross-subject milestone assessment weighted toward
     /// the kid's mastery gaps. Returns an empty assessment when no started
@@ -68,7 +85,8 @@ extension DataStore {
                 for topic in chapter.topics {
                     for question in topic.questions {
                         seq += 1
-                        guard let review = reviews[question.id],
+                        guard Self.isAssessableMCQ(question),
+                              let review = reviews[question.id],
                               review.packId == nil || review.packId == pack.id
                         else { continue }
                         let level = MasteryLevel.from(review: review)

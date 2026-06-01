@@ -1,0 +1,541 @@
+import SwiftUI
+import AppKit
+
+/// v6 Learning Journey · Phase 4. The **Milestone Checkpoint** — a short,
+/// mixed, multiple-choice quiz sampled by mastery gaps (see
+/// `DataStore.buildMilestoneAssessment` + `MilestoneAssessmentPlanner`). It runs
+/// a tiny three-phase flow entirely in local `@State`:
+///   intro → one question at a time (tap an option, Check, see the answer) →
+///   a result screen with a per-subject breakdown.
+///
+/// Deliberately a CHECK-IN, not a teaching surface: scoring is local
+/// (`AnswerValidator.matches`) and it NEVER writes the SRS, so retaking it can't
+/// distort the kid's review schedule — the same read-only stance as the
+/// MasteryEngine the sampler is built on.
+///
+/// Presented in its own AppKit window via Help → Milestone Checkpoint (see
+/// `MilestoneAssessmentWindow.swift` + `desktopAhaanApp.swift`). `@MainActor`
+/// because it reads `DataStore` (main-actor-isolated) synchronously in
+/// `onAppear`. Static bars only — no particles — so it costs the legacy AMD GPU
+/// nothing, and the only transitions go through
+/// `withAnimationRespectingReduceMotion`.
+@MainActor
+struct MilestoneAssessmentView: View {
+    @EnvironmentObject var dataStore: DataStore
+    @EnvironmentObject var registry: SubjectRegistry
+
+    private enum Phase: Equatable { case intro, answering, result }
+
+    @State private var assessment: MilestoneAssessment?
+    @State private var phase: Phase = .intro
+    @State private var index = 0
+    @State private var selected: String?
+    @State private var revealed = false
+    /// questionId → was it answered correctly. Drives the score + breakdown.
+    @State private var correctById: [String: Bool] = [:]
+
+    var body: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 20) {
+                header
+                content
+            }
+            .padding(20)
+            .frame(maxWidth: 680, alignment: .leading)
+            .frame(maxWidth: .infinity, alignment: .center)
+        }
+        .background(Color(NSColor.windowBackgroundColor))
+        .onAppear { buildIfNeeded() }
+        .navigationTitle("Milestone Checkpoint")
+    }
+
+    // MARK: - Phase routing
+
+    @ViewBuilder
+    private var content: some View {
+        if let assessment = assessment {
+            if assessment.isEmpty {
+                emptyState
+            } else {
+                switch phase {
+                case .intro:     introCard(assessment)
+                case .answering: answeringSection(assessment)
+                case .result:    resultSection(assessment)
+                }
+            }
+        } else {
+            ProgressView("Preparing your checkpoint…")
+                .padding(.vertical, 40)
+                .frame(maxWidth: .infinity)
+        }
+    }
+
+    // MARK: - Build / flow control
+
+    private func buildIfNeeded() {
+        guard assessment == nil else { return }
+        assessment = dataStore.buildMilestoneAssessment(registry: registry)
+    }
+
+    private func begin() {
+        index = 0
+        selected = nil
+        revealed = false
+        correctById = [:]
+        withAnimationRespectingReduceMotion(.easeInOut(duration: 0.2)) { phase = .answering }
+    }
+
+    private func check() {
+        guard let q = currentQuestion, let sel = selected, !revealed else { return }
+        correctById[q.id] = AnswerValidator.matches(userInput: sel, truth: q.question.answer)
+        withAnimationRespectingReduceMotion(.easeInOut(duration: 0.2)) { revealed = true }
+    }
+
+    private func advance(in assessment: MilestoneAssessment) {
+        if index + 1 < assessment.count {
+            index += 1
+            selected = nil
+            revealed = false
+        } else {
+            withAnimationRespectingReduceMotion(.easeInOut(duration: 0.2)) { phase = .result }
+        }
+    }
+
+    private func retake() {
+        assessment = dataStore.buildMilestoneAssessment(registry: registry)
+        index = 0
+        selected = nil
+        revealed = false
+        correctById = [:]
+        withAnimationRespectingReduceMotion(.easeInOut(duration: 0.2)) { phase = .intro }
+    }
+
+    private var currentQuestion: AssessmentQuestion? {
+        guard let assessment = assessment,
+              index >= 0, index < assessment.questions.count else { return nil }
+        return assessment.questions[index]
+    }
+
+    private var score: Int { correctById.values.filter { $0 }.count }
+
+    // MARK: - Header
+
+    private var header: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            HStack(spacing: 10) {
+                Text("🏁").font(.system(size: 34)).accessibilityHidden(true)
+                Text("Milestone Checkpoint")
+                    .font(.largeTitle.bold())
+                    .foregroundColor(DesignTokens.BrandColor.canvasText)
+            }
+            Text("A quick mixed quiz to check in on your whole journey.")
+                .font(.subheadline)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+        }
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("Milestone Checkpoint. A quick mixed quiz to check in on your whole journey.")
+    }
+
+    // MARK: - Intro
+
+    private func introCard(_ assessment: MilestoneAssessment) -> some View {
+        VStack(alignment: .leading, spacing: 14) {
+            Text("Ready for a checkpoint?")
+                .font(.title2.weight(.bold))
+                .foregroundColor(DesignTokens.BrandColor.canvasText)
+            Text("\(assessment.count) multiple-choice question\(assessment.count == 1 ? "" : "s"), mixed across \(subjectList(assessment)). It leans into the subjects that need the most attention right now.")
+                .font(.callout)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                .fixedSize(horizontal: false, vertical: true)
+            Text("This is just a check-in — your answers here won't change your review schedule.")
+                .font(.caption)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                .fixedSize(horizontal: false, vertical: true)
+            Button(action: { begin() }) {
+                Text("Begin checkpoint")
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .padding(.horizontal, 18)
+                    .padding(.vertical, 10)
+                    .frame(minHeight: 44)
+                    .background(Capsule().fill(DesignTokens.BrandColor.primaryAction))
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel("Begin checkpoint")
+        }
+        .padding(16)
+        .background(
+            RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusCard)
+                .fill(DesignTokens.BrandColor.primaryAction.opacity(0.07))
+        )
+    }
+
+    private func subjectList(_ assessment: MilestoneAssessment) -> String {
+        let titles = assessment.subjectTitles
+        switch titles.count {
+        case 0:  return "your subjects"
+        case 1:  return titles[0]
+        case 2:  return "\(titles[0]) and \(titles[1])"
+        default: return titles.dropLast().joined(separator: ", ") + ", and " + (titles.last ?? "")
+        }
+    }
+
+    // MARK: - Answering
+
+    private func answeringSection(_ assessment: MilestoneAssessment) -> some View {
+        Group {
+            if let q = currentQuestion {
+                VStack(alignment: .leading, spacing: 14) {
+                    questionMeta(q, total: assessment.count)
+                    Text(q.question.prompt)
+                        .font(.title3.weight(.semibold))
+                        .foregroundColor(DesignTokens.BrandColor.canvasText)
+                        .fixedSize(horizontal: false, vertical: true)
+                    optionsList(q)
+                    if revealed { feedbackBlock(q) }
+                    actionRow(assessment, question: q)
+                }
+                .padding(16)
+                .background(
+                    RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusCard)
+                        .fill(DesignTokens.BrandColor.primaryAction.opacity(0.05))
+                )
+            } else {
+                // Defensive: an out-of-range index can't normally happen, but if
+                // it did we route to the result rather than show a blank card.
+                Color.clear.frame(height: 1).onAppear { phase = .result }
+            }
+        }
+    }
+
+    private func questionMeta(_ q: AssessmentQuestion, total: Int) -> some View {
+        HStack(spacing: 8) {
+            Text(emoji(for: q.packId)).font(.system(size: 18)).accessibilityHidden(true)
+            Text("\(q.subjectTitle) · \(q.chapterTitle)")
+                .font(.caption.weight(.semibold))
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
+            Spacer(minLength: 0)
+            Text("Question \(index + 1) of \(total)")
+                .font(.caption.monospacedDigit())
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+        }
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("Question \(index + 1) of \(total). \(q.subjectTitle), \(q.chapterTitle).")
+    }
+
+    private func optionsList(_ q: AssessmentQuestion) -> some View {
+        VStack(alignment: .leading, spacing: 8) {
+            ForEach(Array((q.question.options ?? []).enumerated()), id: \.offset) { _, option in
+                optionRow(option, question: q)
+            }
+        }
+    }
+
+    private func optionRow(_ option: String, question: AssessmentQuestion) -> some View {
+        let isAnswer = AnswerValidator.matches(userInput: option, truth: question.question.answer)
+        let isSelected = selected == option
+        return Button(action: { if !revealed { selected = option } }) {
+            HStack(spacing: 10) {
+                Text(option)
+                    .font(.body)
+                    .foregroundColor(DesignTokens.BrandColor.canvasText)
+                    .fixedSize(horizontal: false, vertical: true)
+                    .multilineTextAlignment(.leading)
+                Spacer(minLength: 0)
+                optionMark(isAnswer: isAnswer, isSelected: isSelected)
+            }
+            .padding(.horizontal, 14)
+            .padding(.vertical, 11)
+            .frame(maxWidth: .infinity, alignment: .leading)
+            .frame(minHeight: 44)
+            .background(
+                RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusMedium)
+                    .fill(optionFill(isAnswer: isAnswer, isSelected: isSelected))
+            )
+            .overlay(
+                RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusMedium)
+                    .stroke(optionStroke(isAnswer: isAnswer, isSelected: isSelected), lineWidth: 1.5)
+            )
+        }
+        .buttonStyle(.plain)
+        .disabled(revealed)
+        .accessibilityLabel(optionAccessibilityLabel(option, isAnswer: isAnswer, isSelected: isSelected))
+        .accessibilityAddTraits(isSelected ? .isSelected : [])
+    }
+
+    @ViewBuilder
+    private func optionMark(isAnswer: Bool, isSelected: Bool) -> some View {
+        if revealed && isAnswer {
+            Text("✓").font(.headline.weight(.bold))
+                .foregroundColor(DesignTokens.BrandColor.success).accessibilityHidden(true)
+        } else if revealed && isSelected {
+            Text("✗").font(.headline.weight(.bold))
+                .foregroundColor(DesignTokens.BrandColor.danger).accessibilityHidden(true)
+        } else if isSelected {
+            Text("●").font(.headline)
+                .foregroundColor(DesignTokens.BrandColor.primaryAction).accessibilityHidden(true)
+        } else {
+            Text("○").font(.headline)
+                .foregroundColor(DesignTokens.BrandColor.mutedSurface).accessibilityHidden(true)
+        }
+    }
+
+    private func optionFill(isAnswer: Bool, isSelected: Bool) -> Color {
+        if revealed && isAnswer { return DesignTokens.BrandColor.success.opacity(0.14) }
+        if revealed && isSelected { return DesignTokens.BrandColor.danger.opacity(0.12) }
+        if isSelected { return DesignTokens.BrandColor.primaryAction.opacity(0.10) }
+        return Color.gray.opacity(0.05)
+    }
+
+    private func optionStroke(isAnswer: Bool, isSelected: Bool) -> Color {
+        if revealed && isAnswer { return DesignTokens.BrandColor.success }
+        if revealed && isSelected { return DesignTokens.BrandColor.danger }
+        if isSelected { return DesignTokens.BrandColor.primaryAction }
+        return DesignTokens.BrandColor.dividerLine
+    }
+
+    private func optionAccessibilityLabel(_ option: String, isAnswer: Bool, isSelected: Bool) -> String {
+        var label = option
+        if revealed && isAnswer { label += ", correct answer" }
+        else if revealed && isSelected { label += ", your answer, incorrect" }
+        else if isSelected { label += ", selected" }
+        return label
+    }
+
+    private func feedbackBlock(_ q: AssessmentQuestion) -> some View {
+        let wasCorrect = correctById[q.id] ?? false
+        return VStack(alignment: .leading, spacing: 6) {
+            Text(wasCorrect ? "✅ Correct!" : "❌ Not quite — the answer is “\(q.question.answer)”.")
+                .font(.callout.weight(.semibold))
+                .foregroundColor(wasCorrect ? DesignTokens.BrandColor.success : DesignTokens.BrandColor.danger)
+                .fixedSize(horizontal: false, vertical: true)
+            if let step = q.question.solutionSteps.first, !step.isEmpty {
+                Text(step)
+                    .font(.callout)
+                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .padding(12)
+        .background(
+            RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusMedium)
+                .fill((wasCorrect ? DesignTokens.BrandColor.success : DesignTokens.BrandColor.danger).opacity(0.08))
+        )
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel(wasCorrect
+            ? "Correct. \(q.question.solutionSteps.first ?? "")"
+            : "Not quite. The answer is \(q.question.answer). \(q.question.solutionSteps.first ?? "")")
+    }
+
+    private func actionRow(_ assessment: MilestoneAssessment, question: AssessmentQuestion) -> some View {
+        HStack {
+            Spacer(minLength: 0)
+            if revealed {
+                primaryButton(index + 1 < assessment.count ? "Next question" : "See results") {
+                    advance(in: assessment)
+                }
+            } else {
+                primaryButton("Check answer", enabled: selected != nil) { check() }
+            }
+        }
+    }
+
+    // MARK: - Result
+
+    private func resultSection(_ assessment: MilestoneAssessment) -> some View {
+        VStack(alignment: .leading, spacing: 16) {
+            scoreCard(assessment)
+            breakdownSection(assessment)
+            resultActions()
+        }
+    }
+
+    private func scoreCard(_ assessment: MilestoneAssessment) -> some View {
+        let fraction = assessment.count > 0 ? Double(score) / Double(assessment.count) : 0
+        return VStack(alignment: .leading, spacing: 12) {
+            HStack(spacing: 12) {
+                Text(resultEmoji(fraction)).font(.system(size: 34)).accessibilityHidden(true)
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("You got \(score) of \(assessment.count)")
+                        .font(.title2.weight(.bold))
+                        .foregroundColor(DesignTokens.BrandColor.canvasText)
+                    Text(resultMessage(fraction))
+                        .font(.callout)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                Spacer(minLength: 0)
+            }
+            ScoreBar(fraction: fraction, tint: DesignTokens.BrandColor.primaryAction)
+        }
+        .padding(16)
+        .background(
+            RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusCard)
+                .fill(DesignTokens.BrandColor.primaryAction.opacity(0.08))
+        )
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("You got \(score) of \(assessment.count). \(resultMessage(fraction))")
+    }
+
+    private func breakdownSection(_ assessment: MilestoneAssessment) -> some View {
+        VStack(alignment: .leading, spacing: 10) {
+            Text("By subject")
+                .font(.headline)
+                .foregroundColor(DesignTokens.BrandColor.canvasText)
+            ForEach(subjectBreakdown(assessment), id: \.packId) { row in
+                breakdownRow(row)
+            }
+        }
+    }
+
+    private func breakdownRow(_ row: BreakdownRow) -> some View {
+        HStack(spacing: 8) {
+            Text(emoji(for: row.packId)).font(.system(size: 20)).accessibilityHidden(true)
+            Text(row.title)
+                .font(.callout.weight(.semibold))
+                .foregroundColor(DesignTokens.BrandColor.canvasText)
+                .lineLimit(1)
+                .minimumScaleFactor(0.8)
+            Spacer(minLength: 0)
+            Text("\(row.correct) / \(row.total)")
+                .font(.callout.monospacedDigit())
+                .foregroundColor(row.correct == row.total
+                                 ? DesignTokens.BrandColor.success
+                                 : DesignTokens.BrandColor.canvasText)
+        }
+        .padding(.horizontal, 14)
+        .padding(.vertical, 10)
+        .background(
+            RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusMedium)
+                .fill(Color.gray.opacity(0.05))
+        )
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("\(row.title): \(row.correct) of \(row.total) correct.")
+    }
+
+    private func resultActions() -> some View {
+        HStack(spacing: 12) {
+            primaryButton("Take another") { retake() }
+            secondaryButton("Done") { NSApp.keyWindow?.performClose(nil) }
+            Spacer(minLength: 0)
+        }
+    }
+
+    // MARK: - Empty state
+
+    private var emptyState: some View {
+        VStack(spacing: 12) {
+            Text("🌱").font(.system(size: 48)).accessibilityHidden(true)
+            Text("A little practice first")
+                .font(.title2.weight(.bold))
+                .foregroundColor(DesignTokens.BrandColor.canvasText)
+            Text("Answer some multiple-choice questions in any subject, then come back — your checkpoint is built from what you've practised, focused on what needs the most attention.")
+                .font(.callout)
+                .multilineTextAlignment(.center)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .frame(maxWidth: .infinity)
+        .padding(.vertical, 40)
+        .padding(.horizontal, 20)
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("A little practice first. Answer some multiple-choice questions in any subject, then come back for your checkpoint.")
+    }
+
+    // MARK: - Reusable buttons
+
+    private func primaryButton(_ title: String, enabled: Bool = true, action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            Text(title)
+                .font(.headline)
+                .foregroundColor(.white)
+                .padding(.horizontal, 18)
+                .padding(.vertical, 10)
+                .frame(minHeight: 44)
+                .background(Capsule().fill(
+                    enabled ? DesignTokens.BrandColor.primaryAction
+                            : DesignTokens.BrandColor.mutedSurface))
+        }
+        .buttonStyle(.plain)
+        .disabled(!enabled)
+        .accessibilityLabel(title)
+    }
+
+    private func secondaryButton(_ title: String, action: @escaping () -> Void) -> some View {
+        Button(action: action) {
+            Text(title)
+                .font(.headline)
+                .foregroundColor(DesignTokens.BrandColor.primaryAction)
+                .padding(.horizontal, 18)
+                .padding(.vertical, 10)
+                .frame(minHeight: 44)
+                .background(
+                    Capsule().stroke(DesignTokens.BrandColor.primaryAction, lineWidth: 1.5))
+        }
+        .buttonStyle(.plain)
+        .accessibilityLabel(title)
+    }
+
+    // MARK: - Result helpers
+
+    /// One subject's correct/total tally for the result breakdown.
+    struct BreakdownRow { let packId: String; let title: String; let correct: Int; let total: Int }
+
+    private func subjectBreakdown(_ assessment: MilestoneAssessment) -> [BreakdownRow] {
+        // Preserve first-appearance subject order (matches the quiz order).
+        var order: [String] = []
+        var titleByPack: [String: String] = [:]
+        var totalByPack: [String: Int] = [:]
+        var correctByPack: [String: Int] = [:]
+        for q in assessment.questions {
+            if titleByPack[q.packId] == nil { order.append(q.packId); titleByPack[q.packId] = q.subjectTitle }
+            totalByPack[q.packId, default: 0] += 1
+            if correctById[q.id] == true { correctByPack[q.packId, default: 0] += 1 }
+        }
+        return order.map {
+            BreakdownRow(packId: $0, title: titleByPack[$0] ?? $0,
+                         correct: correctByPack[$0] ?? 0, total: totalByPack[$0] ?? 0)
+        }
+    }
+
+    private func resultEmoji(_ fraction: Double) -> String {
+        if fraction >= 0.8 { return "🌟" }
+        if fraction >= 0.5 { return "👍" }
+        return "💪"
+    }
+
+    private func resultMessage(_ fraction: Double) -> String {
+        if fraction >= 0.8 { return "Brilliant — you've got a strong grip on this. Keep it up!" }
+        if fraction >= 0.5 { return "Solid work. A little more practice on the misses and you'll be flying." }
+        return "Every checkpoint shows you where to aim next — let's practise the tricky ones together."
+    }
+
+    private func emoji(for packId: String) -> String {
+        registry.pack(withId: packId)?.coverEmoji ?? "•"
+    }
+}
+
+// MARK: - ScoreBar
+//
+// A static horizontal bar (muted track + tinted fill sized to `fraction`). No
+// animation — width is set directly, costing the legacy GPU nothing and
+// unaffected by Reduce Motion. Accessibility-hidden; the score card speaks it.
+private struct ScoreBar: View {
+    let fraction: Double
+    let tint: Color
+
+    var body: some View {
+        GeometryReader { geo in
+            ZStack(alignment: .leading) {
+                Capsule().fill(DesignTokens.BrandColor.mutedSurface.opacity(0.5))
+                Capsule().fill(tint)
+                    .frame(width: max(0, min(1, fraction)) * geo.size.width)
+            }
+        }
+        .frame(height: 12)
+        .accessibilityHidden(true)
+    }
+}

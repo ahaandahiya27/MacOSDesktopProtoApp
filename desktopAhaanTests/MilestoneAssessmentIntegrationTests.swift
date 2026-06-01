@@ -41,11 +41,13 @@ final class MilestoneAssessmentIntegrationTests: XCTestCase {
                        totalReviews: 6, lapses: 0, packId: packId)
     }
 
-    private func reviewableIds(in pack: SubjectPack, count: Int) -> [String] {
+    /// Up to `count` assessable-MCQ ids (single-tap gradable) from a pack, in
+    /// authored order — matching the builder's eligibility filter.
+    private func assessableMCQIds(in pack: SubjectPack, count: Int) -> [String] {
         var out: [String] = []
         for chapter in pack.chapters {
             for topic in chapter.topics {
-                for q in topic.questions {
+                for q in topic.questions where DataStore.isAssessableMCQ(q) {
                     out.append(q.id)
                     if out.count >= count { return out }
                 }
@@ -80,7 +82,7 @@ final class MilestoneAssessmentIntegrationTests: XCTestCase {
         var seeded: [String] = []
         for pid in ["science_class7", "maths_class7", "sanskrit_class7"] {
             guard let pack = registry.pack(withId: pid) else { continue }
-            let fresh = reviewableIds(in: pack, count: 20)
+            let fresh = assessableMCQIds(in: pack, count: 20)
                 .filter { reviews[$0] == nil }.prefix(5)
             guard fresh.count == 5 else { continue }
             seeded.append(pid)
@@ -130,24 +132,24 @@ final class MilestoneAssessmentIntegrationTests: XCTestCase {
     func testGapWeightingTestsTheWeakerSubjectMore() async throws {
         let registry = try await loadedRegistry()
         guard let weak = registry.pack(withId: "science_class7"),
-              let strong = registry.pack(withId: "maths_class7") else {
-            throw XCTSkip("Science + Maths packs required.")
+              let strong = registry.pack(withId: "socialscience_class7") else {
+            throw XCTSkip("Science + Social Science packs required.")
         }
         let store = tempStore()
         let now = Date()
         let past = now.addingTimeInterval(-3600)
 
-        // Science and Maths topic-question ids SHARE the bare `chNN_tNN_qNN`
-        // scheme (only concept ids are pack-prefixed), so seed against a global
-        // `seen` set to keep the two id sets disjoint as strings — each review's
-        // `packId` then credits it to exactly the intended subject.
+        // Science (`chNN_…`) and Social Science (`sschNN_…`) have disjoint id
+        // prefixes, so their MCQ pools never collide; a global `seen` set keeps
+        // the two seed sets disjoint defensively, and each review's `packId`
+        // credits it to exactly the intended subject.
         var seen = Set<String>()
-        let weakIds = reviewableIds(in: weak, count: 40)
+        let weakIds = assessableMCQIds(in: weak, count: 40)
             .filter { seen.insert($0).inserted }.prefix(6)
-        let strongIds = reviewableIds(in: strong, count: 40)
+        let strongIds = assessableMCQIds(in: strong, count: 40)
             .filter { seen.insert($0).inserted }.prefix(6)
         try XCTSkipUnless(weakIds.count == 6 && strongIds.count == 6,
-            "Need 6 disjoint topic questions across Science and Maths.")
+            "Need 6 assessable MCQs in each of Science and Social Science.")
 
         var reviews: [String: QuestionReview] = [:]
         for id in weakIds { reviews[id] = weakReview(id, packId: weak.id, at: past) }
@@ -161,7 +163,7 @@ final class MilestoneAssessmentIntegrationTests: XCTestCase {
         let weakCount = assessment.subjectCounts[weak.id] ?? 0
         let strongCount = assessment.subjectCounts[strong.id] ?? 0
         XCTAssertGreaterThan(weakCount, strongCount,
-            "The weaker subject (Science, all 'learning') must be tested more than the mastered one (Maths).")
+            "The weaker subject (Science, all 'learning') must be tested more than the mastered one (Social Science).")
         XCTAssertEqual(assessment.count, 8)
         // The quiz leads with the weakest subject (weak-first round-robin).
         XCTAssertEqual(assessment.questions.first?.packId, weak.id,

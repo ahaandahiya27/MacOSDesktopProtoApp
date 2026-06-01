@@ -414,6 +414,8 @@
 		11EDCB88F2999EF00670308B /* TranslatorScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090B5EB533A87E17B20AFFBE /* TranslatorScreen.swift */; };
 		6638A7399D3BFB72A7C4D903 /* MasteryMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB6A798EF07DB8D9CD4B3BD /* MasteryMapView.swift */; };
 		89A2D7E7BA929A5CEF69F3F8 /* MasteryMapWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D235866F96FBF3E035A951C8 /* MasteryMapWindow.swift */; };
+		06E87F538248E2B09CD35D65 /* MilestoneAssessmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D962C53C2D8081E559D6567 /* MilestoneAssessmentView.swift */; };
+		701A157F966B680F24434428 /* MilestoneAssessmentWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96DDC5C03B1F19F0AF51B4C /* MilestoneAssessmentWindow.swift */; };
 		C4E23DF37A41C4E4DA2B6F28 /* WeeklyProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D0E1E842FA13F43456D54A /* WeeklyProgressView.swift */; };
 		F4F16A7550E77985247F0DD1 /* WeeklyProgressWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF69A7CDA48502C2B39D005 /* WeeklyProgressWindow.swift */; };
 		A5B86A574035F0B6BC026B76 /* AchievementBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB519EB841F9885D16C13AE0 /* AchievementBadgeView.swift */; };
@@ -1507,6 +1509,7 @@
 		A5C5546E4A74303E1C27560E /* MathsEnrichmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245F9847237A529875C29A59 /* MathsEnrichmentTests.swift */; };
 		AAD9B03260A7EEA393840B43 /* MilestoneAssessmentIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECDD9785C73D1E29E66F3BC4 /* MilestoneAssessmentIntegrationTests.swift */; };
 		067346B4906659CF18F873BC /* MilestoneAssessmentPlannerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D451650DFF0B97AADBBA265 /* MilestoneAssessmentPlannerTests.swift */; };
+		5AE32BBD094A7FCD974F290F /* MilestoneAssessmentViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3D5D0EF78AF82E12B944C2 /* MilestoneAssessmentViewTests.swift */; };
 		66190B6AD9C92CB9B21169BA /* MiniProjectArticleRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55AB731CAC2EE3D7C53517B9 /* MiniProjectArticleRoutingTests.swift */; };
 		50B3D7C45665C436CC809973 /* NcertQaArticleRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AF5019561D3AFAD7B1183A /* NcertQaArticleRoutingTests.swift */; };
 		69A9B02E40D76F570820DB8B /* NotebookEditedAtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8834AA8CC1E469097EF7E9CF /* NotebookEditedAtTests.swift */; };
@@ -2979,6 +2982,8 @@
 		090B5EB533A87E17B20AFFBE /* TranslatorScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TranslatorScreen.swift"; sourceTree = "<group>"; };
 		2DB6A798EF07DB8D9CD4B3BD /* MasteryMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MasteryMapView.swift"; sourceTree = "<group>"; };
 		D235866F96FBF3E035A951C8 /* MasteryMapWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MasteryMapWindow.swift"; sourceTree = "<group>"; };
+		6D962C53C2D8081E559D6567 /* MilestoneAssessmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilestoneAssessmentView.swift"; sourceTree = "<group>"; };
+		B96DDC5C03B1F19F0AF51B4C /* MilestoneAssessmentWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilestoneAssessmentWindow.swift"; sourceTree = "<group>"; };
 		72D0E1E842FA13F43456D54A /* WeeklyProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeeklyProgressView.swift"; sourceTree = "<group>"; };
 		BAF69A7CDA48502C2B39D005 /* WeeklyProgressWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeeklyProgressWindow.swift"; sourceTree = "<group>"; };
 		DB519EB841F9885D16C13AE0 /* AchievementBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AchievementBadgeView.swift"; sourceTree = "<group>"; };
@@ -3090,6 +3095,7 @@
 		245F9847237A529875C29A59 /* MathsEnrichmentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MathsEnrichmentTests.swift"; sourceTree = "<group>"; };
 		ECDD9785C73D1E29E66F3BC4 /* MilestoneAssessmentIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilestoneAssessmentIntegrationTests.swift"; sourceTree = "<group>"; };
 		7D451650DFF0B97AADBBA265 /* MilestoneAssessmentPlannerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilestoneAssessmentPlannerTests.swift"; sourceTree = "<group>"; };
+		0D3D5D0EF78AF82E12B944C2 /* MilestoneAssessmentViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilestoneAssessmentViewTests.swift"; sourceTree = "<group>"; };
 		55AB731CAC2EE3D7C53517B9 /* MiniProjectArticleRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MiniProjectArticleRoutingTests.swift"; sourceTree = "<group>"; };
 		83AF5019561D3AFAD7B1183A /* NcertQaArticleRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NcertQaArticleRoutingTests.swift"; sourceTree = "<group>"; };
 		8834AA8CC1E469097EF7E9CF /* NotebookEditedAtTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotebookEditedAtTests.swift"; sourceTree = "<group>"; };
@@ -5908,6 +5914,8 @@
 			children = (
 				2DB6A798EF07DB8D9CD4B3BD,
 				D235866F96FBF3E035A951C8,
+				6D962C53C2D8081E559D6567,
+				B96DDC5C03B1F19F0AF51B4C,
 				72D0E1E842FA13F43456D54A,
 				BAF69A7CDA48502C2B39D005,
 			);
@@ -5997,6 +6005,7 @@
 				245F9847237A529875C29A59,
 				ECDD9785C73D1E29E66F3BC4,
 				7D451650DFF0B97AADBBA265,
+				0D3D5D0EF78AF82E12B944C2,
 				55AB731CAC2EE3D7C53517B9,
 				83AF5019561D3AFAD7B1183A,
 				8834AA8CC1E469097EF7E9CF,
@@ -7600,6 +7609,8 @@
 				11EDCB88F2999EF00670308B /* TranslatorScreen.swift in Sources */,
 				6638A7399D3BFB72A7C4D903 /* MasteryMapView.swift in Sources */,
 				89A2D7E7BA929A5CEF69F3F8 /* MasteryMapWindow.swift in Sources */,
+				06E87F538248E2B09CD35D65 /* MilestoneAssessmentView.swift in Sources */,
+				701A157F966B680F24434428 /* MilestoneAssessmentWindow.swift in Sources */,
 				C4E23DF37A41C4E4DA2B6F28 /* WeeklyProgressView.swift in Sources */,
 				F4F16A7550E77985247F0DD1 /* WeeklyProgressWindow.swift in Sources */,
 				A5B86A574035F0B6BC026B76 /* AchievementBadgeView.swift in Sources */,
@@ -7717,6 +7728,7 @@
 				A5C5546E4A74303E1C27560E /* MathsEnrichmentTests.swift in Sources */,
 				AAD9B03260A7EEA393840B43 /* MilestoneAssessmentIntegrationTests.swift in Sources */,
 				067346B4906659CF18F873BC /* MilestoneAssessmentPlannerTests.swift in Sources */,
+				5AE32BBD094A7FCD974F290F /* MilestoneAssessmentViewTests.swift in Sources */,
 				66190B6AD9C92CB9B21169BA /* MiniProjectArticleRoutingTests.swift in Sources */,
 				50B3D7C45665C436CC809973 /* NcertQaArticleRoutingTests.swift in Sources */,
 				69A9B02E40D76F570820DB8B /* NotebookEditedAtTests.swift in Sources */,
