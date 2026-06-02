@@ -444,6 +444,7 @@
 		89A2D7E7BA929A5CEF69F3F8 /* MasteryMapWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D235866F96FBF3E035A951C8 /* MasteryMapWindow.swift */; };
 		06E87F538248E2B09CD35D65 /* MilestoneAssessmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D962C53C2D8081E559D6567 /* MilestoneAssessmentView.swift */; };
 		701A157F966B680F24434428 /* MilestoneAssessmentWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B96DDC5C03B1F19F0AF51B4C /* MilestoneAssessmentWindow.swift */; };
+		6AA7F8A2EDB6C6F676E4C7E8 /* TrendChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466B99F12F0A9B81070F4A34 /* TrendChartView.swift */; };
 		C4E23DF37A41C4E4DA2B6F28 /* WeeklyProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72D0E1E842FA13F43456D54A /* WeeklyProgressView.swift */; };
 		F4F16A7550E77985247F0DD1 /* WeeklyProgressWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF69A7CDA48502C2B39D005 /* WeeklyProgressWindow.swift */; };
 		A5B86A574035F0B6BC026B76 /* AchievementBadgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB519EB841F9885D16C13AE0 /* AchievementBadgeView.swift */; };
@@ -1595,6 +1596,7 @@
 		5AF82297A80604D85A0285A6 /* TopicMasteryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3309464A84A6E3CF62A1EE49 /* TopicMasteryTests.swift */; };
 		2B06D4873A3896418717B43A /* ToughFlagSymmetryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA020DDC77906010D1D02C1F /* ToughFlagSymmetryTests.swift */; };
 		2367D62D7D9068AA233318FB /* TranslationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B26F6ED1B552B74EDB1D5E /* TranslationServiceTests.swift */; };
+		A491D1C9D7ED040A204E9076 /* TrendChartShapeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715D670F22C2AE6FB18392E6 /* TrendChartShapeTests.swift */; };
 		2364C7C253FD18DA34012635 /* TutorNavigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3436224B3C9552AEB42BB80D /* TutorNavigationTests.swift */; };
 		843F030D7CF30DB8AC721F17 /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E6049C67F2B64BD6D4A51 /* ViewModelTests.swift */; };
 		891B31793B0F28E82A4370E7 /* WeeklyActivityRollupTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5E0B3E7B63B76A62C2EDA8 /* WeeklyActivityRollupTests.swift */; };
@@ -3056,6 +3058,7 @@
 		D235866F96FBF3E035A951C8 /* MasteryMapWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MasteryMapWindow.swift"; sourceTree = "<group>"; };
 		6D962C53C2D8081E559D6567 /* MilestoneAssessmentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilestoneAssessmentView.swift"; sourceTree = "<group>"; };
 		B96DDC5C03B1F19F0AF51B4C /* MilestoneAssessmentWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilestoneAssessmentWindow.swift"; sourceTree = "<group>"; };
+		466B99F12F0A9B81070F4A34 /* TrendChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrendChartView.swift"; sourceTree = "<group>"; };
 		72D0E1E842FA13F43456D54A /* WeeklyProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeeklyProgressView.swift"; sourceTree = "<group>"; };
 		BAF69A7CDA48502C2B39D005 /* WeeklyProgressWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeeklyProgressWindow.swift"; sourceTree = "<group>"; };
 		DB519EB841F9885D16C13AE0 /* AchievementBadgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AchievementBadgeView.swift"; sourceTree = "<group>"; };
@@ -3225,6 +3228,7 @@
 		3309464A84A6E3CF62A1EE49 /* TopicMasteryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TopicMasteryTests.swift"; sourceTree = "<group>"; };
 		CA020DDC77906010D1D02C1F /* ToughFlagSymmetryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToughFlagSymmetryTests.swift"; sourceTree = "<group>"; };
 		91B26F6ED1B552B74EDB1D5E /* TranslationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TranslationServiceTests.swift"; sourceTree = "<group>"; };
+		715D670F22C2AE6FB18392E6 /* TrendChartShapeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrendChartShapeTests.swift"; sourceTree = "<group>"; };
 		3436224B3C9552AEB42BB80D /* TutorNavigationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TutorNavigationTests.swift"; sourceTree = "<group>"; };
 		6E9E6049C67F2B64BD6D4A51 /* ViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModelTests.swift"; sourceTree = "<group>"; };
 		FB5E0B3E7B63B76A62C2EDA8 /* WeeklyActivityRollupTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WeeklyActivityRollupTests.swift"; sourceTree = "<group>"; };
@@ -6052,6 +6056,7 @@
 				D235866F96FBF3E035A951C8,
 				6D962C53C2D8081E559D6567,
 				B96DDC5C03B1F19F0AF51B4C,
+				466B99F12F0A9B81070F4A34,
 				72D0E1E842FA13F43456D54A,
 				BAF69A7CDA48502C2B39D005,
 			);
@@ -6195,6 +6200,7 @@
 				3309464A84A6E3CF62A1EE49,
 				CA020DDC77906010D1D02C1F,
 				91B26F6ED1B552B74EDB1D5E,
+				715D670F22C2AE6FB18392E6,
 				3436224B3C9552AEB42BB80D,
 				6E9E6049C67F2B64BD6D4A51,
 				FB5E0B3E7B63B76A62C2EDA8,
@@ -7787,6 +7793,7 @@
 				89A2D7E7BA929A5CEF69F3F8 /* MasteryMapWindow.swift in Sources */,
 				06E87F538248E2B09CD35D65 /* MilestoneAssessmentView.swift in Sources */,
 				701A157F966B680F24434428 /* MilestoneAssessmentWindow.swift in Sources */,
+				6AA7F8A2EDB6C6F676E4C7E8 /* TrendChartView.swift in Sources */,
 				C4E23DF37A41C4E4DA2B6F28 /* WeeklyProgressView.swift in Sources */,
 				F4F16A7550E77985247F0DD1 /* WeeklyProgressWindow.swift in Sources */,
 				A5B86A574035F0B6BC026B76 /* AchievementBadgeView.swift in Sources */,
@@ -7962,6 +7969,7 @@
 				5AF82297A80604D85A0285A6 /* TopicMasteryTests.swift in Sources */,
 				2B06D4873A3896418717B43A /* ToughFlagSymmetryTests.swift in Sources */,
 				2367D62D7D9068AA233318FB /* TranslationServiceTests.swift in Sources */,
+				A491D1C9D7ED040A204E9076 /* TrendChartShapeTests.swift in Sources */,
 				2364C7C253FD18DA34012635 /* TutorNavigationTests.swift in Sources */,
 				843F030D7CF30DB8AC721F17 /* ViewModelTests.swift in Sources */,
 				891B31793B0F28E82A4370E7 /* WeeklyActivityRollupTests.swift in Sources */,

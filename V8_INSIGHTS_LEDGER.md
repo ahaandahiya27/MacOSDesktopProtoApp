@@ -65,7 +65,18 @@ per-subject Discover attribution, and the F.1 accessibility close-out.
   - Tests `desktopAhaanTests/ProgressHistoryTests.swift`: 6 pure + 4 capture (idempotent,
     cap, persist/rehydrate, SRS read-only). Build+test PASSED; all targeted lints clean.
   - Gotcha noted: tests must `flushSavesBeforeQuit()` (sync drain) not `flushPendingSave` (async).
-- [ ] Phase 2 — TrendChartView
+- [x] Phase 2 — TrendChartView. **DONE** (2026-06-02)
+  - `Views/Progress/TrendChartView.swift`: pure-SwiftUI line chart. `TrendLineShape`
+    (normalized points → flipped rect) + `TrendGridShape` (gridlines + axes), both
+    plain `Shape`s, no `Charts`/`Canvas`/`.foregroundStyle`. Self-contained: takes
+    `[TrendSeries]` (overall + per-subject), owns a segmented toggle, plots mastery
+    0–100% with a fixed y-domain. Reveal via `.trim` gated by
+    `withAnimationRespectingReduceMotion` (instant under Reduce Motion); single
+    stroked path → legacy-GPU safe. Endpoint dot, axis date labels, a11y description,
+    "not enough history" empty state, and a `Preview_*` host.
+  - Tests `desktopAhaanTests/TrendChartShapeTests.swift`: 5 pure path-geometry tests.
+  - Gotcha: PreviewProvider types must be named `Preview_*` (or `_*`) or
+    `check_dead_swift_types.py` flags them — the repo has no other PreviewProviders.
 - [ ] Phase 3 — Week-over-week delta + PDF page
 - [ ] Phase 4 — Per-subject Discover attribution
 - [ ] Phase 5 — InsightsView + InsightsWindow + ⌘⇧I + capstone test
