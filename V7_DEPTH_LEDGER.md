@@ -121,6 +121,17 @@ no-orphan-registration + factory-resolves + per-slice coverage each slice.
 
 ## Phase 5 — Integrate / test / doc
 
-- ⬜ Pin: every Sanskrit + SS chapter has a bespoke Discover experience;
-  leak-gate mutual exclusivity; no unregistered ShapeDiagram keys for covered
-  chapters; scene-count invariants. Write V7_DISCOVER_DEPTH_CHECKPOINT.md.
+- ✅ **M5.1 — invariants pinned + checkpoint written** (cycle 2). All Phase-5
+  invariants are guarded by existing tests plus the v7 additions (no new code
+  required; verified green):
+  - Sanskrit/SS bespoke coverage: `testEveryNEPChapterResolvesToTheInteractive`,
+    `testEveryChapterResolvesToAnInteractive`,
+    `testEveryNEPChapterCanFillTheSceneShape`, `testEveryChapterCanFillTheNineSceneShape`.
+  - Leak-gate mutual exclusivity: `testSubjectGatesAreMutuallyExclusive`,
+    `testScienceAndSocialScienceGatesAreMutuallyExclusive`,
+    `testSanskritPackDoesNotEnableOtherGates`, `testSocialSciencePackDoesNotEnableSciencePilot`.
+  - ShapeDiagram completeness: `testEveryPackDiagramKeyIsRegistered` (76/76),
+    `testNoOrphanRegistrations`, `testFullyCoveredChaptersAreComplete`.
+  - Wrote `V7_DISCOVER_DEPTH_CHECKPOINT.md`. Green: ci-build-test (810 XCTest).
+
+> **v7 COMPLETE** — all five phases ✅. 810 XCTest, 0 fail; 17 lints clean.

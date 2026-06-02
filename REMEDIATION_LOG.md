@@ -6527,3 +6527,31 @@ XCTest, 0 failures. Additive; zero regressions; zero STOP_AND_ASK.
 V7_PHASE4_COMPLETE_SENTINEL_v1
 
 NEXT: Phase 5 — integrate/test/doc + V7_DISCOVER_DEPTH_CHECKPOINT.md.
+
+---
+
+## 2026-06-02 — v7 Phase 5: integrate / test / doc — v7 COMPLETE
+
+Confirmed every invariant the v7 brief asks Phase 5 to pin is already guarded by
+tests (existing Phase 1/2 gate + routing tests, plus the Phase 3 additions);
+no new production code needed:
+- bespoke-Discover coverage (Sanskrit NEP + all 20 SS chapters);
+- subject-gate mutual exclusivity (no cross-subject interactive leak);
+- ShapeDiagram completeness (76/76 keys resolve), no-orphan, per-chapter floor;
+- scene-shape invariants (NEP 6-scene / SS 9-scene fillers).
+
+Wrote V7_DISCOVER_DEPTH_CHECKPOINT.md (repo root) summarising all five phases,
+the visual-library build, the Big-Sur discipline held, and the test safety net.
+
+Green here: 17 Big-Sur lints + test_lints.py; ci-build-test.sh → Release BUILD +
+810 XCTest, 0 failures. Additive; zero regressions; zero STOP_AND_ASK.
+
+v7 "Discover Depth + Visual Library" is COMPLETE:
+  Phase 1 SS bespoke Discover ...... pre-existing ✅
+  Phase 2 Sanskrit bespoke Discover . ShabdaArtha word-play, 15/15 NEP ✅
+  Phase 3 Shape Diagram Library ..... 76/76 pure-SwiftUI diagrams ✅
+  Phase 4 Reading-level polish ...... 56 → 15 over-band callouts ✅
+  Phase 5 Integrate/test/doc ........ invariants pinned + checkpoint ✅
+
+V7_PHASE5_COMPLETE_SENTINEL_v1
+V7_DISCOVER_DEPTH_COMPLETE_SENTINEL_v1
