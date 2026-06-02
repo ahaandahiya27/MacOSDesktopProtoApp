@@ -60,7 +60,11 @@ final class ShapeDiagramRegistryTests: XCTestCase {
         "ch02",   // Nutrition in Animals
         "ch03",   // Fibre to Fabric (wool & silk)
         "ch04",   // Heat
-        "ch05"    // Acids, Bases and Salts
+        "ch05",   // Acids, Bases and Salts
+        "ch06",   // Physical and Chemical Changes
+        "ch07",   // Weather, Climate and Adaptations
+        "ch08",   // Winds, Storms and Cyclones
+        "ch09"    // Soil
     ]
 
     /// Coverage floor — every key the pack declares for a fully-covered

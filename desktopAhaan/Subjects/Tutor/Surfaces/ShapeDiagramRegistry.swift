@@ -60,7 +60,27 @@ enum ShapeDiagramRegistry {
         "ch05_ph_scale": { AnyView(PHScaleDiagram()) },
         "ch05_neutralisation": { AnyView(NeutralisationDiagram()) },
         "ch05_indicators": { AnyView(IndicatorsDiagram()) },
-        "ch05_tooth_decay": { AnyView(ToothDecayDiagram()) }
+        "ch05_tooth_decay": { AnyView(ToothDecayDiagram()) },
+        // ch06 — Physical and Chemical Changes
+        "ch06_physical_vs_chemical": { AnyView(PhysicalVsChemicalDiagram()) },
+        "ch06_rust_formation": { AnyView(RustFormationDiagram()) },
+        "ch06_crystallization": { AnyView(CrystallizationDiagram()) },
+        "ch06_balanced_equation": { AnyView(BalancedEquationDiagram()) },
+        // ch07 — Weather, Climate and Adaptations
+        "ch07_atmosphere_layers": { AnyView(AtmosphereLayersDiagram()) },
+        "ch07_monsoon_winds": { AnyView(MonsoonWindsDiagram()) },
+        "ch07_polar_adapt": { AnyView(PolarAdaptDiagram()) },
+        "ch07_climate_zones": { AnyView(ClimateZonesDiagram()) },
+        // ch08 — Winds, Storms and Cyclones
+        "ch08_high_low_pressure": { AnyView(HighLowPressureDiagram()) },
+        "ch08_cyclone_spiral": { AnyView(CycloneSpiralDiagram()) },
+        "ch08_coriolis": { AnyView(CoriolisDiagram()) },
+        "ch08_thunderstorm": { AnyView(ThunderstormDiagram()) },
+        // ch09 — Soil
+        "ch09_soil_profile": { AnyView(SoilProfileDiagram()) },
+        "ch09_soil_types": { AnyView(SoilTypesDiagram()) },
+        "ch09_erosion": { AnyView(ErosionDiagram()) },
+        "ch09_contour_terracing": { AnyView(ContourTerracingDiagram()) }
     ]
 
     /// Resource keys with a registered diagram (sorted). Exposed so a test

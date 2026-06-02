@@ -74,7 +74,20 @@ no-orphan-registration + factory-resolves + per-slice coverage each slice.
   base toothpaste). Test generalised to `testFullyCoveredChaptersAreComplete`
   (per-chapter completeness floor; covered list now ch01–ch05). Green: 17 lints +
   test_lints + ci-build-test (Release BUILD + 809 XCTest, 0 fail).
-- ⬜ M3.3…M3.x — remaining 14 chapters (ch06–ch19), 56 diagrams.
+- ✅ **M3.3 — ch06–ch09 (16/16)** (cycle 2): **ch06 Physical/Chemical Changes:**
+  `physical_vs_chemical` (two-column reversible/no-new-substance vs new-substance),
+  `rust_formation` (iron+O₂+water→rust, rusty nail), `crystallization` (hot
+  solution→crystals beaker), `balanced_equation` (2H₂+O₂→2H₂O with atom tally).
+  **ch07 Weather/Climate/Adaptation:** `atmosphere_layers` (tropo→strato→meso→
+  thermo bands), `monsoon_winds` (sea→land summer arrows over a peninsula),
+  `polar_adapt` (polar-bear adaptations), `climate_zones` (latitude belts on a
+  globe). **ch08 Winds/Storms/Cyclones:** `high_low_pressure` (H→L wind),
+  `cyclone_spiral` (Archimedean spiral + eye), `coriolis` (deflected path on a
+  spinning Earth), `thunderstorm` (cloud + up/downdraft + bolt + rain). **ch09
+  Soil:** `soil_profile` (O/A/B/C/bedrock horizons), `soil_types` (sandy/clayey/
+  loamy grain size), `erosion` (bare vs plant-held slope), `contour_terracing`
+  (stepped terraces). Green: 17 lints + test_lints + ci-build-test (809 XCTest).
+- ⬜ M3.4…M3.x — remaining 10 chapters (ch10–ch19), 40 diagrams.
 
 ## Phase 4 — Reading-level + polish
 

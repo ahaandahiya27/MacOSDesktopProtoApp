@@ -397,6 +397,10 @@
 		5BB50EB3E1A15D412899C439 /* Chapter3ShapeDiagrams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8410A17AF528F378287E90 /* Chapter3ShapeDiagrams.swift */; };
 		CFC5BB09EF7201275C7AAD57 /* Chapter4ShapeDiagrams.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEFCD473741917A7D10182CE /* Chapter4ShapeDiagrams.swift */; };
 		71EF97048A058870D6FF1D44 /* Chapter5ShapeDiagrams.swift in Sources */ = {isa = PBXBuildFile; fileRef = A9EA6AC468605E93210E88C8 /* Chapter5ShapeDiagrams.swift */; };
+		87F497B6EC338C23ABBFB277 /* Chapter6ShapeDiagrams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CAD728D7952965026294E9B /* Chapter6ShapeDiagrams.swift */; };
+		1A6EF7887FE4B7A55384E804 /* Chapter7ShapeDiagrams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26B8DDA7B4FF4B0E88494B2F /* Chapter7ShapeDiagrams.swift */; };
+		8AB89D851B78C33B81F6BA00 /* Chapter8ShapeDiagrams.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA56E5B83A399EF40CBC5722 /* Chapter8ShapeDiagrams.swift */; };
+		5C0C5E60C2F7364400E5AC0F /* Chapter9ShapeDiagrams.swift in Sources */ = {isa = PBXBuildFile; fileRef = B3FAEE27576FAD09E75577D9 /* Chapter9ShapeDiagrams.swift */; };
 		5005503CE27AB8B46048B118 /* ShapeDiagramKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA66531B89AF141694C6CB3 /* ShapeDiagramKit.swift */; };
 		6F1BCE526840ECC878A4652D /* BuildAWaterCycleSandbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CED65B0B8CA4660E4A7F0C /* BuildAWaterCycleSandbox.swift */; };
 		E8379BAB7B82F026D7A2E74C /* InsideTheXylemAscentTour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C332B3ABA91CC2B63F7B757 /* InsideTheXylemAscentTour.swift */; };
@@ -2992,6 +2996,10 @@
 		7D8410A17AF528F378287E90 /* Chapter3ShapeDiagrams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chapter3ShapeDiagrams.swift"; sourceTree = "<group>"; };
 		AEFCD473741917A7D10182CE /* Chapter4ShapeDiagrams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chapter4ShapeDiagrams.swift"; sourceTree = "<group>"; };
 		A9EA6AC468605E93210E88C8 /* Chapter5ShapeDiagrams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chapter5ShapeDiagrams.swift"; sourceTree = "<group>"; };
+		2CAD728D7952965026294E9B /* Chapter6ShapeDiagrams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chapter6ShapeDiagrams.swift"; sourceTree = "<group>"; };
+		26B8DDA7B4FF4B0E88494B2F /* Chapter7ShapeDiagrams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chapter7ShapeDiagrams.swift"; sourceTree = "<group>"; };
+		BA56E5B83A399EF40CBC5722 /* Chapter8ShapeDiagrams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chapter8ShapeDiagrams.swift"; sourceTree = "<group>"; };
+		B3FAEE27576FAD09E75577D9 /* Chapter9ShapeDiagrams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chapter9ShapeDiagrams.swift"; sourceTree = "<group>"; };
 		5BA66531B89AF141694C6CB3 /* ShapeDiagramKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShapeDiagramKit.swift"; sourceTree = "<group>"; };
 		E2CED65B0B8CA4660E4A7F0C /* BuildAWaterCycleSandbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BuildAWaterCycleSandbox.swift"; sourceTree = "<group>"; };
 		0C332B3ABA91CC2B63F7B757 /* InsideTheXylemAscentTour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InsideTheXylemAscentTour.swift"; sourceTree = "<group>"; };
@@ -5841,6 +5849,10 @@
 				7D8410A17AF528F378287E90,
 				AEFCD473741917A7D10182CE,
 				A9EA6AC468605E93210E88C8,
+				2CAD728D7952965026294E9B,
+				26B8DDA7B4FF4B0E88494B2F,
+				BA56E5B83A399EF40CBC5722,
+				B3FAEE27576FAD09E75577D9,
 				5BA66531B89AF141694C6CB3,
 			);
 			path = "ShapeDiagrams";
@@ -7689,6 +7701,10 @@
 				5BB50EB3E1A15D412899C439 /* Chapter3ShapeDiagrams.swift in Sources */,
 				CFC5BB09EF7201275C7AAD57 /* Chapter4ShapeDiagrams.swift in Sources */,
 				71EF97048A058870D6FF1D44 /* Chapter5ShapeDiagrams.swift in Sources */,
+				87F497B6EC338C23ABBFB277 /* Chapter6ShapeDiagrams.swift in Sources */,
+				1A6EF7887FE4B7A55384E804 /* Chapter7ShapeDiagrams.swift in Sources */,
+				8AB89D851B78C33B81F6BA00 /* Chapter8ShapeDiagrams.swift in Sources */,
+				5C0C5E60C2F7364400E5AC0F /* Chapter9ShapeDiagrams.swift in Sources */,
 				5005503CE27AB8B46048B118 /* ShapeDiagramKit.swift in Sources */,
 				6F1BCE526840ECC878A4652D /* BuildAWaterCycleSandbox.swift in Sources */,
 				E8379BAB7B82F026D7A2E74C /* InsideTheXylemAscentTour.swift in Sources */,

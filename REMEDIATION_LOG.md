@@ -6441,3 +6441,25 @@ regressions; zero STOP_AND_ASK.
 
 NEXT: Phase 3 M3.3 — ch06 (physical_vs_chemical, rust_formation, crystallization,
 balanced_equation), then ch07…ch19 one slice each.
+
+---
+
+## 2026-06-02 — v7 Phase 3 M3.3: Shape Diagram Library — ch06–ch09 (16 diagrams)
+
+- ch06 Physical/Chemical Changes: physical_vs_chemical, rust_formation,
+  crystallization (beaker), balanced_equation (2H₂+O₂→2H₂O atom tally).
+- ch07 Weather/Climate/Adaptation: atmosphere_layers, monsoon_winds,
+  polar_adapt, climate_zones (latitude belts).
+- ch08 Winds/Storms/Cyclones: high_low_pressure, cyclone_spiral (segment-built
+  Archimedean spiral + eye), coriolis, thunderstorm.
+- ch09 Soil: soil_profile (horizons), soil_types (grain size), erosion,
+  contour_terracing.
+
+All Path/primitive-Shape only, static, Color.compat*/system palette, SF symbols
+routed through SFSymbolCompat.name(), no macOS 12+ APIs, no force-unwrap.
+ShapeDiagramRegistryTests fullyCoveredChapters now ch01–ch09. Green here: 17
+Big-Sur lints + test_lints.py; pbxproj regenerated; ci-build-test.sh → Release
+BUILD + 809 XCTest, 0 failures. Additive; zero regressions; zero STOP_AND_ASK.
+
+NEXT: Phase 3 M3.4 — ch10–ch13 (respiration, transportation, plant reproduction,
+motion & time).
