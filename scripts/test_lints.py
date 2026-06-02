@@ -130,6 +130,19 @@ def main() -> int:
     if mc.run_selftest() != 0:
         failures.append("check_mainactor_closure_refs selftest")
 
+    # The two T2 UI-test ratchets carry their own fixture-driven selftests
+    # (no external fixture files). Drive them here so a regex edit that
+    # silently neuters either ratchet fails the suite loudly.
+    print("== check_critical_uitest_presence — embedded --selftest ==")
+    cup = _import_lint_module("check_critical_uitest_presence")
+    if cup.selftest() != 0:
+        failures.append("check_critical_uitest_presence selftest")
+
+    print("== check_uitest_label_coverage — embedded --selftest ==")
+    ulc = _import_lint_module("check_uitest_label_coverage")
+    if ulc.selftest() != 0:
+        failures.append("check_uitest_label_coverage selftest")
+
     print()
     if failures:
         print(f"test_lints: FAIL — {len(failures)} broken rule(s):")

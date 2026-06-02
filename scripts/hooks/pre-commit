@@ -294,4 +294,26 @@ if [ -n "$UITEST_STAGED" ] && [ -f "scripts/check_critical_uitest_presence.py" ]
     fi
 fi
 
+# 14) Propagated-CTA label↔UI-test coverage (taxonomy T2). Sibling to #13:
+#     where #13 pins the test methods by name, this pins the accessibility
+#     LABELS those walks query. Runs when a UI-test file, the propagated-CTA
+#     source, or a Build-a-* sandbox surface is staged — i.e. whenever a label
+#     could be added/renamed out from under its walk. Deterministic, no build,
+#     no AX grant. Hard gate.
+LABEL_COVERAGE_TOUCHED=$(git diff --cached --name-only --diff-filter=ACMD \
+    | grep -E '^desktopAhaan(UITests/.+\.swift|/Subjects/Tutor/(ChapterDetailView\+PropagatedCTAs\.swift|Surfaces/.+\.swift))$' \
+    || true)
+if [ -n "$LABEL_COVERAGE_TOUCHED" ] && [ -f "scripts/check_uitest_label_coverage.py" ]; then
+    if ! python3 scripts/check_uitest_label_coverage.py; then
+        echo
+        echo "pre-commit: check_uitest_label_coverage failed — a propagated CTA /"
+        echo "sandbox accessibility label has no referencing UI test (a walk was"
+        echo "deleted, or a label drifted out from under its walk)."
+        echo "Fix: add/restore a UI walk that queries the listed label verbatim,"
+        echo "or update the label in BOTH the source and its UI test."
+        echo "If intentional, bypass with: git commit --no-verify"
+        exit 1
+    fi
+fi
+
 exit 0

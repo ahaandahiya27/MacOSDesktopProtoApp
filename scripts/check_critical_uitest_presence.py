@@ -48,6 +48,42 @@ REQUIRED = {
         "testWalkAllScienceChapters",
     "maths discover walk: Ch.10 (integer arithmetic family)":
         "testTryDiscoverModeFromMathsCh10_doesNotCrash",
+
+    # Propagated tours (T2) — the 4 that GoldenPathUITests' leaf/wire walks
+    # don't already cover. Each pins one presentDeferred(.insideThe*Tour) arm.
+    "propagated tour: Ch.2 digestive open/dismiss":
+        "testInsideTheDigestiveTour_OpenAndDismiss",
+    "propagated tour: Ch.10 alveolus open/dismiss":
+        "testInsideTheAlveolusTour_OpenAndDismiss",
+    "propagated tour: Ch.11 xylem open/dismiss":
+        "testInsideTheXylemTour_OpenAndDismiss",
+    "propagated tour: Ch.15 lens open/dismiss":
+        "testInsideTheLensTour_OpenAndDismiss",
+
+    # Propagated Build-a-* sandboxes (T2) — inline mounts; each walk pins
+    # one chapter's sandbox container + its explainer-toggle state flip.
+    "propagated sandbox: Ch.1 build-a-plant mount/interact":
+        "testBuildAPlantSandbox_MountsAndInteracts",
+    "propagated sandbox: Ch.4 build-a-heat-flow mount/interact":
+        "testBuildAHeatFlowSandbox_MountsAndInteracts",
+    "propagated sandbox: Ch.5 build-a-pH mount/interact":
+        "testBuildAPHSandbox_MountsAndInteracts",
+    "propagated sandbox: Ch.6 build-a-reaction mount/interact":
+        "testBuildAReactionSandbox_MountsAndInteracts",
+    "propagated sandbox: Ch.7 build-a-climate mount/interact":
+        "testBuildAClimateSandbox_MountsAndInteracts",
+    "propagated sandbox: Ch.8 build-a-wind mount/interact":
+        "testBuildAWindSandbox_MountsAndInteracts",
+    "propagated sandbox: Ch.9 build-a-soil mount/interact":
+        "testBuildASoilSandbox_MountsAndInteracts",
+    "propagated sandbox: Ch.13 build-a-motion mount/interact":
+        "testBuildAMotionSandbox_MountsAndInteracts",
+    "propagated sandbox: Ch.16 build-a-water-cycle mount/interact":
+        "testBuildAWaterCycleSandbox_MountsAndInteracts",
+
+    # Try-at-Home home-experiments sheet (T2).
+    "home experiments: Try-at-Home sheet open/dismiss":
+        "testHomeExperimentsSheet_OpenAndDismiss",
 }
 
 FUNC_RE = re.compile(r'func\s+(test[A-Za-z0-9_]+)\s*\(')
