@@ -1521,6 +1521,7 @@
 		56B564832ED473600EDF0626 /* DailyPlanViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5CA7D672C0911411E970709 /* DailyPlanViewTests.swift */; };
 		7048C921BB5D3F44B4E3F9AB /* DailyQuestionPickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E14C1BC2E36EC9E70CAA9D /* DailyQuestionPickerTests.swift */; };
 		F8E4689538CAC34B8482007A /* DictionaryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C883748B706BDB46E529043 /* DictionaryTests.swift */; };
+		F5BD223C79FFDD91C70E5583 /* DiscoverProgressAttributionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6F6BDC799D505C8A03A9C60 /* DiscoverProgressAttributionTests.swift */; };
 		2F62466B7282ADDB6A1CFF95 /* DynamicTypeAtXLargeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD7151492C97EDC9C4CFAEE3 /* DynamicTypeAtXLargeTests.swift */; };
 		5F6B20A8A2E5CFAD15B25843 /* EmptyStateRenderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096D223E1864DE863BD2BCD9 /* EmptyStateRenderTests.swift */; };
 		DA6F50CAD880F7B3579798CB /* EntitlementsSnapshotTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA91C543A578CC6E615E698 /* EntitlementsSnapshotTest.swift */; };
@@ -3153,6 +3154,7 @@
 		C5CA7D672C0911411E970709 /* DailyPlanViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyPlanViewTests.swift"; sourceTree = "<group>"; };
 		24E14C1BC2E36EC9E70CAA9D /* DailyQuestionPickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyQuestionPickerTests.swift"; sourceTree = "<group>"; };
 		8C883748B706BDB46E529043 /* DictionaryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DictionaryTests.swift"; sourceTree = "<group>"; };
+		A6F6BDC799D505C8A03A9C60 /* DiscoverProgressAttributionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DiscoverProgressAttributionTests.swift"; sourceTree = "<group>"; };
 		FD7151492C97EDC9C4CFAEE3 /* DynamicTypeAtXLargeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DynamicTypeAtXLargeTests.swift"; sourceTree = "<group>"; };
 		096D223E1864DE863BD2BCD9 /* EmptyStateRenderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EmptyStateRenderTests.swift"; sourceTree = "<group>"; };
 		CEA91C543A578CC6E615E698 /* EntitlementsSnapshotTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EntitlementsSnapshotTest.swift"; sourceTree = "<group>"; };
@@ -6125,6 +6127,7 @@
 				C5CA7D672C0911411E970709,
 				24E14C1BC2E36EC9E70CAA9D,
 				8C883748B706BDB46E529043,
+				A6F6BDC799D505C8A03A9C60,
 				FD7151492C97EDC9C4CFAEE3,
 				096D223E1864DE863BD2BCD9,
 				CEA91C543A578CC6E615E698,
@@ -7894,6 +7897,7 @@
 				56B564832ED473600EDF0626 /* DailyPlanViewTests.swift in Sources */,
 				7048C921BB5D3F44B4E3F9AB /* DailyQuestionPickerTests.swift in Sources */,
 				F8E4689538CAC34B8482007A /* DictionaryTests.swift in Sources */,
+				F5BD223C79FFDD91C70E5583 /* DiscoverProgressAttributionTests.swift in Sources */,
 				2F62466B7282ADDB6A1CFF95 /* DynamicTypeAtXLargeTests.swift in Sources */,
 				5F6B20A8A2E5CFAD15B25843 /* EmptyStateRenderTests.swift in Sources */,
 				DA6F50CAD880F7B3579798CB /* EntitlementsSnapshotTest.swift in Sources */,

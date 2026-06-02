@@ -17,13 +17,17 @@ import Foundation
 //    dashboard pays the (tiny) read once, and a kid who never touches
 //    either never pays it at all.
 //
-//  • Discover-scene completions are attributed to the host pack
-//    (`DiscoverMode.hostPackId` = science). `DiscoverProgress` only
-//    stores `chapterId`, and Science + the Maths Discover pilot share
-//    bare chapter ids (`ch01`…), so we can't split them without adding
-//    a `packId` to the discover schema (deliberately out of scope this
-//    run; see POLISH_TODOS). The day/week discover totals are exact;
-//    only the per-subject split folds Maths-pilot scenes under Science.
+//  • Discover-scene completions are attributed to their OWNING subject.
+//    `DiscoverProgress` carries a `packId` (v8); for legacy rows that
+//    predate it, `resolvedPackId` recovers the subject from the uniquely
+//    subject-prefixed Discover chapter id (Science `chNN`, Maths `mchNN`,
+//    Sanskrit `schNN`, Social Science `sschNN`). So the per-subject split
+//    is now exact — Maths Discover lands under Maths, not Science. An
+//    unrecognised id (none today) falls back to the host pack so a row is
+//    never dropped. NOTE: the cross-subject Whole-Journey plan still
+//    excludes Maths Discover for a *different* reason (its slot lookup keys
+//    by the bare `chNN` chapter id, which doesn't match the stored `mchNN`
+//    key) — see `DataStore+JourneyPlan.swift`.
 
 /// Pack id bucket for reviews written before `QuestionReview.packId`
 /// existed (legacy rows decode it as nil). Kept distinct so the totals
@@ -144,10 +148,13 @@ extension DataStore {
             perDay[dayIdx][visit.packId] = acc
         }
 
-        // Discover scenes — attributed to the host pack (see file header).
+        // Discover scenes — attributed to the OWNING subject (see file header).
+        // Prefer the row's recorded packId; fall back to recovering it from the
+        // uniquely subject-prefixed chapter id, then to the host pack for an
+        // unrecognised id so a row is never silently dropped.
         for row in discoverProgress {
             guard let dayIdx = dayIndex(for: row.completedAt) else { continue }
-            let packId = DiscoverMode.hostPackId
+            let packId = row.resolvedPackId ?? DiscoverMode.hostPackId
             var acc = perDay[dayIdx][packId] ?? Acc()
             acc.discover += 1
             acc.chapterTally[row.chapterId, default: 0] += 1

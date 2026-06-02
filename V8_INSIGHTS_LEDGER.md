@@ -92,7 +92,30 @@ per-subject Discover attribution, and the F.1 accessibility close-out.
   - Tests: +2 PDF (trend page with/without history). Build+test PASSED.
   - Note: hit a transient stale-DerivedData "Framework … no Info.plist" failure;
     fixed by `rm -rf $TMPDIR/desktopAhaan-ci-derived` then re-running. Not a code issue.
-- [ ] Phase 4 — Per-subject Discover attribution
+- [x] Phase 4 — Per-subject Discover attribution. **DONE** (2026-06-03)
+  - `DiscoverProgress`: added `var packId: String?` (Codable, optional → legacy
+    rows decode nil = forward-compatible), a pure static `inferredPackId(fromChapterId:)`
+    and a `resolvedPackId` accessor. The init auto-populates packId (explicit-or-inferred).
+  - `markSceneComplete`: gained optional `packId:` param; resolves explicit-or-inferred,
+    stores it on new rows AND backfills nil on touched legacy rows.
+  - `DataStore+WeeklyActivity`: discover rows now attribute to `row.resolvedPackId`
+    (→ host pack only for an unrecognised id) — **exact per-subject split**; Maths
+    Discover lands under Maths, not Science. Header comment updated.
+  - Tests: `DiscoverProgressAttributionTests` (inference, prefix ordering, init,
+    legacy decode + recover, round-trip) + 2 rollup tests (per-subject split incl.
+    Maths; legacy-row attribution). Build+test PASSED.
+  - **MATHS CAVEAT (documented, resolved for the dashboard):** Maths Discover rows
+    are recorded under an `mch`-prefixed key (`DiscoverChapterMathNView` writes
+    `"m\(chapter.id)"`), so they are already prefix-distinguishable from Science
+    (`ch`), Sanskrit (`sch`), Social Science (`ssch`). The old journey-plan comment
+    feared a *bare-chNN* collision, but the `"m"` mangling pre-empts it — so the
+    **dashboard** per-subject split is unambiguous and now exact. The cross-subject
+    **Whole-Journey plan** still excludes Maths Discover, but for a *different*
+    reason: `nextOpenDiscoverItem` looks up completions by the pack's bare `chNN`
+    chapter id, which doesn't match the stored `mchNN` key — crediting Maths there
+    needs an auto-Done reconciliation change that's out of scope for the v8
+    attribution pass. Exclusion comment updated to say so. No STOP_AND_ASK: attributed
+    everything unambiguous (the whole dashboard), documented the one out-of-scope path.
 - [ ] Phase 5 — InsightsView + InsightsWindow + ⌘⇧I + capstone test
 - [ ] Phase 6 — F.1 a11y + new-surface a11y + ratchet
 - [ ] Phase 7 — Integrate/test/doc + final sentinel

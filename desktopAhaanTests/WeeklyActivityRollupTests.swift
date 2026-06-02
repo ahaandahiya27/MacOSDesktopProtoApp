@@ -62,8 +62,18 @@ final class WeeklyActivityRollupTests: XCTestCase {
         )
     }
 
-    private func seedDiscover(chapterId: String, sceneId: String, daysAgo: Int) {
+    private func seedDiscover(chapterId: String, sceneId: String, daysAgo: Int,
+                              packId: String? = nil) {
+        let row = DiscoverProgress(chapterId: chapterId, sceneId: sceneId, packId: packId)
+        row.completedAt = cal.date(byAdding: .day, value: -daysAgo, to: endDate)!
+        store.discoverProgress.append(row)
+    }
+
+    /// Append a discover row with `packId` forced to nil to simulate a legacy
+    /// `discover.json` record written before the field existed.
+    private func seedLegacyDiscover(chapterId: String, sceneId: String, daysAgo: Int) {
         let row = DiscoverProgress(chapterId: chapterId, sceneId: sceneId)
+        row.packId = nil   // legacy row: no recorded attribution
         row.completedAt = cal.date(byAdding: .day, value: -daysAgo, to: endDate)!
         store.discoverProgress.append(row)
     }
@@ -201,6 +211,32 @@ final class WeeklyActivityRollupTests: XCTestCase {
         XCTAssertEqual(activity.days[4].perSubject[DiscoverMode.hostPackId]?.discoverScenesCompleted, 1)
         // topChapter on today's host-pack activity is ch01 (2 scenes > ch04 0 today).
         XCTAssertEqual(activity.days[6].perSubject[DiscoverMode.hostPackId]?.topChapter, "ch01")
+    }
+
+    func testDiscoverSplitsPerSubjectByPackId() {
+        // Maths Discover rows are recorded under an "mch"-prefixed key; with v8
+        // attribution they must land under Maths, not Science.
+        seedDiscover(chapterId: "ch01", sceneId: "scene1", daysAgo: 0)   // → science
+        seedDiscover(chapterId: "mch06", sceneId: "scene1", daysAgo: 0)  // → maths
+        seedDiscover(chapterId: "mch06", sceneId: "scene2", daysAgo: 0)  // → maths
+        seedDiscover(chapterId: "sch03", sceneId: "scene1", daysAgo: 0)  // → sanskrit
+        seedDiscover(chapterId: "ssch09", sceneId: "scene1", daysAgo: 0) // → social science
+
+        let today = store.weeklyActivity(endingAt: endDate, calendar: cal).days[6]
+        XCTAssertEqual(today.perSubject["science_class7"]?.discoverScenesCompleted, 1)
+        XCTAssertEqual(today.perSubject["maths_class7"]?.discoverScenesCompleted, 2)
+        XCTAssertEqual(today.perSubject["sanskrit_class7"]?.discoverScenesCompleted, 1)
+        XCTAssertEqual(today.perSubject["socialscience_class7"]?.discoverScenesCompleted, 1)
+    }
+
+    func testLegacyDiscoverRowAttributedByChapterIdPrefix() {
+        // A row that predates the packId field still attributes correctly via
+        // the chapter-id prefix recovery — Maths legacy row → Maths.
+        seedLegacyDiscover(chapterId: "mch10", sceneId: "scene1", daysAgo: 0)
+        let today = store.weeklyActivity(endingAt: endDate, calendar: cal).days[6]
+        XCTAssertEqual(today.perSubject["maths_class7"]?.discoverScenesCompleted, 1)
+        XCTAssertNil(today.perSubject["science_class7"],
+            "A legacy Maths Discover row must not fold under Science any more.")
     }
 
     // MARK: - Mastery delta

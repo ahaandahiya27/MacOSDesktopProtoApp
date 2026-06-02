@@ -21,13 +21,17 @@ import Foundation
 extension DataStore {
 
     /// Discover slots are sourced only from these packs in Whole Journey mode.
-    /// Maths is deliberately excluded: `DiscoverProgress` carries no `packId`
-    /// and Maths shares the bare `chNN` chapter-id space with Science, so a
-    /// Maths Discover row can't be distinguished from a Science one — offering
-    /// a Maths Discover item would make auto-Done reconciliation ambiguous.
-    /// Maths engagement is routed through its reviews + concept slots instead.
-    /// (Sanskrit `sch*` / Social Science `ssch*` ids are unique, so they're
-    /// safe to credit.)
+    /// Maths is deliberately excluded. As of v8 `DiscoverProgress` carries a
+    /// `packId`, so Maths Discover activity is now split correctly in the Weekly
+    /// dashboard — but the Whole-Journey *plan* is a different code path: its
+    /// open-Discover lookup (`nextOpenDiscoverItem`) keys completions by the
+    /// pack's bare `chNN` chapter id, whereas Maths Discover rows are persisted
+    /// under an `mch`-prefixed key (`DiscoverChapterMathNView` records
+    /// `"m\(chapter.id)"`). Crediting Maths here would require reconciling that
+    /// key mismatch through auto-Done as well, which is out of scope for the v8
+    /// attribution pass — so Maths engagement stays routed through its reviews +
+    /// concept slots. (Sanskrit `sch*` / Social Science `ssch*` ids match their
+    /// stored keys, so they're safe to credit.) See `V8_INSIGHTS_LEDGER.md`.
     static let journeyDiscoverPackIds: Set<String> = [
         "science_class7", "sanskrit_class7", "socialscience_class7"
     ]

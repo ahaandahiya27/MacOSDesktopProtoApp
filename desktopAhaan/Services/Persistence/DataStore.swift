@@ -623,16 +623,25 @@ final class DataStore: ObservableObject {
         return discoverProgress.contains { $0.id == key }
     }
 
+    /// Record (or refresh) a completed Discover scene. `packId` attributes the
+    /// completion to its subject for the Weekly dashboard's per-subject split;
+    /// when omitted it's recovered from the (uniquely subject-prefixed)
+    /// `chapterId` via `DiscoverProgress.inferredPackId(_:)`, so callers that
+    /// don't have the pack handy still attribute correctly. Touching a legacy
+    /// row (recorded before the field existed) backfills its `packId`.
     func markSceneComplete(chapterId: String, sceneId: String,
+                           packId: String? = nil,
                            score: Int? = nil, maxScore: Int? = nil) {
         let key = "\(chapterId)::\(sceneId)"
+        let resolvedPackId = packId ?? DiscoverProgress.inferredPackId(fromChapterId: chapterId)
         if let idx = discoverProgress.firstIndex(where: { $0.id == key }) {
             if let s = score { discoverProgress[idx].score = s }
             if let m = maxScore { discoverProgress[idx].maxScore = m }
+            if discoverProgress[idx].packId == nil { discoverProgress[idx].packId = resolvedPackId }
             discoverProgress[idx].completedAt = Date()
         } else {
             let row = DiscoverProgress(
-                chapterId: chapterId, sceneId: sceneId,
+                chapterId: chapterId, sceneId: sceneId, packId: resolvedPackId,
                 score: score, maxScore: maxScore
             )
             discoverProgress.append(row)
