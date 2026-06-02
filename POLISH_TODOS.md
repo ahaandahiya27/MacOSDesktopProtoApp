@@ -82,10 +82,12 @@ non-parallel sweep.
   regression guard (the 6b5a706 review-loss class): record a review on one
   handle, assert visibility through `.shared`. Prevents re-introduction of a
   second `DataStore()`.
-- [ ] **F.1 unlabeled buttons** — 24 Image-only / empty-keyboard-proxy buttons
-  (96% labeled, > 90% floor). Add `.accessibilityLabel`/`.help` per site
-  (CommandPalette shortcut buttons, QuestionDetailView keyboard proxies,
-  FlipCard/DiscoveryStepper). View edits.
+- [x] **F.1 unlabeled buttons** — DONE (v8). a11y label coverage 96% → 100%
+  (floor 90). Labeled the Image-only refresh (AskFollowUpView), the CommandPalette
+  ×4 + QuestionDetailView ×4 zero-size keyboard-shortcut proxies (visible controls
+  carry the semantics; proxy containers `.accessibilityHidden`), and the
+  AchievementGallery badge button. `check_a11y_labels.py` also made more accurate
+  (skips `//`-comment matches; credits `Button(cond ? "A" : "B")` ternary labels).
 - [ ] **I.3 DRY** — `ConceptDetailView+ChapterGlossaryCTA.swift` duplicates the
   `m`-prefix article-key derivation; route it through
   `ArticleIndex.packScopedKey(forPackId:baseKey:)` like GlossarySheet does.
@@ -107,23 +109,22 @@ non-parallel sweep.
   (⌘⇧W / Help → Weekly Progress) + single-page PDF export
   (`WeeklyReportPDFExporter`). See `PRODUCTION_READINESS_REPORT.md` →
   "Weekly Progress Dashboard".
-- [ ] **Exact per-subject Discover attribution** — `DiscoverProgress`
-  stores only `chapterId`, and Science + the Maths Discover pilot share
-  bare chapter ids (`ch01…`), so the dashboard folds Maths-pilot scenes
-  under Science in the per-subject pill (day/week totals stay exact).
-  Adding a `packId` field to `DiscoverProgress` (+ a `discover.json`
-  migration) would make it exact. Schema change — deliberately out of
-  scope for the parallel run.
-- [ ] **True week-over-week mastery delta** — the dashboard's
-  `MasteryDelta` uses the activity-window definition (questions whose
-  last review landed in the 7 days, by current level). A persisted daily
-  mastery snapshot (`masterySnapshots.json`, auto-pruned to 30 days)
-  diffed week-start vs week-end would be exact, but recording one snapshot
-  per day needs an app-launch hook — deferred to a non-parallel sweep
-  (touching the launch path / loader was out of scope here).
-- [ ] **Month view / trend chart** — the current dashboard is a single
-  trailing-7-day window. A month grid or a mastery-over-time sparkline is
-  a natural follow-up once daily snapshots exist.
+- [x] **Exact per-subject Discover attribution** — DONE (v8). `DiscoverProgress`
+  now carries an optional `packId` (forward-compatible: legacy `discover.json`
+  rows decode as nil and recover via `resolvedPackId`'s chapter-id-prefix
+  inference). The Weekly dashboard splits Discover by owning subject — Maths
+  Discover lands under Maths, not Science. (The cross-subject Whole-Journey
+  *plan* still excludes Maths Discover for a separate key-mismatch reason; see
+  `DataStore+JourneyPlan.swift` + `V8_INSIGHTS_LEDGER.md`.)
+- [x] **True week-over-week mastery delta** — DONE (v8). A daily mastery snapshot
+  (`progress_history.json`, 180-day rolling cap, captured at launch + on
+  dashboard/Insights open) feeds an exact week-over-week ±N% delta surfaced in
+  `WeeklyProgressView` + the PDF report's new trend page. Read-only over the SRS.
+- [x] **Month view / trend chart** — DONE (v8). `TrendChartView` draws a
+  Big-Sur-safe mastery-over-time line chart (pure `Path`/`Shape`, no `Charts`)
+  over the daily history, with an overall line + per-subject toggle. Surfaced in
+  the new **Insights** window (Help → Insights / ⌘⇧I) and as a Core-Graphics
+  sparkline on the PDF report's trend page.
 
 ## §6 — Daily Plan + Achievements (Agent A, overnight v2)
 

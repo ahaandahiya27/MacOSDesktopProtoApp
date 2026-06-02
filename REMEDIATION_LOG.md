@@ -6555,3 +6555,40 @@ v7 "Discover Depth + Visual Library" is COMPLETE:
 
 V7_PHASE5_COMPLETE_SENTINEL_v1
 V7_DISCOVER_DEPTH_COMPLETE_SENTINEL_v1
+
+---
+
+## v8 — Longitudinal Insights & Dashboard Completion (2026-06-03)
+
+Built the longitudinal layer the parent dashboard was missing. Everything the
+parent saw was a single-week snapshot; v8 added a persisted daily mastery
+history and the surfaces over it — all read-only over the SRS.
+
+Shipped, in seven phases (each: lints + ci-build-test green, committed + pushed):
+- Phase 1 — `progress_history.json` store (idempotent per-day capture, 180-day
+  cap, atomic) + the pure `ProgressHistory` analysis layer (delta/series/weekOverWeek).
+- Phase 2 — `TrendChartView`: a Big-Sur-safe mastery line chart in pure
+  `Path`/`Shape` (never `Charts`); reduce-motion-gated `.trim` reveal; legacy-safe.
+- Phase 3 — week-over-week ±N% delta in `WeeklyProgressView` + a 3rd PDF page
+  (Core-Graphics sparkline of the overall series + signed deltas).
+- Phase 4 — exact per-subject Discover attribution via `DiscoverProgress.packId`
+  (forward-compatible; legacy rows recover via chapter-id-prefix inference). Maths
+  Discover now splits under Maths in the dashboard; the Whole-Journey plan's Maths
+  exclusion stays (separate key-mismatch reason, documented).
+- Phase 5 — `InsightsView` + `InsightsWindow` (Help → Insights / ⌘⇧I) tying the
+  chart + delta + per-subject standings together; v8 read-only capstone test.
+- Phase 6 — F.1 accessibility close-out: a11y label coverage 96% → 100%; lint
+  made more accurate (skip `//`-comment matches; credit ternary-string labels).
+- Phase 7 — docs: V8_INSIGHTS_CHECKPOINT.md, this entry, POLISH_TODOS flips
+  (F.1 + the three dashboard deferrals), CLAUDE.md refresh (Insights window/⌘⇧I,
+  835 tests).
+
+Read-only-over-SRS invariant held: new surfaces write ONLY progress_history.json
+(+ the additive discover.json packId). The capstone pins the SRS byte-identical.
+
+Green here: full Big-Sur static lint suite + test_lints.py; ci-build-test.sh →
+Release BUILD + 835 XCTest + 66 swift-testing, 0 failures. Additive; zero
+regressions; zero STOP_AND_ASK. Big-Sur compilation/frame-rate of the new views
+still needs an iMac rebuild to confirm directly (dev-Mac + static-lint proxy only).
+
+V8_INSIGHTS_COMPLETE_SENTINEL_v1

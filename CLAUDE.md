@@ -4,7 +4,7 @@ Read this before touching the codebase. It's the durable summary of how
 this project is built, what platform it must run on, and the conventions
 every session has converged on.
 
-## Current status (2026-06-02)
+## Current status (2026-06-03)
 
 - **17 lints clean** on every push — see `scripts/check_*.py`. Wired through `scripts/ci-build-test.sh`. (Plus two commit-time T2 ratchets: `check_critical_uitest_presence.py` + `check_uitest_label_coverage.py`, in the pre-commit chain.)
 - **Bug-free certification: 110/110 categories ✅** — see `BUG_FREE_CERTIFICATION_REPORT.md` at the repo root.
@@ -12,8 +12,9 @@ every session has converged on.
 - **Per-subject readiness:** Science (19 ch), Maths (15 ch), Sanskrit (16 ch = 15 NEP + 1 legacy vocab deck), Social Science (`socialscience_class7`, NEP `sschNN` ids — bespoke per-chapter interactives via `socialScienceInteractives`). See `{SUBJECT}_READINESS_REPORT.md` each.
 - **v6 Learning Journey complete:** Weekly plan, Discover, Articles, Mastery map, Milestone checkpoints, and the mastery-gated Expert Challenge ladder — all read-only over the SRS layer. See `LEARNING_JOURNEY_CHECKPOINT.md`. **Note:** the ladder's **Olympiad** tier is dormant — `StretchTopic.bonusQuestions` is `null`/absent across all packs, so it has no content yet. Authoring beyond-grade MCQs lights it up automatically (no code change).
 - **v7 Discover Depth complete (2026-06-02):** Sanskrit + Social Science now have bespoke per-chapter Discover interactives (on par with Science/Maths); the `ShapeDiagramRegistry` visual library is fully populated (76/76 chapter diagrams, pure-SwiftUI). See `V7_DISCOVER_DEPTH_CHECKPOINT.md`.
+- **v8 Longitudinal Insights complete (2026-06-03):** a daily mastery-history store (`progress_history.json`, 180-day cap, read-only over the SRS) powers an **Insights** window (Help → Insights / **⌘⇧I**) with a Big-Sur-safe trend chart (`TrendChartView`, pure `Path`/`Shape` — never `Charts`), a week-over-week ±N% delta in the Weekly dashboard + a 3rd PDF trend page, and exact per-subject Discover attribution (`DiscoverProgress.packId`). a11y label coverage is 100%. See `V8_INSIGHTS_CHECKPOINT.md`. **Note:** Big-Sur compilation/frame-rate of the new views is verified only by the static lints + dev-Mac `ci-build-test.sh`; final confirmation needs an iMac rebuild.
 - **Pack ID namespacing:** Science `ch*`, Maths `mch*`, Sanskrit `sch*`, Social Science `ssch*` — ratcheted by `testNoCrossPackConceptIdCollision`.
-- **Test surface:** 810 XCTest methods + 66 swift-testing + 42 XCUITest (14 propagated-interactive walks [4 tours + 9 Build-a-* sandboxes + HomeExperiments, 2026-06-02] + 15 maths-Discover walks + 13 prior). Default CI runs unit tests only; UI tests are `--ui` opt-in (AX grant required on runner). T2 surfaces are guarded AX-free by the two commit-time ratchets above.
+- **Test surface:** 835 XCTest methods + 66 swift-testing + 42 XCUITest (14 propagated-interactive walks [4 tours + 9 Build-a-* sandboxes + HomeExperiments, 2026-06-02] + 15 maths-Discover walks + 13 prior). Default CI runs unit tests only; UI tests are `--ui` opt-in (AX grant required on runner). T2 surfaces are guarded AX-free by the two commit-time ratchets above.
 
 ## What this project is
 

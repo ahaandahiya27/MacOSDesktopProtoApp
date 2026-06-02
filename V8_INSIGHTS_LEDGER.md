@@ -145,6 +145,11 @@ per-subject Discover attribution, and the F.1 accessibility close-out.
   - Remaining 1 "unlabeled" (Scene1_SourOrBitter choiceButton) is a false-negative:
     it has `Text(label)` + `.accessibilityLabel("Classify as …")`, both past the
     lint's 1500-char chunk. Left correct as-is. Coverage rounds to 100%.
-- [ ] Phase 7 — Integrate/test/doc + final sentinel
+- [x] Phase 7 — Integrate/test/doc + final sentinel. **DONE** (2026-06-03)
+  - `V8_INSIGHTS_CHECKPOINT.md` written (repo: desktopAhaan/).
+  - `REMEDIATION_LOG.md` v8 entry appended.
+  - POLISH_TODOS: F.1 + all three dashboard deferrals flipped to [x].
+  - CLAUDE.md: v8 status line + Insights window/⌘⇧I + test count 810→835.
+  - +25 XCTest methods this run (835 total). Final full gate green; pushed.
 
 ## STOP_AND_ASK count: 0
