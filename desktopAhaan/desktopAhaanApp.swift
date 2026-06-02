@@ -210,6 +210,12 @@ struct SanskritKoshApp: App {
                     // performance. Idempotent + read-only w.r.t. SRS.
                     AdaptiveDifficultyEngine.shared.configure(
                         registry: subjectRegistry, dataStore: dataStore)
+                    // Longitudinal Insights (v8): record today's mastery
+                    // snapshot so the trend chart / week-over-week delta accrue
+                    // history even if the parent rarely opens a dashboard.
+                    // Read-only over the SRS; no-ops until packs load, and
+                    // idempotent per calendar day.
+                    dataStore.captureProgressSnapshot(registry: subjectRegistry)
                 }
         }
         .commands {

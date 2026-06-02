@@ -159,4 +159,50 @@ final class WeeklyReportPDFExporterTests: XCTestCase {
         XCTAssertTrue(name.hasPrefix("Ahaan-ReportCard-"))
         XCTAssertTrue(name.hasSuffix(".pdf"))
     }
+
+    // MARK: - Trend page (v8 — page 3)
+
+    /// A two-week history with a clear upward overall mastery trend.
+    private func sampleHistory() -> [ProgressSnapshot] {
+        let base = Date(timeIntervalSince1970: 1_700_000_000)
+        return (0..<14).map { i in
+            let frac = 0.1 + Double(i) * 0.04
+            return ProgressSnapshot(
+                date: cal.startOfDay(for: base.addingTimeInterval(Double(i) * 86_400)),
+                subjects: [
+                    SubjectProgressPoint(packId: "science_class7", masteryFraction: frac,
+                                         coverageFraction: frac * 0.8, reviewedQuestions: 10 + i, dueCount: 2),
+                    SubjectProgressPoint(packId: "maths_class7", masteryFraction: frac * 0.5,
+                                         coverageFraction: frac * 0.4, reviewedQuestions: 4 + i, dueCount: 1),
+                ],
+                overallMasteryFraction: frac,
+                overallCoverageFraction: frac * 0.7)
+        }
+    }
+
+    func testReportCardWithHistoryDrawsTrendPage() throws {
+        let url = tmp.appendingPathComponent("reportcard-trend.pdf")
+        let history = sampleHistory()
+        try WeeklyReportPDFExporter.exportReportCard(
+            activity: sampleActivity(), masteryRows: sampleMasteryRows(),
+            checkpoint: sampleCheckpoint(), to: url,
+            progressHistory: history,
+            calendar: cal, now: history.last!.date.addingTimeInterval(3600))
+        let data = try Data(contentsOf: url)
+        XCTAssertEqual(Array(data.prefix(5)), Array("%PDF-".utf8))
+        XCTAssertLessThanOrEqual(data.count, 250 * 1024,
+            "A three-page report card stays well under 250 KB (got \(data.count)).")
+    }
+
+    func testReportCardWithEmptyHistoryStillValid() throws {
+        // No history → the trend page renders its friendly note, still a valid PDF.
+        let url = tmp.appendingPathComponent("reportcard-nohistory.pdf")
+        try WeeklyReportPDFExporter.exportReportCard(
+            activity: sampleActivity(), masteryRows: sampleMasteryRows(),
+            checkpoint: sampleCheckpoint(), to: url,
+            progressHistory: [], calendar: cal)
+        let data = try Data(contentsOf: url)
+        XCTAssertEqual(Array(data.prefix(5)), Array("%PDF-".utf8),
+            "An empty-history report card still produces a valid trend page.")
+    }
 }

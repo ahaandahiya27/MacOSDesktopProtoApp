@@ -77,7 +77,21 @@ per-subject Discover attribution, and the F.1 accessibility close-out.
   - Tests `desktopAhaanTests/TrendChartShapeTests.swift`: 5 pure path-geometry tests.
   - Gotcha: PreviewProvider types must be named `Preview_*` (or `_*`) or
     `check_dead_swift_types.py` flags them — the repo has no other PreviewProviders.
-- [ ] Phase 3 — Week-over-week delta + PDF page
+- [x] Phase 3 — Week-over-week delta + PDF page. **DONE** (2026-06-03)
+  - `WeeklyProgressView`: `reload()` now captures today's snapshot (read-only) +
+    computes `progressWeekOverWeek()`; new `weekOverWeekCard` shows signed overall
+    `±N%` + per-subject deltas (≥0.5%), with arrow/colour and a first-week empty
+    state. Export now passes `progressHistory` to the PDF.
+  - `WeeklyReportPDFExporter`: new optional `progressHistory:` param → **page 3**
+    "Progress Trend" = a CG `NSBezierPath` sparkline of the overall mastery series
+    + signed week-over-week deltas (overall + per subject). Falls back to a note
+    when <2 days. `shortLabel` gained `socialscience_class7 → "SocSci"`.
+  - `desktopAhaanApp` launch onAppear captures a snapshot (no-ops until packs load).
+  - `captureProgressSnapshot` now returns `ProgressSnapshot?` (nil = registry not
+    loaded) so it's safe to fire at launch.
+  - Tests: +2 PDF (trend page with/without history). Build+test PASSED.
+  - Note: hit a transient stale-DerivedData "Framework … no Info.plist" failure;
+    fixed by `rm -rf $TMPDIR/desktopAhaan-ci-derived` then re-running. Not a code issue.
 - [ ] Phase 4 — Per-subject Discover attribution
 - [ ] Phase 5 — InsightsView + InsightsWindow + ⌘⇧I + capstone test
 - [ ] Phase 6 — F.1 a11y + new-surface a11y + ratchet

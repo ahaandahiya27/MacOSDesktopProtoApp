@@ -66,11 +66,17 @@ extension DataStore {
     ///
     /// READ-ONLY over the SRS — derives from `MasteryEngine.snapshot(...)` and
     /// writes only `progress_history.json`.
+    ///
+    /// Returns `nil` (a no-op) when the registry hasn't loaded its packs yet —
+    /// so this is safe to fire from the app-launch hook before the off-thread
+    /// pack decode finishes; a snapshot with zero subjects would otherwise
+    /// pollute the history with a meaningless row.
     @discardableResult
     @MainActor
     func captureProgressSnapshot(registry: SubjectRegistry,
                                  now: Date = Date(),
-                                 calendar: Calendar = .current) -> ProgressSnapshot {
+                                 calendar: Calendar = .current) -> ProgressSnapshot? {
+        guard !registry.packs.isEmpty else { return nil }
         hydrateProgressHistoryIfNeeded()
 
         let overall = MasteryEngine.snapshot(registry: registry, dataStore: self, now: now)

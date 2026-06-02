@@ -152,13 +152,13 @@ final class ProgressHistoryCaptureTests: XCTestCase {
         let noon = cal.startOfDay(for: Date()).addingTimeInterval(12 * 3600)
         seed(store, registry: registry, at: noon.addingTimeInterval(-3600))
 
-        let first = store.captureProgressSnapshot(registry: registry, now: noon, calendar: cal)
+        let first = try XCTUnwrap(store.captureProgressSnapshot(registry: registry, now: noon, calendar: cal))
         XCTAssertEqual(store.progressHistory.count, 1)
 
         // Add more reviews, capture again the SAME calendar day (a few hours later).
         seed(store, registry: registry, at: noon)
-        let again = store.captureProgressSnapshot(
-            registry: registry, now: noon.addingTimeInterval(4 * 3600), calendar: cal)
+        let again = try XCTUnwrap(store.captureProgressSnapshot(
+            registry: registry, now: noon.addingTimeInterval(4 * 3600), calendar: cal))
 
         // Still one row for the day — overwrite, never append.
         XCTAssertEqual(store.progressHistory.count, 1)

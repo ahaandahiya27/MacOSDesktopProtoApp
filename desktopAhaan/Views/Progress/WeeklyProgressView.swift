@@ -17,6 +17,7 @@ struct WeeklyProgressView: View {
     @EnvironmentObject var registry: SubjectRegistry
 
     @State private var activity: WeeklyActivity?
+    @State private var weekOverWeek: ProgressDelta?
     @State private var exportStatus: String?
     @State private var exportIsError = false
 
@@ -47,6 +48,7 @@ struct WeeklyProgressView: View {
                     streakCard(activity)
                     weekGrid(activity)
                     masteryDeltaCard(activity.masteryDelta)
+                    weekOverWeekCard
                     exportSection(activity)
                 } else {
                     ProgressView("Building this week's summary…")
@@ -64,6 +66,11 @@ struct WeeklyProgressView: View {
     }
 
     private func reload() {
+        // Record today's mastery snapshot so the week-over-week delta + the PDF
+        // trend page have fresh, accruing history. Read-only over the SRS;
+        // idempotent per calendar day; no-ops until packs load.
+        dataStore.captureProgressSnapshot(registry: registry)
+        weekOverWeek = dataStore.progressWeekOverWeek()
         activity = dataStore.weeklyActivity(chapterLocator: { id, packId in
             registry.location(forQuestionId: id, preferredPackId: packId)?.chapter.id
         })
@@ -249,6 +256,106 @@ struct WeeklyProgressView: View {
         }
     }
 
+    // MARK: - Week-over-week delta (v8)
+
+    @ViewBuilder
+    private var weekOverWeekCard: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text("Compared with last week")
+                .font(.headline)
+                .foregroundColor(DesignTokens.BrandColor.canvasText)
+            if let wow = weekOverWeek {
+                wowBody(wow)
+            } else {
+                Text("Your week-over-week trend appears here once there's a mastery snapshot from about a week ago. Keep practising — it builds automatically.")
+                    .font(.callout)
+                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+        }
+        .padding(14)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(
+            RoundedRectangle(cornerRadius: 12)
+                .fill(DesignTokens.BrandColor.canvasTextSecondary.opacity(0.06))
+        )
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel(weekOverWeekAccessibilityLabel)
+    }
+
+    private func wowBody(_ wow: ProgressDelta) -> some View {
+        VStack(alignment: .leading, spacing: 8) {
+            HStack(spacing: 10) {
+                Text(deltaArrow(wow.overallMasteryDelta))
+                    .font(.system(size: 26))
+                    .accessibilityHidden(true)
+                Text("Overall mastery \(signedPct(wow.overallMasteryDelta)) vs last week")
+                    .font(.title3.weight(.semibold))
+                    .foregroundColor(deltaColor(wow.overallMasteryDelta))
+            }
+            let subjects = sortedSubjectDeltas(wow)
+            if !subjects.isEmpty {
+                VStack(alignment: .leading, spacing: 3) {
+                    ForEach(subjects, id: \.0) { entry in
+                        Text("\(subjectName(entry.0)): \(signedPct(entry.1))")
+                            .font(.caption)
+                            .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                    }
+                }
+            }
+        }
+    }
+
+    /// Per-subject mastery deltas, in the dashboard's subject order, dropping
+    /// any zero-change rows so the card stays focused on what moved.
+    private func sortedSubjectDeltas(_ wow: ProgressDelta) -> [(String, Double)] {
+        let order = ["science_class7", "maths_class7", "sanskrit_class7", "socialscience_class7"]
+        return wow.perSubjectMasteryDelta
+            .filter { abs($0.value) >= 0.005 }   // ≥ 0.5% to round to a visible point
+            .sorted { lhs, rhs in
+                let li = order.firstIndex(of: lhs.key) ?? order.count
+                let ri = order.firstIndex(of: rhs.key) ?? order.count
+                return li != ri ? li < ri : lhs.key < rhs.key
+            }
+            .map { ($0.key, $0.value) }
+    }
+
+    private func signedPct(_ delta: Double) -> String {
+        let points = Int((delta * 100).rounded())
+        if points > 0 { return "+\(points)%" }
+        if points < 0 { return "−\(abs(points))%" }
+        return "no change"
+    }
+
+    private func deltaArrow(_ delta: Double) -> String {
+        let points = Int((delta * 100).rounded())
+        if points > 0 { return "📈" }
+        if points < 0 { return "📉" }
+        return "➖"
+    }
+
+    private func deltaColor(_ delta: Double) -> Color {
+        let points = Int((delta * 100).rounded())
+        if points > 0 { return DesignTokens.BrandColor.success }
+        if points < 0 { return DesignTokens.BrandColor.danger }
+        return DesignTokens.BrandColor.canvasTextSecondary
+    }
+
+    private func subjectName(_ packId: String) -> String {
+        registry.pack(withId: packId)?.title ?? WeeklyReportPDFExporter.shortLabel(for: packId)
+    }
+
+    private var weekOverWeekAccessibilityLabel: String {
+        guard let wow = weekOverWeek else {
+            return "Compared with last week: not enough history yet."
+        }
+        var label = "Compared with last week: overall mastery \(signedPct(wow.overallMasteryDelta))."
+        for entry in sortedSubjectDeltas(wow) {
+            label += " \(subjectName(entry.0)) \(signedPct(entry.1))."
+        }
+        return label
+    }
+
     // MARK: - Export
 
     private func exportSection(_ activity: WeeklyActivity) -> some View {
@@ -285,7 +392,8 @@ struct WeeklyProgressView: View {
         do {
             try WeeklyReportPDFExporter.exportReportCard(
                 activity: activity, masteryRows: masteryRows,
-                checkpoint: checkpoint, to: url)
+                checkpoint: checkpoint, to: url,
+                progressHistory: dataStore.progressHistorySorted())
             exportStatus = "Saved to \(url.lastPathComponent)."
             exportIsError = false
         } catch {

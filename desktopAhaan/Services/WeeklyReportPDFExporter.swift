@@ -42,17 +42,21 @@ final class WeeklyReportPDFExporter {
         }
     }
 
-    /// Render a two-page **parent report card** at `url`: page 1 is the weekly
+    /// Render a three-page **parent report card** at `url`: page 1 is the weekly
     /// summary (identical to `export`), page 2 adds the cross-subject mastery
     /// picture (coverage + mastery per subject) and the latest milestone
-    /// checkpoint score. `masteryRows` and `checkpoint` are plain values the
+    /// checkpoint score, page 3 adds the longitudinal mastery trend (a Core
+    /// Graphics sparkline of the overall series + the week-over-week delta).
+    /// `masteryRows`, `checkpoint` and `progressHistory` are plain values the
     /// caller builds from `MasteryEngine.snapshot` + `DataStore`, so the
-    /// exporter stays UI-free and testable.
+    /// exporter stays UI-free and testable. `progressHistory` defaults to empty
+    /// so older callers/tests still produce a valid (note-only) trend page.
     static func exportReportCard(
         activity: WeeklyActivity,
         masteryRows: [ReportCardMasteryRow],
         checkpoint: MilestoneCheckpointResult?,
         to url: URL,
+        progressHistory: [ProgressSnapshot] = [],
         calendar: Calendar = .current,
         now: Date = Date()
     ) throws {
@@ -61,6 +65,9 @@ final class WeeklyReportPDFExporter {
             drawPage(ctx) {
                 drawReportCardPage(masteryRows: masteryRows, checkpoint: checkpoint,
                                    calendar: calendar, now: now)
+            }
+            drawPage(ctx) {
+                drawTrendPage(history: progressHistory, calendar: calendar, now: now)
             }
         }
     }
@@ -320,6 +327,158 @@ final class WeeklyReportPDFExporter {
                      color: NSColor.gray)
     }
 
+    /// Page 3 — the longitudinal mastery trend: a Core Graphics sparkline of the
+    /// overall mastery series plus the week-over-week delta (overall + per
+    /// subject). All Big-Sur-safe (NSBezierPath over the flipped context). Falls
+    /// back to a friendly note when there aren't yet two days of history.
+    private static func drawTrendPage(history: [ProgressSnapshot],
+                                      calendar: Calendar, now: Date) {
+        let contentWidth = pageSize.width - margin * 2
+        var cursorY = margin
+
+        cursorY = drawText("Ahaan — Progress Trend",
+                           at: CGPoint(x: margin, y: cursorY),
+                           width: contentWidth,
+                           font: .systemFont(ofSize: 26, weight: .bold),
+                           color: NSColor(calibratedRed: 0.18, green: 0.18, blue: 0.45, alpha: 1))
+        cursorY += 4
+        cursorY = drawText("How mastery has moved over time, and the change vs last week.",
+                           at: CGPoint(x: margin, y: cursorY),
+                           width: contentWidth,
+                           font: .systemFont(ofSize: 13, weight: .regular),
+                           color: NSColor.darkGray)
+        cursorY += 18
+
+        let overall = ProgressHistory.overallSeries(history)
+        guard overall.count >= 2 else {
+            _ = drawText("A trend line appears once there are at least two days of progress recorded. Keep practising — open this report again in a few days to see the curve.",
+                         at: CGPoint(x: margin, y: cursorY),
+                         width: contentWidth,
+                         font: .systemFont(ofSize: 12.5, weight: .regular),
+                         color: NSColor.darkGray)
+            drawTrendFooter(calendar: calendar, now: now)
+            return
+        }
+
+        // Overall mastery sparkline.
+        cursorY = drawText("Overall mastery over time",
+                           at: CGPoint(x: margin, y: cursorY),
+                           width: contentWidth,
+                           font: .systemFont(ofSize: 15, weight: .bold),
+                           color: NSColor.black)
+        cursorY += 8
+        let chartRect = CGRect(x: margin, y: cursorY, width: contentWidth, height: 150)
+        drawSparkline(overall.map { $0.masteryFraction }, in: chartRect)
+        cursorY = chartRect.maxY + 6
+        let rangeFmt = DateFormatter()
+        rangeFmt.calendar = calendar
+        rangeFmt.locale = Locale(identifier: "en_US_POSIX")
+        rangeFmt.dateFormat = "MMM d"
+        if let first = overall.first, let last = overall.last {
+            let axis = "\(rangeFmt.string(from: first.date))   →   \(rangeFmt.string(from: last.date))   ·   y-axis 0–100% mastery"
+            cursorY = drawText(axis,
+                               at: CGPoint(x: margin, y: cursorY),
+                               width: contentWidth,
+                               font: .systemFont(ofSize: 10, weight: .regular),
+                               color: NSColor.gray)
+        }
+        cursorY += 18
+
+        // Week-over-week.
+        cursorY = drawText("Compared with last week",
+                           at: CGPoint(x: margin, y: cursorY),
+                           width: contentWidth,
+                           font: .systemFont(ofSize: 15, weight: .bold),
+                           color: NSColor.black)
+        cursorY += 6
+        if let wow = ProgressHistory.weekOverWeek(history, now: now, calendar: calendar) {
+            cursorY = drawText(signedPct("Overall mastery", wow.overallMasteryDelta),
+                               at: CGPoint(x: margin, y: cursorY),
+                               width: contentWidth,
+                               font: .systemFont(ofSize: 13, weight: .semibold),
+                               color: NSColor.black)
+            cursorY += 6
+            let subjectKeys = wow.perSubjectMasteryDelta.keys.sorted {
+                shortLabel(for: $0) < shortLabel(for: $1)
+            }
+            for key in subjectKeys {
+                let d = wow.perSubjectMasteryDelta[key] ?? 0
+                cursorY = drawRow(label: shortLabel(for: key),
+                                  detail: signedDeltaDetail(d),
+                                  at: cursorY, width: contentWidth)
+                cursorY += 4
+            }
+        } else {
+            _ = drawText("Not enough history yet to compare with a week ago — this fills in once there's a snapshot from about seven days back.",
+                         at: CGPoint(x: margin, y: cursorY),
+                         width: contentWidth,
+                         font: .systemFont(ofSize: 12.5, weight: .regular),
+                         color: NSColor.darkGray)
+        }
+
+        drawTrendFooter(calendar: calendar, now: now)
+    }
+
+    private static func drawTrendFooter(calendar: Calendar, now: Date) {
+        let footerFmt = DateFormatter()
+        footerFmt.calendar = calendar
+        footerFmt.locale = Locale(identifier: "en_US_POSIX")
+        footerFmt.dateFormat = "yyyy-MM-dd HH:mm"
+        _ = drawText("Trend is built from a once-a-day mastery snapshot kept on this Mac (up to 180 days). Generated \(footerFmt.string(from: now)).",
+                     at: CGPoint(x: margin, y: pageSize.height - margin - 24),
+                     width: pageSize.width - margin * 2,
+                     font: .systemFont(ofSize: 9, weight: .regular),
+                     color: NSColor.gray)
+    }
+
+    /// Draw a faint framed sparkline of `fractions` (each 0…1) into `rect`,
+    /// using NSBezierPath over the current flipped NSGraphicsContext. y is
+    /// flipped so a higher fraction sits nearer the top.
+    private static func drawSparkline(_ fractions: [Double], in rect: CGRect) {
+        // Frame.
+        let frame = NSBezierPath(rect: rect)
+        frame.lineWidth = 1
+        NSColor(white: 0.78, alpha: 1).setStroke()
+        frame.stroke()
+        // Midline (50%).
+        let mid = NSBezierPath()
+        mid.move(to: NSPoint(x: rect.minX, y: rect.midY))
+        mid.line(to: NSPoint(x: rect.maxX, y: rect.midY))
+        mid.lineWidth = 0.5
+        NSColor(white: 0.88, alpha: 1).setStroke()
+        mid.stroke()
+
+        guard fractions.count >= 2 else { return }
+        let line = NSBezierPath()
+        line.lineWidth = 2.4
+        line.lineJoinStyle = .round
+        line.lineCapStyle = .round
+        let stepX = rect.width / CGFloat(fractions.count - 1)
+        for (i, f) in fractions.enumerated() {
+            let clamped = CGFloat(max(0, min(1, f)))
+            let x = rect.minX + CGFloat(i) * stepX
+            // Flipped context: top is rect.minY, so high fraction → small y.
+            let y = rect.minY + (1 - clamped) * rect.height
+            let pt = NSPoint(x: x, y: y)
+            if i == 0 { line.move(to: pt) } else { line.line(to: pt) }
+        }
+        NSColor(calibratedRed: 0.10, green: 0.52, blue: 0.18, alpha: 1).setStroke()
+        line.stroke()
+    }
+
+    /// "Overall mastery: +6% vs last week" — sign always shown.
+    private static func signedPct(_ label: String, _ delta: Double) -> String {
+        "\(label): \(signedDeltaDetail(delta)) vs last week"
+    }
+
+    /// "+6%" / "−3%" / "no change", from a signed 0…1 fraction delta.
+    private static func signedDeltaDetail(_ delta: Double) -> String {
+        let points = Int((delta * 100).rounded())
+        if points > 0 { return "+\(points)%" }
+        if points < 0 { return "−\(abs(points))%" }
+        return "no change"
+    }
+
     private static func pct(_ f: Double) -> String {
         "\(Int((max(0, min(1, f)) * 100).rounded()))%"
     }
@@ -386,10 +545,11 @@ final class WeeklyReportPDFExporter {
     /// raw id so an unattributed bucket is still visible (and honest).
     static func shortLabel(for packId: String) -> String {
         switch packId {
-        case "science_class7":  return "Sci"
-        case "maths_class7":    return "Maths"
-        case "sanskrit_class7": return "Skt"
-        default:                return packId
+        case "science_class7":       return "Sci"
+        case "maths_class7":         return "Maths"
+        case "sanskrit_class7":      return "Skt"
+        case "socialscience_class7": return "SocSci"
+        default:                     return packId
         }
     }
 
