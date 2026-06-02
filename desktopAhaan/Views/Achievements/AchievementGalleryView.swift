@@ -84,6 +84,8 @@ struct AchievementGalleryView: View {
                                 progress: badge.progress(in: snapshot))
                         }
                         .buttonStyle(.plain)
+                        .accessibilityLabel(badge.title)
+                        .accessibilityValue(engine.isUnlocked(badge.id) ? "Unlocked" : "Locked")
                     }
                 }
             }

@@ -255,15 +255,23 @@ struct CommandPalette: View {
     /// Invisible Buttons that drive arrow / return / escape shortcuts.
     private var keyboardSink: some View {
         ZStack {
+            // Labels are for tooling + correctness-if-exposed; the enclosing
+            // ZStack is `.accessibilityHidden(true)` so VoiceOver doesn't
+            // announce these zero-size shortcut proxies (the visible list
+            // already carries the real semantics).
             Button(action: moveDown) { EmptyView() }
                 .keyboardShortcut(.downArrow, modifiers: [])
+                .accessibilityLabel("Move selection down")
             Button(action: moveUp)   { EmptyView() }
                 .keyboardShortcut(.upArrow, modifiers: [])
+                .accessibilityLabel("Move selection up")
             Button(action: openSelected) { EmptyView() }
                 .keyboardShortcut(.return, modifiers: [])
                 .disabled(filtered.isEmpty)
+                .accessibilityLabel("Open selected result")
             Button(action: onDismiss) { EmptyView() }
                 .keyboardShortcut(.cancelAction)
+                .accessibilityLabel("Close command palette")
         }
         .frame(width: 0, height: 0)
         .opacity(0)

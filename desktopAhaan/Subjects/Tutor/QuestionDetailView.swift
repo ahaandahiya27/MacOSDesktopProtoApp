@@ -261,21 +261,28 @@ struct QuestionDetailView: View {
             Button(action: { gotoPrevious() }) { EmptyView() }
                 .keyboardShortcut(.leftArrow, modifiers: [])
                 .disabled(!hasPrevious)
+                .accessibilityLabel("Previous question")
             Button(action: { gotoNext() }) { EmptyView() }
                 .keyboardShortcut(.rightArrow, modifiers: [])
                 .disabled(!hasNext)
+                .accessibilityLabel("Next question")
             // Cmd+arrow alternatives — also work when the answer field has
             // focus (where bare arrow keys would move the text cursor).
             Button(action: { gotoPrevious() }) { EmptyView() }
                 .keyboardShortcut(.leftArrow, modifiers: .command)
                 .disabled(!hasPrevious)
+                .accessibilityLabel("Previous question")
             Button(action: { gotoNext() }) { EmptyView() }
                 .keyboardShortcut(.rightArrow, modifiers: .command)
                 .disabled(!hasNext)
+                .accessibilityLabel("Next question")
         }
         .frame(width: 0, height: 0)
         .opacity(0)
         .allowsHitTesting(false)
+        // The visible nav buttons carry the real semantics; hide these
+        // zero-size keyboard-shortcut proxies so VoiceOver doesn't double up.
+        .accessibilityHidden(true)
     }
 
     private func gotoPrevious() {

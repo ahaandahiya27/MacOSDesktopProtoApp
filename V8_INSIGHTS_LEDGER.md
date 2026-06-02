@@ -129,7 +129,22 @@ per-subject Discover attribution, and the F.1 accessibility close-out.
     progressSeries / progressWeekOverWeek, asserts SRS byte-identical. Build+test PASSED.
   - Gotcha: there is no `Color.compatOrange`; use `Color.orange` (Big-Sur-safe — only
     mint/indigo/teal/cyan/brown are banned).
-- [ ] Phase 6 — F.1 a11y + new-surface a11y + ratchet
+- [x] Phase 6 — F.1 a11y + new-surface a11y + ratchet. **DONE** (2026-06-03)
+  - a11y label coverage 96% → **100%** (floor 90, unchanged).
+  - Real labels added: AskFollowUpView refresh (Image-only) `.accessibilityLabel`+`.help`;
+    CommandPalette ×4 keyboard proxies (under the already-hidden ZStack);
+    QuestionDetailView ×4 keyboard proxies + container `.accessibilityHidden(true)`;
+    AchievementGalleryView badge button `.accessibilityLabel(badge.title)` + value.
+  - `check_a11y_labels.py` made *more accurate* (floor untouched, not a ratchet drop):
+    (1) skips `\bButton\b` matches inside `//`/`///` comments (5 doc-comment false
+    positives), (2) credits `Button(cond ? "A" : "B")` ternary-string labels
+    (genuinely VoiceOver-narrated). Lint is a standalone ratchet — not in any
+    automated gate, no fixtures to update.
+  - New v8 surfaces (Insights / TrendChart / week-over-week cards) already ship
+    combined a11y labels (added in Phases 2–5).
+  - Remaining 1 "unlabeled" (Scene1_SourOrBitter choiceButton) is a false-negative:
+    it has `Text(label)` + `.accessibilityLabel("Classify as …")`, both past the
+    lint's 1500-char chunk. Left correct as-is. Coverage rounds to 100%.
 - [ ] Phase 7 — Integrate/test/doc + final sentinel
 
 ## STOP_AND_ASK count: 0

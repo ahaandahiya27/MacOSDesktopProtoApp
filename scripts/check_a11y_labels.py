@@ -83,6 +83,12 @@ def is_labeled(button_chunk: str) -> bool:
     head = button_chunk[:120]
     if re.search(r'Button\s*\(\s*"', head) or re.search(r"Button\s*\(\s*'", head):
         return True
+    # Button(cond ? "Title A" : "Title B") — a conditional whose branches are
+    # string literals is still a visible, VoiceOver-narrated text label. The
+    # `[^{]*` guard stops before any trailing-closure body so a string inside
+    # the *action* closure can't masquerade as a label.
+    if re.search(r'Button\s*\(\s*[^{]*\?\s*["\']', head):
+        return True
     # Button(action:) { Label(...) } or .accessibilityLabel modifier
     if any(marker in button_chunk for marker in LABEL_MARKERS):
         return True
@@ -108,6 +114,12 @@ def find_button_chunks(src: str):
     current codebase.
     """
     for m in re.finditer(r"\bButton\b", src):
+        # Skip matches inside a `//` / `///` line comment — doc comments that
+        # merely mention "Button" (e.g. "HStack + Button + Text") are not
+        # Button sites and shouldn't count against coverage.
+        line_start = src.rfind("\n", 0, m.start()) + 1
+        if "//" in src[line_start:m.start()]:
+            continue
         line_no = src[: m.start()].count("\n") + 1
         chunk = src[m.start(): m.start() + 1500]
         yield line_no, chunk

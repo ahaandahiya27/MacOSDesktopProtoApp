@@ -125,6 +125,8 @@ struct AskFollowUpView: View {
                 Image(systemName: "arrow.clockwise")
             }
             .buttonStyle(.borderless)
+            .accessibilityLabel("Check tutor availability again")
+            .help("Check tutor availability again")
         }
         .padding(10)
         .frame(maxWidth: .infinity, alignment: .leading)
