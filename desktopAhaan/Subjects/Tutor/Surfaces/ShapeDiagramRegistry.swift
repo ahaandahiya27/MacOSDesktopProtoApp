@@ -31,8 +31,19 @@ enum ShapeDiagramRegistry {
         return registrations[key]
     }
 
-    /// Map of registered diagrams. Today empty by design; future
-    /// content sessions will populate per-chapter entries (keys
-    /// follow `chNN_<short_name>`, matching JSON `resource` values).
-    private static let registrations: [String: Factory] = [:]
+    /// Map of registered diagrams. Populated one chapter-slice at a time
+    /// (v7 Phase 3). Keys follow `chNN_<short_name>`, matching the JSON
+    /// `resource` values of each `shapeDiagram` MediaAsset. Unregistered
+    /// keys still render the placeholder card cleanly.
+    private static let registrations: [String: Factory] = [
+        // ch01 — Nutrition in Plants
+        "ch01_chloroplast": { AnyView(ChloroplastDiagram()) },
+        "ch01_stomata": { AnyView(StomataDiagram()) },
+        "ch01_photosynthesis_equation": { AnyView(PhotosynthesisEquationDiagram()) },
+        "ch01_leaf_anatomy": { AnyView(LeafAnatomyDiagram()) }
+    ]
+
+    /// Resource keys with a registered diagram (sorted). Exposed so a test
+    /// can assert the covered set without reflecting over the private map.
+    static var registeredKeys: [String] { registrations.keys.sorted() }
 }

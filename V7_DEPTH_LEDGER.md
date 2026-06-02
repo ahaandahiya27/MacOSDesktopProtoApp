@@ -46,9 +46,18 @@ was partly already-closed by prior sessions — recorded honestly here):
 
 ## Phase 3 — Shape Diagram Library (~76 pure-SwiftUI chapter diagrams)
 
-- ⬜ Populate `ShapeDiagramRegistry.registrations` one chapter-slice at a time.
-  Keys follow JSON `MediaAsset.resource` (`chNN_<short_name>`). Path/Shape only;
-  no MapKit/macOS-12 APIs; legacy-GPU friendly. Add a presence test per slice.
+Registry was empty; populating one chapter-slice (4 diagrams) per milestone.
+Keys follow JSON `MediaAsset.resource` (`chNN_<short_name>`). Path/Shape only;
+no MapKit/macOS-12 APIs; legacy-GPU friendly. `ShapeDiagramRegistryTests` pins
+no-orphan-registration + factory-resolves + per-slice coverage each slice.
+
+- ✅ **M3.1 — ch01 Nutrition in Plants (4/4)** (cycle 1): `ChloroplastDiagram`,
+  `StomataDiagram` (open/closed guard cells), `PhotosynthesisEquationDiagram`
+  (CO₂+H₂O+light→glucose+O₂ over a leaf), `LeafAnatomyDiagram` (epidermis /
+  palisade / spongy + vein / stoma). Registered + `registeredKeys` accessor.
+  +`ShapeDiagramRegistryTests` (4). Green: Release BUILD + 809 XCTest, 0 fail.
+- ⬜ M3.2…M3.19 — remaining 18 chapters (ch02–ch19), 72 diagrams. Resource keys
+  enumerated: 76 total, 4/chapter, all in `science_class7`.
 
 ## Phase 4 — Reading-level + polish
 

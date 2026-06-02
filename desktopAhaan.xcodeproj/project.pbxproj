@@ -392,6 +392,7 @@
 		00C73E900DC5A4AFE23B1437 /* BuildAHeatFlowSandbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFC7FE376FCFB2974F9CA2 /* BuildAHeatFlowSandbox.swift */; };
 		E752A768C84A2DF42A0C2684 /* BuildAPHSandbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5FC5CADC47ED4AB9CD257E /* BuildAPHSandbox.swift */; };
 		887FEBC4E00878B4819E15F0 /* InsideTheDigestiveTour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953A84CBD2D54EB2D7025240 /* InsideTheDigestiveTour.swift */; };
+		D7A1F49192DEBD1652AAC397 /* Chapter1ShapeDiagrams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9C645C7570D6EF0EDE0C85 /* Chapter1ShapeDiagrams.swift */; };
 		6F1BCE526840ECC878A4652D /* BuildAWaterCycleSandbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2CED65B0B8CA4660E4A7F0C /* BuildAWaterCycleSandbox.swift */; };
 		E8379BAB7B82F026D7A2E74C /* InsideTheXylemAscentTour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C332B3ABA91CC2B63F7B757 /* InsideTheXylemAscentTour.swift */; };
 		D13E13A1B1B1125486C1ECAE /* BarterToMoneySim.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE3102AF00CBD384EA4FA011 /* BarterToMoneySim.swift */; };
@@ -1556,6 +1557,7 @@
 		77F7D98E575D7B8FC469EC83 /* ScientistsArticleRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05C5BC3C8770E32738C39E97 /* ScientistsArticleRoutingTests.swift */; };
 		B6C00AA1E3FC977BF311EE82 /* SelfCheckArticleRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B662F7364184B38EBF6256 /* SelfCheckArticleRoutingTests.swift */; };
 		B6AF9B526AC182454D42C3DB /* SettingsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC6A95CD9ABF9B8C9017257 /* SettingsManagerTests.swift */; };
+		AE1A9418310B9993F207305A /* ShapeDiagramRegistryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8D50007343670D4C8E3EB8 /* ShapeDiagramRegistryTests.swift */; };
 		C8ADEF119BC541625E56B57C /* SocialScienceArticleRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108AC54929248AA058607155 /* SocialScienceArticleRoutingTests.swift */; };
 		7ADF9B3CD7738E792BD12C0A /* SocialScienceContentDepthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099E1F28D6D1B177EEA75DB9 /* SocialScienceContentDepthTests.swift */; };
 		D7DD564DB535A730957845B8 /* SocialScienceDiscoverModeRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678377A34E68EE55DBACF757 /* SocialScienceDiscoverModeRoutingTests.swift */; };
@@ -2980,6 +2982,7 @@
 		DFAFC7FE376FCFB2974F9CA2 /* BuildAHeatFlowSandbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BuildAHeatFlowSandbox.swift"; sourceTree = "<group>"; };
 		1D5FC5CADC47ED4AB9CD257E /* BuildAPHSandbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BuildAPHSandbox.swift"; sourceTree = "<group>"; };
 		953A84CBD2D54EB2D7025240 /* InsideTheDigestiveTour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InsideTheDigestiveTour.swift"; sourceTree = "<group>"; };
+		0A9C645C7570D6EF0EDE0C85 /* Chapter1ShapeDiagrams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chapter1ShapeDiagrams.swift"; sourceTree = "<group>"; };
 		E2CED65B0B8CA4660E4A7F0C /* BuildAWaterCycleSandbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BuildAWaterCycleSandbox.swift"; sourceTree = "<group>"; };
 		0C332B3ABA91CC2B63F7B757 /* InsideTheXylemAscentTour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InsideTheXylemAscentTour.swift"; sourceTree = "<group>"; };
 		DE3102AF00CBD384EA4FA011 /* BarterToMoneySim.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BarterToMoneySim.swift"; sourceTree = "<group>"; };
@@ -3162,6 +3165,7 @@
 		05C5BC3C8770E32738C39E97 /* ScientistsArticleRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ScientistsArticleRoutingTests.swift"; sourceTree = "<group>"; };
 		E9B662F7364184B38EBF6256 /* SelfCheckArticleRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelfCheckArticleRoutingTests.swift"; sourceTree = "<group>"; };
 		ECC6A95CD9ABF9B8C9017257 /* SettingsManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsManagerTests.swift"; sourceTree = "<group>"; };
+		4D8D50007343670D4C8E3EB8 /* ShapeDiagramRegistryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShapeDiagramRegistryTests.swift"; sourceTree = "<group>"; };
 		108AC54929248AA058607155 /* SocialScienceArticleRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SocialScienceArticleRoutingTests.swift"; sourceTree = "<group>"; };
 		099E1F28D6D1B177EEA75DB9 /* SocialScienceContentDepthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SocialScienceContentDepthTests.swift"; sourceTree = "<group>"; };
 		678377A34E68EE55DBACF757 /* SocialScienceDiscoverModeRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SocialScienceDiscoverModeRoutingTests.swift"; sourceTree = "<group>"; };
@@ -5689,6 +5693,7 @@
 				2A81135762A70E69344D8FF7,
 				B2845F39AA6607A10B7A196C,
 				4E1719B3B1B1110FB0B4D376,
+				F2C3AD6FA488E849DD7F4259,
 				CAA18E20CA80B1697894AFC7,
 				D5D70429EC9E4522C2122DC5,
 				127547F4B449A6930767EEBA,
@@ -5816,6 +5821,14 @@
 				82B067B93C319B799FD17BF5,
 			);
 			path = "Sanskrit";
+			sourceTree = "<group>";
+		};
+		F2C3AD6FA488E849DD7F4259 /* ShapeDiagrams */ = {
+			isa = PBXGroup;
+			children = (
+				0A9C645C7570D6EF0EDE0C85,
+			);
+			path = "ShapeDiagrams";
 			sourceTree = "<group>";
 		};
 		127547F4B449A6930767EEBA /* SocialScience */ = {
@@ -6100,6 +6113,7 @@
 				05C5BC3C8770E32738C39E97,
 				E9B662F7364184B38EBF6256,
 				ECC6A95CD9ABF9B8C9017257,
+				4D8D50007343670D4C8E3EB8,
 				108AC54929248AA058607155,
 				099E1F28D6D1B177EEA75DB9,
 				678377A34E68EE55DBACF757,
@@ -7655,6 +7669,7 @@
 				00C73E900DC5A4AFE23B1437 /* BuildAHeatFlowSandbox.swift in Sources */,
 				E752A768C84A2DF42A0C2684 /* BuildAPHSandbox.swift in Sources */,
 				887FEBC4E00878B4819E15F0 /* InsideTheDigestiveTour.swift in Sources */,
+				D7A1F49192DEBD1652AAC397 /* Chapter1ShapeDiagrams.swift in Sources */,
 				6F1BCE526840ECC878A4652D /* BuildAWaterCycleSandbox.swift in Sources */,
 				E8379BAB7B82F026D7A2E74C /* InsideTheXylemAscentTour.swift in Sources */,
 				D13E13A1B1B1125486C1ECAE /* BarterToMoneySim.swift in Sources */,
@@ -7843,6 +7858,7 @@
 				77F7D98E575D7B8FC469EC83 /* ScientistsArticleRoutingTests.swift in Sources */,
 				B6C00AA1E3FC977BF311EE82 /* SelfCheckArticleRoutingTests.swift in Sources */,
 				B6AF9B526AC182454D42C3DB /* SettingsManagerTests.swift in Sources */,
+				AE1A9418310B9993F207305A /* ShapeDiagramRegistryTests.swift in Sources */,
 				C8ADEF119BC541625E56B57C /* SocialScienceArticleRoutingTests.swift in Sources */,
 				7ADF9B3CD7738E792BD12C0A /* SocialScienceContentDepthTests.swift in Sources */,
 				D7DD564DB535A730957845B8 /* SocialScienceDiscoverModeRoutingTests.swift in Sources */,

@@ -6368,3 +6368,37 @@ both new files); ci-build-test.sh → Release BUILD + 805 XCTest, 0 failures (wa
 
 NEXT: Phase 3 — populate ShapeDiagramRegistry with pure-SwiftUI chapter diagrams
 (one chapter-slice per milestone), + a presence test per slice.
+
+## 2026-06-02 — v7 Phase 3 M3.1 · Shape Diagram Library — ch01 (4/4)
+
+Began populating the empty `ShapeDiagramRegistry` (76 `shapeDiagram` MediaAsset
+keys authored in science_class7.json, 4/chapter, all rendering as placeholders
+until now). First chapter-slice — ch01 "Nutrition in Plants":
+- `ChloroplastDiagram` — lens-shaped outer membrane + stroma fill + three grana
+  (stacked thylakoid discs), part-labelled.
+- `StomataDiagram` — two kidney guard cells (custom InsettableShape) forming a
+  pore, shown open (day, gap) vs closed (night, touching).
+- `PhotosynthesisEquationDiagram` — CO₂ + H₂O + sunlight → glucose + O₂ chips
+  with an arrow, over a simple leaf ("in the leaf").
+- `LeafAnatomyDiagram` — horizontal tissue bands: upper epidermis, palisade
+  mesophyll (columnar), spongy mesophyll (loose circles) + vein (xylem/phloem),
+  lower epidermis pierced by a stoma.
+
+All pure SwiftUI (Path/primitive Shape only), static (no animation/randomness),
+Color.compat*/system-green palette, legacy-GPU friendly. The host MediaAssetView
+frames to maxHeight 220, supplies caption + the single VoiceOver altText label,
+and ignores child a11y, so diagrams are decorative art with in-figure part
+labels. Renamed a private `LeafShape` → `Ch01LeafShape` after the build flagged
+a collision with the existing `DrawnLeaf.swift` `LeafShape`.
+
+Registry gains a `registeredKeys` accessor; +ShapeDiagramRegistryTests (4):
+no-orphan-registration (every registered key is a real pack resource),
+factory-resolves-for-every-registered-key, unregistered-key-returns-nil
+(placeholder fallback), ch01-fully-covered (4/4).
+
+Green here: 17 Big-Sur lints + test_lints.py pass; pbxproj regenerated;
+ci-build-test.sh → Release BUILD + 809 XCTest, 0 failures (was 805, +4).
+Additive; zero regressions; zero STOP_AND_ASK.
+
+NEXT: Phase 3 M3.2 — ch02 (digestive_system, villi, tooth_types, rumen), then
+ch03…ch19 one slice each.
