@@ -24,6 +24,7 @@
 		E6B0C61CBFC905F1EAAB7736 /* MilestoneCheckpointResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F7C95BDD7A3179165C62DEF /* MilestoneCheckpointResult.swift */; };
 		1FCCA52B7899910DAFB6EC2F /* PracticeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9EC6C50A2CE40EEDFB05CBE /* PracticeItem.swift */; };
 		70BABF6DD2B5E41F1D452234 /* PracticeProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF66CD2A72CAA0A5B69E40AF /* PracticeProgress.swift */; };
+		B4C8D1BAFF76964999A97175 /* ProgressSnapshot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BB000187B7E9736EF9CD125 /* ProgressSnapshot.swift */; };
 		4F88912844E3FE35B19F8CBD /* ReportCardMasteryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AAC6D1FF9731912BEBFC2A0 /* ReportCardMasteryRow.swift */; };
 		B2915BA3B3BABDCF9A818420 /* StudyState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57508568891C194B522876E /* StudyState.swift */; };
 		58A3CB4A194EAA9A8D5BFD3B /* TranslationRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59C82AD9F320BAE5C8B704E2 /* TranslationRecord.swift */; };
@@ -500,6 +501,7 @@
 		7D305C57B43180B133DDCE98 /* DataStore+Mastery.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC3B495C017114FD927D3AD1 /* DataStore+Mastery.swift */; };
 		1838A33C9C828118602950D9 /* DataStore+MilestoneAssessment.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3BF6CDCD4874F2E9E1716B7 /* DataStore+MilestoneAssessment.swift */; };
 		07820572BCDAFB4F92F7DB3C /* DataStore+MilestoneCheckpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70473423C6F9387BBB00246A /* DataStore+MilestoneCheckpoint.swift */; };
+		380C7C428CD13007EBDA6E7C /* DataStore+ProgressHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5DA02F9F439F8B8E84C60FB /* DataStore+ProgressHistory.swift */; };
 		52A3CE4D5880115CA5BF3173 /* DataStore+Saving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76232CCC964FE1CF70AA3379 /* DataStore+Saving.swift */; };
 		33FB902B2C45FBB6C318D838 /* DataStore+WeeklyActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 172FAB3609B485188711DCA2 /* DataStore+WeeklyActivity.swift */; };
 		F618D0A6B24714A46E32C472 /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2898E1F6693A8D631B6B65 /* DataStore.swift */; };
@@ -1558,6 +1560,7 @@
 		0EE8461317239ED4AF661C80 /* PrintableWorksheetAnswerKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1E7CD70D8992624762C0F08 /* PrintableWorksheetAnswerKeyTests.swift */; };
 		1904568B54425CC86F29AFAF /* PrintableWorksheetSelectionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FD690E2287909979AA253CB8 /* PrintableWorksheetSelectionTests.swift */; };
 		856D52CA078A632C3AA5C9ED /* ProductionReadinessRatchetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28F6FBA8F7A2F34634311A6F /* ProductionReadinessRatchetTests.swift */; };
+		76768D02F8569F404AF787AA /* ProgressHistoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0ED072C3871B0B082FF9FB /* ProgressHistoryTests.swift */; };
 		78B1182C92D35AF74805EC43 /* QuestionSourceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E902A3CDFE83A7C65A2E4A4 /* QuestionSourceTests.swift */; };
 		8B8995D4EF63D128324E65DF /* QuickCheckMigrationRatchetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843B8F73DDC119CFF925624D /* QuickCheckMigrationRatchetTests.swift */; };
 		6EE1461FFAD9258E43CAF049 /* QuickCheckPedagogicalContentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A6BA61B199529F78B5C5C55 /* QuickCheckPedagogicalContentTests.swift */; };
@@ -2629,6 +2632,7 @@
 		7F7C95BDD7A3179165C62DEF /* MilestoneCheckpointResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MilestoneCheckpointResult.swift"; sourceTree = "<group>"; };
 		D9EC6C50A2CE40EEDFB05CBE /* PracticeItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PracticeItem.swift"; sourceTree = "<group>"; };
 		DF66CD2A72CAA0A5B69E40AF /* PracticeProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PracticeProgress.swift"; sourceTree = "<group>"; };
+		2BB000187B7E9736EF9CD125 /* ProgressSnapshot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProgressSnapshot.swift"; sourceTree = "<group>"; };
 		9AAC6D1FF9731912BEBFC2A0 /* ReportCardMasteryRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReportCardMasteryRow.swift"; sourceTree = "<group>"; };
 		E57508568891C194B522876E /* StudyState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudyState.swift"; sourceTree = "<group>"; };
 		59C82AD9F320BAE5C8B704E2 /* TranslationRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TranslationRecord.swift"; sourceTree = "<group>"; };
@@ -3109,6 +3113,7 @@
 		CC3B495C017114FD927D3AD1 /* DataStore+Mastery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataStore+Mastery.swift"; sourceTree = "<group>"; };
 		F3BF6CDCD4874F2E9E1716B7 /* DataStore+MilestoneAssessment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataStore+MilestoneAssessment.swift"; sourceTree = "<group>"; };
 		70473423C6F9387BBB00246A /* DataStore+MilestoneCheckpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataStore+MilestoneCheckpoint.swift"; sourceTree = "<group>"; };
+		E5DA02F9F439F8B8E84C60FB /* DataStore+ProgressHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataStore+ProgressHistory.swift"; sourceTree = "<group>"; };
 		76232CCC964FE1CF70AA3379 /* DataStore+Saving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataStore+Saving.swift"; sourceTree = "<group>"; };
 		172FAB3609B485188711DCA2 /* DataStore+WeeklyActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataStore+WeeklyActivity.swift"; sourceTree = "<group>"; };
 		2F2898E1F6693A8D631B6B65 /* DataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DataStore.swift"; sourceTree = "<group>"; };
@@ -3185,6 +3190,7 @@
 		C1E7CD70D8992624762C0F08 /* PrintableWorksheetAnswerKeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PrintableWorksheetAnswerKeyTests.swift"; sourceTree = "<group>"; };
 		FD690E2287909979AA253CB8 /* PrintableWorksheetSelectionTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PrintableWorksheetSelectionTests.swift"; sourceTree = "<group>"; };
 		28F6FBA8F7A2F34634311A6F /* ProductionReadinessRatchetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProductionReadinessRatchetTests.swift"; sourceTree = "<group>"; };
+		1F0ED072C3871B0B082FF9FB /* ProgressHistoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProgressHistoryTests.swift"; sourceTree = "<group>"; };
 		4E902A3CDFE83A7C65A2E4A4 /* QuestionSourceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuestionSourceTests.swift"; sourceTree = "<group>"; };
 		843B8F73DDC119CFF925624D /* QuickCheckMigrationRatchetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuickCheckMigrationRatchetTests.swift"; sourceTree = "<group>"; };
 		3A6BA61B199529F78B5C5C55 /* QuickCheckPedagogicalContentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "QuickCheckPedagogicalContentTests.swift"; sourceTree = "<group>"; };
@@ -3346,6 +3352,7 @@
 				7F7C95BDD7A3179165C62DEF,
 				D9EC6C50A2CE40EEDFB05CBE,
 				DF66CD2A72CAA0A5B69E40AF,
+				2BB000187B7E9736EF9CD125,
 				9AAC6D1FF9731912BEBFC2A0,
 				E57508568891C194B522876E,
 				59C82AD9F320BAE5C8B704E2,
@@ -4944,6 +4951,7 @@
 				CC3B495C017114FD927D3AD1,
 				F3BF6CDCD4874F2E9E1716B7,
 				70473423C6F9387BBB00246A,
+				E5DA02F9F439F8B8E84C60FB,
 				76232CCC964FE1CF70AA3379,
 				172FAB3609B485188711DCA2,
 				2F2898E1F6693A8D631B6B65,
@@ -6152,6 +6160,7 @@
 				C1E7CD70D8992624762C0F08,
 				FD690E2287909979AA253CB8,
 				28F6FBA8F7A2F34634311A6F,
+				1F0ED072C3871B0B082FF9FB,
 				4E902A3CDFE83A7C65A2E4A4,
 				843B8F73DDC119CFF925624D,
 				3A6BA61B199529F78B5C5C55,
@@ -7358,6 +7367,7 @@
 				E6B0C61CBFC905F1EAAB7736 /* MilestoneCheckpointResult.swift in Sources */,
 				1FCCA52B7899910DAFB6EC2F /* PracticeItem.swift in Sources */,
 				70BABF6DD2B5E41F1D452234 /* PracticeProgress.swift in Sources */,
+				B4C8D1BAFF76964999A97175 /* ProgressSnapshot.swift in Sources */,
 				4F88912844E3FE35B19F8CBD /* ReportCardMasteryRow.swift in Sources */,
 				B2915BA3B3BABDCF9A818420 /* StudyState.swift in Sources */,
 				58A3CB4A194EAA9A8D5BFD3B /* TranslationRecord.swift in Sources */,
@@ -7834,6 +7844,7 @@
 				7D305C57B43180B133DDCE98 /* DataStore+Mastery.swift in Sources */,
 				1838A33C9C828118602950D9 /* DataStore+MilestoneAssessment.swift in Sources */,
 				07820572BCDAFB4F92F7DB3C /* DataStore+MilestoneCheckpoint.swift in Sources */,
+				380C7C428CD13007EBDA6E7C /* DataStore+ProgressHistory.swift in Sources */,
 				52A3CE4D5880115CA5BF3173 /* DataStore+Saving.swift in Sources */,
 				33FB902B2C45FBB6C318D838 /* DataStore+WeeklyActivity.swift in Sources */,
 				F618D0A6B24714A46E32C472 /* DataStore.swift in Sources */,
@@ -7916,6 +7927,7 @@
 				0EE8461317239ED4AF661C80 /* PrintableWorksheetAnswerKeyTests.swift in Sources */,
 				1904568B54425CC86F29AFAF /* PrintableWorksheetSelectionTests.swift in Sources */,
 				856D52CA078A632C3AA5C9ED /* ProductionReadinessRatchetTests.swift in Sources */,
+				76768D02F8569F404AF787AA /* ProgressHistoryTests.swift in Sources */,
 				78B1182C92D35AF74805EC43 /* QuestionSourceTests.swift in Sources */,
 				8B8995D4EF63D128324E65DF /* QuickCheckMigrationRatchetTests.swift in Sources */,
 				6EE1461FFAD9258E43CAF049 /* QuickCheckPedagogicalContentTests.swift in Sources */,

@@ -289,6 +289,17 @@ final class DataStore: ObservableObject {
     /// `milestone_checkpoints.json` at most once per process.
     var didHydrateMilestoneCheckpoints = false
 
+    /// In-memory longitudinal progress history, keyed by start-of-day so a
+    /// re-capture of the same day overwrites that day's row (idempotent, never
+    /// a duplicate). Hydrated lazily from `progress_history.json` on first
+    /// access/write (see `DataStore+ProgressHistory.swift`). NOT `@Published`:
+    /// the only readers (Insights / Weekly dashboard) snapshot it in
+    /// `onAppear`. v8 Longitudinal Insights · Phase 1.
+    var progressHistory: [Date: ProgressSnapshot] = [:]
+    /// One-shot guard so the lazy hydrate of `progressHistory` reads
+    /// `progress_history.json` at most once per process.
+    var didHydrateProgressHistory = false
+
     @Published var lastSaveError: String?
 
     // `internal` (default) so save/load helpers in the extension files
