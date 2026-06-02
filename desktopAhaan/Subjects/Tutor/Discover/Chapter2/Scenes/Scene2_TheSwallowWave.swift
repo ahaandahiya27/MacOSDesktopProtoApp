@@ -84,7 +84,7 @@ struct Scene2_TheSwallowWave: View {
 
                 LookingAheadCallout(
                     title: "Class 11 Biology → NEET",
-                    detail: "Peristalsis you just animated is *smooth-muscle physiology*: alternating contraction + relaxation of circular and longitudinal muscle layers in the oesophagus wall. NEET asks 'why can astronauts swallow upside-down in zero gravity?' — because peristalsis doesn't use gravity, it pushes food mechanically regardless of orientation."
+                    detail: "Peristalsis is smooth-muscle physiology. The circular and longitudinal muscle layers of the oesophagus tighten and relax in turn to push food along. NEET loves one question: why can astronauts swallow upside-down in zero gravity? Because peristalsis does not need gravity. It pushes food along mechanically, whichever way you face."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)

@@ -92,7 +92,7 @@ struct Scene4_IntestineVillus: View {
 
                 LookingAheadCallout(
                     title: "Class 11 → NEET (surface-area + diffusion)",
-                    detail: "Villi multiply the intestinal surface area ~30× and micro-villi multiply it another 600×. Total absorptive surface: ~250 m² — a tennis court folded into your belly. NEET pairs this with diffusion math (Fick's law: rate ∝ area × concentration gradient ÷ thickness) — every term is solved by villus + capillary anatomy."
+                    detail: "Villi raise the gut's surface area about 30×, and micro-villi add another 600×. The total is roughly 250 m² — a tennis court folded into your belly. NEET pairs this with Fick's law of diffusion: rate ∝ area × concentration gradient ÷ thickness. The villus and its capillary handle every term in that law."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)

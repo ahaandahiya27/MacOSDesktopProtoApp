@@ -46,7 +46,7 @@ struct Scene1_WaterPie: View {
 
                 LookingAheadCallout(
                     title: "Class 9 Geography → CBSE",
-                    detail: "Class 9 Geography Ch 'Water Resources' goes deeper into India's freshwater stress — depleting groundwater in Punjab, Haryana, Western UP; inter-state river disputes (Cauvery, Yamuna); and the National Water Policy framework. CBSE Class 10 Civics also covers SDG 6: Clean Water and Sanitation."
+                    detail: "Class 9 Geography, 'Water Resources', goes deeper into India's water stress. Groundwater is falling in Punjab, Haryana and western UP. States argue over rivers like the Cauvery and Yamuna. The National Water Policy sets the rules. CBSE Class 10 Civics also covers SDG 6: Clean Water and Sanitation."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)

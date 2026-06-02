@@ -66,7 +66,7 @@ struct Scene4_SpeedometerOdometer: View {
 
                 LookingAheadCallout(
                     title: "Class 11 Physics → JEE",
-                    detail: "In Class 11 'Motion in a Straight Line' you'll formalise average speed vs instantaneous speed (the speedometer reads instantaneous; the odometer ÷ time gives average). JEE Kinematics builds on this with derivatives — instantaneous speed = ds/dt."
+                    detail: "In Class 11 'Motion in a Straight Line' you sharpen average vs instantaneous speed. The speedometer reads instantaneous speed; the odometer divided by time gives the average. JEE Kinematics adds calculus: instantaneous speed = ds/dt."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)

@@ -223,7 +223,7 @@ struct Scene7_ConstellationConnect: View {
 
                     LookingAheadCallout(
                         title: "Class 11 Physics → JEE / Astrophysics",
-                        detail: "Constellations are *line-of-sight patterns* — the stars in Orion's Belt are at very different distances from Earth, only looking aligned from here. JEE Astrophysics covers stellar magnitudes (apparent vs absolute brightness), parallax (distance measurement), and Doppler shift (red/blue indicates motion). Hindu astronomy mapped 27 *nakshatras* (lunar mansions) — a different parsing of the same sky."
+                        detail: "A constellation is just a line-of-sight pattern. The stars of Orion's Belt sit at very different distances; they only look lined up from here. JEE Astrophysics covers stellar magnitude (apparent vs absolute brightness), parallax (measuring distance) and Doppler shift (red or blue shows motion). Hindu astronomy mapped 27 nakshatras (lunar mansions) — another way to read the same sky."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 

@@ -56,7 +56,7 @@ struct Scene3_AquiferCrossSection: View {
 
                 LookingAheadCallout(
                     title: "Class 11 Geography",
-                    detail: "Class 11 Geography 'Water in the Atmosphere and Hydrosphere' covers aquifer types (confined, unconfined, perched), recharge zones, and the world's major aquifer systems (Ganga-Brahmaputra, Ogallala). Connects to environmental science in Class 12."
+                    detail: "Class 11 Geography, 'Water in the Atmosphere and Hydrosphere', covers the kinds of aquifer (confined, unconfined, perched), recharge zones, and the world's big aquifers (Ganga-Brahmaputra, Ogallala). It links to environmental science in Class 12."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)

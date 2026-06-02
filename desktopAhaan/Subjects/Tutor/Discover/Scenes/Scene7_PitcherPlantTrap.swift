@@ -117,7 +117,7 @@ struct Scene7_PitcherPlantTrap: View {
 
             LookingAheadCallout(
                 title: "Class 11 Biology / NEET",
-                detail: "Insectivorous plants are NEET-favourite case studies of convergent evolution: Nepenthes (Asian pitcher), Sarracenia (American pitcher), and Drosera (sundew) all evolved insect-trapping independently from different ancestors — driven by the same problem (low-nitrogen soils) toward the same solution (catch your own nitrogen). Same mathematician, three different proofs."
+                detail: "Insectivorous plants are a NEET-favourite case study of convergent evolution. Nepenthes (Asian pitcher), Sarracenia (American pitcher) and Drosera (sundew) each evolved insect traps on their own, from different ancestors. The same problem drove them all — low-nitrogen soil. They reached the same answer: catch your own nitrogen. One puzzle, three separate solutions."
             )
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)

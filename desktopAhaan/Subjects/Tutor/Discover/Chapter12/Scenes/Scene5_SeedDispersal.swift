@@ -60,7 +60,7 @@ struct Scene5_SeedDispersal: View {
 
                 LookingAheadCallout(
                     title: "Class 12 Bio → NEET",
-                    detail: "Class 12 'Reproduction in Organisms' formalises dispersal mechanisms as evolved adaptations — anemochory (wind), hydrochory (water), zoochory (animals), autochory (self/explosive). Connects to Class 12 Ecology — seed-dispersal limitations explain species distributions."
+                    detail: "Class 12 'Reproduction in Organisms' treats seed dispersal as an evolved adaptation. The types are anemochory (wind), hydrochory (water), zoochory (animals) and autochory (self or explosive). It links to Class 12 Ecology. There, limits on dispersal help explain where species live."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)

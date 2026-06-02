@@ -6499,3 +6499,31 @@ V7_PHASE3_COMPLETE_SENTINEL_v1
 
 NEXT: Phase 4 — reading-level polish (check_callout_reading_level.py over-band
 callouts), then Phase 5 integrate/test/doc + V7_DISCOVER_DEPTH_CHECKPOINT.md.
+
+---
+
+## 2026-06-02 — v7 Phase 4: LookingAheadCallout reading-level pass
+
+Simplified the over-band Discover "Looking Ahead" callouts flagged by
+check_callout_reading_level.py (Flesch-Kincaid grade > 13). The dominant grade
+driver is sentence length, so the fix split run-on sentences into short ones and
+trimmed connective filler ("formalises", "exploited", em-dash pile-ups) WHILE
+KEEPING every technical term, exam reference, ministry/scheme name, genus and
+reaction equation — accuracy fully preserved (these callouts are deliberate
+Class 11/12 / JEE / NEET teasers).
+
+Result: 56 → 15 flagged (73% reduction). The residual 15 sit at grade 13–15 and
+are irreducibly term-dense proper-noun / Latin-name lists (rainwater structures
+khadin/kul/zing/eri/bhandara; asexual modes by genus Amoeba/Plasmodium/Hydra/
+Spirogyra/Rhizopus; water-borne pathogens Vibrio/Salmonella/Entamoeba). The
+checker is advisory (not one of the 17 hard lints) and explicitly tolerates
+intentional exam-prep vocabulary; splitting these further would read as stilted
+without lowering the per-word syllable count that drives the score.
+
+Edits were exact-string replacements in 56 Scene*.swift detail literals (no new
+files, pbxproj unchanged). Green here: ci-build-test.sh → Release BUILD + 810
+XCTest, 0 failures. Additive; zero regressions; zero STOP_AND_ASK.
+
+V7_PHASE4_COMPLETE_SENTINEL_v1
+
+NEXT: Phase 5 — integrate/test/doc + V7_DISCOVER_DEPTH_CHECKPOINT.md.

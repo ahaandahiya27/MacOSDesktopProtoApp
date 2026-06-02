@@ -143,7 +143,7 @@ struct Scene2_BuildAWeatherStation: View {
 
                     LookingAheadCallout(
                         title: "Class 11 Physics + Geography → JEE / IIT-JAM",
-                        detail: "Each instrument measures a physical quantity: thermometer (T), barometer (P), hygrometer (relative humidity), anemometer (wind speed), rain gauge (precipitation). JEE asks the ideal-gas relation PV=nRT — barometer + thermometer + a fixed-volume balloon together can give you n. Indian Met Department feeds these readings into models that predict the monsoon."
+                        detail: "Each instrument measures one quantity: thermometer (T), barometer (P), hygrometer (humidity), anemometer (wind speed), rain gauge (rainfall). JEE uses the ideal-gas law PV = nRT. A barometer, a thermometer and a fixed-volume balloon together can give you n. The Indian Met Department feeds these readings into models that predict the monsoon."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 

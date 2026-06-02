@@ -108,8 +108,16 @@ no-orphan-registration + factory-resolves + per-slice coverage each slice.
 
 ## Phase 4 — Reading-level + polish
 
-- ⬜ Simplify over-band callouts flagged by `check_callout_reading_level.py`
-  without losing accuracy.
+- ✅ **M4.1 — LookingAheadCallout reading-level pass** (cycle 2): simplified the
+  over-band Discover callouts flagged by `check_callout_reading_level.py`
+  (threshold grade > 13). Lever was sentence length: split run-on sentences into
+  short ones and trimmed connective filler **while keeping every technical term
+  and exam reference** (microsporogenesis, anemochory, Coriolis, place names,
+  reaction equations) — accuracy preserved. **56 → 15 flagged (73% reduction).**
+  The residual 15 are irreducibly term-dense proper-noun/Latin lists (e.g.
+  rainwater structures khadin/kul/zing, asexual modes by genus) sitting at
+  grade 13–15; the checker is advisory and explicitly tolerates intentional
+  exam-prep vocabulary. Green: ci-build-test (Release BUILD + 810 XCTest, 0 fail).
 
 ## Phase 5 — Integrate / test / doc
 

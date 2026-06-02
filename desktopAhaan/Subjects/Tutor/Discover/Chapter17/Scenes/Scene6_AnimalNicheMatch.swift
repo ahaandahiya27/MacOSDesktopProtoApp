@@ -57,7 +57,7 @@ struct Scene6_AnimalNicheMatch: View {
 
                 LookingAheadCallout(
                     title: "Class 12 Bio → NEET",
-                    detail: "Class 12 'Organisms and Populations' formalises niche as the role + range an organism occupies. Two species cannot occupy the same niche indefinitely (Gause's competitive exclusion principle). NEET asks niche-vs-habitat distinction questions every cycle."
+                    detail: "Class 12 'Organisms and Populations' defines a niche as the role and range an organism takes. Two species cannot share the same niche for long — that is Gause's competitive exclusion principle. NEET asks how a niche differs from a habitat every cycle."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)

@@ -60,7 +60,7 @@ struct Scene7_WormEngineer: View {
                 Group {
                     LookingAheadCallout(
                         title: "Class 11/12 Bio → NEET",
-                        detail: "Earthworms are studied in detail in Class 11 'Structural Organisation in Animals' — their anatomy, blood vascular system, and nephridial excretion. NEET asks earthworm-specific morphology questions every cycle. Class 12 'Microbes in Human Welfare' covers vermicompost and how earthworm cultures help in soil enrichment."
+                        detail: "Class 11 'Structural Organisation in Animals' studies the earthworm closely — its anatomy, blood vessels and nephridial excretion. NEET asks about earthworm body structure every cycle. Class 12 'Microbes in Human Welfare' covers vermicompost, where earthworm cultures enrich the soil."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
                     .padding(.horizontal, 24)

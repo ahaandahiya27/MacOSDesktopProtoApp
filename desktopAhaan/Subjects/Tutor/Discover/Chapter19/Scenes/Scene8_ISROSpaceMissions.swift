@@ -225,7 +225,7 @@ struct Scene8_ISROSpaceMissions: View {
 
                     LookingAheadCallout(
                         title: "Class 11 / 12 Physics → JEE / ISRO entrance",
-                        detail: "ISRO's missions are JEE Physics live-action: Chandrayaan-3 used a gravity-assist trajectory (saves fuel). Mangalyaan reached Mars using only 75 kg of fuel — cheapest interplanetary mission ever. Aditya-L1 sits at Lagrangian point L1 (gravitational equilibrium between Earth + Sun, the maths is a JEE Advanced problem). Future Gaganyaan crewed missions and Chandrayaan-4 sample-return will keep extending the curriculum's reach into the real world."
+                        detail: "ISRO's missions are JEE Physics in action. Chandrayaan-3 used a gravity-assist path to save fuel. Mangalyaan reached Mars on just 75 kg of fuel — the cheapest interplanetary mission ever. Aditya-L1 sits at Lagrange point L1, where Earth's and the Sun's pull balance; that maths is a JEE Advanced problem. Gaganyaan (crewed) and Chandrayaan-4 (sample return) will push the syllabus further into the real world."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 

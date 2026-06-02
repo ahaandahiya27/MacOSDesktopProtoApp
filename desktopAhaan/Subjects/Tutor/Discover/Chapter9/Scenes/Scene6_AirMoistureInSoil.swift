@@ -54,7 +54,7 @@ struct Scene6_AirMoistureInSoil: View {
 
                 LookingAheadCallout(
                     title: "Class 11 Bio → NEET",
-                    detail: "Class 11 'Mineral Nutrition' covers soil as a chemical reservoir — how plants absorb 17 essential elements through root hairs. NEET asks soil-microbiome questions (nitrogen-fixing Rhizobium, mycorrhizae) every cycle."
+                    detail: "Class 11 'Mineral Nutrition' treats soil as a chemical store. Plants take in 17 essential elements through their root hairs. NEET asks about the soil microbiome every cycle — nitrogen-fixing Rhizobium and mycorrhizae."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)

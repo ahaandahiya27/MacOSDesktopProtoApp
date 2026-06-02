@@ -91,7 +91,7 @@ struct Scene1_SoilProfileDig: View {
 
                 LookingAheadCallout(
                     title: "Class 9 Geography",
-                    detail: "Class 9 Geography studies Indian soil types in detail: alluvial (Indo-Gangetic plain), black (Deccan plateau — perfect for cotton), red (Tamil Nadu, Karnataka), laterite (Western Ghats), and arid (Rajasthan). Each one is the end of a different combination of parent rock, climate and biology working over thousands of years."
+                    detail: "Class 9 Geography studies India's soil types. They include alluvial (Indo-Gangetic plain), black (Deccan plateau, great for cotton), red (Tamil Nadu, Karnataka), laterite (Western Ghats) and arid (Rajasthan). Each one is the end product of a different mix. Parent rock, climate and living things work on it over thousands of years."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)

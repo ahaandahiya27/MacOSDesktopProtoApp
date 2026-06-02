@@ -55,7 +55,7 @@ struct Scene2_WaterTableSlider: View {
 
                 LookingAheadCallout(
                     title: "Class 10 Geography",
-                    detail: "Class 10 'Resources and Development' covers groundwater depletion across India — Punjab, Haryana, Tamil Nadu's worst-affected regions. NCERT Geography asks about CGWB (Central Ground Water Board) monitoring data."
+                    detail: "Class 10 'Resources and Development' covers falling groundwater across India, worst in Punjab, Haryana and Tamil Nadu. NCERT Geography asks about CGWB (Central Ground Water Board) monitoring data."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)

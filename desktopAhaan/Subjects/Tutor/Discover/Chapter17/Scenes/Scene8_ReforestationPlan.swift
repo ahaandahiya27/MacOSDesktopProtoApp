@@ -46,7 +46,7 @@ struct Scene8_ReforestationPlan: View {
 
                 LookingAheadCallout(
                     title: "Class 12 Bio + Civics",
-                    detail: "Class 12 'Biodiversity & Conservation' covers in-situ (national parks, biosphere reserves, sacred groves) and ex-situ (zoos, botanical gardens, seed banks) strategies. Class 10 Civics covers India's Forest Rights Act 2006 and the role of local communities."
+                    detail: "Class 12 'Biodiversity & Conservation' covers two strategies. In-situ means saving species in place (national parks, biosphere reserves, sacred groves). Ex-situ means saving them elsewhere (zoos, botanical gardens, seed banks). Class 10 Civics covers India's Forest Rights Act 2006 and the role of local communities."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)

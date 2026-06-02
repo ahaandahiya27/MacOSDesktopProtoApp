@@ -84,7 +84,7 @@ struct Scene1_FlowerAnatomy: View {
 
                 LookingAheadCallout(
                     title: "Class 12 Bio → NEET",
-                    detail: "Class 12 'Sexual Reproduction in Flowering Plants' covers microsporogenesis (pollen formation in anther), megasporogenesis (egg formation in ovule), and the embryo-sac structure (8 nuclei / 7 cells)."
+                    detail: "Class 12 'Sexual Reproduction in Flowering Plants' goes deeper. It covers microsporogenesis (pollen forms in the anther), megasporogenesis (the egg forms in the ovule), and the embryo sac (8 nuclei in 7 cells)."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)

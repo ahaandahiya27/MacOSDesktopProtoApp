@@ -88,7 +88,7 @@ struct Scene8_FibreVsFibreGame: View {
 
                 LookingAheadCallout(
                     title: "Class 11 / 12 Polymer Chemistry → JEE",
-                    detail: "The cotton-vs-polyester-vs-silk sorting you just did becomes natural-polymers-vs-synthetic-polymers in Class 11 (cellulose vs PET nylon Kevlar). JEE Organic Chem asks 'what's the monomer of nylon-6?' (caprolactam) and 'why is Kevlar bullet-proof?' (rigid aromatic rings + hydrogen-bonded sheets — the same idea as silk, optimised industrially)."
+                    detail: "The sorting you just did — cotton vs polyester vs silk — becomes natural vs synthetic polymers in Class 11 (cellulose vs PET, nylon, Kevlar). JEE Organic Chemistry asks two classics. What is the monomer of nylon-6? Caprolactam. Why is Kevlar bullet-proof? Rigid aromatic rings and hydrogen-bonded sheets — the same idea as silk, built for industry."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)

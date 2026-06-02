@@ -50,7 +50,7 @@ struct Scene8_BetterPractices: View {
 
                 LookingAheadCallout(
                     title: "Class 12 Bio + Civics",
-                    detail: "Class 12 'Environmental Issues' covers individual and policy responses to pollution. Class 10 Civics covers India's environmental policy — Polluter Pays principle, EPA 1986, NGT (National Green Tribunal)."
+                    detail: "Class 12 'Environmental Issues' covers how people and policy respond to pollution. Class 10 Civics covers India's environmental law — the Polluter Pays principle, the EPA 1986, and the NGT (National Green Tribunal)."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)

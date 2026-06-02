@@ -131,7 +131,7 @@ struct Scene3_FiveSignsOfChemicalChange: View {
 
                     LookingAheadCallout(
                         title: "Class 11 Chemistry → JEE (Reaction Signatures)",
-                        detail: "The 5 signs — colour change / gas / precipitate / energy / smell — map to JEE reaction types: redox (colour change of Cu²⁺ pale blue → dark blue with NH₃), gas evolution (HCl + Zn → H₂), precipitation (BaCl₂ + Na₂SO₄ → BaSO₄↓), exothermic (heat released), and characteristic odour (rotten eggs = H₂S, ammonia, ester sweetness)."
+                        detail: "The five signs — colour change, gas, precipitate, energy, smell — each map to a JEE reaction type. Redox shows a colour change (Cu²⁺ pale blue → dark blue with NH₃). A gas evolves (HCl + Zn → H₂). A precipitate forms (BaCl₂ + Na₂SO₄ → BaSO₄↓). Exothermic means heat is released. Smell points to a product: rotten eggs are H₂S, sharp is ammonia, sweet is an ester."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 

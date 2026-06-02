@@ -115,7 +115,7 @@ struct Scene3_InsideALeaf: View {
 
             LookingAheadCallout(
                 title: "Class 11 Biology → NEET",
-                detail: "Each leaf part you just clicked becomes a whole NEET topic: mesophyll cells (palisade vs spongy → light-capture vs gas-exchange specialisation), stomatal guard cells (turgor mechanics, transpiration physics), vascular bundles (xylem ↑ water, phloem ↓ sugar). Knowing the parts now means in Class 11 you're learning their *physiology*, not their *names*."
+                detail: "Each leaf part you clicked becomes a whole NEET topic. Mesophyll cells split into palisade (light capture) and spongy (gas exchange). Guard cells open and close the stomata. Vascular bundles carry water up in the xylem and sugar down in the phloem. Learn the parts now, and in Class 11 you study how they work — not just their names."
             )
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)

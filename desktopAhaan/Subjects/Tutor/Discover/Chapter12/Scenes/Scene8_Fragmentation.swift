@@ -43,7 +43,7 @@ struct Scene8_Fragmentation: View {
 
                 LookingAheadCallout(
                     title: "Class 12 Bio → NEET",
-                    detail: "Class 12 'Reproduction in Organisms' classifies fragmentation as an asexual mode where parent breaks into 2+ pieces, each becoming a complete organism. Common in Spirogyra, Planaria, sea-anemones. NEET asks distinction between fragmentation and regeneration."
+                    detail: "Class 12 'Reproduction in Organisms' calls fragmentation an asexual mode. The parent breaks into two or more pieces, and each piece grows into a full organism. It is common in Spirogyra, Planaria and sea anemones. NEET asks how fragmentation differs from regeneration."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)

@@ -56,7 +56,7 @@ struct Scene7_DeforestationDomino: View {
 
                 LookingAheadCallout(
                     title: "Class 12 Bio → NEET",
-                    detail: "Class 12 'Biodiversity & Conservation' covers deforestation impacts globally and in India — the Chipko movement, Silent Valley, Project Tiger. NEET asks 'three causes of biodiversity loss' (habitat loss + over-exploitation + invasive species + co-extinction) every year."
+                    detail: "Class 12 'Biodiversity & Conservation' covers the effects of deforestation in India and worldwide. Case studies include the Chipko movement, Silent Valley and Project Tiger. NEET asks for the causes of biodiversity loss every year. The four are habitat loss, over-exploitation, invasive species and co-extinction."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)

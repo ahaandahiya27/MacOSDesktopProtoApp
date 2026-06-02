@@ -49,7 +49,7 @@ struct Scene7_SoakPitDesign: View {
                 Group {
                     LookingAheadCallout(
                         title: "Class 12 Bio + Engineering",
-                        detail: "Class 12 'Microbes in Human Welfare' covers biological filtration in soak-pits — the soil's natural microbial community digests organic matter before it reaches the groundwater. Polytechnic / ITI civil-engineering courses dive into design specs."
+                        detail: "Class 12 'Microbes in Human Welfare' covers how a soak-pit filters with life. The soil's own microbes digest the organic matter before it reaches the groundwater. Polytechnic and ITI civil-engineering courses go into the design details."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
                     .padding(.horizontal, 24)

@@ -61,7 +61,7 @@ struct Scene3_SortContaminants: View {
 
                 LookingAheadCallout(
                     title: "Class 12 Bio + Chemistry",
-                    detail: "Class 12 Bio 'Environmental Issues' covers water-pollution sources (sewage, industrial effluents, agricultural runoff, thermal). Class 12 Chemistry 'Environmental Chemistry' adds eutrophication, biomagnification (DDT, mercury in tuna), and acid rain. NEET asks these regularly."
+                    detail: "Class 12 Bio 'Environmental Issues' lists the sources of water pollution: sewage, factory effluent, farm runoff and heat. Class 12 Chemistry 'Environmental Chemistry' adds eutrophication, biomagnification (DDT, mercury in tuna) and acid rain. NEET asks these often."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)

@@ -51,7 +51,7 @@ struct Scene5_KidneyFilter: View {
                 Group {
                     LookingAheadCallout(
                         title: "Class 11 Bio → NEET",
-                        detail: "Class 11 'Excretory Products and their Elimination' covers nephron anatomy in detail, glomerular filtration rate (~125 mL/min), the loop of Henle counter-current multiplier, ADH and aldosterone hormones, and dialysis. The nephron diagram is one of the most-tested NEET visuals year after year."
+                        detail: "Class 11 'Excretory Products and their Elimination' covers the nephron in detail. It includes the filtration rate (~125 mL/min), the loop of Henle's counter-current trick, the hormones ADH and aldosterone, and dialysis. The nephron diagram is one of the most-tested NEET visuals, year after year."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
                     .padding(.horizontal, 24)

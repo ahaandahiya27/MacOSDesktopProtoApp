@@ -67,7 +67,7 @@ struct Scene4_ArteryVeinCapillary: View {
 
                 LookingAheadCallout(
                     title: "Class 11 Bio → NEET",
-                    detail: "Class 11 'Body Fluids and Circulation' covers the three vessel types in microscopic detail — tunica intima/media/externa, valve mechanics, blood pressure measurement (systolic/diastolic). Almost guaranteed NEET questions every cycle."
+                    detail: "Class 11 'Body Fluids and Circulation' studies the three vessel types up close: the tunica intima, media and externa, how valves work, and how blood pressure is measured (systolic and diastolic). These are near-guaranteed NEET questions every cycle."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)

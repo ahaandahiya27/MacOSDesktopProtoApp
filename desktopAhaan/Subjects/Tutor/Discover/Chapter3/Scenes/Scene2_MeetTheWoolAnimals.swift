@@ -107,7 +107,7 @@ struct Scene2_MeetTheWoolAnimals: View {
 
                     LookingAheadCallout(
                         title: "Class 11 Biology → NEET",
-                        detail: "Different climates produced different wool textures — sheep at altitude grow thicker undercoats. NEET tests this as 'adaptive radiation' in Class 11 Evolution: same ancestor, multiple niches, multiple morphologies. The Pashmina goat (Chyangra) in Ladakh has the finest wool because cold + thin air = densest insulation needed."
+                        detail: "Different climates grow different wool. Sheep high in the mountains grow thicker undercoats. NEET calls this adaptive radiation in Class 11 Evolution: one ancestor, many niches, many body forms. The Pashmina goat (Chyangra) of Ladakh has the finest wool. Cold, thin air needs the densest insulation."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
                     .padding(.horizontal, 24)

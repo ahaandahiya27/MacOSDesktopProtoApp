@@ -57,7 +57,7 @@ struct Scene5_O2CO2Balance: View {
                 Group {
                     LookingAheadCallout(
                         title: "Class 12 Bio → NEET",
-                        detail: "Class 12 'Ecosystem' formalises this as the carbon cycle, with quantitative carbon flux numbers. NEET asks ecosystem-level energy and carbon flow (10% rule, gross vs net primary productivity, decomposer role) every year. Climate change is studied in 'Environmental Issues'."
+                        detail: "Class 12 'Ecosystem' turns this into the carbon cycle, with real flux numbers. NEET asks about energy and carbon flow each year — the 10% rule, gross vs net primary productivity, and the role of decomposers. Climate change comes up in 'Environmental Issues'."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
                     .padding(.horizontal, 24)

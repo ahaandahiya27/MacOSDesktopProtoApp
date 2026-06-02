@@ -55,7 +55,7 @@ struct Scene6_InsectsWorms: View {
 
                 LookingAheadCallout(
                     title: "Class 11 Bio → NEET",
-                    detail: "Class 11 'Structural Organisation in Animals' covers respiration across taxa in detail — book-lungs of arachnids, tracheal tubes of insects, gills of fish, lungs of amphibians/reptiles/mammals. Comparison-of-respiration questions are a NEET staple."
+                    detail: "Class 11 'Structural Organisation in Animals' compares breathing across animal groups: book-lungs in arachnids, tracheal tubes in insects, gills in fish, and lungs in amphibians, reptiles and mammals. Compare-the-breathing questions are a NEET staple."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)

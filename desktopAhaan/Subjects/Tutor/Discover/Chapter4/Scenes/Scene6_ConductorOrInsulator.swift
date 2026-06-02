@@ -116,7 +116,7 @@ struct Scene6_ConductorOrInsulator: View {
 
                         LookingAheadCallout(
                             title: "Class 11 / 12 Physics → JEE",
-                            detail: "Conductor vs insulator extends from heat to electricity in Class 11: same metals (Cu, Ag) conduct both well because free-flowing electrons carry both energy and charge. JEE asks: 'Why are graphene and diamond made of identical carbon but graphene conducts and diamond doesn't?' Answer: lattice geometry — graphene's hexagonal sheets allow electron mobility, diamond's tetrahedral cage doesn't."
+                            detail: "Conductor vs insulator carries over from heat to electricity in Class 11. The same metals (Cu, Ag) conduct both well, because free electrons carry both energy and charge. JEE asks a classic: graphene and diamond are both pure carbon, so why does graphene conduct and diamond not? The answer is lattice shape. Graphene's flat sheets let electrons move; diamond's rigid cage does not."
                         )
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
 

@@ -50,7 +50,7 @@ struct Scene6_VegetativePropagation: View {
 
                 LookingAheadCallout(
                     title: "Class 12 Bio",
-                    detail: "Class 12 Bio covers commercial applications — micropropagation in tissue culture (industrial-scale cloning of orchids, bananas), grafting in fruit trees, runners in strawberries, suckers in bananas. Asked in NEET Plant Biotechnology questions."
+                    detail: "Class 12 Bio covers the commercial uses: micropropagation in tissue culture (cloning orchids and bananas at scale), grafting in fruit trees, runners in strawberries and suckers in bananas. NEET asks these in Plant Biotechnology."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)

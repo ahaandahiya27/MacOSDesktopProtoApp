@@ -54,7 +54,7 @@ struct Scene7_MirrorsInRealLife: View {
 
                 LookingAheadCallout(
                     title: "Class 10 / JEE Optics",
-                    detail: "Class 10 Light: 'Spherical Mirrors and Image Formation' covers the same use-cases formally — concave for shaving + headlight + telescope, convex for vehicle mirrors. Class 12 / JEE adds the silvering process and front-surface vs back-surface mirrors."
+                    detail: "Class 10 Light, 'Spherical Mirrors and Image Formation', covers these same uses: concave mirrors for shaving, headlights and telescopes; convex mirrors on vehicles. Class 12 and JEE add the silvering process and front- vs back-surface mirrors."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)

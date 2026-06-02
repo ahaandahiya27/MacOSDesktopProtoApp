@@ -60,7 +60,7 @@ struct Scene8_AnemometerReader: View {
 
                 LookingAheadCallout(
                     title: "Class 11 Physics → JEE",
-                    detail: "Class 11 Physics covers angular speed ω = v/r and the relation between rpm and SI units. JEE asks rotational kinematics problems on rotating bodies (centripetal force, angular momentum) using exactly this kind of cup-and-radius setup."
+                    detail: "Class 11 Physics covers angular speed, ω = v/r, and how rpm links to SI units. JEE sets rotational problems on spinning bodies — centripetal force and angular momentum — using just this kind of cup-and-radius setup."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)
