@@ -1,0 +1,203 @@
+import SwiftUI
+
+// MARK: - Chapter 15 shape diagrams  (Light)
+//
+// Pure-SwiftUI schematic diagrams for the four ch15 `shapeDiagram`
+// MediaAssets. Big Sur / legacy-GPU rules honoured.
+
+// MARK: - ch15_reflection_law
+
+/// The law of reflection at a plane mirror: the angle the incoming ray makes
+/// with the normal equals the angle the reflected ray makes with it
+/// (angle i = angle r).
+struct ReflectionLawDiagram: View {
+    var body: some View {
+        SDFigure(tint: Color.compatBlue) {
+            GeometryReader { geo in
+                let w = geo.size.width, h = geo.size.height
+                let hit = CGPoint(x: w / 2, y: h * 0.7)
+                ZStack {
+                    Group {
+                        // Mirror surface
+                        Rectangle().fill(DesignTokens.BrandColor.canvasText.opacity(0.5))
+                            .frame(width: w * 0.8, height: 4).position(x: w / 2, y: h * 0.7)
+                        // Normal (dashed vertical)
+                        Path { p in
+                            p.move(to: CGPoint(x: hit.x, y: h * 0.3))
+                            p.addLine(to: hit)
+                        }.stroke(DesignTokens.BrandColor.canvasTextSecondary.opacity(0.6),
+                                 style: StrokeStyle(lineWidth: 1.5, dash: [4, 3]))
+                        // Incident + reflected rays
+                        ray(from: CGPoint(x: w * 0.25, y: h * 0.32), to: hit, color: .orange)
+                        ray(from: hit, to: CGPoint(x: w * 0.75, y: h * 0.32), color: .red)
+                    }
+                    Group {
+                        SDLabel(text: "Normal").position(x: hit.x + 28, y: h * 0.34)
+                        SDLabel(text: "Incident", color: .orange).position(x: w * 0.22, y: h * 0.28)
+                        SDLabel(text: "Reflected", color: .red).position(x: w * 0.78, y: h * 0.28)
+                        SDLabel(text: "angle i = angle r", color: Color.compatBlue).position(x: w / 2, y: h * 0.92)
+                    }
+                }
+            }
+        }
+    }
+
+    private func ray(from: CGPoint, to: CGPoint, color: Color) -> some View {
+        Path { p in p.move(to: from); p.addLine(to: to) }
+            .stroke(color.opacity(0.8), style: StrokeStyle(lineWidth: 2.5, lineCap: .round))
+    }
+}
+
+// MARK: - ch15_prism
+
+/// A glass prism splits white light into the colours of the rainbow —
+/// dispersion — because each colour bends by a slightly different amount.
+struct PrismDiagram: View {
+    private let spectrum: [Color] = [.red, .orange, .yellow, .green, .blue, Color.compatPurple]
+    var body: some View {
+        SDFigure(tint: Color.compatPurple) {
+            GeometryReader { geo in
+                let w = geo.size.width, h = geo.size.height
+                ZStack {
+                    Group {
+                        // White light in
+                        Path { p in
+                            p.move(to: CGPoint(x: w * 0.06, y: h * 0.42))
+                            p.addLine(to: CGPoint(x: w * 0.4, y: h * 0.5))
+                        }.stroke(DesignTokens.BrandColor.canvasText.opacity(0.7),
+                                 style: StrokeStyle(lineWidth: 3, lineCap: .round))
+                        // Prism triangle
+                        TriangleShape().fill(Color.compatBlue.opacity(0.18))
+                            .overlay(TriangleShape().stroke(Color.compatBlue.opacity(0.6), lineWidth: 2))
+                            .frame(width: w * 0.26, height: h * 0.5).position(x: w * 0.46, y: h * 0.5)
+                    }
+                    Group {
+                        // Dispersed spectrum out
+                        ForEach(0..<spectrum.count, id: \.self) { i in
+                            Path { p in
+                                p.move(to: CGPoint(x: w * 0.58, y: h * 0.52))
+                                p.addLine(to: CGPoint(x: w * 0.95, y: h * (0.34 + Double(i) * 0.07)))
+                            }.stroke(spectrum[i].opacity(0.85), lineWidth: 2.5)
+                        }
+                        SDLabel(text: "White light").position(x: w * 0.16, y: h * 0.3)
+                        SDLabel(text: "Spectrum", color: Color.compatPurple).position(x: w * 0.82, y: h * 0.9)
+                    }
+                }
+            }
+        }
+    }
+}
+
+/// An upward-pointing triangle (prism).
+private struct TriangleShape: Shape {
+    func path(in rect: CGRect) -> Path {
+        var p = Path()
+        p.move(to: CGPoint(x: rect.midX, y: rect.minY))
+        p.addLine(to: CGPoint(x: rect.maxX, y: rect.maxY))
+        p.addLine(to: CGPoint(x: rect.minX, y: rect.maxY))
+        p.closeSubpath()
+        return p
+    }
+}
+
+// MARK: - ch15_lens_types
+
+/// Two kinds of lens: a convex lens is thick in the middle and brings rays
+/// together (converging); a concave lens is thin in the middle and spreads
+/// them out (diverging).
+struct LensTypesDiagram: View {
+    var body: some View {
+        SDFigure(tint: Color.compatBlue) {
+            HStack(spacing: 18) {
+                lens(convex: true, title: "Convex", note: "converges")
+                lens(convex: false, title: "Concave", note: "diverges")
+            }
+        }
+    }
+
+    private func lens(convex: Bool, title: String, note: String) -> some View {
+        VStack(spacing: 5) {
+            Text(title).font(.system(size: 12, weight: .bold)).foregroundColor(DesignTokens.BrandColor.canvasText)
+            ZStack {
+                Group {
+                    LensShape(convex: convex).fill(Color.compatBlue.opacity(0.25))
+                        .overlay(LensShape(convex: convex).stroke(Color.compatBlue.opacity(0.6), lineWidth: 1.5))
+                        .frame(width: 26, height: 70)
+                }
+                // Incoming + outgoing rays
+                ForEach(0..<2, id: \.self) { s in
+                    rayPair(top: s == 0, convex: convex)
+                }
+            }
+            .frame(width: 110, height: 76)
+            SDLabel(text: note, color: Color.compatBlue)
+        }
+    }
+
+    private func rayPair(top: Bool, convex: Bool) -> some View {
+        let y0: CGFloat = top ? 22 : 54
+        let yOut: CGFloat = convex ? 38 : (top ? 10 : 66)
+        return Path { p in
+            p.move(to: CGPoint(x: 6, y: y0))
+            p.addLine(to: CGPoint(x: 55, y: y0))
+            p.addLine(to: CGPoint(x: 104, y: yOut))
+        }.stroke(.orange.opacity(0.7), lineWidth: 1.5)
+    }
+}
+
+/// A lens cross-section: convex (two outward bows) or concave (two inward bows).
+private struct LensShape: Shape {
+    let convex: Bool
+    func path(in rect: CGRect) -> Path {
+        var p = Path()
+        let bow = convex ? rect.width * 0.5 : -rect.width * 0.5
+        p.move(to: CGPoint(x: rect.midX, y: rect.minY))
+        p.addQuadCurve(to: CGPoint(x: rect.midX, y: rect.maxY),
+                       control: CGPoint(x: rect.midX + bow, y: rect.midY))
+        p.addQuadCurve(to: CGPoint(x: rect.midX, y: rect.minY),
+                       control: CGPoint(x: rect.midX - bow, y: rect.midY))
+        p.closeSubpath()
+        return p
+    }
+}
+
+// MARK: - ch15_periscope
+
+/// A periscope uses two mirrors set at 45° to bend light down a tube, so you
+/// can see over a wall or out of a submarine.
+struct PeriscopeDiagram: View {
+    var body: some View {
+        SDFigure(tint: Color.compatTeal) {
+            GeometryReader { geo in
+                let w = geo.size.width, h = geo.size.height
+                let cx = w / 2
+                ZStack {
+                    Group {
+                        // Tube
+                        RoundedRectangle(cornerRadius: 6).stroke(DesignTokens.BrandColor.canvasText.opacity(0.5), lineWidth: 2)
+                            .frame(width: w * 0.36, height: h * 0.7).position(x: cx, y: h * 0.5)
+                        // Two 45° mirrors
+                        mirror.position(x: cx - w * 0.1, y: h * 0.22)
+                        mirror.position(x: cx + w * 0.1, y: h * 0.78)
+                    }
+                    Group {
+                        // Light path: in top, down, out bottom
+                        Path { p in
+                            p.move(to: CGPoint(x: w * 0.06, y: h * 0.22))
+                            p.addLine(to: CGPoint(x: cx - w * 0.1, y: h * 0.22))
+                            p.addLine(to: CGPoint(x: cx + w * 0.1, y: h * 0.78))
+                            p.addLine(to: CGPoint(x: w * 0.94, y: h * 0.78))
+                        }.stroke(.orange.opacity(0.8), style: StrokeStyle(lineWidth: 2, lineCap: .round))
+                        SDLabel(text: "Light in", color: .orange).position(x: w * 0.12, y: h * 0.12)
+                        SDLabel(text: "Eye", color: .orange).position(x: w * 0.9, y: h * 0.9)
+                    }
+                }
+            }
+        }
+    }
+
+    private var mirror: some View {
+        Rectangle().fill(Color.compatTeal.opacity(0.6))
+            .frame(width: 26, height: 4).rotationEffect(.degrees(45))
+    }
+}

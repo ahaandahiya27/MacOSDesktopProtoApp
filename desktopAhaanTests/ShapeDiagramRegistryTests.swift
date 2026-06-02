@@ -64,7 +64,17 @@ final class ShapeDiagramRegistryTests: XCTestCase {
         "ch06",   // Physical and Chemical Changes
         "ch07",   // Weather, Climate and Adaptations
         "ch08",   // Winds, Storms and Cyclones
-        "ch09"    // Soil
+        "ch09",   // Soil
+        "ch10",   // Respiration in Organisms
+        "ch11",   // Transportation in Animals and Plants
+        "ch12",   // Reproduction in Plants
+        "ch13",   // Motion and Time
+        "ch14",   // Electric Current and Its Effects
+        "ch15",   // Light
+        "ch16",   // Water: A Precious Resource
+        "ch17",   // Forests: Our Lifeline
+        "ch18",   // Wastewater Story
+        "ch19"    // Stars and the Solar System
     ]
 
     /// Coverage floor — every key the pack declares for a fully-covered
@@ -83,6 +93,17 @@ final class ShapeDiagramRegistryTests: XCTestCase {
                     "Chapter '\(ch)' diagram '\(key)' did not resolve to a factory.")
             }
         }
+    }
+
+    /// Phase 3 completeness — EVERY shapeDiagram key the science pack declares
+    /// (all 76, four per chapter ch01–ch19) now resolves to a registered
+    /// factory, so no chapter falls back to the placeholder card.
+    func testEveryPackDiagramKeyIsRegistered() throws {
+        let packKeys = try packDiagramKeys()
+        let registered = Set(ShapeDiagramRegistry.registeredKeys)
+        let missing = packKeys.subtracting(registered).sorted()
+        XCTAssertTrue(missing.isEmpty,
+            "These authored shapeDiagram keys have no registered factory: \(missing)")
     }
 
     // MARK: - Helpers

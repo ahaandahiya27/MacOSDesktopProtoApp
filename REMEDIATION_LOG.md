@@ -6463,3 +6463,39 @@ BUILD + 809 XCTest, 0 failures. Additive; zero regressions; zero STOP_AND_ASK.
 
 NEXT: Phase 3 M3.4 — ch10–ch13 (respiration, transportation, plant reproduction,
 motion & time).
+
+---
+
+## 2026-06-02 — v7 Phase 3 M3.4: Shape Diagram Library — ch10–ch19 (40 diagrams) — PHASE 3 COMPLETE
+
+Authored the final 40 pure-SwiftUI chapter diagrams; the ShapeDiagramRegistry
+now maps all 76 `shapeDiagram` resource keys (4 per chapter × 19 chapters) to a
+real diagram — zero placeholder fallbacks remain.
+
+- ch10 Respiration: lung_anatomy, alveolus, mitochondrion, gas_exchange.
+- ch11 Transportation: heart_4chambers, nephron, xylem_phloem, blood_cells.
+- ch12 Plant Reproduction: flower_anatomy, pollen_tube, seed_dispersal, vegetative.
+- ch13 Motion & Time: distance_time (Path-drawn graph — NOT Charts), pendulum
+  (trig-built swing arc), clock_history, speed_compare.
+- ch14 Electricity: simple_circuit, electromagnet, fuse_mcb, orsted.
+- ch15 Light: reflection_law, prism (dispersion spectrum), lens_types, periscope.
+- ch16 Water: water_cycle, aquifer, drip_system, baori (stepwell).
+- ch17 Forests: forest_layers, food_pyramid, nutrient_cycle, deforestation.
+- ch18 Wastewater: wwtp_flow, sulabh_toilet, biogas_plant, septic_tank.
+- ch19 Solar System: earth_tilt, moon_phases, solar_system, eclipse.
+
+All Path/primitive-Shape only, static, Color.compat*/system palette, SF symbols
+routed through SFSymbolCompat.name() (kept to SF Symbols 1/2-safe names), no
+macOS 12+ APIs (distance-time + speed graphs hand-drawn, not Charts), ViewBuilder
+<=10 children via Group buckets, no force-unwrap. Slow type-check on the alveolus
+ForEach broken into a helper.
+
+New test `testEveryPackDiagramKeyIsRegistered` asserts all 76 pack keys resolve
+to a factory; fullyCoveredChapters now ch01–ch19. Green here: 17 Big-Sur lints +
+test_lints.py; pbxproj regenerated; ci-build-test.sh → Release BUILD + 810
+XCTest, 0 failures (+1 new). Additive; zero regressions; zero STOP_AND_ASK.
+
+V7_PHASE3_COMPLETE_SENTINEL_v1
+
+NEXT: Phase 4 — reading-level polish (check_callout_reading_level.py over-band
+callouts), then Phase 5 integrate/test/doc + V7_DISCOVER_DEPTH_CHECKPOINT.md.

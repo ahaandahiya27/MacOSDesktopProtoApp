@@ -80,7 +80,57 @@ enum ShapeDiagramRegistry {
         "ch09_soil_profile": { AnyView(SoilProfileDiagram()) },
         "ch09_soil_types": { AnyView(SoilTypesDiagram()) },
         "ch09_erosion": { AnyView(ErosionDiagram()) },
-        "ch09_contour_terracing": { AnyView(ContourTerracingDiagram()) }
+        "ch09_contour_terracing": { AnyView(ContourTerracingDiagram()) },
+        // ch10 — Respiration in Organisms
+        "ch10_lung_anatomy": { AnyView(LungAnatomyDiagram()) },
+        "ch10_alveolus": { AnyView(AlveolusDiagram()) },
+        "ch10_mitochondrion": { AnyView(MitochondrionDiagram()) },
+        "ch10_gas_exchange": { AnyView(GasExchangeDiagram()) },
+        // ch11 — Transportation in Animals and Plants
+        "ch11_heart_4chambers": { AnyView(HeartChambersDiagram()) },
+        "ch11_nephron": { AnyView(NephronDiagram()) },
+        "ch11_xylem_phloem": { AnyView(XylemPhloemDiagram()) },
+        "ch11_blood_cells": { AnyView(BloodCellsDiagram()) },
+        // ch12 — Reproduction in Plants
+        "ch12_flower_anatomy": { AnyView(FlowerAnatomyDiagram()) },
+        "ch12_pollen_tube": { AnyView(PollenTubeDiagram()) },
+        "ch12_seed_dispersal": { AnyView(SeedDispersalDiagram()) },
+        "ch12_vegetative": { AnyView(VegetativeDiagram()) },
+        // ch13 — Motion and Time
+        "ch13_distance_time": { AnyView(DistanceTimeDiagram()) },
+        "ch13_pendulum": { AnyView(PendulumDiagram()) },
+        "ch13_clock_history": { AnyView(ClockHistoryDiagram()) },
+        "ch13_speed_compare": { AnyView(SpeedCompareDiagram()) },
+        // ch14 — Electric Current and Its Effects
+        "ch14_simple_circuit": { AnyView(SimpleCircuitDiagram()) },
+        "ch14_electromagnet": { AnyView(ElectromagnetDiagram()) },
+        "ch14_fuse_mcb": { AnyView(FuseMCBDiagram()) },
+        "ch14_orsted": { AnyView(OerstedDiagram()) },
+        // ch15 — Light
+        "ch15_reflection_law": { AnyView(ReflectionLawDiagram()) },
+        "ch15_prism": { AnyView(PrismDiagram()) },
+        "ch15_lens_types": { AnyView(LensTypesDiagram()) },
+        "ch15_periscope": { AnyView(PeriscopeDiagram()) },
+        // ch16 — Water: A Precious Resource
+        "ch16_water_cycle": { AnyView(WaterCycleDiagram()) },
+        "ch16_aquifer": { AnyView(AquiferDiagram()) },
+        "ch16_drip_system": { AnyView(DripSystemDiagram()) },
+        "ch16_baori": { AnyView(BaoriDiagram()) },
+        // ch17 — Forests: Our Lifeline
+        "ch17_forest_layers": { AnyView(ForestLayersDiagram()) },
+        "ch17_food_pyramid": { AnyView(FoodPyramidDiagram()) },
+        "ch17_nutrient_cycle": { AnyView(NutrientCycleDiagram()) },
+        "ch17_deforestation": { AnyView(DeforestationDiagram()) },
+        // ch18 — Wastewater Story
+        "ch18_wwtp_flow": { AnyView(WWTPFlowDiagram()) },
+        "ch18_sulabh_toilet": { AnyView(SulabhToiletDiagram()) },
+        "ch18_biogas_plant": { AnyView(BiogasPlantDiagram()) },
+        "ch18_septic_tank": { AnyView(SepticTankDiagram()) },
+        // ch19 — Stars and the Solar System
+        "ch19_earth_tilt": { AnyView(EarthTiltDiagram()) },
+        "ch19_moon_phases": { AnyView(MoonPhasesDiagram()) },
+        "ch19_solar_system": { AnyView(SolarSystemDiagram()) },
+        "ch19_eclipse": { AnyView(EclipseDiagram()) }
     ]
 
     /// Resource keys with a registered diagram (sorted). Exposed so a test

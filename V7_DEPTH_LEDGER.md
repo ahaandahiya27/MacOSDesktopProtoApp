@@ -87,7 +87,24 @@ no-orphan-registration + factory-resolves + per-slice coverage each slice.
   Soil:** `soil_profile` (O/A/B/C/bedrock horizons), `soil_types` (sandy/clayey/
   loamy grain size), `erosion` (bare vs plant-held slope), `contour_terracing`
   (stepped terraces). Green: 17 lints + test_lints + ci-build-test (809 XCTest).
-- ⬜ M3.4…M3.x — remaining 10 chapters (ch10–ch19), 40 diagrams.
+- ✅ **M3.4 — ch10–ch19 (40/40) — PHASE 3 COMPLETE** (cycle 2): **ch10
+  Respiration:** lung_anatomy, alveolus (O₂ in/CO₂ out), mitochondrion (cristae),
+  gas_exchange (respiration word-eq). **ch11 Transportation:** heart_4chambers,
+  nephron, xylem_phloem, blood_cells. **ch12 Plant Reproduction:** flower_anatomy,
+  pollen_tube, seed_dispersal, vegetative. **ch13 Motion & Time:** distance_time
+  (Path-drawn graph, NOT Charts), pendulum (swing arc), clock_history, speed_compare
+  (bar comparison). **ch14 Electricity:** simple_circuit, electromagnet, fuse_mcb,
+  orsted. **ch15 Light:** reflection_law (i=r), prism (dispersion), lens_types
+  (convex/concave + rays), periscope (45° mirrors). **ch16 Water:** water_cycle,
+  aquifer (water table), drip_system, baori (stepwell). **ch17 Forests:**
+  forest_layers, food_pyramid, nutrient_cycle, deforestation. **ch18 Wastewater:**
+  wwtp_flow, sulabh_toilet (twin-pit), biogas_plant (dome digester), septic_tank
+  (scum/liquid/sludge). **ch19 Solar System:** earth_tilt (23.5°→seasons),
+  moon_phases (ring), solar_system (Sun + 8 planets), eclipse (solar/lunar align).
+  +`testEveryPackDiagramKeyIsRegistered` (all 76 keys resolve → no placeholders).
+  Green: 17 lints + test_lints + ci-build-test (Release BUILD + 810 XCTest, 0 fail).
+
+> **ShapeDiagramRegistry: 76/76 keys registered — zero placeholder fallbacks.**
 
 ## Phase 4 — Reading-level + polish
 

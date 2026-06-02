@@ -392,6 +392,16 @@
 		00C73E900DC5A4AFE23B1437 /* BuildAHeatFlowSandbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFAFC7FE376FCFB2974F9CA2 /* BuildAHeatFlowSandbox.swift */; };
 		E752A768C84A2DF42A0C2684 /* BuildAPHSandbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D5FC5CADC47ED4AB9CD257E /* BuildAPHSandbox.swift */; };
 		887FEBC4E00878B4819E15F0 /* InsideTheDigestiveTour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953A84CBD2D54EB2D7025240 /* InsideTheDigestiveTour.swift */; };
+		E0E78809B4B1E5610C188108 /* Chapter10ShapeDiagrams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16FB31FC838295319079EFBC /* Chapter10ShapeDiagrams.swift */; };
+		0CCF79A817C941260B874D18 /* Chapter11ShapeDiagrams.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF224109A355730A0D939FCC /* Chapter11ShapeDiagrams.swift */; };
+		9D0998F3CE413DA466462689 /* Chapter12ShapeDiagrams.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3075D926ABBAD8B2CFE5F37 /* Chapter12ShapeDiagrams.swift */; };
+		76FCBD1C8715BA4F0F8E4E4A /* Chapter13ShapeDiagrams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90ECE90ADBAC551FF84A499D /* Chapter13ShapeDiagrams.swift */; };
+		65445788DB82C522769EE499 /* Chapter14ShapeDiagrams.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB42C6D71E782068FFBD71CC /* Chapter14ShapeDiagrams.swift */; };
+		B85A1C02923D191B44B3E0DE /* Chapter15ShapeDiagrams.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7725EFCB9E376634C7F1E2B /* Chapter15ShapeDiagrams.swift */; };
+		73A332059F15F2BF0A49A747 /* Chapter16ShapeDiagrams.swift in Sources */ = {isa = PBXBuildFile; fileRef = F12FA3D46C306481E3052F70 /* Chapter16ShapeDiagrams.swift */; };
+		89049238A2F5BB228CE259B2 /* Chapter17ShapeDiagrams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64D55FD26900A744841AB735 /* Chapter17ShapeDiagrams.swift */; };
+		CA991EAFDC91B7C721215034 /* Chapter18ShapeDiagrams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3529FD1EE58B8A2DCB6A73AB /* Chapter18ShapeDiagrams.swift */; };
+		56B5C180EB8C677DE3BDD300 /* Chapter19ShapeDiagrams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49D655BA8664FE39B218ACCA /* Chapter19ShapeDiagrams.swift */; };
 		D7A1F49192DEBD1652AAC397 /* Chapter1ShapeDiagrams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A9C645C7570D6EF0EDE0C85 /* Chapter1ShapeDiagrams.swift */; };
 		6463675431CD0835CE7011DA /* Chapter2ShapeDiagrams.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8A7D28903E18CF6796A22A6 /* Chapter2ShapeDiagrams.swift */; };
 		5BB50EB3E1A15D412899C439 /* Chapter3ShapeDiagrams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8410A17AF528F378287E90 /* Chapter3ShapeDiagrams.swift */; };
@@ -2991,6 +3001,16 @@
 		DFAFC7FE376FCFB2974F9CA2 /* BuildAHeatFlowSandbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BuildAHeatFlowSandbox.swift"; sourceTree = "<group>"; };
 		1D5FC5CADC47ED4AB9CD257E /* BuildAPHSandbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BuildAPHSandbox.swift"; sourceTree = "<group>"; };
 		953A84CBD2D54EB2D7025240 /* InsideTheDigestiveTour.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InsideTheDigestiveTour.swift"; sourceTree = "<group>"; };
+		16FB31FC838295319079EFBC /* Chapter10ShapeDiagrams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chapter10ShapeDiagrams.swift"; sourceTree = "<group>"; };
+		FF224109A355730A0D939FCC /* Chapter11ShapeDiagrams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chapter11ShapeDiagrams.swift"; sourceTree = "<group>"; };
+		A3075D926ABBAD8B2CFE5F37 /* Chapter12ShapeDiagrams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chapter12ShapeDiagrams.swift"; sourceTree = "<group>"; };
+		90ECE90ADBAC551FF84A499D /* Chapter13ShapeDiagrams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chapter13ShapeDiagrams.swift"; sourceTree = "<group>"; };
+		AB42C6D71E782068FFBD71CC /* Chapter14ShapeDiagrams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chapter14ShapeDiagrams.swift"; sourceTree = "<group>"; };
+		D7725EFCB9E376634C7F1E2B /* Chapter15ShapeDiagrams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chapter15ShapeDiagrams.swift"; sourceTree = "<group>"; };
+		F12FA3D46C306481E3052F70 /* Chapter16ShapeDiagrams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chapter16ShapeDiagrams.swift"; sourceTree = "<group>"; };
+		64D55FD26900A744841AB735 /* Chapter17ShapeDiagrams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chapter17ShapeDiagrams.swift"; sourceTree = "<group>"; };
+		3529FD1EE58B8A2DCB6A73AB /* Chapter18ShapeDiagrams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chapter18ShapeDiagrams.swift"; sourceTree = "<group>"; };
+		49D655BA8664FE39B218ACCA /* Chapter19ShapeDiagrams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chapter19ShapeDiagrams.swift"; sourceTree = "<group>"; };
 		0A9C645C7570D6EF0EDE0C85 /* Chapter1ShapeDiagrams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chapter1ShapeDiagrams.swift"; sourceTree = "<group>"; };
 		B8A7D28903E18CF6796A22A6 /* Chapter2ShapeDiagrams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chapter2ShapeDiagrams.swift"; sourceTree = "<group>"; };
 		7D8410A17AF528F378287E90 /* Chapter3ShapeDiagrams.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Chapter3ShapeDiagrams.swift"; sourceTree = "<group>"; };
@@ -5844,6 +5864,16 @@
 		F2C3AD6FA488E849DD7F4259 /* ShapeDiagrams */ = {
 			isa = PBXGroup;
 			children = (
+				16FB31FC838295319079EFBC,
+				FF224109A355730A0D939FCC,
+				A3075D926ABBAD8B2CFE5F37,
+				90ECE90ADBAC551FF84A499D,
+				AB42C6D71E782068FFBD71CC,
+				D7725EFCB9E376634C7F1E2B,
+				F12FA3D46C306481E3052F70,
+				64D55FD26900A744841AB735,
+				3529FD1EE58B8A2DCB6A73AB,
+				49D655BA8664FE39B218ACCA,
 				0A9C645C7570D6EF0EDE0C85,
 				B8A7D28903E18CF6796A22A6,
 				7D8410A17AF528F378287E90,
@@ -7696,6 +7726,16 @@
 				00C73E900DC5A4AFE23B1437 /* BuildAHeatFlowSandbox.swift in Sources */,
 				E752A768C84A2DF42A0C2684 /* BuildAPHSandbox.swift in Sources */,
 				887FEBC4E00878B4819E15F0 /* InsideTheDigestiveTour.swift in Sources */,
+				E0E78809B4B1E5610C188108 /* Chapter10ShapeDiagrams.swift in Sources */,
+				0CCF79A817C941260B874D18 /* Chapter11ShapeDiagrams.swift in Sources */,
+				9D0998F3CE413DA466462689 /* Chapter12ShapeDiagrams.swift in Sources */,
+				76FCBD1C8715BA4F0F8E4E4A /* Chapter13ShapeDiagrams.swift in Sources */,
+				65445788DB82C522769EE499 /* Chapter14ShapeDiagrams.swift in Sources */,
+				B85A1C02923D191B44B3E0DE /* Chapter15ShapeDiagrams.swift in Sources */,
+				73A332059F15F2BF0A49A747 /* Chapter16ShapeDiagrams.swift in Sources */,
+				89049238A2F5BB228CE259B2 /* Chapter17ShapeDiagrams.swift in Sources */,
+				CA991EAFDC91B7C721215034 /* Chapter18ShapeDiagrams.swift in Sources */,
+				56B5C180EB8C677DE3BDD300 /* Chapter19ShapeDiagrams.swift in Sources */,
 				D7A1F49192DEBD1652AAC397 /* Chapter1ShapeDiagrams.swift in Sources */,
 				6463675431CD0835CE7011DA /* Chapter2ShapeDiagrams.swift in Sources */,
 				5BB50EB3E1A15D412899C439 /* Chapter3ShapeDiagrams.swift in Sources */,
