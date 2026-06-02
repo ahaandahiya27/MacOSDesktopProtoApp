@@ -51,6 +51,36 @@ func socialScienceInteractivesAreEnabled(forPackId packId: String) -> Bool {
     packId == "socialscience_class7"
 }
 
+/// Parallel gate for the Sanskrit (`sanskrit_class7`) bespoke interactive
+/// (the शब्द–अर्थ word↔meaning match, v7 Phase 2). Kept SEPARATE from the
+/// Science and Social-Science gates so the three subjects' interactives can
+/// never leak into one another even where chapter ids rhyme. The legacy
+/// `ch01` vocabulary deck is screened out at the per-chapter mount, not here:
+/// this predicate is pack-level only (pure + non-isolated + unit-testable).
+func sanskritInteractivesAreEnabled(forPackId packId: String) -> Bool {
+    packId == "sanskrit_class7"
+}
+
+// MARK: - Sanskrit interactives
+
+/// Per-chapter bespoke interactive for the Sanskrit pack. Every NEP chapter
+/// (`sch01`–`sch15`) ships an 8–12 term Devanagari glossary, so the शब्द–अर्थ
+/// match challenge is faithful by construction and present on every chapter.
+/// Gated on the Sanskrit pack id AND the `sch` prefix so the legacy `ch01`
+/// vocabulary deck (a deliberate NEP-parity carve-out) and any other pack are
+/// excluded. Auto-hides only if a chapter somehow lacks a usable glossary.
+@ViewBuilder
+func sanskritInteractives(
+    pack: SubjectPack,
+    chapter: Chapter
+) -> some View {
+    if sanskritInteractivesAreEnabled(forPackId: pack.id),
+       chapter.id.hasPrefix("sch"),
+       chapter.glossaryList.count >= 2 {
+        ShabdaArthaMatchChallenge(chapterTitle: chapter.title, glossary: chapter.glossaryList)
+    }
+}
+
 // MARK: - Social Science interactives
 
 /// Per-chapter bespoke interactives for the Social Science pack. Each is a

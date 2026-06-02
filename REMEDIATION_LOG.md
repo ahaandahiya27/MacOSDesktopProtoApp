@@ -6331,3 +6331,40 @@ Deferred (gravy, not core): Social Science bespoke interactives
 (`socialScienceInteractives`) have no smoke walk — dynamic interpolated a11y
 labels, no stable container id, so a grounded walk is fragile. Only remaining
 T2 gap; row kept honest at 🟡. Zero STOP_AND_ASK.
+
+## 2026-06-02 — v7 Phase 0 + Phase 2 M2.1 · Sanskrit शब्द–अर्थ Discover interactive
+
+Phase 0 (compile-first): proved the baseline green — `generate_compat_pbxproj.py`
++ `ci-build-test.sh` → Release BUILD + 801 XCTest, 0 failures; 17 lints +
+test_lints clean. Reconciled the v7 brief against the actual tree (recorded in
+the new committed V7_DEPTH_LEDGER.md): Phase 1 (Social Science bespoke Discover)
+was ALREADY complete on main — `socialScienceInteractives` mounts 14 strand
+explorers + chronology challenge + glossary-match fallback across all 20
+chapters, gated + tested. Phase 2 (Sanskrit) and Phase 3 (Shape Diagram Library,
+empty registry) were the genuinely-open gaps.
+
+Phase 2 M2.1 — Sanskrit bespoke interactive for all 15 NEP chapters
+(sch01–sch15; legacy ch01 deck exempt). New `ShabdaArthaMatchChallenge` — a
+Devanagari-forward "match the शब्द (word) to its अर्थ (meaning)" game built from
+each chapter's OWN authored glossary (faithful by construction). Mirrors the
+proven SSGlossaryMatchChallenge mechanic but is deliberately separate and
+Devanagari-safe: word column renders the headword at 19pt with lineSpacing +
+fixedSize(vertical) so tall matras never clip; bilingual framing; Sanskrit
+solved banner (अति उत्तमम्!). No force-unwrap (the SS sibling's `terms[sel!]`
+was replaced with a guarded computed prompt here), reduce-motion-gated, VoiceOver
+labelled, fixed-seed shuffle. Gated by a new pack-level
+`sanskritInteractivesAreEnabled(forPackId:)` (kept separate from the Science and
+SS gates) + a per-chapter mount that screens on the `sch` prefix and a ≥2-term
+glossary. Mounted on ChapterDetailView with the SS call bucketed into one Group
+to hold the ≤10-child @ViewBuilder cap.
+
++SanskritInteractiveGateTests (4 cases): pack-only gate; 3-way mutual
+exclusivity (science/SS/sanskrit gates never co-enable → no cross-subject leak);
+reverse-leak guard; 15/15 NEP coverage with the legacy ch01 explicitly excluded.
+
+Green here: 17 Big-Sur lints + test_lints.py pass; pbxproj regenerated (picks up
+both new files); ci-build-test.sh → Release BUILD + 805 XCTest, 0 failures (was
+801, +4). Additive; zero regressions; zero STOP_AND_ASK.
+
+NEXT: Phase 3 — populate ShapeDiagramRegistry with pure-SwiftUI chapter diagrams
+(one chapter-slice per milestone), + a presence test per slice.

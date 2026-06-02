@@ -97,7 +97,13 @@ struct ChapterDetailView: View {
         Group {
             ch1PilotInteractives(pack: pack, chapter: chapter, coordinator: sheetCoordinator)
             propagatedPilotInteractives(pack: pack, chapter: chapter, coordinator: sheetCoordinator)
-            socialScienceInteractives(pack: pack, chapter: chapter)
+            Group {
+                // Mutually-exclusive by pack: at most one renders. Bucketed in
+                // one Group so surfacesGroupTop stays within the ≤10-child
+                // @ViewBuilder cap on Big Sur.
+                socialScienceInteractives(pack: pack, chapter: chapter)
+                sanskritInteractives(pack: pack, chapter: chapter)
+            }
             DeepDiveSection(chapter: chapter)
             NcertQASectionView(chapter: chapter)
             MisconceptionsSectionView(chapter: chapter)
