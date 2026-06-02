@@ -6272,3 +6272,62 @@ code): author deepDive.bonusQuestions to fill the Expert ladder's Olympiad tier.
 Green here: 8 Big-Sur lints + test_lints.py pass; pbxproj regenerated;
 ci-build-test.sh → BUILD + 801 XCTest, 0 failures (was 800, +1). Additive; zero
 regressions; zero STOP_AND_ASK.
+
+## 2026-06-02 — T2 UI-test coverage sweep (propagated interactives)
+
+Closed the last big 🟡 in the propagated-interactive UI-test surface. Before
+this, only the Ch.1 leaf tour + Ch.14 wire tour were pinned by XCUITest; the
+other ~13 propagated Science sandboxes/tours and the HomeExperiments sheet had
+no walk, so a broken mount, drifted a11y label, or regressed
+`PilotInteractiveSheetCoordinator.presentDeferred(...)` path would ship
+silently (the unit suite can't see "the tap landed on the right destination").
+
+Walks landed (commit 6e7969c) — modeled exactly on GoldenPathUITests:
+- `PropagatedToursUITests.swift` — Ch.2 digestive, Ch.10 alveolus, Ch.11
+  xylem, Ch.15 lens. Each: open chapter → CTA exists → click → first-stop
+  title → close → CTA re-mounts. (4 methods.)
+- `PropagatedSandboxesUITests.swift` — Ch.1/4/5/6/7/8/9/13/16 Build-a-*
+  sandboxes. Each: open chapter → container label exists → tap explainer
+  toggle → assert the toggle flips to its expanded label (deterministic
+  two-state change). (9 methods.)
+- `HomeExperimentsUITests.swift` — Try-at-Home sheet on Ch.1: open → assert
+  first experiment "Iodine starch map of a leaf" → Escape → card re-mounts.
+  (1 method.)
+- Every queried accessibility string copied verbatim from source
+  (ChapterDetailView+PropagatedCTAs.swift, the per-tour/-sandbox views,
+  ChapterDetailView+HomeExperiments.swift). pbxproj regenerated via
+  `generate_compat_pbxproj.py` (no synchronized group in this project — new
+  files need explicit refs; the generator picks them up. Diff was exactly the
+  3 new files in 4 places).
+
+Ratchet (commit 0656399) — deterministic, AX-free, no-build:
+- `check_critical_uitest_presence.py` REQUIRED manifest grew from 8 → 22 (the
+  14 new methods). Rename/delete now fails at commit/push.
+- NEW `check_uitest_label_coverage.py`: derives every propagated contract
+  label from source (tour/concept CTA accessibilityLabels in the CTA file +
+  the Build-a-* container label of each `BuildA*Sandbox(...)` mounted there,
+  resolved from its view under Surfaces/) and asserts each appears verbatim
+  under desktopAhaanUITests/. 16 labels, all referenced. Catches "added a CTA
+  but no walk" AND "drifted a label out from under its walk." Ships
+  `--selftest` (label-present pass + label-missing + unresolved-mount flag).
+- Wired into the pre-commit chain (section 14) and test_lints.py; .git/hooks
+  re-installed.
+
+Honesty note: the UI-test bundle needs an Accessibility grant to the runner
+(`desktopAhaanUITests-Runner.app`). This dev Mac has `CI_BUILD_TEST_FLAGS`
+unset, so the walks cannot be proven green here — the clicks would no-op and
+assertions fail by timeout. **Authoritative green for the new walks is the iMac
+`--ui` run** (`export CI_BUILD_TEST_FLAGS=--ui` is in the iMac's shell profile;
+`scripts/ci-build-test.sh` runs them there). What IS proven here: the UI-test
+target compiles (`xcodebuild build-for-testing` → ** TEST BUILD SUCCEEDED **,
+all 3 new files in the object list), every label is grounded in real source,
+and the two ratchets are green.
+
+Green here: 17 Big-Sur lints + test_lints.py (incl. both ratchet selftests)
+pass; `check_test_target_compat` clean; pbxproj regenerated; `ci-build-test.sh`
+(non-UI) → Release BUILD + 801 XCTest + 66 swift-testing, 0 failures.
+
+Deferred (gravy, not core): Social Science bespoke interactives
+(`socialScienceInteractives`) have no smoke walk — dynamic interpolated a11y
+labels, no stable container id, so a grounded walk is fragile. Only remaining
+T2 gap; row kept honest at 🟡. Zero STOP_AND_ASK.

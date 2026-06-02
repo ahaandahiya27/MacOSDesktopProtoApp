@@ -4,14 +4,15 @@ Read this before touching the codebase. It's the durable summary of how
 this project is built, what platform it must run on, and the conventions
 every session has converged on.
 
-## Current status (2026-05-29)
+## Current status (2026-06-02)
 
-- **17 lints clean** on every push — see `scripts/check_*.py`. Wired through `scripts/ci-build-test.sh`.
+- **17 lints clean** on every push — see `scripts/check_*.py`. Wired through `scripts/ci-build-test.sh`. (Plus two commit-time T2 ratchets: `check_critical_uitest_presence.py` + `check_uitest_label_coverage.py`, in the pre-commit chain.)
 - **Bug-free certification: 110/110 categories ✅** — see `BUG_FREE_CERTIFICATION_REPORT.md` at the repo root.
 - **Production-readiness: per-criterion ✅** — see `PRODUCTION_READINESS_REPORT.md`.
-- **Per-subject readiness:** Science (19 ch), Maths (15 ch), Sanskrit (16 ch = 15 NEP + 1 legacy vocab deck). See `{SUBJECT}_READINESS_REPORT.md` each.
+- **Per-subject readiness:** Science (19 ch), Maths (15 ch), Sanskrit (16 ch = 15 NEP + 1 legacy vocab deck), Social Science (`socialscience_class7`, NEP `sschNN` ids — bespoke per-chapter interactives via `socialScienceInteractives`). See `{SUBJECT}_READINESS_REPORT.md` each.
+- **v6 Learning Journey complete:** Weekly plan, Discover, Articles, Mastery map, Milestone checkpoints, and the mastery-gated Expert Challenge ladder — all read-only over the SRS layer. See `LEARNING_JOURNEY_CHECKPOINT.md`.
 - **Pack ID namespacing:** Science `ch*`, Maths `mch*`, Sanskrit `sch*` — ratcheted by `testNoCrossPackConceptIdCollision`.
-- **Test surface:** 555+ XCTest methods + 66 swift-testing + 28 XCUITest (15 maths-Discover walks + 13 prior). Default CI runs unit tests only; UI tests are `--ui` opt-in (AX grant required on runner).
+- **Test surface:** 801 XCTest methods + 66 swift-testing + 42 XCUITest (14 propagated-interactive walks [4 tours + 9 Build-a-* sandboxes + HomeExperiments, 2026-06-02] + 15 maths-Discover walks + 13 prior). Default CI runs unit tests only; UI tests are `--ui` opt-in (AX grant required on runner). T2 surfaces are guarded AX-free by the two commit-time ratchets above.
 
 ## What this project is
 
