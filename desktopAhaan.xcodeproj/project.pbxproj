@@ -439,6 +439,8 @@
 		11EDCB88F2999EF00670308B /* TranslatorScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090B5EB533A87E17B20AFFBE /* TranslatorScreen.swift */; };
 		D7D46302319B76795C27F695 /* ExpertChallengeLadderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF59B7CEF78589B1199C3A5 /* ExpertChallengeLadderView.swift */; };
 		99271421A5CD0F95BDE407C0 /* ExpertChallengeLadderWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FE8CA4A2401D74766B0DDB /* ExpertChallengeLadderWindow.swift */; };
+		BE78603A1523C4AAD1DB680C /* InsightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDEA2BC42C7A6FFDCA56781 /* InsightsView.swift */; };
+		9F6753A21AC93295597DD0DD /* InsightsWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69A908D4A722390ED134B94F /* InsightsWindow.swift */; };
 		DD0B459DA74DCC9D82FC202A /* MCQQuizComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42983DE5EF47E0D144BDD2E2 /* MCQQuizComponents.swift */; };
 		6638A7399D3BFB72A7C4D903 /* MasteryMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB6A798EF07DB8D9CD4B3BD /* MasteryMapView.swift */; };
 		89A2D7E7BA929A5CEF69F3F8 /* MasteryMapWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D235866F96FBF3E035A951C8 /* MasteryMapWindow.swift */; };
@@ -3054,6 +3056,8 @@
 		090B5EB533A87E17B20AFFBE /* TranslatorScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TranslatorScreen.swift"; sourceTree = "<group>"; };
 		5EF59B7CEF78589B1199C3A5 /* ExpertChallengeLadderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExpertChallengeLadderView.swift"; sourceTree = "<group>"; };
 		A4FE8CA4A2401D74766B0DDB /* ExpertChallengeLadderWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExpertChallengeLadderWindow.swift"; sourceTree = "<group>"; };
+		DBDEA2BC42C7A6FFDCA56781 /* InsightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InsightsView.swift"; sourceTree = "<group>"; };
+		69A908D4A722390ED134B94F /* InsightsWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InsightsWindow.swift"; sourceTree = "<group>"; };
 		42983DE5EF47E0D144BDD2E2 /* MCQQuizComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MCQQuizComponents.swift"; sourceTree = "<group>"; };
 		2DB6A798EF07DB8D9CD4B3BD /* MasteryMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MasteryMapView.swift"; sourceTree = "<group>"; };
 		D235866F96FBF3E035A951C8 /* MasteryMapWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MasteryMapWindow.swift"; sourceTree = "<group>"; };
@@ -6053,6 +6057,8 @@
 			children = (
 				5EF59B7CEF78589B1199C3A5,
 				A4FE8CA4A2401D74766B0DDB,
+				DBDEA2BC42C7A6FFDCA56781,
+				69A908D4A722390ED134B94F,
 				42983DE5EF47E0D144BDD2E2,
 				2DB6A798EF07DB8D9CD4B3BD,
 				D235866F96FBF3E035A951C8,
@@ -7791,6 +7797,8 @@
 				11EDCB88F2999EF00670308B /* TranslatorScreen.swift in Sources */,
 				D7D46302319B76795C27F695 /* ExpertChallengeLadderView.swift in Sources */,
 				99271421A5CD0F95BDE407C0 /* ExpertChallengeLadderWindow.swift in Sources */,
+				BE78603A1523C4AAD1DB680C /* InsightsView.swift in Sources */,
+				9F6753A21AC93295597DD0DD /* InsightsWindow.swift in Sources */,
 				DD0B459DA74DCC9D82FC202A /* MCQQuizComponents.swift in Sources */,
 				6638A7399D3BFB72A7C4D903 /* MasteryMapView.swift in Sources */,
 				89A2D7E7BA929A5CEF69F3F8 /* MasteryMapWindow.swift in Sources */,

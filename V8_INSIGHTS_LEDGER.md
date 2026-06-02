@@ -116,7 +116,19 @@ per-subject Discover attribution, and the F.1 accessibility close-out.
     needs an auto-Done reconciliation change that's out of scope for the v8
     attribution pass. Exclusion comment updated to say so. No STOP_AND_ASK: attributed
     everything unambiguous (the whole dashboard), documented the one out-of-scope path.
-- [ ] Phase 5 — InsightsView + InsightsWindow + ⌘⇧I + capstone test
+- [x] Phase 5 — InsightsView + InsightsWindow + ⌘⇧I + capstone test. **DONE** (2026-06-03)
+  - `Views/Progress/InsightsView.swift`: ties the trend chart (overall + per-subject
+    toggle, built from history), the week-over-week delta, and per-subject "stands
+    today" standings. Read-only over SRS (captures on open). Per-subject tints
+    (Science compatBlue, Maths `.orange`, Sanskrit compatPurple, SocSci compatTeal).
+  - `Views/Progress/InsightsWindow.swift`: `InsightsWindowPresenter` singleton,
+    mirrors `WeeklyProgressWindowPresenter`.
+  - Help → **Insights**, **⌘⇧I** wired in desktopAhaanApp (Group now 8 children, ≤10).
+  - Capstone: `LearningJourneyReadOnlyTests.testEveryV8InsightsSurfaceIsReadOnlyOverSRS`
+    seeds reviews, captures 3 snapshots a week apart, exercises overallProgressSeries /
+    progressSeries / progressWeekOverWeek, asserts SRS byte-identical. Build+test PASSED.
+  - Gotcha: there is no `Color.compatOrange`; use `Color.orange` (Big-Sur-safe — only
+    mint/indigo/teal/cyan/brown are banned).
 - [ ] Phase 6 — F.1 a11y + new-surface a11y + ratchet
 - [ ] Phase 7 — Integrate/test/doc + final sentinel
 

@@ -409,6 +409,16 @@ struct SanskritKoshApp: App {
                 }
                 .keyboardShortcut("m", modifiers: [.command, .shift])
 
+                // Insights — longitudinal mastery trend chart + week-over-week
+                // delta + per-subject standings (v8). Own AppKit window, same
+                // pattern. ⌘⇧I is free in AppKit defaults.
+                Button("Insights") {
+                    InsightsWindowPresenter.shared.present(
+                        dataStore: dataStore, registry: subjectRegistry
+                    )
+                }
+                .keyboardShortcut("i", modifiers: [.command, .shift])
+
                 // Milestone Checkpoint — a short mixed quiz sampled by mastery
                 // gaps (v6 Phase 4). Own AppKit window, same pattern. ⌘⇧K is
                 // free in AppKit defaults.
