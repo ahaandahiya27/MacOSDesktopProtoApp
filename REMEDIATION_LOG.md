@@ -6402,3 +6402,42 @@ Additive; zero regressions; zero STOP_AND_ASK.
 
 NEXT: Phase 3 M3.2 — ch02 (digestive_system, villi, tooth_types, rumen), then
 ch03…ch19 one slice each.
+
+---
+
+## 2026-06-02 — v7 Phase 3 M3.2: Shape Diagram Library — ch02–ch05 (16 diagrams)
+
+Authored 16 pure-SwiftUI chapter diagrams across four science chapters and
+introduced a shared `ShapeDiagramKit` (SDFigure tinted canvas, SDLabel part
+chip, SDChip equation/flow token, SDArrow / SDPlus, SDLeafShape / SDFingerShape).
+`SD*`-named so they never collide with ch01's file-private `DiagramCanvas` /
+`PartLabel` at module scope.
+
+- ch02 Nutrition in Animals: digestive_system (mouth→oesophagus→J-stomach→
+  coiled small intestine framed by large intestine, + liver), villi (finger
+  folds with red capillary loops on an intestinal wall), tooth_types (incisor/
+  canine/premolar/molar crowns set in a gum), rumen (4 chambers rumen/reticulum/
+  omasum/abomasum + dashed cud-return arrow to the mouth).
+- ch03 Fibre to Fabric: wool_process (shearing→scouring→sorting→spinning flow),
+  silkworm_lifecycle (egg→larva→cocoon→moth ring), polymer_chain (monomer →
+  linked-bead chain), fibre_compare (natural vs synthetic columns).
+- ch04 Heat: thermometer (clinical, bulb + kink + 35–42 °C scale), three_modes
+  (conduction/convection/radiation panels), thermos_flask (vacuum double-wall
+  cross-section), sea_breeze (coastal day circulation).
+- ch05 Acids/Bases/Salts: ph_scale (0–14 colour band + markers), neutralisation
+  (acid+base→salt+water), indicators (litmus/turmeric/china-rose colour table),
+  tooth_decay (bacterial acid attack neutralised by basic toothpaste).
+
+All Path/primitive-Shape only, static, Color.compat*/system palette, no macOS
+12+ APIs, ViewBuilder ≤10 children (Group buckets), no force-unwrap. Registered
+under their `chNN_*` pack resource keys. ShapeDiagramRegistryTests generalised:
+`testFullyCoveredChaptersAreComplete` walks a `fullyCoveredChapters` list (now
+ch01–ch05) and asserts every pack-declared key for each chapter resolves to a
+registered factory; no-orphan / factory-resolves / unregistered-nil retained.
+
+Green here: 17 Big-Sur lints + test_lints.py pass; pbxproj regenerated;
+ci-build-test.sh → Release BUILD + 809 XCTest, 0 failures. Additive; zero
+regressions; zero STOP_AND_ASK.
+
+NEXT: Phase 3 M3.3 — ch06 (physical_vs_chemical, rust_formation, crystallization,
+balanced_equation), then ch07…ch19 one slice each.

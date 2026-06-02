@@ -56,8 +56,25 @@ no-orphan-registration + factory-resolves + per-slice coverage each slice.
   (CO₂+H₂O+light→glucose+O₂ over a leaf), `LeafAnatomyDiagram` (epidermis /
   palisade / spongy + vein / stoma). Registered + `registeredKeys` accessor.
   +`ShapeDiagramRegistryTests` (4). Green: Release BUILD + 809 XCTest, 0 fail.
-- ⬜ M3.2…M3.19 — remaining 18 chapters (ch02–ch19), 72 diagrams. Resource keys
-  enumerated: 76 total, 4/chapter, all in `science_class7`.
+- ✅ **M3.2 — ch02–ch05 (16/16)** (cycle 2): new shared `ShapeDiagramKit`
+  (SDFigure / SDLabel / SDChip / SDArrow / SDPlus / SDLeafShape / SDFingerShape;
+  `SD*`-named to avoid colliding with ch01's file-private helpers). Diagrams —
+  **ch02 Nutrition in Animals:** `digestive_system` (alimentary canal: mouth→
+  oesophagus→J-stomach→coiled small intestine framed by large intestine + liver),
+  `villi` (finger folds w/ red capillary loops), `tooth_types` (incisor/canine/
+  premolar/molar crowns in a gum), `rumen` (4 chambers + cud-return arrow).
+  **ch03 Fibre to Fabric:** `wool_process` (shearing→scouring→sorting→spinning),
+  `silkworm_lifecycle` (egg→larva→cocoon→moth ring), `polymer_chain` (monomer→
+  linked-bead chain), `fibre_compare` (natural vs synthetic columns).
+  **ch04 Heat:** `thermometer` (clinical, bulb+kink+35–42 °C scale), `three_modes`
+  (conduction/convection/radiation), `thermos_flask` (vacuum double-wall x-sec),
+  `sea_breeze` (coast circulation). **ch05 Acids/Bases/Salts:** `ph_scale`
+  (0–14 colour band), `neutralisation` (acid+base→salt+water), `indicators`
+  (litmus/turmeric/china-rose colour table), `tooth_decay` (acid attack +
+  base toothpaste). Test generalised to `testFullyCoveredChaptersAreComplete`
+  (per-chapter completeness floor; covered list now ch01–ch05). Green: 17 lints +
+  test_lints + ci-build-test (Release BUILD + 809 XCTest, 0 fail).
+- ⬜ M3.3…M3.x — remaining 14 chapters (ch06–ch19), 56 diagrams.
 
 ## Phase 4 — Reading-level + polish
 

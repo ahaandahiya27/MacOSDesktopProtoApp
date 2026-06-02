@@ -51,21 +51,33 @@ final class ShapeDiagramRegistryTests: XCTestCase {
         XCTAssertNil(ShapeDiagramRegistry.factory(for: "ch99_does_not_exist"))
     }
 
-    /// Coverage floor — ch01 (Nutrition in Plants) is fully illustrated: all
-    /// four of its authored shapeDiagram keys are registered.
-    func testChapter1FullyCovered() throws {
-        let expected = [
-            "ch01_chloroplast",
-            "ch01_stomata",
-            "ch01_photosynthesis_equation",
-            "ch01_leaf_anatomy"
-        ]
-        // Sanity: each expected key is actually authored in the pack.
+    /// Chapter prefixes that the v7 Phase 3 library has fully illustrated so
+    /// far. Each landed chapter is appended here; the test then asserts that
+    /// EVERY shapeDiagram key the pack declares for that chapter resolves to a
+    /// registered factory — a per-chapter completeness floor.
+    private static let fullyCoveredChapters = [
+        "ch01",   // Nutrition in Plants
+        "ch02",   // Nutrition in Animals
+        "ch03",   // Fibre to Fabric (wool & silk)
+        "ch04",   // Heat
+        "ch05"    // Acids, Bases and Salts
+    ]
+
+    /// Coverage floor — every key the pack declares for a fully-covered
+    /// chapter is registered AND resolves to a factory.
+    func testFullyCoveredChaptersAreComplete() throws {
         let packKeys = try packDiagramKeys()
         let registered = Set(ShapeDiagramRegistry.registeredKeys)
-        for key in expected {
-            XCTAssertTrue(packKeys.contains(key), "Pack is missing expected ch01 diagram key '\(key)'.")
-            XCTAssertTrue(registered.contains(key), "ch01 diagram '\(key)' is not registered.")
+        for ch in Self.fullyCoveredChapters {
+            let chapterKeys = packKeys.filter { $0.hasPrefix(ch + "_") }
+            XCTAssertFalse(chapterKeys.isEmpty,
+                "Pack declares no shapeDiagram keys for covered chapter '\(ch)'.")
+            for key in chapterKeys {
+                XCTAssertTrue(registered.contains(key),
+                    "Chapter '\(ch)' diagram '\(key)' is authored in the pack but not registered.")
+                XCTAssertNotNil(ShapeDiagramRegistry.factory(for: key),
+                    "Chapter '\(ch)' diagram '\(key)' did not resolve to a factory.")
+            }
         }
     }
 
