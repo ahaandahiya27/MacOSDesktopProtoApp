@@ -39034,7 +39034,93 @@
           "parentConceptId": "ssch13_t04_c02",
           "body": "High-yielding company seeds are often 'hybrids', made by deliberately crossing two carefully chosen parent varieties. The first-generation hybrid plant is vigorous and high-yielding because it combines the best traits of both parents. But when that plant makes its own seeds, the genes get reshuffled and split up, so the next generation is a mixture — some plants are weak, some tall, some low-yielding, and the uniform high yield is lost. This is why the chapter says the seeds the plant later produces are 'not suitable for planting in the next season', and why farmers who use hybrids must buy fresh seed every year, creating dependence on seed companies. Traditional saved seeds, by contrast, breed true because they are stable, locally adapted varieties.",
           "prerequisite": "Knowing that farmers can either save their own seeds or buy company seeds.",
-          "nextStepHint": "Find out what a 'landrace' is and why preserving traditional crop varieties matters for biodiversity."
+          "nextStepHint": "Find out what a 'landrace' is and why preserving traditional crop varieties matters for biodiversity.",
+          "bonusQuestions": [
+            {
+              "id": "ssch13_dv01_b01",
+              "prompt": "Why must farmers who use high-yielding HYBRID seeds buy fresh seed every year?",
+              "questionType": "mcq",
+              "options": [
+                "The seeds the hybrid plant makes don't 'breed true' — genes reshuffle, so the uniform high yield is lost",
+                "Hybrid plants make no seeds at all",
+                "Saving seed is illegal",
+                "The seeds are always stolen"
+              ],
+              "answer": "The seeds the hybrid plant makes don't 'breed true' — genes reshuffle, so the uniform high yield is lost",
+              "solutionSteps": [
+                "A first-generation hybrid is vigorous, combining both parents' best traits.",
+                "Its own seeds split the genes, giving a mixed, lower-yielding next generation."
+              ],
+              "commonMistakes": [
+                "Thinking hybrids are sterile rather than just not breeding true."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why does a hybrid create dependence on seed companies?",
+                  "answer": "Farmers must buy fresh seed each season",
+                  "solutionSteps": [
+                    "Saved seed won't breed true.",
+                    "Yearly purchase."
+                  ]
+                },
+                {
+                  "prompt": "Why DO traditional saved seeds breed true?",
+                  "answer": "They are stable, locally adapted varieties",
+                  "solutionSteps": [
+                    "Genetically stable.",
+                    "Reliable next generation."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                156
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch13_dv01_b02",
+              "prompt": "Traditional saved seeds 'breed true', meaning the next generation resembles the parent, because they are...",
+              "questionType": "mcq",
+              "options": [
+                "Stable, locally adapted varieties",
+                "First-generation hybrids",
+                "Sterile",
+                "Imported each year"
+              ],
+              "answer": "Stable, locally adapted varieties",
+              "solutionSteps": [
+                "Stable varieties pass on consistent traits.",
+                "Unlike hybrids, their saved seed performs reliably."
+              ],
+              "commonMistakes": [
+                "Confusing stable varieties with hybrids."
+              ],
+              "variations": [
+                {
+                  "prompt": "A first-generation hybrid is high-yielding because it...",
+                  "answer": "Combines the best traits of two chosen parents",
+                  "solutionSteps": [
+                    "Hybrid vigour.",
+                    "Generation 1 only."
+                  ]
+                },
+                {
+                  "prompt": "In the generation AFTER a hybrid, the plants become...",
+                  "answer": "A mixture — some weak, some tall, lower-yielding",
+                  "solutionSteps": [
+                    "Genes reshuffle.",
+                    "Uniformity lost."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                156
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch13_dv02",
@@ -39043,7 +39129,93 @@
           "parentConceptId": "ssch13_t05_c02",
           "body": "In economics, an 'externality' is a cost (or benefit) that falls on people or the environment but is not paid for by the person who causes it. The Green Revolution's high yields had a market price, but its damage — impoverished soil, depleted groundwater, polluted water, harmed health including more cancer cases in some rural areas, and dying pollinators like bees — was a cost paid by society and future generations, not charged to anyone at the time. Economists call these 'negative externalities'. Recognising them explains why purely maximising short-term yield is not the same as maximising true welfare, and why sustainable farming, which counts these hidden costs, is the rational long-term choice.",
           "prerequisite": "Understanding the benefits and harms of the Green Revolution.",
-          "nextStepHint": "Look up how 'subsidies' on power and fertiliser can unintentionally encourage over-use of water and chemicals."
+          "nextStepHint": "Look up how 'subsidies' on power and fertiliser can unintentionally encourage over-use of water and chemicals.",
+          "bonusQuestions": [
+            {
+              "id": "ssch13_dv02_b01",
+              "prompt": "The Green Revolution's soil depletion, groundwater loss and pollution — costs NOT paid by those who caused them — are examples of...",
+              "questionType": "mcq",
+              "options": [
+                "Negative externalities",
+                "Profits",
+                "Subsidies",
+                "Surpluses"
+              ],
+              "answer": "Negative externalities",
+              "solutionSteps": [
+                "An externality is a cost falling on others/the environment, unpaid by the causer.",
+                "These damages were borne by society and the future."
+              ],
+              "commonMistakes": [
+                "Calling environmental damage a 'cost of doing business' rather than an externality."
+              ],
+              "variations": [
+                {
+                  "prompt": "Who paid the Green Revolution's hidden costs?",
+                  "answer": "Society and future generations",
+                  "solutionSteps": [
+                    "Not charged at the time.",
+                    "Externalised."
+                  ]
+                },
+                {
+                  "prompt": "Recognising externalities shows that maximising short-term yield is NOT the same as...",
+                  "answer": "Maximising true welfare",
+                  "solutionSteps": [
+                    "Hidden costs count.",
+                    "Sustainability matters."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                156
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch13_dv02_b02",
+              "prompt": "Why is sustainable farming the rational LONG-TERM choice, in this view?",
+              "questionType": "mcq",
+              "options": [
+                "It counts the hidden costs (externalities) that short-term yield-maximising ignores",
+                "It always gives the highest yield immediately",
+                "It uses the most chemicals",
+                "It ignores the environment"
+              ],
+              "answer": "It counts the hidden costs (externalities) that short-term yield-maximising ignores",
+              "solutionSteps": [
+                "Sustainable farming includes soil, water and health costs.",
+                "So it maximises true welfare over time."
+              ],
+              "commonMistakes": [
+                "Equating 'highest immediate yield' with 'best overall outcome'."
+              ],
+              "variations": [
+                {
+                  "prompt": "Name one negative externality of the Green Revolution.",
+                  "answer": "Depleted groundwater (or impoverished soil, polluted water, dying pollinators)",
+                  "solutionSteps": [
+                    "Unpriced harms.",
+                    "Borne by society."
+                  ]
+                },
+                {
+                  "prompt": "An 'externality' in economics is a cost or benefit that...",
+                  "answer": "Falls on others but isn't paid for by the one who causes it",
+                  "solutionSteps": [
+                    "Spillover effect.",
+                    "Outside the price."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                156
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch13_dv03",
@@ -39052,7 +39224,93 @@
           "parentConceptId": "ssch13_t02_c03",
           "body": "India's three cropping seasons are not random — they are set by the rhythm of the monsoon, and even their names tell the story. Kharif crops (the word is Arabic for 'autumn') are sown with the arrival of the southwest monsoon around June and harvested after the rains in September–October; they are the thirsty crops like rice, maize and cotton that need plenty of water. Rabi (Arabic for 'spring') crops are sown in the cooler, drier months around October–November on the moisture the monsoon left behind, and harvested in spring; wheat, gram and mustard belong here. Zaid is the short summer season between rabi and kharif, used for quick crops like watermelon and cucumber where water is available. So a single farmer reads the calendar by the sky: when the monsoon comes, what it leaves in the soil, and how hot the gap months are. Knowing why the seasons fall when they do explains why a failed monsoon hurts the kharif harvest most of all.",
           "prerequisite": "Knowing the three cropping seasons are kharif, rabi and zaid.",
-          "nextStepHint": "Match rice, wheat and watermelon to their cropping seasons and explain why."
+          "nextStepHint": "Match rice, wheat and watermelon to their cropping seasons and explain why.",
+          "bonusQuestions": [
+            {
+              "id": "ssch13_dv03_b01",
+              "prompt": "Kharif crops (like rice, maize and cotton) are...",
+              "questionType": "mcq",
+              "options": [
+                "Sown with the June southwest monsoon and harvested after the rains in Sept–Oct",
+                "Sown in winter and harvested in spring",
+                "Grown only in the dry summer",
+                "Grown all year regardless of rain"
+              ],
+              "answer": "Sown with the June southwest monsoon and harvested after the rains in Sept–Oct",
+              "solutionSteps": [
+                "Kharif crops need plenty of water, so they follow the monsoon.",
+                "Sown ~June, harvested ~September–October."
+              ],
+              "commonMistakes": [
+                "Mixing up kharif (monsoon) with rabi (winter) crops."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why does a failed monsoon hurt the kharif harvest most?",
+                  "answer": "Kharif crops depend directly on the monsoon rains",
+                  "solutionSteps": [
+                    "Thirsty crops.",
+                    "Monsoon-timed."
+                  ]
+                },
+                {
+                  "prompt": "Rabi crops are sown around Oct–Nov on what water?",
+                  "answer": "The moisture the monsoon left behind in the soil",
+                  "solutionSteps": [
+                    "Cooler, drier months.",
+                    "Leftover moisture."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                156
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch13_dv03_b02",
+              "prompt": "Rabi crops such as wheat, gram and mustard are...",
+              "questionType": "mcq",
+              "options": [
+                "Sown around Oct–Nov on leftover monsoon moisture and harvested in spring",
+                "Sown with the June monsoon",
+                "Grown only in flooded fields",
+                "Never irrigated"
+              ],
+              "answer": "Sown around Oct–Nov on leftover monsoon moisture and harvested in spring",
+              "solutionSteps": [
+                "'Rabi' (Arabic for spring) crops grow in the cooler, drier season.",
+                "Sown ~Oct–Nov, harvested in spring."
+              ],
+              "commonMistakes": [
+                "Confusing rabi (winter-sown) with kharif (monsoon-sown)."
+              ],
+              "variations": [
+                {
+                  "prompt": "The short summer season between rabi and kharif, for quick crops, is...",
+                  "answer": "Zaid (e.g. watermelon, cucumber)",
+                  "solutionSteps": [
+                    "Brief summer season.",
+                    "Where water is available."
+                  ]
+                },
+                {
+                  "prompt": "India's cropping seasons are set mainly by the rhythm of the...",
+                  "answer": "Monsoon",
+                  "solutionSteps": [
+                    "Sky-read calendar.",
+                    "Rains decide timing."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                156
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch13_dv04",
@@ -39061,7 +39319,93 @@
           "parentConceptId": "ssch13_t03_c03",
           "body": "Long before electric pumps, Indians across the country invented clever ways to catch and store the monsoon for the long dry months — a heritage this chapter calls India's water structures. In the rocky Deccan, villages built bunded tanks (eris in the Tamil country) that caught run-off and let it soak slowly into wells and fields. In Rajasthan, stepwells (baolis) and johads stored precious rain; in Bihar, the ahar-pyne system channelled water across the land; terraced hillsides in the Himalayas and the Northeast held soil and water together. What is striking is that these were usually built and maintained by the community, not a distant government — a shared work that also shared the water fairly. Today, as groundwater runs low, engineers and villages are reviving these old structures, because rainwater harvesting that our ancestors mastered turns out to be one of the most sustainable answers to water scarcity we have.",
           "prerequisite": "Knowing that India has a heritage of traditional water structures.",
-          "nextStepHint": "Find the local name for a traditional water structure in your region and how it stored water."
+          "nextStepHint": "Find the local name for a traditional water structure in your region and how it stored water.",
+          "bonusQuestions": [
+            {
+              "id": "ssch13_dv04_b01",
+              "prompt": "Stepwells (baolis), johads, eris and the ahar-pyne system were traditional Indian ways to...",
+              "questionType": "mcq",
+              "options": [
+                "Catch and store the monsoon for the long dry months",
+                "Drain away all floodwater quickly",
+                "Cross wide rivers",
+                "Mark political borders"
+              ],
+              "answer": "Catch and store the monsoon for the long dry months",
+              "solutionSteps": [
+                "Long before electric pumps, communities harvested and stored rain.",
+                "These structures bridged the dry season."
+              ],
+              "commonMistakes": [
+                "Thinking these were for drainage or transport rather than water storage."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why are engineers and villages reviving these old structures today?",
+                  "answer": "As groundwater runs low, rainwater harvesting is a sustainable answer",
+                  "solutionSteps": [
+                    "Old wisdom.",
+                    "Sustainable water."
+                  ]
+                },
+                {
+                  "prompt": "Tamil-country bunded tanks that caught run-off were called...",
+                  "answer": "Eris",
+                  "solutionSteps": [
+                    "Stored monsoon water.",
+                    "Soaked into wells/fields."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                156
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch13_dv04_b02",
+              "prompt": "A striking feature of India's traditional water structures is that they were usually...",
+              "questionType": "mcq",
+              "options": [
+                "Built and maintained by the community, which also shared the water fairly",
+                "Built only by a distant central government",
+                "Imported from abroad",
+                "Never actually used"
+              ],
+              "answer": "Built and maintained by the community, which also shared the water fairly",
+              "solutionSteps": [
+                "These were shared works, locally built and managed.",
+                "Communal upkeep also meant fair sharing."
+              ],
+              "commonMistakes": [
+                "Assuming only governments build water infrastructure."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is reviving rainwater harvesting wise as groundwater falls?",
+                  "answer": "It is one of the most sustainable answers to water scarcity",
+                  "solutionSteps": [
+                    "Ancestral mastery.",
+                    "Sustainable supply."
+                  ]
+                },
+                {
+                  "prompt": "Himalayan and Northeast hillsides used which method to hold soil and water?",
+                  "answer": "Terracing",
+                  "solutionSteps": [
+                    "Stepped fields.",
+                    "Held water + soil."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                156
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch13_dv05",
@@ -39070,7 +39414,93 @@
           "parentConceptId": "ssch13_t03_c01",
           "body": "Soil is not just 'dirt' — it takes a hundred to several thousand years to form as rock slowly weathers and dead plants and animals rot into rich, dark humus. And India's six main soils behave very differently, which is why different crops suit different regions. Alluvial soil, the silt rivers spread across the northern plains, is deep and fertile and feeds most of India's wheat and rice. Black 'cotton' soil, formed from old volcanic rock in the Deccan, holds moisture so well that it is ideal for cotton even where rain is scarce. Red soil gets its colour from iron and is less fertile; laterite or 'brick earth' bakes hard; desert soil is sandy and dry; and mountain soil is thin and rocky. So a farmer's choice of crop is really a conversation with the soil under their feet — reading its colour, depth and how it holds water tells them what will thrive.",
           "prerequisite": "Knowing soil forms slowly from weathered rock and humus.",
-          "nextStepHint": "Match two of India's soils to a crop each, and say why the soil suits that crop."
+          "nextStepHint": "Match two of India's soils to a crop each, and say why the soil suits that crop.",
+          "bonusQuestions": [
+            {
+              "id": "ssch13_dv05_b01",
+              "prompt": "Black 'cotton' soil of the Deccan is ideal for cotton even where rain is scarce because it...",
+              "questionType": "mcq",
+              "options": [
+                "Holds moisture very well",
+                "Is sandy and drains instantly",
+                "Is bright red and infertile",
+                "Never holds any water"
+              ],
+              "answer": "Holds moisture very well",
+              "solutionSteps": [
+                "Black soil formed from old volcanic rock retains moisture.",
+                "So cotton thrives there despite low rainfall."
+              ],
+              "commonMistakes": [
+                "Confusing black cotton soil with sandy or red soils."
+              ],
+              "variations": [
+                {
+                  "prompt": "Alluvial soil of the northern plains is good for wheat and rice because it is...",
+                  "answer": "Deep and fertile (river-deposited silt)",
+                  "solutionSteps": [
+                    "Rich alluvium.",
+                    "Feeds most grain."
+                  ]
+                },
+                {
+                  "prompt": "Red soil gets its colour from...",
+                  "answer": "Iron (and is less fertile)",
+                  "solutionSteps": [
+                    "Iron content.",
+                    "Reddish, lower fertility."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                156
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch13_dv05_b02",
+              "prompt": "Roughly how long does soil take to form as rock weathers and humus builds up?",
+              "questionType": "mcq",
+              "options": [
+                "A hundred to several thousand years",
+                "A few weeks",
+                "A single season",
+                "Overnight"
+              ],
+              "answer": "A hundred to several thousand years",
+              "solutionSteps": [
+                "Soil forms very slowly from weathering rock and rotting matter.",
+                "So it is effectively a non-renewable resource."
+              ],
+              "commonMistakes": [
+                "Thinking soil forms quickly like a crop."
+              ],
+              "variations": [
+                {
+                  "prompt": "A farmer's choice of crop is really a 'conversation' with...",
+                  "answer": "The soil under their feet (its colour, depth, water-holding)",
+                  "solutionSteps": [
+                    "Soil decides.",
+                    "Match crop to soil."
+                  ]
+                },
+                {
+                  "prompt": "How many main soil types does the chapter give for India?",
+                  "answer": "Six",
+                  "solutionSteps": [
+                    "Each behaves differently.",
+                    "Suiting different crops."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                156
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch13_dv06",
@@ -39079,7 +39509,93 @@
           "parentConceptId": "ssch13_t01_c02",
           "body": "Here is a puzzle hidden in two numbers from this chapter. Almost HALF of India's working people — about 46 in every 100 — work in farming, yet agriculture produces only a little over 18 of every 100 rupees of the country's output (in 2022–23). How can so many people produce so small a share? It is because each farm worker, on average, produces less value than each worker in factories or services, where machines and technology multiply output. This gap is not a sign that farming does not matter — it feeds the nation and is its cultural backbone — but it explains why raising farmers' incomes is so important and so hard. A second surprise sharpens the picture: more than 75 of every 100 people working on India's farms are women, even though we often imagine a 'farmer' as a man. Reading these numbers together teaches a key skill: a share of OUTPUT and a share of WORKERS are different things, and comparing them reveals how an economy really works.",
           "prerequisite": "Knowing farming employs about 46% of workers and makes about 18% of output.",
-          "nextStepHint": "If 46% of workers make 18% of output, are farm incomes likely higher or lower than average? Why?"
+          "nextStepHint": "If 46% of workers make 18% of output, are farm incomes likely higher or lower than average? Why?",
+          "bonusQuestions": [
+            {
+              "id": "ssch13_dv06_b01",
+              "prompt": "About 46% of India's workers are in farming, yet agriculture makes only ~18% of output. Why can so many produce so small a share?",
+              "questionType": "mcq",
+              "options": [
+                "Each farm worker, on average, produces less value than a factory or service worker",
+                "Farmers do not work hard",
+                "Farming does not matter",
+                "The figures must be wrong"
+              ],
+              "answer": "Each farm worker, on average, produces less value than a factory or service worker",
+              "solutionSteps": [
+                "Machines and technology multiply output per worker in industry/services.",
+                "So the same number of farm workers produce less value."
+              ],
+              "commonMistakes": [
+                "Reading low output-share as meaning farming is unimportant or workers are lazy."
+              ],
+              "variations": [
+                {
+                  "prompt": "Does the low output-share mean farming doesn't matter?",
+                  "answer": "No — it feeds the nation and is its backbone",
+                  "solutionSteps": [
+                    "Vital despite the share.",
+                    "Income gap is the issue."
+                  ]
+                },
+                {
+                  "prompt": "Comparing a share of OUTPUT with a share of WORKERS teaches that they are...",
+                  "answer": "Different things — comparing them reveals how the economy works",
+                  "solutionSteps": [
+                    "Not the same.",
+                    "A key skill."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                156
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch13_dv06_b02",
+              "prompt": "More than 75 of every 100 people working on India's farms are...",
+              "questionType": "mcq",
+              "options": [
+                "Women",
+                "Children",
+                "Foreigners",
+                "Machines"
+              ],
+              "answer": "Women",
+              "solutionSteps": [
+                "Although a 'farmer' is often imagined as a man, most farm workers are women.",
+                "A surprise the numbers reveal."
+              ],
+              "commonMistakes": [
+                "Assuming the typical farm worker is a man."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is raising farmers' incomes both important and hard?",
+                  "answer": "Many people depend on farming, yet value-per-worker is low",
+                  "solutionSteps": [
+                    "Backbone but low income.",
+                    "A real challenge."
+                  ]
+                },
+                {
+                  "prompt": "Industry and services produce more value per worker because...",
+                  "answer": "Machines and technology multiply each worker's output",
+                  "solutionSteps": [
+                    "Higher productivity.",
+                    "Bigger output share."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                156
+              ],
+              "needsHumanReview": false
+            }
+          ]
         }
       ],
       "crossChapterRefs": [
@@ -41742,7 +42258,93 @@
           "parentConceptId": "ssch14_t01_c02",
           "body": "India's peninsular shape does more than look elegant on a map — it places her astride the busiest sea lanes on Earth. The northern Indian Ocean funnels almost all energy and cargo trade through two narrow 'choke points': the Strait of Hormuz, through which Gulf oil leaves for the world, and the Strait of Malacca, through which trade flows between the Indian and Pacific Oceans. India's peninsula sits squarely between them. This is why a country's coastline length (11,100 km for India) and exclusive economic zone (about 2.2 million sq km) translate into strategic weight: navies, ports and undersea cables all cluster around such geography. The modern doctrines you may meet later — 'Neighbourhood First', 'SAGAR' (Security and Growth for All in the Region), and the 'Indo-Pacific' — are all, at bottom, attempts to manage the responsibilities and opportunities that this peninsular position hands to India.",
           "prerequisite": "ssch14_t01_c02",
-          "nextStepHint": "Read about the Strait of Hormuz and the Strait of Malacca to see where the world's oil and cargo squeeze through."
+          "nextStepHint": "Read about the Strait of Hormuz and the Strait of Malacca to see where the world's oil and cargo squeeze through.",
+          "bonusQuestions": [
+            {
+              "id": "ssch14_dv01_b01",
+              "prompt": "India's peninsula sits between which two strategic Indian-Ocean 'choke points'?",
+              "questionType": "mcq",
+              "options": [
+                "The Strait of Hormuz and the Strait of Malacca",
+                "The English Channel and the Panama Canal",
+                "The Suez Canal and Gibraltar",
+                "The Bering Strait and the Bosphorus"
+              ],
+              "answer": "The Strait of Hormuz and the Strait of Malacca",
+              "solutionSteps": [
+                "Gulf oil passes through Hormuz; Indian–Pacific trade through Malacca.",
+                "India's peninsula lies squarely between them."
+              ],
+              "commonMistakes": [
+                "Picking famous straits elsewhere in the world."
+              ],
+              "variations": [
+                {
+                  "prompt": "The Strait of Hormuz is vital mainly for...",
+                  "answer": "Gulf oil leaving for the world",
+                  "solutionSteps": [
+                    "Energy choke point.",
+                    "Near India."
+                  ]
+                },
+                {
+                  "prompt": "India's coastline length and large EEZ translate into...",
+                  "answer": "Strategic weight (navies, ports, undersea cables cluster there)",
+                  "solutionSteps": [
+                    "Geography = power.",
+                    "Maritime importance."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                168
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch14_dv01_b02",
+              "prompt": "Modern doctrines like 'Neighbourhood First', 'SAGAR' and the 'Indo-Pacific' are attempts to manage the responsibilities handed to India by its...",
+              "questionType": "mcq",
+              "options": [
+                "Peninsular maritime position",
+                "Mountain borders only",
+                "Desert interior",
+                "Lack of coastline"
+              ],
+              "answer": "Peninsular maritime position",
+              "solutionSteps": [
+                "India's position astride busy sea lanes creates opportunities and duties.",
+                "These doctrines respond to that geography."
+              ],
+              "commonMistakes": [
+                "Linking the doctrines to land geography rather than the sea."
+              ],
+              "variations": [
+                {
+                  "prompt": "'SAGAR' stands for...",
+                  "answer": "Security and Growth for All in the Region",
+                  "solutionSteps": [
+                    "A maritime doctrine.",
+                    "India's ocean policy."
+                  ]
+                },
+                {
+                  "prompt": "Why do navies, ports and undersea cables cluster around such geography?",
+                  "answer": "They follow the busy sea lanes and choke points",
+                  "solutionSteps": [
+                    "Strategic chokepoints.",
+                    "Concentrate assets."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                168
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch14_dv02",
@@ -41751,7 +42353,93 @@
           "parentConceptId": "ssch14_t05_c01",
           "body": "Historians describe a remarkable period, roughly 300–1300 CE, when Sanskrit and Indic culture spread across South and Southeast Asia without any empire forcing it — what the scholar Sheldon Pollock called the 'Sanskrit Cosmopolis'. Kings from Cambodia to Java adopted Sanskrit names, Hindu and Buddhist religion, Indian epics, and scripts derived from India's Brahmi, simply because these ideas carried prestige and useful tools for ruling (a calendar, a writing system, a model of kingship). That is why Thailand has kings named Rama, Indonesia has the Ramayana and a Garuda on its money, and Cambodia built Angkor Wat. The lesson is profound: the most lasting kind of influence a civilisation can have is not conquest but attraction — culture freely adopted because people find it valuable. India's neighbourhood is, in a sense, a thousand-year experiment in soft power.",
           "prerequisite": "ssch14_t05_c01",
-          "nextStepHint": "Look up Angkor Wat in Cambodia and the Cham temples of Vietnam to see how far the Sanskrit Cosmopolis reached."
+          "nextStepHint": "Look up Angkor Wat in Cambodia and the Cham temples of Vietnam to see how far the Sanskrit Cosmopolis reached.",
+          "bonusQuestions": [
+            {
+              "id": "ssch14_dv02_b01",
+              "prompt": "During the 'Sanskrit Cosmopolis' (~300–1300 CE), Indic culture spread across Southeast Asia mainly...",
+              "questionType": "mcq",
+              "options": [
+                "Without any empire forcing it — adopted for its prestige and useful tools",
+                "By Indian armies conquering the region",
+                "By force and slavery",
+                "Entirely by accident"
+              ],
+              "answer": "Without any empire forcing it — adopted for its prestige and useful tools",
+              "solutionSteps": [
+                "Kings adopted Sanskrit, religion, epics and scripts because they carried prestige.",
+                "No empire imposed it — influence by attraction (soft power)."
+              ],
+              "commonMistakes": [
+                "Assuming cultural spread required conquest."
+              ],
+              "variations": [
+                {
+                  "prompt": "Name evidence of the Sanskrit Cosmopolis.",
+                  "answer": "Thai kings named Rama, Indonesia's Garuda & Ramayana, Cambodia's Angkor Wat",
+                  "solutionSteps": [
+                    "Indic culture abroad.",
+                    "Freely adopted."
+                  ]
+                },
+                {
+                  "prompt": "The lesson is that the most lasting influence is...",
+                  "answer": "Attraction (culture freely adopted), not conquest",
+                  "solutionSteps": [
+                    "Soft power.",
+                    "Valued, not forced."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                168
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch14_dv02_b02",
+              "prompt": "Which is an example of India's lasting cultural ('soft power') influence on its neighbourhood?",
+              "questionType": "mcq",
+              "options": [
+                "Cambodia building Angkor Wat and Indonesia featuring the Ramayana and a Garuda",
+                "European cathedrals",
+                "Roman legal codes",
+                "Chinese characters"
+              ],
+              "answer": "Cambodia building Angkor Wat and Indonesia featuring the Ramayana and a Garuda",
+              "solutionSteps": [
+                "These reflect Indic religion, epics and symbols adopted abroad.",
+                "A thousand-year experiment in soft power."
+              ],
+              "commonMistakes": [
+                "Picking influences from unrelated civilisations."
+              ],
+              "variations": [
+                {
+                  "prompt": "Southeast Asian scripts were often derived from India's...",
+                  "answer": "Brahmi script",
+                  "solutionSteps": [
+                    "Writing system spread.",
+                    "A useful tool of rule."
+                  ]
+                },
+                {
+                  "prompt": "Why did foreign kings adopt Indic ideas?",
+                  "answer": "They carried prestige and useful tools (calendar, script, model of kingship)",
+                  "solutionSteps": [
+                    "Practical + prestige.",
+                    "Freely chosen."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                168
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch14_dv03",
@@ -41760,7 +42448,93 @@
           "parentConceptId": "ssch14_t05_c04",
           "body": "Being neighbours is not a choice — and the chapter's SAARC shows why countries that share a region try, despite quarrels, to work together. Geography forces it. The great rivers of the subcontinent do not respect borders: the Ganga and Brahmaputra flow from India into Bangladesh, the Indus system is shared by India and Pakistan, and rivers from Nepal and Bhutan feed India's plains. One country's dam or flood becomes its neighbour's problem, so they must talk about sharing water and warning each other of floods. The same monsoon waters them all; a cyclone in the Bay of Bengal threatens several coasts at once; trade is cheapest with the country next door. This is the logic behind regional groups like SAARC and BIMSTEC: not friendship for its own sake, but the plain fact that shared rivers, shared weather and shared seas give neighbours shared problems that no one can solve alone. Cooperation, here, is simply common sense made into policy.",
           "prerequisite": "Knowing that SAARC is a group for regional cooperation among India's neighbours.",
-          "nextStepHint": "Name one river India shares with a neighbour and explain why both countries must cooperate over it."
+          "nextStepHint": "Name one river India shares with a neighbour and explain why both countries must cooperate over it.",
+          "bonusQuestions": [
+            {
+              "id": "ssch14_dv03_b01",
+              "prompt": "Why must subcontinental neighbours cooperate, despite their quarrels?",
+              "questionType": "mcq",
+              "options": [
+                "Shared rivers, weather and seas give them shared problems no one can solve alone",
+                "They are always close friends",
+                "A treaty forces them to",
+                "Only for the sake of trade"
+              ],
+              "answer": "Shared rivers, weather and seas give them shared problems no one can solve alone",
+              "solutionSteps": [
+                "Geography binds them: shared rivers, one monsoon, common seas.",
+                "Such shared problems require cooperation."
+              ],
+              "commonMistakes": [
+                "Thinking cooperation is about friendship rather than shared geography."
+              ],
+              "variations": [
+                {
+                  "prompt": "The Ganga and Brahmaputra flow from India into...",
+                  "answer": "Bangladesh",
+                  "solutionSteps": [
+                    "Cross-border rivers.",
+                    "Shared water."
+                  ]
+                },
+                {
+                  "prompt": "Regional groups like SAARC and BIMSTEC exist because of...",
+                  "answer": "Shared problems from shared rivers, weather and seas",
+                  "solutionSteps": [
+                    "Common-sense policy.",
+                    "Not mere friendship."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                168
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch14_dv03_b02",
+              "prompt": "Rivers crossing borders mean that one country's dam or flood...",
+              "questionType": "mcq",
+              "options": [
+                "Becomes its neighbour's problem, so they must share water and flood warnings",
+                "Stops at the border",
+                "Has no effect downstream",
+                "Is never shared"
+              ],
+              "answer": "Becomes its neighbour's problem, so they must share water and flood warnings",
+              "solutionSteps": [
+                "Water and floods don't respect borders.",
+                "Neighbours must talk about sharing and warning."
+              ],
+              "commonMistakes": [
+                "Assuming national borders contain rivers and their effects."
+              ],
+              "variations": [
+                {
+                  "prompt": "A cyclone in the Bay of Bengal threatens...",
+                  "answer": "Several coasts at once",
+                  "solutionSteps": [
+                    "Shared seas.",
+                    "Common threat."
+                  ]
+                },
+                {
+                  "prompt": "Trade is usually cheapest with...",
+                  "answer": "The country next door",
+                  "solutionSteps": [
+                    "Proximity helps trade.",
+                    "Another reason to cooperate."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                168
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch14_dv04",
@@ -41769,7 +42543,93 @@
           "parentConceptId": "ssch14_t04_c03",
           "body": "The chapter calls Buddhism India's gift to her neighbours, and the way it spread explains the map of Asia's faiths today. The teaching travelled in three great 'vehicles' (yānas). Theravada, the 'teaching of the elders', went south and east by sea to Sri Lanka, Myanmar, Thailand and Cambodia, which is why those countries share saffron-robed monks and similar rituals. Mahayana, the 'great vehicle', travelled north along the Silk Road into China, Korea and Japan, carrying the idea of compassionate bodhisattvas. Vajrayana, the 'diamond vehicle', with its mantras and mandalas, crossed the Himalayas into Tibet, Bhutan and Mongolia. So when you notice that a Thai temple, a Japanese Zen garden and a Bhutanese monastery feel related yet different, you are seeing three branches of one tree whose root is in India. A single Indian tradition, carried by traders, monks and pilgrims, shaped the inner life of half a continent.",
           "prerequisite": "Knowing the three schools of Buddhism (Theravada, Mahayana, Vajrayana).",
-          "nextStepHint": "Match Theravada, Mahayana and Vajrayana to one country each where it became important."
+          "nextStepHint": "Match Theravada, Mahayana and Vajrayana to one country each where it became important.",
+          "bonusQuestions": [
+            {
+              "id": "ssch14_dv04_b01",
+              "prompt": "Theravada Buddhism, the 'teaching of the elders', spread mainly to...",
+              "questionType": "mcq",
+              "options": [
+                "Sri Lanka, Myanmar, Thailand and Cambodia",
+                "China, Korea and Japan",
+                "Tibet, Bhutan and Mongolia",
+                "Europe"
+              ],
+              "answer": "Sri Lanka, Myanmar, Thailand and Cambodia",
+              "solutionSteps": [
+                "Theravada went south and east by sea.",
+                "Hence saffron-robed monks across those countries."
+              ],
+              "commonMistakes": [
+                "Confusing Theravada's range with Mahayana's or Vajrayana's."
+              ],
+              "variations": [
+                {
+                  "prompt": "Mahayana, the 'great vehicle', travelled north along the Silk Road into...",
+                  "answer": "China, Korea and Japan",
+                  "solutionSteps": [
+                    "Carried bodhisattva ideals.",
+                    "Northern route."
+                  ]
+                },
+                {
+                  "prompt": "Buddhism is described in the chapter as India's...",
+                  "answer": "Gift to her neighbours",
+                  "solutionSteps": [
+                    "Spread across Asia.",
+                    "Three vehicles."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                168
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch14_dv04_b02",
+              "prompt": "Vajrayana, the 'diamond vehicle' with its mantras and mandalas, crossed the Himalayas into...",
+              "questionType": "mcq",
+              "options": [
+                "Tibet, Bhutan and Mongolia",
+                "Sri Lanka",
+                "Japan",
+                "Greece"
+              ],
+              "answer": "Tibet, Bhutan and Mongolia",
+              "solutionSteps": [
+                "Vajrayana spread across the Himalayas northward.",
+                "Into Tibet, Bhutan and Mongolia."
+              ],
+              "commonMistakes": [
+                "Mixing up which 'vehicle' went where."
+              ],
+              "variations": [
+                {
+                  "prompt": "A Thai temple, a Japanese Zen garden and a Bhutanese monastery are...",
+                  "answer": "Three branches of one tree rooted in India",
+                  "solutionSteps": [
+                    "Related yet different.",
+                    "One Indian origin."
+                  ]
+                },
+                {
+                  "prompt": "Who carried Buddhism along these routes?",
+                  "answer": "Traders, monks and pilgrims",
+                  "solutionSteps": [
+                    "People-powered spread.",
+                    "Across half a continent."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                168
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch14_dv05",
@@ -41778,7 +42638,93 @@
           "parentConceptId": "ssch14_t03_c02",
           "body": "Most international borders are guarded lines you can only cross with a passport and a visa. India's border with Nepal is famously different — it is an OPEN border, where citizens of both countries can walk across freely for work, study, trade, family or pilgrimage. Why is one border so unlike the others? Geography and shared culture. Nepal sits in the lap of the Himalayas, the same mountain world; families, languages and faiths spill across the line; and Hindu pilgrims from both sides visit the same sacred places, such as Pashupatinath in Kathmandu, while festivals like Dashain, Tihar and Holi are kept on both sides. An open border is a powerful symbol that a boundary on a map need not be a wall between peoples — but it also asks both governments to trust and cooperate closely. It is a living example of what 'being a good neighbour' can mean.",
           "prerequisite": "Knowing India and Nepal share an open border.",
-          "nextStepHint": "List two things an open border makes easier — and one challenge it creates for governments."
+          "nextStepHint": "List two things an open border makes easier — and one challenge it creates for governments.",
+          "bonusQuestions": [
+            {
+              "id": "ssch14_dv05_b01",
+              "prompt": "What makes the India–Nepal border unusual among international borders?",
+              "questionType": "mcq",
+              "options": [
+                "It is an OPEN border citizens of both countries can cross freely, without passport or visa",
+                "It is the most heavily walled border on Earth",
+                "It is permanently closed",
+                "It lies entirely at sea"
+              ],
+              "answer": "It is an OPEN border citizens of both countries can cross freely, without passport or visa",
+              "solutionSteps": [
+                "Most borders need passports and visas; India–Nepal does not.",
+                "Citizens cross freely for work, study, trade, family and pilgrimage."
+              ],
+              "commonMistakes": [
+                "Assuming all international borders are guarded the same way."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is the India–Nepal border so open?",
+                  "answer": "Shared Himalayan geography and culture — families, languages and faiths cross it",
+                  "solutionSteps": [
+                    "Cultural continuity.",
+                    "A doorway, not a wall."
+                  ]
+                },
+                {
+                  "prompt": "An open border shows that a boundary on a map need not be...",
+                  "answer": "A wall between peoples",
+                  "solutionSteps": [
+                    "Symbolic openness.",
+                    "Needs mutual trust."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                168
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch14_dv05_b02",
+              "prompt": "An open border like India–Nepal's depends on both governments...",
+              "questionType": "mcq",
+              "options": [
+                "Trusting and cooperating closely",
+                "Building higher walls",
+                "Closing all crossings",
+                "Banning trade"
+              ],
+              "answer": "Trusting and cooperating closely",
+              "solutionSteps": [
+                "Open crossing requires mutual trust and cooperation.",
+                "It is a living example of being a good neighbour."
+              ],
+              "commonMistakes": [
+                "Thinking openness needs no cooperation."
+              ],
+              "variations": [
+                {
+                  "prompt": "Pilgrims from both sides visit which shared sacred site in Kathmandu?",
+                  "answer": "Pashupatinath",
+                  "solutionSteps": [
+                    "Shared faith.",
+                    "Across the border."
+                  ]
+                },
+                {
+                  "prompt": "Festivals like Dashain, Tihar and Holi are kept...",
+                  "answer": "On both sides of the India–Nepal border",
+                  "solutionSteps": [
+                    "Shared culture.",
+                    "Spilling across."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                168
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch14_dv06",
@@ -41787,7 +42733,93 @@
           "parentConceptId": "ssch14_t02_c01",
           "body": "India and China are two of Asia's giants, yet for most of history they met less than their size would suggest — and the reason is the Himalayas. The highest mountains on Earth stand between them like a colossal wall, so armies and large-scale trade could not easily cross, and the two great civilisations grew largely on their own. But a wall with passes is not sealed. Ideas slipped through where goods could not: Buddhism, born in India, travelled to China around the 1st century CE, and a remarkable traffic of scholars followed — Chinese monks such as Faxian and Xuanzang journeyed to India to study, while Indian monks like Bodhidharma and Kumārajīva carried teachings the other way. So the Himalayas are a perfect lesson in how physical geography shapes history: a barrier high enough to keep two empires apart was still low enough, at its passes, to let a religion and its books cross and change them both.",
           "prerequisite": "Knowing the Himalayas form the border between India and China.",
-          "nextStepHint": "Explain how a mountain range can both separate two countries and still let ideas pass between them."
+          "nextStepHint": "Explain how a mountain range can both separate two countries and still let ideas pass between them.",
+          "bonusQuestions": [
+            {
+              "id": "ssch14_dv06_b01",
+              "prompt": "Why did India and China interact less than their size suggests for most of history?",
+              "questionType": "mcq",
+              "options": [
+                "The Himalayas formed a colossal barrier to armies and large-scale trade",
+                "They were close military allies",
+                "Neither had any interest in the other",
+                "An ocean lay between them"
+              ],
+              "answer": "The Himalayas formed a colossal barrier to armies and large-scale trade",
+              "solutionSteps": [
+                "The world's highest mountains stood between them like a wall.",
+                "So the two civilisations grew largely on their own."
+              ],
+              "commonMistakes": [
+                "Forgetting the Himalayas and imagining easy contact."
+              ],
+              "variations": [
+                {
+                  "prompt": "A wall with passes is not sealed. What slipped through where goods could not?",
+                  "answer": "Ideas — above all, Buddhism",
+                  "solutionSteps": [
+                    "Passes let ideas cross.",
+                    "Not armies."
+                  ]
+                },
+                {
+                  "prompt": "Chinese monks who journeyed to India to study included...",
+                  "answer": "Faxian and Xuanzang",
+                  "solutionSteps": [
+                    "Scholar-pilgrims.",
+                    "Crossing the passes."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                168
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch14_dv06_b02",
+              "prompt": "The Himalayas are 'a perfect lesson in how geography shapes history' because they were...",
+              "questionType": "mcq",
+              "options": [
+                "High enough to keep two empires apart, yet low enough at the passes to let a religion and its books cross",
+                "An impassable, totally sealed wall",
+                "No obstacle at all",
+                "Made by humans"
+              ],
+              "answer": "High enough to keep two empires apart, yet low enough at the passes to let a religion and its books cross",
+              "solutionSteps": [
+                "The barrier limited armies and bulk trade but not ideas.",
+                "Buddhism and scholar-monks crossed the passes both ways."
+              ],
+              "commonMistakes": [
+                "Treating the mountains as either no barrier or a total seal."
+              ],
+              "variations": [
+                {
+                  "prompt": "Indian monks who carried teachings toward China included...",
+                  "answer": "Bodhidharma and Kumārajīva",
+                  "solutionSteps": [
+                    "Two-way traffic.",
+                    "Ideas crossed both ways."
+                  ]
+                },
+                {
+                  "prompt": "Around when did Buddhism travel from India to China?",
+                  "answer": "Around the 1st century CE",
+                  "solutionSteps": [
+                    "Crossed the passes.",
+                    "Changed both lands."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                168
+              ],
+              "needsHumanReview": false
+            }
+          ]
         }
       ],
       "crossChapterRefs": [
