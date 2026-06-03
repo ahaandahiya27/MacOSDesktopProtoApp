@@ -27736,7 +27736,92 @@
           "parentConceptId": "sch11_t01_c02",
           "body": "The सेल्युलर कारागारम् (Cellular Jail) at Port Blair, dreaded as कालापानी ('the black water'), is one of the most sombre sites in India's freedom story. Built by the British and completed in 1906, its name comes from its design: seven wings of tiny solitary CELLS radiating from a central tower, so prisoners could neither see nor speak to one another. To this remote island the colonial government 'transported' revolutionaries — sentence to कालापानी meant exile across the sea, cut off from family and homeland, doing brutal labour like pressing oil at the kolhu. Among those imprisoned here was वीर सावरकर, who served years in its cells. After independence the jail became a national memorial; its walls carry the names of freedom fighters who endured it. So when your chapter tours the beautiful Andamans, it also asks you to remember their darker history — and the word त्रितलात्मकम् ('three-storied') in the lesson literally describes the jail's grim architecture.",
           "prerequisite": "Tackle this once you know सेल्युलर कारागारम् / कालापानी refers to the Andaman prison.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch11_dd01_b01",
+              "prompt": "The Cellular Jail at Port Blair, dreaded as कालापानी, was feared above all because...",
+              "questionType": "mcq",
+              "options": [
+                "Prisoners were exiled across the sea into solitary cells, cut off from family and homeland",
+                "It was a luxurious resort",
+                "It was a free school",
+                "It stood on the mainland near home"
+              ],
+              "answer": "Prisoners were exiled across the sea into solitary cells, cut off from family and homeland",
+              "solutionSteps": [
+                "कालापानी = 'black water', meaning transportation across the sea.",
+                "Solitary radiating cells kept prisoners isolated."
+              ],
+              "commonMistakes": [
+                "Misreading 'beautiful Andamans' as meaning the jail was pleasant."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why was it called 'Cellular' Jail?",
+                  "answer": "It was built as seven wings of tiny solitary cells round a central tower",
+                  "solutionSteps": [
+                    "Cells radiated outward.",
+                    "Prisoners couldn't see/speak to each other."
+                  ]
+                },
+                {
+                  "prompt": "What does त्रितलात्मकम् ('three-storied') describe in the lesson?",
+                  "answer": "The jail's grim architecture",
+                  "solutionSteps": [
+                    "Literally three-storied.",
+                    "Describing the structure."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                90
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch11_dd01_b02",
+              "prompt": "Which famous revolutionary served years in the Cellular Jail?",
+              "questionType": "mcq",
+              "options": [
+                "वीर सावरकर (Veer Savarkar)",
+                "Akbar",
+                "Bankim Chandra",
+                "Patanjali"
+              ],
+              "answer": "वीर सावरकर (Veer Savarkar)",
+              "solutionSteps": [
+                "Savarkar was among the freedom fighters transported there.",
+                "After independence the jail became a national memorial."
+              ],
+              "commonMistakes": [
+                "Confusing the jail's prisoners with unrelated historical figures."
+              ],
+              "variations": [
+                {
+                  "prompt": "After independence, what did the Cellular Jail become?",
+                  "answer": "A national memorial",
+                  "solutionSteps": [
+                    "Honouring those imprisoned.",
+                    "Its walls carry their names."
+                  ]
+                },
+                {
+                  "prompt": "'Transportation to कालापानी' as a sentence meant...",
+                  "answer": "Exile across the sea, far from family",
+                  "solutionSteps": [
+                    "Cut off on a remote island.",
+                    "With brutal labour."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                90
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In later classes you study the history of the freedom struggle and the role of revolutionaries transported to the Andamans."
         },
         {
@@ -27746,7 +27831,92 @@
           "parentConceptId": "sch11_t02_c03",
           "body": "सोढवान् means 'he (has) borne / endured', and it is not a finite verb but a past active participle, formed with the क्तवतु (-तवत्) suffix. This participle turns a verb into an adjective meaning 'one who has done X', agreeing in gender and number with its subject: from कृ ('do') comes कृतवान् ('he who has done'), कृतवती ('she who has done'); from गम् comes गतवान् ('he who has gone'). It pairs with its passive twin, the क्त (-त) past PASSIVE participle — कृतम् ('done'), गतः ('gone') — so Sanskrit can say either 'the boy who has eaten' (बालकः खादितवान्) or 'the food that was eaten' (अन्नं खादितम्). These participles let you express past actions compactly, often standing in for a full past-tense verb. Spotting the -तवत् ending in सोढवान् tells you instantly that someone HAS COMPLETED an action — here, the heroic endurance the chapter celebrates in those who suffered at the Cellular Jail.",
           "prerequisite": "Tackle this once you can read सोढवान् as 'he bore / endured'.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch11_dd02_b01",
+              "prompt": "सोढवान् ('he has endured') is which kind of form?",
+              "questionType": "mcq",
+              "options": [
+                "A past ACTIVE participle (क्तवतु, 'one who has done X')",
+                "A present-tense verb",
+                "A future-tense verb",
+                "A command"
+              ],
+              "answer": "A past ACTIVE participle (क्तवतु, 'one who has done X')",
+              "solutionSteps": [
+                "The -तवत् (क्तवतु) suffix makes a past active participle.",
+                "It agrees with its subject in gender and number."
+              ],
+              "commonMistakes": [
+                "Treating the participle as a finite verb."
+              ],
+              "variations": [
+                {
+                  "prompt": "कृतवान् means...",
+                  "answer": "'He who has done'",
+                  "solutionSteps": [
+                    "कृ + तवत्.",
+                    "Past active participle."
+                  ]
+                },
+                {
+                  "prompt": "Its passive twin, the क्त participle, gives कृतम् meaning...",
+                  "answer": "'Done' (the thing that was done)",
+                  "solutionSteps": [
+                    "Past PASSIVE participle.",
+                    "अन्नं खादितम् = food that was eaten."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                90
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch11_dd02_b02",
+              "prompt": "From the root गम् ('go'), the past active participle 'he who has gone' is...",
+              "questionType": "mcq",
+              "options": [
+                "गतवान्",
+                "गमिष्यति",
+                "गत्वा",
+                "अगच्छत्"
+              ],
+              "answer": "गतवान्",
+              "solutionSteps": [
+                "गम् + तवत् -> गतवान् ('one who has gone').",
+                "It is an adjective, agreeing with its subject."
+              ],
+              "commonMistakes": [
+                "Confusing the participle with the future, gerund or imperfect."
+              ],
+              "variations": [
+                {
+                  "prompt": "The feminine of कृतवान् is...",
+                  "answer": "कृतवती ('she who has done')",
+                  "solutionSteps": [
+                    "Participles agree in gender.",
+                    "Feminine -वती."
+                  ]
+                },
+                {
+                  "prompt": "How does Sanskrit say 'the boy who has eaten'?",
+                  "answer": "बालकः खादितवान्",
+                  "solutionSteps": [
+                    "Past active participle.",
+                    "खादितवान् agrees with बालकः."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                90
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 8 you study the क्त and क्तवतु past participles (passive and active) and use them for past actions."
         },
         {
@@ -27756,7 +27926,92 @@
           "parentConceptId": "sch11_t02_c01",
           "body": "प्रवालप्रस्तरैः ('with coral reefs') does two grammatical jobs at once. First, the -ऐः ending is the तृतीया (instrumental) PLURAL — the case that means 'by / with / by means of', here describing what the islands are adorned WITH. The instrumental is the workhorse for instruments and accompaniment (लेखन्या लिखति, 'he writes with a pen') and is governed by words like सह ('along with'). Second, प्रवालप्रस्तर is itself a compound: प्रवाल (coral) + प्रस्तर (rock/slab) = 'coral-rock', a कर्मधारय/तत्पुरुष joining the two nouns into one. So a single inflected word, प्रवालप्रस्तरैः, carries 'with [the] coral-rocks' — noun, adjective and preposition all folded together. Sanskrit's case endings make this possible: because -ऐः already says 'with, plural', no separate word for 'with' is needed. Unpacking प्रवालप्रस्तरैः into its compound and its case is exactly the two-step reading that long Sanskrit words always reward.",
           "prerequisite": "Tackle this once you can read प्रवालप्रस्तरैः as 'with coral reefs'.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch11_dd03_b01",
+              "prompt": "In प्रवालप्रस्तरैः ('with coral reefs'), the -ऐः ending marks which case and number?",
+              "questionType": "mcq",
+              "options": [
+                "तृतीया (instrumental) plural",
+                "प्रथमा (nominative) singular",
+                "षष्ठी (genitive) singular",
+                "सप्तमी (locative) singular"
+              ],
+              "answer": "तृतीया (instrumental) plural",
+              "solutionSteps": [
+                "-ऐः is the instrumental plural ending.",
+                "It means 'with / by means of [the] coral-rocks'."
+              ],
+              "commonMistakes": [
+                "Reading -ऐः as a genitive or locative."
+              ],
+              "variations": [
+                {
+                  "prompt": "प्रवालप्रस्तर is itself a compound of...",
+                  "answer": "प्रवाल (coral) + प्रस्तर (rock)",
+                  "solutionSteps": [
+                    "Two nouns joined.",
+                    "'Coral-rock'."
+                  ]
+                },
+                {
+                  "prompt": "Why is no separate word for 'with' needed in प्रवालप्रस्तरैः?",
+                  "answer": "The instrumental ending -ऐः already means 'with'",
+                  "solutionSteps": [
+                    "Case carries the preposition.",
+                    "So 'with' is built in."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                90
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch11_dd03_b02",
+              "prompt": "The instrumental case (तृतीया), as in लेखन्या लिखति, expresses...",
+              "questionType": "mcq",
+              "options": [
+                "'By / with / by means of' (instrument or accompaniment)",
+                "'Of' (possession)",
+                "'To / for' (recipient)",
+                "'From' (source)"
+              ],
+              "answer": "'By / with / by means of' (instrument or accompaniment)",
+              "solutionSteps": [
+                "The instrumental marks the means or the accompanier.",
+                "लेखन्या लिखति = 'he writes WITH a pen'."
+              ],
+              "commonMistakes": [
+                "Confusing the instrumental ('with') with the dative ('to/for')."
+              ],
+              "variations": [
+                {
+                  "prompt": "Which word governs the instrumental for 'along with'?",
+                  "answer": "सह",
+                  "solutionSteps": [
+                    "सह takes the instrumental.",
+                    "'Along with'."
+                  ]
+                },
+                {
+                  "prompt": "लेखन्या लिखति means...",
+                  "answer": "'He writes with a pen'",
+                  "solutionSteps": [
+                    "लेखनी (pen) in instrumental.",
+                    "The means of writing."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                90
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 9 and 10 you study the seven cases in full, including the तृतीया (instrumental) and its uses."
         }
       ],
@@ -28991,7 +29246,92 @@
           "parentConceptId": "sch12_t01_c01",
           "body": "पन्नाधाया (Panna Dhai) was the wet-nurse and guardian of the infant prince उदयसिंह of मेवाड (Mewar) in the 16th century. When the usurper Banbir killed the reigning king and came to murder the child heir, Panna Dhai made the most terrible choice a mother could face: she placed her own son Chandan in the prince's bed to be slain in his stead, and smuggled उदयसिंह to safety in a fruit-basket. The prince she saved grew up to found the city of Udaipur, and his son was महाराणा प्रताप, Mewar's legendary defender against Akbar. Mewar's ruling house, the Sisodia Rajputs of Chittor, prized loyalty and sacrifice above life itself, and Panna Dhai's देed became its supreme example — which is why the chapter says her name is written स्वर्णिमाक्षरैः, 'in golden letters'. Knowing the Mewar setting turns a moving story into a real episode of Rajput history, with consequences that shaped a dynasty.",
           "prerequisite": "Tackle this once you know Panna Dhai sacrificed her own son to save prince Udai Singh.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch12_dd01_b01",
+              "prompt": "How did Panna Dhai save the infant prince Udai Singh of Mewar?",
+              "questionType": "mcq",
+              "options": [
+                "She placed her own son in the prince's bed to be slain instead, and smuggled the prince out",
+                "She fought and defeated Banbir",
+                "She hid in a temple",
+                "She fled with the prince to Delhi"
+              ],
+              "answer": "She placed her own son in the prince's bed to be slain instead, and smuggled the prince out",
+              "solutionSteps": [
+                "She sacrificed her own son Chandan in the prince's place.",
+                "She smuggled Udai Singh to safety in a fruit-basket."
+              ],
+              "commonMistakes": [
+                "Underestimating the terrible sacrifice at the heart of the story."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is Panna Dhai's name said to be written स्वर्णिमाक्षरैः ('in golden letters')?",
+                  "answer": "Her supreme sacrifice became Mewar's highest example of loyalty",
+                  "solutionSteps": [
+                    "Loyalty prized above life.",
+                    "Hence honoured in gold."
+                  ]
+                },
+                {
+                  "prompt": "Whom did Panna Dhai serve as guardian and wet-nurse?",
+                  "answer": "The infant prince Udai Singh of Mewar",
+                  "solutionSteps": [
+                    "16th-century Mewar.",
+                    "She guarded the child heir."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                98
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch12_dd01_b02",
+              "prompt": "The prince Panna Dhai saved grew up to found which city, and his son was...",
+              "questionType": "mcq",
+              "options": [
+                "Udaipur; his son was Maharana Pratap",
+                "Delhi; his son was Akbar",
+                "Chittor; his son was Babur",
+                "Jaipur; his son was Man Singh"
+              ],
+              "answer": "Udaipur; his son was Maharana Pratap",
+              "solutionSteps": [
+                "Udai Singh founded Udaipur.",
+                "His son was the legendary Maharana Pratap, defender of Mewar."
+              ],
+              "commonMistakes": [
+                "Confusing the Mewar Sisodia line with the Mughals."
+              ],
+              "variations": [
+                {
+                  "prompt": "Mewar's ruling house, the Sisodia Rajputs, were based at...",
+                  "answer": "Chittor",
+                  "solutionSteps": [
+                    "The Sisodias of Chittor.",
+                    "Mewar's seat."
+                  ]
+                },
+                {
+                  "prompt": "Maharana Pratap is remembered as Mewar's defender against...",
+                  "answer": "Akbar",
+                  "solutionSteps": [
+                    "He resisted Mughal expansion.",
+                    "A legendary stand."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                98
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In later classes you study the history of Mewar, Chittor, and Maharana Pratap's resistance to the Mughals."
         },
         {
@@ -29001,7 +29341,92 @@
           "parentConceptId": "sch12_t02_c03",
           "body": "मारयितुम् means 'in order to KILL (cause to die)', and it shows two grammar tools at once. The -तुम् ending is the तुमुन् suffix, the infinitive that expresses PURPOSE — 'to / in order to' — and it pairs with verbs of wishing and going: पठितुं गच्छति ('he goes [in order] to study'), द्रष्टुम् इच्छति ('he wishes to see'). Underneath, मारयति itself is a CAUSATIVE: from the root मृ ('to die') Sanskrit builds मारयति, 'causes to die = kills', by inserting the णिच् (-अय-) marker. The causative turns 'X happens' into 'someone MAKES X happen': पठति ('he reads') → पाठयति ('he makes [someone] read = teaches'); भवति ('it is') → भावयति ('he brings into being'). So मारयितुम् literally stacks 'to' + 'cause-to-die'. Recognising the तुमुन् infinitive lets you read every 'in order to' clause, and spotting the causative -अय- explains a whole class of 'make-someone-do' verbs.",
           "prerequisite": "Tackle this once you can read मारयितुम् as 'in order to kill'.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch12_dd02_b01",
+              "prompt": "In मारयितुम् ('in order to kill'), the -तुम् ending is the तुमुन् suffix, which expresses...",
+              "questionType": "mcq",
+              "options": [
+                "Purpose ('to / in order to')",
+                "The past",
+                "A command",
+                "Possession"
+              ],
+              "answer": "Purpose ('to / in order to')",
+              "solutionSteps": [
+                "The तुमुन् infinitive expresses purpose.",
+                "It pairs with verbs of wishing/going: पठितुं गच्छति."
+              ],
+              "commonMistakes": [
+                "Reading the infinitive of purpose as a tense."
+              ],
+              "variations": [
+                {
+                  "prompt": "'द्रष्टुम् इच्छति' means...",
+                  "answer": "'He wishes to see'",
+                  "solutionSteps": [
+                    "द्रष्टुम् = 'to see' (purpose).",
+                    "With इच्छति, 'wishes'."
+                  ]
+                },
+                {
+                  "prompt": "'पठितुं गच्छति' means...",
+                  "answer": "'He goes (in order) to study'",
+                  "solutionSteps": [
+                    "तुमुन् gives purpose.",
+                    "Goes to study."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                98
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch12_dd02_b02",
+              "prompt": "मारयति ('causes to die = kills'), built from the root मृ ('to die'), is an example of a...",
+              "questionType": "mcq",
+              "options": [
+                "Causative (णिच् / -अय-)",
+                "Passive",
+                "Future",
+                "Optative"
+              ],
+              "answer": "Causative (णिच् / -अय-)",
+              "solutionSteps": [
+                "The causative णिच् (-अय-) means 'make/cause to do'.",
+                "मृ ('die') -> मारयति ('cause to die = kill')."
+              ],
+              "commonMistakes": [
+                "Mistaking the causative for a passive or future."
+              ],
+              "variations": [
+                {
+                  "prompt": "The causative of पठति ('he reads') is पाठयति, meaning...",
+                  "answer": "'He makes (someone) read = teaches'",
+                  "solutionSteps": [
+                    "णिच् adds 'cause to'.",
+                    "Reading -> teaching."
+                  ]
+                },
+                {
+                  "prompt": "What does the causative marker -अय- do to a verb's meaning?",
+                  "answer": "Turns 'X happens' into 'someone MAKES X happen'",
+                  "solutionSteps": [
+                    "Adds a causer.",
+                    "E.g. भवति -> भावयति."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                98
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 8 and 9 you study the तुमुन् (infinitive of purpose) and the णिच् causative formation."
         },
         {
@@ -29011,7 +29436,92 @@
           "parentConceptId": "sch12_t01_c03",
           "body": "षोडशे शतके means 'in the sixteenth century', and it teaches how Sanskrit expresses both NUMBER and TIME. षोडश ('sixteen') is itself a compound — षट् (six) + दश (ten) — and its ordinal षोडश ('sixteenth') patterns with प्रथम, द्वितीय, तृतीय … which you met counting the ten boys. The ending -ए on both words is the सप्तमी (locative) singular, the case meaning 'in / on / at'. Sanskrit uses this same locative for time: the locative answers 'WHEN?' just as it answers 'where?' — so 'in the sixteenth century' and 'in the village' (ग्रामे) take the identical ending. The agreement is exact: both adjective (षोडशे) and noun (शतके) carry locative -ए because they describe one thing together. This is the famous 'locative of time' (कालाधिकरण). Once you see that -ए can mark a point in time as readily as a place, dates and settings in Sanskrit prose stop being mysterious.",
           "prerequisite": "Tackle this once you can read षोडशे शतके as 'in the sixteenth century'.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch12_dd03_b01",
+              "prompt": "In षोडशे शतके ('in the sixteenth century'), the -ए ending on both words marks which case?",
+              "questionType": "mcq",
+              "options": [
+                "सप्तमी (locative, 'in/on/at')",
+                "प्रथमा (nominative)",
+                "द्वितीया (accusative)",
+                "तृतीया (instrumental)"
+              ],
+              "answer": "सप्तमी (locative, 'in/on/at')",
+              "solutionSteps": [
+                "The locative answers 'where?' and also 'when?'.",
+                "Both षोडशे and शतके take locative -ए, agreeing."
+              ],
+              "commonMistakes": [
+                "Not realising the locative also marks points in time."
+              ],
+              "variations": [
+                {
+                  "prompt": "'in the village' takes the same ending: ग्रामे. Which case is that?",
+                  "answer": "The locative (सप्तमी)",
+                  "solutionSteps": [
+                    "Same -ए as for time.",
+                    "Locative of place."
+                  ]
+                },
+                {
+                  "prompt": "Using the locative for time is called...",
+                  "answer": "कालाधिकरण (the 'locative of time')",
+                  "solutionSteps": [
+                    "Time as a 'locus'.",
+                    "Answers 'when?'."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                98
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch12_dd03_b02",
+              "prompt": "षोडश ('sixteen') is itself a compound of...",
+              "questionType": "mcq",
+              "options": [
+                "षट् (six) + दश (ten)",
+                "seven + nine",
+                "four + four",
+                "ten + ten"
+              ],
+              "answer": "षट् (six) + दश (ten)",
+              "solutionSteps": [
+                "षोडश = 6 + 10.",
+                "Its ordinal षोडश = 'sixteenth'."
+              ],
+              "commonMistakes": [
+                "Guessing the parts rather than 6 + 10."
+              ],
+              "variations": [
+                {
+                  "prompt": "The ordinal 'sixteenth' patterns with which earlier ordinals?",
+                  "answer": "प्रथम, द्वितीय, तृतीय...",
+                  "solutionSteps": [
+                    "Ordinal series.",
+                    "As used counting the ten boys."
+                  ]
+                },
+                {
+                  "prompt": "'षोडशे शतके' as a whole means...",
+                  "answer": "'In the sixteenth century'",
+                  "solutionSteps": [
+                    "Ordinal + 'century' in locative.",
+                    "A date expression."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                98
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In later classes you study the सप्तमी (locative) of time and place and the formation of Sanskrit ordinals."
         }
       ],
@@ -30229,7 +30739,92 @@
           "parentConceptId": "sch13_t01_c01",
           "body": "वर्णमात्रा — the duration of a vowel — is not a dry phonetics fact; it is the raw material of all Sanskrit poetry. Once you can hear that अ is ह्रस्व (short, one मात्रा) and आ is दीर्घ (long, two मात्रास), you are ready for छन्दस् (prosody), the science of metre. In a verse every syllable counts as either लघु (light) or गुरु (heavy): a syllable is heavy if its vowel is long, OR if a short vowel is followed by a conjunct consonant or an अनुस्वार/विसर्ग. Poets arrange these light and heavy beats into fixed patterns — the अनुष्टुप् counts syllables, while metres like इन्द्रवज्रा and मन्दाक्रान्ता fix the exact लघु-गुरु sequence of every line. Classical handbooks even group beats into गण (triplets, each with its own name) to make scanning easy. So the simple ह्रस्व-दीर्घ distinction you learn here is the seed from which the entire, beautiful machinery of Sanskrit verse grows.",
           "prerequisite": "Tackle this once you can tell a ह्रस्व (short) vowel from a दीर्घ (long) one.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch13_dd01_b01",
+              "prompt": "The vowel अ is ह्रस्व (short, one मात्रा). The vowel आ is...",
+              "questionType": "mcq",
+              "options": [
+                "दीर्घ (long, two mātrās)",
+                "also short (one mātrā)",
+                "silent",
+                "a consonant"
+              ],
+              "answer": "दीर्घ (long, two mātrās)",
+              "solutionSteps": [
+                "आ is the long counterpart of अ.",
+                "Long = दीर्घ = two mātrās."
+              ],
+              "commonMistakes": [
+                "Treating आ as the same length as अ."
+              ],
+              "variations": [
+                {
+                  "prompt": "How many vowel-lengths (मात्रा-types) does Sanskrit recognise?",
+                  "answer": "Three (short, long, and the rare प्लुत)",
+                  "solutionSteps": [
+                    "ह्रस्व, दीर्घ, प्लुत.",
+                    "1, 2 and 3 mātrās."
+                  ]
+                },
+                {
+                  "prompt": "वर्णमात्रा (vowel duration) is the raw material of which science?",
+                  "answer": "छन्दस् (prosody/metre)",
+                  "solutionSteps": [
+                    "Length drives metre.",
+                    "The basis of verse."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                106
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch13_dd01_b02",
+              "prompt": "In prosody, a syllable counts as गुरु (heavy) if its vowel is long, OR if a short vowel is followed by...",
+              "questionType": "mcq",
+              "options": [
+                "A conjunct consonant (or an anusvāra/visarga)",
+                "Another vowel",
+                "A pause",
+                "Nothing at all"
+              ],
+              "answer": "A conjunct consonant (or an anusvāra/visarga)",
+              "solutionSteps": [
+                "A short vowel before a cluster (or anusvāra/visarga) becomes heavy by position.",
+                "Otherwise long vowel = heavy, short = light."
+              ],
+              "commonMistakes": [
+                "Thinking only long vowels can be heavy; position also makes a syllable गुरु."
+              ],
+              "variations": [
+                {
+                  "prompt": "A syllable with a short vowel and nothing heavy after it is...",
+                  "answer": "लघु (light)",
+                  "solutionSteps": [
+                    "Short and unobstructed.",
+                    "Counts as light."
+                  ]
+                },
+                {
+                  "prompt": "The अनुष्टुप् metre counts what, while इन्द्रवज्रा fixes what?",
+                  "answer": "अनुष्टुप् counts syllables; इन्द्रवज्रा fixes the exact लघु-गुरु sequence",
+                  "solutionSteps": [
+                    "Two kinds of metre.",
+                    "Syllable-count vs fixed pattern."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                106
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In later classes you study छन्दस् (metre), scanning verses into लघु and गुरु syllables and identifying common metres."
         },
         {
@@ -30239,7 +30834,92 @@
           "parentConceptId": "sch13_t01_c02",
           "body": "Among the three vowel-quantities, ह्रस्व (1 मात्रा) and दीर्घ (2 मात्रास) are everyday, but the third — प्लुत, the 'protracted' vowel of THREE मात्रास — is a fascinating special case. प्लुत is used when a vowel is deliberately drawn out, above all in CALLING someone from a distance: हे राऽऽम (written with the figure ३ to mark it, राम३) stretches the आ to summon attention across a field. It also appears in questions shouted back, in expressions of grief or surprise, and especially in Vedic chanting (सामवेद), where syllables are extended to fit a melody. The rooster's crow कुक्कुटः रौति in your chapter is a playful, everyday illustration of a sound held long. Most Indian languages kept only short and long vowels, so प्लुत is a distinctive survival that shows how finely Sanskrit measured spoken sound — down to a third length used for the human act of calling out.",
           "prerequisite": "Tackle this once you know the three names ह्रस्व, दीर्घ and प्लुत.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch13_dd02_b01",
+              "prompt": "The rare प्लुत vowel has how many मात्रास (units of length)?",
+              "questionType": "mcq",
+              "options": [
+                "Three",
+                "One",
+                "Two",
+                "Zero"
+              ],
+              "answer": "Three",
+              "solutionSteps": [
+                "ह्रस्व = 1, दीर्घ = 2, प्लुत = 3 mātrās.",
+                "प्लुत is the 'protracted' vowel."
+              ],
+              "commonMistakes": [
+                "Confusing प्लुत (3) with दीर्घ (2)."
+              ],
+              "variations": [
+                {
+                  "prompt": "It is written with which figure to mark it (e.g. राम३)?",
+                  "answer": "The figure ३ (three)",
+                  "solutionSteps": [
+                    "Marks the extra length.",
+                    "राम३ = drawn-out आ."
+                  ]
+                },
+                {
+                  "prompt": "In which Vedic tradition is प्लुत-style extension common in chanting?",
+                  "answer": "The सामवेद (where syllables stretch to fit a melody)",
+                  "solutionSteps": [
+                    "Melodic chanting.",
+                    "Syllables extended."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                106
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch13_dd02_b02",
+              "prompt": "The प्लुत (protracted) vowel is used especially when...",
+              "questionType": "mcq",
+              "options": [
+                "Calling someone from a distance",
+                "Whispering quietly",
+                "Writing silently",
+                "Counting on fingers"
+              ],
+              "answer": "Calling someone from a distance",
+              "solutionSteps": [
+                "प्लुत stretches a vowel to summon attention across a distance.",
+                "हे राऽऽम (राम३) calls out."
+              ],
+              "commonMistakes": [
+                "Associating the long-call vowel with quiet speech."
+              ],
+              "variations": [
+                {
+                  "prompt": "Besides calling, where else does प्लुत appear?",
+                  "answer": "In shouted questions, grief/surprise, and Vedic chant",
+                  "solutionSteps": [
+                    "Emotional/long-held sounds.",
+                    "And in chanting."
+                  ]
+                },
+                {
+                  "prompt": "Why is प्लुत a distinctive feature of Sanskrit?",
+                  "answer": "Most Indian languages kept only short and long vowels",
+                  "solutionSteps": [
+                    "Sanskrit measured a third length.",
+                    "For the act of calling."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                106
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Vedic study you meet प्लुत vowels in chanting and learn how they are marked and pronounced."
         },
         {
@@ -30249,7 +30929,92 @@
           "parentConceptId": "sch13_t01_c04",
           "body": "Classifying vowels into types (भेद) and sub-types (उपभेद) by their length is a small piece of शिक्षा, the science of phonetics — and शिक्षा is one of the six वेदाङ्ग, the auxiliary disciplines developed to preserve the Vedas perfectly. Ancient Indian phoneticians achieved an astonishingly precise map of speech: every sound is classified by its place of articulation (स्थान — throat कण्ठ्य, palate तालव्य, lips ओष्ठ्य…) and its effort/manner (प्रयत्न), which is exactly why the Sanskrit alphabet is laid out in a scientific grid rather than an arbitrary ABC order. Pāṇini's grammar opens with the माहेश्वरसूत्राणि (Śiva Sūtras), fourteen lines that ingeniously encode the whole sound-system so rules can refer to groups of letters at once. This phonetic rigour is why Sanskrit was transmitted orally, unchanged, for thousands of years. The vowel-quantities you study here are one cell in that vast, meticulous map of how the human voice makes meaning.",
           "prerequisite": "Tackle this once you can sort vowels by their भेद (type) and उपभेद (sub-type).",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch13_dd03_b01",
+              "prompt": "शिक्षा, the science of phonetics, is one of the six...",
+              "questionType": "mcq",
+              "options": [
+                "वेदाङ्ग (auxiliary disciplines of the Vedas)",
+                "Vedas",
+                "Purāṇas",
+                "darśanas"
+              ],
+              "answer": "वेदाङ्ग (auxiliary disciplines of the Vedas)",
+              "solutionSteps": [
+                "The वेदाङ्ग are six disciplines that preserve the Vedas.",
+                "शिक्षा (phonetics) is one of them."
+              ],
+              "commonMistakes": [
+                "Confusing the वेदाङ्ग (auxiliary sciences) with the Vedas themselves."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why were the वेदाङ्ग developed?",
+                  "answer": "To preserve and transmit the Vedas perfectly",
+                  "solutionSteps": [
+                    "Auxiliary sciences.",
+                    "Including phonetics (शिक्षा)."
+                  ]
+                },
+                {
+                  "prompt": "Every Sanskrit sound is classified by its स्थान, meaning its...",
+                  "answer": "Place of articulation (throat, palate, lips...)",
+                  "solutionSteps": [
+                    "कण्ठ्य, तालव्य, ओष्ठ्य...",
+                    "Where it is made."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                106
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch13_dd03_b02",
+              "prompt": "Why is the Sanskrit alphabet arranged in a scientific grid rather than an arbitrary ABC order?",
+              "questionType": "mcq",
+              "options": [
+                "Letters are ordered by their place of articulation and manner of production",
+                "By how often they are used",
+                "Completely at random",
+                "By the age of each letter"
+              ],
+              "answer": "Letters are ordered by their place of articulation and manner of production",
+              "solutionSteps": [
+                "शिक्षा maps each sound by स्थान (place) and प्रयत्न (effort).",
+                "So the alphabet follows the mouth, throat-to-lips."
+              ],
+              "commonMistakes": [
+                "Assuming the order is arbitrary like English ABC."
+              ],
+              "variations": [
+                {
+                  "prompt": "Pāṇini's grammar opens with which fourteen sound-encoding lines?",
+                  "answer": "The माहेश्वरसूत्राणि (Śiva Sūtras)",
+                  "solutionSteps": [
+                    "They encode the sound-system.",
+                    "Letting rules name letter-groups."
+                  ]
+                },
+                {
+                  "prompt": "This phonetic rigour is why Sanskrit could be transmitted how, unchanged for millennia?",
+                  "answer": "Orally",
+                  "solutionSteps": [
+                    "Precise sound-rules preserved it.",
+                    "Spoken transmission."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                106
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In senior study you meet the six वेदाङ्ग and how शिक्षा classifies sounds by place (स्थान) and manner (प्रयत्न) of articulation."
         }
       ],
@@ -31467,7 +32232,92 @@
           "parentConceptId": "sch14_t01_c01",
           "body": "The सप्तविभक्तयः (seven cases) are the ENDINGS, but Sanskrit grammar explains them through a deeper layer of MEANING called the कारक — the six roles a noun can play in relation to the action of a verb. Pāṇini defines them: कर्तृ (the doer → usually प्रथमा/nominative), कर्म (the thing acted on → द्वितीया/accusative), करण (the instrument 'by which' → तृतीया), सम्प्रदान (the recipient 'for whom' → चतुर्थी), अपादान (the source 'from which' → पञ्चमी), and अधिकरण (the locus 'in/on which' → सप्तमी). Notice the genitive (षष्ठी, 'of') is deliberately LEFT OUT of the कारक — because 'of' expresses a relation between two nouns, not between a noun and the verb's action. This separation of role (कारक) from ending (विभक्ति) is one of the great insights of Indian grammar, letting one ending serve several roles and one role take different endings. Learning the seven declension columns becomes far more logical once you see the six MEANINGS driving them.",
           "prerequisite": "Tackle this once you can name the seven विभक्ति (cases) and what each broadly does.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch14_dd01_b01",
+              "prompt": "कारक theory describes how many fundamental ROLES a noun can play in relation to a verb's action?",
+              "questionType": "mcq",
+              "options": [
+                "Six",
+                "Seven",
+                "Three",
+                "Ten"
+              ],
+              "answer": "Six",
+              "solutionSteps": [
+                "There are six कारक roles (कर्तृ, कर्म, करण, सम्प्रदान, अपादान, अधिकरण).",
+                "The seven विभक्ति (endings) express them, plus the genitive."
+              ],
+              "commonMistakes": [
+                "Confusing the six कारक roles with the seven case-endings."
+              ],
+              "variations": [
+                {
+                  "prompt": "कर्तृ (the doer) usually takes which case?",
+                  "answer": "प्रथमा (nominative)",
+                  "solutionSteps": [
+                    "The agent.",
+                    "Marked by the nominative."
+                  ]
+                },
+                {
+                  "prompt": "अपादान (the source 'from which') takes which case?",
+                  "answer": "पञ्चमी (ablative)",
+                  "solutionSteps": [
+                    "Source role.",
+                    "Marked by पञ्चमी."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                114
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch14_dd01_b02",
+              "prompt": "Which case (विभक्ति) is deliberately LEFT OUT of the कारक, because it relates two nouns rather than a noun to the verb's action?",
+              "questionType": "mcq",
+              "options": [
+                "षष्ठी (genitive, 'of')",
+                "प्रथमा (nominative)",
+                "द्वितीया (accusative)",
+                "तृतीया (instrumental)"
+              ],
+              "answer": "षष्ठी (genitive, 'of')",
+              "solutionSteps": [
+                "The genitive ('of') links noun to noun, not noun to verb.",
+                "So it is not counted among the कारक roles."
+              ],
+              "commonMistakes": [
+                "Assuming all seven cases are कारक; the genitive is excluded."
+              ],
+              "variations": [
+                {
+                  "prompt": "Separating role (कारक) from ending (विभक्ति) lets one ending...",
+                  "answer": "Serve several roles, and one role take different endings",
+                  "solutionSteps": [
+                    "Flexible mapping.",
+                    "A key Indian-grammar insight."
+                  ]
+                },
+                {
+                  "prompt": "करण (the instrument 'by which') maps to which case?",
+                  "answer": "तृतीया (instrumental)",
+                  "solutionSteps": [
+                    "'By means of'.",
+                    "The instrumental."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                114
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 9 you study Pāṇini's कारक theory in depth, mapping each role to its case and its exceptions."
         },
         {
@@ -31477,7 +32327,92 @@
           "parentConceptId": "sch14_t01_c02",
           "body": "देव (a masculine अकारान्त noun) is only one of many declension paradigms (शब्दरूप). Once you have देव by heart, the system opens up in two directions. By GENDER and ending: feminine nouns decline differently (आकारान्त रमा/लता, ईकारान्त नदी/मति), and so do neuters (फलम्, which has identical nominative and accusative — फलम् in both — a hallmark of neuter nouns). By the इ- and उ-ending masculines you already meet here (कवि, गुरु). The other great feature your three columns reveal is the द्विवचन — the DUAL number. Sanskrit counts in THREE numbers, not two: singular (एकवचन), dual (द्विवचन, for exactly two), and plural (बहुवचन, for three or more). So देवः / देवौ / देवाः means 'one god / two gods / many gods', each with its own endings throughout all seven cases. Mastering one paradigm gives you the template; the others are variations on the same seven-case, three-number grid.",
           "prerequisite": "Tackle this once you can recite the देव (अकारान्त masculine) declension.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch14_dd02_b01",
+              "prompt": "Sanskrit counts in how many grammatical NUMBERS?",
+              "questionType": "mcq",
+              "options": [
+                "Three (singular, dual, plural)",
+                "Two (singular, plural)",
+                "One",
+                "Four"
+              ],
+              "answer": "Three (singular, dual, plural)",
+              "solutionSteps": [
+                "Sanskrit has एकवचन (1), द्विवचन (exactly 2) and बहुवचन (3+).",
+                "The dual is for exactly two."
+              ],
+              "commonMistakes": [
+                "Forgetting the dual (द्विवचन), which English lacks."
+              ],
+              "variations": [
+                {
+                  "prompt": "The द्विवचन (dual) is used for exactly how many?",
+                  "answer": "Two",
+                  "solutionSteps": [
+                    "Dual = precisely two.",
+                    "Distinct from plural (3+)."
+                  ]
+                },
+                {
+                  "prompt": "Neuter फलम् has identical forms in which two cases (a neuter hallmark)?",
+                  "answer": "Nominative and accusative (फलम् in both)",
+                  "solutionSteps": [
+                    "Neuters share these.",
+                    "फलम् = फलम्."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                114
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch14_dd02_b02",
+              "prompt": "देवः / देवौ / देवाः means...",
+              "questionType": "mcq",
+              "options": [
+                "One god / two gods / many gods",
+                "God / goddess / gods",
+                "Here / there / everywhere",
+                "A god's three names"
+              ],
+              "answer": "One god / two gods / many gods",
+              "solutionSteps": [
+                "The three forms are singular, dual and plural of देव.",
+                "देवः (1) / देवौ (2) / देवाः (3+)."
+              ],
+              "commonMistakes": [
+                "Reading the three number-forms as different words."
+              ],
+              "variations": [
+                {
+                  "prompt": "Feminine आकारान्त nouns like रमा/लता decline...",
+                  "answer": "Differently from masculine देव (their own paradigm)",
+                  "solutionSteps": [
+                    "Gender changes endings.",
+                    "A separate शब्दरूप."
+                  ]
+                },
+                {
+                  "prompt": "Once you know one paradigm (देव), the others are...",
+                  "answer": "Variations on the same seven-case, three-number grid",
+                  "solutionSteps": [
+                    "Same template.",
+                    "Just different endings."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                114
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 8 and 9 you learn the feminine and neuter paradigms and use the dual (द्विवचन) confidently."
         },
         {
@@ -31487,7 +32422,92 @@
           "parentConceptId": "sch14_t02_c04",
           "body": "The सम्बोधनम् (vocative) — हे देव! 'O god!' — is the form you use to ADDRESS or call someone, and Sanskrit grammar treats it as a special use of the प्रथमा (nominative): often it just shortens the nominative (देवः → हे देव), which is why declension tables list it beside the first case. All these case-endings — the marks that turn a bare stem like देव into देवः, देवम्, देवेन, देवाय … — are called the सुप् (sup) suffixes in Pāṇini's system: twenty-one endings (seven cases × three numbers) that the अष्टाध्यायी attaches by rule. A further wrinkle is that when words meet in a sentence, their final and initial sounds fuse by सन्धि (e.g. देवः + अत्र → देवोऽत्र), so reading real Sanskrit means UNDOING both the सन्धि and the सुप् ending to find the stem. Recognising the vocative and knowing that every ending is a सुप् suffix added to a stem is what lets you parse any inflected noun you meet.",
           "prerequisite": "Tackle this once you can form the vocative (हे देव!) from the nominative.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch14_dd03_b01",
+              "prompt": "हे देव! ('O god!') is which case, used to ADDRESS or call someone?",
+              "questionType": "mcq",
+              "options": [
+                "सम्बोधनम् (the vocative)",
+                "तृतीया (instrumental)",
+                "पञ्चमी (ablative)",
+                "षष्ठी (genitive)"
+              ],
+              "answer": "सम्बोधनम् (the vocative)",
+              "solutionSteps": [
+                "The vocative (सम्बोधनम्) is for addressing/calling.",
+                "It is treated as a special use of the nominative."
+              ],
+              "commonMistakes": [
+                "Confusing the vocative with another case."
+              ],
+              "variations": [
+                {
+                  "prompt": "The vocative often just shortens which case?",
+                  "answer": "The nominative (प्रथमा): देवः -> हे देव",
+                  "solutionSteps": [
+                    "Listed beside the first case.",
+                    "A shortened nominative."
+                  ]
+                },
+                {
+                  "prompt": "All the case-endings added to a stem like देव are called the ... suffixes.",
+                  "answer": "सुप् (sup)",
+                  "solutionSteps": [
+                    "21 endings (7 cases x 3 numbers).",
+                    "Pāṇini's सुप्."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                114
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch14_dd03_b02",
+              "prompt": "When देवः + अत्र combine into देवोऽत्र, the fusion of the final and initial sounds is called...",
+              "questionType": "mcq",
+              "options": [
+                "सन्धि (sandhi)",
+                "समास (compound)",
+                "कारक (case-role)",
+                "गण (verb class)"
+              ],
+              "answer": "सन्धि (sandhi)",
+              "solutionSteps": [
+                "सन्धि is the euphonic fusion of sounds where words meet.",
+                "देवः + अत्र -> देवोऽत्र."
+              ],
+              "commonMistakes": [
+                "Confusing सन्धि (sound-fusion) with समास (word-compounding)."
+              ],
+              "variations": [
+                {
+                  "prompt": "To read real Sanskrit you must undo both सन्धि and the ... ending to find the stem.",
+                  "answer": "सुप् (case) ending",
+                  "solutionSteps": [
+                    "Two-step un-doing.",
+                    "Reveals the bare stem."
+                  ]
+                },
+                {
+                  "prompt": "How many सुप् endings are there in all?",
+                  "answer": "Twenty-one (7 cases x 3 numbers)",
+                  "solutionSteps": [
+                    "A full declension grid.",
+                    "21 endings."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                114
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In senior study you meet Pāṇini's सुप् (case-ending) system and how सन्धि fuses words at their boundaries."
         }
       ],
@@ -32721,7 +33741,92 @@
           "parentConceptId": "sch15_t02_c01",
           "body": "पठति ('he reads') looks simple, but it hides a choice: every Sanskrit root belongs to one of TEN classes called गण (gaṇa), and the class decides how the present-tense stem is built. पठ् is a भ्वादि (first class) root, which inserts -अ- before the ending (पठ् + अ + ति = पठति) — the largest and most regular group, named after भू ('to be', भवति). Other classes behave differently: the अदादि (second class, like अस् 'to be' → अस्ति) add endings DIRECTLY to the root with no vowel; the चुरादि (tenth class, like चुर् → चोरयति) insert -अय-; the तुदादि, दिवादि, स्वादि and the rest each have their own stem-marker. This is why a conjugation table works for पठ्, नम्, गम् and वद् (all भ्वादि) but not blindly for अस् or कृ. Knowing a root's गण tells you in advance how to form its present, imperfect and imperative — turning what looks like memorising endless tables into applying ten predictable patterns.",
           "prerequisite": "Tackle this once you can conjugate पठ् → पठति, पठतः, पठन्ति in the present.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch15_dd01_b01",
+              "prompt": "Every Sanskrit verb root belongs to one of how many classes (गण) that decide how its present stem is built?",
+              "questionType": "mcq",
+              "options": [
+                "Ten",
+                "Three",
+                "Seven",
+                "Two"
+              ],
+              "answer": "Ten",
+              "solutionSteps": [
+                "There are ten गण (verb classes).",
+                "The class fixes the present-stem formation."
+              ],
+              "commonMistakes": [
+                "Guessing a smaller number; there are ten गण."
+              ],
+              "variations": [
+                {
+                  "prompt": "पठ् belongs to which class, the largest and most regular?",
+                  "answer": "भ्वादि (the first class)",
+                  "solutionSteps": [
+                    "Named after भू.",
+                    "The biggest गण."
+                  ]
+                },
+                {
+                  "prompt": "Why doesn't one conjugation table work blindly for अस् or कृ?",
+                  "answer": "They belong to different गण with different stem-rules",
+                  "solutionSteps": [
+                    "Each class behaves differently.",
+                    "So forms differ."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                122
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch15_dd01_b02",
+              "prompt": "As a भ्वादि (first-class) root, पठ् forms its present stem by inserting...",
+              "questionType": "mcq",
+              "options": [
+                "-अ- (पठ् + अ + ति = पठति)",
+                "-अय-",
+                "nothing (endings directly on the root)",
+                "the अ- augment"
+              ],
+              "answer": "-अ- (पठ् + अ + ति = पठति)",
+              "solutionSteps": [
+                "First-class roots insert -अ- before the ending.",
+                "पठ् + अ + ति = पठति."
+              ],
+              "commonMistakes": [
+                "Confusing the भ्वादि -अ- with the चुरादि -अय- or अदादि (no vowel)."
+              ],
+              "variations": [
+                {
+                  "prompt": "The अदादि (second class, like अस्) build the present how?",
+                  "answer": "By adding endings DIRECTLY to the root (अस् + ति = अस्ति)",
+                  "solutionSteps": [
+                    "No linking vowel.",
+                    "अस्ति."
+                  ]
+                },
+                {
+                  "prompt": "The चुरादि (tenth class, like चुर्) insert which marker?",
+                  "answer": "-अय- (चुर् -> चोरयति)",
+                  "solutionSteps": [
+                    "Tenth-class stem.",
+                    "चोरयति."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                122
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 9 you learn that roots fall into ten गण (classes), each forming its present stem differently."
         },
         {
@@ -32731,7 +33836,92 @@
           "parentConceptId": "sch15_t01_c02",
           "body": "Sanskrit organises ALL of a verb's tenses and moods into ten sets of endings called the लकाराः, each named with a code-letter ल् plus a marker. The five you most need are लट् (present — पठति, 'reads'), लङ् (imperfect past — अपठत्, 'read', with its अ-augment), लृट् (future — पठिष्यति, 'will read'), लोट् (imperative/command — पठतु, 'let him read'), and विधिलिङ् (optative — पठेत्, 'should read'). Beyond these lie the more advanced लकाराः you meet later: लिट् (the perfect, for remote past — पपाठ), लुङ् (the aorist), लुट् (a periphrastic future), आशीर्लिङ् (the benedictive, for blessings), and लृङ् (the conditional, 'would have'). Each लकार is simply a complete kit of personal endings expressing one time-or-mood. Once you realise that learning a verb means learning which लकार you need — present to report, लोट् to command, विधिलिङ् to advise — the whole verb system becomes a tidy menu of ten choices rather than a fog of forms.",
           "prerequisite": "Tackle this once you know लट् (present) and have met a past and a future form.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch15_dd02_b01",
+              "prompt": "In the लकार system, the लट् लकार expresses which tense?",
+              "questionType": "mcq",
+              "options": [
+                "The present (पठति, 'reads')",
+                "The future",
+                "The past",
+                "A blessing"
+              ],
+              "answer": "The present (पठति, 'reads')",
+              "solutionSteps": [
+                "लट् = present tense.",
+                "पठति = 'he reads'."
+              ],
+              "commonMistakes": [
+                "Confusing लट् (present) with लृट् (future)."
+              ],
+              "variations": [
+                {
+                  "prompt": "Which लकार is the future (पठिष्यति, 'will read')?",
+                  "answer": "लृट्",
+                  "solutionSteps": [
+                    "Future tense.",
+                    "पठिष्यति."
+                  ]
+                },
+                {
+                  "prompt": "Each लकार is essentially a complete kit of what?",
+                  "answer": "Personal endings expressing one tense-or-mood",
+                  "solutionSteps": [
+                    "A 'menu' of ten.",
+                    "One time/mood each."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                122
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch15_dd02_b02",
+              "prompt": "Which लकार is the imperative — used for a command, e.g. पठतु ('let him read')?",
+              "questionType": "mcq",
+              "options": [
+                "लोट्",
+                "लट्",
+                "लृट्",
+                "विधिलिङ्"
+              ],
+              "answer": "लोट्",
+              "solutionSteps": [
+                "लोट् is the imperative (command) mood.",
+                "पठतु = 'let him read'."
+              ],
+              "commonMistakes": [
+                "Confusing the imperative (लोट्) with the optative (विधिलिङ्, 'should')."
+              ],
+              "variations": [
+                {
+                  "prompt": "Which लकार is the optative ('should', पठेत्)?",
+                  "answer": "विधिलिङ्",
+                  "solutionSteps": [
+                    "Advice/duty mood.",
+                    "पठेत् = 'should read'."
+                  ]
+                },
+                {
+                  "prompt": "The remote-past perfect (पपाठ) is which लकार?",
+                  "answer": "लिट् (the perfect)",
+                  "solutionSteps": [
+                    "Remote past.",
+                    "पपाठ."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                122
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 10 and beyond you study the full लकार system, adding the perfect, aorist, imperative and optative."
         },
         {
@@ -32741,7 +33931,92 @@
           "parentConceptId": "sch15_t01_c03",
           "body": "Sanskrit verbs come in two voice-classes with DIFFERENT sets of personal endings: परस्मैपद (literally 'word for another') and आत्मनेपद ('word for oneself'). पठति, गच्छति, करोति take परस्मैपद endings (-ति, -तः, -न्ति), while भाषते ('speaks'), लभते ('obtains') and सेवते ('serves') take आत्मनेपद endings (-ते, -एते, -न्ते) — which is exactly why your paradigm भाष् → भाषते, भाषेते, भाषन्ते looks so different from पठ् → पठति, पठतः, पठन्ति. Historically आत्मनेपद hinted that the action's fruit returns to the doer (reflexive/middle voice), though in practice each root simply 'belongs' to one set, or to both (उभयपदी). All these endings are the तिङ् (tiṅ) suffixes in Pāṇini's grammar — eighteen forms (nine परस्मैपद + nine आत्मनेपद across three persons and three numbers). Knowing whether a root is परस्मैपदी or आत्मनेपदी tells you which ending-set to reach for, so you never confuse भाषते with a nonexistent *भाषति.",
           "prerequisite": "Tackle this once you notice भाषते uses different endings from पठति.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch15_dd03_b01",
+              "prompt": "भाषते ('speaks') and लभते ('obtains') take which set of personal endings?",
+              "questionType": "mcq",
+              "options": [
+                "आत्मनेपद (-ते, -एते, -न्ते)",
+                "परस्मैपद (-ति, -तः, -न्ति)",
+                "the causative endings",
+                "the future endings"
+              ],
+              "answer": "आत्मनेपद (-ते, -एते, -न्ते)",
+              "solutionSteps": [
+                "These roots are आत्मनेपदी, taking -ते/-न्ते endings.",
+                "भाष् -> भाषते, भाषेते, भाषन्ते."
+              ],
+              "commonMistakes": [
+                "Forming a nonexistent *भाषति with परस्मैपद endings."
+              ],
+              "variations": [
+                {
+                  "prompt": "परस्मैपद literally means...",
+                  "answer": "'Word for another'",
+                  "solutionSteps": [
+                    "vs आत्मनेपद 'word for oneself'.",
+                    "Two ending-families."
+                  ]
+                },
+                {
+                  "prompt": "All these personal endings are called which suffixes in Pāṇini's grammar?",
+                  "answer": "तिङ् (tiṅ) suffixes",
+                  "solutionSteps": [
+                    "18 forms (9 + 9).",
+                    "Across persons and numbers."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                122
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch15_dd03_b02",
+              "prompt": "पठति, गच्छति and करोति take which set of endings?",
+              "questionType": "mcq",
+              "options": [
+                "परस्मैपद (-ति, -तः, -न्ति)",
+                "आत्मनेपद (-ते, -न्ते)",
+                "the vocative endings",
+                "the सुप् endings"
+              ],
+              "answer": "परस्मैपद (-ति, -तः, -न्ति)",
+              "solutionSteps": [
+                "These roots are परस्मैपदी, taking -ति/-न्ति endings.",
+                "पठ् -> पठति, पठतः, पठन्ति."
+              ],
+              "commonMistakes": [
+                "Mixing up परस्मैपद (-ति) with आत्मनेपद (-ते)."
+              ],
+              "variations": [
+                {
+                  "prompt": "A root that can take BOTH ending-sets is called...",
+                  "answer": "उभयपदी",
+                  "solutionSteps": [
+                    "Belongs to both.",
+                    "Either ending-family."
+                  ]
+                },
+                {
+                  "prompt": "Historically, आत्मनेपद hinted the action's fruit returns to...",
+                  "answer": "The doer (reflexive/middle voice)",
+                  "solutionSteps": [
+                    "'For oneself'.",
+                    "A middle-voice sense."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                122
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 8 and 9 you study परस्मैपद and आत्मनेपद endings (the तिङ् suffixes) and which roots take each."
         }
       ],
