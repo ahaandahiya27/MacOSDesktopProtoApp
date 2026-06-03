@@ -53984,7 +53984,92 @@
           "parentConceptId": "ch17_t02_c02",
           "body": "Class 7 introduces food chains. Class 8 stacks them into TROPHIC LEVELS — energy hierarchy. Level 1: PRODUCERS (plants, ~100% of sun's energy captured). Level 2: PRIMARY CONSUMERS (herbivores — deer, rabbits, grasshoppers). Level 3: SECONDARY CONSUMERS (carnivores eating herbivores — frogs, snakes). Level 4: TERTIARY CONSUMERS (top carnivores — tigers, eagles). 10% RULE: only ~10% of energy passes from one level to the next; 90% lost as heat / used by the organism. So 10,000 kg of grass → 1000 kg of deer → 100 kg of leopard → 10 kg of tiger. That's why top predators are rare — there's just not enough energy to support many of them. India's Western Ghats can support only ~50 tigers per 1000 sq km — the ecosystem's energy ceiling.",
           "prerequisite": "Tackle after Class 7 food chain basics.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch17_dd01_b01",
+              "prompt": "By the 10% rule of energy flow, about how much energy passes from one trophic level to the next?",
+              "questionType": "mcq",
+              "options": [
+                "About 10% (the other ~90% is lost as heat and life processes)",
+                "About 90%",
+                "About 50%",
+                "100%"
+              ],
+              "answer": "About 10% (the other ~90% is lost as heat and life processes)",
+              "solutionSteps": [
+                "Only ~10% of energy is passed up each level.",
+                "~90% is lost as heat and used for the organism's own living."
+              ],
+              "commonMistakes": [
+                "Assuming most energy passes up; only about a tenth does."
+              ],
+              "variations": [
+                {
+                  "prompt": "10,000 kg of grass supports roughly how much tiger mass, by the 10% rule?",
+                  "answer": "About 10 kg",
+                  "solutionSteps": [
+                    "Each level keeps ~10%: 10000 -> 1000 -> 100 -> 10.",
+                    "So ~10 kg of top predator."
+                  ]
+                },
+                {
+                  "prompt": "Why are top predators like tigers naturally rare?",
+                  "answer": "Little energy reaches the top level, so few can be supported",
+                  "solutionSteps": [
+                    "The 10% rule shrinks energy each step.",
+                    "So top predators are few."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                208
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch17_dd01_b02",
+              "prompt": "Plants that capture the Sun's energy occupy which trophic level?",
+              "questionType": "mcq",
+              "options": [
+                "Level 1: producers",
+                "Level 2: primary consumers",
+                "Level 3: secondary consumers",
+                "Level 4: top carnivores"
+              ],
+              "answer": "Level 1: producers",
+              "solutionSteps": [
+                "Producers make their own food from sunlight.",
+                "They form the base (level 1) of the energy pyramid."
+              ],
+              "commonMistakes": [
+                "Confusing producers (plants) with consumers (animals)."
+              ],
+              "variations": [
+                {
+                  "prompt": "A deer eating grass is at which trophic level?",
+                  "answer": "Level 2: a primary consumer (herbivore)",
+                  "solutionSteps": [
+                    "It eats producers.",
+                    "So it is a primary consumer."
+                  ]
+                },
+                {
+                  "prompt": "Why is each higher trophic level supported by less total energy?",
+                  "answer": "Only ~10% of energy transfers up at each step",
+                  "solutionSteps": [
+                    "Most energy is lost as heat.",
+                    "So energy shrinks up the pyramid."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                208
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Class 11 introduces gross vs net primary productivity calculations."
         },
         {
@@ -53994,7 +54079,92 @@
           "parentConceptId": "ch17_t01_c01",
           "body": "Class 7 describes forest layers and animals. Class 11 introduces ECOLOGICAL NICHE — the specific 'job' each species does in its ecosystem (food, shelter, role). Two species can't have identical niches — one outcompetes (Gause's principle). Indian tiger vs leopard: niche overlap, but leopard is smaller, climbs trees (different prey size, different microhabitat). SUCCESSION: how ecosystems change over time. PRIMARY SUCCESSION: bare rock → lichens → mosses → grasses → shrubs → trees (centuries to millennia). SECONDARY SUCCESSION: after disturbance (fire, clearing), faster (decades). BIODIVERSITY: species count + ecological diversity + genetic diversity. Western Ghats has high biodiversity (5000+ plant species, 1700 endemic). Higher biodiversity = more resilient ecosystem.",
           "prerequisite": "Tackle after Class 7 forest biodiversity.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch17_dd02_b01",
+              "prompt": "Gause's principle says two species cannot...",
+              "questionType": "mcq",
+              "options": [
+                "Occupy the exact same ecological niche indefinitely (one outcompetes the other)",
+                "Ever live in the same forest",
+                "Eat any of the same food",
+                "Reproduce sexually"
+              ],
+              "answer": "Occupy the exact same ecological niche indefinitely (one outcompetes the other)",
+              "solutionSteps": [
+                "Identical niches mean direct competition for the same resources.",
+                "One species outcompetes the other, so they can't coexist identically."
+              ],
+              "commonMistakes": [
+                "Thinking it forbids sharing a habitat; it forbids identical niches."
+              ],
+              "variations": [
+                {
+                  "prompt": "Tigers and leopards share forests but differ in prey size and climbing. What lets them coexist?",
+                  "answer": "Their niches differ enough to avoid direct competition",
+                  "solutionSteps": [
+                    "Different prey and microhabitats.",
+                    "So niches don't fully overlap."
+                  ]
+                },
+                {
+                  "prompt": "What is an ecological niche?",
+                  "answer": "A species' specific role and resource use in its ecosystem",
+                  "solutionSteps": [
+                    "It is the species' 'job'.",
+                    "Food, shelter and role combined."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                208
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch17_dd02_b02",
+              "prompt": "Bare rock slowly turning into lichens, then mosses, then grasses, shrubs and finally trees is called...",
+              "questionType": "mcq",
+              "options": [
+                "Primary succession",
+                "Secondary succession",
+                "Trophic cascade",
+                "Eutrophication"
+              ],
+              "answer": "Primary succession",
+              "solutionSteps": [
+                "Primary succession starts from bare rock with no soil.",
+                "It proceeds lichens -> mosses -> grasses -> shrubs -> trees over a very long time."
+              ],
+              "commonMistakes": [
+                "Confusing primary succession (from bare rock) with secondary (after a disturbance)."
+              ],
+              "variations": [
+                {
+                  "prompt": "Regrowth after a forest fire or clearing, where soil already exists, is...",
+                  "answer": "Secondary succession",
+                  "solutionSteps": [
+                    "Soil and seeds remain after the disturbance.",
+                    "So recovery is faster - secondary succession."
+                  ]
+                },
+                {
+                  "prompt": "Why is primary succession much slower than secondary?",
+                  "answer": "Soil must form first from bare rock, which takes ages",
+                  "solutionSteps": [
+                    "No soil exists at the start.",
+                    "Building it from rock is slow."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                208
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Class 12 covers in-situ vs ex-situ conservation and IUCN Red List criteria."
         },
         {
@@ -54004,7 +54174,92 @@
           "parentConceptId": "ch17_t02_c01",
           "body": "Class 7 says decomposers break down dead matter. Class 10 names the chemistry. Major nutrients cycle: NITROGEN — dead organisms' proteins → bacteria break to amino acids → AMMONIFYING bacteria release ammonia (NH₃) → NITRIFYING bacteria oxidise to nitrate (NO₃⁻) → roots absorb. CARBON — dead matter's carbohydrates → fungi + bacteria break to CO₂ + small molecules → CO₂ enters atmosphere → photosynthesis pulls back. PHOSPHORUS — dead organisms' DNA + bone → bacteria release phosphate → roots absorb. Each cycle takes weeks (carbon) to centuries (phosphorus). Earthworms, dung beetles, fungi, bacteria — all play roles. Disrupting any one (e.g., by overusing chemical fungicides) breaks the chain. Forest soil's amazing fertility comes from decomposer chemistry running continuously, free.",
           "prerequisite": "Tackle after Class 7 decomposer basics.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch17_dd03_b01",
+              "prompt": "In the nitrogen cycle, nitrifying bacteria convert ammonia into which form that plant roots absorb?",
+              "questionType": "mcq",
+              "options": [
+                "Nitrate (NO3-)",
+                "Pure nitrogen gas (N2)",
+                "Carbon dioxide (CO2)",
+                "Phosphate"
+              ],
+              "answer": "Nitrate (NO3-)",
+              "solutionSteps": [
+                "Ammonifying bacteria release ammonia from dead matter.",
+                "Nitrifying bacteria oxidise ammonia to nitrate, which roots take up."
+              ],
+              "commonMistakes": [
+                "Confusing the nitrogen and carbon cycles, or the products of each bacterial step."
+              ],
+              "variations": [
+                {
+                  "prompt": "Which organisms first release ammonia from dead proteins?",
+                  "answer": "Ammonifying bacteria",
+                  "solutionSteps": [
+                    "They break proteins to amino acids and release ammonia.",
+                    "Starting the nitrogen cycle."
+                  ]
+                },
+                {
+                  "prompt": "In the carbon cycle, decomposers release dead matter's carbon mainly as what gas?",
+                  "answer": "Carbon dioxide (CO2)",
+                  "solutionSteps": [
+                    "Fungi and bacteria break down carbohydrates.",
+                    "Releasing CO2 to the air."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                208
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch17_dd03_b02",
+              "prompt": "Why is forest soil so naturally fertile, without any added chemical fertiliser?",
+              "questionType": "mcq",
+              "options": [
+                "Decomposers continuously recycle nutrients from dead matter back into the soil",
+                "Forest rock dissolves into fertiliser",
+                "Rainfall delivers ready-made nutrients",
+                "Trees inject nutrients into the ground"
+              ],
+              "answer": "Decomposers continuously recycle nutrients from dead matter back into the soil",
+              "solutionSteps": [
+                "Fungi, bacteria, earthworms and dung beetles break down dead matter.",
+                "They release nitrogen, carbon and phosphorus back for roots - free, continuously."
+              ],
+              "commonMistakes": [
+                "Thinking fertility comes from rock or rain rather than decomposer recycling."
+              ],
+              "variations": [
+                {
+                  "prompt": "What happens to nutrient cycling if heavy fungicide use kills the soil fungi?",
+                  "answer": "The decomposer chain breaks and nutrient recycling falters",
+                  "solutionSteps": [
+                    "Fungi are key decomposers.",
+                    "Removing them disrupts the cycle."
+                  ]
+                },
+                {
+                  "prompt": "Name two decomposer organisms in forest soil.",
+                  "answer": "Fungi and bacteria (also earthworms, dung beetles)",
+                  "solutionSteps": [
+                    "These break down dead matter.",
+                    "Recycling its nutrients."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                208
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Class 12 BIOgeochemical cycles + composting industrial science."
         }
       ],
@@ -56551,7 +56806,92 @@
           "parentConceptId": "ch18_t01_c01",
           "body": "Class 7 says sewage is wastewater. Class 8 details what's in it. ORGANIC matter: faeces, urine, food bits (mostly carbohydrates, proteins, fats — biodegradable). INORGANIC: phosphates from detergents (cause algal blooms), nitrates from urine, salts. PATHOGENS: E. coli, salmonella, cholera vibrio, hepatitis A virus. HEAVY METALS from industrial sources: chromium, lead, mercury (don't biodegrade — accumulate in food chain). PERSISTENT ORGANICS: pesticides, pharmaceuticals (paracetamol traces, antibiotics — modern problem). A litre of Indian municipal sewage contains: ~250 mg organic load (BOD), ~10 mg nitrogen, ~2 mg phosphorus, billions of bacteria, hundreds of viruses. Treatment must remove ALL — different processes for each class of contaminant.",
           "prerequisite": "Tackle after Class 7 sewage basics.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch18_dd01_b01",
+              "prompt": "Which class of sewage contaminant does NOT biodegrade and instead accumulates up the food chain?",
+              "questionType": "mcq",
+              "options": [
+                "Heavy metals such as chromium, lead and mercury",
+                "Food scraps",
+                "Faeces and urine",
+                "Most carbohydrates"
+              ],
+              "answer": "Heavy metals such as chromium, lead and mercury",
+              "solutionSteps": [
+                "Organic matter (food, faeces) is broken down by bacteria.",
+                "Heavy metals don't biodegrade; they build up in organisms over time."
+              ],
+              "commonMistakes": [
+                "Assuming everything in sewage biodegrades; metals persist and bioaccumulate."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why are phosphates from detergents a problem in waterways?",
+                  "answer": "They feed algal blooms",
+                  "solutionSteps": [
+                    "Phosphates are a nutrient.",
+                    "Excess triggers algal overgrowth."
+                  ]
+                },
+                {
+                  "prompt": "Name a pathogen commonly found in untreated sewage.",
+                  "answer": "E. coli (or salmonella, cholera vibrio, hepatitis A)",
+                  "solutionSteps": [
+                    "Sewage carries faecal microbes.",
+                    "These cause disease."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                222
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch18_dd01_b02",
+              "prompt": "Besides organic matter, sewage carries a 'modern' class of contaminant. Which is it?",
+              "questionType": "mcq",
+              "options": [
+                "Persistent organics like pesticide and pharmaceutical traces",
+                "Pure drinking water",
+                "Oxygen gas",
+                "Sand only"
+              ],
+              "answer": "Persistent organics like pesticide and pharmaceutical traces",
+              "solutionSteps": [
+                "Modern sewage carries traces of medicines (paracetamol, antibiotics) and pesticides.",
+                "These persist and are hard to remove."
+              ],
+              "commonMistakes": [
+                "Thinking sewage is only faeces and food; it also carries persistent chemicals."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why must a treatment plant use several different processes?",
+                  "answer": "Different contaminant classes (organics, metals, pathogens) each need a different removal step",
+                  "solutionSteps": [
+                    "No single process removes all.",
+                    "So treatment is multi-stage."
+                  ]
+                },
+                {
+                  "prompt": "Roughly how many bacteria are in a litre of municipal sewage?",
+                  "answer": "Billions",
+                  "solutionSteps": [
+                    "Sewage is heavily microbially loaded.",
+                    "Billions of bacteria per litre."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                222
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Class 10 introduces BOD and COD — quantitative measures of organic pollution."
         },
         {
@@ -56561,7 +56901,92 @@
           "parentConceptId": "ch18_t02_c01",
           "body": "Class 7 says polluted water has lots of organic waste. Class 10 introduces BOD — BIOLOGICAL OXYGEN DEMAND. Definition: how much oxygen (in mg/L) bacteria need to digest all organic matter in 1 litre of water over 5 days. Clean water: BOD < 5 mg/L. Sewage: 200-400 mg/L. Industrial effluent: 1000+ mg/L. Yamuna in Delhi: 30-50 mg/L (6× the safe limit). High BOD means bacteria consume all dissolved oxygen → fish + aquatic life suffocate. Indian Pollution Control Boards monitor BOD daily at hundreds of river points. COD (Chemical Oxygen Demand) is similar but uses chemical oxidation — catches non-biodegradable pollutants BOD misses. WWTP success measured in BOD reduction: input 250 mg/L → output 10 mg/L = 96% treatment efficiency.",
           "prerequisite": "Tackle after Class 8 sewage chemistry.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch18_dd02_b01",
+              "prompt": "BOD (Biological Oxygen Demand) measures what about water?",
+              "questionType": "mcq",
+              "options": [
+                "The oxygen bacteria need to digest the organic matter in it",
+                "Its pH",
+                "Its temperature",
+                "Its salt content"
+              ],
+              "answer": "The oxygen bacteria need to digest the organic matter in it",
+              "solutionSteps": [
+                "BOD = oxygen (mg/L) bacteria use over 5 days to break down organic matter.",
+                "Higher BOD means more organic pollution."
+              ],
+              "commonMistakes": [
+                "Thinking BOD measures pH or temperature; it measures oxygen demand."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why does high-BOD water suffocate fish?",
+                  "answer": "Bacteria use up the dissolved oxygen, leaving none for fish",
+                  "solutionSteps": [
+                    "High BOD strips oxygen from water.",
+                    "Aquatic life suffocates."
+                  ]
+                },
+                {
+                  "prompt": "A plant cuts BOD from 250 mg/L to 10 mg/L. What treatment efficiency is that?",
+                  "answer": "About 96%",
+                  "solutionSteps": [
+                    "240 of 250 removed.",
+                    "That is ~96% reduction."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                222
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch18_dd02_b02",
+              "prompt": "Clean water has a BOD under 5 mg/L. Raw sewage is typically...",
+              "questionType": "mcq",
+              "options": [
+                "200-400 mg/L",
+                "About 1 mg/L",
+                "Exactly 5 mg/L",
+                "Always 0 mg/L"
+              ],
+              "answer": "200-400 mg/L",
+              "solutionSteps": [
+                "Sewage is rich in organic matter, so its BOD is very high.",
+                "Typical raw sewage is 200-400 mg/L, far above the clean-water limit."
+              ],
+              "commonMistakes": [
+                "Assuming sewage BOD is near clean water's; it is dozens of times higher."
+              ],
+              "variations": [
+                {
+                  "prompt": "COD measures something similar to BOD but how does it differ?",
+                  "answer": "It uses chemical oxidation and also catches non-biodegradable pollutants",
+                  "solutionSteps": [
+                    "BOD relies on bacteria over 5 days.",
+                    "COD oxidises chemically, catching more."
+                  ]
+                },
+                {
+                  "prompt": "The Yamuna in Delhi runs at 30-50 mg/L BOD versus a 5 mg/L safe limit. By roughly what factor is that over the limit?",
+                  "answer": "About 6 to 10 times",
+                  "solutionSteps": [
+                    "30-50 vs 5 mg/L.",
+                    "Roughly 6-10x the safe level."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                222
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Class 11 environmental science compares Indian rivers' BOD levels with global standards."
         },
         {
@@ -56571,7 +56996,92 @@
           "parentConceptId": "ch18_t02_c02",
           "body": "Class 7 mentions sludge digesters. Class 11 reveals the biochemistry. ANAEROBIC DIGESTION: bacteria break down organic matter WITHOUT oxygen in 4 stages. Stage 1 HYDROLYSIS: enzymes break long molecules to monomers (proteins to amino acids, etc.). Stage 2 ACIDOGENESIS: monomers to organic acids + CO₂ + H₂. Stage 3 ACETOGENESIS: organic acids to acetic acid. Stage 4 METHANOGENESIS: acetic acid + CO₂ + H₂ → METHANE (CH₄) + water. The methane gas is BIOGAS — pure fuel! Indian biogas plants (~5 million installations) capture this, burn it for cooking or electricity. A single household digester (cow dung + food waste) produces 1-2 cubic metres of biogas daily — enough for 3-4 hours of cooking. Some Indian municipalities now run buses on biogas from sewage. Closed loop: sewage → biogas → energy → less reliance on imported fuel.",
           "prerequisite": "Tackle after Class 10 BOD.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch18_dd03_b01",
+              "prompt": "The final stage of anaerobic digestion (methanogenesis) produces which useful gas?",
+              "questionType": "mcq",
+              "options": [
+                "Methane (biogas)",
+                "Oxygen",
+                "Chlorine",
+                "Helium"
+              ],
+              "answer": "Methane (biogas)",
+              "solutionSteps": [
+                "Methanogenic bacteria convert acetic acid, CO2 and H2 into methane.",
+                "This methane is biogas - a usable fuel."
+              ],
+              "commonMistakes": [
+                "Forgetting the end product is methane, the burnable biogas."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is anaerobic digestion called 'anaerobic'?",
+                  "answer": "It breaks down matter without oxygen",
+                  "solutionSteps": [
+                    "Anaerobic means no oxygen.",
+                    "The bacteria work in its absence."
+                  ]
+                },
+                {
+                  "prompt": "How can a town use biogas captured from sewage?",
+                  "answer": "Burn it for cooking or to generate electricity (some buses run on it)",
+                  "solutionSteps": [
+                    "Biogas is a fuel.",
+                    "It powers cooking, electricity or vehicles."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                222
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch18_dd03_b02",
+              "prompt": "Anaerobic digestion proceeds in four stages. Which is the correct overall order?",
+              "questionType": "mcq",
+              "options": [
+                "Hydrolysis -> acidogenesis -> acetogenesis -> methanogenesis",
+                "Methanogenesis first, then hydrolysis",
+                "Acetogenesis -> hydrolysis -> methanogenesis",
+                "All four happen in no particular order"
+              ],
+              "answer": "Hydrolysis -> acidogenesis -> acetogenesis -> methanogenesis",
+              "solutionSteps": [
+                "First big molecules are broken to monomers (hydrolysis).",
+                "Then acids form, then acetic acid, and finally methane (methanogenesis)."
+              ],
+              "commonMistakes": [
+                "Putting methane formation first; it is the last stage."
+              ],
+              "variations": [
+                {
+                  "prompt": "What does the first stage, hydrolysis, do?",
+                  "answer": "Breaks long molecules into smaller monomers",
+                  "solutionSteps": [
+                    "Enzymes split proteins, etc., into building blocks.",
+                    "That readies them for the next stages."
+                  ]
+                },
+                {
+                  "prompt": "A household digester on cow dung yields about how much biogas daily?",
+                  "answer": "1-2 cubic metres (enough for several hours of cooking)",
+                  "solutionSteps": [
+                    "Small digesters produce 1-2 m3/day.",
+                    "Enough for 3-4 hours of cooking."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                222
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Class 12 / engineering covers biogas plant design + methane yield equations."
         }
       ],
@@ -63873,7 +64383,92 @@
           "parentConceptId": "ch19_t01_c06",
           "body": "Class 7 mentions time zones. Class 8 makes them precise. Earth rotates 360° per 24 hours = 15° per hour. So every 15° of longitude EAST = +1 hour ahead. India sits at 82.5°E (Mirzapur meridian), giving IST = UTC+5:30. London (Greenwich, 0°): UTC+0. New York (74°W): UTC-5. Tokyo (139°E): UTC+9. INTERNATIONAL DATE LINE (180°E/W): crossing eastward = lose a day, westward = gain a day. So if you fly Delhi to Sydney (eastward), you 'lose' Sunday and arrive Monday. Major economies like China (3000 km wide) use just one time zone for political unity — sunrise at 8 AM in eastern Shanghai but 10 AM in western Xinjiang. India's choice of single time zone is similar political simplification.",
           "prerequisite": "Tackle after Class 7 rotation basics.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch19_dd01_b01",
+              "prompt": "Earth rotates 360 degrees in 24 hours. How many degrees of longitude correspond to one hour of time difference?",
+              "questionType": "mcq",
+              "options": [
+                "15 degrees",
+                "24 degrees",
+                "60 degrees",
+                "360 degrees"
+              ],
+              "answer": "15 degrees",
+              "solutionSteps": [
+                "360 degrees / 24 hours = 15 degrees per hour.",
+                "So each 15 degrees of longitude is one hour."
+              ],
+              "commonMistakes": [
+                "Dividing wrongly; it is 360/24 = 15 degrees per hour."
+              ],
+              "variations": [
+                {
+                  "prompt": "India's IST is UTC+5:30, based on a meridian near which longitude?",
+                  "answer": "About 82.5 degrees E",
+                  "solutionSteps": [
+                    "82.5 / 15 = 5.5 hours.",
+                    "Hence UTC+5:30."
+                  ]
+                },
+                {
+                  "prompt": "Why does China use a single time zone despite being very wide?",
+                  "answer": "For political unity, even though the sun rises hours apart across it",
+                  "solutionSteps": [
+                    "One zone simplifies the country.",
+                    "Despite real solar-time differences."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                232
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch19_dd01_b02",
+              "prompt": "Crossing the International Date Line travelling eastward, you...",
+              "questionType": "mcq",
+              "options": [
+                "Lose a calendar day",
+                "Gain a calendar day",
+                "Skip an hour only",
+                "Nothing changes"
+              ],
+              "answer": "Lose a calendar day",
+              "solutionSteps": [
+                "The date line marks the day boundary near 180 degrees.",
+                "Crossing it eastward subtracts a calendar day."
+              ],
+              "commonMistakes": [
+                "Mixing up the eastward (lose) and westward (gain) rules."
+              ],
+              "variations": [
+                {
+                  "prompt": "Flying Delhi to Sydney (eastward across the line), Sunday can become...",
+                  "answer": "Monday (you 'lose' a day)",
+                  "solutionSteps": [
+                    "Eastward crossing skips a day.",
+                    "So Sunday becomes Monday."
+                  ]
+                },
+                {
+                  "prompt": "Tokyo is at about 139 E. Roughly what is its UTC offset?",
+                  "answer": "About UTC+9",
+                  "solutionSteps": [
+                    "139 / 15 is about 9.",
+                    "So roughly UTC+9."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                232
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Class 11 covers solar time vs civil time + equation of time."
         },
         {
@@ -63883,7 +64478,92 @@
           "parentConceptId": "ch19_t01_c04",
           "body": "Class 7 says Earth's tilt causes seasons. Class 11 reveals THREE cycles vary over thousands of years — MILANKOVITCH CYCLES, named after Serbian mathematician Milutin Milanković (1920s). (1) AXIAL TILT varies between 22.1° and 24.5° over 41,000 years (today's 23.5° is mid-range). (2) ORBITAL ECCENTRICITY (orbit shape from nearly circular to mildly elliptical) varies over 100,000 years. (3) AXIAL PRECESSION (wobble of Earth's axis like a slowing top) over 26,000 years. Together these cycles affect HOW MUCH solar energy each hemisphere receives at each season. They're the master clock of ICE AGES — ice sheets advance and retreat with this rhythm over hundreds of thousands of years. Modern climate change is overlaid ON TOP of these natural cycles — much faster, human-caused.",
           "prerequisite": "Tackle after Class 7 seasons.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch19_dd02_b01",
+              "prompt": "Milankovitch cycles (axial tilt, orbital eccentricity, precession) are the long-term pacemaker of what?",
+              "questionType": "mcq",
+              "options": [
+                "Ice ages (advancing and retreating ice sheets)",
+                "Daily tides",
+                "The 24-hour day",
+                "Monsoon onset each year"
+              ],
+              "answer": "Ice ages (advancing and retreating ice sheets)",
+              "solutionSteps": [
+                "These cycles change how much solar energy each hemisphere gets over millennia.",
+                "That rhythm drives the advance and retreat of ice ages."
+              ],
+              "commonMistakes": [
+                "Confusing slow ice-age cycles with daily or yearly effects."
+              ],
+              "variations": [
+                {
+                  "prompt": "How is modern human-caused climate change different from Milankovitch cycles?",
+                  "answer": "It is far faster and human-caused, overlaid on the slow natural cycles",
+                  "solutionSteps": [
+                    "Natural cycles take tens of thousands of years.",
+                    "Today's change is much quicker."
+                  ]
+                },
+                {
+                  "prompt": "Earth's axial tilt varies between about 22.1 and 24.5 degrees over how long?",
+                  "answer": "About 41,000 years",
+                  "solutionSteps": [
+                    "That is the tilt cycle's period.",
+                    "Roughly 41,000 years."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                232
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch19_dd02_b02",
+              "prompt": "Which three astronomical variations make up the Milankovitch cycles?",
+              "questionType": "mcq",
+              "options": [
+                "Axial tilt, orbital eccentricity, and axial precession",
+                "Tides, seasons, and eclipses",
+                "Sunspots, comets, and meteors",
+                "Day, month, and year"
+              ],
+              "answer": "Axial tilt, orbital eccentricity, and axial precession",
+              "solutionSteps": [
+                "Tilt changes the angle of sunlight; eccentricity changes orbit shape; precession is the axis wobble.",
+                "Together they vary solar input over millennia."
+              ],
+              "commonMistakes": [
+                "Listing everyday cycles instead of the three orbital variations."
+              ],
+              "variations": [
+                {
+                  "prompt": "Axial precession (the wobble of Earth's axis) repeats over roughly how long?",
+                  "answer": "About 26,000 years",
+                  "solutionSteps": [
+                    "It is like a slowing top's wobble.",
+                    "Period about 26,000 years."
+                  ]
+                },
+                {
+                  "prompt": "Orbital eccentricity (orbit shape) varies over roughly how long?",
+                  "answer": "About 100,000 years",
+                  "solutionSteps": [
+                    "The orbit shifts circular to slightly elliptical.",
+                    "Over about 100,000 years."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                232
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "NEET / Class 12 environmental science covers paleoclimatology and ice core data."
         },
         {
@@ -63893,7 +64573,92 @@
           "parentConceptId": "ch19_t01_c02",
           "body": "Class 7 says day-night affects life. CHRONOBIOLOGY (NEET-relevant) reveals every cell in your body has a 24-hour CIRCADIAN CLOCK — genes that turn on/off in a daily rhythm. The master clock sits in the SUPRACHIASMATIC NUCLEUS (SCN) of your brain — driven by light hitting your retina. SCN → controls melatonin (sleep hormone), cortisol (wake hormone), body temperature (~1°C swing), heart rate, gut motility. Disrupt the clock → jet lag, shift-worker disease, increased cancer risk. JEET LAG = clock misaligned with new sun. Melatonin supplements help reset. The 2017 Nobel Prize in Physiology went to Hall, Rosbash, Young for discovering the GENES that run this clock. Indian medical research studies pollution effects on circadian disruption — Delhi's evening light pollution shifts the clock backward.",
           "prerequisite": "Tackle after Class 7 day-night.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch19_dd03_b01",
+              "prompt": "The body's master circadian clock sits in which part of the brain, set by light hitting the retina?",
+              "questionType": "mcq",
+              "options": [
+                "The suprachiasmatic nucleus (SCN)",
+                "The stomach",
+                "The kidney",
+                "The big toe"
+              ],
+              "answer": "The suprachiasmatic nucleus (SCN)",
+              "solutionSteps": [
+                "The SCN is the brain's master 24-hour clock.",
+                "Light on the retina synchronises it to the day-night cycle."
+              ],
+              "commonMistakes": [
+                "Thinking the clock is in a digestive or peripheral organ rather than the brain's SCN."
+              ],
+              "variations": [
+                {
+                  "prompt": "Which sleep hormone does the circadian clock control?",
+                  "answer": "Melatonin",
+                  "solutionSteps": [
+                    "The SCN regulates melatonin release.",
+                    "Rising at night to promote sleep."
+                  ]
+                },
+                {
+                  "prompt": "Why does jet lag happen?",
+                  "answer": "Your internal clock is misaligned with the new location's day-night cycle",
+                  "solutionSteps": [
+                    "Travel shifts the external light schedule.",
+                    "The clock takes days to resync."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                232
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch19_dd03_b02",
+              "prompt": "The 2017 Nobel Prize in Physiology recognised the discovery of what?",
+              "questionType": "mcq",
+              "options": [
+                "The genes that run the circadian (daily) clock",
+                "The structure of DNA",
+                "Penicillin",
+                "The electron"
+              ],
+              "answer": "The genes that run the circadian (daily) clock",
+              "solutionSteps": [
+                "Hall, Rosbash and Young found the genes controlling the 24-hour clock.",
+                "That work won the 2017 Nobel in Physiology or Medicine."
+              ],
+              "commonMistakes": [
+                "Confusing it with other famous discoveries like DNA or penicillin."
+              ],
+              "variations": [
+                {
+                  "prompt": "Name one body rhythm the circadian clock controls besides sleep.",
+                  "answer": "Cortisol (the wake hormone), body temperature, or heart rate",
+                  "solutionSteps": [
+                    "The SCN drives many daily rhythms.",
+                    "Including cortisol, temperature and heart rate."
+                  ]
+                },
+                {
+                  "prompt": "Can melatonin supplements help reset a jet-lagged clock?",
+                  "answer": "Yes, they can help shift the clock toward the new schedule",
+                  "solutionSteps": [
+                    "Melatonin signals night.",
+                    "Taken well, it nudges the clock."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                232
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Senior biology covers PERIOD and CLOCK genes — the molecular cogwheels of life's daily rhythm."
         }
       ],

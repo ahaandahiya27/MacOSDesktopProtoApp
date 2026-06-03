@@ -50,7 +50,10 @@ canonically: `json.dumps(d, ensure_ascii=False, indent=2) + "\n"`.
 - [x] **ch14 — Electric Current and its Effect (3 topics, 6 MCQs)** — Ohm's law (worked I=V/R), series vs parallel wiring, electromagnetic induction.
 - [x] **ch15 — Light (3 topics, 6 MCQs)** — lens formula (worked image position), total internal reflection / optical fibres, wave optics (diffraction & interference).
 - [x] **ch16 — Water: A Precious Resource (3 topics, 6 MCQs)** — aquifer mechanics (porosity vs permeability), groundwater budget as a bank account, drip vs flood efficiency.
-- [ ] ch17–ch19 (9 topics) — ~2 MCQs each. **96 Science MCQs done so far.**
+- [x] **ch17 — Forest: Our Lifeline (3 topics, 6 MCQs)** — trophic levels & 10% rule, ecological niche/succession/Gause, decomposer (N & C cycle) chemistry.
+- [x] **ch18 — Wastewater Story (3 topics, 6 MCQs)** — sewage contaminant classes, BOD/COD pollution measurement, anaerobic digestion → biogas.
+- [x] **ch19 — Earth, Moon and the Sun (3 topics, 6 MCQs)** — time zones (15°/hr, date line), Milankovitch cycles & ice ages, circadian clock (SCN).
+- ✅ **SCIENCE COMPLETE — 57/57 stretch topics, 114 Olympiad MCQs, all 19 chapters. Every topic ≥2 gradable .mcq.**
 
 **Tooling note:** inject scripts use a variadic `V(p,a,*steps)` helper so step strings can't be mis-bracketed (the earlier source of two SyntaxErrors). `ast.parse` the inject script before running.
 
