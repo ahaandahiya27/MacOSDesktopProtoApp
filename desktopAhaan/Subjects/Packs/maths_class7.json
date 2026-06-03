@@ -11934,7 +11934,92 @@
           "parentConceptId": "mch06_t02_c02",
           "body": "You used parity to argue that five odd numbers can never add to 30 — an even target — because odd + odd + odd + odd + odd is always odd. This is your first INVARIANT argument: a quantity that some process can never change, used to prove an outcome is impossible. The idea is astonishingly powerful. Cover a chessboard with dominoes, each covering one black and one white square; now cut off two opposite corners, which are the same colour. Can the 62 remaining squares be tiled? No — because every domino must cover one of each colour, but you have removed two of the SAME colour, breaking the balance forever. No amount of clever arranging can fix a parity mismatch. The famous 15-puzzle has positions you simply cannot reach, for exactly this reason. Spotting a quantity that stays fixed — its parity, or a sum, or a colouring — is one of a mathematician's sharpest tools for proving 'this is impossible' without checking every case.",
           "prerequisite": "Tackle this once you can use parity to explain why certain sums are forced to be even or odd.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "mch06_dd01_b01",
+              "prompt": "Can five odd numbers ever add up to 30?",
+              "questionType": "mcq",
+              "options": [
+                "No - the sum of five odd numbers is always odd",
+                "Yes, easily",
+                "Only if they are all equal",
+                "Only sometimes"
+              ],
+              "answer": "No - the sum of five odd numbers is always odd",
+              "solutionSteps": [
+                "Odd + odd = even; adding a fifth odd makes the total odd.",
+                "30 is even, so five odds can never reach it - a parity argument."
+              ],
+              "commonMistakes": [
+                "Trying to find an example instead of using the parity invariant."
+              ],
+              "variations": [
+                {
+                  "prompt": "What does a 'parity argument' prove?",
+                  "answer": "That some outcome is impossible, using a quantity (odd/even) that can't change",
+                  "solutionSteps": [
+                    "Parity is an invariant.",
+                    "If it can't match, the outcome is impossible."
+                  ]
+                },
+                {
+                  "prompt": "Sum of four odd numbers - odd or even?",
+                  "answer": "Even",
+                  "solutionSteps": [
+                    "Odd+odd=even, twice over.",
+                    "So four odds sum to even."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                88
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "mch06_dd01_b02",
+              "prompt": "Remove two opposite corners of a chessboard (both the same colour). Why can't dominoes tile the remaining 62 squares?",
+              "questionType": "mcq",
+              "options": [
+                "Each domino covers one black and one white square, but two same-colour squares were removed",
+                "The dominoes are too large",
+                "62 is an odd number",
+                "Corner squares are special"
+              ],
+              "answer": "Each domino covers one black and one white square, but two same-colour squares were removed",
+              "solutionSteps": [
+                "Every domino covers exactly one black and one white.",
+                "Removing two of the same colour unbalances the counts forever."
+              ],
+              "commonMistakes": [
+                "Thinking clever arranging can fix it; a parity mismatch can't be undone."
+              ],
+              "variations": [
+                {
+                  "prompt": "This impossibility is an example of what kind of argument?",
+                  "answer": "An invariant (colouring/parity) argument",
+                  "solutionSteps": [
+                    "The colour balance is the invariant.",
+                    "It can't be restored."
+                  ]
+                },
+                {
+                  "prompt": "Why does the 15-puzzle have unreachable positions?",
+                  "answer": "A parity invariant makes some arrangements impossible",
+                  "solutionSteps": [
+                    "Moves preserve a parity.",
+                    "So half the arrangements can't be reached."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                88
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 9 and in olympiad mathematics, invariant and colouring arguments become a standard technique for impossibility proofs."
         },
         {
@@ -11944,7 +12029,92 @@
           "parentConceptId": "mch06_t03_c01",
           "body": "The sequence 1, 1, 2, 3, 5, 8, 13, 21… — which Virahāṅka found counting rhythms in Sanskrit poetry centuries before Fibonacci met it counting rabbits — hides a remarkable secret. Divide each term by the one before it: 2/1 = 2, 3/2 = 1.5, 5/3 ≈ 1.667, 8/5 = 1.6, 13/8 = 1.625, 21/13 ≈ 1.615… The ratios close in on a single never-ending number, φ ≈ 1.6180339…, the golden ratio. It is the unique number that satisfies φ² = φ + 1 — the very rule the sequence itself obeys (each term is the sum of the two before). This ratio appears in the spiral of a sunflower's seeds, the arrangement of leaves that lets each catch the most light, and the proportions artists have long called pleasing. A pattern that began as a way to count poetic metres turns out to encode a constant woven through living things.",
           "prerequisite": "Tackle this once you can generate the Virahāṅka–Fibonacci numbers by adding the previous two.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "mch06_dd02_b01",
+              "prompt": "Divide each Fibonacci number by the one before it (2/1, 3/2, 5/3, 8/5, ...). The ratios approach which constant?",
+              "questionType": "mcq",
+              "options": [
+                "The golden ratio, about 1.618",
+                "Pi, about 3.14",
+                "Exactly 2",
+                "e, about 2.718"
+              ],
+              "answer": "The golden ratio, about 1.618",
+              "solutionSteps": [
+                "The successive ratios 2, 1.5, 1.667, 1.6, 1.625, ... close in on one value.",
+                "That value is the golden ratio, about 1.618."
+              ],
+              "commonMistakes": [
+                "Guessing pi or 2; the limit is the golden ratio."
+              ],
+              "variations": [
+                {
+                  "prompt": "Who found the 1,1,2,3,5,... sequence counting Sanskrit poetic metres?",
+                  "answer": "Virahanka (centuries before Fibonacci)",
+                  "solutionSteps": [
+                    "He counted rhythm patterns.",
+                    "Predating Fibonacci's rabbits."
+                  ]
+                },
+                {
+                  "prompt": "How is each Fibonacci term formed?",
+                  "answer": "By adding the two terms before it",
+                  "solutionSteps": [
+                    "1,1 then 1+1=2, 1+2=3, ...",
+                    "Sum of the previous two."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                88
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "mch06_dd02_b02",
+              "prompt": "The golden ratio phi is the unique number satisfying which equation?",
+              "questionType": "mcq",
+              "options": [
+                "phi^2 = phi + 1",
+                "phi^2 = 2 phi",
+                "phi = 2",
+                "phi^2 = phi - 1"
+              ],
+              "answer": "phi^2 = phi + 1",
+              "solutionSteps": [
+                "The Fibonacci rule (each term = sum of previous two) forces this relation.",
+                "phi satisfies phi^2 = phi + 1."
+              ],
+              "commonMistakes": [
+                "Picking phi = 2; the golden ratio is irrational, ~1.618."
+              ],
+              "variations": [
+                {
+                  "prompt": "Name one place the golden ratio appears in nature.",
+                  "answer": "Sunflower seed spirals (or leaf arrangement)",
+                  "solutionSteps": [
+                    "It optimises packing/light.",
+                    "Seen in sunflowers and phyllotaxis."
+                  ]
+                },
+                {
+                  "prompt": "Is the golden ratio a terminating decimal?",
+                  "answer": "No - it never ends (~1.6180339...)",
+                  "solutionSteps": [
+                    "It is irrational.",
+                    "So its decimal never ends or repeats."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                88
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 11 you study sequences and series formally and meet the closed-form (Binet's) formula that produces any Fibonacci number directly from φ."
         },
         {
@@ -11954,7 +12124,92 @@
           "parentConceptId": "mch06_t04_c01",
           "body": "Cryptarithms like SEND + MORE = MONEY, where each letter is a hidden digit, are solved not by guessing but by reasoning about carries and last digits — and that reasoning is the beginning of modular arithmetic, the maths of remainders. When you argue 'the units column ends in Y, so D + E and Y must leave the same remainder when divided by 10', you are working 'mod 10'. This clock-style arithmetic, where numbers wrap around after a fixed point, explains the divisibility rules you already use: a number is divisible by 9 exactly when its digit-sum is, because 10 leaves remainder 1 when divided by 9, so every digit contributes just its own value to the remainder. The same idea tells you what day of the week a date falls on (mod 7) and underlies the check-digits that catch typos in bank account and Aadhaar numbers. Puzzle-solving with digits is a friendly door into a deep and useful theory.",
           "prerequisite": "Tackle this once you can solve a simple cryptarithm by tracking the units digit and carries.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "mch06_dd03_b01",
+              "prompt": "A whole number is divisible by 9 exactly when...",
+              "questionType": "mcq",
+              "options": [
+                "The sum of its digits is divisible by 9",
+                "It ends in the digit 9",
+                "It is even",
+                "It ends in 0"
+              ],
+              "answer": "The sum of its digits is divisible by 9",
+              "solutionSteps": [
+                "10 leaves remainder 1 when divided by 9, so each digit contributes its own value mod 9.",
+                "Thus a number is divisible by 9 iff its digit-sum is."
+              ],
+              "commonMistakes": [
+                "Thinking it must end in 9; it's the digit-sum that matters."
+              ],
+              "variations": [
+                {
+                  "prompt": "Is 5832 divisible by 9?",
+                  "answer": "Yes (5+8+3+2 = 18, divisible by 9)",
+                  "solutionSteps": [
+                    "Digit-sum 18.",
+                    "18 is divisible by 9, so yes."
+                  ]
+                },
+                {
+                  "prompt": "The maths of remainders, where numbers wrap after a fixed point, is called...",
+                  "answer": "Modular arithmetic",
+                  "solutionSteps": [
+                    "Clock-style wrap-around.",
+                    "That is modular arithmetic."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                88
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "mch06_dd03_b02",
+              "prompt": "Reasoning about last digits and carries in a cryptarithm (like SEND+MORE=MONEY) is an early form of which idea?",
+              "questionType": "mcq",
+              "options": [
+                "Modular (remainder) arithmetic, e.g. working mod 10",
+                "Calculus",
+                "Coordinate geometry",
+                "Probability"
+              ],
+              "answer": "Modular (remainder) arithmetic, e.g. working mod 10",
+              "solutionSteps": [
+                "Arguing about the units digit is reasoning mod 10.",
+                "That is modular arithmetic."
+              ],
+              "commonMistakes": [
+                "Treating it as mere guessing rather than remainder reasoning."
+              ],
+              "variations": [
+                {
+                  "prompt": "Finding the day of the week for a date uses arithmetic mod what?",
+                  "answer": "Mod 7 (seven days)",
+                  "solutionSteps": [
+                    "Days repeat every 7.",
+                    "So you work mod 7."
+                  ]
+                },
+                {
+                  "prompt": "Aadhaar and bank numbers use a check digit based on this idea to do what?",
+                  "answer": "Catch typing errors",
+                  "solutionSteps": [
+                    "Modular check digits detect typos.",
+                    "A wrong digit fails the check."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                88
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In higher classes and computer science, modular arithmetic (clock arithmetic) underpins divisibility tests, calendars, and the cryptography that secures online payments."
         }
       ],
@@ -13259,7 +13514,92 @@
           "parentConceptId": "mch07_t02_c01",
           "body": "The rule that two sides of a triangle must together exceed the third — so 3 cm, 4 cm and 9 cm can never form a triangle — is more than a construction check. Read it as a statement about TRAVEL: going from A to C directly (one side) is always shorter than detouring through B (the other two sides), because if the direct path were longer, no triangle could close. This 'triangle inequality' is the defining property of distance itself, in any setting where 'distance' makes sense — straight-line geometry, the grid of city blocks, even the 'distance' between two strings of text that spell-checkers use. Mathematicians build the whole idea of a metric space on it. There is also a converse worth knowing: when one side is exactly equal to the sum of the other two, the three points have collapsed onto a single straight line — the triangle has flattened to nothing. The familiar shortcut 'cut across the corner' is this theorem in everyday clothes.",
           "prerequisite": "Tackle this once you can test three lengths to see whether they form a triangle.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "mch07_dd01_b01",
+              "prompt": "Can three segments of length 3 cm, 4 cm and 9 cm form a triangle?",
+              "questionType": "mcq",
+              "options": [
+                "No - 3 + 4 is less than 9",
+                "Yes",
+                "Only a right triangle",
+                "Only if enlarged"
+              ],
+              "answer": "No - 3 + 4 is less than 9",
+              "solutionSteps": [
+                "The triangle inequality: any two sides must together exceed the third.",
+                "3 + 4 = 7 < 9, so they can't close into a triangle."
+              ],
+              "commonMistakes": [
+                "Forgetting to check the two shortest sides against the longest."
+              ],
+              "variations": [
+                {
+                  "prompt": "Do sides 5, 6, 9 form a triangle?",
+                  "answer": "Yes (5 + 6 = 11 > 9)",
+                  "solutionSteps": [
+                    "Each pair's sum exceeds the third.",
+                    "So a triangle exists."
+                  ]
+                },
+                {
+                  "prompt": "If one side equals the sum of the other two, what shape results?",
+                  "answer": "The points are collinear (a flattened triangle)",
+                  "solutionSteps": [
+                    "The triangle collapses to a line.",
+                    "Zero area."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                104
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "mch07_dd01_b02",
+              "prompt": "The triangle inequality, read as travel, says going from A to C directly is...",
+              "questionType": "mcq",
+              "options": [
+                "Always shorter than detouring through B",
+                "Always longer than the detour",
+                "Equal to the detour",
+                "Unrelated to distance"
+              ],
+              "answer": "Always shorter than detouring through B",
+              "solutionSteps": [
+                "The direct side is shorter than the sum of the other two.",
+                "So the straight path beats the detour."
+              ],
+              "commonMistakes": [
+                "Thinking a detour could be shorter; the straight path is shortest."
+              ],
+              "variations": [
+                {
+                  "prompt": "The triangle inequality is the defining property of what concept?",
+                  "answer": "Distance (a metric)",
+                  "solutionSteps": [
+                    "Any sensible distance obeys it.",
+                    "It defines a metric space."
+                  ]
+                },
+                {
+                  "prompt": "'Cut across the corner to save time' is which theorem in everyday clothes?",
+                  "answer": "The triangle inequality",
+                  "solutionSteps": [
+                    "The diagonal beats two sides.",
+                    "That's the inequality."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                104
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 10 and beyond, the triangle inequality is a basic tool in coordinate geometry and in defining distance in any number of dimensions."
         },
         {
@@ -13269,7 +13609,92 @@
           "parentConceptId": "mch07_t04_c01",
           "body": "Classifying triangles by their angles gives you the right-angled triangle — one angle exactly 90°. This special shape obeys the most famous relation in geometry, known in India as the Bhaskara/Baudhāyana result and in the West as Pythagoras' theorem: the square on the longest side (the hypotenuse, opposite the right angle) equals the sum of the squares on the other two sides, a² + b² = c². So a triangle with legs 3 and 4 has hypotenuse 5, because 9 + 16 = 25. This single equation lets you find a distance you cannot measure directly — the height of a kite from its string length and ground distance, or the straight-line gap between two points on a map from their across-and-up separations. Reversed, it even TESTS for a right angle: if the three sides satisfy a² + b² = c², the triangle must be right-angled. Builders use this with a 3-4-5 rope to lay perfect corners.",
           "prerequisite": "Tackle this once you can classify triangles by their angles and identify a right angle.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "mch07_dd02_b01",
+              "prompt": "A right-angled triangle has legs 3 and 4. What is its hypotenuse?",
+              "questionType": "mcq",
+              "options": [
+                "5",
+                "7",
+                "6",
+                "12"
+              ],
+              "answer": "5",
+              "solutionSteps": [
+                "a^2 + b^2 = c^2, so 3^2 + 4^2 = 9 + 16 = 25.",
+                "c = sqrt(25) = 5."
+              ],
+              "commonMistakes": [
+                "Adding 3 + 4 = 7 instead of using the squares."
+              ],
+              "variations": [
+                {
+                  "prompt": "Legs 6 and 8 give what hypotenuse?",
+                  "answer": "10",
+                  "solutionSteps": [
+                    "36 + 64 = 100.",
+                    "sqrt(100) = 10."
+                  ]
+                },
+                {
+                  "prompt": "Builders use a 3-4-5 rope to do what?",
+                  "answer": "Lay an exact right angle (90 degrees) at a corner",
+                  "solutionSteps": [
+                    "3-4-5 satisfies a^2+b^2=c^2.",
+                    "So the angle is right."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                104
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "mch07_dd02_b02",
+              "prompt": "Pythagoras' theorem (the Baudhayana result) states that for a right triangle...",
+              "questionType": "mcq",
+              "options": [
+                "a^2 + b^2 = c^2, with c the hypotenuse",
+                "a + b = c",
+                "a^2 + b^2 + c^2 = 0",
+                "a x b = c"
+              ],
+              "answer": "a^2 + b^2 = c^2, with c the hypotenuse",
+              "solutionSteps": [
+                "The square on the hypotenuse equals the sum of the squares on the legs.",
+                "a^2 + b^2 = c^2."
+              ],
+              "commonMistakes": [
+                "Adding the sides instead of their squares."
+              ],
+              "variations": [
+                {
+                  "prompt": "If the three sides satisfy a^2 + b^2 = c^2, the triangle must be...",
+                  "answer": "Right-angled",
+                  "solutionSteps": [
+                    "The converse of Pythagoras.",
+                    "Equality forces a right angle."
+                  ]
+                },
+                {
+                  "prompt": "Which side is the hypotenuse?",
+                  "answer": "The longest side, opposite the right angle",
+                  "solutionSteps": [
+                    "It faces the 90-degree angle.",
+                    "And is the longest."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                104
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 10 you prove this theorem and use it constantly in coordinate geometry to compute the distance between two points."
         },
         {
@@ -13279,7 +13704,92 @@
           "parentConceptId": "mch07_t03_c02",
           "body": "An altitude is the perpendicular dropped from a vertex to the opposite side — the triangle's 'height' for that base. A striking fact, not at all obvious, is that all three altitudes of a triangle pass through a single common point, called the orthocentre. The triangle has a whole family of such special lines, and each family meets at one point: the three medians (each joining a vertex to the midpoint of the opposite side) cross at the centroid, the triangle's balance point — cut a cardboard triangle out and it will balance on a pin placed there. The three perpendicular bisectors of the sides meet at the circumcentre, the centre of the circle passing through all three corners. That so many triple-line crossings land exactly on one point each, every time, is a piece of hidden order; remarkably, the orthocentre, centroid and circumcentre always lie on one straight line, the Euler line.",
           "prerequisite": "Tackle this once you can construct a triangle and drop an altitude from a vertex.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "mch07_dd03_b01",
+              "prompt": "The three medians of a triangle all pass through a single point called the...",
+              "questionType": "mcq",
+              "options": [
+                "Centroid (the balance point)",
+                "Orthocentre",
+                "Circumcentre",
+                "Vertex"
+              ],
+              "answer": "Centroid (the balance point)",
+              "solutionSteps": [
+                "A median joins a vertex to the midpoint of the opposite side.",
+                "All three meet at the centroid, where a cardboard triangle balances."
+              ],
+              "commonMistakes": [
+                "Confusing the centroid (medians) with the orthocentre (altitudes)."
+              ],
+              "variations": [
+                {
+                  "prompt": "The three altitudes meet at which point?",
+                  "answer": "The orthocentre",
+                  "solutionSteps": [
+                    "Altitudes are perpendiculars from vertices.",
+                    "They concur at the orthocentre."
+                  ]
+                },
+                {
+                  "prompt": "Where does a cardboard triangle balance on a pin?",
+                  "answer": "At its centroid",
+                  "solutionSteps": [
+                    "The centroid is the balance point.",
+                    "Place the pin there."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                104
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "mch07_dd03_b02",
+              "prompt": "The orthocentre, centroid and circumcentre of any triangle always lie on...",
+              "questionType": "mcq",
+              "options": [
+                "One straight line (the Euler line)",
+                "A single circle",
+                "The base",
+                "No common figure"
+              ],
+              "answer": "One straight line (the Euler line)",
+              "solutionSteps": [
+                "These three centres are always collinear.",
+                "The line through them is the Euler line."
+              ],
+              "commonMistakes": [
+                "Assuming they're scattered; they always line up."
+              ],
+              "variations": [
+                {
+                  "prompt": "The three perpendicular bisectors of the sides meet at the...",
+                  "answer": "Circumcentre",
+                  "solutionSteps": [
+                    "Centre of the circle through all three vertices.",
+                    "That's the circumcentre."
+                  ]
+                },
+                {
+                  "prompt": "Is it surprising that three lines meet at exactly one point each time?",
+                  "answer": "Yes - it's a piece of hidden geometric order",
+                  "solutionSteps": [
+                    "Triple concurrence isn't obvious.",
+                    "Yet it always holds."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                104
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 9 and 10 you prove these concurrency results and use the centroid and circumcentre in coordinate geometry."
         }
       ],
@@ -14555,7 +15065,92 @@
           "parentConceptId": "mch08_t03_c01",
           "body": "You now multiply and divide positive fractions fluently. Class 8 stretches the system in a new direction: NEGATIVE fractions, giving the full set of rational numbers — every number that can be written as one integer over another, like −3/4 or 7/2. The arithmetic rules you have learned carry over unchanged; you simply also track signs. The pay-off is closure: within the rationals you may add, subtract, multiply and divide (except by zero) and the answer is ALWAYS another rational — something the whole numbers and integers could not promise (3 ÷ 4 escapes the integers). On the number line the rationals are packed infinitely densely: between any two of them, however close, lies another, found just by averaging the two. This is the number system in which most everyday calculation lives, and dividing by a fraction — your reciprocal rule — is one of the operations that makes it self-contained.",
           "prerequisite": "Tackle this once dividing by a fraction by multiplying by its reciprocal is automatic.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "mch08_dd01_b01",
+              "prompt": "A rational number is any number that can be written as...",
+              "questionType": "mcq",
+              "options": [
+                "One integer divided by another (non-zero)",
+                "A whole number only",
+                "A decimal that always ends",
+                "A negative number only"
+              ],
+              "answer": "One integer divided by another (non-zero)",
+              "solutionSteps": [
+                "Rationals are ratios of integers, like -3/4 or 7/2.",
+                "The denominator must be non-zero."
+              ],
+              "commonMistakes": [
+                "Thinking rationals must be positive or whole; they include negatives and fractions."
+              ],
+              "variations": [
+                {
+                  "prompt": "Is -3/4 a rational number?",
+                  "answer": "Yes",
+                  "solutionSteps": [
+                    "It's an integer over an integer.",
+                    "So it's rational."
+                  ]
+                },
+                {
+                  "prompt": "Between any two rationals, how do you always find another?",
+                  "answer": "Average the two",
+                  "solutionSteps": [
+                    "Their mean lies between them.",
+                    "And is also rational."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                120
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "mch08_dd01_b02",
+              "prompt": "Saying the rationals are 'closed' under division (except by zero) means...",
+              "questionType": "mcq",
+              "options": [
+                "Dividing one rational by another always gives a rational",
+                "You cannot divide rationals",
+                "The result is always a whole number",
+                "Division is forbidden"
+              ],
+              "answer": "Dividing one rational by another always gives a rational",
+              "solutionSteps": [
+                "Closure means the operation never leaves the set.",
+                "Rational / rational (non-zero) is always rational."
+              ],
+              "commonMistakes": [
+                "Confusing closure with the result being an integer."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why aren't the integers closed under division?",
+                  "answer": "3 / 4 is not an integer, so it escapes the set",
+                  "solutionSteps": [
+                    "Integers can't always divide.",
+                    "Fractions were needed."
+                  ]
+                },
+                {
+                  "prompt": "Which operation are whole numbers NOT closed under, prompting integers?",
+                  "answer": "Subtraction",
+                  "solutionSteps": [
+                    "3 - 7 has no whole-number answer.",
+                    "Negatives fix this."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                120
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 9 you place rationals alongside irrationals to build the real numbers, and prove the rationals are 'dense' on the line."
         },
         {
@@ -14565,7 +15160,92 @@
           "parentConceptId": "mch08_t02_c01",
           "body": "Reading 'one-half OF two-thirds' as ½ × ⅔ is a small phrase with enormous reach. A percentage is nothing but a fraction with denominator 100, so '20% of 350' is just 20/100 × 350 = 70 — the very same 'of-means-multiply' move. This single idea powers a huge share of real-world arithmetic: a 15% discount, 18% GST added to a bill, simple interest on a loan, the concentration of a salt solution. It also chains: a shirt marked down 20%, then a further 10% off the reduced price, is 0.90 × 0.80 = 0.72 of the original — a 28% cut, not 30%, because the second discount acts on the smaller amount. Mistaking which whole a percentage is taken 'of' is the single commonest money error people make. Master 'of means multiply' with fractions now and percentages later become almost nothing new.",
           "prerequisite": "Tackle this once 'fraction of a fraction' as multiplication feels natural.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "mch08_dd02_b01",
+              "prompt": "What is 20% of 350?",
+              "questionType": "mcq",
+              "options": [
+                "70",
+                "35",
+                "700",
+                "17.5"
+              ],
+              "answer": "70",
+              "solutionSteps": [
+                "'of' means multiply: 20/100 x 350.",
+                "= 0.2 x 350 = 70."
+              ],
+              "commonMistakes": [
+                "Computing 20% wrongly, e.g. dividing 350 by 20."
+              ],
+              "variations": [
+                {
+                  "prompt": "What is 15% of 200?",
+                  "answer": "30",
+                  "solutionSteps": [
+                    "0.15 x 200.",
+                    "= 30."
+                  ]
+                },
+                {
+                  "prompt": "A percentage is a fraction with which denominator?",
+                  "answer": "100",
+                  "solutionSteps": [
+                    "Per cent = per hundred.",
+                    "Denominator 100."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                120
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "mch08_dd02_b02",
+              "prompt": "A shirt is cut 20%, then a further 10% off the reduced price. The final price is what fraction of the original?",
+              "questionType": "mcq",
+              "options": [
+                "0.72",
+                "0.70",
+                "0.68",
+                "0.90"
+              ],
+              "answer": "0.72",
+              "solutionSteps": [
+                "After 20% off: 0.80 of original. After a further 10% off that: 0.90 x 0.80.",
+                "= 0.72, i.e. a 28% total cut."
+              ],
+              "commonMistakes": [
+                "Adding 20% + 10% = 30%; the second discount acts on the smaller amount."
+              ],
+              "variations": [
+                {
+                  "prompt": "Is two successive cuts of 20% then 10% the same as a single 30% cut?",
+                  "answer": "No - it's a 28% cut (factor 0.72)",
+                  "solutionSteps": [
+                    "Discounts compound, not add.",
+                    "0.8 x 0.9 = 0.72."
+                  ]
+                },
+                {
+                  "prompt": "The commonest money error with percentages is...",
+                  "answer": "Mistaking which whole the percentage is taken 'of'",
+                  "solutionSteps": [
+                    "The base matters.",
+                    "Wrong base gives wrong answer."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                120
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 8 you formalise percentages, profit and loss, and simple interest — all built on this one rule."
         },
         {
@@ -14575,7 +15255,92 @@
           "parentConceptId": "mch08_t01_c01",
           "body": "Multiplying a fraction by a whole number, like 5 × 1/4, rests on the idea of a unit fraction — a fraction with 1 on top, the simplest kind. Ancient Egyptian mathematicians, in the Rhind papyrus over 3500 years ago, wrote EVERY fraction as a sum of distinct unit fractions: 3/4 as 1/2 + 1/4, and 2/7 as 1/4 + 1/28. This was not mere quirkiness — it made sharing practical. To split 3 loaves among 4 people, the 1/2 + 1/4 form tells each person to take half a loaf and a quarter, an actual cutting plan, whereas '3/4 each' does not. Remarkably, every fraction can be written this way, and a simple greedy method (always subtract the largest unit fraction that fits) always works, a fact only fully proved in modern times. So the humble unit fraction you meet here was, for thousands of years, the foundation of all fraction arithmetic.",
           "prerequisite": "Tackle this once multiplying a unit fraction by a whole number is clear.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "mch08_dd03_b01",
+              "prompt": "A 'unit fraction' is a fraction whose numerator is...",
+              "questionType": "mcq",
+              "options": [
+                "1",
+                "0",
+                "Equal to the denominator",
+                "Always even"
+              ],
+              "answer": "1",
+              "solutionSteps": [
+                "A unit fraction has 1 on top, like 1/4 or 1/28.",
+                "It is the simplest kind of fraction."
+              ],
+              "commonMistakes": [
+                "Confusing unit fractions with whole numbers or with equal num/denom."
+              ],
+              "variations": [
+                {
+                  "prompt": "Is 1/28 a unit fraction?",
+                  "answer": "Yes",
+                  "solutionSteps": [
+                    "Numerator is 1.",
+                    "So it's a unit fraction."
+                  ]
+                },
+                {
+                  "prompt": "Egyptians wrote every fraction as a sum of what?",
+                  "answer": "Distinct unit fractions",
+                  "solutionSteps": [
+                    "Each different, each with 1 on top.",
+                    "E.g. 2/7 = 1/4 + 1/28."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                120
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "mch08_dd03_b02",
+              "prompt": "The Egyptians wrote 3/4 as a sum of distinct unit fractions. Which is correct?",
+              "questionType": "mcq",
+              "options": [
+                "1/2 + 1/4",
+                "1/3 + 1/4",
+                "1/2 + 1/2",
+                "1/4 + 1/4 + 1/4"
+              ],
+              "answer": "1/2 + 1/4",
+              "solutionSteps": [
+                "1/2 + 1/4 = 2/4 + 1/4 = 3/4.",
+                "And the two unit fractions are distinct."
+              ],
+              "commonMistakes": [
+                "Using 1/2 + 1/2 (not distinct, and equals 1) or repeating 1/4."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why was the 1/2 + 1/4 form practical for sharing 3 loaves among 4?",
+                  "answer": "Each person takes half a loaf and a quarter - an actual cutting plan",
+                  "solutionSteps": [
+                    "It tells you how to cut.",
+                    "'3/4 each' doesn't."
+                  ]
+                },
+                {
+                  "prompt": "The greedy method for unit fractions always subtracts what?",
+                  "answer": "The largest unit fraction that still fits",
+                  "solutionSteps": [
+                    "Then repeat on the remainder.",
+                    "It always terminates."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                120
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "These 'Egyptian fractions' connect to number theory and to the study of greedy algorithms in higher mathematics and computer science."
         }
       ],
@@ -15780,7 +16545,92 @@
           "parentConceptId": "mch09_t02_c01",
           "body": "The congruence criteria say you don't need all six measurements (3 sides, 3 angles) to pin a triangle down — just the right THREE. SSS, SAS, ASA and RHS each fix a triangle's shape and size completely, so any two triangles sharing one of these sets must be identical copies. But notice the dog that doesn't bark: SSA — two sides and a non-included angle — is NOT on the list, and for a sharp reason. Given two sides and an angle that is not between them, you can often swing the second side to land in TWO different places, producing two genuinely different triangles. This 'ambiguous case' is exactly why SSA is rejected: it fails to determine the triangle uniquely. Understanding which triples work and which fail is not memorisation — it is about how much information is just enough to remove all freedom from the figure, the heart of geometric proof.",
           "prerequisite": "Tackle this once you know the SSS, SAS, ASA and RHS criteria by name.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "mch09_dd01_b01",
+              "prompt": "Which of these is NOT a valid triangle congruence criterion?",
+              "questionType": "mcq",
+              "options": [
+                "SSA",
+                "SSS",
+                "SAS",
+                "ASA"
+              ],
+              "answer": "SSA",
+              "solutionSteps": [
+                "SSS, SAS, ASA (and RHS) each fix a triangle uniquely.",
+                "SSA does not, so it is not a valid criterion."
+              ],
+              "commonMistakes": [
+                "Assuming any three measurements work; SSA is the exception."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why does SSA fail to determine a triangle?",
+                  "answer": "Two sides and a non-included angle can give two different triangles (the ambiguous case)",
+                  "solutionSteps": [
+                    "The second side can swing to two spots.",
+                    "So the triangle isn't unique."
+                  ]
+                },
+                {
+                  "prompt": "How many of the six measurements do the valid criteria need?",
+                  "answer": "Three (the right three)",
+                  "solutionSteps": [
+                    "Not all six are needed.",
+                    "The right three suffice."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                136
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "mch09_dd01_b02",
+              "prompt": "Congruence criteria work because the right three measurements...",
+              "questionType": "mcq",
+              "options": [
+                "Remove all freedom, fixing the triangle's shape and size uniquely",
+                "Are easier to measure",
+                "Make the triangle larger",
+                "Are always angles"
+              ],
+              "answer": "Remove all freedom, fixing the triangle's shape and size uniquely",
+              "solutionSteps": [
+                "Enough information leaves no way to make a different triangle.",
+                "That's why SSS/SAS/ASA/RHS guarantee congruence."
+              ],
+              "commonMistakes": [
+                "Thinking it's about memorising letters rather than removing freedom."
+              ],
+              "variations": [
+                {
+                  "prompt": "RHS applies to which special triangle?",
+                  "answer": "A right-angled triangle",
+                  "solutionSteps": [
+                    "R = right angle.",
+                    "Hypotenuse and one side fix it."
+                  ]
+                },
+                {
+                  "prompt": "Two triangles share an SAS set. Are they congruent?",
+                  "answer": "Yes",
+                  "solutionSteps": [
+                    "SAS fixes the triangle.",
+                    "So they are identical copies."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                136
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 9 you write two-column congruence proofs, and in Class 10 the ambiguous SSA case reappears as the sine-rule's two solutions."
         },
         {
@@ -15790,7 +16640,92 @@
           "parentConceptId": "mch09_t01_c01",
           "body": "Congruent figures are exact copies: same shape AND same size. Class 10 keeps the 'same shape' but relaxes 'same size' to give SIMILAR figures — like a photo and its enlargement. In similar triangles, corresponding angles are equal and corresponding sides are in a constant ratio, the scale factor. This is far more useful than it first sounds: it is how you measure the unreachable. Hold a ruler at arm's length to find a building's height, read a map's scale to get a real distance, or work out the width of a river from the shore — all use similar triangles to turn a measurable small triangle into an unmeasurable large one sharing its angles. Congruence is the special case where the scale factor is exactly 1. So the 'exact copy' idea you study now is one rung of a ladder; loosening it to 'proportional copy' unlocks indirect measurement of the whole world.",
           "prerequisite": "Tackle this once you are comfortable with congruent figures as exact copies.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "mch09_dd02_b01",
+              "prompt": "Similar triangles (like a photo and its enlargement) have...",
+              "questionType": "mcq",
+              "options": [
+                "Equal corresponding angles and sides in a constant ratio",
+                "Equal sides only",
+                "Exactly the same size always",
+                "No fixed relationship"
+              ],
+              "answer": "Equal corresponding angles and sides in a constant ratio",
+              "solutionSteps": [
+                "Similarity keeps the shape (equal angles) but allows a scale change.",
+                "Corresponding sides share a constant scale factor."
+              ],
+              "commonMistakes": [
+                "Confusing similar (same shape) with congruent (same shape AND size)."
+              ],
+              "variations": [
+                {
+                  "prompt": "How can similar triangles measure a building's height?",
+                  "answer": "Compare it to a small triangle with the same angles (e.g. a ruler at arm's length)",
+                  "solutionSteps": [
+                    "Proportional sides scale up.",
+                    "The small triangle gives the large one."
+                  ]
+                },
+                {
+                  "prompt": "In similar triangles, what is the constant ratio of sides called?",
+                  "answer": "The scale factor",
+                  "solutionSteps": [
+                    "It scales one triangle to the other.",
+                    "That's the scale factor."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                136
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "mch09_dd02_b02",
+              "prompt": "Congruence is the special case of similarity when the scale factor is...",
+              "questionType": "mcq",
+              "options": [
+                "Exactly 1",
+                "0",
+                "2",
+                "Negative"
+              ],
+              "answer": "Exactly 1",
+              "solutionSteps": [
+                "Scale factor 1 means same size as well as same shape.",
+                "That is congruence."
+              ],
+              "commonMistakes": [
+                "Thinking congruence is unrelated to similarity; it's the scale-1 case."
+              ],
+              "variations": [
+                {
+                  "prompt": "If two figures are congruent, are they also similar?",
+                  "answer": "Yes (with scale factor 1)",
+                  "solutionSteps": [
+                    "Same shape always.",
+                    "Similarity with ratio 1."
+                  ]
+                },
+                {
+                  "prompt": "A map scale of 1:50000 is an example of what geometric idea?",
+                  "answer": "Similarity (proportional scaling)",
+                  "solutionSteps": [
+                    "Real distances scale down.",
+                    "By a constant factor."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                136
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 10 you prove similarity criteria (AA, SSS, SAS) and use them, with trigonometry, to find heights and distances."
         },
         {
@@ -15800,7 +16735,92 @@
           "parentConceptId": "mch09_t03_c01",
           "body": "You observed that an isosceles triangle's two equal sides face two equal angles, and that an equilateral triangle, with all sides equal, has all three angles equal — necessarily 60° each, since they share 180°. Class 9 proves this and, just as importantly, its CONVERSE: if two ANGLES of a triangle are equal, then the sides facing them are equal too. A statement and its converse are different claims and each needs its own proof — a lesson that runs through all of mathematics. The elegant proof of the isosceles theorem folds the triangle along the bisector of its apex angle, matching the two halves by SAS congruence so the base angles must coincide. This 'equal sides ↔ equal angles' equivalence is a workhorse: it lets you deduce unknown angles from a single tick-mark on the sides, or unknown side-lengths from matching angles, in countless later proofs.",
           "prerequisite": "Tackle this once you accept that equal sides face equal angles and equilateral angles are 60°.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "mch09_dd03_b01",
+              "prompt": "In a triangle, if two ANGLES are equal, then...",
+              "questionType": "mcq",
+              "options": [
+                "The sides facing them are equal",
+                "All three sides are equal",
+                "It must be right-angled",
+                "It is impossible"
+              ],
+              "answer": "The sides facing them are equal",
+              "solutionSteps": [
+                "This is the converse of the isosceles theorem.",
+                "Equal base angles force the opposite sides to be equal."
+              ],
+              "commonMistakes": [
+                "Forgetting that a statement and its converse each need their own proof."
+              ],
+              "variations": [
+                {
+                  "prompt": "Equal sides face equal angles - what is the converse statement?",
+                  "answer": "Equal angles face equal sides",
+                  "solutionSteps": [
+                    "Swap the roles of sides and angles.",
+                    "That's the converse."
+                  ]
+                },
+                {
+                  "prompt": "The isosceles theorem is often proved by folding along which line?",
+                  "answer": "The bisector of the apex angle",
+                  "solutionSteps": [
+                    "It matches the two halves by SAS.",
+                    "So base angles coincide."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                136
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "mch09_dd03_b02",
+              "prompt": "Each interior angle of an equilateral triangle measures...",
+              "questionType": "mcq",
+              "options": [
+                "60 degrees",
+                "90 degrees",
+                "45 degrees",
+                "180 degrees"
+              ],
+              "answer": "60 degrees",
+              "solutionSteps": [
+                "All three angles are equal and sum to 180.",
+                "So each is 180/3 = 60 degrees."
+              ],
+              "commonMistakes": [
+                "Guessing 90; equilateral angles are 60 each."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why must all angles of an equilateral triangle be equal?",
+                  "answer": "All sides are equal, and equal sides face equal angles",
+                  "solutionSteps": [
+                    "Equal sides imply equal angles.",
+                    "All three match."
+                  ]
+                },
+                {
+                  "prompt": "Three equal angles summing to 180 give what each?",
+                  "answer": "60 degrees",
+                  "solutionSteps": [
+                    "180 / 3.",
+                    "= 60."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                136
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 9 you prove both the theorem and its converse formally and use them throughout your geometry problems."
         }
       ],
@@ -17069,7 +18089,92 @@
           "parentConceptId": "mch10_t01_c02",
           "body": "Integer addition has tidy properties — it is commutative, associative, and 0 leaves a number unchanged. But the deepest reason integers exist at all is closure under subtraction. Among the whole numbers, 3 − 7 has no answer; the operation 'falls off the edge' of the system. Extending to the negatives fixes this: now EVERY subtraction has a result, because subtracting is just adding the opposite, and every integer has an opposite. Mathematicians describe this by saying the integers are 'closed' under subtraction. This is the same engine driving every expansion of number systems you meet: whole numbers couldn't always divide, so fractions were born; rationals couldn't measure a square's diagonal, so the reals arrived; reals couldn't square-root a negative, so the complex numbers of Class 11 followed. Each new system is invented to make some operation always work. The integers are the first chapter of that long, recurring story.",
           "prerequisite": "Tackle this once the properties of integer addition and 'subtract = add the opposite' are clear.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "mch10_dd01_b01",
+              "prompt": "Why were negative integers 'invented'?",
+              "questionType": "mcq",
+              "options": [
+                "So that every subtraction has an answer (closure under subtraction)",
+                "To make multiplication harder",
+                "Only for counting objects",
+                "They were never actually needed"
+              ],
+              "answer": "So that every subtraction has an answer (closure under subtraction)",
+              "solutionSteps": [
+                "Among whole numbers, 3 - 7 has no answer.",
+                "Adding negatives makes every subtraction work - closure."
+              ],
+              "commonMistakes": [
+                "Thinking negatives are just for temperatures; they complete subtraction."
+              ],
+              "variations": [
+                {
+                  "prompt": "Among whole numbers alone, what is 3 - 7?",
+                  "answer": "It has no answer (it falls off the system)",
+                  "solutionSteps": [
+                    "Whole numbers stop at 0.",
+                    "So 3 - 7 is undefined there."
+                  ]
+                },
+                {
+                  "prompt": "Each new number system is invented to make which kind of thing always work?",
+                  "answer": "Some operation (e.g. subtraction, division, square roots)",
+                  "solutionSteps": [
+                    "Closure drives the expansion.",
+                    "Each system fixes one gap."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                152
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "mch10_dd01_b02",
+              "prompt": "Fractions were invented to give closure under which operation that integers lack?",
+              "questionType": "mcq",
+              "options": [
+                "Division",
+                "Addition",
+                "Subtraction",
+                "Comparison"
+              ],
+              "answer": "Division",
+              "solutionSteps": [
+                "Integers can't always divide (3 / 4 isn't an integer).",
+                "Fractions provide closure under division."
+              ],
+              "commonMistakes": [
+                "Confusing which operation each system completes."
+              ],
+              "variations": [
+                {
+                  "prompt": "Reals were introduced because rationals couldn't do what?",
+                  "answer": "Measure a square's diagonal (sqrt 2)",
+                  "solutionSteps": [
+                    "No fraction equals sqrt(2).",
+                    "Reals fill that gap."
+                  ]
+                },
+                {
+                  "prompt": "Complex numbers arrived because reals couldn't do what?",
+                  "answer": "Take the square root of a negative number",
+                  "solutionSteps": [
+                    "No real squares to a negative.",
+                    "Complex numbers allow it."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                152
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 8 you see the same closure idea drive the rational numbers, and in Class 11 the complex numbers."
         },
         {
@@ -17079,7 +18184,92 @@
           "parentConceptId": "mch10_t02_c01",
           "body": "The sign rule (−) × (−) = (+) is easy to memorise and famously hard to believe. It is not an arbitrary decree — it is FORCED by insisting that the distributive law keep working. Watch: we know (−3) × 0 = 0. Now write 0 as (5 + (−5)), so (−3) × (5 + (−5)) = 0. Distribute: (−3)×5 + (−3)×(−5) = 0, which is (−15) + (−3)×(−5) = 0. For this to balance, (−3)×(−5) MUST equal +15 — nothing else makes the sum zero. So 'two negatives make a positive' is the only choice that lets the laws of arithmetic stay consistent. A homelier picture: removing (×) a debt (−) repeatedly leaves you richer (+). Seeing that the rule is compelled, not invented, is a first taste of how mathematicians extend definitions: you keep the old laws and let them dictate the new cases.",
           "prerequisite": "Tackle this once you can apply the sign rules for multiplying integers.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "mch10_dd02_b01",
+              "prompt": "What is (-3) x (-5)?",
+              "questionType": "mcq",
+              "options": [
+                "+15",
+                "-15",
+                "-8",
+                "+8"
+              ],
+              "answer": "+15",
+              "solutionSteps": [
+                "A negative times a negative is positive.",
+                "(-3) x (-5) = +15."
+              ],
+              "commonMistakes": [
+                "Leaving the answer negative."
+              ],
+              "variations": [
+                {
+                  "prompt": "What is (-3) x 5?",
+                  "answer": "-15",
+                  "solutionSteps": [
+                    "Negative times positive is negative.",
+                    "= -15."
+                  ]
+                },
+                {
+                  "prompt": "A homely picture: repeatedly removing a debt leaves you...",
+                  "answer": "Richer (a positive result)",
+                  "solutionSteps": [
+                    "Removing (x) a debt (-) = +.",
+                    "So negative times negative is positive."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                152
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "mch10_dd02_b02",
+              "prompt": "The rule (-) x (-) = (+) is forced by keeping which law consistent?",
+              "questionType": "mcq",
+              "options": [
+                "The distributive law",
+                "The commutative law of addition",
+                "BODMAS",
+                "No law at all"
+              ],
+              "answer": "The distributive law",
+              "solutionSteps": [
+                "Using (-3)(5 + (-5)) = 0 and distributing forces (-3)(-5) = +15.",
+                "So the rule follows from the distributive law."
+              ],
+              "commonMistakes": [
+                "Treating the sign rule as an arbitrary decree rather than a forced consequence."
+              ],
+              "variations": [
+                {
+                  "prompt": "Is the (-)(-)= (+) rule arbitrary or compelled?",
+                  "answer": "Compelled - it's the only choice that keeps arithmetic consistent",
+                  "solutionSteps": [
+                    "Other choices break the laws.",
+                    "So it's forced."
+                  ]
+                },
+                {
+                  "prompt": "(-3) x 0 equals what, the fact used in the proof?",
+                  "answer": "0",
+                  "solutionSteps": [
+                    "Anything times 0 is 0.",
+                    "Used to derive the sign rule."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                152
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 8 this same reasoning extends to multiplying and dividing negative rationals; in algebra it guarantees that expanding brackets never breaks."
         },
         {
@@ -17089,7 +18279,92 @@
           "parentConceptId": "mch10_t01_c01",
           "body": "Adding integers lives on a single number line, where direction encodes sign — right for positive, left for negative. Class 9 crosses TWO such lines at right angles, one horizontal and one vertical, to build the coordinate (Cartesian) plane named after René Descartes. Now every point is pinned by an ordered pair (x, y), and the signs you mastered with integers tell you exactly which of the four regions, or quadrants, a point lives in: (+, +) top-right, (−, +) top-left, (−, −) bottom-left, (+, −) bottom-right. This single idea — locating points by signed numbers — is what fuses algebra and geometry into coordinate geometry, lets a straight line become an equation, and underlies every graph, map grid, and pixel address on a screen. The signed number line you add on today is one axis of the plane on which all later graphing is drawn.",
           "prerequisite": "Tackle this once adding integers with same and opposite signs feels natural on the number line.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "mch10_dd03_b01",
+              "prompt": "On the coordinate plane, a point with signs (-, +) lies in which quadrant?",
+              "questionType": "mcq",
+              "options": [
+                "Top-left",
+                "Top-right",
+                "Bottom-left",
+                "Bottom-right"
+              ],
+              "answer": "Top-left",
+              "solutionSteps": [
+                "Negative x is left of the origin; positive y is above it.",
+                "So (-, +) is the top-left quadrant."
+              ],
+              "commonMistakes": [
+                "Mixing up the quadrant sign patterns."
+              ],
+              "variations": [
+                {
+                  "prompt": "Which quadrant has signs (+, +)?",
+                  "answer": "Top-right",
+                  "solutionSteps": [
+                    "Right and up.",
+                    "Top-right quadrant."
+                  ]
+                },
+                {
+                  "prompt": "A single number line becomes a plane by adding what?",
+                  "answer": "A second, perpendicular number line (axis)",
+                  "solutionSteps": [
+                    "Two axes at right angles.",
+                    "Form the coordinate plane."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                152
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "mch10_dd03_b02",
+              "prompt": "The coordinate (Cartesian) plane is named after which mathematician?",
+              "questionType": "mcq",
+              "options": [
+                "Rene Descartes",
+                "Euclid",
+                "Pythagoras",
+                "Fibonacci"
+              ],
+              "answer": "Rene Descartes",
+              "solutionSteps": [
+                "Descartes pioneered locating points by ordered pairs.",
+                "Hence 'Cartesian' coordinates."
+              ],
+              "commonMistakes": [
+                "Attributing it to Euclid or Pythagoras."
+              ],
+              "variations": [
+                {
+                  "prompt": "An ordered pair (x, y) does what?",
+                  "answer": "Pins down a unique point in the plane",
+                  "solutionSteps": [
+                    "x across, y up.",
+                    "Locating one point."
+                  ]
+                },
+                {
+                  "prompt": "Coordinate geometry fuses which two branches of maths?",
+                  "answer": "Algebra and geometry",
+                  "solutionSteps": [
+                    "Equations meet shapes.",
+                    "Lines become equations."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                152
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 9 you plot points and lines in all four quadrants, the foundation of coordinate geometry and graphing."
         }
       ],
