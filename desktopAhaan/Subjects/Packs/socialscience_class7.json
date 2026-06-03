@@ -20849,7 +20849,93 @@
           "parentConceptId": "ssch07_t01_c03",
           "body": "Rust forms when iron reacts with oxygen and water to make flaky iron oxide, which falls away and exposes fresh metal to keep corroding. The Delhi Iron Pillar escapes this through a process called passivation. The Gupta smiths used wrought iron unusually rich in phosphorus and free of sulphur and manganese. As the pillar is wetted and dried over and over, a thin, tightly bonded film of an iron-hydrogen-phosphate compound (sometimes called misawite) grows on the surface and slowly self-repairs. Unlike loose rust, this film clings fast and seals the metal beneath, blocking oxygen and water. Modern rust-proofing — from galvanising to stainless steel — uses the same principle of a stable protective surface layer, which is why metallurgists still study this 1,600-year-old object.",
           "prerequisite": "Knowing that iron normally rusts by reacting with oxygen and water.",
-          "nextStepHint": "Find out how 'stainless steel' uses a chromium-oxide layer to achieve a similar protection."
+          "nextStepHint": "Find out how 'stainless steel' uses a chromium-oxide layer to achieve a similar protection.",
+          "bonusQuestions": [
+            {
+              "id": "ssch07_dv01_b01",
+              "prompt": "Why does the Delhi Iron Pillar resist rusting away after 1,600 years?",
+              "questionType": "mcq",
+              "options": [
+                "A thin, self-repairing protective phosphate film (passivation) seals the metal",
+                "It is painted afresh each year",
+                "It is actually solid gold",
+                "It has always been kept indoors"
+              ],
+              "answer": "A thin, self-repairing protective phosphate film (passivation) seals the metal",
+              "solutionSteps": [
+                "The phosphorus-rich iron forms a tightly bonded film as it wets and dries.",
+                "Unlike flaky rust, this film clings and blocks oxygen and water."
+              ],
+              "commonMistakes": [
+                "Thinking ordinary rust simply doesn't form, rather than a protective film forming."
+              ],
+              "variations": [
+                {
+                  "prompt": "Ordinary rust keeps corroding iron because it...",
+                  "answer": "Flakes away, exposing fresh metal",
+                  "solutionSteps": [
+                    "Loose oxide.",
+                    "Doesn't protect."
+                  ]
+                },
+                {
+                  "prompt": "The Gupta smiths' iron was unusually rich in which element?",
+                  "answer": "Phosphorus",
+                  "solutionSteps": [
+                    "And low in sulphur/manganese.",
+                    "Enabling passivation."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                84
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch07_dv01_b02",
+              "prompt": "Modern rustproofing such as galvanising and stainless steel uses the same principle as the Iron Pillar:",
+              "questionType": "mcq",
+              "options": [
+                "A stable protective surface layer that seals the metal",
+                "Melting the iron repeatedly",
+                "Keeping the metal permanently wet",
+                "Removing all oxygen from the air"
+              ],
+              "answer": "A stable protective surface layer that seals the metal",
+              "solutionSteps": [
+                "A clinging protective layer blocks oxygen/water.",
+                "Galvanising and stainless steel both rely on this."
+              ],
+              "commonMistakes": [
+                "Imagining modern methods work by a totally different idea."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why do metallurgists still study a 1,600-year-old pillar?",
+                  "answer": "It demonstrates passivation, the basis of modern corrosion protection",
+                  "solutionSteps": [
+                    "Ancient applied science.",
+                    "Still instructive."
+                  ]
+                },
+                {
+                  "prompt": "Rust needs which two things to react with iron?",
+                  "answer": "Oxygen and water",
+                  "solutionSteps": [
+                    "Both required.",
+                    "The film blocks them."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                84
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch07_dv02",
@@ -20858,7 +20944,93 @@
           "parentConceptId": "ssch07_t04_c02",
           "body": "Aryabhata's astronomy needed accurate, compact calculation, and classical Indian mathematics supplied a revolutionary tool: the decimal place-value system with a symbol for zero. In place value, the same ten digits mean different amounts depending on their position (the 3 in 30 versus in 300), and zero acts as a 'place-holder' so that 205 is clearly different from 25. This made arithmetic with large numbers far easier than with clumsy systems like Roman numerals. Indian scholars passed this system to the Arab world, where it became known to Europe as the 'Hindu-Arabic numerals' we all use today. So the numbers on every calculator and phone trace back to ideas that matured in the classical age in which Aryabhata worked.",
           "prerequisite": "Comfort with writing numbers using digits and understanding that position matters.",
-          "nextStepHint": "Try writing the year 2024 in Roman numerals and see why place value with zero is so much easier."
+          "nextStepHint": "Try writing the year 2024 in Roman numerals and see why place value with zero is so much easier.",
+          "bonusQuestions": [
+            {
+              "id": "ssch07_dv02_b01",
+              "prompt": "In the decimal place-value system, what crucial role does the symbol zero play?",
+              "questionType": "mcq",
+              "options": [
+                "A place-holder, so that 205 is clearly different from 25",
+                "It simply means 'nothing useful'",
+                "It is itself a very large number",
+                "It marks the end of a number"
+              ],
+              "answer": "A place-holder, so that 205 is clearly different from 25",
+              "solutionSteps": [
+                "Zero holds an empty place so digits keep their correct value.",
+                "This makes arithmetic with large numbers easy."
+              ],
+              "commonMistakes": [
+                "Treating zero as merely 'nothing' rather than a positional place-holder."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is place value powerful: the digit 3 in 30 vs 300 means...",
+                  "answer": "Different amounts depending on position",
+                  "solutionSteps": [
+                    "Position sets value.",
+                    "The place-value idea."
+                  ]
+                },
+                {
+                  "prompt": "Indian numerals reached Europe via the Arab world and are called...",
+                  "answer": "Hindu-Arabic numerals",
+                  "solutionSteps": [
+                    "Passed through Arabic.",
+                    "Used worldwide today."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                84
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch07_dv02_b02",
+              "prompt": "Why was the decimal place-value system far better than systems like Roman numerals?",
+              "questionType": "mcq",
+              "options": [
+                "It made arithmetic with large numbers much easier",
+                "It used more symbols",
+                "It avoided the number zero",
+                "It only worked for small numbers"
+              ],
+              "answer": "It made arithmetic with large numbers much easier",
+              "solutionSteps": [
+                "Place value plus zero streamlines calculation.",
+                "Roman numerals are clumsy for big sums."
+              ],
+              "commonMistakes": [
+                "Assuming all numeral systems calculate equally well."
+              ],
+              "variations": [
+                {
+                  "prompt": "Aryabhata needed this system for what work?",
+                  "answer": "Accurate, compact astronomical calculation",
+                  "solutionSteps": [
+                    "Astronomy demands it.",
+                    "Place value helped."
+                  ]
+                },
+                {
+                  "prompt": "The numbers on every phone and calculator trace back to...",
+                  "answer": "The classical Indian decimal system",
+                  "solutionSteps": [
+                    "Via the Arab world.",
+                    "Hindu-Arabic numerals."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                84
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch07_dv03",
@@ -20867,7 +21039,93 @@
           "parentConceptId": "ssch07_t03_c04",
           "body": "The Chinese pilgrim Faxian walked across Gupta India around 400 CE and left a diary that historians prize, because it shows the empire through an outsider's eyes. He described a prosperous, peaceful land where people moved about freely, charitable rest-houses and free hospitals cared for the poor, and harsh punishments were rare. Such an account is precious — but historians do not swallow it whole. Faxian was a Buddhist monk, so he naturally noticed monasteries and charity and may have passed quickly over things that did not interest him; he also met mostly the comfortable, town-dwelling people along the pilgrim routes, not the poorest villagers. So historians 'cross-check' him against Gupta coins, inscriptions and land-grant records before accepting a claim. A foreign traveller's diary is a wonderful source precisely because it is one point of view — and a careful reader always asks whose view it is.",
           "prerequisite": "Knowing that Faxian visited India and praised Gupta society.",
-          "nextStepHint": "List one thing a foreign visitor to your town today might wrongly conclude after a short stay."
+          "nextStepHint": "List one thing a foreign visitor to your town today might wrongly conclude after a short stay.",
+          "bonusQuestions": [
+            {
+              "id": "ssch07_dv03_b01",
+              "prompt": "Why don't historians accept the pilgrim Faxian's glowing diary of Gupta India at face value?",
+              "questionType": "mcq",
+              "options": [
+                "As a Buddhist monk meeting mostly comfortable townsfolk, his account is one perspective to be cross-checked",
+                "Because he clearly lied about everything",
+                "Because he never actually came to India",
+                "Because diaries are always useless"
+              ],
+              "answer": "As a Buddhist monk meeting mostly comfortable townsfolk, his account is one perspective to be cross-checked",
+              "solutionSteps": [
+                "Faxian noticed monasteries and charity and met mainly town-dwellers.",
+                "So his is one viewpoint — valuable but to be verified."
+              ],
+              "commonMistakes": [
+                "Either swallowing the diary whole or dismissing it entirely."
+              ],
+              "variations": [
+                {
+                  "prompt": "Against what does a historian cross-check Faxian's claims?",
+                  "answer": "Gupta coins, inscriptions and land-grant records",
+                  "solutionSteps": [
+                    "Independent evidence.",
+                    "Before accepting a claim."
+                  ]
+                },
+                {
+                  "prompt": "A foreign traveller's diary is valuable precisely because it is...",
+                  "answer": "One point of view (ask whose view it is)",
+                  "solutionSteps": [
+                    "An outsider's eyes.",
+                    "A careful reader checks."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                84
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch07_dv03_b02",
+              "prompt": "Faxian described Gupta India as prosperous and peaceful, with free rest-houses and hospitals. A careful historian treats this as...",
+              "questionType": "mcq",
+              "options": [
+                "A useful but partial source needing cross-checking",
+                "Absolute, complete truth",
+                "A pure fairy tale",
+                "Irrelevant to history"
+              ],
+              "answer": "A useful but partial source needing cross-checking",
+              "solutionSteps": [
+                "It is precious evidence but reflects what one monk noticed.",
+                "Cross-checking guards against bias."
+              ],
+              "commonMistakes": [
+                "Confusing 'partial/biased' with 'worthless'."
+              ],
+              "variations": [
+                {
+                  "prompt": "Who might Faxian have overlooked along the pilgrim routes?",
+                  "answer": "The poorest village people",
+                  "solutionSteps": [
+                    "He met comfortable townsfolk.",
+                    "A gap in his view."
+                  ]
+                },
+                {
+                  "prompt": "Around when did Faxian travel across Gupta India?",
+                  "answer": "About 400 CE",
+                  "solutionSteps": [
+                    "A Chinese pilgrim.",
+                    "Gupta era."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                84
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch07_dv04",
@@ -20876,7 +21134,93 @@
           "parentConceptId": "ssch07_t03_c01",
           "body": "A quiet revolution of the Gupta age was the spread of 'land grants'. Kings rewarded brahmins, temples and officials with villages, and recorded the gift on copper plates that still survive. At first this seems generous, but look closer: many grants handed over not just the land but the right to collect its taxes and even to govern the people on it. Over generations this meant local grant-holders, not the distant king, controlled more and more of the countryside. Historians see in this the slow beginnings of a more decentralised, layered society — powerful local lords (later called sāmantas) under a weaker centre — that would shape the centuries after the Guptas. It is a good reminder that a single administrative habit, repeated for two hundred years, can reshape how an entire society is governed.",
           "prerequisite": "Knowing the Guptas made land grants recorded on copper plates.",
-          "nextStepHint": "Explain how giving away the right to collect taxes can slowly weaken a central ruler."
+          "nextStepHint": "Explain how giving away the right to collect taxes can slowly weaken a central ruler.",
+          "bonusQuestions": [
+            {
+              "id": "ssch07_dv04_b01",
+              "prompt": "Why did the Gupta-age spread of 'land grants' slowly DECENTRALISE power?",
+              "questionType": "mcq",
+              "options": [
+                "Many grants handed over the right to collect taxes and govern, so local holders, not the king, gained control",
+                "Kings always took the land back each year",
+                "The grants were too tiny to matter",
+                "Only the king could ever tax the land"
+              ],
+              "answer": "Many grants handed over the right to collect taxes and govern, so local holders, not the king, gained control",
+              "solutionSteps": [
+                "Granting tax and governing rights shifted power outward.",
+                "Over generations local lords controlled the countryside."
+              ],
+              "commonMistakes": [
+                "Seeing land grants as mere generosity, missing the power shift."
+              ],
+              "variations": [
+                {
+                  "prompt": "Powerful local grant-holders under a weaker centre were later called...",
+                  "answer": "Sāmantas",
+                  "solutionSteps": [
+                    "Local lords.",
+                    "A layered society."
+                  ]
+                },
+                {
+                  "prompt": "On what were these grants recorded, surviving today?",
+                  "answer": "Copper plates",
+                  "solutionSteps": [
+                    "Inscribed gifts.",
+                    "Primary evidence."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                84
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch07_dv04_b02",
+              "prompt": "The land-grant habit shows that, in history, a single administrative practice repeated for centuries can...",
+              "questionType": "mcq",
+              "options": [
+                "Reshape how an entire society is governed",
+                "Have no lasting effect",
+                "Only matter for one year",
+                "Be undone instantly"
+              ],
+              "answer": "Reshape how an entire society is governed",
+              "solutionSteps": [
+                "Two hundred years of grants built a decentralised, layered order.",
+                "Small habits, repeated, transform societies."
+              ],
+              "commonMistakes": [
+                "Underestimating slow, cumulative change."
+              ],
+              "variations": [
+                {
+                  "prompt": "The society that emerged had what structure?",
+                  "answer": "Powerful local lords under a weaker centre",
+                  "solutionSteps": [
+                    "Decentralised.",
+                    "Post-Gupta pattern."
+                  ]
+                },
+                {
+                  "prompt": "Did kings intend to weaken themselves by granting land?",
+                  "answer": "No — it was a slow, unintended consequence",
+                  "solutionSteps": [
+                    "Generosity with hidden cost.",
+                    "Power drained outward."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                84
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch07_dv05",
@@ -20885,7 +21229,93 @@
           "parentConceptId": "ssch07_t04_c02",
           "body": "Around 500 CE Aryabhata made a claim so bold it was centuries ahead of its time: that the Earth spins on its own axis, and that THIS is why the Sun, Moon and stars seem to march across the sky each day. To most people then, it plainly looked like the heavens moved and the Earth stood still — Aryabhata trusted reasoning over appearances. He also calculated the length of a year as 365 days, 6 hours, 12 minutes and 30 seconds, astonishingly close to the true figure. And where many believed eclipses were caused by demons swallowing the Sun and Moon, he explained them correctly as shadows: a lunar eclipse is the Earth's shadow falling on the Moon, a solar eclipse the Moon's shadow falling on the Earth. His little book, the Āryabhaṭīya, shows the Classical Age at its best — a willingness to measure, calculate and explain the world rather than simply accept old stories.",
           "prerequisite": "Knowing Aryabhata wrote the Āryabhaṭīya on mathematics and astronomy.",
-          "nextStepHint": "Find out how close Aryabhata's year-length is to the modern value, in minutes."
+          "nextStepHint": "Find out how close Aryabhata's year-length is to the modern value, in minutes.",
+          "bonusQuestions": [
+            {
+              "id": "ssch07_dv05_b01",
+              "prompt": "Aryabhata boldly claimed (around 500 CE) that the daily march of Sun, Moon and stars is really caused by...",
+              "questionType": "mcq",
+              "options": [
+                "The Earth spinning on its own axis",
+                "The Sun orbiting a fixed Earth",
+                "Demons dragging the sky",
+                "The Moon blocking the Sun"
+              ],
+              "answer": "The Earth spinning on its own axis",
+              "solutionSteps": [
+                "He trusted reasoning over appearances.",
+                "Earth's rotation explains the apparent motion of the sky."
+              ],
+              "commonMistakes": [
+                "Defaulting to the 'heavens move, Earth still' appearance."
+              ],
+              "variations": [
+                {
+                  "prompt": "Aryabhata calculated the year's length as about...",
+                  "answer": "365 days, 6 hours, 12 min, 30 sec (very close to true)",
+                  "solutionSteps": [
+                    "Remarkably accurate.",
+                    "Measured, not guessed."
+                  ]
+                },
+                {
+                  "prompt": "His ideas are recorded in which work?",
+                  "answer": "The Āryabhaṭīya",
+                  "solutionSteps": [
+                    "His little book.",
+                    "Classical-age science."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                84
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch07_dv05_b02",
+              "prompt": "Aryabhata correctly explained a lunar eclipse as...",
+              "questionType": "mcq",
+              "options": [
+                "The Earth's shadow falling on the Moon",
+                "A demon swallowing the Moon",
+                "Thick clouds hiding the Moon",
+                "The Moon running out of light"
+              ],
+              "answer": "The Earth's shadow falling on the Moon",
+              "solutionSteps": [
+                "He explained eclipses as shadows, not demons.",
+                "Lunar: Earth's shadow on Moon; solar: Moon's shadow on Earth."
+              ],
+              "commonMistakes": [
+                "Accepting the old 'demon swallows the Moon' belief."
+              ],
+              "variations": [
+                {
+                  "prompt": "A solar eclipse, by his explanation, is...",
+                  "answer": "The Moon's shadow falling on the Earth",
+                  "solutionSteps": [
+                    "Shadow geometry.",
+                    "Not a demon."
+                  ]
+                },
+                {
+                  "prompt": "Aryabhata's approach shows the Classical Age valued...",
+                  "answer": "Measuring, calculating and explaining over old stories",
+                  "solutionSteps": [
+                    "Evidence and reason.",
+                    "At its best."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                84
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch07_dv06",
@@ -20894,7 +21324,93 @@
           "parentConceptId": "ssch07_t02_c04",
           "body": "Ancient Indian history is mostly told through kings, so Prabhavati Gupta stands out. A daughter of Chandragupta II, she married into the neighbouring Vakataka royal family; when her husband died young, she became regent — ruling the Vakataka kingdom on behalf of her little sons. She was not a figurehead. She issued land grants in her own name (some of our best evidence for her comes from these inscriptions), kept the Guptas and Vakatakas firm allies, and an inscription proudly calls her the 'mother of two kings'. Her life tells us two things historians prize: that women of the period could wield real political power, and that royal MARRIAGES were a tool of diplomacy, binding neighbouring dynasties into peace. Reading a single queen's record this carefully shows how much one inscription can reveal about a whole society.",
           "prerequisite": "Knowing Prabhavati Gupta was Chandragupta II's daughter and a Vakataka regent.",
-          "nextStepHint": "Find another woman ruler in this book and compare how she came to power."
+          "nextStepHint": "Find another woman ruler in this book and compare how she came to power.",
+          "bonusQuestions": [
+            {
+              "id": "ssch07_dv06_b01",
+              "prompt": "How did Prabhavati Gupta wield real political power?",
+              "questionType": "mcq",
+              "options": [
+                "As regent, ruling the Vakataka kingdom on behalf of her young sons",
+                "As a court poet only",
+                "As a temple priestess",
+                "As a travelling trader"
+              ],
+              "answer": "As regent, ruling the Vakataka kingdom on behalf of her young sons",
+              "solutionSteps": [
+                "A daughter of Chandragupta II, she became Vakataka regent.",
+                "She issued land grants in her own name — real power."
+              ],
+              "commonMistakes": [
+                "Assuming royal women were only figureheads."
+              ],
+              "variations": [
+                {
+                  "prompt": "Our best evidence for Prabhavati comes from...",
+                  "answer": "Land-grant inscriptions issued in her own name",
+                  "solutionSteps": [
+                    "Primary records.",
+                    "In her voice."
+                  ]
+                },
+                {
+                  "prompt": "An inscription proudly calls her the...",
+                  "answer": "'Mother of two kings'",
+                  "solutionSteps": [
+                    "Her status.",
+                    "Recorded in stone."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                84
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch07_dv06_b02",
+              "prompt": "Prabhavati's marriage into the Vakataka family shows that royal marriages were used as a tool of...",
+              "questionType": "mcq",
+              "options": [
+                "Diplomacy, binding neighbouring dynasties into alliance",
+                "War only",
+                "Tax collection",
+                "Religious conversion"
+              ],
+              "answer": "Diplomacy, binding neighbouring dynasties into alliance",
+              "solutionSteps": [
+                "Her marriage kept the Guptas and Vakatakas firm allies.",
+                "Marriages cemented peace between dynasties."
+              ],
+              "commonMistakes": [
+                "Seeing royal marriage as purely personal, not political."
+              ],
+              "variations": [
+                {
+                  "prompt": "Her life tells historians women of the period could...",
+                  "answer": "Wield real political power",
+                  "solutionSteps": [
+                    "Not just figureheads.",
+                    "Documented power."
+                  ]
+                },
+                {
+                  "prompt": "How much can one queen's inscription reveal?",
+                  "answer": "A great deal about a whole society",
+                  "solutionSteps": [
+                    "Careful reading.",
+                    "Rich evidence."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                84
+              ],
+              "needsHumanReview": false
+            }
+          ]
         }
       ],
       "crossChapterRefs": [
@@ -23390,7 +23906,93 @@
           "parentConceptId": "ssch08_t03_c02",
           "body": "Historians describe how India became culturally integrated long before it was politically unified. One key mechanism was 'sacred geography': because holy sites were spread to every corner of the land (the chār dhām at the four corners, the 12 jyotirlingas, the 51 Shakti pīṭhas), the act of pilgrimage forced sustained movement across linguistic and regional boundaries. Pilgrims, traders, students and teachers travelled converging routes, exchanging goods, stories and ideas. Over centuries this circulation layered a shared sacred-cultural map over India's diversity — uniting it not by erasing differences but by connecting them. This is a powerful way to understand 'unity in diversity' as a process, not just a slogan.",
           "prerequisite": "Knowing the main pilgrimage networks (chār dhām, jyotirlingas, Shakti pīṭhas) and that routes converged.",
-          "nextStepHint": "Trace a map of ancient trade routes over a map of tīrthas and describe what the overlap shows about religion and economy."
+          "nextStepHint": "Trace a map of ancient trade routes over a map of tīrthas and describe what the overlap shows about religion and economy.",
+          "bonusQuestions": [
+            {
+              "id": "ssch08_dv01_b01",
+              "prompt": "How did 'sacred geography' help integrate India culturally, long before political unity?",
+              "questionType": "mcq",
+              "options": [
+                "Pilgrimage to sites across the land forced sustained movement, exchanging goods, stories and ideas",
+                "By a single king conquering everyone",
+                "By imposing one language",
+                "By keeping regions isolated"
+              ],
+              "answer": "Pilgrimage to sites across the land forced sustained movement, exchanging goods, stories and ideas",
+              "solutionSteps": [
+                "Holy sites in every corner drew pilgrims along converging routes.",
+                "This circulation layered a shared culture over diversity."
+              ],
+              "commonMistakes": [
+                "Thinking unity came only from conquest or one language."
+              ],
+              "variations": [
+                {
+                  "prompt": "Examples of sites spread to every corner include...",
+                  "answer": "The chār dhām, 12 jyotirlingas and 51 Shakti pīṭhas",
+                  "solutionSteps": [
+                    "Nationwide network.",
+                    "Drawing pilgrims."
+                  ]
+                },
+                {
+                  "prompt": "This integration united India by...",
+                  "answer": "Connecting differences, not erasing them",
+                  "solutionSteps": [
+                    "'Unity in diversity' as a process.",
+                    "A shared sacred map."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                96
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch08_dv01_b02",
+              "prompt": "Historians treat 'unity in diversity' best as...",
+              "questionType": "mcq",
+              "options": [
+                "A process built up over centuries by circulation and exchange, not just a slogan",
+                "A law passed once",
+                "A modern invention",
+                "An accident with no cause"
+              ],
+              "answer": "A process built up over centuries by circulation and exchange, not just a slogan",
+              "solutionSteps": [
+                "Sacred geography shows integration as a long, active process.",
+                "Pilgrims and traders wove the connections."
+              ],
+              "commonMistakes": [
+                "Treating the phrase as an empty slogan rather than a historical process."
+              ],
+              "variations": [
+                {
+                  "prompt": "Who travelled the converging pilgrimage routes?",
+                  "answer": "Pilgrims, traders, students and teachers",
+                  "solutionSteps": [
+                    "Many kinds of people.",
+                    "Exchanging much."
+                  ]
+                },
+                {
+                  "prompt": "Sacred geography is described as a kind of...",
+                  "answer": "Cultural infrastructure",
+                  "solutionSteps": [
+                    "Connecting the land.",
+                    "Before political unity."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                96
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch08_dv02",
@@ -23399,7 +24001,93 @@
           "parentConceptId": "ssch08_t05_c03",
           "body": "A striking modern development translates the sacred-geography worldview into law: granting Nature 'legal personhood'. New Zealand recognised the Maori mountain Taranaki Maunga (and earlier the Whanganui River) as legal persons with rights, represented by community guardians. Some Indian courts have made comparable moves regarding sacred rivers. The reasoning echoes David Suzuki: if a river is a 'vein of the land' or a deity rather than mere 'irrigation water', the law can defend it as it would defend a person. This connects environmental ethics, indigenous worldviews and constitutional duty — a frontier topic in law, ethics and sustainability.",
           "prerequisite": "Understanding that sacred geography exists worldwide and that how we see Nature shapes how we treat it.",
-          "nextStepHint": "Find out which Indian rivers have been the subject of court rulings on their protection, and what the rulings said."
+          "nextStepHint": "Find out which Indian rivers have been the subject of court rulings on their protection, and what the rulings said.",
+          "bonusQuestions": [
+            {
+              "id": "ssch08_dv02_b01",
+              "prompt": "In a striking modern development, New Zealand recognised the Whanganui River (and Taranaki mountain) as...",
+              "questionType": "mcq",
+              "options": [
+                "Legal persons with rights, represented by community guardians",
+                "Ordinary national parks",
+                "Private property",
+                "Sacred but with no legal status"
+              ],
+              "answer": "Legal persons with rights, represented by community guardians",
+              "solutionSteps": [
+                "They were granted legal personhood, defended like a person.",
+                "Some Indian courts have made comparable moves for sacred rivers."
+              ],
+              "commonMistakes": [
+                "Confusing legal personhood with a normal protected park."
+              ],
+              "variations": [
+                {
+                  "prompt": "The reasoning is that if a river is seen as a living being, not mere 'water', the law can...",
+                  "answer": "Defend it as it would defend a person",
+                  "solutionSteps": [
+                    "Rights for Nature.",
+                    "A legal frontier."
+                  ]
+                },
+                {
+                  "prompt": "This topic connects which fields?",
+                  "answer": "Environmental ethics, indigenous worldviews and constitutional duty",
+                  "solutionSteps": [
+                    "A frontier topic.",
+                    "Law + ethics + sustainability."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                96
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch08_dv02_b02",
+              "prompt": "Granting a river 'legal personhood' translates which older worldview into modern law?",
+              "questionType": "mcq",
+              "options": [
+                "The sacred-geography view that a river is a living/divine being, not mere irrigation water",
+                "That rivers are worthless",
+                "That only humans matter",
+                "That law cannot protect nature"
+              ],
+              "answer": "The sacred-geography view that a river is a living/divine being, not mere irrigation water",
+              "solutionSteps": [
+                "Sacred geography sees a river as a 'vein of the land' or deity.",
+                "Legal personhood lets the law defend it accordingly."
+              ],
+              "commonMistakes": [
+                "Missing the link between the sacred worldview and the legal move."
+              ],
+              "variations": [
+                {
+                  "prompt": "Have Indian courts made comparable moves?",
+                  "answer": "Yes, regarding sacred rivers",
+                  "solutionSteps": [
+                    "Parallel rulings.",
+                    "Defending rivers."
+                  ]
+                },
+                {
+                  "prompt": "Whose idea echoes here — a river as a 'vein of the land'?",
+                  "answer": "David Suzuki's environmental ethics",
+                  "solutionSteps": [
+                    "Nature as living.",
+                    "Not mere resource."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                96
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch08_dv03",
@@ -23408,7 +24096,93 @@
           "parentConceptId": "ssch08_t05_c02",
           "body": "Long before India had national parks, it had sacred groves — patches of forest that villages protected because they were the home of a local deity, where cutting trees or hunting was forbidden. There are thousands of them, known by different names region to region (kāvu in Kerala, devarakādu in Karnataka, sarna in Jharkhand, orans in Rajasthan). Ecologists today treasure these groves, because the religious 'do not touch' rule has, by accident, preserved islands of original forest. Inside them survive old-growth trees, rare medicinal plants, springs that feed streams, and animals that have vanished from the cleared land around. A sacred grove shows something important: a belief meant to honour a god can, over centuries, become one of the most effective ways a community ever found to conserve nature. Faith and ecology, here, point the same way.",
           "prerequisite": "Knowing that some forests are protected as sacred groves.",
-          "nextStepHint": "Find the local name for sacred groves in your state and one plant or animal they help protect."
+          "nextStepHint": "Find the local name for sacred groves in your state and one plant or animal they help protect.",
+          "bonusQuestions": [
+            {
+              "id": "ssch08_dv03_b01",
+              "prompt": "Why have India's 'sacred groves' preserved patches of original old-growth forest?",
+              "questionType": "mcq",
+              "options": [
+                "A religious 'do not touch' rule (the grove is a deity's home) protected them for centuries",
+                "The government fenced every one",
+                "They are all too remote to reach",
+                "Nothing grows anywhere else"
+              ],
+              "answer": "A religious 'do not touch' rule (the grove is a deity's home) protected them for centuries",
+              "solutionSteps": [
+                "Villagers forbade cutting and hunting in the deity's grove.",
+                "By accident this preserved islands of original forest."
+              ],
+              "commonMistakes": [
+                "Crediting modern parks rather than the ancient religious protection."
+              ],
+              "variations": [
+                {
+                  "prompt": "Sacred groves go by different regional names such as...",
+                  "answer": "kāvu (Kerala), devarakādu (Karnataka), sarna (Jharkhand), orans (Rajasthan)",
+                  "solutionSteps": [
+                    "Region-specific names.",
+                    "Same idea."
+                  ]
+                },
+                {
+                  "prompt": "What survives inside sacred groves?",
+                  "answer": "Old-growth trees, rare medicinal plants, springs and vanished animals",
+                  "solutionSteps": [
+                    "Preserved biodiversity.",
+                    "Treasured by ecologists."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                96
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch08_dv03_b02",
+              "prompt": "Sacred groves illustrate that...",
+              "questionType": "mcq",
+              "options": [
+                "A belief meant to honour a god can become an effective way to conserve nature",
+                "Religion and ecology always conflict",
+                "Only laws can protect forests",
+                "Old forests cannot survive"
+              ],
+              "answer": "A belief meant to honour a god can become an effective way to conserve nature",
+              "solutionSteps": [
+                "Faith-based protection preserved forest for centuries.",
+                "Here faith and ecology point the same way."
+              ],
+              "commonMistakes": [
+                "Assuming conservation requires only modern science/law."
+              ],
+              "variations": [
+                {
+                  "prompt": "Ecologists call sacred groves India's oldest...",
+                  "answer": "Nature reserves",
+                  "solutionSteps": [
+                    "Protected before parks.",
+                    "By faith."
+                  ]
+                },
+                {
+                  "prompt": "What was forbidden inside a sacred grove?",
+                  "answer": "Cutting trees or hunting",
+                  "solutionSteps": [
+                    "The deity's home.",
+                    "Strictly protected."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                96
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch08_dv04",
@@ -23417,7 +24191,93 @@
           "parentConceptId": "ssch08_t04_c02",
           "body": "The Kumbh Mela is often called the largest human gathering on Earth — tens of millions bathe at the sangam over a few weeks. But why those particular weeks, at those particular places? The timing is astronomical. The festival is fixed by the positions of Jupiter, the Sun and the Moon in the sky: the Kumbh rotates between Prayagraj, Haridwar, Ujjain and Nashik depending on which zodiac sign Jupiter has entered, with the holiest bathing days set by the Sun and Moon. This means a religious festival is really running on a calendar of planetary motion worked out by classical Indian astronomers — the same tradition that produced Aryabhata. It is a lovely example of how sacred time and exact science are woven together: to know when the next Kumbh falls, you must, in effect, read the planets.",
           "prerequisite": "Knowing the Kumbh Mela is held at river sangams and rotates between sacred cities.",
-          "nextStepHint": "Find out which planet's position decides where the next Kumbh Mela will be held."
+          "nextStepHint": "Find out which planet's position decides where the next Kumbh Mela will be held.",
+          "bonusQuestions": [
+            {
+              "id": "ssch08_dv04_b01",
+              "prompt": "What determines the exact timing and place of the Kumbh Mela?",
+              "questionType": "mcq",
+              "options": [
+                "The astronomical positions of Jupiter, the Sun and the Moon",
+                "A random draw of dates",
+                "The reigning king's order",
+                "The year's rainfall"
+              ],
+              "answer": "The astronomical positions of Jupiter, the Sun and the Moon",
+              "solutionSteps": [
+                "The Kumbh rotates between four cities by Jupiter's zodiac sign.",
+                "Holiest bathing days are set by the Sun and Moon."
+              ],
+              "commonMistakes": [
+                "Thinking the dates are arbitrary or political."
+              ],
+              "variations": [
+                {
+                  "prompt": "Between which four cities does the Kumbh rotate?",
+                  "answer": "Prayagraj, Haridwar, Ujjain and Nashik",
+                  "solutionSteps": [
+                    "By Jupiter's sign.",
+                    "Four sacred sites."
+                  ]
+                },
+                {
+                  "prompt": "So a religious festival actually runs on a calendar of...",
+                  "answer": "Planetary motion worked out by classical astronomers",
+                  "solutionSteps": [
+                    "Sacred time + exact science.",
+                    "Read the planets."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                96
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch08_dv04_b02",
+              "prompt": "The Kumbh Mela's astronomical timing shows that, in Indian tradition, sacred time and exact science are...",
+              "questionType": "mcq",
+              "options": [
+                "Woven together",
+                "Always opposed",
+                "Completely separate",
+                "A modern invention"
+              ],
+              "answer": "Woven together",
+              "solutionSteps": [
+                "To know when the next Kumbh falls, you must read the planets.",
+                "The same tradition produced Aryabhata."
+              ],
+              "commonMistakes": [
+                "Assuming religion and astronomy were unrelated."
+              ],
+              "variations": [
+                {
+                  "prompt": "The Kumbh is often called the largest...",
+                  "answer": "Human gathering on Earth",
+                  "solutionSteps": [
+                    "Tens of millions bathe.",
+                    "Over a few weeks."
+                  ]
+                },
+                {
+                  "prompt": "Which astronomical tradition underlies the timing?",
+                  "answer": "Classical Indian astronomy (the tradition of Aryabhata)",
+                  "solutionSteps": [
+                    "Planetary calculation.",
+                    "Sacred + scientific."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                96
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch08_dv05",
@@ -23426,7 +24286,93 @@
           "parentConceptId": "ssch08_t01_c02",
           "body": "The Sanskrit word tīrtha is one of the most beautiful ideas in this chapter. It originally meant a ford — a shallow place where you could safely CROSS a river — which is why so many ancient holy sites sit on riverbanks and confluences. Over time the meaning deepened: a tīrtha became any place where a person could 'cross over' from ordinary, everyday life to a higher, spiritual life. So the word carries two crossings at once — a real one over water and an inner one of the spirit — and a pilgrim who travels to a tīrtha is, in the old image, stepping from one bank of life to another. This is why the journey itself matters as much as the destination, and why difficult mountain shrines are prized: the effort of crossing is part of the meaning. Knowing the root word turns an ordinary term into a small lesson about what pilgrimage is for.",
           "prerequisite": "Knowing a tīrtha is a sacred place and a pilgrimage is a journey to one.",
-          "nextStepHint": "List three famous tīrthas that sit on a riverbank or a river confluence."
+          "nextStepHint": "List three famous tīrthas that sit on a riverbank or a river confluence.",
+          "bonusQuestions": [
+            {
+              "id": "ssch08_dv05_b01",
+              "prompt": "The Sanskrit word 'tīrtha' originally meant...",
+              "questionType": "mcq",
+              "options": [
+                "A ford — a shallow place where you could safely cross a river",
+                "A temple building",
+                "A mountain peak",
+                "A king's palace"
+              ],
+              "answer": "A ford — a shallow place where you could safely cross a river",
+              "solutionSteps": [
+                "A tīrtha first meant a river-crossing (ford).",
+                "That is why holy sites cluster on riverbanks and confluences."
+              ],
+              "commonMistakes": [
+                "Assuming it just meant 'temple' from the start."
+              ],
+              "variations": [
+                {
+                  "prompt": "Over time, 'tīrtha' came to mean a place where one can...",
+                  "answer": "'Cross over' from ordinary life to a higher, spiritual life",
+                  "solutionSteps": [
+                    "Two crossings: water and spirit.",
+                    "An inner journey."
+                  ]
+                },
+                {
+                  "prompt": "Why do so many ancient holy sites sit on riverbanks?",
+                  "answer": "The word tīrtha meant a river-crossing",
+                  "solutionSteps": [
+                    "Fords were tīrthas.",
+                    "Sacred crossings."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                96
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch08_dv05_b02",
+              "prompt": "Why are difficult mountain shrines especially prized as tīrthas?",
+              "questionType": "mcq",
+              "options": [
+                "The effort of 'crossing' is itself part of the spiritual meaning",
+                "They are cheaper to visit",
+                "They are closer to home",
+                "They have more shops"
+              ],
+              "answer": "The effort of 'crossing' is itself part of the spiritual meaning",
+              "solutionSteps": [
+                "A tīrtha is a crossing-over; the hard journey embodies it.",
+                "So the journey matters as much as the destination."
+              ],
+              "commonMistakes": [
+                "Thinking only the destination matters, not the journey."
+              ],
+              "variations": [
+                {
+                  "prompt": "'Tīrtha' carries which two crossings at once?",
+                  "answer": "A real one over water and an inner one of the spirit",
+                  "solutionSteps": [
+                    "Double meaning.",
+                    "Body and soul."
+                  ]
+                },
+                {
+                  "prompt": "So in pilgrimage, the journey matters...",
+                  "answer": "As much as the destination",
+                  "solutionSteps": [
+                    "The crossing is the point.",
+                    "Effort has meaning."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                96
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch08_dv06",
@@ -23435,7 +24381,93 @@
           "parentConceptId": "ssch08_t04_c03",
           "body": "Across the world — not just in India — high mountains are treated as sacred, and the reason is partly simple geography. A peak is the highest point a person can reach, lifted above the ordinary world and often hidden in cloud, so many cultures imagine it as a meeting place of earth and sky, a doorway toward the divine. In India this idea shapes the map of pilgrimage: shrines are deliberately placed on hilltops, and the hard climb up the peak stands for the soul's climb toward the sacred. Mount Kailash, Vaishno Devi at Katra, Tiruvannamalai and Tirumala's Lord Balaji are all examples. The same instinct appears far away — Mount Olympus for the Greeks, Mount Fuji in Japan — which suggests something deeply human: when people look for the holy, they look UP. It is a striking case of geography and belief shaping each other.",
           "prerequisite": "Knowing many Indian shrines and tīrthas sit on hilltops.",
-          "nextStepHint": "Find a sacred mountain in another country and compare why it is revered."
+          "nextStepHint": "Find a sacred mountain in another country and compare why it is revered.",
+          "bonusQuestions": [
+            {
+              "id": "ssch08_dv06_b01",
+              "prompt": "Why do many cultures worldwide treat high mountains as sacred?",
+              "questionType": "mcq",
+              "options": [
+                "A peak is lifted above the ordinary world and often hidden in cloud, feeling like a meeting of earth and sky",
+                "Mountains are warm and easy to reach",
+                "They always have rivers",
+                "They are close to cities"
+              ],
+              "answer": "A peak is lifted above the ordinary world and often hidden in cloud, feeling like a meeting of earth and sky",
+              "solutionSteps": [
+                "Height and cloud make a peak feel like a doorway to the divine.",
+                "So shrines sit on hilltops and the climb stands for the soul's ascent."
+              ],
+              "commonMistakes": [
+                "Looking for a practical reason rather than the symbolic 'meeting of earth and sky'."
+              ],
+              "variations": [
+                {
+                  "prompt": "The hard climb up a sacred peak stands for...",
+                  "answer": "The soul's climb toward the sacred",
+                  "solutionSteps": [
+                    "Effort as symbol.",
+                    "Physical = spiritual ascent."
+                  ]
+                },
+                {
+                  "prompt": "Name an Indian example of a sacred mountain/hill shrine.",
+                  "answer": "Mount Kailash (or Vaishno Devi, Tirumala)",
+                  "solutionSteps": [
+                    "Hilltop shrines.",
+                    "Pilgrimage peaks."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                96
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch08_dv06_b02",
+              "prompt": "Mount Olympus (Greece) and Mount Fuji (Japan) being sacred too suggests...",
+              "questionType": "mcq",
+              "options": [
+                "Something deeply human: when people seek the holy, they look UP",
+                "Pure coincidence with no cause",
+                "These were copied from India",
+                "It is only modern tourism"
+              ],
+              "answer": "Something deeply human: when people seek the holy, they look UP",
+              "solutionSteps": [
+                "The same instinct appears across distant cultures.",
+                "Geography and belief shape each other."
+              ],
+              "commonMistakes": [
+                "Treating the worldwide pattern as mere coincidence or borrowing."
+              ],
+              "variations": [
+                {
+                  "prompt": "This is a striking case of what two things shaping each other?",
+                  "answer": "Geography and belief",
+                  "solutionSteps": [
+                    "Peaks shape ideas; ideas mark peaks.",
+                    "Mutual influence."
+                  ]
+                },
+                {
+                  "prompt": "In India, shrines are deliberately placed where on a mountain?",
+                  "answer": "On hilltops (the climb mirrors the soul's ascent)",
+                  "solutionSteps": [
+                    "Heights chosen.",
+                    "Symbolic placement."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                96
+              ],
+              "needsHumanReview": false
+            }
+          ]
         }
       ],
       "crossChapterRefs": [
