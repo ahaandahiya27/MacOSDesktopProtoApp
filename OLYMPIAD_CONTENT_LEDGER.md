@@ -38,7 +38,10 @@ canonically: `json.dumps(d, ensure_ascii=False, indent=2) + "\n"`.
 - [x] **ch02 — Nutrition in Animals (3 topics, 6 MCQs)** — enzyme pH optima, villi surface-area math, hormonal control (gastrin/CCK/secretin).
 - [x] **ch03 — Fibre to Fabric (3 topics, 6 MCQs)** — synthetic polymers, addition vs condensation polymerisation, keratin vs fibroin.
 - [x] **ch04 — Heat (3 topics, 6 MCQs)** — thermal expansion (worked ΔL=LαΔT), specific heat / coastal climate, kinetic theory of heat.
-- [ ] ch05–ch19 (45 topics) — ~2 MCQs each. **24 Science MCQs done so far.**
+- [x] **ch05 — Acids, Bases and Salts (3 topics, 6 MCQs)** — pH scale (log), salt hydrolysis, Arrhenius/Brønsted–Lowry/Lewis theories.
+- [x] **ch06 — Physical and Chemical Changes (3 topics, 6 MCQs)** — word→symbolic equations, balancing (conservation of mass), enthalpy (exo/endothermic).
+- [x] **ch07 — Weather/Climate/Adaptations (3 topics, 6 MCQs)** — lapse rate (worked), El Niño/La Niña & the monsoon, biomes & convergent evolution.
+- [ ] ch08–ch19 (36 topics) — ~2 MCQs each. **42 Science MCQs done so far.**
 
 ### Maths (`maths_class7`, 15 chapters, 45 stretch topics)
 - [ ] mch01–mch15 — MCQ form with numeric option strings (the ladder grades MCQs only).

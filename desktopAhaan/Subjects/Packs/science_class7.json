@@ -18973,7 +18973,93 @@
           "parentConceptId": "ch05_t01_c03",
           "body": "In Class 7 you saw indicators tell us acid/base. Class 8 introduces the pH SCALE — 0 to 14. pH 0-6: acidic (lower = more acidic). pH 7: neutral (pure water). pH 8-14: basic. Each unit is 10× — pH 3 is 100× more acidic than pH 5. Common Indian-context values: lemon juice pH 2, vinegar pH 3, tomato pH 4, rain pH 5.6, milk pH 6.7, blood pH 7.4, soap pH 9, ammonia pH 11, drain cleaner pH 14. Your stomach holds the strongest natural acid on Earth (pH 2). Your blood is maintained at exactly 7.4 — outside this narrow range, you die. The whole biochemistry of life depends on pH precision. Indian agricultural soils are pH-tested before fertiliser choice.",
           "prerequisite": "Tackle after indicators basics.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch05_dd01_b01",
+              "prompt": "On the pH scale, how much more acidic is a pH 3 solution than a pH 5 solution?",
+              "questionType": "mcq",
+              "options": [
+                "100× more acidic",
+                "2× more acidic",
+                "10× more acidic",
+                "Exactly the same"
+              ],
+              "answer": "100× more acidic",
+              "solutionSteps": [
+                "Each pH unit is a 10× change in acidity.",
+                "pH 3 to pH 5 is 2 units.",
+                "10 × 10 = 100× more acidic."
+              ],
+              "commonMistakes": [
+                "Treating the pH scale as linear (pH 3 = '2 more') rather than each unit being 10×."
+              ],
+              "variations": [
+                {
+                  "prompt": "How much more acidic is pH 2 than pH 4?",
+                  "answer": "100× more acidic",
+                  "solutionSteps": [
+                    "2 units apart.",
+                    "10×10 = 100×."
+                  ]
+                },
+                {
+                  "prompt": "pH 6 vs pH 7 — how different in acidity?",
+                  "answer": "10× (pH 6 is 10× more acidic)",
+                  "solutionSteps": [
+                    "1 unit apart.",
+                    "Each unit = 10×."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                62
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch05_dd01_b02",
+              "prompt": "Human blood is held at pH 7.4 within a very narrow range. What does this tell us?",
+              "questionType": "mcq",
+              "options": [
+                "Life's biochemistry needs precise pH — stray far outside the range and you die",
+                "Blood is a strong acid",
+                "pH is irrelevant to blood",
+                "Blood has the same pH as stomach acid"
+              ],
+              "answer": "Life's biochemistry needs precise pH — stray far outside the range and you die",
+              "solutionSteps": [
+                "Enzymes and proteins work only near their optimal pH.",
+                "Blood is buffered to ~7.4; large deviations are fatal."
+              ],
+              "commonMistakes": [
+                "Thinking blood is acidic — it is slightly basic (7.4) and tightly regulated."
+              ],
+              "variations": [
+                {
+                  "prompt": "Is blood acidic, neutral or basic?",
+                  "answer": "Slightly basic (pH 7.4)",
+                  "solutionSteps": [
+                    "7.4 is just above neutral 7.",
+                    "So blood is slightly basic."
+                  ]
+                },
+                {
+                  "prompt": "Why is stomach pH (~2) so different from blood pH (~7.4)?",
+                  "answer": "Each environment is tuned to its function — strong acid digests food; blood must stay near neutral for cells",
+                  "solutionSteps": [
+                    "Different jobs need different pH.",
+                    "The body keeps them separate and regulated."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                62
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Class 10 uses logarithms to compute pH from H⁺ concentration."
         },
         {
@@ -18983,7 +19069,92 @@
           "parentConceptId": "ch05_t02_c02",
           "body": "Class 7 says salt = acid + base. Class 10 reveals a twist — not all salts dissolve to give NEUTRAL water. Salt from STRONG acid + STRONG base (NaCl from HCl + NaOH): dissolves neutral, pH 7. Salt from WEAK acid + strong base (sodium acetate from acetic acid + NaOH): dissolves BASIC, pH ~8 (the base is more dominant). Salt from strong acid + WEAK base (ammonium chloride from HCl + NH₃): dissolves ACIDIC, pH ~5. This is HYDROLYSIS — water molecules react with salt ions. Practical Indian context: alum (potash alum, used in water purification) dissolves slightly acidic — kills some bacteria. Sodium bicarbonate (baking soda) dissolves slightly basic — neutralises stomach acid in indigestion remedies.",
           "prerequisite": "Tackle after neutralisation basics.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch05_dd02_b01",
+              "prompt": "Sodium acetate is the salt of a weak acid (acetic) and a strong base (NaOH). When dissolved in water its pH is…",
+              "questionType": "mcq",
+              "options": [
+                "Basic (pH ~8)",
+                "Neutral (pH 7)",
+                "Strongly acidic (pH ~2)",
+                "Acidic (pH ~5)"
+              ],
+              "answer": "Basic (pH ~8)",
+              "solutionSteps": [
+                "Salt hydrolysis: the stronger partner dominates.",
+                "Strong base + weak acid → the base wins → basic solution (~pH 8)."
+              ],
+              "commonMistakes": [
+                "Assuming every salt dissolves neutral — only strong-acid+strong-base salts do."
+              ],
+              "variations": [
+                {
+                  "prompt": "Ammonium chloride (strong acid HCl + weak base NH₃) dissolves to give what pH?",
+                  "answer": "Acidic (~pH 5)",
+                  "solutionSteps": [
+                    "The stronger partner (acid) dominates.",
+                    "So the solution is acidic."
+                  ]
+                },
+                {
+                  "prompt": "NaCl (HCl + NaOH) dissolves to give what pH?",
+                  "answer": "Neutral (pH 7)",
+                  "solutionSteps": [
+                    "Strong acid + strong base, equal strength.",
+                    "Neither dominates → neutral."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                62
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch05_dd02_b02",
+              "prompt": "Why does baking soda (sodium bicarbonate) relieve acid indigestion?",
+              "questionType": "mcq",
+              "options": [
+                "It dissolves slightly basic and neutralises excess stomach acid",
+                "It adds more acid to the stomach",
+                "It dissolves perfectly neutral and does nothing",
+                "It is itself a strong acid"
+              ],
+              "answer": "It dissolves slightly basic and neutralises excess stomach acid",
+              "solutionSteps": [
+                "Sodium bicarbonate dissolves to a mildly basic solution.",
+                "Base neutralises excess stomach acid, easing the burn."
+              ],
+              "commonMistakes": [
+                "Thinking an antacid adds acid — it neutralises it."
+              ],
+              "variations": [
+                {
+                  "prompt": "Alum used in water purification dissolves slightly acidic. What benefit does that give?",
+                  "answer": "Slight acidity helps kill some bacteria",
+                  "solutionSteps": [
+                    "Mild acidity is hostile to some microbes.",
+                    "This aids purification."
+                  ]
+                },
+                {
+                  "prompt": "Is sodium bicarbonate acidic or basic in water?",
+                  "answer": "Slightly basic",
+                  "solutionSteps": [
+                    "It's the salt of a weak acid + strong base.",
+                    "So it dissolves basic."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                62
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Class 12 introduces buffer solutions — special mixtures of salts and weak acids that resist pH changes."
         },
         {
@@ -18993,7 +19164,91 @@
           "parentConceptId": "ch05_t01_c01",
           "body": "Class 7's acid-base definition (Arrhenius) is the simplest: acids release H⁺ in water, bases release OH⁻. Class 11 expands to BRØNSTED-LOWRY: acids DONATE H⁺ (proton); bases ACCEPT H⁺. This broader definition includes ammonia (NH₃ accepts H⁺ from water, forming NH₄⁺ — basic) which Arrhenius couldn't explain. Then LEWIS theory generalises further: acids ACCEPT an electron pair; bases DONATE one. Now even substances without H⁺ can be acids (BF₃, AlCl₃) — used in industrial chemistry. Each theory is more general. NEET tests all three. Lewis theory underpins modern catalysis, biology (enzyme-substrate binding), and even photosynthesis machinery — all involve Lewis acid-base interactions.",
           "prerequisite": "Tackle after Class 7 acid-base basics.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch05_dd03_b01",
+              "prompt": "By the Brønsted–Lowry definition, an acid is a substance that…",
+              "questionType": "mcq",
+              "options": [
+                "Donates a proton (H⁺)",
+                "Accepts a proton (H⁺)",
+                "Always releases OH⁻",
+                "Accepts an electron pair"
+              ],
+              "answer": "Donates a proton (H⁺)",
+              "solutionSteps": [
+                "Brønsted–Lowry: acid = proton (H⁺) donor; base = proton acceptor.",
+                "This is broader than Arrhenius (which only spoke of H⁺/OH⁻ in water)."
+              ],
+              "commonMistakes": [
+                "Swapping the roles — the acid donates H⁺; the base accepts it."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why can ammonia (NH₃) be called a base under Brønsted–Lowry but not easily under Arrhenius?",
+                  "answer": "It accepts a proton (forming NH₄⁺) without releasing OH⁻",
+                  "solutionSteps": [
+                    "Arrhenius bases must release OH⁻.",
+                    "NH₃ has none, but it accepts H⁺ — a Brønsted–Lowry base."
+                  ]
+                },
+                {
+                  "prompt": "Under Brønsted–Lowry, what is a base?",
+                  "answer": "A proton (H⁺) acceptor",
+                  "solutionSteps": [
+                    "Bases accept the proton an acid donates.",
+                    "That's the Brønsted–Lowry base."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                62
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch05_dd03_b02",
+              "prompt": "BF₃ has no hydrogen to donate, yet behaves as an acid. Which theory explains this?",
+              "questionType": "mcq",
+              "options": [
+                "Lewis theory — an acid accepts an electron pair",
+                "Arrhenius theory",
+                "Brønsted–Lowry theory",
+                "None — BF₃ cannot be an acid"
+              ],
+              "answer": "Lewis theory — an acid accepts an electron pair",
+              "solutionSteps": [
+                "Lewis: acid = electron-pair acceptor; base = electron-pair donor.",
+                "BF₃ accepts an electron pair, so it's a Lewis acid even with no H⁺."
+              ],
+              "commonMistakes": [
+                "Assuming all acids need H⁺ — Lewis acids don't."
+              ],
+              "variations": [
+                {
+                  "prompt": "Which acid-base theory is the most general?",
+                  "answer": "Lewis theory",
+                  "solutionSteps": [
+                    "It covers electron-pair transfers, not just protons.",
+                    "So it includes the most substances."
+                  ]
+                },
+                {
+                  "prompt": "Under Lewis theory, what is a base?",
+                  "answer": "An electron-pair donor",
+                  "solutionSteps": [
+                    "Lewis bases donate the electron pair a Lewis acid accepts."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                62
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Class 12 covers complex chemistry — almost entirely Lewis acid-base reactions."
         }
       ],
@@ -21729,7 +21984,93 @@
           "parentConceptId": "ch06_t01_c02",
           "body": "In Class 7 you described chemical changes in WORDS: 'iron + oxygen → rust'. Class 8 teaches you to write the same idea in SYMBOLS. Each element has a symbol: iron = Fe, oxygen = O, hydrogen = H, carbon = C. Compounds are made of symbols + subscripts: water = H₂O (2 hydrogens, 1 oxygen), CO₂ = 1 carbon + 2 oxygens. So 'iron + oxygen → iron oxide (rust)' becomes 4Fe + 3O₂ → 2Fe₂O₃. The numbers in front (4, 3, 2) are COEFFICIENTS — count of each molecule. Balancing equations means: count of each atom on left = count on right. (4 Fe atoms on left, 4 in 2Fe₂O₃ on right.) Symbolic equations are chemistry's universal language — chemists in Pune and Cambridge read the same equation identically.",
           "prerequisite": "Tackle after physical-vs-chemical change basics.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch06_dd01_b01",
+              "prompt": "In 4Fe + 3O₂ → 2Fe₂O₃, what do the numbers 4, 3 and 2 written in FRONT of the formulas represent?",
+              "questionType": "mcq",
+              "options": [
+                "Coefficients — how many of each molecule or formula unit",
+                "Subscripts counting atoms inside a formula",
+                "Reaction temperatures",
+                "pH values"
+              ],
+              "answer": "Coefficients — how many of each molecule or formula unit",
+              "solutionSteps": [
+                "Numbers in front are coefficients (counts of whole molecules).",
+                "Numbers below/after (subscripts) count atoms within a formula."
+              ],
+              "commonMistakes": [
+                "Confusing coefficients (in front, count molecules) with subscripts (within, count atoms)."
+              ],
+              "variations": [
+                {
+                  "prompt": "In 2H₂O, what does the small '2' after H mean?",
+                  "answer": "Two hydrogen atoms per water molecule (a subscript)",
+                  "solutionSteps": [
+                    "Subscripts count atoms in the formula.",
+                    "H₂ = 2 hydrogen atoms."
+                  ]
+                },
+                {
+                  "prompt": "In 2H₂O, what does the leading '2' mean?",
+                  "answer": "Two water molecules (a coefficient)",
+                  "solutionSteps": [
+                    "Front number = coefficient.",
+                    "It counts whole molecules."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                78
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch06_dd01_b02",
+              "prompt": "How many oxygen atoms are on the RIGHT side of 4Fe + 3O₂ → 2Fe₂O₃?",
+              "questionType": "mcq",
+              "options": [
+                "6",
+                "3",
+                "2",
+                "4"
+              ],
+              "answer": "6",
+              "solutionSteps": [
+                "Each Fe₂O₃ unit has 3 oxygen atoms.",
+                "There are 2 such units (coefficient 2).",
+                "2 × 3 = 6 oxygen atoms."
+              ],
+              "commonMistakes": [
+                "Forgetting to multiply the subscript (3) by the coefficient (2)."
+              ],
+              "variations": [
+                {
+                  "prompt": "How many oxygen atoms are on the LEFT side (3O₂)?",
+                  "answer": "6",
+                  "solutionSteps": [
+                    "O₂ has 2 O atoms.",
+                    "3 × 2 = 6 — balanced with the right side."
+                  ]
+                },
+                {
+                  "prompt": "How many Fe atoms are in 2Fe₂O₃?",
+                  "answer": "4",
+                  "solutionSteps": [
+                    "Each Fe₂O₃ has 2 Fe.",
+                    "2 × 2 = 4."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                78
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Class 9 dedicates a whole chapter to balancing equations systematically."
         },
         {
@@ -21739,7 +22080,93 @@
           "parentConceptId": "ch06_t01_c03",
           "body": "Class 8 introduces symbolic equations. Class 9 makes balancing them systematic. Rule: atoms can't appear or disappear in a chemical reaction — the SAME atoms just rearrange. So count of each element on LEFT = count on RIGHT. Example: methane burning. Unbalanced: CH₄ + O₂ → CO₂ + H₂O. Count: 1 C left, 1 C right ✓; 4 H left, 2 H right ✗; 2 O left, 3 O right ✗. Multiply H₂O by 2: CH₄ + O₂ → CO₂ + 2H₂O. Now H balanced. O count: 2 left, 4 right (2 from CO₂ + 2 from 2H₂O). Multiply O₂ by 2: CH₄ + 2O₂ → CO₂ + 2H₂O. ✓ all balanced. India's MS-Chemistry students train hundreds of these — it's the foundation of every chemistry calculation, including the chemistry behind Bhopal gas tragedy investigations.",
           "prerequisite": "Tackle after symbolic equations.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch06_dd02_b01",
+              "prompt": "Balance the combustion of methane: CH₄ + O₂ → CO₂ + H₂O. The correctly balanced equation is…",
+              "questionType": "mcq",
+              "options": [
+                "CH₄ + 2O₂ → CO₂ + 2H₂O",
+                "CH₄ + O₂ → CO₂ + H₂O",
+                "CH₄ + 3O₂ → CO₂ + 2H₂O",
+                "2CH₄ + O₂ → CO₂ + H₂O"
+              ],
+              "answer": "CH₄ + 2O₂ → CO₂ + 2H₂O",
+              "solutionSteps": [
+                "Balance H: 4 on left needs 2 H₂O on right.",
+                "Now O on right = 2 (CO₂) + 2 (2H₂O) = 4.",
+                "So O₂ must be 2 on the left: CH₄ + 2O₂ → CO₂ + 2H₂O."
+              ],
+              "commonMistakes": [
+                "Stopping after balancing H without rechecking O."
+              ],
+              "variations": [
+                {
+                  "prompt": "After balancing H with 2H₂O, how many O atoms are on the right?",
+                  "answer": "4",
+                  "solutionSteps": [
+                    "CO₂ has 2 O, 2H₂O has 2 O.",
+                    "Total 4 O atoms."
+                  ]
+                },
+                {
+                  "prompt": "How many O₂ molecules supply 4 oxygen atoms?",
+                  "answer": "2",
+                  "solutionSteps": [
+                    "Each O₂ = 2 O atoms.",
+                    "2 × 2 = 4."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                78
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch06_dd02_b02",
+              "prompt": "Why must every chemical equation be balanced?",
+              "questionType": "mcq",
+              "options": [
+                "Atoms are neither created nor destroyed — they only rearrange (conservation of mass)",
+                "Because chemists prefer round numbers",
+                "To make the equation shorter",
+                "So that energy, not atoms, is conserved"
+              ],
+              "answer": "Atoms are neither created nor destroyed — they only rearrange (conservation of mass)",
+              "solutionSteps": [
+                "Conservation of mass: total atoms of each element are unchanged.",
+                "So each element's count must match on both sides."
+              ],
+              "commonMistakes": [
+                "Confusing conservation of MASS/atoms with conservation of energy."
+              ],
+              "variations": [
+                {
+                  "prompt": "In a reaction, where do the product atoms come from?",
+                  "answer": "From the reactant atoms, rearranged",
+                  "solutionSteps": [
+                    "No atoms are added.",
+                    "Reactant atoms regroup into products."
+                  ]
+                },
+                {
+                  "prompt": "If 4 Fe atoms react, how many Fe atoms appear in the products?",
+                  "answer": "4",
+                  "solutionSteps": [
+                    "Atoms are conserved.",
+                    "The same 4 Fe atoms end up in the products."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                78
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Class 11 introduces stoichiometry — calculating exact masses needed for a reaction using balanced equations."
         },
         {
@@ -21749,7 +22176,92 @@
           "parentConceptId": "ch06_t01_c02",
           "body": "Class 7 says chemical changes often release heat (fireworks, burning). Class 11 quantifies this as ENTHALPY OF REACTION (ΔH). Exothermic reactions: ΔH negative (releases heat). Combustion of methane: ΔH = -890 kJ/mol — that's a LOT. Endothermic: ΔH positive (absorbs heat). Photosynthesis: ΔH = +2870 kJ/mol of glucose (absorbs energy from sunlight). Sodium thiosulphate dissolving in water: endothermic — instant cold pack! Calcium chloride dissolving: exothermic — instant heat pack! Indian industries use these in different products. The whole chemical industry is built on managing reaction enthalpies — controlling whether energy is released or required. Saving and using that energy is the engineering art.",
           "prerequisite": "Tackle after Class 9 balancing.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch06_dd03_b01",
+              "prompt": "Methane combustion has ΔH = −890 kJ/mol. A reaction with a NEGATIVE ΔH is…",
+              "questionType": "mcq",
+              "options": [
+                "Exothermic — it releases heat",
+                "Endothermic — it absorbs heat",
+                "Neither exothermic nor endothermic",
+                "Always explosive"
+              ],
+              "answer": "Exothermic — it releases heat",
+              "solutionSteps": [
+                "Negative ΔH means the system loses energy to the surroundings.",
+                "Releasing heat = exothermic."
+              ],
+              "commonMistakes": [
+                "Mixing the sign convention — negative ΔH is heat RELEASED (exothermic)."
+              ],
+              "variations": [
+                {
+                  "prompt": "Photosynthesis has ΔH = +2870 kJ/mol. Is it exo- or endothermic?",
+                  "answer": "Endothermic (it absorbs energy)",
+                  "solutionSteps": [
+                    "Positive ΔH = energy absorbed.",
+                    "Sunlight supplies that energy."
+                  ]
+                },
+                {
+                  "prompt": "Does an exothermic reaction make its surroundings warmer or cooler?",
+                  "answer": "Warmer",
+                  "solutionSteps": [
+                    "It releases heat to the surroundings.",
+                    "So they warm up."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                78
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch06_dd03_b02",
+              "prompt": "An instant COLD pack works by dissolving sodium thiosulphate in water. That dissolving must be…",
+              "questionType": "mcq",
+              "options": [
+                "Endothermic — it absorbs heat, so the pack feels cold",
+                "Exothermic — it releases heat",
+                "Neither — temperature stays the same",
+                "A nuclear reaction"
+              ],
+              "answer": "Endothermic — it absorbs heat, so the pack feels cold",
+              "solutionSteps": [
+                "A cold pack gets cold by drawing heat from its surroundings.",
+                "That means the process absorbs heat — endothermic."
+              ],
+              "commonMistakes": [
+                "Assuming all dissolving releases heat — some absorb it."
+              ],
+              "variations": [
+                {
+                  "prompt": "An instant HEAT pack uses calcium chloride dissolving. Is that exo- or endothermic?",
+                  "answer": "Exothermic (releases heat)",
+                  "solutionSteps": [
+                    "The pack gets hot.",
+                    "So it releases heat — exothermic."
+                  ]
+                },
+                {
+                  "prompt": "If dissolving a salt makes the beaker feel cold, the process is…",
+                  "answer": "Endothermic",
+                  "solutionSteps": [
+                    "Cold means heat was absorbed from the water.",
+                    "That's endothermic."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                78
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "JEE and Class 12 explore Hess's Law — calculating ΔH from a series of steps."
         }
       ],
@@ -24422,7 +24934,91 @@
           "parentConceptId": "ch07_t01_c02",
           "body": "In Class 7 you learned that mountains are colder because they're higher. Class 9 quantifies this. The atmosphere has FOUR layers — troposphere (0-12 km, where weather happens), stratosphere (12-50 km, where ozone lives), mesosphere, thermosphere. In the troposphere, temperature drops at a steady rate called the LAPSE RATE: about 6.5°C per kilometre of altitude. So at Manali (2050 m), it's roughly 6.5 × 2 = 13°C cooler than Delhi at sea level. At Mount Everest base camp (5400 m), 35°C cooler than coastal Mumbai. Why does this happen? As air rises, atmospheric pressure decreases, and rising air expands. Expansion costs energy — that energy comes from the air's own heat, so it cools. Same physics that makes a deodorant can feel cold when you press it (gas expanding rapidly).",
           "prerequisite": "Tackle this after you're comfortable with how climate varies by location.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch07_dd01_b01",
+              "prompt": "The tropospheric lapse rate is about 6.5°C per km. Manali sits near 2000 m. From the lapse rate alone, roughly how much cooler is it than sea level?",
+              "questionType": "mcq",
+              "options": [
+                "About 13°C cooler",
+                "About 6.5°C cooler",
+                "About 26°C cooler",
+                "No cooler at all"
+              ],
+              "answer": "About 13°C cooler",
+              "solutionSteps": [
+                "Cooling = lapse rate × altitude.",
+                "6.5°C/km × 2 km = 13°C cooler."
+              ],
+              "commonMistakes": [
+                "Forgetting to multiply the rate by the altitude in km."
+              ],
+              "variations": [
+                {
+                  "prompt": "At Everest base camp (~5400 m), roughly how much cooler than sea level?",
+                  "answer": "About 35°C cooler",
+                  "solutionSteps": [
+                    "6.5 × 5.4 ≈ 35°C.",
+                    "That's the lapse-rate cooling."
+                  ]
+                },
+                {
+                  "prompt": "Two hill stations at 1000 m and 3000 m — which is cooler and by how much more?",
+                  "answer": "The 3000 m one, ~13°C cooler than the 1000 m one",
+                  "solutionSteps": [
+                    "Difference 2000 m.",
+                    "6.5 × 2 = 13°C cooler."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                90
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch07_dd01_b02",
+              "prompt": "Why does air cool as it rises, producing the lapse rate?",
+              "questionType": "mcq",
+              "options": [
+                "As air rises, pressure drops, the air expands, and expansion uses up its own heat energy",
+                "Because the Sun is farther away at altitude",
+                "Because mountain rock is cold",
+                "Because there is less oxygen up high"
+              ],
+              "answer": "As air rises, pressure drops, the air expands, and expansion uses up its own heat energy",
+              "solutionSteps": [
+                "Lower pressure aloft lets rising air expand.",
+                "Expansion does work using the air's internal energy, so it cools."
+              ],
+              "commonMistakes": [
+                "Blaming distance to the Sun or low oxygen — it's expansion cooling."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why does a deodorant can feel cold when sprayed?",
+                  "answer": "The gas expands rapidly, using its own energy and cooling — same physics as rising air",
+                  "solutionSteps": [
+                    "Rapid expansion costs energy.",
+                    "Energy comes from the gas's heat, so it cools."
+                  ]
+                },
+                {
+                  "prompt": "In which atmospheric layer does this lapse-rate cooling and weather occur?",
+                  "answer": "The troposphere",
+                  "solutionSteps": [
+                    "Weather and the steady lapse rate occur in the troposphere (0–12 km)."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                90
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Class 11 explores why this lapse rate breaks down at high altitudes in the stratosphere — ozone heats the air, reversing the pattern."
         },
         {
@@ -24432,7 +25028,92 @@
           "parentConceptId": "ch07_t01_c02",
           "body": "In Class 7 you learned that monsoons bring India's rain. Class 11 reveals that monsoons can FAIL — and the cause sits 12,000 km away in the Pacific Ocean. EL NIÑO: every 3-7 years, surface waters in the eastern Pacific (off Peru) warm dramatically (~2°C above normal). This shifts global wind patterns — including the jet stream that drives the Indian monsoon. Result: weaker monsoon over India, often a drought year. 2009 and 2015 were strong El Niño years; both saw deficient Indian rainfall and food price spikes. LA NIÑA is the opposite — cooler-than-normal Pacific waters, often stronger monsoon. Indian meteorologists at IMD Pune now forecast monsoons partly based on Pacific sea surface temperatures measured by satellite. Climate is a single global system — what happens in Lima can determine what happens in Lucknow.",
           "prerequisite": "Tackle this after you're comfortable with monsoon basics.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch07_dd02_b01",
+              "prompt": "India's monsoon was deficient in strong El Niño years like 2009 and 2015. Where does El Niño physically originate?",
+              "questionType": "mcq",
+              "options": [
+                "Warming of the eastern Pacific Ocean (off Peru)",
+                "Cooling of the Bay of Bengal",
+                "Dust storms over the Thar Desert",
+                "Snowmelt in the Himalayas"
+              ],
+              "answer": "Warming of the eastern Pacific Ocean (off Peru)",
+              "solutionSteps": [
+                "El Niño = abnormal warming of the eastern Pacific.",
+                "It shifts global winds/jet stream, weakening the Indian monsoon."
+              ],
+              "commonMistakes": [
+                "Looking for the cause locally — El Niño sits ~12,000 km away in the Pacific."
+              ],
+              "variations": [
+                {
+                  "prompt": "How can an ocean event off Peru affect rain over Lucknow?",
+                  "answer": "Climate is one global system — Pacific warming shifts winds that steer India's monsoon",
+                  "solutionSteps": [
+                    "The jet stream links them.",
+                    "Pacific changes propagate to the monsoon."
+                  ]
+                },
+                {
+                  "prompt": "How often does El Niño typically recur?",
+                  "answer": "Every 3–7 years",
+                  "solutionSteps": [
+                    "It's an irregular multi-year cycle.",
+                    "Roughly every 3–7 years."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                90
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch07_dd02_b02",
+              "prompt": "La Niña, the opposite phase of El Niño, is associated with…",
+              "questionType": "mcq",
+              "options": [
+                "Cooler Pacific waters and often a stronger Indian monsoon",
+                "Warmer Pacific waters and drought in India",
+                "No effect on the monsoon at all",
+                "An even stronger El Niño"
+              ],
+              "answer": "Cooler Pacific waters and often a stronger Indian monsoon",
+              "solutionSteps": [
+                "La Niña = cooler-than-normal eastern Pacific.",
+                "This phase often strengthens the Indian monsoon."
+              ],
+              "commonMistakes": [
+                "Confusing La Niña (cool, wetter monsoon) with El Niño (warm, drought-prone)."
+              ],
+              "variations": [
+                {
+                  "prompt": "Which phase tends to bring drought risk to India?",
+                  "answer": "El Niño",
+                  "solutionSteps": [
+                    "El Niño weakens the monsoon.",
+                    "That raises drought risk."
+                  ]
+                },
+                {
+                  "prompt": "IMD now forecasts the monsoon partly from what Pacific measurement?",
+                  "answer": "Sea surface temperatures",
+                  "solutionSteps": [
+                    "Satellites measure Pacific SSTs.",
+                    "These signal El Niño/La Niña phase."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                90
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "NEET / climate science: El Niño is part of the ENSO (El Niño Southern Oscillation) — Earth's biggest year-to-year climate driver."
         },
         {
@@ -24442,7 +25123,92 @@
           "parentConceptId": "ch07_t01_c02",
           "body": "In Class 7 you saw climates differ (polar, tropical, etc.). NEET expects you to know the SIX major terrestrial biomes — large ecosystems defined by climate. (1) Tropical rainforest (Western Ghats, Amazon) — hot, wet, biodiverse. (2) Temperate deciduous forest (parts of Himachal) — moderate temperature, seasonal trees. (3) Grassland (savannas of Africa, Indian terai). (4) Desert (Thar, Sahara) — low rainfall, extreme temperature swings. (5) Tundra (Ladakh winter, Arctic) — frozen, treeless. (6) Taiga (boreal Russia, Canada) — coniferous forests. Each biome has signature animal and plant adaptations. The same RAINFALL + TEMPERATURE conditions create the same biome across continents — convergent evolution. Indian Western Ghats and South American Amazon look similar despite ZERO direct connection.",
           "prerequisite": "Tackle this after you're comfortable with the polar/tropical adaptation examples in Class 7.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch07_dd03_b01",
+              "prompt": "The Western Ghats and the Amazon look strikingly similar despite no land connection. Why?",
+              "questionType": "mcq",
+              "options": [
+                "The same rainfall + temperature produce the same biome (convergent evolution)",
+                "They were physically joined in the past",
+                "Animals regularly migrate between them",
+                "Pure coincidence with no underlying cause"
+              ],
+              "answer": "The same rainfall + temperature produce the same biome (convergent evolution)",
+              "solutionSteps": [
+                "A biome is defined by its climate (rainfall + temperature).",
+                "Similar climates create similar biomes on different continents — convergence."
+              ],
+              "commonMistakes": [
+                "Assuming similarity must mean a past land connection."
+              ],
+              "variations": [
+                {
+                  "prompt": "What two climate factors mainly define a biome?",
+                  "answer": "Rainfall and temperature",
+                  "solutionSteps": [
+                    "These set what can live there.",
+                    "Together they define the biome."
+                  ]
+                },
+                {
+                  "prompt": "Name one biome found in India.",
+                  "answer": "Tropical rainforest (Western Ghats) / desert (Thar) / tundra (Ladakh)",
+                  "solutionSteps": [
+                    "India spans several biomes.",
+                    "Examples: rainforest, desert, tundra."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                90
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch07_dd03_b02",
+              "prompt": "Which biome is defined by low rainfall and extreme day-night temperature swings?",
+              "questionType": "mcq",
+              "options": [
+                "Desert (e.g. Thar, Sahara)",
+                "Tropical rainforest",
+                "Tundra",
+                "Taiga"
+              ],
+              "answer": "Desert (e.g. Thar, Sahara)",
+              "solutionSteps": [
+                "Deserts get little rain and have large temperature swings.",
+                "Thar and Sahara are classic examples."
+              ],
+              "commonMistakes": [
+                "Confusing desert (hot, dry, swinging) with tundra (cold, frozen)."
+              ],
+              "variations": [
+                {
+                  "prompt": "Which biome is frozen and treeless?",
+                  "answer": "Tundra",
+                  "solutionSteps": [
+                    "Tundra is frozen year-round and treeless.",
+                    "E.g. Arctic, Ladakh winter."
+                  ]
+                },
+                {
+                  "prompt": "Which biome is hot, wet and the most biodiverse?",
+                  "answer": "Tropical rainforest",
+                  "solutionSteps": [
+                    "High rainfall + warmth → huge biodiversity.",
+                    "E.g. Western Ghats, Amazon."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                90
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Marine biomes (coral reefs, deep sea, open ocean) parallel terrestrial ones — Class 12 ecology expands on this."
         }
       ],
