@@ -47,7 +47,10 @@ canonically: `json.dumps(d, ensure_ascii=False, indent=2) + "\n"`.
 - [x] **ch11 — Transportation in Animals and Plants (3 topics, 6 MCQs)** — heart chambers/double circulation, transpiration pull (cohesion-tension), nephron filtration math.
 - [x] **ch12 — Reproduction in Plants (3 topics, 6 MCQs)** — asexual vs sexual trade-offs, Mendel's laws & 3:1 ratio, double fertilisation/endosperm.
 - [x] **ch13 — Motion and Time (3 topics, 6 MCQs)** — speed-time graphs (area=distance), three equations of motion (worked), pendulum T=2π√(L/g).
-- [ ] ch14–ch19 (18 topics) — ~2 MCQs each. **78 Science MCQs done so far.**
+- [x] **ch14 — Electric Current and its Effect (3 topics, 6 MCQs)** — Ohm's law (worked I=V/R), series vs parallel wiring, electromagnetic induction.
+- [x] **ch15 — Light (3 topics, 6 MCQs)** — lens formula (worked image position), total internal reflection / optical fibres, wave optics (diffraction & interference).
+- [x] **ch16 — Water: A Precious Resource (3 topics, 6 MCQs)** — aquifer mechanics (porosity vs permeability), groundwater budget as a bank account, drip vs flood efficiency.
+- [ ] ch17–ch19 (9 topics) — ~2 MCQs each. **96 Science MCQs done so far.**
 
 **Tooling note:** inject scripts use a variadic `V(p,a,*steps)` helper so step strings can't be mis-bracketed (the earlier source of two SyntaxErrors). `ast.parse` the inject script before running.
 

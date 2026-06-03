@@ -44943,7 +44943,92 @@
           "parentConceptId": "ch14_t01_c01",
           "body": "Class 7 says current flows through circuits. Class 9 quantifies it with OHM'S LAW: V = I × R. Voltage (V, volts) = Current (I, amperes) × Resistance (R, ohms). Example: a 12V battery connected to a 4Ω resistor gives current I = V/R = 12/4 = 3 A. Double the voltage → double the current (for same R). Double the resistance → halve the current (for same V). This single formula governs every electrical device — phone charger, fan, fridge. Ohm's law isn't a 'law of nature' like gravity; some devices (diodes, bulbs at high power) deviate. But for resistors and most household wiring, it holds beautifully. Indian electricians use this to size wires — too-thin wire = too much resistance = wasted heat = fire risk.",
           "prerequisite": "Tackle after Class 7 circuit basics.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch14_dd01_b01",
+              "prompt": "A 12 V battery is connected across a 4 ohm resistor. By Ohm's law (V = I x R), the current is...",
+              "questionType": "mcq",
+              "options": [
+                "3 A",
+                "48 A",
+                "0.33 A",
+                "16 A"
+              ],
+              "answer": "3 A",
+              "solutionSteps": [
+                "Ohm's law: I = V / R.",
+                "I = 12 V / 4 ohm = 3 A."
+              ],
+              "commonMistakes": [
+                "Multiplying V x R instead of dividing."
+              ],
+              "variations": [
+                {
+                  "prompt": "Same 12 V battery across an 8 ohm resistor. What current flows?",
+                  "answer": "1.5 A",
+                  "solutionSteps": [
+                    "I = V/R = 12/8.",
+                    "That is 1.5 A."
+                  ]
+                },
+                {
+                  "prompt": "In V = I x R, which quantity is measured in ohms?",
+                  "answer": "Resistance (R)",
+                  "solutionSteps": [
+                    "Volts measure V, amperes measure I.",
+                    "Ohms measure resistance R."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                172
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch14_dd01_b02",
+              "prompt": "For a fixed resistance, what happens to the current if you double the voltage?",
+              "questionType": "mcq",
+              "options": [
+                "It doubles",
+                "It halves",
+                "It stays the same",
+                "It quarters"
+              ],
+              "answer": "It doubles",
+              "solutionSteps": [
+                "I = V / R with R fixed.",
+                "Doubling V doubles I."
+              ],
+              "commonMistakes": [
+                "Thinking current is unchanged or that it halves."
+              ],
+              "variations": [
+                {
+                  "prompt": "For a fixed voltage, what happens to current if you double the resistance?",
+                  "answer": "It halves",
+                  "solutionSteps": [
+                    "I = V/R with V fixed.",
+                    "Doubling R halves I."
+                  ]
+                },
+                {
+                  "prompt": "Is Ohm's law an exact law of nature for every device?",
+                  "answer": "No, some devices (diodes, bulbs at high power) deviate",
+                  "solutionSteps": [
+                    "It holds well for resistors and wiring.",
+                    "But not for all components."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                172
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Class 10 covers series and parallel circuits — how to combine multiple Ohm's-law components."
         },
         {
@@ -44953,7 +45038,92 @@
           "parentConceptId": "ch14_t01_c01",
           "body": "Class 9 introduces V=IR for one resistor. Class 10 builds circuits with multiple. SERIES: resistors end-to-end. Same current through all. Total R = R₁ + R₂ + R₃. If one breaks, ALL stop (old Christmas lights). PARALLEL: resistors side-by-side, each with full voltage. Total R = 1 / (1/R₁ + 1/R₂ + ...) — always LESS than smallest. If one breaks, others keep working. Indian household wiring is PARALLEL — your fridge keeps running when you flip a light off. Each bulb gets full 230V; switches independently. The main fuse protects the whole house from total current exceeding safe limit. Why solar panels are wired in series (boost voltage) but inverters connect in parallel (boost current) — engineering trade-offs.",
           "prerequisite": "Tackle after Class 9 Ohm's law.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch14_dd02_b01",
+              "prompt": "Why is household wiring done in parallel rather than in series?",
+              "questionType": "mcq",
+              "options": [
+                "Each device gets the full voltage and switches independently, and one failing doesn't stop the others",
+                "It uses much less wire",
+                "Series wiring is illegal",
+                "Parallel gives each device more voltage than the supply"
+              ],
+              "answer": "Each device gets the full voltage and switches independently, and one failing doesn't stop the others",
+              "solutionSteps": [
+                "In parallel, every device sees the full mains voltage.",
+                "Devices switch independently and a failure doesn't break the rest."
+              ],
+              "commonMistakes": [
+                "Thinking parallel boosts voltage above the supply; it just shares the same voltage."
+              ],
+              "variations": [
+                {
+                  "prompt": "In old series Christmas lights, why did all bulbs go out when one failed?",
+                  "answer": "Series shares one current path, so a break stops every bulb",
+                  "solutionSteps": [
+                    "Series is a single loop.",
+                    "One break opens the whole circuit."
+                  ]
+                },
+                {
+                  "prompt": "In a parallel circuit, if one bulb burns out, what happens to the others?",
+                  "answer": "They keep working",
+                  "solutionSteps": [
+                    "Each has its own path.",
+                    "So others are unaffected."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                172
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch14_dd02_b02",
+              "prompt": "Two resistors connected in series have a total resistance equal to...",
+              "questionType": "mcq",
+              "options": [
+                "R1 + R2 (the sum)",
+                "Less than the smaller one",
+                "1 / (1/R1 + 1/R2)",
+                "Zero"
+              ],
+              "answer": "R1 + R2 (the sum)",
+              "solutionSteps": [
+                "In series, resistances add directly.",
+                "Total R = R1 + R2."
+              ],
+              "commonMistakes": [
+                "Using the parallel formula for a series circuit."
+              ],
+              "variations": [
+                {
+                  "prompt": "Is the total resistance of a parallel combination more or less than the smallest resistor?",
+                  "answer": "Less than the smallest",
+                  "solutionSteps": [
+                    "Parallel paths add conductance.",
+                    "Total R is below the smallest branch."
+                  ]
+                },
+                {
+                  "prompt": "In a series circuit, is the current the same through every resistor?",
+                  "answer": "Yes",
+                  "solutionSteps": [
+                    "There is one path.",
+                    "So the same current flows through all."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                172
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "JEE tests complex networks — Kirchhoff's laws extend Ohm's law to nodes and loops."
         },
         {
@@ -44963,7 +45133,92 @@
           "parentConceptId": "ch14_t03_c02",
           "body": "Class 7 says current → magnetism (Ørsted). Class 12 reveals the REVERSE: magnetism → current. ELECTROMAGNETIC INDUCTION (Faraday, 1831): moving a magnet through a coil INDUCES a current in the coil. Faster motion = stronger current. This is how EVERY GENERATOR works — a rotating magnet (or coil) inside a stationary coil (or magnet) creates current. The Tehri Hydroelectric Dam: water spins a turbine, which spins a magnet, which induces current in surrounding coils. Same in coal plants, nuclear plants, wind turbines. EVERY KILOWATT of Indian grid electricity is electromagnetic induction. Bicycle dynamo (dynamo light): tiny induction generator. LENZ'S LAW: induced current opposes the change that caused it — Newton's third law of electromagnetism.",
           "prerequisite": "Tackle after Class 9 Ohm's law + Class 7 electromagnets.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch14_dd03_b01",
+              "prompt": "How does a hydroelectric generator actually produce electric current?",
+              "questionType": "mcq",
+              "options": [
+                "A magnet spun by the turbine moves near coils and induces a current (electromagnetic induction)",
+                "Water reacts chemically to make current",
+                "Sunlight on the water makes the current",
+                "The dam stores current like a giant battery"
+              ],
+              "answer": "A magnet spun by the turbine moves near coils and induces a current (electromagnetic induction)",
+              "solutionSteps": [
+                "Moving a magnet near a coil induces a current (Faraday).",
+                "The turbine spins the magnet, generating electricity."
+              ],
+              "commonMistakes": [
+                "Thinking the dam stores electricity or makes it chemically; it uses induction."
+              ],
+              "variations": [
+                {
+                  "prompt": "What does 'faster motion of the magnet' do to the induced current?",
+                  "answer": "Increases it",
+                  "solutionSteps": [
+                    "Faster change in the field induces more current.",
+                    "So the current is stronger."
+                  ]
+                },
+                {
+                  "prompt": "Name another power source that uses electromagnetic induction to make electricity.",
+                  "answer": "Coal, nuclear, or wind power plants (any rotating-magnet generator)",
+                  "solutionSteps": [
+                    "All spin a magnet near coils.",
+                    "So all use induction."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                172
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch14_dd03_b02",
+              "prompt": "Faraday's electromagnetic induction (magnetism produces current) is the reverse of which earlier discovery?",
+              "questionType": "mcq",
+              "options": [
+                "Orsted's: that an electric current produces magnetism",
+                "Newton's laws of motion",
+                "Ohm's law",
+                "Archimedes' principle"
+              ],
+              "answer": "Orsted's: that an electric current produces magnetism",
+              "solutionSteps": [
+                "Orsted showed current creates a magnetic field.",
+                "Faraday showed the reverse: a moving magnet creates current."
+              ],
+              "commonMistakes": [
+                "Confusing induction with Ohm's law or unrelated principles."
+              ],
+              "variations": [
+                {
+                  "prompt": "Lenz's law says the induced current does what to the change that caused it?",
+                  "answer": "Opposes it",
+                  "solutionSteps": [
+                    "The induced current resists the change in field.",
+                    "That is Lenz's law."
+                  ]
+                },
+                {
+                  "prompt": "A bicycle dynamo light is a tiny example of what?",
+                  "answer": "An induction generator",
+                  "solutionSteps": [
+                    "The wheel spins a magnet near a coil.",
+                    "That induces current for the light."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                172
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "JEE / Class 12 covers Faraday's law mathematically: EMF = -N(dΦ/dt)."
         }
       ],
@@ -47974,7 +48229,92 @@
           "parentConceptId": "ch15_t03_c01",
           "body": "Class 7 says lenses converge or diverge light. Class 9 introduces the LENS FORMULA: 1/v - 1/u = 1/f. Where u = object distance from lens, v = image distance, f = focal length (a lens property). All distances signed (sign convention varies; here, object distances negative, image distances positive for real images). Example: object at 30 cm from a +10 cm convex lens. 1/v - 1/(-30) = 1/10. So 1/v = 1/10 - 1/30 = 2/30. v = 15 cm — image forms 15 cm beyond lens, REAL and inverted. The camera in your phone, the projector in your school auditorium, your eye's natural lens — all obey this formula. MAGNIFICATION m = v/u = h'/h tells you size + orientation.",
           "prerequisite": "Tackle after Class 7 convex/concave basics.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch15_dd01_b01",
+              "prompt": "Using 1/v - 1/u = 1/f, an object is 30 cm from a +10 cm convex lens (u = -30 cm). Where does the image form?",
+              "questionType": "mcq",
+              "options": [
+                "15 cm beyond the lens (real and inverted)",
+                "30 cm in front of the lens",
+                "10 cm beyond the lens",
+                "No image forms at all"
+              ],
+              "answer": "15 cm beyond the lens (real and inverted)",
+              "solutionSteps": [
+                "1/v = 1/f + 1/u = 1/10 + (-1/30) ... using 1/v = 1/10 - 1/30 = 2/30.",
+                "So v = 15 cm: a real, inverted image beyond the lens."
+              ],
+              "commonMistakes": [
+                "Dropping the sign on u or mis-adding the fractions."
+              ],
+              "variations": [
+                {
+                  "prompt": "Is the image in this case real or virtual?",
+                  "answer": "Real (and inverted)",
+                  "solutionSteps": [
+                    "The object is beyond the focal length.",
+                    "A convex lens then forms a real, inverted image."
+                  ]
+                },
+                {
+                  "prompt": "In the lens formula, what does f represent?",
+                  "answer": "The focal length, a fixed property of the lens",
+                  "solutionSteps": [
+                    "f is set by the lens shape and material.",
+                    "It is constant for that lens."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                184
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch15_dd01_b02",
+              "prompt": "Magnification m = v/u (= h'/h) tells you the image's...",
+              "questionType": "mcq",
+              "options": [
+                "Size and orientation",
+                "Colour",
+                "Temperature",
+                "Speed"
+              ],
+              "answer": "Size and orientation",
+              "solutionSteps": [
+                "The magnitude of m gives the size ratio.",
+                "Its sign indicates upright vs inverted orientation."
+              ],
+              "commonMistakes": [
+                "Thinking magnification reports colour or brightness."
+              ],
+              "variations": [
+                {
+                  "prompt": "If |m| is greater than 1, is the image larger or smaller than the object?",
+                  "answer": "Larger",
+                  "solutionSteps": [
+                    "|m| > 1 means image taller than object.",
+                    "So the image is enlarged."
+                  ]
+                },
+                {
+                  "prompt": "A negative magnification indicates what about the image?",
+                  "answer": "It is inverted",
+                  "solutionSteps": [
+                    "The sign encodes orientation.",
+                    "Negative means inverted."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                184
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Class 12 derives the formula from refraction at two spherical surfaces."
         },
         {
@@ -47984,7 +48324,92 @@
           "parentConceptId": "ch15_t02_c01",
           "body": "Class 7 says light refracts at boundaries. Class 10 reveals a special case. When light travels from DENSE medium (water, glass) to LESS DENSE (air) at a steep angle, it can be TOTALLY REFLECTED back — no refraction at all. The threshold is called the CRITICAL ANGLE: for water-air, ~48.6°. For glass-air, ~42°. Above this angle, 100% internal reflection. This is the principle of OPTICAL FIBRES — light enters one end of a glass strand at a shallow angle; it hits the wall at ABOVE-critical angles, totally reflects, bounces along the fibre, exits the other end. India's BharatNet has laid 6 lakh km of these. ENT doctors use endoscopes (fibre bundles) to see inside your body via the throat. Same physics.",
           "prerequisite": "Tackle after refraction basics.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch15_dd02_b01",
+              "prompt": "Optical fibres carry light along their length using which principle?",
+              "questionType": "mcq",
+              "options": [
+                "Total internal reflection above the critical angle",
+                "Refraction of light out through the wall",
+                "Absorption and re-emission of light",
+                "Diffraction of light"
+              ],
+              "answer": "Total internal reflection above the critical angle",
+              "solutionSteps": [
+                "Light hits the fibre wall at an angle above the critical angle.",
+                "It is totally internally reflected and bounces along the fibre."
+              ],
+              "commonMistakes": [
+                "Thinking the light refracts out; in a fibre it is totally reflected."
+              ],
+              "variations": [
+                {
+                  "prompt": "Above the critical angle, how much light is reflected back internally?",
+                  "answer": "100% (total internal reflection)",
+                  "solutionSteps": [
+                    "No light escapes above the critical angle.",
+                    "All of it reflects."
+                  ]
+                },
+                {
+                  "prompt": "Doctors' endoscopes use fibre bundles. What physics lets them see inside the body?",
+                  "answer": "Total internal reflection guiding light along the fibres",
+                  "solutionSteps": [
+                    "Light is piped in and images out.",
+                    "Via total internal reflection."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                184
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch15_dd02_b02",
+              "prompt": "Total internal reflection can occur only when light travels...",
+              "questionType": "mcq",
+              "options": [
+                "From a denser medium to a less dense one, at an angle above the critical angle",
+                "From a less dense medium to a denser one",
+                "From air into a vacuum only",
+                "Through any medium at any angle"
+              ],
+              "answer": "From a denser medium to a less dense one, at an angle above the critical angle",
+              "solutionSteps": [
+                "TIR needs the light going dense-to-rare (e.g. glass to air).",
+                "And the incidence angle must exceed the critical angle."
+              ],
+              "commonMistakes": [
+                "Reversing the direction; TIR is dense-to-rare, not rare-to-dense."
+              ],
+              "variations": [
+                {
+                  "prompt": "Roughly what is the critical angle for a glass-air boundary?",
+                  "answer": "About 42 degrees",
+                  "solutionSteps": [
+                    "Beyond ~42 degrees light totally reflects.",
+                    "That is glass-air's critical angle."
+                  ]
+                },
+                {
+                  "prompt": "Why doesn't light leak out of an optical fibre at each bounce?",
+                  "answer": "Each bounce is above the critical angle, so it totally reflects",
+                  "solutionSteps": [
+                    "No refraction occurs above critical angle.",
+                    "So the light stays inside."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                184
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "JEE tests critical angle calculations + multi-medium refraction problems."
         },
         {
@@ -47994,7 +48419,92 @@
           "parentConceptId": "ch15_t02_c02",
           "body": "Class 7 says white light splits into colours in a prism. Class 12 reveals light is a WAVE with specific wavelengths — red ~700 nm, violet ~400 nm. INTERFERENCE: when two wave-fronts overlap, they ADD or CANCEL — creating bright + dark bands. Why CDs show rainbows: the closely-spaced tracks (microscopic ridges) act as a 'diffraction grating' — they split white light into spectral colours. Same effect: oil films on water (the iridescent sheen), butterfly wings, the gem-like surfaces of beetles. Newton's rings: place a curved glass on a flat glass; the tiny air gap between them creates circular interference patterns. India's homegrown CSIR optics labs use these patterns to measure microscopic surface defects to a fraction of light wavelength.",
           "prerequisite": "Tackle after Class 7 dispersion + Class 10 critical angle.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch15_dd03_b01",
+              "prompt": "Why does a CD's surface show rainbow colours in white light?",
+              "questionType": "mcq",
+              "options": [
+                "Its closely-spaced tracks act as a diffraction grating, splitting white light into its colours",
+                "The plastic is dyed with rainbow pigments",
+                "It reflects only red light",
+                "It heats up and glows in colours"
+              ],
+              "answer": "Its closely-spaced tracks act as a diffraction grating, splitting white light into its colours",
+              "solutionSteps": [
+                "The microscopic track spacing diffracts light.",
+                "Different wavelengths bend differently, separating the colours."
+              ],
+              "commonMistakes": [
+                "Assuming the colours are dye; they come from diffraction."
+              ],
+              "variations": [
+                {
+                  "prompt": "Red light is about 700 nm and violet about 400 nm. What property differs between colours?",
+                  "answer": "Their wavelength",
+                  "solutionSteps": [
+                    "Each colour has a specific wavelength.",
+                    "Red is long, violet is short."
+                  ]
+                },
+                {
+                  "prompt": "A butterfly wing's shifting colours come mainly from what?",
+                  "answer": "Interference/diffraction of light by microscopic structures",
+                  "solutionSteps": [
+                    "Tiny structures split and recombine light.",
+                    "That is structural colour, not pigment."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                184
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch15_dd03_b02",
+              "prompt": "The shifting iridescent sheen of an oil film on water is caused by...",
+              "questionType": "mcq",
+              "options": [
+                "Interference of light waves reflecting off the film's two surfaces",
+                "The oil being naturally coloured",
+                "Total internal reflection inside the oil",
+                "Pure absorption of light"
+              ],
+              "answer": "Interference of light waves reflecting off the film's two surfaces",
+              "solutionSteps": [
+                "Light reflects off the top and bottom of the thin film.",
+                "The two reflections interfere, reinforcing some colours and cancelling others."
+              ],
+              "commonMistakes": [
+                "Thinking the oil is coloured; the colour is an interference effect."
+              ],
+              "variations": [
+                {
+                  "prompt": "Newton's rings (curved glass on flat glass) are circular bands of what?",
+                  "answer": "Interference fringes from the thin air gap",
+                  "solutionSteps": [
+                    "The varying air gap causes interference.",
+                    "Producing circular bright/dark rings."
+                  ]
+                },
+                {
+                  "prompt": "Interference can make light waves do what two things when they overlap?",
+                  "answer": "Add (brighten) or cancel (darken)",
+                  "solutionSteps": [
+                    "In phase they add; out of phase they cancel.",
+                    "Giving bright and dark bands."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                184
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Class 12 covers Young's double-slit experiment — the keystone of wave-particle duality."
         }
       ],
@@ -50629,7 +51139,92 @@
           "parentConceptId": "ch16_t01_c02",
           "body": "Class 7 says groundwater lives in aquifers. Class 8 details how. AQUIFER = water-bearing rock. Two types: UNCONFINED (top layer porous, water table rises and falls with rain) and CONFINED (sandwiched between impermeable clay layers above and below — water is pressurised, sometimes flows out spontaneously when drilled = ARTESIAN well). POROSITY = % of rock that's empty space (sand: ~40%, granite: ~1%). PERMEABILITY = how easily water flows through (sand: high; clay: very low even though porous!). Indian Indo-Gangetic alluvial plain has the world's richest aquifer system — vast, deep, recharged by Himalayan snowmelt + monsoon. Rajasthan's hard-rock aquifers are tiny in comparison. Why Punjab can pump and Rajasthan can't — geology matters.",
           "prerequisite": "Tackle after Class 7 groundwater basics.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch16_dd01_b01",
+              "prompt": "When a confined aquifer is drilled, water sometimes flows out on its own (an artesian well). Why?",
+              "questionType": "mcq",
+              "options": [
+                "The water in a confined aquifer is under pressure between impermeable layers",
+                "Confined aquifers are heated from below",
+                "The drill pump pushes it out",
+                "Confined aquifers sit at the surface"
+              ],
+              "answer": "The water in a confined aquifer is under pressure between impermeable layers",
+              "solutionSteps": [
+                "A confined aquifer is sandwiched between impermeable clay layers.",
+                "The trapped water is pressurised, so it can rise on its own when tapped."
+              ],
+              "commonMistakes": [
+                "Confusing confined (pressurised) with unconfined (free water table) aquifers."
+              ],
+              "variations": [
+                {
+                  "prompt": "In an unconfined aquifer, what rises and falls with the rains?",
+                  "answer": "The water table",
+                  "solutionSteps": [
+                    "It is open to recharge from above.",
+                    "So its level tracks rainfall."
+                  ]
+                },
+                {
+                  "prompt": "What makes an aquifer 'confined'?",
+                  "answer": "Impermeable layers above and below trap and pressurise the water",
+                  "solutionSteps": [
+                    "Clay layers seal it.",
+                    "Trapping the water under pressure."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                196
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch16_dd01_b02",
+              "prompt": "Clay has high porosity (lots of empty space) yet water barely flows through it. Which property explains this?",
+              "questionType": "mcq",
+              "options": [
+                "Low permeability (the pores are tiny and poorly connected)",
+                "High permeability",
+                "Negative porosity",
+                "Zero porosity"
+              ],
+              "answer": "Low permeability (the pores are tiny and poorly connected)",
+              "solutionSteps": [
+                "Porosity is how much empty space exists; permeability is how easily water flows through.",
+                "Clay's pores are tiny/poorly connected, so permeability is low despite high porosity."
+              ],
+              "commonMistakes": [
+                "Assuming high porosity means water flows easily; permeability is the separate, deciding property."
+              ],
+              "variations": [
+                {
+                  "prompt": "Sand has high porosity AND high permeability. What does that mean for water?",
+                  "answer": "Water both fills and flows through it easily",
+                  "solutionSteps": [
+                    "Large connected pores.",
+                    "So water moves freely."
+                  ]
+                },
+                {
+                  "prompt": "Which property tells you how EASILY water moves through a rock?",
+                  "answer": "Permeability",
+                  "solutionSteps": [
+                    "Porosity is space; permeability is flow.",
+                    "Permeability governs flow."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                196
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Class 11 introduces Darcy's law for groundwater flow rates."
         },
         {
@@ -50639,7 +51234,92 @@
           "parentConceptId": "ch16_t01_c01",
           "body": "Class 7 traces the water cycle qualitatively. Class 11 puts numbers on it. India's average annual rainfall: ~1170 mm × land area = ~4000 billion cubic metres (4 trillion m³). Of this: ~700 BCM evaporates immediately, ~1900 BCM becomes surface runoff (rivers), ~700 BCM percolates to groundwater. India USES ~700 BCM per year — but unevenly. Punjab pumps 250% of its groundwater recharge (huge deficit). Bihar pumps only 30% (huge surplus, partly polluted from arsenic). National Water Mission's GROUNDWATER MAPPING program (CGWB) tracks this district-by-district. Modern hydrologists treat groundwater as a bank account — withdrawals must equal deposits long-term. Currently India is in deficit at -120 BCM per year. Unsustainable.",
           "prerequisite": "Tackle after Class 8 aquifers.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch16_dd02_b01",
+              "prompt": "Punjab pumps about 250% of its annual groundwater recharge. Treating groundwater like a bank account, what is happening?",
+              "questionType": "mcq",
+              "options": [
+                "Withdrawals far exceed deposits, so the 'account' runs a growing deficit",
+                "Deposits exceed withdrawals, building a surplus",
+                "The account is perfectly balanced",
+                "Groundwater cannot be depleted"
+              ],
+              "answer": "Withdrawals far exceed deposits, so the 'account' runs a growing deficit",
+              "solutionSteps": [
+                "Pumping 250% of recharge means taking out 2.5x what goes in.",
+                "Like overspending an account, the water table falls year on year."
+              ],
+              "commonMistakes": [
+                "Assuming groundwater is unlimited; sustained over-pumping depletes it."
+              ],
+              "variations": [
+                {
+                  "prompt": "Bihar pumps only ~30% of its recharge. Surplus or deficit?",
+                  "answer": "Surplus",
+                  "solutionSteps": [
+                    "Withdrawals are below recharge.",
+                    "So it has a groundwater surplus."
+                  ]
+                },
+                {
+                  "prompt": "For groundwater to be sustainable long-term, withdrawals must...",
+                  "answer": "Roughly equal the recharge (deposits)",
+                  "solutionSteps": [
+                    "Like a balanced account.",
+                    "Take out no more than goes in."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                196
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch16_dd02_b02",
+              "prompt": "India currently uses groundwater at roughly -120 BCM per year relative to recharge. What does this indicate?",
+              "questionType": "mcq",
+              "options": [
+                "An unsustainable national groundwater deficit",
+                "A healthy surplus",
+                "Perfect balance",
+                "That India has no groundwater"
+              ],
+              "answer": "An unsustainable national groundwater deficit",
+              "solutionSteps": [
+                "A negative balance means more is withdrawn than recharged.",
+                "Sustained, this depletes aquifers - unsustainable."
+              ],
+              "commonMistakes": [
+                "Reading a negative balance as a surplus."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why do hydrologists map groundwater district by district?",
+                  "answer": "Use and recharge vary hugely by region, so management must be local",
+                  "solutionSteps": [
+                    "Punjab over-pumps; Bihar under-uses.",
+                    "So tracking must be district-level."
+                  ]
+                },
+                {
+                  "prompt": "If withdrawals keep exceeding recharge, what happens to the water table?",
+                  "answer": "It keeps falling",
+                  "solutionSteps": [
+                    "Net loss each year.",
+                    "The water table drops over time."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                196
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "JEE / UPSC tests groundwater balance equations and the National Water Policy."
         },
         {
@@ -50649,7 +51329,92 @@
           "parentConceptId": "ch16_t02_c01",
           "body": "Class 7 introduces drip, sprinkler, flood. Class 10 quantifies efficiency. FLOOD irrigation: water spread over field, soaks in gradually. Efficiency: ~40% (rest evaporates, runs off, deep-percolates past root zone). Cheap to set up but wasteful. SPRINKLER: efficiency ~70-80%. Better. DRIP: thin pipes deliver water DROP BY DROP at plant roots, often buried slightly. Efficiency: ~95%. Negligible evaporation, no runoff. Result: same crop yield with HALF the water. Indian government's PMKSY scheme subsidises drip 80% for small farmers. Maharashtra grape farms running drip outproduce flood-irrigated farms 3:1 by yield per litre. The investment (₹50,000/acre) pays back in 2-3 years through water + labour savings.",
           "prerequisite": "Tackle after Class 7 irrigation methods.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch16_dd03_b01",
+              "prompt": "Drip irrigation reaches about 95% efficiency while flood irrigation is only about 40%. Why is drip so much better?",
+              "questionType": "mcq",
+              "options": [
+                "It delivers water drop by drop at the roots, so almost none is lost to evaporation or runoff",
+                "It uses far more water per plant",
+                "It floods the whole field faster",
+                "It needs no pipes"
+              ],
+              "answer": "It delivers water drop by drop at the roots, so almost none is lost to evaporation or runoff",
+              "solutionSteps": [
+                "Drip targets the root zone directly.",
+                "Negligible evaporation, runoff or deep loss, so ~95% reaches the plant."
+              ],
+              "commonMistakes": [
+                "Thinking more water means better irrigation; efficiency is about how much reaches the roots."
+              ],
+              "variations": [
+                {
+                  "prompt": "Roughly how much water can drip save versus flood irrigation for the same yield?",
+                  "answer": "About half",
+                  "solutionSteps": [
+                    "Flood ~40% vs drip ~95% efficiency.",
+                    "So drip needs roughly half the water."
+                  ]
+                },
+                {
+                  "prompt": "Why does flood irrigation waste so much water?",
+                  "answer": "Much evaporates, runs off, or percolates below the root zone",
+                  "solutionSteps": [
+                    "Water is spread across the whole field.",
+                    "Only ~40% reaches the roots usefully."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                196
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch16_dd03_b02",
+              "prompt": "Where does drip irrigation deliver its water, and how?",
+              "questionType": "mcq",
+              "options": [
+                "Drop by drop directly at the plant roots, via thin pipes",
+                "As a broad flood across the whole field",
+                "As a high spray over the canopy",
+                "Into deep wells only"
+              ],
+              "answer": "Drop by drop directly at the plant roots, via thin pipes",
+              "solutionSteps": [
+                "Thin pipes carry water to each plant.",
+                "It drips slowly at the roots, minimising loss."
+              ],
+              "commonMistakes": [
+                "Confusing drip (root-zone drops) with sprinkler (overhead spray) or flood."
+              ],
+              "variations": [
+                {
+                  "prompt": "Sprinkler irrigation efficiency is about what, between flood and drip?",
+                  "answer": "About 70-80%",
+                  "solutionSteps": [
+                    "Sprinklers lose some to evaporation/drift.",
+                    "So ~70-80%, between flood and drip."
+                  ]
+                },
+                {
+                  "prompt": "Why does the Indian government subsidise drip systems for small farmers?",
+                  "answer": "The water and labour savings make it worthwhile despite the setup cost",
+                  "solutionSteps": [
+                    "Setup costs are recovered in a few years.",
+                    "Subsidy speeds adoption."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                196
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Class 11/12 environmental engineering covers precision irrigation + IoT-controlled drip systems."
         }
       ],
