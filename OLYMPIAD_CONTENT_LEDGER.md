@@ -64,7 +64,8 @@ canonically: `json.dumps(d, ensure_ascii=False, indent=2) + "\n"`.
 - ✅ **MATHS COMPLETE — 45/45 stretch topics, 90 Olympiad MCQs, all 15 chapters.**
 
 ### Sanskrit (`sanskrit_class7`, sch01–sch15, 45 stretch topics; legacy ch01 exempt)
-- [ ] sch01–sch15 — Devanagari allowed in prompt/options (UTF-8, ensure_ascii=False).
+- [x] **sch01–sch05 (15 topics, 30 MCQs)** — Vande Mataram history / समास / स्तुति; subhāṣita & Bhartrihari / अनुष्टुप् metre / दृष्टान्त & alankāra; नमः+dative कारक / twelve Ādityas / yoga & योगसूत्र; तसिल् suffix / Panchatantra-नीतिकथा / उपसर्ग prefixes; धर्म & puruṣārthas / वति suffix / आयुर्वेद.
+- [ ] sch06–sch15 (30 topics) — Devanagari allowed (UTF-8). **30 Sanskrit MCQs done so far.**
 
 ### Social Science (`socialscience_class7`, 20 chapters, 120 stretch topics)
 - [ ] ssch01–ssch20 — **add the `bonusQuestions` array** to each `deepDive[]` entry

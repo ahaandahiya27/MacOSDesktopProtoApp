@@ -12889,7 +12889,92 @@
           "parentConceptId": "sch01_t01_c02",
           "body": "Bankim Chandra Chattopadhyay did not write वन्दे मातरम् as a separate poem — he wove it into his 1882 Bengali novel आनन्दमठ (Ānandamaṭha), where sannyāsī rebels sing it as a hymn to the motherland imagined as a goddess. Its language is the famous 'maṇipravāḷa' blend, opening in pure Sanskrit (वन्दे मातरम्, सुजलां सुफलां…) before shifting to Bengali. Rabindranath Tagore set it to music and first sang it at the 1896 session of the Indian National Congress, and through the freedom struggle the cry 'Vande Mataram!' became a slogan that sent thousands to jail. On 24 January 1950 the Constituent Assembly gave it the status of राष्ट्रगीत (national song), holding it equal in honour to the राष्ट्रगान (national anthem) जन गण मन. Knowing this history turns the verses you recite from pretty words into a living document of how a language and a song helped build a country.",
           "prerequisite": "Tackle this once you can recite the opening lines and know Bankim Chandra wrote them.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch01_dd01_b01",
+              "prompt": "Vande Mataram was originally written as part of which 1882 work?",
+              "questionType": "mcq",
+              "options": [
+                "The Bengali novel आनन्दमठ (Anandamath) by Bankim Chandra Chattopadhyay",
+                "The Rigveda",
+                "The Ramayana",
+                "A 20th-century film"
+              ],
+              "answer": "The Bengali novel आनन्दमठ (Anandamath) by Bankim Chandra Chattopadhyay",
+              "solutionSteps": [
+                "Bankim Chandra wove the hymn into his 1882 novel Anandamath.",
+                "It was not first written as a standalone poem."
+              ],
+              "commonMistakes": [
+                "Assuming it was always an independent patriotic poem."
+              ],
+              "variations": [
+                {
+                  "prompt": "Who first set Vande Mataram to music and sang it at the 1896 Congress?",
+                  "answer": "Rabindranath Tagore",
+                  "solutionSteps": [
+                    "Tagore composed its tune.",
+                    "Sung at the 1896 INC session."
+                  ]
+                },
+                {
+                  "prompt": "The opening of Vande Mataram is in which language before it shifts to Bengali?",
+                  "answer": "Sanskrit",
+                  "solutionSteps": [
+                    "सुजलां सुफलां... is Sanskrit.",
+                    "Then it moves to Bengali."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                10
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch01_dd01_b02",
+              "prompt": "On 24 January 1950 the Constituent Assembly gave Vande Mataram the status of...",
+              "questionType": "mcq",
+              "options": [
+                "राष्ट्रगीत (national song)",
+                "राष्ट्रगान (national anthem)",
+                "a state law",
+                "a temple prayer"
+              ],
+              "answer": "राष्ट्रगीत (national song)",
+              "solutionSteps": [
+                "जन गण मन is the राष्ट्रगान (anthem); Vande Mataram is the राष्ट्रगीत (national song).",
+                "Both were held equal in honour."
+              ],
+              "commonMistakes": [
+                "Confusing राष्ट्रगीत (national song) with राष्ट्रगान (anthem)."
+              ],
+              "variations": [
+                {
+                  "prompt": "Which composition is India's राष्ट्रगान (national anthem)?",
+                  "answer": "जन गण मन",
+                  "solutionSteps": [
+                    "Vande Mataram is the national song.",
+                    "जन गण मन is the anthem."
+                  ]
+                },
+                {
+                  "prompt": "During the freedom struggle, 'Vande Mataram!' became a...",
+                  "answer": "Rallying slogan that sent many to jail",
+                  "solutionSteps": [
+                    "It united protesters.",
+                    "A cry of the movement."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                10
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In later classes you study the literature of India's freedom movement and the difference between the national song and the national anthem."
         },
         {
@@ -12899,7 +12984,92 @@
           "parentConceptId": "sch01_t02_c04",
           "body": "सस्यश्यामला — 'dark-green with crops' — looks like one word but is really a compressed phrase: सस्यैः श्यामला, 'green BY/with crops'. This packing of several words into one is समास (compound), one of Sanskrit's signature powers and the reason its poetry can be so dense. Class 8 names the main types you will meet everywhere: तत्पुरुष, where the first word qualifies the second (राजपुत्रः = राज्ञः पुत्रः, 'king's son'); कर्मधारय, where both words describe the same thing (नीलकमलम्, 'blue lotus'); द्वन्द्व, a simple 'and' list (रामलक्ष्मणौ, 'Rāma and Lakṣmaṇa'); and बहुव्रीहि, which points OUTSIDE itself (पीताम्बरः = 'one whose cloth is yellow', i.e. Viṣṇu). To read a compound you 'unpack' it (विग्रह) back into the phrase it stands for. Once you can split सस्यश्यामला, the longest, most frightening words in a Sanskrit verse become solvable puzzles rather than walls.",
           "prerequisite": "Tackle this after you understand सस्यश्यामला as 'green with crops'.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch01_dd02_b01",
+              "prompt": "The compound राजपुत्रः (= राज्ञः पुत्रः, 'king's son') is which type of समास?",
+              "questionType": "mcq",
+              "options": [
+                "तत्पुरुष",
+                "द्वन्द्व",
+                "बहुव्रीहि",
+                "कर्मधारय"
+              ],
+              "answer": "तत्पुरुष",
+              "solutionSteps": [
+                "In तत्पुरुष the first word qualifies the second.",
+                "राजपुत्रः = the son OF a king."
+              ],
+              "commonMistakes": [
+                "Confusing तत्पुरुष with कर्मधारय (where both words describe the same thing)."
+              ],
+              "variations": [
+                {
+                  "prompt": "नीलकमलम् ('blue lotus'), where both words describe one thing, is which type?",
+                  "answer": "कर्मधारय",
+                  "solutionSteps": [
+                    "Both parts qualify the same object.",
+                    "That is कर्मधारय."
+                  ]
+                },
+                {
+                  "prompt": "To read a compound you 'unpack' it. What is this unpacking called?",
+                  "answer": "विग्रह",
+                  "solutionSteps": [
+                    "विग्रह restores the underlying phrase.",
+                    "E.g. सस्यश्यामला = सस्यैः श्यामला."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                10
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch01_dd02_b02",
+              "prompt": "The compound रामलक्ष्मणौ ('Rama and Lakshmana') is which type of समास?",
+              "questionType": "mcq",
+              "options": [
+                "द्वन्द्व",
+                "तत्पुरुष",
+                "कर्मधारय",
+                "बहुव्रीहि"
+              ],
+              "answer": "द्वन्द्व",
+              "solutionSteps": [
+                "द्वन्द्व is a simple 'and' list of items.",
+                "रामलक्ष्मणौ = Rama AND Lakshmana."
+              ],
+              "commonMistakes": [
+                "Mistaking the 'and'-list (द्वन्द्व) for तत्पुरुष."
+              ],
+              "variations": [
+                {
+                  "prompt": "पीताम्बरः ('one whose cloth is yellow', i.e. Vishnu) points outside itself. Which type?",
+                  "answer": "बहुव्रीहि",
+                  "solutionSteps": [
+                    "It denotes someone defined by the attribute.",
+                    "That is बहुव्रीहि."
+                  ]
+                },
+                {
+                  "prompt": "Why is समास useful in Sanskrit poetry?",
+                  "answer": "It packs a whole phrase into one word, allowing dense verse",
+                  "solutionSteps": [
+                    "Compounds compress meaning.",
+                    "Making verse economical."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                10
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 8 and 9 you formally study the four compound types and learn to do विग्रह (splitting a compound into its phrase)."
         },
         {
@@ -12909,7 +13079,92 @@
           "parentConceptId": "sch01_t02_c01",
           "body": "Calling the land पर्वतराजः-crowned and रत्नाकरः-girdled is not random scenery — it follows a centuries-old Sanskrit convention of praising a being by listing its glories, the स्तुति (hymn of praise). The same form describes a deity: a goddess is invoked by her attributes — her mountains, rivers, and holy places — until the listener sees her whole. Vande Mataram deliberately borrows this devotional template, casting भारतमाता as a divine mother (मातृभूमि personified as देवी). This is why the song moves so many people: it speaks of a country in the grammar of worship. The wider tradition includes the देवीमाहात्म्य and countless अष्टक and स्तोत्र hymns, where epithets pile up in long compounds and the rhythm itself feels like a prayer. Recognising the स्तुति shape lets you see that a 'patriotic poem' is using one of Sanskrit literature's oldest and most powerful poetic engines.",
           "prerequisite": "Tackle this once you know the epithets पर्वतराजः and रत्नाकरः describe the motherland.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch01_dd03_b01",
+              "prompt": "Praising a being by listing its glories and attributes is the Sanskrit form called...",
+              "questionType": "mcq",
+              "options": [
+                "स्तुति (hymn of praise)",
+                "समास",
+                "सूत्र",
+                "गणित"
+              ],
+              "answer": "स्तुति (hymn of praise)",
+              "solutionSteps": [
+                "A स्तुति invokes a being through its epithets until the listener sees it whole.",
+                "Vande Mataram borrows this template."
+              ],
+              "commonMistakes": [
+                "Treating the device as mere scenery rather than the स्तुति form."
+              ],
+              "variations": [
+                {
+                  "prompt": "Vande Mataram describes the land in the grammar of what?",
+                  "answer": "Worship (as one would praise a deity)",
+                  "solutionSteps": [
+                    "It uses the स्तुति form.",
+                    "Speaking of the country as a goddess."
+                  ]
+                },
+                {
+                  "prompt": "Name a famous text in the wider देवी-praise tradition.",
+                  "answer": "देवीमाहात्म्य (or many अष्टक/स्तोत्र hymns)",
+                  "solutionSteps": [
+                    "Epithets pile up in compounds.",
+                    "As in the देवीमाहात्म्य."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                10
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch01_dd03_b02",
+              "prompt": "By using the स्तुति template, Vande Mataram casts भारत (the motherland) as a...",
+              "questionType": "mcq",
+              "options": [
+                "Divine mother / goddess (देवी)",
+                "A king",
+                "A river only",
+                "A mountain only"
+              ],
+              "answer": "Divine mother / goddess (देवी)",
+              "solutionSteps": [
+                "The motherland is personified as भारतमाता, a देवी.",
+                "That is why it moves people like a prayer."
+              ],
+              "commonMistakes": [
+                "Reading it as plain landscape description, missing the देवी framing."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why does praising the land as mountain-crowned and ocean-girdled feel devotional?",
+                  "answer": "It follows the स्तुति convention used for deities",
+                  "solutionSteps": [
+                    "Attribute-listing is hymn grammar.",
+                    "So it reads as worship."
+                  ]
+                },
+                {
+                  "prompt": "The स्तुति epithets typically appear in long...",
+                  "answer": "Compounds (समास)",
+                  "solutionSteps": [
+                    "Epithets stack into compounds.",
+                    "Giving a prayer-like rhythm."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                10
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 10 and beyond you read देवीस्तुति and स्तोत्र literature and study how epithet-stacking builds devotional poetry."
         }
       ],
@@ -14167,7 +14422,92 @@
           "parentConceptId": "sch02_t01_c01",
           "body": "A सुभाषितम् (literally 'well-spoken') is a short, self-contained verse carrying one polished nugget of wisdom — and Sanskrit produced these by the thousand. The most famous single author is भर्तृहरि, whose शतकत्रय (three centuries of verses) splits into the नीतिशतक (on right conduct), शृङ्गारशतक (on love) and वैराग्यशतक (on detachment). Later scholars gathered the best from everywhere into huge collections like the सुभाषितरत्नभाण्डागारम् — a 'treasure-house of subhāṣita gems', the very image your chapter's title uses with रसम् (nectar). What makes a good subhāṣita memorable is craft: a tight metre, a vivid comparison, and a turn of thought in the last line. They were the SMS and proverbs of classical India, carried in memory and quoted to settle an argument. Reading them is the easiest doorway into real Sanskrit literature, because each verse is a complete, bite-sized poem.",
           "prerequisite": "Tackle this once you know what a सुभाषितम् is and have learnt one by heart.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch02_dd01_b01",
+              "prompt": "A सुभाषितम् (literally 'well-spoken') is best described as...",
+              "questionType": "mcq",
+              "options": [
+                "A short, self-contained verse carrying one polished nugget of wisdom",
+                "A long epic poem",
+                "A prose adventure story",
+                "A rule of grammar"
+              ],
+              "answer": "A short, self-contained verse carrying one polished nugget of wisdom",
+              "solutionSteps": [
+                "Subhashitas are bite-sized complete poems of wisdom.",
+                "They were the proverbs of classical India."
+              ],
+              "commonMistakes": [
+                "Thinking a subhashita is a long work rather than a single crafted verse."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why are subhashitas an easy doorway into Sanskrit literature?",
+                  "answer": "Each is a complete, bite-sized poem",
+                  "solutionSteps": [
+                    "Short and self-contained.",
+                    "So each is approachable."
+                  ]
+                },
+                {
+                  "prompt": "A huge gathered collection of the best verses is the सुभाषित...",
+                  "answer": "रत्नभाण्डागारम् (a 'treasure-house of gems')",
+                  "solutionSteps": [
+                    "Scholars anthologised the best.",
+                    "Into such treasuries."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                18
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch02_dd01_b02",
+              "prompt": "भर्तृहरि's famous शतकत्रय (three centuries of verses) consists of which three?",
+              "questionType": "mcq",
+              "options": [
+                "नीतिशतक, शृङ्गारशतक, वैराग्यशतक",
+                "Ramayana, Mahabharata, Gita",
+                "Rig, Yajur, Sama",
+                "Charaka, Sushruta, Ashtanga"
+              ],
+              "answer": "नीतिशतक, शृङ्गारशतक, वैराग्यशतक",
+              "solutionSteps": [
+                "Bhartrihari's three centuries cover conduct, love and detachment.",
+                "नीति, शृङ्गार, वैराग्य."
+              ],
+              "commonMistakes": [
+                "Confusing Bhartrihari's शतक-s with the epics or the Vedas."
+              ],
+              "variations": [
+                {
+                  "prompt": "The नीतिशतक of Bhartrihari is about what?",
+                  "answer": "Right conduct / wise policy (नीति)",
+                  "solutionSteps": [
+                    "नीति = ethical conduct.",
+                    "Verses on right living."
+                  ]
+                },
+                {
+                  "prompt": "Subhashitas were carried mainly in...",
+                  "answer": "Memory (recited and quoted)",
+                  "solutionSteps": [
+                    "Like proverbs and SMS of their day.",
+                    "Held in memory."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                18
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In later classes you read selections from Bhartṛhari's शतकत्रय and study how anthologies preserved Sanskrit wisdom literature."
         },
         {
@@ -14177,7 +14517,92 @@
           "parentConceptId": "sch02_t01_c05",
           "body": "The verse जलबिन्दुनिपातेन क्रमशः पूर्यते घटः ('drop by drop the pot is filled') is not just wise — it is built on a precise rhythm called अनुष्टुप् (anuṣṭubh), the workhorse metre of Sanskrit. An anuṣṭubh śloka has four quarters (पाद) of exactly eight syllables each, so 32 syllables in all, which is why so many subhāṣitas feel the same shape. Sanskrit prosody (छन्दस्) measures each syllable as light (लघु, one mātrā) or heavy (गुरु, two mātrās), and the anuṣṭuph has gentle rules — for instance the 5th syllable of a quarter is usually light and the 6th heavy — that give it its lilt. Almost the entire Rāmāyaṇa, the Mahābhārata and the Bhagavad Gītā are composed in this metre, which is why a child who internalises its beat can recite epic verses almost effortlessly. The 'drop-by-drop' lesson works on the metre too: feel a few ślokas and the rhythm fills you gradually.",
           "prerequisite": "Tackle this once you can recite the जलबिन्दु verse with its natural rhythm.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch02_dd02_b01",
+              "prompt": "An अनुष्टुप् (anuṣṭubh) śloka has four पाद (quarters) of how many syllables each?",
+              "questionType": "mcq",
+              "options": [
+                "8 syllables each (32 in all)",
+                "4 each",
+                "16 each",
+                "10 each"
+              ],
+              "answer": "8 syllables each (32 in all)",
+              "solutionSteps": [
+                "Anuṣṭubh = 4 पाद x 8 syllables = 32 syllables.",
+                "This shape recurs in most subhashitas."
+              ],
+              "commonMistakes": [
+                "Guessing the total (32) as the per-pada count."
+              ],
+              "variations": [
+                {
+                  "prompt": "How many syllables total are in one anuṣṭubh śloka?",
+                  "answer": "32",
+                  "solutionSteps": [
+                    "4 quarters of 8 each.",
+                    "= 32 syllables."
+                  ]
+                },
+                {
+                  "prompt": "Sanskrit prosody measures each syllable as light or heavy. Their names?",
+                  "answer": "लघु (light) and गुरु (heavy)",
+                  "solutionSteps": [
+                    "लघु = 1 mātrā, गुरु = 2.",
+                    "The basis of the metre."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                18
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch02_dd02_b02",
+              "prompt": "Which great works are composed almost entirely in the अनुष्टुप् metre?",
+              "questionType": "mcq",
+              "options": [
+                "The Ramayana, Mahabharata and Bhagavad Gita",
+                "Only modern poems",
+                "Only the Vedic hymns",
+                "None of them"
+              ],
+              "answer": "The Ramayana, Mahabharata and Bhagavad Gita",
+              "solutionSteps": [
+                "The epics and the Gita use anuṣṭubh throughout.",
+                "Its steady beat aids recitation from memory."
+              ],
+              "commonMistakes": [
+                "Assuming epics use many different metres only."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why can a child recite epic verses almost effortlessly once they feel anuṣṭubh?",
+                  "answer": "Its regular 8-syllable beat carries the lines",
+                  "solutionSteps": [
+                    "The rhythm is predictable.",
+                    "So memory flows."
+                  ]
+                },
+                {
+                  "prompt": "The study of Sanskrit metre is called...",
+                  "answer": "छन्दस् (prosody)",
+                  "solutionSteps": [
+                    "It measures syllable weights.",
+                    "छन्दस् governs metre."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                18
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In later classes you study छन्दस् (prosody) formally, counting लघु and गुरु syllables to identify metres."
         },
         {
@@ -14187,7 +14612,92 @@
           "parentConceptId": "sch02_t02_c04",
           "body": "Subhāṣitas almost never just state a rule; they prove it with a picture. 'A pot fills drop by drop'; 'company (सङ्गतिः) shapes a person as water takes the colour of the cloth it touches'. This deliberate use of a familiar example to illuminate an abstract truth is the अलङ्कार (figure of speech) called दृष्टान्त — 'the illustrative instance'. Sanskrit poetics (अलङ्कारशास्त्र) catalogues dozens of such figures: उपमा (simile, 'X is like Y'), रूपक (metaphor, 'X is Y'), उत्प्रेक्षा (poetic fancy), and many more, all studied in works like the काव्यप्रकाश. The reason the सङ्गतिः verse stays in your memory is that the comparison does the teaching — your mind keeps the image and the moral rides along with it. Learning to spot which अलङ्कार a verse uses turns reading from 'understanding the words' into appreciating the poet's craft, the real goal of literary study.",
           "prerequisite": "Tackle this once you grasp that सङ्गतिः (company) shapes character, taught through a comparison.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch02_dd03_b01",
+              "prompt": "Using a familiar example (a pot filling drop by drop) to illuminate an abstract truth is the अलङ्कार called...",
+              "questionType": "mcq",
+              "options": [
+                "दृष्टान्त (the illustrative instance)",
+                "अनुष्टुप्",
+                "समास",
+                "कारक"
+              ],
+              "answer": "दृष्टान्त (the illustrative instance)",
+              "solutionSteps": [
+                "दृष्टान्त teaches by a vivid concrete example.",
+                "The image carries the moral in memory."
+              ],
+              "commonMistakes": [
+                "Confusing the figure of speech (दृष्टान्त) with the metre (अनुष्टुप्)."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why does the 'drop-by-drop pot' verse stick in memory?",
+                  "answer": "The comparison (दृष्टान्त) does the teaching via an image",
+                  "solutionSteps": [
+                    "The picture carries the moral.",
+                    "So it is memorable."
+                  ]
+                },
+                {
+                  "prompt": "The study of figures of speech in Sanskrit is called...",
+                  "answer": "अलङ्कारशास्त्र",
+                  "solutionSteps": [
+                    "It catalogues poetic figures.",
+                    "Studied in works like काव्यप्रकाश."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                18
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch02_dd03_b02",
+              "prompt": "Which अलङ्कार is a simile of the form 'X is LIKE Y'?",
+              "questionType": "mcq",
+              "options": [
+                "उपमा",
+                "रूपक",
+                "समास",
+                "छन्दस्"
+              ],
+              "answer": "उपमा",
+              "solutionSteps": [
+                "उपमा is an explicit comparison ('like').",
+                "रूपक is metaphor ('X IS Y')."
+              ],
+              "commonMistakes": [
+                "Mixing up उपमा (simile) with रूपक (metaphor)."
+              ],
+              "variations": [
+                {
+                  "prompt": "Which figure says 'X IS Y' directly (metaphor)?",
+                  "answer": "रूपक",
+                  "solutionSteps": [
+                    "रूपक identifies the two.",
+                    "A metaphor, not a simile."
+                  ]
+                },
+                {
+                  "prompt": "'Company shapes a person as cloth takes a colour' uses which device?",
+                  "answer": "दृष्टान्त / उपमा (an illustrative comparison)",
+                  "solutionSteps": [
+                    "A vivid comparison teaches.",
+                    "The image carries the point."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                18
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In senior classes you study अलङ्कारशास्त्र (Sanskrit poetics) and learn to identify उपमा, रूपक, दृष्टान्त and other figures of speech."
         }
       ],
@@ -15387,7 +15897,92 @@
           "parentConceptId": "sch03_t02_c01",
           "body": "मित्राय नमः means 'salutation TO Mitra', and the -आय ending (चतुर्थी, the dative) is not a free choice: the word नमः GOVERNS the dative. Sanskrit grammar explains this through कारक theory — the system that links a verb or word to the roles around it. The dative marks the सम्प्रदान कारक, the recipient 'for whom' something is meant, and Pāṇini's rule नमःस्वस्तिस्वाहास्वधालंवषड्योगाच्च specifically lists नमः (and स्वस्ति, स्वाहा…) as words after which the dative MUST appear. So 'नमः' + dative is a fixed partnership, exactly like English 'pertaining TO'. Each of the twelve sun-salutation mantras — ॐ मित्राय नमः, ॐ रवये नमः, ॐ सूर्याय नमः — repeats this pattern, drilling the dative twelve times in one practice. Seeing that the case ending is dictated by the governing word, not guessed, is your first step from 'memorising endings' to understanding WHY Sanskrit chooses each one.",
           "prerequisite": "Tackle this once you can identify the चतुर्थी (dative) ending in मित्राय.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch03_dd01_b01",
+              "prompt": "In मित्राय नमः, the -आय ending of मित्राय is which case (विभक्ति)?",
+              "questionType": "mcq",
+              "options": [
+                "चतुर्थी (dative)",
+                "प्रथमा (nominative)",
+                "द्वितीया (accusative)",
+                "षष्ठी (genitive)"
+              ],
+              "answer": "चतुर्थी (dative)",
+              "solutionSteps": [
+                "नमः governs the dative ('salutation TO').",
+                "-आय is the चतुर्थी (dative) ending."
+              ],
+              "commonMistakes": [
+                "Reading -आय as a genitive or accusative."
+              ],
+              "variations": [
+                {
+                  "prompt": "The word नमः requires the noun after it to be in which case?",
+                  "answer": "The dative (चतुर्थी)",
+                  "solutionSteps": [
+                    "Pāṇini lists नमः as taking the dative.",
+                    "So 'नमः + dative' is fixed."
+                  ]
+                },
+                {
+                  "prompt": "Each Sun-salutation mantra (ॐ रवये नमः, ...) drills which case?",
+                  "answer": "The dative",
+                  "solutionSteps": [
+                    "नमः governs it.",
+                    "Repeated twelve times."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                26
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch03_dd01_b02",
+              "prompt": "The dative after नमः marks which कारक (the recipient 'for whom')?",
+              "questionType": "mcq",
+              "options": [
+                "सम्प्रदान",
+                "कर्म",
+                "कर्ता",
+                "अपादान"
+              ],
+              "answer": "सम्प्रदान",
+              "solutionSteps": [
+                "सम्प्रदान is the recipient role, marked by the dative.",
+                "नमः directs the salutation TO that recipient."
+              ],
+              "commonMistakes": [
+                "Confusing सम्प्रदान (recipient) with कर्म (object) or अपादान (source)."
+              ],
+              "variations": [
+                {
+                  "prompt": "कारक theory links a word to the ... around it.",
+                  "answer": "Roles (who does what to/for whom)",
+                  "solutionSteps": [
+                    "कारक = relational roles.",
+                    "Each maps to a case."
+                  ]
+                },
+                {
+                  "prompt": "Knowing नमः takes the dative shows case endings are...",
+                  "answer": "Dictated by the governing word, not guessed",
+                  "solutionSteps": [
+                    "Grammar fixes them.",
+                    "Not free choice."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                26
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 9 you study the six कारक relations and how each maps to one of the seven cases (विभक्ति)."
         },
         {
@@ -15397,7 +15992,92 @@
           "parentConceptId": "sch03_t01_c03",
           "body": "The Sun Salutation pairs each posture with one of सूर्य's twelve names, and these are not loose nicknames — they form the ancient set of द्वादश आदित्याः (the twelve Ādityas), one for each month of the year. The mantra-names you chant — मित्र (the friend), रवि (the radiant), सूर्य (the impeller), भानु (the shining), खग (the sky-goer), पूषन् (the nourisher), हिरण्यगर्भ (the golden-wombed), मरीचि (the ray-lord), आदित्य (son of Aditi), सवितृ (the vivifier), अर्क (the fire-orb), and भास्कर (the light-maker) — each captures a different power the sun was felt to have. The names double as a Sanskrit vocabulary lesson, because most are transparent: भास्करः literally 'doer of light' (भास् + कर). The Vedas already praise सूर्य/सवितृ (the गायत्री मन्त्र addresses सवितृ), so reciting these twelve names connects your morning stretch to one of the oldest threads in Indian thought.",
           "prerequisite": "Tackle this once you can name a few of the sun's twelve names from the mantras.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch03_dd02_b01",
+              "prompt": "The twelve names of the Sun chanted in सूर्यनमस्कार form which ancient set?",
+              "questionType": "mcq",
+              "options": [
+                "द्वादश आदित्याः (the twelve Ādityas)",
+                "सप्तर्षि",
+                "नवग्रह",
+                "अष्टदिक्पाल"
+              ],
+              "answer": "द्वादश आदित्याः (the twelve Ādityas)",
+              "solutionSteps": [
+                "The twelve names are the द्वादश आदित्याः, one per month.",
+                "मित्र, रवि, सूर्य, भानु, ... भास्कर."
+              ],
+              "commonMistakes": [
+                "Confusing the twelve Ādityas with the सप्तर्षि or नवग्रह."
+              ],
+              "variations": [
+                {
+                  "prompt": "How many names of सूर्य are paired with the salutation's postures?",
+                  "answer": "Twelve",
+                  "solutionSteps": [
+                    "One per posture/month.",
+                    "The द्वादश आदित्याः."
+                  ]
+                },
+                {
+                  "prompt": "Are these twelve names mere nicknames or meaningful epithets?",
+                  "answer": "Meaningful epithets (each a power of the sun)",
+                  "solutionSteps": [
+                    "E.g. पूषन् = nourisher.",
+                    "Transparent meanings."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                26
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch03_dd02_b02",
+              "prompt": "The name भास्करः literally means...",
+              "questionType": "mcq",
+              "options": [
+                "'Maker of light' (भास् + कर)",
+                "'The friend'",
+                "'The golden-wombed'",
+                "'The sky-goer'"
+              ],
+              "answer": "'Maker of light' (भास् + कर)",
+              "solutionSteps": [
+                "भास् = light, कर = maker/doer.",
+                "So भास्करः = light-maker."
+              ],
+              "commonMistakes": [
+                "Guessing from sound rather than parsing भास् + कर."
+              ],
+              "variations": [
+                {
+                  "prompt": "मित्र, as a name of the sun, means...",
+                  "answer": "The friend",
+                  "solutionSteps": [
+                    "मित्र = friend.",
+                    "A friendly epithet of सूर्य."
+                  ]
+                },
+                {
+                  "prompt": "The गायत्री मन्त्र addresses which solar name?",
+                  "answer": "सवितृ (the vivifier)",
+                  "solutionSteps": [
+                    "An ancient Vedic praise of सवितृ.",
+                    "Linking the names to the Vedas."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                26
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In later study you meet the गायत्री मन्त्र and the Vedic hymns to सूर्य/सवितृ, deepening the tradition behind these names."
         },
         {
@@ -15407,7 +16087,92 @@
           "parentConceptId": "sch03_t01_c01",
           "body": "सूर्यनमस्कारः is one limb of the vast discipline of योग, systematised in Patañjali's योगसूत्र around two thousand years ago as a path of eight steps (अष्टाङ्गयोग) from ethical restraints (यम, नियम) through posture (आसन) and breath-control (प्राणायाम) to deep concentration (समाधि). The salutation chains twelve आसन — प्रणामासन, हस्तउत्तानासन, पादहस्तासन and the rest — each Sanskrit name describing the body's shape (पादहस्त = 'feet-and-hands'). Modern physiology explains why the sequence works: it alternately stretches and compresses the spine, syncs movement with inhalation and exhalation, and warms the whole body — which is exactly स्वस्थं शरीरम्, the 'healthy body' the chapter promises. Sanskrit is the technical language of this science the way Latin is for medicine, so learning the आसन names IS learning anatomy in Sanskrit. The chapter's blend of mantra and movement is yoga in miniature.",
           "prerequisite": "Tackle this once you understand सूर्यनमस्कारः combines postures with mantras for a healthy body.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch03_dd03_b01",
+              "prompt": "सूर्यनमस्कारः is a limb of योग, systematised in which text by Patañjali?",
+              "questionType": "mcq",
+              "options": [
+                "The योगसूत्र",
+                "The चरकसंहिता",
+                "Pāṇini's अष्टाध्यायी",
+                "The अमरकोश"
+              ],
+              "answer": "The योगसूत्र",
+              "solutionSteps": [
+                "Patañjali's योगसूत्र lays out the path of yoga.",
+                "सूर्यनमस्कार belongs to its आसन limb."
+              ],
+              "commonMistakes": [
+                "Confusing the योगसूत्र with medical (चरकसंहिता) or grammar (अष्टाध्यायी) texts."
+              ],
+              "variations": [
+                {
+                  "prompt": "Patañjali's अष्टाङ्गयोग has how many limbs?",
+                  "answer": "Eight",
+                  "solutionSteps": [
+                    "अष्ट = eight.",
+                    "Eight steps from यम to समाधि."
+                  ]
+                },
+                {
+                  "prompt": "In what sense is Sanskrit the 'technical language' of yoga?",
+                  "answer": "Āsana names describe the body's shape in Sanskrit (like Latin for medicine)",
+                  "solutionSteps": [
+                    "पादहस्त = feet-and-hands.",
+                    "Names encode anatomy."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                26
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch03_dd03_b02",
+              "prompt": "Which is one of the eight limbs (अष्टाङ्ग) of Patañjali's yoga?",
+              "questionType": "mcq",
+              "options": [
+                "प्राणायाम (breath-control)",
+                "कषायम्",
+                "सुभाषितम्",
+                "समास"
+              ],
+              "answer": "प्राणायाम (breath-control)",
+              "solutionSteps": [
+                "The eight limbs include यम, नियम, आसन, प्राणायाम, ... समाधि.",
+                "प्राणायाम is breath-control."
+              ],
+              "commonMistakes": [
+                "Picking unrelated terms from other fields."
+              ],
+              "variations": [
+                {
+                  "prompt": "Physiologically, why does the salutation 'work'?",
+                  "answer": "It stretches/compresses the spine and syncs movement with breath",
+                  "solutionSteps": [
+                    "Warming the whole body.",
+                    "Yielding स्वस्थं शरीरम्."
+                  ]
+                },
+                {
+                  "prompt": "आसन in the eight limbs means...",
+                  "answer": "Posture",
+                  "solutionSteps": [
+                    "आसन = seat/posture.",
+                    "One limb of yoga."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                26
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In later study you explore Patañjali's अष्टाङ्गयोग and the Sanskrit names of the major आसन and प्राणायाम."
         }
       ],
@@ -16543,7 +17308,92 @@
           "parentConceptId": "sch04_t02_c01",
           "body": "The direction words पूर्वतः ('from the east'), दक्षिणतः, उत्तरतः all share the ending -तः, and that ending is a real grammatical tool called the तसिल् (tasil) suffix. Added to a noun, -तः makes an indeclinable adverb meaning roughly 'from', 'by way of', or 'with respect to' — so मुखतः means 'from the mouth / orally', and शास्त्रतः means 'according to the scriptures'. It belongs to the large family of तद्धित (taddhita) suffixes, the endings Sanskrit attaches to nouns to spin off new words: -तः for 'from-ness', -त्व and -ता for 'the quality of' (मधुरता = sweetness), -मत्/-वत् for 'possessing'. Because a word ending in -तः never changes form, it is wonderfully easy to use once you recognise it. Spotting the तसिल् suffix lets you instantly decode a whole class of direction- and source-words you will meet everywhere in Sanskrit prose.",
           "prerequisite": "Tackle this once you can read direction words like पूर्वतः and दक्षिणतः.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch04_dd01_b01",
+              "prompt": "The ending -तः in पूर्वतः ('from the east') and शास्त्रतः ('according to scripture') is which suffix?",
+              "questionType": "mcq",
+              "options": [
+                "The तसिल् (tasil) suffix",
+                "The वति suffix",
+                "The मतुप् suffix",
+                "The क्त्वा suffix"
+              ],
+              "answer": "The तसिल् (tasil) suffix",
+              "solutionSteps": [
+                "-तः is the तसिल् suffix, making 'from / by way of' adverbs.",
+                "मुखतः = 'from the mouth / orally'."
+              ],
+              "commonMistakes": [
+                "Confusing तसिल् (-तः) with the वति (-वत्) suffix."
+              ],
+              "variations": [
+                {
+                  "prompt": "A word ending in -तः (like शास्त्रतः) is grammatically...",
+                  "answer": "An indeclinable adverb (it never changes form)",
+                  "solutionSteps": [
+                    "Indeclinables stay fixed.",
+                    "Easy to use."
+                  ]
+                },
+                {
+                  "prompt": "तसिल् belongs to which large family of noun-suffixes?",
+                  "answer": "तद्धित (taddhita) suffixes",
+                  "solutionSteps": [
+                    "Endings added to nouns to form new words.",
+                    "Like -त्व, -ता, -मत्."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                34
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch04_dd01_b02",
+              "prompt": "The suffixes -त्व and -ता (as in मधुरता) express which meaning?",
+              "questionType": "mcq",
+              "options": [
+                "'The quality of' (e.g. sweetness)",
+                "'From / by way of'",
+                "'Possessing'",
+                "'Like'"
+              ],
+              "answer": "'The quality of' (e.g. sweetness)",
+              "solutionSteps": [
+                "मधुर ('sweet') + ता = मधुरता ('sweetness').",
+                "-त्व/-ता abstract a quality."
+              ],
+              "commonMistakes": [
+                "Confusing the quality suffixes with the source suffix -तः."
+              ],
+              "variations": [
+                {
+                  "prompt": "मधुरता means...",
+                  "answer": "Sweetness (the quality of being sweet)",
+                  "solutionSteps": [
+                    "मधुर + ता.",
+                    "Abstract noun."
+                  ]
+                },
+                {
+                  "prompt": "Which suffix means 'possessing' (as in 'having wealth')?",
+                  "answer": "-मत्/-वत् (e.g. धनवत्)",
+                  "solutionSteps": [
+                    "मतुप् possessive.",
+                    "धनवत् = rich."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                34
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 9 you study the तद्धित (secondary) suffixes more fully, including -त्व, -ता and -मत्."
         },
         {
@@ -16553,7 +17403,92 @@
           "parentConceptId": "sch04_t01_c01",
           "body": "Your शृगालः-and-grapes story is a Sanskrit retelling of one of Aesop's Greek fables, and the fit is no accident: India had its own ancient, hugely influential tradition of the नीतिकथा — the moral animal tale. The great collection is the पञ्चतन्त्रम् (c. 300 CE), where a wise teacher instructs three dull princes through stories of clever crows, foolish donkeys and scheming jackals; its shorter cousin is the हितोपदेशः. These were so beloved that they travelled west, translated through Persian and Arabic (as Kalīla wa Dimna) into nearly every European language — so Aesop and the Pañcatantra are distant cousins in a single world-tradition of teaching wisdom through talking animals. The fox who calls the unreachable grapes 'sour' (आम्लम्) is doing exactly what a पञ्चतन्त्र character does: dramatising a human failing so the moral sticks. The genre's whole point is that a story remembered teaches better than a rule recited.",
           "prerequisite": "Tackle this once you can retell the fox-and-grapes fable and state its moral.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch04_dd02_b01",
+              "prompt": "The great Sanskrit collection of moral animal tales (नीतिकथा) is the...",
+              "questionType": "mcq",
+              "options": [
+                "पञ्चतन्त्रम्",
+                "योगसूत्र",
+                "अष्टाध्यायी",
+                "मेघदूत"
+              ],
+              "answer": "पञ्चतन्त्रम्",
+              "solutionSteps": [
+                "The पञ्चतन्त्रम् (c. 300 CE) teaches policy through animal fables.",
+                "Its shorter cousin is the हितोपदेशः."
+              ],
+              "commonMistakes": [
+                "Confusing the fable collection with grammar or poetry texts."
+              ],
+              "variations": [
+                {
+                  "prompt": "The shorter cousin of the Panchatantra is the...",
+                  "answer": "हितोपदेशः",
+                  "solutionSteps": [
+                    "Also a नीतिकथा collection.",
+                    "Shorter than the Panchatantra."
+                  ]
+                },
+                {
+                  "prompt": "What is the genre's core claim about teaching?",
+                  "answer": "A story remembered teaches better than a rule recited",
+                  "solutionSteps": [
+                    "Narrative makes morals stick.",
+                    "Hence animal fables."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                34
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch04_dd02_b02",
+              "prompt": "The Panchatantra travelled west, translated through Persian and Arabic, under which title?",
+              "questionType": "mcq",
+              "options": [
+                "Kalila wa Dimna",
+                "Aesop's Fables",
+                "The Iliad",
+                "Grimm's Tales"
+              ],
+              "answer": "Kalila wa Dimna",
+              "solutionSteps": [
+                "The Arabic/Persian version is Kalila wa Dimna.",
+                "From there it reached many European languages."
+              ],
+              "commonMistakes": [
+                "Confusing the Panchatantra's route with Aesop (its distant cousin)."
+              ],
+              "variations": [
+                {
+                  "prompt": "The fox calling the grapes आम्लम् ('sour') dramatises what?",
+                  "answer": "A human failing, so the moral sticks",
+                  "solutionSteps": [
+                    "Like a Panchatantra character.",
+                    "Teaching through a flaw."
+                  ]
+                },
+                {
+                  "prompt": "Aesop and the Panchatantra are best described as...",
+                  "answer": "Distant cousins in one world tradition of animal fables",
+                  "solutionSteps": [
+                    "Shared genre across cultures.",
+                    "Mutually influential."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                34
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In later classes you read tales from the पञ्चतन्त्रम् and हितोपदेशः in the original Sanskrit."
         },
         {
@@ -16563,7 +17498,92 @@
           "parentConceptId": "sch04_t01_c03",
           "body": "उत्पतति ('he jumps UP') is the verb root पत् ('to fall/fly') with the prefix उद् ('up') fastened in front — and that little prefix completely steers the meaning. Such prefixes are the उपसर्ग, a closed set of about twenty-two particles (प्र, परा, अप, सम्, नि, उद्, अव, आ, वि, अधि…) that attach to roots and twist their sense, sometimes drastically. From the single root हृ ('take') the prefixes spin off आहरति (brings), विहरति (wanders/plays), संहरति (gathers/destroys), प्रहरति (strikes) and प्रतिहरति (strikes back). A classical verse jokes that 'उपसर्गेण धात्वर्थो बलादन्यत्र नीयते' — a prefix drags the root's meaning forcibly elsewhere. So learning a handful of roots plus the उपसर्ग multiplies your vocabulary many times over, because you can predict उत्पतति from पत् once you know उद् means 'up'. Reading Sanskrit becomes far easier when you can peel the prefix off a verb and find the familiar root underneath.",
           "prerequisite": "Tackle this once you can see उत्पतति as उद् + पत् ('jump up').",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch04_dd03_b01",
+              "prompt": "In उत्पतति ('jumps up') = उद् + पत्, the part उद् is a(n)...",
+              "questionType": "mcq",
+              "options": [
+                "उपसर्ग (verbal prefix)",
+                "suffix",
+                "case ending",
+                "root"
+              ],
+              "answer": "उपसर्ग (verbal prefix)",
+              "solutionSteps": [
+                "उपसर्ग are prefixes that steer a root's meaning.",
+                "उद् ('up') + पत् ('fall/fly') = उत्पतति."
+              ],
+              "commonMistakes": [
+                "Calling the prefix a suffix or the root."
+              ],
+              "variations": [
+                {
+                  "prompt": "About how many उपसर्ग particles are there (a closed set)?",
+                  "answer": "About twenty-two",
+                  "solutionSteps": [
+                    "प्र, परा, अप, सम्, नि, उद्...",
+                    "A fixed small set."
+                  ]
+                },
+                {
+                  "prompt": "Why does knowing उपसर्ग multiply your vocabulary?",
+                  "answer": "One root plus different prefixes yields many verbs",
+                  "solutionSteps": [
+                    "E.g. हृ -> आहरति, विहरति...",
+                    "Predictable new meanings."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                34
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch04_dd03_b02",
+              "prompt": "From the root हृ ('take'), which prefixed form means 'strikes'?",
+              "questionType": "mcq",
+              "options": [
+                "प्रहरति",
+                "आहरति",
+                "विहरति",
+                "संहरति"
+              ],
+              "answer": "प्रहरति",
+              "solutionSteps": [
+                "प्र + हृ = प्रहरति ('strikes').",
+                "आहरति = brings, विहरति = wanders, संहरति = gathers/destroys."
+              ],
+              "commonMistakes": [
+                "Confusing the prefixes' effects on हृ."
+              ],
+              "variations": [
+                {
+                  "prompt": "विहरति (वि + हृ) means...",
+                  "answer": "Wanders / plays",
+                  "solutionSteps": [
+                    "वि shifts the sense.",
+                    "To roam or sport."
+                  ]
+                },
+                {
+                  "prompt": "A classical verse says a prefix 'drags the root's meaning' where?",
+                  "answer": "Forcibly elsewhere (उपसर्गेण धात्वर्थो ... नीयते)",
+                  "solutionSteps": [
+                    "Prefixes redirect meaning.",
+                    "Sometimes drastically."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                34
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In later classes you study the उपसर्ग systematically and learn how each shifts a root's meaning."
         }
       ],
@@ -17762,7 +18782,92 @@
           "parentConceptId": "sch05_t01_c02",
           "body": "When the chapter declares सेवा परमो धर्मः, 'service is the highest धर्म', it uses one of the deepest and least translatable words in Sanskrit. धर्म is not simply 'religion'; it spans duty, righteousness, natural law, and the right way of living suited to one's role and stage of life. Classical thought sets it among the four पुरुषार्थ — the legitimate aims of a human life: धर्म (right conduct), अर्थ (prosperity), काम (well-directed desire), and मोक्ष (liberation) — with धर्म as the foundation that keeps the other three honest. The phrasing परमो धर्मः ('the supreme duty') echoes a famous Mahābhārata line, अहिंसा परमो धर्मः ('non-violence is the highest duty'). By slotting सेवा into that exalted frame, the chapter argues that selfless service ranks among life's loftiest goals — an idea Gandhi made central to modern India. Understanding धर्म's range turns a simple sentence into a window on Indian ethics.",
           "prerequisite": "Tackle this once you understand सेवा परमो धर्मः as 'service is the highest duty'.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch05_dd01_b01",
+              "prompt": "The four पुरुषार्थ (legitimate aims of life) are धर्म, अर्थ, काम and...",
+              "questionType": "mcq",
+              "options": [
+                "मोक्ष",
+                "सेवा",
+                "योग",
+                "ज्ञान"
+              ],
+              "answer": "मोक्ष",
+              "solutionSteps": [
+                "The four aims are धर्म, अर्थ, काम, मोक्ष.",
+                "मोक्ष is liberation, the fourth aim."
+              ],
+              "commonMistakes": [
+                "Substituting सेवा or योग for the fourth पुरुषार्थ (मोक्ष)."
+              ],
+              "variations": [
+                {
+                  "prompt": "Which पुरुषार्थ is described as the foundation that keeps the others honest?",
+                  "answer": "धर्म",
+                  "solutionSteps": [
+                    "धर्म underpins अर्थ and काम.",
+                    "The ethical base."
+                  ]
+                },
+                {
+                  "prompt": "धर्म is broader than 'religion'; it also means...",
+                  "answer": "Duty / righteousness / right way of living",
+                  "solutionSteps": [
+                    "Spanning law and conduct.",
+                    "Hard to translate by one word."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                42
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch05_dd01_b02",
+              "prompt": "The phrase 'परमो धर्मः' echoes which famous Mahabharata line?",
+              "questionType": "mcq",
+              "options": [
+                "अहिंसा परमो धर्मः ('non-violence is the highest duty')",
+                "सत्यमेव जयते",
+                "वसुधैव कुटुम्बकम्",
+                "कर्मण्येवाधिकारस्ते"
+              ],
+              "answer": "अहिंसा परमो धर्मः ('non-violence is the highest duty')",
+              "solutionSteps": [
+                "सेवा परमो धर्मः mirrors अहिंसा परमो धर्मः.",
+                "Both rank a virtue as the supreme धर्म."
+              ],
+              "commonMistakes": [
+                "Confusing this line with other famous mottoes."
+              ],
+              "variations": [
+                {
+                  "prompt": "By calling सेवा a परमो धर्मः, the chapter ranks service among life's...",
+                  "answer": "Loftiest goals",
+                  "solutionSteps": [
+                    "Slotted with the highest धर्म.",
+                    "An exalted aim."
+                  ]
+                },
+                {
+                  "prompt": "Which modern leader made selfless सेवा central to his vision of India?",
+                  "answer": "Gandhi",
+                  "solutionSteps": [
+                    "He emphasised service.",
+                    "A central Gandhian idea."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                42
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In later classes you study the four पुरुषार्थ and how धर्म is understood across the epics and dharmaśāstra."
         },
         {
@@ -17772,7 +18877,92 @@
           "parentConceptId": "sch05_t01_c04",
           "body": "The physician serves यन्त्रवत् — 'like a machine', tirelessly. That handy -वत् ending is the वति (vati) suffix, which turns a noun into an adverb meaning 'like / in the manner of'. So पुत्रवत् पालयति means '(he) protects like a son', and राजवत् वर्तते means '(he) behaves like a king'. Pāṇini's rule तेन तुल्यं क्रिया चेद्वतिः captures it: when an action is COMPARABLE to something, attach -वत्. Be careful though — -वत् wears two hats. As the वति suffix it means 'like' (यन्त्रवत् = 'like a machine'); but the very similar मतुप्/-वत् possessive suffix means 'having' (धनवत् = 'having wealth, rich'). Context tells them apart: an adverb of comparison versus an adjective of possession. Mastering the वति suffix lets you build crisp similes in a single word, exactly the kind of compression that makes Sanskrit so economical and expressive.",
           "prerequisite": "Tackle this once you read यन्त्रवत् as 'like a machine'.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch05_dd02_b01",
+              "prompt": "In यन्त्रवत् ('like a machine'), the -वत् is the वति suffix, which means...",
+              "questionType": "mcq",
+              "options": [
+                "'Like / in the manner of'",
+                "'Having / possessing'",
+                "'From'",
+                "'Towards'"
+              ],
+              "answer": "'Like / in the manner of'",
+              "solutionSteps": [
+                "The वति suffix builds adverbs of comparison.",
+                "यन्त्रवत् = 'like a machine'."
+              ],
+              "commonMistakes": [
+                "Confusing the वति 'like' suffix with the मतुप् 'having' suffix."
+              ],
+              "variations": [
+                {
+                  "prompt": "पुत्रवत् पालयति means...",
+                  "answer": "'(He) protects LIKE a son'",
+                  "solutionSteps": [
+                    "वति = 'like'.",
+                    "A one-word simile."
+                  ]
+                },
+                {
+                  "prompt": "Pāṇini's rule for वति applies when an action is...",
+                  "answer": "Comparable to something (तेन तुल्यं क्रिया चेद्वतिः)",
+                  "solutionSteps": [
+                    "Comparison triggers -वत्.",
+                    "Then attach the suffix."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                42
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch05_dd02_b02",
+              "prompt": "The very similar मतुप्/-वत् possessive suffix (as in धनवत्) instead means...",
+              "questionType": "mcq",
+              "options": [
+                "'Having / possessing' (धनवत् = rich)",
+                "'Like'",
+                "'From'",
+                "'Not'"
+              ],
+              "answer": "'Having / possessing' (धनवत् = rich)",
+              "solutionSteps": [
+                "मतुप्/-वत् makes possessive adjectives.",
+                "धनवत् = 'having wealth, rich'."
+              ],
+              "commonMistakes": [
+                "Reading धनवत् as 'like wealth' (that would be the वति sense)."
+              ],
+              "variations": [
+                {
+                  "prompt": "How do you tell the वति '-वत्' from the possessive '-वत्' apart?",
+                  "answer": "By context: adverb of comparison vs adjective of possession",
+                  "solutionSteps": [
+                    "'like' vs 'having'.",
+                    "Context decides."
+                  ]
+                },
+                {
+                  "prompt": "क्रियावान् ('a person of action') uses which kind of suffix?",
+                  "answer": "A possessive (मतुप्-type) suffix",
+                  "solutionSteps": [
+                    "-वान् = 'having'.",
+                    "Possessing action."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                42
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 9 you study the तद्धित suffixes and learn to distinguish the comparison -वत् (वति) from the possessive -वत् (मतुप्)."
         },
         {
@@ -17782,7 +18972,92 @@
           "parentConceptId": "sch05_t02_c03",
           "body": "The serving physician prepares a कषायम् — a herbal decoction — and that single word opens the door to आयुर्वेद, India's classical 'science of life' (आयुस् = life, वेद = knowledge). Its foundational texts are in Sanskrit: the चरकसंहिता on internal medicine, the सुश्रुतसंहिता famed for surgery, and the अष्टाङ्गहृदय. Āyurveda explains health through the balance of three दोष — वात, पित्त and कफ — and treats imbalance with diet, lifestyle, and plant-based preparations of which the कषाय (a simmered herbal extract) is one classic form, alongside चूर्ण (powders) and अरिष्ट (fermented tonics). Because the entire pharmacopoeia is named in Sanskrit, reading even a recipe is a Sanskrit exercise. The chapter's doctor, who chooses tireless service over चasing degrees and posts, embodies the आयुर्वेदिक ideal of the वैद्य whose first duty is the patient — making कषायम् far more than a vocabulary word.",
           "prerequisite": "Tackle this once you know कषायम् is a herbal decoction the physician prepares.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch05_dd03_b01",
+              "prompt": "आयुर्वेद literally means the knowledge/science of...",
+              "questionType": "mcq",
+              "options": [
+                "Life (आयुस्)",
+                "War",
+                "Money",
+                "Music"
+              ],
+              "answer": "Life (आयुस्)",
+              "solutionSteps": [
+                "आयुस् = life, वेद = knowledge.",
+                "So आयुर्वेद = the science of life."
+              ],
+              "commonMistakes": [
+                "Guessing from English 'cure' rather than parsing आयुस् + वेद."
+              ],
+              "variations": [
+                {
+                  "prompt": "Name one foundational Sanskrit text of Āyurveda.",
+                  "answer": "The चरकसंहिता (or सुश्रुतसंहिता)",
+                  "solutionSteps": [
+                    "Charaka on internal medicine.",
+                    "Sushruta on surgery."
+                  ]
+                },
+                {
+                  "prompt": "A कषायम् is which kind of Āyurvedic preparation?",
+                  "answer": "A simmered herbal decoction",
+                  "solutionSteps": [
+                    "Boiled plant extract.",
+                    "One classic form."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                42
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch05_dd03_b02",
+              "prompt": "Āyurveda explains health through the balance of three...",
+              "questionType": "mcq",
+              "options": [
+                "दोष (वात, पित्त, कफ)",
+                "वेद",
+                "गुण",
+                "लोक"
+              ],
+              "answer": "दोष (वात, पित्त, कफ)",
+              "solutionSteps": [
+                "The three दोष are वात, पित्त and कफ.",
+                "Imbalance is treated by diet, lifestyle and herbs."
+              ],
+              "commonMistakes": [
+                "Confusing the three दोष with other Sanskrit triads."
+              ],
+              "variations": [
+                {
+                  "prompt": "Which Āyurvedic text is especially famous for surgery?",
+                  "answer": "The सुश्रुतसंहिता",
+                  "solutionSteps": [
+                    "Sushruta describes surgical methods.",
+                    "An ancient surgical text."
+                  ]
+                },
+                {
+                  "prompt": "The Āyurvedic physician is called the...",
+                  "answer": "वैद्य",
+                  "solutionSteps": [
+                    "वैद्य = healer.",
+                    "Whose first duty is the patient."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                42
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In later study you encounter the Sanskrit medical classics (चरक, सुश्रुत) and the vocabulary of आयुर्वेद."
         }
       ],
