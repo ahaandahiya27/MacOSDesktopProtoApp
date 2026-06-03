@@ -8359,7 +8359,93 @@
           "parentConceptId": "ssch03_t03_c03",
           "body": "When moist winds meet a mountain or range of hills, they are forced to rise. As air rises it expands and cools, and cooler air can hold less water vapour, so the vapour condenses into clouds and falls as rain on the windward (wind-facing) side. This is called 'orographic' or 'relief' rainfall. It explains why the western slopes of the Western Ghats are drenched while the Deccan behind them lies in a drier 'rain shadow', and why the hills of Meghalaya make Mawsynram the rainiest place on Earth. One range can therefore create both a soaking-wet coast and a much drier interior only a short distance apart — the same idea explains why the cold desert of Ladakh sits dry behind the Himalayas.",
           "prerequisite": "Knowing that the Western Ghats and other hills force monsoon winds upward.",
-          "nextStepHint": "Find another 'rain shadow' region in India besides the Deccan and Ladakh."
+          "nextStepHint": "Find another 'rain shadow' region in India besides the Deccan and Ladakh.",
+          "bonusQuestions": [
+            {
+              "id": "ssch03_dv01_b01",
+              "prompt": "The Deccan plateau is much drier than the western slopes of the Western Ghats because it lies in the...",
+              "questionType": "mcq",
+              "options": [
+                "Rain shadow (the dry leeward side of the range)",
+                "Windward side facing the winds",
+                "Monsoon core zone",
+                "Coastal belt"
+              ],
+              "answer": "Rain shadow (the dry leeward side of the range)",
+              "solutionSteps": [
+                "Moist winds drop their rain rising over the Ghats' western slope.",
+                "The Deccan, behind them, gets little — the rain shadow."
+              ],
+              "commonMistakes": [
+                "Thinking the Deccan is dry only because it is far inland, not the rain shadow."
+              ],
+              "variations": [
+                {
+                  "prompt": "Mawsynram is the rainiest place on Earth because moist winds...",
+                  "answer": "Are forced up against the Meghalaya hills, giving heavy orographic rain",
+                  "solutionSteps": [
+                    "Relief rainfall.",
+                    "Extreme totals."
+                  ]
+                },
+                {
+                  "prompt": "One range can make both a wet coast and a dry interior. The dry side is the...",
+                  "answer": "Rain shadow",
+                  "solutionSteps": [
+                    "Leeward, after rain falls.",
+                    "Stays dry."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                36
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch03_dv01_b02",
+              "prompt": "Why is Mawsynram (Meghalaya) the rainiest place on Earth?",
+              "questionType": "mcq",
+              "options": [
+                "Moist winds are forced to rise against the hills, cooling and dropping heavy orographic rain",
+                "It sits exactly on the equator",
+                "It has the most rivers",
+                "It lies below sea level"
+              ],
+              "answer": "Moist winds are forced to rise against the hills, cooling and dropping heavy orographic rain",
+              "solutionSteps": [
+                "Steep hills force humid monsoon air up sharply.",
+                "Rapid cooling condenses huge amounts of rain."
+              ],
+              "commonMistakes": [
+                "Crediting rivers or latitude rather than orographic uplift."
+              ],
+              "variations": [
+                {
+                  "prompt": "On which side of the hills does this heavy rain fall?",
+                  "answer": "The windward (wind-facing) side",
+                  "solutionSteps": [
+                    "Rising air there.",
+                    "Drops its rain."
+                  ]
+                },
+                {
+                  "prompt": "What lies in the comparatively dry rain shadow behind such hills?",
+                  "answer": "A drier interior (e.g. the Deccan, or Ladakh behind the Himalayas)",
+                  "solutionSteps": [
+                    "Leeward side.",
+                    "Much less rain."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                36
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch03_dv02",
@@ -8368,7 +8454,93 @@
           "parentConceptId": "ssch03_t02_c03",
           "body": "Geographers describe how 'extreme' or 'even' a climate is using the temperature range — the difference between the maximum and minimum temperature. A small range means an even, moderate climate; a large range means hot summers and cold winters. The chapter's example makes this concrete: Mumbai's range is about 14°C (max ~32°C, min ~18°C) because the sea moderates it, while Nagpur's range reaches about 34°C (max ~44°C, min ~10°C) because it is far inland. You can compute a place's range for a day, a month or a year, and comparing ranges is a quick way to tell maritime climates from continental ones — a skill you will use throughout geography.",
           "prerequisite": "Knowing the sea moderates coastal temperatures.",
-          "nextStepHint": "Calculate the temperature range of your own town this week and compare it with a coastal city."
+          "nextStepHint": "Calculate the temperature range of your own town this week and compare it with a coastal city.",
+          "bonusQuestions": [
+            {
+              "id": "ssch03_dv02_b01",
+              "prompt": "Mumbai's yearly temperature range is about 14C while Nagpur's is about 34C. The main reason is...",
+              "questionType": "mcq",
+              "options": [
+                "The sea moderates coastal Mumbai, while Nagpur lies far inland",
+                "Mumbai is at a much higher altitude",
+                "Nagpur is on the coast",
+                "Mumbai is simply colder"
+              ],
+              "answer": "The sea moderates coastal Mumbai, while Nagpur lies far inland",
+              "solutionSteps": [
+                "The sea warms and cools slowly, evening out coastal temperatures.",
+                "Inland Nagpur swings more between hot summers and cold winters."
+              ],
+              "commonMistakes": [
+                "Attributing the difference to altitude rather than the moderating sea."
+              ],
+              "variations": [
+                {
+                  "prompt": "Temperature range is calculated as...",
+                  "answer": "Maximum temperature minus minimum temperature",
+                  "solutionSteps": [
+                    "A simple difference.",
+                    "Max - min."
+                  ]
+                },
+                {
+                  "prompt": "A small temperature range indicates which kind of climate?",
+                  "answer": "An even, moderate (maritime) climate",
+                  "solutionSteps": [
+                    "Little seasonal swing.",
+                    "Sea-moderated."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                36
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch03_dv02_b02",
+              "prompt": "A place with a LARGE annual temperature range most likely has which type of climate?",
+              "questionType": "mcq",
+              "options": [
+                "A continental climate (hot summers, cold winters), far from the sea",
+                "A maritime climate",
+                "A coastal climate",
+                "A sea-moderated climate"
+              ],
+              "answer": "A continental climate (hot summers, cold winters), far from the sea",
+              "solutionSteps": [
+                "Large range = big seasonal swings = continental interior.",
+                "Small range = even, maritime."
+              ],
+              "commonMistakes": [
+                "Reversing it: large range means continental, not maritime."
+              ],
+              "variations": [
+                {
+                  "prompt": "Comparing ranges is a quick way to tell ... climates apart.",
+                  "answer": "Maritime from continental",
+                  "solutionSteps": [
+                    "Range reveals evenness.",
+                    "A core geography skill."
+                  ]
+                },
+                {
+                  "prompt": "Nagpur's max ~44C and min ~10C give a range of about...",
+                  "answer": "34C",
+                  "solutionSteps": [
+                    "44 - 10.",
+                    "= 34C."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                36
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch03_dv03",
@@ -8377,7 +8549,93 @@
           "parentConceptId": "ssch03_t03_c01",
           "body": "The summer monsoon works on the same principle as a coastal sea breeze, only on a giant scale. As summer heats the Indian landmass, the air above it warms, expands and rises, creating a vast zone of LOW pressure over the land. The Indian Ocean stays relatively cool, so its air is denser and at HIGHER pressure. Air always flows from high to low pressure, so moisture-laden winds sweep in from the sea toward the land — the southwest monsoon — and dump rain as they are forced up over the Ghats and Himalayas. In winter the land cools faster than the sea, the pressure pattern flips, and the winds reverse into the drier northeast monsoon. So the whole monsoon is really one enormous, seasonal land-and-sea breeze driven by the uneven heating of land and water.",
           "prerequisite": "Knowing that winds blow from high pressure to low pressure, and that land heats faster than the sea.",
-          "nextStepHint": "Find out what the 'ITCZ' (a rain belt that shifts north and south) has to do with the monsoon's arrival."
+          "nextStepHint": "Find out what the 'ITCZ' (a rain belt that shifts north and south) has to do with the monsoon's arrival.",
+          "bonusQuestions": [
+            {
+              "id": "ssch03_dv03_b01",
+              "prompt": "The southwest summer monsoon blows from sea to land because...",
+              "questionType": "mcq",
+              "options": [
+                "The heated land forms a vast low-pressure zone and moist sea air flows in toward it",
+                "The sea is hotter than the land in summer",
+                "Winds always blow toward the north",
+                "The Himalayas magnetically pull the winds"
+              ],
+              "answer": "The heated land forms a vast low-pressure zone and moist sea air flows in toward it",
+              "solutionSteps": [
+                "Summer heats the land, air rises (low pressure).",
+                "Cooler, higher-pressure sea air flows in — like a giant sea breeze."
+              ],
+              "commonMistakes": [
+                "Thinking the sea is warmer; in summer the land heats more, forming the low."
+              ],
+              "variations": [
+                {
+                  "prompt": "The monsoon works on the same principle as a coastal...",
+                  "answer": "Sea breeze (but country-sized)",
+                  "solutionSteps": [
+                    "Land-sea heating contrast.",
+                    "Scaled up hugely."
+                  ]
+                },
+                {
+                  "prompt": "Air always flows from ... pressure to ... pressure.",
+                  "answer": "High to low",
+                  "solutionSteps": [
+                    "Pressure gradient.",
+                    "Drives the winds."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                36
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch03_dv03_b02",
+              "prompt": "Why does the winter (northeast) monsoon reverse and become dry?",
+              "questionType": "mcq",
+              "options": [
+                "In winter the land cools faster than the sea, flipping the pressure pattern so winds blow from land to sea",
+                "The sea dries up in winter",
+                "The Sun stops shining",
+                "The rivers freeze and block the wind"
+              ],
+              "answer": "In winter the land cools faster than the sea, flipping the pressure pattern so winds blow from land to sea",
+              "solutionSteps": [
+                "Cool winter land becomes higher pressure than the sea.",
+                "Winds now blow off the land — drier northeast monsoon."
+              ],
+              "commonMistakes": [
+                "Assuming the monsoon only blows one way year-round."
+              ],
+              "variations": [
+                {
+                  "prompt": "The whole monsoon system is essentially one enormous, seasonal...",
+                  "answer": "Land-and-sea breeze",
+                  "solutionSteps": [
+                    "Driven by uneven heating.",
+                    "Reversing with the seasons."
+                  ]
+                },
+                {
+                  "prompt": "Which monsoon brings most of India's rain?",
+                  "answer": "The southwest (summer) monsoon",
+                  "solutionSteps": [
+                    "Moist sea winds.",
+                    "Heavy rainfall."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                36
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch03_dv04",
@@ -8386,7 +8644,93 @@
           "parentConceptId": "ssch03_t04_c02",
           "body": "It is easy to confuse one hot afternoon with global warming, but they belong to different timescales. Weather is what happens day to day and bounces around a lot; climate is the long-term AVERAGE of that weather over decades. Climate change means that average is slowly shifting, because greenhouse gases trap extra heat in the atmosphere. You cannot see it in a single day — a cold week proves nothing — but you can measure it in the trend: glaciers retreating year after year, monsoons becoming more erratic, cyclones drawing energy from warmer seas, and record-hot years clustering together. That is why scientists study patterns over 30 years or more, not yesterday's temperature, to detect climate change.",
           "prerequisite": "Knowing the difference between weather and climate, and what the greenhouse effect is.",
-          "nextStepHint": "Look up how long a glacier like Gangotri has been retreating and by how much."
+          "nextStepHint": "Look up how long a glacier like Gangotri has been retreating and by how much.",
+          "bonusQuestions": [
+            {
+              "id": "ssch03_dv04_b01",
+              "prompt": "Why doesn't a single very hot afternoon prove global warming?",
+              "questionType": "mcq",
+              "options": [
+                "Weather is day-to-day and varies a lot; climate is the long-term AVERAGE, which shifts only slowly",
+                "A hot day is exactly the same as climate change",
+                "Climate just means yesterday's weather",
+                "Weather and climate are unrelated"
+              ],
+              "answer": "Weather is day-to-day and varies a lot; climate is the long-term AVERAGE, which shifts only slowly",
+              "solutionSteps": [
+                "Weather bounces around daily; climate is its decades-long average.",
+                "One day (hot or cold) proves nothing about the trend."
+              ],
+              "commonMistakes": [
+                "Confusing a single day's weather with the long-term climate."
+              ],
+              "variations": [
+                {
+                  "prompt": "Does a single cold week disprove global warming?",
+                  "answer": "No — it is weather, not the long-term climate trend",
+                  "solutionSteps": [
+                    "Short-term noise.",
+                    "Trend is what matters."
+                  ]
+                },
+                {
+                  "prompt": "Over how long do scientists study patterns to detect climate change?",
+                  "answer": "30 years or more",
+                  "solutionSteps": [
+                    "Long averages.",
+                    "Not one day."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                36
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch03_dv04_b02",
+              "prompt": "Which of these is real EVIDENCE of climate change (a trend, not one day's weather)?",
+              "questionType": "mcq",
+              "options": [
+                "Glaciers retreating year after year and record-hot years clustering together",
+                "One hot afternoon",
+                "A single cold morning",
+                "A windy week"
+              ],
+              "answer": "Glaciers retreating year after year and record-hot years clustering together",
+              "solutionSteps": [
+                "Long-term trends reveal climate change.",
+                "Retreating glaciers and clustered record years are such trends."
+              ],
+              "commonMistakes": [
+                "Treating a single day as evidence rather than a multi-year trend."
+              ],
+              "variations": [
+                {
+                  "prompt": "What traps the extra heat that slowly shifts the climate average?",
+                  "answer": "Greenhouse gases in the atmosphere",
+                  "solutionSteps": [
+                    "They retain heat.",
+                    "Raising the average."
+                  ]
+                },
+                {
+                  "prompt": "Why is studying a 30-year trend better than yesterday's temperature?",
+                  "answer": "It separates the slow climate signal from noisy daily weather",
+                  "solutionSteps": [
+                    "Averages out noise.",
+                    "Reveals the trend."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                36
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch03_dv05",
@@ -8395,7 +8739,93 @@
           "parentConceptId": "ssch03_t01_c02",
           "body": "Much of the world divides the year into four seasons, but the Indian tradition recognises six ṛitus — Vasanta (spring), Grīṣma (summer), Varṣā (the rains), Śharad (autumn), Hemanta (early winter) and Śhiśhira (late winter) — each about two months long. This is not just poetry: it is a finer reading of a climate ruled by the monsoon. A four-season scheme has no slot for the single most important event of the Indian year, the arrival and retreat of the rains, so the tradition gives Varṣā and the post-monsoon Śharad their own names. The six-ṛitu calendar lines up with the farmer's year and with festivals, showing how a culture's words for time grow out of the climate it lives in. The same monsoon that the rest of this chapter explains scientifically is what makes a six-fold year fit India better than a four-fold one.",
           "prerequisite": "Knowing that India's year is built around the monsoon's arrival and retreat.",
-          "nextStepHint": "Match each of the six ṛitus to the months and to a festival celebrated then."
+          "nextStepHint": "Match each of the six ṛitus to the months and to a festival celebrated then.",
+          "bonusQuestions": [
+            {
+              "id": "ssch03_dv05_b01",
+              "prompt": "How many seasons (ṛitus) does the Indian tradition recognise?",
+              "questionType": "mcq",
+              "options": [
+                "Six",
+                "Four",
+                "Two",
+                "Twelve"
+              ],
+              "answer": "Six",
+              "solutionSteps": [
+                "The six ṛitus are Vasanta, Grīṣma, Varṣā, Śharad, Hemanta and Śhiśhira.",
+                "Each about two months long."
+              ],
+              "commonMistakes": [
+                "Defaulting to the four-season scheme used elsewhere."
+              ],
+              "variations": [
+                {
+                  "prompt": "Which ṛitu is 'the rains', central to the Indian year?",
+                  "answer": "Varṣā",
+                  "solutionSteps": [
+                    "The monsoon season.",
+                    "Its own ṛitu."
+                  ]
+                },
+                {
+                  "prompt": "Roughly how long is each ṛitu?",
+                  "answer": "About two months",
+                  "solutionSteps": [
+                    "Six ṛitus across the year.",
+                    "~2 months each."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                36
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch03_dv05_b02",
+              "prompt": "Why does a six-season calendar fit India better than a four-season one?",
+              "questionType": "mcq",
+              "options": [
+                "It gives the all-important monsoon rains (Varṣā) and post-monsoon their own seasons",
+                "Four seasons are forbidden",
+                "It is purely poetic with no real basis",
+                "India has no winter at all"
+              ],
+              "answer": "It gives the all-important monsoon rains (Varṣā) and post-monsoon their own seasons",
+              "solutionSteps": [
+                "A four-season scheme has no slot for the monsoon, India's key event.",
+                "Six ṛitus name Varṣā and Śharad, matching the farmer's year."
+              ],
+              "commonMistakes": [
+                "Dismissing the six-ṛitu system as mere poetry."
+              ],
+              "variations": [
+                {
+                  "prompt": "The six-ṛitu calendar lines up with which practical things?",
+                  "answer": "The farmer's year and festivals",
+                  "solutionSteps": [
+                    "Climate-driven calendar.",
+                    "Tied to the monsoon."
+                  ]
+                },
+                {
+                  "prompt": "This shows a culture's words for time grow out of its...",
+                  "answer": "Climate",
+                  "solutionSteps": [
+                    "Language reflects environment.",
+                    "Monsoon-shaped year."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                36
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch03_dv06",
@@ -8404,7 +8834,93 @@
           "parentConceptId": "ssch03_t03_c01",
           "body": "The monsoon is reliable most years, but every few years it weakens — and the cause can lie thousands of kilometres away in the Pacific Ocean. Normally the western Pacific near Asia is warm and feeds rising, rainy air. In an El Niño year the warm water shifts eastward toward South America, the giant pattern of pressure and winds across the whole tropical belt rearranges, and the pull that draws moist winds onto India weakens. The result can be a late or short southwest monsoon and poor rains. This long-distance link between a Pacific warming and an Indian drought is called a 'teleconnection' — tele meaning 'far'. It is a striking lesson that climate is one connected system: an ocean on the other side of the planet can decide whether an Indian farmer's harvest succeeds, which is exactly why monsoon forecasts watch the Pacific so closely.",
           "prerequisite": "Knowing the monsoon is driven by ocean–land pressure differences.",
-          "nextStepHint": "Find out what La Niña is and whether it tends to strengthen or weaken India's monsoon."
+          "nextStepHint": "Find out what La Niña is and whether it tends to strengthen or weaken India's monsoon.",
+          "bonusQuestions": [
+            {
+              "id": "ssch03_dv06_b01",
+              "prompt": "A weak Indian monsoon can be triggered by warm water shifting eastward in which ocean?",
+              "questionType": "mcq",
+              "options": [
+                "The Pacific Ocean (an El Niño year)",
+                "The Arctic Ocean",
+                "The Indian Ocean alone",
+                "The Atlantic Ocean"
+              ],
+              "answer": "The Pacific Ocean (an El Niño year)",
+              "solutionSteps": [
+                "In El Niño, Pacific warm water shifts east toward South America.",
+                "This rearranges tropical winds and can weaken the monsoon."
+              ],
+              "commonMistakes": [
+                "Looking only at the Indian Ocean; the trigger is the Pacific."
+              ],
+              "variations": [
+                {
+                  "prompt": "An El Niño year can cause India to have a...",
+                  "answer": "Late or short monsoon and poor rains",
+                  "solutionSteps": [
+                    "Weakened pull of moist winds.",
+                    "Drought risk."
+                  ]
+                },
+                {
+                  "prompt": "Why do monsoon forecasters watch the Pacific so closely?",
+                  "answer": "Pacific conditions (El Niño) strongly affect the Indian monsoon",
+                  "solutionSteps": [
+                    "Teleconnection.",
+                    "Far-off but powerful."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                36
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch03_dv06_b02",
+              "prompt": "A long-distance link like Pacific warming causing Indian drought is called a...",
+              "questionType": "mcq",
+              "options": [
+                "Teleconnection",
+                "Monsoon",
+                "Convection cell",
+                "Isobar"
+              ],
+              "answer": "Teleconnection",
+              "solutionSteps": [
+                "'Tele' means 'far'.",
+                "A teleconnection links distant parts of the climate system."
+              ],
+              "commonMistakes": [
+                "Confusing it with local weather terms."
+              ],
+              "variations": [
+                {
+                  "prompt": "What does this teach about Earth's climate?",
+                  "answer": "It is one connected system; distant oceans can affect local weather",
+                  "solutionSteps": [
+                    "Global interconnection.",
+                    "One system."
+                  ]
+                },
+                {
+                  "prompt": "'Tele' in teleconnection means...",
+                  "answer": "Far",
+                  "solutionSteps": [
+                    "Distant link.",
+                    "Across the planet."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                36
+              ],
+              "needsHumanReview": false
+            }
+          ]
         }
       ],
       "crossChapterRefs": [
@@ -10930,7 +11446,93 @@
           "parentConceptId": "ssch04_t03_c02",
           "body": "Among the many mahaajanapadas, why did Magadha (in today's Bihar) become the most powerful and eventually the seed of India's first empires? Geography and resources gave it a decisive edge. It sat on the fertile middle Ganga plain, so it could grow huge food surpluses and tax a large population. It controlled stretches of the Ganga, a natural highway for trade and moving armies. Nearby hills supplied iron ore for tools and weapons, and forests provided timber and elephants for the army. With more food, more iron, more revenue and better transport than its rivals, Magadha could out-build, out-tax and out-arm them — a clear example of how geography and resources can decide which state rises to dominate.",
           "prerequisite": "Knowing that mahaajanapadas needed taxes, iron, armies and fortifications.",
-          "nextStepHint": "Find out which dynasty made Magadha the centre of India's first great empire."
+          "nextStepHint": "Find out which dynasty made Magadha the centre of India's first great empire.",
+          "bonusQuestions": [
+            {
+              "id": "ssch04_dv01_b01",
+              "prompt": "Why did Magadha become the most powerful mahajanapada and the seed of India's first empires?",
+              "questionType": "mcq",
+              "options": [
+                "Fertile Ganga plains, nearby iron ore, river transport and forest elephants gave it food, weapons and revenue",
+                "It was a small coastal trading port",
+                "It had the most temples",
+                "It was the only republic"
+              ],
+              "answer": "Fertile Ganga plains, nearby iron ore, river transport and forest elephants gave it food, weapons and revenue",
+              "solutionSteps": [
+                "Geography and resources gave Magadha surpluses, iron, revenue and transport.",
+                "It could out-build, out-tax and out-arm its rivals."
+              ],
+              "commonMistakes": [
+                "Crediting one cause; it was a combination of geography and resources."
+              ],
+              "variations": [
+                {
+                  "prompt": "Control of the Ganga gave Magadha what advantage?",
+                  "answer": "A natural highway for trade and moving armies",
+                  "solutionSteps": [
+                    "River transport.",
+                    "Trade and military reach."
+                  ]
+                },
+                {
+                  "prompt": "Nearby hills supplied which militarily vital resource?",
+                  "answer": "Iron ore (for tools and weapons)",
+                  "solutionSteps": [
+                    "Iron edge.",
+                    "Better-armed forces."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                48
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch04_dv01_b02",
+              "prompt": "Magadha could support and tax a large population mainly because it...",
+              "questionType": "mcq",
+              "options": [
+                "Sat on the fertile middle Ganga plain and grew large food surpluses",
+                "Imported all its food by sea",
+                "Had no farming at all",
+                "Banned trade"
+              ],
+              "answer": "Sat on the fertile middle Ganga plain and grew large food surpluses",
+              "solutionSteps": [
+                "Rich plains meant big harvests.",
+                "Surplus food fed a large, taxable population."
+              ],
+              "commonMistakes": [
+                "Overlooking the agricultural base of Magadha's power."
+              ],
+              "variations": [
+                {
+                  "prompt": "Forests near Magadha provided which army asset?",
+                  "answer": "Timber and elephants",
+                  "solutionSteps": [
+                    "War elephants.",
+                    "From the forests."
+                  ]
+                },
+                {
+                  "prompt": "More food, iron, revenue and transport than rivals let Magadha...",
+                  "answer": "Out-build, out-tax and out-arm them",
+                  "solutionSteps": [
+                    "Compounded advantages.",
+                    "Rise to dominance."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                48
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch04_dv02",
@@ -10939,7 +11541,93 @@
           "parentConceptId": "ssch04_t03_c03",
           "body": "Scholars call Vajji and Malla 'early republics', but it is worth thinking carefully about what that means. The defining feature of a republic is that the head of state is chosen by a body of people rather than inheriting power by birth — and in these ganas/sanghas the assembly did select the rajaa by discussion and vote. That is genuinely republican. But these were not modern democracies: membership of the assembly was probably limited to clan elders or a privileged group, not every adult. Modern democracy adds the idea of universal participation, with every adult having a vote. So the ganas/sanghas are best understood as early experiments in collective, vote-based rule — important ancestors of democracy, but not identical to it. This distinction trains you to compare past and present institutions precisely instead of flattening them together.",
           "prerequisite": "Understanding that ganas/sanghas selected rulers by assembly vote.",
-          "nextStepHint": "Compare the gana/sangha assembly with how members of the Lok Sabhaa are chosen today."
+          "nextStepHint": "Compare the gana/sangha assembly with how members of the Lok Sabhaa are chosen today.",
+          "bonusQuestions": [
+            {
+              "id": "ssch04_dv02_b01",
+              "prompt": "What made Vajji and Malla 'early republics'?",
+              "questionType": "mcq",
+              "options": [
+                "The rajaa was chosen by an assembly through discussion and vote, not by birth",
+                "Every single adult could vote",
+                "They had no rulers at all",
+                "Kings inherited power by birth"
+              ],
+              "answer": "The rajaa was chosen by an assembly through discussion and vote, not by birth",
+              "solutionSteps": [
+                "A republic's head is selected by a body of people, not inherited.",
+                "The ganas/sanghas chose their rajaa by assembly."
+              ],
+              "commonMistakes": [
+                "Equating early republics with full modern democracy."
+              ],
+              "variations": [
+                {
+                  "prompt": "In these ganas/sanghas, how was the rajaa selected?",
+                  "answer": "By an assembly's discussion and vote",
+                  "solutionSteps": [
+                    "Collective choice.",
+                    "Not by birth."
+                  ]
+                },
+                {
+                  "prompt": "The defining feature of a republic is that the head of state is...",
+                  "answer": "Chosen by people, not inheriting by birth",
+                  "solutionSteps": [
+                    "Selected, not hereditary.",
+                    "A republic."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                48
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch04_dv02_b02",
+              "prompt": "How did the ganas/sanghas DIFFER from a modern democracy?",
+              "questionType": "mcq",
+              "options": [
+                "Assembly membership was limited to clan elders or a privileged group, not every adult",
+                "They held no assemblies",
+                "They used paper ballots",
+                "They were far larger"
+              ],
+              "answer": "Assembly membership was limited to clan elders or a privileged group, not every adult",
+              "solutionSteps": [
+                "Modern democracy adds universal adult participation.",
+                "The early assemblies were restricted, so they are ancestors of democracy, not identical to it."
+              ],
+              "commonMistakes": [
+                "Flattening past and present institutions as the same."
+              ],
+              "variations": [
+                {
+                  "prompt": "Modern democracy adds which key idea the ganas lacked?",
+                  "answer": "Universal participation (every adult has a vote)",
+                  "solutionSteps": [
+                    "One-adult-one-vote.",
+                    "Not in the ganas."
+                  ]
+                },
+                {
+                  "prompt": "Best label for the ganas/sanghas?",
+                  "answer": "Early experiments in collective, vote-based rule",
+                  "solutionSteps": [
+                    "Ancestors of democracy.",
+                    "Not modern democracies."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                48
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch04_dv03",
@@ -10948,7 +11636,93 @@
           "parentConceptId": "ssch04_t01_c03",
           "body": "The Second Urbanisation happened before people kept written histories, so archaeologists reconstruct it from what was left in the ground. They dig in careful layers (stratigraphy): deeper layers are older, so the order of finds gives a rough timeline. A special clue is pottery — a fine, glossy 'Northern Black Polished Ware' appears just as the new cities rise, almost like a fingerprint of the period. Layers of punch-marked coins, iron tools, baked bricks and city ramparts add more evidence, and scientific methods such as radiocarbon dating put real ages on organic remains like charcoal and bone. By combining all these threads — pottery, coins, tools, building styles and lab dates — historians can confidently say cities reappeared around the 6th century BCE, even with no one writing it down.",
           "prerequisite": "Knowing the Second Urbanisation is studied through archaeology, not texts.",
-          "nextStepHint": "Find out how radiocarbon dating measures the age of ancient charcoal or bone."
+          "nextStepHint": "Find out how radiocarbon dating measures the age of ancient charcoal or bone.",
+          "bonusQuestions": [
+            {
+              "id": "ssch04_dv03_b01",
+              "prompt": "With no written histories, how do archaeologists reconstruct the Second Urbanisation?",
+              "questionType": "mcq",
+              "options": [
+                "By digging in layers (stratigraphy) and reading pottery, coins, tools and radiocarbon dates",
+                "By reading contemporary history books",
+                "By pure guesswork",
+                "From a single coin"
+              ],
+              "answer": "By digging in layers (stratigraphy) and reading pottery, coins, tools and radiocarbon dates",
+              "solutionSteps": [
+                "Deeper layers are older, giving a timeline.",
+                "Pottery, coins, tools and lab dates together pin the period."
+              ],
+              "commonMistakes": [
+                "Assuming written records exist for this era; they do not."
+              ],
+              "variations": [
+                {
+                  "prompt": "In stratigraphy, which layers are older?",
+                  "answer": "The deeper ones",
+                  "solutionSteps": [
+                    "Lower = earlier.",
+                    "Gives the order of finds."
+                  ]
+                },
+                {
+                  "prompt": "Which lab method dates organic remains like charcoal and bone?",
+                  "answer": "Radiocarbon dating",
+                  "solutionSteps": [
+                    "Measures decay.",
+                    "Gives real ages."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                48
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch04_dv03_b02",
+              "prompt": "Which pottery acts almost like a 'fingerprint' marking the rise of the new cities?",
+              "questionType": "mcq",
+              "options": [
+                "Northern Black Polished Ware",
+                "Plain terracotta toys",
+                "Blue glazed tiles",
+                "Chinese porcelain"
+              ],
+              "answer": "Northern Black Polished Ware",
+              "solutionSteps": [
+                "Fine, glossy NBPW appears just as the cities rise.",
+                "It signposts the period like a fingerprint."
+              ],
+              "commonMistakes": [
+                "Picking unrelated or much later pottery types."
+              ],
+              "variations": [
+                {
+                  "prompt": "Around which century did cities reappear, per this evidence?",
+                  "answer": "The 6th century BCE",
+                  "solutionSteps": [
+                    "Combined evidence.",
+                    "Confidently dated."
+                  ]
+                },
+                {
+                  "prompt": "Besides pottery, name another urban clue archaeologists use.",
+                  "answer": "Punch-marked coins (or iron tools, baked bricks, ramparts)",
+                  "solutionSteps": [
+                    "Multiple finds.",
+                    "Reinforce the date."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                48
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch04_dv04",
@@ -10957,7 +11731,93 @@
           "parentConceptId": "ssch04_t04_c02",
           "body": "A city is full of people who do NOT grow their own food — potters, weavers, soldiers, priests, traders. For them to live, food and goods must change hands smoothly, and pure barter makes that hard: a potter who wants grain must find a farmer who happens to want pots. Punch-marked coins solved this. A standard-weight piece of stamped metal was trusted by everyone, so anyone could sell to anyone and buy from anyone. Coins also made it far easier for a king to collect taxes and pay officials and armies. By oiling exchange and taxation, money let large numbers of non-farmers cluster together — which is exactly what a city is. The little silver coins were a quiet engine of the Second Urbanisation.",
           "prerequisite": "Knowing punch-marked coins were India's first coins.",
-          "nextStepHint": "Read ahead to 'From Barter to Money' to see the 'double coincidence of wants' problem coins solved."
+          "nextStepHint": "Read ahead to 'From Barter to Money' to see the 'double coincidence of wants' problem coins solved.",
+          "bonusQuestions": [
+            {
+              "id": "ssch04_dv04_b01",
+              "prompt": "Why did punch-marked coins help cities grow, where barter could not?",
+              "questionType": "mcq",
+              "options": [
+                "A trusted, standard-weight coin let anyone buy from and sell to anyone, without matching wants",
+                "Coins could be eaten as food",
+                "Barter was made illegal",
+                "Coins magically grew crops"
+              ],
+              "answer": "A trusted, standard-weight coin let anyone buy from and sell to anyone, without matching wants",
+              "solutionSteps": [
+                "Barter needs a double coincidence of wants.",
+                "A standard coin removes that, oiling exchange and tax collection."
+              ],
+              "commonMistakes": [
+                "Thinking coins helped for some magical reason rather than easing exchange."
+              ],
+              "variations": [
+                {
+                  "prompt": "The barter problem is that a potter wanting grain must find a farmer who...",
+                  "answer": "Happens to want pots",
+                  "solutionSteps": [
+                    "Double coincidence of wants.",
+                    "Coins remove it."
+                  ]
+                },
+                {
+                  "prompt": "Coins also made it easier for a king to...",
+                  "answer": "Collect taxes and pay officials and armies",
+                  "solutionSteps": [
+                    "Standard money.",
+                    "Eases the treasury."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                48
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch04_dv04_b02",
+              "prompt": "A city, by definition, is full of people who...",
+              "questionType": "mcq",
+              "options": [
+                "Do NOT grow their own food (potters, weavers, soldiers, traders, priests)",
+                "All farm their own land",
+                "All rule as kings",
+                "Never trade with anyone"
+              ],
+              "answer": "Do NOT grow their own food (potters, weavers, soldiers, traders, priests)",
+              "solutionSteps": [
+                "Cities cluster non-farmers who must buy food.",
+                "Money let many such people live together — that is a city."
+              ],
+              "commonMistakes": [
+                "Imagining city dwellers grow their own food."
+              ],
+              "variations": [
+                {
+                  "prompt": "Money let large numbers of non-farmers cluster together. That cluster is...",
+                  "answer": "A city",
+                  "solutionSteps": [
+                    "Non-farmers concentrated.",
+                    "Oiled by money."
+                  ]
+                },
+                {
+                  "prompt": "Punch-marked coins were a quiet engine of which process?",
+                  "answer": "The Second Urbanisation",
+                  "solutionSteps": [
+                    "Eased exchange and tax.",
+                    "Helped cities grow."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                48
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch04_dv05",
@@ -10966,7 +11826,93 @@
           "parentConceptId": "ssch04_t04_c01",
           "body": "The Ganga plains that filled with cities in the Second Urbanisation were once covered in dense forest on heavy, sticky soil — land that copper and bronze tools could not easily tame. Iron changed that. An iron axe could fell hard timber and an iron-tipped plough could turn heavy clay soil that a wooden one merely scratched. Clearing forest and ploughing deep let farmers grow far more grain than a single family needed — a SURPLUS. That surplus is the hidden foundation of every city: it freed some people to stop farming and become potters, weavers, traders, soldiers and priests, all of whom a city needs. Iron weapons, lighter and sharper than bronze, also let the stronger kingdoms expand. So the same metal that opened the fields also armed the kingdoms — both pushing toward bigger cities and states.",
           "prerequisite": "Knowing iron tools spread widely by the late 2nd millennium BCE.",
-          "nextStepHint": "Work out the chain: iron tools → forest cleared → grain surplus → who can now live in a city?"
+          "nextStepHint": "Work out the chain: iron tools → forest cleared → grain surplus → who can now live in a city?",
+          "bonusQuestions": [
+            {
+              "id": "ssch04_dv05_b01",
+              "prompt": "How did iron tools enable the Second Urbanisation of the Ganga plains?",
+              "questionType": "mcq",
+              "options": [
+                "Iron axes cleared dense forest and iron ploughs turned heavy clay soil, producing a food surplus",
+                "Iron was eaten as food",
+                "Iron was used only to make coins",
+                "Iron cooled the climate"
+              ],
+              "answer": "Iron axes cleared dense forest and iron ploughs turned heavy clay soil, producing a food surplus",
+              "solutionSteps": [
+                "Copper/bronze couldn't tame the heavy, forested land.",
+                "Iron cleared and ploughed it, growing surplus grain."
+              ],
+              "commonMistakes": [
+                "Missing that iron's role was clearing land and boosting farming."
+              ],
+              "variations": [
+                {
+                  "prompt": "A food SURPLUS is the hidden foundation of a city because it...",
+                  "answer": "Frees some people to stop farming and become craftsmen, traders, soldiers",
+                  "solutionSteps": [
+                    "Extra grain supports non-farmers.",
+                    "Cities need them."
+                  ]
+                },
+                {
+                  "prompt": "Iron weapons also let the stronger kingdoms...",
+                  "answer": "Expand (sharper, lighter than bronze)",
+                  "solutionSteps": [
+                    "Better-armed.",
+                    "Grew bigger states."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                48
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch04_dv05_b02",
+              "prompt": "Why couldn't copper and bronze tools easily open the Ganga forests for farming?",
+              "questionType": "mcq",
+              "options": [
+                "They were too soft to fell hard timber or turn the heavy, sticky clay soil",
+                "There were no forests then",
+                "They were too heavy to lift",
+                "Farmers refused to use them"
+              ],
+              "answer": "They were too soft to fell hard timber or turn the heavy, sticky clay soil",
+              "solutionSteps": [
+                "Softer metals merely scratched heavy soil and struggled with hard wood.",
+                "Iron, harder and sharper, did the job."
+              ],
+              "commonMistakes": [
+                "Assuming all metals work equally; iron was the breakthrough."
+              ],
+              "variations": [
+                {
+                  "prompt": "An iron-tipped plough could do what a wooden one could not?",
+                  "answer": "Turn heavy clay soil deeply (not just scratch it)",
+                  "solutionSteps": [
+                    "Deeper tillage.",
+                    "More grain."
+                  ]
+                },
+                {
+                  "prompt": "So the same metal that opened the fields also...",
+                  "answer": "Armed the kingdoms (iron weapons)",
+                  "solutionSteps": [
+                    "Dual role.",
+                    "Bigger cities and states."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                48
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch04_dv06",
@@ -10975,7 +11921,93 @@
           "parentConceptId": "ssch04_t05_c01",
           "body": "Long before modern highways, two great routes stitched the subcontinent together. The Uttarāpatha (the 'northern road') ran from the northwest across the Ganga plains to the east; the Dakṣiṇāpatha (the 'southern road') reached from near Prayagraj across the Vindhyas into the peninsula. Along them moved not just goods but pilgrims, armies, ideas and coins — which is how distant janapadas came to share scripts, beliefs and a sense of one interconnected land. The names outlived the empires: 'Dakṣiṇāpatha' is the root of the very word 'Deccan', and the old northern artery survives in the route of the Grand Trunk Road still in use today. A trade route, in other words, can leave its mark on the map for over two thousand years.",
           "prerequisite": "Knowing the Uttarāpatha and Dakṣiṇāpatha linked India's regions.",
-          "nextStepHint": "Trace the modern Grand Trunk Road and see how much of the old Uttarāpatha it follows."
+          "nextStepHint": "Trace the modern Grand Trunk Road and see how much of the old Uttarāpatha it follows.",
+          "bonusQuestions": [
+            {
+              "id": "ssch04_dv06_b01",
+              "prompt": "The ancient route 'Dakṣiṇāpatha' (the southern road) is the root of which modern name?",
+              "questionType": "mcq",
+              "options": [
+                "Deccan",
+                "Punjab",
+                "Bengal",
+                "Gujarat"
+              ],
+              "answer": "Deccan",
+              "solutionSteps": [
+                "Dakṣiṇa means 'south'; Dakṣiṇāpatha = the southern road.",
+                "The word 'Deccan' descends from it."
+              ],
+              "commonMistakes": [
+                "Guessing an unrelated region name."
+              ],
+              "variations": [
+                {
+                  "prompt": "The Uttarāpatha was the 'road' in which direction?",
+                  "answer": "Northern",
+                  "solutionSteps": [
+                    "Uttara = north.",
+                    "The northern artery."
+                  ]
+                },
+                {
+                  "prompt": "Along these routes moved not just goods but also...",
+                  "answer": "Pilgrims, armies, ideas and coins",
+                  "solutionSteps": [
+                    "Cultural exchange.",
+                    "Linking janapadas."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                48
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch04_dv06_b02",
+              "prompt": "The old northern trade artery (Uttarāpatha) survives today roughly as which road?",
+              "questionType": "mcq",
+              "options": [
+                "The Grand Trunk Road",
+                "The Konkan Railway",
+                "The coastal ring road",
+                "A village footpath"
+              ],
+              "answer": "The Grand Trunk Road",
+              "solutionSteps": [
+                "The northern route's path persists in the Grand Trunk Road, still in use.",
+                "A trade route can mark the map for over 2000 years."
+              ],
+              "commonMistakes": [
+                "Confusing it with a modern coastal or local route."
+              ],
+              "variations": [
+                {
+                  "prompt": "What does the survival of these route-names show?",
+                  "answer": "A trade route can leave its mark on the map for millennia",
+                  "solutionSteps": [
+                    "Long-lasting geography.",
+                    "Names outlive empires."
+                  ]
+                },
+                {
+                  "prompt": "Distant janapadas came to share scripts and beliefs because...",
+                  "answer": "People, ideas and coins moved along the great routes",
+                  "solutionSteps": [
+                    "Connectivity.",
+                    "Spread culture."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                48
+              ],
+              "needsHumanReview": false
+            }
+          ]
         }
       ],
       "crossChapterRefs": [

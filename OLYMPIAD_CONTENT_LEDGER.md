@@ -72,7 +72,8 @@ canonically: `json.dumps(d, ensure_ascii=False, indent=2) + "\n"`.
 ### Social Science (`socialscience_class7`, 20 chapters, 120 stretch topics)
 The `bonusQuestions` array is ADDED to each `deepDive[]` entry (new key; the optional model field decodes it with no Swift change).
 - [x] **ssch01–ssch02 (12 topics, 24 MCQs)** — Geographical Diversity (orographic rain, GPS plate-motion, Tethys fossils, alluvium depth, river tilt, snow vs rain-fed); Weather (pressure/oxygen-altitude, dew point, forecasting & chaos, convection/sea-breeze, Stevenson screen, rain-gauge depth).
-- [ ] ssch03–ssch20 (108 topics) — 2 MCQs each. **24 SS MCQs done so far.**
+- [x] **ssch03–ssch04 (12 topics, 24 MCQs)** — Climates (orographic/Deccan, temp range, monsoon=giant sea breeze, weather vs climate, six ṛitus, El Niño teleconnection); New Beginnings (Magadha's edge, early republics vs democracy, archaeology/NBPW, money vs barter, iron & surplus, Uttarāpatha/Dakṣiṇāpatha).
+- [ ] ssch05–ssch20 (96 topics) — 2 MCQs each. **48 SS MCQs done so far.**
 
 ## Phase 5 (after content) — coverage test
 - [ ] Add `ExpertChallengeOlympiadContentTests`: each pack yields a non-empty
