@@ -36296,7 +36296,92 @@
           "parentConceptId": "ch11_t01_c02",
           "body": "Class 7 says heart has 4 chambers and 2 circulations. Class 9 details what each chamber does and WHY 4 chambers matter. RIGHT ATRIUM receives oxygen-poor blood from body veins. Contracts → blood drops to RIGHT VENTRICLE. Right ventricle pumps to lungs (low-pressure circuit — lungs are close). Lungs oxygenate, return blood to LEFT ATRIUM. Drops to LEFT VENTRICLE — the most muscular chamber. Left ventricle pumps to the WHOLE BODY (high-pressure — has to reach toes). Why 4 chambers? Fish (2 chambers) mix oxygenated + deoxygenated blood → inefficient. Amphibians (3 chambers) partially separate. Mammals/birds (4 chambers) — full separation, efficient, supports high metabolism. Why we're warm-blooded.",
           "prerequisite": "Tackle after Class 7 heart basics.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch11_dd01_b01",
+              "prompt": "Which chamber of the heart is the most muscular, and why?",
+              "questionType": "mcq",
+              "options": [
+                "The left ventricle, because it pumps blood to the whole body at high pressure",
+                "The right atrium, because it receives all the body's blood",
+                "The left atrium, because the lungs are far away",
+                "The right ventricle, because the body is far away"
+              ],
+              "answer": "The left ventricle, because it pumps blood to the whole body at high pressure",
+              "solutionSteps": [
+                "The left ventricle must push blood all the way to the toes.",
+                "High pressure needs a thick, muscular wall."
+              ],
+              "commonMistakes": [
+                "Assuming the atria are most muscular; they only push blood to the ventricles below."
+              ],
+              "variations": [
+                {
+                  "prompt": "The right ventricle pumps to the lungs only. Is its wall thicker or thinner than the left ventricle's?",
+                  "answer": "Thinner",
+                  "solutionSteps": [
+                    "The lungs are nearby and low-pressure.",
+                    "So the right ventricle needs less muscle."
+                  ]
+                },
+                {
+                  "prompt": "Which chamber receives oxygen-poor blood returning from the body?",
+                  "answer": "The right atrium",
+                  "solutionSteps": [
+                    "Body veins return deoxygenated blood.",
+                    "It enters the right atrium first."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                136
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch11_dd01_b02",
+              "prompt": "Why does a four-chambered heart support a warm-blooded, high-metabolism lifestyle?",
+              "questionType": "mcq",
+              "options": [
+                "It fully separates oxygen-rich from oxygen-poor blood, so oxygen delivery is efficient",
+                "It pumps much more slowly",
+                "It mixes the two bloods like a fish heart",
+                "It removes the need for lungs"
+              ],
+              "answer": "It fully separates oxygen-rich from oxygen-poor blood, so oxygen delivery is efficient",
+              "solutionSteps": [
+                "Full separation means tissues get fully oxygenated blood.",
+                "Efficient oxygen delivery supports a high metabolic rate."
+              ],
+              "commonMistakes": [
+                "Thinking more chambers slow the heart; they improve oxygen separation."
+              ],
+              "variations": [
+                {
+                  "prompt": "A fish has a two-chambered heart. What is the drawback?",
+                  "answer": "Oxygenated and deoxygenated blood mix, lowering efficiency",
+                  "solutionSteps": [
+                    "Two chambers can't separate the bloods.",
+                    "Mixing reduces oxygen delivery."
+                  ]
+                },
+                {
+                  "prompt": "Which animals have full four-chamber separation?",
+                  "answer": "Mammals and birds",
+                  "solutionSteps": [
+                    "They evolved complete separation.",
+                    "This supports warm-bloodedness."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                136
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Class 11 introduces cardiac cycle phases (systole/diastole) + valve operation timing."
         },
         {
@@ -36306,7 +36391,92 @@
           "parentConceptId": "ch11_t03_c02",
           "body": "Class 7 says transpiration pulls water up plants. Class 11 reveals the physics. Water molecules cohere strongly (hydrogen bonds). When water evaporates from leaves' stomata, the water column in xylem behaves like a STRETCHED ROPE — every leaving molecule pulls up the column behind it. This is COHESION-TENSION THEORY. Negative pressure in xylem (yes, NEGATIVE — water under tension) can reach -2 MPa in tall trees. Atmospheric pressure can only push water up ~10 m (the pump physics) — but transpiration pull lifts redwoods 100+ m. Crucial: any AIR BUBBLE in xylem breaks the chain (embolism) — that branch dies. This is why drought stress is so dangerous; xylem embolisms are irreversible.",
           "prerequisite": "Tackle after xylem/phloem basics.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch11_dd02_b01",
+              "prompt": "Atmospheric pressure can push water up only about 10 m, yet a redwood lifts water 100+ m. How?",
+              "questionType": "mcq",
+              "options": [
+                "Transpiration pull: evaporation at the leaves puts the cohesive water column under tension and pulls it up",
+                "A powerful pump in the roots pushes it",
+                "Capillary action alone lifts it 100 m",
+                "Air pressure pushes it up the trunk"
+              ],
+              "answer": "Transpiration pull: evaporation at the leaves puts the cohesive water column under tension and pulls it up",
+              "solutionSteps": [
+                "Water molecules cohere via hydrogen bonds, acting like a rope.",
+                "Evaporation at stomata pulls the whole column upward (cohesion-tension)."
+              ],
+              "commonMistakes": [
+                "Thinking a root pump or simple air pressure lifts water 100 m; it is transpiration pull."
+              ],
+              "variations": [
+                {
+                  "prompt": "What holds the water column together so it can be pulled as one?",
+                  "answer": "Cohesion from hydrogen bonds between water molecules",
+                  "solutionSteps": [
+                    "Water molecules attract each other strongly.",
+                    "So the column behaves like a continuous rope."
+                  ]
+                },
+                {
+                  "prompt": "Is the xylem water under positive or negative pressure in a tall tree?",
+                  "answer": "Negative pressure (tension)",
+                  "solutionSteps": [
+                    "The column is pulled, not pushed.",
+                    "So it is under tension/negative pressure."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                136
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch11_dd02_b02",
+              "prompt": "Why is an air bubble (embolism) in the xylem so dangerous to a plant?",
+              "questionType": "mcq",
+              "options": [
+                "It breaks the continuous water column, and the break is irreversible, so that branch loses its water supply",
+                "It makes the sap boil",
+                "It speeds water flow harmlessly",
+                "It has no real effect"
+              ],
+              "answer": "It breaks the continuous water column, and the break is irreversible, so that branch loses its water supply",
+              "solutionSteps": [
+                "The cohesion-tension chain needs an unbroken column.",
+                "An air bubble snaps it; the branch beyond can die."
+              ],
+              "commonMistakes": [
+                "Assuming the plant easily refills the bubble; xylem embolisms are largely irreversible."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is drought stress especially dangerous for tall trees?",
+                  "answer": "Tension rises and air bubbles (embolisms) can form, breaking the water column",
+                  "solutionSteps": [
+                    "Drought increases xylem tension.",
+                    "That risks irreversible embolism."
+                  ]
+                },
+                {
+                  "prompt": "What happens to a branch whose xylem column is broken by an embolism?",
+                  "answer": "It loses its water supply and can die",
+                  "solutionSteps": [
+                    "The broken column can't lift water.",
+                    "The branch beyond is cut off."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                136
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "NEET tests cohesion-tension, root pressure, and adhesion to xylem walls."
         },
         {
@@ -36316,7 +36486,92 @@
           "parentConceptId": "ch11_t02_c02",
           "body": "Class 7 says nephrons filter blood. Class 10 makes it quantitative. Each kidney has ~1 million nephrons. Each filters ~125 mL of plasma per minute. That's 180 LITRES per day total — equivalent to filtering your entire blood volume 60 times. But you don't urinate 180 L! In the LOOP OF HENLE and convoluted tubules, ~99% is REABSORBED back to blood — water, glucose, salts, amino acids. Final urine: just 1.5 L/day. The reabsorption is selective: 100% glucose (unless diabetic), 99% water, varies by need for salts. Diuretics work by blocking specific reabsorption channels — water exits as urine instead of being kept. Indian dialysis patients lose this filtration — machines replace it at ~25% the efficiency.",
           "prerequisite": "Tackle after Class 7 kidney basics.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch11_dd03_b01",
+              "prompt": "Kidneys filter about 180 L of plasma a day, yet you make only ~1.5 L of urine. Why the huge difference?",
+              "questionType": "mcq",
+              "options": [
+                "About 99% of the filtrate is reabsorbed back into the blood",
+                "Most of the filtrate evaporates",
+                "The bladder destroys the excess",
+                "Only 1.5 L is ever actually filtered"
+              ],
+              "answer": "About 99% of the filtrate is reabsorbed back into the blood",
+              "solutionSteps": [
+                "The tubules and loop of Henle reabsorb water, glucose and salts.",
+                "About 99% returns to the blood, leaving ~1.5 L as urine."
+              ],
+              "commonMistakes": [
+                "Thinking all filtered fluid becomes urine; almost all is reabsorbed."
+              ],
+              "variations": [
+                {
+                  "prompt": "Where in the nephron is most of the filtrate reabsorbed?",
+                  "answer": "In the loop of Henle and the convoluted tubules",
+                  "solutionSteps": [
+                    "These segments reclaim water and solutes.",
+                    "About 99% is reabsorbed there."
+                  ]
+                },
+                {
+                  "prompt": "If filtration is 180 L/day and urine is 1.5 L/day, about what fraction is reabsorbed?",
+                  "answer": "About 99%",
+                  "solutionSteps": [
+                    "178.5 of 180 L is reclaimed.",
+                    "That is roughly 99%."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                136
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch11_dd03_b02",
+              "prompt": "In a healthy (non-diabetic) person, how much of the filtered glucose is reabsorbed?",
+              "questionType": "mcq",
+              "options": [
+                "Essentially 100%",
+                "About 50%",
+                "0%",
+                "Only about 1%"
+              ],
+              "answer": "Essentially 100%",
+              "solutionSteps": [
+                "Healthy kidneys reclaim all filtered glucose.",
+                "Glucose in urine signals a problem such as diabetes."
+              ],
+              "commonMistakes": [
+                "Assuming glucose is normally lost in urine; it is fully reabsorbed when healthy."
+              ],
+              "variations": [
+                {
+                  "prompt": "What does glucose appearing in the urine often indicate?",
+                  "answer": "Diabetes (blood glucose exceeding the reabsorption capacity)",
+                  "solutionSteps": [
+                    "Normally 100% is reabsorbed.",
+                    "Excess blood glucose spills into urine."
+                  ]
+                },
+                {
+                  "prompt": "Roughly how much water of the filtrate is reabsorbed?",
+                  "answer": "About 99%",
+                  "solutionSteps": [
+                    "Most filtered water returns to blood.",
+                    "Only ~1% leaves as urine."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                136
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "JEE/NEET cover specific transporters in each tubule segment."
         }
       ],
@@ -38790,7 +39045,92 @@
           "parentConceptId": "ch12_t03_c01",
           "body": "Class 7 introduces both reproduction modes. Class 8 explores the trade-offs. ASEXUAL: fast (no partner needed), cheap (no flowers/gametes to make), and OFFSPRING ARE CLONES — identical to parent. Great when conditions are favourable + stable. Risk: a disease that kills one kills ALL (Cavendish banana clone vulnerability). SEXUAL: slow, expensive (flowers, nectar to attract pollinators), and OFFSPRING ARE GENETICALLY MIXED — different from parents. Great when conditions are changing or pathogens are common — variation gives some offspring resistance. Most plants do BOTH — sexual in good times for variation, asexual in stress for rapid colonisation. Strawberries: produce both seeds AND runners. Indian agriculture exploits this — propagate desired cultivars asexually for predictability, breed new ones sexually for variation.",
           "prerequisite": "Tackle after Class 7 sexual/asexual basics.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch12_dd01_b01",
+              "prompt": "A single disease wiped out a whole plantation of genetically identical bananas. Which reproduction mode created that vulnerability?",
+              "questionType": "mcq",
+              "options": [
+                "Asexual reproduction (clones share the same weakness)",
+                "Sexual reproduction",
+                "Double fertilisation",
+                "Cross-pollination"
+              ],
+              "answer": "Asexual reproduction (clones share the same weakness)",
+              "solutionSteps": [
+                "Asexual offspring are clones, all genetically identical.",
+                "A disease that kills one can kill them all."
+              ],
+              "commonMistakes": [
+                "Thinking variation protects clones; clones have none."
+              ],
+              "variations": [
+                {
+                  "prompt": "What is the main genetic feature of asexual offspring?",
+                  "answer": "They are clones, identical to the parent",
+                  "solutionSteps": [
+                    "No genes are mixed.",
+                    "So offspring match the parent exactly."
+                  ]
+                },
+                {
+                  "prompt": "Why are identical-clone crops risky?",
+                  "answer": "One disease can destroy the entire population",
+                  "solutionSteps": [
+                    "All share the same weakness.",
+                    "A single pathogen can wipe them out."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                148
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch12_dd01_b02",
+              "prompt": "Why is sexual reproduction advantageous when conditions change or pathogens are common?",
+              "questionType": "mcq",
+              "options": [
+                "It produces genetically varied offspring, so some may resist the new threat",
+                "It is always faster than asexual reproduction",
+                "It requires no energy investment",
+                "It produces identical clones"
+              ],
+              "answer": "It produces genetically varied offspring, so some may resist the new threat",
+              "solutionSteps": [
+                "Mixing genes creates variation among offspring.",
+                "Some variants may survive a new disease or environment."
+              ],
+              "commonMistakes": [
+                "Assuming sexual reproduction is cheaper/faster; its payoff is variation, not speed."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why do many plants reproduce both sexually and asexually?",
+                  "answer": "Sexual for variation in tough times, asexual for fast spread in good times",
+                  "solutionSteps": [
+                    "Each mode suits different conditions.",
+                    "Doing both hedges the bets."
+                  ]
+                },
+                {
+                  "prompt": "Strawberries make seeds and runners. Which gives variation?",
+                  "answer": "The seeds (sexual reproduction)",
+                  "solutionSteps": [
+                    "Seeds come from sexual reproduction.",
+                    "So they carry genetic variation."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                148
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Class 10 covers Mendel's experiments — sexual reproduction's genetic mathematics."
         },
         {
@@ -38800,7 +39140,92 @@
           "parentConceptId": "ch12_t01_c01",
           "body": "Class 7 says sexual reproduction mixes parental traits. Class 10 reveals the MATH behind it. Gregor Mendel (1865, Austrian monk) bred pea plants — short × tall, yellow × green seeds — and noted exact RATIOS in offspring. His laws: (1) LAW OF SEGREGATION: each parent contributes one 'factor' (gene) per trait; the pair segregates in gametes. (2) LAW OF INDEPENDENT ASSORTMENT: different traits inherit independently (height doesn't drag along seed colour). (3) Dominance: in heterozygous offspring, one allele MASKS the other. The famous 3:1 ratio (tall : short in F2 generation) emerges from these. Mendel's work was ignored for 35 years, then rediscovered around 1900 — the foundation of all modern genetics. Indian Green Revolution wheat varieties were bred using Mendelian principles + statistics.",
           "prerequisite": "Tackle after Class 8 sexual vs asexual.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch12_dd02_b01",
+              "prompt": "Mendel crossed tall and short pea plants. What ratio appeared in the F2 generation?",
+              "questionType": "mcq",
+              "options": [
+                "3 : 1 (tall : short)",
+                "1 : 1",
+                "2 : 1",
+                "9 : 7"
+              ],
+              "answer": "3 : 1 (tall : short)",
+              "solutionSteps": [
+                "A dominant tall allele masks the recessive short one.",
+                "In F2, the classic ratio is 3 tall : 1 short."
+              ],
+              "commonMistakes": [
+                "Guessing 1:1; the dominant/recessive F2 ratio is 3:1."
+              ],
+              "variations": [
+                {
+                  "prompt": "In a heterozygous pea, why does the plant look tall?",
+                  "answer": "The dominant tall allele masks the recessive short allele",
+                  "solutionSteps": [
+                    "Dominance hides the recessive trait.",
+                    "So the heterozygote appears tall."
+                  ]
+                },
+                {
+                  "prompt": "The 3:1 ratio appears in which generation of Mendel's cross?",
+                  "answer": "The F2 generation",
+                  "solutionSteps": [
+                    "F1 are all tall (heterozygous).",
+                    "F2 shows the 3:1 split."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                148
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch12_dd02_b02",
+              "prompt": "Mendel's law of independent assortment states that…",
+              "questionType": "mcq",
+              "options": [
+                "Different traits are inherited independently of one another",
+                "Tall plants always have green seeds",
+                "Only one trait can be inherited at a time",
+                "Parental traits blend into an average"
+              ],
+              "answer": "Different traits are inherited independently of one another",
+              "solutionSteps": [
+                "Each trait's alleles assort into gametes independently.",
+                "So height does not drag seed colour along with it."
+              ],
+              "commonMistakes": [
+                "Confusing it with 'blending'; alleles assort, they don't average."
+              ],
+              "variations": [
+                {
+                  "prompt": "Does seed colour get inherited together with plant height in Mendel's peas?",
+                  "answer": "No, they assort independently",
+                  "solutionSteps": [
+                    "Independent assortment separates the traits.",
+                    "Height and seed colour are inherited separately."
+                  ]
+                },
+                {
+                  "prompt": "Mendel's law of segregation says each gamete carries how many alleles per trait?",
+                  "answer": "One",
+                  "solutionSteps": [
+                    "The allele pair segregates.",
+                    "Each gamete gets one allele per trait."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                148
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Class 11/12 expands Mendelian to Mendelian + chromosomal + molecular genetics."
         },
         {
@@ -38810,7 +39235,92 @@
           "parentConceptId": "ch12_t02_c02",
           "body": "Class 7 says pollen fertilises egg → seed. Class 11 reveals flowering plants do TWO simultaneous fertilisations — unique in nature. Pollen tube delivers TWO male gametes. ONE fuses with the egg → makes the embryo (the actual baby plant). The OTHER fuses with TWO POLAR NUCLEI → makes the ENDOSPERM (food storage tissue in the seed). The endosperm is what you EAT in rice, wheat, maize — it's mostly endosperm! This DOUBLE FERTILISATION evolved ~130 million years ago, when flowering plants exploded across Earth. It's incredibly efficient: no resources wasted on endosperm if fertilisation fails. Only flowering plants (angiosperms) do this. Pine trees + ferns don't.",
           "prerequisite": "Tackle after pollination/fertilisation basics.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch12_dd03_b01",
+              "prompt": "Flowering plants perform double fertilisation. What do the two male gametes do?",
+              "questionType": "mcq",
+              "options": [
+                "One fuses with the egg to form the embryo; the other forms the endosperm",
+                "Both fuse with the egg",
+                "Both simply become pollen",
+                "Neither fertilises anything"
+              ],
+              "answer": "One fuses with the egg to form the embryo; the other forms the endosperm",
+              "solutionSteps": [
+                "The pollen tube delivers two male gametes.",
+                "One makes the embryo; the other (with two polar nuclei) makes the endosperm."
+              ],
+              "commonMistakes": [
+                "Thinking only one fertilisation occurs; angiosperms do two at once."
+              ],
+              "variations": [
+                {
+                  "prompt": "What tissue does the second fertilisation create?",
+                  "answer": "The endosperm (the seed's food store)",
+                  "solutionSteps": [
+                    "The second gamete fuses with polar nuclei.",
+                    "That forms the nourishing endosperm."
+                  ]
+                },
+                {
+                  "prompt": "Do pine trees and ferns perform double fertilisation?",
+                  "answer": "No, only flowering plants (angiosperms) do",
+                  "solutionSteps": [
+                    "It is unique to angiosperms.",
+                    "Pines and ferns lack it."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                148
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch12_dd03_b02",
+              "prompt": "When you eat a rice or wheat grain, you are eating mostly which tissue?",
+              "questionType": "mcq",
+              "options": [
+                "Endosperm (the seed's stored food)",
+                "The embryo",
+                "Pollen",
+                "Root tissue"
+              ],
+              "answer": "Endosperm (the seed's stored food)",
+              "solutionSteps": [
+                "Double fertilisation makes a large endosperm.",
+                "Cereal grains are mostly this stored food tissue."
+              ],
+              "commonMistakes": [
+                "Thinking you eat the embryo; the bulk is endosperm."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is endosperm efficient for the plant?",
+                  "answer": "No resources are spent on it unless fertilisation succeeds",
+                  "solutionSteps": [
+                    "Endosperm forms only with fertilisation.",
+                    "So nothing is wasted on failed seeds."
+                  ]
+                },
+                {
+                  "prompt": "Roughly when did double fertilisation evolve?",
+                  "answer": "About 130 million years ago, with the rise of flowering plants",
+                  "solutionSteps": [
+                    "It accompanied the angiosperm explosion.",
+                    "Around 130 million years ago."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                148
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "NEET tests the embryo sac structure (7 cells, 8 nuclei) — site of double fertilisation."
         }
       ],
@@ -41321,7 +41831,92 @@
           "parentConceptId": "ch13_t01_c02",
           "body": "Class 7 uses distance-time graphs. Class 8 introduces SPEED-TIME graphs — a more powerful tool. On a speed-time graph: x = time, y = speed. A FLAT horizontal line = constant speed (uniform motion). UPWARD slope = ACCELERATING (speed increasing). DOWNWARD slope = decelerating. The AREA UNDER THE LINE = distance travelled. So a cyclist at 15 km/h for 2 hours: rectangular area = 15 × 2 = 30 km distance. A train accelerating from 0 to 100 km/h over 1 hour: triangular area = ½ × 1 × 100 = 50 km. This is a tiny piece of integral calculus — areas under curves give totals. Vande Bharat's progress can be visualised as one zig-zag speed-time graph; engineers analyse it to find efficient speed profiles.",
           "prerequisite": "Tackle after distance-time graph basics.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch13_dd01_b01",
+              "prompt": "On a speed-time graph, what does the AREA under the line represent?",
+              "questionType": "mcq",
+              "options": [
+                "The distance travelled",
+                "The acceleration",
+                "The instantaneous speed",
+                "Only the elapsed time"
+              ],
+              "answer": "The distance travelled",
+              "solutionSteps": [
+                "Speed multiplied by time gives distance.",
+                "On a speed-time graph that product is the area under the line."
+              ],
+              "commonMistakes": [
+                "Confusing the area (distance) with the slope (acceleration)."
+              ],
+              "variations": [
+                {
+                  "prompt": "On a speed-time graph, what does the SLOPE of the line represent?",
+                  "answer": "The acceleration",
+                  "solutionSteps": [
+                    "Slope = change in speed over time.",
+                    "That is acceleration."
+                  ]
+                },
+                {
+                  "prompt": "A flat horizontal line on a speed-time graph means…",
+                  "answer": "Constant speed (uniform motion)",
+                  "solutionSteps": [
+                    "No change in speed.",
+                    "So the motion is uniform."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                160
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch13_dd01_b02",
+              "prompt": "A cyclist holds 15 km/h for 2 hours. From the speed-time graph, what distance is covered?",
+              "questionType": "mcq",
+              "options": [
+                "30 km",
+                "15 km",
+                "7.5 km",
+                "45 km"
+              ],
+              "answer": "30 km",
+              "solutionSteps": [
+                "Distance = area under the line = speed x time.",
+                "15 km/h x 2 h = 30 km."
+              ],
+              "commonMistakes": [
+                "Forgetting to multiply by time, or misreading the area."
+              ],
+              "variations": [
+                {
+                  "prompt": "A train accelerates uniformly from 0 to 100 km/h over 1 hour. Distance (triangular area)?",
+                  "answer": "50 km",
+                  "solutionSteps": [
+                    "Area = 1/2 x base x height = 1/2 x 1 x 100.",
+                    "That is 50 km."
+                  ]
+                },
+                {
+                  "prompt": "If the cyclist rode 15 km/h for 4 hours instead, how far?",
+                  "answer": "60 km",
+                  "solutionSteps": [
+                    "15 x 4 = 60.",
+                    "Distance is 60 km."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                160
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Class 9 introduces acceleration formula and three equations of motion."
         },
         {
@@ -41331,7 +41926,92 @@
           "parentConceptId": "ch13_t01_c01",
           "body": "Class 7 has v = d/t (speed = distance / time). Class 9 introduces THREE equations of motion for objects with constant acceleration: (1) v = u + at — final velocity from initial velocity, acceleration, time. (2) s = ut + ½at² — distance covered. (3) v² = u² + 2as — final velocity given distance covered. Where u = initial velocity, v = final, a = acceleration, t = time, s = distance. Practical: a sprinter accelerating at 5 m/s² from rest, after 2 seconds: v = 0 + 5 × 2 = 10 m/s. Distance: s = 0 + ½ × 5 × 4 = 10 m. These three equations predict every projectile, falling ball, accelerating car. Every JEE problem on motion uses these three. Indian Olympic sprinters' training is partly based on these equations + biomechanics.",
           "prerequisite": "Tackle after Class 7 speed basics.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch13_dd02_b01",
+              "prompt": "A sprinter starts from rest and accelerates at 5 m/s2. Using v = u + at, what is the speed after 2 s?",
+              "questionType": "mcq",
+              "options": [
+                "10 m/s",
+                "5 m/s",
+                "2 m/s",
+                "25 m/s"
+              ],
+              "answer": "10 m/s",
+              "solutionSteps": [
+                "u = 0, a = 5 m/s2, t = 2 s.",
+                "v = 0 + 5 x 2 = 10 m/s."
+              ],
+              "commonMistakes": [
+                "Forgetting u = 0 from rest, or multiplying wrongly."
+              ],
+              "variations": [
+                {
+                  "prompt": "Same sprinter, what is the speed after 3 s?",
+                  "answer": "15 m/s",
+                  "solutionSteps": [
+                    "v = 0 + 5 x 3.",
+                    "That is 15 m/s."
+                  ]
+                },
+                {
+                  "prompt": "In v = u + at, what does u stand for?",
+                  "answer": "The initial velocity",
+                  "solutionSteps": [
+                    "u is the starting velocity.",
+                    "Here it is 0 (from rest)."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                160
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch13_dd02_b02",
+              "prompt": "Using s = ut + 1/2 a t^2, how far does that sprinter (u = 0, a = 5 m/s2) travel in 2 s?",
+              "questionType": "mcq",
+              "options": [
+                "10 m",
+                "20 m",
+                "5 m",
+                "2.5 m"
+              ],
+              "answer": "10 m",
+              "solutionSteps": [
+                "s = 0 x 2 + 1/2 x 5 x 2^2.",
+                "= 1/2 x 5 x 4 = 10 m."
+              ],
+              "commonMistakes": [
+                "Forgetting the 1/2, or not squaring the time."
+              ],
+              "variations": [
+                {
+                  "prompt": "Which equation gives final velocity from distance: v^2 = u^2 + 2as. Why is it useful?",
+                  "answer": "It finds v without needing the time t",
+                  "solutionSteps": [
+                    "It links v, u, a and s directly.",
+                    "Useful when time is unknown."
+                  ]
+                },
+                {
+                  "prompt": "How far does the sprinter travel in 4 s (u=0, a=5)?",
+                  "answer": "40 m",
+                  "solutionSteps": [
+                    "s = 1/2 x 5 x 16.",
+                    "That is 40 m."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                160
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Class 11 extends to 2D motion (projectile, circular) with vector equations of motion."
         },
         {
@@ -41341,7 +42021,92 @@
           "parentConceptId": "ch13_t02_c01",
           "body": "Class 7 says pendulum period depends on length. Class 11 gives the formula: T = 2π√(L/g), where T = time period, L = length, g = gravity (9.8 m/s² on Earth). So 1m pendulum: T = 2π√(1/9.8) ≈ 2.0 seconds. Half the length: T = 2π√(0.5/9.8) ≈ 1.4 sec — NOT half, but √2 less. Quadrupling length doubles the period. Why depends on g? On the Moon (g = 1.6), same pendulum: T ≈ 5 sec — Moon clocks would tick slowly. SIMPLE HARMONIC MOTION (SHM): pendulum's swing pattern repeats sinusoidally. Same math describes vibrating springs, sound waves, AC current alternation. Even Indian classical music's tabla bols are described by SHM frequencies.",
           "prerequisite": "Tackle after pendulum basics.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch13_dd03_b01",
+              "prompt": "A pendulum's period is T = 2*pi*sqrt(L/g). If you QUADRUPLE the length L, the period…",
+              "questionType": "mcq",
+              "options": [
+                "Doubles",
+                "Quadruples",
+                "Halves",
+                "Stays the same"
+              ],
+              "answer": "Doubles",
+              "solutionSteps": [
+                "T depends on the square root of L.",
+                "sqrt(4) = 2, so the period doubles."
+              ],
+              "commonMistakes": [
+                "Assuming period scales directly with length; it scales with sqrt(L)."
+              ],
+              "variations": [
+                {
+                  "prompt": "If you instead HALVE the length, the period changes by what factor?",
+                  "answer": "It becomes 1/sqrt(2) (about 0.7) of the original",
+                  "solutionSteps": [
+                    "sqrt(1/2) is about 0.7.",
+                    "So the period is ~0.7x."
+                  ]
+                },
+                {
+                  "prompt": "Does a pendulum's period depend on the mass of the bob?",
+                  "answer": "No",
+                  "solutionSteps": [
+                    "Mass cancels out of T = 2*pi*sqrt(L/g).",
+                    "Only length and g matter."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                160
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch13_dd03_b02",
+              "prompt": "The same pendulum is taken to the Moon (g about 1.6 vs 9.8 on Earth). Its swing will…",
+              "questionType": "mcq",
+              "options": [
+                "Be slower (a longer period)",
+                "Be faster",
+                "Not swing at all",
+                "Have exactly the same period"
+              ],
+              "answer": "Be slower (a longer period)",
+              "solutionSteps": [
+                "T = 2*pi*sqrt(L/g); smaller g gives a larger T.",
+                "On the Moon g is much smaller, so the period is longer."
+              ],
+              "commonMistakes": [
+                "Thinking lower gravity speeds the swing; it lengthens the period."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why would a pendulum clock run slow on the Moon?",
+                  "answer": "Its longer period means each swing takes more time",
+                  "solutionSteps": [
+                    "Smaller g lengthens the period.",
+                    "So the clock ticks slowly."
+                  ]
+                },
+                {
+                  "prompt": "Pendulum motion is an example of what repeating motion?",
+                  "answer": "Simple harmonic motion (SHM)",
+                  "solutionSteps": [
+                    "Its swing repeats sinusoidally.",
+                    "That is SHM."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                160
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "JEE tests SHM amplitude, frequency, phase + the energy oscillation between potential and kinetic."
         }
       ],

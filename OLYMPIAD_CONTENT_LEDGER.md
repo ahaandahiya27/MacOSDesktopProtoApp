@@ -44,7 +44,10 @@ canonically: `json.dumps(d, ensure_ascii=False, indent=2) + "\n"`.
 - [x] **ch08 — Winds, Storms and Cyclones (3 topics, 6 MCQs)** — Coriolis & hemisphere spin, cyclone genesis conditions, air pressure vs altitude / cabin pressurisation.
 - [x] **ch09 — Soil (3 topics, 6 MCQs)** — NPK fertiliser labels, erosion types & remedies, pedogenesis (CLORPT).
 - [x] **ch10 — Respiration in Organisms (3 topics, 6 MCQs)** — cellular respiration stages, ATP currency & turnover, lung volumes.
-- [ ] ch11–ch19 (27 topics) — ~2 MCQs each. **60 Science MCQs done so far.**
+- [x] **ch11 — Transportation in Animals and Plants (3 topics, 6 MCQs)** — heart chambers/double circulation, transpiration pull (cohesion-tension), nephron filtration math.
+- [x] **ch12 — Reproduction in Plants (3 topics, 6 MCQs)** — asexual vs sexual trade-offs, Mendel's laws & 3:1 ratio, double fertilisation/endosperm.
+- [x] **ch13 — Motion and Time (3 topics, 6 MCQs)** — speed-time graphs (area=distance), three equations of motion (worked), pendulum T=2π√(L/g).
+- [ ] ch14–ch19 (18 topics) — ~2 MCQs each. **78 Science MCQs done so far.**
 
 **Tooling note:** inject scripts use a variadic `V(p,a,*steps)` helper so step strings can't be mis-bracketed (the earlier source of two SyntaxErrors). `ast.parse` the inject script before running.
 
