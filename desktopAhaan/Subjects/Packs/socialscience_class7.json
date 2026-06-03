@@ -57781,7 +57781,93 @@
           "parentConceptId": "ssch19_t01_c01",
           "body": "Why does the government, rather than private companies alone, build so much infrastructure? The answer lies in the special economics of infrastructure. First, many infrastructure assets are very expensive to build and take years to pay back - few private firms would build a highway or a dam on their own. Second, infrastructure often has 'positive externalities' - benefits that spill over to everyone, not just the builder. A new road helps not only the company that built it but every farmer, shopkeeper and traveller who uses it. Third, some infrastructure is a 'natural monopoly' - it makes no sense to build ten competing electricity grids in one city. Because of these features, infrastructure is treated as a public good that the government provides or carefully regulates, so that everyone - rich and poor, city and village - can benefit. This is why infrastructure spending is one of the most important things a government does, and why it is called the 'engine' of development: it creates the shared foundation on which millions of private activities can grow.",
           "prerequisite": "ssch19_t01_c01",
-          "nextStepHint": "Compare how roads (often free to use) and electricity (paid per unit) are funded differently, and why."
+          "nextStepHint": "Compare how roads (often free to use) and electricity (paid per unit) are funded differently, and why.",
+          "bonusQuestions": [
+            {
+              "id": "ssch19_dv01_b01",
+              "prompt": "Why does the government, rather than private firms alone, build much of a country's infrastructure?",
+              "questionType": "mcq",
+              "options": [
+                "It is very costly with long payback, has spillover benefits for all, and is often a natural monopoly",
+                "Private firms are banned from building it",
+                "Infrastructure is cheap and quick",
+                "There is no real reason"
+              ],
+              "answer": "It is very costly with long payback, has spillover benefits for all, and is often a natural monopoly",
+              "solutionSteps": [
+                "High cost, positive externalities and natural monopoly make it a public good.",
+                "So government provides or carefully regulates it."
+              ],
+              "commonMistakes": [
+                "Assuming private firms could and would build all infrastructure profitably."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is it called the 'engine' of development?",
+                  "answer": "It creates the shared foundation on which millions of private activities grow",
+                  "solutionSteps": [
+                    "Enables everything else.",
+                    "Public foundation."
+                  ]
+                },
+                {
+                  "prompt": "Building ten competing electricity grids in one city makes no sense. This is because infrastructure is often a...",
+                  "answer": "Natural monopoly",
+                  "solutionSteps": [
+                    "One grid suffices.",
+                    "Public provision/regulation."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                228
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch19_dv01_b02",
+              "prompt": "A new road's benefit reaching every farmer, shopkeeper and traveller — not just the builder — is an example of a...",
+              "questionType": "mcq",
+              "options": [
+                "Positive externality",
+                "Natural monopoly",
+                "Dividend",
+                "Tariff"
+              ],
+              "answer": "Positive externality",
+              "solutionSteps": [
+                "Benefits that spill over to everyone are positive externalities.",
+                "They are a key reason infrastructure is treated as a public good."
+              ],
+              "commonMistakes": [
+                "Confusing a positive externality with a monopoly or a dividend."
+              ],
+              "variations": [
+                {
+                  "prompt": "Because benefits spill over to all, infrastructure is treated as a...",
+                  "answer": "Public good",
+                  "solutionSteps": [
+                    "Provided/regulated by government.",
+                    "For everyone."
+                  ]
+                },
+                {
+                  "prompt": "Many infrastructure assets are slow to pay back, so...",
+                  "answer": "Few private firms would build them alone",
+                  "solutionSteps": [
+                    "Long payback.",
+                    "Government steps in."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                228
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch19_dv02",
@@ -57790,7 +57876,93 @@
           "parentConceptId": "ssch19_t02_c02",
           "body": "The Indian Railways teach a deep lesson about how the same infrastructure can mean very different things depending on who controls it and why. The British built the railways from 1853 not to help Indians but to serve their empire: to drain India's raw materials to British ports, to flood India with British goods, and to rush troops to crush resistance. The very same tracks, after independence in 1947, became something almost opposite - a national lifeline binding a diverse country together, carrying ordinary people cheaply and moving the goods of a free economy. This shows that infrastructure is never just neutral concrete and steel; its purpose is set by the society that owns it. The lesson matters today too: when we build new roads, ports or digital networks, we should ask not only 'what does it do?' but 'whom does it serve?' Good infrastructure in a democracy should serve all its people - which is exactly why the chapter stresses inclusion, sustainability and collective responsibility.",
           "prerequisite": "ssch19_t02_c02",
-          "nextStepHint": "Read how India expanded and 'Indianised' the railways after 1947 to serve its own people."
+          "nextStepHint": "Read how India expanded and 'Indianised' the railways after 1947 to serve its own people.",
+          "bonusQuestions": [
+            {
+              "id": "ssch19_dv02_b01",
+              "prompt": "The British built India's railways from 1853 mainly to...",
+              "questionType": "mcq",
+              "options": [
+                "Serve their empire — drain raw materials to ports, sell British goods, and move troops",
+                "Help Indian farmers reach markets",
+                "Build Indian democracy",
+                "Promote tourism"
+              ],
+              "answer": "Serve their empire — drain raw materials to ports, sell British goods, and move troops",
+              "solutionSteps": [
+                "Colonial railways served imperial extraction and control.",
+                "Not, at first, the welfare of Indians."
+              ],
+              "commonMistakes": [
+                "Assuming the colonial railways were built for Indians' benefit."
+              ],
+              "variations": [
+                {
+                  "prompt": "After 1947 the very same tracks became...",
+                  "answer": "A national lifeline binding a diverse country together",
+                  "solutionSteps": [
+                    "Purpose changed.",
+                    "Serving all Indians."
+                  ]
+                },
+                {
+                  "prompt": "The lesson is that infrastructure's purpose is set by...",
+                  "answer": "The society that owns it (ask 'whom does it serve?')",
+                  "solutionSteps": [
+                    "Not neutral concrete.",
+                    "Who controls it."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                228
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch19_dv02_b02",
+              "prompt": "The railway example teaches that when we build new roads, ports or networks we should ask not only 'what does it do?' but...",
+              "questionType": "mcq",
+              "options": [
+                "'Whom does it serve?'",
+                "'How shiny is it?'",
+                "'How old is it?'",
+                "'Who built it first?'"
+              ],
+              "answer": "'Whom does it serve?'",
+              "solutionSteps": [
+                "The same infrastructure can serve an empire or a free people.",
+                "Good democratic infrastructure should serve all its people."
+              ],
+              "commonMistakes": [
+                "Treating infrastructure as neutral, regardless of who it serves."
+              ],
+              "variations": [
+                {
+                  "prompt": "Good infrastructure in a democracy should serve...",
+                  "answer": "All its people (hence inclusion, sustainability)",
+                  "solutionSteps": [
+                    "Everyone.",
+                    "Not a few."
+                  ]
+                },
+                {
+                  "prompt": "Infrastructure is therefore never just...",
+                  "answer": "Neutral concrete and steel",
+                  "solutionSteps": [
+                    "Purpose-laden.",
+                    "Set by society."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                228
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch19_dv03",
@@ -57799,7 +57971,93 @@
           "parentConceptId": "ssch19_t03_c03",
           "body": "Infrastructure has a special magic that ordinary goods do not: its value grows as more people join it. The very first telephone in the world was almost useless — there was no one to call. The millionth telephone was priceless, because it could reach a million others. Economists call this a 'network effect': each new road, railway line, port or mobile connection makes the whole network more valuable to everyone already on it, not just to the new user. This explains why building infrastructure is so powerful for development — a new highway does not just help one village, it links that village to every market, hospital and school the highway already touches. It also explains why infrastructure is usually planned by the government or as a shared project: no single person would pay to build a road that is only worth a lot once everyone uses it. The network, not the individual link, is the real asset.",
           "prerequisite": "Knowing that roads, railways and communications form connected networks.",
-          "nextStepHint": "Explain why a mobile-phone network becomes more useful as more people in your area get phones."
+          "nextStepHint": "Explain why a mobile-phone network becomes more useful as more people in your area get phones.",
+          "bonusQuestions": [
+            {
+              "id": "ssch19_dv03_b01",
+              "prompt": "Why was the millionth telephone worth far more than the very first one?",
+              "questionType": "mcq",
+              "options": [
+                "It could reach a million others — value grows as more people join (the network effect)",
+                "It was simply a newer model",
+                "It was cheaper to make",
+                "It was physically bigger"
+              ],
+              "answer": "It could reach a million others — value grows as more people join (the network effect)",
+              "solutionSteps": [
+                "The first phone had no one to call.",
+                "Each new connection makes the whole network more valuable."
+              ],
+              "commonMistakes": [
+                "Thinking value comes from the device, not the network."
+              ],
+              "variations": [
+                {
+                  "prompt": "Economists call this growth-of-value-with-users the...",
+                  "answer": "Network effect",
+                  "solutionSteps": [
+                    "More users, more value.",
+                    "For everyone on it."
+                  ]
+                },
+                {
+                  "prompt": "Why is infrastructure usually a shared/government project?",
+                  "answer": "No single person would pay for a road only worth a lot once everyone uses it",
+                  "solutionSteps": [
+                    "Network value.",
+                    "Shared asset."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                228
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch19_dv03_b02",
+              "prompt": "The 'network effect' means each new road, line or connection...",
+              "questionType": "mcq",
+              "options": [
+                "Makes the whole network more valuable to everyone already on it",
+                "Helps only the brand-new user",
+                "Lowers the value for existing users",
+                "Has no effect on value"
+              ],
+              "answer": "Makes the whole network more valuable to everyone already on it",
+              "solutionSteps": [
+                "A new highway links a village to every market the highway already touches.",
+                "The network, not the single link, is the real asset."
+              ],
+              "commonMistakes": [
+                "Thinking a new link helps only the latest user."
+              ],
+              "variations": [
+                {
+                  "prompt": "A new highway helps a village by...",
+                  "answer": "Linking it to every market, hospital and school the highway touches",
+                  "solutionSteps": [
+                    "Network reach.",
+                    "Not one village alone."
+                  ]
+                },
+                {
+                  "prompt": "The real asset in infrastructure is...",
+                  "answer": "The network, not the individual link",
+                  "solutionSteps": [
+                    "Connected whole.",
+                    "Grows with use."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                228
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch19_dv04",
@@ -57808,7 +58066,93 @@
           "parentConceptId": "ssch19_t04_c03",
           "body": "Treating infrastructure as a duty of the state is not a modern idea — the chapter's link to the Arthashastra shows how old it is. Kautilya's manual, written for the Mauryan state over two thousand years ago, instructed the king to build and maintain roads with measured widths for carts, troops and pedestrians; to plant shade trees and dig wells and rest-houses (called dharmashalas) along them for travellers; and above all to build and repair irrigation works, because a prosperous, tax-paying kingdom depended on watered fields. We even have proof it was done: an inscription at Junagadh records the great Sudarshana lake, a dam first built in Mauryan times and repaired by later rulers for centuries. So the principle the chapter teaches — that the state must provide the shared structures on which everyone's prosperity rests — is one India's thinkers had already worked out in antiquity. The technology changes from stone dams to fibre-optic cable, but the responsibility is the same.",
           "prerequisite": "Knowing the Arthashastra discussed roads, rest-houses and irrigation.",
-          "nextStepHint": "Name one piece of infrastructure the Arthashastra told the king to build and its modern equivalent."
+          "nextStepHint": "Name one piece of infrastructure the Arthashastra told the king to build and its modern equivalent.",
+          "bonusQuestions": [
+            {
+              "id": "ssch19_dv04_b01",
+              "prompt": "Kautilya's Arthashastra (2,000+ years ago) instructed the Mauryan king to build and maintain...",
+              "questionType": "mcq",
+              "options": [
+                "Roads (with measured widths), wells, rest-houses, and especially irrigation works",
+                "Only royal palaces",
+                "Nothing at all",
+                "Only temples"
+              ],
+              "answer": "Roads (with measured widths), wells, rest-houses, and especially irrigation works",
+              "solutionSteps": [
+                "A prosperous, tax-paying kingdom depended on watered fields and good roads.",
+                "So infrastructure was a duty of the ancient state."
+              ],
+              "commonMistakes": [
+                "Assuming state-built infrastructure is only a modern idea."
+              ],
+              "variations": [
+                {
+                  "prompt": "Roadside rest-houses for travellers were called...",
+                  "answer": "Dharmashalas",
+                  "solutionSteps": [
+                    "With shade trees and wells.",
+                    "State-provided."
+                  ]
+                },
+                {
+                  "prompt": "The principle that the state must provide shared structures is...",
+                  "answer": "Very old — worked out in antiquity (only the technology changes)",
+                  "solutionSteps": [
+                    "Same responsibility.",
+                    "Stone dams to fibre cable."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                228
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch19_dv04_b02",
+              "prompt": "The Junagadh inscription records which piece of Mauryan-era infrastructure, repaired by later rulers for centuries?",
+              "questionType": "mcq",
+              "options": [
+                "The Sudarshana lake (a dam)",
+                "A railway station",
+                "A seaport",
+                "A highway tunnel"
+              ],
+              "answer": "The Sudarshana lake (a dam)",
+              "solutionSteps": [
+                "The Sudarshana lake dam was first built in Mauryan times.",
+                "Its repair over centuries proves the state's ongoing duty."
+              ],
+              "commonMistakes": [
+                "Picking a modern type of infrastructure for an ancient inscription."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why did the Mauryan state prioritise irrigation works?",
+                  "answer": "Watered fields meant a prosperous, tax-paying kingdom",
+                  "solutionSteps": [
+                    "Farming base.",
+                    "Hence state duty."
+                  ]
+                },
+                {
+                  "prompt": "The technology of state infrastructure changes from stone dams to...",
+                  "answer": "Fibre-optic cable (but the responsibility is the same)",
+                  "solutionSteps": [
+                    "Old principle.",
+                    "New tools."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                228
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch19_dv05",
@@ -57817,7 +58161,93 @@
           "parentConceptId": "ssch19_t01_c03",
           "body": "Of all the kinds of infrastructure, energy has a special place: almost everything else stops without it. A hospital's machines, a railway's signals, a factory's motors, a phone tower, the pump that lifts water to your tap — all of them need electricity. That is why power plants, dams, solar parks and wind farms, and the web of wires and pipelines that carry power and water, are sometimes called the infrastructure BEHIND the infrastructure. India draws energy from many sources: big dams like Bhakra Nangal that give both electricity AND irrigation water; solar projects so ambitious that Cochin became the first airport in the world to run fully on solar power; and giant wind farms like Muppandal in Tamil Nadu. Mixing these sources matters, because clean energy from the sun and wind does not pollute or run out the way coal does. So when you flip a switch, you are using the one service on which nearly every other modern convenience quietly depends.",
           "prerequisite": "Knowing energy and utilities are a kind of infrastructure.",
-          "nextStepHint": "List three other services in your day that would stop if the electricity failed."
+          "nextStepHint": "List three other services in your day that would stop if the electricity failed.",
+          "bonusQuestions": [
+            {
+              "id": "ssch19_dv05_b01",
+              "prompt": "Why is energy called 'the infrastructure behind the infrastructure'?",
+              "questionType": "mcq",
+              "options": [
+                "Almost everything else — hospitals, railway signals, factories, phone towers, water pumps — stops without it",
+                "It is the cheapest to build",
+                "It is the newest type",
+                "It is actually unimportant"
+              ],
+              "answer": "Almost everything else — hospitals, railway signals, factories, phone towers, water pumps — stops without it",
+              "solutionSteps": [
+                "Nearly every modern service depends on electricity.",
+                "So energy underpins all other infrastructure."
+              ],
+              "commonMistakes": [
+                "Treating energy as just one option rather than the base for the rest."
+              ],
+              "variations": [
+                {
+                  "prompt": "Cochin became the first airport in the world to run fully on...",
+                  "answer": "Solar power",
+                  "solutionSteps": [
+                    "Ambitious clean energy.",
+                    "India's mix."
+                  ]
+                },
+                {
+                  "prompt": "Bhakra Nangal is a big dam that provides both...",
+                  "answer": "Electricity AND irrigation water",
+                  "solutionSteps": [
+                    "Dual benefit.",
+                    "Energy + farming."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                228
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch19_dv05_b02",
+              "prompt": "Why does mixing in clean energy from the sun and wind matter?",
+              "questionType": "mcq",
+              "options": [
+                "It does not pollute or run out the way coal does",
+                "It is only more expensive",
+                "It is purely decorative",
+                "It has no real benefit"
+              ],
+              "answer": "It does not pollute or run out the way coal does",
+              "solutionSteps": [
+                "Solar and wind are clean and renewable.",
+                "Mixing sources reduces pollution and reliance on finite coal."
+              ],
+              "commonMistakes": [
+                "Assuming all energy sources are equivalent in pollution and supply."
+              ],
+              "variations": [
+                {
+                  "prompt": "Muppandal in Tamil Nadu is a giant example of which clean source?",
+                  "answer": "A wind farm",
+                  "solutionSteps": [
+                    "Renewable energy.",
+                    "Part of the mix."
+                  ]
+                },
+                {
+                  "prompt": "When you flip a switch, you use the one service on which nearly every other convenience...",
+                  "answer": "Quietly depends",
+                  "solutionSteps": [
+                    "Energy underpins all.",
+                    "Base infrastructure."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                228
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch19_dv06",
@@ -57826,7 +58256,93 @@
           "parentConceptId": "ssch19_t03_c02",
           "body": "Look at the labels on things around you and many were made in another country — and the chances are they reached India by SEA. Most goods that travel between countries go by ship because it is by far the cheapest way to move huge amounts of cargo: a single container vessel can carry what thousands of trucks would. That is why ports are such vital infrastructure. India has major ports on both coasts — Mumbai, Jawaharlal Nehru, Kandla and Kochi in the west; Chennai, Vishakhapatnam, Kolkata and Paradip in the east — where cranes load and unload giant container ships. Their traffic is even measured in a special unit, the TEU (Twenty-foot Equivalent Unit), basically a count of standard containers. Ships are slower than planes, so urgent or light, high-value goods fly while bulky, heavy cargo sails — a neat example of choosing the right infrastructure for the job. A busy port quietly connects a whole region to the world's markets.",
           "prerequisite": "Knowing ports handle most of India's overseas trade.",
-          "nextStepHint": "Why would a country send heavy machinery by sea but fresh flowers by air?"
+          "nextStepHint": "Why would a country send heavy machinery by sea but fresh flowers by air?",
+          "bonusQuestions": [
+            {
+              "id": "ssch19_dv06_b01",
+              "prompt": "Why do most goods that travel between countries go by SHIP?",
+              "questionType": "mcq",
+              "options": [
+                "It is by far the cheapest way to move huge amounts of cargo",
+                "Ships are the fastest transport",
+                "Planes cannot carry cargo",
+                "A law requires sea transport"
+              ],
+              "answer": "It is by far the cheapest way to move huge amounts of cargo",
+              "solutionSteps": [
+                "A single container vessel carries what thousands of trucks would.",
+                "So bulky, heavy cargo goes by sea; ports are vital infrastructure."
+              ],
+              "commonMistakes": [
+                "Thinking goods travel mainly by air; sea is cheapest for bulk."
+              ],
+              "variations": [
+                {
+                  "prompt": "Urgent or light, high-value goods instead go by...",
+                  "answer": "Air (planes) — the right infrastructure for the job",
+                  "solutionSteps": [
+                    "Speed vs cost.",
+                    "Choose appropriately."
+                  ]
+                },
+                {
+                  "prompt": "A busy port quietly connects a whole region to...",
+                  "answer": "The world's markets",
+                  "solutionSteps": [
+                    "Vital link.",
+                    "Sea trade."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                228
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch19_dv06_b02",
+              "prompt": "Port traffic is measured in TEUs, which essentially count...",
+              "questionType": "mcq",
+              "options": [
+                "Standard (twenty-foot) shipping containers",
+                "Tonnes of fuel burned",
+                "The number of ships in a fleet",
+                "Passengers carried"
+              ],
+              "answer": "Standard (twenty-foot) shipping containers",
+              "solutionSteps": [
+                "TEU = Twenty-foot Equivalent Unit.",
+                "It counts standard containers handled."
+              ],
+              "commonMistakes": [
+                "Guessing TEU measures fuel, ships or passengers."
+              ],
+              "variations": [
+                {
+                  "prompt": "Name a major Indian port on the WEST coast.",
+                  "answer": "Mumbai (or Jawaharlal Nehru, Kandla, Kochi)",
+                  "solutionSteps": [
+                    "Western seaboard.",
+                    "Container traffic."
+                  ]
+                },
+                {
+                  "prompt": "Why are ports such vital infrastructure?",
+                  "answer": "Most international cargo arrives by sea through them",
+                  "solutionSteps": [
+                    "Cheapest bulk transport.",
+                    "Gateways to trade."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                228
+              ],
+              "needsHumanReview": false
+            }
+          ]
         }
       ],
       "crossChapterRefs": [
@@ -60216,7 +60732,93 @@
           "parentConceptId": "ssch20_t02_c02",
           "body": "Here is one of the most surprising ideas in economics: banks do not just move money around - in a sense, they help create it. When Anand deposits Rs 200, the bank keeps a small part as a reserve and lends most of it out, say to Shreya. Shreya spends that money, and whoever receives it may deposit it in their own bank, which again keeps a little and lends most out. The same original Rs 200 thus supports a chain of new deposits and loans far larger than itself. This is called the 'money multiplier' effect of fractional-reserve banking. It is enormously useful - it lets a small base of savings finance a much larger amount of productive activity. But it also explains why trust and rules matter so much: because banks lend out most deposits, they could not pay everyone back at the same time, so the RBI sets reserve rules and acts as a backstop to keep the system safe. Understanding this shows why the RBI's regulation is not red tape but the foundation of a stable economy.",
           "prerequisite": "ssch20_t02_c02",
-          "nextStepHint": "Look up the 'cash reserve ratio' to see exactly how much the RBI makes banks keep aside."
+          "nextStepHint": "Look up the 'cash reserve ratio' to see exactly how much the RBI makes banks keep aside.",
+          "bonusQuestions": [
+            {
+              "id": "ssch20_dv01_b01",
+              "prompt": "How do banks, in a sense, 'create' money?",
+              "questionType": "mcq",
+              "options": [
+                "They keep a small reserve and lend out most deposits, which get redeposited and re-lent (the money multiplier)",
+                "They secretly print extra notes",
+                "They mine gold",
+                "They do not create money at all"
+              ],
+              "answer": "They keep a small reserve and lend out most deposits, which get redeposited and re-lent (the money multiplier)",
+              "solutionSteps": [
+                "One deposit supports a chain of new deposits and loans far larger than itself.",
+                "This is the money-multiplier effect of fractional-reserve banking."
+              ],
+              "commonMistakes": [
+                "Thinking banks only store and move existing cash."
+              ],
+              "variations": [
+                {
+                  "prompt": "This multiplying effect is useful because it...",
+                  "answer": "Lets a small base of savings finance much more productive activity",
+                  "solutionSteps": [
+                    "Money multiplier.",
+                    "Funds the economy."
+                  ]
+                },
+                {
+                  "prompt": "Because banks lend out most deposits, why does the RBI set reserve rules and act as a backstop?",
+                  "answer": "Banks couldn't repay everyone at once, so rules keep the system safe",
+                  "solutionSteps": [
+                    "Trust and stability.",
+                    "Not red tape."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                240
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch20_dv01_b02",
+              "prompt": "Why can a bank NOT repay all its depositors at the very same time?",
+              "questionType": "mcq",
+              "options": [
+                "Because it has lent out most of the deposits, keeping only a small reserve",
+                "Because it hides the money abroad",
+                "Because deposits are fake",
+                "Because it keeps no records"
+              ],
+              "answer": "Because it has lent out most of the deposits, keeping only a small reserve",
+              "solutionSteps": [
+                "Fractional-reserve banking means most deposits are out as loans.",
+                "Hence reserve rules and the RBI as a backstop keep the system stable."
+              ],
+              "commonMistakes": [
+                "Imagining banks keep all deposits in a vault."
+              ],
+              "variations": [
+                {
+                  "prompt": "Who regulates banks and acts as a backstop in India?",
+                  "answer": "The RBI",
+                  "solutionSteps": [
+                    "Sets reserve rules.",
+                    "Keeps the system safe."
+                  ]
+                },
+                {
+                  "prompt": "Understanding the money multiplier shows RBI regulation is...",
+                  "answer": "The foundation of a stable economy (not mere red tape)",
+                  "solutionSteps": [
+                    "Trust and rules matter.",
+                    "Essential."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                240
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch20_dv02",
@@ -60225,7 +60827,93 @@
           "parentConceptId": "ssch20_t03_c02",
           "body": "When the news says 'the RBI raised the rate' or 'cut the rate', why does it matter to everyone, not just banks? The answer is a chain reaction. The RBI sets the benchmark rate at which it lends to banks. If the RBI raises this rate, banks must pay more to borrow, so they raise the interest they charge on home loans, car loans and business loans. Higher loan rates make people and companies borrow and spend less, which cools down the economy and helps control rising prices (inflation). If the RBI cuts the rate, the opposite happens: loans get cheaper, people borrow and spend more, and the economy speeds up. So a single decision about one number ripples out to the cost of millions of loans and the spending of an entire nation. This is called monetary policy, and it is one of the most powerful tools a country has to keep its economy steady - which is why central banks like the RBI are so important.",
           "prerequisite": "ssch20_t03_c02",
-          "nextStepHint": "Read about 'inflation' to see why central banks raise rates to keep prices from rising too fast."
+          "nextStepHint": "Read about 'inflation' to see why central banks raise rates to keep prices from rising too fast.",
+          "bonusQuestions": [
+            {
+              "id": "ssch20_dv02_b01",
+              "prompt": "When the RBI RAISES its benchmark interest rate, what typically follows?",
+              "questionType": "mcq",
+              "options": [
+                "Loans become costlier, people and firms borrow and spend less, cooling the economy and inflation",
+                "Loans get cheaper and spending rises",
+                "Nothing changes at all",
+                "Prices always rise faster"
+              ],
+              "answer": "Loans become costlier, people and firms borrow and spend less, cooling the economy and inflation",
+              "solutionSteps": [
+                "Banks pay more to borrow, so they charge more on loans.",
+                "Less borrowing and spending cools the economy and curbs inflation."
+              ],
+              "commonMistakes": [
+                "Reversing the effect — a rate rise cools, not heats, the economy."
+              ],
+              "variations": [
+                {
+                  "prompt": "If the RBI CUTS the rate, what happens?",
+                  "answer": "Loans get cheaper, people borrow and spend more, the economy speeds up",
+                  "solutionSteps": [
+                    "Opposite effect.",
+                    "Stimulus."
+                  ]
+                },
+                {
+                  "prompt": "So one decision about a single rate ripples out to...",
+                  "answer": "The cost of millions of loans and a whole nation's spending",
+                  "solutionSteps": [
+                    "Wide impact.",
+                    "Powerful lever."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                240
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch20_dv02_b02",
+              "prompt": "The RBI's use of interest rates to steer the economy is called...",
+              "questionType": "mcq",
+              "options": [
+                "Monetary policy",
+                "Fiscal policy",
+                "The money multiplier",
+                "A dividend"
+              ],
+              "answer": "Monetary policy",
+              "solutionSteps": [
+                "Adjusting the benchmark rate is monetary policy.",
+                "One of the most powerful tools to keep an economy steady."
+              ],
+              "commonMistakes": [
+                "Confusing monetary policy (interest rates) with fiscal policy (tax/spending)."
+              ],
+              "variations": [
+                {
+                  "prompt": "Raising rates is mainly used to control...",
+                  "answer": "Rising prices (inflation)",
+                  "solutionSteps": [
+                    "Cools the economy.",
+                    "Curbs inflation."
+                  ]
+                },
+                {
+                  "prompt": "Why are central banks like the RBI so important?",
+                  "answer": "Monetary policy is a powerful tool to keep the economy steady",
+                  "solutionSteps": [
+                    "Steers the nation.",
+                    "Crucial role."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                240
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch20_dv03",
@@ -60234,7 +60922,93 @@
           "parentConceptId": "ssch20_t01_c03",
           "body": "The chapter calls compounding 'magic', and the magic is that you earn interest not just on your money but on the interest it has already earned. Put ₹100 at 10% a year: after one year you have ₹110, but in the second year the 10% is taken on ₹110, not ₹100, so you earn ₹11, not ₹10 — and it keeps speeding up like a snowball rolling downhill. A handy trick captures this: the Rule of 72. Divide 72 by the yearly interest rate and you get roughly the number of years for money to double. At 8% money doubles in about 9 years (72 ÷ 8); at 6%, in about 12. The same rule works in reverse and in a scary way — it shows how fast a loan or inflation can double a debt. The deepest lesson is about time: because compounding accelerates, money saved when you are young grows far larger than the same amount saved later. Compounding rewards patience more than it rewards a big start.",
           "prerequisite": "Knowing that compound interest means earning interest on interest.",
-          "nextStepHint": "Use the Rule of 72 to find how many years money doubles at 9% interest."
+          "nextStepHint": "Use the Rule of 72 to find how many years money doubles at 9% interest.",
+          "bonusQuestions": [
+            {
+              "id": "ssch20_dv03_b01",
+              "prompt": "Compound interest 'snowballs' because you earn interest on...",
+              "questionType": "mcq",
+              "options": [
+                "Both your original money AND the interest it has already earned",
+                "Only the original sum, never the interest",
+                "Only the first year's deposit",
+                "Nothing — interest is fixed"
+              ],
+              "answer": "Both your original money AND the interest it has already earned",
+              "solutionSteps": [
+                "Year 2's interest is taken on the grown amount, not the original.",
+                "So growth accelerates like a rolling snowball."
+              ],
+              "commonMistakes": [
+                "Confusing compound interest with simple interest (only on the original)."
+              ],
+              "variations": [
+                {
+                  "prompt": "Rs 100 at 10%/yr: after year 2 you earn Rs 11, not Rs 10, because...",
+                  "answer": "The 10% is taken on Rs 110, not Rs 100",
+                  "solutionSteps": [
+                    "Interest on interest.",
+                    "Accelerating."
+                  ]
+                },
+                {
+                  "prompt": "Why does money saved when young grow far larger than the same amount saved later?",
+                  "answer": "Compounding accelerates over time — it rewards patience",
+                  "solutionSteps": [
+                    "Time is key.",
+                    "More compounding periods."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                240
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch20_dv03_b02",
+              "prompt": "By the Rule of 72, money earning 8% a year doubles in about...",
+              "questionType": "mcq",
+              "options": [
+                "9 years",
+                "72 years",
+                "8 years",
+                "80 years"
+              ],
+              "answer": "9 years",
+              "solutionSteps": [
+                "Rule of 72: years to double ≈ 72 ÷ rate.",
+                "72 ÷ 8 = 9 years."
+              ],
+              "commonMistakes": [
+                "Forgetting to divide 72 by the rate."
+              ],
+              "variations": [
+                {
+                  "prompt": "By the Rule of 72, at 6% money doubles in about...",
+                  "answer": "12 years",
+                  "solutionSteps": [
+                    "72 ÷ 6.",
+                    "= 12 years."
+                  ]
+                },
+                {
+                  "prompt": "The Rule of 72 also warns how fast a ... can double.",
+                  "answer": "Loan or inflation (a debt)",
+                  "solutionSteps": [
+                    "Works in reverse.",
+                    "A scary way."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                240
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch20_dv04",
@@ -60243,7 +61017,93 @@
           "parentConceptId": "ssch20_t04_c03",
           "body": "When you buy a share on the stock market, you are buying a tiny piece of ownership in a real company — if it does well, your share can rise in value and pay you a part of the profits (a dividend); if it does badly, your share can fall and you can lose money. That two-sided possibility is the heart of investing: higher possible reward always comes tied to higher risk. This is why a savings account (very safe, small return) and shares (riskier, possibly larger return) suit different needs. Smart investors manage the risk rather than gamble: they spread money across many companies (diversification, or 'not putting all your eggs in one basket') and stay invested for many years, so that compounding and a growing economy work in their favour while short-term ups and downs average out. The stock market is not a lottery — it is how ordinary people can share in the growth of the businesses around them, as long as they respect the link between risk and reward.",
           "prerequisite": "Knowing that shares represent part-ownership of a company.",
-          "nextStepHint": "Explain why putting all your savings into a single company's shares is riskier than spreading it across many."
+          "nextStepHint": "Explain why putting all your savings into a single company's shares is riskier than spreading it across many.",
+          "bonusQuestions": [
+            {
+              "id": "ssch20_dv04_b01",
+              "prompt": "When you buy a share on the stock market, you are...",
+              "questionType": "mcq",
+              "options": [
+                "Buying a tiny piece of ownership in a real company — it can rise (gain) or fall (loss)",
+                "Lending money to the government",
+                "Getting a guaranteed profit",
+                "Buying a lottery ticket"
+              ],
+              "answer": "Buying a tiny piece of ownership in a real company — it can rise (gain) or fall (loss)",
+              "solutionSteps": [
+                "A share is part-ownership; its value can go up or down.",
+                "Higher possible reward comes tied to higher risk."
+              ],
+              "commonMistakes": [
+                "Thinking shares are a guaranteed profit or a pure gamble."
+              ],
+              "variations": [
+                {
+                  "prompt": "Higher possible reward in investing always comes tied to...",
+                  "answer": "Higher risk",
+                  "solutionSteps": [
+                    "Two-sided.",
+                    "Risk-reward link."
+                  ]
+                },
+                {
+                  "prompt": "A part of a company's profit paid to shareholders is called a...",
+                  "answer": "Dividend",
+                  "solutionSteps": [
+                    "Reward of ownership.",
+                    "If it does well."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                240
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch20_dv04_b02",
+              "prompt": "How do smart investors manage risk rather than gamble?",
+              "questionType": "mcq",
+              "options": [
+                "They diversify across many companies and stay invested for years",
+                "They put all their money in one stock",
+                "They trade daily on rumours",
+                "They avoid shares entirely"
+              ],
+              "answer": "They diversify across many companies and stay invested for years",
+              "solutionSteps": [
+                "'Don't put all your eggs in one basket' spreads risk.",
+                "Staying invested lets compounding and a growing economy work, averaging out short-term swings."
+              ],
+              "commonMistakes": [
+                "Treating investing as a short-term gamble on one stock."
+              ],
+              "variations": [
+                {
+                  "prompt": "Spreading money across many companies is called...",
+                  "answer": "Diversification",
+                  "solutionSteps": [
+                    "Eggs in many baskets.",
+                    "Manages risk."
+                  ]
+                },
+                {
+                  "prompt": "The stock market is best seen as...",
+                  "answer": "A way to share in the growth of businesses (respecting risk-reward), not a lottery",
+                  "solutionSteps": [
+                    "Long-term ownership.",
+                    "Not gambling."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                240
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch20_dv05",
@@ -60252,7 +61112,93 @@
           "parentConceptId": "ssch20_t02_c03",
           "body": "For most of India's history, banking was for the few — before 2014 only about 15 crore Indians had a bank account, and most people kept their money as cash or depended on moneylenders who charged harsh interest. The Pradhan Mantri Jan Dhan Yojana, launched in 2014, set out to change that by offering every Indian a bank account with NO minimum balance and no fees. Since then more than 50 crore accounts have been opened — most of them by women. Why does a simple account matter so much? Because it plugs a person into the whole financial system: wages and pensions arrive directly, students get scholarships, government help reaches people without leaking away to middlemen, and a saver can earn safe interest instead of hiding cash. Economists call this 'financial inclusion', and it is one of the quiet revolutions of modern India — proof that infrastructure is not only roads and wires but also fair access to services everyone deserves.",
           "prerequisite": "Knowing the Jan Dhan Yojana opened bank accounts for crores of Indians.",
-          "nextStepHint": "List two things a person can do with a bank account that is hard to do with only cash."
+          "nextStepHint": "List two things a person can do with a bank account that is hard to do with only cash.",
+          "bonusQuestions": [
+            {
+              "id": "ssch20_dv05_b01",
+              "prompt": "The Pradhan Mantri Jan Dhan Yojana (2014) set out to give every Indian...",
+              "questionType": "mcq",
+              "options": [
+                "A bank account with no minimum balance and no fees",
+                "A free smartphone",
+                "A guaranteed loan",
+                "A plot of land"
+              ],
+              "answer": "A bank account with no minimum balance and no fees",
+              "solutionSteps": [
+                "Before 2014 only ~15 crore Indians had accounts; many used moneylenders.",
+                "Jan Dhan opened 50+ crore accounts, most by women."
+              ],
+              "commonMistakes": [
+                "Confusing the scheme's goal (accounts) with loans or goods."
+              ],
+              "variations": [
+                {
+                  "prompt": "Plugging a person into the banking system is called...",
+                  "answer": "Financial inclusion",
+                  "solutionSteps": [
+                    "Access for all.",
+                    "A quiet revolution."
+                  ]
+                },
+                {
+                  "prompt": "Why does a simple account matter so much?",
+                  "answer": "Wages, pensions and government help reach people directly without leaking to middlemen",
+                  "solutionSteps": [
+                    "Direct benefit transfer.",
+                    "Plus safe saving."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                240
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch20_dv05_b02",
+              "prompt": "'Financial inclusion' (like Jan Dhan) shows that infrastructure is...",
+              "questionType": "mcq",
+              "options": [
+                "Not only roads and wires, but also fair access to services everyone deserves",
+                "Only physical concrete and steel",
+                "Useless for the poor",
+                "A purely private matter"
+              ],
+              "answer": "Not only roads and wires, but also fair access to services everyone deserves",
+              "solutionSteps": [
+                "A bank account connects a person to the whole financial system.",
+                "Fair access is itself a kind of infrastructure."
+              ],
+              "commonMistakes": [
+                "Limiting 'infrastructure' to physical structures only."
+              ],
+              "variations": [
+                {
+                  "prompt": "Before 2014, where did most people without accounts keep money or borrow?",
+                  "answer": "As cash, or from moneylenders charging harsh interest",
+                  "solutionSteps": [
+                    "No banking access.",
+                    "Jan Dhan changed this."
+                  ]
+                },
+                {
+                  "prompt": "Most of the 50+ crore Jan Dhan accounts were opened by...",
+                  "answer": "Women",
+                  "solutionSteps": [
+                    "Inclusive reach.",
+                    "A quiet revolution."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                240
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch20_dv06",
@@ -60261,7 +61207,93 @@
           "parentConceptId": "ssch20_t04_c04",
           "body": "Digital payments are wonderfully convenient, but the same speed that helps you also helps cheats — which is why this is one of the most useful things in the whole book to remember. Most fraud works the same way: a stranger phones or messages pretending to be from your bank and tries to PANIC or TEMPT you into revealing your secret PIN, password or OTP (one-time password), or into tapping a strange link. The single golden rule defeats almost all of it: never share your PIN, password or OTP with ANYONE — because a real bank will NEVER ask for them. Add two habits and you are safer still: be suspicious of 'too good to be true' offers and of links from unknown numbers, and if something feels wrong, stop and check with your bank directly using its official number. Notice the pattern — scams attack not the technology but the human, by rushing you. Slowing down and keeping your secrets secret is a skill that will protect you for life.",
           "prerequisite": "Knowing UPI and digital payments use a secret PIN/OTP.",
-          "nextStepHint": "Write down the 'golden rule' for OTPs and explain why a real bank never needs your OTP."
+          "nextStepHint": "Write down the 'golden rule' for OTPs and explain why a real bank never needs your OTP.",
+          "bonusQuestions": [
+            {
+              "id": "ssch20_dv06_b01",
+              "prompt": "The single golden rule that defeats most money scams is...",
+              "questionType": "mcq",
+              "options": [
+                "Never share your PIN, password or OTP with anyone — a real bank will never ask for them",
+                "Always tap links from unknown numbers",
+                "Trust any urgent caller claiming to be your bank",
+                "Share your OTP to 'verify' yourself"
+              ],
+              "answer": "Never share your PIN, password or OTP with anyone — a real bank will never ask for them",
+              "solutionSteps": [
+                "Scammers trick you into revealing secret codes.",
+                "A real bank never asks for your PIN/OTP, so never share them."
+              ],
+              "commonMistakes": [
+                "Believing a caller who 'needs your OTP to help you'."
+              ],
+              "variations": [
+                {
+                  "prompt": "If something feels wrong, the safe habit is to...",
+                  "answer": "Stop and check with your bank directly using its official number",
+                  "solutionSteps": [
+                    "Slow down.",
+                    "Verify independently."
+                  ]
+                },
+                {
+                  "prompt": "Be especially suspicious of...",
+                  "answer": "'Too good to be true' offers and links from unknown numbers",
+                  "solutionSteps": [
+                    "Common scam bait.",
+                    "Pause and check."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                240
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch20_dv06_b02",
+              "prompt": "Most money scams work by...",
+              "questionType": "mcq",
+              "options": [
+                "Rushing, panicking or tempting you into revealing secrets — they attack the human, not the technology",
+                "Hacking the bank's central computers",
+                "Breaking the encryption",
+                "Guessing your PIN by maths"
+              ],
+              "answer": "Rushing, panicking or tempting you into revealing secrets — they attack the human, not the technology",
+              "solutionSteps": [
+                "Fraud usually targets the person, pressuring them to share codes or tap links.",
+                "Slowing down and keeping secrets secret defeats it."
+              ],
+              "commonMistakes": [
+                "Thinking scams mainly break technology rather than manipulate people."
+              ],
+              "variations": [
+                {
+                  "prompt": "Since scams rush you, the protective skill is to...",
+                  "answer": "Slow down and keep your secrets secret",
+                  "solutionSteps": [
+                    "Defeats most fraud.",
+                    "A life skill."
+                  ]
+                },
+                {
+                  "prompt": "Will a genuine bank ever ask for your OTP or PIN?",
+                  "answer": "No, never",
+                  "solutionSteps": [
+                    "Hence never share them.",
+                    "The golden rule."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                240
+              ],
+              "needsHumanReview": false
+            }
+          ]
         }
       ],
       "crossChapterRefs": [

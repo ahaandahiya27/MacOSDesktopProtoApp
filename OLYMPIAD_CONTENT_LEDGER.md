@@ -80,7 +80,8 @@ The `bonusQuestions` array is ADDED to each `deepDive[]` entry (new key; the opt
 - [x] **ssch13–ssch14 (12 topics, 24 MCQs)** — Indian Farming (hybrid seeds, Green-Revolution externalities, kharif/rabi/zaid, traditional water structures, soils, the half-workers/small-output puzzle); India & Neighbours (maritime choke points, Sanskrit Cosmopolis, why neighbours cooperate, three Buddhist vehicles, India–Nepal open border, the Himalayas).
 - [x] **ssch15–ssch16 (12 topics, 24 MCQs)** — Empires 6th–10th c. (Indian-feudalism debate, legitimation, Uttaramerur election, Bhakti, Nalanda/Vikramashila, Mamallapuram); Turning Tides (writing dark periods, Ghuri vs Mahmud, Bhaskaracharya, Basavanna, Chola navy/Srivijaya, Al-Biruni).
 - [x] **ssch17–ssch18 (12 topics, 24 MCQs)** — A Home to Many (identity-preserving integration, two-way refuge, Parsi milk-and-sugar, Vasudhaiva Kutumbakam, Jews in India, Siddis); The State & Government (separation of powers, democracy beyond majority rule, matsya nyaya/social contract, the third tier, state vs government, the two executives).
-- [ ] ssch19–ssch20 (12 topics) — 2 MCQs each. **216 SS MCQs done so far.**
+- [x] **ssch19–ssch20 (12 topics, 24 MCQs)** — Infrastructure (public good, railway two-meanings, network effect, Arthashastra/Sudarshana, energy, ships & ports/TEU); Banks & Finance (money multiplier, monetary policy/RBI rate, compound interest & Rule of 72, shares risk-reward, Jan Dhan/financial inclusion, the anti-scam golden rule).
+- ✅ **SOCIAL SCIENCE COMPLETE — 120/120 stretch topics, 240 Olympiad MCQs, all 20 chapters. bonusQuestions field added to the SS schema.**
 
 ## Phase 5 (after content) — coverage test
 - [ ] Add `ExpertChallengeOlympiadContentTests`: each pack yields a non-empty
