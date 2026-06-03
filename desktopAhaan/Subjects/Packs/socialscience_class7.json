@@ -14527,7 +14527,93 @@
           "parentConceptId": "ssch05_t05_c02",
           "body": "Ashoka's edicts are 'primary sources' — words from the past itself, not a later retelling. For centuries no one could read them, because the Brahmi script had been forgotten. In 1837 the British scholar James Prinsep cracked the script, and suddenly the inscriptions on rocks and pillars across India could be read as Ashoka's own messages. Historians study where each edict was placed (the spread shows the empire's reach), what language and script were used (Prakrit in Brahmi in most of India, but Greek and Aramaic in the northwest, revealing the diverse peoples Ashoka ruled), and what the edicts say versus what archaeology shows. Comparing the edicts with sources like Megasthenes' Indika and the Sohgaura copper-plate lets historians cross-check claims rather than taking any one source literally — the heart of the historian's method.",
           "prerequisite": "Knowing that Ashoka issued edicts in Prakrit and Brahmi to spread dhamma.",
-          "nextStepHint": "Find out which Ashokan edict sites are nearest your state and what languages were used there."
+          "nextStepHint": "Find out which Ashokan edict sites are nearest your state and what languages were used there.",
+          "bonusQuestions": [
+            {
+              "id": "ssch05_dv01_b01",
+              "prompt": "Ashoka's edicts could finally be READ in 1837 when...",
+              "questionType": "mcq",
+              "options": [
+                "James Prinsep deciphered the forgotten Brahmi script",
+                "They were translated from English",
+                "A brand-new edict was discovered",
+                "Megasthenes returned to India"
+              ],
+              "answer": "James Prinsep deciphered the forgotten Brahmi script",
+              "solutionSteps": [
+                "The Brahmi script had been forgotten for centuries.",
+                "Prinsep cracked it, so the inscriptions could be read as Ashoka's own words."
+              ],
+              "commonMistakes": [
+                "Assuming the edicts were always readable."
+              ],
+              "variations": [
+                {
+                  "prompt": "In the northwest, some edicts used which scripts/languages, revealing diverse subjects?",
+                  "answer": "Greek and Aramaic",
+                  "solutionSteps": [
+                    "Most India: Prakrit in Brahmi.",
+                    "Northwest: Greek/Aramaic."
+                  ]
+                },
+                {
+                  "prompt": "Why does WHERE each edict was placed matter to historians?",
+                  "answer": "Their spread shows the empire's reach",
+                  "solutionSteps": [
+                    "Distribution maps the realm.",
+                    "Evidence of extent."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                60
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch05_dv01_b02",
+              "prompt": "Ashoka's edicts are called 'primary sources' because they are...",
+              "questionType": "mcq",
+              "options": [
+                "Words from the past itself, not a later retelling",
+                "Modern textbook summaries",
+                "Folk legends",
+                "Copies made centuries later"
+              ],
+              "answer": "Words from the past itself, not a later retelling",
+              "solutionSteps": [
+                "A primary source comes directly from the period studied.",
+                "The edicts are Ashoka's own carved messages."
+              ],
+              "commonMistakes": [
+                "Confusing a primary source with a later secondary account."
+              ],
+              "variations": [
+                {
+                  "prompt": "Historians cross-check the edicts against which other sources?",
+                  "answer": "Megasthenes' Indika and the Sohgaura copper-plate",
+                  "solutionSteps": [
+                    "Compare multiple sources.",
+                    "Not taking one literally."
+                  ]
+                },
+                {
+                  "prompt": "Comparing several sources rather than trusting one is the heart of...",
+                  "answer": "The historian's method",
+                  "solutionSteps": [
+                    "Cross-checking evidence.",
+                    "Avoids bias."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                60
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch05_dv02",
@@ -14536,7 +14622,93 @@
           "parentConceptId": "ssch05_t04_c03",
           "body": "Beyond the saptānga, Kauṭilya's Arthaśhāstra contains a famous theory of foreign relations called the mandala (circle). It imagines the world as rings of states around your own kingdom: your immediate neighbour is naturally a potential rival, but the state beyond your neighbour (your neighbour's neighbour) is a natural ally — 'the enemy of my enemy is my friend'. Kauṭilya also listed six measures of foreign policy a king could choose between, such as making peace, waging war, staying neutral, preparing for war, seeking shelter with a stronger power, or pursuing a 'dual policy' of peace with one and war with another. This sophisticated, realistic theory of how states should manage rivals and allies (the mitra limb of the saptānga) is still discussed in the study of international relations today.",
           "prerequisite": "Understanding the saptānga and the role of allies (mitra) in a kingdom.",
-          "nextStepHint": "Compare Kauṭilya's idea that 'the enemy of my enemy is my friend' with examples from modern world politics."
+          "nextStepHint": "Compare Kauṭilya's idea that 'the enemy of my enemy is my friend' with examples from modern world politics.",
+          "bonusQuestions": [
+            {
+              "id": "ssch05_dv02_b01",
+              "prompt": "In Kautilya's mandala theory, the state BEYOND your immediate neighbour is naturally your...",
+              "questionType": "mcq",
+              "options": [
+                "Ally ('the enemy of my enemy is my friend')",
+                "Worst enemy",
+                "Subject/vassal",
+                "Exact equal"
+              ],
+              "answer": "Ally ('the enemy of my enemy is my friend')",
+              "solutionSteps": [
+                "Your neighbour is a likely rival; their neighbour pressures them too.",
+                "So your neighbour's neighbour is a natural ally."
+              ],
+              "commonMistakes": [
+                "Treating all other states as enemies regardless of position."
+              ],
+              "variations": [
+                {
+                  "prompt": "In the mandala, your immediate neighbour is usually a...",
+                  "answer": "Potential rival",
+                  "solutionSteps": [
+                    "Bordering competitor.",
+                    "A likely enemy."
+                  ]
+                },
+                {
+                  "prompt": "Kautilya listed how many measures of foreign policy a king could choose?",
+                  "answer": "Six (peace, war, neutrality, preparing, seeking shelter, dual policy)",
+                  "solutionSteps": [
+                    "A realistic toolkit.",
+                    "Six options."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                60
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch05_dv02_b02",
+              "prompt": "Kautilya's mandala theory of foreign relations appears in which text?",
+              "questionType": "mcq",
+              "options": [
+                "The Arthaśhāstra",
+                "The Periplus",
+                "Ashoka's Rock Edicts",
+                "The Rigveda"
+              ],
+              "answer": "The Arthaśhāstra",
+              "solutionSteps": [
+                "Kautilya's Arthaśhāstra sets out statecraft, including the mandala.",
+                "Still discussed in international-relations study."
+              ],
+              "commonMistakes": [
+                "Attributing it to a different ancient text."
+              ],
+              "variations": [
+                {
+                  "prompt": "The mandala's 'mitra' refers to which limb of the saptānga?",
+                  "answer": "The ally",
+                  "solutionSteps": [
+                    "Friendly states.",
+                    "The mitra limb."
+                  ]
+                },
+                {
+                  "prompt": "Is the mandala theory still studied today?",
+                  "answer": "Yes, in international relations",
+                  "solutionSteps": [
+                    "Realist statecraft.",
+                    "A lasting idea."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                60
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch05_dv03",
@@ -14545,7 +14717,93 @@
           "parentConceptId": "ssch05_t03_c01",
           "body": "Magadha was only one of several mahājanapadas, yet it grew into the heart of India's first empire while its rivals faded. Historians point to a bundle of advantages that reinforced each other. First, geography: Magadha sat in the doubly-fertile Ganga plain, watered by the Ganga and its tributary the Son, so it could feed a large population and army. Second, resources: rich iron-ore deposits in the hills to the south gave Magadha better tools and weapons, and the eastern forests supplied war-elephants that other kingdoms could not match. Third, position: control of the Ganga let Magadha tax and protect river trade — the very routes and goods discussed in this chapter. Fourth, leadership: ambitious rulers from Bimbisāra and Ajātaśhatru onward, and later the Nandas, used these resources deliberately. No single factor 'caused' the rise; it was the combination — fertile land plus iron plus elephants plus rivers plus ambition — that let Magadha out-grow every neighbour. That is how historians explain large changes: not one magic reason, but several advantages compounding over time.",
           "prerequisite": "Knowing that Magadha rose to lead the mahājanapadas.",
-          "nextStepHint": "List the four advantages and rank which you think mattered most, giving a reason."
+          "nextStepHint": "List the four advantages and rank which you think mattered most, giving a reason.",
+          "bonusQuestions": [
+            {
+              "id": "ssch05_dv03_b01",
+              "prompt": "How do historians best explain why Magadha, not its rivals, rose to empire?",
+              "questionType": "mcq",
+              "options": [
+                "A combination of fertile land, iron ore, war-elephants, river trade and ambitious rulers compounding over time",
+                "A single magic cause",
+                "Only its large temples",
+                "Only its religion"
+              ],
+              "answer": "A combination of fertile land, iron ore, war-elephants, river trade and ambitious rulers compounding over time",
+              "solutionSteps": [
+                "No one factor caused it.",
+                "Several advantages reinforced each other."
+              ],
+              "commonMistakes": [
+                "Looking for one 'magic reason' instead of compounding causes."
+              ],
+              "variations": [
+                {
+                  "prompt": "War-elephants that rivals couldn't match came from Magadha's...",
+                  "answer": "Eastern forests",
+                  "solutionSteps": [
+                    "Forest resource.",
+                    "An army edge."
+                  ]
+                },
+                {
+                  "prompt": "Control of the Ganga let Magadha do what economically?",
+                  "answer": "Tax and protect river trade",
+                  "solutionSteps": [
+                    "River routes.",
+                    "Revenue and reach."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                60
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch05_dv03_b02",
+              "prompt": "Which pair of advantages, among others, helped Magadha feed a large army and equip it well?",
+              "questionType": "mcq",
+              "options": [
+                "Fertile Ganga plains (food) and southern iron-ore deposits (tools and weapons)",
+                "Sea ports and gold mines",
+                "Deserts and glaciers",
+                "Coastal trade and pearls"
+              ],
+              "answer": "Fertile Ganga plains (food) and southern iron-ore deposits (tools and weapons)",
+              "solutionSteps": [
+                "The doubly-fertile plain fed people; iron armed them.",
+                "Both fed into Magadha's dominance."
+              ],
+              "commonMistakes": [
+                "Crediting unrelated resources Magadha did not chiefly rely on."
+              ],
+              "variations": [
+                {
+                  "prompt": "Ambitious rulers like Bimbisāra and Ajātaśhatru did what with these resources?",
+                  "answer": "Used them deliberately to expand Magadha",
+                  "solutionSteps": [
+                    "Leadership factor.",
+                    "Turned advantage into empire."
+                  ]
+                },
+                {
+                  "prompt": "How do historians generally explain large changes?",
+                  "answer": "By several advantages compounding, not one cause",
+                  "solutionSteps": [
+                    "Multi-factor.",
+                    "Over time."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                60
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch05_dv04",
@@ -14554,7 +14812,93 @@
           "parentConceptId": "ssch05_t02_c02",
           "body": "The guilds (śhrenīs) in this chapter did far more than group craftsmen together. Inscriptions and texts show they behaved in ways that look surprisingly modern. A śhrenī had its own written rules and a chief, so it could act as a single body — a little like a company having a constitution and a managing director. Some guilds owned a seal to stamp goods and documents, the way a firm uses a trademark. Most striking, guilds acted as early banks: a person could deposit money with a guild, which would pay out a fixed return — an inscription at Sanchi records exactly such a 'permanent endowment' whose interest funded lamps and feeding of monks for ever. Guilds also made large donations to monasteries, leaving the very inscriptions historians now read. Of course they were not companies in the legal sense we mean today, but they show that self-organising economic institutions — pooling capital, fixing rules, lending at interest — are very old in India, long before modern banks or corporations.",
           "prerequisite": "Knowing that guilds (śhrenīs) organised traders and craftsmen.",
-          "nextStepHint": "Compare one feature of a śhrenī (rules, seal, banking, donations) with a feature of a modern company or bank."
+          "nextStepHint": "Compare one feature of a śhrenī (rules, seal, banking, donations) with a feature of a modern company or bank.",
+          "bonusQuestions": [
+            {
+              "id": "ssch05_dv04_b01",
+              "prompt": "How did a śhrenī (guild) act like an early BANK?",
+              "questionType": "mcq",
+              "options": [
+                "People could deposit money with it and it paid out a fixed return (interest)",
+                "It printed its own coins",
+                "It only stored grain",
+                "It collected farmers' taxes"
+              ],
+              "answer": "People could deposit money with it and it paid out a fixed return (interest)",
+              "solutionSteps": [
+                "An inscription at Sanchi records a 'permanent endowment' whose interest funded lamps and feeding monks.",
+                "So guilds took deposits and paid returns — bank-like."
+              ],
+              "commonMistakes": [
+                "Thinking guilds only grouped craftsmen, ignoring their banking role."
+              ],
+              "variations": [
+                {
+                  "prompt": "A guild's written rules and chief made it act like a single body, similar to a company's...",
+                  "answer": "Constitution and managing director",
+                  "solutionSteps": [
+                    "Self-governing body.",
+                    "Like a firm."
+                  ]
+                },
+                {
+                  "prompt": "Were śhrenīs legally 'companies' as we mean today?",
+                  "answer": "No, but they pooled capital and lent at interest very early",
+                  "solutionSteps": [
+                    "Not legal companies.",
+                    "Yet strikingly modern."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                60
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch05_dv04_b02",
+              "prompt": "A guild's seal, used to stamp its goods and documents, functioned much like a modern...",
+              "questionType": "mcq",
+              "options": [
+                "Trademark",
+                "Passport",
+                "Coin",
+                "Road map"
+              ],
+              "answer": "Trademark",
+              "solutionSteps": [
+                "A seal marked goods as the guild's, like a brand.",
+                "That is the role of a trademark."
+              ],
+              "commonMistakes": [
+                "Confusing the seal with money or a travel document."
+              ],
+              "variations": [
+                {
+                  "prompt": "Guilds left many inscriptions because they made large donations to...",
+                  "answer": "Monasteries",
+                  "solutionSteps": [
+                    "Recorded in stone.",
+                    "Which historians now read."
+                  ]
+                },
+                {
+                  "prompt": "What do śhrenīs show about Indian economic institutions?",
+                  "answer": "Self-organising, capital-pooling institutions are very old in India",
+                  "solutionSteps": [
+                    "Pre-modern 'firms'.",
+                    "Long before modern banks."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                60
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch05_dv05",
@@ -14563,7 +14907,93 @@
           "parentConceptId": "ssch05_t05_c01",
           "body": "Most conquerors celebrate a victory; Ashoka grieved over his. After his army crushed Kalinga (modern Odisha) in a terribly bloody war, the sight of the dead and the suffering of the survivors filled him with such remorse that he turned away from conquest by the sword (digvijaya) and toward 'conquest by Dhamma' (dhammavijaya) — winning people's hearts through right conduct. We know this not from a court poet but from Ashoka's own words: in his Rock Edict XIII he openly describes his sorrow over Kalinga, an astonishing thing for a ruler to carve in stone for all to read. Ashoka is therefore famous as one of the very few emperors in history known to have renounced war at the height of his power. It is a rare case where we can watch a person's mind change inside the historical record itself.",
           "prerequisite": "Knowing Ashoka fought and won the Kalinga war.",
-          "nextStepHint": "Read what Dhamma asked of people — was it a religion, or a code of conduct for living together?"
+          "nextStepHint": "Read what Dhamma asked of people — was it a religion, or a code of conduct for living together?",
+          "bonusQuestions": [
+            {
+              "id": "ssch05_dv05_b01",
+              "prompt": "After the terribly bloody Kalinga war, Ashoka turned away from conquest by the sword toward...",
+              "questionType": "mcq",
+              "options": [
+                "'Conquest by Dhamma' (dhammavijaya), winning hearts through right conduct",
+                "Even more wars of conquest",
+                "Total retirement from rule",
+                "Building a ring of forts"
+              ],
+              "answer": "'Conquest by Dhamma' (dhammavijaya), winning hearts through right conduct",
+              "solutionSteps": [
+                "Remorse over Kalinga's dead changed Ashoka.",
+                "He chose dhammavijaya over digvijaya (military conquest)."
+              ],
+              "commonMistakes": [
+                "Thinking he kept conquering; he renounced war at his peak."
+              ],
+              "variations": [
+                {
+                  "prompt": "Conquest by the sword is called digvijaya; conquest by right conduct is...",
+                  "answer": "Dhammavijaya",
+                  "solutionSteps": [
+                    "Winning hearts.",
+                    "Ashoka's new path."
+                  ]
+                },
+                {
+                  "prompt": "Why is Ashoka historically rare among emperors?",
+                  "answer": "He renounced war at the height of his power",
+                  "solutionSteps": [
+                    "Few rulers do this.",
+                    "A turning of mind."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                60
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch05_dv05_b02",
+              "prompt": "How do we know about Ashoka's remorse over the Kalinga war?",
+              "questionType": "mcq",
+              "options": [
+                "From his own Rock Edict XIII, in which he openly carved his sorrow",
+                "From a flattering court poet's song",
+                "From a Greek ambassador's letter",
+                "From a much later legend"
+              ],
+              "answer": "From his own Rock Edict XIII, in which he openly carved his sorrow",
+              "solutionSteps": [
+                "Ashoka himself describes his grief in Rock Edict XIII.",
+                "A ruler carving his own remorse in stone is astonishing."
+              ],
+              "commonMistakes": [
+                "Assuming it comes from a later or second-hand source."
+              ],
+              "variations": [
+                {
+                  "prompt": "Kalinga is in which modern state?",
+                  "answer": "Odisha",
+                  "solutionSteps": [
+                    "Eastern coast.",
+                    "Conquered by Ashoka."
+                  ]
+                },
+                {
+                  "prompt": "Why is this case special for historians?",
+                  "answer": "We can watch a person's mind change inside the historical record itself",
+                  "solutionSteps": [
+                    "Primary, first-person.",
+                    "A rare window."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                60
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch05_dv06",
@@ -14572,7 +15002,93 @@
           "parentConceptId": "ssch05_t05_c03",
           "body": "The Maurya empire was the largest India had ever seen, yet it broke up within about fifty years of Ashoka's death (around 185 BCE). Why are empires so fragile? Several pressures pull at once. An empire is huge, and in an age of slow communication a distant province is hard to govern and quick to break away when the centre weakens. Holding it together needs a large army and constant tribute, which is expensive; a long war or a drought can force an emperor to demand more, angering local rulers and people. Power passes by inheritance, so a weak or quarrelling set of successors can undo what a strong founder built. And an empire stitched together by force never fully wins the loyalty of all its peoples. So the very things that make an empire powerful — vast size, many subject peoples, dependence on army and tribute — are also what make it fragile. This pattern, not just the Mauryas, repeats across history.",
           "prerequisite": "Knowing the Maurya empire ended within ~50 years of Ashoka.",
-          "nextStepHint": "List the empires in this book and check which of these weaknesses brought each one down."
+          "nextStepHint": "List the empires in this book and check which of these weaknesses brought each one down.",
+          "bonusQuestions": [
+            {
+              "id": "ssch05_dv06_b01",
+              "prompt": "Why did the vast Maurya empire break up within about fifty years of Ashoka's death?",
+              "questionType": "mcq",
+              "options": [
+                "Huge size with slow communication, costly army and tribute, and weak/quarrelling successors pulled it apart",
+                "A single great flood destroyed it",
+                "Foreign trade ended",
+                "There were too many coins"
+              ],
+              "answer": "Huge size with slow communication, costly army and tribute, and weak/quarrelling successors pulled it apart",
+              "solutionSteps": [
+                "Distant provinces were hard to govern and quick to secede.",
+                "Costly upkeep plus weak heirs and force-based loyalty made it fragile."
+              ],
+              "commonMistakes": [
+                "Blaming one cause for a fragility that had several pressures."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is a distant province quick to break away when the centre weakens?",
+                  "answer": "Slow communication makes it hard to govern from afar",
+                  "solutionSteps": [
+                    "Distance + slow info.",
+                    "Easy to secede."
+                  ]
+                },
+                {
+                  "prompt": "Power passing by inheritance is risky because...",
+                  "answer": "A weak or quarrelling successor can undo a strong founder's work",
+                  "solutionSteps": [
+                    "Hereditary gamble.",
+                    "Undermines the empire."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                60
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch05_dv06_b02",
+              "prompt": "The very features that make an empire powerful (vast size, many subject peoples, big army and tribute) are also...",
+              "questionType": "mcq",
+              "options": [
+                "What make it fragile",
+                "What make it eternal",
+                "Completely irrelevant",
+                "Forbidden by law"
+              ],
+              "answer": "What make it fragile",
+              "solutionSteps": [
+                "Size, subject peoples and dependence on army/tribute are strengths AND weaknesses.",
+                "This pattern repeats across history, not just the Mauryas."
+              ],
+              "commonMistakes": [
+                "Seeing strength and fragility as unrelated rather than two sides of the same features."
+              ],
+              "variations": [
+                {
+                  "prompt": "An empire stitched together by force never fully wins...",
+                  "answer": "The loyalty of all its peoples",
+                  "solutionSteps": [
+                    "Force isn't loyalty.",
+                    "A standing weakness."
+                  ]
+                },
+                {
+                  "prompt": "Does this fragility pattern apply only to the Mauryas?",
+                  "answer": "No — it repeats across history",
+                  "solutionSteps": [
+                    "A general pattern.",
+                    "Many empires."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                60
+              ],
+              "needsHumanReview": false
+            }
+          ]
         }
       ],
       "crossChapterRefs": [
@@ -17068,7 +17584,93 @@
           "parentConceptId": "ssch06_t03_c04",
           "body": "The Satavahana, Chera and Pandya trade with Rome is documented not only by Indian coins but by a remarkable Greek sailing manual, the Periplus of the Erythraean Sea, written in the 1st century CE. It lists Indian ports, the goods bought and sold there, and even the best sailing seasons using the monsoon winds. Indian exports of pepper, pearls, ivory and textiles drew so much Roman gold that the Roman writer Pliny complained India was draining Rome's treasury. Large hoards of Roman coins found in south India confirm this. Studying these sources together shows how historians cross-check different kinds of evidence — foreign texts, local coins and archaeology — to reconstruct ancient trade.",
           "prerequisite": "Knowing the Cheras, Pandyas and Satavahanas traded with the Roman Empire.",
-          "nextStepHint": "Find out what the 'monsoon winds' had to do with the timing of voyages between India and Rome."
+          "nextStepHint": "Find out what the 'monsoon winds' had to do with the timing of voyages between India and Rome.",
+          "bonusQuestions": [
+            {
+              "id": "ssch06_dv01_b01",
+              "prompt": "Which 1st-century-CE Greek sailing manual documents Indo-Roman trade, listing Indian ports and monsoon sailing seasons?",
+              "questionType": "mcq",
+              "options": [
+                "The Periplus of the Erythraean Sea",
+                "Kautilya's Arthaśhāstra",
+                "Megasthenes' Indika",
+                "Ashoka's Rock Edict XIII"
+              ],
+              "answer": "The Periplus of the Erythraean Sea",
+              "solutionSteps": [
+                "The Periplus is a Greek merchant's guide to Indian Ocean trade.",
+                "It names ports, goods and the best monsoon sailing times."
+              ],
+              "commonMistakes": [
+                "Confusing the Periplus with Indian texts of statecraft."
+              ],
+              "variations": [
+                {
+                  "prompt": "Indian exports that drew Roman gold included...",
+                  "answer": "Pepper, pearls, ivory and textiles",
+                  "solutionSteps": [
+                    "High-value goods.",
+                    "Sought by Rome."
+                  ]
+                },
+                {
+                  "prompt": "Which Roman writer complained India was draining Rome's treasury?",
+                  "answer": "Pliny",
+                  "solutionSteps": [
+                    "Over Roman gold outflow.",
+                    "To buy Indian goods."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                72
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch06_dv01_b02",
+              "prompt": "What physical evidence confirms heavy Roman trade with south India?",
+              "questionType": "mcq",
+              "options": [
+                "Large hoards of Roman coins found in south India",
+                "Ashoka's edicts",
+                "Verses in the Rigveda",
+                "Oral legends only"
+              ],
+              "answer": "Large hoards of Roman coins found in south India",
+              "solutionSteps": [
+                "Roman coin hoards in the south match the textual record.",
+                "Cross-checking texts, coins and archaeology reconstructs the trade."
+              ],
+              "commonMistakes": [
+                "Relying on texts alone; coins provide independent proof."
+              ],
+              "variations": [
+                {
+                  "prompt": "Combining foreign texts, local coins and archaeology shows historians...",
+                  "answer": "Cross-check different kinds of evidence",
+                  "solutionSteps": [
+                    "Triangulate sources.",
+                    "More reliable picture."
+                  ]
+                },
+                {
+                  "prompt": "Which south Indian dynasties traded with Rome?",
+                  "answer": "Satavahana, Chera and Pandya",
+                  "solutionSteps": [
+                    "Peninsular powers.",
+                    "Indo-Roman trade."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                72
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch06_dv02",
@@ -17077,7 +17679,93 @@
           "parentConceptId": "ssch06_t05_c02",
           "body": "Before the Kushana period, the Buddha was usually shown only by symbols — a footprint, an empty seat, a wheel — never as a person (the 'aniconic' style seen at Bharhut). It was in the Gandhara and Mathura schools, under the Kushanas, that the Buddha first began to be carved in human form. Gandhara, drawing on Greco-Roman art, gave him a realistic, draped, almost classical look in grey schist; Mathura, drawing on the older Indian yaksha tradition, gave him a fuller, energetic form in red sandstone. The move to human-form deities here is one of the great turning points in Indian art, and it 'laid the groundwork' for the deity sculptures of later Hindu and Buddhist temples.",
           "prerequisite": "Understanding the difference between the Gandhara and Mathura schools.",
-          "nextStepHint": "Look up an 'aniconic' Bharhut relief and compare it with a Gandhara Buddha image."
+          "nextStepHint": "Look up an 'aniconic' Bharhut relief and compare it with a Gandhara Buddha image.",
+          "bonusQuestions": [
+            {
+              "id": "ssch06_dv02_b01",
+              "prompt": "Before the Kushana period, how was the Buddha usually represented in art?",
+              "questionType": "mcq",
+              "options": [
+                "Only by symbols — a footprint, an empty seat, or a wheel (aniconic)",
+                "As a crowned king",
+                "As an armed warrior",
+                "He was never depicted at all in any form"
+              ],
+              "answer": "Only by symbols — a footprint, an empty seat, or a wheel (aniconic)",
+              "solutionSteps": [
+                "Early ('aniconic') art at sites like Bharhut used symbols, not a human figure.",
+                "Human-form images came later, under the Kushanas."
+              ],
+              "commonMistakes": [
+                "Assuming the Buddha was always shown in human form."
+              ],
+              "variations": [
+                {
+                  "prompt": "Under which rulers did the Buddha first appear in human form?",
+                  "answer": "The Kushanas (Gandhara and Mathura schools)",
+                  "solutionSteps": [
+                    "A turning point.",
+                    "Human-form images begin."
+                  ]
+                },
+                {
+                  "prompt": "This shift to human-form deities 'laid the groundwork' for...",
+                  "answer": "Later Hindu and Buddhist temple sculpture",
+                  "solutionSteps": [
+                    "A major art turning point.",
+                    "Deity images."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                72
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch06_dv02_b02",
+              "prompt": "The Gandhara school carved the Buddha in a realistic, draped, classical style drawing on...",
+              "questionType": "mcq",
+              "options": [
+                "Greco-Roman art",
+                "Chinese painting",
+                "Egyptian sculpture",
+                "No outside influence at all"
+              ],
+              "answer": "Greco-Roman art",
+              "solutionSteps": [
+                "Gandhara (in the northwest) blended Indian themes with Greco-Roman realism.",
+                "Mathura, by contrast, drew on the Indian yaksha tradition."
+              ],
+              "commonMistakes": [
+                "Confusing Gandhara's Greco-Roman style with Mathura's indigenous one."
+              ],
+              "variations": [
+                {
+                  "prompt": "Mathura's Buddha images, in red sandstone, drew on which tradition?",
+                  "answer": "The older Indian yaksha tradition",
+                  "solutionSteps": [
+                    "Fuller, energetic form.",
+                    "Indigenous roots."
+                  ]
+                },
+                {
+                  "prompt": "Gandhara typically used which stone?",
+                  "answer": "Grey schist",
+                  "solutionSteps": [
+                    "Classical, draped figures.",
+                    "Greco-Roman influence."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                72
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch06_dv03",
@@ -17086,7 +17774,93 @@
           "parentConceptId": "ssch06_t02_c04",
           "body": "Some Satavahana kings carried their mother's name in their own — the most famous, Gautamīputra Sātakarni, literally means 'Sātakarni, son of Gautamī'. To historians this small detail is a window into society. Why would a king advertise his mother? It suggests mothers and queens held real standing in Satavahana families, more than the simple 'father-to-son' picture we often assume for ancient kingdoms. We do not have to guess: a long inscription at Nashik was issued by the king's mother, Gautamī Balaśrī, praising her son's deeds after his death — a queen speaking in stone, in her own voice. This is how social history is done. Where chronicles give us only battles and dates, a naming custom and one royal inscription let historians ask harder questions: who held power inside the family, and how do we know? The lesson is that even a name can be evidence.",
           "prerequisite": "Knowing the Satavahanas used 'mother-names' (matronymics).",
-          "nextStepHint": "Think of one thing a person's full name today can tell a future historian about their society."
+          "nextStepHint": "Think of one thing a person's full name today can tell a future historian about their society.",
+          "bonusQuestions": [
+            {
+              "id": "ssch06_dv03_b01",
+              "prompt": "The royal name 'Gautamīputra Sātakarni' literally means...",
+              "questionType": "mcq",
+              "options": [
+                "'Sātakarni, son of Gautamī'",
+                "'Sātakarni the Great'",
+                "'King of the Gautama clan only'",
+                "'Sātakarni of the south'"
+              ],
+              "answer": "'Sātakarni, son of Gautamī'",
+              "solutionSteps": [
+                "'-putra' means 'son of'; Gautamī is the mother's name.",
+                "So the king advertised his mother in his own name."
+              ],
+              "commonMistakes": [
+                "Reading '-putra' as 'great' or a place name."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why would a king advertise his MOTHER in his name?",
+                  "answer": "It suggests mothers and queens held real standing in Satavahana society",
+                  "solutionSteps": [
+                    "Social-history clue.",
+                    "Not just father-to-son."
+                  ]
+                },
+                {
+                  "prompt": "Whose long Nashik inscription praises Gautamīputra's deeds after his death?",
+                  "answer": "His mother, Gautamī Balaśrī",
+                  "solutionSteps": [
+                    "A queen 'speaking in stone'.",
+                    "Her own voice."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                72
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch06_dv03_b02",
+              "prompt": "Why does a king carrying his mother's name interest social historians?",
+              "questionType": "mcq",
+              "options": [
+                "It hints that mothers/queens held real power inside the royal family",
+                "It was simply a spelling error",
+                "It was meant to hide his father",
+                "It was a random choice with no meaning"
+              ],
+              "answer": "It hints that mothers/queens held real power inside the royal family",
+              "solutionSteps": [
+                "A naming custom can be evidence about who held power.",
+                "It lets historians ask harder questions than chronicles of battles do."
+              ],
+              "commonMistakes": [
+                "Dismissing the naming custom as meaningless."
+              ],
+              "variations": [
+                {
+                  "prompt": "The lesson is that even a ... can be historical evidence.",
+                  "answer": "Name",
+                  "solutionSteps": [
+                    "Small details count.",
+                    "A window into society."
+                  ]
+                },
+                {
+                  "prompt": "Social history asks questions like...",
+                  "answer": "Who held power inside the family, and how do we know?",
+                  "solutionSteps": [
+                    "Beyond battles/dates.",
+                    "Using such clues."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                72
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch06_dv04",
@@ -17095,7 +17869,93 @@
           "parentConceptId": "ssch06_t04_c02",
           "body": "The Shaka Samvat (Shaka era) that began in this age of invaders did not stay in the past — it is still an official calendar of India today. When the Republic of India needed a single national calendar in 1957, a committee chose the Shaka era, with year 1 fixed at 78 CE. That is why the date on the masthead of the Gazette of India, on All India Radio broadcasts, and on many government notices is given in Shaka years alongside the Gregorian date — to find the Shaka year, you subtract 78 (or 79 early in the year) from the Common Era year. So a calendar started by the Shaka rulers nearly two thousand years ago quietly survives in the paperwork of a modern democracy. It is a neat example of how the deep past keeps living inside the present.",
           "prerequisite": "Knowing the Shakas gave India the Shaka Samvat calendar.",
-          "nextStepHint": "Work out this year's Shaka year by subtracting 78 from the current Common Era year."
+          "nextStepHint": "Work out this year's Shaka year by subtracting 78 from the current Common Era year.",
+          "bonusQuestions": [
+            {
+              "id": "ssch06_dv04_b01",
+              "prompt": "India's official national calendar (adopted 1957) is based on which era, with year 1 fixed at 78 CE?",
+              "questionType": "mcq",
+              "options": [
+                "The Shaka Samvat",
+                "The Gregorian calendar",
+                "The Vikram Samvat",
+                "The Gupta era"
+              ],
+              "answer": "The Shaka Samvat",
+              "solutionSteps": [
+                "The committee chose the Shaka era for the national calendar.",
+                "Its year 1 corresponds to 78 CE."
+              ],
+              "commonMistakes": [
+                "Confusing the Shaka era with the Vikram Samvat or Gregorian."
+              ],
+              "variations": [
+                {
+                  "prompt": "Where do you still see Shaka-era dates today?",
+                  "answer": "On the Gazette of India, All India Radio and government notices",
+                  "solutionSteps": [
+                    "Official paperwork.",
+                    "Alongside Gregorian dates."
+                  ]
+                },
+                {
+                  "prompt": "A calendar begun by the Shaka rulers ~2000 years ago survives in...",
+                  "answer": "The paperwork of a modern democracy",
+                  "solutionSteps": [
+                    "Deep past in the present.",
+                    "Still official."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                72
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch06_dv04_b02",
+              "prompt": "To convert a Common Era (CE) year to the Shaka year, you...",
+              "questionType": "mcq",
+              "options": [
+                "Subtract 78 (or 79 early in the year)",
+                "Add 78",
+                "Multiply by 78",
+                "Ignore the CE year entirely"
+              ],
+              "answer": "Subtract 78 (or 79 early in the year)",
+              "solutionSteps": [
+                "Shaka year 1 = 78 CE, so subtract 78.",
+                "Early in the year it is 79 due to the start date."
+              ],
+              "commonMistakes": [
+                "Adding instead of subtracting 78."
+              ],
+              "variations": [
+                {
+                  "prompt": "So the CE year 2024 is roughly which Shaka year?",
+                  "answer": "About 1946",
+                  "solutionSteps": [
+                    "2024 - 78.",
+                    "≈ 1946."
+                  ]
+                },
+                {
+                  "prompt": "Shaka year 1 corresponds to which CE year?",
+                  "answer": "78 CE",
+                  "solutionSteps": [
+                    "Fixed start.",
+                    "Year 1 = 78 CE."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                72
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch06_dv05",
@@ -17104,7 +17964,93 @@
           "parentConceptId": "ssch06_t03_c03",
           "body": "Most things built two thousand years ago survive only as ruins — but the Chola king Karikala's Kallanai, or Grand Anicut, on the Kaveri river is still doing its job today. It is not a tall wall that stops the river; it is a long, low barrier laid across the stream to RAISE and DIVERT the water, spreading it through channels across the delta so that a wide area of farmland can be irrigated. That is why engineers call it a 'water-diversion' structure rather than a storage dam. Built in stone without modern cement, it was so well designed that the British later strengthened it rather than replacing it, and it still helps water one of South India's richest rice regions. The Grand Anicut shows that ancient Indians were not only artists and traders but also skilled hydraulic engineers, and that good public works can serve people for almost two millennia.",
           "prerequisite": "Knowing Karikala Chola built the Kallanai/Grand Anicut on the Kaveri.",
-          "nextStepHint": "Find the difference between a diversion 'anicut' and a storage dam like Bhakra Nangal."
+          "nextStepHint": "Find the difference between a diversion 'anicut' and a storage dam like Bhakra Nangal.",
+          "bonusQuestions": [
+            {
+              "id": "ssch06_dv05_b01",
+              "prompt": "The Grand Anicut (Kallanai) on the Kaveri is called a 'water-diversion' structure because it...",
+              "questionType": "mcq",
+              "options": [
+                "Is a long, low barrier that raises and DIVERTS water into delta channels, rather than storing it behind a tall wall",
+                "Is a tall dam storing a deep reservoir",
+                "Blocks the river completely",
+                "Generates hydro-electricity"
+              ],
+              "answer": "Is a long, low barrier that raises and DIVERTS water into delta channels, rather than storing it behind a tall wall",
+              "solutionSteps": [
+                "It lifts and spreads the river across the delta for irrigation.",
+                "That is diversion, not tall storage."
+              ],
+              "commonMistakes": [
+                "Imagining it as a modern tall storage dam."
+              ],
+              "variations": [
+                {
+                  "prompt": "How long has the Grand Anicut been working?",
+                  "answer": "About 1,800 years (the British strengthened rather than replaced it)",
+                  "solutionSteps": [
+                    "Ancient, still in use.",
+                    "Superb design."
+                  ]
+                },
+                {
+                  "prompt": "What does the Grand Anicut show about ancient Indians?",
+                  "answer": "They were skilled hydraulic engineers, not only artists and traders",
+                  "solutionSteps": [
+                    "Public-works skill.",
+                    "Lasting for millennia."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                72
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch06_dv05_b02",
+              "prompt": "Which king built the Grand Anicut, still irrigating a rich rice region today?",
+              "questionType": "mcq",
+              "options": [
+                "The Chola king Karikala",
+                "Emperor Ashoka",
+                "Kanishka the Kushana",
+                "Gautamīputra Sātakarni"
+              ],
+              "answer": "The Chola king Karikala",
+              "solutionSteps": [
+                "Karikala of the Cholas built the Kallanai on the Kaveri.",
+                "It still waters one of South India's richest rice regions."
+              ],
+              "commonMistakes": [
+                "Attributing it to a northern ruler."
+              ],
+              "variations": [
+                {
+                  "prompt": "It was built in stone without modern...",
+                  "answer": "Cement",
+                  "solutionSteps": [
+                    "Yet endured.",
+                    "Strengthened later, not replaced."
+                  ]
+                },
+                {
+                  "prompt": "The Grand Anicut waters which delta region?",
+                  "answer": "The Kaveri delta (South India's rice bowl)",
+                  "solutionSteps": [
+                    "Spread through channels.",
+                    "Rich farmland."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                72
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch06_dv06",
@@ -17113,7 +18059,93 @@
           "parentConceptId": "ssch06_t05_c01",
           "body": "The Kushanas, who came from Central Asia, ended up controlling a huge stretch of the Silk Route — the network of caravan roads carrying silk, spices, gold and ideas between China, Central Asia, India and the Roman world. Sitting astride those roads made the Kushana realm rich and turned India into a busy crossroads of trade and culture rather than an isolated land. Their coins are wonderful evidence: Kanishka's coins show the king on one side and a mix of deities — the Buddha, Shiva, and Greek and Persian gods — on the other, telling us that many faiths met and were respected under one ruler. Along these same routes Buddhism travelled north into Central Asia and China, carried by merchants and monks. The Kushana age shows how trade routes move far more than goods: they move beliefs, art styles and people, knitting distant civilisations together.",
           "prerequisite": "Knowing the Kushanas controlled large parts of the Silk Route.",
-          "nextStepHint": "Trace on a map how Buddhism could travel from India to China along the Silk Route."
+          "nextStepHint": "Trace on a map how Buddhism could travel from India to China along the Silk Route.",
+          "bonusQuestions": [
+            {
+              "id": "ssch06_dv06_b01",
+              "prompt": "Why did controlling a long stretch of the Silk Route make the Kushana realm rich?",
+              "questionType": "mcq",
+              "options": [
+                "Caravans carrying silk, spices, gold and ideas between China, Central Asia, India and Rome passed through it",
+                "They mined the route for gold",
+                "They farmed the desert roads",
+                "They taxed ocean shipping"
+              ],
+              "answer": "Caravans carrying silk, spices, gold and ideas between China, Central Asia, India and Rome passed through it",
+              "solutionSteps": [
+                "Sitting astride the trade roads brought wealth and made India a crossroads.",
+                "Goods, beliefs and art moved along them."
+              ],
+              "commonMistakes": [
+                "Thinking the wealth came from mining or farming rather than trade control."
+              ],
+              "variations": [
+                {
+                  "prompt": "Along the Silk Route, Buddhism travelled where, carried by merchants and monks?",
+                  "answer": "North into Central Asia and China",
+                  "solutionSteps": [
+                    "Ideas move with trade.",
+                    "Faith spread along roads."
+                  ]
+                },
+                {
+                  "prompt": "The Kushanas originally came from where?",
+                  "answer": "Central Asia",
+                  "solutionSteps": [
+                    "Then controlled the route.",
+                    "Linking civilisations."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                72
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch06_dv06_b02",
+              "prompt": "Kanishka's coins show the king with a mix of the Buddha, Shiva and Greek/Persian gods. This tells us that under the Kushanas...",
+              "questionType": "mcq",
+              "options": [
+                "Many faiths met and were respected under one ruler",
+                "Only one religion was allowed",
+                "Coins were banned",
+                "Art was forbidden"
+              ],
+              "answer": "Many faiths met and were respected under one ruler",
+              "solutionSteps": [
+                "The varied deities on the coins reflect a meeting of religions.",
+                "A crossroads empire respected diverse faiths."
+              ],
+              "commonMistakes": [
+                "Reading the mixed deities as religious conflict rather than coexistence."
+              ],
+              "variations": [
+                {
+                  "prompt": "Coins are valuable evidence because they show...",
+                  "answer": "Kings, deities and the cultures that met under a ruler",
+                  "solutionSteps": [
+                    "Primary objects.",
+                    "Rich information."
+                  ]
+                },
+                {
+                  "prompt": "Trade routes move far more than goods; they also move...",
+                  "answer": "Beliefs, art styles and people",
+                  "solutionSteps": [
+                    "Cultural exchange.",
+                    "Knitting civilisations."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                72
+              ],
+              "needsHumanReview": false
+            }
+          ]
         }
       ],
       "crossChapterRefs": [
