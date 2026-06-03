@@ -78,7 +78,8 @@ The `bonusQuestions` array is ADDED to each `deepDive[]` entry (new key; the opt
 - [x] **ssch09–ssch10 (12 topics, 24 MCQs)** — Types of Government (federalism, constitutionalism, ancient gaṇa-saṅghas, separation of powers, direct vs representative, constitutional vs absolute monarchy); Constitution (Directive Principles non-justiciable, basic-structure doctrine, borrowed bricks, why 26 Jan, 'We the People'/popular sovereignty, Constituent Assembly).
 - [x] **ssch11–ssch12 (12 topics, 24 MCQs)** — From Barter to Money (general acceptance/trust, inflation, numismatics, UPI/QR, double coincidence of wants, fiat money); Understanding Markets (equilibrium, externalities, middlemen-add-value, quality marks, online markets/long tail, why countries trade).
 - [x] **ssch13–ssch14 (12 topics, 24 MCQs)** — Indian Farming (hybrid seeds, Green-Revolution externalities, kharif/rabi/zaid, traditional water structures, soils, the half-workers/small-output puzzle); India & Neighbours (maritime choke points, Sanskrit Cosmopolis, why neighbours cooperate, three Buddhist vehicles, India–Nepal open border, the Himalayas).
-- [ ] ssch15–ssch20 (36 topics) — 2 MCQs each. **168 SS MCQs done so far.**
+- [x] **ssch15–ssch16 (12 topics, 24 MCQs)** — Empires 6th–10th c. (Indian-feudalism debate, legitimation, Uttaramerur election, Bhakti, Nalanda/Vikramashila, Mamallapuram); Turning Tides (writing dark periods, Ghuri vs Mahmud, Bhaskaracharya, Basavanna, Chola navy/Srivijaya, Al-Biruni).
+- [ ] ssch17–ssch20 (24 topics) — 2 MCQs each. **192 SS MCQs done so far.**
 
 ## Phase 5 (after content) — coverage test
 - [ ] Add `ExpertChallengeOlympiadContentTests`: each pack yields a non-empty

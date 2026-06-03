@@ -45623,7 +45623,93 @@
           "parentConceptId": "ssch15_t04_c02",
           "body": "Historians have argued for decades about how to describe the early-medieval economy. One school called it 'Indian feudalism': they pointed to the spread of land grants, the rise of powerful landholding intermediaries between king and peasant, and (they claimed) a decline of towns, trade and coins - a picture resembling feudal Europe. A second school disagreed, showing that towns mostly survived and new ones appeared, that long-distance sea trade boomed along both coasts, and that powerful merchant guilds and temple economies kept money and commerce alive. Your textbook leans toward the second view, noting that 'the evidence paints a different and more complex picture' than simple urban decline. The debate is a great example of how history is not just a list of facts but an argument about what the evidence means - and how new evidence can overturn an old theory.",
           "prerequisite": "ssch15_t04_c02",
-          "nextStepHint": "Read about the south Indian merchant guilds (the Ayyavole/Five Hundred) to see how organised medieval trade really was."
+          "nextStepHint": "Read about the south Indian merchant guilds (the Ayyavole/Five Hundred) to see how organised medieval trade really was.",
+          "bonusQuestions": [
+            {
+              "id": "ssch15_dv01_b01",
+              "prompt": "On the early-medieval economy, the textbook leans toward which view?",
+              "questionType": "mcq",
+              "options": [
+                "Towns mostly survived, sea trade boomed and money/commerce stayed alive — not a simple urban decline",
+                "Total feudal collapse of all towns and trade",
+                "There was no economy at all",
+                "It was modern industrial capitalism"
+              ],
+              "answer": "Towns mostly survived, sea trade boomed and money/commerce stayed alive — not a simple urban decline",
+              "solutionSteps": [
+                "One school called it 'Indian feudalism' with urban decline.",
+                "The textbook follows the second school: a more complex, commercially alive picture."
+              ],
+              "commonMistakes": [
+                "Assuming the 'feudalism/urban decline' theory is the settled truth."
+              ],
+              "variations": [
+                {
+                  "prompt": "What did the 'Indian feudalism' school point to?",
+                  "answer": "Land grants, powerful landholding intermediaries, and supposed urban/trade decline",
+                  "solutionSteps": [
+                    "Feudal-Europe parallel.",
+                    "One interpretation."
+                  ]
+                },
+                {
+                  "prompt": "What kept money and commerce alive, per the second school?",
+                  "answer": "Surviving towns, booming sea trade, merchant guilds and temple economies",
+                  "solutionSteps": [
+                    "Commercial vitality.",
+                    "Against decline."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                180
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch15_dv01_b02",
+              "prompt": "The 'Indian feudalism' debate shows that history is...",
+              "questionType": "mcq",
+              "options": [
+                "An argument about what the evidence means, which new evidence can overturn",
+                "Just a fixed list of facts to memorise",
+                "Settled forever",
+                "Pure fiction"
+              ],
+              "answer": "An argument about what the evidence means, which new evidence can overturn",
+              "solutionSteps": [
+                "Historians disagree and revise theories as evidence grows.",
+                "History is interpretation, not a static fact-list."
+              ],
+              "commonMistakes": [
+                "Thinking history is only memorising unchanging facts."
+              ],
+              "variations": [
+                {
+                  "prompt": "New evidence can do what to an old historical theory?",
+                  "answer": "Overturn it",
+                  "solutionSteps": [
+                    "History is revisable.",
+                    "Evidence-driven."
+                  ]
+                },
+                {
+                  "prompt": "Land grants and powerful intermediaries were cited as signs of...",
+                  "answer": "'Indian feudalism'",
+                  "solutionSteps": [
+                    "One school's view.",
+                    "Resembling Europe."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                180
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch15_dv02",
@@ -45632,7 +45718,93 @@
           "parentConceptId": "ssch15_t01_c02",
           "body": "Why did kings build giant temples, take grand titles, and give away wealth? In an age without modern elections or constitutions, rulers had to prove they deserved to rule - this is called legitimation. They did it in several ways: by taking divine or cosmic titles (Bhoja called himself 'Adi Varaha' after Vishnu's world-rescuing boar; Amoghavarsha was 'peak of kings'); by sponsoring spectacular temples (the Rashtrakutas' Kailasanatha, the Pallavas' Mamallapuram) that displayed both wealth and devotion; by patronising many religions at once to win the loyalty of all communities; and by grand public gift-giving, like Harsha's five-yearly ceremony at Prayaga where he gave away his treasure. Reading inscriptions, historians can decode these strategies - so a temple or a coin is not just art, but a political message carved in stone or metal.",
           "prerequisite": "ssch15_t01_c02",
-          "nextStepHint": "Look at how the later Cholas used the giant Brihadishvara temple at Thanjavur as a statement of imperial power."
+          "nextStepHint": "Look at how the later Cholas used the giant Brihadishvara temple at Thanjavur as a statement of imperial power.",
+          "bonusQuestions": [
+            {
+              "id": "ssch15_dv02_b01",
+              "prompt": "Why did early-medieval kings build giant temples, take grand titles and give away wealth?",
+              "questionType": "mcq",
+              "options": [
+                "To prove they deserved to rule — a process historians call legitimation",
+                "To waste their treasure",
+                "Because foreign powers forced them",
+                "For no particular reason"
+              ],
+              "answer": "To prove they deserved to rule — a process historians call legitimation",
+              "solutionSteps": [
+                "Without elections, rulers had to demonstrate they deserved power.",
+                "Titles, temples and gifts were legitimation strategies."
+              ],
+              "commonMistakes": [
+                "Seeing temples/titles only as art or vanity, not political messages."
+              ],
+              "variations": [
+                {
+                  "prompt": "Bhoja calling himself 'Adi Varaha' (after Vishnu's boar) was a way of...",
+                  "answer": "Taking a divine/cosmic title to legitimise rule",
+                  "solutionSteps": [
+                    "Borrowed divine prestige.",
+                    "Legitimation."
+                  ]
+                },
+                {
+                  "prompt": "So a temple or coin is, to a historian, also...",
+                  "answer": "A political message carved in stone or metal",
+                  "solutionSteps": [
+                    "Not just art.",
+                    "Decoded from inscriptions."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                180
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch15_dv02_b02",
+              "prompt": "Harsha's five-yearly ceremony at Prayaga, where he gave away his treasure, was an example of...",
+              "questionType": "mcq",
+              "options": [
+                "Legitimation through grand public gift-giving",
+                "A tax-collection drive",
+                "A military campaign",
+                "Ordinary trade"
+              ],
+              "answer": "Legitimation through grand public gift-giving",
+              "solutionSteps": [
+                "Public generosity displayed a king's worthiness to rule.",
+                "One of several legitimation strategies."
+              ],
+              "commonMistakes": [
+                "Reading the gift-giving as mere charity rather than political legitimation."
+              ],
+              "variations": [
+                {
+                  "prompt": "Patronising many religions at once helped a king...",
+                  "answer": "Win the loyalty of all communities",
+                  "solutionSteps": [
+                    "Broad legitimacy.",
+                    "Across faiths."
+                  ]
+                },
+                {
+                  "prompt": "Sponsoring spectacular temples (e.g. Kailasanatha) displayed both...",
+                  "answer": "Wealth and devotion",
+                  "solutionSteps": [
+                    "A political-religious message.",
+                    "Legitimation in stone."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                180
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch15_dv03",
@@ -45641,7 +45813,93 @@
           "parentConceptId": "ssch15_t04_c01",
           "body": "The chapter's village self-government is not a vague idea — we can read its actual rules, because they were carved on a temple wall at Uttaramerur in the Chola country. The inscription describes how the village ran itself: it was divided into wards, candidates for committees had to meet real qualifications (owning some land, knowing the Vedas or administration, being honest and not in debt), and members were chosen by the kudavolai or 'pot-ticket' method — names written on palm leaves were drawn from a pot by a young child, a kind of lottery to keep it fair. Committees looked after tanks, gardens, justice and gold, and a member who misused funds, or whose close relatives did, could be disqualified. This is astonishing: a careful, written system of local elections, qualifications and accountability, running in Tamil villages while most of the world was ruled by kings alone. It reminds us that the idea of ordinary people governing themselves has deep roots in India.",
           "prerequisite": "Knowing that Chola villages had self-government through assemblies (sabhas).",
-          "nextStepHint": "List two qualifications the Uttaramerur inscription required of a committee member and why they made sense."
+          "nextStepHint": "List two qualifications the Uttaramerur inscription required of a committee member and why they made sense.",
+          "bonusQuestions": [
+            {
+              "id": "ssch15_dv03_b01",
+              "prompt": "The Uttaramerur inscription (Chola country) is famous because it records, carved on a temple wall, a village's...",
+              "questionType": "mcq",
+              "options": [
+                "System of local self-government — wards, candidate qualifications, and committee selection",
+                "Royal tax rates only",
+                "Daily temple rituals",
+                "List of trade goods"
+              ],
+              "answer": "System of local self-government — wards, candidate qualifications, and committee selection",
+              "solutionSteps": [
+                "It describes how the village ran itself with elected committees.",
+                "Qualifications, wards and accountability are all spelled out."
+              ],
+              "commonMistakes": [
+                "Overlooking that an actual local-election system was written in stone."
+              ],
+              "variations": [
+                {
+                  "prompt": "Committees at Uttaramerur looked after things like...",
+                  "answer": "Tanks, gardens, justice and gold",
+                  "solutionSteps": [
+                    "Real local duties.",
+                    "Self-governance."
+                  ]
+                },
+                {
+                  "prompt": "A member who misused funds (or whose relatives did) could be...",
+                  "answer": "Disqualified",
+                  "solutionSteps": [
+                    "Accountability built in.",
+                    "A check on misuse."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                180
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch15_dv03_b02",
+              "prompt": "In the Uttaramerur 'kudavolai' (pot-ticket) method, committee members were chosen by...",
+              "questionType": "mcq",
+              "options": [
+                "Drawing palm-leaf names from a pot — a lottery to keep selection fair",
+                "The king appointing them directly",
+                "Inheritance from father to son",
+                "Whoever was richest"
+              ],
+              "answer": "Drawing palm-leaf names from a pot — a lottery to keep selection fair",
+              "solutionSteps": [
+                "Names on palm leaves were drawn from a pot by a child.",
+                "This lottery kept the process fair."
+              ],
+              "commonMistakes": [
+                "Assuming members were simply appointed by the king."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why have a young child draw the names?",
+                  "answer": "To keep the selection fair and impartial",
+                  "solutionSteps": [
+                    "No favouritism.",
+                    "A fairness measure."
+                  ]
+                },
+                {
+                  "prompt": "This shows the idea of ordinary people governing themselves has...",
+                  "answer": "Deep roots in India",
+                  "solutionSteps": [
+                    "Astonishingly early.",
+                    "Local self-rule."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                180
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch15_dv04",
@@ -45650,7 +45908,93 @@
           "parentConceptId": "ssch15_t05_c01",
           "body": "The Bhakti tradition that this chapter says began in the Tamil south was a quiet revolution in how people worshipped. Its saint-poets — the Nayanars who sang of Shiva and the Alvars who sang of Vishnu — did something new: they poured out love for a personal god not in scholarly Sanskrit but in everyday Tamil, the language ordinary people actually spoke. Because the path was simple, heartfelt devotion rather than complicated ritual, it was open to all — men and women, rich and poor, and people of every jati. Among the most loved saints were a woman, Andal, and people from humble communities, showing how Bhakti could cut across the hardening social divisions of the age. Over the following centuries this devotional movement travelled north and reshaped religious life across India. It is a powerful example of how using the people's own language can open up something that was once closed to a few.",
           "prerequisite": "Knowing the Bhakti tradition began with the Nayanars and Alvars in the south.",
-          "nextStepHint": "Explain why singing to God in Tamil rather than Sanskrit made Bhakti reach more people."
+          "nextStepHint": "Explain why singing to God in Tamil rather than Sanskrit made Bhakti reach more people.",
+          "bonusQuestions": [
+            {
+              "id": "ssch15_dv04_b01",
+              "prompt": "What was new about the Tamil Bhakti saint-poets (the Nayanars and Alvars)?",
+              "questionType": "mcq",
+              "options": [
+                "They sang devotion to a personal god in everyday Tamil, not scholarly Sanskrit, opening worship to all",
+                "They wrote only in Sanskrit for scholars",
+                "They banned worship",
+                "They were all kings"
+              ],
+              "answer": "They sang devotion to a personal god in everyday Tamil, not scholarly Sanskrit, opening worship to all",
+              "solutionSteps": [
+                "Using the people's own language made devotion accessible.",
+                "Simple, heartfelt love of god replaced complicated ritual."
+              ],
+              "commonMistakes": [
+                "Thinking Bhakti was an elite, Sanskrit-only movement."
+              ],
+              "variations": [
+                {
+                  "prompt": "The Nayanars sang of which god, and the Alvars of which?",
+                  "answer": "Nayanars of Shiva; Alvars of Vishnu",
+                  "solutionSteps": [
+                    "Two streams.",
+                    "Tamil devotion."
+                  ]
+                },
+                {
+                  "prompt": "Why was the Bhakti path open to all?",
+                  "answer": "It was simple, heartfelt devotion, not complex ritual",
+                  "solutionSteps": [
+                    "Across jati, gender, wealth.",
+                    "Inclusive."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                180
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch15_dv04_b02",
+              "prompt": "Because Bhakti emphasised simple devotion over ritual, it was open to...",
+              "questionType": "mcq",
+              "options": [
+                "Men and women, rich and poor, and people of every jati",
+                "Only priests",
+                "Only kings",
+                "Only men"
+              ],
+              "answer": "Men and women, rich and poor, and people of every jati",
+              "solutionSteps": [
+                "Loved saints included a woman (Andal) and people from humble communities.",
+                "Bhakti cut across hardening social divisions."
+              ],
+              "commonMistakes": [
+                "Assuming devotion was restricted by birth or gender."
+              ],
+              "variations": [
+                {
+                  "prompt": "Name a beloved woman Bhakti saint.",
+                  "answer": "Andal",
+                  "solutionSteps": [
+                    "An Alvar saint.",
+                    "Shows inclusivity."
+                  ]
+                },
+                {
+                  "prompt": "Over the centuries the Bhakti movement...",
+                  "answer": "Travelled north and reshaped religious life across India",
+                  "solutionSteps": [
+                    "From the Tamil south.",
+                    "Wide influence."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                180
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch15_dv05",
@@ -45659,7 +46003,93 @@
           "parentConceptId": "ssch15_t02_c02",
           "body": "Long before modern colleges, India had vast residential universities, and the Pala kings of Bengal were among their greatest patrons. Vikramashila, which they founded, had SIX colleges, a huge library and nearly 3,000 scholars studying grammar, logic and philosophy; the Palas also founded Somapura and supported the most famous of all, Nalanda. These were not small schools but international centres: students and monks came from across Asia to live, study and debate for years, and a great library could hold thousands of manuscripts. That a dynasty measured its glory partly by the learning it supported tells us something important about this age — knowledge was treated as a treasure worth a king's wealth. It also shows India was a hub of the wider Buddhist world, drawing scholars the way a magnet draws iron, centuries before the universities of medieval Europe.",
           "prerequisite": "Knowing the Palas founded and supported great monastery-universities.",
-          "nextStepHint": "Find out where students at Nalanda came from and what subjects they studied."
+          "nextStepHint": "Find out where students at Nalanda came from and what subjects they studied.",
+          "bonusQuestions": [
+            {
+              "id": "ssch15_dv05_b01",
+              "prompt": "Vikramashila and Nalanda, supported by the Pala kings of Bengal, were...",
+              "questionType": "mcq",
+              "options": [
+                "Vast residential universities drawing scholars from across Asia",
+                "Small village schools",
+                "Only temples",
+                "Trading posts"
+              ],
+              "answer": "Vast residential universities drawing scholars from across Asia",
+              "solutionSteps": [
+                "Vikramashila had six colleges, a huge library and ~3,000 scholars.",
+                "International centres of learning, centuries before medieval European universities."
+              ],
+              "commonMistakes": [
+                "Imagining these were small local schools, not great universities."
+              ],
+              "variations": [
+                {
+                  "prompt": "What did scholars study at these universities?",
+                  "answer": "Grammar, logic and philosophy (among much else)",
+                  "solutionSteps": [
+                    "Advanced learning.",
+                    "Years of study."
+                  ]
+                },
+                {
+                  "prompt": "Students and monks came to them from...",
+                  "answer": "Across Asia",
+                  "solutionSteps": [
+                    "International hubs.",
+                    "Drawn like iron to a magnet."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                180
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch15_dv05_b02",
+              "prompt": "That Pala kings measured their glory partly by the learning they supported tells us that, in this age...",
+              "questionType": "mcq",
+              "options": [
+                "Knowledge was treated as a treasure worth a king's wealth",
+                "Learning was banned",
+                "Only warfare mattered",
+                "Books were unknown"
+              ],
+              "answer": "Knowledge was treated as a treasure worth a king's wealth",
+              "solutionSteps": [
+                "Royal patronage of universities shows the prestige of knowledge.",
+                "India was a hub of the wider Buddhist scholarly world."
+              ],
+              "commonMistakes": [
+                "Assuming kings valued only military glory."
+              ],
+              "variations": [
+                {
+                  "prompt": "Besides Vikramashila and Nalanda, the Palas founded which university?",
+                  "answer": "Somapura",
+                  "solutionSteps": [
+                    "Another great centre.",
+                    "Pala patronage."
+                  ]
+                },
+                {
+                  "prompt": "These universities show India was a hub of which wider world?",
+                  "answer": "The wider Buddhist world",
+                  "solutionSteps": [
+                    "Drawing Asian scholars.",
+                    "A scholarly magnet."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                180
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch15_dv06",
@@ -45668,7 +46098,93 @@
           "parentConceptId": "ssch15_t03_c02",
           "body": "At Mamallapuram (Mahabalipuram) on the Tamil coast, the Pallava kings turned a craft into an art that would shape India for centuries. Earlier shrines were often made of perishable wood or brick; the Pallavas carved temples and shrines straight out of solid rock — some monolithic, cut from a SINGLE stone — and raised the famous Shore Temple. Working in stone meant a building could last a thousand years, and it let sculptors cover walls with gods, animals and scenes of daily life, like the giant relief sometimes called 'Arjuna's Penance'. The techniques and styles worked out here fed into the grand stone temples of the Cholas and the whole tradition of South Indian temple architecture. It is a fine example of how one ambitious experiment in a single place can set a pattern that artists follow for generations.",
           "prerequisite": "Knowing the Pallavas built the rock-cut and stone temples at Mamallapuram.",
-          "nextStepHint": "Why would a king choose to build in stone rather than wood, despite the extra effort?"
+          "nextStepHint": "Why would a king choose to build in stone rather than wood, despite the extra effort?",
+          "bonusQuestions": [
+            {
+              "id": "ssch15_dv06_b01",
+              "prompt": "At Mamallapuram (Mahabalipuram), the Pallava kings pioneered...",
+              "questionType": "mcq",
+              "options": [
+                "Carving temples and shrines straight out of solid rock (some from a single stone)",
+                "Building only in perishable wood",
+                "Painting on cloth instead of building",
+                "Avoiding architecture entirely"
+              ],
+              "answer": "Carving temples and shrines straight out of solid rock (some from a single stone)",
+              "solutionSteps": [
+                "The Pallavas cut monolithic shrines from rock and raised the Shore Temple.",
+                "Earlier shrines were often perishable wood or brick."
+              ],
+              "commonMistakes": [
+                "Thinking early Tamil temples were always built up from blocks, not carved from rock."
+              ],
+              "variations": [
+                {
+                  "prompt": "The famous giant rock relief at Mamallapuram is sometimes called...",
+                  "answer": "'Arjuna's Penance'",
+                  "solutionSteps": [
+                    "Covered in figures.",
+                    "Carved scenes."
+                  ]
+                },
+                {
+                  "prompt": "The Pallava stone styles fed into the grand temples of which later dynasty?",
+                  "answer": "The Cholas",
+                  "solutionSteps": [
+                    "Shaped South Indian temple architecture.",
+                    "A lasting pattern."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                180
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch15_dv06_b02",
+              "prompt": "Why did working in stone matter so much for the Mamallapuram temples?",
+              "questionType": "mcq",
+              "options": [
+                "A stone building could last a thousand years and carry rich, detailed sculpture",
+                "Stone was the cheapest material",
+                "It was faster than using wood",
+                "A law required stone only"
+              ],
+              "answer": "A stone building could last a thousand years and carry rich, detailed sculpture",
+              "solutionSteps": [
+                "Stone gave durability and a canvas for carving gods, animals and daily life.",
+                "So the techniques set a pattern artists followed for generations."
+              ],
+              "commonMistakes": [
+                "Assuming stone was chosen for cost or speed rather than durability and art."
+              ],
+              "variations": [
+                {
+                  "prompt": "One ambitious experiment at Mamallapuram set a pattern that...",
+                  "answer": "Artists followed for generations",
+                  "solutionSteps": [
+                    "Long influence.",
+                    "South Indian temples."
+                  ]
+                },
+                {
+                  "prompt": "Earlier shrines were often made of what perishable materials?",
+                  "answer": "Wood or brick",
+                  "solutionSteps": [
+                    "Less durable.",
+                    "Stone changed that."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                180
+              ],
+              "needsHumanReview": false
+            }
+          ]
         }
       ],
       "crossChapterRefs": [
@@ -48313,7 +48829,93 @@
           "parentConceptId": "ssch16_t01_c01",
           "body": "This chapter pauses to ask a hard question: how should we write about periods of war, conquest and destruction? Historians have sometimes hesitated to draw attention to such 'darker periods' - either to avoid stirring up anger, or because most surviving records are about kings and wars rather than ordinary peaceful life. The textbook argues for a balanced, honest approach: face such periods and analyse them, to understand what made them possible and, hopefully, to help avoid them in future - while remembering that we cannot blame anyone living today for what happened centuries ago. This is a mature idea about history itself: the goal is not to celebrate or to accuse, but to understand. It also reminds us that the loudest records (battles, conquests) are not the whole story; trade, art, science and faith were continuing all the while, which is why this 'turning point' chapter is full of temples, scholars and saints as well as invaders.",
           "prerequisite": "ssch16_t01_c01",
-          "nextStepHint": "In Grade 8 you will read a 'Note on History's Darker Periods' that develops this idea further."
+          "nextStepHint": "In Grade 8 you will read a 'Note on History's Darker Periods' that develops this idea further.",
+          "bonusQuestions": [
+            {
+              "id": "ssch16_dv01_b01",
+              "prompt": "The textbook argues that 'darker periods' of war and destruction should be...",
+              "questionType": "mcq",
+              "options": [
+                "Faced and analysed honestly, to understand them — not to celebrate or to accuse",
+                "Ignored completely",
+                "Blamed on people living today",
+                "Exaggerated for drama"
+              ],
+              "answer": "Faced and analysed honestly, to understand them — not to celebrate or to accuse",
+              "solutionSteps": [
+                "The goal of history is to understand, not to celebrate or accuse.",
+                "We cannot blame anyone living today for the distant past."
+              ],
+              "commonMistakes": [
+                "Thinking history should either glorify or assign present-day blame."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why have historians sometimes hesitated over such periods?",
+                  "answer": "To avoid stirring anger, and because records favour kings/wars over ordinary life",
+                  "solutionSteps": [
+                    "Two reasons.",
+                    "Yet honesty is urged."
+                  ]
+                },
+                {
+                  "prompt": "Understanding a dark period can help us...",
+                  "answer": "Understand what made it possible and hopefully avoid it",
+                  "solutionSteps": [
+                    "Learn from history.",
+                    "Not repeat it."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                192
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch16_dv01_b02",
+              "prompt": "A key reminder of this chapter is that the loudest records (battles, conquests)...",
+              "questionType": "mcq",
+              "options": [
+                "Are not the whole story — trade, art, science and faith continued all the while",
+                "Are the only real history",
+                "Never actually happened",
+                "Are pure fiction"
+              ],
+              "answer": "Are not the whole story — trade, art, science and faith continued all the while",
+              "solutionSteps": [
+                "War records dominate, but life went on in many fields.",
+                "Hence the chapter is full of temples, scholars and saints too."
+              ],
+              "commonMistakes": [
+                "Mistaking the most-recorded events for the whole of history."
+              ],
+              "variations": [
+                {
+                  "prompt": "Can we blame people living today for events of centuries ago?",
+                  "answer": "No",
+                  "solutionSteps": [
+                    "Understand, don't accuse.",
+                    "A mature view."
+                  ]
+                },
+                {
+                  "prompt": "The goal of history, per the chapter, is to...",
+                  "answer": "Understand (not to celebrate or accuse)",
+                  "solutionSteps": [
+                    "Balanced and honest.",
+                    "Learn from it."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                192
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch16_dv02",
@@ -48322,7 +48924,93 @@
           "parentConceptId": "ssch16_t04_c03",
           "body": "At first glance Mahmud of Ghazni seems the more dramatic figure - 17 campaigns, the sack of Somnath, legendary wealth. Yet historians often say Muhammad Ghuri mattered more, even though he came later and was sometimes defeated. The reason is strategy, not spectacle. Mahmud's goal was extraction: raid, loot, and carry the treasure home to Ghazni. When he left, Indian rulers largely carried on as before. Ghuri's goal was territory: after winning the Second Battle of Tarain (1192) he captured Delhi and, crucially, left behind trusted commanders - above all Qutb-ud-din Aibak - to hold and govern the land. That decision to stay and rule, rather than raid and leave, is what turned conquest into a lasting state: the Delhi Sultanate (1206), which would shape north India for over three centuries. The lesson is that in history, what a conqueror does after the battle often matters more than the battle itself.",
           "prerequisite": "ssch16_t04_c03",
-          "nextStepHint": "Read about the founding of the Delhi Sultanate in 1206 to see how 'staying to rule' changed Indian history."
+          "nextStepHint": "Read about the founding of the Delhi Sultanate in 1206 to see how 'staying to rule' changed Indian history.",
+          "bonusQuestions": [
+            {
+              "id": "ssch16_dv02_b01",
+              "prompt": "Why do historians often say Muhammad Ghuri mattered MORE than the more dramatic Mahmud of Ghazni?",
+              "questionType": "mcq",
+              "options": [
+                "Ghuri stayed to RULE — leaving governors like Qutb-ud-din Aibak — founding the lasting Delhi Sultanate, while Mahmud only raided and left",
+                "Ghuri was far richer",
+                "Mahmud never actually came to India",
+                "Ghuri won every single battle"
+              ],
+              "answer": "Ghuri stayed to RULE — leaving governors like Qutb-ud-din Aibak — founding the lasting Delhi Sultanate, while Mahmud only raided and left",
+              "solutionSteps": [
+                "Mahmud's aim was extraction: loot and leave.",
+                "Ghuri's aim was territory: after Tarain (1192) he left commanders to govern, giving rise to the Delhi Sultanate (1206)."
+              ],
+              "commonMistakes": [
+                "Judging by spectacle (raids, wealth) rather than lasting consequence."
+              ],
+              "variations": [
+                {
+                  "prompt": "Mahmud of Ghazni's goal was...",
+                  "answer": "Extraction — raid, loot and carry treasure home",
+                  "solutionSteps": [
+                    "Then leave.",
+                    "No lasting rule."
+                  ]
+                },
+                {
+                  "prompt": "Which lasting state grew from Ghuri's decision to stay and rule?",
+                  "answer": "The Delhi Sultanate (1206)",
+                  "solutionSteps": [
+                    "Governed north India.",
+                    "For over three centuries."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                192
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch16_dv02_b02",
+              "prompt": "The Ghuri-vs-Mahmud comparison teaches that, in history...",
+              "questionType": "mcq",
+              "options": [
+                "What a conqueror does AFTER the battle often matters more than the battle itself",
+                "Only the battles ever matter",
+                "Raiding always builds lasting states",
+                "Treasure alone equals power"
+              ],
+              "answer": "What a conqueror does AFTER the battle often matters more than the battle itself",
+              "solutionSteps": [
+                "Staying to govern, not the victory alone, turned conquest into a lasting state.",
+                "Strategy after the battle was decisive."
+              ],
+              "commonMistakes": [
+                "Focusing on battlefield drama rather than its long-term consequences."
+              ],
+              "variations": [
+                {
+                  "prompt": "After which battle did Ghuri capture Delhi?",
+                  "answer": "The Second Battle of Tarain (1192)",
+                  "solutionSteps": [
+                    "Then left governors.",
+                    "Built a state."
+                  ]
+                },
+                {
+                  "prompt": "Mahmud's raids left Indian rulers...",
+                  "answer": "Largely carrying on as before once he left",
+                  "solutionSteps": [
+                    "No lasting change.",
+                    "Extraction only."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                192
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch16_dv03",
@@ -48331,7 +49019,93 @@
           "parentConceptId": "ssch16_t02_c02",
           "body": "It is easy to imagine that the raids of this 'turning tides' age froze Indian learning. Bhaskaracharya (Bhaskara II), writing his Siddhanta Shiromani in 1150, proves otherwise. He carried forward the algebra and astronomy of Aryabhata and Brahmagupta and pushed into startling new territory. He worked carefully with zero and even discussed what happens when you divide by it. In studying how a planet's speed changes from moment to moment, he used an idea very close to the 'instantaneous rate of change' that Newton and Leibniz would formalise as calculus five centuries later, and he stated a version of what we now call Rolle's theorem. His famous textbook Lilavati taught arithmetic and geometry through charming word-problems addressed to a girl. Bhaskaracharya shows that a civilisation's scientific tradition can keep advancing even while parts of it face invasion and upheaval — knowledge has a momentum of its own, carried by teachers and texts.",
           "prerequisite": "Knowing that Bhaskaracharya was a great mathematician-astronomer of this period.",
-          "nextStepHint": "Find out what the Lilavati is and one kind of problem it teaches."
+          "nextStepHint": "Find out what the Lilavati is and one kind of problem it teaches.",
+          "bonusQuestions": [
+            {
+              "id": "ssch16_dv03_b01",
+              "prompt": "Bhaskaracharya (Bhaskara II, 1150), studying how a planet's speed changes moment to moment, used an idea very close to...",
+              "questionType": "mcq",
+              "options": [
+                "The 'instantaneous rate of change' later formalised as calculus",
+                "The modern computer",
+                "The steam engine",
+                "The telescope"
+              ],
+              "answer": "The 'instantaneous rate of change' later formalised as calculus",
+              "solutionSteps": [
+                "He anticipated a calculus idea five centuries before Newton and Leibniz.",
+                "He also stated a version of Rolle's theorem and worked with zero."
+              ],
+              "commonMistakes": [
+                "Assuming such ideas began only with Newton/Leibniz."
+              ],
+              "variations": [
+                {
+                  "prompt": "Bhaskaracharya's charming arithmetic-and-geometry textbook addressed to a girl is called...",
+                  "answer": "Lilavati",
+                  "solutionSteps": [
+                    "Word-problems.",
+                    "A famous text."
+                  ]
+                },
+                {
+                  "prompt": "His major 1150 work was the...",
+                  "answer": "Siddhanta Shiromani",
+                  "solutionSteps": [
+                    "Algebra and astronomy.",
+                    "Carried forward Aryabhata."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                192
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch16_dv03_b02",
+              "prompt": "Bhaskaracharya's achievements during this turbulent age prove that...",
+              "questionType": "mcq",
+              "options": [
+                "A civilisation's science can keep advancing even while parts face invasion and upheaval",
+                "Indian learning froze during the raids",
+                "Only warfare happened then",
+                "He simply copied later European work"
+              ],
+              "answer": "A civilisation's science can keep advancing even while parts face invasion and upheaval",
+              "solutionSteps": [
+                "Knowledge has momentum, carried by teachers and texts.",
+                "Bhaskaracharya advanced algebra and astronomy in this very period."
+              ],
+              "commonMistakes": [
+                "Assuming invasions necessarily stop all intellectual progress."
+              ],
+              "variations": [
+                {
+                  "prompt": "Whose algebra and astronomy did Bhaskaracharya carry forward?",
+                  "answer": "Aryabhata and Brahmagupta",
+                  "solutionSteps": [
+                    "Building on predecessors.",
+                    "Then pushed further."
+                  ]
+                },
+                {
+                  "prompt": "He even discussed what happens when you...",
+                  "answer": "Divide by zero",
+                  "solutionSteps": [
+                    "Careful work with zero.",
+                    "Advanced for the time."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                192
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch16_dv04",
@@ -48340,7 +49114,93 @@
           "parentConceptId": "ssch16_t05_c01",
           "body": "Alongside the battles, this age produced bold new thinkers. In 12th-century Karnataka, Basavanna led a movement (the Lingayats or Virashaivas) that openly challenged the social order. He taught that devotion to Shiva was open to everyone equally, rejected the idea that birth made one person higher than another, opposed untouchability and elaborate ritual, and honoured all honest work as worship — 'kāyaka' or labour itself was sacred. His followers shared their ideas in vachanas, short, fierce poems in everyday Kannada rather than Sanskrit. Around the same time Ramanujacharya argued that the divine was accessible to all devotees. These were not just religious ideas; they were early arguments for human equality and dignity, voiced eight centuries before the Indian Constitution wrote those values into law. They remind us that the demand for a fairer society has long roots in India's own thinkers.",
           "prerequisite": "Knowing Basavanna and Ramanujacharya were new thinkers of this period.",
-          "nextStepHint": "Explain how Basavanna's idea that all honest work is sacred challenged the society of his time."
+          "nextStepHint": "Explain how Basavanna's idea that all honest work is sacred challenged the society of his time.",
+          "bonusQuestions": [
+            {
+              "id": "ssch16_dv04_b01",
+              "prompt": "In 12th-century Karnataka, Basavanna's movement (the Lingayats/Virashaivas) taught that...",
+              "questionType": "mcq",
+              "options": [
+                "Devotion to Shiva was open to everyone equally, and birth did not make one person higher than another",
+                "Only priests could worship",
+                "Kings were gods",
+                "Elaborate ritual was supreme"
+              ],
+              "answer": "Devotion to Shiva was open to everyone equally, and birth did not make one person higher than another",
+              "solutionSteps": [
+                "Basavanna rejected birth-based hierarchy and untouchability.",
+                "He honoured all honest work ('kāyaka') as worship."
+              ],
+              "commonMistakes": [
+                "Thinking these movements upheld rather than challenged social hierarchy."
+              ],
+              "variations": [
+                {
+                  "prompt": "Basavanna taught that honest labour ('kāyaka') was...",
+                  "answer": "Sacred — a form of worship",
+                  "solutionSteps": [
+                    "Dignity of work.",
+                    "Equality of labour."
+                  ]
+                },
+                {
+                  "prompt": "These ideas were early arguments for...",
+                  "answer": "Human equality and dignity (centuries before the Constitution)",
+                  "solutionSteps": [
+                    "Deep Indian roots.",
+                    "Fairer society."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                192
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch16_dv04_b02",
+              "prompt": "Basavanna's followers shared their ideas in 'vachanas', which were...",
+              "questionType": "mcq",
+              "options": [
+                "Short, fierce poems in everyday Kannada (not Sanskrit)",
+                "Long Sanskrit hymns",
+                "Royal tax decrees",
+                "Trade account books"
+              ],
+              "answer": "Short, fierce poems in everyday Kannada (not Sanskrit)",
+              "solutionSteps": [
+                "Vachanas used the people's own language, like Bhakti poetry.",
+                "Making radical ideas widely accessible."
+              ],
+              "commonMistakes": [
+                "Assuming reform ideas were written only in elite Sanskrit."
+              ],
+              "variations": [
+                {
+                  "prompt": "Around the same time, who argued the divine was accessible to all devotees?",
+                  "answer": "Ramanujacharya",
+                  "solutionSteps": [
+                    "A parallel thinker.",
+                    "Devotion for all."
+                  ]
+                },
+                {
+                  "prompt": "Basavanna's movement openly challenged...",
+                  "answer": "The birth-based social order and untouchability",
+                  "solutionSteps": [
+                    "Bold for its age.",
+                    "Equality argued early."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                192
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch16_dv05",
@@ -48349,7 +49209,93 @@
           "parentConceptId": "ssch16_t03_c03",
           "body": "While northern India faced raids from the northwest, in the south the Cholas were doing something almost unique in Indian history — projecting power across the OPEN SEA. Rajendra Chola I sent a fleet right across the Bay of Bengal to attack the Srivijaya Empire in present-day Malaysia and Indonesia. Why launch an expedition so far from home? Trade. Srivijaya controlled the Strait of Malacca, the narrow gateway through which the Cholas' rich sea trade with China had to pass; a power that controlled the strait could tax or choke that trade. The expedition shows three things at once: that the Cholas had real naval strength, that medieval Indian kingdoms were deeply tied into a wider trading world, and that even a thousand years ago, control of a vital sea route was worth crossing an ocean to secure. It is a reminder that Indian history was never only a land story.",
           "prerequisite": "Knowing Rajendra Chola sent a navy across the Bay of Bengal to Srivijaya.",
-          "nextStepHint": "Find the Strait of Malacca on a map and explain why controlling it mattered to a trading power."
+          "nextStepHint": "Find the Strait of Malacca on a map and explain why controlling it mattered to a trading power.",
+          "bonusQuestions": [
+            {
+              "id": "ssch16_dv05_b01",
+              "prompt": "Why did Rajendra Chola I send a fleet across the Bay of Bengal to attack the Srivijaya Empire?",
+              "questionType": "mcq",
+              "options": [
+                "Srivijaya controlled the Strait of Malacca, the gateway for the Cholas' rich sea trade with China",
+                "Just for adventure",
+                "To find empty land to settle",
+                "Entirely by accident"
+              ],
+              "answer": "Srivijaya controlled the Strait of Malacca, the gateway for the Cholas' rich sea trade with China",
+              "solutionSteps": [
+                "Whoever controlled the strait could tax or choke that trade.",
+                "So the Cholas projected naval power to secure it."
+              ],
+              "commonMistakes": [
+                "Missing the trade motive behind the naval expedition."
+              ],
+              "variations": [
+                {
+                  "prompt": "The Chola expedition shows medieval Indian kingdoms were...",
+                  "answer": "Deeply tied into a wider trading world",
+                  "solutionSteps": [
+                    "Not only a land story.",
+                    "Sea-connected."
+                  ]
+                },
+                {
+                  "prompt": "Controlling a vital sea route was worth...",
+                  "answer": "Crossing an ocean to secure",
+                  "solutionSteps": [
+                    "Strategic value.",
+                    "Even 1,000 years ago."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                192
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch16_dv05_b02",
+              "prompt": "The Chola sea expedition against Srivijaya reminds us that Indian history...",
+              "questionType": "mcq",
+              "options": [
+                "Was never only a land story — it included real naval power and ocean trade",
+                "Ignored the sea entirely",
+                "Had no navy",
+                "Was always peaceful"
+              ],
+              "answer": "Was never only a land story — it included real naval power and ocean trade",
+              "solutionSteps": [
+                "The Cholas projected power across the open sea.",
+                "India was woven into a wider maritime trading world."
+              ],
+              "commonMistakes": [
+                "Picturing all Indian history as purely land-based."
+              ],
+              "variations": [
+                {
+                  "prompt": "Srivijaya was located in present-day...",
+                  "answer": "Malaysia and Indonesia",
+                  "solutionSteps": [
+                    "Across the Bay of Bengal.",
+                    "Controlling Malacca."
+                  ]
+                },
+                {
+                  "prompt": "The expedition shows the Cholas had real...",
+                  "answer": "Naval strength",
+                  "solutionSteps": [
+                    "Open-sea power projection.",
+                    "Almost unique in Indian history."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                192
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch16_dv06",
@@ -48358,7 +49304,93 @@
           "parentConceptId": "ssch16_t02_c01",
           "body": "Not everyone who arrived with the invaders carried a sword. Al-Biruni, a Persian scholar from Khwarizm (today's Uzbekistan), came to India around 1017 in the company of Mahmud of Ghazni — yet instead of plundering he LEARNED. He studied Sanskrit, read Indian texts, and talked with Indian astronomers and philosophers, then wrote a careful encyclopaedia of Indian religion, philosophy, science and geography, comparing Indian ideas with Greek and Islamic ones. What makes him remarkable is his honesty: he tried to describe India as it really was, noting both what he admired and what he found puzzling, rather than judging it as an outsider. His work is doubly precious to historians — it is a rich record of 11th-century India, and it shows that even in an age of raids, knowledge could flow PEACEFULLY in both directions. Al-Biruni stands for a quieter kind of contact between cultures: curiosity instead of conquest.",
           "prerequisite": "Knowing Al-Biruni was a scholar who came to India and studied it.",
-          "nextStepHint": "Why is a curious outsider's careful account sometimes a valuable historical source?"
+          "nextStepHint": "Why is a curious outsider's careful account sometimes a valuable historical source?",
+          "bonusQuestions": [
+            {
+              "id": "ssch16_dv06_b01",
+              "prompt": "Al-Biruni, who came to India around 1017 with Mahmud of Ghazni, is remarkable because he...",
+              "questionType": "mcq",
+              "options": [
+                "Learned Sanskrit and wrote a careful, honest encyclopaedia of Indian knowledge instead of plundering",
+                "Looted the most temples",
+                "Led the biggest battles",
+                "Ignored India entirely"
+              ],
+              "answer": "Learned Sanskrit and wrote a careful, honest encyclopaedia of Indian knowledge instead of plundering",
+              "solutionSteps": [
+                "He studied Indian texts, astronomy and philosophy and compared them with Greek and Islamic ideas.",
+                "His honesty makes his work doubly precious to historians."
+              ],
+              "commonMistakes": [
+                "Assuming everyone arriving with raiders came only to plunder."
+              ],
+              "variations": [
+                {
+                  "prompt": "What makes Al-Biruni's account especially valuable to historians?",
+                  "answer": "It is an honest, rich record of 11th-century India",
+                  "solutionSteps": [
+                    "Tried to describe India as it really was.",
+                    "A precious source."
+                  ]
+                },
+                {
+                  "prompt": "Al-Biruni came from where?",
+                  "answer": "Khwarizm (today's Uzbekistan)",
+                  "solutionSteps": [
+                    "A Persian scholar.",
+                    "Travelled to India."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                192
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch16_dv06_b02",
+              "prompt": "Al-Biruni stands for which kind of contact between cultures?",
+              "questionType": "mcq",
+              "options": [
+                "Curiosity instead of conquest — knowledge flowing peacefully both ways",
+                "War only",
+                "Trade only",
+                "Total isolation"
+              ],
+              "answer": "Curiosity instead of conquest — knowledge flowing peacefully both ways",
+              "solutionSteps": [
+                "Even in an age of raids, learning could flow peacefully.",
+                "He compared Indian ideas with Greek and Islamic ones, admiring and questioning honestly."
+              ],
+              "commonMistakes": [
+                "Assuming all cross-cultural contact in the age was violent."
+              ],
+              "variations": [
+                {
+                  "prompt": "Al-Biruni compared Indian ideas with which other traditions?",
+                  "answer": "Greek and Islamic",
+                  "solutionSteps": [
+                    "Cross-cultural scholarship.",
+                    "Honest comparison."
+                  ]
+                },
+                {
+                  "prompt": "His work is 'doubly precious' because it is both a record of India and proof that...",
+                  "answer": "Knowledge could flow peacefully in an age of raids",
+                  "solutionSteps": [
+                    "Curiosity, not conquest.",
+                    "Two-way learning."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                192
+              ],
+              "needsHumanReview": false
+            }
+          ]
         }
       ],
       "crossChapterRefs": [
