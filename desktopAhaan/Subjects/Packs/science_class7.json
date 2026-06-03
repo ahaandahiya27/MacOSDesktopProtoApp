@@ -27776,7 +27776,93 @@
           "parentConceptId": "ch08_t03_c02",
           "body": "In Class 7 you saw cyclones spin. Class 9 reveals WHY — Earth is rotating beneath the moving air. The CORIOLIS EFFECT: any object moving over a rotating planet appears (to an observer on the surface) to curve. In the Northern Hemisphere, moving objects deflect RIGHT; in the Southern, LEFT. So Bay of Bengal cyclones rotate ANTICLOCKWISE; cyclones near Australia rotate CLOCKWISE. The effect is zero at the equator and strongest at the poles — that's why cyclones never form within ~5° of the equator (no Coriolis to start the spin). Indian Ocean cyclones always form north of ~10°N or south of ~10°S. Sub-tropical Indian states (Tamil Nadu, Odisha, West Bengal) are in the cyclone zone.",
           "prerequisite": "Tackle after wind-formation basics.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch08_dd01_b01",
+              "prompt": "Bay of Bengal cyclones spin anticlockwise, but cyclones near Australia spin clockwise. Why?",
+              "questionType": "mcq",
+              "options": [
+                "The Coriolis effect deflects moving air to the right in the Northern Hemisphere and to the left in the Southern",
+                "The two oceans differ in salt content",
+                "Australia is nearer the Sun",
+                "Cyclones pick a direction at random"
+              ],
+              "answer": "The Coriolis effect deflects moving air to the right in the Northern Hemisphere and to the left in the Southern",
+              "solutionSteps": [
+                "Earth rotates beneath the moving air (the Coriolis effect).",
+                "Northern Hemisphere: air deflects right, giving anticlockwise spin.",
+                "Southern Hemisphere: air deflects left, giving clockwise spin."
+              ],
+              "commonMistakes": [
+                "Thinking spin direction is random rather than set by hemisphere via the Coriolis effect."
+              ],
+              "variations": [
+                {
+                  "prompt": "Which way do Northern-Hemisphere cyclones rotate?",
+                  "answer": "Anticlockwise",
+                  "solutionSteps": [
+                    "Coriolis deflects air to the right in the Northern Hemisphere.",
+                    "That rightward deflection produces anticlockwise rotation."
+                  ]
+                },
+                {
+                  "prompt": "Where on Earth is the Coriolis effect strongest?",
+                  "answer": "At the poles",
+                  "solutionSteps": [
+                    "It is zero at the equator and grows toward the poles.",
+                    "So it is strongest at the poles."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                104
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch08_dd01_b02",
+              "prompt": "Why do cyclones never form within about 5 degrees of the equator?",
+              "questionType": "mcq",
+              "options": [
+                "The Coriolis effect is nearly zero there, so nothing starts the spin",
+                "The sea is too cold at the equator",
+                "There is no wind at the equator",
+                "The equator never has clouds"
+              ],
+              "answer": "The Coriolis effect is nearly zero there, so nothing starts the spin",
+              "solutionSteps": [
+                "The Coriolis effect is essentially zero at the equator.",
+                "Without it, a cyclone's rotation cannot get started."
+              ],
+              "commonMistakes": [
+                "Assuming warm equatorial water alone is enough; the spin needs the Coriolis effect."
+              ],
+              "variations": [
+                {
+                  "prompt": "Indian Ocean cyclones form north of about 10N or south of 10S. Why not in between?",
+                  "answer": "Too little Coriolis effect near the equator to start rotation",
+                  "solutionSteps": [
+                    "Near the equator the Coriolis effect is about zero.",
+                    "No spin can develop there."
+                  ]
+                },
+                {
+                  "prompt": "Is warm ocean water by itself enough to make a cyclone spin?",
+                  "answer": "No, it also needs the Coriolis effect",
+                  "solutionSteps": [
+                    "Warm water is the energy source.",
+                    "The Coriolis effect provides the rotation."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                104
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Class 11 derives Coriolis force quantitatively: F = -2mΩ × v."
         },
         {
@@ -27786,7 +27872,92 @@
           "parentConceptId": "ch08_t03_c02",
           "body": "In Class 7 you saw cyclones form over warm seas. Class 11 details the mechanism. CYCLONE GENESIS requires: (1) sea surface temperature ≥ 26.5°C through 50+ m depth — provides moisture and energy. (2) Low vertical wind shear — winds blowing the same direction at different altitudes (no shear = vertical column intact). (3) Pre-existing low-pressure disturbance (e.g., monsoon trough). (4) At least ~5° from equator (Coriolis spin). (5) Moist mid-troposphere (no dry air to disrupt convection). The Bay of Bengal has all five most years — that's why ~80% of Indian cyclones form there, not in the Arabian Sea. Eye wall replacement: as a cyclone matures, the outer rain bands form a new wall, the old wall collapses — the storm 're-organises'. This is what makes intensity hard to forecast.",
           "prerequisite": "Tackle after Class 9 Coriolis.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch08_dd02_b01",
+              "prompt": "A key requirement for cyclone formation is a sea-surface temperature of at least about...",
+              "questionType": "mcq",
+              "options": [
+                "26.5C through 50+ m of depth",
+                "10C at the surface only",
+                "40C at the surface",
+                "Any temperature at all"
+              ],
+              "answer": "26.5C through 50+ m of depth",
+              "solutionSteps": [
+                "Warm, deep water supplies the moisture and energy a cyclone needs.",
+                "The threshold is about 26.5C sustained through 50+ m of depth."
+              ],
+              "commonMistakes": [
+                "Thinking only the thin surface must be warm; the depth of warm water matters."
+              ],
+              "variations": [
+                {
+                  "prompt": "Besides warm water, name one other condition needed for cyclone formation.",
+                  "answer": "Low vertical wind shear (or a pre-existing low-pressure disturbance, or being about 5 degrees from the equator)",
+                  "solutionSteps": [
+                    "Several conditions must coincide.",
+                    "Low wind shear keeps the storm column intact."
+                  ]
+                },
+                {
+                  "prompt": "What does strong vertical wind shear do to a forming cyclone?",
+                  "answer": "It disrupts the vertical column and hinders formation",
+                  "solutionSteps": [
+                    "Shear tilts and tears the storm apart.",
+                    "So low shear is needed for it to form."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                104
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch08_dd02_b02",
+              "prompt": "Why do roughly 80% of Indian cyclones form in the Bay of Bengal rather than the Arabian Sea?",
+              "questionType": "mcq",
+              "options": [
+                "The Bay more often has all the formation conditions at once (warm deep water, low shear, a low-pressure trough)",
+                "The Arabian Sea contains no water",
+                "Cyclones are banned from the west coast",
+                "The Bay sits right on the equator"
+              ],
+              "answer": "The Bay more often has all the formation conditions at once (warm deep water, low shear, a low-pressure trough)",
+              "solutionSteps": [
+                "Cyclone formation needs several conditions together.",
+                "The Bay of Bengal meets them most years; the Arabian Sea does so less often."
+              ],
+              "commonMistakes": [
+                "Assuming it is about distance or coastline rather than which sea meets the formation conditions."
+              ],
+              "variations": [
+                {
+                  "prompt": "Which Indian states are most exposed to Bay of Bengal cyclones?",
+                  "answer": "Tamil Nadu, Odisha and West Bengal",
+                  "solutionSteps": [
+                    "They border the cyclone-prone Bay of Bengal.",
+                    "So they are in the main strike zone."
+                  ]
+                },
+                {
+                  "prompt": "Why is a maturing cyclone's intensity hard to forecast?",
+                  "answer": "Eye-wall replacement re-organises the storm",
+                  "solutionSteps": [
+                    "Outer rain bands form a new wall as the old one collapses.",
+                    "This reshuffling makes intensity hard to predict."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                104
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "NEET / IIT-meteorology students study Saffir-Simpson scale and the role of CAPE (convective available potential energy)."
         },
         {
@@ -27796,7 +27967,93 @@
           "parentConceptId": "ch08_t01_c01",
           "body": "Class 7 says air pressure is the 'weight of air above'. Class 10 makes it quantitative. At sea level, atmospheric pressure ≈ 1013 hPa (or 1 atm). Every 10 m up, pressure drops by ~1 hPa initially. At Manali (2050 m): ~780 hPa (77% of sea-level). At Mount Everest base camp: ~500 hPa. At 10 km cruising altitude (where aircraft fly): only ~265 hPa — too low to breathe. So airplane cabins are pressurised to ~750 hPa (equivalent to ~2400 m altitude). When a plane suddenly depressurises (rare but happens), oxygen masks deploy automatically. The cabin doors are slightly inward-curved so cabin pressure pushes them shut tighter, never opens them in flight. Air pressure isn't optional engineering — it's life support.",
           "prerequisite": "Tackle after Class 7 air pressure.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch08_dd03_b01",
+              "prompt": "Aircraft cruise near 10 km where pressure is only about 265 hPa. Why are cabins pressurised to about 750 hPa?",
+              "questionType": "mcq",
+              "options": [
+                "At 265 hPa people cannot breathe enough oxygen, so cabins are kept near a 2400 m equivalent",
+                "To make the aircraft lighter",
+                "To stop the windows fogging",
+                "Because the engines require it"
+              ],
+              "answer": "At 265 hPa people cannot breathe enough oxygen, so cabins are kept near a 2400 m equivalent",
+              "solutionSteps": [
+                "Air pressure falls steeply with altitude.",
+                "At 10 km it is far too low to breathe.",
+                "Cabins are pressurised to a comfortable level (about 750 hPa)."
+              ],
+              "commonMistakes": [
+                "Thinking cabin pressure is only for comfort; it is life support."
+              ],
+              "variations": [
+                {
+                  "prompt": "What deploys automatically if a cabin suddenly loses pressure?",
+                  "answer": "Oxygen masks",
+                  "solutionSteps": [
+                    "Low pressure cannot sustain breathing.",
+                    "Masks drop to supply oxygen."
+                  ]
+                },
+                {
+                  "prompt": "About what fraction of sea-level pressure remains at Manali (about 2050 m)?",
+                  "answer": "About 77%",
+                  "solutionSteps": [
+                    "Roughly 780 hPa versus about 1013 hPa at sea level.",
+                    "That is about 77%."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                104
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch08_dd03_b02",
+              "prompt": "Airplane cabin doors curve slightly inward. Why is that a safety feature?",
+              "questionType": "mcq",
+              "options": [
+                "The higher cabin pressure pushes the door tighter against its frame, so it cannot open in flight",
+                "It makes the door lighter",
+                "It improves the passengers' view",
+                "It reduces engine noise"
+              ],
+              "answer": "The higher cabin pressure pushes the door tighter against its frame, so it cannot open in flight",
+              "solutionSteps": [
+                "In flight the cabin pressure is higher than outside.",
+                "An inward-curved plug door is pressed harder shut by that pressure difference."
+              ],
+              "commonMistakes": [
+                "Imagining cabin pressure could blow the door open; the plug design does the opposite."
+              ],
+              "variations": [
+                {
+                  "prompt": "Is cabin pressure higher or lower than the outside air at cruise?",
+                  "answer": "Higher",
+                  "solutionSteps": [
+                    "Cabins stay near 750 hPa.",
+                    "Outside at 10 km it is about 265 hPa, far lower."
+                  ]
+                },
+                {
+                  "prompt": "What keeps a plug-type aircraft door sealed shut?",
+                  "answer": "The cabin's higher pressure pressing it against the frame",
+                  "solutionSteps": [
+                    "The pressure difference seals it.",
+                    "More pressure means a tighter seal."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                104
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Class 12 introduces gas laws (PV=nRT) — the math behind altitude pressure equations."
         }
       ],
@@ -30343,7 +30600,92 @@
           "parentConceptId": "ch09_t01_c02",
           "body": "Class 7 shows soil supports plants. Class 8 names the three macronutrients plants need most: NITROGEN (N), PHOSPHORUS (P), POTASSIUM (K). Every fertiliser bag in India shows three numbers like 20-20-0 — that's % N, % P, % K. Urea (most popular Indian fertiliser): 46-0-0, pure nitrogen. DAP (diammonium phosphate): 18-46-0, balanced N+P. MOP (potassium chloride): 0-0-60, pure potassium. Why three numbers? Nitrogen makes leaves green and lush. Phosphorus drives roots and flowers. Potassium builds disease resistance and water regulation. Different crops need different ratios — paddy needs more N, mangoes more K. Soil testing by Krishi Vigyan Kendras tells farmers which combination to use. Without this chemistry knowledge, fertilizers either under-feed (poor yield) or over-feed (water pollution).",
           "prerequisite": "Tackle after sandy/clayey/loamy basics.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch09_dd01_b01",
+              "prompt": "A fertiliser bag reads 46-0-0 (urea). What do those three numbers mean?",
+              "questionType": "mcq",
+              "options": [
+                "Percentages of Nitrogen, Phosphorus and Potassium, so urea is essentially pure nitrogen",
+                "The price in rupees",
+                "The soil's pH, moisture and depth",
+                "Kilograms for each bag size"
+              ],
+              "answer": "Percentages of Nitrogen, Phosphorus and Potassium, so urea is essentially pure nitrogen",
+              "solutionSteps": [
+                "The three numbers are %N, %P and %K.",
+                "46-0-0 means 46% nitrogen and no P or K, so urea is a pure-nitrogen fertiliser."
+              ],
+              "commonMistakes": [
+                "Reading the numbers as price or weight instead of N-P-K percentages."
+              ],
+              "variations": [
+                {
+                  "prompt": "DAP is labelled 18-46-0. Which nutrient does it supply most?",
+                  "answer": "Phosphorus (46%)",
+                  "solutionSteps": [
+                    "The middle number is %P.",
+                    "46 is its largest value, so mostly phosphorus."
+                  ]
+                },
+                {
+                  "prompt": "MOP is 0-0-60. Which nutrient is that?",
+                  "answer": "Potassium",
+                  "solutionSteps": [
+                    "The third number is %K.",
+                    "60% K, with no N or P."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                116
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch09_dd01_b02",
+              "prompt": "A farmer wants lush, green leafy growth. Which macronutrient should the fertiliser emphasise?",
+              "questionType": "mcq",
+              "options": [
+                "Nitrogen (N)",
+                "Phosphorus (P)",
+                "Potassium (K)",
+                "None of the three"
+              ],
+              "answer": "Nitrogen (N)",
+              "solutionSteps": [
+                "Nitrogen drives leaf and stem growth, giving green leafy plants.",
+                "Phosphorus favours roots and flowers; potassium favours hardiness."
+              ],
+              "commonMistakes": [
+                "Confusing the roles: N for leaves, P for roots and flowers, K for resistance."
+              ],
+              "variations": [
+                {
+                  "prompt": "Which nutrient mainly drives root growth and flowering?",
+                  "answer": "Phosphorus",
+                  "solutionSteps": [
+                    "Phosphorus supports roots and flowers.",
+                    "That is its main role."
+                  ]
+                },
+                {
+                  "prompt": "Which nutrient builds disease resistance and water regulation?",
+                  "answer": "Potassium",
+                  "solutionSteps": [
+                    "Potassium strengthens plant hardiness.",
+                    "It aids disease resistance and water balance."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                116
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Class 11 covers micronutrients (iron, zinc, manganese) — needed in tiny amounts but equally critical."
         },
         {
@@ -30353,7 +30695,92 @@
           "parentConceptId": "ch09_t03_c01",
           "body": "Class 7 says erosion strips soil. Class 10 names the processes. SHEET EROSION: thin layer of topsoil swept off by surface runoff. GULLY EROSION: deep channels cut by concentrated water flow. RILL EROSION: small channels, in between. WIND EROSION: dry, bare topsoil blown away by strong winds (worst in Rajasthan). Indian numbers are alarming: ~5300 million tonnes of topsoil lost annually. The Chambal ravines (MP) are textbook gully-eroded landscape — formed in decades from clearing forests. Solutions: terracing (cuts slope), contour ploughing (perpendicular to slope), cover crops (no bare soil), shelterbelts (trees blocking wind). Each works at a specific scale — terracing is village-level engineering; cover crops are individual-farm decisions.",
           "prerequisite": "Tackle after Class 7 soil erosion basics.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch09_dd02_b01",
+              "prompt": "The Chambal ravines formed where concentrated water flow cut deep channels into the land. This is an example of...",
+              "questionType": "mcq",
+              "options": [
+                "Gully erosion",
+                "Sheet erosion",
+                "Wind erosion",
+                "No erosion at all"
+              ],
+              "answer": "Gully erosion",
+              "solutionSteps": [
+                "Concentrated runoff cutting deep channels is gully erosion.",
+                "Sheet erosion removes a thin even layer; wind erosion is caused by wind."
+              ],
+              "commonMistakes": [
+                "Confusing gully erosion (deep channels) with sheet erosion (thin even removal)."
+              ],
+              "variations": [
+                {
+                  "prompt": "A thin even layer of topsoil swept off by surface runoff is called...",
+                  "answer": "Sheet erosion",
+                  "solutionSteps": [
+                    "It removes a uniform thin layer of soil.",
+                    "That is sheet erosion."
+                  ]
+                },
+                {
+                  "prompt": "Which erosion type is worst in dry, bare Rajasthan?",
+                  "answer": "Wind erosion",
+                  "solutionSteps": [
+                    "Dry bare soil is blown away by strong winds.",
+                    "Wind erosion dominates there."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                116
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch09_dd02_b02",
+              "prompt": "Which practice reduces erosion by ploughing across a slope rather than up and down it?",
+              "questionType": "mcq",
+              "options": [
+                "Contour ploughing",
+                "Clearing all the trees",
+                "Leaving the soil bare",
+                "Digging deeper gullies"
+              ],
+              "answer": "Contour ploughing",
+              "solutionSteps": [
+                "Ploughing along the contours (across the slope) slows runoff.",
+                "Slower water carries away less soil."
+              ],
+              "commonMistakes": [
+                "Thinking up-and-down ploughing is fine; it channels water and worsens erosion."
+              ],
+              "variations": [
+                {
+                  "prompt": "How does terracing reduce erosion on steep land?",
+                  "answer": "It breaks a long slope into level steps, slowing the water",
+                  "solutionSteps": [
+                    "Steps reduce the effective slope.",
+                    "Slower water erodes less."
+                  ]
+                },
+                {
+                  "prompt": "Why do cover crops reduce erosion?",
+                  "answer": "They stop soil from being left bare and exposed",
+                  "solutionSteps": [
+                    "Bare soil erodes fastest.",
+                    "Plant cover shields and binds the soil."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                116
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "JEE / Civil engineering students study soil mechanics — quantitative models of erosion rates."
         },
         {
@@ -30363,7 +30790,92 @@
           "parentConceptId": "ch09_t02_c01",
           "body": "Class 7 says soil is bits of rock + organic matter. Class 11 names the formation process: PEDOGENESIS — soil genesis. Five factors (CLORPT acronym): Climate (temperature, rainfall drive weathering rates); Organisms (lichens, then bacteria, then plants colonise rock); Relief (slope shapes soil depth); Parent material (the rock determines the chemistry); Time (millennia to form). A 30 cm soil profile typically takes 1000-10,000 years. The famous Indian black cotton soil (Deccan) formed from basalt + millennia of weathering — it's why Maharashtra grows cotton so well. Once eroded, you can't 'just regrow' soil — it's a geological-time resource. This is why every farmer protecting his soil today is gifting the next 5 generations.",
           "prerequisite": "Tackle after Class 7 soil profile basics.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch09_dd03_b01",
+              "prompt": "Roughly how long does a 30 cm soil profile typically take to form?",
+              "questionType": "mcq",
+              "options": [
+                "1,000 to 10,000 years",
+                "A few weeks",
+                "About one year",
+                "A single monsoon season"
+              ],
+              "answer": "1,000 to 10,000 years",
+              "solutionSteps": [
+                "Soil formation (pedogenesis) is extremely slow.",
+                "A 30 cm profile takes roughly 1,000 to 10,000 years."
+              ],
+              "commonMistakes": [
+                "Assuming soil regrows quickly; it forms over geological time."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why can't eroded soil simply be regrown in a season?",
+                  "answer": "Because it forms over millennia from slow rock weathering",
+                  "solutionSteps": [
+                    "Formation needs thousands of years.",
+                    "So it cannot be replaced quickly."
+                  ]
+                },
+                {
+                  "prompt": "Indian black cotton soil of the Deccan formed from which parent rock?",
+                  "answer": "Basalt",
+                  "solutionSteps": [
+                    "Deccan basalt weathered over millennia.",
+                    "That produced the black cotton soil."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                116
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch09_dd03_b02",
+              "prompt": "Soil formation depends on five factors (the CLORPT set). Which of these is NOT one of them?",
+              "questionType": "mcq",
+              "options": [
+                "Ocean salinity",
+                "Climate",
+                "Organisms",
+                "Time"
+              ],
+              "answer": "Ocean salinity",
+              "solutionSteps": [
+                "CLORPT means Climate, Organisms, Relief, Parent material and Time.",
+                "Ocean salinity is not a soil-forming factor."
+              ],
+              "commonMistakes": [
+                "Adding unrelated factors; only the five CLORPT factors form soil."
+              ],
+              "variations": [
+                {
+                  "prompt": "In CLORPT, what does parent material determine?",
+                  "answer": "The basic chemistry and minerals of the soil",
+                  "solutionSteps": [
+                    "Soil inherits minerals from its parent rock.",
+                    "That sets its chemistry."
+                  ]
+                },
+                {
+                  "prompt": "How does climate drive soil formation?",
+                  "answer": "Temperature and rainfall control the rate of rock weathering",
+                  "solutionSteps": [
+                    "Warm, wet climates weather rock faster.",
+                    "That speeds soil formation."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                116
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Class 12 environmental science quantifies soil loss in tonnes per hectare per year."
         }
       ],
@@ -32826,7 +33338,92 @@
           "parentConceptId": "ch10_t02_c02",
           "body": "Class 7 says aerobic respiration: glucose + O₂ → CO₂ + water + energy. Class 8 reveals this happens in stages, mostly inside MITOCHONDRIA (cell powerhouses). Stage 1 GLYCOLYSIS: in the cytoplasm, glucose (6-carbon) splits into 2 pyruvate (3-carbon) molecules + a little ATP energy. Stage 2 KREBS CYCLE: pyruvate enters mitochondria, gets stripped of CO₂ (the CO₂ you exhale!), produces NADH + a little more ATP. Stage 3 ELECTRON TRANSPORT CHAIN: NADH dumps electrons to oxygen — that's where most ATP (~34 per glucose) is made. Without oxygen for stage 3, only glycolysis runs — that's anaerobic respiration, with just 2 ATP. That's why aerobic is so much more efficient than anaerobic.",
           "prerequisite": "Tackle after aerobic vs anaerobic basics.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch10_dd01_b01",
+              "prompt": "In aerobic respiration, where is the MOST ATP produced?",
+              "questionType": "mcq",
+              "options": [
+                "The electron transport chain in the mitochondria, using oxygen",
+                "Glycolysis in the cytoplasm",
+                "The stomach",
+                "The cell nucleus"
+              ],
+              "answer": "The electron transport chain in the mitochondria, using oxygen",
+              "solutionSteps": [
+                "Glycolysis and the Krebs cycle make only a little ATP.",
+                "The electron transport chain, using oxygen, makes most of it (about 34 ATP)."
+              ],
+              "commonMistakes": [
+                "Crediting glycolysis with most ATP; the electron transport chain produces the majority."
+              ],
+              "variations": [
+                {
+                  "prompt": "What gas is required for the electron transport chain to run?",
+                  "answer": "Oxygen",
+                  "solutionSteps": [
+                    "The chain passes electrons onto oxygen.",
+                    "Without oxygen it stops."
+                  ]
+                },
+                {
+                  "prompt": "Where does the CO2 you exhale come from in respiration?",
+                  "answer": "The Krebs cycle stripping CO2 from pyruvate",
+                  "solutionSteps": [
+                    "The Krebs cycle releases CO2.",
+                    "That is the CO2 you breathe out."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                128
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch10_dd01_b02",
+              "prompt": "Why does aerobic respiration yield far more energy than anaerobic respiration?",
+              "questionType": "mcq",
+              "options": [
+                "With oxygen, the Krebs cycle and electron transport chain run, adding about 34 ATP beyond glycolysis's 2",
+                "Anaerobic respiration uses more oxygen",
+                "Aerobic respiration skips glycolysis entirely",
+                "Anaerobic respiration makes 34 ATP"
+              ],
+              "answer": "With oxygen, the Krebs cycle and electron transport chain run, adding about 34 ATP beyond glycolysis's 2",
+              "solutionSteps": [
+                "Without oxygen only glycolysis runs, giving about 2 ATP.",
+                "With oxygen, the Krebs cycle and electron transport chain add about 34 more."
+              ],
+              "commonMistakes": [
+                "Thinking anaerobic respiration is high-yield; it gives only about 2 ATP per glucose."
+              ],
+              "variations": [
+                {
+                  "prompt": "How many ATP does anaerobic respiration make per glucose?",
+                  "answer": "About 2",
+                  "solutionSteps": [
+                    "Only glycolysis runs without oxygen.",
+                    "That yields about 2 ATP."
+                  ]
+                },
+                {
+                  "prompt": "Roughly how many ATP does aerobic respiration make per glucose?",
+                  "answer": "About 36 to 38",
+                  "solutionSteps": [
+                    "Glycolysis plus the Krebs cycle plus the electron transport chain.",
+                    "That totals about 36 to 38 ATP."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                128
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Class 11 names each enzyme in the chain — pyruvate dehydrogenase, citrate synthase, NADH dehydrogenase."
         },
         {
@@ -32836,7 +33433,92 @@
           "parentConceptId": "ch10_t02_c01",
           "body": "Class 7 says respiration makes 'energy'. Class 11 specifies: ENERGY in cells = ATP (adenosine triphosphate). Each glucose makes ~38 ATP total via aerobic respiration. ATP stores energy in its third phosphate bond — when the cell uses energy (muscle contraction, nerve firing, building proteins), it 'cracks' ATP → ADP + Pi (inorganic phosphate) + energy. The whole human body 'turns over' your bodyweight worth of ATP per day — but only ~250g exists at any moment. ATP is constantly made and broken. Subbarao's 1929 discovery (Yellapragada Subbarao at Harvard — Chapter 10's scientist) was what ATP actually IS. Modern medicine — chemotherapy, antibiotics — often works by disrupting ATP production in fast-growing cells.",
           "prerequisite": "Tackle after Class 7 respiration overview.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch10_dd02_b01",
+              "prompt": "What molecule is the cell's main energy currency?",
+              "questionType": "mcq",
+              "options": [
+                "ATP (adenosine triphosphate)",
+                "Glucose only",
+                "DNA",
+                "Water"
+              ],
+              "answer": "ATP (adenosine triphosphate)",
+              "solutionSteps": [
+                "Cells spend energy by breaking ATP's third phosphate bond.",
+                "ATP becomes ADP plus phosphate, releasing usable energy."
+              ],
+              "commonMistakes": [
+                "Calling glucose the currency; glucose is the fuel, ATP is the spendable currency."
+              ],
+              "variations": [
+                {
+                  "prompt": "When ATP is used for energy, what does it become?",
+                  "answer": "ADP plus inorganic phosphate",
+                  "solutionSteps": [
+                    "Its third phosphate bond is broken.",
+                    "ATP becomes ADP plus phosphate plus energy."
+                  ]
+                },
+                {
+                  "prompt": "Where is ATP's usable energy stored?",
+                  "answer": "In its third phosphate bond",
+                  "solutionSteps": [
+                    "Breaking that bond releases energy.",
+                    "That is the spendable energy."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                128
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch10_dd02_b02",
+              "prompt": "Your body holds only about 250 g of ATP yet uses roughly its own bodyweight in ATP each day. What does this imply?",
+              "questionType": "mcq",
+              "options": [
+                "ATP is continually broken down to ADP and rebuilt, a very rapid turnover",
+                "The body stores several days of ATP",
+                "ATP is used once and never reused",
+                "ATP is made only once, at birth"
+              ],
+              "answer": "ATP is continually broken down to ADP and rebuilt, a very rapid turnover",
+              "solutionSteps": [
+                "Daily use far exceeds the tiny standing amount.",
+                "So ATP must be recycled, rebuilt from ADP thousands of times a day."
+              ],
+              "commonMistakes": [
+                "Imagining ATP is stockpiled; it is constantly regenerated."
+              ],
+              "variations": [
+                {
+                  "prompt": "If only 250 g exists but bodyweight-worth is used daily, ATP must be...",
+                  "answer": "Recycled and regenerated continuously",
+                  "solutionSteps": [
+                    "Use far exceeds the standing amount.",
+                    "So it is constantly remade from ADP."
+                  ]
+                },
+                {
+                  "prompt": "Many drugs such as chemotherapy and antibiotics work by...",
+                  "answer": "Disrupting ATP production in fast-growing or microbial cells",
+                  "solutionSteps": [
+                    "ATP is vital to cells.",
+                    "Blocking its production harms the target cells."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                128
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Class 12 covers ATP synthase — the molecular motor that makes ATP, one of the most elegant biological machines."
         },
         {
@@ -32846,7 +33528,92 @@
           "parentConceptId": "ch10_t01_c01",
           "body": "Class 7 introduces the respiratory system. Class 10 quantifies lung function. TIDAL VOLUME (normal breath): ~500 mL in/out. VITAL CAPACITY (max forceful breath): ~4500 mL adult, can reach 7000+ in trained athletes. INSPIRATORY RESERVE (extra you can inhale above tidal): ~3000 mL. RESIDUAL VOLUME (always trapped): ~1200 mL — lungs never empty completely. Olympic swimmers like India's Sajan Prakash train to expand vital capacity — efficient breathing = better endurance. A fit Class 7 student already has vital capacity ~70-80% of adult range. As you age, vital capacity declines ~25 mL per year after age 25 — exercise slows this decline by half. Lung function is one of the few biomarkers you can directly improve with consistent training.",
           "prerequisite": "Tackle after Class 7 lung basics.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch10_dd03_b01",
+              "prompt": "A relaxed normal breath moves about 500 mL of air in and out. What is this volume called?",
+              "questionType": "mcq",
+              "options": [
+                "Tidal volume",
+                "Vital capacity",
+                "Residual volume",
+                "Inspiratory reserve"
+              ],
+              "answer": "Tidal volume",
+              "solutionSteps": [
+                "The volume of a normal quiet breath is the tidal volume, about 500 mL.",
+                "Vital capacity is the maximum forceful breath instead."
+              ],
+              "commonMistakes": [
+                "Confusing tidal volume (a normal breath) with vital capacity (the maximum breath)."
+              ],
+              "variations": [
+                {
+                  "prompt": "What is the maximum air you can forcefully exhale after a full inhale called?",
+                  "answer": "Vital capacity",
+                  "solutionSteps": [
+                    "It is the largest usable breath.",
+                    "About 4500 mL in adults."
+                  ]
+                },
+                {
+                  "prompt": "Trained athletes can push vital capacity to roughly what value?",
+                  "answer": "7000+ mL",
+                  "solutionSteps": [
+                    "Training expands usable lung volume.",
+                    "Athletes can reach 7000 mL or more."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                128
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch10_dd03_b02",
+              "prompt": "Why can the lungs never be emptied completely?",
+              "questionType": "mcq",
+              "options": [
+                "A residual volume of about 1200 mL always stays trapped in the lungs",
+                "The diaphragm is too weak to push it out",
+                "Air is too heavy to exhale",
+                "The lungs refill instantly while you exhale"
+              ],
+              "answer": "A residual volume of about 1200 mL always stays trapped in the lungs",
+              "solutionSteps": [
+                "Some air, the residual volume, always remains after a full exhale.",
+                "This keeps the alveoli from collapsing."
+              ],
+              "commonMistakes": [
+                "Assuming a hard exhale empties the lungs; the residual volume always remains."
+              ],
+              "variations": [
+                {
+                  "prompt": "Roughly how much air remains trapped after a maximal exhale?",
+                  "answer": "About 1200 mL",
+                  "solutionSteps": [
+                    "That is the residual volume.",
+                    "It never leaves the lungs."
+                  ]
+                },
+                {
+                  "prompt": "After age 25, vital capacity falls about 25 mL per year. What halves that decline?",
+                  "answer": "Regular exercise",
+                  "solutionSteps": [
+                    "Exercise preserves lung function.",
+                    "It slows the age-related decline by about half."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                128
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "NEET tests spirometer readings + how diseases (asthma, COPD) change each volume."
         }
       ],

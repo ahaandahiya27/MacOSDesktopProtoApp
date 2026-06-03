@@ -41,7 +41,12 @@ canonically: `json.dumps(d, ensure_ascii=False, indent=2) + "\n"`.
 - [x] **ch05 — Acids, Bases and Salts (3 topics, 6 MCQs)** — pH scale (log), salt hydrolysis, Arrhenius/Brønsted–Lowry/Lewis theories.
 - [x] **ch06 — Physical and Chemical Changes (3 topics, 6 MCQs)** — word→symbolic equations, balancing (conservation of mass), enthalpy (exo/endothermic).
 - [x] **ch07 — Weather/Climate/Adaptations (3 topics, 6 MCQs)** — lapse rate (worked), El Niño/La Niña & the monsoon, biomes & convergent evolution.
-- [ ] ch08–ch19 (36 topics) — ~2 MCQs each. **42 Science MCQs done so far.**
+- [x] **ch08 — Winds, Storms and Cyclones (3 topics, 6 MCQs)** — Coriolis & hemisphere spin, cyclone genesis conditions, air pressure vs altitude / cabin pressurisation.
+- [x] **ch09 — Soil (3 topics, 6 MCQs)** — NPK fertiliser labels, erosion types & remedies, pedogenesis (CLORPT).
+- [x] **ch10 — Respiration in Organisms (3 topics, 6 MCQs)** — cellular respiration stages, ATP currency & turnover, lung volumes.
+- [ ] ch11–ch19 (27 topics) — ~2 MCQs each. **60 Science MCQs done so far.**
+
+**Tooling note:** inject scripts use a variadic `V(p,a,*steps)` helper so step strings can't be mis-bracketed (the earlier source of two SyntaxErrors). `ast.parse` the inject script before running.
 
 ### Maths (`maths_class7`, 15 chapters, 45 stretch topics)
 - [ ] mch01–mch15 — MCQ form with numeric option strings (the ladder grades MCQs only).
