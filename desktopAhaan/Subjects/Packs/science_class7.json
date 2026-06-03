@@ -7925,7 +7925,94 @@
           "parentConceptId": "ch02_t01_c04",
           "body": "In Class 7 you learned the stomach makes acid + enzymes. Class 8 introduces a crucial idea: each enzyme works at a SPECIFIC pH. Pepsin (stomach enzyme) works only in strong acid (pH 1.5-2.5). Pancreatic trypsin (small intestine) works only in mild alkali (pH 8). If you put pepsin in your small intestine, it would be inactive — wrong pH. This is why your digestive system is a SEQUENCE of distinct pH environments: mouth (pH 6.8), stomach (pH 2), small intestine (pH 8). Each region tuned for its specific enzymes. Drinking too much milk during indigestion — neutralises stomach acid, briefly disabling pepsin so the burning sensation fades. The enzymes resume working as acidity returns.",
           "prerequisite": "Tackle after you're comfortable with stomach acid + digestive enzymes.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch02_dd01_b01",
+              "prompt": "Pepsin digests protein in the stomach. Why is it inactive if it passes into the small intestine?",
+              "questionType": "mcq",
+              "options": [
+                "The small intestine is mildly alkaline (pH ~8), but pepsin works only in strong acid (pH 1.5–2.5)",
+                "There is no protein left to digest there",
+                "Villi destroy pepsin on contact",
+                "The small intestine contains no enzymes at all"
+              ],
+              "answer": "The small intestine is mildly alkaline (pH ~8), but pepsin works only in strong acid (pH 1.5–2.5)",
+              "solutionSteps": [
+                "Each enzyme has a specific pH optimum.",
+                "Pepsin's optimum is strong acid (pH ~2).",
+                "The small intestine is alkaline (pH ~8), so pepsin is inactive there; trypsin works instead."
+              ],
+              "commonMistakes": [
+                "Assuming one enzyme works everywhere — enzymes are pH-specific."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why does the small intestine use trypsin instead of pepsin?",
+                  "answer": "Trypsin's pH optimum (~8) matches the alkaline small intestine, whereas pepsin needs acid",
+                  "solutionSteps": [
+                    "The duodenum is neutralised to ~pH 8.",
+                    "Trypsin is tuned to that alkalinity; pepsin is not."
+                  ]
+                },
+                {
+                  "prompt": "Your digestive tract runs mouth pH 6.8 → stomach pH 2 → small intestine pH 8. Why the changing pH?",
+                  "answer": "Each region is tuned to the pH optimum of its own enzymes",
+                  "solutionSteps": [
+                    "Different enzymes act in each region.",
+                    "Each region's pH matches its enzymes' optimum."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                16
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch02_dd01_b02",
+              "prompt": "Drinking milk during indigestion briefly eases the burning. In enzyme terms, why?",
+              "questionType": "mcq",
+              "options": [
+                "Milk neutralises stomach acid, raising the pH so pepsin temporarily stops working",
+                "Milk permanently coats and seals the stomach",
+                "Milk adds extra acid to speed digestion",
+                "Milk destroys all stomach enzymes for good"
+              ],
+              "answer": "Milk neutralises stomach acid, raising the pH so pepsin temporarily stops working",
+              "solutionSteps": [
+                "Milk is mildly alkaline and neutralises some stomach acid.",
+                "Higher pH moves pepsin away from its acid optimum, so it slows.",
+                "As acidity returns, pepsin resumes — the effect is temporary."
+              ],
+              "commonMistakes": [
+                "Thinking the relief is permanent — pepsin restarts as acid returns."
+              ],
+              "variations": [
+                {
+                  "prompt": "Would an antacid tablet have a similar short-term effect on pepsin?",
+                  "answer": "Yes — it raises stomach pH, temporarily reducing pepsin activity",
+                  "solutionSteps": [
+                    "Antacids neutralise acid.",
+                    "Pepsin slows away from its acid optimum until acidity returns."
+                  ]
+                },
+                {
+                  "prompt": "After the milk is digested and acid returns, what happens to pepsin?",
+                  "answer": "It becomes active again",
+                  "solutionSteps": [
+                    "pH falls back toward 2.",
+                    "Pepsin is back at its optimum and resumes digesting protein."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                16
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Class 11 introduces the active-site lock-and-key model — why an enzyme has ONE pH optimum."
         },
         {
@@ -7935,7 +8022,94 @@
           "parentConceptId": "ch02_t01_c11",
           "body": "In Class 7 you learned villi are tiny finger-like projections in the small intestine. Class 10 makes the math concrete. Your small intestine is ~6 m long with diameter ~2.5 cm — surface area as a smooth tube would be only ~0.5 m². But the inside has CIRCULAR FOLDS (3× area = ~1.5 m²), each fold covered in VILLI 1 mm tall (10× = ~15 m²), each villus covered in MICROVILLI (20× = ~300 m²). Total absorptive surface: ~300 sq metres — the size of a tennis court folded into your abdomen. Why so much area? Speed: glucose, amino acids, fats need to be absorbed before food moves on. Surface area × diffusion rate = absorption capacity. Same math your skin avoids (which is why you can't absorb food through your hand — way too little surface area).",
           "prerequisite": "Tackle after the basic small-intestine concept.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch02_dd02_b01",
+              "prompt": "The small intestine packs ~300 m² of absorptive area into a ~6 m tube. Which structures multiply the area, from largest to smallest scale?",
+              "questionType": "mcq",
+              "options": [
+                "Circular folds → villi → microvilli",
+                "Microvilli → villi → circular folds",
+                "Only the villi",
+                "The stomach's rugae"
+              ],
+              "answer": "Circular folds → villi → microvilli",
+              "solutionSteps": [
+                "Circular folds roughly triple the smooth-tube area.",
+                "Villi (1 mm) add ~10×.",
+                "Microvilli add ~20× more — together reaching ~300 m²."
+              ],
+              "commonMistakes": [
+                "Forgetting that THREE nested levels (folds, villi, microvilli) stack to give the huge area."
+              ],
+              "variations": [
+                {
+                  "prompt": "Roughly how large is the small intestine's total absorptive surface?",
+                  "answer": "About 300 square metres (a tennis court)",
+                  "solutionSteps": [
+                    "Folds × villi × microvilli multiply a ~0.5 m² tube.",
+                    "The product is ~300 m²."
+                  ]
+                },
+                {
+                  "prompt": "Which structures are smallest and add the final ~20× of area?",
+                  "answer": "Microvilli",
+                  "solutionSteps": [
+                    "Microvilli coat each villus.",
+                    "They add the last and largest multiplication of area."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                16
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch02_dd02_b02",
+              "prompt": "Why does the small intestine need such an enormous absorptive surface?",
+              "questionType": "mcq",
+              "options": [
+                "To absorb nutrients quickly before food moves on — absorption ∝ surface area × diffusion rate",
+                "To store food for several days",
+                "To manufacture stomach acid",
+                "To deliberately slow food down"
+              ],
+              "answer": "To absorb nutrients quickly before food moves on — absorption ∝ surface area × diffusion rate",
+              "solutionSteps": [
+                "Food spends limited time in the small intestine.",
+                "Absorption rate rises with surface area.",
+                "More area = enough capacity to absorb glucose, amino acids and fats in time."
+              ],
+              "commonMistakes": [
+                "Thinking the area is for storage rather than fast absorption."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why can't you absorb nutrients through the skin of your hand?",
+                  "answer": "Skin has far too little surface area for meaningful absorption",
+                  "solutionSteps": [
+                    "Absorption ∝ surface area.",
+                    "Skin's area and barrier make nutrient uptake negligible."
+                  ]
+                },
+                {
+                  "prompt": "If villi were flattened away, what would happen to absorption?",
+                  "answer": "It would fall sharply",
+                  "solutionSteps": [
+                    "Surface area would collapse.",
+                    "Lower area means much less absorption capacity."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                16
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Class 12 connects this to membrane biology — each microvillus is a tiny absorption machine."
         },
         {
@@ -7945,7 +8119,92 @@
           "parentConceptId": "ch02_t01_c04",
           "body": "Class 7 says: stomach makes acid 'when food arrives'. Class 11 reveals the messenger system. When you SEE/SMELL food, the brain signals vagus nerve → stomach starts releasing acid (yes, before any food arrives — that's why your mouth waters). When food TOUCHES the stomach lining, gastrin hormone is released → MORE acid + pepsin. When acid + food enter the duodenum, CCK (cholecystokinin) is released → gallbladder squeezes bile, pancreas releases enzymes. Simultaneously, SECRETIN tells the pancreas to release alkaline bicarbonate to neutralise stomach acid. The digestive system is a chemically-coordinated assembly line driven by hormones, not just nerve signals.",
           "prerequisite": "Tackle after stomach + intestine basics.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch02_dd03_b01",
+              "prompt": "When acidic food enters the duodenum, which hormone triggers the gallbladder to release bile and the pancreas to release digestive enzymes?",
+              "questionType": "mcq",
+              "options": [
+                "CCK (cholecystokinin)",
+                "Gastrin",
+                "Secretin",
+                "Insulin"
+              ],
+              "answer": "CCK (cholecystokinin)",
+              "solutionSteps": [
+                "CCK is released when fatty/acidic chyme reaches the duodenum.",
+                "It signals the gallbladder to contract (bile) and the pancreas to release enzymes."
+              ],
+              "commonMistakes": [
+                "Confusing CCK (bile + enzymes) with secretin (alkaline bicarbonate)."
+              ],
+              "variations": [
+                {
+                  "prompt": "Which hormone tells the pancreas to release alkaline bicarbonate to neutralise stomach acid?",
+                  "answer": "Secretin",
+                  "solutionSteps": [
+                    "Acid in the duodenum triggers secretin.",
+                    "Secretin → pancreatic bicarbonate neutralises the acid."
+                  ]
+                },
+                {
+                  "prompt": "Which hormone, released when food touches the stomach lining, boosts acid + pepsin output?",
+                  "answer": "Gastrin",
+                  "solutionSteps": [
+                    "Food contact triggers gastrin.",
+                    "Gastrin increases acid and pepsin secretion."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                16
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch02_dd03_b02",
+              "prompt": "Your mouth waters and your stomach makes acid at the mere SMELL of food, before any food arrives. What drives this early phase?",
+              "questionType": "mcq",
+              "options": [
+                "The brain signalling the stomach via the vagus nerve",
+                "Gastrin from food touching the stomach",
+                "CCK from the duodenum",
+                "Secretin from the pancreas"
+              ],
+              "answer": "The brain signalling the stomach via the vagus nerve",
+              "solutionSteps": [
+                "Sight/smell of food is sensed by the brain.",
+                "The brain signals down the vagus nerve to start acid release before eating."
+              ],
+              "commonMistakes": [
+                "Assuming acid is only released after food arrives — the nervous (cephalic) phase comes first."
+              ],
+              "variations": [
+                {
+                  "prompt": "Is digestion controlled by nerves, hormones, or both?",
+                  "answer": "Both — nerve signals (vagus) and hormones (gastrin, CCK, secretin) coordinate it",
+                  "solutionSteps": [
+                    "The cephalic phase is nervous.",
+                    "Later phases are hormonal — together they coordinate the assembly line."
+                  ]
+                },
+                {
+                  "prompt": "Acid release before food arrives is triggered by which sense(s)?",
+                  "answer": "Sight and smell of food",
+                  "solutionSteps": [
+                    "These cephalic cues reach the brain.",
+                    "The brain pre-activates the stomach via the vagus nerve."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                16
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "NEET tests every gut hormone, source, target, and effect — this Class 7 chapter is the entry point."
         }
       ],
@@ -11759,7 +12018,92 @@
           "parentConceptId": "ch03_t03_c01",
           "body": "In Class 7 you compared natural fibres (wool, silk) vs synthetic (nylon, polyester). Class 8 explains the chemistry. SYNTHETIC fibres are POLYMERS — long chains made by linking thousands of small molecules called monomers. Nylon was invented at DuPont in 1935 — its monomers are diamine + dicarboxylic acid. Polyester (Indian Reliance produces millions of tonnes) is made from terephthalic acid + ethylene glycol. The chains are spun while molten, drawn into threads, and cooled. Result: a fibre 5× stronger than wool, water-resistant, cheap to make. But — petroleum-derived (non-renewable), microplastic shedding (every wash pollutes water), 200+ year decomposition. Indian textile mills now mix natural + synthetic (poly-cotton) to balance the trade-offs.",
           "prerequisite": "Tackle after natural vs synthetic fibre comparison.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch03_dd01_b01",
+              "prompt": "Nylon and polyester are described as polymers. What does 'polymer' mean?",
+              "questionType": "mcq",
+              "options": [
+                "Long chains made by linking thousands of small monomer molecules",
+                "Single small molecules",
+                "Natural proteins taken from animals",
+                "Pure metals drawn into thin threads"
+              ],
+              "answer": "Long chains made by linking thousands of small monomer molecules",
+              "solutionSteps": [
+                "'Poly' = many, 'mer' = unit.",
+                "A polymer is a long chain of repeating monomer units linked together."
+              ],
+              "commonMistakes": [
+                "Confusing monomer (the small unit) with polymer (the long chain)."
+              ],
+              "variations": [
+                {
+                  "prompt": "What are the small repeating units that build up a polymer called?",
+                  "answer": "Monomers",
+                  "solutionSteps": [
+                    "Monomers are the building blocks.",
+                    "Linked in thousands, they form the polymer chain."
+                  ]
+                },
+                {
+                  "prompt": "Is wool a synthetic polymer?",
+                  "answer": "No — wool is a natural protein fibre, not a synthetic polymer",
+                  "solutionSteps": [
+                    "Synthetic polymers (nylon, polyester) are made in factories from monomers.",
+                    "Wool is a natural animal protein (keratin)."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                30
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch03_dd01_b02",
+              "prompt": "Which is a genuine environmental drawback of synthetic fibres compared with natural ones?",
+              "questionType": "mcq",
+              "options": [
+                "They are petroleum-derived and shed microplastics that pollute water",
+                "They are always weaker than wool",
+                "They cannot be dyed any colour",
+                "They decompose completely within days"
+              ],
+              "answer": "They are petroleum-derived and shed microplastics that pollute water",
+              "solutionSteps": [
+                "Synthetics come from non-renewable petroleum.",
+                "Each wash sheds microplastics; the fibres take 200+ years to decompose."
+              ],
+              "commonMistakes": [
+                "Believing synthetics are weak or biodegradable — they're strong and very slow to decompose."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why do Indian mills blend poly-cotton instead of using pure polyester?",
+                  "answer": "To balance synthetic strength/cheapness against natural comfort and lower pollution",
+                  "solutionSteps": [
+                    "Pure synthetics shed microplastics and feel less breathable.",
+                    "Blending captures benefits of both."
+                  ]
+                },
+                {
+                  "prompt": "Roughly how long can a synthetic fibre take to decompose?",
+                  "answer": "200+ years",
+                  "solutionSteps": [
+                    "Synthetics resist natural breakdown.",
+                    "Decomposition takes centuries, unlike natural fibres."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                30
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Class 9 introduces polymerisation reactions — addition vs condensation polymers."
         },
         {
@@ -11769,7 +12113,93 @@
           "parentConceptId": "ch03_t03_c01",
           "body": "Class 8 shows that synthetic fibres are polymers. Class 9 reveals HOW the polymerisation happens. TWO main reaction types. ADDITION polymerisation: ethylene (C₂H₄) units add to each other in a chain, no byproducts. Polyethylene (plastic bags, water bottles) is made this way. CONDENSATION polymerisation: two different monomers join, releasing a small molecule (usually water) per link. Nylon-6,6 is condensation — adipic acid + hexamethylenediamine releases water. The Indian textile industry's polyester is also condensation polymerisation. WHY this matters: addition polymers can't be easily depolymerised (recycled); condensation polymers CAN be hydrolysed back to monomers. That's why nylon recycling is growing in Mumbai's textile circular economy.",
           "prerequisite": "Tackle after the synthetic polymer Class 8 stretch.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch03_dd02_b01",
+              "prompt": "In which type of polymerisation does each new link release a small molecule such as water?",
+              "questionType": "mcq",
+              "options": [
+                "Condensation polymerisation",
+                "Addition polymerisation",
+                "Combustion",
+                "Neutralisation"
+              ],
+              "answer": "Condensation polymerisation",
+              "solutionSteps": [
+                "Condensation joins two monomers and expels a small molecule (often water) per link.",
+                "Nylon-6,6 (adipic acid + a diamine) is a classic condensation polymer."
+              ],
+              "commonMistakes": [
+                "Mixing up addition (no byproduct) with condensation (releases water)."
+              ],
+              "variations": [
+                {
+                  "prompt": "Polyethylene forms by ethylene units adding with no byproduct. Which polymerisation is that?",
+                  "answer": "Addition polymerisation",
+                  "solutionSteps": [
+                    "No small molecule is released.",
+                    "Units simply add to the chain — addition polymerisation."
+                  ]
+                },
+                {
+                  "prompt": "Does addition polymerisation release water?",
+                  "answer": "No",
+                  "solutionSteps": [
+                    "Only condensation releases a small molecule like water.",
+                    "Addition produces no byproduct."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                30
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch03_dd02_b02",
+              "prompt": "Why is condensation-polymer nylon easier to recycle back to monomers than addition-polymer polyethylene?",
+              "questionType": "mcq",
+              "options": [
+                "Condensation polymers can be hydrolysed back to their monomers; addition polymers can't easily be depolymerised",
+                "Nylon is actually a metal",
+                "Polyethylene dissolves in plain water",
+                "Addition polymers already contain water"
+              ],
+              "answer": "Condensation polymers can be hydrolysed back to their monomers; addition polymers can't easily be depolymerised",
+              "solutionSteps": [
+                "Condensation links can be split by hydrolysis (adding water back).",
+                "That regenerates the monomers, enabling recycling.",
+                "Addition polymers' carbon backbone resists depolymerisation."
+              ],
+              "commonMistakes": [
+                "Assuming all plastics recycle equally — chain chemistry decides recyclability."
+              ],
+              "variations": [
+                {
+                  "prompt": "What chemical process breaks nylon back into its monomers?",
+                  "answer": "Hydrolysis",
+                  "solutionSteps": [
+                    "Water splits the condensation links.",
+                    "This reverses polymerisation to monomers."
+                  ]
+                },
+                {
+                  "prompt": "Which is harder to depolymerise: polyethylene or nylon?",
+                  "answer": "Polyethylene",
+                  "solutionSteps": [
+                    "Its stable carbon backbone resists breakdown.",
+                    "Nylon's links can be hydrolysed."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                30
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Class 11 explores reaction kinetics — how temperature controls polymer chain length, which controls fabric strength."
         },
         {
@@ -11779,7 +12209,92 @@
           "parentConceptId": "ch03_t01_c02",
           "body": "In Class 7 you learned wool comes from sheep, silk from silkworms. Class 11 reveals these aren't just 'animal fibres' — they're SPECIFIC PROTEINS with very different structures. KERATIN (wool, hair, nails) — packed with sulphur bonds that give it strength + crimp. Wool's natural curl comes from disulphide bridges. Perms in salons CHEMICALLY break and re-form these bonds. FIBROIN (silk) — a much simpler protein, mostly glycine + alanine, with VERY LONG straight chains. The straightness is why silk reflects light beautifully (regular surface = mirror-like reflection). Why silk feels cool and wool feels warm: keratin's spiral structure traps air (insulator); fibroin's straight chains transfer heat away from skin. Two animals, two protein architectures, two completely different fabric properties.",
           "prerequisite": "Tackle after wool and silk basics.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch03_dd03_b01",
+              "prompt": "Wool feels warm while silk feels cool. Which protein-structure difference best explains this?",
+              "questionType": "mcq",
+              "options": [
+                "Keratin's spiral structure traps insulating air; fibroin's straight chains conduct heat away from skin",
+                "Silk simply contains more sulphur",
+                "Wool is a metal and silk is a plastic",
+                "Fibroin traps far more air than keratin"
+              ],
+              "answer": "Keratin's spiral structure traps insulating air; fibroin's straight chains conduct heat away from skin",
+              "solutionSteps": [
+                "Wool is keratin — coiled, trapping air (an insulator) → feels warm.",
+                "Silk is fibroin — long straight chains that conduct heat from skin → feels cool."
+              ],
+              "commonMistakes": [
+                "Thinking the warmth/coolness is about the animal, not the protein architecture."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why does silk reflect light with a beautiful sheen?",
+                  "answer": "Fibroin's long, straight, regular chains give a smooth, mirror-like surface",
+                  "solutionSteps": [
+                    "Regular straight chains = smooth surface.",
+                    "Smooth surfaces reflect light evenly → sheen."
+                  ]
+                },
+                {
+                  "prompt": "Which protein makes up wool, hair and nails?",
+                  "answer": "Keratin",
+                  "solutionSteps": [
+                    "Keratin is sulphur-rich and coiled.",
+                    "It forms wool, hair and nails."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                30
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch03_dd03_b02",
+              "prompt": "A salon 'perm' reshapes hair by breaking and re-forming which bonds in keratin?",
+              "questionType": "mcq",
+              "options": [
+                "Disulphide (sulphur) bridges",
+                "Hydrogen bonds in water",
+                "Ionic bonds from salt",
+                "Metallic bonds"
+              ],
+              "answer": "Disulphide (sulphur) bridges",
+              "solutionSteps": [
+                "Keratin's curl comes from disulphide (S–S) bridges.",
+                "A perm chemically breaks then re-forms these bridges in a new shape."
+              ],
+              "commonMistakes": [
+                "Thinking hair shape is set by water/hydrogen bonds permanently — perms target disulphide bridges."
+              ],
+              "variations": [
+                {
+                  "prompt": "Where does wool's natural crimp (curl) come from?",
+                  "answer": "Disulphide bridges in keratin",
+                  "solutionSteps": [
+                    "S–S bridges lock the coiled shape.",
+                    "They produce wool's natural crimp."
+                  ]
+                },
+                {
+                  "prompt": "Why is keratin stronger and curlier than fibroin?",
+                  "answer": "Keratin is rich in sulphur bonds that add strength and crimp",
+                  "solutionSteps": [
+                    "Disulphide bridges cross-link keratin.",
+                    "Fibroin lacks these, so it's straight and smooth."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                30
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "NEET tests protein quaternary structure — keratin and fibroin are textbook examples of structural proteins."
         }
       ],
@@ -15435,7 +15950,94 @@
           "parentConceptId": "ch04_t01_c02",
           "body": "In Class 7 you saw thermometers use thermal expansion of mercury. Class 8 quantifies the same effect for solids. Every solid has a LINEAR EXPANSION COEFFICIENT — how much its length grows per °C of warming. Steel: 12 × 10⁻⁶ per °C. So a 100-metre steel railway track at 20°C, on a 45°C summer day, grows by 100 × 12 × 10⁻⁶ × 25 = 0.030 m = 3 cm. Without expansion gaps, the track would BUCKLE — bend sideways in deadly waves. Indian Railways inserts ~20 mm gaps every 30 m for exactly this reason. The Howrah Bridge in Kolkata sits on giant ROLLERS that let it slide a few cm in summer (and back in winter). Engineers don't fight expansion; they design for it.",
           "prerequisite": "Tackle after thermometer basics.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch04_dd01_b01",
+              "prompt": "A 100 m steel track (linear expansion coefficient 12×10⁻⁶ per °C) warms from 20°C to 45°C. About how much does it lengthen?",
+              "questionType": "mcq",
+              "options": [
+                "About 3 cm",
+                "About 3 m",
+                "About 3 mm",
+                "It does not change"
+              ],
+              "answer": "About 3 cm",
+              "solutionSteps": [
+                "ΔL = L × α × ΔT.",
+                "= 100 m × 12×10⁻⁶ /°C × 25°C.",
+                "= 0.030 m = 3 cm."
+              ],
+              "commonMistakes": [
+                "Slipping a factor of 10/1000 — the answer is 3 cm, not 3 mm or 3 m."
+              ],
+              "variations": [
+                {
+                  "prompt": "Same track, but ΔT is only 10°C. How much does it expand?",
+                  "answer": "About 1.2 cm",
+                  "solutionSteps": [
+                    "ΔL = 100 × 12e-6 × 10 = 0.012 m.",
+                    "= 1.2 cm."
+                  ]
+                },
+                {
+                  "prompt": "If two tracks (50 m and 100 m) warm by the same ΔT, which expands more?",
+                  "answer": "The 100 m track",
+                  "solutionSteps": [
+                    "ΔL is proportional to length L.",
+                    "Twice the length → twice the expansion."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                50
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch04_dd01_b02",
+              "prompt": "Why does Indian Railways leave ~20 mm gaps between rail sections, and put the Howrah Bridge on rollers?",
+              "questionType": "mcq",
+              "options": [
+                "To give steel room to expand in summer heat without buckling",
+                "To save steel and reduce cost",
+                "To let rainwater drain off the track",
+                "To reduce the noise of passing trains"
+              ],
+              "answer": "To give steel room to expand in summer heat without buckling",
+              "solutionSteps": [
+                "Steel expands when heated.",
+                "Without room, a constrained track buckles sideways.",
+                "Gaps and rollers let it expand and contract safely."
+              ],
+              "commonMistakes": [
+                "Thinking the gaps are a flaw — they're deliberate thermal-expansion allowance."
+              ],
+              "variations": [
+                {
+                  "prompt": "What happens to a long steel track in summer if it has no expansion gaps?",
+                  "answer": "It can buckle (bend sideways)",
+                  "solutionSteps": [
+                    "Heated steel must expand somewhere.",
+                    "Constrained, it buckles — a derailment risk."
+                  ]
+                },
+                {
+                  "prompt": "Engineers 'design for' thermal expansion rather than fight it. Give one example.",
+                  "answer": "Rollers under a bridge (or gaps between rails) that allow sliding",
+                  "solutionSteps": [
+                    "Rollers let the bridge slide a few cm.",
+                    "This accommodates summer expansion safely."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                50
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Class 11 derives ΔL = αLΔT and uses it for bimetallic strips in thermostats."
         },
         {
@@ -15445,7 +16047,94 @@
           "parentConceptId": "ch04_t01_c07",
           "body": "In Class 7 you saw water has special properties. Class 10 names the property: SPECIFIC HEAT CAPACITY — how much energy (joules) it takes to raise 1 kg by 1°C. Water's value: 4186 J/kg/°C. Sand's: ~830. So water heats up 5× SLOWER than sand for the same energy input. This is why Mumbai (surrounded by Arabian Sea) has milder summers than Delhi (inland) — even though both at same latitude. The sea acts as a giant thermal buffer. Same physics in reverse during winter: the sea stays warm longer, so coastal Goa is milder than inland Madhya Pradesh. Indian coastal cities thank water's specific heat for ~10°C less extreme weather than their inland counterparts.",
           "prerequisite": "Tackle after heat vs temperature basics.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch04_dd02_b01",
+              "prompt": "Water's specific heat (4186 J/kg/°C) is about 5× sand's (~830). For the same energy input, this means…",
+              "questionType": "mcq",
+              "options": [
+                "Water heats up about 5× slower than sand",
+                "Water heats up about 5× faster than sand",
+                "Water and sand heat at the same rate",
+                "Sand cannot be heated at all"
+              ],
+              "answer": "Water heats up about 5× slower than sand",
+              "solutionSteps": [
+                "Higher specific heat = more energy needed per °C.",
+                "Water needs ~5× the energy of sand for the same temperature rise.",
+                "So for equal energy, water's temperature rises ~5× less."
+              ],
+              "commonMistakes": [
+                "Reversing the logic — high specific heat means SLOWER heating, not faster."
+              ],
+              "variations": [
+                {
+                  "prompt": "Which cools down more slowly at night, the sea or the sandy beach?",
+                  "answer": "The sea",
+                  "solutionSteps": [
+                    "Water's high specific heat stores more energy.",
+                    "It releases heat slowly, so it cools slowly."
+                  ]
+                },
+                {
+                  "prompt": "Does a high specific heat make a substance a good thermal buffer?",
+                  "answer": "Yes",
+                  "solutionSteps": [
+                    "It resists temperature change.",
+                    "So it buffers surroundings against swings."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                50
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch04_dd02_b02",
+              "prompt": "Why does coastal Mumbai have milder summers than inland Delhi at a similar latitude?",
+              "questionType": "mcq",
+              "options": [
+                "The sea's high specific heat makes it a thermal buffer that warms and cools slowly",
+                "Mumbai is at a much higher altitude",
+                "Delhi receives no sunlight in summer",
+                "The sea reflects nearly all incoming heat"
+              ],
+              "answer": "The sea's high specific heat makes it a thermal buffer that warms and cools slowly",
+              "solutionSteps": [
+                "The Arabian Sea absorbs huge energy with little temperature rise.",
+                "It moderates nearby air temperature year-round.",
+                "Inland Delhi has no such buffer, so it swings more."
+              ],
+              "commonMistakes": [
+                "Attributing the difference to latitude/altitude rather than water's specific heat."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why does coastal Goa stay milder than inland Madhya Pradesh in winter?",
+                  "answer": "The sea stays warm longer, releasing heat slowly to the coast",
+                  "solutionSteps": [
+                    "Water's high specific heat stores summer heat.",
+                    "It releases it slowly, keeping the coast mild in winter."
+                  ]
+                },
+                {
+                  "prompt": "Coastal cities often have ~10°C less extreme weather than inland cities. The main cause?",
+                  "answer": "The high specific heat of the nearby sea",
+                  "solutionSteps": [
+                    "The sea buffers temperature.",
+                    "This narrows the seasonal/daily extremes."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                50
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "JEE / Class 11 introduces calorimetry — measuring specific heat experimentally."
         },
         {
@@ -15455,7 +16144,94 @@
           "parentConceptId": "ch04_t01_c01",
           "body": "Class 7 said heat is the energy of warm things. Class 11 reveals what HEAT actually is at atomic scale: heat is the average KINETIC ENERGY (motion energy) of the atoms or molecules. A hot gas = molecules bouncing fast (~500 m/s at room temperature for air). Cold gas = molecules bouncing slowly. Temperature is proportional to this average speed squared: T ∝ v². When you touch a hot stove, fast-moving stove atoms collide with your skin's atoms, transferring kinetic energy. There's no 'heat substance' — just motion. Indian physicist S.N. Bose's 1924 work was about gases of indistinguishable particles — that's how he and Einstein found the Bose-Einstein statistics. The whole field of statistical mechanics traces back to this insight: heat = motion.",
           "prerequisite": "Tackle after heat vs temperature.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch04_dd03_b01",
+              "prompt": "At the atomic scale, what IS the heat of a gas?",
+              "questionType": "mcq",
+              "options": [
+                "The average kinetic energy (motion) of its molecules",
+                "A fluid 'heat substance' that flows between objects",
+                "The colour the gas glows",
+                "The total mass of the gas"
+              ],
+              "answer": "The average kinetic energy (motion) of its molecules",
+              "solutionSteps": [
+                "Kinetic theory: gas molecules are in constant motion.",
+                "Heat is the average kinetic energy of that motion.",
+                "There is no separate 'heat fluid' — just movement."
+              ],
+              "commonMistakes": [
+                "Believing in an old 'caloric'/heat-substance idea — heat is molecular motion."
+              ],
+              "variations": [
+                {
+                  "prompt": "Temperature is proportional to molecular speed in what way?",
+                  "answer": "Proportional to the average speed squared (T ∝ v²)",
+                  "solutionSteps": [
+                    "Kinetic energy ∝ v².",
+                    "Temperature tracks average kinetic energy, so T ∝ v²."
+                  ]
+                },
+                {
+                  "prompt": "A hot gas vs a cold gas — what's different about the molecules?",
+                  "answer": "Hot-gas molecules move faster on average",
+                  "solutionSteps": [
+                    "Heat = motion energy.",
+                    "More heat means faster average molecular speed."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                50
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch04_dd03_b02",
+              "prompt": "Touching a hot stove burns you because…",
+              "questionType": "mcq",
+              "options": [
+                "Fast-moving stove atoms collide with your skin's atoms, transferring kinetic energy",
+                "A 'heat liquid' flows from the stove into your hand",
+                "The stove adds extra mass to your skin",
+                "Cold atoms move out of your hand into the stove"
+              ],
+              "answer": "Fast-moving stove atoms collide with your skin's atoms, transferring kinetic energy",
+              "solutionSteps": [
+                "Stove atoms vibrate rapidly (high kinetic energy).",
+                "On contact they collide with slower skin atoms.",
+                "Energy transfers by collisions — that's conduction of heat."
+              ],
+              "commonMistakes": [
+                "Imagining heat as a substance flowing rather than energy transferred by collisions."
+              ],
+              "variations": [
+                {
+                  "prompt": "Heat transfer by direct contact (atom-to-atom collisions) is called…",
+                  "answer": "Conduction",
+                  "solutionSteps": [
+                    "Touching = direct contact.",
+                    "Energy passes by collisions — conduction."
+                  ]
+                },
+                {
+                  "prompt": "Is there a material 'heat substance' that enters your hand from the stove?",
+                  "answer": "No — only kinetic energy is transferred",
+                  "solutionSteps": [
+                    "Heat is molecular motion, not matter.",
+                    "Only energy moves, by collisions."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                50
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Class 12 covers Maxwell-Boltzmann distribution — the curve of molecular speeds at a given temperature."
         }
       ],

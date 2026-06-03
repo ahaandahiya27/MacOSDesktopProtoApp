@@ -35,7 +35,10 @@ canonically: `json.dumps(d, ensure_ascii=False, indent=2) + "\n"`.
   - `ch01_dd02` (light vs dark reactions, class_9): `_b01`, `_b02`.
   - `ch01_dd03` (C3/C4/CAM, class_11): `_b01`, `_b02`.
   - All 6: mcq, answer∈options, ≥2 variations, difficulty 4–5, pageRefs [4], needsHumanReview false. Content lints + roundtrip clean.
-- [ ] ch02–ch19 (54 topics) — ~2–3 MCQs each.
+- [x] **ch02 — Nutrition in Animals (3 topics, 6 MCQs)** — enzyme pH optima, villi surface-area math, hormonal control (gastrin/CCK/secretin).
+- [x] **ch03 — Fibre to Fabric (3 topics, 6 MCQs)** — synthetic polymers, addition vs condensation polymerisation, keratin vs fibroin.
+- [x] **ch04 — Heat (3 topics, 6 MCQs)** — thermal expansion (worked ΔL=LαΔT), specific heat / coastal climate, kinetic theory of heat.
+- [ ] ch05–ch19 (45 topics) — ~2 MCQs each. **24 Science MCQs done so far.**
 
 ### Maths (`maths_class7`, 15 chapters, 45 stretch topics)
 - [ ] mch01–mch15 — MCQ form with numeric option strings (the ladder grades MCQs only).
