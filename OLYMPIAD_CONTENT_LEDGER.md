@@ -65,7 +65,8 @@ canonically: `json.dumps(d, ensure_ascii=False, indent=2) + "\n"`.
 
 ### Sanskrit (`sanskrit_class7`, sch01–sch15, 45 stretch topics; legacy ch01 exempt)
 - [x] **sch01–sch05 (15 topics, 30 MCQs)** — Vande Mataram history / समास / स्तुति; subhāṣita & Bhartrihari / अनुष्टुप् metre / दृष्टान्त & alankāra; नमः+dative कारक / twelve Ādityas / yoga & योगसूत्र; तसिल् suffix / Panchatantra-नीतिकथा / उपसर्ग prefixes; धर्म & puruṣārthas / वति suffix / आयुर्वेद.
-- [ ] sch06–sch15 (30 topics) — Devanagari allowed (UTF-8). **30 Sanskrit MCQs done so far.**
+- [x] **sch06–sch10 (15 topics, 30 MCQs)** — अक्षर/syllable / विद्या verses / -विन् suffix; Īśopaniṣad & वेदान्त / future tense लृट् / Advaita & महावाक्य; वाक्-सूक्ति / शस् suffix / matup क्रियावान्; Gītā cycle verse / optative विधिलिङ् / Sanskrit science-coinage; tenth-man parable / क्त्वा gerund / imperfect लङ्.
+- [ ] sch11–sch15 (15 topics) — Devanagari allowed. **60 Sanskrit MCQs done so far.**
 
 ### Social Science (`socialscience_class7`, 20 chapters, 120 stretch topics)
 - [ ] ssch01–ssch20 — **add the `bonusQuestions` array** to each `deepDive[]` entry

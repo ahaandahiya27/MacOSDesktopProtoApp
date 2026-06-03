@@ -20275,7 +20275,92 @@
           "parentConceptId": "sch06_t01_c01",
           "body": "श्लोकान्त्याक्षरी works by a simple rule: the next verse must begin with the LAST अक्षर (syllable) of the one before. That makes the अक्षर — not the letter — the real unit of spoken Sanskrit. An अक्षर is one vowel together with any consonants that lean on it: न-मः is two syllables, but स्व-स्ति shows how a cluster (स्व) still forms a single beat around its vowel. This is why Sanskrit is written and counted by syllable, and why a 'conjunct' consonant (संयुक्ताक्षर) like क्ष or ज्ञ is one written sign. The whole game of antyākṣarī trains your ear to hear where one syllable ends and the next begins — exactly the skill prosody and recitation depend on. Once you think in अक्षर rather than separate letters, splitting words for sandhi, counting metres, and reciting cleanly all become far easier, because you are hearing Sanskrit the way it is actually built.",
           "prerequisite": "Tackle this once you can find the last syllable of a śloka to start the next.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch06_dd01_b01",
+              "prompt": "In Sanskrit, the true unit of spoken sound (used to count metre and play antyākṣarī) is the...",
+              "questionType": "mcq",
+              "options": [
+                "अक्षर (a syllable: one vowel with any consonants leaning on it)",
+                "Individual written letter",
+                "Whole word",
+                "Whole sentence"
+              ],
+              "answer": "अक्षर (a syllable: one vowel with any consonants leaning on it)",
+              "solutionSteps": [
+                "An अक्षर is one vowel plus the consonants attached to it.",
+                "Sanskrit is counted and recited by अक्षर, not by letter."
+              ],
+              "commonMistakes": [
+                "Counting separate letters instead of syllables (अक्षर)."
+              ],
+              "variations": [
+                {
+                  "prompt": "How many अक्षर are in न-मः?",
+                  "answer": "Two",
+                  "solutionSteps": [
+                    "Each vowel forms one syllable.",
+                    "न and मः = two अक्षर."
+                  ]
+                },
+                {
+                  "prompt": "Why does thinking in अक्षर help with sandhi and metre?",
+                  "answer": "You hear where each syllable begins and ends, the way Sanskrit is built",
+                  "solutionSteps": [
+                    "Syllable-sense aids splitting and counting.",
+                    "So recitation flows."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                50
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch06_dd01_b02",
+              "prompt": "A conjunct consonant (संयुक्ताक्षर) such as क्ष or ज्ञ counts as how many written signs?",
+              "questionType": "mcq",
+              "options": [
+                "One",
+                "Two",
+                "Three",
+                "None"
+              ],
+              "answer": "One",
+              "solutionSteps": [
+                "A cluster forms a single conjunct sign around its vowel.",
+                "So क्ष or ज्ञ is one written अक्षर."
+              ],
+              "commonMistakes": [
+                "Counting each consonant of a cluster as a separate sign."
+              ],
+              "variations": [
+                {
+                  "prompt": "स्व-स्ति has how many अक्षर?",
+                  "answer": "Two",
+                  "solutionSteps": [
+                    "Each cluster groups around one vowel.",
+                    "स्व and स्ति = two syllables."
+                  ]
+                },
+                {
+                  "prompt": "The game श्लोकान्त्याक्षरी requires the next verse to begin with the previous one's...",
+                  "answer": "Last अक्षर (syllable)",
+                  "solutionSteps": [
+                    "'Antya' = last.",
+                    "Hence the syllable focus."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                50
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 9 you use the अक्षर as the counting unit when you study प्रोसody (छन्दस्) and sandhi."
         },
         {
@@ -20285,7 +20370,92 @@
           "parentConceptId": "sch06_t01_c02",
           "body": "विद्याहीना न शोभन्ते — 'those without knowledge do not shine' — belongs to a whole family of Sanskrit verses that exalt विद्या (learning) above every other possession. The full subhāṣita compares the beautiful-but-ignorant to किंशुक flowers: gorgeous to look at, yet scentless. Bhartṛhari's नीतिशतक returns to this again and again — विद्या is the wealth thieves cannot steal, that grows when spent, and that earns respect in every land (विद्या नाम नरस्य रूपमधिकम्). The same idea drives the famous definition सा विद्या या विमुक्तये, 'that is true knowledge which liberates'. These verses are not just moral cheerleading; they encode a civilisation's value-system, where the scholar outranked the rich. Reading them alongside your antyākṣarī shlokas shows you that the verses you play with are drawn from a deep, coherent tradition of thought about what makes a human life worthwhile — and why your own schooling sits at its centre.",
           "prerequisite": "Tackle this once you can recite विद्याहीना न शोभन्ते and grasp its meaning.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch06_dd02_b01",
+              "prompt": "The subhāṣita 'विद्याहीना न शोभन्ते' compares the beautiful-but-ignorant to which scentless flower?",
+              "questionType": "mcq",
+              "options": [
+                "किंशुक",
+                "कमल",
+                "मल्लिका",
+                "चम्पक"
+              ],
+              "answer": "किंशुक",
+              "solutionSteps": [
+                "The किंशुक (palāśa) flower is gorgeous yet scentless.",
+                "So beauty without विद्या is like किंशुक."
+              ],
+              "commonMistakes": [
+                "Guessing a fragrant flower; the point is the scentless किंशुक."
+              ],
+              "variations": [
+                {
+                  "prompt": "What is the verse's lesson about विद्या?",
+                  "answer": "Learning, not mere looks, makes a person 'shine'",
+                  "solutionSteps": [
+                    "Beauty without knowledge is empty.",
+                    "विद्या gives true worth."
+                  ]
+                },
+                {
+                  "prompt": "Bhartrihari calls विद्या the wealth that...",
+                  "answer": "Thieves cannot steal (and grows when spent)",
+                  "solutionSteps": [
+                    "An imperishable treasure.",
+                    "Unlike material wealth."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                50
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch06_dd02_b02",
+              "prompt": "The famous definition 'सा विद्या या विमुक्तये' says true knowledge is that which...",
+              "questionType": "mcq",
+              "options": [
+                "Liberates",
+                "Earns money",
+                "Wins fame",
+                "Fills idle time"
+              ],
+              "answer": "Liberates",
+              "solutionSteps": [
+                "विमुक्तये = 'for liberation'.",
+                "True विद्या is what frees you."
+              ],
+              "commonMistakes": [
+                "Equating विद्या only with worldly gain."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why did the scholar outrank the rich in this value-system?",
+                  "answer": "विद्या was prized as the highest, lasting wealth",
+                  "solutionSteps": [
+                    "Knowledge over riches.",
+                    "Earning respect everywhere."
+                  ]
+                },
+                {
+                  "prompt": "'विद्या नाम नरस्य रूपम् अधिकम्' praises learning as a person's...",
+                  "answer": "Greater beauty/adornment",
+                  "solutionSteps": [
+                    "विद्या is the higher रूप.",
+                    "Beyond physical looks."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                50
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In later classes you read more of Bhartṛhari's नीतिशतक on the supremacy of विद्या (knowledge)."
         },
         {
@@ -20295,7 +20465,92 @@
           "parentConceptId": "sch06_t02_c04",
           "body": "यशस्विनी means 'she who is full of fame', from यशस् (fame) + the possessive suffix -विन् (with its feminine -विनी). This -विन् belongs to the same possessive family as -मत्/-वत्: all of them turn a quality-noun into an adjective meaning 'possessing that quality'. So तेजस् (radiance) gives तेजस्विन् (radiant, full of energy), and मेधा (intellect) gives मेधाविन् (intelligent). Sanskrit also loves to PERSONIFY abstract qualities as goddesses — लक्ष्मीः is not just 'wealth' but Wealth herself, who, the verse warns, behaves very differently in wicked hands (खलः) than in good ones. Notice how grammar and imagery cooperate: the feminine -विनी ending and the goddess-personification together let a poet treat fame, fortune and learning as living women who choose whom to favour. Spotting the -विन्/-मत् suffix lets you unlock dozens of 'rich-in-X' words, and seeing the personification lets you read the poetry behind them.",
           "prerequisite": "Tackle this once you can read यशस्विनी as 'full of fame'.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch06_dd03_b01",
+              "prompt": "यशस्विनी ('she full of fame') is यशस् (fame) + which possessive suffix?",
+              "questionType": "mcq",
+              "options": [
+                "-विन् (feminine -विनी)",
+                "तसिल्",
+                "क्त्वा",
+                "लृट्"
+              ],
+              "answer": "-विन् (feminine -विनी)",
+              "solutionSteps": [
+                "-विन् means 'rich in / possessing'.",
+                "यशस् + -विन् + feminine = यशस्विनी."
+              ],
+              "commonMistakes": [
+                "Confusing -विन् with the adverb-forming तसिल् (-तः)."
+              ],
+              "variations": [
+                {
+                  "prompt": "तेजस् (radiance) + -विन् gives which word?",
+                  "answer": "तेजस्विन् (radiant, full of energy)",
+                  "solutionSteps": [
+                    "Possessing तेजस्.",
+                    "Hence radiant."
+                  ]
+                },
+                {
+                  "prompt": "-विन् belongs to the same family as which other possessive suffix?",
+                  "answer": "-मत्/-वत् (matup)",
+                  "solutionSteps": [
+                    "Both mean 'possessing'.",
+                    "A 'rich-in-X' family."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                50
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch06_dd03_b02",
+              "prompt": "मेधाविन् (from मेधा, intellect) means...",
+              "questionType": "mcq",
+              "options": [
+                "Intelligent (possessing intellect)",
+                "From intellect",
+                "Like intellect",
+                "Without intellect"
+              ],
+              "answer": "Intelligent (possessing intellect)",
+              "solutionSteps": [
+                "-विन् = 'possessing'.",
+                "मेधा + -विन् = one who has intellect, i.e. intelligent."
+              ],
+              "commonMistakes": [
+                "Reading -विन् as 'from' or 'like'."
+              ],
+              "variations": [
+                {
+                  "prompt": "Sanskrit often personifies abstract qualities as...",
+                  "answer": "Goddesses (e.g. लक्ष्मी as Wealth herself)",
+                  "solutionSteps": [
+                    "Qualities become living women.",
+                    "Who favour whom they choose."
+                  ]
+                },
+                {
+                  "prompt": "The feminine of the -विन् suffix appears as...",
+                  "answer": "-विनी (e.g. यशस्विनी)",
+                  "solutionSteps": [
+                    "Feminine ending.",
+                    "As in यशस्विनी."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                50
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In later classes you study the possessive suffixes (मतुप्, विनिप्) and the poetic personification of abstract nouns."
         }
       ],
@@ -21513,7 +21768,92 @@
           "parentConceptId": "sch07_t01_c01",
           "body": "ईशावास्यमिदं सर्वम् is the opening line of the ईशोपनिषद् (Īśopaniṣad), one of the ten principal Upaniṣads and part of the शुक्लयजुर्वेद. The Upaniṣads are the philosophical summit of the Vedas — the वेदान्त, 'the end of the Veda' — where the focus turns from ritual to the nature of reality and the self. This short text of just 18 verses delivers one of India's most quoted ethical teachings in its very next words: तेन त्यक्तेन भुञ्जीथाः, 'enjoy through renunciation' — take what you need, claim nothing as ultimately yours, since the Lord pervades all. Gandhi said that if every other scripture were lost but this one verse survived, Hinduism would live on. Meeting ईशावास्यम् in Class 7 means you have already touched the headwaters of Indian philosophy; the words you recite are studied by scholars and saints alike as a complete worldview compressed into a single line.",
           "prerequisite": "Tackle this once you understand ईशावास्यमिदं सर्वम् as 'all this is pervaded by the Lord'.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch07_dd01_b01",
+              "prompt": "'ईशावास्यमिदं सर्वम्' is the opening line of which text?",
+              "questionType": "mcq",
+              "options": [
+                "The ईशोपनिषद् (Isopanishad)",
+                "The Ramayana",
+                "The Panchatantra",
+                "The Yogasutra"
+              ],
+              "answer": "The ईशोपनिषद् (Isopanishad)",
+              "solutionSteps": [
+                "It opens the Īśopaniṣad, one of the ten principal Upaniṣads.",
+                "Part of the शुक्लयजुर्वेद."
+              ],
+              "commonMistakes": [
+                "Mistaking an Upaniṣadic verse for an epic line."
+              ],
+              "variations": [
+                {
+                  "prompt": "The Upaniṣads are the philosophical summit of the Vedas, called...",
+                  "answer": "वेदान्त ('the end of the Veda')",
+                  "solutionSteps": [
+                    "Veda + anta = end.",
+                    "The Upaniṣads = वेदान्त."
+                  ]
+                },
+                {
+                  "prompt": "'तेन त्यक्तेन भुञ्जीथाः' from this text teaches...",
+                  "answer": "Enjoy through renunciation (claim nothing as ultimately yours)",
+                  "solutionSteps": [
+                    "Take what you need.",
+                    "Owning nothing absolutely."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                58
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch07_dd01_b02",
+              "prompt": "The Upaniṣads are known as वेदान्त, which means...",
+              "questionType": "mcq",
+              "options": [
+                "'The end of the Veda'",
+                "'The start of the Veda'",
+                "'The song of the Veda'",
+                "'The grammar of the Veda'"
+              ],
+              "answer": "'The end of the Veda'",
+              "solutionSteps": [
+                "Veda + anta = 'end of the Veda'.",
+                "They mark the philosophical culmination of the Vedas."
+              ],
+              "commonMistakes": [
+                "Reading वेदान्त as 'beginning' rather than 'end/culmination'."
+              ],
+              "variations": [
+                {
+                  "prompt": "How many verses long is the short Īśopaniṣad?",
+                  "answer": "Just 18",
+                  "solutionSteps": [
+                    "A very compact text.",
+                    "Yet hugely influential."
+                  ]
+                },
+                {
+                  "prompt": "Gandhi said which text could carry Hinduism alone?",
+                  "answer": "The Īśopaniṣad (its opening verse)",
+                  "solutionSteps": [
+                    "He prized it highly.",
+                    "A complete worldview in a line."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                58
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In senior classes you study the principal Upaniṣads as the वेदान्त, the philosophical core of the Vedas."
         },
         {
@@ -21523,7 +21863,92 @@
           "parentConceptId": "sch07_t02_c02",
           "body": "दास्यन्ति means 'they SHALL give', and that future meaning lives in a single inserted piece: the marker -स्य- (technically the लृट् लकार, simple future). Take the root दा ('give'); add -स्य- and the personal endings, and you get दास्यति (he will give), दास्यतः (those two will give), दास्यन्ति (they will give). The same recipe works across roots: from पठ् you get पठिष्यति (he will read), from गम् → गमिष्यति (he will go) — the tell-tale -ष्य/-स्य announcing 'future' every time. This contrasts neatly with the present (लट्, पठति 'he reads') and the past you meet elsewhere. Sanskrit thus marks WHEN an action happens by changing the verb's middle, not by adding a separate word like English 'will'. Once you can hear the -स्य- inside दास्यन्ति, you can both recognise and form the future of almost any verb — a huge step up from memorising whole conjugation tables.",
           "prerequisite": "Tackle this once you can read दास्यन्ति as the future 'they shall give'.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch07_dd02_b01",
+              "prompt": "दास्यन्ति ('they will give') shows the future tense through which inserted marker?",
+              "questionType": "mcq",
+              "options": [
+                "-स्य- (the लृट् future)",
+                "The अ- augment",
+                "-त्वा",
+                "-ता"
+              ],
+              "answer": "-स्य- (the लृट् future)",
+              "solutionSteps": [
+                "The लृट् (simple future) inserts -स्य-/-ष्य- before the endings.",
+                "दा + स्य + ... = दास्यन्ति."
+              ],
+              "commonMistakes": [
+                "Confusing the future -स्य- with the past अ- augment."
+              ],
+              "variations": [
+                {
+                  "prompt": "From पठ्, 'he will read' is...",
+                  "answer": "पठिष्यति",
+                  "solutionSteps": [
+                    "-इष्य- future marker.",
+                    "पठ् + इष्य + ति."
+                  ]
+                },
+                {
+                  "prompt": "How does Sanskrit mark WHEN an action happens, unlike English 'will'?",
+                  "answer": "By changing the verb's middle, not adding a separate word",
+                  "solutionSteps": [
+                    "Tense lives inside the verb.",
+                    "E.g. the -स्य- infix."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                58
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch07_dd02_b02",
+              "prompt": "From the root गम् ('go'), the future 'he will go' is...",
+              "questionType": "mcq",
+              "options": [
+                "गमिष्यति",
+                "गच्छति",
+                "अगच्छत्",
+                "गत्वा"
+              ],
+              "answer": "गमिष्यति",
+              "solutionSteps": [
+                "Future inserts -इष्य-: गम् + इष्य + ति.",
+                "गमिष्यति = 'he will go'."
+              ],
+              "commonMistakes": [
+                "Picking the present (गच्छति) or past (अगच्छत्)."
+              ],
+              "variations": [
+                {
+                  "prompt": "गच्छति is which tense?",
+                  "answer": "Present (लट्)",
+                  "solutionSteps": [
+                    "No future/past marker.",
+                    "Plain present."
+                  ]
+                },
+                {
+                  "prompt": "The tell-tale sound announcing the future is...",
+                  "answer": "-ष्य/-स्य",
+                  "solutionSteps": [
+                    "Inserted before the ending.",
+                    "Marks the future every time."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                58
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 8 you learn the लृट् (future) of common roots and contrast it with the present and imperfect tenses."
         },
         {
@@ -21533,7 +21958,92 @@
           "parentConceptId": "sch07_t01_c02",
           "body": "Saying God is सर्वशक्तिमान् (all-powerful) and pervades everything points straight at the boldest idea in Indian philosophy: अद्वैत (non-dualism), most famously expounded by आदि शङ्कराचार्य around 700 CE. Advaita holds that the ultimate reality, ब्रह्मन्, is one without a second, and that the individual self (आत्मन्) is not separate from it — the great Upaniṣadic sentences (महावाक्य) declare अहं ब्रह्मास्मि ('I am Brahman') and तत्त्वमसि ('That thou art'). Because ब्रह्मन् is beyond all description, the seers point to it by negation — नेति नेति, 'not this, not this' — peeling away everything finite until only the infinite remains. The chapter's gentle phrase 'God pervades all' is the doorway to this entire system, elaborated in Śaṅkara's commentaries (भाष्य) on the Upaniṣads, the Gītā and the Brahmasūtras. To grasp सर्वशक्तिमान् fully is to begin asking the question वेदान्त exists to answer: what is real, and who am I?",
           "prerequisite": "Tackle this once you understand the chapter's idea that one all-powerful Lord pervades everything.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch07_dd03_b01",
+              "prompt": "Saying God is सर्वशक्तिमान् and pervades everything points to which philosophy, famously expounded by Adi Shankara?",
+              "questionType": "mcq",
+              "options": [
+                "अद्वैत (non-dualism)",
+                "न्याय",
+                "वैशेषिक",
+                "सांख्य"
+              ],
+              "answer": "अद्वैत (non-dualism)",
+              "solutionSteps": [
+                "Advaita holds ब्रह्मन् is one without a second.",
+                "The self (आत्मन्) is not separate from it."
+              ],
+              "commonMistakes": [
+                "Confusing अद्वैत with other darśanas like न्याय or सांख्य."
+              ],
+              "variations": [
+                {
+                  "prompt": "Advaita says the individual self (आत्मन्) is...",
+                  "answer": "Not separate from ब्रह्मन्",
+                  "solutionSteps": [
+                    "'One without a second'.",
+                    "आत्मन् = ब्रह्मन्."
+                  ]
+                },
+                {
+                  "prompt": "The seers point to indescribable ब्रह्मन् by negation, saying...",
+                  "answer": "नेति नेति ('not this, not this')",
+                  "solutionSteps": [
+                    "Peeling away the finite.",
+                    "Until the infinite remains."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                58
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch07_dd03_b02",
+              "prompt": "The महावाक्य 'तत्त्वमसि' means...",
+              "questionType": "mcq",
+              "options": [
+                "'That thou art'",
+                "'I am the body'",
+                "'God is many'",
+                "'Knowledge is power'"
+              ],
+              "answer": "'That thou art'",
+              "solutionSteps": [
+                "तत् (That) + त्वम् (thou) + असि (art).",
+                "A great Advaita sentence equating self and Brahman."
+              ],
+              "commonMistakes": [
+                "Translating it as a dualistic statement."
+              ],
+              "variations": [
+                {
+                  "prompt": "'अहं ब्रह्मास्मि' means...",
+                  "answer": "'I am Brahman'",
+                  "solutionSteps": [
+                    "अहम् + ब्रह्म + अस्मि.",
+                    "A महावाक्य of Advaita."
+                  ]
+                },
+                {
+                  "prompt": "Shankara wrote भाष्य (commentaries) on which three?",
+                  "answer": "The Upaniṣads, the Gītā and the Brahmasūtras",
+                  "solutionSteps": [
+                    "The प्रस्थानत्रयी.",
+                    "Foundational Advaita texts."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                58
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In senior classes you study अद्वैत वेदान्त, Śaṅkara's commentaries, and the महावाक्य of the Upaniṣads."
         }
       ],
@@ -22749,7 +23259,92 @@
           "parentConceptId": "sch08_t02_c01",
           "body": "A सूक्तिः ('well-said thing', su + ukti) is a close cousin of the सुभाषितम्, and the chapter's theme — that speech should be both हितम् (beneficial) AND मनोहारि (pleasing) — reflects a civilisation that treated वाक् (speech) as sacred. In the Veda, वाक् is a goddess (वाग्देवी, identified with सरस्वती), and the grammarian-philosopher Bhartṛhari built a whole philosophy of language around the idea that ultimate reality is शब्दब्रह्मन्, 'reality as the Word'. His Vākyapadīya describes four levels of speech — परा (the unmanifest), पश्यन्ती (the visionary), मध्यमा (the mental), and वैखरी (the spoken) — through which a thought descends into audible sound. Against that backdrop, the demand that speech be useful, true, AND beautiful is not mere politeness; it treats every word as carrying real power. The subhāṣita सत्यं ब्रूयात् प्रियं ब्रूयात् ('speak the truth, speak it kindly') states the same ideal. Sanskrit literature returns endlessly to the ethics of how we speak.",
           "prerequisite": "Tackle this once you grasp that good speech is both useful (हितम्) and pleasing (मनोहारि).",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch08_dd01_b01",
+              "prompt": "In the Veda, वाक् (speech) is personified as a goddess identified with...",
+              "questionType": "mcq",
+              "options": [
+                "सरस्वती",
+                "लक्ष्मी",
+                "पार्वती",
+                "गङ्गा"
+              ],
+              "answer": "सरस्वती",
+              "solutionSteps": [
+                "वाग्देवी, the goddess of speech, is identified with सरस्वती.",
+                "Speech (वाक्) was treated as sacred."
+              ],
+              "commonMistakes": [
+                "Confusing सरस्वती (speech/learning) with लक्ष्मी (wealth)."
+              ],
+              "variations": [
+                {
+                  "prompt": "The chapter asks speech to be both हितम् and मनोहारि, meaning...",
+                  "answer": "Beneficial AND pleasing",
+                  "solutionSteps": [
+                    "Useful and beautiful.",
+                    "A rare combination."
+                  ]
+                },
+                {
+                  "prompt": "Bhartrihari's philosophy that reality is 'the Word' is called...",
+                  "answer": "शब्दब्रह्मन्",
+                  "solutionSteps": [
+                    "Reality as शब्द.",
+                    "From his Vākyapadīya."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                66
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch08_dd01_b02",
+              "prompt": "The subhāṣita 'सत्यं ब्रूयात् प्रियं ब्रूयात्' advises one to speak...",
+              "questionType": "mcq",
+              "options": [
+                "The truth, and to speak it kindly",
+                "Only loudly",
+                "Only briefly",
+                "Never at all"
+              ],
+              "answer": "The truth, and to speak it kindly",
+              "solutionSteps": [
+                "सत्यं ब्रूयात् = speak truth; प्रियं ब्रूयात् = speak kindly.",
+                "Truth and kindness together."
+              ],
+              "commonMistakes": [
+                "Reading it as 'speak only truth' while ignoring 'kindly'."
+              ],
+              "variations": [
+                {
+                  "prompt": "A सूक्तिः is a close cousin of which form?",
+                  "answer": "The सुभाषितम्",
+                  "solutionSteps": [
+                    "su + ukti = 'well-said'.",
+                    "Like a subhāṣita."
+                  ]
+                },
+                {
+                  "prompt": "Bhartrihari's four levels of speech are परा, पश्यन्ती, मध्यमा and...",
+                  "answer": "वैखरी (the spoken)",
+                  "solutionSteps": [
+                    "From unmanifest to audible.",
+                    "वैखरी is the spoken level."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                66
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In senior study you meet Bhartṛhari's philosophy of language and the Sanskrit tradition that treats वाक् (speech) as sacred."
         },
         {
@@ -22759,7 +23354,92 @@
           "parentConceptId": "sch08_t01_c02",
           "body": "क्षणशः कणशः — 'moment by moment, particle by particle' — teaches both a life-lesson (learning and wealth accumulate gradually) and a neat grammar point. The -शः ending is the शस् (śas) suffix, which attaches to a noun to mean 'one by one' or 'in units of', a sense Sanskrit grammar calls वीप्सा (distributive repetition). So शतशः means 'by the hundreds', सहस्रशः 'by the thousands', एकशः 'one at a time', and अंशशः 'portion by portion'. Like the -तः (तसिल्) adverbs you met earlier, a -शः word is indeclinable: it never changes its form. The pairing क्षणशः कणशः is also a piece of poetic craft — two -शः adverbs echoing each other to drive the 'little by little' idea home through sound as well as sense. Recognising the शस् suffix lets you instantly read any 'X by X' adverb, and shows you how Sanskrit packs a whole English phrase ('particle by particle') into one tidy word.",
           "prerequisite": "Tackle this once you can read क्षणशः कणशः as 'moment by moment, particle by particle'.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch08_dd02_b01",
+              "prompt": "शतशः means...",
+              "questionType": "mcq",
+              "options": [
+                "'By the hundreds'",
+                "'One hundred'",
+                "'From a hundred'",
+                "'Like a hundred'"
+              ],
+              "answer": "'By the hundreds'",
+              "solutionSteps": [
+                "The शस् suffix (-शः) means 'in units of / X by X'.",
+                "शत + शः = 'by the hundreds'."
+              ],
+              "commonMistakes": [
+                "Reading शतशः as just 'hundred' rather than 'by the hundreds'."
+              ],
+              "variations": [
+                {
+                  "prompt": "कणशः means...",
+                  "answer": "'Particle by particle'",
+                  "solutionSteps": [
+                    "कण (particle) + शः.",
+                    "Distributive 'bit by bit'."
+                  ]
+                },
+                {
+                  "prompt": "The distributive sense of the शस् suffix is called...",
+                  "answer": "वीप्सा (distributive repetition)",
+                  "solutionSteps": [
+                    "'X by X' meaning.",
+                    "Grammar's वीप्सा."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                66
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch08_dd02_b02",
+              "prompt": "A word ending in -शः (the शस् suffix, like एकशः) is grammatically...",
+              "questionType": "mcq",
+              "options": [
+                "An indeclinable adverb meaning 'X by X'",
+                "A plural noun",
+                "A verb",
+                "A future-tense form"
+              ],
+              "answer": "An indeclinable adverb meaning 'X by X'",
+              "solutionSteps": [
+                "Like the -तः (तसिल्) adverbs, -शः words never change form.",
+                "एकशः = 'one at a time'."
+              ],
+              "commonMistakes": [
+                "Treating a -शः adverb as a declinable noun."
+              ],
+              "variations": [
+                {
+                  "prompt": "सहस्रशः means...",
+                  "answer": "'By the thousands'",
+                  "solutionSteps": [
+                    "सहस्र (thousand) + शः.",
+                    "Distributive."
+                  ]
+                },
+                {
+                  "prompt": "The pairing 'क्षणशः कणशः' is also a piece of...",
+                  "answer": "Poetic craft (two echoing -शः adverbs)",
+                  "solutionSteps": [
+                    "Sound reinforces sense.",
+                    "Driving home 'little by little'."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                66
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 9 you study the distributive (वीप्सा) suffix शस् and other adverb-forming तद्धित endings."
         },
         {
@@ -22769,7 +23449,92 @@
           "parentConceptId": "sch08_t01_c04",
           "body": "The subhāṣitas praise the क्रियावान् — the 'one possessing action', the doer — and warn against mere विकत्थनम् (boasting). Grammatically क्रियावान् is क्रिया (action) + the possessive suffix -मत्/-वत् (मतुप्), which means 'having' or 'rich in'. The same suffix builds बुद्धिमान् (having intelligence, wise), बलवान् (having strength, strong), धनवान् (having wealth, rich) and भगवान् (the possessor of all glories). A spelling rule decides the shape: roots and words with certain sounds take -वत् (भगवत्), others -मत् (श्रीमत्). The lesson and the grammar reinforce each other — to be called क्रियावान् you must actually POSSESS deeds, just as धनवान् must possess wealth; you cannot become either by talking. This is the same possessive family as the -विन् in यशस्विन्, so once you know मतुप्, a huge set of 'having-X' adjectives opens up. Sanskrit lets one suffix turn almost any noun into 'the one who has it'.",
           "prerequisite": "Tackle this once you grasp क्रियावान् as 'one of action' versus the boaster.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch08_dd03_b01",
+              "prompt": "क्रियावान् ('one possessing action') is क्रिया + which suffix?",
+              "questionType": "mcq",
+              "options": [
+                "The मतुप्/-वत् possessive suffix",
+                "तसिल्",
+                "क्त्वा",
+                "लृट्"
+              ],
+              "answer": "The मतुप्/-वत् possessive suffix",
+              "solutionSteps": [
+                "मतुप् (-मत्/-वत्) means 'having / rich in'.",
+                "क्रिया + वत् = 'having action', a doer."
+              ],
+              "commonMistakes": [
+                "Confusing the possessive मतुप् with the comparative वति."
+              ],
+              "variations": [
+                {
+                  "prompt": "बुद्धिमान् means...",
+                  "answer": "'Having intelligence, wise'",
+                  "solutionSteps": [
+                    "बुद्धि + मत्.",
+                    "Possessing intelligence."
+                  ]
+                },
+                {
+                  "prompt": "You cannot become क्रियावान् merely by...",
+                  "answer": "Boasting (विकत्थनम्) — you must possess deeds",
+                  "solutionSteps": [
+                    "Like धनवान् must own wealth.",
+                    "Action, not talk."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                66
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch08_dd03_b02",
+              "prompt": "Which word means 'having strength, strong' using the possessive suffix?",
+              "questionType": "mcq",
+              "options": [
+                "बलवान्",
+                "बलात्",
+                "बलतः",
+                "अबलत्"
+              ],
+              "answer": "बलवान्",
+              "solutionSteps": [
+                "बल (strength) + -वत् = बलवान्.",
+                "'Possessing strength' = strong."
+              ],
+              "commonMistakes": [
+                "Picking -तः or augmented forms instead of the possessive -वत्."
+              ],
+              "variations": [
+                {
+                  "prompt": "भगवान् is built from भग (glories) + which suffix?",
+                  "answer": "-वत् (possessive: 'possessor of glories')",
+                  "solutionSteps": [
+                    "भगवत् = having all भग.",
+                    "Hence 'the Lord'."
+                  ]
+                },
+                {
+                  "prompt": "A spelling rule decides whether a word takes -मत् or -वत्. श्री takes...",
+                  "answer": "-मत् (श्रीमत्)",
+                  "solutionSteps": [
+                    "Sound decides the form.",
+                    "श्रीमत्, not श्रीवत्."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                66
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In later classes you study the मतुप्/वतुप् possessive suffixes that build बुद्धिमान्, बलवान् and भगवान्."
         }
       ],
@@ -23969,7 +24734,92 @@
           "parentConceptId": "sch09_t01_c01",
           "body": "The chapter's title is verse 3.14 of the भगवद्गीता, and the Gītā states it as one link in a great cycle: अन्नाद्भवन्ति भूतानि (from food, beings arise), पर्जन्यादन्नसम्भवः (food from rain), यज्ञाद्भवति पर्जन्यः (rain from sacrifice), यज्ञः कर्मसमुद्भवः (sacrifice from action). Beings → food → rain → यज्ञ → action → beings: a wheel (चक्र) that keeps the world turning, where each part owes its existence to the next. The Gītā's point is ethical as much as ecological — one who takes from this cycle without giving back, the next verse says, 'lives in vain'. The Gītā itself is 700 verses set within the Mahābhārata, Krishna's counsel to Arjuna on duty, action and devotion, and among the most translated books on Earth. Meeting one of its verses in Class 7 means the simple words 'from food, beings come to be' carry, in their home text, a whole philosophy of interdependence and selfless action (कर्मयोग).",
           "prerequisite": "Tackle this once you understand the food-rain-sacrifice cycle the verse describes.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch09_dd01_b01",
+              "prompt": "'अन्नाद् भवन्ति भूतानि' is a verse from which text?",
+              "questionType": "mcq",
+              "options": [
+                "The भगवद्गीता",
+                "The Isopanishad",
+                "The Panchatantra",
+                "The Yogasutra"
+              ],
+              "answer": "The भगवद्गीता",
+              "solutionSteps": [
+                "It is Gītā verse 3.14.",
+                "Part of the great cycle beings -> food -> rain -> yajña -> action."
+              ],
+              "commonMistakes": [
+                "Attributing a Gītā verse to a different text."
+              ],
+              "variations": [
+                {
+                  "prompt": "The Gītā is set within which epic?",
+                  "answer": "The Mahābhārata",
+                  "solutionSteps": [
+                    "Krishna's counsel to Arjuna.",
+                    "700 verses within the epic."
+                  ]
+                },
+                {
+                  "prompt": "Beings (भूतानि) arise from what, per the verse?",
+                  "answer": "Food (अन्न)",
+                  "solutionSteps": [
+                    "अन्नाद् भवन्ति भूतानि.",
+                    "From food, beings come to be."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                74
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch09_dd01_b02",
+              "prompt": "In the Gītā's cycle, food (अन्न) itself comes from...",
+              "questionType": "mcq",
+              "options": [
+                "Rain (पर्जन्य)",
+                "The sun directly",
+                "The earth alone",
+                "Fire"
+              ],
+              "answer": "Rain (पर्जन्य)",
+              "solutionSteps": [
+                "पर्जन्याद् अन्नसम्भवः — food arises from rain.",
+                "Rain in turn from यज्ञ, from action."
+              ],
+              "commonMistakes": [
+                "Skipping the rain link in the cycle."
+              ],
+              "variations": [
+                {
+                  "prompt": "The Gītā says one who takes from the cycle without giving back...",
+                  "answer": "'Lives in vain'",
+                  "solutionSteps": [
+                    "An ethical, not just ecological, point.",
+                    "Selfless action is urged."
+                  ]
+                },
+                {
+                  "prompt": "This teaching of selfless action is called...",
+                  "answer": "कर्मयोग",
+                  "solutionSteps": [
+                    "Acting without selfish claim.",
+                    "The Gītā's path of action."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                74
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In senior classes you study the भगवद्गीता's teaching of कर्मयोग and the यज्ञ-cycle of which this verse is a part."
         },
         {
@@ -23979,7 +24829,92 @@
           "parentConceptId": "sch09_t01_c04",
           "body": "जानीयात् means '(one) SHOULD know', and that flavour of advice, duty or possibility lives in a special mood called the विधिलिङ् (optative or potential). Where the present tense जानाति simply reports 'he knows', the optative जानीयात् prescribes 'he ought to know / let him know'. Sanskrit uses this mood constantly for rules and good counsel: सत्यं वदेत् ('one should speak the truth'), धर्मं चरेत् ('one should practise dharma'), न हिंस्यात् सर्वभूतानि ('one should not harm any creature'). The tell-tale marker is the -ई-/-या- that slips in before the ending (भवति → भवेत्, पठति → पठेत्). Because so much Sanskrit literature — dharmaśāstra, subhāṣitas, instructions of every kind — is phrased as 'one should', the optative is one of the most useful moods to recognise. Once you spot the विधिलिङ्, you can tell a command or recommendation apart from a plain statement of fact at a glance.",
           "prerequisite": "Tackle this once you can read जानीयात् as 'one should know'.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch09_dd02_b01",
+              "prompt": "जानीयात् ('one should know') is in which mood?",
+              "questionType": "mcq",
+              "options": [
+                "विधिलिङ् (optative / potential)",
+                "Present (लट्)",
+                "Future (लृट्)",
+                "Imperfect (लङ्)"
+              ],
+              "answer": "विधिलिङ् (optative / potential)",
+              "solutionSteps": [
+                "The optative expresses advice, duty or possibility ('should').",
+                "जानीयात् = 'one ought to know'."
+              ],
+              "commonMistakes": [
+                "Reading the 'should' form as a plain present statement."
+              ],
+              "variations": [
+                {
+                  "prompt": "How does जानीयात् differ from जानाति?",
+                  "answer": "जानाति reports 'he knows'; जानीयात् prescribes 'he should know'",
+                  "solutionSteps": [
+                    "Fact vs counsel.",
+                    "Different moods."
+                  ]
+                },
+                {
+                  "prompt": "The tell-tale marker of the optative is...",
+                  "answer": "an inserted -ई-/-या- (e.g. भवेत्, पठेत्)",
+                  "solutionSteps": [
+                    "Slips in before the ending.",
+                    "Signals 'should'."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                74
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch09_dd02_b02",
+              "prompt": "'सत्यं वदेत्' means...",
+              "questionType": "mcq",
+              "options": [
+                "'One should speak the truth'",
+                "'He speaks the truth'",
+                "'He spoke the truth'",
+                "'He will speak the truth'"
+              ],
+              "answer": "'One should speak the truth'",
+              "solutionSteps": [
+                "वदेत् is the optative of वद् ('speak').",
+                "So it prescribes 'one should speak'."
+              ],
+              "commonMistakes": [
+                "Translating the optative as a present or future."
+              ],
+              "variations": [
+                {
+                  "prompt": "'न हिंस्यात् सर्वभूतानि' means...",
+                  "answer": "'One should not harm any creature'",
+                  "solutionSteps": [
+                    "हिंस्यात् = optative of हिंस्.",
+                    "A moral 'should-not'."
+                  ]
+                },
+                {
+                  "prompt": "Why is the optative so common in Sanskrit literature?",
+                  "answer": "Much of it (dharmaśāstra, subhāṣitas) is phrased as 'one should'",
+                  "solutionSteps": [
+                    "Rules and counsel use it.",
+                    "Hence very frequent."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                74
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 8 you learn the विधिलिङ् (optative) of common roots and use it to express 'should / ought'."
         },
         {
@@ -23989,7 +24924,92 @@
           "parentConceptId": "sch09_t01_c03",
           "body": "The chapter's 'modern touch' word रसायनशास्त्रम् (chemistry) shows a living power of Sanskrit: building precise new technical terms from old roots, the way English reaches for Greek and Latin. रसायन (rasa, 'fluid/essence' + ayana, 'course') was the alchemy-and-elixir branch of आयुर्वेद, and शास्त्रम् means 'science/discipline', so the compound neatly names the science of substances. The same method generates a whole modern vocabulary: दूरभाषः (telephone, 'far-speech'), संगणकः (computer, 'the calculator'), विद्युत् (electricity), आकाशवाणी (radio, 'voice from the sky'), and दूरदर्शनम् (television, 'far-seeing'). Because Sanskrit words are transparent — each part means something — a coined term often explains itself. This is why Sanskrit has been proposed as a clear, unambiguous language for terminology, and why scientific Hindi borrows its vocabulary wholesale from Sanskrit roots. Seeing रसायनशास्त्रम् taken apart teaches you that you can often GUESS a Sanskrit technical word's meaning from its pieces.",
           "prerequisite": "Tackle this once you know रसायनशास्त्रम् means 'chemistry'.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch09_dd03_b01",
+              "prompt": "रसायनशास्त्रम् (chemistry) = रसायन + शास्त्रम्, where शास्त्रम् means...",
+              "questionType": "mcq",
+              "options": [
+                "'Science / discipline'",
+                "'Fluid'",
+                "'Course'",
+                "'Word'"
+              ],
+              "answer": "'Science / discipline'",
+              "solutionSteps": [
+                "शास्त्रम् = a science or disciplined field of knowledge.",
+                "रसायन + शास्त्रम् = the science of substances."
+              ],
+              "commonMistakes": [
+                "Mis-assigning the meaning of the components."
+              ],
+              "variations": [
+                {
+                  "prompt": "Sanskrit coins technical terms the way English uses which languages?",
+                  "answer": "Greek and Latin roots",
+                  "solutionSteps": [
+                    "Transparent root-building.",
+                    "Each part means something."
+                  ]
+                },
+                {
+                  "prompt": "Because Sanskrit terms are transparent, you can often...",
+                  "answer": "Guess a word's meaning from its pieces",
+                  "solutionSteps": [
+                    "दूरभाषः = far-speech (telephone).",
+                    "Self-explaining terms."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                74
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch09_dd03_b02",
+              "prompt": "Which coined Sanskrit word means 'television' (literally 'far-seeing')?",
+              "questionType": "mcq",
+              "options": [
+                "दूरदर्शनम्",
+                "दूरभाषः",
+                "संगणकः",
+                "आकाशवाणी"
+              ],
+              "answer": "दूरदर्शनम्",
+              "solutionSteps": [
+                "दूर (far) + दर्शन (seeing) = दूरदर्शनम्.",
+                "दूरभाषः = telephone, आकाशवाणी = radio."
+              ],
+              "commonMistakes": [
+                "Confusing 'far-seeing' (TV) with 'far-speech' (phone)."
+              ],
+              "variations": [
+                {
+                  "prompt": "संगणकः means...",
+                  "answer": "Computer ('the calculator')",
+                  "solutionSteps": [
+                    "गणक = calculator.",
+                    "A coined modern term."
+                  ]
+                },
+                {
+                  "prompt": "आकाशवाणी ('voice from the sky') means...",
+                  "answer": "Radio",
+                  "solutionSteps": [
+                    "आकाश + वाणी.",
+                    "Sky-voice = radio."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                74
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In later study you see how Sanskrit roots and compounds supply the technical vocabulary of modern Indian science."
         }
       ],
@@ -25189,7 +26209,92 @@
           "parentConceptId": "sch10_t01_c01",
           "body": "Ten boys cross a river, each counts the others, finds only nine, and grieves for a lost companion — until a wise passer-by points and says दशमस्त्वमसि: 'YOU are the tenth.' Vedānta teachers have told this story for centuries because it is a perfect image of the central Upaniṣadic insight. The counter overlooks the very self that is doing the counting, exactly as a person searches everywhere for happiness and meaning while overlooking their own true Self (आत्मन्). The teacher's words echo the महावाक्य तत्त्वमसि ('That thou art') from the छान्दोग्योपनिषद् — the truth was never missing, only unrecognised. Vidyāraṇya's पञ्चदशी uses precisely this 'tenth man' (दशम) example to explain how self-knowledge is not the GAINING of something new but the removal of an error. So the charming children's puzzle in your textbook is also one of the most elegant teaching-stories in Indian philosophy: what you seek, you already are.",
           "prerequisite": "Tackle this once you can retell the parable and its surprise — the counter forgot himself.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch10_dd01_b01",
+              "prompt": "In 'दशमस्त्वमसि' ('you are the tenth'), the counter's mistake is that he overlooks...",
+              "questionType": "mcq",
+              "options": [
+                "Himself (the very self that is doing the counting)",
+                "The river",
+                "The ninth boy",
+                "The teacher"
+              ],
+              "answer": "Himself (the very self that is doing the counting)",
+              "solutionSteps": [
+                "Each boy counts the others and forgets to count himself.",
+                "Hence only nine — the tenth was never lost."
+              ],
+              "commonMistakes": [
+                "Thinking a boy was truly lost rather than overlooked."
+              ],
+              "variations": [
+                {
+                  "prompt": "What does the overlooked 'tenth man' stand for in Vedānta?",
+                  "answer": "The true Self (आत्मन्), sought everywhere but already present",
+                  "solutionSteps": [
+                    "Self-knowledge removes an error.",
+                    "Not a new gain."
+                  ]
+                },
+                {
+                  "prompt": "Self-knowledge, the parable says, is not gaining something new but...",
+                  "answer": "Removing an error (recognising what was always there)",
+                  "solutionSteps": [
+                    "The truth was never missing.",
+                    "Only unrecognised."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                82
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch10_dd01_b02",
+              "prompt": "The 'tenth man' parable illustrates which महावाक्य?",
+              "questionType": "mcq",
+              "options": [
+                "तत्त्वमसि ('That thou art')",
+                "अहिंसा परमो धर्मः",
+                "वसुधैव कुटुम्बकम्",
+                "सत्यमेव जयते"
+              ],
+              "answer": "तत्त्वमसि ('That thou art')",
+              "solutionSteps": [
+                "'You are the tenth' echoes 'That thou art' from the Chāndogya Upaniṣad.",
+                "Both reveal the self already present."
+              ],
+              "commonMistakes": [
+                "Confusing it with other famous Sanskrit mottoes."
+              ],
+              "variations": [
+                {
+                  "prompt": "Which text's example of the 'tenth man' explains self-knowledge as removing error?",
+                  "answer": "Vidyāraṇya's पञ्चदशी",
+                  "solutionSteps": [
+                    "It uses the दशम example.",
+                    "A Vedānta classic."
+                  ]
+                },
+                {
+                  "prompt": "'तत्त्वमसि' appears in which Upaniṣad?",
+                  "answer": "The छान्दोग्योपनिषद्",
+                  "solutionSteps": [
+                    "A major महावाक्य.",
+                    "From the Chāndogya."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                82
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In senior study you meet तत्त्वमसि and the Vedāntic use of the 'tenth man' parable to teach self-knowledge."
         },
         {
@@ -25199,7 +26304,92 @@
           "parentConceptId": "sch10_t02_c02",
           "body": "तीर्त्वा means 'having crossed/swum across', and that '-ing first, then…' sense comes from the क्त्वा (ktvā) suffix, the Sanskrit gerund or absolutive. It marks the EARLIER of two actions by the same doer: स्नात्वा भुङ्क्ते means 'having bathed, he eats' (i.e. he bathes, THEN eats); पठित्वा गच्छति, 'having studied, he goes'. The ending appears as -त्वा (गत्वा 'having gone', कृत्वा 'having done', दृष्ट्वा 'having seen'). There is one important twist: when the verb carries a prefix (उपसर्ग), the क्त्वा changes to -य, the ल्यप् form — so from आ + गम् you get आगत्य ('having come'), and from वि + हस् you get विहस्य ('having laughed'). The gerund lets Sanskrit chain a sequence of actions tidily without repeating 'and then'. Recognising तीर्त्वा as 'having crossed' is your key to reading narrative Sanskrit, where these -त्वा / -य forms string the events of a story together.",
           "prerequisite": "Tackle this once you can read तीर्त्वा as 'having swum across'.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch10_dd02_b01",
+              "prompt": "तीर्त्वा ('having crossed') uses the क्त्वा gerund, which marks...",
+              "questionType": "mcq",
+              "options": [
+                "The earlier of two actions by the same doer",
+                "The future",
+                "A command",
+                "A question"
+              ],
+              "answer": "The earlier of two actions by the same doer",
+              "solutionSteps": [
+                "The क्त्वा (absolutive) shows 'having done X, then Y'.",
+                "स्नात्वा भुङ्क्ते = 'having bathed, he eats'."
+              ],
+              "commonMistakes": [
+                "Reading the gerund as a tense rather than a 'first this, then that' link."
+              ],
+              "variations": [
+                {
+                  "prompt": "'पठित्वा गच्छति' means...",
+                  "answer": "'Having studied, he goes'",
+                  "solutionSteps": [
+                    "पठित्वा = having studied.",
+                    "Then he goes."
+                  ]
+                },
+                {
+                  "prompt": "कृत्वा means...",
+                  "answer": "'Having done'",
+                  "solutionSteps": [
+                    "कृ + त्वा.",
+                    "The क्त्वा gerund of कृ."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                82
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch10_dd02_b02",
+              "prompt": "When a verb carries a prefix (उपसर्ग), the क्त्वा -त्वा changes to which form?",
+              "questionType": "mcq",
+              "options": [
+                "-य (the ल्यप्, e.g. आगत्य 'having come')",
+                "-स्य",
+                "-ता",
+                "the अ- augment"
+              ],
+              "answer": "-य (the ल्यप्, e.g. आगत्य 'having come')",
+              "solutionSteps": [
+                "With a prefix, -त्वा becomes -य (ल्यप्).",
+                "आ + गम् -> आगत्य; वि + हस् -> विहस्य."
+              ],
+              "commonMistakes": [
+                "Keeping -त्वा even when a prefix is present."
+              ],
+              "variations": [
+                {
+                  "prompt": "वि + हस् in the gerund becomes...",
+                  "answer": "विहस्य ('having laughed')",
+                  "solutionSteps": [
+                    "Prefix -> ल्यप् -य form.",
+                    "विहस्य."
+                  ]
+                },
+                {
+                  "prompt": "Why is the gerund useful in storytelling?",
+                  "answer": "It chains a sequence of actions without repeating 'and then'",
+                  "solutionSteps": [
+                    "Links events tidily.",
+                    "Common in narrative."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                82
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 8 you study the क्त्वा (gerund) and its prefixed form ल्यप् (-य) to link successive actions."
         },
         {
@@ -25209,7 +26399,92 @@
           "parentConceptId": "sch10_t02_c03",
           "body": "अगणयत् means 'he counted', a past-tense form, and the clue to its pastness sits right at the front: the little अ- prefix called the अट् augment (आगम). Sanskrit's everyday past tense is the लङ् लकार (imperfect), and it is built by putting अ- before the stem and adding past endings — so the present गणयति ('he counts') becomes अगणयत् ('he counted'), पठति → अपठत्, भवति → अभवत्, गच्छति → अगच्छत्. That leading अ- is the single most reliable signpost of the imperfect: see a verb beginning with अ that is not part of the root, and you are almost certainly looking at a past action. (Sanskrit actually has three past tenses — लङ् imperfect, लिट् perfect, लुङ् aorist — but the अ-augmented लङ् is the one stories use most.) Once you can strip the अट् augment off अगणयत् to find the familiar present stem, reading past-tense narrative becomes far easier.",
           "prerequisite": "Tackle this once you can read अगणयत् as the past 'he counted'.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "sch10_dd03_b01",
+              "prompt": "अगणयत् ('he counted', imperfect past) is recognised by which tell-tale sign at its front?",
+              "questionType": "mcq",
+              "options": [
+                "The अ- (the अट् augment)",
+                "-स्य-",
+                "-त्वा",
+                "-विन्"
+              ],
+              "answer": "The अ- (the अट् augment)",
+              "solutionSteps": [
+                "The लङ् (imperfect) adds अ- before the stem.",
+                "गणयति -> अगणयत्."
+              ],
+              "commonMistakes": [
+                "Mistaking the past अ- augment for the future -स्य-."
+              ],
+              "variations": [
+                {
+                  "prompt": "The everyday past tense built with the अ- augment is the...",
+                  "answer": "लङ् (imperfect)",
+                  "solutionSteps": [
+                    "अ- + stem + past endings.",
+                    "The लङ् लकार."
+                  ]
+                },
+                {
+                  "prompt": "Sanskrit's three past tenses are लङ् (imperfect), लिट् (perfect) and...",
+                  "answer": "लुङ् (aorist)",
+                  "solutionSteps": [
+                    "Three pasts in all.",
+                    "लङ् is most common in stories."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                82
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "sch10_dd03_b02",
+              "prompt": "The present गच्छति ('he goes') becomes which imperfect-past form?",
+              "questionType": "mcq",
+              "options": [
+                "अगच्छत्",
+                "गमिष्यति",
+                "गत्वा",
+                "गच्छेत्"
+              ],
+              "answer": "अगच्छत्",
+              "solutionSteps": [
+                "Add the अ- augment and past endings: अ + गच्छ + त्.",
+                "अगच्छत् = 'he went'."
+              ],
+              "commonMistakes": [
+                "Picking the future (गमिष्यति) or gerund (गत्वा)."
+              ],
+              "variations": [
+                {
+                  "prompt": "पठति ('he reads') becomes which past form?",
+                  "answer": "अपठत्",
+                  "solutionSteps": [
+                    "अ- augment + past ending.",
+                    "अपठत् = 'he read'."
+                  ]
+                },
+                {
+                  "prompt": "To read past narrative, you strip the अट् augment to find the...",
+                  "answer": "Familiar present stem",
+                  "solutionSteps": [
+                    "Remove the leading अ-.",
+                    "Reveals the known stem."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                82
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 9 you learn the लङ् (imperfect) with its अ-augment and contrast it with the present and future."
         }
       ],
