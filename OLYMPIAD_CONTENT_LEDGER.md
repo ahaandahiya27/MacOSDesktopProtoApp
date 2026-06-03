@@ -76,7 +76,8 @@ The `bonusQuestions` array is ADDED to each `deepDive[]` entry (new key; the opt
 - [x] **ssch05–ssch06 (12 topics, 24 MCQs)** — Rise of Empires (Ashoka's edicts & Prinsep, Kautilya's mandala, why Magadha, śhrenī guild-banks, Kalinga & dhammavijaya, why empires fall); Age of Reorganisation (Indo-Roman trade & Periplus, Gandhara/Mathura Buddha, queen's-name social history, Shaka calendar, Grand Anicut, Kushanas & Silk Route).
 - [x] **ssch07–ssch08 (12 topics, 24 MCQs)** — Gupta Era (Iron Pillar passivation, Aryabhata/zero & place value, traveller's-diary method, land grants & decentralisation, spinning Earth & eclipses, Prabhavati Gupta); Sacred geography (cultural infrastructure, legal personhood for nature, sacred groves, Kumbh astronomy, tīrtha=crossing, mountains as gateways).
 - [x] **ssch09–ssch10 (12 topics, 24 MCQs)** — Types of Government (federalism, constitutionalism, ancient gaṇa-saṅghas, separation of powers, direct vs representative, constitutional vs absolute monarchy); Constitution (Directive Principles non-justiciable, basic-structure doctrine, borrowed bricks, why 26 Jan, 'We the People'/popular sovereignty, Constituent Assembly).
-- [ ] ssch11–ssch20 (60 topics) — 2 MCQs each. **120 SS MCQs done so far (halfway).**
+- [x] **ssch11–ssch12 (12 topics, 24 MCQs)** — From Barter to Money (general acceptance/trust, inflation, numismatics, UPI/QR, double coincidence of wants, fiat money); Understanding Markets (equilibrium, externalities, middlemen-add-value, quality marks, online markets/long tail, why countries trade).
+- [ ] ssch13–ssch20 (48 topics) — 2 MCQs each. **144 SS MCQs done so far.**
 
 ## Phase 5 (after content) — coverage test
 - [ ] Add `ExpertChallengeOlympiadContentTests`: each pack yields a non-empty

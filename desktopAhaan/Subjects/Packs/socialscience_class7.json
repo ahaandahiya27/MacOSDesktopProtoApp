@@ -32990,7 +32990,93 @@
           "parentConceptId": "ssch11_t03_c01",
           "body": "The single most important property of money is that everyone is willing to accept it. A ₹500 note has almost no value as paper; you take it only because you are confident the next shopkeeper will take it from you too. This is a 'self-fulfilling' belief: money works because everyone expects everyone else to use it. Governments strengthen this by declaring official currency 'legal tender' (it must be accepted to settle debts) and by giving sole issuing power to a central bank like the RBI, which guarantees uniformity and fights counterfeiting. When that trust breaks — say, through runaway inflation or floods of fake notes — money can stop working even if it is physically the same. This is why protecting the trust behind money is treated as seriously as printing it.",
           "prerequisite": "Knowing that money is the commonly accepted tool for payments.",
-          "nextStepHint": "Find out what 'legal tender' means and look for the words 'I promise to pay the bearer' on an Indian note."
+          "nextStepHint": "Find out what 'legal tender' means and look for the words 'I promise to pay the bearer' on an Indian note.",
+          "bonusQuestions": [
+            {
+              "id": "ssch11_dv01_b01",
+              "prompt": "A 500-rupee note is almost worthless as paper. Why does everyone accept it?",
+              "questionType": "mcq",
+              "options": [
+                "Because everyone is confident the next person will also accept it — a self-fulfilling trust",
+                "Because the paper itself is worth 500 rupees",
+                "Because it is made of gold",
+                "Because the RBI personally guarantees each note in court"
+              ],
+              "answer": "Because everyone is confident the next person will also accept it — a self-fulfilling trust",
+              "solutionSteps": [
+                "Money works because everyone expects everyone else to use it.",
+                "Its value rests on shared, self-fulfilling trust."
+              ],
+              "commonMistakes": [
+                "Thinking the note's value comes from the paper or metal it is made of."
+              ],
+              "variations": [
+                {
+                  "prompt": "What happens to money when that trust breaks (e.g. runaway inflation or fake notes)?",
+                  "answer": "It can stop working even though it is physically unchanged",
+                  "solutionSteps": [
+                    "Trust is the real backing.",
+                    "Lose it and money fails."
+                  ]
+                },
+                {
+                  "prompt": "Why does the government give sole note-issuing power to the RBI?",
+                  "answer": "To guarantee uniformity and fight counterfeiting",
+                  "solutionSteps": [
+                    "Protects trust.",
+                    "One trusted issuer."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                132
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch11_dv01_b02",
+              "prompt": "Official money that must be accepted to settle debts is called...",
+              "questionType": "mcq",
+              "options": [
+                "Legal tender",
+                "Barter",
+                "A surplus",
+                "An externality"
+              ],
+              "answer": "Legal tender",
+              "solutionSteps": [
+                "Governments declare official currency 'legal tender'.",
+                "It must be accepted to settle debts."
+              ],
+              "commonMistakes": [
+                "Confusing 'legal tender' with unrelated economic terms."
+              ],
+              "variations": [
+                {
+                  "prompt": "Which body has sole power to issue India's currency?",
+                  "answer": "The RBI (Reserve Bank of India)",
+                  "solutionSteps": [
+                    "Central bank.",
+                    "Guarantees uniformity."
+                  ]
+                },
+                {
+                  "prompt": "Why is protecting trust in money taken as seriously as printing it?",
+                  "answer": "Without trust, money stops working",
+                  "solutionSteps": [
+                    "Trust is essential.",
+                    "Counterfeiting attacks it."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                132
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch11_dv02",
@@ -32999,7 +33085,93 @@
           "parentConceptId": "ssch11_t03_c02",
           "body": "Money is supposed to store value so you can spend it later — but over time, prices tend to rise, a process called inflation. If a chocolate that cost ₹10 a few years ago now costs ₹20, then ₹10 saved has lost half its buying power, even though the coin is unchanged. So money is a convenient but imperfect store of value. This is why people often keep larger savings in things expected to hold value better, like gold, land, or bank deposits that earn interest. It also explains why central banks like the RBI try hard to keep inflation low and steady: stable prices keep money trustworthy both as a store of value and as a standard for deferred payments like loans.",
           "prerequisite": "Understanding money's function as a store of value.",
-          "nextStepHint": "Ask an elder what a litre of milk or a cinema ticket cost when they were your age, and work out how much prices have risen."
+          "nextStepHint": "Ask an elder what a litre of milk or a cinema ticket cost when they were your age, and work out how much prices have risen.",
+          "bonusQuestions": [
+            {
+              "id": "ssch11_dv02_b01",
+              "prompt": "A chocolate that cost 10 rupees now costs 20 rupees. This general rise in prices over time is called...",
+              "questionType": "mcq",
+              "options": [
+                "Inflation",
+                "Deflation",
+                "Barter",
+                "Equilibrium"
+              ],
+              "answer": "Inflation",
+              "solutionSteps": [
+                "Rising prices over time = inflation.",
+                "10 rupees saved now buys less than before."
+              ],
+              "commonMistakes": [
+                "Confusing inflation (prices rising) with deflation (prices falling)."
+              ],
+              "variations": [
+                {
+                  "prompt": "Inflation makes saved money lose its...",
+                  "answer": "Buying power",
+                  "solutionSteps": [
+                    "Same coin, less value.",
+                    "Weaker over time."
+                  ]
+                },
+                {
+                  "prompt": "Why do central banks like the RBI try to keep inflation low and steady?",
+                  "answer": "Stable prices keep money trustworthy as a store of value",
+                  "solutionSteps": [
+                    "Protects savings.",
+                    "And loans/deferred payment."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                132
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch11_dv02_b02",
+              "prompt": "Because of inflation, economists say money is an imperfect...",
+              "questionType": "mcq",
+              "options": [
+                "Store of value",
+                "Medium of exchange",
+                "Unit of weight",
+                "Type of coin"
+              ],
+              "answer": "Store of value",
+              "solutionSteps": [
+                "Money should store value to spend later, but inflation erodes it.",
+                "So it is convenient but an imperfect store of value."
+              ],
+              "commonMistakes": [
+                "Confusing money's three roles; inflation hits its store-of-value role."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why might people keep savings in gold, land or interest-earning deposits?",
+                  "answer": "These are expected to hold value better than cash during inflation",
+                  "solutionSteps": [
+                    "Hedge against inflation.",
+                    "Better stores of value."
+                  ]
+                },
+                {
+                  "prompt": "Money still works well as a ... even during mild inflation.",
+                  "answer": "Medium of exchange",
+                  "solutionSteps": [
+                    "You can still buy/sell.",
+                    "Its store-of-value role suffers most."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                132
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch11_dv03",
@@ -33008,7 +33180,93 @@
           "parentConceptId": "ssch11_t04_c01",
           "body": "The chapter shows ancient coins with their obverse and reverse designs — and to a historian each old coin is a packed little document. The branch of study is called numismatics. From a single coin a scholar can read a surprising amount: the ruler's name or portrait tells us who was in power; the script and language fix roughly when and where it was made; the symbols (a bull, a goddess, a bow) reveal which gods and ideas a kingdom honoured; and the metal — gold, silver or copper — and its purity hint at how rich or troubled the economy was, since rulers in hard times often mixed cheaper metal into 'gold' coins. Best of all, where coins are found maps how far a kingdom's trade and power reached — Roman coins in south India, for instance, prove sea trade with Rome. So the earliest purpose of coins was to make buying easy, but a happy side effect is that they quietly recorded history for us to read two thousand years later.",
           "prerequisite": "Knowing that ancient coins carried designs on their obverse and reverse.",
-          "nextStepHint": "List three different things a historian could learn from one ancient coin."
+          "nextStepHint": "List three different things a historian could learn from one ancient coin.",
+          "bonusQuestions": [
+            {
+              "id": "ssch11_dv03_b01",
+              "prompt": "The study of coins as historical evidence is called...",
+              "questionType": "mcq",
+              "options": [
+                "Numismatics",
+                "Archaeology",
+                "Cartography",
+                "Philately"
+              ],
+              "answer": "Numismatics",
+              "solutionSteps": [
+                "Numismatics studies coins.",
+                "Each old coin is a packed little historical document."
+              ],
+              "commonMistakes": [
+                "Confusing numismatics (coins) with philately (stamps)."
+              ],
+              "variations": [
+                {
+                  "prompt": "A coin's ruler-portrait, script and symbols can reveal...",
+                  "answer": "Who ruled, roughly when/where, and which gods/ideas were honoured",
+                  "solutionSteps": [
+                    "Rich information.",
+                    "From one coin."
+                  ]
+                },
+                {
+                  "prompt": "Why might a ruler in hard times mix cheaper metal into 'gold' coins?",
+                  "answer": "The economy was troubled, so purity fell",
+                  "solutionSteps": [
+                    "Debasement.",
+                    "A clue to trouble."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                132
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch11_dv03_b02",
+              "prompt": "Finding Roman coins in south India is good evidence of...",
+              "questionType": "mcq",
+              "options": [
+                "Sea trade between Rome and south India",
+                "That Romans ruled India",
+                "That India never made coins",
+                "That coins are worthless"
+              ],
+              "answer": "Sea trade between Rome and south India",
+              "solutionSteps": [
+                "Where coins are found maps how far trade reached.",
+                "Roman coins in the south prove Indo-Roman sea trade."
+              ],
+              "commonMistakes": [
+                "Reading foreign coins as proof of rule rather than trade."
+              ],
+              "variations": [
+                {
+                  "prompt": "Where coins are found maps a kingdom's...",
+                  "answer": "Trade and power reach",
+                  "solutionSteps": [
+                    "Distribution = extent.",
+                    "Geographic clue."
+                  ]
+                },
+                {
+                  "prompt": "So coins' earliest purpose was buying, but a happy side effect is...",
+                  "answer": "They quietly recorded history for us to read",
+                  "solutionSteps": [
+                    "Documents in metal.",
+                    "Two thousand years on."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                132
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch11_dv04",
@@ -33017,7 +33275,93 @@
           "parentConceptId": "ssch11_t05_c01",
           "body": "When you pay by scanning a shop's QR code on a UPI app, no note or coin moves at all — yet money truly changes hands. Behind the scan, your app reads the shop's unique payment address, you approve the amount with a secret PIN, and within seconds instructions travel between your bank and the shop's bank so that your account is reduced and theirs is increased by the same amount. The 'money' here is just numbers updated in two banks' records, made trustworthy by the same idea as a banknote: everyone agrees these records count. India's UPI system now handles billions of such payments a month, letting even a tiny street vendor accept money without a card machine. Digital money does not replace what money is — a generally accepted medium of exchange — it only changes how the message is carried, from coins in a hand to data over a network.",
           "prerequisite": "Knowing that UPI and QR codes are forms of digital money.",
-          "nextStepHint": "Explain why a QR-code payment still needs both people to trust the banks' records."
+          "nextStepHint": "Explain why a QR-code payment still needs both people to trust the banks' records.",
+          "bonusQuestions": [
+            {
+              "id": "ssch11_dv04_b01",
+              "prompt": "When you pay by scanning a shop's UPI QR code, the 'money' that changes hands is really...",
+              "questionType": "mcq",
+              "options": [
+                "Numbers updated in two banks' records",
+                "Physical coins moving invisibly",
+                "Gold transferred between vaults",
+                "Paper notes sent down the wire"
+              ],
+              "answer": "Numbers updated in two banks' records",
+              "solutionSteps": [
+                "No note or coin moves; banks update account balances.",
+                "Your account falls and the shop's rises by the same amount."
+              ],
+              "commonMistakes": [
+                "Imagining physical cash secretly moves during a digital payment."
+              ],
+              "variations": [
+                {
+                  "prompt": "What makes those bank records count as 'money'?",
+                  "answer": "Everyone agrees the records count — the same trust behind a banknote",
+                  "solutionSteps": [
+                    "Shared agreement.",
+                    "Trust, as with notes."
+                  ]
+                },
+                {
+                  "prompt": "UPI lets even a tiny street vendor...",
+                  "answer": "Accept money without a card machine",
+                  "solutionSteps": [
+                    "Just a QR code.",
+                    "Billions of payments a month."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                132
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch11_dv04_b02",
+              "prompt": "Digital money (like UPI) changes...",
+              "questionType": "mcq",
+              "options": [
+                "How the message is carried, not what money fundamentally is",
+                "The basic meaning of money",
+                "The value of the rupee",
+                "Nothing at all"
+              ],
+              "answer": "How the message is carried, not what money fundamentally is",
+              "solutionSteps": [
+                "Money is still a generally accepted medium of exchange.",
+                "Only the carrier changes — coins in hand to data over a network."
+              ],
+              "commonMistakes": [
+                "Thinking digital money is a different kind of thing entirely."
+              ],
+              "variations": [
+                {
+                  "prompt": "Money is fundamentally a...",
+                  "answer": "Generally accepted medium of exchange",
+                  "solutionSteps": [
+                    "Its core nature.",
+                    "However carried."
+                  ]
+                },
+                {
+                  "prompt": "To approve a UPI payment, you confirm the amount with a...",
+                  "answer": "Secret PIN",
+                  "solutionSteps": [
+                    "Authorises the transfer.",
+                    "Then banks update."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                132
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch11_dv05",
@@ -33026,7 +33370,93 @@
           "parentConceptId": "ssch11_t02_c01",
           "body": "Of all the troubles with barter, one is so important that economists gave it a name: the double coincidence of wants. To swap by barter, it is not enough that YOU want what someone has — they must ALSO want what you have, at the same time, in the right amount. A farmer with a spare ox who needs shoes must find a shoemaker who happens to want an ox; if the shoemaker wants grain instead, no deal. Each person has to satisfy the other's want as well as their own, and finding that perfect double match is rare and slow. Money dissolves the problem completely: the farmer sells the ox to ANYONE who wants it, takes money, and spends that money on shoes from ANYONE selling them. By splitting one awkward swap into two easy ones — a sale and a purchase — money frees trade from needing a coincidence at all. That single idea is the deepest reason money was invented.",
           "prerequisite": "Knowing barter means swapping goods directly without money.",
-          "nextStepHint": "Describe a three-person barter chain and show how one coin would make it instant."
+          "nextStepHint": "Describe a three-person barter chain and show how one coin would make it instant.",
+          "bonusQuestions": [
+            {
+              "id": "ssch11_dv05_b01",
+              "prompt": "Barter's biggest problem, the 'double coincidence of wants', means that...",
+              "questionType": "mcq",
+              "options": [
+                "Each person must want what the other has, at the same time and in the right amount",
+                "Two coins must be exchanged",
+                "Prices must be equal",
+                "Two shops must be nearby"
+              ],
+              "answer": "Each person must want what the other has, at the same time and in the right amount",
+              "solutionSteps": [
+                "You wanting their goods isn't enough — they must also want yours.",
+                "Finding that double match is rare and slow."
+              ],
+              "commonMistakes": [
+                "Thinking barter only needs one side to want something."
+              ],
+              "variations": [
+                {
+                  "prompt": "A farmer with a spare ox who needs shoes is stuck in barter unless...",
+                  "answer": "The shoemaker happens to want an ox",
+                  "solutionSteps": [
+                    "Double match needed.",
+                    "Otherwise no deal."
+                  ]
+                },
+                {
+                  "prompt": "This 'double coincidence' difficulty is the deepest reason for inventing...",
+                  "answer": "Money",
+                  "solutionSteps": [
+                    "It dissolves the problem.",
+                    "Frees trade."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                132
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch11_dv05_b02",
+              "prompt": "How does money solve the double-coincidence-of-wants problem?",
+              "questionType": "mcq",
+              "options": [
+                "It splits one awkward swap into two easy ones — a sale for money, then a purchase",
+                "It forces both sides to want each other's goods",
+                "It bans barter by law",
+                "It makes all prices equal"
+              ],
+              "answer": "It splits one awkward swap into two easy ones — a sale for money, then a purchase",
+              "solutionSteps": [
+                "Sell your ox to anyone for money; buy shoes from anyone with money.",
+                "No coincidence of wants needed."
+              ],
+              "commonMistakes": [
+                "Missing that money breaks one trade into a sale and a purchase."
+              ],
+              "variations": [
+                {
+                  "prompt": "With money, the farmer sells the ox to...",
+                  "answer": "Anyone who wants it (then buys shoes from anyone)",
+                  "solutionSteps": [
+                    "No matching needed.",
+                    "Two easy steps."
+                  ]
+                },
+                {
+                  "prompt": "Money frees trade from needing a...",
+                  "answer": "Coincidence of wants",
+                  "solutionSteps": [
+                    "The barter headache.",
+                    "Removed entirely."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                132
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch11_dv06",
@@ -33035,7 +33465,93 @@
           "parentConceptId": "ssch11_t04_c03",
           "body": "A ₹100 note is just a printed slip of paper — it is not made of anything worth ₹100, and you cannot eat it or wear it. So why does everyone accept it? Modern paper money is what economists call FIAT money: it has value not because of the material it is made of, but because the government and the Reserve Bank of India declare it legal tender and everyone trusts that declaration. Look closely and an Indian note carries the RBI Governor's promise 'I promise to pay the bearer the sum of one hundred rupees'. The real backing is shared trust: I accept the note because I am sure the next person will accept it from me too. That is also why only the RBI may print currency — if anyone could, trust would collapse and the notes would become worthless. So a banknote works on exactly the same magic as a QR-code payment: a society agreeing, together, on what counts as money.",
           "prerequisite": "Knowing only the RBI may issue currency in India.",
-          "nextStepHint": "Find the RBI Governor's 'I promise to pay' line on a real banknote and explain what it means."
+          "nextStepHint": "Find the RBI Governor's 'I promise to pay' line on a real banknote and explain what it means.",
+          "bonusQuestions": [
+            {
+              "id": "ssch11_dv06_b01",
+              "prompt": "Why is a 100-rupee note — just printed paper — worth 100 rupees?",
+              "questionType": "mcq",
+              "options": [
+                "It is FIAT money: the government/RBI declare it legal tender and everyone trusts that",
+                "The paper itself is worth 100 rupees",
+                "You can exchange it for an equal weight of gold on demand",
+                "It is edible in an emergency"
+              ],
+              "answer": "It is FIAT money: the government/RBI declare it legal tender and everyone trusts that",
+              "solutionSteps": [
+                "Fiat money's value comes from declaration and shared trust, not its material.",
+                "The note even carries the RBI Governor's promise to pay the bearer."
+              ],
+              "commonMistakes": [
+                "Thinking the note is backed by an equal amount of claimable gold."
+              ],
+              "variations": [
+                {
+                  "prompt": "What does 'fiat money' mean?",
+                  "answer": "Money valued by government declaration and trust, not its material",
+                  "solutionSteps": [
+                    "Not commodity-backed.",
+                    "Trust-based."
+                  ]
+                },
+                {
+                  "prompt": "Whose promise appears on an Indian banknote?",
+                  "answer": "The RBI Governor's ('I promise to pay the bearer...')",
+                  "solutionSteps": [
+                    "On the note.",
+                    "Symbol of trust."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                132
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch11_dv06_b02",
+              "prompt": "Why may ONLY the RBI print India's currency?",
+              "questionType": "mcq",
+              "options": [
+                "If anyone could, trust would collapse and the notes would become worthless",
+                "To save on printing costs",
+                "Purely for decoration",
+                "It is a rule with no real reason"
+              ],
+              "answer": "If anyone could, trust would collapse and the notes would become worthless",
+              "solutionSteps": [
+                "Money works on shared trust; uncontrolled printing destroys it.",
+                "So sole issuing power protects the currency."
+              ],
+              "commonMistakes": [
+                "Treating the RBI's monopoly as arbitrary rather than trust-protecting."
+              ],
+              "variations": [
+                {
+                  "prompt": "A banknote works on the same 'magic' as a QR payment, namely...",
+                  "answer": "A society agreeing together on what counts as money",
+                  "solutionSteps": [
+                    "Shared agreement.",
+                    "Trust at the core."
+                  ]
+                },
+                {
+                  "prompt": "The real backing of a fiat note is...",
+                  "answer": "Shared trust that others will accept it",
+                  "solutionSteps": [
+                    "Not the paper.",
+                    "Collective belief."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                132
+              ],
+              "needsHumanReview": false
+            }
+          ]
         }
       ],
       "crossChapterRefs": [
@@ -35443,7 +35959,93 @@
           "parentConceptId": "ssch12_t02_c02",
           "body": "In senior classes, demand and supply are drawn as two lines on a graph: a demand curve that slopes downward (buyers want more as the price falls) and a supply curve that slopes upward (sellers offer more as the price rises). The single point where the two lines cross is the 'equilibrium', and the price there is the equilibrium price — exactly the 'just right' price the guava seller discovered. At that price, the quantity buyers want to buy equals the quantity sellers want to sell, so there is no leftover surplus and no shortage. If demand or supply shifts — say onions become scarce — the curves move and the equilibrium price changes, which is how economists explain price rises and falls precisely.",
           "prerequisite": "Understanding that price is set by the interaction of demand and supply.",
-          "nextStepHint": "Sketch a simple demand and supply graph for guavas and mark the ₹40 equilibrium point."
+          "nextStepHint": "Sketch a simple demand and supply graph for guavas and mark the ₹40 equilibrium point.",
+          "bonusQuestions": [
+            {
+              "id": "ssch12_dv01_b01",
+              "prompt": "On a demand-supply graph, the 'equilibrium price' is the price at which...",
+              "questionType": "mcq",
+              "options": [
+                "The downward demand curve and the upward supply curve cross",
+                "Demand is zero",
+                "Supply is at its highest",
+                "The price is lowest possible"
+              ],
+              "answer": "The downward demand curve and the upward supply curve cross",
+              "solutionSteps": [
+                "Demand slopes down, supply slopes up; they meet at one point.",
+                "That crossing sets the equilibrium price."
+              ],
+              "commonMistakes": [
+                "Thinking equilibrium is the lowest or highest price, not the crossing."
+              ],
+              "variations": [
+                {
+                  "prompt": "At the equilibrium price, what is true of quantities?",
+                  "answer": "Quantity buyers want equals quantity sellers offer",
+                  "solutionSteps": [
+                    "Demand = supply.",
+                    "No surplus or shortage."
+                  ]
+                },
+                {
+                  "prompt": "If onions become scarce, the supply curve shifts and the equilibrium price...",
+                  "answer": "Changes (here, rises)",
+                  "solutionSteps": [
+                    "Curves move.",
+                    "New crossing point."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                144
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch12_dv01_b02",
+              "prompt": "At the equilibrium price in a market, there is...",
+              "questionType": "mcq",
+              "options": [
+                "No leftover surplus and no shortage",
+                "A large unsold surplus",
+                "A severe shortage",
+                "No buyers at all"
+              ],
+              "answer": "No leftover surplus and no shortage",
+              "solutionSteps": [
+                "Buyers' wanted quantity equals sellers' offered quantity.",
+                "So nothing is left over and nothing runs short."
+              ],
+              "commonMistakes": [
+                "Imagining equilibrium still leaves a surplus or shortage."
+              ],
+              "variations": [
+                {
+                  "prompt": "The 'just right' price the guava seller found is what economists call the...",
+                  "answer": "Equilibrium price",
+                  "solutionSteps": [
+                    "Demand meets supply.",
+                    "Market-clearing price."
+                  ]
+                },
+                {
+                  "prompt": "A demand curve slopes downward because buyers want more as the price...",
+                  "answer": "Falls",
+                  "solutionSteps": [
+                    "Lower price, more demand.",
+                    "Downward slope."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                144
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch12_dv02",
@@ -35452,7 +36054,93 @@
           "parentConceptId": "ssch12_t05_c02",
           "body": "When a factory makes a product, the buyer pays for the product but not for the pollution the factory releases into the air or river. That pollution is a real cost, but it falls on society — on people who never bought the product — rather than on the buyer or seller. Economists call such a spillover cost a 'negative externality'. Because the market price ignores it, the market on its own produces too much of the polluting good. This is why the government steps in with regulations, pollution limits, or bans (as on single-use plastics): it forces the cost back onto the producer so the true cost of the good is reflected. Recognising externalities is one of the most important reasons economists give for government action in markets.",
           "prerequisite": "Knowing that markets can have effects beyond just buying and selling.",
-          "nextStepHint": "Find a real example of a 'positive externality' — a market activity that benefits people who did not pay for it."
+          "nextStepHint": "Find a real example of a 'positive externality' — a market activity that benefits people who did not pay for it.",
+          "bonusQuestions": [
+            {
+              "id": "ssch12_dv02_b01",
+              "prompt": "A factory's pollution is a real cost that falls on society rather than the buyer or seller. Economists call this a...",
+              "questionType": "mcq",
+              "options": [
+                "Negative externality",
+                "Surplus",
+                "Subsidy",
+                "Profit"
+              ],
+              "answer": "Negative externality",
+              "solutionSteps": [
+                "A spillover cost on people who didn't buy the product is a negative externality.",
+                "The market price ignores it."
+              ],
+              "commonMistakes": [
+                "Confusing an externality with a normal cost or a subsidy."
+              ],
+              "variations": [
+                {
+                  "prompt": "Because the price ignores pollution, the market on its own produces...",
+                  "answer": "Too much of the polluting good",
+                  "solutionSteps": [
+                    "Hidden cost unpriced.",
+                    "Overproduction."
+                  ]
+                },
+                {
+                  "prompt": "Why does the government regulate or ban polluting goods (e.g. single-use plastics)?",
+                  "answer": "To force the true cost back onto the producer",
+                  "solutionSteps": [
+                    "Internalise the externality.",
+                    "Correct the market."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                144
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch12_dv02_b02",
+              "prompt": "Recognising negative externalities is a key reason economists give for...",
+              "questionType": "mcq",
+              "options": [
+                "Government action in markets (regulation, limits, bans)",
+                "Abolishing all markets",
+                "Never regulating anything",
+                "Raising every price"
+              ],
+              "answer": "Government action in markets (regulation, limits, bans)",
+              "solutionSteps": [
+                "Markets alone overproduce goods with external costs.",
+                "So regulation can correct this market failure."
+              ],
+              "commonMistakes": [
+                "Assuming markets always self-correct without any government role."
+              ],
+              "variations": [
+                {
+                  "prompt": "A pollution limit on a factory forces it to...",
+                  "answer": "Bear the cost it was passing to society",
+                  "solutionSteps": [
+                    "Internalises the harm.",
+                    "True cost reflected."
+                  ]
+                },
+                {
+                  "prompt": "Who bears the cost of a negative externality if it is unpriced?",
+                  "answer": "Society — people who never bought the product",
+                  "solutionSteps": [
+                    "Spillover onto others.",
+                    "Not the buyer/seller."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                144
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch12_dv03",
@@ -35461,7 +36149,93 @@
           "parentConceptId": "ssch12_t04_c03",
           "body": "It can seem that wholesalers, distributors and retailers just take a 'cut' and make goods costlier. But look at how a Surat shirt reaches a village shop, and each middleman turns out to be doing real work. The mill makes thousands of identical shirts and has no time to sell them one by one. A wholesaler buys in bulk, stores them, and takes the risk that some won't sell. A distributor carries them across states and 'breaks bulk' — splitting a truckload into shop-sized boxes. The retailer keeps a handful on a shelf near you, gives advice, and lets you buy just one. Each link adds a service — storage, transport, breaking bulk, reaching the last customer — and is paid for it. Where one of these services isn't needed, markets do remove the link: that is exactly what online selling does when a factory ships straight to your door. So middlemen are not automatically 'bad'; they survive only as long as they add value someone is willing to pay for.",
           "prerequisite": "Knowing the roles of wholesalers, distributors and retailers in a supply chain.",
-          "nextStepHint": "Pick one middleman in the shirt's journey and name the service they add."
+          "nextStepHint": "Pick one middleman in the shirt's journey and name the service they add.",
+          "bonusQuestions": [
+            {
+              "id": "ssch12_dv03_b01",
+              "prompt": "Why does a shirt pass through a wholesaler, distributor and retailer on its way to a village shop?",
+              "questionType": "mcq",
+              "options": [
+                "Each adds a real service — bulk storage, transport and breaking bulk, and last-customer sale",
+                "They each just take a cut for doing nothing",
+                "A law forces three middlemen",
+                "Only to push the price up"
+              ],
+              "answer": "Each adds a real service — bulk storage, transport and breaking bulk, and last-customer sale",
+              "solutionSteps": [
+                "The mill can't sell shirts one by one; each link does real work.",
+                "They are paid for the service they add."
+              ],
+              "commonMistakes": [
+                "Assuming middlemen are automatically wasteful 'cuts'."
+              ],
+              "variations": [
+                {
+                  "prompt": "What does a distributor's 'breaking bulk' mean?",
+                  "answer": "Splitting a truckload into shop-sized boxes",
+                  "solutionSteps": [
+                    "Bulk to small lots.",
+                    "A real service."
+                  ]
+                },
+                {
+                  "prompt": "When a middleman's service isn't needed, markets...",
+                  "answer": "Remove the link (e.g. a factory shipping straight to your door)",
+                  "solutionSteps": [
+                    "Online selling does this.",
+                    "Value or vanish."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                144
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch12_dv03_b02",
+              "prompt": "Middlemen survive in a market only as long as they...",
+              "questionType": "mcq",
+              "options": [
+                "Add a service someone is willing to pay for",
+                "Are protected by law",
+                "Make goods cheaper than the factory",
+                "Hide from customers"
+              ],
+              "answer": "Add a service someone is willing to pay for",
+              "solutionSteps": [
+                "Storage, transport, breaking bulk, last-mile reach are paid-for services.",
+                "No value added means the link is cut (e.g. by online selling)."
+              ],
+              "commonMistakes": [
+                "Believing middlemen are inherently 'bad' regardless of value added."
+              ],
+              "variations": [
+                {
+                  "prompt": "What does a retailer add that a distant mill cannot?",
+                  "answer": "A handful of stock near you, advice, and selling you just one",
+                  "solutionSteps": [
+                    "Last-customer service.",
+                    "Convenience."
+                  ]
+                },
+                {
+                  "prompt": "Online selling cuts a link by...",
+                  "answer": "Letting a factory ship straight to your door",
+                  "solutionSteps": [
+                    "Removes an unneeded service.",
+                    "Shorter chain."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                144
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch12_dv04",
@@ -35470,7 +36244,93 @@
           "parentConceptId": "ssch12_t05_c03",
           "body": "How can a buyer judge quality when you cannot test a product before buying it? India built a system of trust-marks so you don't have to. The ISI mark (from the Bureau of Indian Standards) certifies safety on goods like helmets and electrical plugs; AGMARK grades farm products such as spices and honey; FSSAI's licence number must appear on packaged food; and the BIS Hallmark certifies the purity of gold jewellery. Behind these is the Consumer Protection law, which gives buyers rights — to safety, to information (such as the printed MRP and expiry date), to choose, and to complain — and special consumer courts to settle disputes cheaply. These marks and rights are a quiet but powerful part of how markets work: they let an ordinary person trust a stranger's product, which is the very thing a market needs to function.",
           "prerequisite": "Knowing consumers need ways to judge the quality of what they buy.",
-          "nextStepHint": "Find an ISI, AGMARK, FSSAI or Hallmark mark on something at home and say what it certifies."
+          "nextStepHint": "Find an ISI, AGMARK, FSSAI or Hallmark mark on something at home and say what it certifies.",
+          "bonusQuestions": [
+            {
+              "id": "ssch12_dv04_b01",
+              "prompt": "Which Indian mark certifies the PURITY of gold jewellery?",
+              "questionType": "mcq",
+              "options": [
+                "The BIS Hallmark",
+                "AGMARK",
+                "FSSAI licence number",
+                "The ISI mark"
+              ],
+              "answer": "The BIS Hallmark",
+              "solutionSteps": [
+                "BIS Hallmark certifies gold purity.",
+                "ISI is for safety goods, AGMARK for farm produce, FSSAI for food."
+              ],
+              "commonMistakes": [
+                "Mixing up which mark covers which product."
+              ],
+              "variations": [
+                {
+                  "prompt": "Which mark grades farm products like spices and honey?",
+                  "answer": "AGMARK",
+                  "solutionSteps": [
+                    "Agricultural grading.",
+                    "Quality of produce."
+                  ]
+                },
+                {
+                  "prompt": "Which number must appear on packaged food?",
+                  "answer": "The FSSAI licence number",
+                  "solutionSteps": [
+                    "Food safety.",
+                    "On the package."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                144
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch12_dv04_b02",
+              "prompt": "How do quality trust-marks (ISI, AGMARK, FSSAI, Hallmark) help markets work?",
+              "questionType": "mcq",
+              "options": [
+                "They let an ordinary person trust a stranger's product without testing it first",
+                "They raise prices for no reason",
+                "They hide information from buyers",
+                "They replace the need for money"
+              ],
+              "answer": "They let an ordinary person trust a stranger's product without testing it first",
+              "solutionSteps": [
+                "You can't test a product before buying, so marks certify quality.",
+                "Trust is exactly what a market needs to function."
+              ],
+              "commonMistakes": [
+                "Seeing trust-marks as red tape rather than enablers of trust."
+              ],
+              "variations": [
+                {
+                  "prompt": "Consumer Protection law gives buyers rights such as...",
+                  "answer": "Safety, information (MRP/expiry), choice and to complain",
+                  "solutionSteps": [
+                    "Plus consumer courts.",
+                    "Backs the marks."
+                  ]
+                },
+                {
+                  "prompt": "Why are trust-marks especially important when you cannot test a product first?",
+                  "answer": "They certify quality so you can trust a stranger's goods",
+                  "solutionSteps": [
+                    "Substitute for testing.",
+                    "Enable the sale."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                144
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch12_dv05",
@@ -35479,7 +36339,93 @@
           "parentConceptId": "ssch12_t03_c01",
           "body": "An online market keeps the three essentials of any market — a buyer, a seller and a price — but everything else changes. There is no single PLACE: the 'shop' is an app, the seller may sit a thousand kilometres away, and the goods arrive at your door. A physical shop can only stock what fits on its shelves, but an online store can list almost endless products, so even unusual items find buyers (sellers call this the 'long tail'). You cannot pick up and inspect the product, so trust is built in new ways — star ratings, reviews from past buyers, return policies and the quality marks from the last deep-dive do the job your hands used to do. And because many sellers are visible side by side, prices are easy to compare, which pushes them down. So the online market is not a different THING from a haat or a mall; it is the same idea — buyers and sellers meeting at a price — carried over a network instead of a marketplace.",
           "prerequisite": "Knowing a market needs a buyer, a seller and a price, and that online markets exist.",
-          "nextStepHint": "List two ways you can judge a product's quality online when you cannot touch it."
+          "nextStepHint": "List two ways you can judge a product's quality online when you cannot touch it.",
+          "bonusQuestions": [
+            {
+              "id": "ssch12_dv05_b01",
+              "prompt": "An online market still keeps which three essentials of ANY market?",
+              "questionType": "mcq",
+              "options": [
+                "A buyer, a seller and a price",
+                "A shop, shelves and a till",
+                "Trucks, roads and ports",
+                "Gold, silver and copper"
+              ],
+              "answer": "A buyer, a seller and a price",
+              "solutionSteps": [
+                "Online or offline, a market needs buyers, sellers and a price.",
+                "Only the place and methods change."
+              ],
+              "commonMistakes": [
+                "Thinking an online market is a wholly different thing from a haat or mall."
+              ],
+              "variations": [
+                {
+                  "prompt": "How is trust built online without touching the product?",
+                  "answer": "Star ratings, reviews, return policies and quality marks",
+                  "solutionSteps": [
+                    "Replace your hands.",
+                    "Build trust."
+                  ]
+                },
+                {
+                  "prompt": "An online market has no single...",
+                  "answer": "Place (the 'shop' is an app; sellers may be far away)",
+                  "solutionSteps": [
+                    "No fixed location.",
+                    "Goods come to you."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                144
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch12_dv05_b02",
+              "prompt": "Because an online store can list almost endless products (so even unusual items find buyers), sellers call this the...",
+              "questionType": "mcq",
+              "options": [
+                "Long tail",
+                "Equilibrium",
+                "Externality",
+                "Hallmark"
+              ],
+              "answer": "Long tail",
+              "solutionSteps": [
+                "Physical shelves are limited; online listings are not.",
+                "Endless niche items selling a little each is the 'long tail'."
+              ],
+              "commonMistakes": [
+                "Confusing the 'long tail' with unrelated economic terms."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why are online prices easy to push down?",
+                  "answer": "Many sellers are visible side by side, so buyers compare",
+                  "solutionSteps": [
+                    "Comparison pressure.",
+                    "Lowers prices."
+                  ]
+                },
+                {
+                  "prompt": "An online market is best seen as...",
+                  "answer": "The same market idea carried over a network",
+                  "solutionSteps": [
+                    "Not a new thing.",
+                    "Buyers + sellers + price."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                144
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch12_dv06",
@@ -35488,7 +36434,93 @@
           "parentConceptId": "ssch12_t03_c02",
           "body": "If a country could in principle make everything itself, why does it still import goods? The answer is that no place is equally good at everything. India's climate and soil grow tea and spices cheaply; some countries have oil under the ground, others have built huge factories for electronics. Each place tends to produce what it can make best or most cheaply, sells (exports) the surplus, and uses the money to buy (imports) the things others make better or cheaper. Both sides end up with more than if each tried to make everything alone — which is the whole reason international markets exist. It also explains the labels on things around you: a phone designed in one country, assembled in another, running on minerals from a third. Trade across borders is really just the market idea — buyers and sellers meeting at a price — stretched across the whole world.",
           "prerequisite": "Knowing that exports are sales abroad and imports are purchases from abroad.",
-          "nextStepHint": "Name one thing India exports and one it imports, and say why each makes sense."
+          "nextStepHint": "Name one thing India exports and one it imports, and say why each makes sense.",
+          "bonusQuestions": [
+            {
+              "id": "ssch12_dv06_b01",
+              "prompt": "Why does a country import goods even if it could, in principle, make everything itself?",
+              "questionType": "mcq",
+              "options": [
+                "Each place produces what it makes best or cheapest, sells the surplus, and buys what others make better — so both gain",
+                "Importing is forced on it",
+                "To deliberately lose money",
+                "For no real reason"
+              ],
+              "answer": "Each place produces what it makes best or cheapest, sells the surplus, and buys what others make better — so both gain",
+              "solutionSteps": [
+                "No place is equally good at everything.",
+                "Specialising and trading leaves both sides better off."
+              ],
+              "commonMistakes": [
+                "Thinking self-sufficiency always beats trade."
+              ],
+              "variations": [
+                {
+                  "prompt": "India's climate and soil let it cheaply produce...",
+                  "answer": "Tea and spices (which it can export)",
+                  "solutionSteps": [
+                    "Local advantage.",
+                    "Sell the surplus."
+                  ]
+                },
+                {
+                  "prompt": "Both trading sides end up with...",
+                  "answer": "More than if each made everything alone",
+                  "solutionSteps": [
+                    "Mutual gain.",
+                    "Why trade exists."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                144
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch12_dv06_b02",
+              "prompt": "A phone designed in one country, assembled in another, using minerals from a third illustrates...",
+              "questionType": "mcq",
+              "options": [
+                "The market idea (buyers and sellers meeting at a price) stretched across the whole world",
+                "That trade is harmful",
+                "That self-sufficiency is best",
+                "A return to barter"
+              ],
+              "answer": "The market idea (buyers and sellers meeting at a price) stretched across the whole world",
+              "solutionSteps": [
+                "International trade is the same market idea across borders.",
+                "Each place contributes what it does best."
+              ],
+              "commonMistakes": [
+                "Reading global supply chains as something other than trade."
+              ],
+              "variations": [
+                {
+                  "prompt": "Trade across borders is really just...",
+                  "answer": "The market idea stretched worldwide",
+                  "solutionSteps": [
+                    "Same buyers-sellers-price.",
+                    "Across the globe."
+                  ]
+                },
+                {
+                  "prompt": "A country sells its surplus (exports) and uses the money to...",
+                  "answer": "Buy (import) what others make better or cheaper",
+                  "solutionSteps": [
+                    "Two-way trade.",
+                    "Both gain."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                144
+              ],
+              "needsHumanReview": false
+            }
+          ]
         }
       ],
       "crossChapterRefs": [
