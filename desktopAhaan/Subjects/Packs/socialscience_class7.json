@@ -2116,7 +2116,92 @@
           "parentConceptId": "ssch01_t05_c03",
           "body": "When moist winds meet a mountain or range of hills, they are forced to rise. As air rises it expands and cools, and cooler air can hold less water vapour, so the vapour condenses into clouds and falls as rain on the windward (wind-facing) side. This is called 'orographic' or 'relief' rainfall. It explains why the Western Ghats soak the west coast, why the Khasi hills of the Northeast are among the wettest places on Earth, and why the far side of a range (the 'rain shadow') stays dry — which is exactly why Ladakh, behind the Himalayas, is a desert. One range can therefore create both a rainforest and a desert, only a short distance apart.",
           "prerequisite": "Understanding that the Himalayas and Ghats force winds upward.",
-          "nextStepHint": "Look up 'rain shadow' and find another example in India besides Ladakh."
+          "nextStepHint": "Look up 'rain shadow' and find another example in India besides Ladakh.",
+          "bonusQuestions": [
+            {
+              "id": "ssch01_dv01_b01",
+              "prompt": "Why is Ladakh, lying behind the high Himalayas, a cold desert?",
+              "questionType": "mcq",
+              "options": [
+                "It sits in the 'rain shadow' — the dry far side of the range, after winds have dropped their rain",
+                "It is too cold for any rain ever",
+                "It has no rivers nearby",
+                "It lies below sea level"
+              ],
+              "answer": "It sits in the 'rain shadow' — the dry far side of the range, after winds have dropped their rain",
+              "solutionSteps": [
+                "Moist winds drop their rain on the windward side as they rise.",
+                "The leeward (far) side gets little — the rain shadow — so Ladakh is dry."
+              ],
+              "commonMistakes": [
+                "Assuming it is dry only because it is cold, not because of the rain shadow."
+              ],
+              "variations": [
+                {
+                  "prompt": "On which side of a mountain does orographic rain mainly fall?",
+                  "answer": "The windward (wind-facing) side",
+                  "solutionSteps": [
+                    "Rising air cools and condenses there.",
+                    "Leaving the far side dry."
+                  ]
+                },
+                {
+                  "prompt": "One range can create both a rainforest and a desert nearby. Why?",
+                  "answer": "Wet windward side vs dry rain-shadow side",
+                  "solutionSteps": [
+                    "Rain falls on one side.",
+                    "The other is starved."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                12
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch01_dv01_b02",
+              "prompt": "Orographic ('relief') rainfall occurs when moist winds...",
+              "questionType": "mcq",
+              "options": [
+                "Are forced to rise over a mountain, cool, and the vapour condenses into rain",
+                "Blow steadily across a flat plain",
+                "Sink down into a warm valley",
+                "Warm up over the open sea"
+              ],
+              "answer": "Are forced to rise over a mountain, cool, and the vapour condenses into rain",
+              "solutionSteps": [
+                "Rising air expands and cools; cool air holds less vapour, so it condenses."
+              ],
+              "commonMistakes": [
+                "Thinking rain forms as air warms; it forms as rising air cools."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why are the Khasi hills among the wettest places on Earth?",
+                  "answer": "Moist winds rise against them and dump heavy orographic rain",
+                  "solutionSteps": [
+                    "Relief rainfall on the windward slope.",
+                    "Extreme totals result."
+                  ]
+                },
+                {
+                  "prompt": "As rising air cools, its ability to hold water vapour...",
+                  "answer": "Decreases (so vapour condenses)",
+                  "solutionSteps": [
+                    "Cooler air is less 'roomy'.",
+                    "Condensation follows."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                12
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch01_dv02",
@@ -2125,7 +2210,93 @@
           "parentConceptId": "ssch01_t02_c01",
           "body": "We can actually measure India creeping into Asia. Networks of GPS stations fixed to the ground record their positions to within millimetres, year after year, and they show the Indian plate moving north-northeast at roughly 5 cm a year. Geologists combine this with the age of rock layers, the pattern of earthquakes along the Himalayan front, and marine fossils found high in the mountains to reconstruct the whole collision. This is a great example of how a claim in your textbook ('the Himalayas are still rising') is not a guess but a measured, testable fact — the heart of how science works.",
           "prerequisite": "Knowing the Himalayas formed by the India–Eurasia collision.",
-          "nextStepHint": "Find out what a 'seismograph' measures and how it maps Himalayan earthquakes."
+          "nextStepHint": "Find out what a 'seismograph' measures and how it maps Himalayan earthquakes.",
+          "bonusQuestions": [
+            {
+              "id": "ssch01_dv02_b01",
+              "prompt": "How do geographers know the Indian plate is still moving north into Asia?",
+              "questionType": "mcq",
+              "options": [
+                "GPS stations fixed to the ground measure its position to within millimetres, showing ~5 cm per year",
+                "They guess from old maps",
+                "By counting the number of mountains",
+                "From the colour of the soil"
+              ],
+              "answer": "GPS stations fixed to the ground measure its position to within millimetres, showing ~5 cm per year",
+              "solutionSteps": [
+                "Precise GPS tracks the plate's motion year after year.",
+                "It moves north-northeast about 5 cm annually."
+              ],
+              "commonMistakes": [
+                "Thinking plate motion can't be measured directly; GPS measures it."
+              ],
+              "variations": [
+                {
+                  "prompt": "Besides GPS, name one other line of evidence for the collision.",
+                  "answer": "Earthquake patterns along the Himalayan front (or marine fossils high up)",
+                  "solutionSteps": [
+                    "Multiple independent clues.",
+                    "All point to the collision."
+                  ]
+                },
+                {
+                  "prompt": "Roughly how fast does the Indian plate move north each year?",
+                  "answer": "About 5 cm",
+                  "solutionSteps": [
+                    "Measured by GPS.",
+                    "~5 cm/year."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                12
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch01_dv02_b02",
+              "prompt": "That 'the Himalayas are still rising' is best described as...",
+              "questionType": "mcq",
+              "options": [
+                "A measured, testable fact",
+                "A wild guess",
+                "An ancient legend",
+                "A matter of opinion"
+              ],
+              "answer": "A measured, testable fact",
+              "solutionSteps": [
+                "GPS, rock ages and earthquake data all confirm ongoing uplift.",
+                "So it is measured and testable, not a guess."
+              ],
+              "commonMistakes": [
+                "Dismissing it as opinion rather than evidence-based science."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is this a good example of how science works?",
+                  "answer": "A claim is backed by measurement and can be tested",
+                  "solutionSteps": [
+                    "Evidence over assertion.",
+                    "Testable and repeatable."
+                  ]
+                },
+                {
+                  "prompt": "Marine fossils high in the mountains support which idea?",
+                  "answer": "Continental drift / the collision that raised the Himalayas",
+                  "solutionSteps": [
+                    "Sea floor pushed up.",
+                    "Direct evidence."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                12
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch01_dv03",
@@ -2134,7 +2305,93 @@
           "parentConceptId": "ssch01_t02_c01",
           "body": "Climb high into the Himalayas and you can find fossils of ammonites and other sea creatures embedded in the rock, kilometres above the nearest ocean. How did sea animals end up on the world's tallest mountains? Before the Himalayas existed, a wide sea called the Tethys lay between India and Asia. As India drifted north and slammed into Asia, the floor of that vanished sea was squeezed, folded and pushed UP to form the Himalayas, carrying its buried sea-life with it. Those fossils are direct evidence that today's snowy peaks were once an ocean bed — one of the clearest proofs of continental drift you can hold in your hand.",
           "prerequisite": "Knowing the Himalayas rose from the India–Eurasia collision.",
-          "nextStepHint": "Find out what an 'ammonite' was and why it makes such a useful 'index fossil'."
+          "nextStepHint": "Find out what an 'ammonite' was and why it makes such a useful 'index fossil'.",
+          "bonusQuestions": [
+            {
+              "id": "ssch01_dv03_b01",
+              "prompt": "Fossils of sea creatures found high in the Himalayas are evidence that the peaks were once...",
+              "questionType": "mcq",
+              "options": [
+                "The floor of an ancient sea (the Tethys)",
+                "A volcano",
+                "A glacier",
+                "A desert"
+              ],
+              "answer": "The floor of an ancient sea (the Tethys)",
+              "solutionSteps": [
+                "The Tethys Sea lay between India and Asia.",
+                "Its floor was folded upward into the Himalayas, carrying sea-fossils."
+              ],
+              "commonMistakes": [
+                "Imagining the fossils were carried up by rivers rather than the sea floor itself rising."
+              ],
+              "variations": [
+                {
+                  "prompt": "What was the sea called that once lay between India and Asia?",
+                  "answer": "The Tethys",
+                  "solutionSteps": [
+                    "It separated the landmasses.",
+                    "Its floor became the Himalayas."
+                  ]
+                },
+                {
+                  "prompt": "Ammonite fossils on Everest-region rocks are a clear proof of...",
+                  "answer": "Continental drift",
+                  "solutionSteps": [
+                    "Sea bed raised to peaks.",
+                    "Held in your hand."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                12
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch01_dv03_b02",
+              "prompt": "The Himalayas formed when...",
+              "questionType": "mcq",
+              "options": [
+                "India drifted north and collided with Asia, folding the old sea floor upward",
+                "A giant volcano erupted",
+                "A sea suddenly dried up",
+                "An earthquake split the land in two"
+              ],
+              "answer": "India drifted north and collided with Asia, folding the old sea floor upward",
+              "solutionSteps": [
+                "The collision squeezed and folded the Tethys sea floor.",
+                "Pushing it up into mountains."
+              ],
+              "commonMistakes": [
+                "Attributing the mountains to volcanoes rather than plate collision."
+              ],
+              "variations": [
+                {
+                  "prompt": "The Himalayas are an example of which kind of mountain?",
+                  "answer": "Fold mountains (formed by crustal squeezing)",
+                  "solutionSteps": [
+                    "Layers folded up.",
+                    "By collision."
+                  ]
+                },
+                {
+                  "prompt": "Is the collision finished?",
+                  "answer": "No — India still pushes north, so the mountains still rise",
+                  "solutionSteps": [
+                    "Ongoing process.",
+                    "~5 cm/yr."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                12
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch01_dv04",
@@ -2143,7 +2400,93 @@
           "parentConceptId": "ssch01_t03_c01",
           "body": "The Northern Plains look flat and ordinary, but beneath your feet the river-laid soil (alluvium) goes down for kilometres before it reaches solid rock. For millions of years the Himalayan rivers have ground down the young, rising mountains and dumped the sediment into the trough in front of them, filling it like sand poured into a tray. Geographers even sort this alluvium into 'bhangar' (older, higher, slightly clayey land) and 'khadar' (newer, lower flood-plain soil renewed each monsoon). This colossal depth of fine, mineral-rich soil is exactly why the plains are so fertile and can feed so many people — but it also means earthquakes shake harder here, because loose soil wobbles more than firm rock.",
           "prerequisite": "Knowing the Northern Plains were built by the Himalayan rivers.",
-          "nextStepHint": "Compare 'khadar' and 'bhangar' and work out which one a farmer would prefer for which crop."
+          "nextStepHint": "Compare 'khadar' and 'bhangar' and work out which one a farmer would prefer for which crop.",
+          "bonusQuestions": [
+            {
+              "id": "ssch01_dv04_b01",
+              "prompt": "Why are the Northern Plains so fertile?",
+              "questionType": "mcq",
+              "options": [
+                "They are kilometres deep in fine, mineral-rich river alluvium",
+                "They are made of solid bare rock",
+                "They receive no rain at all",
+                "They are volcanic ash"
+              ],
+              "answer": "They are kilometres deep in fine, mineral-rich river alluvium",
+              "solutionSteps": [
+                "Himalayan rivers dumped sediment into the trough for millions of years.",
+                "The deep, mineral-rich soil feeds huge populations."
+              ],
+              "commonMistakes": [
+                "Thinking the plains are rocky rather than deep soil."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why do earthquakes shake harder in the plains than on firm rock?",
+                  "answer": "Loose, deep alluvium wobbles more than solid rock",
+                  "solutionSteps": [
+                    "Soft soil amplifies shaking.",
+                    "Firm rock shakes less."
+                  ]
+                },
+                {
+                  "prompt": "Where did the plains' sediment come from?",
+                  "answer": "Eroded from the rising Himalayas by rivers",
+                  "solutionSteps": [
+                    "Ground down and carried.",
+                    "Filling the trough."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                12
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch01_dv04_b02",
+              "prompt": "Newer, lower flood-plain soil that is renewed each monsoon is called...",
+              "questionType": "mcq",
+              "options": [
+                "Khadar",
+                "Bhangar",
+                "Laterite",
+                "Regur"
+              ],
+              "answer": "Khadar",
+              "solutionSteps": [
+                "Khadar = newer flood-plain alluvium, renewed yearly.",
+                "Bhangar = older, higher, slightly clayey land."
+              ],
+              "commonMistakes": [
+                "Swapping khadar (new) and bhangar (old)."
+              ],
+              "variations": [
+                {
+                  "prompt": "Older, higher, slightly clayey alluvium is called...",
+                  "answer": "Bhangar",
+                  "solutionSteps": [
+                    "The older terrace soil.",
+                    "Above the flood plain."
+                  ]
+                },
+                {
+                  "prompt": "Why is khadar especially good for farming?",
+                  "answer": "Fresh silt is deposited on it each monsoon, renewing fertility",
+                  "solutionSteps": [
+                    "New nutrients yearly.",
+                    "Highly fertile."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                12
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch01_dv05",
@@ -2152,7 +2495,93 @@
           "parentConceptId": "ssch01_t04_c02",
           "body": "Look at a map of the peninsula and a puzzle appears: its biggest rivers — the Godavari, Krishna and Kaveri — begin in the Western Ghats, only a short distance from the Arabian Sea, yet they flow the other way, right across India to empty into the Bay of Bengal in the east. Why? The plateau is gently tilted. The Western Ghats stand high and steep along the west coast, so the whole tableland slopes downwards towards the east. Water always runs downhill, so these rivers travel east for hundreds of kilometres, slowing as they reach the flat coast and dropping their silt to build the wide, fertile deltas of the East Coast. The short rivers on the western slope, by contrast, have no room to wander — they tumble straight down the steep Ghats and reach the Arabian Sea quickly, which is why the West Coast has swift rivers and few big deltas. The tilt of the land, set when the plateau formed, still decides which way the water goes today.",
           "prerequisite": "Knowing the peninsular plateau is bordered by the high Western Ghats and sends most of its rivers east.",
-          "nextStepHint": "Trace the Godavari or Krishna on a map from its source to the sea and measure how far east it travels."
+          "nextStepHint": "Trace the Godavari or Krishna on a map from its source to the sea and measure how far east it travels.",
+          "bonusQuestions": [
+            {
+              "id": "ssch01_dv05_b01",
+              "prompt": "Why do the Godavari, Krishna and Kaveri flow EAST across India to the Bay of Bengal?",
+              "questionType": "mcq",
+              "options": [
+                "The peninsular plateau is tilted gently downward toward the east",
+                "The Bay of Bengal pulls water toward it",
+                "They are trying to avoid the Ghats",
+                "They follow the monsoon winds"
+              ],
+              "answer": "The peninsular plateau is tilted gently downward toward the east",
+              "solutionSteps": [
+                "The Western Ghats stand high, so the tableland slopes east.",
+                "Water runs downhill, so the big rivers flow east."
+              ],
+              "commonMistakes": [
+                "Thinking rivers flow toward the nearest sea regardless of slope."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why do these east-flowing rivers build wide deltas on the east coast?",
+                  "answer": "They slow on the flat coast and drop their silt",
+                  "solutionSteps": [
+                    "Sediment settles.",
+                    "Forming fertile deltas."
+                  ]
+                },
+                {
+                  "prompt": "The plateau's eastward tilt was set when?",
+                  "answer": "When the plateau itself formed (long ago)",
+                  "solutionSteps": [
+                    "An ancient feature.",
+                    "Still steering rivers today."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                12
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch01_dv05_b02",
+              "prompt": "Rivers on the WESTERN slope of the Ghats reach the Arabian Sea quickly and form few deltas because...",
+              "questionType": "mcq",
+              "options": [
+                "The slope is steep and short, so they tumble straight down with little room to wander",
+                "They carry no water",
+                "The sea is higher than the land",
+                "They flow uphill"
+              ],
+              "answer": "The slope is steep and short, so they tumble straight down with little room to wander",
+              "solutionSteps": [
+                "The Western Ghats drop steeply to a narrow coast.",
+                "Short, swift rivers reach the sea fast, building few big deltas."
+              ],
+              "commonMistakes": [
+                "Assuming all Indian rivers behave alike regardless of slope."
+              ],
+              "variations": [
+                {
+                  "prompt": "So the West Coast has what kind of rivers?",
+                  "answer": "Swift, short rivers with few big deltas",
+                  "solutionSteps": [
+                    "Steep, short courses.",
+                    "Fast to the sea."
+                  ]
+                },
+                {
+                  "prompt": "Water always moves in which direction, deciding a river's path?",
+                  "answer": "Downhill",
+                  "solutionSteps": [
+                    "Following the land's slope.",
+                    "Set by relief."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                12
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch01_dv06",
@@ -2161,7 +2590,93 @@
           "parentConceptId": "ssch01_t02_c03",
           "body": "India's rivers come in two families that behave very differently. The northern rivers — the Ganga, Indus and Brahmaputra — are born in the Himalayas and are fed by melting snow and glaciers as well as the monsoon. Because the snow keeps melting even in the dry season, these rivers flow all year round; geographers call them 'perennial'. The peninsular rivers — like the Godavari, Krishna and Kaveri — have no glaciers behind them and depend almost entirely on the monsoon rains. So they swell into torrents during the rainy months and shrink to thin streams, or even dry up, in summer; these are 'seasonal' or rain-fed rivers. This one difference shapes life across India: the snow-fed north can rely on river water for farming and cities through the whole year, while much of the peninsula had to invent tanks, reservoirs and careful water storage to bridge the long dry season — an idea you meet again in the story of Indian farming.",
           "prerequisite": "Knowing the Himalayan snow and glaciers feed the Ganga, Indus and Brahmaputra.",
-          "nextStepHint": "List which of India's big rivers are perennial and which are seasonal, and explain the difference."
+          "nextStepHint": "List which of India's big rivers are perennial and which are seasonal, and explain the difference.",
+          "bonusQuestions": [
+            {
+              "id": "ssch01_dv06_b01",
+              "prompt": "Why do the Ganga, Indus and Brahmaputra flow all year round (perennial)?",
+              "questionType": "mcq",
+              "options": [
+                "They are fed by Himalayan snow and glacier melt as well as the monsoon",
+                "They never lose any water",
+                "They are short rivers",
+                "They flow underground in summer"
+              ],
+              "answer": "They are fed by Himalayan snow and glacier melt as well as the monsoon",
+              "solutionSteps": [
+                "Snow and glaciers keep melting even in the dry season.",
+                "So these northern rivers flow year-round."
+              ],
+              "commonMistakes": [
+                "Thinking all rivers are perennial; only snow-fed ones reliably are."
+              ],
+              "variations": [
+                {
+                  "prompt": "Geographers call all-year rivers...",
+                  "answer": "Perennial",
+                  "solutionSteps": [
+                    "Flow through every season.",
+                    "Snow-fed northern rivers."
+                  ]
+                },
+                {
+                  "prompt": "Why can the snow-fed north rely on river water all year?",
+                  "answer": "Glacier melt sustains flow in the dry months",
+                  "solutionSteps": [
+                    "Steady supply.",
+                    "For farms and cities."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                12
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch01_dv06_b02",
+              "prompt": "Peninsular rivers like the Krishna and Kaveri are called 'seasonal' because...",
+              "questionType": "mcq",
+              "options": [
+                "They depend almost entirely on the monsoon rains, with no glaciers behind them",
+                "They freeze solid in winter",
+                "They are man-made canals",
+                "They flow only at night"
+              ],
+              "answer": "They depend almost entirely on the monsoon rains, with no glaciers behind them",
+              "solutionSteps": [
+                "No glaciers feed them, so they swell in the rains and shrink in summer.",
+                "Hence 'seasonal' or rain-fed."
+              ],
+              "commonMistakes": [
+                "Assuming peninsular rivers have a Himalayan snow source."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why did much of the peninsula develop tanks and reservoirs?",
+                  "answer": "To store monsoon water and bridge the long dry season",
+                  "solutionSteps": [
+                    "Seasonal rivers shrink.",
+                    "Storage is needed."
+                  ]
+                },
+                {
+                  "prompt": "Snow-fed vs rain-fed is the key split among Indian rivers. Which never dries up?",
+                  "answer": "The snow-fed (perennial) northern rivers",
+                  "solutionSteps": [
+                    "Glacier melt sustains them.",
+                    "Unlike rain-fed ones."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                12
+              ],
+              "needsHumanReview": false
+            }
+          ]
         }
       ],
       "crossChapterRefs": [
@@ -4665,7 +5180,93 @@
           "parentConceptId": "ssch02_t03_c01",
           "body": "Atmospheric pressure equals the weight of the entire column of air above a point, so it must fall as you climb, because more of the air ends up below you. But the fall is not steady — it is roughly exponential, dropping fastest near the ground where the air is densest. That is why pressure goes from about 1013 mb at sea level to around 650 mb at Khardung La (over 5,600 m): more than a third of the air is already below you. Crucially, the share of oxygen in air stays about 21% everywhere, but because the whole air is thinner, each breath contains fewer oxygen molecules. The body responds over days by making more red blood cells to carry the scarce oxygen — which is exactly why mountaineers acclimatise instead of climbing straight to the top.",
           "prerequisite": "Knowing that atmospheric pressure is the weight of the air above us.",
-          "nextStepHint": "Find out what 'altitude sickness' is and why pilots' cabins are 'pressurised'."
+          "nextStepHint": "Find out what 'altitude sickness' is and why pilots' cabins are 'pressurised'.",
+          "bonusQuestions": [
+            {
+              "id": "ssch02_dv01_b01",
+              "prompt": "High on a mountain the air is still about 21% oxygen, yet each breath gives you less oxygen. Why?",
+              "questionType": "mcq",
+              "options": [
+                "The whole air is thinner (lower pressure), so a breath contains fewer molecules of everything",
+                "Oxygen turns into nitrogen up there",
+                "The body suddenly needs less oxygen",
+                "Oxygen sinks to the valleys"
+              ],
+              "answer": "The whole air is thinner (lower pressure), so a breath contains fewer molecules of everything",
+              "solutionSteps": [
+                "Lower pressure means fewer air molecules per breath.",
+                "The percentage is the same, but the total is less."
+              ],
+              "commonMistakes": [
+                "Thinking the oxygen percentage drops; it's the air density that falls."
+              ],
+              "variations": [
+                {
+                  "prompt": "Roughly what is air pressure at Khardung La (~5,600 m) vs sea level?",
+                  "answer": "About 650 mb vs ~1013 mb",
+                  "solutionSteps": [
+                    "Over a third of the air is below you.",
+                    "Much thinner air."
+                  ]
+                },
+                {
+                  "prompt": "Why does pressure fall fastest near the ground?",
+                  "answer": "The air is densest there, so most of it is low down",
+                  "solutionSteps": [
+                    "Exponential fall.",
+                    "Steepest near sea level."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                24
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch02_dv01_b02",
+              "prompt": "How does the body adapt to high altitude over several days?",
+              "questionType": "mcq",
+              "options": [
+                "It makes more red blood cells to carry the scarce oxygen",
+                "It stops breathing at night",
+                "It grows taller",
+                "It lowers its body temperature permanently"
+              ],
+              "answer": "It makes more red blood cells to carry the scarce oxygen",
+              "solutionSteps": [
+                "More red cells carry more oxygen from each thin breath.",
+                "This is why climbers acclimatise gradually."
+              ],
+              "commonMistakes": [
+                "Thinking the body cannot adapt, or adapts instantly."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why do mountaineers 'acclimatise' instead of rushing to the summit?",
+                  "answer": "The body needs days to adjust to thin air",
+                  "solutionSteps": [
+                    "Red-cell increase takes time.",
+                    "So they climb slowly."
+                  ]
+                },
+                {
+                  "prompt": "Does the share of oxygen in air change much with altitude?",
+                  "answer": "No — it stays about 21%; only the air's density falls",
+                  "solutionSteps": [
+                    "Same proportion.",
+                    "Fewer molecules per breath."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                24
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch02_dv02",
@@ -4674,7 +5275,93 @@
           "parentConceptId": "ssch02_t04_c01",
           "body": "Air can hold only a limited amount of water vapour, and that limit rises sharply as the air gets warmer — warm air is 'roomier' for vapour. Relative humidity is the ratio of the vapour actually present to that maximum, as a percentage. The clever consequence: if you cool a parcel of air without adding any water, its relative humidity climbs, because the 'room' shrinks. Cool it enough to reach 100% — the 'dew point' — and vapour starts condensing into tiny droplets, forming dew, fog or clouds. This is why dew appears on cold mornings, why fog forms in cold valleys, and why rising air (which cools as it goes up) makes clouds. It also explains evaporative cooling: sweat and wet clothes dry slowly when the air is already near 100%, leaving you hot and sticky.",
           "prerequisite": "Understanding humidity as the amount of water vapour in the air.",
-          "nextStepHint": "Look up the 'water cycle' and trace how the Sun's heat lifts water into the air and brings it back as rain."
+          "nextStepHint": "Look up the 'water cycle' and trace how the Sun's heat lifts water into the air and brings it back as rain.",
+          "bonusQuestions": [
+            {
+              "id": "ssch02_dv02_b01",
+              "prompt": "Cooling a parcel of air without adding any water RAISES its relative humidity. Why?",
+              "questionType": "mcq",
+              "options": [
+                "Warm air holds more vapour, so cooling shrinks the 'room' and the same vapour fills more of it",
+                "Cooling creates new water",
+                "Cooling adds vapour from outside",
+                "Pressure rises and squeezes out water"
+              ],
+              "answer": "Warm air holds more vapour, so cooling shrinks the 'room' and the same vapour fills more of it",
+              "solutionSteps": [
+                "Relative humidity = vapour present / maximum the air can hold.",
+                "Cooling lowers the maximum, so the ratio rises."
+              ],
+              "commonMistakes": [
+                "Thinking water is added; it's the capacity that shrinks."
+              ],
+              "variations": [
+                {
+                  "prompt": "Warmer air can hold ... water vapour than cooler air.",
+                  "answer": "More",
+                  "solutionSteps": [
+                    "Warm air is 'roomier'.",
+                    "Higher capacity."
+                  ]
+                },
+                {
+                  "prompt": "Why does fog form in cold valleys?",
+                  "answer": "Cooling pushes the air to 100% humidity, so vapour condenses",
+                  "solutionSteps": [
+                    "Reaches dew point.",
+                    "Droplets form."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                24
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch02_dv02_b02",
+              "prompt": "The temperature at which cooling air reaches 100% humidity and vapour starts to condense is the...",
+              "questionType": "mcq",
+              "options": [
+                "Dew point",
+                "Boiling point",
+                "Freezing point",
+                "Melting point"
+              ],
+              "answer": "Dew point",
+              "solutionSteps": [
+                "At the dew point the air is saturated (100% RH).",
+                "Further cooling condenses vapour into dew, fog or cloud."
+              ],
+              "commonMistakes": [
+                "Confusing dew point with boiling or freezing point."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why does dew appear on cold mornings?",
+                  "answer": "Air near the ground cools to its dew point and vapour condenses",
+                  "solutionSteps": [
+                    "Saturation reached.",
+                    "Dew forms."
+                  ]
+                },
+                {
+                  "prompt": "Why does sweat dry slowly when humidity is near 100%?",
+                  "answer": "The air is already nearly full of vapour, so little more can evaporate",
+                  "solutionSteps": [
+                    "Low evaporation.",
+                    "You feel hot and sticky."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                24
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch02_dv03",
@@ -4683,7 +5370,93 @@
           "parentConceptId": "ssch02_t05_c02",
           "body": "A modern forecast is not a guess. Thousands of weather stations, balloons, ships, aircraft and satellites measure temperature, pressure, humidity and wind across the whole globe at the same moments. These numbers are fed into giant computer programs that divide the atmosphere into a 3-D grid and use the physics of how air, heat and moisture move to calculate the next few hours, then the next, and so on. The catch is that the atmosphere is 'chaotic': a tiny error in today's measurements grows bigger the further ahead you compute — the famous 'butterfly effect'. That is why a forecast for tomorrow is usually reliable, but one for ten days away is much less certain, and why forecasters now run many slightly different calculations and report the odds (a '60% chance of rain') rather than a single answer.",
           "prerequisite": "Knowing the five weather elements and the instruments that measure them.",
-          "nextStepHint": "Find out what an 'ensemble forecast' is and why forecasters run a model many times."
+          "nextStepHint": "Find out what an 'ensemble forecast' is and why forecasters run a model many times.",
+          "bonusQuestions": [
+            {
+              "id": "ssch02_dv03_b01",
+              "prompt": "Why is a 10-day weather forecast much less reliable than a 1-day forecast?",
+              "questionType": "mcq",
+              "options": [
+                "The atmosphere is chaotic, so tiny errors in today's data grow larger the further ahead you compute",
+                "The computers are switched off after a day",
+                "Satellites stop working",
+                "The Sun changes each day"
+              ],
+              "answer": "The atmosphere is chaotic, so tiny errors in today's data grow larger the further ahead you compute",
+              "solutionSteps": [
+                "Small measurement errors amplify over time (the 'butterfly effect').",
+                "So far-ahead forecasts are much less certain."
+              ],
+              "commonMistakes": [
+                "Thinking forecasts fail due to weak computers rather than chaos."
+              ],
+              "variations": [
+                {
+                  "prompt": "The growth of tiny errors over time is nicknamed the...",
+                  "answer": "Butterfly effect",
+                  "solutionSteps": [
+                    "Chaos amplifies errors.",
+                    "Limits long-range forecasts."
+                  ]
+                },
+                {
+                  "prompt": "How is a modern forecast actually computed?",
+                  "answer": "Global measurements are fed into physics-based computer models on a 3-D grid",
+                  "solutionSteps": [
+                    "Not a guess.",
+                    "Calculated step by step."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                24
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch02_dv03_b02",
+              "prompt": "Why do forecasters report '60% chance of rain' instead of a single yes/no answer?",
+              "questionType": "mcq",
+              "options": [
+                "They run many slightly different calculations and report the resulting odds",
+                "They are simply unsure how to measure",
+                "They are guessing randomly",
+                "They dislike giving exact answers"
+              ],
+              "answer": "They run many slightly different calculations and report the resulting odds",
+              "solutionSteps": [
+                "Running an 'ensemble' of forecasts gives a probability.",
+                "The odds capture the uncertainty honestly."
+              ],
+              "commonMistakes": [
+                "Reading the percentage as mere vagueness rather than measured probability."
+              ],
+              "variations": [
+                {
+                  "prompt": "What kind of data feeds a forecast model?",
+                  "answer": "Temperature, pressure, humidity and wind from stations, balloons, ships and satellites",
+                  "solutionSteps": [
+                    "Global simultaneous measurements.",
+                    "Fed into the model."
+                  ]
+                },
+                {
+                  "prompt": "A forecast for tomorrow is usually... compared with one for ten days away.",
+                  "answer": "More reliable",
+                  "solutionSteps": [
+                    "Errors smaller short-term.",
+                    "Chaos grows with time."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                24
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch02_dv04",
@@ -4692,7 +5465,93 @@
           "parentConceptId": "ssch02_t03_c02",
           "body": "Heat a parcel of air and it expands, becomes less dense than the air around it, and floats upward — just like a hot-air balloon. Cooler, denser air then flows in along the ground to take its place, and that horizontal flow is wind. This 'convection' explains the sea breeze: by day the land heats faster than the sea, so air rises over the warm land and cooler air blows in from the sea, giving coastal afternoons their refreshing breeze; at night it reverses. The same rising-and-sinking links straight back to pressure — air rises where pressure is low and sinks where it is high — so convection ties together temperature, pressure and wind, three of the five weather elements, into one moving picture.",
           "prerequisite": "Knowing that wind is moving air and that warm air is lighter than cold air.",
-          "nextStepHint": "Work out which way the breeze blows at the coast at night, and why it is the opposite of the daytime sea breeze."
+          "nextStepHint": "Work out which way the breeze blows at the coast at night, and why it is the opposite of the daytime sea breeze.",
+          "bonusQuestions": [
+            {
+              "id": "ssch02_dv04_b01",
+              "prompt": "Why does a daytime sea breeze blow from the sea toward the land?",
+              "questionType": "mcq",
+              "options": [
+                "Land heats faster than sea; warm air rises over the land and cooler sea air flows in to replace it",
+                "The sea is always warmer than the land",
+                "Wind always blows toward the coast",
+                "The Moon's pull drags the air inland"
+              ],
+              "answer": "Land heats faster than sea; warm air rises over the land and cooler sea air flows in to replace it",
+              "solutionSteps": [
+                "By day land warms faster, air rises over it (low pressure).",
+                "Cooler sea air flows in — the sea breeze."
+              ],
+              "commonMistakes": [
+                "Reversing it: the breeze is from sea to land by day, not land to sea."
+              ],
+              "variations": [
+                {
+                  "prompt": "At night the breeze reverses. Why?",
+                  "answer": "Land cools faster than the sea, so air now flows from land to sea",
+                  "solutionSteps": [
+                    "Reverse temperature contrast.",
+                    "Land breeze at night."
+                  ]
+                },
+                {
+                  "prompt": "Convection links which three weather elements?",
+                  "answer": "Temperature, pressure and wind",
+                  "solutionSteps": [
+                    "Rising/sinking air ties them.",
+                    "One moving picture."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                24
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch02_dv04_b02",
+              "prompt": "Warm air rises (convection) because, when heated, the air...",
+              "questionType": "mcq",
+              "options": [
+                "Expands and becomes less dense than the surrounding air",
+                "Gains weight and sinks",
+                "Turns into water",
+                "Becomes denser"
+              ],
+              "answer": "Expands and becomes less dense than the surrounding air",
+              "solutionSteps": [
+                "Heated air expands, lowering its density.",
+                "Less-dense air floats upward, like a hot-air balloon."
+              ],
+              "commonMistakes": [
+                "Thinking warm air sinks; it rises because it is less dense."
+              ],
+              "variations": [
+                {
+                  "prompt": "Air rises where pressure is ... and sinks where pressure is ...",
+                  "answer": "low; high",
+                  "solutionSteps": [
+                    "Rising = low pressure.",
+                    "Sinking = high pressure."
+                  ]
+                },
+                {
+                  "prompt": "Cooler, denser air flowing in along the ground to replace rising air is what we feel as...",
+                  "answer": "Wind",
+                  "solutionSteps": [
+                    "Horizontal air flow.",
+                    "That is wind."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                24
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch02_dv05",
@@ -4701,7 +5560,93 @@
           "parentConceptId": "ssch02_t02_c01",
           "body": "If you leave a thermometer in direct sunshine it does not measure the air at all — it measures how hot the sun has made the glass, and can read many degrees too high. So a real weather station never does that. Its thermometers sit inside a white, louvred wooden box (a 'Stevenson screen') raised about a metre and a quarter above short grass. White paint reflects sunlight, the slatted sides let air flow freely past the bulb, and the standard height keeps the bulb away from heat radiating off the ground. The point is fairness: only if every station in the country measures the air the same way — in shade, at the same height, with free-flowing air — can a temperature taken in Delhi be honestly compared with one taken in Chennai. Good measurement is not just about the instrument; it is about measuring the same thing, the same way, everywhere.",
           "prerequisite": "Knowing temperature is measured with a thermometer.",
-          "nextStepHint": "Try reading a thermometer in the sun and then in the shade at the same moment, and note the difference."
+          "nextStepHint": "Try reading a thermometer in the sun and then in the shade at the same moment, and note the difference.",
+          "bonusQuestions": [
+            {
+              "id": "ssch02_dv05_b01",
+              "prompt": "Why is a weather thermometer kept inside a white, louvred box in the shade?",
+              "questionType": "mcq",
+              "options": [
+                "In direct sun it would measure the hot glass, not the air; the shaded, ventilated box gives a true, comparable reading",
+                "To make the station look tidy",
+                "To keep the thermometer dry",
+                "To hide it from people"
+              ],
+              "answer": "In direct sun it would measure the hot glass, not the air; the shaded, ventilated box gives a true, comparable reading",
+              "solutionSteps": [
+                "Sunlight heats the glass and gives a falsely high reading.",
+                "White paint reflects sun; louvres let air flow; shade gives the real air temperature."
+              ],
+              "commonMistakes": [
+                "Thinking the box is for tidiness rather than accurate, fair measurement."
+              ],
+              "variations": [
+                {
+                  "prompt": "What is this standard white louvred box called?",
+                  "answer": "A Stevenson screen",
+                  "solutionSteps": [
+                    "Houses the thermometers.",
+                    "White and ventilated."
+                  ]
+                },
+                {
+                  "prompt": "Why must the box be raised about 1.25 m above short grass?",
+                  "answer": "To keep the bulb away from heat radiating off the ground",
+                  "solutionSteps": [
+                    "Standard height.",
+                    "For fair readings."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                24
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch02_dv05_b02",
+              "prompt": "Why must every weather station measure temperature the same way (shade, same height, free-flowing air)?",
+              "questionType": "mcq",
+              "options": [
+                "So a reading taken in Delhi can be honestly compared with one taken in Chennai",
+                "To save money on instruments",
+                "Purely for decoration",
+                "It actually does not matter"
+              ],
+              "answer": "So a reading taken in Delhi can be honestly compared with one taken in Chennai",
+              "solutionSteps": [
+                "Fair comparison needs everyone to measure the SAME thing the SAME way.",
+                "Standardisation makes readings comparable across the country."
+              ],
+              "commonMistakes": [
+                "Thinking the instrument alone matters, not the standard method."
+              ],
+              "variations": [
+                {
+                  "prompt": "The deeper lesson of the Stevenson screen is that good measurement is about...",
+                  "answer": "Measuring the same thing, the same way, everywhere",
+                  "solutionSteps": [
+                    "Standardisation enables comparison.",
+                    "Not just the instrument."
+                  ]
+                },
+                {
+                  "prompt": "A thermometer left in the sun reads...",
+                  "answer": "Too high (it measures the heated glass)",
+                  "solutionSteps": [
+                    "Sun heats the bulb.",
+                    "Falsely high."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                24
+              ],
+              "needsHumanReview": false
+            }
+          ]
         },
         {
           "id": "ssch02_dv06",
@@ -4710,7 +5655,93 @@
           "parentConceptId": "ssch02_t02_c03",
           "body": "When a forecast says '25 mm of rain fell today', what does that number mean? A rain gauge catches rain through a funnel of a known opening and channels it into a narrow measuring tube. The reading is a DEPTH: 25 mm means that if the rain had not drained away, soaked in or evaporated, it would have covered flat ground to a depth of 25 millimetres — everywhere, not just in the gauge. The funnel matters because it concentrates the catch into the thin tube, so a tiny depth becomes an easy-to-read height of water. That is also why rainfall does not depend on the size of your gauge: a wide bucket and a narrow tube standing side by side both fill to the same depth. Turn the depth into volume and the numbers get dramatic — 25 mm over a single hectare is 250,000 litres of water.",
           "prerequisite": "Knowing rainfall is measured with a rain gauge.",
-          "nextStepHint": "Work out how many litres of water 10 mm of rain drops on a flat rooftop 10 m by 10 m."
+          "nextStepHint": "Work out how many litres of water 10 mm of rain drops on a flat rooftop 10 m by 10 m.",
+          "bonusQuestions": [
+            {
+              "id": "ssch02_dv06_b01",
+              "prompt": "When a report says '25 mm of rain fell', the 25 mm is a...",
+              "questionType": "mcq",
+              "options": [
+                "Depth — the rain would cover flat ground to 25 mm everywhere if none drained or evaporated",
+                "Height only inside the narrow tube",
+                "Volume of 25 litres",
+                "Weight of 25 kilograms"
+              ],
+              "answer": "Depth — the rain would cover flat ground to 25 mm everywhere if none drained or evaporated",
+              "solutionSteps": [
+                "Rainfall is reported as a DEPTH over the ground.",
+                "25 mm means a 25 mm-deep layer everywhere, not just in the gauge."
+              ],
+              "commonMistakes": [
+                "Reading the figure as a volume or as the tube's height rather than ground depth."
+              ],
+              "variations": [
+                {
+                  "prompt": "25 mm of rain over one hectare is roughly how much water?",
+                  "answer": "About 250,000 litres",
+                  "solutionSteps": [
+                    "Depth x area = volume.",
+                    "A dramatic total."
+                  ]
+                },
+                {
+                  "prompt": "What does the funnel of a rain gauge do?",
+                  "answer": "Concentrates the catch into a thin tube so a small depth is easy to read",
+                  "solutionSteps": [
+                    "Amplifies the reading height.",
+                    "Easier to measure."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                24
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ssch02_dv06_b02",
+              "prompt": "Why does measured rainfall NOT depend on the size of your rain gauge?",
+              "questionType": "mcq",
+              "options": [
+                "A wide gauge and a narrow one side by side both fill to the same DEPTH",
+                "Bigger gauges always catch more rain per area",
+                "Rainfall depth is random",
+                "Narrow tubes always overflow"
+              ],
+              "answer": "A wide gauge and a narrow one side by side both fill to the same DEPTH",
+              "solutionSteps": [
+                "Rain falls evenly, so depth is independent of opening size.",
+                "A bigger opening catches proportionally more, giving the same depth."
+              ],
+              "commonMistakes": [
+                "Thinking a bigger bucket reports more rainfall; depth is the same."
+              ],
+              "variations": [
+                {
+                  "prompt": "Rainfall is measured as a depth, so two different gauges nearby should read...",
+                  "answer": "The same value",
+                  "solutionSteps": [
+                    "Depth is gauge-independent.",
+                    "Same depth."
+                  ]
+                },
+                {
+                  "prompt": "Why use a funnel-and-narrow-tube design at all?",
+                  "answer": "It turns a tiny depth into an easy-to-read height of water",
+                  "solutionSteps": [
+                    "Concentrates the catch.",
+                    "Easier reading."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                24
+              ],
+              "needsHumanReview": false
+            }
+          ]
         }
       ],
       "crossChapterRefs": [

@@ -70,9 +70,9 @@ canonically: `json.dumps(d, ensure_ascii=False, indent=2) + "\n"`.
 - ✅ **SANSKRIT COMPLETE — 45/45 stretch topics, 90 Olympiad MCQs, all 15 NEP chapters (legacy ch01 exempt).**
 
 ### Social Science (`socialscience_class7`, 20 chapters, 120 stretch topics)
-- [ ] ssch01–ssch20 — **add the `bonusQuestions` array** to each `deepDive[]` entry
-  (new key; the `StretchTopic` model already declares the optional field, so no
-  Swift change is needed to decode it).
+The `bonusQuestions` array is ADDED to each `deepDive[]` entry (new key; the optional model field decodes it with no Swift change).
+- [x] **ssch01–ssch02 (12 topics, 24 MCQs)** — Geographical Diversity (orographic rain, GPS plate-motion, Tethys fossils, alluvium depth, river tilt, snow vs rain-fed); Weather (pressure/oxygen-altitude, dew point, forecasting & chaos, convection/sea-breeze, Stevenson screen, rain-gauge depth).
+- [ ] ssch03–ssch20 (108 topics) — 2 MCQs each. **24 SS MCQs done so far.**
 
 ## Phase 5 (after content) — coverage test
 - [ ] Add `ExpertChallengeOlympiadContentTests`: each pack yields a non-empty
