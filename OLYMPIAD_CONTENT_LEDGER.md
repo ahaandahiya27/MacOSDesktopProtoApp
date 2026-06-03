@@ -83,9 +83,15 @@ The `bonusQuestions` array is ADDED to each `deepDive[]` entry (new key; the opt
 - [x] **ssch19–ssch20 (12 topics, 24 MCQs)** — Infrastructure (public good, railway two-meanings, network effect, Arthashastra/Sudarshana, energy, ships & ports/TEU); Banks & Finance (money multiplier, monetary policy/RBI rate, compound interest & Rule of 72, shares risk-reward, Jan Dhan/financial inclusion, the anti-scam golden rule).
 - ✅ **SOCIAL SCIENCE COMPLETE — 120/120 stretch topics, 240 Olympiad MCQs, all 20 chapters. bonusQuestions field added to the SS schema.**
 
-## Phase 5 (after content) — coverage test
-- [ ] Add `ExpertChallengeOlympiadContentTests`: each pack yields a non-empty
-  Olympiad tier; every `bonusQuestions` entry is a gradable `.mcq` with `answer ∈ options`.
+## Phase 5 (after content) — coverage test ✅
+- [x] `ExpertChallengeOlympiadContentTests` added: (1) every `deepDive.bonusQuestions`
+  entry across all four packs is a gradable beyond-grade `.mcq` (`answer ∈ options`,
+  ≥2 variations, difficulty 4–5, `isAssessableMCQ`); (2) the live
+  `buildExpertChallengeLadder` yields a NON-EMPTY Olympiad tier for every subject.
+
+## ✅ OLYMPIAD CONTENT COMPLETE — all 4 packs, 267/267 stretch topics
+- Science 114 + Maths 90 + Sanskrit 90 + Social Science 240 = **534 Olympiad MCQs**.
+- The Expert Challenge Olympiad tier is now populated for every subject (was dormant).
 
 ## Notes
 - Doing this directly in-session proved the pipeline (ch01). The autonomous
