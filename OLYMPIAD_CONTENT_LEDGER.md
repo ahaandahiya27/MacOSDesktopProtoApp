@@ -60,7 +60,8 @@ canonically: `json.dumps(d, ensure_ascii=False, indent=2) + "\n"`.
 ### Maths (`maths_class7`, 15 chapters, 45 stretch topics)
 - [x] **ch01–ch05 (15 topics, 30 MCQs)** — standard form / sig figs / Fermi; distributive law / BODMAS / commutativity; terminating decimals / reals / place value; identities / polynomials / functions; Euclid's 5th / triangle-angle-sum / slope. MCQ form, difficulty 4–5.
 - [x] **ch06–ch10 (15 topics, 30 MCQs)** — parity invariants / Fibonacci-golden ratio / modular arithmetic; triangle inequality / Pythagoras / triangle centres; rationals & closure / 'of'=multiply & percentages / unit fractions; congruence (SSS/SAS/ASA, why not SSA) / similarity / isosceles theorem; integer closure / (-)(-)=+ proof / coordinate plane.
-- [ ] mch11–mch15 (15 topics) — MCQ form. **60 Maths MCQs done so far.**
+- [x] **ch11–ch15 (15 topics, 30 MCQs)** — Euclid's algorithm / Fundamental Theorem of Arithmetic / LCM; powers-of-ten / repeating-decimal→fraction / estimation; mean-median-mode / standard deviation / misleading graphs; impossible constructions / regular-polygon tilings / perpendicular-bisector locus; equations both sides / simultaneous equations / quadratics.
+- ✅ **MATHS COMPLETE — 45/45 stretch topics, 90 Olympiad MCQs, all 15 chapters.**
 
 ### Sanskrit (`sanskrit_class7`, sch01–sch15, 45 stretch topics; legacy ch01 exempt)
 - [ ] sch01–sch15 — Devanagari allowed in prompt/options (UTF-8, ensure_ascii=False).

@@ -19633,7 +19633,92 @@
           "parentConceptId": "mch11_t01_c01",
           "body": "Listing all the factors of two numbers to spot their highest common factor is fine for 12 and 16, but hopeless for 1794 and 2346. Over 2000 years ago Euclid gave a method that needs no factor lists at all, and it is still one of the fastest algorithms known. The idea: the HCF of two numbers also divides their difference, so you may repeatedly REPLACE the larger number by its remainder on division by the smaller, shrinking the pair until one becomes zero — the other is then the HCF. For 1794 and 2346: 2346 = 1×1794 + 552; then 1794 = 3×552 + 138; then 552 = 4×138 + 0, so the HCF is 138, found in three quick steps. Because each step shrinks the numbers fast, even huge inputs finish quickly — which is why Euclid's algorithm runs inside the cryptography that protects online banking today. A 2000-year-old trick still guards your money.",
           "prerequisite": "Tackle this once you can find the HCF of small numbers by listing common factors.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "mch11_dd01_b01",
+              "prompt": "Euclid's algorithm finds the HCF of two numbers by repeatedly...",
+              "questionType": "mcq",
+              "options": [
+                "Replacing the larger number with its remainder on division by the smaller",
+                "Listing all factors of both",
+                "Adding the two numbers",
+                "Multiplying the two numbers"
+              ],
+              "answer": "Replacing the larger number with its remainder on division by the smaller",
+              "solutionSteps": [
+                "The HCF also divides the remainder, so the pair can shrink.",
+                "Repeat until one becomes 0; the other is the HCF."
+              ],
+              "commonMistakes": [
+                "Thinking you must list factors; Euclid's method avoids that."
+              ],
+              "variations": [
+                {
+                  "prompt": "Apply one step to (2346, 1794): 2346 = 1x1794 + 552. What replaces 2346?",
+                  "answer": "552 (the remainder)",
+                  "solutionSteps": [
+                    "Keep the smaller (1794) and the remainder (552).",
+                    "Continue with (1794, 552)."
+                  ]
+                },
+                {
+                  "prompt": "Why is Euclid's algorithm still important today?",
+                  "answer": "It is fast even for huge numbers, so cryptography uses it",
+                  "solutionSteps": [
+                    "Each step shrinks the numbers quickly.",
+                    "Hence used in online-banking crypto."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                168
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "mch11_dd01_b02",
+              "prompt": "HCF(1794, 2346) comes out to 138 in three quick steps. The key fact Euclid used is that the HCF of two numbers also divides their...",
+              "questionType": "mcq",
+              "options": [
+                "Difference (and hence their remainder)",
+                "Product",
+                "Sum of digits",
+                "Square"
+              ],
+              "answer": "Difference (and hence their remainder)",
+              "solutionSteps": [
+                "Any common divisor of a and b divides a - b.",
+                "So it divides the remainder, letting the numbers shrink."
+              ],
+              "commonMistakes": [
+                "Assuming it relies on the product or digits."
+              ],
+              "variations": [
+                {
+                  "prompt": "Euclid's algorithm stops when one number becomes...",
+                  "answer": "Zero (the other is then the HCF)",
+                  "solutionSteps": [
+                    "Repeated remainders reach 0.",
+                    "The last non-zero value is the HCF."
+                  ]
+                },
+                {
+                  "prompt": "Is Euclid's algorithm faster than listing factors for 1794 and 2346?",
+                  "answer": "Yes, far faster",
+                  "solutionSteps": [
+                    "Three steps vs huge factor lists.",
+                    "Much faster."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                168
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 10 you formalise Euclid's division algorithm and use it to prove the Fundamental Theorem of Arithmetic."
         },
         {
@@ -19643,7 +19728,92 @@
           "parentConceptId": "mch11_t03_c01",
           "body": "Prime factorisation feels like a routine tool for finding HCF and LCM, but it rests on a profound guarantee called the Fundamental Theorem of Arithmetic: every whole number greater than 1 can be written as a product of primes in EXACTLY ONE way, apart from the order of the factors. So 60 is always 2² × 3 × 5 — there is no second, different prime recipe for it, ever. Primes are therefore the indivisible 'atoms' from which all numbers are built, and this uniqueness is what makes the HCF (the primes two numbers share) and the LCM (all primes between them, at their highest powers) well defined in the first place. It also explains the neat identity HCF(a,b) × LCM(a,b) = a × b: between them, the HCF and LCM use up each prime exactly as many times as a and b together do. This quiet theorem is the bedrock under almost all of number theory.",
           "prerequisite": "Tackle this once you can factorise a number into primes and use it for HCF and LCM.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "mch11_dd02_b01",
+              "prompt": "The Fundamental Theorem of Arithmetic says every whole number greater than 1 can be written as a product of primes in...",
+              "questionType": "mcq",
+              "options": [
+                "Exactly one way, apart from the order of factors",
+                "Many genuinely different ways",
+                "No way at all",
+                "Only one way if it is even"
+              ],
+              "answer": "Exactly one way, apart from the order of factors",
+              "solutionSteps": [
+                "Prime factorisation is unique up to order.",
+                "E.g. 60 is always 2^2 x 3 x 5."
+              ],
+              "commonMistakes": [
+                "Thinking a number could have two different prime recipes."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why are primes called the 'atoms' of number?",
+                  "answer": "Every number is built uniquely from primes",
+                  "solutionSteps": [
+                    "They're the indivisible building blocks.",
+                    "All numbers factor into them."
+                  ]
+                },
+                {
+                  "prompt": "Write 60 as a product of primes.",
+                  "answer": "2^2 x 3 x 5",
+                  "solutionSteps": [
+                    "60 = 4 x 15 = 2x2x3x5.",
+                    "= 2^2 x 3 x 5."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                168
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "mch11_dd02_b02",
+              "prompt": "For any two numbers a and b, HCF(a, b) x LCM(a, b) equals...",
+              "questionType": "mcq",
+              "options": [
+                "a x b",
+                "a + b",
+                "a - b",
+                "1"
+              ],
+              "answer": "a x b",
+              "solutionSteps": [
+                "Between them, HCF and LCM use each prime exactly as often as a and b do.",
+                "So their product equals a x b."
+              ],
+              "commonMistakes": [
+                "Guessing a + b instead of the product."
+              ],
+              "variations": [
+                {
+                  "prompt": "If HCF(a,b)=6 and a x b = 72, what is LCM(a,b)?",
+                  "answer": "12",
+                  "solutionSteps": [
+                    "LCM = (a x b)/HCF = 72/6.",
+                    "= 12."
+                  ]
+                },
+                {
+                  "prompt": "Why is the LCM well defined at all?",
+                  "answer": "Unique prime factorisation guarantees it",
+                  "solutionSteps": [
+                    "Primes are unique.",
+                    "So HCF and LCM are well defined."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                168
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 10 you prove √2 is irrational using this theorem, and it underpins all later work in number theory."
         },
         {
@@ -19653,7 +19823,92 @@
           "parentConceptId": "mch11_t02_c01",
           "body": "The least common multiple looks like a stand-alone topic, but you have been using it for years without the name: it is exactly the lowest common denominator you reach for when adding unlike fractions. To add 1/6 + 1/4 you rewrite both over 12 — the LCM of 6 and 4 — because 12 is the smallest number both sixths and quarters divide into evenly. The LCM also answers every 'when do cycles line up?' question. If one bus leaves every 6 minutes and another every 8, both depart together every 24 minutes — LCM(6, 8). Planets returning to the same alignment, two blinking lights flashing in unison, gear teeth meeting again — all are LCM problems in disguise. Pairing this with the HCF×LCM = product rule lets you find one from the other instantly. So LCM is less a new idea than a name for a pattern you already rely on whenever quantities must synchronise.",
           "prerequisite": "Tackle this once you can find the LCM of two numbers by listing multiples or using primes.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "mch11_dd03_b01",
+              "prompt": "To add 1/6 + 1/4 you rewrite both over the LCM of 6 and 4, which is...",
+              "questionType": "mcq",
+              "options": [
+                "12",
+                "24",
+                "10",
+                "2"
+              ],
+              "answer": "12",
+              "solutionSteps": [
+                "The LCM of 6 and 4 is the smallest number both divide.",
+                "That is 12 (the lowest common denominator)."
+              ],
+              "commonMistakes": [
+                "Using 24 (a common multiple, but not the lowest) or 10 (the sum)."
+              ],
+              "variations": [
+                {
+                  "prompt": "So 1/6 + 1/4 equals what?",
+                  "answer": "5/12",
+                  "solutionSteps": [
+                    "2/12 + 3/12.",
+                    "= 5/12."
+                  ]
+                },
+                {
+                  "prompt": "The lowest common denominator is just another name for the...",
+                  "answer": "LCM of the denominators",
+                  "solutionSteps": [
+                    "Smallest shared multiple.",
+                    "= the LCM."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                168
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "mch11_dd03_b02",
+              "prompt": "One bus leaves every 6 minutes and another every 8 minutes. They depart together every...",
+              "questionType": "mcq",
+              "options": [
+                "24 minutes",
+                "48 minutes",
+                "14 minutes",
+                "2 minutes"
+              ],
+              "answer": "24 minutes",
+              "solutionSteps": [
+                "They sync at common multiples of 6 and 8.",
+                "The least is LCM(6,8) = 24 minutes."
+              ],
+              "commonMistakes": [
+                "Adding 6 + 8 = 14 instead of taking the LCM."
+              ],
+              "variations": [
+                {
+                  "prompt": "Two lights flash every 9 s and 12 s. When do they flash together?",
+                  "answer": "Every 36 s",
+                  "solutionSteps": [
+                    "LCM(9,12) = 36.",
+                    "So every 36 seconds."
+                  ]
+                },
+                {
+                  "prompt": "'When do cycles line up?' problems are solved using the...",
+                  "answer": "LCM",
+                  "solutionSteps": [
+                    "Synchronisation needs a common multiple.",
+                    "The least is the LCM."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                168
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 8 you use the LCM constantly to add and subtract unlike fractions and rational expressions."
         }
       ],
@@ -20856,7 +21111,92 @@
           "parentConceptId": "mch12_t01_c02",
           "body": "Multiplying a decimal by 10, 100 or 1000 shifts the point right; dividing shifts it left. Class 8 reveals the law underneath: when you multiply powers of ten you ADD their exponents, and when you divide you SUBTRACT them. So 10² × 10³ = 10⁵, and 10⁵ ÷ 10² = 10³ — and 'shifting the decimal point n places' is just multiplying by 10ⁿ. This unifies a string of separate tricks into one idea and, combined with standard form, makes giant and tiny numbers easy to multiply. To find how far light travels in a year, multiply its speed 3 × 10⁸ m/s by the 3 × 10⁷ seconds in a year: multiply the fronts (3 × 3 = 9) and ADD the exponents (8 + 7 = 15) to get 9 × 10¹⁵ m — a calculation that would be a nightmare with all the zeros written out. The point-shifting you do now is exponent arithmetic wearing everyday clothes.",
           "prerequisite": "Tackle this once multiplying and dividing decimals by powers of ten by shifting the point is automatic.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "mch12_dd01_b01",
+              "prompt": "Using the law for powers of ten, 10^2 x 10^3 equals...",
+              "questionType": "mcq",
+              "options": [
+                "10^5",
+                "10^6",
+                "10^1",
+                "100^5"
+              ],
+              "answer": "10^5",
+              "solutionSteps": [
+                "Multiplying powers of ten adds the exponents.",
+                "2 + 3 = 5, so 10^5."
+              ],
+              "commonMistakes": [
+                "Multiplying the exponents (2x3) instead of adding."
+              ],
+              "variations": [
+                {
+                  "prompt": "What is 10^5 / 10^2?",
+                  "answer": "10^3",
+                  "solutionSteps": [
+                    "Dividing subtracts exponents.",
+                    "5 - 2 = 3."
+                  ]
+                },
+                {
+                  "prompt": "Shifting a decimal point n places right is the same as multiplying by...",
+                  "answer": "10^n",
+                  "solutionSteps": [
+                    "Each place is one power of ten.",
+                    "So multiply by 10^n."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                184
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "mch12_dd01_b02",
+              "prompt": "Multiply 3 x 10^8 m/s by 3 x 10^7 s to find light's distance in a year.",
+              "questionType": "mcq",
+              "options": [
+                "9 x 10^15 m",
+                "9 x 10^56 m",
+                "6 x 10^15 m",
+                "9 x 10^1 m"
+              ],
+              "answer": "9 x 10^15 m",
+              "solutionSteps": [
+                "Multiply the fronts: 3 x 3 = 9.",
+                "Add the exponents: 8 + 7 = 15, giving 9 x 10^15 m."
+              ],
+              "commonMistakes": [
+                "Multiplying the exponents (8x7) instead of adding."
+              ],
+              "variations": [
+                {
+                  "prompt": "(2 x 10^4) x (4 x 10^3) = ?",
+                  "answer": "8 x 10^7",
+                  "solutionSteps": [
+                    "2x4=8; 4+3=7.",
+                    "= 8 x 10^7."
+                  ]
+                },
+                {
+                  "prompt": "Why is standard form handy for such products?",
+                  "answer": "You multiply small fronts and just add exponents, avoiding strings of zeros",
+                  "solutionSteps": [
+                    "No long zeros to mishandle.",
+                    "Simple front x and exponent +."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                184
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 8 you state the laws of exponents in full and apply them to multiply numbers in standard form."
         },
         {
@@ -20866,7 +21206,92 @@
           "parentConceptId": "mch12_t02_c01",
           "body": "Dividing decimals sometimes produces an answer that never stops repeating, such as 1 ÷ 3 = 0.333… or 1 ÷ 11 = 0.0909… Class 9 shows the surprising reverse skill: every such repeating decimal can be converted back into an exact fraction with a neat algebra trick. Let x = 0.7777…; multiply by 10 to get 10x = 7.7777…; subtract the first line from the second and the endless tails cancel perfectly, leaving 9x = 7, so x = 7/9 — exactly. (If two digits repeat, multiply by 100 instead.) This proves something deep: every repeating decimal is rational, a ratio of two integers. It even settles the famous puzzle 0.9999… = 1, since the same method gives 9x = 9, so x = 1 — the two are genuinely the same number, just written differently. The 'messy' decimals that division throws up are not mysterious at all; they are fractions in disguise.",
           "prerequisite": "Tackle this once you can carry out decimal division that yields a repeating block.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "mch12_dd02_b01",
+              "prompt": "Let x = 0.7777... Then 10x - x gives 9x = 7, so 0.7777... equals...",
+              "questionType": "mcq",
+              "options": [
+                "7/9",
+                "7/10",
+                "9/7",
+                "7/100"
+              ],
+              "answer": "7/9",
+              "solutionSteps": [
+                "10x = 7.777...; subtract x = 0.777... to cancel the tails.",
+                "9x = 7, so x = 7/9."
+              ],
+              "commonMistakes": [
+                "Reading the repeating decimal as 7/10."
+              ],
+              "variations": [
+                {
+                  "prompt": "If TWO digits repeat (e.g. 0.0909...), you multiply by what?",
+                  "answer": "100",
+                  "solutionSteps": [
+                    "Two repeating digits need 100x.",
+                    "Then subtract to cancel."
+                  ]
+                },
+                {
+                  "prompt": "This trick proves every repeating decimal is what kind of number?",
+                  "answer": "Rational (a fraction)",
+                  "solutionSteps": [
+                    "It equals a ratio of integers.",
+                    "So it is rational."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                184
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "mch12_dd02_b02",
+              "prompt": "Using the same algebra trick, the value of 0.9999... is...",
+              "questionType": "mcq",
+              "options": [
+                "Exactly 1",
+                "Just under 1",
+                "0.9",
+                "9/10"
+              ],
+              "answer": "Exactly 1",
+              "solutionSteps": [
+                "Let x = 0.999...; 10x - x = 9x = 9, so x = 1.",
+                "0.999... and 1 are the same number."
+              ],
+              "commonMistakes": [
+                "Believing 0.999... is slightly less than 1; it is exactly 1."
+              ],
+              "variations": [
+                {
+                  "prompt": "Are 0.999... and 1 the same number or different?",
+                  "answer": "The same number",
+                  "solutionSteps": [
+                    "The algebra gives x = 1.",
+                    "Just written differently."
+                  ]
+                },
+                {
+                  "prompt": "What does this say about how a number can be written?",
+                  "answer": "One number can have two decimal forms",
+                  "solutionSteps": [
+                    "0.999... = 1.000...",
+                    "Two writings, one value."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                184
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 9 this confirms which numbers are rational and sharpens the boundary with the irrationals."
         },
         {
@@ -20876,7 +21301,92 @@
           "parentConceptId": "mch12_t03_c01",
           "body": "Estimating before you compute is sold as a way to place the decimal point — '4.8 × 21 is about 100, so the answer near 100.8 is sensible'. But the deeper purpose is controlling error. Every measurement carries uncertainty: a length read as 4.8 cm really means 'somewhere between 4.75 and 4.85'. When you multiply two such rough numbers, the uncertainties combine, and the answer cannot honestly be more precise than its least precise input. So reporting 4.8 × 2.1 as 10.08 cm² fakes a precision the data never had — 10 cm² is the honest claim. Estimating the size and the likely spread of an answer first is how scientists and engineers avoid being fooled by a calculator's long decimal tail. The habit you build here, of asking 'roughly how big, and how sure?' before trusting a digit, is exactly the discipline of significant figures and error analysis in senior science.",
           "prerequisite": "Tackle this once you can estimate a decimal product to check where the point belongs.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "mch12_dd03_b01",
+              "prompt": "A length read as 4.8 cm and another as 2.1 cm are multiplied. The honest area to report is about...",
+              "questionType": "mcq",
+              "options": [
+                "10 cm^2 (2 significant figures)",
+                "10.08 cm^2",
+                "10.080 cm^2",
+                "10.1000 cm^2"
+              ],
+              "answer": "10 cm^2 (2 significant figures)",
+              "solutionSteps": [
+                "Both inputs have 2 significant figures.",
+                "The product can't be more precise, so report ~10 cm^2."
+              ],
+              "commonMistakes": [
+                "Reporting 10.08, faking precision the data never had."
+              ],
+              "variations": [
+                {
+                  "prompt": "A length read as 4.8 cm really means it lies between...",
+                  "answer": "4.75 and 4.85 cm",
+                  "solutionSteps": [
+                    "The last digit is uncertain by half a unit.",
+                    "So 4.75 to 4.85 cm."
+                  ]
+                },
+                {
+                  "prompt": "Why not report the calculator's 10.08 cm^2?",
+                  "answer": "It claims more precision than the rough inputs allow",
+                  "solutionSteps": [
+                    "Inputs were only 2 sig figs.",
+                    "So 10.08 overstates accuracy."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                184
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "mch12_dd03_b02",
+              "prompt": "Estimating '4.8 x 21 is about 100' before computing mainly helps you...",
+              "questionType": "mcq",
+              "options": [
+                "Catch a misplaced decimal point and sanity-check the answer",
+                "Get the exact answer faster",
+                "Avoid using a calculator ever",
+                "Make the answer more precise"
+              ],
+              "answer": "Catch a misplaced decimal point and sanity-check the answer",
+              "solutionSteps": [
+                "A rough size tells you where the decimal belongs.",
+                "An answer far from ~100 signals an error."
+              ],
+              "commonMistakes": [
+                "Thinking estimation gives the exact value rather than a check."
+              ],
+              "variations": [
+                {
+                  "prompt": "If a calculation of 4.8 x 21 gives 10.08, what does your estimate (~100) tell you?",
+                  "answer": "A decimal point is misplaced - recheck",
+                  "solutionSteps": [
+                    "100 vs 10.08 is a 10x gap.",
+                    "So an error occurred."
+                  ]
+                },
+                {
+                  "prompt": "Asking 'roughly how big, and how sure?' first is the discipline of what senior topic?",
+                  "answer": "Significant figures and error analysis",
+                  "solutionSteps": [
+                    "It controls precision.",
+                    "The basis of error analysis."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                184
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 11 physics this becomes the formal study of significant figures, absolute error, and propagation of uncertainty."
         }
       ],
@@ -22115,7 +22625,92 @@
           "parentConceptId": "mch13_t02_c01",
           "body": "Mean, median and mode are three different 'representative values', and the gap between them is where statistics gets interesting — and where it gets misused. The mean (arithmetic average) uses every value but is dragged around by extremes: put one billionaire in a room of ten people and the MEAN income suggests everyone is rich, while the MEDIAN — the middle value, blind to how large the outlier is — still reports the ordinary person honestly. That is why 'average income' figures usually quote the median, and why a cricketer's batting can look strong on the mean yet inconsistent once you notice the median is far lower. The mode (most frequent value) is the one to use for shoe sizes a shop should stock, where 'typical' means 'most common', not 'middle'. Knowing which average suits which question — and spotting when someone has picked the flattering one — is a genuine life skill, not just an exam topic.",
           "prerequisite": "Tackle this once you can compute the mean, median and mode of a small data set.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "mch13_dd01_b01",
+              "prompt": "One billionaire walks into a room of ten ordinary earners. Which average best reports the typical person's income?",
+              "questionType": "mcq",
+              "options": [
+                "The median",
+                "The mean",
+                "The mode",
+                "The range"
+              ],
+              "answer": "The median",
+              "solutionSteps": [
+                "The mean is dragged up by the extreme outlier.",
+                "The median (middle value) ignores how large the outlier is, staying honest."
+              ],
+              "commonMistakes": [
+                "Using the mean, which the billionaire inflates."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is 'average income' usually quoted as the median?",
+                  "answer": "It isn't distorted by a few very high earners",
+                  "solutionSteps": [
+                    "The mean is pulled by outliers.",
+                    "The median resists them."
+                  ]
+                },
+                {
+                  "prompt": "The mean uses how many of the values?",
+                  "answer": "Every value",
+                  "solutionSteps": [
+                    "It sums all and divides.",
+                    "So extremes affect it."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                200
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "mch13_dd01_b02",
+              "prompt": "A shop deciding which single shoe size to stock most of should use the...",
+              "questionType": "mcq",
+              "options": [
+                "Mode",
+                "Mean",
+                "Median",
+                "Range"
+              ],
+              "answer": "Mode",
+              "solutionSteps": [
+                "'Typical' here means 'most common', which is the mode.",
+                "The mean shoe size might not even be a real size."
+              ],
+              "commonMistakes": [
+                "Using the mean, which can give a non-stocked size."
+              ],
+              "variations": [
+                {
+                  "prompt": "What does the mode measure?",
+                  "answer": "The most frequently occurring value",
+                  "solutionSteps": [
+                    "'Mode' = most common.",
+                    "The value that appears most."
+                  ]
+                },
+                {
+                  "prompt": "Why is the mean a poor choice for shoe sizes to stock?",
+                  "answer": "It can land between real sizes and ignores what's most common",
+                  "solutionSteps": [
+                    "Average size may not be sold.",
+                    "Mode fits the need."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                200
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 9 and 10 you study these measures of central tendency for grouped data and learn when each is appropriate."
         },
         {
@@ -22125,7 +22720,92 @@
           "parentConceptId": "mch13_t02_c02",
           "body": "Range — the gap between the largest and smallest value — is your first measure of spread, but it is fragile: it depends only on the two most extreme readings and ignores everything in between, so a single freak value can blow it up. Two cricketers could have the same range yet utterly different consistency. Senior statistics fixes this with the standard deviation, which asks how far EVERY value sits from the mean, on average. You measure each value's distance from the mean, square those distances (so overs and unders don't cancel), average them, and take the square root to return to the original units. A small standard deviation means the data huddle near the mean (the consistent batsman); a large one means they scatter widely. This single number, paired with the mean, summarises a whole data set's behaviour, and underlies opinion-poll margins of error, quality control in factories, and the 'bell curve' of marks.",
           "prerequisite": "Tackle this once you understand range as a measure of consistency and spread.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "mch13_dd02_b01",
+              "prompt": "Standard deviation measures...",
+              "questionType": "mcq",
+              "options": [
+                "How far every value sits from the mean, on average",
+                "Only the largest minus the smallest value",
+                "The middle value of the data",
+                "The most common value"
+              ],
+              "answer": "How far every value sits from the mean, on average",
+              "solutionSteps": [
+                "You take each value's distance from the mean, square, average, then square-root.",
+                "A small SD means values huddle near the mean."
+              ],
+              "commonMistakes": [
+                "Confusing standard deviation with range (just the extremes)."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why square the distances when computing standard deviation?",
+                  "answer": "So overs and unders don't cancel out",
+                  "solutionSteps": [
+                    "Squares are all positive.",
+                    "Then average and square-root."
+                  ]
+                },
+                {
+                  "prompt": "A small standard deviation means the data are...",
+                  "answer": "Closely clustered near the mean (consistent)",
+                  "solutionSteps": [
+                    "Little spread.",
+                    "Values huddle near the mean."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                200
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "mch13_dd02_b02",
+              "prompt": "Why is range a fragile measure of spread?",
+              "questionType": "mcq",
+              "options": [
+                "It depends only on the two most extreme values, ignoring the rest",
+                "It uses every value equally",
+                "It is always zero",
+                "It ignores the maximum value"
+              ],
+              "answer": "It depends only on the two most extreme values, ignoring the rest",
+              "solutionSteps": [
+                "Range = max - min, so one freak value can blow it up.",
+                "Two data sets can share a range yet differ wildly inside."
+              ],
+              "commonMistakes": [
+                "Thinking range reflects all the data; it only sees the extremes."
+              ],
+              "variations": [
+                {
+                  "prompt": "Two cricketers have the same range of scores. Are they equally consistent?",
+                  "answer": "Not necessarily - range ignores the middle scores",
+                  "solutionSteps": [
+                    "Same extremes, different spreads.",
+                    "SD would distinguish them."
+                  ]
+                },
+                {
+                  "prompt": "Which single number, paired with the mean, summarises a data set's spread?",
+                  "answer": "The standard deviation",
+                  "solutionSteps": [
+                    "It captures typical distance from the mean.",
+                    "Mean + SD summarise the set."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                200
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 11 you compute variance and standard deviation, the workhorse measures of dispersion in all of statistics."
         },
         {
@@ -22135,7 +22815,92 @@
           "parentConceptId": "mch13_t03_c01",
           "body": "A bar graph turns numbers into a picture so the eye can compare them at a glance — but the same power makes graphs easy to weaponise. The classic trick is the truncated axis: start the vertical scale at 90 instead of 0 and a rise from 92 to 96 LOOKS like a doubling, though it is barely a 4% change. Stretching or squashing the axes, using pictures whose AREA grows far faster than the value they stand for, or omitting the scale entirely, all mislead while showing 'real' data. Learning to read a graph critically — first checking where the axis starts and what the scale is — is as important as learning to draw one. You also meet a cousin of the bar graph, the histogram, which groups continuous data into intervals and where, crucially, it is the AREA of each bar, not just its height, that carries the meaning. A graph is an argument; treat it like one.",
           "prerequisite": "Tackle this once you can read and draw a bar graph correctly.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "mch13_dd03_b01",
+              "prompt": "Starting a bar graph's vertical axis at 90 instead of 0 can...",
+              "questionType": "mcq",
+              "options": [
+                "Exaggerate a small change so it looks huge",
+                "Make the data more honest",
+                "Have no visual effect",
+                "Only ever help the reader"
+              ],
+              "answer": "Exaggerate a small change so it looks huge",
+              "solutionSteps": [
+                "A truncated axis stretches small differences.",
+                "A 92-to-96 rise can look like a doubling though it's ~4%."
+              ],
+              "commonMistakes": [
+                "Trusting the visual without checking where the axis starts."
+              ],
+              "variations": [
+                {
+                  "prompt": "What is the first thing to check when reading a bar graph critically?",
+                  "answer": "Where the vertical axis starts and what its scale is",
+                  "solutionSteps": [
+                    "A truncated/zero axis changes the story.",
+                    "Check the scale first."
+                  ]
+                },
+                {
+                  "prompt": "Using a picture whose AREA grows far faster than its value is a way to...",
+                  "answer": "Mislead while showing 'real' data",
+                  "solutionSteps": [
+                    "Area exaggerates the quantity.",
+                    "A common graph trick."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                200
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "mch13_dd03_b02",
+              "prompt": "In a histogram of grouped data, what carries the meaning of each bar?",
+              "questionType": "mcq",
+              "options": [
+                "Its area",
+                "Only its height",
+                "Its colour",
+                "Only its width"
+              ],
+              "answer": "Its area",
+              "solutionSteps": [
+                "Histograms group continuous data into intervals.",
+                "It is the AREA of each bar (not just height) that represents the frequency."
+              ],
+              "commonMistakes": [
+                "Reading only the height, as in a bar chart."
+              ],
+              "variations": [
+                {
+                  "prompt": "How does a histogram differ from a bar graph?",
+                  "answer": "It groups continuous data into intervals, and area carries meaning",
+                  "solutionSteps": [
+                    "Bars touch; intervals are continuous.",
+                    "Area, not just height, matters."
+                  ]
+                },
+                {
+                  "prompt": "'A graph is an argument' means you should...",
+                  "answer": "Read it critically, checking scale and axes",
+                  "solutionSteps": [
+                    "Treat visuals with suspicion.",
+                    "Verify before believing."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                200
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 9 you meet histograms and frequency polygons and learn the conventions that keep statistical graphics honest."
         }
       ],
@@ -23330,7 +24095,92 @@
           "parentConceptId": "mch14_t02_c01",
           "body": "With compass and straightedge alone you can bisect any angle exactly. So it feels as if these two tools should be able to do anything. Astonishingly, three problems the ancient Greeks posed turned out to be IMPOSSIBLE with them, no matter how clever you are: trisecting a general angle (cutting it into three equal parts), doubling the cube (building a cube of twice the volume), and squaring the circle (making a square of the same area as a given circle). These were not solved for over 2000 years — and the answer, found in the 1800s using algebra, was that they CANNOT be done. Compass-and-straightedge steps can only produce lengths reachable by +, −, ×, ÷ and square roots; trisection demands cube roots, and squaring the circle demands π, which no such construction can reach. So 'I can bisect, why not trisect?' has a deep answer: the tools have a precise, provable limit.",
           "prerequisite": "Tackle this once you can construct and bisect an angle with compass and straightedge.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "mch14_dd01_b01",
+              "prompt": "Which of these is IMPOSSIBLE using only an unmarked straightedge and compass?",
+              "questionType": "mcq",
+              "options": [
+                "Trisecting a general angle",
+                "Bisecting an angle",
+                "Drawing a perpendicular",
+                "Copying a segment"
+              ],
+              "answer": "Trisecting a general angle",
+              "solutionSteps": [
+                "Bisection, perpendiculars and copying are all constructible.",
+                "Trisecting a general angle was proven impossible with these tools."
+              ],
+              "commonMistakes": [
+                "Assuming that since you can bisect, you can trisect; you cannot in general."
+              ],
+              "variations": [
+                {
+                  "prompt": "Name another classic impossible construction.",
+                  "answer": "Doubling the cube (or squaring the circle)",
+                  "solutionSteps": [
+                    "Both were proven impossible.",
+                    "With straightedge and compass."
+                  ]
+                },
+                {
+                  "prompt": "Compass-and-straightedge lengths are limited to those reachable by...",
+                  "answer": "+, -, x, division and square roots",
+                  "solutionSteps": [
+                    "No cube roots or pi.",
+                    "Hence the limits."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                216
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "mch14_dd01_b02",
+              "prompt": "Why is 'squaring the circle' impossible with straightedge and compass?",
+              "questionType": "mcq",
+              "options": [
+                "It requires pi, which such constructions can never reach",
+                "It needs too many steps",
+                "The circle is too round to copy",
+                "It needs a ruler with markings"
+              ],
+              "answer": "It requires pi, which such constructions can never reach",
+              "solutionSteps": [
+                "A square equal in area to a circle needs a length involving pi.",
+                "pi is not reachable by +,-,x,/, and square roots, so it's impossible."
+              ],
+              "commonMistakes": [
+                "Thinking it's merely hard rather than provably impossible."
+              ],
+              "variations": [
+                {
+                  "prompt": "Trisecting an angle is impossible because it demands what kind of root?",
+                  "answer": "Cube roots (not reachable by these tools)",
+                  "solutionSteps": [
+                    "Tools give only square roots.",
+                    "Cube roots are out of reach."
+                  ]
+                },
+                {
+                  "prompt": "When were these problems finally settled, and how?",
+                  "answer": "In the 1800s, using algebra (proving impossibility)",
+                  "solutionSteps": [
+                    "Not by construction.",
+                    "Algebra proved they can't be done."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                216
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In higher mathematics, field theory explains exactly which lengths and angles are constructible and proves these classical impossibilities."
         },
         {
@@ -23340,7 +24190,92 @@
           "parentConceptId": "mch14_t03_c01",
           "body": "Tiling rests on one rule: the shapes meeting at every corner must fill exactly 360°, with no gap and no overlap. That rule alone explains a striking fact — among regular polygons (all sides and angles equal), only THREE can tile the plane on their own: the triangle, the square, and the hexagon. The reason is pure arithmetic. A regular polygon's interior angle must divide 360° a whole number of times to fit around a vertex. Triangles have 60° angles (six meet: 6 × 60 = 360), squares 90° (four meet), hexagons 120° (three meet). A regular pentagon's angle is 108°, which divides 360 only 3.33 times — so pentagons always leave a gap and cannot tile alone. This is exactly why honeycomb cells, bathroom tiles and football-net patterns gravitate to those three shapes; nature and tiler alike are obeying the 360°-at-a-vertex law you meet here.",
           "prerequisite": "Tackle this once you understand the 360°-at-a-vertex rule for tiling.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "mch14_dd02_b01",
+              "prompt": "Which regular polygons can tile the plane all by themselves?",
+              "questionType": "mcq",
+              "options": [
+                "Triangle, square and hexagon",
+                "Every regular polygon",
+                "Only the square",
+                "Pentagon and hexagon"
+              ],
+              "answer": "Triangle, square and hexagon",
+              "solutionSteps": [
+                "Their interior angles (60, 90, 120) each divide 360 a whole number of times.",
+                "Only these three regular polygons tile alone."
+              ],
+              "commonMistakes": [
+                "Assuming pentagons tile; their angle doesn't fit 360 evenly."
+              ],
+              "variations": [
+                {
+                  "prompt": "How many regular triangles meet at a vertex in a tiling?",
+                  "answer": "Six (6 x 60 = 360)",
+                  "solutionSteps": [
+                    "Each angle is 60.",
+                    "Six fill 360 degrees."
+                  ]
+                },
+                {
+                  "prompt": "The single rule behind tiling is that angles at each corner must sum to...",
+                  "answer": "360 degrees, with no gap or overlap",
+                  "solutionSteps": [
+                    "A full turn fills the corner.",
+                    "So 360 exactly."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                216
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "mch14_dd02_b02",
+              "prompt": "Why can't regular pentagons tile the plane on their own?",
+              "questionType": "mcq",
+              "options": [
+                "Their 108-degree angle does not divide 360 a whole number of times",
+                "They have too many sides",
+                "They are too small",
+                "They are designed to overlap"
+              ],
+              "answer": "Their 108-degree angle does not divide 360 a whole number of times",
+              "solutionSteps": [
+                "360 / 108 is about 3.33, not a whole number.",
+                "So pentagons always leave a gap at the vertex."
+              ],
+              "commonMistakes": [
+                "Thinking any regular shape can tile; the angle must divide 360 evenly."
+              ],
+              "variations": [
+                {
+                  "prompt": "A hexagon's interior angle is 120. How many meet at a vertex?",
+                  "answer": "Three (3 x 120 = 360)",
+                  "solutionSteps": [
+                    "120 divides 360 exactly three times.",
+                    "Three hexagons per vertex."
+                  ]
+                },
+                {
+                  "prompt": "Why do honeycomb cells use hexagons?",
+                  "answer": "Hexagons tile with no gaps (120 divides 360)",
+                  "solutionSteps": [
+                    "Efficient gap-free packing.",
+                    "Nature obeys the 360 rule."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                216
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "This idea grows into the study of tessellations and symmetry groups, and into why certain crystals and quasicrystals form the shapes they do."
         },
         {
@@ -23350,7 +24285,92 @@
           "parentConceptId": "mch14_t01_c01",
           "body": "Constructing a perpendicular bisector with two equal arcs looks like a recipe, but it builds something with a beautiful definition: the perpendicular bisector of a segment is the set of ALL points that are the same distance from both endpoints — what mathematicians call a locus. That is precisely why the equal-arc construction works: each arc-crossing is found at an equal radius from both ends, so it must lie on the bisector. This locus idea pays off immediately. Draw the perpendicular bisectors of all three sides of a triangle and they meet at one point, the circumcentre, which is therefore equally distant from all three corners — the exact centre of the circle that passes through them. It answers real questions too: where to place a hospital equally far from two towns is a point on their perpendicular bisector. Seeing a construction as a locus turns 'how to draw it' into 'what it fundamentally is'.",
           "prerequisite": "Tackle this once you can construct a perpendicular bisector with equal arcs.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "mch14_dd03_b01",
+              "prompt": "The perpendicular bisector of a segment is exactly the set of all points that are...",
+              "questionType": "mcq",
+              "options": [
+                "Equally distant from both endpoints",
+                "Closer to one endpoint",
+                "On the segment itself only",
+                "At the midpoint only"
+              ],
+              "answer": "Equally distant from both endpoints",
+              "solutionSteps": [
+                "Each point on it is the same distance from both ends - a locus.",
+                "That's why the equal-arc construction lands on it."
+              ],
+              "commonMistakes": [
+                "Thinking it's just the midpoint, not the whole line of equal-distance points."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why do the perpendicular bisectors of a triangle's sides meet at one point equally far from all corners?",
+                  "answer": "That point (the circumcentre) is equidistant from each pair of vertices",
+                  "solutionSteps": [
+                    "On all three bisectors at once.",
+                    "So equally distant from all three."
+                  ]
+                },
+                {
+                  "prompt": "Where should a hospital go to be equally far from two towns?",
+                  "answer": "On the perpendicular bisector of the line joining them",
+                  "solutionSteps": [
+                    "Equal-distance locus.",
+                    "Any point on that bisector."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                216
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "mch14_dd03_b02",
+              "prompt": "Seeing a construction 'as a locus' means describing it by...",
+              "questionType": "mcq",
+              "options": [
+                "What property all its points share (e.g. equal distance), not just how to draw it",
+                "The number of compass arcs used",
+                "The colour of the pencil",
+                "How long it takes"
+              ],
+              "answer": "What property all its points share (e.g. equal distance), not just how to draw it",
+              "solutionSteps": [
+                "A locus is the set of points satisfying a condition.",
+                "It answers 'what it fundamentally is', beyond the recipe."
+              ],
+              "commonMistakes": [
+                "Treating a construction as only a drawing recipe."
+              ],
+              "variations": [
+                {
+                  "prompt": "The circumcentre is the centre of which circle?",
+                  "answer": "The circle passing through all three vertices of the triangle",
+                  "solutionSteps": [
+                    "Equidistant from the corners.",
+                    "So it's that circle's centre."
+                  ]
+                },
+                {
+                  "prompt": "Why does the equal-arc construction land on the perpendicular bisector?",
+                  "answer": "Each arc-crossing is at an equal radius from both endpoints",
+                  "solutionSteps": [
+                    "Equal distances by construction.",
+                    "So it lies on the bisector."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                216
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 9 and 10 you use loci and the circumcentre in proofs and in coordinate geometry."
         }
       ],
@@ -24616,7 +25636,92 @@
           "parentConceptId": "mch15_t02_c01",
           "body": "You solve an equation by doing the SAME thing to both sides, keeping the balance level. Class 8 hands you tougher equations where the unknown appears on BOTH sides, like 3x + 4 = x + 12. The balance idea still rules: subtract x from each side to gather all the x's together (2x + 4 = 12), then subtract 4 (2x = 8), then divide by 2 (x = 4). With practice this 'do the same to both sides' shortens into transposition — the familiar move where a term seems to 'cross the equals sign and flip its operation', a + becoming a − and a × becoming a ÷. It is not magic: transposing is just the balance rule done in one stroke. Recognising that the shortcut is only the balance principle in disguise is what keeps you from the classic error of changing one side while forgetting the other, or flipping the wrong sign.",
           "prerequisite": "Tackle this once 'do the same to both sides' to isolate the unknown feels secure.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "mch15_dd01_b01",
+              "prompt": "Solve 3x + 4 = x + 12.",
+              "questionType": "mcq",
+              "options": [
+                "x = 4",
+                "x = 8",
+                "x = 2",
+                "x = 16"
+              ],
+              "answer": "x = 4",
+              "solutionSteps": [
+                "Subtract x: 2x + 4 = 12. Subtract 4: 2x = 8.",
+                "Divide by 2: x = 4."
+              ],
+              "commonMistakes": [
+                "Forgetting to do the same operation to BOTH sides."
+              ],
+              "variations": [
+                {
+                  "prompt": "Solve 5x = 2x + 9.",
+                  "answer": "x = 3",
+                  "solutionSteps": [
+                    "Subtract 2x: 3x = 9.",
+                    "x = 3."
+                  ]
+                },
+                {
+                  "prompt": "First step in solving 3x + 4 = x + 12?",
+                  "answer": "Subtract x from both sides to gather the x-terms",
+                  "solutionSteps": [
+                    "Keeps the balance.",
+                    "Gives 2x + 4 = 12."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                232
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "mch15_dd01_b02",
+              "prompt": "'Transposition' - a term seeming to cross the equals sign and flip its operation - is really...",
+              "questionType": "mcq",
+              "options": [
+                "The balance rule (do the same to both sides) done in one stroke",
+                "A separate magic rule",
+                "Only valid for fractions",
+                "Changing just one side"
+              ],
+              "answer": "The balance rule (do the same to both sides) done in one stroke",
+              "solutionSteps": [
+                "Moving +4 across as -4 is just subtracting 4 from both sides.",
+                "Transposition is shorthand for the balance principle."
+              ],
+              "commonMistakes": [
+                "Treating transposition as magic and flipping the wrong sign."
+              ],
+              "variations": [
+                {
+                  "prompt": "When +5 'crosses' the equals sign, it becomes...",
+                  "answer": "-5 (subtracting 5 from both sides)",
+                  "solutionSteps": [
+                    "The inverse operation.",
+                    "+5 becomes -5."
+                  ]
+                },
+                {
+                  "prompt": "The classic transposition error is...",
+                  "answer": "Changing one side while forgetting the other",
+                  "solutionSteps": [
+                    "Both sides must change together.",
+                    "Else the balance breaks."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                232
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 8 you solve linear equations with the variable on both sides and with brackets and fractions."
         },
         {
@@ -24626,7 +25731,92 @@
           "parentConceptId": "mch15_t01_c01",
           "body": "Every equation you balance now has a single unknown and (usually) a single solution. But many real problems involve TWO unknowns at once — 'two pens and three pencils cost ₹40' is one equation in two letters, and it has infinitely many solutions, each a pair (pens, pencils). Plot all those pairs and they form a straight LINE — this is the moment algebra and geometry fuse. To pin down a unique answer you need a SECOND independent fact, a second equation; together they are simultaneous equations, and their single shared solution is exactly the point where the two lines cross. Three outcomes are possible and each has a geometric meaning: the lines cross once (one solution), run parallel (no solution — the conditions contradict), or lie on top of each other (infinitely many). The balanced single-unknown equation you master here is one line of a richer two-dimensional picture.",
           "prerequisite": "Tackle this once you can solve a single linear equation confidently.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "mch15_dd02_b01",
+              "prompt": "'Two pens and three pencils cost ₹40' is one equation in two unknowns. How many solutions does it have?",
+              "questionType": "mcq",
+              "options": [
+                "Infinitely many (they form a straight line)",
+                "Exactly one",
+                "None",
+                "Exactly two"
+              ],
+              "answer": "Infinitely many (they form a straight line)",
+              "solutionSteps": [
+                "One linear equation in two unknowns has infinitely many (x, y) solutions.",
+                "Plotted, they form a straight line."
+              ],
+              "commonMistakes": [
+                "Expecting a single solution; you need a second equation for that."
+              ],
+              "variations": [
+                {
+                  "prompt": "What do you need to pin down a unique solution for two unknowns?",
+                  "answer": "A second independent equation",
+                  "solutionSteps": [
+                    "Two equations together.",
+                    "Their crossing point is the solution."
+                  ]
+                },
+                {
+                  "prompt": "Geometrically, the unique solution of two simultaneous equations is...",
+                  "answer": "The point where the two lines cross",
+                  "solutionSteps": [
+                    "Each equation is a line.",
+                    "Their intersection is the answer."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                232
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "mch15_dd02_b02",
+              "prompt": "Two simultaneous linear equations whose graphs are PARALLEL lines have...",
+              "questionType": "mcq",
+              "options": [
+                "No solution",
+                "Exactly one solution",
+                "Infinitely many solutions",
+                "Exactly two solutions"
+              ],
+              "answer": "No solution",
+              "solutionSteps": [
+                "Parallel lines never meet, so there is no common point.",
+                "The conditions contradict - no solution."
+              ],
+              "commonMistakes": [
+                "Thinking parallel lines still cross somewhere."
+              ],
+              "variations": [
+                {
+                  "prompt": "If two equations describe the SAME line, how many solutions?",
+                  "answer": "Infinitely many",
+                  "solutionSteps": [
+                    "They overlap entirely.",
+                    "Every point is shared."
+                  ]
+                },
+                {
+                  "prompt": "Two lines crossing at exactly one point means...",
+                  "answer": "Exactly one solution",
+                  "solutionSteps": [
+                    "One shared point.",
+                    "One (x, y) solves both."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                232
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 10 you solve pairs of linear equations in two variables by substitution, elimination and graphing."
         },
         {
@@ -24636,7 +25826,92 @@
           "parentConceptId": "mch15_t01_c02",
           "body": "A solution is a value that makes both sides of an equation equal, and so far each equation has had just one. But raise the unknown to a power and that changes. The equation x² = 9 has TWO solutions, x = 3 and x = −3, because both square to 9 — a fact the integer sign rules you have learned make inevitable. Equations where the highest power of the unknown is 2, like x² − 5x + 6 = 0, are called quadratics, and they typically have two solutions, found by factorising into (x − 2)(x − 3) = 0 (so x = 2 or x = 3) or by the general quadratic formula. They are everywhere the real world curves rather than runs straight: the arc of a thrown ball, the area of a field given its perimeter, the path of water from a fountain. Asking 'what counts as a solution?' carefully now prepares you for the moment one equation legitimately answers with more than one number.",
           "prerequisite": "Tackle this once you are clear on what it means for a value to satisfy an equation.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "mch15_dd03_b01",
+              "prompt": "How many solutions does x^2 = 9 have?",
+              "questionType": "mcq",
+              "options": [
+                "Two (x = 3 and x = -3)",
+                "One (x = 3 only)",
+                "None",
+                "Infinitely many"
+              ],
+              "answer": "Two (x = 3 and x = -3)",
+              "solutionSteps": [
+                "Both 3 and -3 square to 9.",
+                "So x^2 = 9 has two solutions."
+              ],
+              "commonMistakes": [
+                "Forgetting the negative root, giving only x = 3."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is -3 also a solution of x^2 = 9?",
+                  "answer": "(-3) x (-3) = 9 (negative times negative is positive)",
+                  "solutionSteps": [
+                    "Squaring -3 gives 9.",
+                    "So -3 works too."
+                  ]
+                },
+                {
+                  "prompt": "How many solutions does x^2 = 0 have?",
+                  "answer": "One (x = 0)",
+                  "solutionSteps": [
+                    "Only 0 squares to 0.",
+                    "A single solution."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                232
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "mch15_dd03_b02",
+              "prompt": "Solve x^2 - 5x + 6 = 0 by factorising.",
+              "questionType": "mcq",
+              "options": [
+                "x = 2 or x = 3",
+                "x = 5 or x = 6",
+                "x = -2 or x = -3",
+                "x = 1 or x = 6"
+              ],
+              "answer": "x = 2 or x = 3",
+              "solutionSteps": [
+                "x^2 - 5x + 6 = (x - 2)(x - 3).",
+                "Set each factor to 0: x = 2 or x = 3."
+              ],
+              "commonMistakes": [
+                "Reading the roots straight off as 5 and 6."
+              ],
+              "variations": [
+                {
+                  "prompt": "Equations whose highest power of the unknown is 2 are called...",
+                  "answer": "Quadratics",
+                  "solutionSteps": [
+                    "Degree-2 equations.",
+                    "They typically have two solutions."
+                  ]
+                },
+                {
+                  "prompt": "Name one real situation modelled by a quadratic.",
+                  "answer": "The arc of a thrown ball (a parabola)",
+                  "solutionSteps": [
+                    "Curved paths are quadratic.",
+                    "E.g. projectiles, fountains."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                232
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 10 you solve quadratic equations by factorising, completing the square, and the quadratic formula."
         }
       ],
