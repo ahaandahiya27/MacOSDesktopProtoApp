@@ -3595,7 +3595,94 @@
           "parentConceptId": "ch01_t01_c07",
           "body": "In Class 7 you learned that photosynthesis needs FOUR things: sunlight, chlorophyll, CO₂, and water. Class 8 introduces an important twist: at any moment, only ONE of these four is the bottleneck — and that's what controls the rate. Give a plant infinite water + sunlight, but starve it of CO₂, and photosynthesis stalls. The German plant physiologist Justus von Liebig called this 'the law of the minimum.' Modern greenhouse farmers in Pune use this to their advantage — they pump extra CO₂ into closed glasshouses (boosting concentration from atmospheric 0.04% to 0.1%) and see tomato yields jump 30%. They've identified CO₂ as the bottleneck and removed it. When you garden, watch for which factor is limiting yours — usually it's light in winter and water in summer.",
           "prerequisite": "Tackle this after you're comfortable with the 4 conditions for photosynthesis (Class 7).",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch01_dd01_b01",
+              "prompt": "A Pune greenhouse gives tomato plants unlimited water and bright light, yet yields stay flat. Raising CO₂ from 0.04% to 0.1% lifts yield 30%. By the law of the minimum, which factor had been limiting?",
+              "questionType": "mcq",
+              "options": [
+                "Carbon dioxide",
+                "Water",
+                "Sunlight",
+                "Chlorophyll"
+              ],
+              "answer": "Carbon dioxide",
+              "solutionSteps": [
+                "Liebig's law of the minimum: at any moment only the single scarcest factor sets the rate.",
+                "Water and light were already plentiful, so neither was the bottleneck.",
+                "Adding CO₂ raised the rate — proof CO₂ was the limiting factor."
+              ],
+              "commonMistakes": [
+                "Assuming more of EVERY input helps — only increasing the one limiting factor changes the rate."
+              ],
+              "variations": [
+                {
+                  "prompt": "In winter a windowsill plant grows slowly despite regular watering. Which factor is most likely limiting?",
+                  "answer": "Light",
+                  "solutionSteps": [
+                    "Water is supplied, so it isn't the bottleneck.",
+                    "Winter days are short and dim, so light is scarcest — it is the limiting factor."
+                  ]
+                },
+                {
+                  "prompt": "If a plant already has plenty of light, water and chlorophyll, doubling the light will roughly double its photosynthesis. True or false?",
+                  "answer": "False",
+                  "solutionSteps": [
+                    "If light is NOT the limiting factor, adding more light barely changes the rate.",
+                    "Only raising the actual bottleneck speeds photosynthesis."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                4
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_dd01_b02",
+              "prompt": "According to Liebig's 'law of the minimum', what sets the rate of photosynthesis at a given moment?",
+              "questionType": "mcq",
+              "options": [
+                "The single factor in shortest supply",
+                "The average of all four factors",
+                "Sunlight, always",
+                "The sum of all four factors"
+              ],
+              "answer": "The single factor in shortest supply",
+              "solutionSteps": [
+                "The law of the minimum says a process is capped by its scarcest requirement.",
+                "Whichever of light, CO₂, water or chlorophyll is most limited becomes the bottleneck.",
+                "Raising any other factor has little effect until the bottleneck is relieved."
+              ],
+              "commonMistakes": [
+                "Thinking the rate is an average or sum of all factors rather than being capped by the scarcest one."
+              ],
+              "variations": [
+                {
+                  "prompt": "Two factors are scarce at once. Per the law of the minimum, which controls the rate?",
+                  "answer": "The scarcer of the two",
+                  "solutionSteps": [
+                    "The most limiting (scarcest) factor sets the cap.",
+                    "Relieving it shifts the bottleneck to the next-scarcest factor."
+                  ]
+                },
+                {
+                  "prompt": "Greenhouse farmers raise CO₂ above outdoor levels. What does this tell you about their plants' bottleneck?",
+                  "answer": "CO₂ was the limiting factor",
+                  "solutionSteps": [
+                    "They added CO₂ specifically and yields rose.",
+                    "So CO₂ — not light or water — had been the bottleneck."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                4
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 11 you'll see how each limiting factor affects a different enzyme in the Calvin cycle — that's why one limit slows the whole assembly line."
         },
         {
@@ -3605,7 +3692,94 @@
           "parentConceptId": "ch01_t01_c02",
           "body": "In Class 7 you wrote photosynthesis as: CO₂ + H₂O + light → glucose + O₂. Class 9 splits this single reaction into TWO stages happening in different parts of the chloroplast. STAGE 1 — light-dependent reactions: happen in the thylakoid membranes (those green stacks inside the chloroplast). Sunlight splits water into hydrogen + oxygen. The oxygen leaves; the hydrogen is captured in a molecule called NADPH. ATP is also made here. STAGE 2 — light-independent reactions (often misnamed 'dark reactions'): happen in the stroma (chloroplast's fluid). The captured hydrogen + ATP power a cycle that converts CO₂ into glucose. The first stage NEEDS light; the second only needs the products from the first stage. This is why a plant in darkness can briefly continue photosynthesis using stored NADPH — but only briefly.",
           "prerequisite": "Tackle this after you're comfortable with the basic photosynthesis equation.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch01_dd02_b01",
+              "prompt": "In a chloroplast, where do the light-dependent reactions (water-splitting, O₂ release, NADPH/ATP formation) take place?",
+              "questionType": "mcq",
+              "options": [
+                "The thylakoid membranes",
+                "The stroma",
+                "The cell wall",
+                "The mitochondria"
+              ],
+              "answer": "The thylakoid membranes",
+              "solutionSteps": [
+                "Light-dependent reactions need the pigment-packed membranes that capture light.",
+                "Those are the thylakoid membranes (the green stacks).",
+                "The stroma hosts the light-independent reactions, not the light reactions."
+              ],
+              "commonMistakes": [
+                "Confusing the stroma (site of the 'dark'/Calvin reactions) with the thylakoids (site of the light reactions)."
+              ],
+              "variations": [
+                {
+                  "prompt": "Where in the chloroplast is glucose actually assembled from CO₂?",
+                  "answer": "The stroma",
+                  "solutionSteps": [
+                    "CO₂ fixation is the light-independent stage.",
+                    "It runs in the stroma using NADPH and ATP made in the thylakoids."
+                  ]
+                },
+                {
+                  "prompt": "Which gas is released specifically during the light-dependent reactions?",
+                  "answer": "Oxygen",
+                  "solutionSteps": [
+                    "Water is split in the light reactions.",
+                    "Its oxygen is released; its hydrogen is captured as NADPH."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                4
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_dd02_b02",
+              "prompt": "A leaf moved into darkness can keep making glucose for a short while. Why?",
+              "questionType": "mcq",
+              "options": [
+                "The light-independent reactions can briefly run on NADPH and ATP already stored from the light reactions",
+                "Glucose is built directly by sunlight, so it continues from leftover light",
+                "The light-independent reactions need no inputs whatsoever",
+                "Darkness actually speeds photosynthesis up"
+              ],
+              "answer": "The light-independent reactions can briefly run on NADPH and ATP already stored from the light reactions",
+              "solutionSteps": [
+                "Stage 2 (light-independent) consumes NADPH + ATP, not light directly.",
+                "A small store of NADPH/ATP remains right after the lights go out.",
+                "Stage 2 runs on that store until it is used up — then it stops."
+              ],
+              "commonMistakes": [
+                "Believing 'dark reactions' happen in the dark by choice — they simply don't require light directly, but they still need the products of the light stage."
+              ],
+              "variations": [
+                {
+                  "prompt": "Why is the name 'dark reactions' misleading?",
+                  "answer": "They don't require darkness — they just don't use light directly, and normally run in daylight on the light reactions' products",
+                  "solutionSteps": [
+                    "They depend on NADPH/ATP from the light stage.",
+                    "In nature they run during the day, right alongside the light reactions."
+                  ]
+                },
+                {
+                  "prompt": "Once stored NADPH and ATP run out in darkness, what happens to glucose production?",
+                  "answer": "It stops",
+                  "solutionSteps": [
+                    "Stage 2 cannot proceed without NADPH/ATP.",
+                    "With no light to regenerate them, the cycle halts."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                4
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "In Class 11 you'll meet the Calvin Cycle by name — three enzymes, three stages, the heart of the 'dark reactions'."
         },
         {
@@ -3615,7 +3789,94 @@
           "parentConceptId": "ch01_t01_c02",
           "body": "In Class 7 photosynthesis was one process. In Class 11 you'll discover plants have evolved THREE different photosynthesis strategies. C3 plants (rice, wheat, most trees) — the original pathway. CO₂ is fixed into a 3-carbon molecule. Works great in moderate climates; loses ~30% of fixed CO₂ to a wasteful process called photorespiration in hot, dry conditions. C4 plants (sugarcane, maize, sorghum) — evolved 30 million years ago when atmospheric CO₂ dropped. They first concentrate CO₂ in special cells, THEN run C3. Twice as efficient in hot climates. That's why sugarcane outyields any other crop per hectare. CAM plants (pineapple, cactus, agave) — they open stomata only at night to grab CO₂, store it, then run photosynthesis with closed stomata in the day. Saves water dramatically. Indian farmers' choice of crop is, without knowing it, a choice between these three pathways.",
           "prerequisite": "Tackle this after you're comfortable with light and dark reactions.",
-          "bonusQuestions": null,
+          "bonusQuestions": [
+            {
+              "id": "ch01_dd03_b01",
+              "prompt": "Pineapple and cactus open their stomata only at night to capture CO₂, then photosynthesise by day with stomata shut. Which pathway is this?",
+              "questionType": "mcq",
+              "options": [
+                "CAM",
+                "C3",
+                "C4",
+                "Photorespiration"
+              ],
+              "answer": "CAM",
+              "solutionSteps": [
+                "Opening stomata at night minimises daytime water loss.",
+                "Storing CO₂ overnight and fixing it by day with closed stomata is the CAM strategy.",
+                "C3 and C4 plants open stomata in daylight; photorespiration is a wasteful side-process, not a pathway."
+              ],
+              "commonMistakes": [
+                "Mixing up CAM (night-time stomata, water-saving) with C4 (daytime CO₂ concentrating)."
+              ],
+              "variations": [
+                {
+                  "prompt": "Which pathway is best suited to a desert plant that must conserve water?",
+                  "answer": "CAM",
+                  "solutionSteps": [
+                    "Desert plants lose water through open daytime stomata.",
+                    "CAM opens stomata at night, slashing water loss — ideal for deserts."
+                  ]
+                },
+                {
+                  "prompt": "Rice, wheat and most trees use which (original) pathway?",
+                  "answer": "C3",
+                  "solutionSteps": [
+                    "C3 is the ancestral pathway fixing CO₂ into a 3-carbon molecule.",
+                    "Rice, wheat and most trees are C3 plants."
+                  ]
+                }
+              ],
+              "difficulty": 4,
+              "pageRefs": [
+                4
+              ],
+              "needsHumanReview": false
+            },
+            {
+              "id": "ch01_dd03_b02",
+              "prompt": "Why does sugarcane (C4) outyield rice (C3) per hectare in hot climates?",
+              "questionType": "mcq",
+              "options": [
+                "C4 plants first concentrate CO₂, avoiding the ~30% loss to photorespiration that C3 plants suffer in heat",
+                "C4 plants need no sunlight to grow",
+                "C3 plants cannot photosynthesise in heat at all",
+                "Rice lacks chlorophyll"
+              ],
+              "answer": "C4 plants first concentrate CO₂, avoiding the ~30% loss to photorespiration that C3 plants suffer in heat",
+              "solutionSteps": [
+                "In hot, dry conditions C3 plants lose ~30% of fixed CO₂ to photorespiration.",
+                "C4 plants concentrate CO₂ in special cells before running the C3 steps.",
+                "That higher CO₂ concentration suppresses photorespiration, so C4 is more efficient in heat."
+              ],
+              "commonMistakes": [
+                "Thinking C4 plants skip C3 chemistry entirely — they still run C3, but only after concentrating CO₂."
+              ],
+              "variations": [
+                {
+                  "prompt": "Researchers want a 'super rice' that feeds 50% more people. Which trait are they trying to engineer into rice?",
+                  "answer": "C4 photosynthesis",
+                  "solutionSteps": [
+                    "Rice is naturally C3 and loses CO₂ to photorespiration in heat.",
+                    "Adding C4 CO₂-concentrating traits would raise its efficiency and yield."
+                  ]
+                },
+                {
+                  "prompt": "In cool, moderate climates, is the C4 advantage large or small?",
+                  "answer": "Small",
+                  "solutionSteps": [
+                    "Photorespiration is mainly a hot-climate problem.",
+                    "In moderate conditions C3 loses little CO₂, so C4's edge shrinks."
+                  ]
+                }
+              ],
+              "difficulty": 5,
+              "pageRefs": [
+                4
+              ],
+              "needsHumanReview": false
+            }
+          ],
           "nextStepHint": "Modern agriculture is trying to engineer C4 traits into rice — a 'super rice' that could feed 50% more people from the same land."
         }
       ],
