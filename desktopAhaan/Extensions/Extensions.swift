@@ -342,12 +342,14 @@ enum DesignTokens {
 // MARK: - Monospaced-digit fonts (Big-Sur-safe)
 
 extension Font {
-    /// Big-Sur-safe monospaced-digit caption font for counters that change in
+    /// AppKit-backed monospaced-digit caption font for counters that change in
     /// real time ("Scene N of M · X done", score readouts, badge numbers).
-    /// SwiftUI's `.monospacedDigit()` modifier on Font is macOS 12+; this
-    /// builds the same effect via AppKit's `NSFont.monospacedDigitSystemFont`
-    /// which has shipped since macOS 10.7, so digit columns stay aligned as
-    /// the number changes — no jitter as widths shift between `1` and `8`.
+    /// NOTE: SwiftUI's `Font.monospacedDigit()` is in fact available on Big Sur
+    /// (compiler-verified `@available(macOS 11)` — it typechecks against the
+    /// 11.5 deployment target), so the many call sites using
+    /// `.font(.X.monospacedDigit())` are Big-Sur-safe and need NOT be migrated.
+    /// This helper remains as an explicit AppKit alternative (`NSFont.
+    /// monospacedDigitSystemFont`, since macOS 10.7) for cases that prefer it.
     static var monoDigitCaption: Font {
         Font(NSFont.monospacedDigitSystemFont(
             ofSize: NSFont.smallSystemFontSize,
