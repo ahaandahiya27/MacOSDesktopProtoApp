@@ -66,21 +66,44 @@ fi
 cd "${REPO_ROOT}" || exit 1
 echo "   ✓ now in $(pwd)"
 
-echo "▶ 3. Stashing any local pbxproj auto-edits (non-destructive)…"
-git stash push -m "imac-pull: local pbxproj before pull $(date +%F_%H%M%S)" \
-    -- desktopAhaan.xcodeproj/project.pbxproj 2>/dev/null || true
-echo "   ✓ stash attempted (nothing to stash is fine)."
+echo "▶ 3. Parking ALL local changes (safety net before the hard sync)…"
+# The iMac is a PURE CONSUMER of origin/main — it never authors commits that
+# need preserving, and its only routine local edits are pbxproj auto-rewrites
+# that Xcode regenerates anyway. A plain `git pull` (merge) used to leave the
+# tree STALE whenever ANY tracked file besides pbxproj was dirty or local main
+# had diverged: the merge wouldn't fast-forward, the old source stayed on disk,
+# and Xcode rebuilt the pre-fix code → the same crash "again and again".
+# We snapshot everything into a stash (recoverable if ever needed) and then
+# force the working tree to EXACTLY match origin/main below.
+git stash push -u -m "imac-pull: full local snapshot $(date +%F_%H%M%S)" 2>/dev/null || true
+echo "   ✓ snapshot taken (nothing to stash is fine; recover via 'git stash list')."
 
-echo "▶ 4. Pulling origin/main…"
-if ! git pull origin main; then
-    echo "   ✗ pull failed — likely a deeper conflict. Run 'git status' and"
-    echo "     either commit, stash, or discard the conflicting files."
+echo "▶ 4. Force-syncing the working tree to origin/main (fetch + hard reset)…"
+# fetch first so origin/main is current, then reset --hard so the tree matches
+# it byte-for-byte regardless of local divergence, dirt, or a failed prior pull.
+if ! git fetch origin; then
+    echo "   ✗ fetch failed — check the network / GitHub auth, then re-run."
     exit 1
 fi
-echo "   ✓ pull complete."
+if ! git reset --hard origin/main; then
+    echo "   ✗ reset failed — run 'git status' and inspect."
+    exit 1
+fi
+git clean -fd desktopAhaan.xcodeproj 2>/dev/null || true   # drop stray pbxproj turds
+echo "   ✓ working tree now matches origin/main exactly."
 
-echo "▶ 5. Latest commit on main:"
+echo "▶ 5. Verifying the sync actually took (guards against a silent stale tree)…"
+LOCAL_SHA="$(git rev-parse HEAD)"
+ORIGIN_SHA="$(git rev-parse origin/main)"
+echo "   HEAD       = $(git rev-parse --short HEAD)"
+echo "   origin/main= $(git rev-parse --short origin/main)"
 git log -1 --oneline
+if [ "${LOCAL_SHA}" != "${ORIGIN_SHA}" ]; then
+    echo "   ✗ HEAD does not match origin/main after reset — STOP. Do not build a"
+    echo "     stale tree. Run 'git status' / 'git remote -v' and re-run this script."
+    exit 1
+fi
+echo "   ✓ HEAD matches origin/main — the build will compile the latest source."
 
 echo "▶ 6. Wiping stale DerivedData (with retry — handles file-handle races)…"
 DERIVED_GLOB="${HOME}/Library/Developer/Xcode/DerivedData/desktopAhaan-*"
