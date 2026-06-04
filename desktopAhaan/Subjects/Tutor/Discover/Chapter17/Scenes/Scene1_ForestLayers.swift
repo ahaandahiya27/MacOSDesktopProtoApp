@@ -53,7 +53,7 @@ struct Scene1_ForestLayers: View {
 
                 LookingAheadCallout(
                     title: "Class 12 Bio → NEET",
-                    detail: "Class 12 'Ecosystem' turns this into ecological pyramids: the pyramid of biomass, the pyramid of energy (always upright, by the 10% rule), and the pyramid of numbers (which can be upside-down in parasite chains). NEET tests these every year. Class 12 'Biodiversity & Conservation' adds India's forest types and biodiversity hotspots."
+                    detail: "Class 12 'Ecosystem' turns this into ecological pyramids. One is the pyramid of biomass. The pyramid of energy is always upright, by the 10% rule. The pyramid of numbers can be upside-down in parasite chains. NEET tests these every year. Class 12 also adds India's forest types and biodiversity hotspots."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)

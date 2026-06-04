@@ -79,7 +79,7 @@ struct Scene7_CycloneWarningCodes: View {
                 if done {
                 LookingAheadCallout(
                     title: "Class 10 Disaster Management",
-                    detail: "Class 10 Geography covers disaster preparedness: cyclone shelters, the IMD warning chain, and early-warning satellites (INSAT). It lines up with the NCERT Disaster Management syllabus."
+                    detail: "Class 10 Geography covers disaster preparedness. It covers cyclone shelters. It covers the IMD warning chain. It covers early-warning satellites like INSAT. This lines up with the NCERT Disaster Management syllabus."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)

@@ -48,7 +48,7 @@ struct Scene4_OpenDrainHazards: View {
 
                 LookingAheadCallout(
                     title: "Class 12 Bio → NEET",
-                    detail: "Class 12 'Human Health and Disease' covers water-borne diseases: cholera (Vibrio cholerae), typhoid (Salmonella typhi), dysentery (Entamoeba histolytica) and hepatitis A. NEET asks how they spread and how to prevent them every year."
+                    detail: "Class 12 'Human Health and Disease' covers water-borne diseases. Cholera comes from Vibrio cholerae. Typhoid comes from Salmonella typhi. Dysentery comes from Entamoeba histolytica. Hepatitis A is another. NEET asks how they spread and how to prevent them."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)

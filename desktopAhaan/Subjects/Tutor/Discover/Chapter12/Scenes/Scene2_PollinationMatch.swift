@@ -61,7 +61,7 @@ struct Scene2_PollinationMatch: View {
 
                 LookingAheadCallout(
                     title: "Class 12 Bio → NEET",
-                    detail: "Class 12 covers the types of pollination — autogamy, geitonogamy, xenogamy — and the floral tricks behind each (cleistogamy, dichogamy, herkogamy). NEET asks you to tell them apart every year."
+                    detail: "Class 12 covers the types of pollination. These are autogamy, geitonogamy and xenogamy. It also covers floral tricks. These are cleistogamy, dichogamy and herkogamy. NEET asks you to tell them apart."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)

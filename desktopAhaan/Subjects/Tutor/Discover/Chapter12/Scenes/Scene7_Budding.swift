@@ -44,7 +44,7 @@ struct Scene7_Budding: View {
 
                 LookingAheadCallout(
                     title: "Class 12 Bio → NEET",
-                    detail: "Class 12 'Reproduction in Organisms' covers the asexual modes. They are binary fission (Amoeba), multiple fission (Plasmodium), budding (Hydra, yeast), fragmentation (Spirogyra) and spore formation (Rhizopus). NEET tests these every year."
+                    detail: "Class 12 'Reproduction in Organisms' covers asexual modes. Amoeba uses binary fission. Plasmodium uses multiple fission. Hydra and yeast use budding. Spirogyra uses fragmentation. Rhizopus makes spores. NEET tests these every year."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)

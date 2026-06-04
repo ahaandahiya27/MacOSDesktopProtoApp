@@ -45,7 +45,7 @@ struct Scene6_BawdiStepwell: View {
 
                 LookingAheadCallout(
                     title: "Class 9 History + Geography",
-                    detail: "Class 9 History, 'Climate, Environment and Civilisation', covers the Indus Valley's drains. Class 10 Geography covers traditional Indian water stores — bawdis, johads and tankas. UNESCO lists Rani-ki-Vav (Gujarat) as a World Heritage Site."
+                    detail: "Class 9 History covers the Indus Valley's drains. Class 10 Geography covers old Indian water stores. These include bawdis, johads and tankas. UNESCO lists Rani-ki-Vav in Gujarat as a World Heritage Site."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)

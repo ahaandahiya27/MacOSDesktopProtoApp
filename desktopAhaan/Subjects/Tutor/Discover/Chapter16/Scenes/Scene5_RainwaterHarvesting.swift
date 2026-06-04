@@ -70,7 +70,7 @@ struct Scene5_RainwaterHarvesting: View {
 
                 LookingAheadCallout(
                     title: "Class 10 Geography",
-                    detail: "Class 10 covers many rainwater-harvesting structures. Examples are khadins (Rajasthan), kuls (Himachal), zings (Ladakh), eris (Tamil Nadu) and bhandaras (Maharashtra). CBSE asks about regional methods every year."
+                    detail: "Class 10 covers many rainwater-harvesting structures. Rajasthan has khadins. Himachal has kuls. Ladakh has zings. Tamil Nadu has eris. Maharashtra has bhandaras. CBSE asks about regional methods every year."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)

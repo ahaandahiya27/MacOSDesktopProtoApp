@@ -60,7 +60,7 @@ struct Scene4_IrrigationCompare: View {
 
                 LookingAheadCallout(
                     title: "Class 10 Geography",
-                    detail: "Class 10 'Agriculture' covers irrigation in India: big canal systems (Indira Gandhi, Bhakra-Nangal), tank irrigation in Tamil Nadu, and the rise of drip irrigation in dry Rajasthan and Gujarat. CBSE board exams ask about it."
+                    detail: "Class 10 'Agriculture' covers irrigation in India. Big canals include the Indira Gandhi and Bhakra-Nangal systems. Tamil Nadu uses tank irrigation. Dry Rajasthan and Gujarat now use drip irrigation. CBSE board exams ask about it."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)
