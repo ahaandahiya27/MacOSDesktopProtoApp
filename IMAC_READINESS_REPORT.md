@@ -75,6 +75,41 @@ If anything is red, paste the compile/crash output back — it can be root-cause
 and fixed within minutes (most likely an SDK-symbol gap per §5). If it builds
 clean, the entire v6→Olympiad stack is confirmed authoritative-green on Big Sur.
 
+## 7. Runtime crash / hang / main-thread / jank verification (every historical class)
+Mined every prior iMac failure from `CRASH_LEDGER.md`, `ZOMBIE_LOG_FINDINGS.md`,
+`docs/CRASH_DEEP_RESEARCH.md`, and the issue taxonomy, then verified each class's
+guard is green AND not reintroduced by v6/UI-sweep/v7/v8/Olympiad:
+
+| # | Historical failure (where it bit the iMac) | Guard | Current status |
+|---|---|---|---|
+| C1 | **Layout-recursion crash** — unbounded `GeometryReader` in a `ScrollView`/`LazyVStack` (AMD driver) | scene template + `Crash1_TryDiscoverMode_Ch1` | ✅ every new v7/v8 `GeometryReader` is frame-bounded (`.frame(height:…)`); manually verified sandboxes/tours/TrendChart |
+| C2 | **Sync re-render collision crash** — sheet-dismiss + `nav.push` in one commit | defer via `presentDeferred`/`DispatchQueue.main.async`; `Crash_BeyondThenDiscover` | ✅ deferral intact in the coordinator + ChapterDetail; test present |
+| C4 | **WebContent/XPC over-release** (WKWebView) | retired WKWebView → native `NSTextView` `.sheet` + ordered `dismantleNSView` | ✅ zero `WKWebView`/`WebContent` references remain |
+| C3 | **Speech permission dialog blocking** launch/tests | `requestPermissions()` is a no-op under test | ✅ present |
+| — | force-unwrap / `as!` / `try!` on runtime paths | B1/B2 lint | ✅ none (FoundationTutor-only pass) |
+| — | `Dictionary(uniqueKeysWithValues:)` dup-key crash | gotcha/convention | ✅ zero uses |
+| — | KVO / `NotificationCenter` observer leaks | `check_kvo_observer_leak`, `check_notificationcenter_leak` | ✅ clean |
+| — | `Timer` retain (no `[weak self]`) | `check_lifetime_hazards` (LH004b) | ✅ clean (value-type-ViewModifier cases allowlisted) |
+| — | tuple-keypath crash (`\.offset`/`\.element.*`) | race/deadlock lint | ✅ clean |
+
+**Main-thread / hang / jank:**
+- **Launch I/O is off-main.** `SubjectRegistry.reload()` and `DataStore.loadAllOffThread`
+  decode JSON on `Task.detached(.userInitiated)` and publish via `MainActor.run`;
+  `SanskritDictionary` is lazy + pre-warmed. No synchronous pack/store read blocks the
+  main thread at launch.
+- **No main-thread blocking primitives:** zero `DispatchQueue.main.sync`, zero
+  `DispatchSemaphore`/`.wait()`, zero synchronous network (the sole egress is the
+  opt-in `FreeOnlineTranslationProvider`, async).
+- **AMD R9 M290X GPU:** particle counts + animation FPS gated on `HardwareTier.isLegacy`
+  (I1/I2); every `withAnimation` routed through `withAnimationRespectingReduceMotion`
+  (LH005b lint, empty allowlist); `Timer`s invalidate on disappear + `scenePhase` (I9).
+- **Perf baselines:** `testPackDecodePerformance` (cold-launch decode) + per-render
+  index caches guard regressions.
+
+Net: **no known crash / hang / main-thread-block / jank class is reintroduced.** The
+driver-specific crashes (C1/C2) only ever reproduced on the AMD R9 M290X, so the code
+patterns are confirmed clean here but final proof is still the §6 iMac run.
+
 ## Honesty note
 This audit makes the codebase *statically* as iMac-ready as possible from the dev
 Mac. It does **not** prove a Big-Sur build — that claim can only be made after the
