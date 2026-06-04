@@ -19,13 +19,13 @@ struct LungAnatomyDiagram: View {
         }
     }
 
-    // Body split into typed helpers so the Swift 5.5 type-checker on the
-    // Big-Sur iMac (Xcode 13.2.1) never has to solve one deep
-    // GeometryReader→ZStack result-builder closure full of inline CGFloat
-    // coordinate math in a single pass — that recursion overflows the
-    // compiler stack → `Segmentation fault: 11`. All coordinates are
-    // computed as explicit `CGFloat` locals; nothing for the type-checker
-    // to disambiguate.
+    // Body split into typed helpers AND every coordinate pre-computed as
+    // an explicit `CGFloat` local before it reaches a SwiftUI view modifier.
+    // Inline `h * 0.3` / `w * 0.16` inside `.frame(...)` / `.position(...)`
+    // still forces the Swift 5.5 type-checker on the Big-Sur iMac to solve
+    // CGFloat * Double overloads inside a Group's @ViewBuilder closure —
+    // the recursion overflows the compiler stack → `Segmentation fault: 11`.
+    // Hoisting the math out makes every modifier arg a plain CGFloat ref.
     private func content(w: CGFloat, h: CGFloat) -> some View {
         let cx = w / 2
         return ZStack {
@@ -35,39 +35,57 @@ struct LungAnatomyDiagram: View {
     }
 
     private func airway(w: CGFloat, h: CGFloat, cx: CGFloat) -> some View {
-        Group {
-            // Trachea
+        let tracheaH: CGFloat = h * 0.3
+        let tracheaY: CGFloat = h * 0.2
+        let bronchiTopY: CGFloat = h * 0.34
+        let bronchiBottomY: CGFloat = h * 0.46
+        let bronchiSpread: CGFloat = w * 0.16
+        let lungW: CGFloat = w * 0.28
+        let lungH: CGFloat = h * 0.45
+        let lungOffset: CGFloat = w * 0.17
+        let lungY: CGFloat = h * 0.55
+        let lungLeftX: CGFloat = cx - lungOffset
+        let lungRightX: CGFloat = cx + lungOffset
+        let bronchiLeftX: CGFloat = cx - bronchiSpread
+        let bronchiRightX: CGFloat = cx + bronchiSpread
+        return Group {
             Capsule().fill(Color.compatBlue.opacity(0.4))
-                .frame(width: 12, height: h * 0.3)
-                .position(x: cx, y: h * 0.2)
-            // Bronchi
+                .frame(width: 12, height: tracheaH)
+                .position(x: cx, y: tracheaY)
             Path { p in
-                p.move(to: CGPoint(x: cx, y: h * 0.34))
-                p.addLine(to: CGPoint(x: cx - w * 0.16, y: h * 0.46))
-                p.move(to: CGPoint(x: cx, y: h * 0.34))
-                p.addLine(to: CGPoint(x: cx + w * 0.16, y: h * 0.46))
+                p.move(to: CGPoint(x: cx, y: bronchiTopY))
+                p.addLine(to: CGPoint(x: bronchiLeftX, y: bronchiBottomY))
+                p.move(to: CGPoint(x: cx, y: bronchiTopY))
+                p.addLine(to: CGPoint(x: bronchiRightX, y: bronchiBottomY))
             }.stroke(Color.compatBlue.opacity(0.5), lineWidth: 6)
-            // Two lungs
             LungShape(flip: false).fill(.pink.opacity(0.4))
-                .frame(width: w * 0.28, height: h * 0.45)
-                .position(x: cx - w * 0.17, y: h * 0.55)
+                .frame(width: lungW, height: lungH)
+                .position(x: lungLeftX, y: lungY)
             LungShape(flip: true).fill(.pink.opacity(0.4))
-                .frame(width: w * 0.28, height: h * 0.45)
-                .position(x: cx + w * 0.17, y: h * 0.55)
+                .frame(width: lungW, height: lungH)
+                .position(x: lungRightX, y: lungY)
         }
     }
 
     private func lowerParts(w: CGFloat, h: CGFloat, cx: CGFloat) -> some View {
-        Group {
-            // Diaphragm dome
+        let diaphragmHalfW: CGFloat = w * 0.32
+        let diaphragmY: CGFloat = h * 0.84
+        let diaphragmControlY: CGFloat = h * 0.72
+        let diaphragmLeftX: CGFloat = cx - diaphragmHalfW
+        let diaphragmRightX: CGFloat = cx + diaphragmHalfW
+        let tracheaLabelX: CGFloat = cx + 44
+        let tracheaLabelY: CGFloat = h * 0.18
+        let lungsLabelY: CGFloat = h * 0.55
+        let diaphragmLabelY: CGFloat = h * 0.9
+        return Group {
             Path { p in
-                p.move(to: CGPoint(x: cx - w * 0.32, y: h * 0.84))
-                p.addQuadCurve(to: CGPoint(x: cx + w * 0.32, y: h * 0.84),
-                               control: CGPoint(x: cx, y: h * 0.72))
+                p.move(to: CGPoint(x: diaphragmLeftX, y: diaphragmY))
+                p.addQuadCurve(to: CGPoint(x: diaphragmRightX, y: diaphragmY),
+                               control: CGPoint(x: cx, y: diaphragmControlY))
             }.stroke(Color.compatBrown.opacity(0.6), lineWidth: 3)
-            SDLabel(text: "Trachea", color: Color.compatBlue).position(x: cx + 44, y: h * 0.18)
-            SDLabel(text: "Lungs", color: .pink).position(x: cx, y: h * 0.55)
-            SDLabel(text: "Diaphragm", color: Color.compatBrown).position(x: cx, y: h * 0.9)
+            SDLabel(text: "Trachea", color: Color.compatBlue).position(x: tracheaLabelX, y: tracheaLabelY)
+            SDLabel(text: "Lungs", color: .pink).position(x: cx, y: lungsLabelY)
+            SDLabel(text: "Diaphragm", color: Color.compatBrown).position(x: cx, y: diaphragmLabelY)
         }
     }
 }
@@ -102,15 +120,12 @@ struct AlveolusDiagram: View {
         }
     }
 
-    // Body split into typed helpers so the Swift 5.5 type-checker on the
-    // Big-Sur iMac (Xcode 13.2.1) never has to solve one deep
-    // GeometryReader→ZStack result-builder closure full of inline CGFloat
-    // coordinate math in a single pass — that recursion overflows the
-    // compiler stack → `Segmentation fault: 11`. All coordinates are
-    // computed as explicit `CGFloat` locals; nothing for the type-checker
-    // to disambiguate.
+    // See LungAnatomyDiagram comment — same Swift 5.5 segfault class. Every
+    // coordinate is hoisted to a typed `CGFloat` local so no view modifier
+    // arg is an arithmetic expression.
     private func content(w: CGFloat, h: CGFloat) -> some View {
-        let cx = w * 0.42, cy = h * 0.5
+        let cx: CGFloat = w * 0.42
+        let cy: CGFloat = h * 0.5
         return ZStack {
             sacCluster(w: w, h: h, cx: cx, cy: cy)
             gasLabels(w: w, h: h, cx: cx)
@@ -118,36 +133,41 @@ struct AlveolusDiagram: View {
     }
 
     private func sacCluster(w: CGFloat, h: CGFloat, cx: CGFloat, cy: CGFloat) -> some View {
-        Group {
-            // Cluster of alveolar sacs
+        let capsuleW: CGFloat = w * 0.7
+        let capsuleH: CGFloat = h * 0.55
+        return Group {
             ForEach(0..<5, id: \.self) { i in
                 alveolarSac(i: i, cx: cx, cy: cy)
             }
-            // Capillary wrapping
             Capsule().stroke(.red.opacity(0.6), lineWidth: 2)
-                .frame(width: w * 0.7, height: h * 0.55).position(x: cx, y: cy)
+                .frame(width: capsuleW, height: capsuleH).position(x: cx, y: cy)
         }
     }
 
     private func gasLabels(w: CGFloat, h: CGFloat, cx: CGFloat) -> some View {
-        Group {
+        let arrowX: CGFloat = w * 0.78
+        let topRowY: CGFloat = h * 0.36
+        let bottomRowY: CGFloat = h * 0.62
+        let labelX: CGFloat = w * 0.9
+        let alveoliLabelY: CGFloat = h * 0.92
+        return Group {
             Image(systemName: SFSymbolCompat.name("arrow.right"))
                 .font(.system(size: 13, weight: .bold)).foregroundColor(.red)
-                .position(x: w * 0.78, y: h * 0.36)
+                .position(x: arrowX, y: topRowY)
             Image(systemName: SFSymbolCompat.name("arrow.left"))
                 .font(.system(size: 13, weight: .bold)).foregroundColor(Color.compatBlue)
-                .position(x: w * 0.78, y: h * 0.62)
-            SDLabel(text: "O₂ in", color: .red).position(x: w * 0.9, y: h * 0.36)
-            SDLabel(text: "CO₂ out", color: Color.compatBlue).position(x: w * 0.9, y: h * 0.62)
-            SDLabel(text: "Alveoli", color: .pink).position(x: cx, y: h * 0.92)
+                .position(x: arrowX, y: bottomRowY)
+            SDLabel(text: "O₂ in", color: .red).position(x: labelX, y: topRowY)
+            SDLabel(text: "CO₂ out", color: Color.compatBlue).position(x: labelX, y: bottomRowY)
+            SDLabel(text: "Alveoli", color: .pink).position(x: cx, y: alveoliLabelY)
         }
     }
 
     private func alveolarSac(i: Int, cx: CGFloat, cy: CGFloat) -> some View {
-        let col = CGFloat(i % 3 - 1)
-        let row = CGFloat(i / 3)
-        let x = cx + col * 28
-        let y = cy + row * 28 - 14
+        let col: CGFloat = CGFloat(i % 3 - 1)
+        let row: CGFloat = CGFloat(i / 3)
+        let x: CGFloat = cx + col * 28
+        let y: CGFloat = cy + row * 28 - 14
         return Circle().fill(.pink.opacity(0.3))
             .overlay(Circle().stroke(.pink.opacity(0.6), lineWidth: 1.5))
             .frame(width: 30, height: 30)
