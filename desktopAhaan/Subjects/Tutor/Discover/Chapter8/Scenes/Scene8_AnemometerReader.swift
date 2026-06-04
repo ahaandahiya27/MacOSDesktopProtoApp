@@ -25,10 +25,11 @@ struct Scene8_AnemometerReader: View {
                 ZStack {
                     Circle().fill(Color.white.opacity(0.95)).frame(width: 240, height: 240)
                     ForEach(0..<3, id: \.self) { i in
+                        let cupAngle: Double = Double(i) * 120
                         Text("🥣")
                             .font(.system(size: 36))
                             .offset(x: 90)
-                            .rotationEffect(.degrees(Double(i) * 120))
+                            .rotationEffect(.degrees(cupAngle))
                     }
                     Circle().fill(Color.compatIndigo).frame(width: 14, height: 14)
                 }

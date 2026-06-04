@@ -108,7 +108,8 @@ struct ThreeModesDiagram: View {
                 Capsule().fill(Color.compatBrown.opacity(0.4)).frame(width: 60, height: 16)
                 HStack(spacing: 4) {
                     ForEach(0..<3, id: \.self) { i in
-                        Circle().fill(Color.red.opacity(0.7 - Double(i) * 0.18)).frame(width: 8, height: 8)
+                        let dotAlpha: Double = 0.7 - Double(i) * 0.18
+                        Circle().fill(Color.red.opacity(dotAlpha)).frame(width: 8, height: 8)
                     }
                 }
             }
@@ -134,10 +135,11 @@ struct ThreeModesDiagram: View {
             Text("Radiation").font(.system(size: 10, weight: .bold)).foregroundColor(DesignTokens.BrandColor.canvasText)
             ZStack {
                 ForEach(0..<8, id: \.self) { i in
+                    let rayAngle: Double = Double(i) * 45
                     Rectangle().fill(Color.orange.opacity(0.6))
                         .frame(width: 2, height: 16)
                         .offset(y: -16)
-                        .rotationEffect(.degrees(Double(i) * 45))
+                        .rotationEffect(.degrees(rayAngle))
                 }
                 Circle().fill(Color.orange.opacity(0.8)).frame(width: 22, height: 22)
             }

@@ -145,11 +145,13 @@ private struct VoltageSliderScene: View {
         ScrollView { LazyVStack(spacing: 14) {
             Text("Voltage → Bulb Brightness").font(.largeTitle.bold())
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
+            let shadowAlpha: Double = brightness * 0.8
+            let shadowRadius: CGFloat = 30 * brightness
             ZStack {
                 Circle().fill(DesignTokens.BrandColor.mnemonicAccent.opacity(brightness))
                     .frame(width: 120, height: 120)
-                    .shadow(color: DesignTokens.BrandColor.mnemonicAccent.opacity(brightness * 0.8),
-                            radius: 30 * brightness)
+                    .shadow(color: DesignTokens.BrandColor.mnemonicAccent.opacity(shadowAlpha),
+                            radius: shadowRadius)
                 Image(systemName: "lightbulb.fill").font(.system(size: 60))
                     .foregroundColor(brightness > 0.3 ? DesignTokens.BrandColor.canvasText : .gray)
             }

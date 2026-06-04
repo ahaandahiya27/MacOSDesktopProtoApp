@@ -296,15 +296,17 @@ private struct ReflectionAngleScene: View {
         ScrollView { LazyVStack(spacing: 14) {
             Text("Reflection — Angle In = Angle Out").font(.largeTitle.bold())
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
+            let incomingAngle: Double = -(90 - angle)
+            let outgoingAngle: Double = 90 - angle
             ZStack {
                 Rectangle().fill(Color.gray).frame(width: 240, height: 4).offset(y: 80)
                 Rectangle().fill(DesignTokens.BrandColor.mnemonicAccent.opacity(0.6))
                     .frame(width: 140, height: 3)
-                    .rotationEffect(.degrees(-(90 - angle)), anchor: .trailing)
+                    .rotationEffect(.degrees(incomingAngle), anchor: .trailing)
                     .offset(x: -40, y: 30)
                 Rectangle().fill(DesignTokens.BrandColor.danger.opacity(0.6))
                     .frame(width: 140, height: 3)
-                    .rotationEffect(.degrees(90 - angle), anchor: .leading)
+                    .rotationEffect(.degrees(outgoingAngle), anchor: .leading)
                     .offset(x: 40, y: 30)
             }
             .frame(height: 180)

@@ -61,8 +61,19 @@ import sys
 from pathlib import Path
 
 # Modifiers whose argument lists are arithmetic-sensitive in result-builder
-# closures. These are the four hit by the iMac segfault class on 2026-06-04.
-MODIFIERS = ("frame", "position", "offset", "padding")
+# closures. The first four (frame/position/offset/padding) were the original
+# hits on 2026-06-04. The rest were added on the follow-up sweep — same
+# segfault class, just a wider numeric-arg modifier set: `.shadow(radius:)`,
+# `.scaleEffect(x:y:)`, `.cornerRadius(r)`, `.rotationEffect(.degrees(a))`,
+# `.blur(radius:)`, `.lineSpacing(x)`, `.kerning(x)`, `.tracking(x)`,
+# `.opacity(x)`, `.brightness(x)`, `.contrast(x)`, `.saturation(x)`,
+# `.hueRotation(.degrees(a))`.
+MODIFIERS = (
+    "frame", "position", "offset", "padding",
+    "shadow", "scaleEffect", "cornerRadius", "rotationEffect", "blur",
+    "lineSpacing", "kerning", "tracking", "opacity",
+    "brightness", "contrast", "saturation", "hueRotation",
+)
 
 # Match the start of one of the four modifier calls. The leading `.`
 # disambiguates them from same-named free functions.
@@ -148,6 +159,12 @@ def run_selftest() -> int:
           Text("x").position(x: cx + 10, y: cy)
           Image(systemName: "x").offset(x: w / 2)
           Rectangle().padding(.horizontal, base + 8)
+          Circle().shadow(color: .black, radius: r * 2, x: 0, y: r)
+          Circle().scaleEffect(1 + bounce * 0.2)
+          Circle().cornerRadius(r * 2)
+          Text("x").rotationEffect(.degrees(angle * 90))
+          Rectangle().blur(radius: r * 0.5)
+          Text("x").opacity(0.5 + alpha * 0.3)
         }
       }
     }
@@ -157,12 +174,20 @@ def run_selftest() -> int:
       var body: some View {
         let cellW: CGFloat = w * 0.5
         let cellH: CGFloat = h * 0.5
+        let shadowR: CGFloat = r * 2
+        let scale: CGFloat = 1 + bounce * 0.2
         return ZStack {
           Circle().frame(width: cellW, height: cellH)
           Text("x").position(x: cx, y: cy)
           Image(systemName: "x").offset(x: -10)
           Rectangle().padding(.horizontal, 8)
           Text("x").frame(maxWidth: .infinity, maxHeight: .infinity)
+          Circle().shadow(color: .black, radius: shadowR, x: 0, y: shadowR)
+          Circle().scaleEffect(scale)
+          Circle().cornerRadius(8)
+          Text("x").rotationEffect(.degrees(45))
+          Rectangle().blur(radius: 4)
+          Text("x").opacity(0.7)
           // .position(x: w * 0.5, y: h * 0.5)  ← commented out, ignored
         }
       }
@@ -170,8 +195,8 @@ def run_selftest() -> int:
     """
     ok = True
     d = scan_text(danger)
-    if len(d) != 4:
-        print(f"SELFTEST FAIL: danger fixture flagged {len(d)} sites, expected 4")
+    if len(d) != 10:
+        print(f"SELFTEST FAIL: danger fixture flagged {len(d)} sites, expected 10")
         for v in d:
             print("  ", v)
         ok = False

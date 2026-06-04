@@ -28,10 +28,11 @@ struct Scene6_Sundial: View {
                         .rotationEffect(.degrees(shadowAngle))
                         .accessibilityLabel("Sundial shadow at \(Int(hour)) o'clock")
                     ForEach(6..<19, id: \.self) { h in
+                        let hourAngle: Double = Double(h - 6) * 15 - 90
                         Text("\(h)")
                             .font(.caption)
                             .offset(y: -120)
-                            .rotationEffect(.degrees(Double(h - 6) * 15 - 90))
+                            .rotationEffect(.degrees(hourAngle))
                     }
                     Text("☀️").font(.system(size: 30)).offset(y: 110)
                 }

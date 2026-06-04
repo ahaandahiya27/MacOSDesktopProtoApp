@@ -181,7 +181,8 @@ struct Scene5_GalvanisationShield: View {
 
     private var pipeColor: Color {
         if step == .exposed && rustLevel > 0.3 {
-            return Color.compatBrown.opacity(0.6 + Double(rustLevel) * 0.4)
+            let rustAlpha: Double = 0.6 + Double(rustLevel) * 0.4
+            return Color.compatBrown.opacity(rustAlpha)
         }
         if step == .protected { return .gray }
         return .gray

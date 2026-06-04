@@ -486,10 +486,11 @@ struct WaterJourneyScene: View {
             // Roots
             ForEach(0..<3, id: \.self) { i in
                 let rootX: CGFloat = CGFloat(i - 1) * 14
+                let rootAngle: Double = Double(i - 1) * 25
                 Rectangle().fill(stage >= 1 ? Color.compatTeal : Color.compatBrown.opacity(0.5))
                     .frame(width: 4, height: 30)
                     .offset(x: rootX, y: 100)
-                    .rotationEffect(.degrees(Double(i - 1) * 25))
+                    .rotationEffect(.degrees(rootAngle))
             }
             // Soil
             RoundedRectangle(cornerRadius: 6).fill(Color.compatBrown.opacity(0.18))

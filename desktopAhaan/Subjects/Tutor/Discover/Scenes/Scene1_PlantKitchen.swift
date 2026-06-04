@@ -197,9 +197,10 @@ private struct SunRayDot: View {
         let x: Double = Double(size.width) * (0.15 + Double(index) * 0.18)
         let y: Double = Double(size.height) * 0.05 + Double(size.height) * 0.4 * phase
         let opacity: Double = 1.0 - phase
+        let tintAlpha: Double = opacity * 0.9
         Image(systemName: "sun.max.fill")
             .font(.system(size: 22))
-            .foregroundColor(Color.yellow.opacity(opacity * 0.9))
+            .foregroundColor(Color.yellow.opacity(tintAlpha))
             .position(x: CGFloat(x), y: CGFloat(y))
     }
 }
@@ -213,9 +214,10 @@ private struct WaterDrop: View {
         let x: Double = Double(size.width) * (0.25 + Double(index) * 0.13)
         let y: Double = Double(size.height) * 0.95 - Double(size.height) * 0.4 * phase
         let opacity: Double = 1.0 - phase
+        let tintAlpha: Double = opacity * 0.85
         Image(systemName: "drop.fill")
             .font(.system(size: 16))
-            .foregroundColor(Color.blue.opacity(opacity * 0.85))
+            .foregroundColor(Color.blue.opacity(tintAlpha))
             .position(x: CGFloat(x), y: CGFloat(y))
     }
 }
@@ -229,9 +231,10 @@ private struct CO2Wisp: View {
         let x: Double = Double(size.width) * 0.05 + Double(size.width) * 0.4 * phase
         let y: Double = Double(size.height) * (0.30 + Double(index) * 0.18)
         let opacity: Double = sin(Double(phase) * Double.pi)
+        let tintAlpha: Double = opacity * 0.7
         Text("CO₂")
             .font(.system(size: 18, weight: .medium, design: .rounded))
-            .foregroundColor(Color.gray.opacity(opacity * 0.7))
+            .foregroundColor(Color.gray.opacity(tintAlpha))
             .position(x: CGFloat(x), y: CGFloat(y))
     }
 }

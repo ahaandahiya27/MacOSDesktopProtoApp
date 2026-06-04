@@ -288,9 +288,10 @@ private struct SalivaLabScene: View {
     }
 
     private var breadVisual: some View {
-        ZStack {
+        let breadAlpha: Double = 0.5 + 0.4 * sugar
+        return ZStack {
             RoundedRectangle(cornerRadius: 16)
-                .fill(Color.compatBrown.opacity(0.5 + 0.4 * sugar))
+                .fill(Color.compatBrown.opacity(breadAlpha))
                 .frame(width: 200, height: 80)
             ForEach(0..<8, id: \.self) { i in
                 let crumbX: CGFloat = CGFloat(i - 4) * 22

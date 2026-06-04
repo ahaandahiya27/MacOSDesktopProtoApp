@@ -34,8 +34,9 @@ struct Scene5_CycloneEye: View {
                 ZStack {
                     ForEach(0..<5, id: \.self) { i in
                         let bandSize: CGFloat = CGFloat(60 + i * 50)
+                        let bandAlpha: Double = 0.5 - Double(i) * 0.08
                         Circle()
-                            .strokeBorder(Color.compatIndigo.opacity(0.5 - Double(i) * 0.08), lineWidth: 6)
+                            .strokeBorder(Color.compatIndigo.opacity(bandAlpha), lineWidth: 6)
                             .frame(width: bandSize, height: bandSize)
                     }
                     Circle()

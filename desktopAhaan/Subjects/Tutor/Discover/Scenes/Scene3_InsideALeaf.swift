@@ -305,15 +305,17 @@ private struct StomataPair: View {
     let phase: Double
     var body: some View {
         let openness: Double = 0.4 + 0.6 * abs(sin(Double(phase) * 2.0 * Double.pi))
+        let leftAngle: Double = -15 * openness
+        let rightAngle: Double = 15 * openness
         HStack(spacing: 1) {
             Capsule()
                 .fill(Color.green.opacity(0.7))
                 .frame(width: 16, height: 28)
-                .rotationEffect(.degrees(-15 * openness))
+                .rotationEffect(.degrees(leftAngle))
             Capsule()
                 .fill(Color.green.opacity(0.7))
                 .frame(width: 16, height: 28)
-                .rotationEffect(.degrees(15 * openness))
+                .rotationEffect(.degrees(rightAngle))
         }
         .position(x: 250, y: 258)
     }

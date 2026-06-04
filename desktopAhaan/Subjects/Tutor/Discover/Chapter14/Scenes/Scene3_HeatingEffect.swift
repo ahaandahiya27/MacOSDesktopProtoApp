@@ -28,13 +28,15 @@ struct Scene3_HeatingEffect: View {
                 Text("Heating Effect").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Current flowing through a wire heats it up.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
+                let glowAlpha: Double = current / 10
+                let glowRadius: CGFloat = CGFloat(current * 2)
                 ZStack {
                     Capsule().fill(glowColor.opacity(0.3))
                         .frame(width: 280, height: 12)
                     Capsule().fill(glowColor)
                         .frame(width: 280, height: 6)
                 }
-                .shadow(color: glowColor.opacity(current / 10), radius: CGFloat(current * 2))
+                .shadow(color: glowColor.opacity(glowAlpha), radius: glowRadius)
 
                 Text("Current: \(String(format: "%.1f", current)) A — \(glowLabel)")
                     .font(.headline).foregroundColor(glowColor)

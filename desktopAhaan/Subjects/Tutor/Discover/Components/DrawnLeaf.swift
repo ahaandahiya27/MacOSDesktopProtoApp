@@ -20,6 +20,7 @@ struct DrawnLeaf: View {
             let haloSide: CGFloat = max(w, h) * 1.1
             let centerX: CGFloat = w / 2
             let centerY: CGFloat = h / 2
+            let haloAlpha: Double = 0.35 * Double(pulse)
 
             ZStack {
                 // Glow halo behind the leaf — grows with the pulse value.
@@ -27,7 +28,7 @@ struct DrawnLeaf: View {
                     .fill(
                         RadialGradient(
                             colors: [
-                                tint.opacity(0.35 * pulse),
+                                tint.opacity(haloAlpha),
                                 tint.opacity(0)
                             ],
                             center: .center,

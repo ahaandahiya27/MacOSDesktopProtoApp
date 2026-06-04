@@ -135,8 +135,9 @@ struct BuildAWaterCycleSandbox: View {
                 ForEach(levels.indices, id: \.self) { idx in
                     let value = levels[idx]
                     let barHeight: CGFloat = max(2, geo.size.height * CGFloat(value))
+                    let barAlpha: Double = 0.5 + 0.5 * value
                     Capsule()
-                        .fill(statusColor.opacity(0.5 + 0.5 * value))
+                        .fill(statusColor.opacity(barAlpha))
                         .frame(width: barWidth,
                                height: barHeight)
                         .respectReduceMotion(animation: .easeOut(duration: 0.32))

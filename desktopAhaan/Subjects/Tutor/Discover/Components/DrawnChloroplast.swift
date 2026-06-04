@@ -18,13 +18,15 @@ struct DrawnChloroplast: View {
             let ringSide: CGFloat = r * 2
             let innerRingSide: CGFloat = r * 1.6
             let mgSide: CGFloat = r * 0.55
+            let haloAlpha: Double = 0.4 + 0.4 * Double(excitation)
+            let mgGlowAlpha: Double = 0.5 * Double(excitation)
 
             ZStack {
                 // Outer halo
                 Circle()
                     .fill(
                         RadialGradient(
-                            colors: [.green.opacity(0.4 + 0.4 * excitation), .clear],
+                            colors: [.green.opacity(haloAlpha), .clear],
                             center: .center, startRadius: 0, endRadius: r * 1.5
                         )
                     )
@@ -65,7 +67,7 @@ struct DrawnChloroplast: View {
                             .foregroundColor(.green)
                     )
                     .position(x: cx, y: cy)
-                    .shadow(color: .green.opacity(0.5 * excitation), radius: 12)
+                    .shadow(color: .green.opacity(mgGlowAlpha), radius: 12)
             }
         }
     }

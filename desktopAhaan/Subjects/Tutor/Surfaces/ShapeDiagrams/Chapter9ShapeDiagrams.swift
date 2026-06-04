@@ -27,8 +27,9 @@ struct SoilProfileDiagram: View {
     }
 
     private func layer(_ name: String, _ note: String, _ c: Color, _ opacity: CGFloat) -> some View {
-        ZStack {
-            Rectangle().fill(c.opacity(Double(opacity) * 0.5))
+        let layerAlpha: Double = Double(opacity) * 0.5
+        return ZStack {
+            Rectangle().fill(c.opacity(layerAlpha))
             HStack(spacing: 6) {
                 Text(name).font(.system(size: 10, weight: .bold)).foregroundColor(DesignTokens.BrandColor.canvasText)
                 SDLabel(text: note, color: c)
@@ -75,8 +76,9 @@ struct SoilTypesDiagram: View {
             ForEach(0..<rows, id: \.self) { r in
                 HStack(spacing: 2) {
                     ForEach(0..<columns, id: \.self) { c in
+                        let visible: Bool = (r * columns + c) < count
                         Circle()
-                            .fill(Color.compatBrown.opacity(r * columns + c < count ? 0.6 : 0))
+                            .fill(Color.compatBrown.opacity(visible ? 0.6 : 0))
                             .frame(width: size, height: size)
                     }
                 }

@@ -27,8 +27,9 @@ struct ForestLayersDiagram: View {
     }
 
     private func band(_ name: String, _ c: Color, _ opacity: CGFloat) -> some View {
-        ZStack {
-            Rectangle().fill(c.opacity(Double(opacity) * 0.5))
+        let bandAlpha: Double = Double(opacity) * 0.5
+        return ZStack {
+            Rectangle().fill(c.opacity(bandAlpha))
             SDLabel(text: name, color: c)
         }
         .frame(maxHeight: .infinity)

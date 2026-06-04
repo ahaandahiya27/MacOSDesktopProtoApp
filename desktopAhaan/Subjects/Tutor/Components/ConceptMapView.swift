@@ -175,12 +175,13 @@ struct ConceptMapView: View {
             let nodeLayer = nodesLayer(in: geo.size)
             let offsetX: CGFloat = pan.width + dragOffset.width
             let offsetY: CGFloat = pan.height + dragOffset.height
+            let totalZoom: CGFloat = zoom * liveZoom
             ZStack {
                 Color.compatIndigo.opacity(0.04)
                 edgeLayer
                 nodeLayer
             }
-            .scaleEffect(zoom * liveZoom)
+            .scaleEffect(totalZoom)
             .offset(x: offsetX, y: offsetY)
             .respectReduceMotion(animation: .easeOut(duration: 0.15))
             .gesture(
