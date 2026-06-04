@@ -341,8 +341,9 @@ struct VanHelmontWillowScene: View {
                         // modifier (CLAUDE.md forbids macOS 12 APIs on
                         // our Big Sur deploy target). Wrap the slider
                         // change in withAnimation in the binding instead.
+                        let treeFontSize: CGFloat = 18 + CGFloat(treeKg * 0.55)
                         Text("🌳")
-                            .font(.system(size: 18 + CGFloat(treeKg * 0.55)))
+                            .font(.system(size: treeFontSize))
                         Text("Tree: \(String(format: "%.1f", treeKg)) kg")
                             .font(.subheadline.bold())
                             .foregroundColor(DesignTokens.BrandColor.canvasText)

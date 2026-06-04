@@ -33,10 +33,11 @@ struct Scene7_StomataZoom: View {
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
                 ZStack {
+                    let emojiSize: CGFloat = 100 + CGFloat(zoom * 50)
                     RoundedRectangle(cornerRadius: 18).fill(Color.green.opacity(0.18))
                         .frame(width: 320, height: 280)
                     VStack(spacing: 8) {
-                        Text(emoji).font(.system(size: 100 + CGFloat(zoom * 50)))
+                        Text(emoji).font(.system(size: emojiSize))
                         Text(stage).font(.headline).foregroundColor(Color.compatIndigo)
                     }
                 }

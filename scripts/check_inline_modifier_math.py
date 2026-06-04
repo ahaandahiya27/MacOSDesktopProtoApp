@@ -81,6 +81,25 @@ _MOD_START = re.compile(
     r"\.(?P<name>" + "|".join(MODIFIERS) + r")\("
 )
 
+# Constructors whose argument lists are arithmetic-sensitive in result-builder
+# closures — same segfault class as the modifiers, just without the leading
+# `.` (these are bare type initializers). The Swift 5.5 constraint solver
+# still has to disambiguate `CGFloat * Double` inside their arg lists when
+# the constructor is a child of a Group/ZStack/VStack/HStack closure.
+#
+# Each entry is (display_name, regex_for_constructor_start). The regex
+# anchors on a word boundary to avoid matching inside identifiers, and
+# matches the opening `(` so the existing balanced-paren routine can finish.
+_CONSTRUCTORS = (
+    ("RoundedRectangle(...)", re.compile(r"\bRoundedRectangle\(")),
+    ("Capsule(...)", re.compile(r"\bCapsule\(")),
+    ("HStack(...)", re.compile(r"\bHStack\(")),
+    ("VStack(...)", re.compile(r"\bVStack\(")),
+    ("LazyHStack(...)", re.compile(r"\bLazyHStack\(")),
+    ("LazyVStack(...)", re.compile(r"\bLazyVStack\(")),
+    (".system(size:)", re.compile(r"\.system\(")),
+)
+
 # A binary arithmetic operator between two "real" tokens — identifier,
 # number, closing paren/bracket on the left; identifier, number, opening
 # paren/bracket on the right. Whitespace allowed around the operator.
@@ -140,6 +159,19 @@ def scan_text(src: str) -> list[tuple[int, str, str]]:
         if _BINARY_OP.search(args):
             line_no = cleaned.count("\n", 0, m.start()) + 1
             findings.append((line_no, m.group("name"), args.strip()))
+    for display_name, regex in _CONSTRUCTORS:
+        for m in regex.finditer(cleaned):
+            # The constructor regex matches up to and including `(`; balanced
+            # paren routine wants the `(` index.
+            open_idx = m.end() - 1
+            close_idx = _balanced_paren_end(cleaned, open_idx)
+            if close_idx < 0:
+                continue
+            args = cleaned[open_idx + 1 : close_idx]
+            if _BINARY_OP.search(args):
+                line_no = cleaned.count("\n", 0, m.start()) + 1
+                findings.append((line_no, display_name, args.strip()))
+    findings.sort(key=lambda t: t[0])
     return findings
 
 
@@ -165,6 +197,11 @@ def run_selftest() -> int:
           Text("x").rotationEffect(.degrees(angle * 90))
           Rectangle().blur(radius: r * 0.5)
           Text("x").opacity(0.5 + alpha * 0.3)
+          RoundedRectangle(cornerRadius: r * 2).fill(.red)
+          Capsule(cornerRadius: r * 2).fill(.blue)
+          HStack(spacing: gap + 4) { Text("a") }
+          VStack(spacing: base * 2) { Text("b") }
+          Text("z").font(.system(size: scale * 16))
         }
       }
     }
@@ -176,6 +213,9 @@ def run_selftest() -> int:
         let cellH: CGFloat = h * 0.5
         let shadowR: CGFloat = r * 2
         let scale: CGFloat = 1 + bounce * 0.2
+        let corner: CGFloat = r * 2
+        let hgap: CGFloat = gap + 4
+        let fontSize: CGFloat = scale * 16
         return ZStack {
           Circle().frame(width: cellW, height: cellH)
           Text("x").position(x: cx, y: cy)
@@ -188,6 +228,11 @@ def run_selftest() -> int:
           Text("x").rotationEffect(.degrees(45))
           Rectangle().blur(radius: 4)
           Text("x").opacity(0.7)
+          RoundedRectangle(cornerRadius: corner).fill(.red)
+          Capsule(cornerRadius: corner).fill(.blue)
+          HStack(spacing: hgap) { Text("a") }
+          VStack(spacing: 12) { Text("b") }
+          Text("z").font(.system(size: fontSize))
           // .position(x: w * 0.5, y: h * 0.5)  ← commented out, ignored
         }
       }
@@ -195,8 +240,8 @@ def run_selftest() -> int:
     """
     ok = True
     d = scan_text(danger)
-    if len(d) != 10:
-        print(f"SELFTEST FAIL: danger fixture flagged {len(d)} sites, expected 10")
+    if len(d) != 15:
+        print(f"SELFTEST FAIL: danger fixture flagged {len(d)} sites, expected 15")
         for v in d:
             print("  ", v)
         ok = False
@@ -242,8 +287,12 @@ def main() -> int:
                 continue
             for (line_no, name, args_text) in scan_file(swift):
                 trimmed = args_text if len(args_text) <= 80 else args_text[:77] + "..."
+                # Modifier names are bare words ("frame") — render as ".frame(...)".
+                # Constructor names already carry their decorations
+                # ("RoundedRectangle(...)") — render as-is.
+                rendered = name if "(" in name else f".{name}(...)"
                 print(
-                    f"{swift}:{line_no}  .{name}(...) has inline arithmetic — hoist to typed CGFloat local"
+                    f"{swift}:{line_no}  {rendered} has inline arithmetic — hoist to typed CGFloat local"
                 )
                 print(f"    args: {trimmed}")
                 failed = True

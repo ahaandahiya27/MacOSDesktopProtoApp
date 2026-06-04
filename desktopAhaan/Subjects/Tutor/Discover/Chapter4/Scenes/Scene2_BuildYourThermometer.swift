@@ -141,11 +141,12 @@ struct Scene2_BuildYourThermometer: View {
         let mercuryW: CGFloat = tubeW - 4
         let mercuryH: CGFloat = tubeH * fraction
         let bulbPad: CGFloat = bulbR * 2 - 4
+        let tubeCornerRadius: CGFloat = tubeW / 2
 
         return ZStack(alignment: .bottom) {
             VStack(spacing: 0) {
                 ZStack(alignment: .leading) {
-                    RoundedRectangle(cornerRadius: tubeW / 2)
+                    RoundedRectangle(cornerRadius: tubeCornerRadius)
                         .fill(Color.gray.opacity(0.12))
                         .frame(width: tubeW, height: tubeH)
 
@@ -175,7 +176,7 @@ struct Scene2_BuildYourThermometer: View {
             // Mercury
             VStack(spacing: 0) {
                 Spacer(minLength: 0)
-                RoundedRectangle(cornerRadius: tubeW / 2)
+                RoundedRectangle(cornerRadius: tubeCornerRadius)
                     .fill(LinearGradient(colors: [.red, .red.opacity(0.6)], startPoint: .bottom, endPoint: .top))
                     .frame(width: mercuryW, height: mercuryH)
                     .padding(.bottom, bulbPad)

@@ -62,14 +62,19 @@ struct DrawnChloroplast: View {
                     )
                     .frame(width: mgSide, height: mgSide)
                     .overlay(
-                        Text("Mg")
-                            .font(.system(size: r * 0.2, weight: .heavy, design: .rounded))
-                            .foregroundColor(.green)
+                        mgLabel(r: r)
                     )
                     .position(x: cx, y: cy)
                     .shadow(color: .green.opacity(mgGlowAlpha), radius: 12)
             }
         }
+    }
+
+    private func mgLabel(r: CGFloat) -> some View {
+        let mgFontSize: CGFloat = r * 0.2
+        return Text("Mg")
+            .font(.system(size: mgFontSize, weight: .heavy, design: .rounded))
+            .foregroundColor(.green)
     }
 }
 

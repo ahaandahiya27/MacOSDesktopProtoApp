@@ -285,13 +285,14 @@ private struct StomaView: View {
     @Binding var openness: Double
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        let guardCellSpacing: CGFloat = max(4, openness * 60)
+        return VStack(alignment: .leading, spacing: 8) {
             ZStack {
                 RoundedRectangle(cornerRadius: 14)
                     .fill(Color.compatTeal.opacity(0.12))
                 // Two guard cells: ellipses that bow toward / away from
                 // each other as openness changes.
-                HStack(spacing: max(4, openness * 60)) {
+                HStack(spacing: guardCellSpacing) {
                     Ellipse()
                         .fill(Color.compatTeal.opacity(0.85))
                         .frame(width: 90, height: 130)

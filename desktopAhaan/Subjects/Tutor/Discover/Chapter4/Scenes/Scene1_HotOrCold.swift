@@ -148,11 +148,12 @@ struct Scene1_HotOrCold: View {
             let mercuryH: CGFloat = tubeH * mercuryHeight
             let bulbPad: CGFloat = bulbR * 2 - 4
             let labelY: CGFloat = -tubeH * mercuryHeight - bulbR
+            let tubeCornerRadius: CGFloat = tubeW / 2
 
             ZStack(alignment: .bottom) {
                 // Tube background
                 VStack(spacing: 0) {
-                    RoundedRectangle(cornerRadius: tubeW / 2)
+                    RoundedRectangle(cornerRadius: tubeCornerRadius)
                         .fill(Color.gray.opacity(0.15))
                         .frame(width: tubeW, height: tubeH)
                     Circle()
@@ -163,7 +164,7 @@ struct Scene1_HotOrCold: View {
                 // Mercury fill
                 VStack(spacing: 0) {
                     Spacer(minLength: 0)
-                    RoundedRectangle(cornerRadius: tubeW / 2)
+                    RoundedRectangle(cornerRadius: tubeCornerRadius)
                         .fill(LinearGradient(colors: [.red, .red.opacity(0.7)], startPoint: .bottom, endPoint: .top))
                         .frame(width: mercuryW, height: mercuryH)
                         .padding(.bottom, bulbPad)

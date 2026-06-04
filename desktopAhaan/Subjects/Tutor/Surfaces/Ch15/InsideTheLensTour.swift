@@ -399,8 +399,9 @@ private struct LensImageFormationView: View {
                     .fill(Color.gray.opacity(0.40))
                     .frame(height: 1)
                 // Object — an upright arrow at the LEFT
+                let objectFontSize: CGFloat = 30 + CGFloat(distance) * 20
                 Image(systemName: SFSymbolCompat.name("arrow.up"))
-                    .font(.system(size: 30 + CGFloat(distance) * 20))
+                    .font(.system(size: objectFontSize))
                     .foregroundColor(.orange)
                     .offset(x: objectOffsetX, y: -16)
                 // Lens
