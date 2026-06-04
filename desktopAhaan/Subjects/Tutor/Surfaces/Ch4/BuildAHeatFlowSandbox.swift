@@ -145,6 +145,7 @@ struct BuildAHeatFlowSandbox: View {
 
     private var flowBar: some View {
         GeometryReader { geo in
+            let fillW: CGFloat = max(4, geo.size.width * flow)
             ZStack(alignment: .leading) {
                 Capsule()
                     .fill(Color.secondary.opacity(0.20))
@@ -156,7 +157,7 @@ struct BuildAHeatFlowSandbox: View {
                             endPoint: .trailing
                         )
                     )
-                    .frame(width: max(4, geo.size.width * flow))
+                    .frame(width: fillW)
                     .respectReduceMotion(animation: .easeOut(duration: 0.32))
             }
         }

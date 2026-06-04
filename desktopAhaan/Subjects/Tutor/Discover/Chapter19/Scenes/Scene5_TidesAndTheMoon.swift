@@ -151,7 +151,13 @@ struct Scene5_TidesAndTheMoon: View {
     // MARK: - Tide Diagram
 
     private var tideDiagram: some View {
-        ZStack {
+        let highTideAX: CGFloat = 95 * cos(moonAngle * .pi / 180)
+        let highTideAY: CGFloat = 95 * sin(moonAngle * .pi / 180)
+        let highTideBX: CGFloat = -95 * cos(moonAngle * .pi / 180)
+        let highTideBY: CGFloat = -95 * sin(moonAngle * .pi / 180)
+        let moonOrbitX: CGFloat = 130 * cos(moonAngle * .pi / 180)
+        let moonOrbitY: CGFloat = 130 * sin(moonAngle * .pi / 180)
+        return ZStack {
             // Water bulges (ellipse stretched horizontally)
             Ellipse()
                 .fill(Color.blue.opacity(0.18))
@@ -171,18 +177,12 @@ struct Scene5_TidesAndTheMoon: View {
             Text("High")
                 .font(.system(size: 9, weight: .semibold))
                 .foregroundColor(.blue)
-                .offset(
-                    x: 95 * cos(moonAngle * .pi / 180),
-                    y: 95 * sin(moonAngle * .pi / 180)
-                )
+                .offset(x: highTideAX, y: highTideAY)
 
             Text("High")
                 .font(.system(size: 9, weight: .semibold))
                 .foregroundColor(.blue)
-                .offset(
-                    x: -95 * cos(moonAngle * .pi / 180),
-                    y: -95 * sin(moonAngle * .pi / 180)
-                )
+                .offset(x: highTideBX, y: highTideBY)
 
             // Moon orbiting
             Circle()
@@ -194,10 +194,7 @@ struct Scene5_TidesAndTheMoon: View {
                         .foregroundColor(.white)
                 )
                 .shadow(color: .gray.opacity(0.4), radius: 4)
-                .offset(
-                    x: 130 * cos(moonAngle * .pi / 180),
-                    y: 130 * sin(moonAngle * .pi / 180)
-                )
+                .offset(x: moonOrbitX, y: moonOrbitY)
 
             // Orbit path
             Circle()

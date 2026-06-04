@@ -288,12 +288,13 @@ private struct GlacierMeltdownScene: View {
     let onComplete: () -> Void
     @State private var year: Double = 1950
     private var glacier: Double { max(0.2, 1.0 - (year - 1950) / 200) }
+    private var glacierWidth: CGFloat { 240 * CGFloat(glacier) }
     var body: some View {
         ScrollView { LazyVStack(spacing: 14) {
             Text("Glaciers Are Shrinking").font(.largeTitle.bold())
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             RoundedRectangle(cornerRadius: 16).fill(Color.compatIndigo.opacity(0.45))
-                .frame(width: 240 * CGFloat(glacier), height: 120)
+                .frame(width: glacierWidth, height: 120)
             Text("Year: \(Int(year))").font(.title2.monospacedDigit())
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
             Slider(value: $year, in: 1950...2100).frame(maxWidth: 340).padding(.horizontal, 24)

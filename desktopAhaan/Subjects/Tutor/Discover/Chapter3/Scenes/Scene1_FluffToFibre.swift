@@ -117,9 +117,10 @@ struct Scene1_FluffToFibre: View {
         .timedScene(idealFPS: 30, tick: $tick)
     }
 
-    @ViewBuilder
     private func fabricPanel(geoSize: CGSize) -> some View {
-        VStack {
+        let panelX: CGFloat = geoSize.width * 0.8
+        let panelY: CGFloat = geoSize.height * 0.35
+        return VStack {
             Text("Fabric Woven")
                 .font(.caption.weight(.semibold))
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
@@ -141,7 +142,7 @@ struct Scene1_FluffToFibre: View {
         .background(Color(NSColor.controlBackgroundColor))
         .cornerRadius(12)
         .shadow(color: Color.black.opacity(0.1), radius: 8, x: 0, y: 4)
-        .position(x: geoSize.width * 0.8, y: geoSize.height * 0.35)
+        .position(x: panelX, y: panelY)
     }
 
     private func fibreGradeExplanation(_ mm: Double) -> String {
@@ -198,9 +199,10 @@ private struct DriftingIcon: View {
     var body: some View {
         let bob: Double = sin(Double(t + phaseOffset) * 1.5) * 0.1
         let y: CGFloat = size.height * (baseY + CGFloat(bob))
-        Text(emoji)
+        let x: CGFloat = size.width * baseX
+        return Text(emoji)
             .font(.system(size: 64))
-            .position(x: size.width * baseX, y: y)
+            .position(x: x, y: y)
             .onTapGesture { onTap() }
             .accessibilityAddTraits(.isButton)
             .accessibilityLabel("Tap \(emoji) to weave a fibre")

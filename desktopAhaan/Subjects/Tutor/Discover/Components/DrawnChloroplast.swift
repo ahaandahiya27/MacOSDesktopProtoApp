@@ -14,6 +14,10 @@ struct DrawnChloroplast: View {
             let r = min(geo.size.width, geo.size.height) * 0.45
             let cx = geo.size.width / 2
             let cy = geo.size.height / 2
+            let haloSide: CGFloat = r * 3
+            let ringSide: CGFloat = r * 2
+            let innerRingSide: CGFloat = r * 1.6
+            let mgSide: CGFloat = r * 0.55
 
             ZStack {
                 // Outer halo
@@ -24,7 +28,7 @@ struct DrawnChloroplast: View {
                             center: .center, startRadius: 0, endRadius: r * 1.5
                         )
                     )
-                    .frame(width: r * 3, height: r * 3)
+                    .frame(width: haloSide, height: haloSide)
                     .position(x: cx, y: cy)
 
                 // Hexagonal porphyrin ring
@@ -37,13 +41,13 @@ struct DrawnChloroplast: View {
                         ),
                         lineWidth: 5
                     )
-                    .frame(width: r * 2, height: r * 2)
+                    .frame(width: ringSide, height: ringSide)
                     .position(x: cx, y: cy)
 
                 // Inner ring for depth
                 HexagonShape()
                     .stroke(.white.opacity(0.35), lineWidth: 1.5)
-                    .frame(width: r * 1.6, height: r * 1.6)
+                    .frame(width: innerRingSide, height: innerRingSide)
                     .position(x: cx, y: cy)
 
                 // Central Mg atom
@@ -54,7 +58,7 @@ struct DrawnChloroplast: View {
                             center: .center, startRadius: 0, endRadius: r * 0.35
                         )
                     )
-                    .frame(width: r * 0.55, height: r * 0.55)
+                    .frame(width: mgSide, height: mgSide)
                     .overlay(
                         Text("Mg")
                             .font(.system(size: r * 0.2, weight: .heavy, design: .rounded))

@@ -17,6 +17,9 @@ struct DrawnLeaf: View {
             let w = geo.size.width
             let h = geo.size.height
             let scale = 1.0 + 0.04 * pulse
+            let haloSide: CGFloat = max(w, h) * 1.1
+            let centerX: CGFloat = w / 2
+            let centerY: CGFloat = h / 2
 
             ZStack {
                 // Glow halo behind the leaf — grows with the pulse value.
@@ -32,8 +35,8 @@ struct DrawnLeaf: View {
                             endRadius: max(w, h) * 0.55
                         )
                     )
-                    .frame(width: max(w, h) * 1.1, height: max(w, h) * 1.1)
-                    .position(x: w / 2, y: h / 2)
+                    .frame(width: haloSide, height: haloSide)
+                    .position(x: centerX, y: centerY)
 
                 // The leaf body
                 LeafShape()

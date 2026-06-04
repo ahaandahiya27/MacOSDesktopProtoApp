@@ -136,7 +136,11 @@ struct Scene2_BuildYourThermometer: View {
     private func analogThermometer(height: CGFloat) -> some View {
         let tubeW: CGFloat = 20
         let bulbR: CGFloat = 26
-        let tubeH = height - bulbR * 2
+        let tubeH: CGFloat = height - bulbR * 2
+        let bulbSize: CGFloat = bulbR * 2
+        let mercuryW: CGFloat = tubeW - 4
+        let mercuryH: CGFloat = tubeH * fraction
+        let bulbPad: CGFloat = bulbR * 2 - 4
 
         return ZStack(alignment: .bottom) {
             VStack(spacing: 0) {
@@ -165,7 +169,7 @@ struct Scene2_BuildYourThermometer: View {
 
                 Circle()
                     .fill(Color.red.opacity(0.85))
-                    .frame(width: bulbR * 2, height: bulbR * 2)
+                    .frame(width: bulbSize, height: bulbSize)
             }
 
             // Mercury
@@ -173,8 +177,8 @@ struct Scene2_BuildYourThermometer: View {
                 Spacer(minLength: 0)
                 RoundedRectangle(cornerRadius: tubeW / 2)
                     .fill(LinearGradient(colors: [.red, .red.opacity(0.6)], startPoint: .bottom, endPoint: .top))
-                    .frame(width: tubeW - 4, height: tubeH * fraction)
-                    .padding(.bottom, bulbR * 2 - 4)
+                    .frame(width: mercuryW, height: mercuryH)
+                    .padding(.bottom, bulbPad)
             }
             .frame(height: height)
             .gesture(

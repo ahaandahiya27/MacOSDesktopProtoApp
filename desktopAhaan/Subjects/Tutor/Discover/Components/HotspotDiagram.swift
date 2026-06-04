@@ -105,12 +105,13 @@ struct HotspotDiagram: View {
     }
 
     private var diagram: some View {
-        ZStack {
+        let baseSide: CGFloat = size * 0.75
+        return ZStack {
             Image(systemName: SFSymbolCompat.name(baseSymbol))
                 .resizable()
                 .scaledToFit()
                 .foregroundColor(baseColor.opacity(0.30))
-                .frame(width: size * 0.75, height: size * 0.75)
+                .frame(width: baseSide, height: baseSide)
                 .accessibilityHidden(true)
             ForEach(hotspots.indices, id: \.self) { index in let spot = hotspots[index];
                 hotspotDot(at: index, spot: spot)
@@ -125,6 +126,8 @@ struct HotspotDiagram: View {
 
     private func hotspotDot(at index: Int, spot: Hotspot) -> some View {
         let isSelected = (selectedIndex == index)
+        let dotX: CGFloat = spot.x * size
+        let dotY: CGFloat = spot.y * size
         return Button {
             selectedIndex = (selectedIndex == index) ? nil : index
         } label: {
@@ -143,7 +146,7 @@ struct HotspotDiagram: View {
         }
         .buttonStyle(PressableButtonStyle())
         .pointingCursor()
-        .position(x: spot.x * size, y: spot.y * size)
+        .position(x: dotX, y: dotY)
         .accessibilityLabel("Part \(index + 1): \(spot.label)")
         .accessibilityHint(spot.detail)
         .accessibilityAddTraits(isSelected ? [.isSelected, .isButton] : .isButton)

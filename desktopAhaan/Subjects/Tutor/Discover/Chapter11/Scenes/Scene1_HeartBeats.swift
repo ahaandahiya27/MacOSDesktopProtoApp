@@ -120,7 +120,15 @@ private struct FourChamberHeart: View {
         GeometryReader { geo in
             let w = geo.size.width
             let h = geo.size.height
-            ZStack {
+            let raX: CGFloat = w * 0.30
+            let raY: CGFloat = h * 0.28
+            let laX: CGFloat = w * 0.70
+            let laY: CGFloat = h * 0.28
+            let rvX: CGFloat = w * 0.32
+            let rvY: CGFloat = h * 0.68
+            let lvX: CGFloat = w * 0.68
+            let lvY: CGFloat = h * 0.68
+            return ZStack {
                 // Right half (oxygen-poor — blue)
                 HalfHeart(side: .right)
                     .fill(Color.blue.opacity(0.7))
@@ -144,13 +152,13 @@ private struct FourChamberHeart: View {
 
                 // Labels
                 Text("RA").font(.caption2.bold()).foregroundColor(.white)
-                    .position(x: w * 0.30, y: h * 0.28)
+                    .position(x: raX, y: raY)
                 Text("LA").font(.caption2.bold()).foregroundColor(.white)
-                    .position(x: w * 0.70, y: h * 0.28)
+                    .position(x: laX, y: laY)
                 Text("RV").font(.caption2.bold()).foregroundColor(.white)
-                    .position(x: w * 0.32, y: h * 0.68)
+                    .position(x: rvX, y: rvY)
                 Text("LV").font(.caption2.bold()).foregroundColor(.white)
-                    .position(x: w * 0.68, y: h * 0.68)
+                    .position(x: lvX, y: lvY)
             }
         }
     }

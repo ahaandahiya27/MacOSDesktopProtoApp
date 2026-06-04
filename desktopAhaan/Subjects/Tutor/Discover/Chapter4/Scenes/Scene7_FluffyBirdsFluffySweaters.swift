@@ -57,12 +57,14 @@ struct Scene7_FluffyBirdsFluffySweaters: View {
                                 ForEach(0..<8, id: \.self) { i in
                                     let angle = Double(i) * .pi / 4
                                     let r: CGFloat = isCold ? 50 : 35
+                                    let dotX: CGFloat = cos(angle) * r
+                                    let dotY: CGFloat = sin(angle) * r * 0.7
                                     Circle()
                                         .fill(Color.compatCyan.opacity(0.4))
                                         .frame(width: 10, height: 10)
                                         .offset(
-                                            x: cos(angle) * r,
-                                            y: sin(angle) * r * 0.7
+                                            x: dotX,
+                                            y: dotY
                                         )
                                 }
                             }
@@ -99,12 +101,14 @@ struct Scene7_FluffyBirdsFluffySweaters: View {
                                 ForEach(0..<6, id: \.self) { i in
                                     let row = i / 3
                                     let col = i % 3
+                                    let dotX: CGFloat = CGFloat(col - 1) * 30
+                                    let dotY: CGFloat = CGFloat(row) * 35 - 20
                                     Circle()
                                         .fill(Color.compatCyan.opacity(0.4))
                                         .frame(width: 10, height: 10)
                                         .offset(
-                                            x: CGFloat(col - 1) * 30,
-                                            y: CGFloat(row) * 35 - 20
+                                            x: dotX,
+                                            y: dotY
                                         )
                                 }
                             }

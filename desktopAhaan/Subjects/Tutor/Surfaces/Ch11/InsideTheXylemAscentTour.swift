@@ -344,11 +344,13 @@ private struct XylemLeafVeinView: View {
                 .frame(width: 200, height: 4)
             // Side veins
             ForEach(0..<4, id: \.self) { i in
+                let offX: CGFloat = CGFloat(i * 20 - 30)
+                let offY: CGFloat = CGFloat(i % 2 == 0 ? -22 : 22)
                 Capsule()
                     .fill(Color.compatBlue.opacity(0.65))
                     .frame(width: 90, height: 2)
                     .rotationEffect(.degrees(Double(i % 2 == 0 ? 25 : -25)))
-                    .offset(x: CGFloat(i * 20 - 30), y: CGFloat(i % 2 == 0 ? -22 : 22))
+                    .offset(x: offX, y: offY)
             }
         }
         .frame(height: 200)

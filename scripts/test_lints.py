@@ -130,6 +130,11 @@ def main() -> int:
     if vd.run_selftest() != 0:
         failures.append("check_viewbuilder_depth selftest")
 
+    print("== check_inline_modifier_math — embedded --selftest ==")
+    imm = _import_lint_module("check_inline_modifier_math")
+    if imm.run_selftest() != 0:
+        failures.append("check_inline_modifier_math selftest")
+
     print("== check_mainactor_closure_refs — embedded --selftest ==")
     mc = _import_lint_module("check_mainactor_closure_refs")
     if mc.run_selftest() != 0:

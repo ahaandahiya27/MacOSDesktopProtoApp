@@ -142,16 +142,19 @@ struct BuildASoilSandbox: View {
     /// Stacked horizontal bar showing the three components.
     private var compositionBar: some View {
         GeometryReader { geo in
+            let sandWidth: CGFloat = geo.size.width * CGFloat(sand)
+            let siltWidth: CGFloat = geo.size.width * CGFloat(silt)
+            let clayWidth: CGFloat = geo.size.width * CGFloat(clay)
             HStack(spacing: 0) {
                 Rectangle()
                     .fill(DesignTokens.BrandColor.mnemonic)
-                    .frame(width: geo.size.width * CGFloat(sand))
+                    .frame(width: sandWidth)
                 Rectangle()
                     .fill(Color.compatBrown)
-                    .frame(width: geo.size.width * CGFloat(silt))
+                    .frame(width: siltWidth)
                 Rectangle()
                     .fill(DesignTokens.BrandColor.tryAtHome)
-                    .frame(width: geo.size.width * CGFloat(clay))
+                    .frame(width: clayWidth)
             }
             .cornerRadius(7)
             .respectReduceMotion(animation: .easeOut(duration: 0.32))

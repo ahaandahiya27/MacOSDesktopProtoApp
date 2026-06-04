@@ -39,10 +39,11 @@ struct Scene2_TheSwallowWave: View {
                     if isBolus {
                         // Brown food bolus marker (was Canvas) — positioned by
                         // bolusPosition (0...1) inside the 100x300 oesophagus.
+                        let bolusY: CGFloat = 50 + bolusPosition * 200
                         RoundedRectangle(cornerRadius: 8)
                             .fill(Color.compatBrown.opacity(0.8))
                             .frame(width: 40, height: 30)
-                            .position(x: 50, y: 50 + bolusPosition * 200)
+                            .position(x: 50, y: bolusY)
                             .frame(width: 100, height: 300, alignment: .topLeading)
                     }
                 }
@@ -158,16 +159,18 @@ struct OesophagusView: View {
     var body: some View {
         ZStack(alignment: .topLeading) {
             ForEach(0..<segmentCount, id: \.self) { i in
-                let y = CGFloat(i) * (tubeHeight / CGFloat(segmentCount))
-                let segH = tubeHeight / CGFloat(segmentCount)
-                let squeezePos = squeeze * CGFloat(segmentCount)
-                let dist = abs(CGFloat(i) - squeezePos)
+                let y: CGFloat = CGFloat(i) * (tubeHeight / CGFloat(segmentCount))
+                let segH: CGFloat = tubeHeight / CGFloat(segmentCount)
+                let squeezePos: CGFloat = squeeze * CGFloat(segmentCount)
+                let dist: CGFloat = abs(CGFloat(i) - squeezePos)
                 let squeezeAt: CGFloat = dist < 2 ? max(0, 1 - dist / 2) * 8 : 0
-                let w = max(20, tubeWidth - squeezeAt)
+                let w: CGFloat = max(20, tubeWidth - squeezeAt)
+                let segX: CGFloat = tubeX + tubeWidth / 2
+                let segY: CGFloat = y + segH / 2
                 RoundedRectangle(cornerRadius: 4)
                     .stroke(Color.gray.opacity(0.5), lineWidth: 2)
                     .frame(width: w, height: segH)
-                    .position(x: tubeX + tubeWidth / 2, y: y + segH / 2)
+                    .position(x: segX, y: segY)
             }
         }
     }

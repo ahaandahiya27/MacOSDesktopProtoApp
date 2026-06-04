@@ -111,7 +111,8 @@ private struct PHLadderSliderScene: View {
     }
 
     var body: some View {
-        ScrollView {
+        let knobX: CGFloat = CGFloat(ph / 14) * 240 + 4
+        return ScrollView {
             LazyVStack(spacing: 14) {
                 Text("The pH Ladder").font(.largeTitle.bold())
                     .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
@@ -127,7 +128,7 @@ private struct PHLadderSliderScene: View {
                         .frame(height: 30)
                     Circle().fill(Color.white).frame(width: 22, height: 22)
                         .overlay(Circle().strokeBorder(Color.gray, lineWidth: 1.5))
-                        .offset(x: CGFloat(ph / 14) * 240 + 4)
+                        .offset(x: knobX)
                 }
                 .frame(width: 260)
                 Text("pH \(String(format: "%.1f", ph))").font(.title2.monospacedDigit())

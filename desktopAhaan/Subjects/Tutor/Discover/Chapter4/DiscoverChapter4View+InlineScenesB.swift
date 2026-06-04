@@ -85,12 +85,13 @@ struct SpecificHeatRaceScene: View {
     }
 
     private func barReadout(label: String, temp: Double, color: Color) -> some View {
-        VStack(spacing: 6) {
+        let fillH: CGFloat = CGFloat((temp - 20) / 80) * 120
+        return VStack(spacing: 6) {
             ZStack(alignment: .bottom) {
                 RoundedRectangle(cornerRadius: 8).fill(Color.gray.opacity(0.1))
                     .frame(width: 60, height: 120)
                 RoundedRectangle(cornerRadius: 8).fill(color.opacity(0.7))
-                    .frame(width: 60, height: CGFloat((temp - 20) / 80) * 120)
+                    .frame(width: 60, height: fillH)
             }
             Text(label).font(.caption.weight(.semibold))
                 .foregroundColor(DesignTokens.BrandColor.canvasText)

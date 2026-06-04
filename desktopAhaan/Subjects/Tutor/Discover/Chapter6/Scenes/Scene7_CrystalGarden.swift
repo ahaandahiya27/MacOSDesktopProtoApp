@@ -202,10 +202,12 @@ struct Scene7_CrystalGarden: View {
         ]
         let sizes: [CGFloat] = [12, 16, 10, 14, 11, 13, 18]
         let rotations: [Double] = [15, -20, 30, -10, 45, -30, 0]
+        let w: CGFloat = sizes[index]
+        let h: CGFloat = sizes[index] * 1.4
 
         return Diamond()
             .fill(.purple.opacity(0.7))
-            .frame(width: sizes[index], height: sizes[index] * 1.4)
+            .frame(width: w, height: h)
             .rotationEffect(.degrees(rotations[index]))
             .offset(x: offsets[index].0, y: offsets[index].1)
     }

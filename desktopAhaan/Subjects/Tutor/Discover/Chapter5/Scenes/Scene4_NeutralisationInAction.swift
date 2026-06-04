@@ -32,7 +32,8 @@ struct Scene4_NeutralisationInAction: View {
         // removing the unused outer GeometryReader; interactive content
         // (beakers, ion animation) now flows naturally and the inner
         // ionAnimationView's own GeometryReader has a real bounded canvas.
-        ScrollView {
+        let mixedFillH: CGFloat = 80 + pourProgress * 50
+        return ScrollView {
             LazyVStack(alignment: .center, spacing: 14) {
                 VStack(spacing: 16) {
                     Text("Neutralisation in Action")
@@ -53,7 +54,7 @@ struct Scene4_NeutralisationInAction: View {
 
                             RoundedRectangle(cornerRadius: 6, style: .continuous)
                                 .fill(mixedColor.opacity(0.7))
-                                .frame(width: 112, height: 80 + pourProgress * 50)
+                                .frame(width: 112, height: mixedFillH)
                                 .animation(reduceMotion ? .none : .easeInOut(duration: 1.5))
 
                             RoundedRectangle(cornerRadius: 8, style: .continuous)

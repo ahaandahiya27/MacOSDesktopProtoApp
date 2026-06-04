@@ -115,21 +115,26 @@ private struct DistanceTimePlot: View {
     }
 
     private func axisLabels(layout: PlotLayout, size: CGSize) -> some View {
-        ZStack {
+        let distanceX: CGFloat = layout.padLeft - 18
+        let distanceY: CGFloat = layout.padTop + layout.plotH / 2
+        let timeX: CGFloat = size.width - 30
+        let timeY: CGFloat = size.height - 8
+        let zeroX: CGFloat = layout.padLeft - 8
+        let zeroY: CGFloat = size.height - layout.padBottom + 8
+        return ZStack {
             Text("distance")
                 .font(.caption2.bold())
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 .rotationEffect(.degrees(-90))
-                .position(x: layout.padLeft - 18,
-                          y: layout.padTop + layout.plotH / 2)
+                .position(x: distanceX, y: distanceY)
             Text("time →")
                 .font(.caption2.bold())
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .position(x: size.width - 30, y: size.height - 8)
+                .position(x: timeX, y: timeY)
             Text("0")
                 .font(.caption2)
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .position(x: layout.padLeft - 8, y: size.height - layout.padBottom + 8)
+                .position(x: zeroX, y: zeroY)
         }
     }
 }

@@ -35,7 +35,8 @@ struct Scene3_PercolationRate: View {
     var body: some View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
-        ScrollView {
+        let fillH: CGFloat = fillFraction * 260
+        return ScrollView {
             LazyVStack(alignment: .center, spacing: 14) {
                 Text("Percolation Rate").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Pour the same amount of water. How fast does it sink through?").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
@@ -48,7 +49,7 @@ struct Scene3_PercolationRate: View {
                     RoundedRectangle(cornerRadius: 14).fill(Color.gray.opacity(0.15))
                         .frame(width: 200, height: 260)
                     Rectangle().fill(soil.color.opacity(0.55))
-                        .frame(width: 200, height: fillFraction * 260)
+                        .frame(width: 200, height: fillH)
                         .animation(reduceMotion ? .none : .easeInOut(duration: animationDuration))
                 }
                 .clipShape(RoundedRectangle(cornerRadius: 14))

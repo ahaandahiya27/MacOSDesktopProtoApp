@@ -25,20 +25,7 @@ struct Scene2_PendulumLab: View {
                 Text("Change the string length. The period changes too.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-                ZStack {
-                    Rectangle().fill(Color.gray.opacity(0.4)).frame(width: 200, height: 4)
-                    Path { p in
-                        p.move(to: CGPoint(x: 100, y: 2))
-                        p.addLine(to: CGPoint(x: 100 + sin(angle * .pi / 180) * length * 100,
-                                              y: 2 + cos(angle * .pi / 180) * length * 100))
-                    }
-                    .stroke(Color.compatIndigo, lineWidth: 2)
-                    .frame(width: 200, height: 200, alignment: .top)
-                    Circle().fill(Color.compatIndigo)
-                        .frame(width: 28, height: 28)
-                        .offset(x: CGFloat(sin(angle * .pi / 180) * length * 100),
-                                y: CGFloat(cos(angle * .pi / 180) * length * 100) - 100)
-                }
+                pendulumDiagram
                 .frame(width: 240, height: 260)
                 .onChange(of: tick) { newTick in
                     guard !reduceMotion else { return }
@@ -117,6 +104,27 @@ struct Scene2_PendulumLab: View {
             .padding(.bottom, 12)
         }
     }
+
+    /// Hoisted out of `body` so the Swift 5.5 constraint solver doesn't have
+    /// to evaluate `CGFloat(sin(...)) * length * 100` arithmetic inside a
+    /// result-builder closure — iMac segfault class (see ccd011a / 162a71b).
+    private var pendulumDiagram: some View {
+        let bobX: CGFloat = CGFloat(sin(angle * .pi / 180) * length * 100)
+        let bobY: CGFloat = CGFloat(cos(angle * .pi / 180) * length * 100) - 100
+        return ZStack {
+            Rectangle().fill(Color.gray.opacity(0.4)).frame(width: 200, height: 4)
+            Path { p in
+                p.move(to: CGPoint(x: 100, y: 2))
+                p.addLine(to: CGPoint(x: 100 + sin(angle * .pi / 180) * length * 100,
+                                      y: 2 + cos(angle * .pi / 180) * length * 100))
+            }
+            .stroke(Color.compatIndigo, lineWidth: 2)
+            .frame(width: 200, height: 200, alignment: .top)
+            Circle().fill(Color.compatIndigo)
+                .frame(width: 28, height: 28)
+                .offset(x: bobX, y: bobY)
+        }
+    }
 }
 
 /// Mini-chart: period (y) as a function of length (x), for L = 0.2…2.0 m.
@@ -139,6 +147,10 @@ private struct PeriodLengthCurve: View {
         let layout = PendulumPlotLayout(size: size)
         let cx = layout.x(for: currentLength)
         let cy = layout.y(for: PendulumPlotLayout.period(currentLength))
+        let tLabelX: CGFloat = layout.padLeft - 12
+        let tLabelY: CGFloat = layout.padTop + 6
+        let lLabelX: CGFloat = size.width - 10
+        let lLabelY: CGFloat = size.height - layout.padBottom - 8
         ZStack {
             PendulumAxesShape(layout: layout)
                 .stroke(Color.gray.opacity(0.6), lineWidth: 1)
@@ -158,11 +170,11 @@ private struct PeriodLengthCurve: View {
             Text("T")
                 .font(.caption2.bold())
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .position(x: layout.padLeft - 12, y: layout.padTop + 6)
+                .position(x: tLabelX, y: tLabelY)
             Text("L")
                 .font(.caption2.bold())
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .position(x: size.width - 10, y: size.height - layout.padBottom - 8)
+                .position(x: lLabelX, y: lLabelY)
         }
     }
 }

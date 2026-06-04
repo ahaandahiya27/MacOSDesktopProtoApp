@@ -127,10 +127,11 @@ struct Scene3_TheShearingDay: View {
 
                 // Clipper animation (was a single-ellipse Canvas)
                 if isShearing {
+                    let clipperX: CGFloat = 80 + clipperPosition * 140
                     Ellipse()
                         .fill(Color.yellow.opacity(0.7))
                         .frame(width: 24, height: 16)
-                        .position(x: 80 + clipperPosition * 140, y: 120)
+                        .position(x: clipperX, y: 120)
                         .frame(height: 280, alignment: .topLeading)
                 }
         }

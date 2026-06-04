@@ -128,6 +128,8 @@ struct Scene4_PolarBearSurvivalKit: View {
     private func bearEllipse(x: CGFloat, y: CGFloat,
                              width: CGFloat, height: CGFloat,
                              fillOpacity: Double, withStroke: Bool) -> some View {
+        let cx: CGFloat = x + width / 2
+        let cy: CGFloat = y + height / 2
         ZStack {
             Ellipse().fill(Color.white.opacity(fillOpacity))
             if withStroke {
@@ -135,16 +137,18 @@ struct Scene4_PolarBearSurvivalKit: View {
             }
         }
         .frame(width: width, height: height)
-        .position(x: x + width / 2, y: y + height / 2)
+        .position(x: cx, y: cy)
     }
 
     @ViewBuilder
     private func blackEllipse(x: CGFloat, y: CGFloat,
                               width: CGFloat, height: CGFloat) -> some View {
+        let cx: CGFloat = x + width / 2
+        let cy: CGFloat = y + height / 2
         Ellipse()
             .fill(Color.primary)
             .frame(width: width, height: height)
-            .position(x: x + width / 2, y: y + height / 2)
+            .position(x: cx, y: cy)
     }
 
     private var bearDiagramBackground: some View {
@@ -164,6 +168,8 @@ struct Scene4_PolarBearSurvivalKit: View {
         let bgColor: Color = isSelected
             ? Color.compatIndigo
             : (isTapped ? Color.green.opacity(0.8) : Color.blue.opacity(0.7))
+        let posX: CGFloat = adapt.position.x * 400
+        let posY: CGFloat = adapt.position.y * 280
 
         Button {
             withAnimation(reduceMotion ? .none : .spring()) {
@@ -183,7 +189,7 @@ struct Scene4_PolarBearSurvivalKit: View {
             .foregroundColor(.white)
         }
         .buttonStyle(.plain)
-        .position(x: adapt.position.x * 400, y: adapt.position.y * 280)
+        .position(x: posX, y: posY)
         .accessibilityLabel("\(adapt.name). \(isTapped ? "Already explored" : "Tap to explore")")
     }
 

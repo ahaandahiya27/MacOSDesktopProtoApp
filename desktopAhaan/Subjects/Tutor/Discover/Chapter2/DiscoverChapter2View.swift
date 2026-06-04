@@ -293,9 +293,11 @@ private struct SalivaLabScene: View {
                 .fill(Color.compatBrown.opacity(0.5 + 0.4 * sugar))
                 .frame(width: 200, height: 80)
             ForEach(0..<8, id: \.self) { i in
+                let crumbX: CGFloat = CGFloat(i - 4) * 22
+                let crumbY: CGFloat = Double(i).truncatingRemainder(dividingBy: 2) == 0 ? -10 : 10
                 Circle().fill(DesignTokens.BrandColor.mnemonicAccent.opacity(sugar))
                     .frame(width: 10, height: 10)
-                    .offset(x: CGFloat(i - 4) * 22, y: Double(i).truncatingRemainder(dividingBy: 2) == 0 ? -10 : 10)
+                    .offset(x: crumbX, y: crumbY)
             }
         }
     }
@@ -405,7 +407,8 @@ private struct StomachPHSliderScene: View {
     }
 
     private var phMeter: some View {
-        ZStack(alignment: .leading) {
+        let knobX: CGFloat = CGFloat(ph / 14) * 238 + 4
+        return ZStack(alignment: .leading) {
             RoundedRectangle(cornerRadius: 10)
                 .fill(LinearGradient(
                     colors: [DesignTokens.BrandColor.danger,
@@ -417,7 +420,7 @@ private struct StomachPHSliderScene: View {
             Circle().fill(Color.white)
                 .frame(width: 22, height: 22)
                 .overlay(Circle().strokeBorder(Color.gray, lineWidth: 1.5))
-                .offset(x: CGFloat(ph / 14) * 238 + 4)
+                .offset(x: knobX)
         }
         .frame(width: 260)
     }
@@ -466,10 +469,12 @@ private struct BileEmulsifiesFatScene: View {
             RoundedRectangle(cornerRadius: 12).fill(Color.gray.opacity(0.12))
             if emulsified {
                 ForEach(0..<24, id: \.self) { i in
+                    let dropX: CGFloat = CGFloat((i % 6) - 3) * 32
+                    let dropY: CGFloat = CGFloat((i / 6) - 1) * 40
                     Circle().fill(DesignTokens.BrandColor.mnemonic.opacity(0.8))
                         .frame(width: 14, height: 14)
-                        .offset(x: CGFloat((i % 6) - 3) * 32,
-                                y: CGFloat((i / 6) - 1) * 40)
+                        .offset(x: dropX,
+                                y: dropY)
                 }
             } else {
                 Circle().fill(DesignTokens.BrandColor.mnemonic.opacity(0.85))

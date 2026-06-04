@@ -173,13 +173,15 @@ struct ConceptMapView: View {
         GeometryReader { geo in
             let edgeLayer = edgesLayer(in: geo.size)
             let nodeLayer = nodesLayer(in: geo.size)
+            let offsetX: CGFloat = pan.width + dragOffset.width
+            let offsetY: CGFloat = pan.height + dragOffset.height
             ZStack {
                 Color.compatIndigo.opacity(0.04)
                 edgeLayer
                 nodeLayer
             }
             .scaleEffect(zoom * liveZoom)
-            .offset(x: pan.width + dragOffset.width, y: pan.height + dragOffset.height)
+            .offset(x: offsetX, y: offsetY)
             .respectReduceMotion(animation: .easeOut(duration: 0.15))
             .gesture(
                 DragGesture()
@@ -242,6 +244,8 @@ struct ConceptMapView: View {
     private func nodesLayer(in size: CGSize) -> some View {
         ZStack {
             ForEach(nodes) { node in
+                let nodeX: CGFloat = node.x * size.width
+                let nodeY: CGFloat = node.y * size.height
                 Button {
                     handleNodeTap(node)
                 } label: {
@@ -250,8 +254,8 @@ struct ConceptMapView: View {
                 .buttonStyle(.plain)
                 .pointingCursor()
                 .position(
-                    x: node.x * size.width,
-                    y: node.y * size.height
+                    x: nodeX,
+                    y: nodeY
                 )
             }
         }

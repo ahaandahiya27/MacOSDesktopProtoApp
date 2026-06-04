@@ -219,6 +219,26 @@ if [ -f "scripts/check_viewbuilder_depth.py" ]; then
     fi
 fi
 
+# 8c) Inline-modifier-math lint — finer-grained sister of #8b. The depth lint
+#     catches DENSE GeometryReader closures; this one catches the per-call case
+#     it misses: a single .frame(...) / .position(...) / .offset(...) /
+#     .padding(...) whose arg list contains inline arithmetic (`w * 0.3`,
+#     `cx - h * 0.16`). Same segfault class, finer granularity. The fix is to
+#     hoist the expression to a typed `let _: CGFloat = ...` local above the
+#     `return Group { ... }`. See commit ccd011a + the 162a71b sweep + the
+#     63-file follow-up. Hard gate.
+if [ -f "scripts/check_inline_modifier_math.py" ]; then
+    if ! python3 scripts/check_inline_modifier_math.py --quiet; then
+        echo
+        echo "pre-commit: inline-modifier-math lint failed — a view-modifier arg list"
+        echo "  contains arithmetic that risks a Swift 5.5 type-checker segfault on"
+        echo "  the iMac. Hoist the math to a typed CGFloat local above the closure"
+        echo "  (see commit ccd011a for the canonical pattern)."
+        echo "If intentional, bypass with: git commit --no-verify"
+        exit 1
+    fi
+fi
+
 # 9) Pack-integrity lints (Bug-Free-Cert D.2/D.3/D.4/D.5/D.6/D.10). Only run
 #    when a pack JSON is staged — they're pure-JSON and cheap, and gating on
 #    the pack keeps them from touching unrelated commits. They duplicate the

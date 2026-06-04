@@ -96,11 +96,12 @@ struct CompoundingGrowth: View {
         let principalFrac = principal / total
         return VStack(spacing: 3) {
             GeometryReader { geo in
-                let w = geo.size.width
+                let w: CGFloat = geo.size.width
+                let principalW: CGFloat = max(2, CGFloat(principalFrac) * w)
                 HStack(spacing: 0) {
                     Rectangle()
                         .fill(moneyGreen)
-                        .frame(width: max(2, CGFloat(principalFrac) * w))
+                        .frame(width: principalW)
                     Rectangle()
                         .fill(moneyGreen.opacity(0.40))
                         .frame(maxWidth: .infinity)

@@ -59,10 +59,11 @@ struct Scene7_AmoebaPseudopodHunt: View {
                         .onTapGesture { hunt() }
                     } else {
                         // Food vacuole inside amoeba (shrinking)
-                        let vacuoleScale = 1.0 - (foodEngulfed * 0.6)
+                        let vacuoleScale: CGFloat = 1.0 - (foodEngulfed * 0.6)
+                        let vacuoleSize: CGFloat = 16 * vacuoleScale
                         Circle()
                             .fill(Color.green.opacity(0.4))
-                            .frame(width: 16 * vacuoleScale, height: 16 * vacuoleScale)
+                            .frame(width: vacuoleSize, height: vacuoleSize)
                             .position(x: 150, y: 120)
                     }
                 }

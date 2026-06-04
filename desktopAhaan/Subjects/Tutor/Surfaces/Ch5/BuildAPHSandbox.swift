@@ -135,6 +135,7 @@ struct BuildAPHSandbox: View {
     /// Horizontal 0..14 pH bar with the indicator dot at the current value.
     private var pHBar: some View {
         GeometryReader { geo in
+            let dotOffsetX: CGFloat = max(0, geo.size.width - 18) * CGFloat(pH / 14.0)
             ZStack(alignment: .leading) {
                 Capsule()
                     .fill(
@@ -156,7 +157,7 @@ struct BuildAPHSandbox: View {
                     .overlay(
                         Circle().stroke(Color.black.opacity(0.45), lineWidth: 2)
                     )
-                    .offset(x: max(0, geo.size.width - 18) * CGFloat(pH / 14.0))
+                    .offset(x: dotOffsetX)
                     .respectReduceMotion(animation: .easeOut(duration: 0.32))
             }
         }

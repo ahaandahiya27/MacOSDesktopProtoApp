@@ -438,10 +438,12 @@ private struct ScoreBar: View {
 
     var body: some View {
         GeometryReader { geo in
+            let clampedFraction: CGFloat = max(0, min(1, fraction))
+            let fillW: CGFloat = clampedFraction * geo.size.width
             ZStack(alignment: .leading) {
                 Capsule().fill(DesignTokens.BrandColor.mutedSurface.opacity(0.5))
                 Capsule().fill(tint)
-                    .frame(width: max(0, min(1, fraction)) * geo.size.width)
+                    .frame(width: fillW)
             }
         }
         .frame(height: 12)

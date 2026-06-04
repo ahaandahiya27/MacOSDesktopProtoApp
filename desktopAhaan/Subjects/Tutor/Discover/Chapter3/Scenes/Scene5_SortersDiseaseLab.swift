@@ -51,12 +51,14 @@ struct Scene5_SortersDiseaseLab: View {
 
                             if showSpores {
                                 ForEach(0..<12, id: \.self) { i in
+                                    let sporeX: CGFloat = 200 + CGFloat.random(in: -30...30)
+                                    let sporeY: CGFloat = 90 + CGFloat.random(in: -30...30)
                                     Circle()
                                         .fill(Color.red.opacity(0.8))
                                         .frame(width: 4, height: 4)
                                         .position(
-                                            x: 200 + CGFloat.random(in: -30...30),
-                                            y: 90 + CGFloat.random(in: -30...30)
+                                            x: sporeX,
+                                            y: sporeY
                                         )
                                 }
                             }

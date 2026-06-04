@@ -354,10 +354,12 @@ private struct MesophyllCell: View {
                 .offset(x: -10, y: -10)
             // Chloroplasts.
             ForEach(0..<3, id: \.self) { idx in
+                let offX: CGFloat = CGFloat(idx * 6 - 6)
+                let offY: CGFloat = CGFloat(idx * 3 + 4)
                 Ellipse()
                     .fill(Color.compatTeal.opacity(0.85))
                     .frame(width: 8, height: 4)
-                    .offset(x: CGFloat(idx * 6 - 6), y: CGFloat(idx * 3 + 4))
+                    .offset(x: offX, y: offY)
             }
         }
         .frame(width: 48, height: 48)

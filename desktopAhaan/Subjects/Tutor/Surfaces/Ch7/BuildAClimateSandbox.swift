@@ -162,6 +162,7 @@ struct BuildAClimateSandbox: View {
 
     private var temperatureBar: some View {
         GeometryReader { geo in
+            let fillW: CGFloat = max(4, geo.size.width * temperatureProxy)
             ZStack(alignment: .leading) {
                 Capsule()
                     .fill(Color.secondary.opacity(0.20))
@@ -173,7 +174,7 @@ struct BuildAClimateSandbox: View {
                             endPoint: .trailing
                         )
                     )
-                    .frame(width: max(4, geo.size.width * temperatureProxy))
+                    .frame(width: fillW)
                     .respectReduceMotion(animation: .easeOut(duration: 0.32))
             }
         }

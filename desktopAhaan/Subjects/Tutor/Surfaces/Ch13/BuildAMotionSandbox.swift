@@ -118,6 +118,7 @@ struct BuildAMotionSandbox: View {
 
     private var runnerTrack: some View {
         GeometryReader { geo in
+            let runnerX: CGFloat = max(0, geo.size.width - 24) * CGFloat(runnerPosition)
             ZStack(alignment: .leading) {
                 Capsule()
                     .fill(Color.secondary.opacity(0.20))
@@ -125,7 +126,7 @@ struct BuildAMotionSandbox: View {
                 Image(systemName: SFSymbolCompat.name("figure.run"))
                     .font(.title3)
                     .foregroundColor(Color.compatPurple)
-                    .offset(x: max(0, geo.size.width - 24) * CGFloat(runnerPosition))
+                    .offset(x: runnerX)
                     .respectReduceMotion(animation: .easeInOut(duration: 0.32))
                     .accessibilityHidden(true)
             }

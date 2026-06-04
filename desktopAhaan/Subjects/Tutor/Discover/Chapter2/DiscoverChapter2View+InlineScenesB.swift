@@ -105,16 +105,17 @@ struct FoodVacuoleFormationScene: View {
     }
 
     private var amoebaVisual: some View {
-        ZStack {
+        let pseudoX: CGFloat = 60 - CGFloat(stage * 10)
+        return ZStack {
             Circle().fill(DesignTokens.BrandColor.relatedConcepts.opacity(0.35))
                 .frame(width: 130, height: 130)
             if stage >= 1 {
                 Capsule().fill(DesignTokens.BrandColor.relatedConcepts.opacity(0.35))
                     .frame(width: 40, height: 70)
-                    .offset(x: 60 - CGFloat(stage * 10), y: -20)
+                    .offset(x: pseudoX, y: -20)
                 Capsule().fill(DesignTokens.BrandColor.relatedConcepts.opacity(0.35))
                     .frame(width: 40, height: 70)
-                    .offset(x: 60 - CGFloat(stage * 10), y: 20)
+                    .offset(x: pseudoX, y: 20)
             }
             // The food
             Circle().fill(DesignTokens.BrandColor.danger.opacity(0.8))

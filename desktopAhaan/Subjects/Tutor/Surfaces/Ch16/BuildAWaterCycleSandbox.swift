@@ -130,13 +130,15 @@ struct BuildAWaterCycleSandbox: View {
     private var timelineChart: some View {
         GeometryReader { geo in
             let levels = monthlyLevels
+            let barWidth: CGFloat = (geo.size.width - 44) / 12
             HStack(alignment: .bottom, spacing: 4) {
                 ForEach(levels.indices, id: \.self) { idx in
                     let value = levels[idx]
+                    let barHeight: CGFloat = max(2, geo.size.height * CGFloat(value))
                     Capsule()
                         .fill(statusColor.opacity(0.5 + 0.5 * value))
-                        .frame(width: (geo.size.width - 44) / 12,
-                               height: max(2, geo.size.height * CGFloat(value)))
+                        .frame(width: barWidth,
+                               height: barHeight)
                         .respectReduceMotion(animation: .easeOut(duration: 0.32))
                         .accessibilityLabel("Month \(idx + 1): \(Int(value * 100)) percent.")
                 }

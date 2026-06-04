@@ -249,9 +249,10 @@ private struct MasteryDashboardContent: View {
                     ForEach(MasteryLevel.allCases) { level in
                         let count = totals[level] ?? 0
                         let fraction = Double(count) / Double(total)
+                        let segWidth: CGFloat = geo.size.width * CGFloat(fraction)
                         Rectangle()
                             .fill(level.tint)
-                            .frame(width: geo.size.width * CGFloat(fraction))
+                            .frame(width: segWidth)
                             .accessibilityHidden(true)
                     }
                 }
@@ -387,9 +388,10 @@ private struct MasteryDashboardContent: View {
                     ForEach(MasteryLevel.allCases) { level in
                         let count = topic.counts[level] ?? 0
                         let fraction = Double(count) / Double(total)
+                        let segWidth: CGFloat = geo.size.width * CGFloat(fraction)
                         Rectangle()
                             .fill(level.tint)
-                            .frame(width: geo.size.width * CGFloat(fraction))
+                            .frame(width: segWidth)
                             .accessibilityHidden(true)
                     }
                 }
@@ -412,9 +414,10 @@ private struct MasteryDashboardContent: View {
                 ForEach(MasteryLevel.allCases) { level in
                     let count = row.counts[level] ?? 0
                     let fraction = Double(count) / Double(total)
+                    let segWidth: CGFloat = geo.size.width * CGFloat(fraction)
                     Rectangle()
                         .fill(level.tint)
-                        .frame(width: geo.size.width * CGFloat(fraction))
+                        .frame(width: segWidth)
                         .accessibilityHidden(true)
                 }
             }

@@ -191,21 +191,26 @@ private struct BeamView: View {
 
     var body: some View {
         GeometryReader { geo in
-            let h = geo.size.height
-            let w = geo.size.width
-            let midX = w / 2
+            let h: CGFloat = geo.size.height
+            let w: CGFloat = geo.size.width
+            let midX: CGFloat = w / 2
+            let downH: CGFloat = max(8, h * progress)
+            let downY: CGFloat = (h * progress) / 2
+            let bounceH: CGFloat = max(0, h * (progress - 0.55) * 2)
+            let bounceX: CGFloat = midX + 30
+            let bounceY: CGFloat = max(0, h - h * (progress - 0.55) * 2 / 2)
             ZStack {
                 // Down beam
                 Capsule()
                     .fill(color.opacity(0.85))
-                    .frame(width: 8, height: max(8, h * progress))
-                    .position(x: midX, y: (h * progress) / 2)
+                    .frame(width: 8, height: downH)
+                    .position(x: midX, y: downY)
                 if !absorbed {
                     // Bounce-back beam
                     Capsule()
                         .fill(color.opacity(0.6))
-                        .frame(width: 6, height: max(0, h * (progress - 0.55) * 2))
-                        .position(x: midX + 30, y: max(0, h - h * (progress - 0.55) * 2 / 2))
+                        .frame(width: 6, height: bounceH)
+                        .position(x: bounceX, y: bounceY)
                 }
             }
         }

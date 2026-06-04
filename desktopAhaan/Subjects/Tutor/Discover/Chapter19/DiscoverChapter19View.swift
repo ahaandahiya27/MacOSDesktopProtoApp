@@ -104,14 +104,16 @@ private struct SunSizeSliderScene: View {
     let onComplete: () -> Void
     @State private var sun: Double = 100
     private var earths: Double { sun * 109 / 100 } // ~109 Earths across Sun's diameter
+    private var sunDiameter: CGFloat { CGFloat(sun) * 2.5 }
+    private var earthDiameter: CGFloat { max(4, CGFloat(sun) * 2.5 / 109) }
     var body: some View {
         ScrollView { LazyVStack(spacing: 14) {
             Text("How Big is the Sun?").font(.largeTitle.bold())
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             ZStack {
                 Circle().fill(DesignTokens.BrandColor.mnemonicAccent.opacity(0.8))
-                    .frame(width: CGFloat(sun) * 2.5, height: CGFloat(sun) * 2.5)
-                Circle().fill(Color.compatTeal).frame(width: max(4, CGFloat(sun) * 2.5 / 109), height: max(4, CGFloat(sun) * 2.5 / 109))
+                    .frame(width: sunDiameter, height: sunDiameter)
+                Circle().fill(Color.compatTeal).frame(width: earthDiameter, height: earthDiameter)
             }
             .frame(height: 280)
             Slider(value: $sun, in: 30...100).frame(maxWidth: 340).padding(.horizontal, 24)

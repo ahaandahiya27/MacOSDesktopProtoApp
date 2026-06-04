@@ -48,9 +48,11 @@ struct RhizobiumNitrogenScene: View {
         ZStack {
             Rectangle().fill(Color.compatBrown.opacity(0.6)).frame(width: 10, height: 180)
             ForEach(0..<5, id: \.self) { i in
+                let noduleX: CGFloat = i.isMultiple(of: 2) ? -18 : 18
+                let noduleY: CGFloat = -70 + CGFloat(i * 30)
                 Circle().fill(Color.pink.opacity(0.6))
                     .frame(width: 22, height: 22)
-                    .offset(x: i.isMultiple(of: 2) ? -18 : 18, y: -70 + CGFloat(i * 30))
+                    .offset(x: noduleX, y: noduleY)
             }
         }
     }

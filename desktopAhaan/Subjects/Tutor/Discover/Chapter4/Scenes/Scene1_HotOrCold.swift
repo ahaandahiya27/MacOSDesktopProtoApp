@@ -39,12 +39,12 @@ struct Scene1_HotOrCold: View {
         ScrollView {
             LazyVStack(alignment: .center, spacing: 14) {
                 GeometryReader { geo in
-
+                    let thermoH: CGFloat = min(geo.size.height * 0.55, 340)
                     ZStack {
                 HStack(spacing: 30) {
                     // Thermometer on the left
                     thermometerView
-                        .frame(width: 80, height: min(geo.size.height * 0.55, 340))
+                        .frame(width: 80, height: thermoH)
                         .accessibilityLabel("Thermometer showing \(displayTemp) degrees Celsius")
 
                     // Object grid
@@ -142,7 +142,12 @@ struct Scene1_HotOrCold: View {
         GeometryReader { geo in
             let bulbR: CGFloat = 24
             let tubeW: CGFloat = 16
-            let tubeH = geo.size.height - bulbR * 2 - 10
+            let tubeH: CGFloat = geo.size.height - bulbR * 2 - 10
+            let bulbSize: CGFloat = bulbR * 2
+            let mercuryW: CGFloat = tubeW - 4
+            let mercuryH: CGFloat = tubeH * mercuryHeight
+            let bulbPad: CGFloat = bulbR * 2 - 4
+            let labelY: CGFloat = -tubeH * mercuryHeight - bulbR
 
             ZStack(alignment: .bottom) {
                 // Tube background
@@ -152,7 +157,7 @@ struct Scene1_HotOrCold: View {
                         .frame(width: tubeW, height: tubeH)
                     Circle()
                         .fill(Color.red.opacity(0.8))
-                        .frame(width: bulbR * 2, height: bulbR * 2)
+                        .frame(width: bulbSize, height: bulbSize)
                 }
 
                 // Mercury fill
@@ -160,8 +165,8 @@ struct Scene1_HotOrCold: View {
                     Spacer(minLength: 0)
                     RoundedRectangle(cornerRadius: tubeW / 2)
                         .fill(LinearGradient(colors: [.red, .red.opacity(0.7)], startPoint: .bottom, endPoint: .top))
-                        .frame(width: tubeW - 4, height: tubeH * mercuryHeight)
-                        .padding(.bottom, bulbR * 2 - 4)
+                        .frame(width: mercuryW, height: mercuryH)
+                        .padding(.bottom, bulbPad)
                     Spacer().frame(height: 0)
                 }
                 .frame(height: geo.size.height)
@@ -170,7 +175,7 @@ struct Scene1_HotOrCold: View {
                 Text("\(displayTemp)°C")
                     .font(.title3.bold().monospacedDigit())
                     .foregroundColor(.red)
-                    .offset(x: 50, y: -tubeH * mercuryHeight - bulbR)
+                    .offset(x: 50, y: labelY)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottom)
         }

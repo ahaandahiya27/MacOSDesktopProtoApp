@@ -344,10 +344,11 @@ private struct AlveolusSacView: View {
                 }
                 // Capillary mesh — thin red lines arched over the sac
                 ForEach(0..<5, id: \.self) { i in
+                    let capillaryY: CGFloat = CGFloat(i * 22 - 44)
                     Capsule()
                         .stroke(Color.red.opacity(0.85), lineWidth: 1.5)
                         .frame(width: 150, height: 8)
-                        .offset(y: CGFloat(i * 22 - 44))
+                        .offset(y: capillaryY)
                 }
             }
         }

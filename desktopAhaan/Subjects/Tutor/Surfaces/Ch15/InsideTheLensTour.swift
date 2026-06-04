@@ -389,7 +389,8 @@ private struct LensImageFormationView: View {
     @Binding var distance: Double
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 10) {
+        let objectOffsetX: CGFloat = -120 + CGFloat(distance) * -40
+        return VStack(alignment: .leading, spacing: 10) {
             ZStack {
                 RoundedRectangle(cornerRadius: 14)
                     .fill(Color.compatPurple.opacity(0.10))
@@ -401,7 +402,7 @@ private struct LensImageFormationView: View {
                 Image(systemName: SFSymbolCompat.name("arrow.up"))
                     .font(.system(size: 30 + CGFloat(distance) * 20))
                     .foregroundColor(.orange)
-                    .offset(x: -120 + CGFloat(distance) * -40, y: -16)
+                    .offset(x: objectOffsetX, y: -16)
                 // Lens
                 LensSilhouette()
                     .fill(Color.compatCyan.opacity(0.45))

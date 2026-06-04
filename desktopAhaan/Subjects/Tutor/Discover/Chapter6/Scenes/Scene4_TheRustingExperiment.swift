@@ -142,6 +142,9 @@ struct Scene4_TheRustingExperiment: View {
         let tube = tubes[index]
         let progress = tubeProgress[index]
         let done = fastForwarded.contains(index)
+        let waterH: CGFloat = height * 0.6
+        let nailStemH: CGFloat = height * 0.35
+        let nailBottomPad: CGFloat = height * 0.15
 
         VStack(spacing: 8) {
             Text(tube.title)
@@ -162,7 +165,7 @@ struct Scene4_TheRustingExperiment: View {
                 if tube.hasWater {
                     RoundedRectangle(cornerRadius: 8)
                         .fill(Color.compatCyan.opacity(0.2))
-                        .frame(width: 70, height: height * 0.6)
+                        .frame(width: 70, height: waterH)
                         .padding(.bottom, 4)
                 }
 
@@ -173,9 +176,9 @@ struct Scene4_TheRustingExperiment: View {
                         .frame(width: 14, height: 14)
                     RoundedRectangle(cornerRadius: 2)
                         .fill(nailColor(rusts: tube.rusts, progress: progress))
-                        .frame(width: 6, height: height * 0.35)
+                        .frame(width: 6, height: nailStemH)
                 }
-                .padding(.bottom, height * 0.15)
+                .padding(.bottom, nailBottomPad)
 
                 // Rust particles (Timer-driven; Big Sur compatible)
                 if tube.rusts && progress > 0.2 && !reduceMotion {

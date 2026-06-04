@@ -399,14 +399,15 @@ private struct ReactionSpeedSliderScene: View {
         return "Hot: very fast — used in industrial reactors."
     }
     var body: some View {
-        ScrollView { LazyVStack(spacing: 14) {
+        let fillH: CGFloat = 180 * CGFloat(speed)
+        return ScrollView { LazyVStack(spacing: 14) {
             Text("What Speeds Up a Reaction?").font(.largeTitle.bold())
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             ZStack(alignment: .bottom) {
                 RoundedRectangle(cornerRadius: 12).fill(Color.gray.opacity(0.1))
                     .frame(width: 80, height: 180)
                 RoundedRectangle(cornerRadius: 12).fill(DesignTokens.BrandColor.danger.opacity(0.6))
-                    .frame(width: 80, height: 180 * CGFloat(speed))
+                    .frame(width: 80, height: fillH)
             }
             Text("Temperature: \(Int(temp)) °C").font(.callout.monospacedDigit())
                 .foregroundColor(DesignTokens.BrandColor.canvasText)

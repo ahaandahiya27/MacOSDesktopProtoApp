@@ -170,6 +170,7 @@ struct BuildAPlantSandbox: View {
     /// width without animating when Reduce Motion is on.
     private var rateBar: some View {
         GeometryReader { geo in
+            let fillW: CGFloat = max(4, geo.size.width * photosynthesisRate)
             ZStack(alignment: .leading) {
                 Capsule()
                     .fill(Color.secondary.opacity(0.20))
@@ -181,7 +182,7 @@ struct BuildAPlantSandbox: View {
                             endPoint: .trailing
                         )
                     )
-                    .frame(width: max(4, geo.size.width * photosynthesisRate))
+                    .frame(width: fillW)
                     .respectReduceMotion(animation: .easeOut(duration: 0.32))
             }
         }

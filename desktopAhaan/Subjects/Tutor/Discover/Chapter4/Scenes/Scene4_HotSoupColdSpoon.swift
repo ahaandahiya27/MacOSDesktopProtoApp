@@ -72,12 +72,14 @@ struct Scene4_HotSoupColdSpoon: View {
                         // Heat dots traveling up the spoon
                         if heating && !isWooden {
                             ForEach(0..<5, id: \.self) { i in
+                                let dotX: CGFloat = 60 - CGFloat(i) * 3
+                                let dotY: CGFloat = 30 - dotProgress * 140 - CGFloat(i) * 18
                                 Circle()
                                     .fill(Color.orange)
                                     .frame(width: 8, height: 8)
                                     .offset(
-                                        x: 60 - CGFloat(i) * 3,
-                                        y: 30 - dotProgress * 140 - CGFloat(i) * 18
+                                        x: dotX,
+                                        y: dotY
                                     )
                                     .opacity(Double(dotProgress))
                                     .accessibilityLabel("Heat dot traveling up spoon")
@@ -187,10 +189,12 @@ private struct SteamWisp: View {
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
     var body: some View {
-        Text("~")
+        let wispX: CGFloat = CGFloat(index - 1) * 30
+        let wispY: CGFloat = -20 - offset
+        return Text("~")
             .font(.title2)
             .foregroundColor(.white.opacity(0.5))
-            .offset(x: CGFloat(index - 1) * 30, y: -20 - offset)
+            .offset(x: wispX, y: wispY)
             .onAppear {
                 guard !reduceMotion else { return }
                 withAnimation(.easeInOut(duration: HardwareTier.duration(ideal: 2)).repeatForever(autoreverses: true).delay(Double(index) * 0.3)) {

@@ -151,6 +151,7 @@ struct Scene3_ThreeHighwaysOfHeat: View {
     private func laneView(index: Int, height: CGFloat) -> some View {
         let d = laneData[index]
         let isTapped = tappedLanes.contains(index)
+        let laneH: CGFloat = height * 0.5
 
         Button {
             withAnimation(reduceMotion ? .none : .easeInOut(duration: 0.3)) {
@@ -163,8 +164,8 @@ struct Scene3_ThreeHighwaysOfHeat: View {
                     .font(.system(size: 36))
                     .foregroundColor(d.color)
 
-                laneAnimation(index: index, height: height * 0.5)
-                    .frame(height: height * 0.5)
+                laneAnimation(index: index, height: laneH)
+                    .frame(height: laneH)
 
                 Text(d.title)
                     .font(.headline)

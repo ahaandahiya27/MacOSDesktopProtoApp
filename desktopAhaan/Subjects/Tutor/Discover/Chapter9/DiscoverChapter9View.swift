@@ -354,14 +354,17 @@ private struct SoilTexturePyramidScene: View {
         return "Loam — the gold standard. Ideal for most crops."
     }
     var body: some View {
-        ScrollView { LazyVStack(spacing: 14) {
+        let sandW: CGFloat = CGFloat(sand) * 240
+        let siltW: CGFloat = CGFloat(silt) * 240
+        let clayW: CGFloat = CGFloat(clay) * 240
+        return ScrollView { LazyVStack(spacing: 14) {
             Text("Soil Texture Pyramid").font(.largeTitle.bold())
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             VStack(spacing: 4) {
                 HStack(spacing: 0) {
-                    Rectangle().fill(DesignTokens.BrandColor.mnemonicAccent.opacity(0.7)).frame(width: CGFloat(sand) * 240)
-                    Rectangle().fill(Color.compatTeal.opacity(0.7)).frame(width: CGFloat(silt) * 240)
-                    Rectangle().fill(Color.compatBrown.opacity(0.7)).frame(width: CGFloat(clay) * 240)
+                    Rectangle().fill(DesignTokens.BrandColor.mnemonicAccent.opacity(0.7)).frame(width: sandW)
+                    Rectangle().fill(Color.compatTeal.opacity(0.7)).frame(width: siltW)
+                    Rectangle().fill(Color.compatBrown.opacity(0.7)).frame(width: clayW)
                 }
                 .frame(width: 240, height: 30).cornerRadius(6)
                 Text("\(Int(sand * 100))% sand · \(Int(silt * 100))% silt · \(Int(clay * 100))% clay")
@@ -448,10 +451,11 @@ private struct WaterHoldingCapacityScene: View {
         }.frame(maxWidth: .infinity).padding(.bottom, 12) }
     }
     private func bar(_ label: String, level: CGFloat, color: Color) -> some View {
-        VStack {
+        let fillH: CGFloat = 140 * level
+        return VStack {
             ZStack(alignment: .bottom) {
                 RoundedRectangle(cornerRadius: 8).fill(Color.gray.opacity(0.1)).frame(width: 60, height: 140)
-                RoundedRectangle(cornerRadius: 8).fill(color.opacity(0.7)).frame(width: 60, height: 140 * level)
+                RoundedRectangle(cornerRadius: 8).fill(color.opacity(0.7)).frame(width: 60, height: fillH)
             }
             Text(label).font(.caption.weight(.semibold))
                 .foregroundColor(DesignTokens.BrandColor.canvasText)

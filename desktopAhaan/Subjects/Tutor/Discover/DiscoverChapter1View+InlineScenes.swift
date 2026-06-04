@@ -389,12 +389,13 @@ struct LightAndRateScene: View {
     }
 
     private var rateBar: some View {
-        VStack {
+        let barH: CGFloat = 180 * CGFloat(rate)
+        return VStack {
             ZStack(alignment: .bottom) {
                 RoundedRectangle(cornerRadius: 10).fill(Color.gray.opacity(0.1))
                 RoundedRectangle(cornerRadius: 10)
                     .fill(DesignTokens.BrandColor.primaryAction.opacity(0.6))
-                    .frame(height: 180 * CGFloat(rate))
+                    .frame(height: barH)
             }
             .frame(width: 80, height: 180)
             Text("Sugar / min: \(Int(rate * 100))")
@@ -484,9 +485,10 @@ struct WaterJourneyScene: View {
                 .frame(width: 10, height: 160)
             // Roots
             ForEach(0..<3, id: \.self) { i in
+                let rootX: CGFloat = CGFloat(i - 1) * 14
                 Rectangle().fill(stage >= 1 ? Color.compatTeal : Color.compatBrown.opacity(0.5))
                     .frame(width: 4, height: 30)
-                    .offset(x: CGFloat(i - 1) * 14, y: 100)
+                    .offset(x: rootX, y: 100)
                     .rotationEffect(.degrees(Double(i - 1) * 25))
             }
             // Soil

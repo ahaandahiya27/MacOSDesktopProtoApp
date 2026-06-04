@@ -165,6 +165,7 @@ struct BuildAReactionSandbox: View {
 
     private var rateBar: some View {
         GeometryReader { geo in
+            let fillW: CGFloat = max(4, geo.size.width * rate)
             ZStack(alignment: .leading) {
                 Capsule()
                     .fill(Color.secondary.opacity(0.20))
@@ -176,7 +177,7 @@ struct BuildAReactionSandbox: View {
                             endPoint: .trailing
                         )
                     )
-                    .frame(width: max(4, geo.size.width * rate))
+                    .frame(width: fillW)
                     .respectReduceMotion(animation: .easeOut(duration: 0.32))
             }
         }

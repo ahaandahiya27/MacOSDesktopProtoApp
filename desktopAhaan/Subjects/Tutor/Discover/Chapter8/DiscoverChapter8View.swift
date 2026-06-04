@@ -400,23 +400,28 @@ private struct DopplerRadarScene: View {
     let onComplete: () -> Void
     @State private var scan: Double = 0
     var body: some View {
-        ScrollView { LazyVStack(spacing: 14) {
+        let cloudX: CGFloat = CGFloat(60 * cos(scan))
+        let cloudY: CGFloat = CGFloat(60 * sin(scan))
+        let sweepX: CGFloat = CGFloat(55 * cos(scan))
+        let sweepY: CGFloat = CGFloat(55 * sin(scan))
+        return ScrollView { LazyVStack(spacing: 14) {
             Text("Doppler Radar — Watching the Storm").font(.largeTitle.bold())
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             ZStack {
                 Circle().fill(Color.gray.opacity(0.1)).frame(width: 220, height: 220)
                 ForEach(0..<3, id: \.self) { i in
+                    let ringSize: CGFloat = CGFloat(70 + i * 60)
                     Circle().stroke(Color.gray.opacity(0.3), lineWidth: 1)
-                        .frame(width: CGFloat(70 + i * 60), height: CGFloat(70 + i * 60))
+                        .frame(width: ringSize, height: ringSize)
                 }
                 Image(systemName: "cloud.heavyrain.fill")
                     .font(.system(size: 30))
                     .foregroundColor(DesignTokens.BrandColor.danger)
-                    .offset(x: 60 * cos(scan), y: 60 * sin(scan))
+                    .offset(x: cloudX, y: cloudY)
                 Rectangle().fill(DesignTokens.BrandColor.primaryAction.opacity(0.4))
                     .frame(width: 110, height: 3)
                     .rotationEffect(.radians(scan))
-                    .offset(x: 55 * cos(scan), y: 55 * sin(scan))
+                    .offset(x: sweepX, y: sweepY)
             }
             Text("IMD has 30+ Doppler radars across India. Each one tracks rainfall up to 250 km away in real time.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)

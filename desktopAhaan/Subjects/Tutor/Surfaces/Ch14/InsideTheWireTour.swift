@@ -333,12 +333,14 @@ private struct WireElectronDriftView: View {
                     .padding(.horizontal, 24)
                 // The electron — moves with offset
                 GeometryReader { geo in
+                    let posX: CGFloat = 30 + CGFloat(offset) * max(0, geo.size.width - 60)
+                    let posY: CGFloat = geo.size.height / 2
                     Circle()
                         .fill(Color.blue)
                         .frame(width: 18, height: 18)
                         .position(
-                            x: 30 + CGFloat(offset) * max(0, geo.size.width - 60),
-                            y: geo.size.height / 2
+                            x: posX,
+                            y: posY
                         )
                         .respectReduceMotion(animation: .easeInOut(duration: 0.6))
                 }

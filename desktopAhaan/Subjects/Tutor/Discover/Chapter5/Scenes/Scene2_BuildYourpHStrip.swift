@@ -129,6 +129,9 @@ struct Scene2_BuildYourpHStrip: View {
 
     private var pHStrip: some View {
         GeometryReader { geo in
+            let centerY: CGFloat = geo.size.height * 0.5
+            let markerH: CGFloat = geo.size.height + 8
+            let xPos: CGFloat = geo.size.width * CGFloat(pH / 14.0)
             ZStack(alignment: .leading) {
                 // Gradient bar
                 LinearGradient(
@@ -140,23 +143,23 @@ struct Scene2_BuildYourpHStrip: View {
 
                 // pH labels along the bar
                 ForEach([0, 7, 14], id: \.self) { val in
+                    let labelX: CGFloat = geo.size.width * CGFloat(val) / 14.0
                     Text("\(val)")
                         .font(.caption2.bold())
                         .foregroundColor(.white)
                         .shadow(radius: 2)
                         .position(
-                            x: geo.size.width * CGFloat(val) / 14.0,
-                            y: geo.size.height * 0.5
+                            x: labelX,
+                            y: centerY
                         )
                 }
 
                 // Marker
-                let xPos = geo.size.width * CGFloat(pH / 14.0)
                 RoundedRectangle(cornerRadius: 3)
                     .fill(Color(NSColor.controlBackgroundColor))
-                    .frame(width: 4, height: geo.size.height + 8)
+                    .frame(width: 4, height: markerH)
                     .shadow(radius: 2)
-                    .position(x: xPos, y: geo.size.height * 0.5)
+                    .position(x: xPos, y: centerY)
             }
         }
     }

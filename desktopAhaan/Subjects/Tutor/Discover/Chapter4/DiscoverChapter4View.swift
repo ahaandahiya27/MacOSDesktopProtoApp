@@ -237,14 +237,16 @@ private struct BimetallicStripScene: View {
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .multilineTextAlignment(.center).padding(.horizontal, 24)
+                let topY: CGFloat = -CGFloat(bend)
+                let botY: CGFloat = 8 - CGFloat(bend)
                 ZStack {
                     Capsule().fill(DesignTokens.BrandColor.mnemonicAccent)
                         .frame(width: 180, height: 14)
-                        .offset(y: -CGFloat(bend))
+                        .offset(y: topY)
                         .rotationEffect(.degrees(bend))
                     Capsule().fill(Color.gray)
                         .frame(width: 180, height: 14)
-                        .offset(y: 8 - CGFloat(bend))
+                        .offset(y: botY)
                         .rotationEffect(.degrees(bend))
                 }
                 .frame(height: 80)

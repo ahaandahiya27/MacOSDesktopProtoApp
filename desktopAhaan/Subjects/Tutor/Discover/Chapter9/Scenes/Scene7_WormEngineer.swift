@@ -15,7 +15,8 @@ struct Scene7_WormEngineer: View {
     var body: some View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
-        ScrollView {
+        let wormY: CGFloat = CGFloat(depth) * 130 - 130
+        return ScrollView {
             LazyVStack(alignment: .center, spacing: 14) {
                 Text("Worm — the Engineer").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Drag the worm down. Watch it leave tunnels behind.")
@@ -27,14 +28,16 @@ struct Scene7_WormEngineer: View {
                         .frame(width: 320, height: 320)
 
                     ForEach(0..<tunnels, id: \.self) { i in
+                        let tunnelX: CGFloat = tunnelOffsets[i % tunnelOffsets.count]
+                        let tunnelY: CGFloat = CGFloat(i * 28 - 140)
                         Circle().fill(Color.white.opacity(0.25))
                             .frame(width: 14, height: 14)
-                            .offset(x: tunnelOffsets[i % tunnelOffsets.count], y: CGFloat(i * 28 - 140))
+                            .offset(x: tunnelX, y: tunnelY)
                     }
 
                     Text("🪱")
                         .font(.system(size: 44))
-                        .offset(y: CGFloat(depth) * 130 - 130)
+                        .offset(y: wormY)
                         .accessibilityLabel("Earthworm at depth \(Int(depth * 100)) percent")
                 }
 

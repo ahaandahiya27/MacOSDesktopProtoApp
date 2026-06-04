@@ -8,6 +8,8 @@ struct Scene6_BawdiStepwell: View {
 
     @State private var depth: Double = 0
 
+    private var walkerOffsetY: CGFloat { CGFloat(depth) * 200 }
+
     var body: some View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
@@ -27,7 +29,7 @@ struct Scene6_BawdiStepwell: View {
                         }
                         Rectangle().fill(Color.blue.opacity(0.7)).frame(width: 140, height: 24)
                     }
-                    Text("🚶").font(.system(size: 30)).offset(y: CGFloat(depth) * 200)
+                    Text("🚶").font(.system(size: 30)).offset(y: walkerOffsetY)
                 }
 
                 Text("Depth: \(Int(depth * 30)) m").font(.headline).foregroundColor(Color.compatIndigo)

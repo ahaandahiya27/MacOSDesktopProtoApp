@@ -46,9 +46,10 @@ struct Scene6_FourStomachsOfACow: View {
                         .frame(height: 200)
 
                     if currentChamber <= 3 {
+                        let foodX: CGFloat = 100 + foodPosition * 100
                         Text("🌾")
                             .font(.system(size: 32))
-                            .position(x: 100 + foodPosition * 100, y: 100)
+                            .position(x: foodX, y: 100)
                     }
                 }
                 .padding(.horizontal, 24)
@@ -181,18 +182,22 @@ struct CowDiagram: View {
     private let legXs: [CGFloat] = [60, 80, 100, 120]
 
     var body: some View {
-        ZStack {
+        let bodyX: CGFloat = 30 + 50
+        let bodyY: CGFloat = 50 + 30
+        let headX: CGFloat = 130 + 15
+        let headY: CGFloat = 60 + 12.5
+        return ZStack {
             // Cow body (outlined ellipse)
             Ellipse()
                 .stroke(Color.compatBrown.opacity(0.4), lineWidth: 2)
                 .frame(width: 100, height: 60)
-                .position(x: 30 + 50, y: 50 + 30)
+                .position(x: bodyX, y: bodyY)
 
             // Head (filled ellipse)
             Ellipse()
                 .fill(Color.compatBrown.opacity(0.3))
                 .frame(width: 30, height: 25)
-                .position(x: 130 + 15, y: 60 + 12.5)
+                .position(x: headX, y: headY)
 
             // Four stomach chambers
             ForEach(0..<chambers.count, id: \.self) { i in

@@ -11,6 +11,8 @@ struct Scene2_WaterTableSlider: View {
 
     private var level: Double { 100 + (rain - extract) * 6 }
     private var dryWell: Bool { level <= 0 }
+    private var waterHeight: CGFloat { max(0, min(220, CGFloat(level))) }
+    private var labelOffsetY: CGFloat { -max(0, min(220, CGFloat(level))) - 6 }
 
     var body: some View {
         // Wrapped in ScrollView so the scene scrolls on
@@ -25,14 +27,14 @@ struct Scene2_WaterTableSlider: View {
                     RoundedRectangle(cornerRadius: 12).fill(Color(red: 0.45, green: 0.3, blue: 0.15))
                         .frame(width: 320, height: 220)
                     Rectangle().fill(Color.blue.opacity(0.7))
-                        .frame(width: 320, height: max(0, min(220, CGFloat(level))))
+                        .frame(width: 320, height: waterHeight)
                         .clipShape(RoundedRectangle(cornerRadius: 12))
                     Text(dryWell ? "⚠️ Dry well!" : "Water table")
                         .font(.caption.bold())
                         .foregroundColor(dryWell ? .white : .black)
                         .padding(4)
                         .background(Capsule().fill(dryWell ? Color.red.opacity(0.85) : Color.white.opacity(0.9)))
-                        .offset(y: -max(0, min(220, CGFloat(level))) - 6)
+                        .offset(y: labelOffsetY)
                 }
 
                 VStack {

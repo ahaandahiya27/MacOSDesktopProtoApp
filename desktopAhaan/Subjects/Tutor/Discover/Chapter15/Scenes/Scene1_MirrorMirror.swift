@@ -101,7 +101,14 @@ private struct MirrorDiagram: View {
             let outEndX = Double(centerX) + sin(rad) * rayLength
             let outEndY = Double(mirrorY) - cos(rad) * rayLength
 
-            ZStack {
+            let incidentLabelX: CGFloat = CGFloat(inStartX) + 18
+            let incidentLabelY: CGFloat = CGFloat(inStartY) + 10
+            let reflectedLabelX: CGFloat = CGFloat(outEndX) - 22
+            let reflectedLabelY: CGFloat = CGFloat(outEndY) + 10
+            let normalLabelX: CGFloat = centerX + 30
+            let normalLabelY: CGFloat = mirrorY - 175
+
+            return ZStack {
                 // Mirror surface (with hatching feel via thick line)
                 Path { p in
                     p.move(to: CGPoint(x: 30, y: mirrorY))
@@ -134,15 +141,15 @@ private struct MirrorDiagram: View {
                 Text("incident")
                     .font(.caption.bold())
                     .foregroundColor(DesignTokens.BrandColor.tryAtHome)
-                    .position(x: CGFloat(inStartX) + 18, y: CGFloat(inStartY) + 10)
+                    .position(x: incidentLabelX, y: incidentLabelY)
                 Text("reflected")
                     .font(.caption.bold())
                     .foregroundColor(.red)
-                    .position(x: CGFloat(outEndX) - 22, y: CGFloat(outEndY) + 10)
+                    .position(x: reflectedLabelX, y: reflectedLabelY)
                 Text("normal")
                     .font(.caption2)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                    .position(x: centerX + 30, y: mirrorY - 175)
+                    .position(x: normalLabelX, y: normalLabelY)
             }
         }
     }

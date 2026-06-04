@@ -180,9 +180,10 @@ private struct WoolQualityGraderScene: View {
                     RoundedRectangle(cornerRadius: 16).fill(Color.compatBrown.opacity(0.15))
                         .frame(width: 220, height: 80)
                     HStack(spacing: 4) {
+                        let strandW: CGFloat = CGFloat(2 + coarseness * 6)
                         ForEach(0..<20, id: \.self) { _ in
                             Capsule().fill(Color.compatBrown.opacity(0.6))
-                                .frame(width: CGFloat(2 + coarseness * 6), height: 50)
+                                .frame(width: strandW, height: 50)
                         }
                     }
                 }
@@ -291,9 +292,10 @@ private struct DyeVatMixScene: View {
     private var yarnVisual: some View {
         ZStack {
             ForEach(0..<12, id: \.self) { i in
+                let yarnX: CGFloat = CGFloat(i - 6) * 16
                 Capsule().fill(dyed ? colors[color] : Color.gray.opacity(0.15))
                     .frame(width: 14, height: 60)
-                    .offset(x: CGFloat(i - 6) * 16)
+                    .offset(x: yarnX)
             }
         }
     }

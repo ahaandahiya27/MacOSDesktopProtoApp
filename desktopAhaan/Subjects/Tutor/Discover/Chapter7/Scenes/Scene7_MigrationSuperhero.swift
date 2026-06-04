@@ -170,6 +170,8 @@ struct Scene7_MigrationSuperhero: View {
 
     private var globeView: some View {
         GeometryReader { geo in
+            let midX: CGFloat = geo.size.width * 0.5
+            let antarcticY: CGFloat = geo.size.height - 14
             ZStack {
                 // Ocean background
                 Rectangle()
@@ -188,12 +190,12 @@ struct Scene7_MigrationSuperhero: View {
                 Text("Arctic")
                     .font(.caption2.bold())
                     .foregroundColor(Color.compatCyan)
-                    .position(x: geo.size.width * 0.5, y: 18)
+                    .position(x: midX, y: 18)
 
                 Text("Antarctic")
                     .font(.caption2.bold())
                     .foregroundColor(Color.compatCyan)
-                    .position(x: geo.size.width * 0.5, y: geo.size.height - 14)
+                    .position(x: midX, y: antarcticY)
 
                 // Bird marker (Timer-driven; static when reduceMotion)
                 BirdMarker(t: tick, reduceMotion: reduceMotion, size: geo.size)
