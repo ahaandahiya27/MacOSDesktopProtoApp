@@ -9,6 +9,19 @@ struct Scene8_Fragmentation: View {
 
     @State private var fragments: Double = 1
 
+    /// Width of one fragment capsule. Pulled out of the `body` ViewBuilder with
+    /// fully-explicit `Double` literals + a single `CGFloat` conversion so the
+    /// Swift 5.5 type-checker on the Big-Sur iMac (Xcode 13.2.1) has no Int/
+    /// Double/CGFloat operator-overload tree to explore — the inline form
+    /// `CGFloat((280 - 8 * (fragments - 1)) / fragments)` is a classic
+    /// `Segmentation fault: 11` trigger on that older compiler.
+    private func fragmentWidth(count n: Double) -> CGFloat {
+        let totalWidth = 280.0
+        let gap = 8.0
+        let usable = totalWidth - gap * (n - 1.0)
+        return CGFloat(usable / n)
+    }
+
     var body: some View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
@@ -22,7 +35,7 @@ struct Scene8_Fragmentation: View {
                 HStack(spacing: 8) {
                     ForEach(0..<Int(fragments), id: \.self) { _ in
                         Capsule().fill(Color.green.opacity(0.8))
-                            .frame(width: CGFloat((280 - 8 * (fragments - 1)) / fragments), height: 16)
+                            .frame(width: fragmentWidth(count: fragments), height: 16)
                     }
                 }
                 .frame(width: 300, alignment: .leading)
