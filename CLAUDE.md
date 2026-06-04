@@ -6,7 +6,7 @@ every session has converged on.
 
 ## Current status (2026-06-03)
 
-- **17 lints clean** on every push — see `scripts/check_*.py`. Wired through `scripts/ci-build-test.sh`. (Plus two commit-time T2 ratchets: `check_critical_uitest_presence.py` + `check_uitest_label_coverage.py`, in the pre-commit chain.)
+- **18 lints clean** on every push — see `scripts/check_*.py`. Wired through `scripts/ci-build-test.sh` + the pre-commit hook. (Plus two commit-time T2 ratchets: `check_critical_uitest_presence.py` + `check_uitest_label_coverage.py`, in the pre-commit chain.) Newest: `check_viewbuilder_depth.py` (2026-06-04) — guards the Swift-5.5 `Segmentation fault: 11` class where a monolithic `GeometryReader` closure overflows the iMac compiler's type-checker stack; fix by delegating to typed helper funcs (see `LungAnatomyDiagram`).
 - **Bug-free certification: 110/110 categories ✅** — see `BUG_FREE_CERTIFICATION_REPORT.md` at the repo root.
 - **Production-readiness: per-criterion ✅** — see `PRODUCTION_READINESS_REPORT.md`.
 - **Per-subject readiness:** Science (19 ch), Maths (15 ch), Sanskrit (16 ch = 15 NEP + 1 legacy vocab deck), Social Science (`socialscience_class7`, NEP `sschNN` ids — bespoke per-chapter interactives via `socialScienceInteractives`). See `{SUBJECT}_READINESS_REPORT.md` each.

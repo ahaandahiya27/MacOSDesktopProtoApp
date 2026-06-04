@@ -44,34 +44,47 @@ struct AtmosphereLayersDiagram: View {
 /// The summer monsoon: the land heats up, drawing in moisture-laden winds
 /// from the sea that bring India its rains.
 struct MonsoonWindsDiagram: View {
+    // Split into small typed helpers so Swift 5.5's type-checker doesn't
+    // overflow its stack on one deep @ViewBuilder closure. No visual change.
     var body: some View {
         SDFigure(tint: Color.compatTeal) {
             GeometryReader { geo in
-                let w = geo.size.width, h = geo.size.height
-                ZStack {
-                    Group {
-                        // Sea (lower) and land (upper)
-                        Rectangle().fill(Color.compatTeal.opacity(0.3))
-                            .frame(width: w, height: h * 0.4).position(x: w / 2, y: h * 0.8)
-                        IndiaBlobShape().fill(Color.compatBrown.opacity(0.4))
-                            .overlay(IndiaBlobShape().stroke(Color.compatBrown.opacity(0.6), lineWidth: 1.5))
-                            .frame(width: w * 0.4, height: h * 0.5).position(x: w / 2, y: h * 0.4)
-                        // Cloud over land
-                        CloudShape().fill(Color.white.opacity(0.85))
-                            .frame(width: 64, height: 26).position(x: w / 2, y: h * 0.22)
-                    }
-                    Group {
-                        ForEach(0..<3, id: \.self) { i in
-                            Image(systemName: SFSymbolCompat.name("arrow.up"))
-                                .font(.system(size: 18, weight: .bold)).foregroundColor(Color.compatTeal)
-                                .position(x: w * (0.32 + Double(i) * 0.18), y: h * 0.62)
-                        }
-                        SDLabel(text: "Land (India)", color: Color.compatBrown).position(x: w / 2, y: h * 0.42)
-                        SDLabel(text: "Moist sea winds", color: Color.compatTeal).position(x: w / 2, y: h * 0.95)
-                        SDLabel(text: "Rain", color: Color.compatBlue).position(x: w / 2, y: h * 0.22)
-                    }
-                }
+                content(w: geo.size.width, h: geo.size.height)
             }
+        }
+    }
+
+    private func content(w: CGFloat, h: CGFloat) -> some View {
+        ZStack {
+            terrain(w: w, h: h)
+            windsAndLabels(w: w, h: h)
+        }
+    }
+
+    private func terrain(w: CGFloat, h: CGFloat) -> some View {
+        Group {
+            // Sea (lower) and land (upper)
+            Rectangle().fill(Color.compatTeal.opacity(0.3))
+                .frame(width: w, height: h * 0.4).position(x: w / 2, y: h * 0.8)
+            IndiaBlobShape().fill(Color.compatBrown.opacity(0.4))
+                .overlay(IndiaBlobShape().stroke(Color.compatBrown.opacity(0.6), lineWidth: 1.5))
+                .frame(width: w * 0.4, height: h * 0.5).position(x: w / 2, y: h * 0.4)
+            // Cloud over land
+            CloudShape().fill(Color.white.opacity(0.85))
+                .frame(width: 64, height: 26).position(x: w / 2, y: h * 0.22)
+        }
+    }
+
+    private func windsAndLabels(w: CGFloat, h: CGFloat) -> some View {
+        Group {
+            ForEach(0..<3, id: \.self) { i in
+                Image(systemName: SFSymbolCompat.name("arrow.up"))
+                    .font(.system(size: 18, weight: .bold)).foregroundColor(Color.compatTeal)
+                    .position(x: w * (0.32 + Double(i) * 0.18), y: h * 0.62)
+            }
+            SDLabel(text: "Land (India)", color: Color.compatBrown).position(x: w / 2, y: h * 0.42)
+            SDLabel(text: "Moist sea winds", color: Color.compatTeal).position(x: w / 2, y: h * 0.95)
+            SDLabel(text: "Rain", color: Color.compatBlue).position(x: w / 2, y: h * 0.22)
         }
     }
 }

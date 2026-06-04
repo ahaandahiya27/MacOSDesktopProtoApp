@@ -44,24 +44,29 @@ struct HighLowPressureDiagram: View {
 /// A cyclone is a giant spiral of stormy winds whirling around a calm centre
 /// — the "eye". This shows the spiral arms and the eye.
 struct CycloneSpiralDiagram: View {
+    // Big Sur / Swift 5.5 fix: the deep GeometryReader+ZStack closure is split
+    // into typed helper funcs so the type-checker doesn't overflow its stack.
     var body: some View {
         SDFigure(tint: Color.compatBlue) {
             GeometryReader { geo in
-                let w = geo.size.width, h = geo.size.height
-                let cx = w / 2, cy = h / 2
-                ZStack {
-                    SpiralShape(turns: 3, maxRadius: min(w, h) * 0.42)
-                        .stroke(Color.compatBlue.opacity(0.6),
-                                style: StrokeStyle(lineWidth: 4, lineCap: .round))
-                        .frame(width: min(w, h) * 0.85, height: min(w, h) * 0.85)
-                        .position(x: cx, y: cy)
-                    Circle().fill(Color.white.opacity(0.85))
-                        .overlay(Circle().stroke(Color.compatBlue.opacity(0.6), lineWidth: 1.5))
-                        .frame(width: 26, height: 26).position(x: cx, y: cy)
-                    SDLabel(text: "Eye (calm)", color: Color.compatBlue).position(x: cx, y: cy + 28)
-                    SDLabel(text: "Spiralling storm winds", color: Color.compatBlue).position(x: cx, y: 12)
-                }
+                content(w: geo.size.width, h: geo.size.height)
             }
+        }
+    }
+
+    private func content(w: CGFloat, h: CGFloat) -> some View {
+        let cx = w / 2, cy = h / 2
+        return ZStack {
+            SpiralShape(turns: 3, maxRadius: min(w, h) * 0.42)
+                .stroke(Color.compatBlue.opacity(0.6),
+                        style: StrokeStyle(lineWidth: 4, lineCap: .round))
+                .frame(width: min(w, h) * 0.85, height: min(w, h) * 0.85)
+                .position(x: cx, y: cy)
+            Circle().fill(Color.white.opacity(0.85))
+                .overlay(Circle().stroke(Color.compatBlue.opacity(0.6), lineWidth: 1.5))
+                .frame(width: 26, height: 26).position(x: cx, y: cy)
+            SDLabel(text: "Eye (calm)", color: Color.compatBlue).position(x: cx, y: cy + 28)
+            SDLabel(text: "Spiralling storm winds", color: Color.compatBlue).position(x: cx, y: 12)
         }
     }
 }
@@ -90,36 +95,45 @@ private struct SpiralShape: Shape {
 /// The Coriolis effect: because the Earth spins, moving winds appear to curve
 /// rather than travel in a straight line — which is why cyclones spiral.
 struct CoriolisDiagram: View {
+    // Big Sur / Swift 5.5 fix: the deep GeometryReader+ZStack closure is split
+    // into typed helper funcs so the type-checker doesn't overflow its stack.
     var body: some View {
         SDFigure(tint: .green) {
             GeometryReader { geo in
-                let w = geo.size.width, h = geo.size.height
-                let s = min(w, h) * 0.78
-                let cx = w / 2, cy = h / 2
-                ZStack {
-                    Circle().fill(Color.compatBlue.opacity(0.16))
-                        .overlay(Circle().strokeBorder(Color.compatBlue.opacity(0.5), lineWidth: 1.5))
-                        .frame(width: s, height: s).position(x: cx, y: cy)
-                    Image(systemName: SFSymbolCompat.name("arrow.triangle.2.circlepath"))
-                        .font(.system(size: 16, weight: .semibold)).foregroundColor(Color.compatBlue)
-                        .position(x: cx, y: cy)
-                    Group {
-                        // Intended straight path
-                        Path { p in
-                            p.move(to: CGPoint(x: cx - s * 0.35, y: cy - s * 0.3))
-                            p.addLine(to: CGPoint(x: cx + s * 0.35, y: cy - s * 0.3))
-                        }.stroke(DesignTokens.BrandColor.canvasTextSecondary.opacity(0.5),
-                                 style: StrokeStyle(lineWidth: 1.5, dash: [4, 3]))
-                        // Actual curved (deflected) path
-                        CurvedArrowShape()
-                            .stroke(.red.opacity(0.75), style: StrokeStyle(lineWidth: 2.5, lineCap: .round))
-                            .frame(width: s * 0.7, height: s * 0.4)
-                            .position(x: cx, y: cy - s * 0.18)
-                        SDLabel(text: "straight").position(x: cx, y: cy - s * 0.42)
-                        SDLabel(text: "curved by spin", color: .red).position(x: cx, y: cy + s * 0.1)
-                    }
-                }
+                content(w: geo.size.width, h: geo.size.height)
             }
+        }
+    }
+
+    private func content(w: CGFloat, h: CGFloat) -> some View {
+        let s = min(w, h) * 0.78
+        let cx = w / 2, cy = h / 2
+        return ZStack {
+            Circle().fill(Color.compatBlue.opacity(0.16))
+                .overlay(Circle().strokeBorder(Color.compatBlue.opacity(0.5), lineWidth: 1.5))
+                .frame(width: s, height: s).position(x: cx, y: cy)
+            Image(systemName: SFSymbolCompat.name("arrow.triangle.2.circlepath"))
+                .font(.system(size: 16, weight: .semibold)).foregroundColor(Color.compatBlue)
+                .position(x: cx, y: cy)
+            paths(w: w, h: h, cx: cx, cy: cy, s: s)
+        }
+    }
+
+    private func paths(w: CGFloat, h: CGFloat, cx: CGFloat, cy: CGFloat, s: CGFloat) -> some View {
+        Group {
+            // Intended straight path
+            Path { p in
+                p.move(to: CGPoint(x: cx - s * 0.35, y: cy - s * 0.3))
+                p.addLine(to: CGPoint(x: cx + s * 0.35, y: cy - s * 0.3))
+            }.stroke(DesignTokens.BrandColor.canvasTextSecondary.opacity(0.5),
+                     style: StrokeStyle(lineWidth: 1.5, dash: [4, 3]))
+            // Actual curved (deflected) path
+            CurvedArrowShape()
+                .stroke(.red.opacity(0.75), style: StrokeStyle(lineWidth: 2.5, lineCap: .round))
+                .frame(width: s * 0.7, height: s * 0.4)
+                .position(x: cx, y: cy - s * 0.18)
+            SDLabel(text: "straight").position(x: cx, y: cy - s * 0.42)
+            SDLabel(text: "curved by spin", color: .red).position(x: cx, y: cy + s * 0.1)
         }
     }
 }
@@ -144,35 +158,48 @@ private struct CurvedArrowShape: Shape {
 /// these violent up- and down-draughts build the charge that flashes as
 /// lightning, with heavy rain below.
 struct ThunderstormDiagram: View {
+    // Big Sur / Swift 5.5 fix: the deep GeometryReader+ZStack closure is split
+    // into typed helper funcs so the type-checker doesn't overflow its stack.
     var body: some View {
         SDFigure(tint: Color.compatPurple) {
             GeometryReader { geo in
-                let w = geo.size.width, h = geo.size.height
-                ZStack {
-                    Group {
-                        CloudShape8().fill(DesignTokens.BrandColor.canvasTextSecondary.opacity(0.4))
-                            .frame(width: w * 0.7, height: h * 0.45).position(x: w / 2, y: h * 0.3)
-                        // Lightning bolt
-                        BoltShape().fill(.yellow.opacity(0.9))
-                            .frame(width: 18, height: 40).position(x: w * 0.5, y: h * 0.62)
-                    }
-                    Group {
-                        Image(systemName: SFSymbolCompat.name("arrow.up"))
-                            .font(.system(size: 16, weight: .bold)).foregroundColor(.red.opacity(0.7))
-                            .position(x: w * 0.36, y: h * 0.34)
-                        Image(systemName: SFSymbolCompat.name("arrow.down"))
-                            .font(.system(size: 16, weight: .bold)).foregroundColor(Color.compatBlue)
-                            .position(x: w * 0.64, y: h * 0.34)
-                        // Rain
-                        ForEach(0..<5, id: \.self) { i in
-                            Capsule().fill(Color.compatBlue.opacity(0.6)).frame(width: 2, height: 9)
-                                .position(x: w * (0.34 + Double(i) * 0.08), y: h * 0.82)
-                        }
-                        SDLabel(text: "updraft", color: .red).position(x: w * 0.22, y: h * 0.34)
-                        SDLabel(text: "downdraft", color: Color.compatBlue).position(x: w * 0.8, y: h * 0.34)
-                    }
-                }
+                content(w: geo.size.width, h: geo.size.height)
             }
+        }
+    }
+
+    private func content(w: CGFloat, h: CGFloat) -> some View {
+        ZStack {
+            cloud(w: w, h: h)
+            draughts(w: w, h: h)
+        }
+    }
+
+    private func cloud(w: CGFloat, h: CGFloat) -> some View {
+        Group {
+            CloudShape8().fill(DesignTokens.BrandColor.canvasTextSecondary.opacity(0.4))
+                .frame(width: w * 0.7, height: h * 0.45).position(x: w / 2, y: h * 0.3)
+            // Lightning bolt
+            BoltShape().fill(.yellow.opacity(0.9))
+                .frame(width: 18, height: 40).position(x: w * 0.5, y: h * 0.62)
+        }
+    }
+
+    private func draughts(w: CGFloat, h: CGFloat) -> some View {
+        Group {
+            Image(systemName: SFSymbolCompat.name("arrow.up"))
+                .font(.system(size: 16, weight: .bold)).foregroundColor(.red.opacity(0.7))
+                .position(x: w * 0.36, y: h * 0.34)
+            Image(systemName: SFSymbolCompat.name("arrow.down"))
+                .font(.system(size: 16, weight: .bold)).foregroundColor(Color.compatBlue)
+                .position(x: w * 0.64, y: h * 0.34)
+            // Rain
+            ForEach(0..<5, id: \.self) { i in
+                Capsule().fill(Color.compatBlue.opacity(0.6)).frame(width: 2, height: 9)
+                    .position(x: w * (0.34 + Double(i) * 0.08), y: h * 0.82)
+            }
+            SDLabel(text: "updraft", color: .red).position(x: w * 0.22, y: h * 0.34)
+            SDLabel(text: "downdraft", color: Color.compatBlue).position(x: w * 0.8, y: h * 0.34)
         }
     }
 }

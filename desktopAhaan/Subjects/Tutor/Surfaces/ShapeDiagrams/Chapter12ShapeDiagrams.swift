@@ -11,42 +11,55 @@ import SwiftUI
 /// the male stamens (anther on a filament) and the central female carpel
 /// (stigma → style → ovary holding ovules).
 struct FlowerAnatomyDiagram: View {
+    // Split into typed helpers so the Swift 5.5 type-checker (Big Sur / Xcode
+    // 13.2.1) doesn't overflow its stack on one deep @ViewBuilder closure.
     var body: some View {
         SDFigure(tint: .pink) {
             GeometryReader { geo in
-                let w = geo.size.width, h = geo.size.height
-                let cx = w / 2
-                ZStack {
-                    Group {
-                        // Petals (behind) and sepals
-                        ForEach(0..<2, id: \.self) { s in
-                            SDLeafShape().fill(.pink.opacity(0.3))
-                                .frame(width: 36, height: 80)
-                                .rotationEffect(.degrees(s == 0 ? -24 : 24))
-                                .position(x: cx + (s == 0 ? -22 : 22), y: h * 0.55)
-                        }
-                        SDLeafShape().fill(.green.opacity(0.35)).frame(width: 26, height: 50)
-                            .position(x: cx, y: h * 0.82)
-                        // Carpel: ovary bulb → style → stigma
-                        Ellipse().fill(.green.opacity(0.4)).frame(width: 30, height: 26)
-                            .position(x: cx, y: h * 0.62)
-                        Capsule().fill(.green.opacity(0.5)).frame(width: 6, height: h * 0.28)
-                            .position(x: cx, y: h * 0.38)
-                        Circle().fill(.green.opacity(0.6)).frame(width: 14, height: 14)
-                            .position(x: cx, y: h * 0.22)
-                        // Stamens flanking the carpel
-                        stamen(x: cx - 26, h: h)
-                        stamen(x: cx + 26, h: h)
-                    }
-                    Group {
-                        SDLabel(text: "Stigma", color: .green).position(x: cx + 40, y: h * 0.22)
-                        SDLabel(text: "Style", color: .green).position(x: cx + 36, y: h * 0.4)
-                        SDLabel(text: "Ovary", color: .green).position(x: cx + 44, y: h * 0.62)
-                        SDLabel(text: "Anther", color: .orange).position(x: cx - 50, y: h * 0.26)
-                        SDLabel(text: "Petal", color: .pink).position(x: cx - 56, y: h * 0.58)
-                    }
-                }
+                content(w: geo.size.width, h: geo.size.height)
             }
+        }
+    }
+
+    private func content(w: CGFloat, h: CGFloat) -> some View {
+        let cx = w / 2
+        return ZStack {
+            parts(w: w, h: h, cx: cx)
+            labels(w: w, h: h, cx: cx)
+        }
+    }
+
+    private func parts(w: CGFloat, h: CGFloat, cx: CGFloat) -> some View {
+        Group {
+            // Petals (behind) and sepals
+            ForEach(0..<2, id: \.self) { s in
+                SDLeafShape().fill(.pink.opacity(0.3))
+                    .frame(width: 36, height: 80)
+                    .rotationEffect(.degrees(s == 0 ? -24 : 24))
+                    .position(x: cx + (s == 0 ? -22 : 22), y: h * 0.55)
+            }
+            SDLeafShape().fill(.green.opacity(0.35)).frame(width: 26, height: 50)
+                .position(x: cx, y: h * 0.82)
+            // Carpel: ovary bulb → style → stigma
+            Ellipse().fill(.green.opacity(0.4)).frame(width: 30, height: 26)
+                .position(x: cx, y: h * 0.62)
+            Capsule().fill(.green.opacity(0.5)).frame(width: 6, height: h * 0.28)
+                .position(x: cx, y: h * 0.38)
+            Circle().fill(.green.opacity(0.6)).frame(width: 14, height: 14)
+                .position(x: cx, y: h * 0.22)
+            // Stamens flanking the carpel
+            stamen(x: cx - 26, h: h)
+            stamen(x: cx + 26, h: h)
+        }
+    }
+
+    private func labels(w: CGFloat, h: CGFloat, cx: CGFloat) -> some View {
+        Group {
+            SDLabel(text: "Stigma", color: .green).position(x: cx + 40, y: h * 0.22)
+            SDLabel(text: "Style", color: .green).position(x: cx + 36, y: h * 0.4)
+            SDLabel(text: "Ovary", color: .green).position(x: cx + 44, y: h * 0.62)
+            SDLabel(text: "Anther", color: .orange).position(x: cx - 50, y: h * 0.26)
+            SDLabel(text: "Petal", color: .pink).position(x: cx - 56, y: h * 0.58)
         }
     }
 
@@ -66,33 +79,46 @@ struct FlowerAnatomyDiagram: View {
 /// down through the style to reach an ovule in the ovary, where the male and
 /// female cells fuse.
 struct PollenTubeDiagram: View {
+    // Split into typed helpers so the Swift 5.5 type-checker (Big Sur / Xcode
+    // 13.2.1) doesn't overflow its stack on one deep @ViewBuilder closure.
     var body: some View {
         SDFigure(tint: .green) {
             GeometryReader { geo in
-                let w = geo.size.width, h = geo.size.height
-                let cx = w * 0.4
-                ZStack {
-                    Group {
-                        // Stigma top, style, ovary with ovule
-                        Circle().fill(.orange.opacity(0.6)).frame(width: 16, height: 16).position(x: cx, y: h * 0.16)
-                        Capsule().fill(.green.opacity(0.25)).frame(width: 22, height: h * 0.5).position(x: cx, y: h * 0.45)
-                        Ellipse().fill(.green.opacity(0.3))
-                            .overlay(Ellipse().stroke(.green.opacity(0.6), lineWidth: 1.5))
-                            .frame(width: 60, height: 50).position(x: cx, y: h * 0.78)
-                        Circle().fill(Color.compatPurple.opacity(0.6)).frame(width: 14, height: 14).position(x: cx, y: h * 0.8)
-                        // Growing pollen tube
-                        Path { p in
-                            p.move(to: CGPoint(x: cx, y: h * 0.18))
-                            p.addLine(to: CGPoint(x: cx, y: h * 0.74))
-                        }.stroke(.orange.opacity(0.8), style: StrokeStyle(lineWidth: 2.5, dash: [4, 3]))
-                    }
-                    Group {
-                        SDLabel(text: "Pollen on stigma", color: .orange).position(x: cx + 56, y: h * 0.16)
-                        SDLabel(text: "Pollen tube", color: .orange).position(x: cx - 44, y: h * 0.45)
-                        SDLabel(text: "Ovule", color: Color.compatPurple).position(x: cx + 48, y: h * 0.8)
-                    }
-                }
+                content(w: geo.size.width, h: geo.size.height)
             }
+        }
+    }
+
+    private func content(w: CGFloat, h: CGFloat) -> some View {
+        let cx = w * 0.4
+        return ZStack {
+            structures(w: w, h: h, cx: cx)
+            labels(w: w, h: h, cx: cx)
+        }
+    }
+
+    private func structures(w: CGFloat, h: CGFloat, cx: CGFloat) -> some View {
+        Group {
+            // Stigma top, style, ovary with ovule
+            Circle().fill(.orange.opacity(0.6)).frame(width: 16, height: 16).position(x: cx, y: h * 0.16)
+            Capsule().fill(.green.opacity(0.25)).frame(width: 22, height: h * 0.5).position(x: cx, y: h * 0.45)
+            Ellipse().fill(.green.opacity(0.3))
+                .overlay(Ellipse().stroke(.green.opacity(0.6), lineWidth: 1.5))
+                .frame(width: 60, height: 50).position(x: cx, y: h * 0.78)
+            Circle().fill(Color.compatPurple.opacity(0.6)).frame(width: 14, height: 14).position(x: cx, y: h * 0.8)
+            // Growing pollen tube
+            Path { p in
+                p.move(to: CGPoint(x: cx, y: h * 0.18))
+                p.addLine(to: CGPoint(x: cx, y: h * 0.74))
+            }.stroke(.orange.opacity(0.8), style: StrokeStyle(lineWidth: 2.5, dash: [4, 3]))
+        }
+    }
+
+    private func labels(w: CGFloat, h: CGFloat, cx: CGFloat) -> some View {
+        Group {
+            SDLabel(text: "Pollen on stigma", color: .orange).position(x: cx + 56, y: h * 0.16)
+            SDLabel(text: "Pollen tube", color: .orange).position(x: cx - 44, y: h * 0.45)
+            SDLabel(text: "Ovule", color: Color.compatPurple).position(x: cx + 48, y: h * 0.8)
         }
     }
 }

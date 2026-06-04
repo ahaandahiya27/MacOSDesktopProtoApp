@@ -10,42 +10,55 @@ import SwiftUI
 /// A clinical thermometer: glass bulb of mercury at the base, a fine
 /// capillary with a kink (so the reading holds), and a 35–42 °C scale.
 struct ThermometerDiagram: View {
+    // Structural split: deep GeometryReader/ZStack closure broken into typed
+    // helpers for the Swift 5.5 type-checker. No visual change.
     var body: some View {
         SDFigure(tint: .red) {
             GeometryReader { geo in
-                let w = geo.size.width, h = geo.size.height
-                let cx = w / 2
-                ZStack {
-                    Group {
-                        // Glass tube
-                        Capsule()
-                            .fill(Color.white.opacity(0.85))
-                            .overlay(Capsule().stroke(DesignTokens.BrandColor.canvasTextSecondary.opacity(0.5), lineWidth: 1.5))
-                            .frame(width: 16, height: h * 0.7)
-                            .position(x: cx, y: h * 0.42)
-                        // Mercury column rising from the bulb
-                        Capsule()
-                            .fill(Color.red.opacity(0.7))
-                            .frame(width: 7, height: h * 0.4)
-                            .position(x: cx, y: h * 0.52)
-                        // Bulb
-                        Circle()
-                            .fill(Color.red.opacity(0.75))
-                            .frame(width: 26, height: 26)
-                            .position(x: cx, y: h * 0.84)
-                    }
-                    Group {
-                        ForEach(0..<6, id: \.self) { i in
-                            tick(i: i, cx: cx, h: h)
-                        }
-                        SDLabel(text: "Bulb", color: .red).position(x: cx + 34, y: h * 0.84)
-                        SDLabel(text: "Kink").position(x: cx - 30, y: h * 0.66)
-                        Rectangle().fill(DesignTokens.BrandColor.canvasText)
-                            .frame(width: 10, height: 2)
-                            .position(x: cx, y: h * 0.66)
-                    }
-                }
+                content(w: geo.size.width, h: geo.size.height)
             }
+        }
+    }
+
+    private func content(w: CGFloat, h: CGFloat) -> some View {
+        let cx = w / 2
+        return ZStack {
+            glassTube(cx: cx, h: h)
+            scaleAndLabels(cx: cx, h: h)
+        }
+    }
+
+    private func glassTube(cx: CGFloat, h: CGFloat) -> some View {
+        Group {
+            // Glass tube
+            Capsule()
+                .fill(Color.white.opacity(0.85))
+                .overlay(Capsule().stroke(DesignTokens.BrandColor.canvasTextSecondary.opacity(0.5), lineWidth: 1.5))
+                .frame(width: 16, height: h * 0.7)
+                .position(x: cx, y: h * 0.42)
+            // Mercury column rising from the bulb
+            Capsule()
+                .fill(Color.red.opacity(0.7))
+                .frame(width: 7, height: h * 0.4)
+                .position(x: cx, y: h * 0.52)
+            // Bulb
+            Circle()
+                .fill(Color.red.opacity(0.75))
+                .frame(width: 26, height: 26)
+                .position(x: cx, y: h * 0.84)
+        }
+    }
+
+    private func scaleAndLabels(cx: CGFloat, h: CGFloat) -> some View {
+        Group {
+            ForEach(0..<6, id: \.self) { i in
+                tick(i: i, cx: cx, h: h)
+            }
+            SDLabel(text: "Bulb", color: .red).position(x: cx + 34, y: h * 0.84)
+            SDLabel(text: "Kink").position(x: cx - 30, y: h * 0.66)
+            Rectangle().fill(DesignTokens.BrandColor.canvasText)
+                .frame(width: 10, height: 2)
+                .position(x: cx, y: h * 0.66)
         }
     }
 
@@ -158,38 +171,51 @@ struct ThermosFlaskDiagram: View {
 /// The sea breeze: by day the land heats faster than the sea, warm air rises
 /// over the land, and cool air flows in from the sea to take its place.
 struct SeaBreezeDiagram: View {
+    // Structural split: deep GeometryReader/ZStack closure broken into typed
+    // helpers for the Swift 5.5 type-checker. No visual change.
     var body: some View {
         SDFigure(tint: Color.compatBlue) {
             GeometryReader { geo in
-                let w = geo.size.width, h = geo.size.height
-                ZStack {
-                    Group {
-                        // Sun
-                        Circle().fill(Color.orange.opacity(0.8)).frame(width: 26, height: 26)
-                            .position(x: w * 0.18, y: h * 0.16)
-                        // Sea (left) and land (right)
-                        Rectangle().fill(Color.compatBlue.opacity(0.35))
-                            .frame(width: w * 0.5, height: h * 0.3)
-                            .position(x: w * 0.25, y: h * 0.82)
-                        Rectangle().fill(Color.compatBrown.opacity(0.5))
-                            .frame(width: w * 0.5, height: h * 0.3)
-                            .position(x: w * 0.75, y: h * 0.82)
-                    }
-                    Group {
-                        // Warm air rising over land
-                        Image(systemName: SFSymbolCompat.name("arrow.up"))
-                            .font(.system(size: 20, weight: .bold)).foregroundColor(.red.opacity(0.7))
-                            .position(x: w * 0.75, y: h * 0.5)
-                        // Cool sea breeze flowing toward land
-                        Image(systemName: SFSymbolCompat.name("arrow.right"))
-                            .font(.system(size: 20, weight: .bold)).foregroundColor(Color.compatBlue)
-                            .position(x: w * 0.45, y: h * 0.62)
-                        SDLabel(text: "Sea", color: Color.compatBlue).position(x: w * 0.22, y: h * 0.82)
-                        SDLabel(text: "Land (warmer)", color: Color.compatBrown).position(x: w * 0.75, y: h * 0.82)
-                        SDLabel(text: "Cool breeze", color: Color.compatBlue).position(x: w * 0.42, y: h * 0.5)
-                    }
-                }
+                content(w: geo.size.width, h: geo.size.height)
             }
+        }
+    }
+
+    private func content(w: CGFloat, h: CGFloat) -> some View {
+        ZStack {
+            scenery(w: w, h: h)
+            airflow(w: w, h: h)
+        }
+    }
+
+    private func scenery(w: CGFloat, h: CGFloat) -> some View {
+        Group {
+            // Sun
+            Circle().fill(Color.orange.opacity(0.8)).frame(width: 26, height: 26)
+                .position(x: w * 0.18, y: h * 0.16)
+            // Sea (left) and land (right)
+            Rectangle().fill(Color.compatBlue.opacity(0.35))
+                .frame(width: w * 0.5, height: h * 0.3)
+                .position(x: w * 0.25, y: h * 0.82)
+            Rectangle().fill(Color.compatBrown.opacity(0.5))
+                .frame(width: w * 0.5, height: h * 0.3)
+                .position(x: w * 0.75, y: h * 0.82)
+        }
+    }
+
+    private func airflow(w: CGFloat, h: CGFloat) -> some View {
+        Group {
+            // Warm air rising over land
+            Image(systemName: SFSymbolCompat.name("arrow.up"))
+                .font(.system(size: 20, weight: .bold)).foregroundColor(.red.opacity(0.7))
+                .position(x: w * 0.75, y: h * 0.5)
+            // Cool sea breeze flowing toward land
+            Image(systemName: SFSymbolCompat.name("arrow.right"))
+                .font(.system(size: 20, weight: .bold)).foregroundColor(Color.compatBlue)
+                .position(x: w * 0.45, y: h * 0.62)
+            SDLabel(text: "Sea", color: Color.compatBlue).position(x: w * 0.22, y: h * 0.82)
+            SDLabel(text: "Land (warmer)", color: Color.compatBrown).position(x: w * 0.75, y: h * 0.82)
+            SDLabel(text: "Cool breeze", color: Color.compatBlue).position(x: w * 0.42, y: h * 0.5)
         }
     }
 }

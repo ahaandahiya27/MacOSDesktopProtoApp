@@ -125,6 +125,11 @@ def main() -> int:
     if vb.run_selftest() != 0:
         failures.append("check_viewbuilder_limit selftest")
 
+    print("== check_viewbuilder_depth — embedded --selftest ==")
+    vd = _import_lint_module("check_viewbuilder_depth")
+    if vd.run_selftest() != 0:
+        failures.append("check_viewbuilder_depth selftest")
+
     print("== check_mainactor_closure_refs — embedded --selftest ==")
     mc = _import_lint_module("check_mainactor_closure_refs")
     if mc.run_selftest() != 0:

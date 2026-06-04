@@ -50,25 +50,37 @@ struct SulabhToiletDiagram: View {
     var body: some View {
         SDFigure(tint: Color.compatBrown) {
             GeometryReader { geo in
-                let w = geo.size.width, h = geo.size.height
-                ZStack {
-                    Group {
-                        // Toilet pan
-                        Ellipse().fill(.white.opacity(0.9)).overlay(Ellipse().stroke(DesignTokens.BrandColor.canvasTextSecondary.opacity(0.5), lineWidth: 1.5))
-                            .frame(width: 34, height: 20).position(x: w / 2, y: h * 0.18)
-                        // Two pits
-                        pit(x: w * 0.3, h: h, label: "Pit in use", active: true)
-                        pit(x: w * 0.7, h: h, label: "Resting → compost", active: false)
-                        // Y junction
-                        Path { p in
-                            p.move(to: CGPoint(x: w / 2, y: h * 0.28))
-                            p.addLine(to: CGPoint(x: w * 0.3, y: h * 0.5))
-                            p.move(to: CGPoint(x: w / 2, y: h * 0.28))
-                            p.addLine(to: CGPoint(x: w * 0.7, y: h * 0.5))
-                        }.stroke(Color.compatBrown.opacity(0.6), lineWidth: 4)
-                    }
-                }
+                content(w: geo.size.width, h: geo.size.height)
             }
+        }
+    }
+
+    // Body split into typed helpers so the Swift 5.5 type-checker on the
+    // Big-Sur iMac (Xcode 13.2.1) never has to solve one deep
+    // GeometryReader→ZStack result-builder closure full of inline CGFloat
+    // coordinate math in a single pass — that recursion overflows the
+    // compiler stack → `Segmentation fault: 11`.
+    private func content(w: CGFloat, h: CGFloat) -> some View {
+        ZStack {
+            pitsAndPlumbing(w: w, h: h)
+        }
+    }
+
+    private func pitsAndPlumbing(w: CGFloat, h: CGFloat) -> some View {
+        Group {
+            // Toilet pan
+            Ellipse().fill(.white.opacity(0.9)).overlay(Ellipse().stroke(DesignTokens.BrandColor.canvasTextSecondary.opacity(0.5), lineWidth: 1.5))
+                .frame(width: 34, height: 20).position(x: w / 2, y: h * 0.18)
+            // Two pits
+            pit(x: w * 0.3, h: h, label: "Pit in use", active: true)
+            pit(x: w * 0.7, h: h, label: "Resting → compost", active: false)
+            // Y junction
+            Path { p in
+                p.move(to: CGPoint(x: w / 2, y: h * 0.28))
+                p.addLine(to: CGPoint(x: w * 0.3, y: h * 0.5))
+                p.move(to: CGPoint(x: w / 2, y: h * 0.28))
+                p.addLine(to: CGPoint(x: w * 0.7, y: h * 0.5))
+            }.stroke(Color.compatBrown.opacity(0.6), lineWidth: 4)
         }
     }
 
@@ -93,25 +105,41 @@ struct BiogasPlantDiagram: View {
     var body: some View {
         SDFigure(tint: .green) {
             GeometryReader { geo in
-                let w = geo.size.width, h = geo.size.height
-                ZStack {
-                    Group {
-                        // Digester tank with dome
-                        Rectangle().fill(Color.compatBrown.opacity(0.35)).frame(width: w * 0.4, height: h * 0.4).position(x: w / 2, y: h * 0.62)
-                        DomeShape().fill(.green.opacity(0.3))
-                            .overlay(DomeShape().stroke(.green.opacity(0.6), lineWidth: 2))
-                            .frame(width: w * 0.4, height: h * 0.3).position(x: w / 2, y: h * 0.4)
-                        // Gas outlet pipe
-                        Rectangle().fill(.green.opacity(0.6)).frame(width: 6, height: h * 0.18).position(x: w / 2, y: h * 0.18)
-                    }
-                    Group {
-                        Image(systemName: SFSymbolCompat.name("flame.fill"))
-                            .font(.system(size: 16)).foregroundColor(.orange).position(x: w / 2, y: h * 0.1)
-                        SDLabel(text: "Biogas (methane)", color: .green).position(x: w * 0.72, y: h * 0.22)
-                        SDLabel(text: "Dung + waste", color: Color.compatBrown).position(x: w / 2, y: h * 0.7)
-                    }
-                }
+                content(w: geo.size.width, h: geo.size.height)
             }
+        }
+    }
+
+    // Body split into typed helpers so the Swift 5.5 type-checker on the
+    // Big-Sur iMac (Xcode 13.2.1) never has to solve one deep
+    // GeometryReader→ZStack result-builder closure full of inline CGFloat
+    // coordinate math in a single pass — that recursion overflows the
+    // compiler stack → `Segmentation fault: 11`.
+    private func content(w: CGFloat, h: CGFloat) -> some View {
+        ZStack {
+            digester(w: w, h: h)
+            gasLabels(w: w, h: h)
+        }
+    }
+
+    private func digester(w: CGFloat, h: CGFloat) -> some View {
+        Group {
+            // Digester tank with dome
+            Rectangle().fill(Color.compatBrown.opacity(0.35)).frame(width: w * 0.4, height: h * 0.4).position(x: w / 2, y: h * 0.62)
+            DomeShape().fill(.green.opacity(0.3))
+                .overlay(DomeShape().stroke(.green.opacity(0.6), lineWidth: 2))
+                .frame(width: w * 0.4, height: h * 0.3).position(x: w / 2, y: h * 0.4)
+            // Gas outlet pipe
+            Rectangle().fill(.green.opacity(0.6)).frame(width: 6, height: h * 0.18).position(x: w / 2, y: h * 0.18)
+        }
+    }
+
+    private func gasLabels(w: CGFloat, h: CGFloat) -> some View {
+        Group {
+            Image(systemName: SFSymbolCompat.name("flame.fill"))
+                .font(.system(size: 16)).foregroundColor(.orange).position(x: w / 2, y: h * 0.1)
+            SDLabel(text: "Biogas (methane)", color: .green).position(x: w * 0.72, y: h * 0.22)
+            SDLabel(text: "Dung + waste", color: Color.compatBrown).position(x: w / 2, y: h * 0.7)
         }
     }
 }
@@ -137,24 +165,40 @@ struct SepticTankDiagram: View {
     var body: some View {
         SDFigure(tint: Color.compatBrown) {
             GeometryReader { geo in
-                let w = geo.size.width, h = geo.size.height
-                ZStack {
-                    Group {
-                        // Tank
-                        Rectangle().stroke(DesignTokens.BrandColor.canvasText.opacity(0.6), lineWidth: 2)
-                            .frame(width: w * 0.7, height: h * 0.5).position(x: w / 2, y: h * 0.5)
-                        // Layers: scum (top), liquid (mid), sludge (bottom)
-                        layer(Color.compatBrown, w: w * 0.68, h: h * 0.12, x: w / 2, y: h * 0.3)
-                        layer(Color.compatBlue, w: w * 0.68, h: h * 0.2, x: w / 2, y: h * 0.5)
-                        layer(DesignTokens.BrandColor.canvasTextSecondary, w: w * 0.68, h: h * 0.12, x: w / 2, y: h * 0.68)
-                    }
-                    Group {
-                        SDLabel(text: "Scum (floats)", color: Color.compatBrown).position(x: w / 2, y: h * 0.3)
-                        SDLabel(text: "Liquid → out", color: Color.compatBlue).position(x: w / 2, y: h * 0.5)
-                        SDLabel(text: "Sludge (sinks)").position(x: w / 2, y: h * 0.68)
-                    }
-                }
+                content(w: geo.size.width, h: geo.size.height)
             }
+        }
+    }
+
+    // Body split into typed helpers so the Swift 5.5 type-checker on the
+    // Big-Sur iMac (Xcode 13.2.1) never has to solve one deep
+    // GeometryReader→ZStack result-builder closure full of inline CGFloat
+    // coordinate math in a single pass — that recursion overflows the
+    // compiler stack → `Segmentation fault: 11`.
+    private func content(w: CGFloat, h: CGFloat) -> some View {
+        ZStack {
+            tankLayers(w: w, h: h)
+            tankLabels(w: w, h: h)
+        }
+    }
+
+    private func tankLayers(w: CGFloat, h: CGFloat) -> some View {
+        Group {
+            // Tank
+            Rectangle().stroke(DesignTokens.BrandColor.canvasText.opacity(0.6), lineWidth: 2)
+                .frame(width: w * 0.7, height: h * 0.5).position(x: w / 2, y: h * 0.5)
+            // Layers: scum (top), liquid (mid), sludge (bottom)
+            layer(Color.compatBrown, w: w * 0.68, h: h * 0.12, x: w / 2, y: h * 0.3)
+            layer(Color.compatBlue, w: w * 0.68, h: h * 0.2, x: w / 2, y: h * 0.5)
+            layer(DesignTokens.BrandColor.canvasTextSecondary, w: w * 0.68, h: h * 0.12, x: w / 2, y: h * 0.68)
+        }
+    }
+
+    private func tankLabels(w: CGFloat, h: CGFloat) -> some View {
+        Group {
+            SDLabel(text: "Scum (floats)", color: Color.compatBrown).position(x: w / 2, y: h * 0.3)
+            SDLabel(text: "Liquid → out", color: Color.compatBlue).position(x: w / 2, y: h * 0.5)
+            SDLabel(text: "Sludge (sinks)").position(x: w / 2, y: h * 0.68)
         }
     }
 

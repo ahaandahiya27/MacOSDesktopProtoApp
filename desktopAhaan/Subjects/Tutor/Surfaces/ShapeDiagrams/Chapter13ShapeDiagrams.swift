@@ -12,36 +12,50 @@ import SwiftUI
 /// A straight, sloping line means steady (uniform) speed — equal distance in
 /// equal time.
 struct DistanceTimeDiagram: View {
+    // Split into small typed helpers so Swift 5.5's type-checker doesn't
+    // overflow its stack on one deep @ViewBuilder closure. No visual change.
     var body: some View {
         SDFigure(tint: Color.compatBlue) {
             GeometryReader { geo in
-                let w = geo.size.width, h = geo.size.height
-                let ox = w * 0.16, oy = h * 0.84   // origin
-                let tx = w * 0.9, ty = h * 0.12     // axis ends
-                ZStack {
-                    Group {
-                        // Axes
-                        Path { p in
-                            p.move(to: CGPoint(x: ox, y: ty))
-                            p.addLine(to: CGPoint(x: ox, y: oy))
-                            p.addLine(to: CGPoint(x: tx, y: oy))
-                        }.stroke(DesignTokens.BrandColor.canvasText.opacity(0.7), lineWidth: 2)
-                        // Uniform-motion line
-                        Path { p in
-                            p.move(to: CGPoint(x: ox, y: oy))
-                            p.addLine(to: CGPoint(x: tx, y: ty))
-                        }.stroke(Color.compatBlue.opacity(0.8),
-                                 style: StrokeStyle(lineWidth: 3, lineCap: .round))
-                    }
-                    Group {
-                        SDLabel(text: "Distance →", color: Color.compatBlue)
-                            .rotationEffect(.degrees(-90)).position(x: ox - 14, y: h * 0.48)
-                        SDLabel(text: "Time →").position(x: w * 0.5, y: oy + 14)
-                        SDLabel(text: "Straight line = uniform speed", color: Color.compatBlue)
-                            .position(x: w * 0.56, y: h * 0.28)
-                    }
-                }
+                content(w: geo.size.width, h: geo.size.height)
             }
+        }
+    }
+
+    private func content(w: CGFloat, h: CGFloat) -> some View {
+        ZStack {
+            graph(w: w, h: h)
+            labels(w: w, h: h)
+        }
+    }
+
+    private func graph(w: CGFloat, h: CGFloat) -> some View {
+        let ox = w * 0.16, oy = h * 0.84   // origin
+        let tx = w * 0.9, ty = h * 0.12     // axis ends
+        return Group {
+            // Axes
+            Path { p in
+                p.move(to: CGPoint(x: ox, y: ty))
+                p.addLine(to: CGPoint(x: ox, y: oy))
+                p.addLine(to: CGPoint(x: tx, y: oy))
+            }.stroke(DesignTokens.BrandColor.canvasText.opacity(0.7), lineWidth: 2)
+            // Uniform-motion line
+            Path { p in
+                p.move(to: CGPoint(x: ox, y: oy))
+                p.addLine(to: CGPoint(x: tx, y: ty))
+            }.stroke(Color.compatBlue.opacity(0.8),
+                     style: StrokeStyle(lineWidth: 3, lineCap: .round))
+        }
+    }
+
+    private func labels(w: CGFloat, h: CGFloat) -> some View {
+        let ox = w * 0.16, oy = h * 0.84   // origin
+        return Group {
+            SDLabel(text: "Distance →", color: Color.compatBlue)
+                .rotationEffect(.degrees(-90)).position(x: ox - 14, y: h * 0.48)
+            SDLabel(text: "Time →").position(x: w * 0.5, y: oy + 14)
+            SDLabel(text: "Straight line = uniform speed", color: Color.compatBlue)
+                .position(x: w * 0.56, y: h * 0.28)
         }
     }
 }

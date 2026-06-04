@@ -11,36 +11,49 @@ import SwiftUI
 /// from the Sun — is why we get seasons: the hemisphere leaning toward the Sun
 /// gets more direct light.
 struct EarthTiltDiagram: View {
+    // Big Sur / Swift 5.5 fix: the deep GeometryReader+ZStack closure is split
+    // into typed helper funcs so the type-checker doesn't overflow its stack.
     var body: some View {
         SDFigure(tint: Color.compatBlue) {
             GeometryReader { geo in
-                let w = geo.size.width, h = geo.size.height
-                let cx = w * 0.62, cy = h * 0.5
-                let r = min(w, h) * 0.26
-                ZStack {
-                    Group {
-                        // Sun + rays
-                        Circle().fill(.orange.opacity(0.8)).frame(width: 30, height: 30).position(x: w * 0.12, y: cy)
-                        ForEach(0..<3, id: \.self) { i in
-                            Image(systemName: SFSymbolCompat.name("arrow.right"))
-                                .font(.system(size: 12, weight: .bold)).foregroundColor(.orange)
-                                .position(x: w * 0.32, y: cy - 24 + CGFloat(i) * 24)
-                        }
-                        // Earth
-                        Circle().fill(Color.compatBlue.opacity(0.35))
-                            .overlay(Circle().strokeBorder(Color.compatBlue.opacity(0.6), lineWidth: 1.5))
-                            .frame(width: r * 2, height: r * 2).position(x: cx, y: cy)
-                        // Tilted axis (23.5°)
-                        Rectangle().fill(.red.opacity(0.7)).frame(width: 2.5, height: r * 2.6)
-                            .rotationEffect(.degrees(23.5)).position(x: cx, y: cy)
-                    }
-                    Group {
-                        SDLabel(text: "Sun", color: .orange).position(x: w * 0.12, y: cy - 26)
-                        SDLabel(text: "Axis tilt ≈ 23.5°", color: .red).position(x: cx, y: cy - r - 14)
-                        SDLabel(text: "Tilt → seasons", color: Color.compatBlue).position(x: cx, y: cy + r + 14)
-                    }
-                }
+                content(w: geo.size.width, h: geo.size.height)
             }
+        }
+    }
+
+    private func content(w: CGFloat, h: CGFloat) -> some View {
+        let cx = w * 0.62, cy = h * 0.5
+        let r = min(w, h) * 0.26
+        return ZStack {
+            bodies(w: w, h: h, cx: cx, cy: cy, r: r)
+            labels(w: w, h: h, cx: cx, cy: cy, r: r)
+        }
+    }
+
+    private func bodies(w: CGFloat, h: CGFloat, cx: CGFloat, cy: CGFloat, r: CGFloat) -> some View {
+        Group {
+            // Sun + rays
+            Circle().fill(.orange.opacity(0.8)).frame(width: 30, height: 30).position(x: w * 0.12, y: cy)
+            ForEach(0..<3, id: \.self) { i in
+                Image(systemName: SFSymbolCompat.name("arrow.right"))
+                    .font(.system(size: 12, weight: .bold)).foregroundColor(.orange)
+                    .position(x: w * 0.32, y: cy - 24 + CGFloat(i) * 24)
+            }
+            // Earth
+            Circle().fill(Color.compatBlue.opacity(0.35))
+                .overlay(Circle().strokeBorder(Color.compatBlue.opacity(0.6), lineWidth: 1.5))
+                .frame(width: r * 2, height: r * 2).position(x: cx, y: cy)
+            // Tilted axis (23.5°)
+            Rectangle().fill(.red.opacity(0.7)).frame(width: 2.5, height: r * 2.6)
+                .rotationEffect(.degrees(23.5)).position(x: cx, y: cy)
+        }
+    }
+
+    private func labels(w: CGFloat, h: CGFloat, cx: CGFloat, cy: CGFloat, r: CGFloat) -> some View {
+        Group {
+            SDLabel(text: "Sun", color: .orange).position(x: w * 0.12, y: cy - 26)
+            SDLabel(text: "Axis tilt ≈ 23.5°", color: .red).position(x: cx, y: cy - r - 14)
+            SDLabel(text: "Tilt → seasons", color: Color.compatBlue).position(x: cx, y: cy + r + 14)
         }
     }
 }

@@ -14,29 +14,40 @@ struct WaterCycleDiagram: View {
     var body: some View {
         SDFigure(tint: Color.compatBlue) {
             GeometryReader { geo in
-                let w = geo.size.width, h = geo.size.height
-                ZStack {
-                    Group {
-                        Circle().fill(.orange.opacity(0.7)).frame(width: 24, height: 24).position(x: w * 0.14, y: h * 0.16)
-                        CloudShape16().fill(.white.opacity(0.9)).frame(width: 70, height: 28).position(x: w * 0.6, y: h * 0.2)
-                        // Sea
-                        Rectangle().fill(Color.compatBlue.opacity(0.35)).frame(width: w, height: h * 0.22).position(x: w / 2, y: h * 0.9)
-                    }
-                    Group {
-                        Image(systemName: SFSymbolCompat.name("arrow.up"))
-                            .font(.system(size: 16, weight: .bold)).foregroundColor(.orange).position(x: w * 0.22, y: h * 0.55)
-                        // Rain
-                        ForEach(0..<4, id: \.self) { i in
-                            Capsule().fill(Color.compatBlue.opacity(0.6)).frame(width: 2, height: 9)
-                                .position(x: w * (0.52 + Double(i) * 0.05), y: h * 0.5)
-                        }
-                        SDLabel(text: "Evaporation", color: .orange).position(x: w * 0.2, y: h * 0.4)
-                        SDLabel(text: "Condensation → clouds").position(x: w * 0.6, y: h * 0.36)
-                        SDLabel(text: "Rain", color: Color.compatBlue).position(x: w * 0.58, y: h * 0.62)
-                        SDLabel(text: "Collects in sea", color: Color.compatBlue).position(x: w / 2, y: h * 0.92)
-                    }
-                }
+                content(w: geo.size.width, h: geo.size.height)
             }
+        }
+    }
+    // Body split into typed helpers so the Swift 5.5 type-checker on the
+    // Big-Sur iMac never solves one deep GeometryReader→ZStack result-builder
+    // closure full of inline CGFloat coordinate math in a single pass.
+    private func content(w: CGFloat, h: CGFloat) -> some View {
+        ZStack {
+            scene(w: w, h: h)
+            labels(w: w, h: h)
+        }
+    }
+    private func scene(w: CGFloat, h: CGFloat) -> some View {
+        Group {
+            Circle().fill(.orange.opacity(0.7)).frame(width: 24, height: 24).position(x: w * 0.14, y: h * 0.16)
+            CloudShape16().fill(.white.opacity(0.9)).frame(width: 70, height: 28).position(x: w * 0.6, y: h * 0.2)
+            // Sea
+            Rectangle().fill(Color.compatBlue.opacity(0.35)).frame(width: w, height: h * 0.22).position(x: w / 2, y: h * 0.9)
+        }
+    }
+    private func labels(w: CGFloat, h: CGFloat) -> some View {
+        Group {
+            Image(systemName: SFSymbolCompat.name("arrow.up"))
+                .font(.system(size: 16, weight: .bold)).foregroundColor(.orange).position(x: w * 0.22, y: h * 0.55)
+            // Rain
+            ForEach(0..<4, id: \.self) { i in
+                Capsule().fill(Color.compatBlue.opacity(0.6)).frame(width: 2, height: 9)
+                    .position(x: w * (0.52 + Double(i) * 0.05), y: h * 0.5)
+            }
+            SDLabel(text: "Evaporation", color: .orange).position(x: w * 0.2, y: h * 0.4)
+            SDLabel(text: "Condensation → clouds").position(x: w * 0.6, y: h * 0.36)
+            SDLabel(text: "Rain", color: Color.compatBlue).position(x: w * 0.58, y: h * 0.62)
+            SDLabel(text: "Collects in sea", color: Color.compatBlue).position(x: w / 2, y: h * 0.92)
         }
     }
 }
@@ -61,27 +72,38 @@ struct AquiferDiagram: View {
     var body: some View {
         SDFigure(tint: Color.compatBrown) {
             GeometryReader { geo in
-                let w = geo.size.width, h = geo.size.height
-                ZStack {
-                    Group {
-                        // Layers
-                        Rectangle().fill(Color.compatBrown.opacity(0.35)).frame(width: w, height: h * 0.3).position(x: w / 2, y: h * 0.2)
-                        Rectangle().fill(Color.compatBlue.opacity(0.3)).frame(width: w, height: h * 0.32).position(x: w / 2, y: h * 0.55)
-                        Rectangle().fill(DesignTokens.BrandColor.canvasTextSecondary.opacity(0.4)).frame(width: w, height: h * 0.2).position(x: w / 2, y: h * 0.85)
-                        // Water table line
-                        Rectangle().fill(Color.compatBlue.opacity(0.8)).frame(width: w, height: 2).position(x: w / 2, y: h * 0.4)
-                        // Well
-                        Rectangle().fill(DesignTokens.BrandColor.canvasText.opacity(0.4)).frame(width: 12, height: h * 0.6).position(x: w * 0.78, y: h * 0.45)
-                    }
-                    Group {
-                        SDLabel(text: "Permeable soil", color: Color.compatBrown).position(x: w * 0.28, y: h * 0.2)
-                        SDLabel(text: "Water table", color: Color.compatBlue).position(x: w * 0.3, y: h * 0.4)
-                        SDLabel(text: "Aquifer (saturated)", color: Color.compatBlue).position(x: w * 0.34, y: h * 0.58)
-                        SDLabel(text: "Impermeable rock").position(x: w * 0.4, y: h * 0.85)
-                        SDLabel(text: "Well").position(x: w * 0.78, y: h * 0.12)
-                    }
-                }
+                content(w: geo.size.width, h: geo.size.height)
             }
+        }
+    }
+    // Body split into typed helpers so the Swift 5.5 type-checker on the
+    // Big-Sur iMac never solves one deep GeometryReader→ZStack result-builder
+    // closure full of inline CGFloat coordinate math in a single pass.
+    private func content(w: CGFloat, h: CGFloat) -> some View {
+        ZStack {
+            layers(w: w, h: h)
+            labels(w: w, h: h)
+        }
+    }
+    private func layers(w: CGFloat, h: CGFloat) -> some View {
+        Group {
+            // Layers
+            Rectangle().fill(Color.compatBrown.opacity(0.35)).frame(width: w, height: h * 0.3).position(x: w / 2, y: h * 0.2)
+            Rectangle().fill(Color.compatBlue.opacity(0.3)).frame(width: w, height: h * 0.32).position(x: w / 2, y: h * 0.55)
+            Rectangle().fill(DesignTokens.BrandColor.canvasTextSecondary.opacity(0.4)).frame(width: w, height: h * 0.2).position(x: w / 2, y: h * 0.85)
+            // Water table line
+            Rectangle().fill(Color.compatBlue.opacity(0.8)).frame(width: w, height: 2).position(x: w / 2, y: h * 0.4)
+            // Well
+            Rectangle().fill(DesignTokens.BrandColor.canvasText.opacity(0.4)).frame(width: 12, height: h * 0.6).position(x: w * 0.78, y: h * 0.45)
+        }
+    }
+    private func labels(w: CGFloat, h: CGFloat) -> some View {
+        Group {
+            SDLabel(text: "Permeable soil", color: Color.compatBrown).position(x: w * 0.28, y: h * 0.2)
+            SDLabel(text: "Water table", color: Color.compatBlue).position(x: w * 0.3, y: h * 0.4)
+            SDLabel(text: "Aquifer (saturated)", color: Color.compatBlue).position(x: w * 0.34, y: h * 0.58)
+            SDLabel(text: "Impermeable rock").position(x: w * 0.4, y: h * 0.85)
+            SDLabel(text: "Well").position(x: w * 0.78, y: h * 0.12)
         }
     }
 }

@@ -13,52 +13,70 @@ import SwiftUI
 /// oesophagus → J-shaped stomach → coiled small intestine framed by the
 /// large intestine, with the liver as an accessory gland.
 struct DigestiveSystemDiagram: View {
+    // Structural split: one deep GeometryReader/ZStack closure broken into
+    // small typed helpers so Swift 5.5's type-checker doesn't segfault. No
+    // visual change — every coordinate/colour/string preserved verbatim.
     var body: some View {
         SDFigure(tint: Color.compatBrown) {
             GeometryReader { geo in
-                let w = geo.size.width, h = geo.size.height
-                let cx = w / 2
-                ZStack {
-                    Group {
-                        // Large intestine frame surrounding the coils
-                        Ch02ColonShape()
-                            .stroke(Color.compatBrown.opacity(0.55), lineWidth: 9)
-                            .frame(width: min(w * 0.7, 220), height: h * 0.42)
-                            .position(x: cx, y: h * 0.66)
-                        // Small intestine coils
-                        Ch02CoilShape()
-                            .stroke(Color.orange.opacity(0.65), lineWidth: 7)
-                            .frame(width: min(w * 0.5, 150), height: h * 0.3)
-                            .position(x: cx, y: h * 0.66)
-                    }
-                    Group {
-                        // Oesophagus
-                        Capsule()
-                            .fill(Color.compatBrown.opacity(0.35))
-                            .frame(width: 10, height: h * 0.22)
-                            .position(x: cx, y: h * 0.18)
-                        // Stomach (J sac)
-                        Ch02StomachShape()
-                            .fill(Color.red.opacity(0.28))
-                            .overlay(Ch02StomachShape().stroke(Color.red.opacity(0.6), lineWidth: 2))
-                            .frame(width: 64, height: 52)
-                            .position(x: cx + 10, y: h * 0.36)
-                        // Liver accessory gland
-                        SDLeafShape()
-                            .fill(Color.compatBrown.opacity(0.5))
-                            .frame(width: 46, height: 30)
-                            .position(x: cx - 46, y: h * 0.34)
-                    }
-                    Group {
-                        SDLabel(text: "Mouth").position(x: cx, y: 10)
-                        SDLabel(text: "Oesophagus").position(x: cx + 52, y: h * 0.18)
-                        SDLabel(text: "Stomach", color: .red).position(x: cx + 56, y: h * 0.38)
-                        SDLabel(text: "Liver", color: Color.compatBrown).position(x: cx - 46, y: h * 0.34 - 22)
-                        SDLabel(text: "Small intestine").position(x: cx, y: h * 0.66)
-                        SDLabel(text: "Large intestine", color: Color.compatBrown).position(x: cx, y: min(h - 8, h * 0.9))
-                    }
-                }
+                content(w: geo.size.width, h: geo.size.height)
             }
+        }
+    }
+
+    private func content(w: CGFloat, h: CGFloat) -> some View {
+        let cx = w / 2
+        return ZStack {
+            intestines(w: w, h: h, cx: cx)
+            organs(w: w, h: h, cx: cx)
+            labels(w: w, h: h, cx: cx)
+        }
+    }
+
+    private func intestines(w: CGFloat, h: CGFloat, cx: CGFloat) -> some View {
+        Group {
+            // Large intestine frame surrounding the coils
+            Ch02ColonShape()
+                .stroke(Color.compatBrown.opacity(0.55), lineWidth: 9)
+                .frame(width: min(w * 0.7, 220), height: h * 0.42)
+                .position(x: cx, y: h * 0.66)
+            // Small intestine coils
+            Ch02CoilShape()
+                .stroke(Color.orange.opacity(0.65), lineWidth: 7)
+                .frame(width: min(w * 0.5, 150), height: h * 0.3)
+                .position(x: cx, y: h * 0.66)
+        }
+    }
+
+    private func organs(w: CGFloat, h: CGFloat, cx: CGFloat) -> some View {
+        Group {
+            // Oesophagus
+            Capsule()
+                .fill(Color.compatBrown.opacity(0.35))
+                .frame(width: 10, height: h * 0.22)
+                .position(x: cx, y: h * 0.18)
+            // Stomach (J sac)
+            Ch02StomachShape()
+                .fill(Color.red.opacity(0.28))
+                .overlay(Ch02StomachShape().stroke(Color.red.opacity(0.6), lineWidth: 2))
+                .frame(width: 64, height: 52)
+                .position(x: cx + 10, y: h * 0.36)
+            // Liver accessory gland
+            SDLeafShape()
+                .fill(Color.compatBrown.opacity(0.5))
+                .frame(width: 46, height: 30)
+                .position(x: cx - 46, y: h * 0.34)
+        }
+    }
+
+    private func labels(w: CGFloat, h: CGFloat, cx: CGFloat) -> some View {
+        Group {
+            SDLabel(text: "Mouth").position(x: cx, y: 10)
+            SDLabel(text: "Oesophagus").position(x: cx + 52, y: h * 0.18)
+            SDLabel(text: "Stomach", color: .red).position(x: cx + 56, y: h * 0.38)
+            SDLabel(text: "Liver", color: Color.compatBrown).position(x: cx - 46, y: h * 0.34 - 22)
+            SDLabel(text: "Small intestine").position(x: cx, y: h * 0.66)
+            SDLabel(text: "Large intestine", color: Color.compatBrown).position(x: cx, y: min(h - 8, h * 0.9))
         }
     }
 }
@@ -250,29 +268,42 @@ private struct ToothShape: Shape {
 /// (rumen → reticulum → omasum → abomasum); softened cud travels back up to
 /// the mouth to be chewed again.
 struct RumenDiagram: View {
+    // Structural split: deep GeometryReader/ZStack closure broken into typed
+    // helpers for the Swift 5.5 type-checker. No visual change.
     var body: some View {
         SDFigure(tint: .green) {
             GeometryReader { geo in
-                let w = geo.size.width, h = geo.size.height
-                ZStack {
-                    Group {
-                        chamber("Rumen", .green, x: w * 0.30, y: h * 0.40, dw: 80, dh: 64)
-                        chamber("Reticulum", Color.compatTeal, x: w * 0.62, y: h * 0.30, dw: 46, dh: 40)
-                        chamber("Omasum", Color.compatBlue, x: w * 0.74, y: h * 0.58, dw: 42, dh: 44)
-                        chamber("Abomasum", Color.compatBrown, x: w * 0.5, y: h * 0.74, dw: 56, dh: 36)
-                    }
-                    Group {
-                        // Cud-return arrow (chambers back up to mouth)
-                        Ch02CudArrow()
-                            .stroke(Color.green.opacity(0.7),
-                                    style: StrokeStyle(lineWidth: 2.5, lineCap: .round, dash: [5, 3]))
-                            .frame(width: w * 0.5, height: h * 0.5)
-                            .position(x: w * 0.5, y: h * 0.32)
-                        SDLabel(text: "cud chewed again", color: .green)
-                            .position(x: w * 0.5, y: 12)
-                    }
-                }
+                content(w: geo.size.width, h: geo.size.height)
             }
+        }
+    }
+
+    private func content(w: CGFloat, h: CGFloat) -> some View {
+        ZStack {
+            chambers(w: w, h: h)
+            cudReturn(w: w, h: h)
+        }
+    }
+
+    private func chambers(w: CGFloat, h: CGFloat) -> some View {
+        Group {
+            chamber("Rumen", .green, x: w * 0.30, y: h * 0.40, dw: 80, dh: 64)
+            chamber("Reticulum", Color.compatTeal, x: w * 0.62, y: h * 0.30, dw: 46, dh: 40)
+            chamber("Omasum", Color.compatBlue, x: w * 0.74, y: h * 0.58, dw: 42, dh: 44)
+            chamber("Abomasum", Color.compatBrown, x: w * 0.5, y: h * 0.74, dw: 56, dh: 36)
+        }
+    }
+
+    private func cudReturn(w: CGFloat, h: CGFloat) -> some View {
+        Group {
+            // Cud-return arrow (chambers back up to mouth)
+            Ch02CudArrow()
+                .stroke(Color.green.opacity(0.7),
+                        style: StrokeStyle(lineWidth: 2.5, lineCap: .round, dash: [5, 3]))
+                .frame(width: w * 0.5, height: h * 0.5)
+                .position(x: w * 0.5, y: h * 0.32)
+            SDLabel(text: "cud chewed again", color: .green)
+                .position(x: w * 0.5, y: 12)
         }
     }
 

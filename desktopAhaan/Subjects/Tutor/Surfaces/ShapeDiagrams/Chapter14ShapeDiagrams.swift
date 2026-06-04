@@ -10,37 +10,50 @@ import SwiftUI
 /// A simple electric circuit: a cell pushes current around a loop of wire,
 /// through a closed switch, to light a bulb.
 struct SimpleCircuitDiagram: View {
+    // Split into small typed helpers so Swift 5.5's type-checker doesn't
+    // overflow its stack on one deep @ViewBuilder closure. No visual change.
     var body: some View {
         SDFigure(tint: .orange) {
             GeometryReader { geo in
-                let w = geo.size.width, h = geo.size.height
-                let inset = min(w, h) * 0.18
-                let frame = CGRect(x: inset, y: inset, width: w - inset * 2, height: h - inset * 2)
-                ZStack {
-                    Rectangle().stroke(DesignTokens.BrandColor.canvasText.opacity(0.6), lineWidth: 2.5)
-                        .frame(width: frame.width, height: frame.height)
-                        .position(x: w / 2, y: h / 2)
-                    Group {
-                        // Cell (top)
-                        CellGlyph().frame(width: 40, height: 18).position(x: w / 2, y: inset)
-                        // Bulb (bottom)
-                        ZStack {
-                            Circle().fill(.yellow.opacity(0.7)).frame(width: 24, height: 24)
-                            Image(systemName: SFSymbolCompat.name("multiply"))
-                                .font(.system(size: 12, weight: .bold)).foregroundColor(.orange)
-                        }.position(x: w / 2, y: h - inset)
-                        // Switch (right side) — closed
-                        Capsule().fill(DesignTokens.BrandColor.canvasText.opacity(0.5))
-                            .frame(width: 22, height: 6).rotationEffect(.degrees(-18))
-                            .position(x: w - inset, y: h / 2)
-                    }
-                    Group {
-                        SDLabel(text: "Cell").position(x: w / 2, y: inset - 16)
-                        SDLabel(text: "Bulb", color: .orange).position(x: w / 2, y: h - inset + 18)
-                        SDLabel(text: "Switch").position(x: w - inset, y: h / 2 - 18)
-                    }
-                }
+                content(w: geo.size.width, h: geo.size.height)
             }
+        }
+    }
+
+    private func content(w: CGFloat, h: CGFloat) -> some View {
+        let inset = min(w, h) * 0.18
+        let frame = CGRect(x: inset, y: inset, width: w - inset * 2, height: h - inset * 2)
+        return ZStack {
+            Rectangle().stroke(DesignTokens.BrandColor.canvasText.opacity(0.6), lineWidth: 2.5)
+                .frame(width: frame.width, height: frame.height)
+                .position(x: w / 2, y: h / 2)
+            components(w: w, h: h, inset: inset)
+            labels(w: w, h: h, inset: inset)
+        }
+    }
+
+    private func components(w: CGFloat, h: CGFloat, inset: CGFloat) -> some View {
+        Group {
+            // Cell (top)
+            CellGlyph().frame(width: 40, height: 18).position(x: w / 2, y: inset)
+            // Bulb (bottom)
+            ZStack {
+                Circle().fill(.yellow.opacity(0.7)).frame(width: 24, height: 24)
+                Image(systemName: SFSymbolCompat.name("multiply"))
+                    .font(.system(size: 12, weight: .bold)).foregroundColor(.orange)
+            }.position(x: w / 2, y: h - inset)
+            // Switch (right side) — closed
+            Capsule().fill(DesignTokens.BrandColor.canvasText.opacity(0.5))
+                .frame(width: 22, height: 6).rotationEffect(.degrees(-18))
+                .position(x: w - inset, y: h / 2)
+        }
+    }
+
+    private func labels(w: CGFloat, h: CGFloat, inset: CGFloat) -> some View {
+        Group {
+            SDLabel(text: "Cell").position(x: w / 2, y: inset - 16)
+            SDLabel(text: "Bulb", color: .orange).position(x: w / 2, y: h - inset + 18)
+            SDLabel(text: "Switch").position(x: w - inset, y: h / 2 - 18)
         }
     }
 }
@@ -61,37 +74,50 @@ private struct CellGlyph: View {
 /// the core becomes a magnet and attracts iron objects — and stops when the
 /// current is switched off.
 struct ElectromagnetDiagram: View {
+    // Split into small typed helpers so Swift 5.5's type-checker doesn't
+    // overflow its stack on one deep @ViewBuilder closure. No visual change.
     var body: some View {
         SDFigure(tint: Color.compatBlue) {
             GeometryReader { geo in
-                let w = geo.size.width, h = geo.size.height
-                ZStack {
-                    Group {
-                        // Iron core
-                        RoundedRectangle(cornerRadius: 4).fill(DesignTokens.BrandColor.canvasTextSecondary.opacity(0.5))
-                            .frame(width: w * 0.5, height: 22).position(x: w / 2, y: h * 0.45)
-                        // Coil turns
-                        ForEach(0..<6, id: \.self) { i in
-                            Ellipse().stroke(Color.compatBrown.opacity(0.7), lineWidth: 2.5)
-                                .frame(width: 16, height: 34)
-                                .position(x: w * 0.28 + CGFloat(i) * (w * 0.44 / 5), y: h * 0.45)
-                        }
-                        // Battery
-                        CellGlyph2().frame(width: 30, height: 20).position(x: w / 2, y: h * 0.16)
-                    }
-                    Group {
-                        // Attracted pins
-                        ForEach(0..<3, id: \.self) { i in
-                            Capsule().fill(DesignTokens.BrandColor.canvasTextSecondary)
-                                .frame(width: 3, height: 12)
-                                .position(x: w * 0.74 + CGFloat(i) * 6, y: h * 0.7)
-                        }
-                        SDLabel(text: "Iron core").position(x: w / 2, y: h * 0.62)
-                        SDLabel(text: "Coil + current", color: Color.compatBrown).position(x: w * 0.3, y: h * 0.2)
-                        SDLabel(text: "Attracts pins").position(x: w * 0.78, y: h * 0.85)
-                    }
-                }
+                content(w: geo.size.width, h: geo.size.height)
             }
+        }
+    }
+
+    private func content(w: CGFloat, h: CGFloat) -> some View {
+        ZStack {
+            coreAndCoil(w: w, h: h)
+            pinsAndLabels(w: w, h: h)
+        }
+    }
+
+    private func coreAndCoil(w: CGFloat, h: CGFloat) -> some View {
+        Group {
+            // Iron core
+            RoundedRectangle(cornerRadius: 4).fill(DesignTokens.BrandColor.canvasTextSecondary.opacity(0.5))
+                .frame(width: w * 0.5, height: 22).position(x: w / 2, y: h * 0.45)
+            // Coil turns
+            ForEach(0..<6, id: \.self) { i in
+                Ellipse().stroke(Color.compatBrown.opacity(0.7), lineWidth: 2.5)
+                    .frame(width: 16, height: 34)
+                    .position(x: w * 0.28 + CGFloat(i) * (w * 0.44 / 5), y: h * 0.45)
+            }
+            // Battery
+            CellGlyph2().frame(width: 30, height: 20).position(x: w / 2, y: h * 0.16)
+        }
+    }
+
+    private func pinsAndLabels(w: CGFloat, h: CGFloat) -> some View {
+        Group {
+            // Attracted pins
+            ForEach(0..<3, id: \.self) { i in
+                Capsule().fill(DesignTokens.BrandColor.canvasTextSecondary)
+                    .frame(width: 3, height: 12)
+                    .position(x: w * 0.74 + CGFloat(i) * 6, y: h * 0.7)
+            }
+            SDLabel(text: "Iron core").position(x: w / 2, y: h * 0.62)
+            SDLabel(text: "Coil + current", color: Color.compatBrown).position(x: w * 0.3, y: h * 0.2)
+            SDLabel(text: "Attracts pins").position(x: w * 0.78, y: h * 0.85)
         }
     }
 }
@@ -155,31 +181,44 @@ struct FuseMCBDiagram: View {
 /// Oersted's discovery: a current-carrying wire makes a nearby compass needle
 /// swing — the first proof that electricity produces magnetism.
 struct OerstedDiagram: View {
+    // Split into small typed helpers so Swift 5.5's type-checker doesn't
+    // overflow its stack on one deep @ViewBuilder closure. No visual change.
     var body: some View {
         SDFigure(tint: Color.compatBlue) {
             GeometryReader { geo in
-                let w = geo.size.width, h = geo.size.height
-                ZStack {
-                    Group {
-                        // Wire carrying current
-                        Rectangle().fill(Color.compatBrown.opacity(0.6)).frame(width: w * 0.7, height: 5)
-                            .position(x: w / 2, y: h * 0.3)
-                        Image(systemName: SFSymbolCompat.name("arrow.right"))
-                            .font(.system(size: 13, weight: .bold)).foregroundColor(Color.compatBrown)
-                            .position(x: w * 0.82, y: h * 0.3)
-                        // Compass below the wire
-                        Circle().stroke(DesignTokens.BrandColor.canvasText.opacity(0.6), lineWidth: 2)
-                            .frame(width: 60, height: 60).position(x: w / 2, y: h * 0.62)
-                        CompassNeedle().fill(.red.opacity(0.8))
-                            .frame(width: 44, height: 12).rotationEffect(.degrees(35))
-                            .position(x: w / 2, y: h * 0.62)
-                    }
-                    Group {
-                        SDLabel(text: "Current in wire", color: Color.compatBrown).position(x: w / 2, y: h * 0.16)
-                        SDLabel(text: "Needle deflects", color: .red).position(x: w / 2, y: h * 0.9)
-                    }
-                }
+                content(w: geo.size.width, h: geo.size.height)
             }
+        }
+    }
+
+    private func content(w: CGFloat, h: CGFloat) -> some View {
+        ZStack {
+            wireAndCompass(w: w, h: h)
+            labels(w: w, h: h)
+        }
+    }
+
+    private func wireAndCompass(w: CGFloat, h: CGFloat) -> some View {
+        Group {
+            // Wire carrying current
+            Rectangle().fill(Color.compatBrown.opacity(0.6)).frame(width: w * 0.7, height: 5)
+                .position(x: w / 2, y: h * 0.3)
+            Image(systemName: SFSymbolCompat.name("arrow.right"))
+                .font(.system(size: 13, weight: .bold)).foregroundColor(Color.compatBrown)
+                .position(x: w * 0.82, y: h * 0.3)
+            // Compass below the wire
+            Circle().stroke(DesignTokens.BrandColor.canvasText.opacity(0.6), lineWidth: 2)
+                .frame(width: 60, height: 60).position(x: w / 2, y: h * 0.62)
+            CompassNeedle().fill(.red.opacity(0.8))
+                .frame(width: 44, height: 12).rotationEffect(.degrees(35))
+                .position(x: w / 2, y: h * 0.62)
+        }
+    }
+
+    private func labels(w: CGFloat, h: CGFloat) -> some View {
+        Group {
+            SDLabel(text: "Current in wire", color: Color.compatBrown).position(x: w / 2, y: h * 0.16)
+            SDLabel(text: "Needle deflects", color: .red).position(x: w / 2, y: h * 0.9)
         }
     }
 }

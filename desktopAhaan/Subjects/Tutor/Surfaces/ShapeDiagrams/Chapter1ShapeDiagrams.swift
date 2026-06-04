@@ -59,29 +59,45 @@ struct ChloroplastDiagram: View {
     var body: some View {
         DiagramCanvas(tint: .green) {
             GeometryReader { geo in
-                let w = geo.size.width, h = geo.size.height
-                let cx = w / 2, cy = h / 2
-                let ow = min(w * 0.9, h * 2.0), oh = min(h * 0.78, w * 0.5)
-                ZStack {
-                    // Outer membrane + stroma
-                    Ellipse()
-                        .fill(Color.compatMint.opacity(0.30))
-                        .overlay(Ellipse().strokeBorder(Color.green.opacity(0.75), lineWidth: 2.5))
-                        .frame(width: ow, height: oh)
-                        .position(x: cx, y: cy)
-                    // Three grana (thylakoid stacks)
-                    ForEach(0..<3, id: \.self) { i in
-                        granum
-                            .position(x: cx + CGFloat(i - 1) * ow * 0.26, y: cy)
-                    }
-                    PartLabel(text: "Outer membrane", color: .green)
-                        .position(x: cx, y: max(12, cy - oh / 2 - 2))
-                    PartLabel(text: "Stroma")
-                        .position(x: cx + ow * 0.30, y: cy + oh * 0.30)
-                    PartLabel(text: "Thylakoid stacks (grana)", color: .green)
-                        .position(x: cx, y: min(h - 10, cy + oh / 2 + 4))
-                }
+                content(w: geo.size.width, h: geo.size.height)
             }
+        }
+    }
+    // Body split into typed helpers so the Swift 5.5 type-checker on the
+    // Big-Sur iMac never solves one deep GeometryReader→ZStack result-builder
+    // closure full of inline CGFloat coordinate math in a single pass.
+    private func content(w: CGFloat, h: CGFloat) -> some View {
+        let cx = w / 2, cy = h / 2
+        let ow = min(w * 0.9, h * 2.0), oh = min(h * 0.78, w * 0.5)
+        return ZStack {
+            membrane(cx: cx, cy: cy, ow: ow, oh: oh)
+            grana(cx: cx, cy: cy, ow: ow)
+            labels(cx: cx, cy: cy, ow: ow, oh: oh, h: h)
+        }
+    }
+    private func membrane(cx: CGFloat, cy: CGFloat, ow: CGFloat, oh: CGFloat) -> some View {
+        // Outer membrane + stroma
+        Ellipse()
+            .fill(Color.compatMint.opacity(0.30))
+            .overlay(Ellipse().strokeBorder(Color.green.opacity(0.75), lineWidth: 2.5))
+            .frame(width: ow, height: oh)
+            .position(x: cx, y: cy)
+    }
+    private func grana(cx: CGFloat, cy: CGFloat, ow: CGFloat) -> some View {
+        // Three grana (thylakoid stacks)
+        ForEach(0..<3, id: \.self) { i in
+            granum
+                .position(x: cx + CGFloat(i - 1) * ow * 0.26, y: cy)
+        }
+    }
+    private func labels(cx: CGFloat, cy: CGFloat, ow: CGFloat, oh: CGFloat, h: CGFloat) -> some View {
+        Group {
+            PartLabel(text: "Outer membrane", color: .green)
+                .position(x: cx, y: max(12, cy - oh / 2 - 2))
+            PartLabel(text: "Stroma")
+                .position(x: cx + ow * 0.30, y: cy + oh * 0.30)
+            PartLabel(text: "Thylakoid stacks (grana)", color: .green)
+                .position(x: cx, y: min(h - 10, cy + oh / 2 + 4))
         }
     }
 

@@ -201,6 +201,24 @@ if [ -f "scripts/check_swift55_syntax.py" ]; then
     fi
 fi
 
+# 8b) ViewBuilder DEPTH lint — a monolithic `GeometryReader { ZStack { Group {
+#     many .position(...) with inline w/h coordinate math } } }` closure can be
+#     too deep for the Swift 5.5 type-checker, which SIGSEGVs the compiler on
+#     the iMac (`error: Segmentation fault: 11`) while building clean on the dev
+#     Mac. Bit the iMac twice on 2026-06-04 (LungAnatomyDiagram + ~25 sibling
+#     ShapeDiagrams). The fix is delegation to typed helper funcs. Hard gate.
+if [ -f "scripts/check_viewbuilder_depth.py" ]; then
+    if ! python3 scripts/check_viewbuilder_depth.py --quiet; then
+        echo
+        echo "pre-commit: ViewBuilder-depth lint failed — a GeometryReader closure"
+        echo "  is dense enough to risk a Swift 5.5 compiler Segmentation fault on"
+        echo "  the iMac. Pull its body into typed helpers (see LungAnatomyDiagram"
+        echo "  in Chapter10ShapeDiagrams.swift)."
+        echo "If intentional, bypass with: git commit --no-verify"
+        exit 1
+    fi
+fi
+
 # 9) Pack-integrity lints (Bug-Free-Cert D.2/D.3/D.4/D.5/D.6/D.10). Only run
 #    when a pack JSON is staged — they're pure-JSON and cheap, and gating on
 #    the pack keeps them from touching unrelated commits. They duplicate the

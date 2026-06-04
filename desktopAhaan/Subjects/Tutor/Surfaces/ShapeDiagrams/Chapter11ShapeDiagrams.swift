@@ -11,23 +11,32 @@ import SwiftUI
 /// ventricles pump it out. The right side handles oxygen-poor blood (blue),
 /// the left side oxygen-rich blood (red).
 struct HeartChambersDiagram: View {
+    // Split into typed helpers so the Swift 5.5 type-checker (Big Sur / Xcode
+    // 13.2.1) doesn't overflow its stack on one deep @ViewBuilder closure.
     var body: some View {
         SDFigure(tint: .red) {
             GeometryReader { geo in
-                let w = geo.size.width, h = geo.size.height
-                let cx = w / 2
-                ZStack {
-                    Group {
-                        chamber("Right atrium", Color.compatBlue, x: cx - w * 0.18, y: h * 0.3, dw: w * 0.3, dh: h * 0.3)
-                        chamber("Left atrium", .red, x: cx + w * 0.18, y: h * 0.3, dw: w * 0.3, dh: h * 0.3)
-                        chamber("Right ventricle", Color.compatBlue, x: cx - w * 0.18, y: h * 0.68, dw: w * 0.3, dh: h * 0.4)
-                        chamber("Left ventricle", .red, x: cx + w * 0.18, y: h * 0.68, dw: w * 0.3, dh: h * 0.4)
-                    }
-                    Rectangle().fill(DesignTokens.BrandColor.canvasTextSecondary.opacity(0.4))
-                        .frame(width: 1.5, height: h * 0.8).position(x: cx, y: h * 0.5)
-                    SDLabel(text: "Septum divides L / R").position(x: cx, y: h * 0.96)
-                }
+                content(w: geo.size.width, h: geo.size.height)
             }
+        }
+    }
+
+    private func content(w: CGFloat, h: CGFloat) -> some View {
+        let cx = w / 2
+        return ZStack {
+            chambers(w: w, h: h, cx: cx)
+            Rectangle().fill(DesignTokens.BrandColor.canvasTextSecondary.opacity(0.4))
+                .frame(width: 1.5, height: h * 0.8).position(x: cx, y: h * 0.5)
+            SDLabel(text: "Septum divides L / R").position(x: cx, y: h * 0.96)
+        }
+    }
+
+    private func chambers(w: CGFloat, h: CGFloat, cx: CGFloat) -> some View {
+        Group {
+            chamber("Right atrium", Color.compatBlue, x: cx - w * 0.18, y: h * 0.3, dw: w * 0.3, dh: h * 0.3)
+            chamber("Left atrium", .red, x: cx + w * 0.18, y: h * 0.3, dw: w * 0.3, dh: h * 0.3)
+            chamber("Right ventricle", Color.compatBlue, x: cx - w * 0.18, y: h * 0.68, dw: w * 0.3, dh: h * 0.4)
+            chamber("Left ventricle", .red, x: cx + w * 0.18, y: h * 0.68, dw: w * 0.3, dh: h * 0.4)
         }
     }
 
@@ -46,31 +55,44 @@ struct HeartChambersDiagram: View {
 /// of vessels (the glomerulus), then useful substances are reabsorbed along a
 /// looping tubule, leaving urine.
 struct NephronDiagram: View {
+    // Split into typed helpers so the Swift 5.5 type-checker (Big Sur / Xcode
+    // 13.2.1) doesn't overflow its stack on one deep @ViewBuilder closure.
     var body: some View {
         SDFigure(tint: Color.compatBlue) {
             GeometryReader { geo in
-                let w = geo.size.width, h = geo.size.height
-                ZStack {
-                    Group {
-                        // Glomerulus cup
-                        Circle().fill(.red.opacity(0.4))
-                            .overlay(Circle().stroke(.red.opacity(0.6), lineWidth: 1.5))
-                            .frame(width: 34, height: 34).position(x: w * 0.28, y: h * 0.3)
-                        // Looping tubule
-                        TubuleShape().stroke(Color.compatBlue.opacity(0.6),
-                                             style: StrokeStyle(lineWidth: 4, lineCap: .round))
-                            .frame(width: w * 0.55, height: h * 0.6).position(x: w * 0.55, y: h * 0.55)
-                    }
-                    Group {
-                        SDLabel(text: "Glomerulus (filters blood)", color: .red).position(x: w * 0.34, y: h * 0.12)
-                        SDLabel(text: "Tubule (reabsorbs)", color: Color.compatBlue).position(x: w * 0.6, y: h * 0.9)
-                        Image(systemName: SFSymbolCompat.name("arrow.down"))
-                            .font(.system(size: 13, weight: .bold)).foregroundColor(Color.compatBlue)
-                            .position(x: w * 0.85, y: h * 0.8)
-                        SDLabel(text: "urine").position(x: w * 0.92, y: h * 0.92)
-                    }
-                }
+                content(w: geo.size.width, h: geo.size.height)
             }
+        }
+    }
+
+    private func content(w: CGFloat, h: CGFloat) -> some View {
+        ZStack {
+            structures(w: w, h: h)
+            labels(w: w, h: h)
+        }
+    }
+
+    private func structures(w: CGFloat, h: CGFloat) -> some View {
+        Group {
+            // Glomerulus cup
+            Circle().fill(.red.opacity(0.4))
+                .overlay(Circle().stroke(.red.opacity(0.6), lineWidth: 1.5))
+                .frame(width: 34, height: 34).position(x: w * 0.28, y: h * 0.3)
+            // Looping tubule
+            TubuleShape().stroke(Color.compatBlue.opacity(0.6),
+                                 style: StrokeStyle(lineWidth: 4, lineCap: .round))
+                .frame(width: w * 0.55, height: h * 0.6).position(x: w * 0.55, y: h * 0.55)
+        }
+    }
+
+    private func labels(w: CGFloat, h: CGFloat) -> some View {
+        Group {
+            SDLabel(text: "Glomerulus (filters blood)", color: .red).position(x: w * 0.34, y: h * 0.12)
+            SDLabel(text: "Tubule (reabsorbs)", color: Color.compatBlue).position(x: w * 0.6, y: h * 0.9)
+            Image(systemName: SFSymbolCompat.name("arrow.down"))
+                .font(.system(size: 13, weight: .bold)).foregroundColor(Color.compatBlue)
+                .position(x: w * 0.85, y: h * 0.8)
+            SDLabel(text: "urine").position(x: w * 0.92, y: h * 0.92)
         }
     }
 }

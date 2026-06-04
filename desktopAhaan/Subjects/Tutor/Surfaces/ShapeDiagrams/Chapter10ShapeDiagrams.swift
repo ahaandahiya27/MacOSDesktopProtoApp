@@ -14,39 +14,60 @@ struct LungAnatomyDiagram: View {
     var body: some View {
         SDFigure(tint: Color.compatBlue) {
             GeometryReader { geo in
-                let w = geo.size.width, h = geo.size.height
-                let cx = w / 2
-                ZStack {
-                    Group {
-                        // Trachea
-                        Capsule().fill(Color.compatBlue.opacity(0.4)).frame(width: 12, height: h * 0.3)
-                            .position(x: cx, y: h * 0.2)
-                        // Bronchi
-                        Path { p in
-                            p.move(to: CGPoint(x: cx, y: h * 0.34))
-                            p.addLine(to: CGPoint(x: cx - w * 0.16, y: h * 0.46))
-                            p.move(to: CGPoint(x: cx, y: h * 0.34))
-                            p.addLine(to: CGPoint(x: cx + w * 0.16, y: h * 0.46))
-                        }.stroke(Color.compatBlue.opacity(0.5), lineWidth: 6)
-                        // Two lungs
-                        LungShape(flip: false).fill(.pink.opacity(0.4))
-                            .frame(width: w * 0.28, height: h * 0.45).position(x: cx - w * 0.17, y: h * 0.55)
-                        LungShape(flip: true).fill(.pink.opacity(0.4))
-                            .frame(width: w * 0.28, height: h * 0.45).position(x: cx + w * 0.17, y: h * 0.55)
-                    }
-                    Group {
-                        // Diaphragm dome
-                        Path { p in
-                            p.move(to: CGPoint(x: cx - w * 0.32, y: h * 0.84))
-                            p.addQuadCurve(to: CGPoint(x: cx + w * 0.32, y: h * 0.84),
-                                           control: CGPoint(x: cx, y: h * 0.72))
-                        }.stroke(Color.compatBrown.opacity(0.6), lineWidth: 3)
-                        SDLabel(text: "Trachea", color: Color.compatBlue).position(x: cx + 44, y: h * 0.18)
-                        SDLabel(text: "Lungs", color: .pink).position(x: cx, y: h * 0.55)
-                        SDLabel(text: "Diaphragm", color: Color.compatBrown).position(x: cx, y: h * 0.9)
-                    }
-                }
+                content(w: geo.size.width, h: geo.size.height)
             }
+        }
+    }
+
+    // Body split into typed helpers so the Swift 5.5 type-checker on the
+    // Big-Sur iMac (Xcode 13.2.1) never has to solve one deep
+    // GeometryReader→ZStack result-builder closure full of inline CGFloat
+    // coordinate math in a single pass — that recursion overflows the
+    // compiler stack → `Segmentation fault: 11`. All coordinates are
+    // computed as explicit `CGFloat` locals; nothing for the type-checker
+    // to disambiguate.
+    private func content(w: CGFloat, h: CGFloat) -> some View {
+        let cx = w / 2
+        return ZStack {
+            airway(w: w, h: h, cx: cx)
+            lowerParts(w: w, h: h, cx: cx)
+        }
+    }
+
+    private func airway(w: CGFloat, h: CGFloat, cx: CGFloat) -> some View {
+        Group {
+            // Trachea
+            Capsule().fill(Color.compatBlue.opacity(0.4))
+                .frame(width: 12, height: h * 0.3)
+                .position(x: cx, y: h * 0.2)
+            // Bronchi
+            Path { p in
+                p.move(to: CGPoint(x: cx, y: h * 0.34))
+                p.addLine(to: CGPoint(x: cx - w * 0.16, y: h * 0.46))
+                p.move(to: CGPoint(x: cx, y: h * 0.34))
+                p.addLine(to: CGPoint(x: cx + w * 0.16, y: h * 0.46))
+            }.stroke(Color.compatBlue.opacity(0.5), lineWidth: 6)
+            // Two lungs
+            LungShape(flip: false).fill(.pink.opacity(0.4))
+                .frame(width: w * 0.28, height: h * 0.45)
+                .position(x: cx - w * 0.17, y: h * 0.55)
+            LungShape(flip: true).fill(.pink.opacity(0.4))
+                .frame(width: w * 0.28, height: h * 0.45)
+                .position(x: cx + w * 0.17, y: h * 0.55)
+        }
+    }
+
+    private func lowerParts(w: CGFloat, h: CGFloat, cx: CGFloat) -> some View {
+        Group {
+            // Diaphragm dome
+            Path { p in
+                p.move(to: CGPoint(x: cx - w * 0.32, y: h * 0.84))
+                p.addQuadCurve(to: CGPoint(x: cx + w * 0.32, y: h * 0.84),
+                               control: CGPoint(x: cx, y: h * 0.72))
+            }.stroke(Color.compatBrown.opacity(0.6), lineWidth: 3)
+            SDLabel(text: "Trachea", color: Color.compatBlue).position(x: cx + 44, y: h * 0.18)
+            SDLabel(text: "Lungs", color: .pink).position(x: cx, y: h * 0.55)
+            SDLabel(text: "Diaphragm", color: Color.compatBrown).position(x: cx, y: h * 0.9)
         }
     }
 }
@@ -76,31 +97,49 @@ struct AlveolusDiagram: View {
     var body: some View {
         SDFigure(tint: .pink) {
             GeometryReader { geo in
-                let w = geo.size.width, h = geo.size.height
-                let cx = w * 0.42, cy = h * 0.5
-                ZStack {
-                    Group {
-                        // Cluster of alveolar sacs
-                        ForEach(0..<5, id: \.self) { i in
-                            alveolarSac(i: i, cx: cx, cy: cy)
-                        }
-                        // Capillary wrapping
-                        Capsule().stroke(.red.opacity(0.6), lineWidth: 2)
-                            .frame(width: w * 0.7, height: h * 0.55).position(x: cx, y: cy)
-                    }
-                    Group {
-                        Image(systemName: SFSymbolCompat.name("arrow.right"))
-                            .font(.system(size: 13, weight: .bold)).foregroundColor(.red)
-                            .position(x: w * 0.78, y: h * 0.36)
-                        Image(systemName: SFSymbolCompat.name("arrow.left"))
-                            .font(.system(size: 13, weight: .bold)).foregroundColor(Color.compatBlue)
-                            .position(x: w * 0.78, y: h * 0.62)
-                        SDLabel(text: "O₂ in", color: .red).position(x: w * 0.9, y: h * 0.36)
-                        SDLabel(text: "CO₂ out", color: Color.compatBlue).position(x: w * 0.9, y: h * 0.62)
-                        SDLabel(text: "Alveoli", color: .pink).position(x: cx, y: h * 0.92)
-                    }
-                }
+                content(w: geo.size.width, h: geo.size.height)
             }
+        }
+    }
+
+    // Body split into typed helpers so the Swift 5.5 type-checker on the
+    // Big-Sur iMac (Xcode 13.2.1) never has to solve one deep
+    // GeometryReader→ZStack result-builder closure full of inline CGFloat
+    // coordinate math in a single pass — that recursion overflows the
+    // compiler stack → `Segmentation fault: 11`. All coordinates are
+    // computed as explicit `CGFloat` locals; nothing for the type-checker
+    // to disambiguate.
+    private func content(w: CGFloat, h: CGFloat) -> some View {
+        let cx = w * 0.42, cy = h * 0.5
+        return ZStack {
+            sacCluster(w: w, h: h, cx: cx, cy: cy)
+            gasLabels(w: w, h: h, cx: cx)
+        }
+    }
+
+    private func sacCluster(w: CGFloat, h: CGFloat, cx: CGFloat, cy: CGFloat) -> some View {
+        Group {
+            // Cluster of alveolar sacs
+            ForEach(0..<5, id: \.self) { i in
+                alveolarSac(i: i, cx: cx, cy: cy)
+            }
+            // Capillary wrapping
+            Capsule().stroke(.red.opacity(0.6), lineWidth: 2)
+                .frame(width: w * 0.7, height: h * 0.55).position(x: cx, y: cy)
+        }
+    }
+
+    private func gasLabels(w: CGFloat, h: CGFloat, cx: CGFloat) -> some View {
+        Group {
+            Image(systemName: SFSymbolCompat.name("arrow.right"))
+                .font(.system(size: 13, weight: .bold)).foregroundColor(.red)
+                .position(x: w * 0.78, y: h * 0.36)
+            Image(systemName: SFSymbolCompat.name("arrow.left"))
+                .font(.system(size: 13, weight: .bold)).foregroundColor(Color.compatBlue)
+                .position(x: w * 0.78, y: h * 0.62)
+            SDLabel(text: "O₂ in", color: .red).position(x: w * 0.9, y: h * 0.36)
+            SDLabel(text: "CO₂ out", color: Color.compatBlue).position(x: w * 0.9, y: h * 0.62)
+            SDLabel(text: "Alveoli", color: .pink).position(x: cx, y: h * 0.92)
         }
     }
 
