@@ -142,19 +142,28 @@ struct ContourTerracingDiagram: View {
     var body: some View {
         SDFigure(tint: .green) {
             GeometryReader { geo in
-                let w = geo.size.width, h = geo.size.height
-                ZStack {
-                    // Hillside
-                    SlopeShape9().fill(Color.compatBrown.opacity(0.35))
-                        .frame(width: w * 0.9, height: h * 0.8).position(x: w / 2, y: h * 0.55)
-                    // Level terrace steps with a little water on each
-                    Group {
-                        ForEach(0..<4, id: \.self) { i in
-                            terraceStep(i: i, w: w, h: h)
-                        }
-                        SDLabel(text: "Level steps slow run-off", color: .green).position(x: w / 2, y: h * 0.06)
-                    }
+                content(w: geo.size.width, h: geo.size.height)
+            }
+        }
+    }
+
+    private func content(w: CGFloat, h: CGFloat) -> some View {
+        let hillW: CGFloat = w * 0.9
+        let hillH: CGFloat = h * 0.8
+        let hillX: CGFloat = w / 2
+        let hillY: CGFloat = h * 0.55
+        let labelX: CGFloat = w / 2
+        let labelY: CGFloat = h * 0.06
+        return ZStack {
+            // Hillside
+            SlopeShape9().fill(Color.compatBrown.opacity(0.35))
+                .frame(width: hillW, height: hillH).position(x: hillX, y: hillY)
+            // Level terrace steps with a little water on each
+            Group {
+                ForEach(0..<4, id: \.self) { i in
+                    terraceStep(i: i, w: w, h: h)
                 }
+                SDLabel(text: "Level steps slow run-off", color: .green).position(x: labelX, y: labelY)
             }
         }
     }
@@ -162,14 +171,18 @@ struct ContourTerracingDiagram: View {
     private func terraceStep(i: Int, w: CGFloat, h: CGFloat) -> some View {
         // Steps widen and descend toward the foot of the slope; each shares a
         // common left margin so they read as cut into the hillside.
-        let leftMargin = w * 0.08
-        let width = w * (0.3 + CGFloat(i) * 0.14)
-        let y = h * (0.28 + CGFloat(i) * 0.16)
+        let leftMargin: CGFloat = w * 0.08
+        let widthFrac: CGFloat = 0.3 + CGFloat(i) * 0.14
+        let width: CGFloat = w * widthFrac
+        let yFrac: CGFloat = 0.28 + CGFloat(i) * 0.16
+        let y: CGFloat = h * yFrac
+        let halfWidth: CGFloat = width / 2
+        let centerX: CGFloat = leftMargin + halfWidth
         return RoundedRectangle(cornerRadius: 2)
             .fill(Color.compatBlue.opacity(0.4))
             .overlay(RoundedRectangle(cornerRadius: 2).strokeBorder(.green.opacity(0.6), lineWidth: 1.5))
             .frame(width: width, height: 12)
-            .position(x: leftMargin + width / 2, y: y)
+            .position(x: centerX, y: y)
     }
 }
 

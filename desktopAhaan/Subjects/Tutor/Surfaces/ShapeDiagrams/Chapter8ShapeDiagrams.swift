@@ -55,17 +55,22 @@ struct CycloneSpiralDiagram: View {
     }
 
     private func content(w: CGFloat, h: CGFloat) -> some View {
-        let cx = w / 2, cy = h / 2
+        let cx: CGFloat = w / 2
+        let cy: CGFloat = h / 2
+        let minDim: CGFloat = min(w, h)
+        let maxRadius: CGFloat = minDim * 0.42
+        let spiralSize: CGFloat = minDim * 0.85
+        let eyeLabelY: CGFloat = cy + 28
         return ZStack {
-            SpiralShape(turns: 3, maxRadius: min(w, h) * 0.42)
+            SpiralShape(turns: 3, maxRadius: maxRadius)
                 .stroke(Color.compatBlue.opacity(0.6),
                         style: StrokeStyle(lineWidth: 4, lineCap: .round))
-                .frame(width: min(w, h) * 0.85, height: min(w, h) * 0.85)
+                .frame(width: spiralSize, height: spiralSize)
                 .position(x: cx, y: cy)
             Circle().fill(Color.white.opacity(0.85))
                 .overlay(Circle().stroke(Color.compatBlue.opacity(0.6), lineWidth: 1.5))
                 .frame(width: 26, height: 26).position(x: cx, y: cy)
-            SDLabel(text: "Eye (calm)", color: Color.compatBlue).position(x: cx, y: cy + 28)
+            SDLabel(text: "Eye (calm)", color: Color.compatBlue).position(x: cx, y: eyeLabelY)
             SDLabel(text: "Spiralling storm winds", color: Color.compatBlue).position(x: cx, y: 12)
         }
     }
@@ -106,8 +111,10 @@ struct CoriolisDiagram: View {
     }
 
     private func content(w: CGFloat, h: CGFloat) -> some View {
-        let s = min(w, h) * 0.78
-        let cx = w / 2, cy = h / 2
+        let sBase: CGFloat = min(w, h)
+        let s: CGFloat = sBase * 0.78
+        let cx: CGFloat = w / 2
+        let cy: CGFloat = h / 2
         return ZStack {
             Circle().fill(Color.compatBlue.opacity(0.16))
                 .overlay(Circle().strokeBorder(Color.compatBlue.opacity(0.5), lineWidth: 1.5))
@@ -120,7 +127,12 @@ struct CoriolisDiagram: View {
     }
 
     private func paths(w: CGFloat, h: CGFloat, cx: CGFloat, cy: CGFloat, s: CGFloat) -> some View {
-        Group {
+        let curvedW: CGFloat = s * 0.7
+        let curvedH: CGFloat = s * 0.4
+        let curvedY: CGFloat = cy - s * 0.18
+        let straightLabelY: CGFloat = cy - s * 0.42
+        let curvedLabelY: CGFloat = cy + s * 0.1
+        return Group {
             // Intended straight path
             Path { p in
                 p.move(to: CGPoint(x: cx - s * 0.35, y: cy - s * 0.3))
@@ -130,10 +142,10 @@ struct CoriolisDiagram: View {
             // Actual curved (deflected) path
             CurvedArrowShape()
                 .stroke(.red.opacity(0.75), style: StrokeStyle(lineWidth: 2.5, lineCap: .round))
-                .frame(width: s * 0.7, height: s * 0.4)
-                .position(x: cx, y: cy - s * 0.18)
-            SDLabel(text: "straight").position(x: cx, y: cy - s * 0.42)
-            SDLabel(text: "curved by spin", color: .red).position(x: cx, y: cy + s * 0.1)
+                .frame(width: curvedW, height: curvedH)
+                .position(x: cx, y: curvedY)
+            SDLabel(text: "straight").position(x: cx, y: straightLabelY)
+            SDLabel(text: "curved by spin", color: .red).position(x: cx, y: curvedLabelY)
         }
     }
 }
@@ -176,30 +188,45 @@ struct ThunderstormDiagram: View {
     }
 
     private func cloud(w: CGFloat, h: CGFloat) -> some View {
-        Group {
+        let cloudW: CGFloat = w * 0.7
+        let cloudH: CGFloat = h * 0.45
+        let cloudCx: CGFloat = w / 2
+        let cloudCy: CGFloat = h * 0.3
+        let boltCx: CGFloat = w * 0.5
+        let boltCy: CGFloat = h * 0.62
+        return Group {
             CloudShape8().fill(DesignTokens.BrandColor.canvasTextSecondary.opacity(0.4))
-                .frame(width: w * 0.7, height: h * 0.45).position(x: w / 2, y: h * 0.3)
+                .frame(width: cloudW, height: cloudH).position(x: cloudCx, y: cloudCy)
             // Lightning bolt
             BoltShape().fill(.yellow.opacity(0.9))
-                .frame(width: 18, height: 40).position(x: w * 0.5, y: h * 0.62)
+                .frame(width: 18, height: 40).position(x: boltCx, y: boltCy)
         }
     }
 
     private func draughts(w: CGFloat, h: CGFloat) -> some View {
-        Group {
+        let upX: CGFloat = w * 0.36
+        let downX: CGFloat = w * 0.64
+        let arrowY: CGFloat = h * 0.34
+        let rainY: CGFloat = h * 0.82
+        let updraftX: CGFloat = w * 0.22
+        let downdraftX: CGFloat = w * 0.8
+        return Group {
             Image(systemName: SFSymbolCompat.name("arrow.up"))
                 .font(.system(size: 16, weight: .bold)).foregroundColor(.red.opacity(0.7))
-                .position(x: w * 0.36, y: h * 0.34)
+                .position(x: upX, y: arrowY)
             Image(systemName: SFSymbolCompat.name("arrow.down"))
                 .font(.system(size: 16, weight: .bold)).foregroundColor(Color.compatBlue)
-                .position(x: w * 0.64, y: h * 0.34)
+                .position(x: downX, y: arrowY)
             // Rain
             ForEach(0..<5, id: \.self) { i in
-                Capsule().fill(Color.compatBlue.opacity(0.6)).frame(width: 2, height: 9)
-                    .position(x: w * (0.34 + Double(i) * 0.08), y: h * 0.82)
+                let fracBase: Double = 0.34 + Double(i) * 0.08
+                let frac: CGFloat = CGFloat(fracBase)
+                let rainX: CGFloat = w * frac
+                return Capsule().fill(Color.compatBlue.opacity(0.6)).frame(width: 2, height: 9)
+                    .position(x: rainX, y: rainY)
             }
-            SDLabel(text: "updraft", color: .red).position(x: w * 0.22, y: h * 0.34)
-            SDLabel(text: "downdraft", color: Color.compatBlue).position(x: w * 0.8, y: h * 0.34)
+            SDLabel(text: "updraft", color: .red).position(x: updraftX, y: arrowY)
+            SDLabel(text: "downdraft", color: Color.compatBlue).position(x: downdraftX, y: arrowY)
         }
     }
 }

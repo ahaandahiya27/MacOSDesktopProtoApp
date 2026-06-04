@@ -30,29 +30,45 @@ struct ReflectionLawDiagram: View {
 
     private func rays(w: CGFloat, h: CGFloat) -> some View {
         let hit = CGPoint(x: w / 2, y: h * 0.7)
+        let mirrorW: CGFloat = w * 0.8
+        let mirrorX: CGFloat = w / 2
+        let mirrorY: CGFloat = h * 0.7
+        let normalTopY: CGFloat = h * 0.3
+        let incidentX: CGFloat = w * 0.25
+        let incidentY: CGFloat = h * 0.32
+        let reflectedX: CGFloat = w * 0.75
+        let reflectedY: CGFloat = h * 0.32
         return Group {
             // Mirror surface
             Rectangle().fill(DesignTokens.BrandColor.canvasText.opacity(0.5))
-                .frame(width: w * 0.8, height: 4).position(x: w / 2, y: h * 0.7)
+                .frame(width: mirrorW, height: 4).position(x: mirrorX, y: mirrorY)
             // Normal (dashed vertical)
             Path { p in
-                p.move(to: CGPoint(x: hit.x, y: h * 0.3))
+                p.move(to: CGPoint(x: hit.x, y: normalTopY))
                 p.addLine(to: hit)
             }.stroke(DesignTokens.BrandColor.canvasTextSecondary.opacity(0.6),
                      style: StrokeStyle(lineWidth: 1.5, dash: [4, 3]))
             // Incident + reflected rays
-            ray(from: CGPoint(x: w * 0.25, y: h * 0.32), to: hit, color: .orange)
-            ray(from: hit, to: CGPoint(x: w * 0.75, y: h * 0.32), color: .red)
+            ray(from: CGPoint(x: incidentX, y: incidentY), to: hit, color: .orange)
+            ray(from: hit, to: CGPoint(x: reflectedX, y: reflectedY), color: .red)
         }
     }
 
     private func labels(w: CGFloat, h: CGFloat) -> some View {
         let hit = CGPoint(x: w / 2, y: h * 0.7)
+        let normalLabelX: CGFloat = hit.x + 28
+        let normalLabelY: CGFloat = h * 0.34
+        let incidentLabelX: CGFloat = w * 0.22
+        let incidentLabelY: CGFloat = h * 0.28
+        let reflectedLabelX: CGFloat = w * 0.78
+        let reflectedLabelY: CGFloat = h * 0.28
+        let angleLabelX: CGFloat = w / 2
+        let angleLabelY: CGFloat = h * 0.92
         return Group {
-            SDLabel(text: "Normal").position(x: hit.x + 28, y: h * 0.34)
-            SDLabel(text: "Incident", color: .orange).position(x: w * 0.22, y: h * 0.28)
-            SDLabel(text: "Reflected", color: .red).position(x: w * 0.78, y: h * 0.28)
-            SDLabel(text: "angle i = angle r", color: Color.compatBlue).position(x: w / 2, y: h * 0.92)
+            SDLabel(text: "Normal").position(x: normalLabelX, y: normalLabelY)
+            SDLabel(text: "Incident", color: .orange).position(x: incidentLabelX, y: incidentLabelY)
+            SDLabel(text: "Reflected", color: .red).position(x: reflectedLabelX, y: reflectedLabelY)
+            SDLabel(text: "angle i = angle r", color: Color.compatBlue).position(x: angleLabelX, y: angleLabelY)
         }
     }
 
@@ -86,32 +102,52 @@ struct PrismDiagram: View {
     }
 
     private func prism(w: CGFloat, h: CGFloat) -> some View {
-        Group {
+        let lightStartX: CGFloat = w * 0.06
+        let lightStartY: CGFloat = h * 0.42
+        let lightEndX: CGFloat = w * 0.4
+        let lightEndY: CGFloat = h * 0.5
+        let prismW: CGFloat = w * 0.26
+        let prismH: CGFloat = h * 0.5
+        let prismX: CGFloat = w * 0.46
+        let prismY: CGFloat = h * 0.5
+        return Group {
             // White light in
             Path { p in
-                p.move(to: CGPoint(x: w * 0.06, y: h * 0.42))
-                p.addLine(to: CGPoint(x: w * 0.4, y: h * 0.5))
+                p.move(to: CGPoint(x: lightStartX, y: lightStartY))
+                p.addLine(to: CGPoint(x: lightEndX, y: lightEndY))
             }.stroke(DesignTokens.BrandColor.canvasText.opacity(0.7),
                      style: StrokeStyle(lineWidth: 3, lineCap: .round))
             // Prism triangle
             TriangleShape().fill(Color.compatBlue.opacity(0.18))
                 .overlay(TriangleShape().stroke(Color.compatBlue.opacity(0.6), lineWidth: 2))
-                .frame(width: w * 0.26, height: h * 0.5).position(x: w * 0.46, y: h * 0.5)
+                .frame(width: prismW, height: prismH).position(x: prismX, y: prismY)
         }
     }
 
     private func spectrumOut(w: CGFloat, h: CGFloat) -> some View {
-        Group {
+        let whiteLabelX: CGFloat = w * 0.16
+        let whiteLabelY: CGFloat = h * 0.3
+        let spectrumLabelX: CGFloat = w * 0.82
+        let spectrumLabelY: CGFloat = h * 0.9
+        return Group {
             // Dispersed spectrum out
             ForEach(0..<spectrum.count, id: \.self) { i in
-                Path { p in
-                    p.move(to: CGPoint(x: w * 0.58, y: h * 0.52))
-                    p.addLine(to: CGPoint(x: w * 0.95, y: h * (0.34 + Double(i) * 0.07)))
-                }.stroke(spectrum[i].opacity(0.85), lineWidth: 2.5)
+                spectrumRay(i: i, w: w, h: h)
             }
-            SDLabel(text: "White light").position(x: w * 0.16, y: h * 0.3)
-            SDLabel(text: "Spectrum", color: Color.compatPurple).position(x: w * 0.82, y: h * 0.9)
+            SDLabel(text: "White light").position(x: whiteLabelX, y: whiteLabelY)
+            SDLabel(text: "Spectrum", color: Color.compatPurple).position(x: spectrumLabelX, y: spectrumLabelY)
         }
+    }
+
+    private func spectrumRay(i: Int, w: CGFloat, h: CGFloat) -> some View {
+        let startX: CGFloat = w * 0.58
+        let startY: CGFloat = h * 0.52
+        let endX: CGFloat = w * 0.95
+        let endY: CGFloat = h * (0.34 + Double(i) * 0.07)
+        return Path { p in
+            p.move(to: CGPoint(x: startX, y: startY))
+            p.addLine(to: CGPoint(x: endX, y: endY))
+        }.stroke(spectrum[i].opacity(0.85), lineWidth: 2.5)
     }
 }
 
@@ -204,7 +240,7 @@ struct PeriscopeDiagram: View {
     }
 
     private func content(w: CGFloat, h: CGFloat) -> some View {
-        let cx = w / 2
+        let cx: CGFloat = w / 2
         return ZStack {
             tubeAndMirrors(w: w, h: h, cx: cx)
             lightPath(w: w, h: h, cx: cx)
@@ -212,27 +248,44 @@ struct PeriscopeDiagram: View {
     }
 
     private func tubeAndMirrors(w: CGFloat, h: CGFloat, cx: CGFloat) -> some View {
-        Group {
+        let tubeW: CGFloat = w * 0.36
+        let tubeH: CGFloat = h * 0.7
+        let tubeY: CGFloat = h * 0.5
+        let topMirrorX: CGFloat = cx - w * 0.1
+        let topMirrorY: CGFloat = h * 0.22
+        let bottomMirrorX: CGFloat = cx + w * 0.1
+        let bottomMirrorY: CGFloat = h * 0.78
+        return Group {
             // Tube
             RoundedRectangle(cornerRadius: 6).stroke(DesignTokens.BrandColor.canvasText.opacity(0.5), lineWidth: 2)
-                .frame(width: w * 0.36, height: h * 0.7).position(x: cx, y: h * 0.5)
+                .frame(width: tubeW, height: tubeH).position(x: cx, y: tubeY)
             // Two 45° mirrors
-            mirror.position(x: cx - w * 0.1, y: h * 0.22)
-            mirror.position(x: cx + w * 0.1, y: h * 0.78)
+            mirror.position(x: topMirrorX, y: topMirrorY)
+            mirror.position(x: bottomMirrorX, y: bottomMirrorY)
         }
     }
 
     private func lightPath(w: CGFloat, h: CGFloat, cx: CGFloat) -> some View {
-        Group {
+        let inX: CGFloat = w * 0.06
+        let topY: CGFloat = h * 0.22
+        let topMirrorX: CGFloat = cx - w * 0.1
+        let bottomMirrorX: CGFloat = cx + w * 0.1
+        let bottomY: CGFloat = h * 0.78
+        let outX: CGFloat = w * 0.94
+        let inLabelX: CGFloat = w * 0.12
+        let inLabelY: CGFloat = h * 0.12
+        let eyeLabelX: CGFloat = w * 0.9
+        let eyeLabelY: CGFloat = h * 0.9
+        return Group {
             // Light path: in top, down, out bottom
             Path { p in
-                p.move(to: CGPoint(x: w * 0.06, y: h * 0.22))
-                p.addLine(to: CGPoint(x: cx - w * 0.1, y: h * 0.22))
-                p.addLine(to: CGPoint(x: cx + w * 0.1, y: h * 0.78))
-                p.addLine(to: CGPoint(x: w * 0.94, y: h * 0.78))
+                p.move(to: CGPoint(x: inX, y: topY))
+                p.addLine(to: CGPoint(x: topMirrorX, y: topY))
+                p.addLine(to: CGPoint(x: bottomMirrorX, y: bottomY))
+                p.addLine(to: CGPoint(x: outX, y: bottomY))
             }.stroke(.orange.opacity(0.8), style: StrokeStyle(lineWidth: 2, lineCap: .round))
-            SDLabel(text: "Light in", color: .orange).position(x: w * 0.12, y: h * 0.12)
-            SDLabel(text: "Eye", color: .orange).position(x: w * 0.9, y: h * 0.9)
+            SDLabel(text: "Light in", color: .orange).position(x: inLabelX, y: inLabelY)
+            SDLabel(text: "Eye", color: .orange).position(x: eyeLabelX, y: eyeLabelY)
         }
     }
 

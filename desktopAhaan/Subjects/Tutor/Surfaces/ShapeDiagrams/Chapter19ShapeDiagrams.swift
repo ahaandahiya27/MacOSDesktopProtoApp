@@ -22,8 +22,10 @@ struct EarthTiltDiagram: View {
     }
 
     private func content(w: CGFloat, h: CGFloat) -> some View {
-        let cx = w * 0.62, cy = h * 0.5
-        let r = min(w, h) * 0.26
+        let cx: CGFloat = w * 0.62
+        let cy: CGFloat = h * 0.5
+        let rBase: CGFloat = min(w, h)
+        let r: CGFloat = rBase * 0.26
         return ZStack {
             bodies(w: w, h: h, cx: cx, cy: cy, r: r)
             labels(w: w, h: h, cx: cx, cy: cy, r: r)
@@ -31,29 +33,38 @@ struct EarthTiltDiagram: View {
     }
 
     private func bodies(w: CGFloat, h: CGFloat, cx: CGFloat, cy: CGFloat, r: CGFloat) -> some View {
-        Group {
+        let sunX: CGFloat = w * 0.12
+        let raysX: CGFloat = w * 0.32
+        let earthSize: CGFloat = r * 2
+        let axisH: CGFloat = r * 2.6
+        return Group {
             // Sun + rays
-            Circle().fill(.orange.opacity(0.8)).frame(width: 30, height: 30).position(x: w * 0.12, y: cy)
+            Circle().fill(.orange.opacity(0.8)).frame(width: 30, height: 30).position(x: sunX, y: cy)
             ForEach(0..<3, id: \.self) { i in
-                Image(systemName: SFSymbolCompat.name("arrow.right"))
+                let rayY: CGFloat = cy - 24 + CGFloat(i) * 24
+                return Image(systemName: SFSymbolCompat.name("arrow.right"))
                     .font(.system(size: 12, weight: .bold)).foregroundColor(.orange)
-                    .position(x: w * 0.32, y: cy - 24 + CGFloat(i) * 24)
+                    .position(x: raysX, y: rayY)
             }
             // Earth
             Circle().fill(Color.compatBlue.opacity(0.35))
                 .overlay(Circle().strokeBorder(Color.compatBlue.opacity(0.6), lineWidth: 1.5))
-                .frame(width: r * 2, height: r * 2).position(x: cx, y: cy)
+                .frame(width: earthSize, height: earthSize).position(x: cx, y: cy)
             // Tilted axis (23.5°)
-            Rectangle().fill(.red.opacity(0.7)).frame(width: 2.5, height: r * 2.6)
+            Rectangle().fill(.red.opacity(0.7)).frame(width: 2.5, height: axisH)
                 .rotationEffect(.degrees(23.5)).position(x: cx, y: cy)
         }
     }
 
     private func labels(w: CGFloat, h: CGFloat, cx: CGFloat, cy: CGFloat, r: CGFloat) -> some View {
-        Group {
-            SDLabel(text: "Sun", color: .orange).position(x: w * 0.12, y: cy - 26)
-            SDLabel(text: "Axis tilt ≈ 23.5°", color: .red).position(x: cx, y: cy - r - 14)
-            SDLabel(text: "Tilt → seasons", color: Color.compatBlue).position(x: cx, y: cy + r + 14)
+        let sunLabelX: CGFloat = w * 0.12
+        let sunLabelY: CGFloat = cy - 26
+        let tiltLabelY: CGFloat = cy - r - 14
+        let seasonsLabelY: CGFloat = cy + r + 14
+        return Group {
+            SDLabel(text: "Sun", color: .orange).position(x: sunLabelX, y: sunLabelY)
+            SDLabel(text: "Axis tilt ≈ 23.5°", color: .red).position(x: cx, y: tiltLabelY)
+            SDLabel(text: "Tilt → seasons", color: Color.compatBlue).position(x: cx, y: seasonsLabelY)
         }
     }
 }
@@ -71,28 +82,34 @@ struct MoonPhasesDiagram: View {
     var body: some View {
         SDFigure(tint: Color.compatBlue) {
             GeometryReader { geo in
-                let w = geo.size.width, h = geo.size.height
-                let cx = w / 2, cy = h / 2
-                let r = min(w, h) * 0.36
-                ZStack {
-                    SDLabel(text: "~29 days", color: Color.compatBlue).position(x: cx, y: cy)
-                    ForEach(0..<phases.count, id: \.self) { i in
-                        moonNode(i: i, cx: cx, cy: cy, r: r)
-                    }
-                }
+                content(w: geo.size.width, h: geo.size.height)
+            }
+        }
+    }
+
+    private func content(w: CGFloat, h: CGFloat) -> some View {
+        let cx: CGFloat = w / 2
+        let cy: CGFloat = h / 2
+        let rBase: CGFloat = min(w, h)
+        let r: CGFloat = rBase * 0.36
+        return ZStack {
+            SDLabel(text: "~29 days", color: Color.compatBlue).position(x: cx, y: cy)
+            ForEach(0..<phases.count, id: \.self) { i in
+                moonNode(i: i, cx: cx, cy: cy, r: r)
             }
         }
     }
 
     private func moonNode(i: Int, cx: CGFloat, cy: CGFloat, r: CGFloat) -> some View {
-        let angle = CGFloat(i) / CGFloat(phases.count) * 2 * .pi - .pi / 2
-        let x = cx + r * cos(angle)
-        let y = cy + r * sin(angle)
-        let lit = phases[i].1
+        let angle: CGFloat = CGFloat(i) / CGFloat(phases.count) * 2 * .pi - .pi / 2
+        let x: CGFloat = cx + r * cos(angle)
+        let y: CGFloat = cy + r * sin(angle)
+        let lit: CGFloat = phases[i].1
+        let litW: CGFloat = 22 * lit
         return ZStack {
             Circle().fill(DesignTokens.BrandColor.canvasTextSecondary.opacity(0.4)).frame(width: 22, height: 22)
             Circle().fill(.yellow.opacity(0.85))
-                .frame(width: 22 * lit, height: 22)
+                .frame(width: litW, height: 22)
         }
         .position(x: x, y: y)
     }
@@ -110,21 +127,29 @@ struct SolarSystemDiagram: View {
     var body: some View {
         SDFigure(tint: .orange) {
             GeometryReader { geo in
-                let w = geo.size.width, h = geo.size.height
-                let cx = w * 0.12, cy = h / 2
-                ZStack {
-                    Circle().fill(.orange.opacity(0.85)).frame(width: 34, height: 34).position(x: cx, y: cy)
-                    ForEach(0..<planets.count, id: \.self) { i in
-                        planetNode(i: i, cx: cx, cy: cy, w: w)
-                    }
-                    SDLabel(text: "Sun + 8 planets", color: .orange).position(x: w * 0.6, y: h * 0.9)
-                }
+                content(w: geo.size.width, h: geo.size.height)
             }
         }
     }
 
+    private func content(w: CGFloat, h: CGFloat) -> some View {
+        let cx: CGFloat = w * 0.12
+        let cy: CGFloat = h / 2
+        let captionX: CGFloat = w * 0.6
+        let captionY: CGFloat = h * 0.9
+        return ZStack {
+            Circle().fill(.orange.opacity(0.85)).frame(width: 34, height: 34).position(x: cx, y: cy)
+            ForEach(0..<planets.count, id: \.self) { i in
+                planetNode(i: i, cx: cx, cy: cy, w: w)
+            }
+            SDLabel(text: "Sun + 8 planets", color: .orange).position(x: captionX, y: captionY)
+        }
+    }
+
     private func planetNode(i: Int, cx: CGFloat, cy: CGFloat, w: CGFloat) -> some View {
-        let x = cx + 28 + CGFloat(i) * ((w - cx - 40) / CGFloat(planets.count))
+        let span: CGFloat = w - cx - 40
+        let step: CGFloat = span / CGFloat(planets.count)
+        let x: CGFloat = cx + 28 + CGFloat(i) * step
         let size: CGFloat = (i == 4 || i == 5) ? 18 : (i >= 6 ? 13 : 9)
         return VStack(spacing: 2) {
             Circle().fill(planets[i].1.opacity(0.7)).frame(width: size, height: size)

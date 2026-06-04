@@ -22,21 +22,32 @@ struct HeartChambersDiagram: View {
     }
 
     private func content(w: CGFloat, h: CGFloat) -> some View {
-        let cx = w / 2
+        let cx: CGFloat = w / 2
+        let septumH: CGFloat = h * 0.8
+        let septumY: CGFloat = h * 0.5
+        let captionY: CGFloat = h * 0.96
         return ZStack {
             chambers(w: w, h: h, cx: cx)
             Rectangle().fill(DesignTokens.BrandColor.canvasTextSecondary.opacity(0.4))
-                .frame(width: 1.5, height: h * 0.8).position(x: cx, y: h * 0.5)
-            SDLabel(text: "Septum divides L / R").position(x: cx, y: h * 0.96)
+                .frame(width: 1.5, height: septumH).position(x: cx, y: septumY)
+            SDLabel(text: "Septum divides L / R").position(x: cx, y: captionY)
         }
     }
 
     private func chambers(w: CGFloat, h: CGFloat, cx: CGFloat) -> some View {
-        Group {
-            chamber("Right atrium", Color.compatBlue, x: cx - w * 0.18, y: h * 0.3, dw: w * 0.3, dh: h * 0.3)
-            chamber("Left atrium", .red, x: cx + w * 0.18, y: h * 0.3, dw: w * 0.3, dh: h * 0.3)
-            chamber("Right ventricle", Color.compatBlue, x: cx - w * 0.18, y: h * 0.68, dw: w * 0.3, dh: h * 0.4)
-            chamber("Left ventricle", .red, x: cx + w * 0.18, y: h * 0.68, dw: w * 0.3, dh: h * 0.4)
+        let hOffset: CGFloat = w * 0.18
+        let leftX: CGFloat = cx - hOffset
+        let rightX: CGFloat = cx + hOffset
+        let atriumY: CGFloat = h * 0.3
+        let ventricleY: CGFloat = h * 0.68
+        let chamberW: CGFloat = w * 0.3
+        let atriumH: CGFloat = h * 0.3
+        let ventricleH: CGFloat = h * 0.4
+        return Group {
+            chamber("Right atrium", Color.compatBlue, x: leftX, y: atriumY, dw: chamberW, dh: atriumH)
+            chamber("Left atrium", .red, x: rightX, y: atriumY, dw: chamberW, dh: atriumH)
+            chamber("Right ventricle", Color.compatBlue, x: leftX, y: ventricleY, dw: chamberW, dh: ventricleH)
+            chamber("Left ventricle", .red, x: rightX, y: ventricleY, dw: chamberW, dh: ventricleH)
         }
     }
 
@@ -73,26 +84,40 @@ struct NephronDiagram: View {
     }
 
     private func structures(w: CGFloat, h: CGFloat) -> some View {
-        Group {
+        let glomerulusX: CGFloat = w * 0.28
+        let glomerulusY: CGFloat = h * 0.3
+        let tubuleW: CGFloat = w * 0.55
+        let tubuleH: CGFloat = h * 0.6
+        let tubuleX: CGFloat = w * 0.55
+        let tubuleY: CGFloat = h * 0.55
+        return Group {
             // Glomerulus cup
             Circle().fill(.red.opacity(0.4))
                 .overlay(Circle().stroke(.red.opacity(0.6), lineWidth: 1.5))
-                .frame(width: 34, height: 34).position(x: w * 0.28, y: h * 0.3)
+                .frame(width: 34, height: 34).position(x: glomerulusX, y: glomerulusY)
             // Looping tubule
             TubuleShape().stroke(Color.compatBlue.opacity(0.6),
                                  style: StrokeStyle(lineWidth: 4, lineCap: .round))
-                .frame(width: w * 0.55, height: h * 0.6).position(x: w * 0.55, y: h * 0.55)
+                .frame(width: tubuleW, height: tubuleH).position(x: tubuleX, y: tubuleY)
         }
     }
 
     private func labels(w: CGFloat, h: CGFloat) -> some View {
-        Group {
-            SDLabel(text: "Glomerulus (filters blood)", color: .red).position(x: w * 0.34, y: h * 0.12)
-            SDLabel(text: "Tubule (reabsorbs)", color: Color.compatBlue).position(x: w * 0.6, y: h * 0.9)
+        let glomLabelX: CGFloat = w * 0.34
+        let glomLabelY: CGFloat = h * 0.12
+        let tubLabelX: CGFloat = w * 0.6
+        let tubLabelY: CGFloat = h * 0.9
+        let arrowX: CGFloat = w * 0.85
+        let arrowY: CGFloat = h * 0.8
+        let urineX: CGFloat = w * 0.92
+        let urineY: CGFloat = h * 0.92
+        return Group {
+            SDLabel(text: "Glomerulus (filters blood)", color: .red).position(x: glomLabelX, y: glomLabelY)
+            SDLabel(text: "Tubule (reabsorbs)", color: Color.compatBlue).position(x: tubLabelX, y: tubLabelY)
             Image(systemName: SFSymbolCompat.name("arrow.down"))
                 .font(.system(size: 13, weight: .bold)).foregroundColor(Color.compatBlue)
-                .position(x: w * 0.85, y: h * 0.8)
-            SDLabel(text: "urine").position(x: w * 0.92, y: h * 0.92)
+                .position(x: arrowX, y: arrowY)
+            SDLabel(text: "urine").position(x: urineX, y: urineY)
         }
     }
 }

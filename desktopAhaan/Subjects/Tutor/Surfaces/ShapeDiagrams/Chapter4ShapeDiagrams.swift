@@ -21,7 +21,7 @@ struct ThermometerDiagram: View {
     }
 
     private func content(w: CGFloat, h: CGFloat) -> some View {
-        let cx = w / 2
+        let cx: CGFloat = w / 2
         return ZStack {
             glassTube(cx: cx, h: h)
             scaleAndLabels(cx: cx, h: h)
@@ -29,49 +29,60 @@ struct ThermometerDiagram: View {
     }
 
     private func glassTube(cx: CGFloat, h: CGFloat) -> some View {
-        Group {
+        let tubeH: CGFloat = h * 0.7
+        let tubeY: CGFloat = h * 0.42
+        let mercuryH: CGFloat = h * 0.4
+        let mercuryY: CGFloat = h * 0.52
+        let bulbY: CGFloat = h * 0.84
+        return Group {
             // Glass tube
             Capsule()
                 .fill(Color.white.opacity(0.85))
                 .overlay(Capsule().stroke(DesignTokens.BrandColor.canvasTextSecondary.opacity(0.5), lineWidth: 1.5))
-                .frame(width: 16, height: h * 0.7)
-                .position(x: cx, y: h * 0.42)
+                .frame(width: 16, height: tubeH)
+                .position(x: cx, y: tubeY)
             // Mercury column rising from the bulb
             Capsule()
                 .fill(Color.red.opacity(0.7))
-                .frame(width: 7, height: h * 0.4)
-                .position(x: cx, y: h * 0.52)
+                .frame(width: 7, height: mercuryH)
+                .position(x: cx, y: mercuryY)
             // Bulb
             Circle()
                 .fill(Color.red.opacity(0.75))
                 .frame(width: 26, height: 26)
-                .position(x: cx, y: h * 0.84)
+                .position(x: cx, y: bulbY)
         }
     }
 
     private func scaleAndLabels(cx: CGFloat, h: CGFloat) -> some View {
-        Group {
+        let bulbLabelX: CGFloat = cx + 34
+        let bulbLabelY: CGFloat = h * 0.84
+        let kinkLabelX: CGFloat = cx - 30
+        let kinkLabelY: CGFloat = h * 0.66
+        let kinkMarkY: CGFloat = h * 0.66
+        return Group {
             ForEach(0..<6, id: \.self) { i in
                 tick(i: i, cx: cx, h: h)
             }
-            SDLabel(text: "Bulb", color: .red).position(x: cx + 34, y: h * 0.84)
-            SDLabel(text: "Kink").position(x: cx - 30, y: h * 0.66)
+            SDLabel(text: "Bulb", color: .red).position(x: bulbLabelX, y: bulbLabelY)
+            SDLabel(text: "Kink").position(x: kinkLabelX, y: kinkLabelY)
             Rectangle().fill(DesignTokens.BrandColor.canvasText)
                 .frame(width: 10, height: 2)
-                .position(x: cx, y: h * 0.66)
+                .position(x: cx, y: kinkMarkY)
         }
     }
 
     private func tick(i: Int, cx: CGFloat, h: CGFloat) -> some View {
         let value = 35 + i
-        let y = h * 0.66 - CGFloat(i) * (h * 0.5 / 6)
+        let y: CGFloat = h * 0.66 - CGFloat(i) * (h * 0.5 / 6)
+        let tickX: CGFloat = cx + 26
         return HStack(spacing: 3) {
             Rectangle().fill(DesignTokens.BrandColor.canvasTextSecondary).frame(width: 6, height: 1.5)
             Text("\(value)")
                 .font(.system(size: 8))
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
         }
-        .position(x: cx + 26, y: y)
+        .position(x: tickX, y: y)
     }
 }
 
@@ -189,33 +200,50 @@ struct SeaBreezeDiagram: View {
     }
 
     private func scenery(w: CGFloat, h: CGFloat) -> some View {
-        Group {
+        let sunX: CGFloat = w * 0.18
+        let sunY: CGFloat = h * 0.16
+        let groundW: CGFloat = w * 0.5
+        let groundH: CGFloat = h * 0.3
+        let seaX: CGFloat = w * 0.25
+        let groundY: CGFloat = h * 0.82
+        let landX: CGFloat = w * 0.75
+        return Group {
             // Sun
             Circle().fill(Color.orange.opacity(0.8)).frame(width: 26, height: 26)
-                .position(x: w * 0.18, y: h * 0.16)
+                .position(x: sunX, y: sunY)
             // Sea (left) and land (right)
             Rectangle().fill(Color.compatBlue.opacity(0.35))
-                .frame(width: w * 0.5, height: h * 0.3)
-                .position(x: w * 0.25, y: h * 0.82)
+                .frame(width: groundW, height: groundH)
+                .position(x: seaX, y: groundY)
             Rectangle().fill(Color.compatBrown.opacity(0.5))
-                .frame(width: w * 0.5, height: h * 0.3)
-                .position(x: w * 0.75, y: h * 0.82)
+                .frame(width: groundW, height: groundH)
+                .position(x: landX, y: groundY)
         }
     }
 
     private func airflow(w: CGFloat, h: CGFloat) -> some View {
-        Group {
+        let warmArrowX: CGFloat = w * 0.75
+        let warmArrowY: CGFloat = h * 0.5
+        let coolArrowX: CGFloat = w * 0.45
+        let coolArrowY: CGFloat = h * 0.62
+        let seaLabelX: CGFloat = w * 0.22
+        let seaLabelY: CGFloat = h * 0.82
+        let landLabelX: CGFloat = w * 0.75
+        let landLabelY: CGFloat = h * 0.82
+        let breezeLabelX: CGFloat = w * 0.42
+        let breezeLabelY: CGFloat = h * 0.5
+        return Group {
             // Warm air rising over land
             Image(systemName: SFSymbolCompat.name("arrow.up"))
                 .font(.system(size: 20, weight: .bold)).foregroundColor(.red.opacity(0.7))
-                .position(x: w * 0.75, y: h * 0.5)
+                .position(x: warmArrowX, y: warmArrowY)
             // Cool sea breeze flowing toward land
             Image(systemName: SFSymbolCompat.name("arrow.right"))
                 .font(.system(size: 20, weight: .bold)).foregroundColor(Color.compatBlue)
-                .position(x: w * 0.45, y: h * 0.62)
-            SDLabel(text: "Sea", color: Color.compatBlue).position(x: w * 0.22, y: h * 0.82)
-            SDLabel(text: "Land (warmer)", color: Color.compatBrown).position(x: w * 0.75, y: h * 0.82)
-            SDLabel(text: "Cool breeze", color: Color.compatBlue).position(x: w * 0.42, y: h * 0.5)
+                .position(x: coolArrowX, y: coolArrowY)
+            SDLabel(text: "Sea", color: Color.compatBlue).position(x: seaLabelX, y: seaLabelY)
+            SDLabel(text: "Land (warmer)", color: Color.compatBrown).position(x: landLabelX, y: landLabelY)
+            SDLabel(text: "Cool breeze", color: Color.compatBlue).position(x: breezeLabelX, y: breezeLabelY)
         }
     }
 }

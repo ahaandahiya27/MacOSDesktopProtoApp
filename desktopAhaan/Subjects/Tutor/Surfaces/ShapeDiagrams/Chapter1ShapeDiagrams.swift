@@ -67,8 +67,14 @@ struct ChloroplastDiagram: View {
     // Big-Sur iMac never solves one deep GeometryReader→ZStack result-builder
     // closure full of inline CGFloat coordinate math in a single pass.
     private func content(w: CGFloat, h: CGFloat) -> some View {
-        let cx = w / 2, cy = h / 2
-        let ow = min(w * 0.9, h * 2.0), oh = min(h * 0.78, w * 0.5)
+        let cx: CGFloat = w / 2
+        let cy: CGFloat = h / 2
+        let owA: CGFloat = w * 0.9
+        let owB: CGFloat = h * 2.0
+        let ow: CGFloat = min(owA, owB)
+        let ohA: CGFloat = h * 0.78
+        let ohB: CGFloat = w * 0.5
+        let oh: CGFloat = min(ohA, ohB)
         return ZStack {
             membrane(cx: cx, cy: cy, ow: ow, oh: oh)
             grana(cx: cx, cy: cy, ow: ow)
@@ -86,18 +92,27 @@ struct ChloroplastDiagram: View {
     private func grana(cx: CGFloat, cy: CGFloat, ow: CGFloat) -> some View {
         // Three grana (thylakoid stacks)
         ForEach(0..<3, id: \.self) { i in
-            granum
-                .position(x: cx + CGFloat(i - 1) * ow * 0.26, y: cy)
+            let offset: CGFloat = CGFloat(i - 1) * ow * 0.26
+            let gx: CGFloat = cx + offset
+            return granum
+                .position(x: gx, y: cy)
         }
     }
     private func labels(cx: CGFloat, cy: CGFloat, ow: CGFloat, oh: CGFloat, h: CGFloat) -> some View {
-        Group {
+        let outerHalfH: CGFloat = oh / 2
+        let outerMembraneY: CGFloat = max(12, cy - outerHalfH - 2)
+        let stromaX: CGFloat = cx + ow * 0.30
+        let stromaY: CGFloat = cy + oh * 0.30
+        let thylakoidYCandidate: CGFloat = cy + outerHalfH + 4
+        let thylakoidYCap: CGFloat = h - 10
+        let thylakoidY: CGFloat = min(thylakoidYCap, thylakoidYCandidate)
+        return Group {
             PartLabel(text: "Outer membrane", color: .green)
-                .position(x: cx, y: max(12, cy - oh / 2 - 2))
+                .position(x: cx, y: outerMembraneY)
             PartLabel(text: "Stroma")
-                .position(x: cx + ow * 0.30, y: cy + oh * 0.30)
+                .position(x: stromaX, y: stromaY)
             PartLabel(text: "Thylakoid stacks (grana)", color: .green)
-                .position(x: cx, y: min(h - 10, cy + oh / 2 + 4))
+                .position(x: cx, y: thylakoidY)
         }
     }
 
@@ -121,19 +136,26 @@ struct StomataDiagram: View {
     var body: some View {
         DiagramCanvas(tint: .green) {
             GeometryReader { geo in
-                let w = geo.size.width, h = geo.size.height
+                let w: CGFloat = geo.size.width
+                let h: CGFloat = geo.size.height
+                let halfW: CGFloat = w / 2
                 HStack(spacing: 0) {
-                    stoma(open: true, label: "Open (day)", w: w / 2, h: h)
-                    stoma(open: false, label: "Closed (night)", w: w / 2, h: h)
+                    stoma(open: true, label: "Open (day)", w: halfW, h: h)
+                    stoma(open: false, label: "Closed (night)", w: halfW, h: h)
                 }
             }
         }
     }
 
     private func stoma(open: Bool, label: String, w: CGFloat, h: CGFloat) -> some View {
-        let cellW = min(w * 0.16, 26)
-        let cellH = min(h * 0.5, 78)
+        let cellWRaw: CGFloat = w * 0.16
+        let cellW: CGFloat = min(cellWRaw, 26)
+        let cellHRaw: CGFloat = h * 0.5
+        let cellH: CGFloat = min(cellHRaw, 78)
         let gap: CGFloat = open ? cellW * 0.95 : 1.5
+        let centerX: CGFloat = w / 2
+        let poreY: CGFloat = cellH / 2
+        let outerH: CGFloat = cellH + 6
         return VStack(spacing: 8) {
             ZStack {
                 HStack(spacing: gap) {
@@ -142,10 +164,10 @@ struct StomataDiagram: View {
                 }
                 if open {
                     PartLabel(text: "pore", color: .green)
-                        .position(x: w / 2, y: cellH / 2)
+                        .position(x: centerX, y: poreY)
                 }
             }
-            .frame(width: w, height: cellH + 6)
+            .frame(width: w, height: outerH)
             PartLabel(text: label)
         }
         .frame(width: w, height: h, alignment: .center)
@@ -280,9 +302,10 @@ struct LeafAnatomyDiagram: View {
     }
 
     private func palisade(w: CGFloat) -> some View {
-        ZStack {
+        let cellCount: Int = max(4, Int(w / 26))
+        return ZStack {
             HStack(spacing: 3) {
-                ForEach(0..<max(4, Int(w / 26)), id: \.self) { _ in
+                ForEach(0..<cellCount, id: \.self) { _ in
                     RoundedRectangle(cornerRadius: 4)
                         .fill(Color.green.opacity(0.45))
                         .overlay(RoundedRectangle(cornerRadius: 4).strokeBorder(Color.green.opacity(0.7), lineWidth: 1))
@@ -295,13 +318,15 @@ struct LeafAnatomyDiagram: View {
     }
 
     private func spongy(w: CGFloat) -> some View {
-        ZStack {
+        let cellCount: Int = max(5, Int(w / 30))
+        return ZStack {
             HStack(spacing: 6) {
-                ForEach(0..<max(5, Int(w / 30)), id: \.self) { i in
-                    Circle()
+                ForEach(0..<cellCount, id: \.self) { i in
+                    let cellSize: CGFloat = i % 2 == 0 ? 20 : 15
+                    return Circle()
                         .fill(Color.green.opacity(0.28))
                         .overlay(Circle().strokeBorder(Color.green.opacity(0.6), lineWidth: 1))
-                        .frame(width: i % 2 == 0 ? 20 : 15)
+                        .frame(width: cellSize)
                 }
             }
             // Vascular bundle: a small xylem/phloem pair

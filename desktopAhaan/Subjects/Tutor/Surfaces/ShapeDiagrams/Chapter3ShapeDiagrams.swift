@@ -52,23 +52,32 @@ struct SilkwormLifecycleDiagram: View {
     var body: some View {
         SDFigure(tint: .green) {
             GeometryReader { geo in
-                let w = geo.size.width, h = geo.size.height
-                let cx = w / 2, cy = h / 2
-                let r = min(w, h) * 0.34
-                ZStack {
-                    Circle()
-                        .stroke(Color.green.opacity(0.4),
-                                style: StrokeStyle(lineWidth: 2, dash: [4, 3]))
-                        .frame(width: r * 2, height: r * 2)
-                        .position(x: cx, y: cy)
-                    SDLabel(text: "Life cycle", color: .green).position(x: cx, y: cy)
-                    Group {
-                        stageNode(stages[0], x: cx, y: cy - r)
-                        stageNode(stages[1], x: cx + r, y: cy)
-                        stageNode(stages[2], x: cx, y: cy + r)
-                        stageNode(stages[3], x: cx - r, y: cy)
-                    }
-                }
+                content(w: geo.size.width, h: geo.size.height)
+            }
+        }
+    }
+
+    private func content(w: CGFloat, h: CGFloat) -> some View {
+        let cx: CGFloat = w / 2
+        let cy: CGFloat = h / 2
+        let r: CGFloat = min(w, h) * 0.34
+        let d: CGFloat = r * 2
+        let topY: CGFloat = cy - r
+        let rightX: CGFloat = cx + r
+        let bottomY: CGFloat = cy + r
+        let leftX: CGFloat = cx - r
+        return ZStack {
+            Circle()
+                .stroke(Color.green.opacity(0.4),
+                        style: StrokeStyle(lineWidth: 2, dash: [4, 3]))
+                .frame(width: d, height: d)
+                .position(x: cx, y: cy)
+            SDLabel(text: "Life cycle", color: .green).position(x: cx, y: cy)
+            Group {
+                stageNode(stages[0], x: cx, y: topY)
+                stageNode(stages[1], x: rightX, y: cy)
+                stageNode(stages[2], x: cx, y: bottomY)
+                stageNode(stages[3], x: leftX, y: cy)
             }
         }
     }

@@ -30,8 +30,10 @@ struct DistanceTimeDiagram: View {
     }
 
     private func graph(w: CGFloat, h: CGFloat) -> some View {
-        let ox = w * 0.16, oy = h * 0.84   // origin
-        let tx = w * 0.9, ty = h * 0.12     // axis ends
+        let ox: CGFloat = w * 0.16
+        let oy: CGFloat = h * 0.84
+        let tx: CGFloat = w * 0.9
+        let ty: CGFloat = h * 0.12
         return Group {
             // Axes
             Path { p in
@@ -49,13 +51,20 @@ struct DistanceTimeDiagram: View {
     }
 
     private func labels(w: CGFloat, h: CGFloat) -> some View {
-        let ox = w * 0.16, oy = h * 0.84   // origin
+        let ox: CGFloat = w * 0.16
+        let oy: CGFloat = h * 0.84
+        let distanceLabelX: CGFloat = ox - 14
+        let distanceLabelY: CGFloat = h * 0.48
+        let timeLabelX: CGFloat = w * 0.5
+        let timeLabelY: CGFloat = oy + 14
+        let captionX: CGFloat = w * 0.56
+        let captionY: CGFloat = h * 0.28
         return Group {
             SDLabel(text: "Distance →", color: Color.compatBlue)
-                .rotationEffect(.degrees(-90)).position(x: ox - 14, y: h * 0.48)
-            SDLabel(text: "Time →").position(x: w * 0.5, y: oy + 14)
+                .rotationEffect(.degrees(-90)).position(x: distanceLabelX, y: distanceLabelY)
+            SDLabel(text: "Time →").position(x: timeLabelX, y: timeLabelY)
             SDLabel(text: "Straight line = uniform speed", color: Color.compatBlue)
-                .position(x: w * 0.56, y: h * 0.28)
+                .position(x: captionX, y: captionY)
         }
     }
 }
@@ -66,42 +75,61 @@ struct DistanceTimeDiagram: View {
 /// full to-and-fro swing is an oscillation; the time it takes is the time
 /// period, and it stays the same for a given length.
 struct PendulumDiagram: View {
+    // Big Sur / Swift 5.5 fix: the deep GeometryReader+ZStack closure is split
+    // into typed helper funcs so the type-checker doesn't overflow its stack.
     var body: some View {
         SDFigure(tint: .orange) {
             GeometryReader { geo in
-                let w = geo.size.width, h = geo.size.height
-                let px = w / 2, py = h * 0.14   // pivot
-                let len = h * 0.6
-                let swing = 28.0
-                ZStack {
-                    Group {
-                        // Pivot
-                        Rectangle().fill(DesignTokens.BrandColor.canvasText.opacity(0.6))
-                            .frame(width: 40, height: 6).position(x: px, y: py)
-                        // Swing arc
-                        SwingArcShape(radius: len, swingDegrees: swing)
-                            .stroke(.orange.opacity(0.5),
-                                    style: StrokeStyle(lineWidth: 1.5, dash: [4, 3]))
-                            .frame(width: len * 2, height: len * 2).position(x: px, y: py)
-                        // String + bob at one extreme
-                        stringAndBob(px: px, py: py, len: len, deg: -swing)
-                        stringAndBob(px: px, py: py, len: len, deg: swing, faded: true)
-                    }
-                    Group {
-                        SDLabel(text: "Pivot").position(x: px + 40, y: py)
-                        SDLabel(text: "Bob", color: .orange).position(x: px + 36, y: py + len)
-                        SDLabel(text: "One swing = 1 oscillation").position(x: px, y: h * 0.95)
-                    }
-                }
+                content(w: geo.size.width, h: geo.size.height)
             }
         }
     }
 
+    private func content(w: CGFloat, h: CGFloat) -> some View {
+        let px: CGFloat = w / 2
+        let py: CGFloat = h * 0.14
+        let len: CGFloat = h * 0.6
+        let swing: Double = 28.0
+        return ZStack {
+            apparatus(px: px, py: py, len: len, swing: swing)
+            labels(px: px, py: py, len: len, h: h)
+        }
+    }
+
+    private func apparatus(px: CGFloat, py: CGFloat, len: CGFloat, swing: Double) -> some View {
+        let arcSize: CGFloat = len * 2
+        return Group {
+            // Pivot
+            Rectangle().fill(DesignTokens.BrandColor.canvasText.opacity(0.6))
+                .frame(width: 40, height: 6).position(x: px, y: py)
+            // Swing arc
+            SwingArcShape(radius: len, swingDegrees: swing)
+                .stroke(.orange.opacity(0.5),
+                        style: StrokeStyle(lineWidth: 1.5, dash: [4, 3]))
+                .frame(width: arcSize, height: arcSize).position(x: px, y: py)
+            // String + bob at one extreme
+            stringAndBob(px: px, py: py, len: len, deg: -swing)
+            stringAndBob(px: px, py: py, len: len, deg: swing, faded: true)
+        }
+    }
+
+    private func labels(px: CGFloat, py: CGFloat, len: CGFloat, h: CGFloat) -> some View {
+        let pivotLabelX: CGFloat = px + 40
+        let bobLabelX: CGFloat = px + 36
+        let bobLabelY: CGFloat = py + len
+        let bottomLabelY: CGFloat = h * 0.95
+        return Group {
+            SDLabel(text: "Pivot").position(x: pivotLabelX, y: py)
+            SDLabel(text: "Bob", color: .orange).position(x: bobLabelX, y: bobLabelY)
+            SDLabel(text: "One swing = 1 oscillation").position(x: px, y: bottomLabelY)
+        }
+    }
+
     private func stringAndBob(px: CGFloat, py: CGFloat, len: CGFloat, deg: Double, faded: Bool = false) -> some View {
-        let rad = CGFloat(deg) * .pi / 180
-        let bx = px + len * sin(rad)
-        let by = py + len * cos(rad)
-        let op = faded ? 0.3 : 0.9
+        let rad: CGFloat = CGFloat(deg) * .pi / 180
+        let bx: CGFloat = px + len * sin(rad)
+        let by: CGFloat = py + len * cos(rad)
+        let op: Double = faded ? 0.3 : 0.9
         return ZStack {
             Path { p in
                 p.move(to: CGPoint(x: px, y: py))
@@ -182,15 +210,18 @@ struct SpeedCompareDiagram: View {
             VStack(spacing: 5) {
                 SDLabel(text: "Speed = distance ÷ time", color: .green)
                 ForEach(0..<movers.count, id: \.self) { i in
-                    HStack(spacing: 6) {
+                    let frac: CGFloat = movers[i].1
+                    return HStack(spacing: 6) {
                         Text(movers[i].0)
                             .font(.system(size: 9, weight: .semibold))
                             .foregroundColor(DesignTokens.BrandColor.canvasText)
                             .frame(width: 56, alignment: .trailing)
                         GeometryReader { geo in
-                            RoundedRectangle(cornerRadius: 3)
+                            let scaled: CGFloat = geo.size.width * frac
+                            let barW: CGFloat = max(6, scaled)
+                            return RoundedRectangle(cornerRadius: 3)
                                 .fill(Color.green.opacity(0.5))
-                                .frame(width: max(6, geo.size.width * movers[i].1), height: 12)
+                                .frame(width: barW, height: 12)
                         }
                         .frame(height: 12)
                     }

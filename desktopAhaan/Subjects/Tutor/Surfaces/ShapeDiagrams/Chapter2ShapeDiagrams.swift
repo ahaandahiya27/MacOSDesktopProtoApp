@@ -25,7 +25,7 @@ struct DigestiveSystemDiagram: View {
     }
 
     private func content(w: CGFloat, h: CGFloat) -> some View {
-        let cx = w / 2
+        let cx: CGFloat = w / 2
         return ZStack {
             intestines(w: w, h: h, cx: cx)
             organs(w: w, h: h, cx: cx)
@@ -34,49 +34,68 @@ struct DigestiveSystemDiagram: View {
     }
 
     private func intestines(w: CGFloat, h: CGFloat, cx: CGFloat) -> some View {
-        Group {
+        let colonW: CGFloat = min(w * 0.7, 220)
+        let colonH: CGFloat = h * 0.42
+        let coilW: CGFloat = min(w * 0.5, 150)
+        let coilH: CGFloat = h * 0.3
+        let centerY: CGFloat = h * 0.66
+        return Group {
             // Large intestine frame surrounding the coils
             Ch02ColonShape()
                 .stroke(Color.compatBrown.opacity(0.55), lineWidth: 9)
-                .frame(width: min(w * 0.7, 220), height: h * 0.42)
-                .position(x: cx, y: h * 0.66)
+                .frame(width: colonW, height: colonH)
+                .position(x: cx, y: centerY)
             // Small intestine coils
             Ch02CoilShape()
                 .stroke(Color.orange.opacity(0.65), lineWidth: 7)
-                .frame(width: min(w * 0.5, 150), height: h * 0.3)
-                .position(x: cx, y: h * 0.66)
+                .frame(width: coilW, height: coilH)
+                .position(x: cx, y: centerY)
         }
     }
 
     private func organs(w: CGFloat, h: CGFloat, cx: CGFloat) -> some View {
-        Group {
+        let oesophagusH: CGFloat = h * 0.22
+        let oesophagusY: CGFloat = h * 0.18
+        let stomachX: CGFloat = cx + 10
+        let stomachY: CGFloat = h * 0.36
+        let liverX: CGFloat = cx - 46
+        let liverY: CGFloat = h * 0.34
+        return Group {
             // Oesophagus
             Capsule()
                 .fill(Color.compatBrown.opacity(0.35))
-                .frame(width: 10, height: h * 0.22)
-                .position(x: cx, y: h * 0.18)
+                .frame(width: 10, height: oesophagusH)
+                .position(x: cx, y: oesophagusY)
             // Stomach (J sac)
             Ch02StomachShape()
                 .fill(Color.red.opacity(0.28))
                 .overlay(Ch02StomachShape().stroke(Color.red.opacity(0.6), lineWidth: 2))
                 .frame(width: 64, height: 52)
-                .position(x: cx + 10, y: h * 0.36)
+                .position(x: stomachX, y: stomachY)
             // Liver accessory gland
             SDLeafShape()
                 .fill(Color.compatBrown.opacity(0.5))
                 .frame(width: 46, height: 30)
-                .position(x: cx - 46, y: h * 0.34)
+                .position(x: liverX, y: liverY)
         }
     }
 
     private func labels(w: CGFloat, h: CGFloat, cx: CGFloat) -> some View {
-        Group {
+        let oesophagusLabelX: CGFloat = cx + 52
+        let oesophagusLabelY: CGFloat = h * 0.18
+        let stomachLabelX: CGFloat = cx + 56
+        let stomachLabelY: CGFloat = h * 0.38
+        let liverLabelX: CGFloat = cx - 46
+        let liverLabelY: CGFloat = h * 0.34 - 22
+        let smallIntestineY: CGFloat = h * 0.66
+        let largeIntestineY: CGFloat = min(h - 8, h * 0.9)
+        return Group {
             SDLabel(text: "Mouth").position(x: cx, y: 10)
-            SDLabel(text: "Oesophagus").position(x: cx + 52, y: h * 0.18)
-            SDLabel(text: "Stomach", color: .red).position(x: cx + 56, y: h * 0.38)
-            SDLabel(text: "Liver", color: Color.compatBrown).position(x: cx - 46, y: h * 0.34 - 22)
-            SDLabel(text: "Small intestine").position(x: cx, y: h * 0.66)
-            SDLabel(text: "Large intestine", color: Color.compatBrown).position(x: cx, y: min(h - 8, h * 0.9))
+            SDLabel(text: "Oesophagus").position(x: oesophagusLabelX, y: oesophagusLabelY)
+            SDLabel(text: "Stomach", color: .red).position(x: stomachLabelX, y: stomachLabelY)
+            SDLabel(text: "Liver", color: Color.compatBrown).position(x: liverLabelX, y: liverLabelY)
+            SDLabel(text: "Small intestine").position(x: cx, y: smallIntestineY)
+            SDLabel(text: "Large intestine", color: Color.compatBrown).position(x: cx, y: largeIntestineY)
         }
     }
 }
@@ -286,24 +305,37 @@ struct RumenDiagram: View {
     }
 
     private func chambers(w: CGFloat, h: CGFloat) -> some View {
-        Group {
-            chamber("Rumen", .green, x: w * 0.30, y: h * 0.40, dw: 80, dh: 64)
-            chamber("Reticulum", Color.compatTeal, x: w * 0.62, y: h * 0.30, dw: 46, dh: 40)
-            chamber("Omasum", Color.compatBlue, x: w * 0.74, y: h * 0.58, dw: 42, dh: 44)
-            chamber("Abomasum", Color.compatBrown, x: w * 0.5, y: h * 0.74, dw: 56, dh: 36)
+        let rumenX: CGFloat = w * 0.30
+        let rumenY: CGFloat = h * 0.40
+        let reticulumX: CGFloat = w * 0.62
+        let reticulumY: CGFloat = h * 0.30
+        let omasumX: CGFloat = w * 0.74
+        let omasumY: CGFloat = h * 0.58
+        let abomasumX: CGFloat = w * 0.5
+        let abomasumY: CGFloat = h * 0.74
+        return Group {
+            chamber("Rumen", .green, x: rumenX, y: rumenY, dw: 80, dh: 64)
+            chamber("Reticulum", Color.compatTeal, x: reticulumX, y: reticulumY, dw: 46, dh: 40)
+            chamber("Omasum", Color.compatBlue, x: omasumX, y: omasumY, dw: 42, dh: 44)
+            chamber("Abomasum", Color.compatBrown, x: abomasumX, y: abomasumY, dw: 56, dh: 36)
         }
     }
 
     private func cudReturn(w: CGFloat, h: CGFloat) -> some View {
-        Group {
+        let arrowW: CGFloat = w * 0.5
+        let arrowH: CGFloat = h * 0.5
+        let arrowX: CGFloat = w * 0.5
+        let arrowY: CGFloat = h * 0.32
+        let labelX: CGFloat = w * 0.5
+        return Group {
             // Cud-return arrow (chambers back up to mouth)
             Ch02CudArrow()
                 .stroke(Color.green.opacity(0.7),
                         style: StrokeStyle(lineWidth: 2.5, lineCap: .round, dash: [5, 3]))
-                .frame(width: w * 0.5, height: h * 0.5)
-                .position(x: w * 0.5, y: h * 0.32)
+                .frame(width: arrowW, height: arrowH)
+                .position(x: arrowX, y: arrowY)
             SDLabel(text: "cud chewed again", color: .green)
-                .position(x: w * 0.5, y: 12)
+                .position(x: labelX, y: 12)
         }
     }
 

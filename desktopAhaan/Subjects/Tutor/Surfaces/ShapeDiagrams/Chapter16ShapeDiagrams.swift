@@ -28,27 +28,49 @@ struct WaterCycleDiagram: View {
         }
     }
     private func scene(w: CGFloat, h: CGFloat) -> some View {
-        Group {
-            Circle().fill(.orange.opacity(0.7)).frame(width: 24, height: 24).position(x: w * 0.14, y: h * 0.16)
-            CloudShape16().fill(.white.opacity(0.9)).frame(width: 70, height: 28).position(x: w * 0.6, y: h * 0.2)
+        let sunX: CGFloat = w * 0.14
+        let sunY: CGFloat = h * 0.16
+        let cloudX: CGFloat = w * 0.6
+        let cloudY: CGFloat = h * 0.2
+        let seaH: CGFloat = h * 0.22
+        let midX: CGFloat = w / 2
+        let seaY: CGFloat = h * 0.9
+        return Group {
+            Circle().fill(.orange.opacity(0.7)).frame(width: 24, height: 24).position(x: sunX, y: sunY)
+            CloudShape16().fill(.white.opacity(0.9)).frame(width: 70, height: 28).position(x: cloudX, y: cloudY)
             // Sea
-            Rectangle().fill(Color.compatBlue.opacity(0.35)).frame(width: w, height: h * 0.22).position(x: w / 2, y: h * 0.9)
+            Rectangle().fill(Color.compatBlue.opacity(0.35)).frame(width: w, height: seaH).position(x: midX, y: seaY)
         }
     }
     private func labels(w: CGFloat, h: CGFloat) -> some View {
-        Group {
+        let arrowX: CGFloat = w * 0.22
+        let arrowY: CGFloat = h * 0.55
+        let rainY: CGFloat = h * 0.5
+        let evapX: CGFloat = w * 0.2
+        let evapY: CGFloat = h * 0.4
+        let condX: CGFloat = w * 0.6
+        let condY: CGFloat = h * 0.36
+        let rainLabelX: CGFloat = w * 0.58
+        let rainLabelY: CGFloat = h * 0.62
+        let midX: CGFloat = w / 2
+        let seaLabelY: CGFloat = h * 0.92
+        return Group {
             Image(systemName: SFSymbolCompat.name("arrow.up"))
-                .font(.system(size: 16, weight: .bold)).foregroundColor(.orange).position(x: w * 0.22, y: h * 0.55)
+                .font(.system(size: 16, weight: .bold)).foregroundColor(.orange).position(x: arrowX, y: arrowY)
             // Rain
             ForEach(0..<4, id: \.self) { i in
-                Capsule().fill(Color.compatBlue.opacity(0.6)).frame(width: 2, height: 9)
-                    .position(x: w * (0.52 + Double(i) * 0.05), y: h * 0.5)
+                rainDrop(i: i, w: w, rainY: rainY)
             }
-            SDLabel(text: "Evaporation", color: .orange).position(x: w * 0.2, y: h * 0.4)
-            SDLabel(text: "Condensation → clouds").position(x: w * 0.6, y: h * 0.36)
-            SDLabel(text: "Rain", color: Color.compatBlue).position(x: w * 0.58, y: h * 0.62)
-            SDLabel(text: "Collects in sea", color: Color.compatBlue).position(x: w / 2, y: h * 0.92)
+            SDLabel(text: "Evaporation", color: .orange).position(x: evapX, y: evapY)
+            SDLabel(text: "Condensation → clouds").position(x: condX, y: condY)
+            SDLabel(text: "Rain", color: Color.compatBlue).position(x: rainLabelX, y: rainLabelY)
+            SDLabel(text: "Collects in sea", color: Color.compatBlue).position(x: midX, y: seaLabelY)
         }
+    }
+    private func rainDrop(i: Int, w: CGFloat, rainY: CGFloat) -> some View {
+        let dropX: CGFloat = w * (0.52 + Double(i) * 0.05)
+        return Capsule().fill(Color.compatBlue.opacity(0.6)).frame(width: 2, height: 9)
+            .position(x: dropX, y: rainY)
     }
 }
 
@@ -86,24 +108,45 @@ struct AquiferDiagram: View {
         }
     }
     private func layers(w: CGFloat, h: CGFloat) -> some View {
-        Group {
+        let midX: CGFloat = w / 2
+        let soilH: CGFloat = h * 0.3
+        let soilY: CGFloat = h * 0.2
+        let aquiferH: CGFloat = h * 0.32
+        let aquiferY: CGFloat = h * 0.55
+        let rockH: CGFloat = h * 0.2
+        let rockY: CGFloat = h * 0.85
+        let tableY: CGFloat = h * 0.4
+        let wellH: CGFloat = h * 0.6
+        let wellX: CGFloat = w * 0.78
+        let wellY: CGFloat = h * 0.45
+        return Group {
             // Layers
-            Rectangle().fill(Color.compatBrown.opacity(0.35)).frame(width: w, height: h * 0.3).position(x: w / 2, y: h * 0.2)
-            Rectangle().fill(Color.compatBlue.opacity(0.3)).frame(width: w, height: h * 0.32).position(x: w / 2, y: h * 0.55)
-            Rectangle().fill(DesignTokens.BrandColor.canvasTextSecondary.opacity(0.4)).frame(width: w, height: h * 0.2).position(x: w / 2, y: h * 0.85)
+            Rectangle().fill(Color.compatBrown.opacity(0.35)).frame(width: w, height: soilH).position(x: midX, y: soilY)
+            Rectangle().fill(Color.compatBlue.opacity(0.3)).frame(width: w, height: aquiferH).position(x: midX, y: aquiferY)
+            Rectangle().fill(DesignTokens.BrandColor.canvasTextSecondary.opacity(0.4)).frame(width: w, height: rockH).position(x: midX, y: rockY)
             // Water table line
-            Rectangle().fill(Color.compatBlue.opacity(0.8)).frame(width: w, height: 2).position(x: w / 2, y: h * 0.4)
+            Rectangle().fill(Color.compatBlue.opacity(0.8)).frame(width: w, height: 2).position(x: midX, y: tableY)
             // Well
-            Rectangle().fill(DesignTokens.BrandColor.canvasText.opacity(0.4)).frame(width: 12, height: h * 0.6).position(x: w * 0.78, y: h * 0.45)
+            Rectangle().fill(DesignTokens.BrandColor.canvasText.opacity(0.4)).frame(width: 12, height: wellH).position(x: wellX, y: wellY)
         }
     }
     private func labels(w: CGFloat, h: CGFloat) -> some View {
-        Group {
-            SDLabel(text: "Permeable soil", color: Color.compatBrown).position(x: w * 0.28, y: h * 0.2)
-            SDLabel(text: "Water table", color: Color.compatBlue).position(x: w * 0.3, y: h * 0.4)
-            SDLabel(text: "Aquifer (saturated)", color: Color.compatBlue).position(x: w * 0.34, y: h * 0.58)
-            SDLabel(text: "Impermeable rock").position(x: w * 0.4, y: h * 0.85)
-            SDLabel(text: "Well").position(x: w * 0.78, y: h * 0.12)
+        let soilLabelX: CGFloat = w * 0.28
+        let soilLabelY: CGFloat = h * 0.2
+        let tableLabelX: CGFloat = w * 0.3
+        let tableLabelY: CGFloat = h * 0.4
+        let aquiferLabelX: CGFloat = w * 0.34
+        let aquiferLabelY: CGFloat = h * 0.58
+        let rockLabelX: CGFloat = w * 0.4
+        let rockLabelY: CGFloat = h * 0.85
+        let wellLabelX: CGFloat = w * 0.78
+        let wellLabelY: CGFloat = h * 0.12
+        return Group {
+            SDLabel(text: "Permeable soil", color: Color.compatBrown).position(x: soilLabelX, y: soilLabelY)
+            SDLabel(text: "Water table", color: Color.compatBlue).position(x: tableLabelX, y: tableLabelY)
+            SDLabel(text: "Aquifer (saturated)", color: Color.compatBlue).position(x: aquiferLabelX, y: aquiferLabelY)
+            SDLabel(text: "Impermeable rock").position(x: rockLabelX, y: rockLabelY)
+            SDLabel(text: "Well").position(x: wellLabelX, y: wellLabelY)
         }
     }
 }
@@ -116,28 +159,37 @@ struct DripSystemDiagram: View {
     var body: some View {
         SDFigure(tint: Color.compatBlue) {
             GeometryReader { geo in
-                let w = geo.size.width, h = geo.size.height
-                ZStack {
-                    Group {
-                        // Main pipe
-                        Capsule().fill(Color.compatBlue.opacity(0.5)).frame(width: w * 0.8, height: 10).position(x: w / 2, y: h * 0.28)
-                        // Drips + plants
-                        ForEach(0..<4, id: \.self) { i in
-                            dripColumn(i: i, w: w, h: h)
-                        }
-                    }
-                    SDLabel(text: "Drips straight to roots — saves water", color: Color.compatBlue).position(x: w / 2, y: h * 0.92)
-                }
+                content(w: geo.size.width, h: geo.size.height)
             }
         }
     }
 
-    private func dripColumn(i: Int, w: CGFloat, h: CGFloat) -> some View {
-        let x = w * (0.2 + CGFloat(i) * 0.2)
+    private func content(w: CGFloat, h: CGFloat) -> some View {
+        let pipeW: CGFloat = w * 0.8
+        let midX: CGFloat = w / 2
+        let pipeY: CGFloat = h * 0.28
+        let captionY: CGFloat = h * 0.92
         return ZStack {
-            Capsule().fill(Color.compatBlue.opacity(0.7)).frame(width: 4, height: 8).position(x: x, y: h * 0.42)
+            Group {
+                // Main pipe
+                Capsule().fill(Color.compatBlue.opacity(0.5)).frame(width: pipeW, height: 10).position(x: midX, y: pipeY)
+                // Drips + plants
+                ForEach(0..<4, id: \.self) { i in
+                    dripColumn(i: i, w: w, h: h)
+                }
+            }
+            SDLabel(text: "Drips straight to roots — saves water", color: Color.compatBlue).position(x: midX, y: captionY)
+        }
+    }
+
+    private func dripColumn(i: Int, w: CGFloat, h: CGFloat) -> some View {
+        let x: CGFloat = w * (0.2 + CGFloat(i) * 0.2)
+        let dripY: CGFloat = h * 0.42
+        let leafY: CGFloat = h * 0.62
+        return ZStack {
+            Capsule().fill(Color.compatBlue.opacity(0.7)).frame(width: 4, height: 8).position(x: x, y: dripY)
             Image(systemName: SFSymbolCompat.name("leaf.fill"))
-                .font(.system(size: 15)).foregroundColor(.green).position(x: x, y: h * 0.62)
+                .font(.system(size: 15)).foregroundColor(.green).position(x: x, y: leafY)
         }
     }
 }
@@ -151,30 +203,50 @@ struct BaoriDiagram: View {
     var body: some View {
         SDFigure(tint: Color.compatBrown) {
             GeometryReader { geo in
-                let w = geo.size.width, h = geo.size.height
-                ZStack {
-                    Group {
-                        // Ground + descending steps
-                        ForEach(0..<5, id: \.self) { i in
-                            stair(i: i, w: w, h: h)
-                        }
-                        // Water at the bottom
-                        Rectangle().fill(Color.compatBlue.opacity(0.5))
-                            .frame(width: w * 0.36, height: h * 0.22).position(x: w * 0.74, y: h * 0.78)
-                    }
-                    Group {
-                        SDLabel(text: "Steps down", color: Color.compatBrown).position(x: w * 0.28, y: h * 0.2)
-                        SDLabel(text: "Stored water", color: Color.compatBlue).position(x: w * 0.74, y: h * 0.78)
-                    }
-                }
+                content(w: geo.size.width, h: geo.size.height)
             }
         }
     }
 
+    private func content(w: CGFloat, h: CGFloat) -> some View {
+        ZStack {
+            stepsAndWater(w: w, h: h)
+            labels(w: w, h: h)
+        }
+    }
+
+    private func stepsAndWater(w: CGFloat, h: CGFloat) -> some View {
+        let waterW: CGFloat = w * 0.36
+        let waterH: CGFloat = h * 0.22
+        let waterX: CGFloat = w * 0.74
+        let waterY: CGFloat = h * 0.78
+        return Group {
+            // Ground + descending steps
+            ForEach(0..<5, id: \.self) { i in
+                stair(i: i, w: w, h: h)
+            }
+            // Water at the bottom
+            Rectangle().fill(Color.compatBlue.opacity(0.5))
+                .frame(width: waterW, height: waterH).position(x: waterX, y: waterY)
+        }
+    }
+
+    private func labels(w: CGFloat, h: CGFloat) -> some View {
+        let stepsLabelX: CGFloat = w * 0.28
+        let stepsLabelY: CGFloat = h * 0.2
+        let waterLabelX: CGFloat = w * 0.74
+        let waterLabelY: CGFloat = h * 0.78
+        return Group {
+            SDLabel(text: "Steps down", color: Color.compatBrown).position(x: stepsLabelX, y: stepsLabelY)
+            SDLabel(text: "Stored water", color: Color.compatBlue).position(x: waterLabelX, y: waterLabelY)
+        }
+    }
+
     private func stair(i: Int, w: CGFloat, h: CGFloat) -> some View {
-        let x = w * (0.12 + CGFloat(i) * 0.12)
-        let y = h * (0.32 + CGFloat(i) * 0.12)
+        let x: CGFloat = w * (0.12 + CGFloat(i) * 0.12)
+        let y: CGFloat = h * (0.32 + CGFloat(i) * 0.12)
+        let stairW: CGFloat = w * 0.12
         return Rectangle().fill(Color.compatBrown.opacity(0.5))
-            .frame(width: w * 0.12, height: 12).position(x: x, y: y)
+            .frame(width: stairW, height: 12).position(x: x, y: y)
     }
 }

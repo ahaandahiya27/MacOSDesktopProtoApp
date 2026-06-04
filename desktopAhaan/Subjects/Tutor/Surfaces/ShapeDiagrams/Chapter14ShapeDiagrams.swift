@@ -21,39 +21,51 @@ struct SimpleCircuitDiagram: View {
     }
 
     private func content(w: CGFloat, h: CGFloat) -> some View {
-        let inset = min(w, h) * 0.18
-        let frame = CGRect(x: inset, y: inset, width: w - inset * 2, height: h - inset * 2)
+        let inset: CGFloat = min(w, h) * 0.18
+        let frameW: CGFloat = w - inset * 2
+        let frameH: CGFloat = h - inset * 2
+        let midX: CGFloat = w / 2
+        let midY: CGFloat = h / 2
         return ZStack {
             Rectangle().stroke(DesignTokens.BrandColor.canvasText.opacity(0.6), lineWidth: 2.5)
-                .frame(width: frame.width, height: frame.height)
-                .position(x: w / 2, y: h / 2)
+                .frame(width: frameW, height: frameH)
+                .position(x: midX, y: midY)
             components(w: w, h: h, inset: inset)
             labels(w: w, h: h, inset: inset)
         }
     }
 
     private func components(w: CGFloat, h: CGFloat, inset: CGFloat) -> some View {
-        Group {
+        let midX: CGFloat = w / 2
+        let midY: CGFloat = h / 2
+        let bulbY: CGFloat = h - inset
+        let switchX: CGFloat = w - inset
+        return Group {
             // Cell (top)
-            CellGlyph().frame(width: 40, height: 18).position(x: w / 2, y: inset)
+            CellGlyph().frame(width: 40, height: 18).position(x: midX, y: inset)
             // Bulb (bottom)
             ZStack {
                 Circle().fill(.yellow.opacity(0.7)).frame(width: 24, height: 24)
                 Image(systemName: SFSymbolCompat.name("multiply"))
                     .font(.system(size: 12, weight: .bold)).foregroundColor(.orange)
-            }.position(x: w / 2, y: h - inset)
+            }.position(x: midX, y: bulbY)
             // Switch (right side) — closed
             Capsule().fill(DesignTokens.BrandColor.canvasText.opacity(0.5))
                 .frame(width: 22, height: 6).rotationEffect(.degrees(-18))
-                .position(x: w - inset, y: h / 2)
+                .position(x: switchX, y: midY)
         }
     }
 
     private func labels(w: CGFloat, h: CGFloat, inset: CGFloat) -> some View {
-        Group {
-            SDLabel(text: "Cell").position(x: w / 2, y: inset - 16)
-            SDLabel(text: "Bulb", color: .orange).position(x: w / 2, y: h - inset + 18)
-            SDLabel(text: "Switch").position(x: w - inset, y: h / 2 - 18)
+        let midX: CGFloat = w / 2
+        let cellLabelY: CGFloat = inset - 16
+        let bulbLabelY: CGFloat = h - inset + 18
+        let switchLabelX: CGFloat = w - inset
+        let switchLabelY: CGFloat = h / 2 - 18
+        return Group {
+            SDLabel(text: "Cell").position(x: midX, y: cellLabelY)
+            SDLabel(text: "Bulb", color: .orange).position(x: midX, y: bulbLabelY)
+            SDLabel(text: "Switch").position(x: switchLabelX, y: switchLabelY)
         }
     }
 }
@@ -92,32 +104,48 @@ struct ElectromagnetDiagram: View {
     }
 
     private func coreAndCoil(w: CGFloat, h: CGFloat) -> some View {
-        Group {
+        let coreW: CGFloat = w * 0.5
+        let midX: CGFloat = w / 2
+        let coreY: CGFloat = h * 0.45
+        let coilStartX: CGFloat = w * 0.28
+        let coilStep: CGFloat = w * 0.44 / 5
+        let batteryY: CGFloat = h * 0.16
+        return Group {
             // Iron core
             RoundedRectangle(cornerRadius: 4).fill(DesignTokens.BrandColor.canvasTextSecondary.opacity(0.5))
-                .frame(width: w * 0.5, height: 22).position(x: w / 2, y: h * 0.45)
+                .frame(width: coreW, height: 22).position(x: midX, y: coreY)
             // Coil turns
             ForEach(0..<6, id: \.self) { i in
+                let coilX: CGFloat = coilStartX + CGFloat(i) * coilStep
                 Ellipse().stroke(Color.compatBrown.opacity(0.7), lineWidth: 2.5)
                     .frame(width: 16, height: 34)
-                    .position(x: w * 0.28 + CGFloat(i) * (w * 0.44 / 5), y: h * 0.45)
+                    .position(x: coilX, y: coreY)
             }
             // Battery
-            CellGlyph2().frame(width: 30, height: 20).position(x: w / 2, y: h * 0.16)
+            CellGlyph2().frame(width: 30, height: 20).position(x: midX, y: batteryY)
         }
     }
 
     private func pinsAndLabels(w: CGFloat, h: CGFloat) -> some View {
-        Group {
+        let pinStartX: CGFloat = w * 0.74
+        let pinY: CGFloat = h * 0.7
+        let midX: CGFloat = w / 2
+        let ironLabelY: CGFloat = h * 0.62
+        let coilLabelX: CGFloat = w * 0.3
+        let coilLabelY: CGFloat = h * 0.2
+        let pinsLabelX: CGFloat = w * 0.78
+        let pinsLabelY: CGFloat = h * 0.85
+        return Group {
             // Attracted pins
             ForEach(0..<3, id: \.self) { i in
+                let pinX: CGFloat = pinStartX + CGFloat(i) * 6
                 Capsule().fill(DesignTokens.BrandColor.canvasTextSecondary)
                     .frame(width: 3, height: 12)
-                    .position(x: w * 0.74 + CGFloat(i) * 6, y: h * 0.7)
+                    .position(x: pinX, y: pinY)
             }
-            SDLabel(text: "Iron core").position(x: w / 2, y: h * 0.62)
-            SDLabel(text: "Coil + current", color: Color.compatBrown).position(x: w * 0.3, y: h * 0.2)
-            SDLabel(text: "Attracts pins").position(x: w * 0.78, y: h * 0.85)
+            SDLabel(text: "Iron core").position(x: midX, y: ironLabelY)
+            SDLabel(text: "Coil + current", color: Color.compatBrown).position(x: coilLabelX, y: coilLabelY)
+            SDLabel(text: "Attracts pins").position(x: pinsLabelX, y: pinsLabelY)
         }
     }
 }
@@ -199,26 +227,34 @@ struct OerstedDiagram: View {
     }
 
     private func wireAndCompass(w: CGFloat, h: CGFloat) -> some View {
-        Group {
+        let wireW: CGFloat = w * 0.7
+        let midX: CGFloat = w / 2
+        let wireY: CGFloat = h * 0.3
+        let arrowX: CGFloat = w * 0.82
+        let compassY: CGFloat = h * 0.62
+        return Group {
             // Wire carrying current
-            Rectangle().fill(Color.compatBrown.opacity(0.6)).frame(width: w * 0.7, height: 5)
-                .position(x: w / 2, y: h * 0.3)
+            Rectangle().fill(Color.compatBrown.opacity(0.6)).frame(width: wireW, height: 5)
+                .position(x: midX, y: wireY)
             Image(systemName: SFSymbolCompat.name("arrow.right"))
                 .font(.system(size: 13, weight: .bold)).foregroundColor(Color.compatBrown)
-                .position(x: w * 0.82, y: h * 0.3)
+                .position(x: arrowX, y: wireY)
             // Compass below the wire
             Circle().stroke(DesignTokens.BrandColor.canvasText.opacity(0.6), lineWidth: 2)
-                .frame(width: 60, height: 60).position(x: w / 2, y: h * 0.62)
+                .frame(width: 60, height: 60).position(x: midX, y: compassY)
             CompassNeedle().fill(.red.opacity(0.8))
                 .frame(width: 44, height: 12).rotationEffect(.degrees(35))
-                .position(x: w / 2, y: h * 0.62)
+                .position(x: midX, y: compassY)
         }
     }
 
     private func labels(w: CGFloat, h: CGFloat) -> some View {
-        Group {
-            SDLabel(text: "Current in wire", color: Color.compatBrown).position(x: w / 2, y: h * 0.16)
-            SDLabel(text: "Needle deflects", color: .red).position(x: w / 2, y: h * 0.9)
+        let midX: CGFloat = w / 2
+        let currentLabelY: CGFloat = h * 0.16
+        let needleLabelY: CGFloat = h * 0.9
+        return Group {
+            SDLabel(text: "Current in wire", color: Color.compatBrown).position(x: midX, y: currentLabelY)
+            SDLabel(text: "Needle deflects", color: .red).position(x: midX, y: needleLabelY)
         }
     }
 }

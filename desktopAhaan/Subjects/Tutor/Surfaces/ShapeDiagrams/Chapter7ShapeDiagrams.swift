@@ -62,29 +62,44 @@ struct MonsoonWindsDiagram: View {
     }
 
     private func terrain(w: CGFloat, h: CGFloat) -> some View {
-        Group {
+        let cx: CGFloat = w / 2
+        let seaH: CGFloat = h * 0.4
+        let seaY: CGFloat = h * 0.8
+        let landW: CGFloat = w * 0.4
+        let landH: CGFloat = h * 0.5
+        let landY: CGFloat = h * 0.4
+        let cloudY: CGFloat = h * 0.22
+        return Group {
             // Sea (lower) and land (upper)
             Rectangle().fill(Color.compatTeal.opacity(0.3))
-                .frame(width: w, height: h * 0.4).position(x: w / 2, y: h * 0.8)
+                .frame(width: w, height: seaH).position(x: cx, y: seaY)
             IndiaBlobShape().fill(Color.compatBrown.opacity(0.4))
                 .overlay(IndiaBlobShape().stroke(Color.compatBrown.opacity(0.6), lineWidth: 1.5))
-                .frame(width: w * 0.4, height: h * 0.5).position(x: w / 2, y: h * 0.4)
+                .frame(width: landW, height: landH).position(x: cx, y: landY)
             // Cloud over land
             CloudShape().fill(Color.white.opacity(0.85))
-                .frame(width: 64, height: 26).position(x: w / 2, y: h * 0.22)
+                .frame(width: 64, height: 26).position(x: cx, y: cloudY)
         }
     }
 
     private func windsAndLabels(w: CGFloat, h: CGFloat) -> some View {
-        Group {
+        let cx: CGFloat = w / 2
+        let arrowY: CGFloat = h * 0.62
+        let landLabelY: CGFloat = h * 0.42
+        let windsLabelY: CGFloat = h * 0.95
+        let rainLabelY: CGFloat = h * 0.22
+        return Group {
             ForEach(0..<3, id: \.self) { i in
-                Image(systemName: SFSymbolCompat.name("arrow.up"))
+                let fracBase: Double = 0.32 + Double(i) * 0.18
+                let frac: CGFloat = CGFloat(fracBase)
+                let arrowX: CGFloat = w * frac
+                return Image(systemName: SFSymbolCompat.name("arrow.up"))
                     .font(.system(size: 18, weight: .bold)).foregroundColor(Color.compatTeal)
-                    .position(x: w * (0.32 + Double(i) * 0.18), y: h * 0.62)
+                    .position(x: arrowX, y: arrowY)
             }
-            SDLabel(text: "Land (India)", color: Color.compatBrown).position(x: w / 2, y: h * 0.42)
-            SDLabel(text: "Moist sea winds", color: Color.compatTeal).position(x: w / 2, y: h * 0.95)
-            SDLabel(text: "Rain", color: Color.compatBlue).position(x: w / 2, y: h * 0.22)
+            SDLabel(text: "Land (India)", color: Color.compatBrown).position(x: cx, y: landLabelY)
+            SDLabel(text: "Moist sea winds", color: Color.compatTeal).position(x: cx, y: windsLabelY)
+            SDLabel(text: "Rain", color: Color.compatBlue).position(x: cx, y: rainLabelY)
         }
     }
 }
@@ -171,20 +186,35 @@ struct ClimateZonesDiagram: View {
     var body: some View {
         SDFigure(tint: .green) {
             GeometryReader { geo in
-                let s = min(geo.size.width, geo.size.height) * 0.8
-                let cx = geo.size.width / 2, cy = geo.size.height / 2
-                ZStack {
-                    Circle().fill(Color.compatBlue.opacity(0.18))
-                        .overlay(Circle().strokeBorder(Color.compatBlue.opacity(0.5), lineWidth: 1.5))
-                        .frame(width: s, height: s).position(x: cx, y: cy)
-                    Group {
-                        zoneBand("Polar", color: Color.compatBlue, cx: cx, y: cy - s * 0.38, width: s * 0.4)
-                        zoneBand("Temperate", color: .green, cx: cx, y: cy - s * 0.18, width: s * 0.8)
-                        zoneBand("Tropical", color: .orange, cx: cx, y: cy, width: s * 0.95)
-                        zoneBand("Temperate", color: .green, cx: cx, y: cy + s * 0.18, width: s * 0.8)
-                        zoneBand("Polar", color: Color.compatBlue, cx: cx, y: cy + s * 0.38, width: s * 0.4)
-                    }
-                }
+                content(w: geo.size.width, h: geo.size.height)
+            }
+        }
+    }
+
+    private func content(w: CGFloat, h: CGFloat) -> some View {
+        let sBase: CGFloat = min(w, h)
+        let s: CGFloat = sBase * 0.8
+        let cx: CGFloat = w / 2
+        let cy: CGFloat = h / 2
+        let polarOffset: CGFloat = s * 0.38
+        let temperateOffset: CGFloat = s * 0.18
+        let polarTopY: CGFloat = cy - polarOffset
+        let polarBottomY: CGFloat = cy + polarOffset
+        let temperateTopY: CGFloat = cy - temperateOffset
+        let temperateBottomY: CGFloat = cy + temperateOffset
+        let polarWidth: CGFloat = s * 0.4
+        let temperateWidth: CGFloat = s * 0.8
+        let tropicalWidth: CGFloat = s * 0.95
+        return ZStack {
+            Circle().fill(Color.compatBlue.opacity(0.18))
+                .overlay(Circle().strokeBorder(Color.compatBlue.opacity(0.5), lineWidth: 1.5))
+                .frame(width: s, height: s).position(x: cx, y: cy)
+            Group {
+                zoneBand("Polar", color: Color.compatBlue, cx: cx, y: polarTopY, width: polarWidth)
+                zoneBand("Temperate", color: .green, cx: cx, y: temperateTopY, width: temperateWidth)
+                zoneBand("Tropical", color: .orange, cx: cx, y: cy, width: tropicalWidth)
+                zoneBand("Temperate", color: .green, cx: cx, y: temperateBottomY, width: temperateWidth)
+                zoneBand("Polar", color: Color.compatBlue, cx: cx, y: polarBottomY, width: polarWidth)
             }
         }
     }

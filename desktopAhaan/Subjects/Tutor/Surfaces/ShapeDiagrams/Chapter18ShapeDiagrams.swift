@@ -67,32 +67,39 @@ struct SulabhToiletDiagram: View {
     }
 
     private func pitsAndPlumbing(w: CGFloat, h: CGFloat) -> some View {
-        Group {
+        let centerX: CGFloat = w / 2
+        let panY: CGFloat = h * 0.18
+        let leftPitX: CGFloat = w * 0.3
+        let rightPitX: CGFloat = w * 0.7
+        let junctionTopY: CGFloat = h * 0.28
+        let junctionBottomY: CGFloat = h * 0.5
+        return Group {
             // Toilet pan
             Ellipse().fill(.white.opacity(0.9)).overlay(Ellipse().stroke(DesignTokens.BrandColor.canvasTextSecondary.opacity(0.5), lineWidth: 1.5))
-                .frame(width: 34, height: 20).position(x: w / 2, y: h * 0.18)
+                .frame(width: 34, height: 20).position(x: centerX, y: panY)
             // Two pits
-            pit(x: w * 0.3, h: h, label: "Pit in use", active: true)
-            pit(x: w * 0.7, h: h, label: "Resting → compost", active: false)
+            pit(x: leftPitX, h: h, label: "Pit in use", active: true)
+            pit(x: rightPitX, h: h, label: "Resting → compost", active: false)
             // Y junction
             Path { p in
-                p.move(to: CGPoint(x: w / 2, y: h * 0.28))
-                p.addLine(to: CGPoint(x: w * 0.3, y: h * 0.5))
-                p.move(to: CGPoint(x: w / 2, y: h * 0.28))
-                p.addLine(to: CGPoint(x: w * 0.7, y: h * 0.5))
+                p.move(to: CGPoint(x: centerX, y: junctionTopY))
+                p.addLine(to: CGPoint(x: leftPitX, y: junctionBottomY))
+                p.move(to: CGPoint(x: centerX, y: junctionTopY))
+                p.addLine(to: CGPoint(x: rightPitX, y: junctionBottomY))
             }.stroke(Color.compatBrown.opacity(0.6), lineWidth: 4)
         }
     }
 
     private func pit(x: CGFloat, h: CGFloat, label: String, active: Bool) -> some View {
-        VStack(spacing: 4) {
+        let pitY: CGFloat = h * 0.7
+        return VStack(spacing: 4) {
             RoundedRectangle(cornerRadius: 6)
                 .fill(Color.compatBrown.opacity(active ? 0.5 : 0.25))
                 .overlay(RoundedRectangle(cornerRadius: 6).strokeBorder(Color.compatBrown.opacity(0.6), lineWidth: 1.5))
                 .frame(width: 56, height: 44)
             SDLabel(text: label, color: Color.compatBrown)
         }
-        .position(x: x, y: h * 0.7)
+        .position(x: x, y: pitY)
     }
 }
 
@@ -123,23 +130,37 @@ struct BiogasPlantDiagram: View {
     }
 
     private func digester(w: CGFloat, h: CGFloat) -> some View {
-        Group {
+        let centerX: CGFloat = w / 2
+        let tankW: CGFloat = w * 0.4
+        let tankH: CGFloat = h * 0.4
+        let tankY: CGFloat = h * 0.62
+        let domeW: CGFloat = w * 0.4
+        let domeH: CGFloat = h * 0.3
+        let domeY: CGFloat = h * 0.4
+        let pipeH: CGFloat = h * 0.18
+        let pipeY: CGFloat = h * 0.18
+        return Group {
             // Digester tank with dome
-            Rectangle().fill(Color.compatBrown.opacity(0.35)).frame(width: w * 0.4, height: h * 0.4).position(x: w / 2, y: h * 0.62)
+            Rectangle().fill(Color.compatBrown.opacity(0.35)).frame(width: tankW, height: tankH).position(x: centerX, y: tankY)
             DomeShape().fill(.green.opacity(0.3))
                 .overlay(DomeShape().stroke(.green.opacity(0.6), lineWidth: 2))
-                .frame(width: w * 0.4, height: h * 0.3).position(x: w / 2, y: h * 0.4)
+                .frame(width: domeW, height: domeH).position(x: centerX, y: domeY)
             // Gas outlet pipe
-            Rectangle().fill(.green.opacity(0.6)).frame(width: 6, height: h * 0.18).position(x: w / 2, y: h * 0.18)
+            Rectangle().fill(.green.opacity(0.6)).frame(width: 6, height: pipeH).position(x: centerX, y: pipeY)
         }
     }
 
     private func gasLabels(w: CGFloat, h: CGFloat) -> some View {
-        Group {
+        let centerX: CGFloat = w / 2
+        let flameY: CGFloat = h * 0.1
+        let biogasLabelX: CGFloat = w * 0.72
+        let biogasLabelY: CGFloat = h * 0.22
+        let dungLabelY: CGFloat = h * 0.7
+        return Group {
             Image(systemName: SFSymbolCompat.name("flame.fill"))
-                .font(.system(size: 16)).foregroundColor(.orange).position(x: w / 2, y: h * 0.1)
-            SDLabel(text: "Biogas (methane)", color: .green).position(x: w * 0.72, y: h * 0.22)
-            SDLabel(text: "Dung + waste", color: Color.compatBrown).position(x: w / 2, y: h * 0.7)
+                .font(.system(size: 16)).foregroundColor(.orange).position(x: centerX, y: flameY)
+            SDLabel(text: "Biogas (methane)", color: .green).position(x: biogasLabelX, y: biogasLabelY)
+            SDLabel(text: "Dung + waste", color: Color.compatBrown).position(x: centerX, y: dungLabelY)
         }
     }
 }
@@ -183,22 +204,37 @@ struct SepticTankDiagram: View {
     }
 
     private func tankLayers(w: CGFloat, h: CGFloat) -> some View {
-        Group {
+        let centerX: CGFloat = w / 2
+        let tankW: CGFloat = w * 0.7
+        let tankH: CGFloat = h * 0.5
+        let tankY: CGFloat = h * 0.5
+        let layerW: CGFloat = w * 0.68
+        let scumH: CGFloat = h * 0.12
+        let scumY: CGFloat = h * 0.3
+        let liquidH: CGFloat = h * 0.2
+        let liquidY: CGFloat = h * 0.5
+        let sludgeH: CGFloat = h * 0.12
+        let sludgeY: CGFloat = h * 0.68
+        return Group {
             // Tank
             Rectangle().stroke(DesignTokens.BrandColor.canvasText.opacity(0.6), lineWidth: 2)
-                .frame(width: w * 0.7, height: h * 0.5).position(x: w / 2, y: h * 0.5)
+                .frame(width: tankW, height: tankH).position(x: centerX, y: tankY)
             // Layers: scum (top), liquid (mid), sludge (bottom)
-            layer(Color.compatBrown, w: w * 0.68, h: h * 0.12, x: w / 2, y: h * 0.3)
-            layer(Color.compatBlue, w: w * 0.68, h: h * 0.2, x: w / 2, y: h * 0.5)
-            layer(DesignTokens.BrandColor.canvasTextSecondary, w: w * 0.68, h: h * 0.12, x: w / 2, y: h * 0.68)
+            layer(Color.compatBrown, w: layerW, h: scumH, x: centerX, y: scumY)
+            layer(Color.compatBlue, w: layerW, h: liquidH, x: centerX, y: liquidY)
+            layer(DesignTokens.BrandColor.canvasTextSecondary, w: layerW, h: sludgeH, x: centerX, y: sludgeY)
         }
     }
 
     private func tankLabels(w: CGFloat, h: CGFloat) -> some View {
-        Group {
-            SDLabel(text: "Scum (floats)", color: Color.compatBrown).position(x: w / 2, y: h * 0.3)
-            SDLabel(text: "Liquid → out", color: Color.compatBlue).position(x: w / 2, y: h * 0.5)
-            SDLabel(text: "Sludge (sinks)").position(x: w / 2, y: h * 0.68)
+        let centerX: CGFloat = w / 2
+        let scumY: CGFloat = h * 0.3
+        let liquidY: CGFloat = h * 0.5
+        let sludgeY: CGFloat = h * 0.68
+        return Group {
+            SDLabel(text: "Scum (floats)", color: Color.compatBrown).position(x: centerX, y: scumY)
+            SDLabel(text: "Liquid → out", color: Color.compatBlue).position(x: centerX, y: liquidY)
+            SDLabel(text: "Sludge (sinks)").position(x: centerX, y: sludgeY)
         }
     }
 
