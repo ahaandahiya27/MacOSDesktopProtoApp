@@ -98,6 +98,12 @@ _CONSTRUCTORS = (
     ("LazyHStack(...)", re.compile(r"\bLazyHStack\(")),
     ("LazyVStack(...)", re.compile(r"\bLazyVStack\(")),
     (".system(size:)", re.compile(r"\.system\(")),
+    # ForEach(0..<<arithmetic>) range bound, e.g. `ForEach(0..<Int(x * y))`.
+    # The full arg list goes through the same Swift-5.5 solver path.
+    ("ForEach(...)", re.compile(r"\bForEach\(")),
+    # Slider / Stepper bounds: `in: lo...hi` where hi is arithmetic.
+    ("Slider(...)", re.compile(r"\bSlider\(")),
+    ("Stepper(...)", re.compile(r"\bStepper\(")),
 )
 
 # A binary arithmetic operator between two "real" tokens — identifier,
@@ -202,6 +208,8 @@ def run_selftest() -> int:
           HStack(spacing: gap + 4) { Text("a") }
           VStack(spacing: base * 2) { Text("b") }
           Text("z").font(.system(size: scale * 16))
+          ForEach(0..<Int(progress * 10), id: \\.self) { _ in Text("p") }
+          Slider(value: $v, in: 0...max + 5)
         }
       }
     }
@@ -216,6 +224,8 @@ def run_selftest() -> int:
         let corner: CGFloat = r * 2
         let hgap: CGFloat = gap + 4
         let fontSize: CGFloat = scale * 16
+        let particleCount: Int = Int(progress * 10)
+        let sliderMax: CGFloat = maxVal + 5
         return ZStack {
           Circle().frame(width: cellW, height: cellH)
           Text("x").position(x: cx, y: cy)
@@ -233,6 +243,10 @@ def run_selftest() -> int:
           HStack(spacing: hgap) { Text("a") }
           VStack(spacing: 12) { Text("b") }
           Text("z").font(.system(size: fontSize))
+          ForEach(items, id: \\.self) { _ in Text("p") }
+          ForEach(0..<particleCount, id: \\.self) { _ in Text("p") }
+          Slider(value: $v, in: 0...sliderMax)
+          Slider(value: $v, in: -10...10)
           // .position(x: w * 0.5, y: h * 0.5)  ← commented out, ignored
         }
       }
@@ -240,8 +254,8 @@ def run_selftest() -> int:
     """
     ok = True
     d = scan_text(danger)
-    if len(d) != 15:
-        print(f"SELFTEST FAIL: danger fixture flagged {len(d)} sites, expected 15")
+    if len(d) != 17:
+        print(f"SELFTEST FAIL: danger fixture flagged {len(d)} sites, expected 17")
         for v in d:
             print("  ", v)
         ok = False

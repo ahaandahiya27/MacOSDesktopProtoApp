@@ -89,7 +89,8 @@ struct Scene5_GalvanisationShield: View {
 
                         // Rust spots
                         if step == .exposed && rustLevel > 0.3 {
-                            ForEach(0..<Int(rustLevel * 6), id: \.self) { i in
+                            let rustSpotCount: Int = Int(rustLevel * 6)
+                            ForEach(0..<rustSpotCount, id: \.self) { i in
                                 Circle()
                                     .fill(Color.compatBrown.opacity(0.7))
                                     .frame(width: CGFloat.random(in: 5...12))

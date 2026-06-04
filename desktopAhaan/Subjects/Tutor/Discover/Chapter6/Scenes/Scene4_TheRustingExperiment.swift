@@ -182,9 +182,10 @@ struct Scene4_TheRustingExperiment: View {
 
                 // Rust particles (Timer-driven; Big Sur compatible)
                 if tube.rusts && progress > 0.2 && !reduceMotion {
+                    let particleCount: Int = Int(progress * 10)
                     GeometryReader { rgeo in
                         ZStack(alignment: .topLeading) {
-                            ForEach(0..<Int(progress * 10), id: \.self) { j in
+                            ForEach(0..<particleCount, id: \.self) { j in
                                 RustParticle(index: j, t: tick, progress: Double(progress), size: rgeo.size)
                             }
                         }
