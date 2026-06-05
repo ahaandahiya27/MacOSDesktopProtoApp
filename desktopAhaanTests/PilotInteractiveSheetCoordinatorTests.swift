@@ -10,6 +10,11 @@ import Combine
 ///   - presentDeferred(_:) defers the assignment to the next runloop
 ///     tick (the documented dismantle-order pattern)
 ///   - dismiss() clears the state
+///
+/// `@MainActor` because `PilotInteractiveSheetCoordinator` is now main-actor
+/// isolated (it drives SwiftUI sheet presentation); its `init`, `presented`,
+/// `presentDeferred(_:)` and `dismiss()` can only be touched from the main actor.
+@MainActor
 final class PilotInteractiveSheetCoordinatorTests: XCTestCase {
 
     func testDefaultStateIsNil() {
@@ -39,13 +44,15 @@ final class PilotInteractiveSheetCoordinatorTests: XCTestCase {
         XCTAssertNil(coord.presented,
                      "presentDeferred(_:) must NOT assign synchronously — that's the entire point of the runloop defer.")
 
+        // Enqueue our own main-queue tick AFTER presentDeferred's — FIFO on the
+        // main queue guarantees the deferred assignment has run by the time this
+        // fulfills. The assertion stays in the @MainActor method body (not the
+        // non-isolated closure) so it can touch `coord.presented` safely.
         let exp = expectation(description: "deferred assignment lands")
-        DispatchQueue.main.async {
-            XCTAssertEqual(coord.presented?.id, "insideTheLeafTour",
-                           "After one runloop tick, the deferred sheet must be presented.")
-            exp.fulfill()
-        }
+        DispatchQueue.main.async { exp.fulfill() }
         wait(for: [exp], timeout: 0.5)
+        XCTAssertEqual(coord.presented?.id, "insideTheLeafTour",
+                       "After one runloop tick, the deferred sheet must be presented.")
     }
 
     func testDismissClearsState() {
