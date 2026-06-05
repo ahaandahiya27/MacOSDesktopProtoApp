@@ -33,7 +33,7 @@ struct DeepDiveSection: View {
     /// preference survives navigation. One global preference (not
     /// per-chapter) — Rohan tested with two kids and per-chapter felt
     /// like noise.
-    @AppStorage("deepDive.disclosureExpanded") private var isExpanded: Bool = false
+    @AppStorage(AppStorageKeys.deepDiveDisclosureExpanded) private var isExpanded: Bool = false
 
     /// "NEW!" badge counter — the badge shows until the kid has opened
     /// a chapter 3 times AFTER this feature shipped. After that, the

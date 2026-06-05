@@ -239,6 +239,23 @@ if [ -f "scripts/check_inline_modifier_math.py" ]; then
     fi
 fi
 
+# 8d) @AppStorage keys must route through AppStorageKeys enum. CLAUDE.md key
+#     invariant: raw string literals in `@AppStorage("…")` are typo-able and
+#     silently fork a fresh cursor on next launch (streak resets, badges
+#     reappear). 2026-06-04 audit caught a regression in DeepDiveSection.swift
+#     that had slipped through the convention; lint added the same commit.
+#     Hard gate; fix by adding a `static let` to AppStorageKeys.swift.
+if [ -f "scripts/check_appstorage_keys_routing.py" ]; then
+    if ! python3 scripts/check_appstorage_keys_routing.py --quiet; then
+        echo
+        echo "pre-commit: AppStorage-keys routing lint failed — a raw string"
+        echo "  literal slipped through. Add a `static let` to AppStorageKeys"
+        echo "  and reference it: @AppStorage(AppStorageKeys.yourKey)."
+        echo "If intentional, bypass with: git commit --no-verify"
+        exit 1
+    fi
+fi
+
 # 9) Pack-integrity lints (Bug-Free-Cert D.2/D.3/D.4/D.5/D.6/D.10). Only run
 #    when a pack JSON is staged — they're pure-JSON and cheap, and gating on
 #    the pack keeps them from touching unrelated commits. They duplicate the

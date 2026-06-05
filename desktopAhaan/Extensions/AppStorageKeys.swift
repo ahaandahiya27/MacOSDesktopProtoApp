@@ -68,4 +68,12 @@ enum AppStorageKeys {
     /// kid hypothesises before reading. Default: off. Persisted globally
     /// because the kid's learning preference shouldn't reset per session.
     static let inquiryFirstMode = "inquiryFirstMode"
+
+    /// "Go Deeper" disclosure expanded state. Global preference (not
+    /// per-chapter) so the kid's last open/closed choice survives chapter
+    /// navigation. Two-kid testing showed per-chapter persistence felt
+    /// like noise. Lifted out of `DeepDiveSection.swift` as a raw string
+    /// literal 2026-06-04 to comply with the AppStorageKeys-routes-all-keys
+    /// convention (prevents typo-driven progress loss).
+    static let deepDiveDisclosureExpanded = "deepDive.disclosureExpanded"
 }

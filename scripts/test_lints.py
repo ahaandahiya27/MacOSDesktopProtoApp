@@ -135,6 +135,11 @@ def main() -> int:
     if imm.run_selftest() != 0:
         failures.append("check_inline_modifier_math selftest")
 
+    print("== check_appstorage_keys_routing — embedded --selftest ==")
+    aks = _import_lint_module("check_appstorage_keys_routing")
+    if aks.run_selftest() != 0:
+        failures.append("check_appstorage_keys_routing selftest")
+
     print("== check_mainactor_closure_refs — embedded --selftest ==")
     mc = _import_lint_module("check_mainactor_closure_refs")
     if mc.run_selftest() != 0:

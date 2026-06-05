@@ -570,7 +570,11 @@ final class WeeklyReportPDFExporter {
         case 1: return parts[0]
         case 2: return parts[0] + " and " + parts[1]
         default:
-            return parts.dropLast().joined(separator: ", ") + ", and " + parts.last!
+            // `default` only fires when parts.count >= 3, so parts.last is
+            // guaranteed non-nil; but a `??` keeps the code defensive against
+            // future refactors that change the dispatch arms.
+            let tail = parts.last ?? ""
+            return parts.dropLast().joined(separator: ", ") + ", and " + tail
         }
     }
 }
