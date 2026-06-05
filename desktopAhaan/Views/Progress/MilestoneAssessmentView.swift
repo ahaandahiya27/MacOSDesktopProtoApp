@@ -235,8 +235,13 @@ struct MilestoneAssessmentView: View {
 
     private func optionsList(_ q: AssessmentQuestion) -> some View {
         VStack(alignment: .leading, spacing: 8) {
-            ForEach(Array((q.question.options ?? []).enumerated()), id: \.offset) { _, option in
-                optionRow(option, question: q)
+            // Index-keyed identity: `ForEach(Array(x.enumerated()), id: \.offset)`
+            // rebuilds the (offset, element) tuple every render → unstable view
+            // identity on Swift 5.5 / Big Sur → EXC_BAD_ACCESS in objc_release
+            // on teardown. Subscript a stable array via its indices instead.
+            let options = q.question.options ?? []
+            ForEach(options.indices, id: \.self) { idx in
+                optionRow(options[idx], question: q)
             }
         }
     }

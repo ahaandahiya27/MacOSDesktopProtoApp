@@ -237,7 +237,13 @@ struct ExpertChallengeLadderView: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .fixedSize(horizontal: false, vertical: true)
 
-                ForEach(Array((q.question.options ?? []).enumerated()), id: \.offset) { _, option in
+                // Index-keyed identity: `ForEach(Array(x.enumerated()), id: \.offset)`
+                // rebuilds the (offset, element) tuple every render → unstable view
+                // identity on Swift 5.5 / Big Sur → EXC_BAD_ACCESS in objc_release
+                // on teardown. Subscript a stable array via its indices instead.
+                let options = q.question.options ?? []
+                ForEach(options.indices, id: \.self) { idx in
+                    let option = options[idx]
                     MCQOptionRow(
                         option: option,
                         isAnswer: AnswerValidator.matches(userInput: option, truth: q.question.answer),

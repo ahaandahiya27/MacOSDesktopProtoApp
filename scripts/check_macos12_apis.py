@@ -188,7 +188,7 @@ RULES: list[tuple[re.Pattern[str], str, str]] = [
     # after pre-commit" → EXC_BAD_ACCESS. Same bug class that crashed
     # Try-at-Home / Van Helmont. Use `ForEach(x.indices, id: \.self)`
     # and subscript x[i] inside, OR a proper Identifiable model struct.
-    (re.compile(r"ForEach\(Array\([^)]*\.enumerated\(\)\)[^)]*id:\s*\\\.offset"),
+    (re.compile(r"ForEach\(Array\(.*\.enumerated\(\)\)[^)]*id:\s*\\\.offset"),
      "ForEach with tuple-keypath id: \\.offset",
      "Swift 5.5 / Big Sur SwiftUI fragility — unstable view identity. " +
      "Use ForEach(x.indices, id: \\.self) { i in let item = x[i]; ... }."),
@@ -197,7 +197,7 @@ RULES: list[tuple[re.Pattern[str], str, str]] = [
     # because the (offset, element) tuple is rebuilt every render. Found
     # in CommandPalette + Scene1_FastOrSlow during the 2026-05-21 audit;
     # both converted to ForEach(x.indices, id: \.self) + subscript.
-    (re.compile(r"ForEach\(Array\([^)]*\.enumerated\(\)\)[^)]*id:\s*\\\.element"),
+    (re.compile(r"ForEach\(Array\(.*\.enumerated\(\)\)[^)]*id:\s*\\\.element"),
      "ForEach with tuple-keypath id: \\.element.<...>",
      "Swift 5.5 / Big Sur SwiftUI fragility — even with `\\.element.id` the " +
      "tuple wrapper rebuilds on render. Use ForEach(x.indices, id: \\.self) " +
