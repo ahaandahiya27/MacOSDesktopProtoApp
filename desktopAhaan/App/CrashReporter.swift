@@ -91,14 +91,37 @@ final class CrashReporter {
         NSSetUncaughtExceptionHandler { exception in
             CrashReporter.shared.recordException(exception)
         }
-        for sig in [SIGABRT, SIGILL, SIGBUS, SIGSEGV, SIGFPE, SIGPIPE] {
-            signal(sig) { signo in
-                CrashReporter.shared.recordSignal(signo)
-                // Reset to default and re-raise so the OS still gets the
-                // crash and produces its own .crash report in Console.
-                signal(signo, SIG_DFL)
-                raise(signo)
-            }
+        // SIGPIPE → ignore. Broken-pipe is routine on macOS XPC
+        // connections (Speech.framework, FreeOnlineTranslationProvider
+        // socket close, AVAudio session re-bind). Routing it through
+        // recordSignal + raise was making routine broken-pipes fatal.
+        // 2026-06-05 audit pin: socket writes now return EPIPE rather
+        // than killing the process.
+        signal(SIGPIPE, SIG_IGN)
+        // Install fatal-signal handlers via `sigaction` with
+        // SA_RESETHAND | SA_NODEFER so the kernel restores SIG_DFL
+        // atomically on entry. If the handler itself takes a fault
+        // (very possible given the heap-allocating Foundation calls
+        // it makes — see also the deferred follow-up to make the
+        // handler async-signal-safe), the second fault produces a
+        // real OS crash report instead of recursing into the same
+        // Swift closure until stack exhaustion. 2026-06-05 audit pin.
+        var action = sigaction()
+        action.sa_flags = SA_RESETHAND | SA_NODEFER
+        sigemptyset(&action.sa_mask)
+        // `__sigaction_u.__sa_handler` is the field name on macOS.
+        // Swift bridges it as `__sigaction_u.__sa_handler`. We use the
+        // c-function pointer form so the handler is a plain @convention(c)
+        // function — required because async-signal-safe context bans
+        // Swift closure capture lists anyway.
+        let cHandler: @convention(c) (Int32) -> Void = { signo in
+            CrashReporter.shared.recordSignal(signo)
+            // SA_RESETHAND already restored SIG_DFL; just re-raise.
+            raise(signo)
+        }
+        action.__sigaction_u = __sigaction_u(__sa_handler: cHandler)
+        for sig in [SIGABRT, SIGILL, SIGBUS, SIGSEGV, SIGFPE] {
+            sigaction(sig, &action, nil)
         }
         // Prune in the background so a long-idle install doesn't carry
         // months of files forward — but never block the cold-launch
@@ -118,8 +141,8 @@ final class CrashReporter {
         // crashlogs sees crash → relaunch pairs without needing a helper
         // binary. UserDefaults read is the only persistent state we need.
         let defaults = UserDefaults.standard
-        let prevCleanExit = defaults.bool(forKey: "desktopAhaan.lastSessionCleanExit")
-        if defaults.object(forKey: "desktopAhaan.lastSessionCleanExit") != nil && !prevCleanExit {
+        let prevCleanExit = defaults.bool(forKey: AppStorageKeys.lastSessionCleanExit)
+        if defaults.object(forKey: AppStorageKeys.lastSessionCleanExit) != nil && !prevCleanExit {
             let entry = formatEntry(kind: "RECOVERY",
                                     message: "previous session ended without a clean quit — likely crashed",
                                     origin: "CrashReporter.install",
@@ -127,7 +150,7 @@ final class CrashReporter {
             appendToCurrentLog(entry)
         }
         // Default to "not clean" — applicationWillTerminate flips it to true.
-        defaults.set(false, forKey: "desktopAhaan.lastSessionCleanExit")
+        defaults.set(false, forKey: AppStorageKeys.lastSessionCleanExit)
         logger.info("CrashReporter installed; logs go to \(self.logDirectoryURL.path, privacy: .public)")
     }
 
@@ -261,7 +284,7 @@ final class CrashReporter {
     /// Called by applicationWillTerminate so the next launch can tell
     /// "clean quit" from "crashed mid-session".
     func markCleanExit() {
-        UserDefaults.standard.set(true, forKey: "desktopAhaan.lastSessionCleanExit")
+        UserDefaults.standard.set(true, forKey: AppStorageKeys.lastSessionCleanExit)
     }
 
     /// Enforce `maxLogFiles` by deleting the oldest files first. Called

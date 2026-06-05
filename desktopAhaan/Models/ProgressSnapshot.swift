@@ -21,6 +21,14 @@ import Foundation
 /// One subject's standing on a given day. Mirrors the four fields the
 /// dashboard cares about from `SubjectMasterySnapshot`, frozen as plain
 /// `Codable` values so the history file never depends on the live registry.
+///
+/// **Schema-evolution invariant** (2026-06-05 audit): every NEW field added
+/// here MUST be Optional (or carry a `= defaultValue` default), so a
+/// year-old `progress_history.json` written before the field's introduction
+/// still decodes. The whole file goes through `DataStore.readFile`, which
+/// quarantines on any decode error and surfaces a non-fatal banner — but
+/// the kid still loses their trend chart for that session. Optionality is
+/// the cheaper fix.
 struct SubjectProgressPoint: Codable, Hashable {
     let packId: String
     let masteryFraction: Double
@@ -32,6 +40,10 @@ struct SubjectProgressPoint: Codable, Hashable {
 /// The whole journey on one calendar day. `date` is a start-of-day boundary
 /// (day-granular) so re-capturing the same day is idempotent. Identified by
 /// that day boundary.
+///
+/// **Schema-evolution invariant** (2026-06-05 audit): same as
+/// `SubjectProgressPoint` — any new field MUST be Optional or default-
+/// valued, so older on-disk history files keep decoding cleanly.
 struct ProgressSnapshot: Codable, Hashable, Identifiable {
     /// Start-of-day boundary this row represents.
     let date: Date

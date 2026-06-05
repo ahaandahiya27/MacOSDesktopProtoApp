@@ -46,8 +46,8 @@ final class AppState: ObservableObject {
     private let monitor = NWPathMonitor()
     private let queue = DispatchQueue(label: "NetworkMonitor")
 
-    private static let sidebarSelectionKey = "sidebarSelection"
-    private static let recentItemsKey = "recentItems"
+    private static let sidebarSelectionKey = AppStorageKeys.sidebarSelection
+    private static let recentItemsKey = AppStorageKeys.recentItems
     private static let recentItemsLimit = 8
 
     private static func persist(_ selection: SidebarSelection) {

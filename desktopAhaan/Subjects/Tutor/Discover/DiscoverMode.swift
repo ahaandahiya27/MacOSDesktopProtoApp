@@ -245,6 +245,11 @@ struct DiscoverShell<SceneBody: View>: View {
     /// when the completed-scene count increases. Toggled briefly via
     /// onChange in the header; honours Reduce Motion (MO1, closes 2026-05-19).
     @State private var counterPopActive: Bool = false
+    /// 350 ms counter-pop relaxation task. Stored + cancelled on disappear
+    /// so a quick scene-change during the animation doesn't leave the
+    /// task pending on an orphaned `@State`. 2026-06-05 audit caught the
+    /// unowned variant.
+    @State private var counterPopRelaxTask: Task<Void, Never>?
 
     var totalScenes: Int { sceneTitles.count }
 
@@ -362,12 +367,18 @@ struct DiscoverShell<SceneBody: View>: View {
                         withAnimation(.spring(response: 0.32, dampingFraction: 0.55)) {
                             counterPopActive = true
                         }
-                        Task { @MainActor in
+                        counterPopRelaxTask?.cancel()
+                        counterPopRelaxTask = Task { @MainActor in
                             try? await Task.sleep(nanoseconds: 350_000_000)
+                            if Task.isCancelled { return }
                             withAnimation(.spring(response: 0.32, dampingFraction: 0.7)) {
                                 counterPopActive = false
                             }
                         }
+                    }
+                    .onDisappear {
+                        counterPopRelaxTask?.cancel()
+                        counterPopRelaxTask = nil
                     }
             }
             HStack(spacing: 8) {

@@ -22,7 +22,7 @@ final class OnboardingState {
     /// UserDefaults key for the completed-tour flag. Bool; defaults to false
     /// (UserDefaults.bool returns false for an absent key), so a brand-new
     /// install reads "not seen" and gets the tour.
-    static let hasSeenOnboardingKey = "hasSeenOnboarding"
+    static let hasSeenOnboardingKey = AppStorageKeys.hasSeenOnboarding
 
     /// Process-wide instance used by the app. Tests construct their own with
     /// a scratch suite.

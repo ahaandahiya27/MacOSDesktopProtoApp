@@ -171,18 +171,39 @@ extension DataStore {
     /// `saveQueue.sync { }` after dispatching all pending writes blocks
     /// the calling thread (main) until the serial queue has drained.
     /// Standard pattern — saveQueue runs on a background thread and
-    /// doesn't need main to make progress, so no deadlock. We accept
-    /// some main-thread block at quit time because the alternative
-    /// (returning before writes land) defeats the purpose. Bounded by
-    /// the size of `pendingSavePayloads`, which today is ≤ 11 files of
-    /// kilobytes each.
+    /// doesn't need main to make progress, so no deadlock. Bounded by
+    /// the size of `pendingSavePayloads` (≤ 11 files of kilobytes each).
+    ///
+    /// **2026-06-05 audit**: the drain WAS unbounded. AppKit kills any
+    /// `applicationWillTerminate` that runs more than ~5 seconds. If the
+    /// disk is stalled (slow Big-Sur fsync on the spinning-disk iMac,
+    /// TimeMachine snapshot mid-quit, full-disk allocation retry), the
+    /// kernel would SIGKILL us before `markCleanExit()` flipped the flag,
+    /// and the next launch would log a SPURIOUS RECOVERY entry. Capped
+    /// the wait at 1.5 seconds via a DispatchGroup timeout. Trade-off
+    /// documented: at most one debounce window of data can be lost on
+    /// a stuck-disk quit — which is strictly better than the alternative
+    /// of the kernel killing us at an arbitrary point during the drain.
     func flushSavesBeforeQuit() {
         let filenames = Array(pendingSavePayloads.keys)
         for filename in filenames {
             flushPendingSave(filename: filename)
         }
-        // Wait for every write we just dispatched to land on disk.
-        Self.saveQueue.sync { }
+        // Bounded drain. The serial queue runs every dispatched write in
+        // FIFO order; we hop one trailing async block onto the queue and
+        // wait for THAT block to signal a semaphore, with a 1.5 s cap.
+        let drainSignal = DispatchSemaphore(value: 0)
+        Self.saveQueue.async {
+            drainSignal.signal()
+        }
+        let result = drainSignal.wait(timeout: .now() + 1.5)
+        if result == .timedOut {
+            // 5+ pending writes still running. Surface to the next launch's
+            // crashlog so the parent sees the stuck-disk pattern.
+            CrashReporter.shared.logDataIssue(
+                "flushSavesBeforeQuit timed out at 1.5s — some saves may not have landed before quit"
+            )
+        }
     }
 
     /// Number of writes still queued in the coalesced-save buffer. Used

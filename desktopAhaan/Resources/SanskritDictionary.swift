@@ -165,7 +165,15 @@ final class SanskritDictionary {
         case .hindi:
             results = hindiIndex[query] ?? []
             if results.isEmpty {
-                results = entries.filter { $0.hindi.contains(query) }
+                // 2026-06-05 audit: NFC normalize both sides. Devanagari
+                // composed (`क्षि` as a single codepoint sequence) vs
+                // decomposed (क + ् + ष + ि) byte-mismatches under bare
+                // `contains`. Web clipboard pastes often arrive decomposed;
+                // hand-typed Hindi is usually composed.
+                let normalQuery = query.precomposedStringWithCanonicalMapping
+                results = entries.filter {
+                    $0.hindi.precomposedStringWithCanonicalMapping.contains(normalQuery)
+                }
             }
         case .sanskrit:
             results = sanskritIndex[query] ?? []
@@ -174,8 +182,10 @@ final class SanskritDictionary {
                 results = translitIndex[queryLower] ?? []
             }
             if results.isEmpty {
+                let normalQuery = query.precomposedStringWithCanonicalMapping
                 results = entries.filter {
-                    $0.sanskrit.contains(query) || $0.transliteration.localizedCaseInsensitiveContains(query)
+                    $0.sanskrit.precomposedStringWithCanonicalMapping.contains(normalQuery)
+                        || $0.transliteration.localizedCaseInsensitiveContains(query)
                 }
             }
         }
@@ -240,9 +250,17 @@ final class SanskritDictionary {
             }
         }
 
+        // 2026-06-05 audit: NFC normalize before the Devanagari exact-match
+        // gate so composed-vs-decomposed Unicode (same word from clipboard
+        // paste vs typed) is treated as identical.
+        let textNorm = text.precomposedStringWithCanonicalMapping
+        let bestHindiNorm = best.hindi.precomposedStringWithCanonicalMapping
+        let bestSanskritNorm = best.sanskrit.precomposedStringWithCanonicalMapping
         let confidence: String
         if matches.count >= 1 && text.lowercased() == best.english.lowercased()
-            || text == best.hindi || text == best.sanskrit || text.lowercased() == best.transliteration.lowercased() {
+            || textNorm == bestHindiNorm
+            || textNorm == bestSanskritNorm
+            || text.lowercased() == best.transliteration.lowercased() {
             confidence = "Exact match found in the built-in dictionary."
         } else {
             confidence = "Partial match. The translation may not be exact for this phrase. Try simpler words for better results."

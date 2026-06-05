@@ -272,6 +272,24 @@ if [ -f "scripts/check_particle_budget.py" ]; then
     fi
 fi
 
+# 8f) Combine .sink with `self.` body must use `[weak self]`. The cycle
+#     pattern: `cancellable = publisher.sink { self.handle(...) }; cancellables.insert(cancellable)`
+#     — the closure captures self strongly, publisher upstream holds the
+#     closure, cancellables (owned by self) holds the cancellable. Net
+#     effect: self never deinits. On the 8 GB iMac, even one leaked
+#     view-model accumulates over a multi-hour session.
+#     Hard gate; 2026-06-05 audit pin.
+if [ -f "scripts/check_combine_sink_weakself.py" ]; then
+    if ! python3 scripts/check_combine_sink_weakself.py --quiet; then
+        echo
+        echo "pre-commit: Combine sink/weak-self lint failed — a .sink"
+        echo "  closure captures `self` strongly. Add `[weak self]` and"
+        echo "  replace `self.foo` with `self?.foo`."
+        echo "If intentional, bypass with: git commit --no-verify"
+        exit 1
+    fi
+fi
+
 # 9) Pack-integrity lints (Bug-Free-Cert D.2/D.3/D.4/D.5/D.6/D.10). Only run
 #    when a pack JSON is staged — they're pure-JSON and cheap, and gating on
 #    the pack keeps them from touching unrelated commits. They duplicate the

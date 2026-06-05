@@ -98,6 +98,13 @@ final class AchievementToastPresenter {
     }
 
     private func present(_ achievement: Achievement) {
+        // Defensive: if a previous panel is still onscreen (a race window
+        // during dequeue reset could call present() while self.panel is
+        // non-nil), order it out before overwriting the reference. Without
+        // this the old NSPanel leaks until the dispatch-after fires and
+        // calls orderOut on the now-current panel — caught in the
+        // 2026-06-05 audit.
+        self.panel?.orderOut(nil)
         let host = NSHostingController(rootView: AchievementToastView(achievement: achievement))
         let panel = NSPanel(contentViewController: host)
         panel.styleMask = [.borderless, .nonactivatingPanel]

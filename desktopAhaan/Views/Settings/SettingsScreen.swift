@@ -161,8 +161,24 @@ struct SettingsScreen: View {
                                 .frame(maxWidth: 120)
                                 .accessibilityLabel("Parent PIN, 4 to 6 digits")
                                 .onChange(of: newPIN) { value in
-                                    let digits = value.filter { $0.isNumber }
-                                    newPIN = String(digits.prefix(6))
+                                    // Write-back into the observed value is
+                                    // the canonical SwiftUI onChange re-fire-
+                                    // loop pattern. Guard for fixed-point so
+                                    // we don't bounce when SwiftUI hands us
+                                    // back our own filtered string. Mirrors
+                                    // the pattern used in the 6-digit input
+                                    // below. 2026-06-05 audit.
+                                    //
+                                    // ASCII digit filter (NOT `.isNumber`):
+                                    // `.isNumber` admits Devanagari १२३४ and
+                                    // Arabic-Indic ١٢٣٤. If the parent has
+                                    // an IME active (system-level) and saves
+                                    // `१२३४`, the later compare against the
+                                    // typed `1234` byte-mismatches and they
+                                    // get locked out of Settings. Same fix
+                                    // applied to the unlock input below.
+                                    let trimmed = String(value.filter { ("0"..."9").contains($0) }.prefix(6))
+                                    if trimmed != newPIN { newPIN = trimmed }
                                 }
 
                             if newPIN.count >= 4 {
@@ -366,7 +382,11 @@ struct PINEntryView: View {
                 .multilineTextAlignment(.center)
                 .accessibilityLabel("Parent PIN")
                 .onChange(of: pinInput) { value in
-                    let digits = value.filter { $0.isNumber }
+                    // ASCII digits only — see comment on the set-PIN field.
+                    // `Character.isNumber` accepts Devanagari / Arabic-Indic
+                    // digits which the parent could enter via IME but
+                    // wouldn't byte-match the stored `1234`-form on unlock.
+                    let digits = value.filter { ("0"..."9").contains($0) }
                     if digits != value {
                         pinInput = digits
                     }

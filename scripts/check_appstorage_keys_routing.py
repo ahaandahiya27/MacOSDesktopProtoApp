@@ -40,6 +40,15 @@ from pathlib import Path
 # like `AppStorageKeys.discoverScene(_:)`.
 _UNSAFE_APPSTORAGE = re.compile(r'@AppStorage\(\s*"[^"]+"\s*[,)]')
 
+# Direct UserDefaults access with a raw string-literal `forKey:` — the
+# parallel risk class. CLAUDE.md "Key invariants" → all UserDefaults keys
+# route through `AppStorageKeys` so a typo can't silently fork a fresh
+# cursor. The 2026-06-05 audit found 5 sites bypassing the convention
+# (AppState, OnboardingState, CrashReporter); fixed in the same commit.
+_UNSAFE_USERDEFAULTS = re.compile(
+    r'UserDefaults\.[^.]+\.(?:object|array|string|integer|bool|float|double|data|url|dictionary|set|removeObject)\(\s*forKey:\s*"[^"]+"'
+)
+
 # Strip `// ...` line comments so a comment-quoted example doesn't false-fire.
 _LINE_COMMENT = re.compile(r"//[^\n]*")
 
@@ -50,6 +59,14 @@ def scan_text(src: str) -> list[tuple[int, str]]:
     for m in _UNSAFE_APPSTORAGE.finditer(cleaned):
         line_no = cleaned.count("\n", 0, m.start()) + 1
         findings.append((line_no, m.group(0)))
+    for m in _UNSAFE_USERDEFAULTS.finditer(cleaned):
+        line_no = cleaned.count("\n", 0, m.start()) + 1
+        # Trim long matches for readability in the report.
+        snippet = m.group(0)
+        if len(snippet) > 90:
+            snippet = snippet[:87] + "..."
+        findings.append((line_no, snippet))
+    findings.sort(key=lambda t: t[0])
     return findings
 
 
@@ -66,6 +83,13 @@ def run_selftest() -> int:
       @AppStorage("hasSeenWelcome") var seen: Bool = false
       @AppStorage("deepDive.expanded") var expanded: Bool = false
     }
+    class S {
+      let v = UserDefaults.standard.bool(forKey: "literalKey")
+      func save() {
+        UserDefaults.standard.set(true, forKey: "anotherLiteral")
+        let n = UserDefaults.standard.integer(forKey: "intLiteral")
+      }
+    }
     """
     safe = """
     struct V: View {
@@ -74,11 +98,23 @@ def run_selftest() -> int:
       @AppStorage(AppStorageKeys.discoverScene(1)) var cursor: Int = 0
       // Example comment: @AppStorage("ignored.in.comment") should be ignored
     }
+    class S {
+      let v = UserDefaults.standard.bool(forKey: AppStorageKeys.hasSeenWelcome)
+      func save() {
+        UserDefaults.standard.set(true, forKey: AppStorageKeys.hasSeenWelcome)
+        UserDefaults.standard.set(value, forKey: someComputedKey)
+      }
+    }
     """
     ok = True
     d = scan_text(danger)
-    if len(d) != 2:
-        print(f"SELFTEST FAIL: danger fixture flagged {len(d)} sites, expected 2")
+    # 2 @AppStorage + 1 .bool + 1 .integer = 4 hits. The .set(_:forKey:)
+    # variants are NOT in the regex (set is the write, not the lookup), so
+    # those don't fire — they're caught implicitly because every write site
+    # also has a read site, and a regressed write would be paired with a
+    # regressed read. Documented heuristic.
+    if len(d) != 4:
+        print(f"SELFTEST FAIL: danger fixture flagged {len(d)} sites, expected 4")
         for v in d:
             print("  ", v)
         ok = False

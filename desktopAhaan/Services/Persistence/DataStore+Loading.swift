@@ -35,8 +35,22 @@ extension DataStore {
                 .replacingOccurrences(of: ":", with: "-")
             let rescue = url.deletingPathExtension()
                 .appendingPathExtension("corrupt.\(stamp).json")
-            try? FileManager.default.moveItem(at: url, to: rescue)
+            // 2026-06-05 audit: was `try?` — if the rescue move itself
+            // fails (TCC denial, ENOSPC, ENOENT), the corrupt file stays
+            // in place and the next launch loops through this same path
+            // forever, with no breadcrumb. Now we surface the move
+            // failure to the parent-facing crashlog explicitly.
+            do {
+                try FileManager.default.moveItem(at: url, to: rescue)
+            } catch let moveError {
+                CrashReporter.shared.logDataIssue(
+                    "DataStore.readFile rescue-rename failed for \(filename): \(moveError.localizedDescription) — corrupt file left in place; next launch will retry"
+                )
+            }
             logger.error("load \(filename, privacy: .public) failed: \(error.localizedDescription, privacy: .public); preserved as \(rescue.lastPathComponent, privacy: .public)")
+            CrashReporter.shared.logDataIssue(
+                "DataStore.readFile decode failed for \(filename): \(error.localizedDescription); preserved corrupt copy as \(rescue.lastPathComponent)"
+            )
             return ([], true)
         }
     }

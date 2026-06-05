@@ -65,7 +65,14 @@ final class TranslationRecord: Identifiable, Codable {
         let words: [WordMeaning]? = wordByWordJSON.flatMap { data in
             do { return try JSONDecoder().decode([WordMeaning].self, from: data) }
             catch {
+                // 2026-06-05 audit: dual-route the error. os.Logger is for
+                // dev-time inspection (Console.app); CrashReporter.logDataIssue
+                // is for the parent-facing crashlog so they can debug from
+                // the report alone.
                 recordLogger.error("wordByWord decode failed: \(error.localizedDescription, privacy: .public)")
+                CrashReporter.shared.logDataIssue(
+                    "TranslationRecord.wordByWord decode failed: \(error.localizedDescription)"
+                )
                 return nil
             }
         }
@@ -73,6 +80,9 @@ final class TranslationRecord: Identifiable, Codable {
             do { return try JSONDecoder().decode([String].self, from: data) }
             catch {
                 recordLogger.error("alternatives decode failed: \(error.localizedDescription, privacy: .public)")
+                CrashReporter.shared.logDataIssue(
+                    "TranslationRecord.alternatives decode failed: \(error.localizedDescription)"
+                )
                 return nil
             }
         }

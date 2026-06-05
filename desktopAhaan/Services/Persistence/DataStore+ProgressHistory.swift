@@ -50,12 +50,19 @@ extension DataStore {
             lastSaveError = "Saved data couldn't be read — a backup copy was preserved next to your data. Continuing with a fresh file."
         }
         // Latest-per-day wins if the file somehow carries two rows for one day.
-        var dict: [Date: ProgressSnapshot] = [:]
-        for snap in result.items {
-            if let existing = dict[snap.date], existing.date >= snap.date { continue }
-            dict[snap.date] = snap
-        }
-        progressHistory = dict
+        // `result.items` reflects file insertion order (we append on every
+        // capture), so the LAST row for a given date is the most recent one.
+        // The 2026-06-05 audit caught a stale guard here that compared
+        // `existing.date >= snap.date` — since the dict key IS `snap.date`,
+        // both sides were identical and the FIRST row read always won (the
+        // opposite of the intended behaviour). Replaced with explicit
+        // last-wins coalescer; `Dictionary(_:uniquingKeysWith:)` is the safe
+        // form (no dup-key trap; the comment in ConceptMapView documents the
+        // same convention).
+        progressHistory = Dictionary(
+            result.items.map { ($0.date, $0) },
+            uniquingKeysWith: { _, new in new }
+        )
     }
 
     // MARK: - Capture (READ-ONLY over SRS)

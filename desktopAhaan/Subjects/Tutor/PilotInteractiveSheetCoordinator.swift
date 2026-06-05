@@ -36,10 +36,19 @@ import SwiftUI
 //   - `@StateObject` (used by the view) is macOS 11+ baseline.
 //   - Nothing else; pure SwiftUI state machinery.
 
+@MainActor
 final class PilotInteractiveSheetCoordinator: ObservableObject {
     /// Which enrichment sheet (if any) is currently presented on
     /// ChapterDetailView. nil → nothing presented; assigning a new
     /// value opens the corresponding sheet via `.sheet(item:)`.
+    ///
+    /// `@MainActor` annotation added 2026-06-05 — the class is owned
+    /// by SwiftUI views (which always call modifiers on main) but
+    /// nothing previously enforced the contract. A future caller
+    /// that hopped off-main (Combine sink without `.receive(on:)`,
+    /// background `URLSession` callback) would publish from non-main
+    /// and trigger the purple "Modifying state during view update"
+    /// runtime warning. Compile-time isolation now prevents that.
     @Published var presented: SheetKind?
 
     /// Convenience setter that defers assignment to the next runloop

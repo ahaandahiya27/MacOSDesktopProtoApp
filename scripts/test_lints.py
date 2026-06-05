@@ -145,6 +145,11 @@ def main() -> int:
     if pb.run_selftest() != 0:
         failures.append("check_particle_budget selftest")
 
+    print("== check_combine_sink_weakself — embedded --selftest ==")
+    csw = _import_lint_module("check_combine_sink_weakself")
+    if csw.run_selftest() != 0:
+        failures.append("check_combine_sink_weakself selftest")
+
     print("== check_mainactor_closure_refs — embedded --selftest ==")
     mc = _import_lint_module("check_mainactor_closure_refs")
     if mc.run_selftest() != 0:

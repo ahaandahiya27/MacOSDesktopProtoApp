@@ -76,4 +76,30 @@ enum AppStorageKeys {
     /// literal 2026-06-04 to comply with the AppStorageKeys-routes-all-keys
     /// convention (prevents typo-driven progress loss).
     static let deepDiveDisclosureExpanded = "deepDive.disclosureExpanded"
+
+    // MARK: - Added 2026-06-05 in the UserDefaults-keys consolidation sweep
+
+    /// Last-selected sidebar destination (`SidebarSelection.persistedString`).
+    /// Restored before first publish so the app boots into the kid's last
+    /// context (Sanskrit / Maths / etc.) instead of the default. Previously
+    /// declared as `AppState.sidebarSelectionKey = "sidebarSelection"` — a
+    /// typo would silently send the kid to the default subject on next
+    /// launch.
+    static let sidebarSelection = "sidebarSelection"
+
+    /// Recently viewed concepts/questions (JSON-encoded `[RecentItem]`).
+    /// Previously declared as `AppState.recentItemsKey`. A typo would
+    /// silently empty the sidebar's recents row.
+    static let recentItems = "recentItems"
+
+    /// First-launch tour seen flag. Previously declared as
+    /// `OnboardingState.hasSeenOnboardingKey`. A typo would silently
+    /// re-show the tour on every launch.
+    static let hasSeenOnboarding = "hasSeenOnboarding"
+
+    /// True when the previous session ended via `applicationWillTerminate`
+    /// (clean exit). Read on next launch to decide whether to emit a
+    /// `RECOVERY` breadcrumb in the crashlog. Previously declared as a
+    /// bare literal in `CrashReporter.markCleanExit`.
+    static let lastSessionCleanExit = "desktopAhaan.lastSessionCleanExit"
 }

@@ -27,7 +27,11 @@ struct PlainTextArticleFallback: View {
                     if let url = url, url.isFileURL,
                        url.path.hasPrefix(Bundle.main.bundlePath) {
                         Button("Open in Safari") {
-                            NSWorkspace.shared.open(url)
+                            if !NSWorkspace.shared.open(url) {
+                                CrashReporter.shared.logDataIssue(
+                                    "NSWorkspace.open returned false for fallback article URL: \(url.lastPathComponent)"
+                                )
+                            }
                         }
                         .controlSize(.small)
                     }
@@ -214,5 +218,65 @@ struct PlainTextArticleFallback: View {
             }
         }
         return output
+    }
+}
+
+// MARK: - NativeArticleRepresentable
+//
+// The native NSTextView article renderer. Lives in this sister file (rather
+// than ArticleBrowserView.swift) to keep that file under the 600-LOC Big Sur
+// type-checker ceiling; it is `internal` so ArticleBrowserView can embed it.
+
+struct NativeArticleRepresentable: NSViewRepresentable {
+    let coordinator: ArticleCoordinator
+
+    func makeNSView(context: Context) -> NSScrollView {
+        let textView = NSTextView()
+        textView.backgroundColor = NSColor.textBackgroundColor
+        textView.drawsBackground = true
+        textView.isEditable = false
+        textView.isSelectable = true
+        textView.allowsUndo = false
+        textView.textContainerInset = NSSize(width: 28, height: 24)
+        textView.textContainer?.widthTracksTextView = true
+        textView.textContainer?.containerSize = NSSize(
+            width: CGFloat.greatestFiniteMagnitude,
+            height: CGFloat.greatestFiniteMagnitude
+        )
+        let scrollView = NSScrollView()
+        scrollView.hasVerticalScroller = true
+        scrollView.hasHorizontalScroller = false
+        scrollView.autohidesScrollers = true
+        scrollView.documentView = textView
+        scrollView.backgroundColor = NSColor.textBackgroundColor
+        coordinator.attachNativeTextView(textView)
+        return scrollView
+    }
+
+    func updateNSView(_ nsView: NSScrollView, context: Context) {
+        coordinator.updateNativeTextView()
+    }
+
+    // Dismantle ordering — the SwiftUI ↔ AppKit pinch-point on Big Sur.
+    //
+    // When the sheet hosting ArticleBrowserView dismisses (⌘W) and the
+    // user immediately clicks a CTA on the parent ChapterDetailView
+    // (Try Discover Mode), the sheet-dismount commit and the next render
+    // commit can interleave: SwiftUI tears this NSScrollView down, AppKit
+    // can still send one final NSTextViewDelegate / NSLayoutManager
+    // callback into a freed instance, and the parent commit pump trips on
+    // the resulting over-release as objc_release.
+    //
+    // Defensive ordering, applied synchronously here before the NSScrollView
+    // is released by SwiftUI's commit:
+    //   1. nil any NSTextView delegate first so AppKit cannot route another
+    //      callback (no-op in this build — we never assign one — but cheap
+    //      insurance against future code adding a delegate without thinking
+    //      about teardown).
+    //   2. detach documentView so the NSTextView's retain count drops in a
+    //      deterministic order before the SwiftUI commit unwinds.
+    static func dismantleNSView(_ nsView: NSScrollView, coordinator: ()) {
+        (nsView.documentView as? NSTextView)?.delegate = nil
+        nsView.documentView = nil
     }
 }
