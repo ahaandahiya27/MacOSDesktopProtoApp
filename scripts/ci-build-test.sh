@@ -229,6 +229,29 @@ if [ -f "scripts/test_lints.py" ]; then
     fi
 fi
 
+# Big Sur / Swift 5.5 COMPILE-CLASS compat lints. These also run in the
+# pre-commit hook, but wiring them HERE enforces them on every push (pre-push
+# calls this script) and in CI — closing the gap where a `git commit
+# --no-verify`, a hook-less CI runner, or a tool that bypasses hooks could let a
+# Big-Sur incompatibility reach the iMac. Critically, the dev-Mac build (Swift 6
+# / SDK 26) CANNOT catch several of these classes — the two Swift-5.5
+# Segmentation-fault-11 patterns (over-dense GeometryReader + inline modifier
+# math), SF Symbols 3+ (render blank, not a compile error), and the
+# tuple-keypath ForEach identity crash are all invisible to a green dev-Mac
+# build — so these scans are the ONLY push-time guard for them.
+echo "==> Big Sur compile-class compat lints (push/CI enforcement)"
+for L in check_macos12_apis check_sf_symbols_compat check_swift55_syntax \
+         check_viewbuilder_limit check_viewbuilder_depth check_inline_modifier_math \
+         check_mainactor_closure_refs check_combine_sink_weakself; do
+    [ -f "scripts/$L.py" ] || continue
+    if ! python3 "scripts/$L.py" >/dev/null 2>&1; then
+        echo "ci-build-test: $L failed — Big Sur compat violation (compiles on the dev Mac, fails or crashes on the iMac). Re-running with output:" >&2
+        python3 "scripts/$L.py" >&2 || true
+        exit 1
+    fi
+done
+echo "    ✓ compile-class compat lints clean"
+
 run_xcodebuild "BUILD" \
     -project "$PROJECT" \
     -scheme "$SCHEME" \
