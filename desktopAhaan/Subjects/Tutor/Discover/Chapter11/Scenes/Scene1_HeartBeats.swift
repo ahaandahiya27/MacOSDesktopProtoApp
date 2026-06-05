@@ -118,48 +118,61 @@ struct Scene1_HeartBeats: View {
 private struct FourChamberHeart: View {
     var body: some View {
         GeometryReader { geo in
-            let w = geo.size.width
-            let h = geo.size.height
-            let raX: CGFloat = w * 0.30
-            let raY: CGFloat = h * 0.28
-            let laX: CGFloat = w * 0.70
-            let laY: CGFloat = h * 0.28
-            let rvX: CGFloat = w * 0.32
-            let rvY: CGFloat = h * 0.68
-            let lvX: CGFloat = w * 0.68
-            let lvY: CGFloat = h * 0.68
-            return ZStack {
-                // Right half (oxygen-poor — blue)
-                HalfHeart(side: .right)
-                    .fill(Color.blue.opacity(0.7))
-                // Left half (oxygen-rich — red)
-                HalfHeart(side: .left)
-                    .fill(Color.red.opacity(0.75))
+            content(w: geo.size.width, h: geo.size.height)
+        }
+    }
 
-                // Vertical septum
-                Path { p in
-                    p.move(to: CGPoint(x: w / 2, y: h * 0.10))
-                    p.addLine(to: CGPoint(x: w / 2, y: h * 0.92))
-                }
-                .stroke(Color.white, lineWidth: 3)
+    // Body extracted into a typed helper so Swift 5.5's @ViewBuilder
+    // doesn't see the `let ... ; return ZStack { ... }` sequence inside
+    // the GeometryReader closure. (Swift 5.5 rejects explicit `return`
+    // inside a multi-statement @ViewBuilder closure body — caught on
+    // the 2026-06-05 iMac build.)
+    private func content(w: CGFloat, h: CGFloat) -> some View {
+        let raX: CGFloat = w * 0.30
+        let raY: CGFloat = h * 0.28
+        let laX: CGFloat = w * 0.70
+        let laY: CGFloat = h * 0.28
+        let rvX: CGFloat = w * 0.32
+        let rvY: CGFloat = h * 0.68
+        let lvX: CGFloat = w * 0.68
+        let lvY: CGFloat = h * 0.68
+        let septumX: CGFloat = w / 2
+        let septumTopY: CGFloat = h * 0.10
+        let septumBottomY: CGFloat = h * 0.92
+        let dividerLeftX: CGFloat = w * 0.12
+        let dividerRightX: CGFloat = w * 0.88
+        let dividerY: CGFloat = h * 0.45
+        return ZStack {
+            // Right half (oxygen-poor — blue)
+            HalfHeart(side: .right)
+                .fill(Color.blue.opacity(0.7))
+            // Left half (oxygen-rich — red)
+            HalfHeart(side: .left)
+                .fill(Color.red.opacity(0.75))
 
-                // Atrium/ventricle horizontal divider
-                Path { p in
-                    p.move(to: CGPoint(x: w * 0.12, y: h * 0.45))
-                    p.addLine(to: CGPoint(x: w * 0.88, y: h * 0.45))
-                }
-                .stroke(Color.white.opacity(0.85), lineWidth: 2)
-
-                // Labels
-                Text("RA").font(.caption2.bold()).foregroundColor(.white)
-                    .position(x: raX, y: raY)
-                Text("LA").font(.caption2.bold()).foregroundColor(.white)
-                    .position(x: laX, y: laY)
-                Text("RV").font(.caption2.bold()).foregroundColor(.white)
-                    .position(x: rvX, y: rvY)
-                Text("LV").font(.caption2.bold()).foregroundColor(.white)
-                    .position(x: lvX, y: lvY)
+            // Vertical septum
+            Path { p in
+                p.move(to: CGPoint(x: septumX, y: septumTopY))
+                p.addLine(to: CGPoint(x: septumX, y: septumBottomY))
             }
+            .stroke(Color.white, lineWidth: 3)
+
+            // Atrium/ventricle horizontal divider
+            Path { p in
+                p.move(to: CGPoint(x: dividerLeftX, y: dividerY))
+                p.addLine(to: CGPoint(x: dividerRightX, y: dividerY))
+            }
+            .stroke(Color.white.opacity(0.85), lineWidth: 2)
+
+            // Labels
+            Text("RA").font(.caption2.bold()).foregroundColor(.white)
+                .position(x: raX, y: raY)
+            Text("LA").font(.caption2.bold()).foregroundColor(.white)
+                .position(x: laX, y: laY)
+            Text("RV").font(.caption2.bold()).foregroundColor(.white)
+                .position(x: rvX, y: rvY)
+            Text("LV").font(.caption2.bold()).foregroundColor(.white)
+                .position(x: lvX, y: lvY)
         }
     }
 }

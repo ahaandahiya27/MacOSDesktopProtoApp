@@ -150,6 +150,11 @@ def main() -> int:
     if csw.run_selftest() != 0:
         failures.append("check_combine_sink_weakself selftest")
 
+    print("== check_return_in_viewbuilder — embedded --selftest ==")
+    rvb = _import_lint_module("check_return_in_viewbuilder")
+    if rvb.run_selftest() != 0:
+        failures.append("check_return_in_viewbuilder selftest")
+
     print("== check_mainactor_closure_refs — embedded --selftest ==")
     mc = _import_lint_module("check_mainactor_closure_refs")
     if mc.run_selftest() != 0:

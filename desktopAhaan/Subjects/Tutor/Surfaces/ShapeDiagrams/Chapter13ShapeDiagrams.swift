@@ -210,23 +210,35 @@ struct SpeedCompareDiagram: View {
             VStack(spacing: 5) {
                 SDLabel(text: "Speed = distance ÷ time", color: .green)
                 ForEach(0..<movers.count, id: \.self) { i in
-                    let frac: CGFloat = movers[i].1
-                    return HStack(spacing: 6) {
-                        Text(movers[i].0)
-                            .font(.system(size: 9, weight: .semibold))
-                            .foregroundColor(DesignTokens.BrandColor.canvasText)
-                            .frame(width: 56, alignment: .trailing)
-                        GeometryReader { geo in
-                            let scaled: CGFloat = geo.size.width * frac
-                            let barW: CGFloat = max(6, scaled)
-                            return RoundedRectangle(cornerRadius: 3)
-                                .fill(Color.green.opacity(0.5))
-                                .frame(width: barW, height: 12)
-                        }
-                        .frame(height: 12)
-                    }
+                    moverRow(i: i)
                 }
             }
         }
+    }
+
+    // Body extracted into typed helpers so Swift 5.5's @ViewBuilder
+    // doesn't see `let ... ; return HStack/RoundedRectangle { ... }`
+    // inside a ForEach or GeometryReader closure. Caught by
+    // check_return_in_viewbuilder lint on 2026-06-05.
+    private func moverRow(i: Int) -> some View {
+        let frac: CGFloat = movers[i].1
+        return HStack(spacing: 6) {
+            Text(movers[i].0)
+                .font(.system(size: 9, weight: .semibold))
+                .foregroundColor(DesignTokens.BrandColor.canvasText)
+                .frame(width: 56, alignment: .trailing)
+            GeometryReader { geo in
+                moverBar(width: geo.size.width, frac: frac)
+            }
+            .frame(height: 12)
+        }
+    }
+
+    private func moverBar(width: CGFloat, frac: CGFloat) -> some View {
+        let scaled: CGFloat = width * frac
+        let barW: CGFloat = max(6, scaled)
+        return RoundedRectangle(cornerRadius: 3)
+            .fill(Color.green.opacity(0.5))
+            .frame(width: barW, height: 12)
     }
 }

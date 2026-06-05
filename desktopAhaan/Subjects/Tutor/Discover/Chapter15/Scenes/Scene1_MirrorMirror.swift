@@ -89,68 +89,79 @@ private struct MirrorDiagram: View {
 
     var body: some View {
         GeometryReader { geo in
-            let centerX = geo.size.width / 2
-            let mirrorY = geo.size.height - 30
-            let rayLength: Double = 170
+            content(w: geo.size.width, h: geo.size.height)
+        }
+    }
 
-            let rad = angle * .pi / 180
-            // Incoming ray STARTS at upper-left, ENDS at hit point.
-            let inStartX = Double(centerX) - sin(rad) * rayLength
-            let inStartY = Double(mirrorY) - cos(rad) * rayLength
-            // Reflected ray STARTS at hit point, ENDS at upper-right.
-            let outEndX = Double(centerX) + sin(rad) * rayLength
-            let outEndY = Double(mirrorY) - cos(rad) * rayLength
+    // Body extracted into a typed helper so Swift 5.5's @ViewBuilder
+    // doesn't see the `let ... ; return ZStack { ... }` sequence inside
+    // the GeometryReader closure. Swift 5.5 rejects explicit `return`
+    // in a multi-statement @ViewBuilder closure body (caught on the
+    // 2026-06-05 iMac build).
+    private func content(w: CGFloat, h: CGFloat) -> some View {
+        let centerX: CGFloat = w / 2
+        let mirrorY: CGFloat = h - 30
+        let rayLength: Double = 170
 
-            let incidentLabelX: CGFloat = CGFloat(inStartX) + 18
-            let incidentLabelY: CGFloat = CGFloat(inStartY) + 10
-            let reflectedLabelX: CGFloat = CGFloat(outEndX) - 22
-            let reflectedLabelY: CGFloat = CGFloat(outEndY) + 10
-            let normalLabelX: CGFloat = centerX + 30
-            let normalLabelY: CGFloat = mirrorY - 175
+        let rad: Double = angle * .pi / 180
+        // Incoming ray STARTS at upper-left, ENDS at hit point.
+        let inStartX: Double = Double(centerX) - sin(rad) * rayLength
+        let inStartY: Double = Double(mirrorY) - cos(rad) * rayLength
+        // Reflected ray STARTS at hit point, ENDS at upper-right.
+        let outEndX: Double = Double(centerX) + sin(rad) * rayLength
+        let outEndY: Double = Double(mirrorY) - cos(rad) * rayLength
 
-            return ZStack {
-                // Mirror surface (with hatching feel via thick line)
-                Path { p in
-                    p.move(to: CGPoint(x: 30, y: mirrorY))
-                    p.addLine(to: CGPoint(x: geo.size.width - 30, y: mirrorY))
-                }
-                .stroke(Color.compatIndigo, lineWidth: 4)
+        let incidentLabelX: CGFloat = CGFloat(inStartX) + 18
+        let incidentLabelY: CGFloat = CGFloat(inStartY) + 10
+        let reflectedLabelX: CGFloat = CGFloat(outEndX) - 22
+        let reflectedLabelY: CGFloat = CGFloat(outEndY) + 10
+        let normalLabelX: CGFloat = centerX + 30
+        let normalLabelY: CGFloat = mirrorY - 175
+        let mirrorRightX: CGFloat = w - 30
+        let normalTopY: CGFloat = mirrorY - 180
 
-                // Normal (dashed vertical from hit point)
-                Path { p in
-                    p.move(to: CGPoint(x: centerX, y: mirrorY))
-                    p.addLine(to: CGPoint(x: centerX, y: mirrorY - 180))
-                }
-                .stroke(Color.gray, style: StrokeStyle(lineWidth: 1.5, dash: [4, 4]))
-
-                // Incoming ray (orange)
-                Path { p in
-                    p.move(to: CGPoint(x: inStartX, y: inStartY))
-                    p.addLine(to: CGPoint(x: centerX, y: mirrorY))
-                }
-                .stroke(Color.orange, lineWidth: 2.5)
-
-                // Reflected ray (red)
-                Path { p in
-                    p.move(to: CGPoint(x: centerX, y: mirrorY))
-                    p.addLine(to: CGPoint(x: outEndX, y: outEndY))
-                }
-                .stroke(Color.red, lineWidth: 2.5)
-
-                // Labels
-                Text("incident")
-                    .font(.caption.bold())
-                    .foregroundColor(DesignTokens.BrandColor.tryAtHome)
-                    .position(x: incidentLabelX, y: incidentLabelY)
-                Text("reflected")
-                    .font(.caption.bold())
-                    .foregroundColor(.red)
-                    .position(x: reflectedLabelX, y: reflectedLabelY)
-                Text("normal")
-                    .font(.caption2)
-                    .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                    .position(x: normalLabelX, y: normalLabelY)
+        return ZStack {
+            // Mirror surface (with hatching feel via thick line)
+            Path { p in
+                p.move(to: CGPoint(x: 30, y: mirrorY))
+                p.addLine(to: CGPoint(x: mirrorRightX, y: mirrorY))
             }
+            .stroke(Color.compatIndigo, lineWidth: 4)
+
+            // Normal (dashed vertical from hit point)
+            Path { p in
+                p.move(to: CGPoint(x: centerX, y: mirrorY))
+                p.addLine(to: CGPoint(x: centerX, y: normalTopY))
+            }
+            .stroke(Color.gray, style: StrokeStyle(lineWidth: 1.5, dash: [4, 4]))
+
+            // Incoming ray (orange)
+            Path { p in
+                p.move(to: CGPoint(x: inStartX, y: inStartY))
+                p.addLine(to: CGPoint(x: centerX, y: mirrorY))
+            }
+            .stroke(Color.orange, lineWidth: 2.5)
+
+            // Reflected ray (red)
+            Path { p in
+                p.move(to: CGPoint(x: centerX, y: mirrorY))
+                p.addLine(to: CGPoint(x: outEndX, y: outEndY))
+            }
+            .stroke(Color.red, lineWidth: 2.5)
+
+            // Labels
+            Text("incident")
+                .font(.caption.bold())
+                .foregroundColor(DesignTokens.BrandColor.tryAtHome)
+                .position(x: incidentLabelX, y: incidentLabelY)
+            Text("reflected")
+                .font(.caption.bold())
+                .foregroundColor(.red)
+                .position(x: reflectedLabelX, y: reflectedLabelY)
+            Text("normal")
+                .font(.caption2)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                .position(x: normalLabelX, y: normalLabelY)
         }
     }
 }
