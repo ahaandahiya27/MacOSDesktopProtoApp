@@ -395,10 +395,14 @@ final class CrashReporter {
             return
         }
         if let handle = try? FileHandle(forWritingTo: url) {
+            // defer close FIRST so a throw in seekToEnd / write doesn't leak
+            // the fd; the success path no longer needs an explicit close().
+            // Crash-handler hot-path: leaking an fd here cascades into a
+            // second writer racing with this one on the same URL.
+            defer { try? handle.close() }
             do {
                 try handle.seekToEnd()
                 try handle.write(contentsOf: data)
-                try handle.close()
             } catch {
                 // Last resort — at least don't crash inside the crash handler.
                 try? data.write(to: url, options: .atomic)

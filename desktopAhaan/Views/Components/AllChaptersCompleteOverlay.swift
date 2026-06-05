@@ -50,7 +50,7 @@ struct AllChaptersCompleteOverlay: View {
                 .shadow(color: .black.opacity(0.4), radius: 20, x: 0, y: 8)
 
             if celebrate {
-                ParticleEmitter(isActive: true, particleCount: 80, duration: 4.0)
+                ParticleEmitter(isActive: true, particleCount: HardwareTier.particleBudget, duration: 4.0)
                     .allowsHitTesting(false)
                     .ignoresSafeArea()
             }

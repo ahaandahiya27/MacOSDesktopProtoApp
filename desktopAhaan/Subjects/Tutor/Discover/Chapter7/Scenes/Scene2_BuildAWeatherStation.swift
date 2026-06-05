@@ -165,7 +165,7 @@ struct Scene2_BuildAWeatherStation: View {
         }
         .overlay(
             stationComplete
-                ? ParticleEmitter(isActive: true, particleCount: 40, duration: 2.0)
+                ? ParticleEmitter(isActive: true, particleCount: min(40, HardwareTier.particleBudget), duration: 2.0)
                     .allowsHitTesting(false)
                 : nil
         )

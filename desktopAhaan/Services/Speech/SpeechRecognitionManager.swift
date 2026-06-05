@@ -36,6 +36,9 @@ final class SpeechRecognitionManager: ObservableObject {
 
     private var hasTapInstalled = false
     private var errorDismissTask: Task<Void, Never>?
+    /// 30-second listening watchdog. Stored so a stop-then-start within the
+    /// window can cancel the previous timer and avoid two stops racing.
+    private var autoStopTask: Task<Void, Never>?
 
     /// Whether real audio hardware is available (false on Simulator)
     private var isAudioHardwareAvailable: Bool {
@@ -233,9 +236,13 @@ final class SpeechRecognitionManager: ObservableObject {
             try audioEngine.start()
             isListening = true
 
-            // Auto-stop after 30 seconds to prevent indefinite recording
-            Task { [weak self] in
+            // Auto-stop after 30 seconds to prevent indefinite recording.
+            // Stored + cancelled in stopListening so a quick restart within
+            // the window doesn't race two stops.
+            autoStopTask?.cancel()
+            autoStopTask = Task { [weak self] in
                 try? await Task.sleep(nanoseconds: 30_000_000_000)
+                if Task.isCancelled { return }
                 await MainActor.run { [weak self] in
                     if let self = self, self.isListening {
                         self.stopListening()
@@ -310,8 +317,10 @@ final class SpeechRecognitionManager: ObservableObject {
             try audioEngine.start()
             isListening = true
 
-            Task { [weak self] in
+            autoStopTask?.cancel()
+            autoStopTask = Task { [weak self] in
                 try? await Task.sleep(nanoseconds: 30_000_000_000)
+                if Task.isCancelled { return }
                 await MainActor.run { [weak self] in
                     if let self = self, self.isListening {
                         self.stopListening()
@@ -327,6 +336,8 @@ final class SpeechRecognitionManager: ObservableObject {
 
     /// Stop listening and clean up all resources
     func stopListening() {
+        autoStopTask?.cancel()
+        autoStopTask = nil
         if let engine = _audioEngine {
             if engine.isRunning {
                 engine.stop()
@@ -357,7 +368,7 @@ final class SpeechRecognitionManager: ObservableObject {
     private func showTemporaryError(_ message: String) {
         errorMessage = message
         errorDismissTask?.cancel()
-        errorDismissTask = Task { [weak self] in
+        errorDismissTask = Task { @MainActor [weak self] in
             try? await Task.sleep(nanoseconds: 10_000_000_000)
             if !Task.isCancelled {
                 self?.errorMessage = nil

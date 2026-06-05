@@ -78,7 +78,7 @@ struct Scene2_PhotosynthesisLab: View {
                 if burstActive {
                     ParticleEmitter(
                         isActive: burstActive,
-                        particleCount: 50,
+                        particleCount: min(50, HardwareTier.particleBudget),
                         duration: 1.2,
                         palette: [.purple, .pink, Color.compatTeal, .green]
                     )

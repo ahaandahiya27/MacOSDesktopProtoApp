@@ -140,6 +140,11 @@ def main() -> int:
     if aks.run_selftest() != 0:
         failures.append("check_appstorage_keys_routing selftest")
 
+    print("== check_particle_budget — embedded --selftest ==")
+    pb = _import_lint_module("check_particle_budget")
+    if pb.run_selftest() != 0:
+        failures.append("check_particle_budget selftest")
+
     print("== check_mainactor_closure_refs — embedded --selftest ==")
     mc = _import_lint_module("check_mainactor_closure_refs")
     if mc.run_selftest() != 0:

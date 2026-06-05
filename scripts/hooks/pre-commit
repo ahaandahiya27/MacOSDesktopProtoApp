@@ -256,6 +256,22 @@ if [ -f "scripts/check_appstorage_keys_routing.py" ]; then
     fi
 fi
 
+# 8e) ParticleEmitter particleCount must route through HardwareTier.particleBudget.
+#     The deploy iMac's AMD R9 M290X (2 GB VRAM) chokes when redraw count
+#     exceeds the legacy budget (40). 2026-06-05 audit found 9 sites with
+#     raw int literals (`particleCount: 40` / `: 50` / `: 80`). Lint added
+#     same commit. Hard gate.
+if [ -f "scripts/check_particle_budget.py" ]; then
+    if ! python3 scripts/check_particle_budget.py --quiet; then
+        echo
+        echo "pre-commit: ParticleEmitter budget lint failed — a raw int"
+        echo "  literal slipped through. Replace with `HardwareTier.particleBudget`"
+        echo "  (or `min(N, HardwareTier.particleBudget)` to cap at N)."
+        echo "If intentional, bypass with: git commit --no-verify"
+        exit 1
+    fi
+fi
+
 # 9) Pack-integrity lints (Bug-Free-Cert D.2/D.3/D.4/D.5/D.6/D.10). Only run
 #    when a pack JSON is staged — they're pure-JSON and cheap, and gating on
 #    the pack keeps them from touching unrelated commits. They duplicate the

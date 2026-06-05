@@ -130,7 +130,7 @@ struct Scene9_BossQuiz_Ch2: View {
         .overlay(
             Group {
                 if celebrate {
-                    ParticleEmitter(isActive: true, particleCount: 40, duration: 2.0)
+                    ParticleEmitter(isActive: true, particleCount: min(40, HardwareTier.particleBudget), duration: 2.0)
                         .allowsHitTesting(false)
                         .ignoresSafeArea()
                 }

@@ -135,7 +135,7 @@ struct Scene6_AcidOrBaseSortingLab: View {
                 .padding(.horizontal, 24)
 
                 if showConfetti {
-                    ParticleEmitter(isActive: true, particleCount: 40, duration: 1.5)
+                    ParticleEmitter(isActive: true, particleCount: min(40, HardwareTier.particleBudget), duration: 1.5)
                         .allowsHitTesting(false)
                         .ignoresSafeArea()
                 }

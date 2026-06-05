@@ -249,7 +249,7 @@ struct Scene5_AutotrophHeterotroph: View {
                     .padding(20)
                 }
                 .frame(maxWidth: 320)
-                ParticleEmitter(isActive: true, particleCount: 80)
+                ParticleEmitter(isActive: true, particleCount: HardwareTier.particleBudget)
                     .allowsHitTesting(false)
             }
             .transition(.opacity)
