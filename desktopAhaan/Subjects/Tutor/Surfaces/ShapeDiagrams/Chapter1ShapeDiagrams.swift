@@ -90,13 +90,17 @@ struct ChloroplastDiagram: View {
             .position(x: cx, y: cy)
     }
     private func grana(cx: CGFloat, cy: CGFloat, ow: CGFloat) -> some View {
-        // Three grana (thylakoid stacks)
+        // Three grana (thylakoid stacks). Body extracted to a helper so
+        // the ForEach @ViewBuilder closure is a single expression.
         ForEach(0..<3, id: \.self) { i in
-            let offset: CGFloat = CGFloat(i - 1) * ow * 0.26
-            let gx: CGFloat = cx + offset
-            return granum
-                .position(x: gx, y: cy)
+            granumAt(i: i, cx: cx, cy: cy, ow: ow)
         }
+    }
+
+    private func granumAt(i: Int, cx: CGFloat, cy: CGFloat, ow: CGFloat) -> some View {
+        let offset: CGFloat = CGFloat(i - 1) * ow * 0.26
+        let gx: CGFloat = cx + offset
+        return granum.position(x: gx, y: cy)
     }
     private func labels(cx: CGFloat, cy: CGFloat, ow: CGFloat, oh: CGFloat, h: CGFloat) -> some View {
         let outerHalfH: CGFloat = oh / 2
@@ -322,11 +326,7 @@ struct LeafAnatomyDiagram: View {
         return ZStack {
             HStack(spacing: 6) {
                 ForEach(0..<cellCount, id: \.self) { i in
-                    let cellSize: CGFloat = i % 2 == 0 ? 20 : 15
-                    return Circle()
-                        .fill(Color.green.opacity(0.28))
-                        .overlay(Circle().strokeBorder(Color.green.opacity(0.6), lineWidth: 1))
-                        .frame(width: cellSize)
+                    spongyCell(i: i)
                 }
             }
             // Vascular bundle: a small xylem/phloem pair
@@ -339,6 +339,18 @@ struct LeafAnatomyDiagram: View {
             .overlay(PartLabel(text: "Vein").offset(y: 16))
         }
         .frame(height: 44)
+    }
+
+    // Per-iteration spongy-mesophyll cell — extracted from the ForEach
+    // body so the @ViewBuilder closure is single-expression. The
+    // `let cellSize` + `return Circle()` pattern was rejected by Swift
+    // 5.5 (caught on the 2026-06-05 iMac build).
+    private func spongyCell(i: Int) -> some View {
+        let cellSize: CGFloat = i % 2 == 0 ? 20 : 15
+        return Circle()
+            .fill(Color.green.opacity(0.28))
+            .overlay(Circle().strokeBorder(Color.green.opacity(0.6), lineWidth: 1))
+            .frame(width: cellSize)
     }
 
     private func lowerEpidermisWithStoma(w: CGFloat) -> some View {

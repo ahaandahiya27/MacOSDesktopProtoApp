@@ -217,17 +217,22 @@ struct ThunderstormDiagram: View {
             Image(systemName: SFSymbolCompat.name("arrow.down"))
                 .font(.system(size: 16, weight: .bold)).foregroundColor(Color.compatBlue)
                 .position(x: downX, y: arrowY)
-            // Rain
+            // Rain — body extracted to a helper so the ForEach
+            // @ViewBuilder closure is single-expression. 2026-06-05 pin.
             ForEach(0..<5, id: \.self) { i in
-                let fracBase: Double = 0.34 + Double(i) * 0.08
-                let frac: CGFloat = CGFloat(fracBase)
-                let rainX: CGFloat = w * frac
-                return Capsule().fill(Color.compatBlue.opacity(0.6)).frame(width: 2, height: 9)
-                    .position(x: rainX, y: rainY)
+                rainDrop(i: i, w: w, rainY: rainY)
             }
             SDLabel(text: "updraft", color: .red).position(x: updraftX, y: arrowY)
             SDLabel(text: "downdraft", color: Color.compatBlue).position(x: downdraftX, y: arrowY)
         }
+    }
+
+    private func rainDrop(i: Int, w: CGFloat, rainY: CGFloat) -> some View {
+        let fracBase: Double = 0.34 + Double(i) * 0.08
+        let frac: CGFloat = CGFloat(fracBase)
+        let rainX: CGFloat = w * frac
+        return Capsule().fill(Color.compatBlue.opacity(0.6)).frame(width: 2, height: 9)
+            .position(x: rainX, y: rainY)
     }
 }
 

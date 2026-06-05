@@ -90,17 +90,23 @@ struct MonsoonWindsDiagram: View {
         let rainLabelY: CGFloat = h * 0.22
         return Group {
             ForEach(0..<3, id: \.self) { i in
-                let fracBase: Double = 0.32 + Double(i) * 0.18
-                let frac: CGFloat = CGFloat(fracBase)
-                let arrowX: CGFloat = w * frac
-                return Image(systemName: SFSymbolCompat.name("arrow.up"))
-                    .font(.system(size: 18, weight: .bold)).foregroundColor(Color.compatTeal)
-                    .position(x: arrowX, y: arrowY)
+                windsArrow(i: i, w: w, arrowY: arrowY)
             }
             SDLabel(text: "Land (India)", color: Color.compatBrown).position(x: cx, y: landLabelY)
             SDLabel(text: "Moist sea winds", color: Color.compatTeal).position(x: cx, y: windsLabelY)
             SDLabel(text: "Rain", color: Color.compatBlue).position(x: cx, y: rainLabelY)
         }
+    }
+
+    // Per-iteration monsoon arrow — single-expression body for the
+    // ForEach @ViewBuilder. 2026-06-05 iMac build pin.
+    private func windsArrow(i: Int, w: CGFloat, arrowY: CGFloat) -> some View {
+        let fracBase: Double = 0.32 + Double(i) * 0.18
+        let frac: CGFloat = CGFloat(fracBase)
+        let arrowX: CGFloat = w * frac
+        return Image(systemName: SFSymbolCompat.name("arrow.up"))
+            .font(.system(size: 18, weight: .bold)).foregroundColor(Color.compatTeal)
+            .position(x: arrowX, y: arrowY)
     }
 }
 

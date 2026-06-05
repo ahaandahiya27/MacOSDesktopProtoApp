@@ -41,10 +41,7 @@ struct EarthTiltDiagram: View {
             // Sun + rays
             Circle().fill(.orange.opacity(0.8)).frame(width: 30, height: 30).position(x: sunX, y: cy)
             ForEach(0..<3, id: \.self) { i in
-                let rayY: CGFloat = cy - 24 + CGFloat(i) * 24
-                return Image(systemName: SFSymbolCompat.name("arrow.right"))
-                    .font(.system(size: 12, weight: .bold)).foregroundColor(.orange)
-                    .position(x: raysX, y: rayY)
+                sunRay(i: i, cy: cy, raysX: raysX)
             }
             // Earth
             Circle().fill(Color.compatBlue.opacity(0.35))
@@ -54,6 +51,16 @@ struct EarthTiltDiagram: View {
             Rectangle().fill(.red.opacity(0.7)).frame(width: 2.5, height: axisH)
                 .rotationEffect(.degrees(23.5)).position(x: cx, y: cy)
         }
+    }
+
+    // Per-iteration helper so the ForEach @ViewBuilder closure body is
+    // a single expression (no `let ... ; return ...`). Swift 5.5 rejects
+    // `return` inside @ViewBuilder closures.
+    private func sunRay(i: Int, cy: CGFloat, raysX: CGFloat) -> some View {
+        let rayY: CGFloat = cy - 24 + CGFloat(i) * 24
+        return Image(systemName: SFSymbolCompat.name("arrow.right"))
+            .font(.system(size: 12, weight: .bold)).foregroundColor(.orange)
+            .position(x: raysX, y: rayY)
     }
 
     private func labels(w: CGFloat, h: CGFloat, cx: CGFloat, cy: CGFloat, r: CGFloat) -> some View {

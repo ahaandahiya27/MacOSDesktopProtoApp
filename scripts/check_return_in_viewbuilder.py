@@ -99,11 +99,30 @@ def _balanced_close(src: str, open_idx: int) -> int:
 def scan_text(src: str) -> list[tuple[int, str]]:
     cleaned = _LINE_COMMENT.sub("", src)
     findings: list[tuple[int, str]] = []
-    # Find every `GeometryReader { ... in` opener and check whether
-    # any direct `return X` appears at the OUTERMOST nesting of the
-    # closure body (not inside a Path closure, not inside a nested
-    # Group, etc.).
-    for m in re.finditer(r"\bGeometryReader\s*\{", cleaned):
+    # @ViewBuilder closure openers. Swift 5.5 rejects explicit `return`
+    # inside ANY multi-statement @ViewBuilder closure, not just
+    # GeometryReader's trailing-closure body. The 2026-06-05 iMac build
+    # surfaced 5 more sites in ForEach { i in let X = ...; return Y { ... } }
+    # patterns; widened the scan accordingly.
+    #
+    # ForEach captures the broadest @ViewBuilder closure surface. The
+    # others (ZStack/VStack/HStack/Group) are typically closed-form
+    # @ViewBuilder bodies where `return` is rejected the same way.
+    openers = (
+        "GeometryReader",
+        "ForEach",
+        "ZStack",
+        "VStack",
+        "HStack",
+        "Group",
+        "Section",
+        "LazyVStack",
+        "LazyHStack",
+        "ScrollView",
+        "List",
+    )
+    pattern = r"\b(?:" + "|".join(openers) + r")\s*\{|\b(?:" + "|".join(openers) + r")\s*\([^)]*\)\s*\{"
+    for m in re.finditer(pattern, cleaned):
         brace_idx = m.end() - 1
         close_idx = _balanced_close(cleaned, brace_idx)
         if close_idx < 0:
@@ -165,6 +184,12 @@ def run_selftest() -> int:
           }
         }
       }
+      private func grana(cx: CGFloat) -> some View {
+        ForEach(0..<3, id: \\.self) { i in
+          let gx: CGFloat = cx + CGFloat(i) * 10
+          return Circle().position(x: gx, y: 0)
+        }
+      }
     }
     """
     safe = """
@@ -180,12 +205,21 @@ def run_selftest() -> int:
           Text("x").position(x: cx, y: h / 2)
         }
       }
+      private func grana(cx: CGFloat) -> some View {
+        ForEach(0..<3, id: \\.self) { i in
+          granum(i: i, cx: cx)
+        }
+      }
+      private func granum(i: Int, cx: CGFloat) -> some View {
+        let gx: CGFloat = cx + CGFloat(i) * 10
+        return Circle().position(x: gx, y: 0)
+      }
     }
     """
     ok = True
     d = scan_text(danger)
-    if len(d) != 1:
-        print(f"SELFTEST FAIL: danger fixture flagged {len(d)} sites, expected 1")
+    if len(d) != 2:
+        print(f"SELFTEST FAIL: danger fixture flagged {len(d)} sites, expected 2")
         for v in d:
             print("  ", v)
         ok = False
@@ -249,7 +283,7 @@ def main() -> int:
         print("ccd011a's pattern).")
         return 1
     if not args.quiet:
-        print("no explicit `return` statements inside GeometryReader closures")
+        print("no explicit `return` statements inside @ViewBuilder closures (GeometryReader / ForEach / ZStack / VStack / HStack / Group / etc.)")
     return 0
 
 
