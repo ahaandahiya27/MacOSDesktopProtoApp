@@ -315,3 +315,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_ch03",
+            subjectId: "maths_class7",
+            subjectName: "Mathematics",
+            chapterNumber: 3,
+            chapterTitle: "A Peek Beyond the Point",
+            displayTitle: "A Peek Beyond the Point — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch03_APeekBeyondThePoint_QuestionPaper.md",
+            solutionsMD: "Maths_Ch03_APeekBeyondThePoint_Solutions.md",
+            questionPaperHTML: "Maths_Ch03_APeekBeyondThePoint.html",
+            questionPaperPDF: "Maths_Ch03_APeekBeyondThePoint.pdf",
+            solvedGuideHTML: "Maths_Ch03_APeekBeyondThePoint_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
