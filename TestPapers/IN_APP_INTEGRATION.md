@@ -349,3 +349,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_ch05",
+            subjectId: "maths_class7",
+            subjectName: "Mathematics",
+            chapterNumber: 5,
+            chapterTitle: "Parallel and Intersecting Lines",
+            displayTitle: "Parallel and Intersecting Lines — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch05_ParallelAndIntersectingLines_QuestionPaper.md",
+            solutionsMD: "Maths_Ch05_ParallelAndIntersectingLines_Solutions.md",
+            questionPaperHTML: "Maths_Ch05_ParallelAndIntersectingLines.html",
+            questionPaperPDF: "Maths_Ch05_ParallelAndIntersectingLines.pdf",
+            solvedGuideHTML: "Maths_Ch05_ParallelAndIntersectingLines_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
