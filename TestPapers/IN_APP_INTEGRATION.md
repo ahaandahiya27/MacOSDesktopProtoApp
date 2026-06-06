@@ -468,3 +468,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_ch12",
+            subjectId: "maths_class7",
+            subjectName: "Mathematics",
+            chapterNumber: 12,
+            chapterTitle: "Another Peek Beyond the Point",
+            displayTitle: "Another Peek Beyond the Point — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch12_AnotherPeekBeyondThePoint_QuestionPaper.md",
+            solutionsMD: "Maths_Ch12_AnotherPeekBeyondThePoint_Solutions.md",
+            questionPaperHTML: "Maths_Ch12_AnotherPeekBeyondThePoint.html",
+            questionPaperPDF: "Maths_Ch12_AnotherPeekBeyondThePoint.pdf",
+            solvedGuideHTML: "Maths_Ch12_AnotherPeekBeyondThePoint_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
