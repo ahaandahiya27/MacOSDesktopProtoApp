@@ -366,3 +366,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_ch06",
+            subjectId: "maths_class7",
+            subjectName: "Mathematics",
+            chapterNumber: 6,
+            chapterTitle: "Number Play",
+            displayTitle: "Number Play — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch06_NumberPlay_QuestionPaper.md",
+            solutionsMD: "Maths_Ch06_NumberPlay_Solutions.md",
+            questionPaperHTML: "Maths_Ch06_NumberPlay.html",
+            questionPaperPDF: "Maths_Ch06_NumberPlay.pdf",
+            solvedGuideHTML: "Maths_Ch06_NumberPlay_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
