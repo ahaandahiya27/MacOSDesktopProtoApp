@@ -298,3 +298,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_ch02",
+            subjectId: "maths_class7",
+            subjectName: "Mathematics",
+            chapterNumber: 2,
+            chapterTitle: "Arithmetic Expressions",
+            displayTitle: "Arithmetic Expressions — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch02_ArithmeticExpressions_QuestionPaper.md",
+            solutionsMD: "Maths_Ch02_ArithmeticExpressions_Solutions.md",
+            questionPaperHTML: "Maths_Ch02_ArithmeticExpressions.html",
+            questionPaperPDF: "Maths_Ch02_ArithmeticExpressions.pdf",
+            solvedGuideHTML: "Maths_Ch02_ArithmeticExpressions_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
