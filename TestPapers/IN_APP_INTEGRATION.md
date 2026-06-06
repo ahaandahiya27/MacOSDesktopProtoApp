@@ -281,3 +281,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_ch01",
+            subjectId: "maths_class7",
+            subjectName: "Mathematics",
+            chapterNumber: 1,
+            chapterTitle: "Large Numbers Around Us",
+            displayTitle: "Large Numbers Around Us — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch01_LargeNumbersAroundUs_QuestionPaper.md",
+            solutionsMD: "Maths_Ch01_LargeNumbersAroundUs_Solutions.md",
+            questionPaperHTML: "Maths_Ch01_LargeNumbersAroundUs.html",
+            questionPaperPDF: "Maths_Ch01_LargeNumbersAroundUs.pdf",
+            solvedGuideHTML: "Maths_Ch01_LargeNumbersAroundUs_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
