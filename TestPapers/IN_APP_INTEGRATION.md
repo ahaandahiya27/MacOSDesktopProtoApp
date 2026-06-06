@@ -485,3 +485,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_ch13",
+            subjectId: "maths_class7",
+            subjectName: "Mathematics",
+            chapterNumber: 13,
+            chapterTitle: "Connecting the Dots",
+            displayTitle: "Connecting the Dots — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch13_ConnectingTheDots_QuestionPaper.md",
+            solutionsMD: "Maths_Ch13_ConnectingTheDots_Solutions.md",
+            questionPaperHTML: "Maths_Ch13_ConnectingTheDots.html",
+            questionPaperPDF: "Maths_Ch13_ConnectingTheDots.pdf",
+            solvedGuideHTML: "Maths_Ch13_ConnectingTheDots_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```

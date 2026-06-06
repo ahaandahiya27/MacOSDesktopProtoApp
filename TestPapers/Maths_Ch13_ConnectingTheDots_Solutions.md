@@ -144,7 +144,7 @@ Answer-key distribution: A = 15, B = 15, C = 15, D = 15.
 
 **50. (D)** X = 7 × 4 = 28 cars; Y = 5.5 × 4 = 22 cars. Difference = 28 − 22 = 6 cars. (Subtracting the symbols, 7 − 5.5 = 1.5, then forgetting to scale gives the C trap.)
 
-**51. (A)** Data 3, 7, 7, 7, 9, 11, 12: mode = 7 (three times); median = 4th value = 7; mean = 56 ÷ 7 = 8. Wait — recompute the mean: 3 + 7 + 7 + 7 + 9 + 11 + 12 = 56, and 56 ÷ 7 = 8. So mode 7, median 7, mean 8 → answer is "7, 7, 8". (Option A is exactly that triple.)
+**51. (A)** Data 3, 7, 7, 7, 9, 11, 12: mode = 7 (three times); median = 4th value = 7; mean = (3 + 7 + 7 + 7 + 9 + 11 + 12) ÷ 7 = 56 ÷ 7 = 8. So mode 7, median 7, mean 8 → "7, 7, 8", which is option A. (Option D, "7, 7, 7", wrongly takes the mean to be 7 too.)
 
 **52. (B)** Equal means (60) but Section P's range is 8 versus Q's 40, so P's marks are bunched closely — more consistent / less spread. Larger range (Q) means more scatter, not tighter. Equal means never imply identical marks.
 

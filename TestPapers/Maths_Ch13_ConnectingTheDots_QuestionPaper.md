@@ -316,10 +316,10 @@
     (D) 6
 
 51. For the data 3, 7, 7, 7, 9, 11, 12 the mode, median and mean are respectively:
-    (A) 7, 7, 7
+    (A) 7, 7, 8
     (B) 7, 8, 7
     (C) 9, 7, 8
-    (D) 7, 7, 8
+    (D) 7, 7, 7
 
 52. Two sections both have mean marks 60. Section P has range 8; Section Q has range 40. Which conclusion is correct?
     (A) Section Q's marks are more tightly clustered.
