@@ -48,9 +48,11 @@ RESOURCE_FILES = [
     "desktopAhaan/Resources/TestPapers/Science_Ch13_MotionAndTime_QuestionPaper.md",
     "desktopAhaan/Resources/TestPapers/Science_Ch13_MotionAndTime_Solutions.md",
     "desktopAhaan/Resources/TestPapers/Science_Ch13_MotionAndTime.html",
+    "desktopAhaan/Resources/TestPapers/Science_Ch13_MotionAndTime.pdf",
     "desktopAhaan/Resources/TestPapers/Maths_Ch15_FindingTheUnknown_QuestionPaper.md",
     "desktopAhaan/Resources/TestPapers/Maths_Ch15_FindingTheUnknown_Solutions.md",
     "desktopAhaan/Resources/TestPapers/Maths_Ch15_FindingTheUnknown.html",
+    "desktopAhaan/Resources/TestPapers/Maths_Ch15_FindingTheUnknown.pdf",
 ]
 
 
@@ -70,6 +72,7 @@ def filetype_for(path: str) -> str:
         "swift": "sourcecode.swift",
         "html": "text.html",
         "md": "net.daringfireball.markdown",
+        "pdf": "image.pdf",
     }.get(ext, "text")
 
 
@@ -88,13 +91,17 @@ def patch(text: str) -> tuple[str, list[str]]:
     for rel_path in SWIFT_FILES + RESOURCE_FILES:
         bare = os.path.basename(rel_path)
         is_swift = rel_path.endswith(".swift")
-        # Skip if already present.
-        if f"/* {bare} */" in out and bare in out.split(f"/* {bare} */")[0][-200:] + bare:
-            # Heuristic: if the filename appears as a comment somewhere
-            # AND any UUID has already been assigned, skip.
-            if re.search(rf"[0-9A-F]{{24}}\s*/\*\s*{re.escape(bare)}\s*\*/\s*=\s*\{{isa = PBXBuildFile", out):
-                log.append(f"skip (already present): {bare}")
-                continue
+        # Idempotency check: if a PBXBuildFile line already references
+        # this exact basename, skip. The match looks at the line shape
+        # `<24-hex-UUID> /* <bare> in <Sources|Resources> */ = {isa =
+        # PBXBuildFile;` to avoid colliding with bare-name mentions in
+        # comments or paths.
+        if re.search(
+            rf"[0-9A-F]{{24}}\s*/\*\s*{re.escape(bare)}\s+in\s+(Sources|Resources)\s*\*/\s*=\s*\{{isa\s*=\s*PBXBuildFile",
+            out,
+        ):
+            log.append(f"skip (already present): {bare}")
+            continue
 
         build_uuid = stable_uuid(f"buildfile:{rel_path}")
         ref_uuid = stable_uuid(f"fileref:{rel_path}")

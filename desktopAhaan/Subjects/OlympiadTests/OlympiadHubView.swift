@@ -1,104 +1,175 @@
 import SwiftUI
+import AppKit
 
 // MARK: - OlympiadHubView
 //
-// Landing view for the "Olympiad Tests" sidebar entry. Lists every
-// bundled paper grouped by subject, each row offering three actions:
-//   • Take Quiz       — interactive MCQ flow with score (Approach B)
-//   • Read Paper      — print-style HTML of the question paper (Approach A)
-//   • View Solutions  — print-style HTML of the solutions (Approach A)
+// Landing view for the "Olympiad Tests" sidebar entry. One card per
+// bundled paper with three actions:
 //
-// Big Sur safety: pure SwiftUI, NavigationView with NavigationLink for
-// the quiz drill-in, .sheet() for the two HTML viewers — all baseline
-// macOS 11. ArticleBrowserView reuse means zero new HTML-rendering
-// code (and zero WKWebView risk on the AMD R9 M290X — that path uses
-// NSTextView).
+//   • Take Quiz   — interactive MCQ flow with score (Approach B)
+//   • Open Paper  — print-style HTML viewer (includes both questions
+//                   AND solutions — the make_html.py tool ships them
+//                   as a single document, matching the parent's
+//                   intended print workflow)
+//   • Save PDF    — drops the print-ready .pdf onto a destination
+//                   the parent picks (NSSavePanel; defaults to
+//                   ~/Downloads). The PDF version is what the parent
+//                   physically prints; the HTML viewer is for on-
+//                   screen reading without leaving the app.
+//
+// 2026-06-06 UX iteration: the earlier "View Solutions" CTA was
+// dropped because the Open Paper HTML viewer already includes the
+// solutions section. Three CTAs is the clean shape — one to QUIZ,
+// one to READ, one to SAVE-FOR-PRINTING.
+//
+// Big Sur safety: pure SwiftUI + AppKit NSSavePanel. No WebKit, no
+// macOS 12+ APIs. Animations gated via withAnimationRespectingReduceMotion.
 
 @MainActor
 struct OlympiadHubView: View {
-    /// Which paper the user is currently reading the question / solutions
-    /// HTML for. nil → no sheet up. Both sheets pivot off the same
-    /// optional via two different cases, mirrored in `sheetKind`.
-    @State private var presentedSheet: SheetKind?
-
-    enum SheetKind: Identifiable, Hashable {
-        case questionPaper(OlympiadPaper)
-        case solutions(OlympiadPaper)
-
-        var id: String {
-            switch self {
-            case .questionPaper(let p): return "Q:\(p.id)"
-            case .solutions(let p):     return "S:\(p.id)"
-            }
-        }
-    }
+    /// The print-ready HTML sheet (the Read Paper CTA target). nil →
+    /// no sheet up.
+    @State private var presentedPaperSheet: OlympiadPaper?
+    /// Banner shown briefly after a successful Save PDF — gives the
+    /// parent a confirmation that the file landed where they asked.
+    @State private var savedToURL: URL?
+    /// Auto-dismiss timer for the saved banner.
+    @State private var bannerDismissTask: Task<Void, Never>?
 
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 24) {
                 header
+                if let url = savedToURL {
+                    savedBanner(url: url)
+                }
                 ForEach(OlympiadPaperRegistry.papersBySubject(), id: \.subject) { group in
                     subjectSection(name: group.subject, papers: group.papers)
                 }
             }
             .padding(24)
-            .frame(maxWidth: 820, alignment: .leading)
+            .frame(maxWidth: 880, alignment: .leading)
             .frame(maxWidth: .infinity, alignment: .center)
         }
         .background(Color(NSColor.windowBackgroundColor))
         .navigationTitle("Olympiad Tests")
-        .sheet(item: $presentedSheet) { kind in
-            switch kind {
-            case .questionPaper(let paper):
-                ArticleBrowserView(
-                    initialFile: paper.questionPaperHTML,
-                    chapterFolder: "TestPapers",
-                    articleTitle: "Question Paper — \(paper.chapterTitle)"
-                )
-                .frame(minWidth: 720, minHeight: 540)
-            case .solutions(let paper):
-                // The .html bundled with the paper is the question
-                // paper, not the solutions. The solutions are MD-only
-                // today; render them via the plain-text fallback so
-                // the kid can still read the answer key + worked
-                // solutions in-app while the printed HTML is reserved
-                // for the question paper.
-                OlympiadSolutionsSheet(paper: paper)
-                    .frame(minWidth: 720, minHeight: 540)
-            }
+        .sheet(item: $presentedPaperSheet) { paper in
+            ArticleBrowserView(
+                initialFile: paper.questionPaperHTML,
+                chapterFolder: "TestPapers",
+                articleTitle: "Question Paper + Solutions — \(paper.chapterTitle)"
+            )
+            .frame(minWidth: 760, minHeight: 560)
         }
     }
 
+    // MARK: - Header
+
     private var header: some View {
-        VStack(alignment: .leading, spacing: 6) {
-            HStack(spacing: 10) {
-                Text("🏆").font(.system(size: 36)).accessibilityHidden(true)
-                Text("Olympiad Tests")
-                    .font(.largeTitle.bold())
-                    .foregroundColor(DesignTokens.BrandColor.canvasText)
+        VStack(alignment: .leading, spacing: 8) {
+            HStack(spacing: 12) {
+                Text("🏆").font(.system(size: 40)).accessibilityHidden(true)
+                VStack(alignment: .leading, spacing: 2) {
+                    Text("Olympiad Tests")
+                        .font(.largeTitle.bold())
+                        .foregroundColor(DesignTokens.BrandColor.canvasText)
+                    Text("Class 7 syllabus · Olympiad difficulty")
+                        .font(.subheadline)
+                        .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                }
             }
-            Text("Class-7 syllabus, Olympiad difficulty. Each paper is a 60-MCQ rehearsal with the marking scheme +4 / −1 / 0 (max 240). Take it as a timed quiz or open the print-ready paper.")
+            Text("Each paper is a 60-MCQ rehearsal at competitive standard. **Take Quiz** to attempt it interactively (instant scoring with worked solutions per question). **Open Paper** to read the full print-style document (questions plus answer key plus worked solutions). **Save PDF** to drop a print-ready file onto disk.")
                 .font(.callout)
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 .fixedSize(horizontal: false, vertical: true)
+                .padding(.top, 4)
+            HStack(spacing: 14) {
+                schemeChip(icon: "plus", text: "+4 correct", tint: .green)
+                schemeChip(icon: "minus", text: "−1 wrong", tint: .red)
+                schemeChip(icon: "circle", text: "0 skipped", tint: .gray)
+                schemeChip(icon: "star.circle", text: "Max 240", tint: DesignTokens.BrandColor.primaryAction)
+            }
+            .padding(.top, 4)
         }
         .accessibilityElement(children: .combine)
     }
 
+    private func schemeChip(icon: String, text: String, tint: Color) -> some View {
+        HStack(spacing: 5) {
+            Image(systemName: SFSymbolCompat.name(icon))
+                .font(.caption2.weight(.semibold))
+            Text(text)
+                .font(.caption.monospacedDigit())
+        }
+        .foregroundColor(tint)
+        .padding(.horizontal, 8).padding(.vertical, 3)
+        .background(
+            Capsule().fill(tint.opacity(0.12))
+        )
+    }
+
+    // MARK: - Saved banner
+
+    private func savedBanner(url: URL) -> some View {
+        HStack(spacing: 10) {
+            Image(systemName: SFSymbolCompat.name("checkmark.circle.fill"))
+                .font(.title3)
+                .foregroundColor(.green)
+            VStack(alignment: .leading, spacing: 2) {
+                Text("Saved PDF")
+                    .font(.callout.weight(.semibold))
+                    .foregroundColor(DesignTokens.BrandColor.canvasText)
+                Text(url.path)
+                    .font(.caption.monospacedDigit())
+                    .foregroundColor(.secondary)
+                    .lineLimit(1)
+                    .truncationMode(.middle)
+            }
+            Spacer()
+            Button("Reveal in Finder") {
+                NSWorkspace.shared.activateFileViewerSelecting([url])
+            }
+            .controlSize(.small)
+            Button("Dismiss") {
+                savedToURL = nil
+                bannerDismissTask?.cancel()
+            }
+            .controlSize(.small)
+        }
+        .padding(12)
+        .background(
+            RoundedRectangle(cornerRadius: 8)
+                .fill(Color.green.opacity(0.10))
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 8)
+                .strokeBorder(Color.green.opacity(0.30), lineWidth: 1)
+        )
+    }
+
+    // MARK: - Subject section
+
     private func subjectSection(name: String, papers: [OlympiadPaper]) -> some View {
-        VStack(alignment: .leading, spacing: 12) {
-            Text(name)
-                .font(.title2.weight(.bold))
-                .foregroundColor(DesignTokens.BrandColor.canvasText)
+        VStack(alignment: .leading, spacing: 14) {
+            HStack(spacing: 8) {
+                Text(name)
+                    .font(.title2.weight(.bold))
+                    .foregroundColor(DesignTokens.BrandColor.canvasText)
+                Text("\(papers.count) paper\(papers.count == 1 ? "" : "s")")
+                    .font(.caption.monospacedDigit())
+                    .foregroundColor(.secondary)
+            }
             ForEach(papers) { paper in
                 paperCard(paper)
             }
         }
     }
 
+    // MARK: - Paper card
+
     private func paperCard(_ paper: OlympiadPaper) -> some View {
-        VStack(alignment: .leading, spacing: 10) {
-            HStack(alignment: .firstTextBaseline, spacing: 8) {
+        VStack(alignment: .leading, spacing: 14) {
+            HStack(alignment: .firstTextBaseline, spacing: 10) {
                 Text("Ch \(paper.chapterNumber)")
                     .font(.caption.weight(.semibold).monospacedDigit())
                     .foregroundColor(.white)
@@ -107,44 +178,55 @@ struct OlympiadHubView: View {
                 Text(paper.chapterTitle)
                     .font(.title3.weight(.semibold))
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
+                Spacer()
             }
-            HStack(spacing: 16) {
+            HStack(spacing: 14) {
                 statChip(icon: "questionmark.circle", text: "\(paper.questionCount) MCQ")
                 statChip(icon: "clock", text: "\(paper.suggestedTimeMinutes) min")
-                statChip(icon: "star.circle", text: "Max \(paper.maxMarks)")
-                statChip(icon: "plus.forwardslash.minus", text: "+\(paper.marksCorrect) / \(paper.marksWrong)")
+                statChip(icon: "star.circle", text: "\(paper.maxMarks) max")
             }
-            HStack(spacing: 10) {
+            HStack(spacing: 12) {
                 NavigationLink(destination: OlympiadQuizView(paper: paper)) {
-                    actionButtonLabel(icon: "play.circle.fill", text: "Take Quiz", tint: DesignTokens.BrandColor.primaryAction)
+                    actionLabel(icon: "play.circle.fill",
+                                text: "Take Quiz",
+                                tint: DesignTokens.BrandColor.primaryAction,
+                                filled: true)
                 }
                 .buttonStyle(.plain)
-                .accessibilityLabel("Take quiz — \(paper.chapterTitle)")
                 .help("Take this Olympiad paper as a 60-question interactive quiz.")
+                .accessibilityLabel("Take quiz — \(paper.chapterTitle)")
 
                 Button {
-                    presentedSheet = .questionPaper(paper)
+                    presentedPaperSheet = paper
                 } label: {
-                    actionButtonLabel(icon: "doc.text.fill", text: "Read Paper", tint: Color.compatTeal)
+                    actionLabel(icon: "doc.text.fill",
+                                text: "Open Paper",
+                                tint: Color.compatTeal,
+                                filled: false)
                 }
                 .buttonStyle(.plain)
-                .accessibilityLabel("Read paper — \(paper.chapterTitle)")
-                .help("Open the print-ready question paper as HTML.")
+                .help("Open the print-style HTML — questions, answer key and worked solutions.")
+                .accessibilityLabel("Open paper — \(paper.chapterTitle)")
 
                 Button {
-                    presentedSheet = .solutions(paper)
+                    savePDF(for: paper)
                 } label: {
-                    actionButtonLabel(icon: "key.fill", text: "View Solutions", tint: Color.compatBrown)
+                    actionLabel(icon: "arrow.down.doc.fill",
+                                text: "Save PDF",
+                                tint: DesignTokens.BrandColor.mnemonicAccent,
+                                filled: false)
                 }
                 .buttonStyle(.plain)
-                .accessibilityLabel("View solutions — \(paper.chapterTitle)")
-                .help("Open the answer key + worked solutions.")
+                .help("Save the print-ready PDF to a folder you choose.")
+                .accessibilityLabel("Save PDF — \(paper.chapterTitle)")
+
+                Spacer(minLength: 0)
             }
         }
-        .padding(16)
+        .padding(18)
         .background(
             RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusCard)
-                .fill(Color.white.opacity(0.55))
+                .fill(Color.white.opacity(0.65))
         )
         .overlay(
             RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusCard)
@@ -153,106 +235,108 @@ struct OlympiadHubView: View {
     }
 
     private func statChip(icon: String, text: String) -> some View {
-        HStack(spacing: 4) {
+        HStack(spacing: 5) {
             Image(systemName: SFSymbolCompat.name(icon))
-                .font(.caption)
+                .font(.caption.weight(.medium))
                 .foregroundColor(.secondary)
             Text(text)
                 .font(.caption.monospacedDigit())
                 .foregroundColor(.secondary)
         }
+        .padding(.horizontal, 8).padding(.vertical, 3)
+        .background(
+            Capsule().fill(Color.gray.opacity(0.10))
+        )
     }
 
-    private func actionButtonLabel(icon: String, text: String, tint: Color) -> some View {
+    /// Single-line action button label. `fixedSize` ensures the text
+    /// never wraps mid-button (the earlier UI iteration broke "Take
+    /// Quiz" onto two lines because the buttons were too narrow).
+    /// The `filled` variant uses tint as the background; the unfilled
+    /// variant uses a tint border + white fill so the visual hierarchy
+    /// reads "Take Quiz is primary, Open / Save are secondary".
+    private func actionLabel(icon: String, text: String, tint: Color, filled: Bool) -> some View {
         HStack(spacing: 6) {
             Image(systemName: SFSymbolCompat.name(icon))
+                .font(.subheadline.weight(.semibold))
             Text(text)
-                .font(.callout.weight(.semibold))
+                .font(.subheadline.weight(.semibold))
         }
-        .foregroundColor(.white)
+        .foregroundColor(filled ? .white : tint)
+        .fixedSize()
         .padding(.horizontal, 14)
         .padding(.vertical, 8)
         .frame(minHeight: 36)
-        .background(Capsule().fill(tint))
-    }
-}
-
-// MARK: - OlympiadSolutionsSheet
-//
-// MD-only solutions don't have a print-ready HTML companion today, so
-// we render them with a lightweight in-app viewer (plain text + scroll).
-// Mirrors the `PlainTextArticleFallback` shape so the kid sees a
-// consistent look whether they're reading bundled HTML or MD-only
-// solutions.
-struct OlympiadSolutionsSheet: View {
-    let paper: OlympiadPaper
-    @Environment(\.presentationMode) private var presentationMode
-    @State private var bodyText: String = ""
-    @State private var loadError: String? = nil
-
-    var body: some View {
-        VStack(spacing: 0) {
-            HStack(spacing: 12) {
-                Button(action: { presentationMode.wrappedValue.dismiss() }) {
-                    Image(systemName: SFSymbolCompat.name("xmark.circle.fill"))
-                        .font(.title3)
+        .background(
+            Group {
+                if filled {
+                    Capsule().fill(tint)
+                } else {
+                    Capsule().fill(Color.white)
                 }
-                .keyboardShortcut("w", modifiers: .command)
-                .accessibilityLabel("Close solutions")
-                .help("Close solutions")
-                Spacer()
-                Text("Solutions — \(paper.chapterTitle)")
-                    .font(.body.weight(.semibold))
-                Spacer()
             }
-            .padding(.horizontal, 12).padding(.vertical, 10)
-            .background(Color(NSColor.controlBackgroundColor))
-
-            ScrollView {
-                VStack(alignment: .leading, spacing: 14) {
-                    if let err = loadError {
-                        Text(err)
-                            .font(.caption)
-                            .foregroundColor(.red)
-                    }
-                    if bodyText.isEmpty && loadError == nil {
-                        Text("Loading…")
-                            .foregroundColor(.secondary)
-                    } else {
-                        Text(bodyText)
-                            .font(.body)
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                    }
+        )
+        .overlay(
+            Group {
+                if !filled {
+                    Capsule().strokeBorder(tint.opacity(0.55), lineWidth: 1.5)
                 }
-                .padding(20)
             }
-            .background(Color(NSColor.windowBackgroundColor))
-        }
-        .onAppear { loadSolutions() }
+        )
     }
 
-    private func loadSolutions() {
-        let bare = (paper.solutionsMD as NSString).deletingPathExtension
-        let ext = (paper.solutionsMD as NSString).pathExtension
-        guard let url = Bundle.main.url(
+    // MARK: - Save PDF
+
+    /// Open an `NSSavePanel` so the parent can pick where to drop the
+    /// print-ready PDF. Defaults to `~/Downloads` with the paper's
+    /// pretty filename. On success, surfaces the destination URL in
+    /// the "Saved PDF" banner (auto-dismisses in ~6 seconds) + the
+    /// "Reveal in Finder" CTA.
+    private func savePDF(for paper: OlympiadPaper) {
+        let bare = (paper.questionPaperPDF as NSString).deletingPathExtension
+        let ext = (paper.questionPaperPDF as NSString).pathExtension
+        guard let bundledURL = Bundle.main.url(
             forResource: bare,
             withExtension: ext,
             subdirectory: "TestPapers"
         ) ?? Bundle.main.url(forResource: bare, withExtension: ext) else {
-            loadError = "Solutions file not bundled."
+            CrashReporter.shared.logDataIssue(
+                "OlympiadHub: PDF resource '\(paper.questionPaperPDF)' is not bundled"
+            )
             return
         }
-        Task.detached(priority: .userInitiated) {
+        let panel = NSSavePanel()
+        panel.title = "Save Olympiad Paper"
+        panel.nameFieldStringValue = paper.questionPaperPDF
+        panel.directoryURL = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first
+        panel.allowedContentTypes = []
+        panel.canCreateDirectories = true
+        panel.isExtensionHidden = false
+
+        panel.begin { response in
+            guard response == .OK, let dest = panel.url else { return }
             do {
-                let raw = try String(contentsOf: url, encoding: .utf8)
-                await MainActor.run {
-                    bodyText = raw
+                // If the user picked an existing file's location, the
+                // panel already prompted for overwrite confirmation;
+                // remove the stale copy before our copyItem call so we
+                // don't throw NSFileWriteFileExistsError.
+                if FileManager.default.fileExists(atPath: dest.path) {
+                    try FileManager.default.removeItem(at: dest)
+                }
+                try FileManager.default.copyItem(at: bundledURL, to: dest)
+                Task { @MainActor in
+                    savedToURL = dest
+                    bannerDismissTask?.cancel()
+                    bannerDismissTask = Task { @MainActor in
+                        try? await Task.sleep(nanoseconds: 6_000_000_000)
+                        if Task.isCancelled { return }
+                        savedToURL = nil
+                    }
                 }
             } catch {
-                let message = error.localizedDescription
-                await MainActor.run {
-                    loadError = message
-                }
+                CrashReporter.shared.logDataIssue(
+                    "OlympiadHub: copy PDF '\(paper.questionPaperPDF)' to '\(dest.path)' failed: \(error.localizedDescription)"
+                )
             }
         }
     }

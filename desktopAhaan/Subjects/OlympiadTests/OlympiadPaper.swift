@@ -69,6 +69,10 @@ struct OlympiadPaper: Identifiable, Hashable {
     let questionPaperMD: String     // "Science_Ch13_MotionAndTime_QuestionPaper.md"
     let solutionsMD: String         // "Science_Ch13_MotionAndTime_Solutions.md"
     let questionPaperHTML: String   // "Science_Ch13_MotionAndTime.html"
+    /// Print-ready PDF of the question paper + answer key + worked
+    /// solutions. Surfaced via the "Save PDF" CTA which lets the parent
+    /// drop a printable copy on the kid's desk.
+    let questionPaperPDF: String    // "Science_Ch13_MotionAndTime.pdf"
 
     /// Marking-scheme constants. +4 correct / -1 wrong / 0 skipped is
     /// the contract baked into every authored paper today.

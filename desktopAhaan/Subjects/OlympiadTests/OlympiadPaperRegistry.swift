@@ -27,6 +27,7 @@ enum OlympiadPaperRegistry {
             questionPaperMD: "Science_Ch13_MotionAndTime_QuestionPaper.md",
             solutionsMD: "Science_Ch13_MotionAndTime_Solutions.md",
             questionPaperHTML: "Science_Ch13_MotionAndTime.html",
+            questionPaperPDF: "Science_Ch13_MotionAndTime.pdf",
             suggestedTimeMinutes: 90
         ),
         OlympiadPaper(
@@ -39,6 +40,7 @@ enum OlympiadPaperRegistry {
             questionPaperMD: "Maths_Ch15_FindingTheUnknown_QuestionPaper.md",
             solutionsMD: "Maths_Ch15_FindingTheUnknown_Solutions.md",
             questionPaperHTML: "Maths_Ch15_FindingTheUnknown.html",
+            questionPaperPDF: "Maths_Ch15_FindingTheUnknown.pdf",
             suggestedTimeMinutes: 90
         )
     ]

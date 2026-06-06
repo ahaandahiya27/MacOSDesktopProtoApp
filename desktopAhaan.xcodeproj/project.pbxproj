@@ -1632,6 +1632,8 @@
 		E6E6847DCA8ED5B559642CB6 /* Maths_Ch15_FindingTheUnknown_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = F714D849C1A82534DF4CC99C /* Maths_Ch15_FindingTheUnknown_QuestionPaper.md */; };
 		224325AA0441545CF943C41F /* Maths_Ch15_FindingTheUnknown_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 5AEEBB51ABD3963EF28078BC /* Maths_Ch15_FindingTheUnknown_Solutions.md */; };
 		0E563A6A37B3CAAFDD8295E3 /* Maths_Ch15_FindingTheUnknown.html in Resources */ = {isa = PBXBuildFile; fileRef = 590B30D26433E910C4F3E40C /* Maths_Ch15_FindingTheUnknown.html */; };
+		A25D81EABDACC5D7E9054E4D /* Science_Ch13_MotionAndTime.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 5F464603921401DE1A253D01 /* Science_Ch13_MotionAndTime.pdf */; };
+		691212A9E89ADC7B7D112854 /* Maths_Ch15_FindingTheUnknown.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 383A3077D9EF527B972740A6 /* Maths_Ch15_FindingTheUnknown.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -3281,6 +3283,8 @@
 		F714D849C1A82534DF4CC99C /* Maths_Ch15_FindingTheUnknown_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = "Maths_Ch15_FindingTheUnknown_QuestionPaper.md"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch15_FindingTheUnknown_QuestionPaper.md"; sourceTree = SOURCE_ROOT; };
 		5AEEBB51ABD3963EF28078BC /* Maths_Ch15_FindingTheUnknown_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = "Maths_Ch15_FindingTheUnknown_Solutions.md"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch15_FindingTheUnknown_Solutions.md"; sourceTree = SOURCE_ROOT; };
 		590B30D26433E910C4F3E40C /* Maths_Ch15_FindingTheUnknown.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Maths_Ch15_FindingTheUnknown.html"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch15_FindingTheUnknown.html"; sourceTree = SOURCE_ROOT; };
+		5F464603921401DE1A253D01 /* Science_Ch13_MotionAndTime.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Science_Ch13_MotionAndTime.pdf"; path = "desktopAhaan/Resources/TestPapers/Science_Ch13_MotionAndTime.pdf"; sourceTree = SOURCE_ROOT; };
+		383A3077D9EF527B972740A6 /* Maths_Ch15_FindingTheUnknown.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Maths_Ch15_FindingTheUnknown.pdf"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch15_FindingTheUnknown.pdf"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -7374,6 +7378,8 @@
 				E6E6847DCA8ED5B559642CB6 /* Maths_Ch15_FindingTheUnknown_QuestionPaper.md in Resources */,
 				224325AA0441545CF943C41F /* Maths_Ch15_FindingTheUnknown_Solutions.md in Resources */,
 				0E563A6A37B3CAAFDD8295E3 /* Maths_Ch15_FindingTheUnknown.html in Resources */,
+				A25D81EABDACC5D7E9054E4D /* Science_Ch13_MotionAndTime.pdf in Resources */,
+				691212A9E89ADC7B7D112854 /* Maths_Ch15_FindingTheUnknown.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
