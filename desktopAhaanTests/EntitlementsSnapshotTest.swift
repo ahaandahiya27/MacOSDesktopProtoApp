@@ -14,10 +14,18 @@ import XCTest
 final class EntitlementsSnapshotTest: XCTestCase {
 
     /// Locked entitlement set. Order is alphabetical for stable diffs.
+    ///
+    /// 2026-06-06: `files.user-selected.read-only` → `read-write` because
+    /// the new Olympiad "Save PDF" NSSavePanel needs the read-write
+    /// variant. The read-only variant alone hard-crashes the panel
+    /// construction with EXC_BREAKPOINT and "your app has the User
+    /// Selected File Read entitlement but it lacks User Selected File
+    /// Read/Write to display save panels". The OCR Open Image use
+    /// case still works under read-write (it's a superset).
     private let expectedKeys: Set<String> = [
         "com.apple.security.app-sandbox",
         "com.apple.security.device.audio-input",
-        "com.apple.security.files.user-selected.read-only",
+        "com.apple.security.files.user-selected.read-write",
         "com.apple.security.network.client",
         "com.apple.security.temporary-exception.files.home-relative-path.read-write",
     ]

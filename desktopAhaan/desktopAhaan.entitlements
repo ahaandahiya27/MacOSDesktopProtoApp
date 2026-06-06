@@ -15,11 +15,21 @@
                           via Settings → "Dictionary Only (Offline Mode)"
                           which makes the app fully offline. NWPathMonitor
                           observation alone does NOT require this entitlement.
-  files.user-selected.read-only
-                          ONLY for the "Open Image…" command which uses
-                          NSOpenPanel so the user can pick an image to
-                          OCR. Read-only — the app never writes back to
-                          the picked file.
+  files.user-selected.read-write
+                          Needed for BOTH the "Open Image…" NSOpenPanel
+                          (OCR picks an image to read) AND the
+                          "Save PDF" NSSavePanel under Olympiad Tests
+                          (the kid / parent picks a destination to
+                          write the print-ready paper). 2026-06-06:
+                          upgraded from `read-only` because NSSavePanel
+                          requires the read-WRITE variant — `read-only`
+                          alone hard-crashes the panel construction
+                          (EXC_BREAKPOINT) with the diagnostic "your
+                          app has the User Selected File Read
+                          entitlement but it lacks User Selected File
+                          Read/Write to display save panels". The
+                          previous OCR-only use case still works under
+                          read-write (it's a superset).
   device.audio-input      ONLY for SpeechRecognitionManager (microphone
                           dictation for translator + practice answers).
                           Paired with NSMicrophoneUsageDescription +
@@ -39,7 +49,7 @@
 	<true/>
 	<key>com.apple.security.network.client</key>
 	<true/>
-	<key>com.apple.security.files.user-selected.read-only</key>
+	<key>com.apple.security.files.user-selected.read-write</key>
 	<true/>
 	<key>com.apple.security.temporary-exception.files.home-relative-path.read-write</key>
 	<array>
