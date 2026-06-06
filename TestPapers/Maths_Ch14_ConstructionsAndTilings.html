@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maths Ch14 ConstructionsAndTilings</title>
+<style>
+@page { size: A4; margin: 18mm 16mm; }
+* { box-sizing: border-box; }
+body { font-family: Georgia, 'Times New Roman', serif; font-size: 12pt;
+       line-height: 1.45; color: #111; max-width: 820px; margin: 0 auto;
+       padding: 16px; }
+h1 { font-size: 19pt; margin: 0 0 2px; }
+h2 { font-size: 15pt; margin: 0 0 10px; color: #333; }
+h3 { font-size: 13pt; margin: 18px 0 6px; }
+table { border-collapse: collapse; margin: 8px 0 14px; }
+th, td { border: 1px solid #999; padding: 3px 9px; text-align: left;
+         font-size: 11pt; }
+.markbox { border: 2px solid #222; border-radius: 6px; padding: 8px 12px;
+           margin: 10px 0 16px; background: #f6f6f6; font-size: 11.5pt; }
+.q { margin: 9px 0 2px; }
+.opts { margin: 0 0 6px 22px; }
+.opts span { display: inline-block; min-width: 46%; vertical-align: top;
+             margin: 1px 0; }
+.sol { margin: 5px 0; }
+.pagebreak { page-break-before: always; }
+.note { color: #555; font-style: italic; font-size: 10.5pt; }
+hr { border: none; border-top: 1px solid #ccc; margin: 14px 0; }
+code { background: #eee; padding: 0 2px; }
+</style>
+</head>
+<body>
+<h1>Olympiad Test Paper — Mathematics (Class 7)</h1>
+<h2>Chapter 14: Constructions and Tilings</h2>
+<table>
+<tr><th></th><th></th></tr>
+<tr><td><strong>Subject</strong></td><td>Mathematics (NCERT Class 7)</td></tr>
+<tr><td><strong>Chapter</strong></td><td>14 — Constructions and Tilings</td></tr>
+<tr><td><strong>Total Questions</strong></td><td>60 (Multiple Choice, single correct)</td></tr>
+<tr><td><strong>Maximum Marks</strong></td><td>240</td></tr>
+<tr><td><strong>Suggested Time</strong></td><td>90 minutes</td></tr>
+</table>
+<p><strong>Marking scheme:</strong> <strong>+4</strong> for each correct answer · <strong>−1</strong> for each wrong answer · <strong>0</strong> if unattempted.</p>
+<p><strong>Instructions:</strong> Each question has four options (A), (B), (C), (D); exactly one is correct. Constructions are described in words — picture the compass arcs and straightedge lines as you read. For tiling questions, the one rule that decides everything is that the angles meeting at a point must sum to <strong>exactly 360°</strong>; watch the traps that a polygon tiles whenever 360° is &quot;close&quot;, that you can trisect like you bisect, and that a construction is &quot;just a careful drawing&quot;. Do not write on this paper — mark answers on your answer sheet.</p>
+<hr>
+<div class="q"><strong>1.</strong> In a construction, a &quot;straightedge&quot; is used to:</div>
+<div class="opts"><span>(A) measure exact lengths in centimetres</span><span>(B) draw straight lines only (it carries no markings)</span><span>(C) measure angles like a protractor</span><span>(D) swing arcs of equal radius</span></div>
+<div class="q"><strong>2.</strong> To construct the perpendicular bisector of a segment XY, you draw arcs from X and from Y. For the construction to work, those arcs must be drawn with:</div>
+<div class="opts"><span>(A) any two different radii</span><span>(B) a radius exactly equal to half of XY</span><span>(C) a radius equal to the full length XY only</span><span>(D) the same radius from both X and Y, that radius being more than half of XY</span></div>
+<div class="q"><strong>3.</strong> Every point lying on the perpendicular bisector of segment AB is:</div>
+<div class="opts"><span>(A) equidistant from A and B</span><span>(B) closer to A than to B</span><span>(C) the midpoint of AB and nothing else</span><span>(D) always inside segment AB</span></div>
+<div class="q"><strong>4.</strong> The perpendicular bisector construction crosses the segment XY at its midpoint AND meets it at an angle of:</div>
+<div class="opts"><span>(A) 45°</span><span>(B) 60°</span><span>(C) 90°</span><span>(D) 30°</span></div>
+<div class="q"><strong>5.</strong> Why does the equal-arc construction land exactly on the midpoint of XY, with no measuring?</div>
+<div class="opts"><span>(A) Because the compass secretly measures half the length</span><span>(B) Because each arc-crossing is the same distance from X as from Y, so the line through them is the segment&#x27;s mirror line</span><span>(C) Because any two arcs always cross at a midpoint</span><span>(D) Because the straightedge is marked at its centre</span></div>
+<div class="q"><strong>6.</strong> A regular polygon&#x27;s interior angle must satisfy which condition for the polygon to tile the plane by itself?</div>
+<div class="opts"><span>(A) It must divide 360° a whole number of times</span><span>(B) It must be a multiple of 90°</span><span>(C) It must be less than 90°</span><span>(D) It must be greater than 100°</span></div>
+<div class="q"><strong>7.</strong> Four squares meet exactly at a point in a square tiling because:</div>
+<div class="opts"><span>(A) squares are the only four-sided shapes</span><span>(B) squares have four equal sides</span><span>(C) 4 × 90° = 360°, filling the full turn with no gap or overlap</span><span>(D) two squares already make 360°</span></div>
+<div class="q"><strong>8.</strong> How many equilateral triangles meet at each vertex in a triangular tiling?</div>
+<div class="opts"><span>(A) 3</span><span>(B) 4</span><span>(C) 5</span><span>(D) 6</span></div>
+<div class="q"><strong>9.</strong> How many regular hexagons meet at each vertex when hexagons tile the plane?</div>
+<div class="opts"><span>(A) 2</span><span>(B) 3</span><span>(C) 4</span><span>(D) 6</span></div>
+<div class="q"><strong>10.</strong> A regular pentagon has interior angle 108°. Why can&#x27;t regular pentagons tile the plane by themselves?</div>
+<div class="opts"><span>(A) Pentagons have an odd number of sides</span><span>(B) 108° is too large to fit any tiling</span><span>(C) 360 ÷ 108 is not a whole number, so they leave a gap or overlap at a vertex</span><span>(D) Pentagons are not regular polygons</span></div>
+<div class="q"><strong>11.</strong> To construct a 60° angle with compass and straightedge, you essentially build the corner of which figure?</div>
+<div class="opts"><span>(A) An equilateral triangle</span><span>(B) A square</span><span>(C) A regular hexagon</span><span>(D) A right-angled isosceles triangle</span></div>
+<div class="q"><strong>12.</strong> Bisecting a 60° angle with only a compass and straightedge produces an angle of:</div>
+<div class="opts"><span>(A) 15°</span><span>(B) 45°</span><span>(C) 20°</span><span>(D) 30°</span></div>
+<div class="q"><strong>13.</strong> A student bisects a right angle, then bisects one of the two resulting angles. The smaller of the final pieces measures:</div>
+<div class="opts"><span>(A) 45°</span><span>(B) 30°</span><span>(C) 22.5°</span><span>(D) 15°</span></div>
+<div class="q"><strong>14.</strong> Which of these can be constructed using only a compass and straightedge?</div>
+<div class="opts"><span>(A) Trisecting a general 60° angle into three 20° angles</span><span>(B) A 30° angle (by bisecting a constructed 60° angle)</span><span>(C) A 20° angle directly</span><span>(D) A 1° angle by repeated bisection</span></div>
+<div class="q"><strong>15.</strong> The seven pieces of a tangram are cut from a single square and rearranged into the shape of a swan. The swan&#x27;s total area compared with the original square is:</div>
+<div class="opts"><span>(A) larger, because the swan looks bigger</span><span>(B) smaller, because gaps appear</span><span>(C) exactly the same</span><span>(D) it depends on how the pieces are turned</span></div>
+<div class="q"><strong>16.</strong> The deep reason rearranging tangram pieces conserves area is that:</div>
+<div class="opts"><span>(A) sliding, turning or flipping a piece changes its position but not its size</span><span>(B) the pieces are all triangles</span><span>(C) a square always has the largest area</span><span>(D) seven pieces always cover the same region</span></div>
+<div class="q"><strong>17.</strong> A regular octagon has an interior angle of 135°. Can regular octagons tile the plane on their own?</div>
+<div class="opts"><span>(A) Yes, four of them meet at a vertex</span><span>(B) Yes, three of them meet at a vertex</span><span>(C) Yes, two of them meet at a vertex</span><span>(D) No, because 360 ÷ 135 is not a whole number</span></div>
+<div class="q"><strong>18.</strong> At a tiling vertex, two regular octagons (135° each) meet along with one more regular polygon that fits exactly. That polygon must have an interior angle of:</div>
+<div class="opts"><span>(A) 45°</span><span>(B) 90°</span><span>(C) 120°</span><span>(D) 60°</span></div>
+<div class="q"><strong>19.</strong> The polygon in the previous situation (one that fills the leftover angle beside two octagons) is a:</div>
+<div class="opts"><span>(A) regular hexagon</span><span>(B) regular triangle</span><span>(C) square</span><span>(D) regular pentagon</span></div>
+<div class="q"><strong>20.</strong> Three regular pentagons (108° each) are placed around a point. The angle still left uncovered is:</div>
+<div class="opts"><span>(A) 36°</span><span>(B) 0° (they tile)</span><span>(C) 72°</span><span>(D) 45°</span></div>
+<div class="q"><strong>21.</strong> If your compass slipped so the two arcs for a perpendicular bisector had DIFFERENT radii, the line you draw would:</div>
+<div class="opts"><span>(A) still be the exact perpendicular bisector</span><span>(B) not pass through the midpoint and not be perpendicular — it would tilt and miss</span><span>(C) become an angle bisector instead</span><span>(D) be parallel to XY</span></div>
+<div class="q"><strong>22.</strong> A &quot;construction&quot; in this chapter is special because the figure is exact by:</div>
+<div class="opts"><span>(A) careful measuring with a ruler</span><span>(B) tracing over a printed shape</span><span>(C) using a protractor accurately</span><span>(D) geometry — equal radii and equidistance — not measurement</span></div>
+<div class="q"><strong>23.</strong> Which statement about trisecting and bisecting angles is TRUE?</div>
+<div class="opts"><span>(A) Bisecting a general angle is possible, but trisecting a general angle is impossible with these tools</span><span>(B) Both bisecting and trisecting a general angle are easy with compass and straightedge</span><span>(C) Trisecting is possible but bisecting is not</span><span>(D) Neither can be done without a protractor</span></div>
+<div class="q"><strong>24.</strong> To get a 15° angle using only a compass and straightedge, the cleanest route is to:</div>
+<div class="opts"><span>(A) construct 60°, bisect to 30°, bisect again to 15°</span><span>(B) construct 45° and subtract 30°</span><span>(C) trisect a 45° angle</span><span>(D) it cannot be constructed at all</span></div>
+<div class="q"><strong>25.</strong> A regular dodecagon (12 sides) has interior angle 150°. Around a point you place one dodecagon corner. To fill the rest of the 360° with two MORE equal polygons, each of those must have interior angle:</div>
+<div class="opts"><span>(A) 90°</span><span>(B) 60°</span><span>(C) 120°</span><span>(D) 105°</span></div>
+<div class="q"><strong>26.</strong> Which set of regular polygons tile the plane EACH BY ITSELF?</div>
+<div class="opts"><span>(A) Triangle, square, pentagon</span><span>(B) Square, hexagon, octagon</span><span>(C) Triangle, square, hexagon</span><span>(D) Pentagon, hexagon, heptagon</span></div>
+<div class="q"><strong>27.</strong> A regular polygon has interior angle 144° (a regular decagon). The number of such polygons that would meet at a tiling vertex if they tiled would be 360 ÷ 144 = 2.5. This tells you the decagon:</div>
+<div class="opts"><span>(A) tiles, with 2 meeting at a vertex</span><span>(B) cannot tile by itself, because 2.5 is not a whole number</span><span>(C) tiles, with 3 meeting at a vertex</span><span>(D) tiles, with 2.5 meeting at a vertex</span></div>
+<div class="q"><strong>28.</strong> Constructing the perpendicular bisector of segment XY gives you, as a free bonus, the:</div>
+<div class="opts"><span>(A) exact midpoint of XY</span><span>(B) angle bisector of angle X</span><span>(C) a 60° angle at X</span><span>(D) a tiling of the plane</span></div>
+<div class="q"><strong>29.</strong> A rectangle is cut along a diagonal into two triangles, which are then slid together into a different shape. The total area has:</div>
+<div class="opts"><span>(A) doubled</span><span>(B) halved</span><span>(C) not changed</span><span>(D) changed by the length of the diagonal</span></div>
+<div class="q"><strong>30.</strong> To bisect a given angle, from the vertex you draw an arc cutting both arms; then from those two crossing points you swing equal arcs to meet at a point P. The ray from the vertex to P works because P is:</div>
+<div class="opts"><span>(A) the midpoint of the original arc only</span><span>(B) always 30° from each arm</span><span>(C) the centre of the angle&#x27;s circle</span><span>(D) equidistant from both arms, so the ray splits the angle evenly</span></div>
+<div class="q"><strong>31.</strong> Equilateral triangles tile the plane. If instead you used the triangles to surround a point and only FIVE met there, the angle covered would be:</div>
+<div class="opts"><span>(A) 360° (they still tile)</span><span>(B) 300°, leaving a 60° gap</span><span>(C) 240°</span><span>(D) 320°</span></div>
+<div class="q"><strong>32.</strong> Which is the correct first step to construct a 60° angle at the end A of a ray AB?</div>
+<div class="opts"><span>(A) From A, draw an arc crossing the ray; from that crossing, with the SAME radius, swing an arc cutting the first arc</span><span>(B) Place the protractor at A and mark 60°</span><span>(C) Measure 60 mm along the ray</span><span>(D) Fold the paper at A</span></div>
+<div class="q"><strong>33.</strong> Squares tile the plane and so do regular hexagons. The reason hexagons need only THREE at a vertex while squares need FOUR is that:</div>
+<div class="opts"><span>(A) hexagons are bigger than squares</span><span>(B) hexagons have more sides so more must meet</span><span>(C) a hexagon&#x27;s interior angle (120°) is larger than a square&#x27;s (90°), so fewer fill 360°</span><span>(D) it is just a coincidence</span></div>
+<div class="q"><strong>34.</strong> A point is constructed at equal distance from both endpoints of a segment, on the same side. Joining it to a second such point on the other side produces a line that is the segment&#x27;s:</div>
+<div class="opts"><span>(A) angle bisector</span><span>(B) perpendicular bisector</span><span>(C) tangent</span><span>(D) parallel</span></div>
+<div class="q"><strong>35.</strong> The interior angle of a regular polygon must divide 360° evenly for a self-tiling. The largest regular polygon (most sides) that can tile by itself is therefore the:</div>
+<div class="opts"><span>(A) square</span><span>(B) regular pentagon</span><span>(C) regular octagon</span><span>(D) regular hexagon</span></div>
+<div class="q"><strong>36.</strong> Tiling (tessellation) is best defined as:</div>
+<div class="opts"><span>(A) covering a region with shapes leaving no gaps and no overlaps</span><span>(B) covering a region with shapes that may overlap a little</span><span>(C) drawing a shape with a compass</span><span>(D) cutting a square into seven pieces</span></div>
+<div class="q"><strong>37.</strong> At a tiling vertex the corner angles meeting there must add to EXACTLY 360°. If they add to less than 360°, the result is:</div>
+<div class="opts"><span>(A) an overlap of tiles</span><span>(B) a perfect tiling</span><span>(C) a gap (uncovered wedge)</span><span>(D) a 90° corner</span></div>
+<div class="q"><strong>38.</strong> If the angles meeting at a tiling vertex add to MORE than 360°, the result is:</div>
+<div class="opts"><span>(A) a gap</span><span>(B) an overlap (tiles pile on top of each other)</span><span>(C) a perfect fit</span><span>(D) a perpendicular bisector</span></div>
+<div class="q"><strong>39.</strong> A mixed tiling uses squares (90°) and equilateral triangles (60°). At one vertex three triangles and two squares meet. The angles there total:</div>
+<div class="opts"><span>(A) 330°</span><span>(B) 300°</span><span>(C) 390°</span><span>(D) 360°</span></div>
+<div class="q"><strong>40.</strong> A mixed tiling uses regular hexagons (120°) and equilateral triangles (60°). At a vertex two hexagons already meet; the number of triangles needed to complete the full 360° is:</div>
+<div class="opts"><span>(A) two triangles</span><span>(B) one triangle</span><span>(C) three triangles</span><span>(D) four triangles</span></div>
+<div class="q"><strong>41.</strong> A 90° angle is constructed and then bisected twice in succession (each time taking the smaller new angle and halving it). After the two bisections, the smallest angle present measures:</div>
+<div class="opts"><span>(A) 45°</span><span>(B) 30°</span><span>(C) 22.5°</span><span>(D) 60°</span></div>
+<div class="q"><strong>42.</strong> Which of these angles is NOT directly constructible by combining a constructed 60° angle with bisections of it?</div>
+<div class="opts"><span>(A) 30°</span><span>(B) 15°</span><span>(C) 90° (as 60° + 30°)</span><span>(D) 20°</span></div>
+<div class="q"><strong>43.</strong> You construct a 60° angle, then bisect it, then place the 30° angle next to the original 60°. The total angle formed is:</div>
+<div class="opts"><span>(A) 45°</span><span>(B) 30°</span><span>(C) 120°</span><span>(D) 90°</span></div>
+<div class="q"><strong>44.</strong> A tangram square is rearranged into a tall thin &quot;tree&quot; and into a wide squat &quot;boat&quot;, using all seven pieces each time. The tree and the boat have:</div>
+<div class="opts"><span>(A) equal areas</span><span>(B) different areas, the boat larger</span><span>(C) different areas, the tree larger</span><span>(D) areas that cannot be compared</span></div>
+<div class="q"><strong>45.</strong> Which statement is the correct reason only triangles, squares and hexagons tile among regular polygons?</div>
+<div class="opts"><span>(A) They are the only shapes with equal sides</span><span>(B) Only their interior angles (60°, 90°, 120°) divide 360° a whole number of times</span><span>(C) They are the only convex polygons</span><span>(D) Larger polygons are simply too heavy to tile</span></div>
+<div class="q"><strong>46.</strong> A regular polygon whose interior angle is 120° will, at a tiling vertex, have how many of its corners meeting?</div>
+<div class="opts"><span>(A) 2</span><span>(B) 4</span><span>(C) 3</span><span>(D) 6</span></div>
+<div class="q"><strong>47.</strong> The interior angle of an equilateral triangle is 60°. The number meeting at a tiling vertex (six) multiplied by 60° gives:</div>
+<div class="opts"><span>(A) 360°</span><span>(B) 300°</span><span>(C) 420°</span><span>(D) 240°</span></div>
+<div class="q"><strong>48.</strong> You want to construct a 45° angle with compass and straightedge. The correct route is to:</div>
+<div class="opts"><span>(A) trisect a 135° angle</span><span>(B) measure it with a protractor</span><span>(C) bisect a 60° angle</span><span>(D) construct a right angle (90°) and bisect it</span></div>
+<div class="q"><strong>49.</strong> The perpendicular bisector of a segment is, in precise terms, the set of ALL points that are:</div>
+<div class="opts"><span>(A) inside the segment</span><span>(B) the same distance from both endpoints</span><span>(C) closer to the left endpoint</span><span>(D) exactly the midpoint</span></div>
+<div class="q"><strong>50.</strong> Three regular hexagons (120° each) meet at a vertex. The angle they cover is:</div>
+<div class="opts"><span>(A) 240°</span><span>(B) 300°</span><span>(C) 360°</span><span>(D) 480°</span></div>
+<div class="q"><strong>51.</strong> A student claims &quot;any regular polygon can tile the plane.&quot; The simplest single counterexample is the:</div>
+<div class="opts"><span>(A) square</span><span>(B) regular pentagon</span><span>(C) equilateral triangle</span><span>(D) regular hexagon</span></div>
+<div class="q"><strong>52.</strong> To construct a 90° angle (a perpendicular at a point P on a line) the construction relies on building a:</div>
+<div class="opts"><span>(A) 60° angle and doubling it</span><span>(B) regular pentagon</span><span>(C) tangram</span><span>(D) perpendicular bisector / equal-arc construction so the line meets at a right angle</span></div>
+<div class="q"><strong>53.</strong> Two equilateral triangles and two squares are arranged around a point. The total of their corner angles is:</div>
+<div class="opts"><span>(A) 300°</span><span>(B) 360°</span><span>(C) 330°</span><span>(D) 270°</span></div>
+<div class="q"><strong>54.</strong> A regular polygon&#x27;s interior angle is 140°. The value 360 ÷ 140 is between 2 and 3 (about 2.57). This polygon:</div>
+<div class="opts"><span>(A) tiles with 2 meeting at a vertex</span><span>(B) tiles with 3 meeting at a vertex</span><span>(C) cannot tile the plane by itself</span><span>(D) tiles with 2.57 meeting at a vertex</span></div>
+<div class="q"><strong>55.</strong> Bisecting an angle requires finding a point equidistant from both arms. The tool that locates such a point exactly, without measuring, is:</div>
+<div class="opts"><span>(A) a protractor</span><span>(B) equal-radius compass arcs</span><span>(C) a marked ruler</span><span>(D) a set square</span></div>
+<div class="q"><strong>56.</strong> A floor is to be tiled with regular pentagons only. Pushing three pentagons (108° each) snug at a corner leaves a wedge. Four pentagons would overshoot. This shows pentagons:</div>
+<div class="opts"><span>(A) tile with three at a vertex</span><span>(B) tile with four at a vertex</span><span>(C) tile only if cut in half</span><span>(D) cannot tile, since neither 3 nor 4 of them makes exactly 360°</span></div>
+<div class="q"><strong>57.</strong> Which pair of facts is BOTH true?</div>
+<div class="opts"><span>(A) A general angle can be bisected with compass and straightedge; pentagons cannot tile the plane</span><span>(B) A general angle can be trisected with compass and straightedge; pentagons tile the plane</span><span>(C) Constructions need a protractor; hexagons cannot tile</span><span>(D) The perpendicular bisector misses the midpoint; squares cannot tile</span></div>
+<div class="q"><strong>58.</strong> The interior angle of a regular polygon increases as the number of sides increases. This is why, among regular polygons, the ability to self-tile STOPS after the hexagon: any polygon with more sides has an interior angle that is:</div>
+<div class="opts"><span>(A) less than 90°, too small</span><span>(B) more than 120° but not a whole-number divisor of 360°</span><span>(C) exactly 360°</span><span>(D) negative</span></div>
+<div class="q"><strong>59.</strong> A 30° angle has been constructed (by bisecting 60°). Constructing one more 30° angle beside it and then a third gives a total angle of:</div>
+<div class="opts"><span>(A) 60°</span><span>(B) 120°</span><span>(C) 90°</span><span>(D) 30°</span></div>
+<div class="q"><strong>60.</strong> The single rule that governs ALL of plane tiling — deciding which shapes fit around a point — is that the angles meeting at any vertex must sum to:</div>
+<div class="opts"><span>(A) exactly 180°</span><span>(B) exactly 270°</span><span>(C) any amount up to 360°</span><span>(D) exactly 360°</span></div>
+<hr>
+<p class="note">End of question paper. Maximum marks: 240. Marking: +4 correct, −1 wrong, 0 unattempted.</p>
+<div class="pagebreak"></div>
+<h1>Solutions — Mathematics (Class 7), Chapter 14: Constructions and Tilings</h1>
+<p>Marking: <strong>+4</strong> correct, <strong>−1</strong> wrong, <strong>0</strong> unattempted. Maximum marks <strong>240</strong>.</p>
+<h2>Answer Key</h2>
+<table>
+<tr><th>Q</th><th>Ans</th><th>Q</th><th>Ans</th><th>Q</th><th>Ans</th><th>Q</th><th>Ans</th><th>Q</th><th>Ans</th><th>Q</th><th>Ans</th></tr>
+<tr><td>1</td><td>B</td><td>11</td><td>A</td><td>21</td><td>B</td><td>31</td><td>B</td><td>41</td><td>C</td><td>51</td><td>B</td></tr>
+<tr><td>2</td><td>D</td><td>12</td><td>D</td><td>22</td><td>D</td><td>32</td><td>A</td><td>42</td><td>D</td><td>52</td><td>D</td></tr>
+<tr><td>3</td><td>A</td><td>13</td><td>C</td><td>23</td><td>A</td><td>33</td><td>C</td><td>43</td><td>D</td><td>53</td><td>A</td></tr>
+<tr><td>4</td><td>C</td><td>14</td><td>B</td><td>24</td><td>A</td><td>34</td><td>B</td><td>44</td><td>A</td><td>54</td><td>C</td></tr>
+<tr><td>5</td><td>B</td><td>15</td><td>C</td><td>25</td><td>D</td><td>35</td><td>D</td><td>45</td><td>B</td><td>55</td><td>B</td></tr>
+<tr><td>6</td><td>A</td><td>16</td><td>A</td><td>26</td><td>C</td><td>36</td><td>A</td><td>46</td><td>C</td><td>56</td><td>D</td></tr>
+<tr><td>7</td><td>C</td><td>17</td><td>D</td><td>27</td><td>B</td><td>37</td><td>C</td><td>47</td><td>A</td><td>57</td><td>A</td></tr>
+<tr><td>8</td><td>D</td><td>18</td><td>B</td><td>28</td><td>A</td><td>38</td><td>B</td><td>48</td><td>D</td><td>58</td><td>B</td></tr>
+<tr><td>9</td><td>B</td><td>19</td><td>C</td><td>29</td><td>C</td><td>39</td><td>D</td><td>49</td><td>B</td><td>59</td><td>C</td></tr>
+<tr><td>10</td><td>C</td><td>20</td><td>A</td><td>30</td><td>D</td><td>40</td><td>A</td><td>50</td><td>C</td><td>60</td><td>D</td></tr>
+</table>
+<p>Answer-key distribution: A = 15, B = 15, C = 15, D = 15.</p>
+<hr>
+<h2>Worked Solutions</h2>
+<p><strong>1. (B)</strong> A straightedge is an *unmarked* ruler — its only job is to draw straight lines. It carries no scale (so it cannot measure lengths) and is not a protractor; swinging arcs is the compass&#x27;s job.</p>
+<p><strong>2. (D)</strong> Both arcs must be the SAME radius (so each crossing is equidistant from X and Y), and that radius must exceed half of XY or the arcs won&#x27;t reach far enough to cross. &quot;Exactly half&quot; makes the arcs meet only on the segment (no upper/lower crossings); different radii destroy the equidistance.</p>
+<p><strong>3. (A)</strong> The perpendicular bisector is precisely the locus of points equidistant from A and B. The midpoint is just ONE such point; the whole line is equidistant, and points on it can lie far outside the segment.</p>
+<p><strong>4. (C)</strong> By definition the perpendicular bisector meets the segment at a right angle, 90°, while also cutting it in half. That is exactly the &quot;perpendicular&quot; in the name.</p>
+<p><strong>5. (B)</strong> Each arc-crossing is found at equal radius from X and from Y, so it is equidistant from both endpoints — it lies on the segment&#x27;s mirror line. Two such crossings fix that mirror line, which cuts XY at its midpoint. No length is ever measured; equidistance does the work.</p>
+<p><strong>6. (A)</strong> For corners to surround a point with no gap/overlap, copies of the interior angle must fill exactly 360°, i.e. 360° ÷ (interior angle) must be a whole number. Being a multiple of 90° or &quot;small&quot; is neither necessary nor sufficient (120° tiles though it isn&#x27;t a multiple of 90°).</p>
+<p><strong>7. (C)</strong> A square&#x27;s interior angle is 90°, and four of them give 4 × 90° = 360° — a full turn with no gap or overlap. Having four equal sides (B) is true but is not the tiling reason; two squares give only 180°.</p>
+<p><strong>8. (D)</strong> Each interior angle of an equilateral triangle is 60°, and 360° ÷ 60° = 6, so six triangles meet at every vertex.</p>
+<p><strong>9. (B)</strong> A regular hexagon&#x27;s interior angle is 120°, and 360° ÷ 120° = 3, so three hexagons meet at each vertex (the honeycomb pattern).</p>
+<p><strong>10. (C)</strong> A regular pentagon&#x27;s interior angle is 108°, and 360 ÷ 108 ≈ 3.33 — not a whole number. Three pentagons give 324° (a 36° gap) and four give 432° (overlap), so they cannot surround a point cleanly.</p>
+<p><strong>11. (A)</strong> The 60° construction copies the corner of an equilateral triangle: equal-radius arcs build three equal sides, whose corners are all 60°. A square&#x27;s corner is 90°, a hexagon&#x27;s 120°.</p>
+<p><strong>12. (D)</strong> Bisecting halves the angle: 60° ÷ 2 = 30°. (Bisecting again would give 15°, the trap option A.)</p>
+<p><strong>13. (C)</strong> Bisect 90° → two 45° angles. Bisect one 45° → two 22.5° pieces. The smallest piece present is 22.5°. (45° is the in-between stage; 30° comes from bisecting 60°, not 90°.)</p>
+<p><strong>14. (B)</strong> A 30° angle is constructible — bisect a constructed 60°. Trisecting a general angle (so 60° → three 20°s) is provably impossible with these tools, so a 20° angle &quot;directly&quot; is out, and an exact 1° cannot be reached by halving from 60°/90° either.</p>
+<p><strong>15. (C)</strong> Rearranging the same seven pieces only moves them; nothing is added or removed, so the swan has exactly the same area as the original square. &quot;Looks bigger&quot; and &quot;gaps appear&quot; are perception traps.</p>
+<p><strong>16. (A)</strong> Sliding, turning or flipping a piece is a rigid motion: it changes position, never size. So a fixed set of pieces re-adds to the same total area no matter the arrangement.</p>
+<p><strong>17. (D)</strong> A regular octagon&#x27;s interior angle is 135°, and 360 ÷ 135 ≈ 2.67 — not a whole number. Two octagons give 270° (a 90° gap), three give 405° (overlap), so octagons cannot tile alone.</p>
+<p><strong>18. (B)</strong> Two octagons contribute 2 × 135° = 270°. The leftover to reach a full 360° is 360° − 270° = 90°, so the third polygon&#x27;s interior angle is 90°.</p>
+<p><strong>19. (C)</strong> A regular polygon with a 90° interior angle is a square. (This is the classic octagon–square semi-regular tiling.)</p>
+<p><strong>20. (A)</strong> Three pentagons give 3 × 108° = 324°. The angle left uncovered is 360° − 324° = 36°. (A 0° leftover would mean they tile, which they don&#x27;t.)</p>
+<p><strong>21. (B)</strong> Unequal radii destroy the equidistance: the two crossings are no longer the same distance from X and Y, so the line through them tilts, misses the midpoint, and is not perpendicular. It is neither the true perpendicular bisector nor an angle bisector.</p>
+<p><strong>22. (D)</strong> A construction is *exact by geometry* — equal radii force equal distances, guaranteeing the result without any measuring. Ruler/protractor measuring (A, C) or tracing (B) would only be approximate; that is precisely what makes constructions special.</p>
+<p><strong>23. (A)</strong> With compass and straightedge any angle can be BISECTED, but trisecting a *general* angle is provably impossible (you can make 30° = half of 60°, but not 20° = a third). So only A is true.</p>
+<p><strong>24. (A)</strong> Construct 60° (equilateral corner), bisect to 30°, bisect again to 15°. Subtracting 30° from 45° isn&#x27;t a single clean construction step here, and trisecting a 45° is impossible; 15° certainly IS constructible, ruling out D.</p>
+<p><strong>25. (D)</strong> One dodecagon corner is 150°. The remaining angle is 360° − 150° = 210°, shared by two equal polygons: 210° ÷ 2 = 105° each.</p>
+<p><strong>26. (C)</strong> Only triangle (60°), square (90°) and hexagon (120°) have interior angles dividing 360° a whole number of times, so only this trio tiles each on its own. Pentagons (108°) and octagons (135°) do not.</p>
+<p><strong>27. (B)</strong> 360 ÷ 144 = 2.5 is not a whole number, so a whole number of decagons can never surround a point — the decagon cannot tile by itself. &quot;2.5 tiles meet&quot; (D) is meaningless; you can&#x27;t have half a tile-corner at a vertex.</p>
+<p><strong>28. (A)</strong> The perpendicular-bisector construction cuts XY exactly in half, so it hands you the midpoint for free — no measuring. It does not produce an angle bisector at X, a 60° angle, or a tiling.</p>
+<p><strong>29. (C)</strong> Cutting and rearranging is rigid motion only — the two triangles are merely slid into a new outline, so the total area is unchanged (conservation of area under rearrangement). The diagonal&#x27;s length has nothing to do with total area.</p>
+<p><strong>30. (D)</strong> P is built at equal distances from the two crossing points on the arms, which makes it equidistant from both arms. A point equidistant from both arms lies on the angle&#x27;s bisector, so the ray V→P splits the angle into two equal halves.</p>
+<p><strong>31. (B)</strong> Five equilateral triangles give 5 × 60° = 300°, which is 60° short of a full 360°, leaving a 60° gap. (Six are needed to actually tile.)</p>
+<p><strong>32. (A)</strong> With compass and straightedge you start by swinging an arc from A across the ray, then from that crossing point swing the SAME radius to cut the arc — building the equilateral corner. Protractors, measuring or folding are not construction steps.</p>
+<p><strong>33. (C)</strong> The count is 360° ÷ (interior angle). A hexagon&#x27;s 120° is larger than a square&#x27;s 90°, so fewer hexagons fill the 360° (three vs four). It has nothing to do with physical size or &quot;more sides means more meet&quot;.</p>
+<p><strong>34. (B)</strong> Two points each equidistant from both endpoints (one on each side) lie on the segment&#x27;s mirror line; joining them gives the perpendicular bisector. Equidistance from the *endpoints* (not from arms) is the perpendicular-bisector signature.</p>
+<p><strong>35. (D)</strong> Self-tiling needs the interior angle to divide 360° evenly. Among regular polygons that holds only for the triangle, square and hexagon; the hexagon has the most sides of these, so it is the largest self-tiler. The octagon (135°) does not divide 360°.</p>
+<p><strong>36. (A)</strong> Tiling (tessellation) means covering a region with shapes leaving NO gaps and NO overlaps. &quot;May overlap a little&quot; (B) violates the definition; the others describe constructions/tangrams.</p>
+<p><strong>37. (C)</strong> Less than 360° at a vertex means the corners don&#x27;t reach all the way round — an uncovered wedge, i.e. a gap. (More than 360° would force an overlap.)</p>
+<p><strong>38. (B)</strong> More than 360° means the corners run past a full turn and pile on top of one another — an overlap. (Less than 360° gives a gap; exactly 360° is the perfect fit.)</p>
+<p><strong>39. (D)</strong> Three triangles + two squares = 3 × 60° + 2 × 90° = 180° + 180° = 360°. The angles fill a full turn exactly, so this is a valid vertex.</p>
+<p><strong>40. (A)</strong> Two hexagons contribute 2 × 120° = 240°, leaving 360° − 240° = 120° to fill. Equilateral triangles are 60° each, so 120° ÷ 60° = 2 triangles complete the vertex. One triangle gives only 300° (a gap); three give 420° and four give 480° (overlaps).</p>
+<p><strong>41. (C)</strong> Bisect 90° → 45°; bisect 45° → 22.5°. After two bisections the smallest angle present is 22.5°. (45° and 30° are intermediate/distractor values.)</p>
+<p><strong>42. (D)</strong> From a constructed 60° you can bisect to 30°, bisect again to 15°, and add to make 90° (= 60° + 30°). But 20° would require trisecting 60°, which is impossible — so 20° is NOT constructible this way.</p>
+<p><strong>43. (D)</strong> The original is 60°; bisecting gives a 30° angle; placing the 30° beside the 60° gives 60° + 30° = 90°. (120° would be 60° + 60°.)</p>
+<p><strong>44. (A)</strong> Both the &quot;tree&quot; and the &quot;boat&quot; use all seven pieces of the same square, so by conservation of area under rearrangement they have exactly equal areas. Appearance (tall vs wide) does not change total area.</p>
+<p><strong>45. (B)</strong> The reason is pure arithmetic: only 60°, 90° and 120° divide 360° a whole number of times (6, 4 and 3 times). Equal sides, convexity and &quot;weight&quot; are irrelevant to whether a regular polygon tiles.</p>
+<p><strong>46. (C)</strong> 360° ÷ 120° = 3, so three of its corners meet at a vertex (this is the hexagon case).</p>
+<p><strong>47. (A)</strong> 6 × 60° = 360°, a full turn — which is exactly why six equilateral triangles tile around a point.</p>
+<p><strong>48. (D)</strong> Construct a right angle (90°) and bisect it: 90° ÷ 2 = 45°. Bisecting 60° gives 30°, not 45°; trisecting 135° is impossible; a protractor isn&#x27;t a construction.</p>
+<p><strong>49. (B)</strong> Precisely, the perpendicular bisector is the set of ALL points the same distance from both endpoints (the locus). The midpoint (D) is just one of those points, not the whole set.</p>
+<p><strong>50. (C)</strong> 3 × 120° = 360°, a full turn — so three hexagons exactly surround a vertex with no gap or overlap.</p>
+<p><strong>51. (B)</strong> The regular pentagon (108°) is the simplest counterexample: 108° does not divide 360°, so it cannot tile alone. Triangle, square and hexagon all DO tile, so they&#x27;re not counterexamples.</p>
+<p><strong>52. (D)</strong> A right angle is built from the equal-arc / perpendicular construction, which by design meets the line at 90°. Doubling a 60° gives 120° (not 90°); a pentagon or tangram is irrelevant.</p>
+<p><strong>53. (A)</strong> 2 × 60° + 2 × 90° = 120° + 180° = 300°. That is 60° short of 360°, so it is NOT a valid vertex — but the question only asks the total, which is 300°.</p>
+<p><strong>54. (C)</strong> 360 ÷ 140 ≈ 2.57 is not a whole number, so no whole number of these polygons can surround a point — it cannot tile by itself. (&quot;2.57 meeting&quot; is meaningless.)</p>
+<p><strong>55. (B)</strong> Equal-radius compass arcs locate a point equidistant from both arms exactly, without measuring — that is what makes angle bisection a true construction. A protractor or marked ruler would only measure approximately.</p>
+<p><strong>56. (D)</strong> Three pentagons give 324° (a 36° wedge left) and four give 432° (overlap); since neither hits exactly 360°, regular pentagons cannot tile the plane. Cutting them in half changes the shape, so that doesn&#x27;t count.</p>
+<p><strong>57. (A)</strong> True facts: a general angle CAN be bisected with these tools, and regular pentagons CANNOT tile. Option B reverses both (trisection is impossible; pentagons don&#x27;t tile), and C, D each contain a false claim (constructions need no protractor; hexagons DO tile; the perpendicular bisector hits the midpoint; squares DO tile).</p>
+<p><strong>58. (B)</strong> Beyond the hexagon, each regular polygon&#x27;s interior angle exceeds 120° (heptagon ≈128.6°, octagon 135°, …) yet never again divides 360° a whole number of times, so none of them can self-tile. The angle is never less than 90°, never 360°, never negative.</p>
+<p><strong>59. (C)</strong> Three 30° angles placed in a row give 3 × 30° = 90°. (Two would give 60°; four would give 120°.)</p>
+<p><strong>60. (D)</strong> The single governing rule of plane tiling is that the corner angles meeting at any vertex must sum to EXACTLY 360° — a full turn — with no gap (less) and no overlap (more). &quot;Any amount up to 360°&quot; is the trap that allows gaps.</p>
+<hr>
+<p class="note">Solutions complete: 60 / 60.</p>
+</body>
+</html>

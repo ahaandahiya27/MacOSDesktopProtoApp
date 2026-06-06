@@ -502,3 +502,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_ch14",
+            subjectId: "maths_class7",
+            subjectName: "Mathematics",
+            chapterNumber: 14,
+            chapterTitle: "Constructions and Tilings",
+            displayTitle: "Constructions and Tilings — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch14_ConstructionsAndTilings_QuestionPaper.md",
+            solutionsMD: "Maths_Ch14_ConstructionsAndTilings_Solutions.md",
+            questionPaperHTML: "Maths_Ch14_ConstructionsAndTilings.html",
+            questionPaperPDF: "Maths_Ch14_ConstructionsAndTilings.pdf",
+            solvedGuideHTML: "Maths_Ch14_ConstructionsAndTilings_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
