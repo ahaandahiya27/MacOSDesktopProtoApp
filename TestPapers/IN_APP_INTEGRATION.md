@@ -400,3 +400,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_ch08",
+            subjectId: "maths_class7",
+            subjectName: "Mathematics",
+            chapterNumber: 8,
+            chapterTitle: "Working with Fractions",
+            displayTitle: "Working with Fractions — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch08_WorkingWithFractions_QuestionPaper.md",
+            solutionsMD: "Maths_Ch08_WorkingWithFractions_Solutions.md",
+            questionPaperHTML: "Maths_Ch08_WorkingWithFractions.html",
+            questionPaperPDF: "Maths_Ch08_WorkingWithFractions.pdf",
+            solvedGuideHTML: "Maths_Ch08_WorkingWithFractions_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
