@@ -417,3 +417,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_ch09",
+            subjectId: "maths_class7",
+            subjectName: "Mathematics",
+            chapterNumber: 9,
+            chapterTitle: "Geometric Twins",
+            displayTitle: "Geometric Twins — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch09_GeometricTwins_QuestionPaper.md",
+            solutionsMD: "Maths_Ch09_GeometricTwins_Solutions.md",
+            questionPaperHTML: "Maths_Ch09_GeometricTwins.html",
+            questionPaperPDF: "Maths_Ch09_GeometricTwins.pdf",
+            solvedGuideHTML: "Maths_Ch09_GeometricTwins_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```

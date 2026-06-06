@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maths Ch09 GeometricTwins</title>
+<style>
+@page { size: A4; margin: 18mm 16mm; }
+* { box-sizing: border-box; }
+body { font-family: Georgia, 'Times New Roman', serif; font-size: 12pt;
+       line-height: 1.45; color: #111; max-width: 820px; margin: 0 auto;
+       padding: 16px; }
+h1 { font-size: 19pt; margin: 0 0 2px; }
+h2 { font-size: 15pt; margin: 0 0 10px; color: #333; }
+h3 { font-size: 13pt; margin: 18px 0 6px; }
+table { border-collapse: collapse; margin: 8px 0 14px; }
+th, td { border: 1px solid #999; padding: 3px 9px; text-align: left;
+         font-size: 11pt; }
+.markbox { border: 2px solid #222; border-radius: 6px; padding: 8px 12px;
+           margin: 10px 0 16px; background: #f6f6f6; font-size: 11.5pt; }
+.q { margin: 9px 0 2px; }
+.opts { margin: 0 0 6px 22px; }
+.opts span { display: inline-block; min-width: 46%; vertical-align: top;
+             margin: 1px 0; }
+.sol { margin: 5px 0; }
+.pagebreak { page-break-before: always; }
+.note { color: #555; font-style: italic; font-size: 10.5pt; }
+hr { border: none; border-top: 1px solid #ccc; margin: 14px 0; }
+code { background: #eee; padding: 0 2px; }
+</style>
+</head>
+<body>
+<h1>Olympiad Test Paper — Mathematics (Class 7)</h1>
+<h2>Chapter 9: Geometric Twins</h2>
+<table>
+<tr><th></th><th></th></tr>
+<tr><td><strong>Subject</strong></td><td>Mathematics (NCERT Class 7)</td></tr>
+<tr><td><strong>Chapter</strong></td><td>9 — Geometric Twins (Congruence of Triangles)</td></tr>
+<tr><td><strong>Total Questions</strong></td><td>60 (Multiple Choice, single correct)</td></tr>
+<tr><td><strong>Maximum Marks</strong></td><td>240</td></tr>
+<tr><td><strong>Suggested Time</strong></td><td>90 minutes</td></tr>
+</table>
+<p><strong>Marking scheme:</strong> <strong>+4</strong> for each correct answer · <strong>−1</strong> for each wrong answer · <strong>0</strong> if unattempted.</p>
+<p><strong>Instructions:</strong> Each question has four options (A), (B), (C), (D); exactly one is correct. &quot;Congruent&quot; means same shape AND same size — never confuse it with &quot;similar&quot; (same shape, any size). The classic traps here are: treating AAA or SSA as congruence rules (they are not), forgetting that SAS needs the *included* angle, and answering the wrong angle in an isosceles triangle. Read every figure description carefully. Do not write on this paper — mark answers on your answer sheet.</p>
+<hr>
+<div class="q"><strong>1.</strong> Two figures are said to be congruent when:</div>
+<div class="opts"><span>(A) they have the same shape and the same size</span><span>(B) they have the same area only</span><span>(C) they have the same shape only</span><span>(D) one is an enlargement of the other</span></div>
+<div class="q"><strong>2.</strong> The symbol used to denote &quot;is congruent to&quot; is:</div>
+<div class="opts"><span>(A) ≈</span><span>(B) ≅</span><span>(C) =</span><span>(D) ∼</span></div>
+<div class="q"><strong>3.</strong> A drawing is photocopied at 150% (enlarged). The copy and the original are:</div>
+<div class="opts"><span>(A) congruent</span><span>(B) neither similar nor congruent</span><span>(C) similar but not congruent</span><span>(D) congruent only if the original was a triangle</span></div>
+<div class="q"><strong>4.</strong> Which set of equal parts does NOT, by itself, guarantee that two triangles are congruent?</div>
+<div class="opts"><span>(A) three pairs of equal sides</span><span>(B) two sides and the included angle</span><span>(C) two angles and the included side</span><span>(D) three pairs of equal angles</span></div>
+<div class="q"><strong>5.</strong> Two triangles have all three pairs of corresponding sides equal. The criterion that proves them congruent is:</div>
+<div class="opts"><span>(A) SAS</span><span>(B) SSS</span><span>(C) ASA</span><span>(D) RHS</span></div>
+<div class="q"><strong>6.</strong> In an isosceles triangle the two equal sides each measure x cm. Which other measurement is always equal to its partner across the axis of symmetry?</div>
+<div class="opts"><span>(A) the base only</span><span>(B) the apex angle&#x27;s two halves only</span><span>(C) the two base angles</span><span>(D) nothing — only the equal sides match</span></div>
+<div class="q"><strong>7.</strong> Why are two side-lengths NOT enough to copy a triangle exactly, while three are?</div>
+<div class="opts"><span>(A) two sides give a triangle that is too small</span><span>(B) two sides leave the perimeter unknown</span><span>(C) two sides always force a right angle</span><span>(D) the two given arcs meet at two points, so two different triangles fit</span></div>
+<div class="q"><strong>8.</strong> In ∆ABC and ∆DEF, AB = DE, BC = EF and ∠B = ∠E. By which criterion are they congruent?</div>
+<div class="opts"><span>(A) SAS</span><span>(B) ASA</span><span>(C) SSS</span><span>(D) RHS</span></div>
+<div class="q"><strong>9.</strong> The &quot;included angle&quot; between two named sides of a triangle is:</div>
+<div class="opts"><span>(A) the angle opposite the longer side</span><span>(B) the largest angle of the triangle</span><span>(C) the angle formed where those two sides meet</span><span>(D) any angle not touching either side</span></div>
+<div class="q"><strong>10.</strong> In ∆PQR and ∆XYZ, ∠P = ∠X, ∠Q = ∠Y and PQ = XY. The correct congruence statement and criterion is:</div>
+<div class="opts"><span>(A) ∆PQR ≅ ∆YXZ by ASA</span><span>(B) ∆PQR ≅ ∆XYZ by SAS</span><span>(C) they need not be congruent (AA only)</span><span>(D) ∆PQR ≅ ∆XYZ by ASA</span></div>
+<div class="q"><strong>11.</strong> Each angle of an equilateral triangle measures:</div>
+<div class="opts"><span>(A) 60°</span><span>(B) 90°</span><span>(C) 45°</span><span>(D) 120°</span></div>
+<div class="q"><strong>12.</strong> An isosceles triangle has apex (vertex) angle 40°. Each base angle measures:</div>
+<div class="opts"><span>(A) 40°</span><span>(B) 70°</span><span>(C) 100°</span><span>(D) 140°</span></div>
+<div class="q"><strong>13.</strong> In ∆ABC, ∠B = ∠C = 50°. Which two sides must be equal?</div>
+<div class="opts"><span>(A) AB = BC</span><span>(B) BC = AC</span><span>(C) all three are equal</span><span>(D) AB = AC</span></div>
+<div class="q"><strong>14.</strong> Two right-angled triangles have equal hypotenuses and one pair of equal legs. They are congruent by:</div>
+<div class="opts"><span>(A) RHS</span><span>(B) SSS</span><span>(C) SAS</span><span>(D) ASA</span></div>
+<div class="q"><strong>15.</strong> A triangle has angles 50° and 60°. A second triangle also has angles 50° and 60° but is drawn twice as large. The two triangles are:</div>
+<div class="opts"><span>(A) congruent by ASA</span><span>(B) similar but not congruent</span><span>(C) congruent by AAA</span><span>(D) congruent by SAS</span></div>
+<div class="q"><strong>16.</strong> In isosceles ∆ABC, AB = AC and ∠A = 80°. The value of ∠B is:</div>
+<div class="opts"><span>(A) 80°</span><span>(B) 40°</span><span>(C) 50°</span><span>(D) 100°</span></div>
+<div class="q"><strong>17.</strong> To prove the base angles of an isosceles triangle equal, we drop the altitude from the apex and show the two halves are congruent. The criterion used for the two halves is:</div>
+<div class="opts"><span>(A) RHS</span><span>(B) SAS</span><span>(C) SSS</span><span>(D) ASA</span></div>
+<div class="q"><strong>18.</strong> Two triangles meet the AAA condition (all three angles equal). We can be sure they are:</div>
+<div class="opts"><span>(A) congruent</span><span>(B) the same shape but possibly different size</span><span>(C) the same size but possibly different shape</span><span>(D) right-angled</span></div>
+<div class="q"><strong>19.</strong> In ∆ABC, AB = 6 cm, AC = 8 cm, ∠A = 55°; in ∆DEF, DE = 6 cm, DF = 8 cm, ∠D = 55°. The triangles are congruent because the equal angle is:</div>
+<div class="opts"><span>(A) opposite a side (SSA)</span><span>(B) the largest angle (AAS)</span><span>(C) included between the two equal sides (SAS)</span><span>(D) a right angle (RHS)</span></div>
+<div class="q"><strong>20.</strong> ∆ABC has AB = 5 cm, BC = 7 cm and ∠A = 40° (the angle at A, NOT between AB and BC). A second triangle has the same three measurements in the same role. We can conclude the two triangles are:</div>
+<div class="opts"><span>(A) certainly congruent by SAS</span><span>(B) certainly congruent by ASA</span><span>(C) certainly congruent by SSS</span><span>(D) not necessarily congruent — this is the SSA (ambiguous) case</span></div>
+<div class="q"><strong>21.</strong> If ∆ABC ≅ ∆DEF, ∠A = 50° and ∠B = 65°, then ∠F equals:</div>
+<div class="opts"><span>(A) 50°</span><span>(B) 65°</span><span>(C) 115°</span><span>(D) 130°</span></div>
+<div class="q"><strong>22.</strong> If ∆ABC ≅ ∆PQR, which side of ∆PQR equals BC?</div>
+<div class="opts"><span>(A) PQ</span><span>(B) PR</span><span>(C) QR</span><span>(D) cannot be decided</span></div>
+<div class="q"><strong>23.</strong> CPCT stands for &quot;Corresponding Parts of Congruent Triangles (are equal).&quot; It may be used:</div>
+<div class="opts"><span>(A) before proving the triangles congruent, to set up the proof</span><span>(B) only for the sides, never for the angles</span><span>(C) only when the triangles are equilateral</span><span>(D) only after the triangles have been proved congruent</span></div>
+<div class="q"><strong>24.</strong> A triangle has two equal sides of 5 cm and an included angle of 60° between them. This triangle is:</div>
+<div class="opts"><span>(A) equilateral</span><span>(B) right-angled</span><span>(C) isosceles but never equilateral</span><span>(D) scalene</span></div>
+<div class="q"><strong>25.</strong> The minimum number of independent measurements needed to fix a triangle&#x27;s shape and size is:</div>
+<div class="opts"><span>(A) 2</span><span>(B) 5</span><span>(C) 3</span><span>(D) 6</span></div>
+<div class="q"><strong>26.</strong> In ∆ABC, ∠A = 70° and ∠B = 70°. The triangle is:</div>
+<div class="opts"><span>(A) equilateral</span><span>(B) isosceles with AB = AC</span><span>(C) right-angled</span><span>(D) isosceles with AC = BC</span></div>
+<div class="q"><strong>27.</strong> Two triangles have sides 4 cm, 6 cm, 9 cm and 4 cm, 6 cm, 9 cm respectively. They are:</div>
+<div class="opts"><span>(A) congruent by SSS</span><span>(B) similar but not congruent</span><span>(C) congruent by SAS</span><span>(D) not necessarily congruent</span></div>
+<div class="q"><strong>28.</strong> In ∆ABC, AB = AC. If ∠B = (2x + 10)° and ∠C = (3x − 20)°, then x equals:</div>
+<div class="opts"><span>(A) 10</span><span>(B) 30</span><span>(C) 6</span><span>(D) 50</span></div>
+<div class="q"><strong>29.</strong> A square is folded along one of its diagonals. The two triangular halves are:</div>
+<div class="opts"><span>(A) similar but not congruent</span><span>(B) congruent only if the square is also a rectangle</span><span>(C) never congruent</span><span>(D) congruent</span></div>
+<div class="q"><strong>30.</strong> In ∆ABC ≅ ∆DEF, AB = 7 cm and DF = 9 cm. Given the order of letters, the length of AC is:</div>
+<div class="opts"><span>(A) 9 cm</span><span>(B) 7 cm</span><span>(C) cannot be found</span><span>(D) 16 cm</span></div>
+<div class="q"><strong>31.</strong> Which statement is FALSE?</div>
+<div class="opts"><span>(A) every equilateral triangle is isosceles</span><span>(B) similar triangles are always congruent</span><span>(C) congruent triangles are always similar</span><span>(D) AAA does not prove congruence</span></div>
+<div class="q"><strong>32.</strong> In ∆PQR, PQ = PR and ∠Q = 65°. Then ∠P equals:</div>
+<div class="opts"><span>(A) 65°</span><span>(B) 25°</span><span>(C) 50°</span><span>(D) 130°</span></div>
+<div class="q"><strong>33.</strong> Two triangles are drawn: the first with base 5 cm and base angles 50° and 60°; the second with base 5 cm and base angles 50° and 60° in the same positions. They are congruent by:</div>
+<div class="opts"><span>(A) ASA</span><span>(B) SAS</span><span>(C) SSS</span><span>(D) RHS</span></div>
+<div class="q"><strong>34.</strong> A right triangle has legs 6 cm and 8 cm. A second right triangle has hypotenuse 10 cm and one leg 6 cm. These two triangles are:</div>
+<div class="opts"><span>(A) not congruent</span><span>(B) congruent (the second&#x27;s other leg is also 8 cm)</span><span>(C) similar only</span><span>(D) congruent only if both are isosceles</span></div>
+<div class="q"><strong>35.</strong> ∆ABC ≅ ∆DEF is written with that exact letter order. This tells us ∠A corresponds to:</div>
+<div class="opts"><span>(A) ∠E</span><span>(B) ∠F</span><span>(C) ∠D</span><span>(D) any of the three</span></div>
+<div class="q"><strong>36.</strong> In ∆ABC, AD is the median to BC and AB = AC. Comparing ∆ABD and ∆ACD, they are congruent by:</div>
+<div class="opts"><span>(A) ASA</span><span>(B) RHS</span><span>(C) AAA</span><span>(D) SSS</span></div>
+<div class="q"><strong>37.</strong> The exterior angle at the apex of an isosceles triangle is 100°. Each base angle is:</div>
+<div class="opts"><span>(A) 100°</span><span>(B) 50°</span><span>(C) 80°</span><span>(D) 40°</span></div>
+<div class="q"><strong>38.</strong> Two triangles cannot be congruent if they have:</div>
+<div class="opts"><span>(A) equal perimeters and an SSS match</span><span>(B) the same three angles</span><span>(C) different areas</span><span>(D) two equal sides and the included angle equal</span></div>
+<div class="q"><strong>39.</strong> In ∆LMN and ∆RST, LM = RS, ∠L = ∠R and ∠M = ∠S. The congruence criterion is:</div>
+<div class="opts"><span>(A) SAS</span><span>(B) SSS</span><span>(C) SSA</span><span>(D) ASA</span></div>
+<div class="q"><strong>40.</strong> An isosceles triangle has a base angle of 75°. Its apex angle is:</div>
+<div class="opts"><span>(A) 30°</span><span>(B) 75°</span><span>(C) 105°</span><span>(D) 15°</span></div>
+<div class="q"><strong>41.</strong> In ∆ABC, ∠A = 90°, AB = AC. Then ∠B equals:</div>
+<div class="opts"><span>(A) 90°</span><span>(B) 60°</span><span>(C) 45°</span><span>(D) 30°</span></div>
+<div class="q"><strong>42.</strong> Which of these guarantees congruence of two RIGHT triangles using exactly three matching parts that include the right angle?</div>
+<div class="opts"><span>(A) all three angles equal</span><span>(B) one acute angle equal (and the right angle), but no side given</span><span>(C) the perimeters equal</span><span>(D) the two pairs of legs equal (and the right angle between them)</span></div>
+<div class="q"><strong>43.</strong> A triangle is fixed by its three sides 3 cm, 4 cm, 5 cm. How many genuinely different (non-congruent) triangles have exactly these three side-lengths?</div>
+<div class="opts"><span>(A) exactly one</span><span>(B) none</span><span>(C) exactly two</span><span>(D) infinitely many</span></div>
+<div class="q"><strong>44.</strong> In ∆ABC, AB = AC and ∠A = 100°. The largest angle of the triangle is:</div>
+<div class="opts"><span>(A) each base angle at 40°</span><span>(B) ∠A at 100°</span><span>(C) ∠B at 80°</span><span>(D) all equal</span></div>
+<div class="q"><strong>45.</strong> ∆ABC has AB = AC. The bisector of ∠A meets BC at D. Then BD compared with DC is:</div>
+<div class="opts"><span>(A) BD &gt; DC</span><span>(B) BD &lt; DC</span><span>(C) cannot be determined</span><span>(D) BD = DC</span></div>
+<div class="q"><strong>46.</strong> Two triangles have two pairs of equal sides and a pair of equal angles, but the equal angle is NOT between the equal sides. This information:</div>
+<div class="opts"><span>(A) does not guarantee congruence (SSA, ambiguous)</span><span>(B) always proves congruence by SAS</span><span>(C) always proves congruence by SSS</span><span>(D) proves the triangles are equilateral</span></div>
+<div class="q"><strong>47.</strong> In ∆ABC, the perpendicular bisector of side BC passes through A. This means:</div>
+<div class="opts"><span>(A) BC is the longest side</span><span>(B) AB = AC, so the triangle is isosceles</span><span>(C) ∠A = 90°</span><span>(D) the triangle is scalene</span></div>
+<div class="q"><strong>48.</strong> ∆ABC ≅ ∆PQR. The perimeter of ∆ABC is 24 cm. The perimeter of ∆PQR is:</div>
+<div class="opts"><span>(A) 12 cm</span><span>(B) 48 cm</span><span>(C) 24 cm</span><span>(D) cannot be found</span></div>
+<div class="q"><strong>49.</strong> In ∆ABC, ∠A = 40° and AB = AC. Then ∠C of ∆ABC is:</div>
+<div class="opts"><span>(A) 70°</span><span>(B) 40°</span><span>(C) 100°</span><span>(D) 50°</span></div>
+<div class="q"><strong>50.</strong> Which pair of conditions is enough to construct a UNIQUE triangle?</div>
+<div class="opts"><span>(A) three angles</span><span>(B) two angles and the included side</span><span>(C) two sides only</span><span>(D) one side and one angle</span></div>
+<div class="q"><strong>51.</strong> The angles of a triangle are in the ratio 1 : 1 : 2. Such a triangle is:</div>
+<div class="opts"><span>(A) equilateral</span><span>(B) scalene</span><span>(C) isosceles and right-angled</span><span>(D) impossible</span></div>
+<div class="q"><strong>52.</strong> In ∆DEF, DE = DF and ∠D = 2∠E. Then ∠E equals:</div>
+<div class="opts"><span>(A) 36°</span><span>(B) 60°</span><span>(C) 90°</span><span>(D) 45°</span></div>
+<div class="q"><strong>53.</strong> A triangle has sides 7 cm, 7 cm, 7 cm. Each of its angles is:</div>
+<div class="opts"><span>(A) 45°</span><span>(B) 60°</span><span>(C) 50°</span><span>(D) 70°</span></div>
+<div class="q"><strong>54.</strong> ∆ABC ≅ ∆DEF by SAS, using AB = DE, ∠A = ∠D and AC = DF. The angle ∠A is the included angle between sides:</div>
+<div class="opts"><span>(A) AB and BC</span><span>(B) BC and AC</span><span>(C) AB and AC</span><span>(D) the hypotenuse and a leg</span></div>
+<div class="q"><strong>55.</strong> Two triangles ∆ABC and ∆ABD share the common base AB, lie on opposite sides of it, with AC = AD and BC = BD. The criterion proving ∆ABC ≅ ∆ABD is:</div>
+<div class="opts"><span>(A) SAS</span><span>(B) ASA</span><span>(C) RHS</span><span>(D) SSS</span></div>
+<div class="q"><strong>56.</strong> In isosceles ∆ABC, AB = AC, so ∠B = ∠C. If ∠B = (x + 20)° and the apex ∠A = (2x)°, then ∠A equals:</div>
+<div class="opts"><span>(A) 70°</span><span>(B) 35°</span><span>(C) 50°</span><span>(D) 130°</span></div>
+<div class="q"><strong>57.</strong> A child claims: &quot;If two triangles have the same area, they are congruent.&quot; This claim is:</div>
+<div class="opts"><span>(A) always true</span><span>(B) true only for right triangles</span><span>(C) false — equal area does not force equal shape and size</span><span>(D) true only for equilateral triangles</span></div>
+<div class="q"><strong>58.</strong> In ∆ABC, AB = AC = 13 cm and BC = 10 cm. The altitude from A to BC has foot M. The length BM is:</div>
+<div class="opts"><span>(A) 6.5 cm</span><span>(B) 12 cm</span><span>(C) 10 cm</span><span>(D) 5 cm</span></div>
+<div class="q"><strong>59.</strong> ∆ABC ≅ ∆ACB (note the letter order) for a single triangle ABC. This self-congruence forces:</div>
+<div class="opts"><span>(A) AB = AC, i.e. the triangle is isosceles</span><span>(B) ∠A = 90°</span><span>(C) the triangle is scalene</span><span>(D) the triangle is equilateral</span></div>
+<div class="q"><strong>60.</strong> A triangle has angles in the ratio 2 : 2 : 5. The triangle is:</div>
+<div class="opts"><span>(A) equilateral</span><span>(B) isosceles</span><span>(C) right-angled</span><span>(D) scalene</span></div>
+<hr>
+<p class="note">End of question paper. Maximum marks: 240. Marking: +4 correct, −1 wrong, 0 unattempted.</p>
+<div class="pagebreak"></div>
+<h1>Solutions — Mathematics (Class 7), Chapter 9: Geometric Twins</h1>
+<p>Marking: <strong>+4</strong> correct, <strong>−1</strong> wrong, <strong>0</strong> unattempted. Maximum marks <strong>240</strong>.</p>
+<h2>Answer Key</h2>
+<table>
+<tr><th>Q</th><th>Ans</th><th>Q</th><th>Ans</th><th>Q</th><th>Ans</th><th>Q</th><th>Ans</th><th>Q</th><th>Ans</th><th>Q</th><th>Ans</th></tr>
+<tr><td>1</td><td>A</td><td>11</td><td>A</td><td>21</td><td>B</td><td>31</td><td>B</td><td>41</td><td>C</td><td>51</td><td>C</td></tr>
+<tr><td>2</td><td>B</td><td>12</td><td>B</td><td>22</td><td>C</td><td>32</td><td>C</td><td>42</td><td>D</td><td>52</td><td>D</td></tr>
+<tr><td>3</td><td>C</td><td>13</td><td>D</td><td>23</td><td>D</td><td>33</td><td>A</td><td>43</td><td>A</td><td>53</td><td>B</td></tr>
+<tr><td>4</td><td>D</td><td>14</td><td>A</td><td>24</td><td>A</td><td>34</td><td>B</td><td>44</td><td>B</td><td>54</td><td>C</td></tr>
+<tr><td>5</td><td>B</td><td>15</td><td>B</td><td>25</td><td>C</td><td>35</td><td>C</td><td>45</td><td>D</td><td>55</td><td>D</td></tr>
+<tr><td>6</td><td>C</td><td>16</td><td>C</td><td>26</td><td>D</td><td>36</td><td>D</td><td>46</td><td>A</td><td>56</td><td>A</td></tr>
+<tr><td>7</td><td>D</td><td>17</td><td>A</td><td>27</td><td>A</td><td>37</td><td>B</td><td>47</td><td>B</td><td>57</td><td>C</td></tr>
+<tr><td>8</td><td>A</td><td>18</td><td>B</td><td>28</td><td>B</td><td>38</td><td>C</td><td>48</td><td>C</td><td>58</td><td>D</td></tr>
+<tr><td>9</td><td>C</td><td>19</td><td>C</td><td>29</td><td>D</td><td>39</td><td>D</td><td>49</td><td>A</td><td>59</td><td>A</td></tr>
+<tr><td>10</td><td>D</td><td>20</td><td>D</td><td>30</td><td>A</td><td>40</td><td>A</td><td>50</td><td>B</td><td>60</td><td>B</td></tr>
+</table>
+<p>Answer-key distribution: A = 15, B = 15, C = 15, D = 15.</p>
+<hr>
+<h2>Worked Solutions</h2>
+<p><strong>1. (A)</strong> Congruent means one figure can be placed exactly on the other — that requires the <strong>same shape AND the same size</strong>. &quot;Same area only&quot; (a 2×6 and a 3×4 rectangle) or &quot;same shape only&quot; (an enlargement) fail this.</p>
+<p><strong>2. (B)</strong> ≅ is the congruence symbol. ∼ means &quot;similar&quot;, ≈ means &quot;approximately&quot;, = is ordinary equality.</p>
+<p><strong>3. (C)</strong> A 150% copy keeps the shape but multiplies every length by 1.5, so it is bigger. Same shape, different size = <strong>similar but not congruent</strong>. (Congruent needs equal size.)</p>
+<p><strong>4. (D)</strong> SSS, SAS and ASA each pin a triangle down completely. <strong>AAA (three equal angles)</strong> fixes only the shape — the triangles can be different sizes (similar), so it does not guarantee congruence.</p>
+<p><strong>5. (B)</strong> Three pairs of equal corresponding sides is exactly the <strong>SSS</strong> criterion.</p>
+<p><strong>6. (C)</strong> Fold an isosceles triangle along its axis of symmetry (the altitude from the apex): the two halves coincide, so the <strong>two base angles</strong> are forced equal. The equal sides face equal angles.</p>
+<p><strong>7. (D)</strong> Drawing a base and swinging two arcs from its ends, <strong>the arcs meet at two points</strong> (one above, one below the base), giving two different triangles. A third side removes the ambiguity, so SSS fixes the triangle.</p>
+<p><strong>8. (A)</strong> AB = DE and BC = EF are two sides, and ∠B is the angle <strong>between</strong> them (the included angle). Two sides + included angle = <strong>SAS</strong>.</p>
+<p><strong>9. (C)</strong> The included angle of two named sides is <strong>the angle where those two sides meet</strong> (their common vertex). This is the key word in SAS.</p>
+<p><strong>10. (D)</strong> Two angles (∠P = ∠X, ∠Q = ∠Y) with the <strong>included</strong> side PQ = XY give <strong>ASA</strong>, and the vertices already correspond in order P↔X, Q↔Y, R↔Z, so ∆PQR ≅ ∆XYZ. (AA alone would only give similarity, but here a side is also equal.)</p>
+<p><strong>11. (A)</strong> All three sides equal ⇒ all three angles equal; they sum to 180°, so each is 180 ÷ 3 = <strong>60°</strong>. (Not 90° and not 360 ÷ 3.)</p>
+<p><strong>12. (B)</strong> Apex 40°, so the two equal base angles share 180 − 40 = 140°, giving 140 ÷ 2 = <strong>70°</strong> each. (40° is the apex itself — the trap.)</p>
+<p><strong>13. (D)</strong> Equal angles are faced by equal sides. ∠B and ∠C are equal, so the sides opposite them — AC (opposite B) and AB (opposite C) — are equal: <strong>AB = AC</strong>.</p>
+<p><strong>14. (A)</strong> A right angle, equal hypotenuses and one equal leg is precisely the <strong>RHS</strong> criterion. (SSS would need the third side proved equal first; RHS gives it directly.)</p>
+<p><strong>15. (B)</strong> Equal angles fix only the shape; &quot;twice as large&quot; means a different size. So the triangles are <strong>similar but not congruent</strong> — AAA is not a congruence rule.</p>
+<p><strong>16. (C)</strong> AB = AC ⇒ ∠B = ∠C. With ∠A = 80°, 2∠B = 180 − 80 = 100, so ∠B = <strong>50°</strong>. (80° is ∠A; 100° is the sum of the base angles.)</p>
+<p><strong>17. (A)</strong> The altitude makes ∠ADB = ∠ADC = 90° (right angle), AB = AC (hypotenuses), AD common (a leg) → <strong>RHS</strong>. The matching base angles then equal by CPCT.</p>
+<p><strong>18. (B)</strong> AAA guarantees only <strong>the same shape but possibly different size</strong> (similar). It is not a congruence criterion.</p>
+<p><strong>19. (C)</strong> The equal angle ∠A sits <strong>between the two equal sides</strong> AB and AC, so this is the included angle — <strong>SAS</strong>. (If the angle were opposite a side it would be the unreliable SSA case.)</p>
+<p><strong>20. (D)</strong> Here ∠A is at vertex A while the given sides are AB and BC; ∠A is NOT between them — it is a <strong>non-included angle (SSA)</strong>, which can fit two different triangles. So congruence is <strong>not guaranteed</strong>.</p>
+<p><strong>21. (B)</strong> In ∆ABC, ∠C = 180 − 50 − 65 = 65°. Congruence ∆ABC ≅ ∆DEF makes ∠F correspond to ∠C, so ∠F = <strong>65°</strong>.</p>
+<p><strong>22. (C)</strong> Under ∆ABC ≅ ∆PQR the correspondence is A↔P, B↔Q, C↔R. Side BC (between B and C) corresponds to <strong>QR</strong> (between Q and R).</p>
+<p><strong>23. (D)</strong> CPCT lets you conclude corresponding parts are equal — but <strong>only after</strong> the two triangles have been shown congruent. It is a consequence of congruence, never a step to prove it.</p>
+<p><strong>24. (A)</strong> Two equal sides with a 60° included angle: the third side, by the isosceles property the base angles are equal, and equal base angles with a 60° apex force all angles to 60°, so all three sides become equal — the triangle is <strong>equilateral</strong>. (A 5-5 triangle with a 60° apex is the classic equilateral.)</p>
+<p><strong>25. (C)</strong> A triangle has six measurements, but only <strong>3</strong> well-chosen independent ones (e.g. SSS, SAS or ASA) are needed to fix it completely. Two are too few; six is unnecessary.</p>
+<p><strong>26. (D)</strong> ∠A = ∠B = 70°, so the sides facing them are equal: side opposite A is BC, side opposite B is AC, hence <strong>AC = BC</strong> (isosceles). (Watch which sides face the equal angles.)</p>
+<p><strong>27. (A)</strong> All three pairs of sides equal (4, 6, 9 each) ⇒ congruent by <strong>SSS</strong>. Equal corresponding sides means same size too, not merely similar.</p>
+<p><strong>28. (B)</strong> AB = AC ⇒ ∠B = ∠C: 2x + 10 = 3x − 20 → 30 = x, so x = <strong>30</strong>. (Check: ∠B = 70° = ∠C.)</p>
+<p><strong>29. (D)</strong> A diagonal splits a square into two triangles with the two sides of the square equal, the included right angle equal, and the diagonal shared — by SAS (or SSS) they are <strong>congruent</strong>. Folding maps one exactly onto the other.</p>
+<p><strong>30. (A)</strong> ∆ABC ≅ ∆DEF gives A↔D, B↔E, C↔F. Side AC corresponds to DF, so AC = DF = <strong>9 cm</strong>. (AB = DE = 7 cm is a different pair — the trap.)</p>
+<p><strong>31. (B)</strong> Congruent ⇒ similar (true), every equilateral triangle is isosceles (true), AAA fails to prove congruence (true). The <strong>false</strong> statement is &quot;<strong>similar triangles are always congruent</strong>&quot; — similar triangles can differ in size.</p>
+<p><strong>32. (C)</strong> PQ = PR ⇒ ∠Q = ∠R = 65°. ∠P = 180 − 65 − 65 = <strong>50°</strong>. (65° is a base angle, not the apex.)</p>
+<p><strong>33. (A)</strong> Base 5 cm with the two base angles (50° and 60°) equal in the same positions: two angles + the included side ⇒ <strong>ASA</strong>.</p>
+<p><strong>34. (B)</strong> First triangle: legs 6, 8 ⇒ hypotenuse 10. Second: hypotenuse 10, one leg 6 ⇒ other leg √(100 − 36) = 8. Right angle + equal hypotenuse + equal leg (RHS) makes them <strong>congruent</strong>, with the missing leg also 8 cm.</p>
+<p><strong>35. (C)</strong> The letter order in ∆ABC ≅ ∆DEF pairs the vertices in place: A↔D. So ∠A corresponds to <strong>∠D</strong>.</p>
+<p><strong>36. (D)</strong> AD is a median ⇒ BD = DC; AB = AC (given); AD common. Three pairs of equal sides ⇒ <strong>SSS</strong>.</p>
+<p><strong>37. (B)</strong> Exterior angle 100° at the apex ⇒ interior apex angle = 180 − 100 = 80°. Base angles share 180 − 80 = 100°, so each = <strong>50°</strong>. (Using 100° directly as the interior apex is the trap.)</p>
+<p><strong>38. (C)</strong> Congruent triangles must be identical in size, hence equal area — so two triangles with <strong>different areas</strong> can never be congruent. (Equal perimeter + SSS, equal angles, or SAS are all consistent with congruence.)</p>
+<p><strong>39. (D)</strong> ∠L = ∠R, ∠M = ∠S are two angles, and the side LM = RS lies <strong>between</strong> ∠L and ∠M — included side. Two angles + included side ⇒ <strong>ASA</strong>.</p>
+<p><strong>40. (A)</strong> Base angle 75° ⇒ both base angles 75°, summing to 150°. Apex = 180 − 150 = <strong>30°</strong>.</p>
+<p><strong>41. (C)</strong> ∠A = 90°, AB = AC ⇒ ∠B = ∠C; they share 180 − 90 = 90°, so each = <strong>45°</strong>.</p>
+<p><strong>42. (D)</strong> With the right angle counted as one of the parts, <strong>two pairs of equal legs (with the included right angle)</strong> gives SAS congruence using exactly the right angle + two sides. (&quot;All three angles&quot; is mere AAA — shape only; a right angle + one acute angle with no side given is still only angles (AAA), fixing shape not size; and equal perimeters alone prove nothing.)</p>
+<p><strong>43. (A)</strong> Three fixed side-lengths leave <strong>exactly one</strong> triangle up to congruence (SSS pins it completely). Any two such triangles can be laid exactly on top of each other.</p>
+<p><strong>44. (B)</strong> AB = AC ⇒ ∠B = ∠C = (180 − 100)/2 = 40°. The biggest angle is the apex, <strong>∠A at 100°</strong> (each base angle is only 40°).</p>
+<p><strong>45. (D)</strong> In an isosceles triangle the bisector of the apex angle is also the median and altitude to the base, so it bisects BC: <strong>BD = DC</strong>. (∆ABD ≅ ∆ACD by SAS, then CPCT.)</p>
+<p><strong>46. (A)</strong> Two equal sides and an equal angle that is <strong>not</strong> between them is the SSA pattern, which can fit two different triangles. So it <strong>does not guarantee congruence</strong>.</p>
+<p><strong>47. (B)</strong> Every point on the perpendicular bisector of BC is equidistant from B and C; since A lies on it, AB = AC, so the triangle is <strong>isosceles</strong>. (It says nothing about a right angle or the longest side.)</p>
+<p><strong>48. (C)</strong> Congruent triangles are identical copies, so all corresponding sides are equal and the perimeters match: <strong>24 cm</strong>.</p>
+<p><strong>49. (A)</strong> AB = AC ⇒ ∠B = ∠C, and ∠B + ∠C = 180 − 40 = 140°, so ∠C = <strong>70°</strong>. (40° is ∠A, not a base angle.)</p>
+<p><strong>50. (B)</strong> <strong>Two angles and the included side (ASA)</strong> fix a unique triangle. Three angles give only shape (AAA), two sides alone are ambiguous, and a single side-and-angle is far too little.</p>
+<p><strong>51. (C)</strong> 1 : 1 : 2 over 180° gives angles 45°, 45°, 90°: two equal angles (isosceles) and a right angle — <strong>isosceles and right-angled</strong>.</p>
+<p><strong>52. (D)</strong> DE = DF ⇒ ∠E = ∠F. With ∠D = 2∠E: ∠D + ∠E + ∠F = 2∠E + ∠E + ∠E = 4∠E = 180 → ∠E = <strong>45°</strong>.</p>
+<p><strong>53. (B)</strong> All sides equal (7, 7, 7) ⇒ equilateral ⇒ every angle = <strong>60°</strong>.</p>
+<p><strong>54. (C)</strong> SAS uses two sides and the angle between them. The named sides are AB and AC, both meeting at A, so ∠A is included between <strong>AB and AC</strong>.</p>
+<p><strong>55. (D)</strong> AC = AD, BC = BD (given) and AB is the common base — three pairs of equal sides ⇒ <strong>SSS</strong>.</p>
+<p><strong>56. (A)</strong> AB = AC ⇒ ∠B = ∠C = (x + 20)°; with apex ∠A = (2x)°: 2x + (x + 20) + (x + 20) = 180 → 4x + 40 = 180 → x = 35. So ∠A = 2x = <strong>70°</strong>. (Check: base angles 55° each, 70 + 55 + 55 = 180. ✓)</p>
+<p><strong>57. (C)</strong> Equal area does NOT force equal shape and size — a tall thin triangle and a short wide one can share an area. So the claim is <strong>false</strong>.</p>
+<p><strong>58. (D)</strong> AB = AC, so the altitude from apex A to base BC also bisects BC (isosceles property): M is the midpoint, giving BM = BC/2 = 10/2 = <strong>5 cm</strong>. (6.5 wrongly halves a slant side; 12 is the altitude length √(13² − 5²).)</p>
+<p><strong>59. (A)</strong> ∆ABC ≅ ∆ACB pairs A↔A, B↔C, C↔B, so AB corresponds to AC ⇒ <strong>AB = AC</strong>: the triangle is isosceles. (This need not make it equilateral or right-angled.)</p>
+<p><strong>60. (B)</strong> 2 : 2 : 5 over 180° (9 parts of 20°) gives 40°, 40°, 100°: two equal angles ⇒ <strong>isosceles</strong> (and obtuse, but isosceles is the classification asked).</p>
+<hr>
+<p class="note">Solutions complete: 60 / 60.</p>
+</body>
+</html>
