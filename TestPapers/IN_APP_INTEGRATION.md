@@ -383,3 +383,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_ch07",
+            subjectId: "maths_class7",
+            subjectName: "Mathematics",
+            chapterNumber: 7,
+            chapterTitle: "A Tale of Three Intersecting Lines",
+            displayTitle: "A Tale of Three Intersecting Lines — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch07_ATaleOfThreeIntersectingLines_QuestionPaper.md",
+            solutionsMD: "Maths_Ch07_ATaleOfThreeIntersectingLines_Solutions.md",
+            questionPaperHTML: "Maths_Ch07_ATaleOfThreeIntersectingLines.html",
+            questionPaperPDF: "Maths_Ch07_ATaleOfThreeIntersectingLines.pdf",
+            solvedGuideHTML: "Maths_Ch07_ATaleOfThreeIntersectingLines_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
