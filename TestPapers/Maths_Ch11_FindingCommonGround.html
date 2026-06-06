@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maths Ch11 FindingCommonGround</title>
+<style>
+@page { size: A4; margin: 18mm 16mm; }
+* { box-sizing: border-box; }
+body { font-family: Georgia, 'Times New Roman', serif; font-size: 12pt;
+       line-height: 1.45; color: #111; max-width: 820px; margin: 0 auto;
+       padding: 16px; }
+h1 { font-size: 19pt; margin: 0 0 2px; }
+h2 { font-size: 15pt; margin: 0 0 10px; color: #333; }
+h3 { font-size: 13pt; margin: 18px 0 6px; }
+table { border-collapse: collapse; margin: 8px 0 14px; }
+th, td { border: 1px solid #999; padding: 3px 9px; text-align: left;
+         font-size: 11pt; }
+.markbox { border: 2px solid #222; border-radius: 6px; padding: 8px 12px;
+           margin: 10px 0 16px; background: #f6f6f6; font-size: 11.5pt; }
+.q { margin: 9px 0 2px; }
+.opts { margin: 0 0 6px 22px; }
+.opts span { display: inline-block; min-width: 46%; vertical-align: top;
+             margin: 1px 0; }
+.sol { margin: 5px 0; }
+.pagebreak { page-break-before: always; }
+.note { color: #555; font-style: italic; font-size: 10.5pt; }
+hr { border: none; border-top: 1px solid #ccc; margin: 14px 0; }
+code { background: #eee; padding: 0 2px; }
+</style>
+</head>
+<body>
+<h1>Olympiad Test Paper — Mathematics (Class 7)</h1>
+<h2>Chapter 11: Finding Common Ground</h2>
+<table>
+<tr><th></th><th></th></tr>
+<tr><td><strong>Subject</strong></td><td>Mathematics (NCERT Class 7)</td></tr>
+<tr><td><strong>Chapter</strong></td><td>11 — Finding Common Ground (HCF &amp; LCM)</td></tr>
+<tr><td><strong>Total Questions</strong></td><td>60 (Multiple Choice, single correct)</td></tr>
+<tr><td><strong>Maximum Marks</strong></td><td>240</td></tr>
+<tr><td><strong>Suggested Time</strong></td><td>90 minutes</td></tr>
+</table>
+<p><strong>Marking scheme:</strong> <strong>+4</strong> for each correct answer · <strong>−1</strong> for each wrong answer · <strong>0</strong> if unattempted.</p>
+<p><strong>Instructions:</strong> Each question has four options (A), (B), (C), (D); exactly one is correct. Decide first whether the problem asks for the largest number that DIVIDES the given numbers (HCF — for sharing/cutting/tiling) or the smallest number they DIVIDE INTO (LCM — for bells/lights/cycles meeting again). Beware the classic traps: HCF is never bigger than the smaller number, LCM equals the product only for co-prime pairs, and for the HCF you take the LOWEST powers of the common primes while the LCM takes the HIGHEST powers of all primes. Do not write on this paper — mark answers on your answer sheet.</p>
+<hr>
+<div class="q"><strong>1.</strong> The HCF of two numbers is the:</div>
+<div class="opts"><span>(A) smallest number that both numbers divide into</span><span>(B) largest number that divides both numbers exactly</span><span>(C) product of the two numbers</span><span>(D) sum of all common factors of the two numbers</span></div>
+<div class="q"><strong>2.</strong> Find the HCF of 24 and 36.</div>
+<div class="opts"><span>(A) 6</span><span>(B) 4</span><span>(C) 12</span><span>(D) 72</span></div>
+<div class="q"><strong>3.</strong> Find the LCM of 12 and 18.</div>
+<div class="opts"><span>(A) 36</span><span>(B) 6</span><span>(C) 72</span><span>(D) 216</span></div>
+<div class="q"><strong>4.</strong> Sameeksha tiles a 12 ft × 16 ft floor with the largest equal square tiles of whole-foot side that fit exactly. The side of each tile is:</div>
+<div class="opts"><span>(A) 16 ft</span><span>(B) 2 ft</span><span>(C) 4 ft</span><span>(D) 48 ft</span></div>
+<div class="q"><strong>5.</strong> For the same 12 ft × 16 ft floor, the number of largest square tiles needed is:</div>
+<div class="opts"><span>(A) 6</span><span>(B) 4</span><span>(C) 48</span><span>(D) 12</span></div>
+<div class="q"><strong>6.</strong> Which of these pairs is co-prime (HCF = 1)?</div>
+<div class="opts"><span>(A) 8 and 15</span><span>(B) 9 and 15</span><span>(C) 8 and 12</span><span>(D) 10 and 25</span></div>
+<div class="q"><strong>7.</strong> The LCM of two co-prime numbers 7 and 9 is:</div>
+<div class="opts"><span>(A) 1</span><span>(B) 16</span><span>(C) 63</span><span>(D) 7</span></div>
+<div class="q"><strong>8.</strong> Two bells ring at intervals of 6 minutes and 8 minutes. If they ring together now, after how many minutes do they next ring together?</div>
+<div class="opts"><span>(A) 48</span><span>(B) 14</span><span>(C) 2</span><span>(D) 24</span></div>
+<div class="q"><strong>9.</strong> The product of two numbers is 216 and their HCF is 6. Their LCM is:</div>
+<div class="opts"><span>(A) 36</span><span>(B) 1296</span><span>(C) 30</span><span>(D) 210</span></div>
+<div class="q"><strong>10.</strong> For any two numbers, HCF × LCM equals:</div>
+<div class="opts"><span>(A) the sum of the two numbers</span><span>(B) the product of the two numbers</span><span>(C) the larger of the two numbers</span><span>(D) the difference of the two numbers</span></div>
+<div class="q"><strong>11.</strong> Using 12 = 2² × 3 and 18 = 2 × 3², the HCF of 12 and 18 is:</div>
+<div class="opts"><span>(A) 2² × 3² = 36</span><span>(B) 2² × 3 = 12</span><span>(C) 2³ × 3 = 24</span><span>(D) 2 × 3 = 6</span></div>
+<div class="q"><strong>12.</strong> Using 12 = 2² × 3 and 18 = 2 × 3², the LCM of 12 and 18 is:</div>
+<div class="opts"><span>(A) 2 × 3 = 6</span><span>(B) 2² × 3 = 12</span><span>(C) 2² × 3² = 36</span><span>(D) 2³ × 3³ = 216</span></div>
+<div class="q"><strong>13.</strong> Two numbers have HCF 6 and LCM 72. If one number is 24, the other is:</div>
+<div class="opts"><span>(A) 36</span><span>(B) 18</span><span>(C) 12</span><span>(D) 8</span></div>
+<div class="q"><strong>14.</strong> The longest tape that can measure 7 m, 3.85 m and 12.95 m an exact whole number of times is:</div>
+<div class="opts"><span>(A) 7 cm</span><span>(B) 5 cm</span><span>(C) 35 cm</span><span>(D) 70 cm</span></div>
+<div class="q"><strong>15.</strong> Which statement is always TRUE?</div>
+<div class="opts"><span>(A) The HCF of two numbers is never larger than the smaller number.</span><span>(B) The LCM of two numbers is never larger than the larger number.</span><span>(C) The HCF of two numbers is always one of the two numbers.</span><span>(D) The LCM of two numbers always equals their product.</span></div>
+<div class="q"><strong>16.</strong> Find the HCF of 18, 24 and 30.</div>
+<div class="opts"><span>(A) 2</span><span>(B) 3</span><span>(C) 12</span><span>(D) 6</span></div>
+<div class="q"><strong>17.</strong> Find the LCM of 4, 6 and 8.</div>
+<div class="opts"><span>(A) 24</span><span>(B) 12</span><span>(C) 48</span><span>(D) 16</span></div>
+<div class="q"><strong>18.</strong> Three traffic lights change every 24 s, 36 s and 54 s. Having just changed together, after how long do all three change together again?</div>
+<div class="opts"><span>(A) 108 s</span><span>(B) 216 s</span><span>(C) 6 s</span><span>(D) 324 s</span></div>
+<div class="q"><strong>19.</strong> The greatest number that divides both 70 and 125 leaving remainder 0 is:</div>
+<div class="opts"><span>(A) 25</span><span>(B) 7</span><span>(C) 5</span><span>(D) 10</span></div>
+<div class="q"><strong>20.</strong> Two numbers are in the ratio 3 : 4 and their HCF is 5. The two numbers are:</div>
+<div class="opts"><span>(A) 3 and 4</span><span>(B) 9 and 12</span><span>(C) 30 and 40</span><span>(D) 15 and 20</span></div>
+<div class="q"><strong>21.</strong> The LCM of 15 and 20 is 60. Their HCF is:</div>
+<div class="opts"><span>(A) 5</span><span>(B) 3</span><span>(C) 4</span><span>(D) 300</span></div>
+<div class="q"><strong>22.</strong> Which of the following is NOT a common multiple of 4 and 6?</div>
+<div class="opts"><span>(A) 12</span><span>(B) 18</span><span>(C) 36</span><span>(D) 24</span></div>
+<div class="q"><strong>23.</strong> The number of common factors of 24 and 36 is:</div>
+<div class="opts"><span>(A) 3</span><span>(B) 4</span><span>(C) 6</span><span>(D) 12</span></div>
+<div class="q"><strong>24.</strong> Two gears have 8 and 12 teeth and mesh together. After how many teeth of the larger gear pass do they return to their starting position together?</div>
+<div class="opts"><span>(A) 96 teeth</span><span>(B) 2 teeth</span><span>(C) 4 teeth</span><span>(D) 24 teeth</span></div>
+<div class="q"><strong>25.</strong> The HCF of two numbers is 1. Which must be true?</div>
+<div class="opts"><span>(A) The numbers are co-prime and their LCM equals their product.</span><span>(B) Both numbers are prime.</span><span>(C) The numbers are equal.</span><span>(D) One number divides the other.</span></div>
+<div class="q"><strong>26.</strong> The HCF of 1794 and 2346 by repeated subtraction/division (Euclid) is:</div>
+<div class="opts"><span>(A) 23</span><span>(B) 138</span><span>(C) 46</span><span>(D) 6</span></div>
+<div class="q"><strong>27.</strong> The smallest number that is exactly divisible by each of 1, 2, 3, 4, 5 and 6 is:</div>
+<div class="opts"><span>(A) 30</span><span>(B) 720</span><span>(C) 120</span><span>(D) 60</span></div>
+<div class="q"><strong>28.</strong> Two ribbons of length 36 cm and 48 cm are cut into equal pieces of the greatest possible length with none left over. The length of each piece is:</div>
+<div class="opts"><span>(A) 6 cm</span><span>(B) 12 cm</span><span>(C) 4 cm</span><span>(D) 24 cm</span></div>
+<div class="q"><strong>29.</strong> For the ribbons in the previous question, the total number of equal pieces obtained is:</div>
+<div class="opts"><span>(A) 12</span><span>(B) 4</span><span>(C) 7</span><span>(D) 8</span></div>
+<div class="q"><strong>30.</strong> If two numbers are both multiples of their HCF h, then h is also a factor of:</div>
+<div class="opts"><span>(A) their sum and their difference</span><span>(B) only the larger number</span><span>(C) neither their sum nor their difference</span><span>(D) only their product, never their sum</span></div>
+<div class="q"><strong>31.</strong> The prime factorisation of 360 is:</div>
+<div class="opts"><span>(A) 2³ × 3 × 5</span><span>(B) 2² × 3² × 5</span><span>(C) 2³ × 3² × 5</span><span>(D) 2³ × 3² × 5²</span></div>
+<div class="q"><strong>32.</strong> The HCF of 2² × 3 × 5 and 2 × 3² × 7 is:</div>
+<div class="opts"><span>(A) 2² × 3² × 5 × 7 = 1260</span><span>(B) 2² × 3² = 36</span><span>(C) 2 × 3 × 5 × 7 = 210</span><span>(D) 2 × 3 = 6</span></div>
+<div class="q"><strong>33.</strong> The LCM of 2² × 3 × 5 and 2 × 3² × 7 is:</div>
+<div class="opts"><span>(A) 2 × 3 = 6</span><span>(B) 2² × 3² × 5 × 7 = 1260</span><span>(C) 2³ × 3³ × 5 × 7</span><span>(D) 2² × 3 × 5 = 60</span></div>
+<div class="q"><strong>34.</strong> The greatest number that divides 43, 91 and 183 leaving the same remainder 3 in each case is:</div>
+<div class="opts"><span>(A) 4</span><span>(B) 8</span><span>(C) 20</span><span>(D) 40</span></div>
+<div class="q"><strong>35.</strong> A shopkeeper has 84 kg of one type of rice and 108 kg of another. He packs each type into bags of equal, largest possible size (one type per bag). The bag size is:</div>
+<div class="opts"><span>(A) 6 kg</span><span>(B) 24 kg</span><span>(C) 12 kg</span><span>(D) 4 kg</span></div>
+<div class="q"><strong>36.</strong> For the rice in the previous question, the total number of bags is:</div>
+<div class="opts"><span>(A) 32</span><span>(B) 7</span><span>(C) 9</span><span>(D) 16</span></div>
+<div class="q"><strong>37.</strong> Which pair has its LCM equal to the larger of the two numbers?</div>
+<div class="opts"><span>(A) 6 and 8</span><span>(B) 4 and 6</span><span>(C) 6 and 12</span><span>(D) 9 and 15</span></div>
+<div class="q"><strong>38.</strong> If a and b are two numbers with a a factor of b, then HCF(a, b) and LCM(a, b) are:</div>
+<div class="opts"><span>(A) HCF = b, LCM = a</span><span>(B) HCF = a, LCM = b</span><span>(C) HCF = 1, LCM = ab</span><span>(D) HCF = a, LCM = ab</span></div>
+<div class="q"><strong>39.</strong> Two bells ring at intervals of 18 minutes and 24 minutes. If they ring together at 9:00 am, they next ring together at:</div>
+<div class="opts"><span>(A) 9:42 am</span><span>(B) 10:00 am</span><span>(C) 11:00 am</span><span>(D) 10:12 am</span></div>
+<div class="q"><strong>40.</strong> The smallest number which when divided by 12, 15 and 20 leaves remainder 5 in each case is:</div>
+<div class="opts"><span>(A) 60</span><span>(B) 65</span><span>(C) 305</span><span>(D) 55</span></div>
+<div class="q"><strong>41.</strong> The HCF of two consecutive whole numbers (such as 14 and 15) is always:</div>
+<div class="opts"><span>(A) 1</span><span>(B) 2</span><span>(C) the smaller number</span><span>(D) their product</span></div>
+<div class="q"><strong>42.</strong> The LCM of two numbers is 12 times their HCF. The sum of the HCF and LCM is 403, and one number is 93. The other number is:</div>
+<div class="opts"><span>(A) 93</span><span>(B) 31</span><span>(C) 372</span><span>(D) 124</span></div>
+<div class="q"><strong>43.</strong> Find the smallest 4-digit number exactly divisible by 8, 12 and 18.</div>
+<div class="opts"><span>(A) 1008</span><span>(B) 1080</span><span>(C) 1044</span><span>(D) 1000</span></div>
+<div class="q"><strong>44.</strong> A florist has 24 roses and 36 tulips. She makes identical bouquets using all the flowers, each bouquet with the same number of roses and the same number of tulips. The largest number of bouquets she can make is:</div>
+<div class="opts"><span>(A) 6</span><span>(B) 24</span><span>(C) 12</span><span>(D) 4</span></div>
+<div class="q"><strong>45.</strong> For the bouquets in the previous question, each bouquet contains:</div>
+<div class="opts"><span>(A) 4 roses and 6 tulips</span><span>(B) 2 roses and 3 tulips</span><span>(C) 3 roses and 2 tulips</span><span>(D) 6 roses and 9 tulips</span></div>
+<div class="q"><strong>46.</strong> The LCM of two numbers is 180 and their HCF is 6. If one number is 36, the other is:</div>
+<div class="opts"><span>(A) 30</span><span>(B) 60</span><span>(C) 45</span><span>(D) 90</span></div>
+<div class="q"><strong>47.</strong> Which of these CANNOT be the HCF and LCM of a pair of numbers?</div>
+<div class="opts"><span>(A) HCF 4, LCM 24</span><span>(B) HCF 6, LCM 90</span><span>(C) HCF 8, LCM 60</span><span>(D) HCF 5, LCM 60</span></div>
+<div class="q"><strong>48.</strong> Three pieces of wire of lengths 144 cm, 180 cm and 192 cm are cut into equal pieces of the greatest possible length. The number of such pieces is:</div>
+<div class="opts"><span>(A) 12</span><span>(B) 43</span><span>(C) 36</span><span>(D) 16</span></div>
+<div class="q"><strong>49.</strong> Two numbers are co-prime. Which of these can be their LCM if the numbers are 12 and 35?</div>
+<div class="opts"><span>(A) 7</span><span>(B) 105</span><span>(C) 60</span><span>(D) 420</span></div>
+<div class="q"><strong>50.</strong> A number when divided by 6, 9 and 15 leaves no remainder, and lies between 100 and 200. The number is:</div>
+<div class="opts"><span>(A) 90</span><span>(B) 135</span><span>(C) 180</span><span>(D) 120</span></div>
+<div class="q"><strong>51.</strong> Mira jogs around a track in 4 minutes, Sam in 6 minutes, and Lina in 9 minutes. Starting together, they are all back at the start together after:</div>
+<div class="opts"><span>(A) 18 min</span><span>(B) 36 min</span><span>(C) 24 min</span><span>(D) 54 min</span></div>
+<div class="q"><strong>52.</strong> If HCF(x, 18) = 6 and x is a two-digit number less than 30, then x could be:</div>
+<div class="opts"><span>(A) 24</span><span>(B) 15</span><span>(C) 18</span><span>(D) 27</span></div>
+<div class="q"><strong>53.</strong> The product of the HCF and LCM of 16 and 20 is:</div>
+<div class="opts"><span>(A) 4</span><span>(B) 80</span><span>(C) 320</span><span>(D) 36</span></div>
+<div class="q"><strong>54.</strong> The greatest number of children among whom 25 sweets and 35 chocolates can be distributed so that each child gets the same number of sweets and the same number of chocolates is:</div>
+<div class="opts"><span>(A) 60</span><span>(B) 7</span><span>(C) 10</span><span>(D) 5</span></div>
+<div class="q"><strong>55.</strong> Two numbers have a product of 2400 and an LCM of 120. Their HCF is:</div>
+<div class="opts"><span>(A) 10</span><span>(B) 20</span><span>(C) 24</span><span>(D) 12</span></div>
+<div class="q"><strong>56.</strong> The smallest number that, when 7 is added to it, becomes exactly divisible by 8, 12 and 16 is:</div>
+<div class="opts"><span>(A) 41</span><span>(B) 48</span><span>(C) 55</span><span>(D) 89</span></div>
+<div class="q"><strong>57.</strong> Buses to two towns leave a stop every 15 minutes and every 25 minutes. They leave together at 8:00 am. The next time both leave together is:</div>
+<div class="opts"><span>(A) 8:40 am</span><span>(B) 9:30 am</span><span>(C) 9:00 am</span><span>(D) 9:15 am</span></div>
+<div class="q"><strong>58.</strong> A rectangular courtyard 5 m 25 cm long and 3 m 78 cm broad is to be paved with identical square tiles of the largest possible size. The side of each tile is:</div>
+<div class="opts"><span>(A) 12 cm</span><span>(B) 7 cm</span><span>(C) 21 cm</span><span>(D) 9 cm</span></div>
+<div class="q"><strong>59.</strong> For the courtyard in the previous question, the least number of square tiles required is:</div>
+<div class="opts"><span>(A) 450</span><span>(B) 525</span><span>(C) 378</span><span>(D) 900</span></div>
+<div class="q"><strong>60.</strong> The HCF of two numbers is 13 and their LCM is 1989. How many such pairs of numbers (a, b) with a &lt; b exist?</div>
+<div class="opts"><span>(A) 1</span><span>(B) 4</span><span>(C) 3</span><span>(D) 2</span></div>
+<hr>
+<p class="note">End of question paper. Maximum marks: 240. Marking: +4 correct, −1 wrong, 0 unattempted.</p>
+<div class="pagebreak"></div>
+<h1>Solutions — Mathematics (Class 7), Chapter 11: Finding Common Ground</h1>
+<p>Marking: <strong>+4</strong> correct, <strong>−1</strong> wrong, <strong>0</strong> unattempted. Maximum marks <strong>240</strong>.</p>
+<h2>Answer Key</h2>
+<table>
+<tr><th>Q</th><th>Ans</th><th>Q</th><th>Ans</th><th>Q</th><th>Ans</th><th>Q</th><th>Ans</th><th>Q</th><th>Ans</th><th>Q</th><th>Ans</th></tr>
+<tr><td>1</td><td>B</td><td>11</td><td>D</td><td>21</td><td>A</td><td>31</td><td>C</td><td>41</td><td>A</td><td>51</td><td>B</td></tr>
+<tr><td>2</td><td>C</td><td>12</td><td>C</td><td>22</td><td>B</td><td>32</td><td>D</td><td>42</td><td>D</td><td>52</td><td>A</td></tr>
+<tr><td>3</td><td>A</td><td>13</td><td>B</td><td>23</td><td>C</td><td>33</td><td>B</td><td>43</td><td>A</td><td>53</td><td>C</td></tr>
+<tr><td>4</td><td>C</td><td>14</td><td>C</td><td>24</td><td>D</td><td>34</td><td>A</td><td>44</td><td>C</td><td>54</td><td>D</td></tr>
+<tr><td>5</td><td>D</td><td>15</td><td>A</td><td>25</td><td>A</td><td>35</td><td>C</td><td>45</td><td>B</td><td>55</td><td>B</td></tr>
+<tr><td>6</td><td>A</td><td>16</td><td>D</td><td>26</td><td>B</td><td>36</td><td>D</td><td>46</td><td>A</td><td>56</td><td>A</td></tr>
+<tr><td>7</td><td>C</td><td>17</td><td>A</td><td>27</td><td>D</td><td>37</td><td>C</td><td>47</td><td>C</td><td>57</td><td>D</td></tr>
+<tr><td>8</td><td>D</td><td>18</td><td>B</td><td>28</td><td>B</td><td>38</td><td>B</td><td>48</td><td>B</td><td>58</td><td>C</td></tr>
+<tr><td>9</td><td>A</td><td>19</td><td>C</td><td>29</td><td>C</td><td>39</td><td>D</td><td>49</td><td>D</td><td>59</td><td>A</td></tr>
+<tr><td>10</td><td>B</td><td>20</td><td>D</td><td>30</td><td>A</td><td>40</td><td>B</td><td>50</td><td>C</td><td>60</td><td>D</td></tr>
+</table>
+<p>Answer-key distribution: A = 15, B = 14, C = 16, D = 15.</p>
+<hr>
+<h2>Worked Solutions</h2>
+<p><strong>1. (B)</strong> The HCF (Highest Common Factor) is the largest number that divides both numbers exactly. (A) describes the LCM — the smallest number both divide into. The HCF is about dividing INTO the numbers; the LCM is what the numbers divide into.</p>
+<p><strong>2. (C)</strong> 24 = 2³ × 3, 36 = 2² × 3². Common primes to the lowest power: 2² × 3 = 12. (72 is the LCM — taking highest powers gives the trap.)</p>
+<p><strong>3. (A)</strong> 12 = 2² × 3, 18 = 2 × 3². LCM takes every prime to its highest power: 2² × 3² = 36. (6 is the HCF; 216 = 12 × 18 is the product, which only equals the LCM for co-prime numbers.)</p>
+<p><strong>4. (C)</strong> The tile side must divide both 12 and 16 exactly, so it must be a common factor; the largest is HCF(12, 16). 12 = 2²×3, 16 = 2⁴, so HCF = 2² = 4 ft. (16 ft is the &quot;HCF = the bigger number&quot; trap; the HCF can&#x27;t exceed the smaller dimension.)</p>
+<p><strong>5. (D)</strong> With 4 ft tiles the floor is (12 ÷ 4) × (16 ÷ 4) = 3 × 4 = 12 tiles. (A bigger tile gives FEWER tiles, so the HCF gives the fewest tiles for an exact fit.)</p>
+<p><strong>6. (A)</strong> 8 = 2³ and 15 = 3 × 5 share no prime, so HCF(8, 15) = 1 — co-prime. The others share a factor: 8 &amp; 12 share 4, 9 &amp; 15 share 3, 10 &amp; 25 share 5. (Co-prime numbers need not themselves be prime — 8 and 15 are both composite.)</p>
+<p><strong>7. (C)</strong> 7 and 9 are co-prime (HCF = 1), so their LCM equals their product: 7 × 9 = 63.</p>
+<p><strong>8. (D)</strong> They ring together at common multiples of 6 and 8; the first is LCM(6, 8). 6 = 2×3, 8 = 2³, LCM = 2³×3 = 24 minutes. (48 = 6 × 8 is the trap — the product overshoots because they share the factor 2.)</p>
+<p><strong>9. (A)</strong> HCF × LCM = product, so LCM = product ÷ HCF = 216 ÷ 6 = 36. (1296 = 216 × 6 multiplies instead of divides; 210 = 216 − 6 subtracts.)</p>
+<p><strong>10. (B)</strong> For any two numbers, HCF × LCM = the product of the two numbers. This lets you find one if you know the other.</p>
+<p><strong>11. (D)</strong> HCF takes each COMMON prime to its LOWEST power: from 2² × 3 and 2 × 3², the lowest powers are 2¹ and 3¹, giving 2 × 3 = 6. (36 uses highest powers — that&#x27;s the LCM; 12 keeps 2² instead of the lower 2¹.)</p>
+<p><strong>12. (C)</strong> LCM takes every prime to its HIGHEST power: 2² (from 12) and 3² (from 18), giving 2² × 3² = 36. (6 uses lowest powers — that&#x27;s the HCF; 216 multiplies the two numbers.)</p>
+<p><strong>13. (B)</strong> HCF × LCM = product of the two numbers: 6 × 72 = 432. Other number = 432 ÷ 24 = 18. Check: HCF(24, 18) = 6 and LCM(24, 18) = 72. ✓</p>
+<p><strong>14. (C)</strong> Convert to cm: 700, 385, 1295. The longest exact measuring length is HCF(700, 385, 1295). 700 = 2²×5²×7, 385 = 5×7×11, 1295 = 5×7×37. Common: 5 × 7 = 35 cm. ✓</p>
+<p><strong>15. (A)</strong> The HCF divides the smaller number, so it can never exceed it — always true. (B) is false (the LCM is usually larger than both); (C) fails for e.g. 12 and 16 (HCF 4 is neither); (D) holds only for co-prime pairs.</p>
+<p><strong>16. (D)</strong> 18 = 2×3², 24 = 2³×3, 30 = 2×3×5. Common primes to lowest power: 2 × 3 = 6.</p>
+<p><strong>17. (A)</strong> 4 = 2², 6 = 2×3, 8 = 2³. LCM takes highest powers: 2³ × 3 = 24. Check: 24 ÷ 4, ÷6, ÷8 are all whole. ✓</p>
+<p><strong>18. (B)</strong> All three change together at LCM(24, 36, 54). 24 = 2³×3, 36 = 2²×3², 54 = 2×3³. Highest powers: 2³ × 3³ = 8 × 27 = 216 s. (6 s is the HCF — the trap of dividing instead.)</p>
+<p><strong>19. (C)</strong> &quot;Divides both leaving remainder 0&quot; means a common factor; the greatest is HCF(70, 125). 70 = 2×5×7, 125 = 5³. Common: 5.</p>
+<p><strong>20. (D)</strong> Numbers in ratio 3 : 4 can be written 3k and 4k. Since 3 and 4 are co-prime, their HCF is k. Given HCF = 5, take k = 5: the numbers are 15 and 20. Check: HCF(15, 20) = 5 and 15 : 20 = 3 : 4. ✓ (30 and 40 have HCF 10, not 5; 3 and 4 have HCF 1.)</p>
+<p><strong>21. (A)</strong> HCF × LCM = product, so HCF = (15 × 20) ÷ LCM = 300 ÷ 60 = 5. (300 forgets to divide.)</p>
+<p><strong>22. (B)</strong> Common multiples of 4 and 6 are multiples of LCM(4, 6) = 12: 12, 24, 36, 48… 18 is a multiple of 6 but not of 4, so it is NOT a common multiple. (12, 24, 36 all are.)</p>
+<p><strong>23. (C)</strong> Common factors of two numbers are exactly the factors of their HCF. HCF(24, 36) = 12, and 12 has factors 1, 2, 3, 4, 6, 12 — that is 6 common factors.</p>
+<p><strong>24. (D)</strong> The gears realign after a number of teeth that is a multiple of both 8 and 12 — the LCM. 8 = 2³, 12 = 2²×3, LCM = 2³×3 = 24 teeth. (96 = 8 × 12 overshoots.)</p>
+<p><strong>25. (A)</strong> HCF = 1 means the numbers are co-prime, and for co-prime numbers LCM = product. (B) is false — 8 and 15 are co-prime yet neither is prime; (C) and (D) are false (equal numbers share a factor &gt; 1, and if one divides the other the HCF is the smaller, not 1).</p>
+<p><strong>26. (B)</strong> Euclid: 2346 = 1×1794 + 552; 1794 = 3×552 + 138; 552 = 4×138 + 0. So HCF = 138. (138 = 2 × 3 × 23.) Listing factors here would be hopeless — that&#x27;s the point of Euclid&#x27;s method.</p>
+<p><strong>27. (D)</strong> Smallest number divisible by 1–6 = LCM(1,2,3,4,5,6). Highest powers among them: 2² (from 4), 3 (from 3 or 6), 5 (from 5): 4 × 3 × 5 = 60. (120 and 720 are larger common multiples, not the LEAST.)</p>
+<p><strong>28. (B)</strong> Greatest equal piece length = HCF(36, 48). 36 = 2²×3², 48 = 2⁴×3, HCF = 2²×3 = 12 cm. (24 divides 48 but not 36.)</p>
+<p><strong>29. (C)</strong> With 12 cm pieces: 36 ÷ 12 + 48 ÷ 12 = 3 + 4 = 7 pieces.</p>
+<p><strong>30. (A)</strong> If h divides both a and b, then it divides a + b and a − b (since each is a sum/difference of multiples of h). This is exactly why Euclid&#x27;s algorithm works.</p>
+<p><strong>31. (C)</strong> 360 = 2 × 180 = 2² × 90 = 2³ × 45 = 2³ × 9 × 5 = 2³ × 3² × 5. Check: 8 × 9 × 5 = 360. ✓ (2³×3×5 = 120 and 2²×3²×5 = 180 are wrong prime powers.)</p>
+<p><strong>32. (D)</strong> HCF takes common primes to the lowest power. Both have 2 (powers 2 and 1 → take 2¹) and 3 (powers 1 and 2 → take 3¹); 5 and 7 are not common. HCF = 2 × 3 = 6. (1260 is the LCM; 210 wrongly includes the non-common 5 and 7.)</p>
+<p><strong>33. (B)</strong> LCM takes every prime to its highest power: 2² (from the first), 3² (from the second), and 5 and 7 once each: 2² × 3² × 5 × 7 = 4 × 9 × 35 = 1260. (6 is the HCF.)</p>
+<p><strong>34. (A)</strong> A number leaving the same remainder when dividing 43, 91, 183 must divide their differences exactly: 91 − 43 = 48, 183 − 91 = 92, 183 − 43 = 140. HCF(48, 92, 140): 48 = 2⁴×3, 92 = 2²×23, 140 = 2²×5×7 → common 2² = 4. Check: 43 = 4×10 + 3, 91 = 4×22 + 3, 183 = 4×45 + 3. ✓</p>
+<p><strong>35. (C)</strong> Largest equal bag size (one type per bag) = HCF(84, 108). 84 = 2²×3×7, 108 = 2²×3³, HCF = 2²×3 = 12 kg. (24 divides neither exactly.)</p>
+<p><strong>36. (D)</strong> With 12 kg bags: 84 ÷ 12 + 108 ÷ 12 = 7 + 9 = 16 bags.</p>
+<p><strong>37. (C)</strong> The LCM equals the larger number exactly when the smaller number divides the larger. Testing each: 6 &amp; 8 → LCM 24; 4 &amp; 6 → LCM 12; 9 &amp; 15 → LCM 45; but 6 &amp; 12 → 6 divides 12, so LCM = 12 = the larger number. Hence (C) 6 and 12.</p>
+<p><strong>38. (B)</strong> If a is a factor of b, then a divides b, so the largest common factor is a itself (HCF = a) and the smallest common multiple is b itself (LCM = b). E.g. a = 4, b = 12: HCF 4, LCM 12.</p>
+<p><strong>39. (D)</strong> Next together after LCM(18, 24) minutes. 18 = 2×3², 24 = 2³×3, LCM = 2³×3² = 72 min = 1 h 12 min. 9:00 + 1:12 = 10:12 am. (9:42 adds only 42 min; 11:00 overshoots.)</p>
+<p><strong>40. (B)</strong> Remainder 5 each time means (number − 5) is divisible by 12, 15, 20 → it is a multiple of LCM(12,15,20). 12 = 2²×3, 15 = 3×5, 20 = 2²×5 → LCM = 2²×3×5 = 60. Smallest number = 60 + 5 = 65. (60 forgets to add the remainder.)</p>
+<p><strong>41. (A)</strong> Two consecutive whole numbers share no common factor greater than 1 (any common divisor would divide their difference 1), so their HCF is always 1 — they are always co-prime.</p>
+<p><strong>42. (D)</strong> Let HCF = h; LCM = 12h. h + 12h = 403 → 13h = 403 → h = 31, LCM = 372. HCF × LCM = product = 31 × 372 = 11532. Other number = 11532 ÷ 93 = 124. Check: HCF(93, 124) = 31, LCM = 372. ✓</p>
+<p><strong>43. (A)</strong> Must be divisible by LCM(8, 12, 18). 8 = 2³, 12 = 2²×3, 18 = 2×3² → LCM = 2³×3² = 72. Smallest 4-digit multiple of 72: 1000 ÷ 72 ≈ 13.9, so 14 × 72 = 1008. ✓ (1080 = 15×72 is larger; 1000 isn&#x27;t a multiple of 72.)</p>
+<p><strong>44. (C)</strong> Each bouquet gets an equal share of both, so the number of bouquets must divide 24 and 36; the largest is HCF(24, 36) = 12. ✓</p>
+<p><strong>45. (B)</strong> With 12 bouquets: 24 ÷ 12 = 2 roses and 36 ÷ 12 = 3 tulips each.</p>
+<p><strong>46. (A)</strong> HCF × LCM = product: 6 × 180 = 1080. Other number = 1080 ÷ 36 = 30. Check: HCF(36, 30) = 6, LCM = 180. ✓</p>
+<p><strong>47. (C)</strong> The HCF must divide the LCM for a valid pair. (A) 4 | 24 ✓; (B) 6 | 90 ✓; (D) 5 | 60 ✓; (C) 8 ∤ 60 (60 ÷ 8 isn&#x27;t whole) — impossible. So (C) cannot occur.</p>
+<p><strong>48. (B)</strong> Greatest equal piece length = HCF(144, 180, 192). 144 = 2⁴×3², 180 = 2²×3²×5, 192 = 2⁶×3 → common 2²×3 = 12 cm. Pieces = 144/12 + 180/12 + 192/12 = 12 + 15 + 16 = 43.</p>
+<p><strong>49. (D)</strong> 12 and 35 are co-prime (12 = 2²×3, 35 = 5×7 share nothing), so LCM = product = 12 × 35 = 420. (7 is just a factor; 105 = 3×5×7 misses the 2²; 60 ignores 35.)</p>
+<p><strong>50. (C)</strong> Divisible by 6, 9 and 15 means a multiple of LCM(6, 9, 15). 6 = 2×3, 9 = 3², 15 = 3×5 → LCM = 2×3²×5 = 90. Multiples of 90 between 100 and 200: 180. (90 is below 100; 135 is divisible by 9 and 15 but not 6.)</p>
+<p><strong>51. (B)</strong> All back together after LCM(4, 6, 9). 4 = 2², 6 = 2×3, 9 = 3² → LCM = 2²×3² = 36 min. (18 is a multiple of 6 and 9 but not 4.)</p>
+<p><strong>52. (A)</strong> Test HCF with 18 = 2 × 3² for each option. 24 = 2³ × 3 → common primes to lowest power 2¹ × 3¹ = 6 ✓. The others fail: HCF(15, 18) = 3, HCF(18, 18) = 18, HCF(27, 18) = 9. Only 24 gives HCF 6.</p>
+<p><strong>53. (C)</strong> Product of HCF and LCM equals the product of the numbers: 16 × 20 = 320. (No need to find HCF and LCM separately — the identity gives it directly. HCF(16,20) = 4, LCM = 80, and 4 × 80 = 320. ✓)</p>
+<p><strong>54. (D)</strong> Each child gets equal sweets and equal chocolates, so the number of children divides both 25 and 35; the greatest is HCF(25, 35) = 5. (Each child then gets 5 sweets and 7 chocolates.)</p>
+<p><strong>55. (B)</strong> HCF = product ÷ LCM = 2400 ÷ 120 = 20. Check: HCF must divide LCM, and 20 | 120. ✓</p>
+<p><strong>56. (A)</strong> number + 7 is divisible by 8, 12, 16 → a multiple of LCM(8,12,16) = 2⁴×3 = 48. Smallest such: 48, so number = 48 − 7 = 41. Check: 41 + 7 = 48 ÷ 8, ÷12, ÷16 all whole. ✓</p>
+<p><strong>57. (D)</strong> Leave together at common multiples of 15 and 25 → LCM(15, 25). 15 = 3×5, 25 = 5² → LCM = 3×5² = 75 min = 1 h 15 min. 8:00 + 1:15 = 9:15 am. (8:40 adds only 40 min; 9:30 = 90 min overshoots.)</p>
+<p><strong>58. (C)</strong> Convert: 525 cm × 378 cm. Largest square tile side = HCF(525, 378). 525 = 3×5²×7, 378 = 2×3³×7 → common 3 × 7 = 21 cm. (12, 9 don&#x27;t divide 525.)</p>
+<p><strong>59. (A)</strong> With 21 cm tiles: (525 ÷ 21) × (378 ÷ 21) = 25 × 18 = 450 tiles.</p>
+<p><strong>60. (D)</strong> HCF = 13 means both numbers are 13a and 13b with a, b co-prime; LCM = 13ab = 1989 → ab = 153 = 9 × 17 = 3² × 17. Co-prime factor pairs (a, b) of 153 with a &lt; b: (1, 153) and (9, 17). That gives 2 pairs: (13, 1989) and (117, 221). So 2 such pairs. ✓</p>
+<hr>
+<p class="note">Solutions complete: 60 / 60.</p>
+</body>
+</html>

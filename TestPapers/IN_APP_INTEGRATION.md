@@ -451,3 +451,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_ch11",
+            subjectId: "maths_class7",
+            subjectName: "Mathematics",
+            chapterNumber: 11,
+            chapterTitle: "Finding Common Ground",
+            displayTitle: "Finding Common Ground — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch11_FindingCommonGround_QuestionPaper.md",
+            solutionsMD: "Maths_Ch11_FindingCommonGround_Solutions.md",
+            questionPaperHTML: "Maths_Ch11_FindingCommonGround.html",
+            questionPaperPDF: "Maths_Ch11_FindingCommonGround.pdf",
+            solvedGuideHTML: "Maths_Ch11_FindingCommonGround_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
