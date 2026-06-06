@@ -65,9 +65,9 @@
 
 9. Put these water-cycle events in their natural order: precipitation, evaporation, condensation.
    (A) condensation → evaporation → precipitation
-   (B) evaporation → condensation → precipitation
+   (B) evaporation → precipitation → condensation
    (C) precipitation → evaporation → condensation
-   (D) evaporation → precipitation → condensation
+   (D) evaporation → condensation → precipitation
 
 10. About what fraction of all the water on Earth is in the seas and oceans?
     (A) about 97%
@@ -197,9 +197,9 @@
 
 31. A farmer switches a field from flood irrigation to drip irrigation. The effect on ground water is that the field now:
     (A) wastes much more water, lowering the water table faster
-    (B) uses much less water, easing the demand on ground water
+    (B) makes the ground water salty
     (C) needs no water at all
-    (D) makes the ground water salty
+    (D) uses much less water, easing the demand on ground water
 
 32. Among the common irrigation methods, the one that **wastes the most water** is:
     (A) flood (surface) irrigation
@@ -209,9 +209,9 @@
 
 33. Drip irrigation saves water mainly because it:
     (A) sprays water high into the air over the whole field
-    (B) delivers water drop by drop directly to each plant's root zone
+    (B) waters only at night
     (C) floods the entire basin
-    (D) waters only at night
+    (D) delivers water drop by drop directly to each plant's root zone
 
 34. A gardener wants to water a row of tomato plants using the **least** water. The best method is:
     (A) flooding the whole bed
@@ -299,9 +299,9 @@
 
 48. Which statement correctly compares water amounts on Earth?
     (A) fresh usable water is far more than ocean water
-    (B) ocean (salty) water is far more than the fresh water we can readily use
+    (B) glacier ice is the largest source of drinking water we use daily
     (C) all the water is fresh
-    (D) glacier ice is the largest source of drinking water we use daily
+    (D) ocean (salty) water is far more than the fresh water we can readily use
 
 49. Ice, liquid water and water vapour are:
     (A) three different substances
@@ -353,8 +353,8 @@
 
 57. A colony replaces its lawns and soil paths with full concrete and tiles, then complains its wells dry up. The most likely reason is:
     (A) the concrete makes the water salty
-    (B) rain now runs off instead of soaking in, so the ground water is no longer recharged
-    (C) the Sun got hotter
+    (B) the Sun got hotter
+    (C) rain now runs off instead of soaking in, so the ground water is no longer recharged
     (D) the sea level rose
 
 58. Compared with spraying water over a whole field, drip irrigation also reduces weeds because:
