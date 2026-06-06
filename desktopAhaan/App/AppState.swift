@@ -225,6 +225,7 @@ enum SidebarTool: String, Hashable, CaseIterable, Identifiable {
     case dailyPractice
     case mastery
     case discover
+    case olympiad
     case settings
 
     var id: String { rawValue }
@@ -236,6 +237,7 @@ enum SidebarTool: String, Hashable, CaseIterable, Identifiable {
         case .dailyPractice: return "Daily Practice"
         case .mastery:       return "My Progress"
         case .discover:      return "Discover Progress"
+        case .olympiad:      return "Olympiad Tests"
         case .settings:      return "Settings"
         }
     }
@@ -247,6 +249,7 @@ enum SidebarTool: String, Hashable, CaseIterable, Identifiable {
         case .dailyPractice: return "flame.fill"
         case .mastery:       return SFSymbolCompat.name("chart.bar.xaxis")
         case .discover:      return "sparkles"
+        case .olympiad:      return SFSymbolCompat.name("trophy.fill")
         case .settings:      return "gearshape.fill"
         }
     }
@@ -263,6 +266,7 @@ enum SidebarTool: String, Hashable, CaseIterable, Identifiable {
         case .dailyPractice: return "\u{2318}\u{21E7}P"  // ⌘⇧P
         case .mastery:       return "\u{2318}\u{21E7}M"  // ⌘⇧M
         case .discover:      return "\u{2318}\u{21E7}D"  // ⌘⇧D
+        case .olympiad:      return nil                  // no menu shortcut yet
         case .settings:      return "\u{2318}\u{21E7},"  // ⌘⇧,
         }
     }

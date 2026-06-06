@@ -1620,6 +1620,18 @@
 		1BC16957C8D131B6D704F522 /* PropagatedToursUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED29D7D476A296170FF50E /* PropagatedToursUITests.swift */; };
 		07D8B6C6B70B3A10DD9C65F7 /* SRS_Smoke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923C172966243DEABD91751F /* SRS_Smoke.swift */; };
 		DDB015C8D62C992B762151A6 /* Surface_AuditWalker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D8B5E1A41E3A1401C4C16B /* Surface_AuditWalker.swift */; };
+		F7362B37AB2217DDC8BCA074 /* OlympiadPaper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66E204C7773BC9AF563A64C0 /* OlympiadPaper.swift */; };
+		2439D2CEEA66EDC1782FBFBD /* OlympiadPaperParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61E9E18D509A911A77CE713E /* OlympiadPaperParser.swift */; };
+		AEC67FB0E8037FB8FEA660F4 /* OlympiadPaperRegistry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFA0EFC8A1A3A7E024F887F2 /* OlympiadPaperRegistry.swift */; };
+		F91890D798DC6299C96DF455 /* OlympiadHubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD6303421E855116A075E8F /* OlympiadHubView.swift */; };
+		CD09A4827E5030D26956F32F /* OlympiadQuizView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6BC5AB3CE6CA289FABD07F4 /* OlympiadQuizView.swift */; };
+		2CB840C52E1E6D4CE26288C0 /* OlympiadQuizResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57DBC1E9AD28F71BC0631019 /* OlympiadQuizResultView.swift */; };
+		E055603AB88A7961959EBA5C /* Science_Ch13_MotionAndTime_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = DE3F92817A41A32AB6E450CC /* Science_Ch13_MotionAndTime_QuestionPaper.md */; };
+		BDFD58A11839B652DDDFD9C5 /* Science_Ch13_MotionAndTime_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 56A174CF844652833650CAFC /* Science_Ch13_MotionAndTime_Solutions.md */; };
+		E9DA84328FA5023F8DFCE8D6 /* Science_Ch13_MotionAndTime.html in Resources */ = {isa = PBXBuildFile; fileRef = FC9819553EE892340AD8A077 /* Science_Ch13_MotionAndTime.html */; };
+		E6E6847DCA8ED5B559642CB6 /* Maths_Ch15_FindingTheUnknown_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = F714D849C1A82534DF4CC99C /* Maths_Ch15_FindingTheUnknown_QuestionPaper.md */; };
+		224325AA0441545CF943C41F /* Maths_Ch15_FindingTheUnknown_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 5AEEBB51ABD3963EF28078BC /* Maths_Ch15_FindingTheUnknown_Solutions.md */; };
+		0E563A6A37B3CAAFDD8295E3 /* Maths_Ch15_FindingTheUnknown.html in Resources */ = {isa = PBXBuildFile; fileRef = 590B30D26433E910C4F3E40C /* Maths_Ch15_FindingTheUnknown.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -3257,6 +3269,18 @@
 		C3ED29D7D476A296170FF50E /* PropagatedToursUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PropagatedToursUITests.swift"; sourceTree = "<group>"; };
 		923C172966243DEABD91751F /* SRS_Smoke.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SRS_Smoke.swift"; sourceTree = "<group>"; };
 		31D8B5E1A41E3A1401C4C16B /* Surface_AuditWalker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Surface_AuditWalker.swift"; sourceTree = "<group>"; };
+		66E204C7773BC9AF563A64C0 /* OlympiadPaper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "OlympiadPaper.swift"; path = "desktopAhaan/Subjects/OlympiadTests/OlympiadPaper.swift"; sourceTree = SOURCE_ROOT; };
+		61E9E18D509A911A77CE713E /* OlympiadPaperParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "OlympiadPaperParser.swift"; path = "desktopAhaan/Subjects/OlympiadTests/OlympiadPaperParser.swift"; sourceTree = SOURCE_ROOT; };
+		BFA0EFC8A1A3A7E024F887F2 /* OlympiadPaperRegistry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "OlympiadPaperRegistry.swift"; path = "desktopAhaan/Subjects/OlympiadTests/OlympiadPaperRegistry.swift"; sourceTree = SOURCE_ROOT; };
+		0CD6303421E855116A075E8F /* OlympiadHubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "OlympiadHubView.swift"; path = "desktopAhaan/Subjects/OlympiadTests/OlympiadHubView.swift"; sourceTree = SOURCE_ROOT; };
+		F6BC5AB3CE6CA289FABD07F4 /* OlympiadQuizView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "OlympiadQuizView.swift"; path = "desktopAhaan/Subjects/OlympiadTests/OlympiadQuizView.swift"; sourceTree = SOURCE_ROOT; };
+		57DBC1E9AD28F71BC0631019 /* OlympiadQuizResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "OlympiadQuizResultView.swift"; path = "desktopAhaan/Subjects/OlympiadTests/OlympiadQuizResultView.swift"; sourceTree = SOURCE_ROOT; };
+		DE3F92817A41A32AB6E450CC /* Science_Ch13_MotionAndTime_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = "Science_Ch13_MotionAndTime_QuestionPaper.md"; path = "desktopAhaan/Resources/TestPapers/Science_Ch13_MotionAndTime_QuestionPaper.md"; sourceTree = SOURCE_ROOT; };
+		56A174CF844652833650CAFC /* Science_Ch13_MotionAndTime_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = "Science_Ch13_MotionAndTime_Solutions.md"; path = "desktopAhaan/Resources/TestPapers/Science_Ch13_MotionAndTime_Solutions.md"; sourceTree = SOURCE_ROOT; };
+		FC9819553EE892340AD8A077 /* Science_Ch13_MotionAndTime.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Science_Ch13_MotionAndTime.html"; path = "desktopAhaan/Resources/TestPapers/Science_Ch13_MotionAndTime.html"; sourceTree = SOURCE_ROOT; };
+		F714D849C1A82534DF4CC99C /* Maths_Ch15_FindingTheUnknown_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = "Maths_Ch15_FindingTheUnknown_QuestionPaper.md"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch15_FindingTheUnknown_QuestionPaper.md"; sourceTree = SOURCE_ROOT; };
+		5AEEBB51ABD3963EF28078BC /* Maths_Ch15_FindingTheUnknown_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = "Maths_Ch15_FindingTheUnknown_Solutions.md"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch15_FindingTheUnknown_Solutions.md"; sourceTree = SOURCE_ROOT; };
+		590B30D26433E910C4F3E40C /* Maths_Ch15_FindingTheUnknown.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Maths_Ch15_FindingTheUnknown.html"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch15_FindingTheUnknown.html"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -7344,6 +7368,12 @@
 				4D5743C43A54C95790C93C5E /* science_class7.json in Resources */,
 				C53AB75B6C95AA03391A681A /* socialscience_class7.json in Resources */,
 				A1055E7FBA438D915D066CCF /* Assets.xcassets in Resources */,
+				E055603AB88A7961959EBA5C /* Science_Ch13_MotionAndTime_QuestionPaper.md in Resources */,
+				BDFD58A11839B652DDDFD9C5 /* Science_Ch13_MotionAndTime_Solutions.md in Resources */,
+				E9DA84328FA5023F8DFCE8D6 /* Science_Ch13_MotionAndTime.html in Resources */,
+				E6E6847DCA8ED5B559642CB6 /* Maths_Ch15_FindingTheUnknown_QuestionPaper.md in Resources */,
+				224325AA0441545CF943C41F /* Maths_Ch15_FindingTheUnknown_Solutions.md in Resources */,
+				0E563A6A37B3CAAFDD8295E3 /* Maths_Ch15_FindingTheUnknown.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -7870,6 +7900,12 @@
 				33FB902B2C45FBB6C318D838 /* DataStore+WeeklyActivity.swift in Sources */,
 				F618D0A6B24714A46E32C472 /* DataStore.swift in Sources */,
 				C5A96ABF47DC77F8082F8495 /* SettingsManager.swift in Sources */,
+				F7362B37AB2217DDC8BCA074 /* OlympiadPaper.swift in Sources */,
+				2439D2CEEA66EDC1782FBFBD /* OlympiadPaperParser.swift in Sources */,
+				AEC67FB0E8037FB8FEA660F4 /* OlympiadPaperRegistry.swift in Sources */,
+				F91890D798DC6299C96DF455 /* OlympiadHubView.swift in Sources */,
+				CD09A4827E5030D26956F32F /* OlympiadQuizView.swift in Sources */,
+				2CB840C52E1E6D4CE26288C0 /* OlympiadQuizResultView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

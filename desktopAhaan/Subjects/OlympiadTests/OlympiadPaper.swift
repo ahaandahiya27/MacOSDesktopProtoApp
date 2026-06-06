@@ -1,0 +1,97 @@
+import Foundation
+
+// MARK: - OlympiadPaper
+//
+// One Olympiad-level test paper (60-MCQ, Class-7-syllabus stretch).
+// Authored as a Markdown source in `desktopAhaan/Resources/TestPapers/`
+// (see `TestPapers/README.md` at the repo root for the authoring +
+// validation tooling). At runtime the MCQs are PARSED from the
+// QuestionPaper.md so the quiz UI gets structured data; the answer
+// key + worked solutions are parsed from the Solutions.md.
+//
+// The same paper is ALSO available as a print-ready HTML rendering
+// (`.html`) — opened via `ArticleBrowserView` for the read-only
+// "Open Question Paper" / "View Solutions" affordances.
+//
+// Big Sur safety: no macOS 12+ APIs; pure-Foundation parsing; bundle
+// lookup uses `Bundle.main.url(forResource:withExtension:subdirectory:)`
+// which has been baseline since macOS 10.6.
+
+/// One MCQ inside a paper. `correctAnswer` is the option letter
+/// ("A"/"B"/"C"/"D"). The 4 options are ALWAYS exactly 4 — the
+/// authoring/validation pipeline (`TestPapers/validate_paper.py`)
+/// rejects any paper that breaks the contract.
+struct OlympiadQuestion: Identifiable, Hashable {
+    let id: String              // e.g. "ch13_q01"
+    let number: Int             // 1-based question number as printed
+    let stem: String            // human-readable, may contain math chars
+    let options: [String]       // exactly 4: index 0=A, 1=B, 2=C, 3=D
+    let correctAnswer: String   // "A" / "B" / "C" / "D"
+    let explanation: String?    // worked solution from Solutions.md
+}
+
+extension OlympiadQuestion {
+    /// "A" / "B" / "C" / "D" → 0 / 1 / 2 / 3. Returns nil for any
+    /// other letter (the parser already guarantees the contract, so
+    /// this nil branch is dead in practice — kept defensive).
+    var correctIndex: Int? {
+        switch correctAnswer.uppercased() {
+        case "A": return 0
+        case "B": return 1
+        case "C": return 2
+        case "D": return 3
+        default:  return nil
+        }
+    }
+}
+
+/// One Olympiad paper. Maps a single (subject, chapter) pair to the
+/// MD/HTML resource triplet plus a parsed-on-demand MCQ list. The
+/// `questions` array is computed lazily from the bundled MD so the
+/// in-memory cost is zero until the kid actually opens the paper.
+struct OlympiadPaper: Identifiable, Hashable {
+    /// Stable id used for SwiftUI diffing + UserDefaults persistence
+    /// of attempt state (future work).
+    let id: String              // e.g. "olympiad_science_ch13"
+    /// One of the four subject packs the rest of the app knows.
+    let subjectId: String       // "science_class7" / "maths_class7" / …
+    /// Display-friendly subject name (cached so we don't have to
+    /// reach into the SubjectRegistry on every render).
+    let subjectName: String     // "Science" / "Maths" / …
+    /// 1-based chapter number that matches the bundled pack JSON.
+    let chapterNumber: Int      // 13, 15, …
+    /// Chapter title as shown in the paper header.
+    let chapterTitle: String    // "Motion and Time", "Finding the Unknown"
+    /// Pretty title used in the sidebar list row.
+    let displayTitle: String    // "Motion and Time — 60 MCQ Olympiad"
+
+    // Resource filenames, all bundled under `TestPapers/` subdirectory.
+    let questionPaperMD: String     // "Science_Ch13_MotionAndTime_QuestionPaper.md"
+    let solutionsMD: String         // "Science_Ch13_MotionAndTime_Solutions.md"
+    let questionPaperHTML: String   // "Science_Ch13_MotionAndTime.html"
+
+    /// Marking-scheme constants. +4 correct / -1 wrong / 0 skipped is
+    /// the contract baked into every authored paper today.
+    let marksCorrect: Int       = 4
+    let marksWrong: Int         = -1
+    let marksSkipped: Int       = 0
+    let maxMarks: Int           = 240
+    let suggestedTimeMinutes: Int  // 90 for current papers
+
+    /// Total question count. Today always 60; reading from a constant
+    /// rather than `questions.count` so the value is available BEFORE
+    /// the MD has been parsed (e.g. for the sidebar row's badge).
+    let questionCount: Int      = 60
+
+    /// Parse the bundled QuestionPaper.md + Solutions.md and return
+    /// the 60 questions. Heavy enough (regex over ~10 KB of text +
+    /// answer-key lookup) to be worth caching at the call-site; the
+    /// quiz view caches the result in `@State` after first decode.
+    func loadQuestions() -> [OlympiadQuestion] {
+        OlympiadPaperParser.parse(
+            paperId: id,
+            questionPaperResource: questionPaperMD,
+            solutionsResource: solutionsMD
+        )
+    }
+}

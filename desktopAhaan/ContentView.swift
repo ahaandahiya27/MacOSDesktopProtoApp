@@ -417,6 +417,10 @@ struct ContentView: View {
             MasteryDashboard()
         case .tool(.discover):
             DiscoverProgressDashboard()
+        case .tool(.olympiad):
+            NavigationView {
+                OlympiadHubView()
+            }
         case .tool(.settings):
             SettingsScreen()
         }
