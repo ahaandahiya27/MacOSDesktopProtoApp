@@ -434,3 +434,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_ch10",
+            subjectId: "maths_class7",
+            subjectName: "Mathematics",
+            chapterNumber: 10,
+            chapterTitle: "Operations with Integers",
+            displayTitle: "Operations with Integers — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch10_OperationsWithIntegers_QuestionPaper.md",
+            solutionsMD: "Maths_Ch10_OperationsWithIntegers_Solutions.md",
+            questionPaperHTML: "Maths_Ch10_OperationsWithIntegers.html",
+            questionPaperPDF: "Maths_Ch10_OperationsWithIntegers.pdf",
+            solvedGuideHTML: "Maths_Ch10_OperationsWithIntegers_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
