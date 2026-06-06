@@ -27,17 +27,17 @@
    (C) 3x − 5 = 26
    (D) 3x + 5 = 26
 
-3. Solve: 4x − 9 = 11.
-   (A) 5
-   (B) 20
-   (C) 0.5
-   (D) −5
+3. If 4x − 9 = 2x + 7, then the value of 3x + 1 is:
+   (A) 25
+   (B) 24
+   (C) 17
+   (D) 9
 
-4. Solve: x/3 + 2 = 6.
-   (A) 24
-   (B) 8
-   (C) 12
-   (D) 18
+4. One-third of a number exceeds one-fourth of the same number by 5. The number is:
+   (A) 60
+   (B) 5
+   (C) 20
+   (D) 12
 
 5. Solve: 7x + 4 = 3x + 20.
    (A) 6
@@ -45,11 +45,11 @@
    (C) 4
    (D) 3
 
-6. Solve: 2(x − 3) = 10.
+6. A number increased by 8 equals three times the result of decreasing the same number by 4. The number is:
    (A) 8
    (B) 5
-   (C) 2
-   (D) 11
+   (C) 14
+   (D) 10
 
 7. Solve: 3(2x + 1) = 27.
    (A) 6
@@ -117,17 +117,17 @@
     (C) 1
     (D) 5
 
-18. Solve: 9 − 2x = 3.
-    (A) 3
-    (B) −3
-    (C) 6
-    (D) −6
+18. The sum of a number and its successor is 5 less than three times the number. The number is:
+    (A) 5
+    (B) 4
+    (C) 7
+    (D) 6
 
-19. The sum of two consecutive even numbers is 54. The smaller number is:
-    (A) 24
-    (B) 28
-    (C) 26
-    (D) 27
+19. The length of a rectangle is twice its breadth, and its perimeter is 54 cm. The length (in cm) is:
+    (A) 18
+    (B) 9
+    (C) 27
+    (D) 12
 
 20. A box holds twenty ₹1 and ₹2 coins worth ₹35 in all. The number of ₹2 coins is:
     (A) 5
@@ -141,11 +141,11 @@
     (C) 4x − 5 = 7
     (D) x/3 = 9
 
-22. Solve: x/4 − 2 = 1.
-    (A) 3
-    (B) 4
-    (C) −4
-    (D) 12
+22. Half of a number, decreased by 6, equals one-third of the same number. The number is:
+    (A) 12
+    (B) 18
+    (C) 9
+    (D) 36
 
 23. Solve: 5 − 2(x − 1) = 1.
     (A) −3
@@ -207,11 +207,11 @@
     (C) 55
     (D) 15
 
-33. The sum of three consecutive odd numbers is 81. The middle number is:
-    (A) 25
-    (B) 29
-    (C) 81
-    (D) 27
+33. In a two-digit number the units digit is 3 more than the tens digit, and the sum of the two digits is 11. The number is:
+    (A) 47
+    (B) 74
+    (C) 38
+    (D) 29
 
 34. Solve: 2x/3 − x/2 = 1.
     (A) 3
@@ -243,17 +243,17 @@
     (C) 10
     (D) 12
 
-39. Five years ago, Anil was 3 times as old as Bina. Bina is now 15. Anil's present age is:
+39. ₹90 is divided among three friends so that the second gets twice the first and the third gets three times the first. The third friend's share (in ₹) is:
     (A) 45
-    (B) 30
-    (C) 40
-    (D) 35
+    (B) 15
+    (C) 30
+    (D) 90
 
-40. Solve: x/2 + x/4 = 9.
-    (A) 12
+40. Solve: (x − 1)/2 + (x + 1)/3 = 4.
+    (A) 4
     (B) 6
-    (C) 18
-    (D) 4
+    (C) 5
+    (D) 7
 
 41. Solve: 6x − 5 = 4x + 7.
     (A) 1
@@ -273,11 +273,11 @@
     (C) 9
     (D) 8
 
-44. Solve: 3x/4 = 9.
-    (A) 6
-    (B) 3
-    (C) 27
-    (D) 12
+44. In the pattern 5, 8, 11, 14, … (each term is 3 more than the one before), which term equals 47?
+    (A) the 16th
+    (B) the 14th
+    (C) the 47th
+    (D) the 15th
 
 45. "The cost of n notebooks at ₹15 each, after a ₹20 discount on the bill" is written as:
     (A) 15n − 20
@@ -315,11 +315,11 @@
     (C) 2
     (D) −12
 
-51. Solve: (x − 5)/3 = 2.
-    (A) 11
-    (B) 1
-    (C) 6
-    (D) 9
+51. Which value of x satisfies BOTH 2x − 1 = x + 3 and x/2 + 1 = 3?
+    (A) 3
+    (B) 2
+    (C) 4
+    (D) 5
 
 52. The angles of a triangle are in the ratio 1 : 2 : 3. The largest angle is:
     (A) 30°

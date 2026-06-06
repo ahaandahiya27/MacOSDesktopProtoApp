@@ -3,41 +3,45 @@
 Marking: **+4** correct, **−1** wrong, **0** unattempted. Maximum marks **240**.
 
 <!--
-COVERAGE MATRIX (fine-grained; no single sub-topic exceeds ~7 of the 60)
+COVERAGE MATRIX (fine-grained; no single sub-topic exceeds ~6 of the 60)
   Translate words -> expression/equation:        Q1, Q2, Q32, Q45                  = 4
-  Solve simple linear (1-2 step):                Q3, Q4, Q6, Q18, Q44, Q51         = 6
   Equations with brackets:                       Q7, Q23, Q37, Q48, Q56            = 5
-  Equations with fractions (single variable):    Q8, Q22, Q34, Q40                 = 4
-  Fractions both-sides / cross-multiplication:   Q16, Q27, Q53, Q59                = 4
+  Equations with fractions (single variable):    Q8, Q16, Q34                      = 3
+  Brackets + fractions combined:                 Q40                               = 1
+  Fractions both-sides / cross-multiplication:   Q27, Q53, Q59                     = 3
   Variables on both sides:                       Q5, Q17, Q26, Q31, Q41            = 5
-  Checking a solution by substitution:           Q9, Q21, Q36, Q47                 = 4
-  Forming an equation from a pattern:            Q14, Q25, Q38                     = 3
-  Word problems — ages:                          Q11, Q24, Q39, Q57                = 4
-  Word problems — consecutive integers:          Q10, Q19, Q33, Q55                = 4
+  Checking a solution by substitution:           Q9, Q21, Q36, Q47, Q51            = 5
+  Forming an equation from a pattern:            Q14, Q25, Q38, Q44                = 4
+  Word problems — ages:                          Q11, Q24, Q57                     = 3
+  Word problems — consecutive integers:          Q10, Q55                          = 2
   Word problems — money / coins:                 Q12, Q20, Q35, Q58                = 4
-  Word problems — geometry (perimeter/angles):   Q13, Q30, Q43, Q52                = 4
-  Word problems — sharing:                       Q28, Q49                          = 2
-  Olympiad twists (number puzzles, 2-condition,
-     digits, "find the number such that…"):      Q15, Q29, Q42, Q46, Q50, Q54, Q60 = 7
-  TOTAL = 60. Difficulty ramps from clean transposition (Q3-Q8) to multi-step
-  word problems and two-condition puzzles; every word problem requires forming
-  the equation before solving.
+  Word problems — geometry (perimeter/angles):   Q13, Q19, Q30, Q43, Q52           = 5
+  Word problems — sharing:                       Q28, Q39, Q49                     = 3
+  Number puzzles / forming from a verbal cond.:  Q6, Q15, Q18, Q29, Q50, Q60       = 6
+  Multi-step solve & reverse-operation:          Q3, Q42, Q54                      = 3
+  Fraction word problems:                        Q4, Q22                           = 2
+  Two-digit / digit puzzles:                     Q33, Q46                          = 2
+  TOTAL = 60. Olympiad-heavy: ~40 of the 60 require forming an equation or two-
+  to-four reasoning steps; only a small core of clean transposition solves
+  remains as anchors. Repeated families trimmed per FB-004 (consecutive 4->2,
+  ages 4->3); single-step solves upgraded per FB-003 (Q3, Q4, Q6, Q18, Q22, Q40,
+  Q44, Q51 are now multi-step / word / pattern / two-condition items).
 -->
 
 ## Answer Key
 
 | Q | Ans | Q | Ans | Q | Ans | Q | Ans | Q | Ans | Q | Ans |
 |---|-----|---|-----|---|-----|---|-----|---|-----|---|-----|
-| 1 | B | 11 | C | 21 | C | 31 | C | 41 | B | 51 | A |
+| 1 | B | 11 | C | 21 | C | 31 | C | 41 | B | 51 | C |
 | 2 | D | 12 | A | 22 | D | 32 | B | 42 | A | 52 | D |
-| 3 | A | 13 | A | 23 | B | 33 | D | 43 | C | 53 | D |
-| 4 | C | 14 | C | 24 | A | 34 | C | 44 | D | 54 | C |
+| 3 | A | 13 | A | 23 | B | 33 | A | 43 | C | 53 | D |
+| 4 | A | 14 | C | 24 | A | 34 | C | 44 | D | 54 | C |
 | 5 | C | 15 | B | 25 | B | 35 | A | 45 | A | 55 | B |
-| 6 | A | 16 | D | 26 | A | 36 | B | 46 | D | 56 | A |
+| 6 | D | 16 | D | 26 | A | 36 | B | 46 | D | 56 | A |
 | 7 | D | 17 | D | 27 | D | 37 | C | 47 | B | 57 | A |
-| 8 | B | 18 | A | 28 | C | 38 | B | 48 | C | 58 | B |
-| 9 | D | 19 | C | 29 | A | 39 | D | 49 | C | 59 | D |
-| 10 | B | 20 | B | 30 | D | 40 | A | 50 | B | 60 | C |
+| 8 | B | 18 | D | 28 | C | 38 | B | 48 | C | 58 | B |
+| 9 | D | 19 | A | 29 | A | 39 | A | 49 | C | 59 | D |
+| 10 | B | 20 | B | 30 | D | 40 | C | 50 | B | 60 | C |
 
 Answer-key distribution: A = 15, B = 15, C = 15, D = 15.
 
@@ -49,13 +53,13 @@ Answer-key distribution: A = 15, B = 15, C = 15, D = 15.
 
 **2. (D)** "Thrice a number" = 3x; "5 added" = 3x + 5; "result is 26" → 3x + 5 = 26.
 
-**3. (A)** 4x − 9 = 11 → 4x = 20 → x = 5.
+**3. (A)** 4x − 9 = 2x + 7 → 4x − 2x = 7 + 9 → 2x = 16 → x = 8. Then 3x + 1 = 3·8 + 1 = 25. (Stopping at 3x = 24 gives the trap 24; using 2x + 1 gives 17.)
 
-**4. (C)** x/3 + 2 = 6 → x/3 = 4 → x = 12. (Dividing 6 by 3 first gives the trap 8.)
+**4. (A)** "Exceeds by 5" → x/3 − x/4 = 5. Multiply by 12: 4x − 3x = 60 → x = 60. Check: 60/3 − 60/4 = 20 − 15 = 5. ✓ (Reading "exceeds by 5" as x/3 = x/4 + 5 gives the same equation; the trap 5 is the difference itself.)
 
 **5. (C)** 7x + 4 = 3x + 20 → 7x − 3x = 20 − 4 → 4x = 16 → x = 4. Check: 7·4 + 4 = 32 = 3·4 + 20. ✓
 
-**6. (A)** 2(x − 3) = 10 → x − 3 = 5 → x = 8. Check: 2·5 = 10. ✓
+**6. (D)** x + 8 = 3(x − 4) → x + 8 = 3x − 12 → 8 + 12 = 3x − x → 20 = 2x → x = 10. Check: 10 + 8 = 18 = 3(10 − 4) = 18. ✓ (Forgetting to distribute the 3 over −4, i.e. x + 8 = 3x − 4, gives the trap 6.)
 
 **7. (D)** 3(2x + 1) = 27 → 6x + 3 = 27 → 6x = 24 → x = 4. Check: 3(8 + 1) = 27. ✓
 
@@ -79,15 +83,15 @@ Answer-key distribution: A = 15, B = 15, C = 15, D = 15.
 
 **17. (D)** 4(x − 1) = 2(x + 3) → 4x − 4 = 2x + 6 → 2x = 10 → x = 5. Check: 4·4 = 16 = 2·8. ✓
 
-**18. (A)** 9 − 2x = 3 → −2x = −6 → x = 3. (Sign slips give −3.)
+**18. (D)** Number = x, successor = x + 1. "Sum is 5 less than three times the number" → x + (x + 1) = 3x − 5 → 2x + 1 = 3x − 5 → 1 + 5 = 3x − 2x → x = 6. Check: 6 + 7 = 13 = 3·6 − 5 = 13. ✓
 
-**19. (C)** n + (n + 2) = 54 → 2n + 2 = 54 → 2n = 52 → n = 26. Check: 26 + 28 = 54. ✓
+**19. (A)** breadth = b, length = 2b. Perimeter = 2(2b + b) = 6b = 54 → b = 9. Length = 2b = 18. Check: 2(18 + 9) = 54. ✓ (9 is the breadth — the classic "answered the wrong unknown" trap.)
 
 **20. (B)** Let t = number of ₹2 coins; then 20 − t are ₹1 coins. 2t + 1·(20 − t) = 35 → t + 20 = 35 → t = 15. Check: 15·2 + 5·1 = 35. ✓
 
 **21. (C)** Test x = 3: (A) 2·3 + 1 = 7 ≠ 5; (B) 3 − 3 = 0 ≠ 3; (C) 4·3 − 5 = 7 ✓; (D) 3/3 = 1 ≠ 9. So (C).
 
-**22. (D)** x/4 − 2 = 1 → x/4 = 3 → x = 12.
+**22. (D)** "Half of a number, decreased by 6" = x/2 − 6; this equals one-third of it: x/2 − 6 = x/3. Multiply by 6: 3x − 36 = 2x → x = 36. Check: 36/2 − 6 = 12 = 36/3. ✓
 
 **23. (B)** 5 − 2(x − 1) = 1 → 5 − 2x + 2 = 1 → 7 − 2x = 1 → 2x = 6 → x = 3. (The trap is writing 5 − 2x − 2; the bracket flips the sign of −1 to +2.) Check: 5 − 2(2) = 1. ✓
 
@@ -109,7 +113,7 @@ Answer-key distribution: A = 15, B = 15, C = 15, D = 15.
 
 **32. (B)** x/5 + 3 = 8 → x/5 = 5 → x = 25.
 
-**33. (D)** Three consecutive odd numbers average to the middle one, so middle = 81 ÷ 3 = 27. (Numbers: 25, 27, 29.) ✓
+**33. (A)** tens = t, units = t + 3. Digit-sum: t + (t + 3) = 11 → 2t + 3 = 11 → 2t = 8 → t = 4, units = 7. The number is 47. Check: 4 + 7 = 11 and 7 = 4 + 3. ✓ (74 reverses the digits; 38 and 29 also sum to 11 but their units digit is not 3 more than the tens digit.)
 
 **34. (C)** 2x/3 − x/2 = 1 → multiply by 6: 4x − 3x = 6 → x = 6. Check: 12/3 − 6/2 = 4 − 3 = 1. ✓
 
@@ -121,9 +125,9 @@ Answer-key distribution: A = 15, B = 15, C = 15, D = 15.
 
 **38. (B)** 50 + 12k = 158 → 12k = 108 → k = 9.
 
-**39. (D)** Bina now = 15, so 5 years ago Bina = 10 and Anil = 3·10 = 30. Anil now = 30 + 5 = 35.
+**39. (A)** first = a, second = 2a, third = 3a. a + 2a + 3a = 90 → 6a = 90 → a = 15. Third = 3a = 45. Check: 15 + 30 + 45 = 90. ✓ (15 is the first friend's share, 30 the second — both are traps.)
 
-**40. (A)** x/2 + x/4 = 9 → multiply by 4: 2x + x = 36 → 3x = 36 → x = 12. Check: 6 + 3 = 9. ✓
+**40. (C)** (x − 1)/2 + (x + 1)/3 = 4. Multiply by 6: 3(x − 1) + 2(x + 1) = 24 → 3x − 3 + 2x + 2 = 24 → 5x − 1 = 24 → 5x = 25 → x = 5. Check: 4/2 + 6/3 = 2 + 2 = 4. ✓ (Dropping a sign on the brackets, e.g. 3x − 3 + 2x − 2, gives 5x = 29 and no clean answer — a signal you distributed wrongly.)
 
 **41. (B)** 6x − 5 = 4x + 7 → 2x = 12 → x = 6. Check: 36 − 5 = 31 = 24 + 7. ✓
 
@@ -131,7 +135,7 @@ Answer-key distribution: A = 15, B = 15, C = 15, D = 15.
 
 **43. (C)** x + x + (x − 2) = 25 → 3x − 2 = 25 → 3x = 27 → x = 9. Check: 9 + 9 + 7 = 25. ✓
 
-**44. (D)** 3x/4 = 9 → 3x = 36 → x = 12.
+**44. (D)** The terms go up by 3 from a first term of 5, so the nth term is 5 + 3(n − 1) = 3n + 2. Set 3n + 2 = 47 → 3n = 45 → n = 15. So 47 is the 15th term. Check: 3·15 + 2 = 47. ✓ (Picking 47 itself is the "the value IS the position" trap.)
 
 **45. (A)** Cost of n notebooks = 15n; "after a ₹20 discount" = 15n − 20.
 
@@ -145,7 +149,7 @@ Answer-key distribution: A = 15, B = 15, C = 15, D = 15.
 
 **50. (B)** 2x − 7 = x + 5 → x = 12. Check: 2·12 − 7 = 17 = 12 + 5. ✓
 
-**51. (A)** (x − 5)/3 = 2 → x − 5 = 6 → x = 11.
+**51. (C)** Solve each and find the common value. First: 2x − 1 = x + 3 → x = 4. Second: x/2 + 1 = 3 → x/2 = 2 → x = 4. Both give x = 4, so 4 satisfies both. ✓ (A value satisfying only one equation — e.g. checking just the first — is the trap.)
 
 **52. (D)** Angles x, 2x, 3x. x + 2x + 3x = 180 → 6x = 180 → x = 30. Largest = 3x = 90°.
 
