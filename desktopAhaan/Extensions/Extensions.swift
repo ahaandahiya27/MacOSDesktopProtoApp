@@ -143,6 +143,9 @@ enum SFSymbolCompat {
         case "text.word.spacing":          return "textformat"             // SF Symbols 3+ — added 2026-05-27 (TranslationResultCard Word by Word section)
         case "text.book.closed":           return "book.closed"            // SF Symbols 3+ — added 2026-05-27 (TranslationResultCard Grammar section)
         case "arrow.triangle.branch":      return "arrow.branch"           // SF Symbols 3+ — added 2026-05-27 (TranslationResultCard Alternatives section)
+        case "trophy.fill":                return "star.fill"              // SF Symbols 4+ — added 2026-06-06 (Olympiad Tests sidebar icon)
+        case "trophy":                     return "star"                   // SF Symbols 4+ — added 2026-06-06 (Olympiad Tests sidebar icon)
+        case "arrow.down.doc.fill":        return "square.and.arrow.down"  // SF Symbols 3+ — added 2026-06-06 (Olympiad Save PDF CTA)
         default:                           return modern
         }
     }

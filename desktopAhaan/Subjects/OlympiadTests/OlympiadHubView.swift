@@ -78,7 +78,12 @@ struct OlympiadHubView: View {
                         .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 }
             }
-            Text("Each paper is a 60-MCQ rehearsal at competitive standard. **Take Quiz** to attempt it interactively (instant scoring with worked solutions per question). **Open Paper** to read the full print-style document (questions plus answer key plus worked solutions). **Save PDF** to drop a print-ready file onto disk.")
+            // Big Sur (macOS 11) does NOT parse markdown inside
+            // `Text("…")` — the `**bold**` syntax was added to SwiftUI
+            // in macOS 12. On Big Sur the literal asterisks render
+            // verbatim. Use plain prose; the action button row below
+            // is the visual hierarchy.
+            Text("Each paper is a 60-MCQ rehearsal at competitive standard. Take Quiz to attempt it interactively (instant scoring with worked solutions per question). Open Paper to read the full print-style document (questions plus answer key plus worked solutions). Save PDF to drop a print-ready file onto disk.")
                 .font(.callout)
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 .fixedSize(horizontal: false, vertical: true)
@@ -309,9 +314,13 @@ struct OlympiadHubView: View {
         panel.title = "Save Olympiad Paper"
         panel.nameFieldStringValue = paper.questionPaperPDF
         panel.directoryURL = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first
-        panel.allowedContentTypes = []
         panel.canCreateDirectories = true
         panel.isExtensionHidden = false
+        // NOTE: NOT setting `panel.allowedContentTypes` here. That
+        // property is `[UTType]` (macOS 11+) which requires `import
+        // UniformTypeIdentifiers` to typecheck even when assigning an
+        // empty array literal on Swift 5.5. The default value (no
+        // restriction) is what we want anyway.
 
         panel.begin { response in
             guard response == .OK, let dest = panel.url else { return }
@@ -324,13 +333,23 @@ struct OlympiadHubView: View {
                     try FileManager.default.removeItem(at: dest)
                 }
                 try FileManager.default.copyItem(at: bundledURL, to: dest)
-                Task { @MainActor in
-                    savedToURL = dest
+                // panel.begin's completion is already on the main
+                // thread, but the outer `savePDF(for:)` is `@MainActor`-
+                // isolated, so we hop explicitly. Use DispatchQueue
+                // instead of `Task { @MainActor in ... }` because Swift
+                // 5.5's actor-isolation rules around nested Tasks inside
+                // an unisolated completion handler are stricter than
+                // Swift 6's; the dispatch hop is portable.
+                let destination = dest
+                DispatchQueue.main.async {
+                    savedToURL = destination
                     bannerDismissTask?.cancel()
-                    bannerDismissTask = Task { @MainActor in
+                    bannerDismissTask = Task { @MainActor [destination] in
                         try? await Task.sleep(nanoseconds: 6_000_000_000)
                         if Task.isCancelled { return }
-                        savedToURL = nil
+                        if savedToURL == destination {
+                            savedToURL = nil
+                        }
                     }
                 }
             } catch {
