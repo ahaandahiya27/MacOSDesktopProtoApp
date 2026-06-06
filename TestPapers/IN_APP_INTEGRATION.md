@@ -332,3 +332,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_ch04",
+            subjectId: "maths_class7",
+            subjectName: "Mathematics",
+            chapterNumber: 4,
+            chapterTitle: "Expressions Using Letter-Numbers",
+            displayTitle: "Expressions Using Letter-Numbers — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch04_ExpressionsUsingLetterNumbers_QuestionPaper.md",
+            solutionsMD: "Maths_Ch04_ExpressionsUsingLetterNumbers_Solutions.md",
+            questionPaperHTML: "Maths_Ch04_ExpressionsUsingLetterNumbers.html",
+            questionPaperPDF: "Maths_Ch04_ExpressionsUsingLetterNumbers.pdf",
+            solvedGuideHTML: "Maths_Ch04_ExpressionsUsingLetterNumbers_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
