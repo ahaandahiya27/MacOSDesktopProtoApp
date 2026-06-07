@@ -951,3 +951,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch07",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 7,
+            chapterTitle: "ईशावास्यम् इदं सर्वम् (Ishavasyam Idam Sarvam)",
+            displayTitle: "ईशावास्यम् इदं सर्वम् (Ishavasyam Idam Sarvam) — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch07_IshavasyamIdamSarvam_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch07_IshavasyamIdamSarvam_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch07_IshavasyamIdamSarvam.html",
+            questionPaperPDF: "Sanskrit_Sch07_IshavasyamIdamSarvam.pdf",
+            solvedGuideHTML: "Sanskrit_Sch07_IshavasyamIdamSarvam_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
