@@ -747,3 +747,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch15",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 15,
+            chapterTitle: "Empires and Kingdoms: 6th to 10th Centuries",
+            displayTitle: "Empires and Kingdoms: 6th to 10th Centuries — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch15_EmpiresAndKingdoms6thTo10thCenturies_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch15_EmpiresAndKingdoms6thTo10thCenturies_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch15_EmpiresAndKingdoms6thTo10thCenturies.html",
+            questionPaperPDF: "SocialScience_Ssch15_EmpiresAndKingdoms6thTo10thCenturies.pdf",
+            solvedGuideHTML: "SocialScience_Ssch15_EmpiresAndKingdoms6thTo10thCenturies_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
