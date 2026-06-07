@@ -18,6 +18,15 @@ import Foundation
 enum AnswerValidator {
     /// Strict match — required for `.fillInBlank` and `.numerical` where the
     /// truth is short and exactness matters.
+    ///
+    /// 2026-06-07: rules widened to accept the Class-7 Indian-numeric forms
+    /// the practice screens were rejecting (`1000` vs `1,000 presses`;
+    /// `31000` vs `31,000`; `100000, 99999` vs `1,00,000 and 99,999`):
+    ///   • All digit-grouping commas (Indian 1,00,000 or international 100,000)
+    ///     are stripped before any compare, so "1,000" and "1000" are equal.
+    ///   • If the user input is a single numeric token AND the truth STARTS
+    ///     with that same number (followed by a non-digit), accept. The kid
+    ///     typing "1000" for "1,000 presses; …" passes.
     static func matches(userInput: String, truth: String) -> Bool {
         let u = normalize(userInput)
         let t = normalize(truth)
@@ -27,7 +36,34 @@ enum AnswerValidator {
         let uTokens = tokenize(u)
         let tTokens = tokenize(t)
         if !uTokens.isEmpty && uTokens == tTokens { return true }
+        // Leading-number rule. If the user gave a single numeric token and
+        // the truth STARTS with that same number followed by a non-digit
+        // (so "1000 presses" matches but "10000" against "1000-something"
+        // doesn't accidentally match a prefix), accept. Both sides have
+        // already been comma-stripped, so this is a clean digit compare.
+        if uTokens.count == 1, let first = uTokens.first,
+           Double(first) != nil,
+           leadsWithNumber(t, number: first) {
+            return true
+        }
+        // Sibling rule: truth is a single number, user gave the same digits
+        // surrounded by non-numeric context ("1000 presses" → truth "1000").
+        // Symmetric to the above so the validator is reversible.
+        if tTokens.count == 1, let first = tTokens.first,
+           Double(first) != nil,
+           leadsWithNumber(u, number: first) {
+            return true
+        }
         return false
+    }
+
+    /// True if `s` starts with `number` and the next char (if any) isn't
+    /// a digit — so "1000" matches "1000 presses" but not "10000 something".
+    private static func leadsWithNumber(_ s: String, number: String) -> Bool {
+        guard s.hasPrefix(number) else { return false }
+        let after = s.index(s.startIndex, offsetBy: number.count)
+        if after == s.endIndex { return true }
+        return !s[after].isNumber
     }
 
     /// Lenient match for `.shortAnswer` / `.longAnswer` where the truth is a
@@ -51,7 +87,21 @@ enum AnswerValidator {
     }
 
     private static func normalize(_ s: String) -> String {
-        s.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
+        // Trim + lowercase + strip digit-grouping commas. The comma-strip
+        // uses a regex so it only fires BETWEEN digits — preserving the
+        // English-list comma in "apple, orange" while collapsing the
+        // Indian / international digit groupings:
+        //   "1,000"            → "1000"
+        //   "1,00,000"         → "100000"
+        //   "100,000"          → "100000"
+        //   "1,00,000 and 99,999" → "100000 and 99999"
+        //   "apple, orange"    → "apple, orange"        (no change)
+        let trimmed = s.trimmingCharacters(in: .whitespacesAndNewlines).lowercased()
+        guard let re = try? NSRegularExpression(pattern: "(?<=\\d),(?=\\d)") else {
+            return trimmed
+        }
+        let range = NSRange(trimmed.startIndex..<trimmed.endIndex, in: trimmed)
+        return re.stringByReplacingMatches(in: trimmed, range: range, withTemplate: "")
     }
 
     /// Sorted set of meaningful tokens. Strips punctuation and a tiny set of

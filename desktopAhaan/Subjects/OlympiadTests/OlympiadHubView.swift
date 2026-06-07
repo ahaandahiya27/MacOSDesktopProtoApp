@@ -61,12 +61,16 @@ struct OlympiadHubView: View {
         .navigationTitle("Olympiad Tests")
         .onDisappear { bannerDismissTask?.cancel() }
         .sheet(item: $presentedPaperSheet) { paper in
-            ArticleBrowserView(
-                initialFile: paper.questionPaperHTML,
-                chapterFolder: "TestPapers",
-                articleTitle: "Question Paper + Solutions — \(paper.chapterTitle)"
-            )
-            .frame(minWidth: 760, minHeight: 560)
+            // Native SwiftUI reader. The earlier `ArticleBrowserView`
+            // path rendered blank because its NCERT-tuned structured
+            // parser (`<p>` / `<h1-3>` / `<aside class="fact-box">`)
+            // doesn't recognize the Olympiad HTML's print-style
+            // `<div class="q">` / `<div class="opts">` / `<table>`
+            // shape. We already parse the bundled MD into structured
+            // questions for the quiz; the reader just renders that
+            // data non-interactively, with the correct option marked.
+            OlympiadPaperReaderView(paper: paper)
+                .frame(minWidth: 760, minHeight: 560)
         }
         .sheet(item: $presentedGuideSheet) { paper in
             // The Solved Guide is a bundled SwiftUI-rendered HTML —

@@ -1908,6 +1908,7 @@
 		7ED32507DBB7A41A9B2A2831 /* SocialScience_Ssch18_TheStateTheGovernmentAndYou.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CCF6B0AEBE3740717608989F /* SocialScience_Ssch18_TheStateTheGovernmentAndYou.pdf */; };
 		7B99FB40034B50EB0B5EDF37 /* SocialScience_Ssch19_Infrastructure.pdf in Resources */ = {isa = PBXBuildFile; fileRef = B50F85CF17609EB76784B873 /* SocialScience_Ssch19_Infrastructure.pdf */; };
 		47727B371E8D8A4589147BB7 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0D40DDA8E1DF0F1329CD83A7 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance.pdf */; };
+		3DB98307F3BB343592DC7010 /* OlympiadPaperReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083109A9F66B12919BE85A7 /* OlympiadPaperReaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -3833,6 +3834,7 @@
 		CCF6B0AEBE3740717608989F /* SocialScience_Ssch18_TheStateTheGovernmentAndYou.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "SocialScience_Ssch18_TheStateTheGovernmentAndYou.pdf"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch18_TheStateTheGovernmentAndYou.pdf"; sourceTree = SOURCE_ROOT; };
 		B50F85CF17609EB76784B873 /* SocialScience_Ssch19_Infrastructure.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "SocialScience_Ssch19_Infrastructure.pdf"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch19_Infrastructure.pdf"; sourceTree = SOURCE_ROOT; };
 		0D40DDA8E1DF0F1329CD83A7 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "SocialScience_Ssch20_BanksAndTheMagicOfFinance.pdf"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch20_BanksAndTheMagicOfFinance.pdf"; sourceTree = SOURCE_ROOT; };
+		C083109A9F66B12919BE85A7 /* OlympiadPaperReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "OlympiadPaperReaderView.swift"; path = "desktopAhaan/Subjects/OlympiadTests/OlympiadPaperReaderView.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -8734,6 +8736,7 @@
 				E0C4A5A99334A6096E03861E /* OlympiadPaperRegistry+SanskritPapers.swift in Sources */,
 				B7A8164F45247100D27BC969 /* OlympiadPaperRegistry+SciencePapers.swift in Sources */,
 				084434020B6508143125C577 /* OlympiadPaperRegistry+SocialSciencePapers.swift in Sources */,
+				3DB98307F3BB343592DC7010 /* OlympiadPaperReaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
