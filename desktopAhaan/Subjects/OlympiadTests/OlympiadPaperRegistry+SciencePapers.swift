@@ -181,13 +181,33 @@ extension OlympiadPaperRegistry {
             subjectName: "Science",
             chapterNumber: 13,
             chapterTitle: "Motion and Time",
-            displayTitle: "Motion and Time — 60 MCQ Olympiad",
+            displayTitle: "Motion and Time — Paper 1 (Foundation)",
             questionPaperMD: "Science_Ch13_MotionAndTime_QuestionPaper.md",
             solutionsMD: "Science_Ch13_MotionAndTime_Solutions.md",
             questionPaperHTML: "Science_Ch13_MotionAndTime.html",
             questionPaperPDF: "Science_Ch13_MotionAndTime.pdf",
             suggestedTimeMinutes: 90,
             solvedGuideHTML: "Science_Ch13_MotionAndTime_SolvedGuide.html"
+        ),
+        OlympiadPaper(
+            id: "olympiad_science_ch13_advanced",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 13,
+            chapterTitle: "Motion and Time",
+            displayTitle: "Motion and Time — Paper 2 (Advanced)",
+            questionPaperMD: "Science_Ch13_MotionAndTime_Advanced_QuestionPaper.md",
+            solutionsMD: "Science_Ch13_MotionAndTime_Advanced_Solutions.md",
+            // Reuses Paper 1's printable HTML + PDF until Paper 2 print
+            // assets are generated — the Open Paper / Save PDF CTAs are
+            // already gated on these being present so the hub can still
+            // render the card. Marking the tier as advanced is what makes
+            // this row distinct in the registry.
+            questionPaperHTML: "Science_Ch13_MotionAndTime.html",
+            questionPaperPDF: "Science_Ch13_MotionAndTime.pdf",
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Science_Ch13_MotionAndTime_Advanced_SolvedGuide.html",
+            tier: .advanced
         ),
         OlympiadPaper(
             id: "olympiad_science_ch14",

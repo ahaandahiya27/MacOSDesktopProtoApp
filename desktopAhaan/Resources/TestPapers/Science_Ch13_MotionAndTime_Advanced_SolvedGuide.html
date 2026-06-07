@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Motion And Time_Advanced — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Motion And Time_Advanced<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">A ceiling fan spinning at constant speed has each blade-tip moving in a circle once every 0.4 s. Which two motion descriptors fit the tip best?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>circular and oscillatory</span></li>
+        <li class=""><span class="lab">B</span><span>rectilinear and periodic</span></li>
+        <li class=""><span class="lab">C</span><span>random and periodic</span></li>
+        <li class="correct"><span class="lab">D</span><span>circular and periodic</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Each blade-tip traces a circle, so the motion is circular. It also returns to the same orientation every 0.4 s, so it's periodic. It is NOT oscillatory (oscillation needs back-and-forth across an equilibrium point), and clearly not rectilinear or random.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">A child swings from rest, rises to the same height on the other side, and stops there forever (no further push). The motion shown is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>periodic, because it crossed the centre once</span></li>
+        <li class=""><span class="lab">B</span><span>uniform circular motion</span></li>
+        <li class="correct"><span class="lab">C</span><span>oscillatory only — not periodic, because it didn't repeat</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>random motion</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Oscillation requires back-and-forth across an equilibrium; the swing did that once. Periodicity requires the cycle to REPEAT — a single excursion doesn't qualify. So it's oscillatory but not periodic. Option A confuses crossing with repeating; B and D are unrelated.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">A car covers 50 km in the 1st hour, 70 km in the 2nd hour, and 90 km in the 3rd hour. Its motion is best described as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>uniform</span></li>
+        <li class=""><span class="lab">B</span><span>at rest</span></li>
+        <li class="correct"><span class="lab">C</span><span>non-uniform, speeding up</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>non-uniform, slowing down</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Equal time-intervals (1 hour each) but unequal distances (50 → 70 → 90 km) → non-uniform. The distance per hour is GROWING, so the car is speeding up. Slowing down would mean shrinking distances per equal time.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">A train 200 m long crosses a 300 m platform completely in 25 s. The train's speed is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>12 m/s</span></li>
+        <li class=""><span class="lab">B</span><span>4 m/s</span></li>
+        <li class=""><span class="lab">C</span><span>8 m/s</span></li>
+        <li class="correct"><span class="lab">D</span><span>20 m/s</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The train's nose enters the platform and the train's tail leaves the other end — total distance covered = train length + platform length = 200 + 300 = 500 m. Speed = 500 m ÷ 25 s = 20 m/s.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">A man walks **half** of his journey at 4 km/h and the **other half** at 6 km/h. His average speed for the whole journey is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5 km/h</span></li>
+        <li class=""><span class="lab">B</span><span>5.2 km/h</span></li>
+        <li class="correct"><span class="lab">C</span><span>4.8 km/h</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>2.4 km/h</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Equal distances → use harmonic mean: avg = 2·v₁·v₂/(v₁+v₂) = 2·4·6/(4+6) = 48/10 = 4.8 km/h. The trap is option A — averaging speeds arithmetically only works for equal TIMES, not equal distances.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">A boat moves at 12 km/h in still water. In a river flowing at 4 km/h, what are the boat's speeds **downstream** and **upstream**?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>12 km/h both ways</span></li>
+        <li class=""><span class="lab">B</span><span>8 km/h and 16 km/h</span></li>
+        <li class="correct"><span class="lab">C</span><span>16 km/h and 8 km/h</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>4 km/h and 12 km/h</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Downstream the current helps: 12 + 4 = 16 km/h. Upstream the current opposes: 12 − 4 = 8 km/h. Many kids reverse this — remember "down" means with the flow, which adds.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">A pendulum's length is **doubled**. By what factor does its time period change? (Use *T* ∝ √*L*.)</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>×2</span></li>
+        <li class=""><span class="lab">B</span><span>×4</span></li>
+        <li class=""><span class="lab">C</span><span>÷2</span></li>
+        <li class="correct"><span class="lab">D</span><span>×√2</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>T ∝ √L, so doubling L scales T by √2 (about 1.414×). Option A is the common mistake — period does NOT scale linearly with length.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">A pendulum's length is **quartered** (cut to one-fourth). Its time period:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>doubles</span></li>
+        <li class="correct"><span class="lab">B</span><span>halves</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>is one-fourth as long</span></li>
+        <li class=""><span class="lab">D</span><span>is unchanged</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>T ∝ √L, and √(1/4) = 1/2. So the period halves. Option C is the natural trap — but length-quartered does NOT quarter the period; the square root softens it.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">Two cyclists start at the same point. P moves east at 5 m/s, Q moves west at 3 m/s. Their **rate of separation** is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>8 m/s</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>2 m/s</span></li>
+        <li class=""><span class="lab">C</span><span>15 m/s</span></li>
+        <li class=""><span class="lab">D</span><span>0 m/s</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Moving in OPPOSITE directions adds their speeds for the rate of separation: 5 + 3 = 8 m/s. They draw apart at 8 m every second.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">A car travelling at 20 m/s overtakes a truck moving at 15 m/s in the same direction. The relative speed of the car with respect to the truck is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>35 m/s</span></li>
+        <li class=""><span class="lab">B</span><span>20 m/s</span></li>
+        <li class=""><span class="lab">C</span><span>0 m/s</span></li>
+        <li class="correct"><span class="lab">D</span><span>5 m/s</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In the SAME direction, the relative speed is the difference: 20 − 15 = 5 m/s. From the truck driver's frame, the car only seems to approach at 5 m/s.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">A satellite circles the Earth at 7.5 km/s. Expressed in km/h, its speed is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2700 km/h</span></li>
+        <li class=""><span class="lab">B</span><span>270 km/h</span></li>
+        <li class="correct"><span class="lab">C</span><span>27 000 km/h</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>270 000 km/h</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>7.5 km/s × 3600 s/h = 27 000 km/h. Many ISS-style satellites really do orbit at roughly this speed — about 27 000 km/h or Mach 25.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">A car maintains an average speed of 60 km/h for a 240 km trip. If the first 120 km were covered at 40 km/h, what speed must the car average over the second 120 km?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>80 km/h</span></li>
+        <li class=""><span class="lab">B</span><span>100 km/h</span></li>
+        <li class="correct"><span class="lab">C</span><span>120 km/h</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>90 km/h</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Target avg of 60 km/h × 4 h trip would give 240 km total — so total time must be 4 hours. First 120 km at 40 km/h takes 3 hours. The remaining 120 km must therefore be covered in 1 hour → 120 km/h. Note this is faster than the target average because the slow first half ate up most of the time budget.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">The Moon's gravity is about *g*/6 of Earth's. A pendulum that has a time period of 1 s on Earth will, on the Moon, have a time period of about:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1/√6 s</span></li>
+        <li class=""><span class="lab">B</span><span>6 s</span></li>
+        <li class=""><span class="lab">C</span><span>1 s — gravity doesn't matter</span></li>
+        <li class="correct"><span class="lab">D</span><span>√6 s ≈ 2.45 s</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>T = 2π√(L/g). If g shrinks by a factor of 6, then T grows by √6 ≈ 2.45×. So a 1-second Earth pendulum becomes about 2.45 s on the Moon.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">A cricket ball is bowled at 144 km/h toward a batsman 18 m away. How long does the ball take to reach the batsman? (Assume constant speed.)</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>0.45 s</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>0.18 s</span></li>
+        <li class=""><span class="lab">C</span><span>1.0 s</span></li>
+        <li class=""><span class="lab">D</span><span>0.05 s</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>144 km/h × 5/18 = 40 m/s. Time = distance ÷ speed = 18 m ÷ 40 m/s = 0.45 s. That's why batters have only about half a second to react — they're really good.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">A pendulum-clock that loses 6 minutes per day has a period that is approximately:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>0.4% too long</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>0.4% too short</span></li>
+        <li class=""><span class="lab">C</span><span>6% too long</span></li>
+        <li class=""><span class="lab">D</span><span>6% too short</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A day is 1440 minutes; losing 6 min is 6/1440 = 1/240 ≈ 0.4%. "Losing time" means the clock's seconds are LONGER than true seconds — its period is too LONG by ~0.4%.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">A car covers a journey in three equal **time** segments at 30, 50, and 70 km/h. Its average speed for the whole journey is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>50 km/h</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>45 km/h</span></li>
+        <li class=""><span class="lab">C</span><span>47 km/h</span></li>
+        <li class=""><span class="lab">D</span><span>60 km/h</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Equal TIME segments → arithmetic mean: (30+50+70)/3 = 150/3 = 50 km/h. This case is straightforward because the same hours weight each speed equally.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">A car covers a journey in three equal **distance** segments at 20, 30, and 60 km/h. Its average speed for the whole journey is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>30 km/h</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>36.7 km/h</span></li>
+        <li class=""><span class="lab">C</span><span>40 km/h</span></li>
+        <li class=""><span class="lab">D</span><span>50 km/h</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Equal DISTANCE segments → harmonic mean. avg = 3/(1/20+1/30+1/60) = 3/((3+2+1)/60) = 3/(6/60) = 30 km/h. The slow legs eat up so much time that they dominate.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">On a distance–time graph the line is straight from (0 s, 0 m) to (10 s, 60 m), then horizontal from (10 s, 60 m) to (15 s, 60 m), then straight from (15 s, 60 m) back to (25 s, 0 m). At t = 20 s the object is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>at rest</span></li>
+        <li class=""><span class="lab">B</span><span>at the starting point</span></li>
+        <li class="correct"><span class="lab">C</span><span>30 m from the start, returning</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>90 m from the start</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>From t=15 s to t=25 s the line falls from 60 m to 0 m, slope = −6 m/s. At t = 20 s, the object has descended for 5 s at 6 m/s → distance from start = 60 − 30 = 30 m, moving back toward the start.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">In the previous question, the **total distance travelled** in 25 s is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>60 m</span></li>
+        <li class=""><span class="lab">B</span><span>0 m</span></li>
+        <li class="correct"><span class="lab">C</span><span>120 m</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>30 m</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Up: 60 m (during 0→10 s). At rest: 0 m (during 10→15 s, no distance covered). Back: 60 m (during 15→25 s). Total path length = 60 + 0 + 60 = 120 m.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">A bike's wheel has a circumference of 2 m. The bike moves at 18 km/h. The wheel turns about how many times per second?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>2.5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>9</span></li>
+        <li class=""><span class="lab">C</span><span>1.0</span></li>
+        <li class=""><span class="lab">D</span><span>5</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>18 km/h = 5 m/s. Each revolution covers one circumference = 2 m. Revolutions per second = 5 ÷ 2 = 2.5.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">The slope of a distance–time graph gives the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>total distance</span></li>
+        <li class=""><span class="lab">B</span><span>total time</span></li>
+        <li class="correct"><span class="lab">C</span><span>speed at that moment</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>acceleration</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Slope of distance ÷ time = speed at that instant. The bigger the slope, the faster the motion at that moment. Slope is NOT mass, distance, or acceleration.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">A car's distance–time graph is a parabola opening upward starting at the origin. The car is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>at rest</span></li>
+        <li class=""><span class="lab">B</span><span>moving at constant speed</span></li>
+        <li class="correct"><span class="lab">C</span><span>speeding up</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>slowing down</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A parabola that bends UPWARD means distance grows faster and faster as time passes — the object is speeding up. A straight line would be constant speed; a curve flattening out would be slowing.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">Two pendulums A and B have lengths 1 m and 4 m. The ratio of their time periods *T*ₐ : *T_b* is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>1 : 2</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>2 : 1</span></li>
+        <li class=""><span class="lab">C</span><span>1 : 4</span></li>
+        <li class=""><span class="lab">D</span><span>4 : 1</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>T ∝ √L. T_a : T_b = √1 : √4 = 1 : 2. So pendulum B (4 m) has TWICE the period of pendulum A (1 m), even though its length is 4× longer.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">A simple pendulum's period is 2 s on Earth. To make it 1 s, its length must be changed to:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>one-fourth</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>half</span></li>
+        <li class=""><span class="lab">C</span><span>double</span></li>
+        <li class=""><span class="lab">D</span><span>four times</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>T ∝ √L, so to halve T you need to QUARTER L. Many kids halve the length and get a √2 factor wrong; the correct answer is one-fourth.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">A lightning flash is seen, then thunder is heard 6 s later. Sound travels at 330 m/s; light is essentially instant. The storm is about:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>1.98 km away</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>6 km away</span></li>
+        <li class=""><span class="lab">C</span><span>19.8 km away</span></li>
+        <li class=""><span class="lab">D</span><span>60 km away</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sound travels 330 m/s × 6 s = 1980 m = 1.98 km. The flash arrived essentially the instant the lightning struck (light is much faster than sound), so the 6-second gap is the sound's travel time.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">Two trains move toward each other on parallel tracks at 60 km/h and 40 km/h. The gap closes at:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>100 km/h</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>20 km/h</span></li>
+        <li class=""><span class="lab">C</span><span>50 km/h</span></li>
+        <li class=""><span class="lab">D</span><span>200 km/h</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Trains approach each other; their CLOSING speed is the sum: 60 + 40 = 100 km/h. The gap shrinks at 100 km every hour.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">A person walks at 3 km/h on a moving walkway that travels at 5 km/h in the same direction. Their ground speed is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2 km/h</span></li>
+        <li class=""><span class="lab">B</span><span>4 km/h</span></li>
+        <li class=""><span class="lab">C</span><span>5 km/h</span></li>
+        <li class="correct"><span class="lab">D</span><span>8 km/h</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Walking IN THE SAME DIRECTION as the walkway, ground speed adds: 3 + 5 = 8 km/h. Compare to standing still on the walkway (5 km/h) — walking adds your foot-speed.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">On a distance–time graph, line A passes through (0, 0) and (10, 50); line B passes through (0, 20) and (10, 30). When and where do the lines first meet?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>never — A is steeper but starts lower</span></li>
+        <li class=""><span class="lab">B</span><span>at t = 4 s, distance = 20 m</span></li>
+        <li class="correct"><span class="lab">C</span><span>at t = 5 s, distance = 25 m</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>at t = 10 s, distance = 50 m</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Line A: y = 5x. Line B: y = 20 + x. They meet when 5x = 20 + x → 4x = 20 → x = 5 s. At that moment y = 25 m. So they first cross at (5 s, 25 m).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">Cars A and B follow the lines from Q28. At **t = 2 s**, the **gap** between them is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0 m</span></li>
+        <li class=""><span class="lab">B</span><span>20 m</span></li>
+        <li class=""><span class="lab">C</span><span>30 m</span></li>
+        <li class="correct"><span class="lab">D</span><span>12 m</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>At t = 2 s: A is at 5×2 = 10 m, B is at 20 + 2 = 22 m. Gap = 22 − 10 = 12 m. B is still ahead (it had a 20 m head start; A has only gained 2 m so far).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">A bus moves north at 30 km/h while a man inside walks toward the front at 5 km/h relative to the bus. The man's speed **relative to the ground** is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>25 km/h north</span></li>
+        <li class=""><span class="lab">B</span><span>5 km/h north</span></li>
+        <li class="correct"><span class="lab">C</span><span>35 km/h north</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>30 km/h north</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Same direction (north). The man's ground speed = bus speed + his speed relative to bus = 30 + 5 = 35 km/h north.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">A pendulum makes 24 oscillations in exactly 30 s. The frequency of its oscillation is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1.25 Hz</span></li>
+        <li class=""><span class="lab">B</span><span>4.0 Hz</span></li>
+        <li class=""><span class="lab">C</span><span>0.25 Hz</span></li>
+        <li class="correct"><span class="lab">D</span><span>0.8 Hz</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Frequency = oscillations ÷ time = 24 ÷ 30 s = 0.8 Hz. So the pendulum completes 0.8 oscillations every second on average.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">Frequency and time period are linked by *f* = 1/*T*. A pendulum with *T* = 0.5 s has frequency:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>2 Hz</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>0.5 Hz</span></li>
+        <li class=""><span class="lab">C</span><span>5 Hz</span></li>
+        <li class=""><span class="lab">D</span><span>0.05 Hz</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>f = 1/T = 1/0.5 = 2 Hz. A half-second period means twice-per-second oscillation.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">A car accelerates from rest, covering 2 m in the 1st second, 6 m in the 2nd second, and 10 m in the 3rd second. Average speed over the first three seconds is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>6 m/s</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>18 m/s</span></li>
+        <li class=""><span class="lab">C</span><span>2 m/s</span></li>
+        <li class=""><span class="lab">D</span><span>10 m/s</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Total distance in 3 seconds: 2 + 6 + 10 = 18 m. Total time = 3 s. Average speed = 18 ÷ 3 = 6 m/s. The motion itself is non-uniform (it's accelerating), but the AVERAGE is still well-defined.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">A train of length 100 m, moving at 36 km/h, takes how long to pass a stationary observer completely?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>10 s</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>2.8 s</span></li>
+        <li class=""><span class="lab">C</span><span>36 s</span></li>
+        <li class=""><span class="lab">D</span><span>100 s</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>36 km/h = 10 m/s. To pass an observer completely, the train's whole length must cross — so distance = train length = 100 m. Time = 100 ÷ 10 = 10 s.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">Two pendulums A (period 2 s) and B (period 3 s) start in sync. They will next be **simultaneously back in phase** at a multiple of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5 s</span></li>
+        <li class="correct"><span class="lab">B</span><span>6 s</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>1 s</span></li>
+        <li class=""><span class="lab">D</span><span>12 s</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>They will be back in phase when both have completed an integer number of periods. The smallest common multiple of 2 s and 3 s is 6 s — after 6 s, A has done 3 full swings and B has done 2 full swings, both back at the same position.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">A quartz oscillator vibrates at 32 768 Hz inside most wristwatches. Its period is about:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>32 768 s</span></li>
+        <li class=""><span class="lab">B</span><span>30 ms</span></li>
+        <li class="correct"><span class="lab">C</span><span>30 μs</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>3 s</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>T = 1/f = 1/32768 ≈ 3.05 × 10⁻⁵ s ≈ 30 μs (microseconds). Quartz vibrates incredibly fast, which is why digital watches keep time so accurately.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">A car driver's reaction time is 0.6 s. When she sees a hazard while driving at 20 m/s, the car covers **before** she even touches the brake:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>6 m</span></li>
+        <li class="correct"><span class="lab">B</span><span>12 m</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>33 m</span></li>
+        <li class=""><span class="lab">D</span><span>1.2 m</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>During the 0.6 s reaction time the car travels at 20 m/s × 0.6 s = 12 m — completely before the brake even starts working. That's why following distance matters so much at speed.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">Light from the Sun takes about 8 minutes to reach Earth. If the speed of light is 3 × 10⁵ km/s, the Sun is approximately:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>14 million km away</span></li>
+        <li class=""><span class="lab">B</span><span>144 million km away</span></li>
+        <li class=""><span class="lab">C</span><span>1.44 × 10⁸ km away</span></li>
+        <li class="correct"><span class="lab">D</span><span>Both B and C describe the same distance</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>300 000 km/s × 480 s (8 minutes) = 1.44 × 10⁸ km. That same number written in plain words is 144 million km. So options B and C are two formats of the SAME distance — D acknowledges both are correct.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">A car maintains a steady 72 km/h for 30 minutes, then 90 km/h for 20 minutes. Its average speed for the 50-minute drive is closest to:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>79 km/h</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>81 km/h</span></li>
+        <li class=""><span class="lab">C</span><span>76 km/h</span></li>
+        <li class=""><span class="lab">D</span><span>84 km/h</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Distance: 72 km/h × 0.5 h = 36 km; 90 km/h × (1/3) h = 30 km. Total 66 km in 50 min (5/6 h). Avg = 66 ÷ (5/6) = 66 × 6/5 = 79.2 km/h ≈ 79 km/h.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">The **steepness** of a distance–time graph line corresponds to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the object's mass</span></li>
+        <li class="correct"><span class="lab">B</span><span>the object's speed</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the elapsed time</span></li>
+        <li class=""><span class="lab">D</span><span>the choice of axes only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A steeper d-t line = larger distance covered per unit time = higher speed. Steepness has nothing to do with mass, elapsed time, or axis choice (axes scale, not slope-meaning).</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">On a distance–time graph, two cars start at the same place. Car A's line is a straight slope; car B's line is a curve that **bends upward**. After 10 s:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>car A is always ahead</span></li>
+        <li class=""><span class="lab">B</span><span>car B is always ahead</span></li>
+        <li class="correct"><span class="lab">C</span><span>car B started slower but ends up ahead if the curve bends enough</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>both cars are always at the same point</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Initially the steady straight-line car (A) is ahead because B starts slower. But B's speed is GROWING (the curve bends upward). If the curve bends enough, B's accumulated distance can overtake A's by t = 10 s. So C is correct: B may catch up and even surpass.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">A bus driver covers 90 km between two cities, planning to average 60 km/h. The first 45 km took 1 hour. To still hit the 60 km/h average, the remaining 45 km must be covered in:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>30 minutes</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>45 minutes</span></li>
+        <li class=""><span class="lab">C</span><span>1 hour</span></li>
+        <li class=""><span class="lab">D</span><span>0 minutes — impossible without an instantaneous teleport</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Total trip target: 90 km ÷ 60 km/h = 1.5 hours. First 45 km already took 1 hour. So 30 minutes remain for the second 45 km → 45 km / 0.5 h = 90 km/h needed. So drive for 30 minutes.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">A grandfather clock pendulum's length is doubled by accident. After exactly 1 (correct) hour, the clock's minute hand will be approximately:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>30 minutes behind correct time</span></li>
+        <li class="correct"><span class="lab">B</span><span>17.5 minutes behind correct time</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>on time</span></li>
+        <li class=""><span class="lab">D</span><span>17.5 minutes ahead</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>L doubles → T scales by √2 ≈ 1.414. The clock's seconds are now 1.414× too long, so it counts only 1/1.414 ≈ 0.707 of the true elapsed time. In 1 true hour (60 min) it shows 60 × 0.707 ≈ 42.4 min — about 17.6 min behind. Closest: 17.5 min behind.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">A traveller logs three consecutive 1-hour segments at speeds 20 km/h, 40 km/h and 60 km/h. The average speed for the 3 hours is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>40 km/h</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>30 km/h</span></li>
+        <li class=""><span class="lab">C</span><span>36 km/h</span></li>
+        <li class=""><span class="lab">D</span><span>45 km/h</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Equal TIMES (1 hour each) → arithmetic mean of speeds: (20+40+60)/3 = 120/3 = 40 km/h. Same problem shape as Q16.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">Same traveller, three consecutive segments **each 60 km long** at 20 km/h, 40 km/h and 60 km/h. Average speed for the whole 180 km is closest to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>40 km/h</span></li>
+        <li class="correct"><span class="lab">B</span><span>32.7 km/h</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>30 km/h</span></li>
+        <li class=""><span class="lab">D</span><span>50 km/h</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Equal DISTANCES (60 km each) → harmonic mean. avg = 3 ÷ (1/20 + 1/40 + 1/60) = 3 ÷ (11/120) = 360/11 ≈ 32.7 km/h. Notice it's slower than the time-weighted version because the slow legs hog more time.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">A sand clock measures a fixed time interval because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sand falls at the speed of light</span></li>
+        <li class="correct"><span class="lab">B</span><span>the gravitational pull on the sand is roughly constant</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>sand has no mass</span></li>
+        <li class=""><span class="lab">D</span><span>the glass shape changes over time</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sand falls under gravity. As long as gravity is roughly constant (it is, anywhere on Earth's surface), the sand drops at a roughly constant rate, so it takes the same time to flow through. A sand clock would NOT work in zero gravity (e.g. on the ISS).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">On a distance–time graph the line is a **horizontal** segment at distance 20 m, from t = 5 s to t = 12 s. During this segment the object's speed is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>20 m/s</span></li>
+        <li class="correct"><span class="lab">B</span><span>0 m/s</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>4 m/s</span></li>
+        <li class=""><span class="lab">D</span><span>cannot be determined</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Horizontal line on a distance–time graph = no change in distance over time = zero speed. The object is at rest at the 20 m mark from t = 5 s to t = 12 s.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">A 200 m train moving at 20 m/s completely overtakes a 100 m train moving at 10 m/s in the same direction. How long does the overtake take, measured from when the noses align to when the tails clear?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>10 s</span></li>
+        <li class="correct"><span class="lab">B</span><span>30 s</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>20 s</span></li>
+        <li class=""><span class="lab">D</span><span>15 s</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Relative speed of the overtaking train with respect to the slower train = 20 − 10 = 10 m/s. Total distance to clear = 200 + 100 = 300 m (one train's nose must reach the tail of the other, then its own tail must clear). Time = 300 ÷ 10 = 30 s.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">Two cars cover the same distance. Car A averages 60 km/h and car B averages 40 km/h. The ratio *time*_A : *time*_B is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>3 : 2</span></li>
+        <li class="correct"><span class="lab">B</span><span>2 : 3</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>1 : 1</span></li>
+        <li class=""><span class="lab">D</span><span>4 : 3</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Same distance, so t = d/v → t ∝ 1/v. t_A : t_B = (1/60) : (1/40) = 40 : 60 = 2 : 3. Car A is faster, so its time is shorter — the smaller number in the ratio.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">A wheel rolls without slipping at 5 m/s. Its diameter is 50 cm. The number of revolutions per second is closest to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1.6</span></li>
+        <li class="correct"><span class="lab">B</span><span>3.2</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>10</span></li>
+        <li class=""><span class="lab">D</span><span>0.5</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Diameter 0.5 m → circumference = π × 0.5 ≈ 1.57 m per revolution. At 5 m/s, revolutions per second = 5 ÷ 1.57 ≈ 3.18 ≈ 3.2.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">Which of these statements is **false**?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>period × frequency = 1 for any oscillator</span></li>
+        <li class=""><span class="lab">B</span><span>a longer pendulum has a longer period</span></li>
+        <li class=""><span class="lab">C</span><span>the speed of light is much greater than the speed of sound</span></li>
+        <li class="correct"><span class="lab">D</span><span>two pendulums with the same length but different bob masses have different periods</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Statement D is FALSE — Galileo's discovery was that pendulum period depends ONLY on length (and g), NOT on bob mass. Two pendulums of the same length swing in identical times regardless of how heavy the bobs are. The other three statements are all true.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">The slope of a **horizontal** segment on a distance–time graph corresponds to a speed of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>maximum</span></li>
+        <li class="correct"><span class="lab">B</span><span>zero</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>negative</span></li>
+        <li class=""><span class="lab">D</span><span>undefined</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A horizontal segment means distance is not changing as time passes → the object is stationary → speed = 0. The slope of a horizontal line is exactly zero.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">A drone flies 600 m east in 40 s, then 600 m west in 20 s, ending where it started. The drone's average **speed** (total path ÷ total time) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0 m/s</span></li>
+        <li class="correct"><span class="lab">B</span><span>20 m/s</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>30 m/s</span></li>
+        <li class=""><span class="lab">D</span><span>10 m/s</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Speed (path-length basis) = total path ÷ total time = (600+600) m ÷ (40+20) s = 1200 ÷ 60 = 20 m/s. Note that DISPLACEMENT-based average velocity would be 0 (drone returns to start), but the question asks for path-based speed.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">A person crosses a 2 km bridge walking at 4 km/h. A second person cycles the same bridge at 12 km/h, but starts 15 minutes later. The cyclist finishes ahead of the walker by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0 min — they tie</span></li>
+        <li class="correct"><span class="lab">B</span><span>5 min</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>10 min</span></li>
+        <li class=""><span class="lab">D</span><span>20 min</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Walker: 2 km / 4 km/h = 0.5 h = 30 min, finishes at t = 30 min. Cyclist: 2 km / 12 km/h = 10 min, but starts at t = 15 min, so finishes at t = 25 min. Cyclist beats walker by 30 − 25 = 5 min.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">A pendulum-clock is taken from sea level (g = 9.8 m/s²) to a mountaintop (g = 9.7 m/s²). The clock will:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>run faster than it did at sea level</span></li>
+        <li class="correct"><span class="lab">B</span><span>run slower than it did at sea level</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>keep the same time exactly</span></li>
+        <li class=""><span class="lab">D</span><span>stop completely</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>T ∝ 1/√g. Smaller g (mountaintop) → larger T → seconds are too long → clock runs SLOWER than at sea level. This is why precision pendulum clocks must be re-calibrated when moved.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">A car travels 30 km, then idles in traffic for 30 minutes, then travels another 30 km. The first 30 km took 1 hour; the second 30 km took 30 minutes. The average speed for the **entire trip (including the idle)** is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>60 km/h</span></li>
+        <li class=""><span class="lab">B</span><span>40 km/h</span></li>
+        <li class="correct"><span class="lab">C</span><span>30 km/h</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>45 km/h</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Total distance = 30 + 30 = 60 km. Total time = 1 h (first leg) + 0.5 h (idle) + 0.5 h (second leg) = 2 h. Avg = 60 ÷ 2 = 30 km/h. The idle time counts even though no distance was covered.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">On a graph of **total distance travelled** (cumulative) vs time, the slope can never be:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>zero</span></li>
+        <li class="correct"><span class="lab">B</span><span>negative</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>very large</span></li>
+        <li class=""><span class="lab">D</span><span>the same at two different points</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cumulative distance only increases (or stays the same) — you can't "untravel" distance you've already covered. So the slope cannot be negative. All other options (zero slope = at rest, very large slope = high speed, same slope at two points = same speed twice) are possible.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">A wave on a string oscillates 20 times every 5 s. Its frequency is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>4 Hz</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>0.25 Hz</span></li>
+        <li class=""><span class="lab">C</span><span>100 Hz</span></li>
+        <li class=""><span class="lab">D</span><span>0.4 Hz</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Frequency = oscillations ÷ time = 20 ÷ 5 = 4 Hz. Higher frequency = more vibrations per second.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">Spot the **incorrect** unit conversion among these four:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>36 km/h = 10 m/s</span></li>
+        <li class=""><span class="lab">B</span><span>54 km/h = 15 m/s</span></li>
+        <li class=""><span class="lab">C</span><span>72 km/h = 20 m/s</span></li>
+        <li class="correct"><span class="lab">D</span><span>90 km/h = 30 m/s</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Check each conversion using 1 km/h = 5/18 m/s. A: 36 × 5/18 = 10 ✓. B: 54 × 5/18 = 15 ✓. C: 72 × 5/18 = 20 ✓. D: 90 × 5/18 = 25, but the option says 30 — that's wrong by 5 m/s. So D is the incorrect conversion.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">A 60 m long train crosses a 240 m long bridge completely in 15 s. Its speed is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4 m/s</span></li>
+        <li class="correct"><span class="lab">B</span><span>20 m/s</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>16 m/s</span></li>
+        <li class=""><span class="lab">D</span><span>12 m/s</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>To cross a bridge, the train must travel one bridge-length PLUS one train-length: 240 + 60 = 300 m. Speed = 300 m ÷ 15 s = 20 m/s. Like the platform problem in Q4. --- *End of solutions. Maximum marks: 240.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

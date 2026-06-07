@@ -215,6 +215,7 @@ struct OlympiadHubView: View {
                 Text(paper.chapterTitle)
                     .font(.title3.weight(.semibold))
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
+                tierBadge(for: paper.tier)
                 Spacer()
             }
             HStack(spacing: 14) {
@@ -301,6 +302,25 @@ struct OlympiadHubView: View {
             RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusCard)
                 .strokeBorder(DesignTokens.BrandColor.primaryAction.opacity(0.18), lineWidth: 1)
         )
+    }
+
+    /// Tier badge shown next to the chapter title. Paper 1 (foundation)
+    /// is the implicit default — show no badge to keep the card chrome
+    /// clean. Paper 2 (advanced) gets a coral pill so the kid sees at
+    /// a glance which difficulty they're picking.
+    @ViewBuilder
+    private func tierBadge(for tier: PaperTier) -> some View {
+        switch tier {
+        case .foundation:
+            EmptyView()
+        case .advanced:
+            Text("Advanced")
+                .font(.caption.weight(.semibold))
+                .foregroundColor(.white)
+                .padding(.horizontal, 7).padding(.vertical, 2)
+                .background(Capsule().fill(DesignTokens.BrandColor.mnemonicAccent))
+                .accessibilityLabel("Advanced tier paper")
+        }
     }
 
     /// Per-paper attempt history badge row. Shows "Best: 86% · Last:

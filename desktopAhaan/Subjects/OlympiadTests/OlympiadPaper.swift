@@ -21,6 +21,18 @@ import Foundation
 /// ("A"/"B"/"C"/"D"). The 4 options are ALWAYS exactly 4 — the
 /// authoring/validation pipeline (`TestPapers/validate_paper.py`)
 /// rejects any paper that breaks the contract.
+/// Difficulty tier of an Olympiad paper. The first paper for each
+/// chapter is `.foundation` — recall + understanding (Bloom L1-L2,
+/// recognition-style). The optional `.advanced` paper is Paper 2 —
+/// application + analysis + evaluation (Bloom L3-L5), multi-step
+/// reasoning, sharper distractors. Both tiers carry the same +4/-1/0
+/// marking scheme + 60-MCQ / 90-min envelope so the marking surface,
+/// timer, autosave, and Score Report don't need per-tier branches.
+enum PaperTier: String, Codable, Hashable {
+    case foundation
+    case advanced
+}
+
 struct OlympiadQuestion: Identifiable, Hashable {
     let id: String              // e.g. "ch13_q01"
     let number: Int             // 1-based question number as printed
@@ -93,6 +105,12 @@ struct OlympiadPaper: Identifiable, Hashable {
     /// arg) and the 2 sites that do pass it (Science Ch13 + Maths
     /// Ch15) follow the natural declaration order.
     var solvedGuideHTML: String? = nil   // "Science_Ch13_MotionAndTime_SolvedGuide.html"
+
+    /// Difficulty tier. Foundation (Paper 1) tests recognition + recall;
+    /// Advanced (Paper 2) tests application + analysis + multi-step
+    /// reasoning. Defaults to `.foundation` so the 69 existing call
+    /// sites stay unchanged. New Paper 2 entries override to `.advanced`.
+    var tier: PaperTier = .foundation
 
     /// Total question count. Today always 60; reading from a constant
     /// rather than `questions.count` so the value is available BEFORE

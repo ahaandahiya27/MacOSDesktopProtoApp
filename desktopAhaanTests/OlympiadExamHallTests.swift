@@ -223,15 +223,46 @@ final class OlympiadExamHallTests: XCTestCase {
         }
     }
 
-    func testRegistryHasExactly69PapersToday() {
-        // Soft canary on the current 19+15+15+20 inventory. If a paper
-        // is added or removed, this fails and the author is forced to
-        // bump the expected count in lock-step — which is the same
-        // pattern used by EntitlementsSnapshotTest and the pack-id
-        // collision ratchet.
+    func testRegistryHasExpectedPaperCount() {
+        // Soft canary on the current inventory. Bumps when a Paper 2
+        // (Advanced) lands for a new chapter — author has to update
+        // both the count here and the per-tier breakdown below.
+        //
+        // 2026-06-07: 69 foundation (19 Sci + 15 Maths + 15 Sanskrit
+        // + 20 SocSci) + 1 advanced (Science Ch13 anchor) = 70.
         let papers = OlympiadPaperRegistry.allPapers
-        XCTAssertEqual(papers.count, 69,
-                       "Expected 69 papers (19 Science + 15 Maths + 15 Sanskrit + 20 Social Science). Got \(papers.count).")
+        XCTAssertEqual(papers.count, 70,
+                       "Expected 70 papers total. Got \(papers.count). Update this assertion when Paper 2 lands for a new chapter.")
+    }
+
+    func testFoundationTierIsTheDefault() {
+        // Backward-compat: every existing registry entry that doesn't
+        // explicitly opt in to .advanced should default to .foundation.
+        // Counts 69 foundation today; bumps as more chapters get a
+        // Paper 1-only restating that the default applies.
+        let foundation = OlympiadPaperRegistry.allPapers.filter { $0.tier == .foundation }
+        XCTAssertEqual(foundation.count, 69,
+                       "Expected 69 foundation-tier papers, got \(foundation.count)")
+    }
+
+    func testAdvancedTierIsExplicitlyTagged() {
+        // Every chapter with a Paper 2 must carry tier=.advanced
+        // (default is .foundation; adding a Paper 2 row requires the
+        // explicit opt-in). Today: only Science Ch13 has a Paper 2.
+        let advanced = OlympiadPaperRegistry.allPapers.filter { $0.tier == .advanced }
+        XCTAssertEqual(advanced.count, 1,
+                       "Expected 1 advanced-tier paper (Science Ch13 anchor), got \(advanced.count)")
+        XCTAssertEqual(advanced.first?.id, "olympiad_science_ch13_advanced")
+    }
+
+    func testAdvancedPaperHasUniqueIdPerChapter() {
+        // A chapter can have at most one foundation + one advanced row.
+        // Detecting a duplicate would mean the registry has shipped two
+        // identical Paper 2s for the same chapter — attempts and
+        // in-progress records would silently overwrite each other.
+        let ids = OlympiadPaperRegistry.allPapers.map { $0.id }
+        XCTAssertEqual(Set(ids).count, ids.count,
+                       "Duplicate paper ids in registry: \(ids)")
     }
 
     func testMarkingSchemeIsUniformAcrossAllPapers() {

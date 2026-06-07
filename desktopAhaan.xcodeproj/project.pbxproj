@@ -1983,6 +1983,9 @@
 		F491A0DE2781F423F11C53A4 /* SocialScience_Ssch18_TheStateTheGovernmentAndYou_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 47B1854F4BCA616E57CB85E4 /* SocialScience_Ssch18_TheStateTheGovernmentAndYou_SolvedGuide.html */; };
 		3F0AB847F4F9847F38DBFECA /* SocialScience_Ssch19_Infrastructure_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = D15006BCB9CA0F380C7C1D28 /* SocialScience_Ssch19_Infrastructure_SolvedGuide.html */; };
 		9645A2DCFEC6E3F143BF1E38 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 08A558C7C948F637461107D4 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance_SolvedGuide.html */; };
+		40F87C6CE1DE673D4DC36414 /* Science_Ch13_MotionAndTime_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = FBBAC1F69033C1C928CDAD54 /* Science_Ch13_MotionAndTime_Advanced_QuestionPaper.md */; };
+		87F51130EFC9B8D6EB8A4DE2 /* Science_Ch13_MotionAndTime_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = C8B376E1F0E2870C4359D677 /* Science_Ch13_MotionAndTime_Advanced_Solutions.md */; };
+		4EFC4DAB3501702B5CC5E260 /* Science_Ch13_MotionAndTime_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = B7669A73FF1010FB7467D960 /* Science_Ch13_MotionAndTime_Advanced_SolvedGuide.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -3983,6 +3986,9 @@
 		47B1854F4BCA616E57CB85E4 /* SocialScience_Ssch18_TheStateTheGovernmentAndYou_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "SocialScience_Ssch18_TheStateTheGovernmentAndYou_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch18_TheStateTheGovernmentAndYou_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
 		D15006BCB9CA0F380C7C1D28 /* SocialScience_Ssch19_Infrastructure_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "SocialScience_Ssch19_Infrastructure_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch19_Infrastructure_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
 		08A558C7C948F637461107D4 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "SocialScience_Ssch20_BanksAndTheMagicOfFinance_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch20_BanksAndTheMagicOfFinance_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		FBBAC1F69033C1C928CDAD54 /* Science_Ch13_MotionAndTime_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = "Science_Ch13_MotionAndTime_Advanced_QuestionPaper.md"; path = "desktopAhaan/Resources/TestPapers/Science_Ch13_MotionAndTime_Advanced_QuestionPaper.md"; sourceTree = SOURCE_ROOT; };
+		C8B376E1F0E2870C4359D677 /* Science_Ch13_MotionAndTime_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = "Science_Ch13_MotionAndTime_Advanced_Solutions.md"; path = "desktopAhaan/Resources/TestPapers/Science_Ch13_MotionAndTime_Advanced_Solutions.md"; sourceTree = SOURCE_ROOT; };
+		B7669A73FF1010FB7467D960 /* Science_Ch13_MotionAndTime_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Science_Ch13_MotionAndTime_Advanced_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Science_Ch13_MotionAndTime_Advanced_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -8439,6 +8445,9 @@
 				F491A0DE2781F423F11C53A4 /* SocialScience_Ssch18_TheStateTheGovernmentAndYou_SolvedGuide.html in Resources */,
 				3F0AB847F4F9847F38DBFECA /* SocialScience_Ssch19_Infrastructure_SolvedGuide.html in Resources */,
 				9645A2DCFEC6E3F143BF1E38 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance_SolvedGuide.html in Resources */,
+				40F87C6CE1DE673D4DC36414 /* Science_Ch13_MotionAndTime_Advanced_QuestionPaper.md in Resources */,
+				87F51130EFC9B8D6EB8A4DE2 /* Science_Ch13_MotionAndTime_Advanced_Solutions.md in Resources */,
+				4EFC4DAB3501702B5CC5E260 /* Science_Ch13_MotionAndTime_Advanced_SolvedGuide.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
