@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maths Ch07 ATaleOfThreeIntersectingLines</title>
+<style>
+@page { size: A4; margin: 18mm 16mm; }
+* { box-sizing: border-box; }
+body { font-family: Georgia, 'Times New Roman', serif; font-size: 12pt;
+       line-height: 1.45; color: #111; max-width: 820px; margin: 0 auto;
+       padding: 16px; }
+h1 { font-size: 19pt; margin: 0 0 2px; }
+h2 { font-size: 15pt; margin: 0 0 10px; color: #333; }
+h3 { font-size: 13pt; margin: 18px 0 6px; }
+table { border-collapse: collapse; margin: 8px 0 14px; }
+th, td { border: 1px solid #999; padding: 3px 9px; text-align: left;
+         font-size: 11pt; }
+.markbox { border: 2px solid #222; border-radius: 6px; padding: 8px 12px;
+           margin: 10px 0 16px; background: #f6f6f6; font-size: 11.5pt; }
+.q { margin: 9px 0 2px; }
+.opts { margin: 0 0 6px 22px; }
+.opts span { display: inline-block; min-width: 46%; vertical-align: top;
+             margin: 1px 0; }
+.sol { margin: 5px 0; }
+.pagebreak { page-break-before: always; }
+.note { color: #555; font-style: italic; font-size: 10.5pt; }
+hr { border: none; border-top: 1px solid #ccc; margin: 14px 0; }
+code { background: #eee; padding: 0 2px; }
+</style>
+</head>
+<body>
+<h1>Olympiad Test Paper — Mathematics (Class 7)</h1>
+<h2>Chapter 7: A Tale of Three Intersecting Lines</h2>
+<table>
+<tr><th></th><th></th></tr>
+<tr><td><strong>Subject</strong></td><td>Mathematics (NCERT Class 7)</td></tr>
+<tr><td><strong>Chapter</strong></td><td>7 — A Tale of Three Intersecting Lines (Triangles)</td></tr>
+<tr><td><strong>Total Questions</strong></td><td>60 (Multiple Choice, single correct)</td></tr>
+<tr><td><strong>Maximum Marks</strong></td><td>240</td></tr>
+<tr><td><strong>Suggested Time</strong></td><td>90 minutes</td></tr>
+</table>
+<p><strong>Marking scheme:</strong> <strong>+4</strong> for each correct answer · <strong>−1</strong> for each wrong answer · <strong>0</strong> if unattempted.</p>
+<p><strong>Instructions:</strong> Each question has four options (A), (B), (C), (D); exactly one is correct. Use the angle-sum (180°), the exterior-angle theorem, and the triangle inequality as your main tools, and sketch a quick figure where one is described in words. Watch the classic traps: a triangle is &quot;acute&quot; only when ALL three angles are under 90°, two sides must SUM to MORE than the third (equal is not enough), and an altitude is a perpendicular, not a side. Do not write on this paper — mark answers on your answer sheet.</p>
+<hr>
+<div class="q"><strong>1.</strong> Which of the following correctly names the parts of triangle ∆ABC?</div>
+<div class="opts"><span>(A) Vertices A, B, C; sides AB, BC, CA; angles ∠A, ∠B, ∠C</span><span>(B) Vertices AB, BC, CA; sides A, B, C; angles ∠A, ∠B, ∠C</span><span>(C) Vertices A, B, C; sides ∠A, ∠B, ∠C; angles AB, BC, CA</span><span>(D) Sides A, B, C; vertices AB, BC, CA; angles ∆ABC</span></div>
+<div class="q"><strong>2.</strong> Three points P, Q, R are marked so that PQ = 4 cm, QR = 3 cm and PR = 7 cm. What can you say about them?</div>
+<div class="opts"><span>(A) They form a scalene triangle</span><span>(B) They are collinear, so no triangle is formed</span><span>(C) They form an isosceles triangle</span><span>(D) They form an obtuse triangle</span></div>
+<div class="q"><strong>3.</strong> Two angles of a triangle are 48° and 67°. The third angle is:</div>
+<div class="opts"><span>(A) 75°</span><span>(B) 115°</span><span>(C) 65°</span><span>(D) 55°</span></div>
+<div class="q"><strong>4.</strong> Can a triangle have sides 5 cm, 8 cm and 13 cm?</div>
+<div class="opts"><span>(A) Yes, because all three sides are different</span><span>(B) Yes, because 8 + 13 &gt; 5</span><span>(C) No, because the sides are too long</span><span>(D) No, because 5 + 8 = 13 is not greater than 13</span></div>
+<div class="q"><strong>5.</strong> Two sides of a triangle measure 7 cm and 10 cm. The third side x must satisfy:</div>
+<div class="opts"><span>(A) 7 &lt; x &lt; 10</span><span>(B) 3 &lt; x &lt; 17</span><span>(C) x &lt; 17</span><span>(D) 3 ≤ x ≤ 17</span></div>
+<div class="q"><strong>6.</strong> A triangle has angles 40°, 60° and 80°. Classified by its angles it is:</div>
+<div class="opts"><span>(A) Acute</span><span>(B) Right</span><span>(C) Obtuse</span><span>(D) Equiangular and right</span></div>
+<div class="q"><strong>7.</strong> An exterior angle of a triangle measures 120°. One of the two interior angles not adjacent to it is 70°. The other one is:</div>
+<div class="opts"><span>(A) 60°</span><span>(B) 110°</span><span>(C) 70°</span><span>(D) 50°</span></div>
+<div class="q"><strong>8.</strong> In ∆ABC, ∠A = 90° and ∠B = 90° is claimed. Such a triangle:</div>
+<div class="opts"><span>(A) Is a right isosceles triangle</span><span>(B) Is obtuse</span><span>(C) Has its third angle equal to 0°, so it cannot exist</span><span>(D) Has third angle 90° too</span></div>
+<div class="q"><strong>9.</strong> A triangle has angles 90°, 45° and 45°. By sides AND by angles it is:</div>
+<div class="opts"><span>(A) Right-angled and isosceles</span><span>(B) Acute and isosceles</span><span>(C) Right-angled and scalene</span><span>(D) Obtuse and isosceles</span></div>
+<div class="q"><strong>10.</strong> Which set of three lengths (in cm) CANNOT form a triangle?</div>
+<div class="opts"><span>(A) 6, 6, 6</span><span>(B) 4, 9, 6</span><span>(C) 5, 12, 13</span><span>(D) 2, 3, 6</span></div>
+<div class="q"><strong>11.</strong> In an isosceles triangle the vertex angle (between the two equal sides) is 40°. Each base angle is:</div>
+<div class="opts"><span>(A) 40°</span><span>(B) 70°</span><span>(C) 80°</span><span>(D) 100°</span></div>
+<div class="q"><strong>12.</strong> The angles of a triangle are in the ratio 2 : 3 : 4. The largest angle is:</div>
+<div class="opts"><span>(A) 40°</span><span>(B) 60°</span><span>(C) 80°</span><span>(D) 90°</span></div>
+<div class="q"><strong>13.</strong> An altitude of a triangle is best described as:</div>
+<div class="opts"><span>(A) Any one of the three sides</span><span>(B) A line joining a vertex to the midpoint of the opposite side</span><span>(C) The longest side of the triangle</span><span>(D) The perpendicular segment from a vertex to the opposite side</span></div>
+<div class="q"><strong>14.</strong> In a right-angled triangle, the two altitudes drawn from the vertices of the acute angles coincide with:</div>
+<div class="opts"><span>(A) The two legs (the sides meeting at the right angle)</span><span>(B) The hypotenuse and one leg</span><span>(C) The three medians</span><span>(D) Lines that always fall outside the triangle</span></div>
+<div class="q"><strong>15.</strong> Two sides of a triangle are 8 cm and 5 cm. The third side must lie strictly between:</div>
+<div class="opts"><span>(A) 5 cm and 8 cm</span><span>(B) 8 cm and 13 cm</span><span>(C) 3 cm and 13 cm</span><span>(D) 0 cm and 13 cm</span></div>
+<div class="q"><strong>16.</strong> In ∆ABC, ∠A = 2∠B and ∠C = 3∠B. The measure of ∠B is:</div>
+<div class="opts"><span>(A) 60°</span><span>(B) 30°</span><span>(C) 45°</span><span>(D) 36°</span></div>
+<div class="q"><strong>17.</strong> A triangle has exactly two equal angles, each 65°. Classified by its sides it is:</div>
+<div class="opts"><span>(A) Isosceles</span><span>(B) Equilateral</span><span>(C) Scalene</span><span>(D) Cannot be decided</span></div>
+<div class="q"><strong>18.</strong> The exterior angle of a triangle at vertex C equals 130°, and the interior angle at A is 55°. The interior angle at B is:</div>
+<div class="opts"><span>(A) 65°</span><span>(B) 50°</span><span>(C) 60°</span><span>(D) 75°</span></div>
+<div class="q"><strong>19.</strong> Which statement about the angles of a triangle is always TRUE?</div>
+<div class="opts"><span>(A) A triangle can have two obtuse angles</span><span>(B) A triangle has at least two acute angles</span><span>(C) A triangle can have two right angles</span><span>(D) Every triangle has exactly one acute angle</span></div>
+<div class="q"><strong>20.</strong> An equilateral triangle has perimeter 27 cm. Each of its angles measures:</div>
+<div class="opts"><span>(A) 90°</span><span>(B) 45°</span><span>(C) 60°</span><span>(D) 27°</span></div>
+<div class="q"><strong>21.</strong> The three sides of a triangle are 3x, 4x and 5x and its perimeter is 60 cm. The longest side is:</div>
+<div class="opts"><span>(A) 15 cm</span><span>(B) 20 cm</span><span>(C) 12 cm</span><span>(D) 25 cm</span></div>
+<div class="q"><strong>22.</strong> In ∆PQR, the exterior angle at R is 105° and ∠P = 60°. Then ∠Q equals:</div>
+<div class="opts"><span>(A) 45°</span><span>(B) 55°</span><span>(C) 75°</span><span>(D) 105°</span></div>
+<div class="q"><strong>23.</strong> How many of these can be the angles of a single triangle: (40°, 60°, 80°), (90°, 90°, 0°), (30°, 60°, 90°), (50°, 50°, 80°)?</div>
+<div class="opts"><span>(A) 1</span><span>(B) 2</span><span>(C) 3</span><span>(D) 4</span></div>
+<div class="q"><strong>24.</strong> A triangle has one angle of 110°. The other two angles:</div>
+<div class="opts"><span>(A) Are both obtuse</span><span>(B) Must be acute and add up to 70°</span><span>(C) Add up to 110°</span><span>(D) Can include a right angle</span></div>
+<div class="q"><strong>25.</strong> The smallest whole-number length (in cm) that can be the third side of a triangle whose other two sides are 6 cm and 9 cm is:</div>
+<div class="opts"><span>(A) 3 cm</span><span>(B) 2 cm</span><span>(C) 15 cm</span><span>(D) 4 cm</span></div>
+<div class="q"><strong>26.</strong> In a triangle the second angle is twice the first and the third is 20° more than the first. The first angle is:</div>
+<div class="opts"><span>(A) 40°</span><span>(B) 30°</span><span>(C) 50°</span><span>(D) 35°</span></div>
+<div class="q"><strong>27.</strong> A triangle has sides 7 cm, 7 cm and 7 cm. Choose the FULLY correct classification:</div>
+<div class="opts"><span>(A) Equilateral and right</span><span>(B) Equilateral and acute</span><span>(C) Isosceles and obtuse</span><span>(D) Scalene and acute</span></div>
+<div class="q"><strong>28.</strong> An exterior angle of a triangle is always:</div>
+<div class="opts"><span>(A) Equal to the adjacent interior angle</span><span>(B) Less than each remote interior angle</span><span>(C) Equal to the sum of all three interior angles</span><span>(D) Equal to the sum of the two remote interior angles</span></div>
+<div class="q"><strong>29.</strong> The sum of the three exterior angles of any triangle (one at each vertex) is:</div>
+<div class="opts"><span>(A) 180°</span><span>(B) 270°</span><span>(C) 360°</span><span>(D) Depends on the triangle</span></div>
+<div class="q"><strong>30.</strong> In ∆ABC, AB = AC and ∠B = 50°. The vertex angle ∠A is:</div>
+<div class="opts"><span>(A) 80°</span><span>(B) 50°</span><span>(C) 100°</span><span>(D) 65°</span></div>
+<div class="q"><strong>31.</strong> Which of these CAN form a triangle?</div>
+<div class="opts"><span>(A) 1 cm, 2 cm, 3 cm</span><span>(B) 4 cm, 5 cm, 8 cm</span><span>(C) 2 cm, 4 cm, 7 cm</span><span>(D) 3 cm, 3 cm, 6 cm</span></div>
+<div class="q"><strong>32.</strong> A right-angled triangle cannot also be:</div>
+<div class="opts"><span>(A) Isosceles</span><span>(B) Scalene</span><span>(C) A triangle with a 30° angle</span><span>(D) Obtuse</span></div>
+<div class="q"><strong>33.</strong> Two angles of a triangle add up to 122°. The third angle is:</div>
+<div class="opts"><span>(A) 48°</span><span>(B) 68°</span><span>(C) 58°</span><span>(D) 122°</span></div>
+<div class="q"><strong>34.</strong> In ∆ABC the angles satisfy ∠A : ∠B : ∠C = 1 : 1 : 4. The triangle is:</div>
+<div class="opts"><span>(A) Obtuse and isosceles</span><span>(B) Right and isosceles</span><span>(C) Acute and equilateral</span><span>(D) Acute and scalene</span></div>
+<div class="q"><strong>35.</strong> To construct ∆ABC with AB = 4 cm, AC = 5 cm and BC = 6 cm using a compass, you should:</div>
+<div class="opts"><span>(A) Draw AB = 4 cm, then arc 6 cm from A and arc 5 cm from A</span><span>(B) Draw AB = 4 cm, then arc 5 cm from A and arc 6 cm from B; their crossing is C</span><span>(C) Draw three separate segments and hope they meet</span><span>(D) Draw AB = 4 cm and a perpendicular of 5 cm at A</span></div>
+<div class="q"><strong>36.</strong> A student claims a triangle with sides 3 cm, 4 cm and 9 cm can be built. The truth is:</div>
+<div class="opts"><span>(A) Yes — the sides are all different</span><span>(B) Yes — 4 + 9 &gt; 3</span><span>(C) No — 3 + 4 = 7 is less than 9, so the short sides cannot meet</span><span>(D) No — only equal sides can form a triangle</span></div>
+<div class="q"><strong>37.</strong> In an isosceles triangle one base angle is 35°. The vertex angle is:</div>
+<div class="opts"><span>(A) 35°</span><span>(B) 70°</span><span>(C) 145°</span><span>(D) 110°</span></div>
+<div class="q"><strong>38.</strong> The exterior angle at one vertex of a triangle is 95°, and the two remote interior angles are equal. Each of them is:</div>
+<div class="opts"><span>(A) 47.5°</span><span>(B) 95°</span><span>(C) 42.5°</span><span>(D) 85°</span></div>
+<div class="q"><strong>39.</strong> A triangle has angles x, x + 10° and x + 20°. The largest angle is:</div>
+<div class="opts"><span>(A) 50°</span><span>(B) 60°</span><span>(C) 70°</span><span>(D) 80°</span></div>
+<div class="q"><strong>40.</strong> Which is impossible for the side lengths (in cm) of a triangle?</div>
+<div class="opts"><span>(A) 5, 5, 9</span><span>(B) 10, 1, 8</span><span>(C) 7, 8, 9</span><span>(D) 6, 6, 6</span></div>
+<div class="q"><strong>41.</strong> In ∆ABC, side BC is extended to D. If ∠ACD (the exterior angle) = 118° and ∠ABC = 73°, then ∠BAC is:</div>
+<div class="opts"><span>(A) 45°</span><span>(B) 35°</span><span>(C) 55°</span><span>(D) 62°</span></div>
+<div class="q"><strong>42.</strong> A triangle has two sides of length 9 cm and the third side is also a whole number of cm. The largest the third side can be is:</div>
+<div class="opts"><span>(A) 9 cm</span><span>(B) 18 cm</span><span>(C) 16 cm</span><span>(D) 17 cm</span></div>
+<div class="q"><strong>43.</strong> If each base angle of an isosceles triangle is twice the vertex angle, the vertex angle is:</div>
+<div class="opts"><span>(A) 30°</span><span>(B) 45°</span><span>(C) 36°</span><span>(D) 72°</span></div>
+<div class="q"><strong>44.</strong> A triangle is described as having all sides different and all angles less than 90°. It is:</div>
+<div class="opts"><span>(A) Isosceles and right</span><span>(B) Scalene and acute</span><span>(C) Scalene and obtuse</span><span>(D) Equilateral and acute</span></div>
+<div class="q"><strong>45.</strong> The altitude from the right-angle vertex of a right triangle:</div>
+<div class="opts"><span>(A) Is one of the legs</span><span>(B) Coincides with the hypotenuse</span><span>(C) Falls outside the triangle</span><span>(D) Falls inside, perpendicular to the hypotenuse</span></div>
+<div class="q"><strong>46.</strong> Two sides of a triangle are 11 cm and 4 cm. The number of whole-number values the third side can take is:</div>
+<div class="opts"><span>(A) 7</span><span>(B) 5</span><span>(C) 8</span><span>(D) 15</span></div>
+<div class="q"><strong>47.</strong> In ∆ABC, ∠A = 3x, ∠B = 2x and ∠C = x. The triangle is:</div>
+<div class="opts"><span>(A) Acute</span><span>(B) Right-angled</span><span>(C) Obtuse</span><span>(D) Equilateral</span></div>
+<div class="q"><strong>48.</strong> An exterior angle of a triangle measures 70°. Then the interior angle adjacent to it is:</div>
+<div class="opts"><span>(A) 70°</span><span>(B) 20°</span><span>(C) 110°</span><span>(D) 290°</span></div>
+<div class="q"><strong>49.</strong> A triangle has an angle of 100° and an angle of 50°. Classified by sides, it is:</div>
+<div class="opts"><span>(A) Equilateral</span><span>(B) Isosceles</span><span>(C) Right isosceles</span><span>(D) Scalene</span></div>
+<div class="q"><strong>50.</strong> A triangle has angles 35°, 35° and 110°. Classified by its sides AND by its angles it is:</div>
+<div class="opts"><span>(A) Scalene and obtuse</span><span>(B) Isosceles and obtuse</span><span>(C) Isosceles and acute</span><span>(D) Equilateral and obtuse</span></div>
+<div class="q"><strong>51.</strong> In an obtuse triangle, the foot of an altitude from a vertex of an acute angle:</div>
+<div class="opts"><span>(A) Can lie outside the triangle, on the extension of the base</span><span>(B) Always lies inside the triangle</span><span>(C) Is always the midpoint of the base</span><span>(D) Coincides with the obtuse vertex</span></div>
+<div class="q"><strong>52.</strong> In ∆ABC, ∠A = 70° and the exterior angle at B equals 130°. Then ∠C is:</div>
+<div class="opts"><span>(A) 50°</span><span>(B) 70°</span><span>(C) 60°</span><span>(D) 40°</span></div>
+<div class="q"><strong>53.</strong> A triangle has sides 5 cm and 5 cm with an included angle of 60°. The triangle is:</div>
+<div class="opts"><span>(A) Scalene</span><span>(B) Right-angled</span><span>(C) Obtuse isosceles</span><span>(D) Equilateral</span></div>
+<div class="q"><strong>54.</strong> For three lengths to form a triangle, it is ENOUGH to check that:</div>
+<div class="opts"><span>(A) The sum of the two largest exceeds the smallest</span><span>(B) The sum of the two smallest exceeds the largest</span><span>(C) All three are different</span><span>(D) Each is less than the sum of the other two squared</span></div>
+<div class="q"><strong>55.</strong> In ∆PQR, the exterior angle at R is 150° and ∠P = 2∠Q. Then ∠Q equals:</div>
+<div class="opts"><span>(A) 30°</span><span>(B) 75°</span><span>(C) 50°</span><span>(D) 60°</span></div>
+<div class="q"><strong>56.</strong> A triangle with angles 89°, 89° and 2° is:</div>
+<div class="opts"><span>(A) Acute</span><span>(B) Obtuse</span><span>(C) Right-angled</span><span>(D) Not a valid triangle</span></div>
+<div class="q"><strong>57.</strong> The sides of a triangle are consecutive whole numbers and the perimeter is 12 cm. The shortest side is:</div>
+<div class="opts"><span>(A) 2 cm</span><span>(B) 5 cm</span><span>(C) 4 cm</span><span>(D) 3 cm</span></div>
+<div class="q"><strong>58.</strong> In ∆ABC, the bisector from A is drawn, and ∠B = 50°, ∠C = 70°. The angle ∠BAC is:</div>
+<div class="opts"><span>(A) 50°</span><span>(B) 60°</span><span>(C) 70°</span><span>(D) 120°</span></div>
+<div class="q"><strong>59.</strong> Two exterior angles of a triangle are 100° and 140°. The third interior angle (at the remaining vertex) is:</div>
+<div class="opts"><span>(A) 60°</span><span>(B) 40°</span><span>(C) 80°</span><span>(D) 120°</span></div>
+<div class="q"><strong>60.</strong> A triangle has two sides of length 6 cm and 8 cm, and the third side c is a whole number of cm. How many different whole-number values can c take?</div>
+<div class="opts"><span>(A) 9</span><span>(B) 13</span><span>(C) 11</span><span>(D) 14</span></div>
+<hr>
+<p class="note">End of question paper. Maximum marks: 240. Marking: +4 correct, −1 wrong, 0 unattempted.</p>
+<div class="pagebreak"></div>
+<h1>Solutions — Mathematics (Class 7), Chapter 7: A Tale of Three Intersecting Lines</h1>
+<p>Marking: <strong>+4</strong> correct, <strong>−1</strong> wrong, <strong>0</strong> unattempted. Maximum marks <strong>240</strong>.</p>
+<h2>Answer Key</h2>
+<table>
+<tr><th>Q</th><th>Ans</th><th>Q</th><th>Ans</th><th>Q</th><th>Ans</th><th>Q</th><th>Ans</th><th>Q</th><th>Ans</th><th>Q</th><th>Ans</th></tr>
+<tr><td>1</td><td>A</td><td>11</td><td>B</td><td>21</td><td>D</td><td>31</td><td>B</td><td>41</td><td>A</td><td>51</td><td>A</td></tr>
+<tr><td>2</td><td>B</td><td>12</td><td>C</td><td>22</td><td>A</td><td>32</td><td>D</td><td>42</td><td>D</td><td>52</td><td>C</td></tr>
+<tr><td>3</td><td>C</td><td>13</td><td>D</td><td>23</td><td>C</td><td>33</td><td>C</td><td>43</td><td>C</td><td>53</td><td>D</td></tr>
+<tr><td>4</td><td>D</td><td>14</td><td>A</td><td>24</td><td>B</td><td>34</td><td>A</td><td>44</td><td>B</td><td>54</td><td>B</td></tr>
+<tr><td>5</td><td>B</td><td>15</td><td>C</td><td>25</td><td>D</td><td>35</td><td>B</td><td>45</td><td>D</td><td>55</td><td>C</td></tr>
+<tr><td>6</td><td>A</td><td>16</td><td>B</td><td>26</td><td>A</td><td>36</td><td>C</td><td>46</td><td>A</td><td>56</td><td>A</td></tr>
+<tr><td>7</td><td>D</td><td>17</td><td>A</td><td>27</td><td>B</td><td>37</td><td>D</td><td>47</td><td>B</td><td>57</td><td>D</td></tr>
+<tr><td>8</td><td>C</td><td>18</td><td>D</td><td>28</td><td>D</td><td>38</td><td>A</td><td>48</td><td>C</td><td>58</td><td>B</td></tr>
+<tr><td>9</td><td>A</td><td>19</td><td>B</td><td>29</td><td>C</td><td>39</td><td>C</td><td>49</td><td>D</td><td>59</td><td>A</td></tr>
+<tr><td>10</td><td>D</td><td>20</td><td>C</td><td>30</td><td>A</td><td>40</td><td>B</td><td>50</td><td>B</td><td>60</td><td>C</td></tr>
+</table>
+<p>Answer-key distribution: A = 15, B = 15, C = 15, D = 15.</p>
+<hr>
+<h2>Worked Solutions</h2>
+<p><strong>1. (A)</strong> A triangle ∆ABC has three corner points called vertices (A, B, C), three sides that are segments joining the pairs of vertices (AB, BC, CA), and three angles where the sides meet (∠A, ∠B, ∠C). The other options swap the roles of vertices, sides and angles.</p>
+<p><strong>2. (B)</strong> Check the triangle inequality on the longest gap: PQ + QR = 4 + 3 = 7, which equals PR = 7, not greater than it. When the two shorter lengths just reach (sum = third), the points lie on one straight line — they are collinear and enclose no area, so no triangle forms.</p>
+<p><strong>3. (C)</strong> Angle sum = 180°, so third = 180° − (48° + 67°) = 180° − 115° = 65°. The trap 115° is the sum of the two given angles, and 75° comes from a slip.</p>
+<p><strong>4. (D)</strong> Test the two shortest against the longest: 5 + 8 = 13, which is NOT greater than 13. The inequality must be strict, so no triangle exists. &quot;8 + 13 &gt; 5&quot; is true but irrelevant — you must check the two SHORT sides against the longest.</p>
+<p><strong>5. (B)</strong> The third side lies strictly between the difference and the sum of the other two: 10 − 7 = 3 and 10 + 7 = 17, so 3 &lt; x &lt; 17. The endpoints are excluded (the ≤ form in (D) is the classic trap; equality gives a degenerate line).</p>
+<p><strong>6. (A)</strong> All three angles (40°, 60°, 80°) are less than 90°, so the triangle is acute. &quot;Acute&quot; requires ALL angles under 90°, which holds here.</p>
+<p><strong>7. (D)</strong> The exterior angle equals the sum of the two remote (non-adjacent) interior angles: 120° = 70° + other, so the other = 50°. The trap 70° just repeats the given angle.</p>
+<p><strong>8. (C)</strong> Two 90° angles already total 180°, leaving 0° for the third — impossible, since all three must sum to exactly 180°. A triangle can have at most one right angle, so this triangle cannot exist.</p>
+<p><strong>9. (A)</strong> One 90° angle ⇒ right-angled. The two 45° angles are equal, so the two sides opposite them are equal ⇒ isosceles. Hence right-angled AND isosceles.</p>
+<p><strong>10. (D)</strong> Test each: 2 + 3 = 5 &lt; 6, so 2, 3, 6 fails the inequality. The others pass (6+6&gt;6; 4+6&gt;9; 5+12&gt;13), so 2, 3, 6 cannot form a triangle.</p>
+<p><strong>11. (B)</strong> In an isosceles triangle the two base angles are equal. With vertex angle 40°, the base angles share 180° − 40° = 140°, so each = 70°. The trap 40° wrongly copies the vertex angle.</p>
+<p><strong>12. (C)</strong> Ratio 2 : 3 : 4 has 9 parts = 180°, so one part = 20°. The largest angle = 4 × 20° = 80°.</p>
+<p><strong>13. (D)</strong> An altitude is the perpendicular segment from a vertex straight down (at 90°) to the opposite side. Option (B) describes a median, and a side or the longest side is not an altitude in general.</p>
+<p><strong>14. (A)</strong> In a right triangle, each leg is already perpendicular to the other, so dropping a perpendicular from an acute-angle vertex to the opposite side just lands along the other leg. Thus the two legs ARE the altitudes from the acute vertices.</p>
+<p><strong>15. (C)</strong> Third side lies strictly between 8 − 5 = 3 and 8 + 5 = 13, i.e. between 3 cm and 13 cm. &quot;0 cm and 13 cm&quot; ignores the lower bound from the difference.</p>
+<p><strong>16. (B)</strong> ∠A + ∠B + ∠C = 2∠B + ∠B + 3∠B = 6∠B = 180°, so ∠B = 30°. (Then ∠A = 60°, ∠C = 90°.)</p>
+<p><strong>17. (A)</strong> Two equal angles (65° and 65°) mean the two sides opposite them are equal, so the triangle has exactly two equal sides — isosceles. (It is not equilateral, since the third angle is 50°.)</p>
+<p><strong>18. (D)</strong> Exterior angle at C = sum of the two remote interior angles A and B: 130° = 55° + ∠B, so ∠B = 75°.</p>
+<p><strong>19. (B)</strong> A triangle can have at most one angle that is 90° or more (two such would already reach 180°), so at least two angles must be acute. Options (A) and (C) are impossible, and (D) is false (e.g. an equilateral triangle has three acute angles).</p>
+<p><strong>20. (C)</strong> An equilateral triangle has all three angles equal: each = 180°/3 = 60°, regardless of perimeter. The 27 cm is a distractor.</p>
+<p><strong>21. (D)</strong> 3x + 4x + 5x = 12x = 60, so x = 5 cm. The longest side = 5x = 25 cm. The trap 15 cm is 3x (the shortest side).</p>
+<p><strong>22. (A)</strong> Exterior angle at R = ∠P + ∠Q, so 105° = 60° + ∠Q, giving ∠Q = 45°.</p>
+<p><strong>23. (C)</strong> Check each: (40,60,80) sums to 180 ✓; (90,90,0) has a 0° &quot;angle&quot; — invalid; (30,60,90) sums to 180 ✓; (50,50,80) sums to 180 ✓. Three valid sets.</p>
+<p><strong>24. (B)</strong> The remaining two angles total 180° − 110° = 70°. Since their sum is only 70°, each is under 70° &lt; 90°, so both are acute. They cannot include a right angle (that would need ≥90° but only 70° is left).</p>
+<p><strong>25. (D)</strong> The third side must satisfy 9 − 6 = 3 &lt; side, so side &gt; 3. The smallest whole number greater than 3 is 4 cm. (3 cm itself is excluded — it would be degenerate.)</p>
+<p><strong>26. (A)</strong> Let first = x. Then x + 2x + (x + 20°) = 4x + 20° = 180°, so 4x = 160°, x = 40°. (Angles: 40°, 80°, 60°.)</p>
+<p><strong>27. (B)</strong> Equal sides (7, 7, 7) make it equilateral; all angles are 60° &lt; 90°, so it is acute. Hence equilateral and acute. An equilateral triangle can never be right or obtuse.</p>
+<p><strong>28. (D)</strong> By the exterior angle theorem, an exterior angle of a triangle always equals the sum of the two remote (non-adjacent) interior angles. (It is supplementary to — not equal to — the adjacent interior angle.)</p>
+<p><strong>29. (C)</strong> At each vertex the interior and exterior angles sum to 180°, so the three exterior angles total 3 × 180° − 180° = 540° − 180° = 360°. The sum of exterior angles of any triangle is always 360°.</p>
+<p><strong>30. (A)</strong> AB = AC makes the base angles equal, so ∠C = ∠B = 50°. Then the vertex angle ∠A = 180° − 50° − 50° = 80°. The trap 50° wrongly copies a base angle.</p>
+<p><strong>31. (B)</strong> Test each: 1+2 = 3 not &gt; 3 (fail); 2+4 = 6 &lt; 7 (fail); 4+5 = 9 &gt; 8 ✓; 3+3 = 6 not &gt; 6 (fail). Only 4, 5, 8 works.</p>
+<p><strong>32. (D)</strong> A right triangle has one 90° angle; a second angle of 90° or more (obtuse) would push the total past 180°. So a right triangle cannot also be obtuse. It can be isosceles (45-45-90) or scalene (30-60-90).</p>
+<p><strong>33. (C)</strong> Third angle = 180° − 122° = 58°. The trap 122° repeats the given sum.</p>
+<p><strong>34. (A)</strong> Ratio 1 : 1 : 4 over 6 parts of 180° gives 30°, 30°, 120°. The 120° angle makes it obtuse; the two equal 30° angles make it isosceles. Hence obtuse and isosceles.</p>
+<p><strong>35. (B)</strong> Draw the base AB = 4 cm. From A swing an arc of radius 5 cm (= AC); from B swing an arc of radius 6 cm (= BC). Where the arcs cross is C, equidistant correctly from both ends. Option (A) wrongly swings both arcs from A.</p>
+<p><strong>36. (C)</strong> The two short sides: 3 + 4 = 7, which is less than 9. They cannot reach across to meet, so no triangle closes. &quot;All sides different&quot; and &quot;4 + 9 &gt; 3&quot; are irrelevant to whether it can be built.</p>
+<p><strong>37. (D)</strong> The two base angles are equal: 35° each. Vertex angle = 180° − (35° + 35°) = 180° − 70° = 110°. The trap 70° is the sum of the base angles, not the vertex angle.</p>
+<p><strong>38. (A)</strong> The exterior angle equals the sum of the two equal remote interior angles: 95° = 2x, so x = 47.5°. The trap 42.5° comes from wrongly using 85° (the supplement) and halving.</p>
+<p><strong>39. (C)</strong> x + (x + 10°) + (x + 20°) = 3x + 30° = 180°, so 3x = 150°, x = 50°. The largest angle = x + 20° = 70°.</p>
+<p><strong>40. (B)</strong> Check each against the inequality: 5+5 = 10 &gt; 9 ✓; 7+8 = 15 &gt; 9 ✓; for 10, 1, 8 the two short sides 1 + 8 = 9 &lt; 10 (fail); 6+6 &gt; 6 ✓. So 10, 1, 8 is impossible.</p>
+<p><strong>41. (A)</strong> The exterior angle ∠ACD = sum of the two remote interior angles ∠ABC and ∠BAC: 118° = 73° + ∠BAC, so ∠BAC = 45°.</p>
+<p><strong>42. (D)</strong> With two sides of 9 cm, the third side must be less than 9 + 9 = 18, so the largest whole number is 17 cm. The trap 18 cm forgets the inequality is strict.</p>
+<p><strong>43. (C)</strong> Let the vertex angle = v; each base angle = 2v. Then 2v + 2v + v = 5v = 180°, so v = 36°. (Base angles are 72° each.)</p>
+<p><strong>44. (B)</strong> &quot;All sides different&quot; ⇒ scalene; &quot;all angles less than 90°&quot; ⇒ acute. So scalene and acute.</p>
+<p><strong>45. (D)</strong> The altitude from the right-angle vertex is the perpendicular dropped to the hypotenuse; it falls inside the triangle, meeting the hypotenuse at a right angle. It is not a leg (those are the altitudes from the acute vertices).</p>
+<p><strong>46. (A)</strong> Third side x satisfies 11 − 4 = 7 &lt; x &lt; 11 + 4 = 15, so x ∈ {8, 9, 10, 11, 12, 13, 14} — that is 7 whole-number values. The trap 5 forgets to count both ends; 15 just lists numbers up to the sum.</p>
+<p><strong>47. (B)</strong> 3x + 2x + x = 6x = 180°, so x = 30°. Angles are 90°, 60°, 30° — exactly one right angle, so the triangle is right-angled.</p>
+<p><strong>48. (C)</strong> The interior angle adjacent to an exterior angle is its supplement: 180° − 70° = 110°. (The remote interior angles, not the adjacent one, sum to 70°.)</p>
+<p><strong>49. (D)</strong> Third angle = 180° − 100° − 50° = 30°. The angles 100°, 50°, 30° are all different, so the sides opposite them are all different ⇒ scalene.</p>
+<p><strong>50. (B)</strong> Two equal angles (35° and 35°) mean the two sides opposite them are equal, so the triangle is isosceles. One angle, 110°, is greater than 90°, so by the angle classification the triangle is obtuse. Hence isosceles and obtuse. It is not scalene (two angles are equal) and not acute (110° exceeds 90°).</p>
+<p><strong>51. (A)</strong> In an obtuse triangle, the perpendicular dropped from an acute-angle vertex to the (extended) opposite side has its foot OUTSIDE the triangle, on the extension of the base. So it can lie outside — it is not always inside.</p>
+<p><strong>52. (C)</strong> Exterior angle at B = sum of the two remote interior angles A and C: 130° = 70° + ∠C, so ∠C = 60°.</p>
+<p><strong>53. (D)</strong> Two sides equal (5, 5) with the included angle 60°: the base angles are equal and share 180° − 60° = 120°, so each = 60°. All three angles are 60°, making it equilateral (and so the third side is also 5 cm).</p>
+<p><strong>54. (B)</strong> It is enough to check that the sum of the two SMALLEST sides exceeds the largest — if that holds, every other pair sum (which is even larger) automatically exceeds the remaining side. Checking the two largest against the smallest (A) is automatic and proves nothing.</p>
+<p><strong>55. (C)</strong> Exterior angle at R = ∠P + ∠Q (remote interior angles). With ∠P = 2∠Q: 150° = 2∠Q + ∠Q = 3∠Q, so ∠Q = 50°.</p>
+<p><strong>56. (A)</strong> All three angles — 89°, 89°, 2° — are less than 90°, so by the angle classification the triangle is acute. (It looks nearly flat, but every angle is still under 90°.)</p>
+<p><strong>57. (D)</strong> Consecutive sides n−1, n, n+1 sum to 3n = 12, so n = 4: sides 3, 4, 5. Triangle inequality holds (3 + 4 &gt; 5), and the shortest side is 3 cm.</p>
+<p><strong>58. (B)</strong> ∠BAC = 180° − ∠B − ∠C = 180° − 50° − 70° = 60°. The angle bisector mentioned in the stem is a distractor — it does not change ∠BAC itself.</p>
+<p><strong>59. (A)</strong> The interior angles at those two vertices are 180° − 100° = 80° and 180° − 140° = 40°. The third interior angle = 180° − 80° − 40° = 60°.</p>
+<p><strong>60. (C)</strong> The third side c lies strictly between the difference and the sum of the other two: 8 − 6 = 2 &lt; c &lt; 8 + 6 = 14. So c can be any whole number from 3 up to 13, that is {3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13} — exactly 11 values. The trap 13 counts up to the sum without excluding both endpoints; 14 forgets the inequality is strict.</p>
+</body>
+</html>

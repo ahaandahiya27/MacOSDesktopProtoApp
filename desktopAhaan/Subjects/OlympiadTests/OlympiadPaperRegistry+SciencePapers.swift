@@ -1,0 +1,258 @@
+import Foundation
+
+// 19 Science Olympiad papers. Split into this per-subject
+// file so no single registry file approaches the 600-LOC Big-Sur
+// Swift-5.5 type-checker ceiling (a 69-element array literal in one
+// file both broke the file-size gate and risked a slow type-check).
+
+extension OlympiadPaperRegistry {
+    static let sciencePapers: [OlympiadPaper] = [
+        OlympiadPaper(
+            id: "olympiad_science_ch01",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 1,
+            chapterTitle: "Nutrition in Plants",
+            displayTitle: "Nutrition in Plants — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch01_NutritionInPlants_QuestionPaper.md",
+            solutionsMD: "Science_Ch01_NutritionInPlants_Solutions.md",
+            questionPaperHTML: "Science_Ch01_NutritionInPlants.html",
+            questionPaperPDF: "Science_Ch01_NutritionInPlants.pdf",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_science_ch02",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 2,
+            chapterTitle: "Nutrition in Animals",
+            displayTitle: "Nutrition in Animals — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch02_NutritionInAnimals_QuestionPaper.md",
+            solutionsMD: "Science_Ch02_NutritionInAnimals_Solutions.md",
+            questionPaperHTML: "Science_Ch02_NutritionInAnimals.html",
+            questionPaperPDF: "Science_Ch02_NutritionInAnimals.pdf",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_science_ch03",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 3,
+            chapterTitle: "Fibre to Fabric",
+            displayTitle: "Fibre to Fabric — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch03_FibreToFabric_QuestionPaper.md",
+            solutionsMD: "Science_Ch03_FibreToFabric_Solutions.md",
+            questionPaperHTML: "Science_Ch03_FibreToFabric.html",
+            questionPaperPDF: "Science_Ch03_FibreToFabric.pdf",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_science_ch04",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 4,
+            chapterTitle: "Heat",
+            displayTitle: "Heat — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch04_Heat_QuestionPaper.md",
+            solutionsMD: "Science_Ch04_Heat_Solutions.md",
+            questionPaperHTML: "Science_Ch04_Heat.html",
+            questionPaperPDF: "Science_Ch04_Heat.pdf",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_science_ch05",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 5,
+            chapterTitle: "Acids, Bases and Salts",
+            displayTitle: "Acids, Bases and Salts — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch05_AcidsBasesAndSalts_QuestionPaper.md",
+            solutionsMD: "Science_Ch05_AcidsBasesAndSalts_Solutions.md",
+            questionPaperHTML: "Science_Ch05_AcidsBasesAndSalts.html",
+            questionPaperPDF: "Science_Ch05_AcidsBasesAndSalts.pdf",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_science_ch06",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 6,
+            chapterTitle: "Physical and Chemical Changes",
+            displayTitle: "Physical and Chemical Changes — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch06_PhysicalAndChemicalChanges_QuestionPaper.md",
+            solutionsMD: "Science_Ch06_PhysicalAndChemicalChanges_Solutions.md",
+            questionPaperHTML: "Science_Ch06_PhysicalAndChemicalChanges.html",
+            questionPaperPDF: "Science_Ch06_PhysicalAndChemicalChanges.pdf",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_science_ch07",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 7,
+            chapterTitle: "Weather, Climate and Adaptations of Animals to Climate",
+            displayTitle: "Weather, Climate and Adaptations of Animals to Climate — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_QuestionPaper.md",
+            solutionsMD: "Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_Solutions.md",
+            questionPaperHTML: "Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate.html",
+            questionPaperPDF: "Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate.pdf",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_science_ch08",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 8,
+            chapterTitle: "Winds, Storms and Cyclones",
+            displayTitle: "Winds, Storms and Cyclones — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch08_WindsStormsAndCyclones_QuestionPaper.md",
+            solutionsMD: "Science_Ch08_WindsStormsAndCyclones_Solutions.md",
+            questionPaperHTML: "Science_Ch08_WindsStormsAndCyclones.html",
+            questionPaperPDF: "Science_Ch08_WindsStormsAndCyclones.pdf",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_science_ch09",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 9,
+            chapterTitle: "Soil",
+            displayTitle: "Soil — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch09_Soil_QuestionPaper.md",
+            solutionsMD: "Science_Ch09_Soil_Solutions.md",
+            questionPaperHTML: "Science_Ch09_Soil.html",
+            questionPaperPDF: "Science_Ch09_Soil.pdf",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_science_ch10",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 10,
+            chapterTitle: "Respiration in Organisms",
+            displayTitle: "Respiration in Organisms — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch10_RespirationInOrganisms_QuestionPaper.md",
+            solutionsMD: "Science_Ch10_RespirationInOrganisms_Solutions.md",
+            questionPaperHTML: "Science_Ch10_RespirationInOrganisms.html",
+            questionPaperPDF: "Science_Ch10_RespirationInOrganisms.pdf",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_science_ch11",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 11,
+            chapterTitle: "Transportation in Animals and Plants",
+            displayTitle: "Transportation in Animals and Plants — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch11_TransportationInAnimalsAndPlants_QuestionPaper.md",
+            solutionsMD: "Science_Ch11_TransportationInAnimalsAndPlants_Solutions.md",
+            questionPaperHTML: "Science_Ch11_TransportationInAnimalsAndPlants.html",
+            questionPaperPDF: "Science_Ch11_TransportationInAnimalsAndPlants.pdf",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_science_ch12",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 12,
+            chapterTitle: "Reproduction in Plants",
+            displayTitle: "Reproduction in Plants — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch12_ReproductionInPlants_QuestionPaper.md",
+            solutionsMD: "Science_Ch12_ReproductionInPlants_Solutions.md",
+            questionPaperHTML: "Science_Ch12_ReproductionInPlants.html",
+            questionPaperPDF: "Science_Ch12_ReproductionInPlants.pdf",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_science_ch13",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 13,
+            chapterTitle: "Motion and Time",
+            displayTitle: "Motion and Time — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch13_MotionAndTime_QuestionPaper.md",
+            solutionsMD: "Science_Ch13_MotionAndTime_Solutions.md",
+            questionPaperHTML: "Science_Ch13_MotionAndTime.html",
+            questionPaperPDF: "Science_Ch13_MotionAndTime.pdf",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_science_ch14",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 14,
+            chapterTitle: "Electric Current and its Effect",
+            displayTitle: "Electric Current and its Effect — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch14_ElectricCurrentAndItsEffect_QuestionPaper.md",
+            solutionsMD: "Science_Ch14_ElectricCurrentAndItsEffect_Solutions.md",
+            questionPaperHTML: "Science_Ch14_ElectricCurrentAndItsEffect.html",
+            questionPaperPDF: "Science_Ch14_ElectricCurrentAndItsEffect.pdf",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_science_ch15",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 15,
+            chapterTitle: "Light",
+            displayTitle: "Light — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch15_Light_QuestionPaper.md",
+            solutionsMD: "Science_Ch15_Light_Solutions.md",
+            questionPaperHTML: "Science_Ch15_Light.html",
+            questionPaperPDF: "Science_Ch15_Light.pdf",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_science_ch16",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 16,
+            chapterTitle: "Water: A Precious Resource",
+            displayTitle: "Water: A Precious Resource — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch16_WaterAPreciousResource_QuestionPaper.md",
+            solutionsMD: "Science_Ch16_WaterAPreciousResource_Solutions.md",
+            questionPaperHTML: "Science_Ch16_WaterAPreciousResource.html",
+            questionPaperPDF: "Science_Ch16_WaterAPreciousResource.pdf",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_science_ch17",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 17,
+            chapterTitle: "Forest: Our Lifeline",
+            displayTitle: "Forest: Our Lifeline — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch17_ForestOurLifeline_QuestionPaper.md",
+            solutionsMD: "Science_Ch17_ForestOurLifeline_Solutions.md",
+            questionPaperHTML: "Science_Ch17_ForestOurLifeline.html",
+            questionPaperPDF: "Science_Ch17_ForestOurLifeline.pdf",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_science_ch18",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 18,
+            chapterTitle: "Wastewater Story",
+            displayTitle: "Wastewater Story — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch18_WastewaterStory_QuestionPaper.md",
+            solutionsMD: "Science_Ch18_WastewaterStory_Solutions.md",
+            questionPaperHTML: "Science_Ch18_WastewaterStory.html",
+            questionPaperPDF: "Science_Ch18_WastewaterStory.pdf",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_science_ch19",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 19,
+            chapterTitle: "Earth, Moon and the Sun",
+            displayTitle: "Earth, Moon and the Sun — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch19_EarthMoonAndTheSun_QuestionPaper.md",
+            solutionsMD: "Science_Ch19_EarthMoonAndTheSun_Solutions.md",
+            questionPaperHTML: "Science_Ch19_EarthMoonAndTheSun.html",
+            questionPaperPDF: "Science_Ch19_EarthMoonAndTheSun.pdf",
+            suggestedTimeMinutes: 90
+        )
+    ]
+}

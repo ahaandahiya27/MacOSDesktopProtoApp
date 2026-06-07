@@ -1,0 +1,206 @@
+import Foundation
+
+// 15 Sanskrit Olympiad papers. Split into this per-subject
+// file so no single registry file approaches the 600-LOC Big-Sur
+// Swift-5.5 type-checker ceiling (a 69-element array literal in one
+// file both broke the file-size gate and risked a slow type-check).
+
+extension OlympiadPaperRegistry {
+    static let sanskritPapers: [OlympiadPaper] = [
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch01",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 1,
+            chapterTitle: "वन्दे भारतमातरम् (Vande Bharatamataram)",
+            displayTitle: "वन्दे भारतमातरम् (Vande Bharatamataram) — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch01_VandeBharatamataram_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch01_VandeBharatamataram_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch01_VandeBharatamataram.html",
+            questionPaperPDF: "Sanskrit_Sch01_VandeBharatamataram.pdf",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch02",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 2,
+            chapterTitle: "नित्यं पिबामः सुभाषितरसम् (Nityam Pibamah Subhashitarasam)",
+            displayTitle: "नित्यं पिबामः सुभाषितरसम् (Nityam Pibamah Subhashitarasam) — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch02_NityamPibamahSubhashitarasam_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch02_NityamPibamahSubhashitarasam_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch02_NityamPibamahSubhashitarasam.html",
+            questionPaperPDF: "Sanskrit_Sch02_NityamPibamahSubhashitarasam.pdf",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch03",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 3,
+            chapterTitle: "मित्राय नमः (Mitraya Namah)",
+            displayTitle: "मित्राय नमः (Mitraya Namah) — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch03_MitrayaNamah_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch03_MitrayaNamah_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch03_MitrayaNamah.html",
+            questionPaperPDF: "Sanskrit_Sch03_MitrayaNamah.pdf",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch04",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 4,
+            chapterTitle: "न लभ्यते चेत् आम्लं द्राक्षाफलम् (The Fox and the Grapes)",
+            displayTitle: "न लभ्यते चेत् आम्लं द्राक्षाफलम् (The Fox and the Grapes) — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch04_TheFoxAndTheGrapes_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch04_TheFoxAndTheGrapes_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch04_TheFoxAndTheGrapes.html",
+            questionPaperPDF: "Sanskrit_Sch04_TheFoxAndTheGrapes.pdf",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch05",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 5,
+            chapterTitle: "सेवा हि परमो धर्मः (Seva Hi Paramo Dharmah)",
+            displayTitle: "सेवा हि परमो धर्मः (Seva Hi Paramo Dharmah) — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch05_SevaHiParamoDharmah_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch05_SevaHiParamoDharmah_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch05_SevaHiParamoDharmah.html",
+            questionPaperPDF: "Sanskrit_Sch05_SevaHiParamoDharmah.pdf",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch06",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 6,
+            chapterTitle: "क्रीडाम वयं श्लोकान्त्याक्षरीम् (Let Us Play Shloka-Antyakshari)",
+            displayTitle: "क्रीडाम वयं श्लोकान्त्याक्षरीम् (Let Us Play Shloka-Antyakshari) — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch06_KridamaVayamShlokantyaksharim_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch06_KridamaVayamShlokantyaksharim_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch06_KridamaVayamShlokantyaksharim.html",
+            questionPaperPDF: "Sanskrit_Sch06_KridamaVayamShlokantyaksharim.pdf",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch07",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 7,
+            chapterTitle: "ईशावास्यम् इदं सर्वम् (Ishavasyam Idam Sarvam)",
+            displayTitle: "ईशावास्यम् इदं सर्वम् (Ishavasyam Idam Sarvam) — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch07_IshavasyamIdamSarvam_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch07_IshavasyamIdamSarvam_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch07_IshavasyamIdamSarvam.html",
+            questionPaperPDF: "Sanskrit_Sch07_IshavasyamIdamSarvam.pdf",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch08",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 8,
+            chapterTitle: "हितं मनोहारि च दुर्लभं वचः (Hitam Manohari cha Durlabham Vachah)",
+            displayTitle: "हितं मनोहारि च दुर्लभं वचः (Hitam Manohari cha Durlabham Vachah) — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch08_HitamManohariChaDurlabhamVachah_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch08_HitamManohariChaDurlabhamVachah_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch08_HitamManohariChaDurlabhamVachah.html",
+            questionPaperPDF: "Sanskrit_Sch08_HitamManohariChaDurlabhamVachah.pdf",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch09",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 9,
+            chapterTitle: "अन्नाद् भवन्ति भूतानि (Annad Bhavanti Bhutani)",
+            displayTitle: "अन्नाद् भवन्ति भूतानि (Annad Bhavanti Bhutani) — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch09_AnnadBhavantiBhutani_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch09_AnnadBhavantiBhutani_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch09_AnnadBhavantiBhutani.html",
+            questionPaperPDF: "Sanskrit_Sch09_AnnadBhavantiBhutani.pdf",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch10",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 10,
+            chapterTitle: "दशमः कः? (Dashamah Kah? - Who Is the Tenth?)",
+            displayTitle: "दशमः कः? (Dashamah Kah? - Who Is the Tenth?) — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch10_DashamahKah_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch10_DashamahKah_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch10_DashamahKah.html",
+            questionPaperPDF: "Sanskrit_Sch10_DashamahKah.pdf",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch11",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 11,
+            chapterTitle: "द्वीपेषु रम्यः द्वीपोऽण्डमानः (The Andaman Islands)",
+            displayTitle: "द्वीपेषु रम्यः द्वीपोऽण्डमानः (The Andaman Islands) — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah.html",
+            questionPaperPDF: "Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah.pdf",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch12",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 12,
+            chapterTitle: "वीराङ्गना पन्नाधाया (Panna Dhai, the Brave)",
+            displayTitle: "वीराङ्गना पन्नाधाया (Panna Dhai, the Brave) — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch12_ViranganaPannadhaya_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch12_ViranganaPannadhaya_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch12_ViranganaPannadhaya.html",
+            questionPaperPDF: "Sanskrit_Sch12_ViranganaPannadhaya.pdf",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch13",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 13,
+            chapterTitle: "वर्णमात्रा-परिचयः (Varna-Matra: Vowel Quantity)",
+            displayTitle: "वर्णमात्रा-परिचयः (Varna-Matra: Vowel Quantity) — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch13_VarnaMatraParichayah_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch13_VarnaMatraParichayah_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch13_VarnaMatraParichayah.html",
+            questionPaperPDF: "Sanskrit_Sch13_VarnaMatraParichayah.pdf",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch14",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 14,
+            chapterTitle: "शब्दरूपाणि (Shabda-Rupani: Noun Declensions)",
+            displayTitle: "शब्दरूपाणि (Shabda-Rupani: Noun Declensions) — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch14_ShabdaRupani_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch14_ShabdaRupani_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch14_ShabdaRupani.html",
+            questionPaperPDF: "Sanskrit_Sch14_ShabdaRupani.pdf",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch15",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 15,
+            chapterTitle: "धातुरूपाणि (Dhatu-Rupani: Verb Conjugations)",
+            displayTitle: "धातुरूपाणि (Dhatu-Rupani: Verb Conjugations) — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch15_DhaturupaniVerbConjugations_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch15_DhaturupaniVerbConjugations_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch15_DhaturupaniVerbConjugations.html",
+            questionPaperPDF: "Sanskrit_Sch15_DhaturupaniVerbConjugations.pdf",
+            suggestedTimeMinutes: 90
+        )
+    ]
+}

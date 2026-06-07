@@ -16,34 +16,8 @@ enum OlympiadPaperRegistry {
     /// All papers, ordered for display in the sidebar landing view.
     /// Order: by subject (Science → Maths → Sanskrit → Social
     /// Science) then by chapter number ascending.
-    static let allPapers: [OlympiadPaper] = [
-        OlympiadPaper(
-            id: "olympiad_science_ch13",
-            subjectId: "science_class7",
-            subjectName: "Science",
-            chapterNumber: 13,
-            chapterTitle: "Motion and Time",
-            displayTitle: "Motion and Time — 60 MCQ Olympiad",
-            questionPaperMD: "Science_Ch13_MotionAndTime_QuestionPaper.md",
-            solutionsMD: "Science_Ch13_MotionAndTime_Solutions.md",
-            questionPaperHTML: "Science_Ch13_MotionAndTime.html",
-            questionPaperPDF: "Science_Ch13_MotionAndTime.pdf",
-            suggestedTimeMinutes: 90
-        ),
-        OlympiadPaper(
-            id: "olympiad_maths_ch15",
-            subjectId: "maths_class7",
-            subjectName: "Maths",
-            chapterNumber: 15,
-            chapterTitle: "Finding the Unknown",
-            displayTitle: "Finding the Unknown — 60 MCQ Olympiad",
-            questionPaperMD: "Maths_Ch15_FindingTheUnknown_QuestionPaper.md",
-            solutionsMD: "Maths_Ch15_FindingTheUnknown_Solutions.md",
-            questionPaperHTML: "Maths_Ch15_FindingTheUnknown.html",
-            questionPaperPDF: "Maths_Ch15_FindingTheUnknown.pdf",
-            suggestedTimeMinutes: 90
-        )
-    ]
+    static let allPapers: [OlympiadPaper] =
+        sciencePapers + mathsPapers + sanskritPapers + socialSciencePapers
 
     /// Group the list by subject for the sectioned sidebar landing.
     /// Returns an array of (subjectName, papersInThatSubject) pairs
