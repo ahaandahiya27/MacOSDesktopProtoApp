@@ -1342,3 +1342,105 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch14_p3",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 14,
+            chapterTitle: "Electric Current and Its Effect",
+            displayTitle: "Electric Current and Its Effect — Paper 3 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch14_ElectricCurrentAndItsEffect_P3_QuestionPaper.md",
+            solutionsMD: "Science_Ch14_ElectricCurrentAndItsEffect_P3_Solutions.md",
+            questionPaperHTML: "Science_Ch14_ElectricCurrentAndItsEffect_P3.html",
+            questionPaperPDF: "Science_Ch14_ElectricCurrentAndItsEffect_P3.pdf",
+            solvedGuideHTML: "Science_Ch14_ElectricCurrentAndItsEffect_P3_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch15_p3",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 15,
+            chapterTitle: "Light",
+            displayTitle: "Light — Paper 3 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch15_Light_P3_QuestionPaper.md",
+            solutionsMD: "Science_Ch15_Light_P3_Solutions.md",
+            questionPaperHTML: "Science_Ch15_Light_P3.html",
+            questionPaperPDF: "Science_Ch15_Light_P3.pdf",
+            solvedGuideHTML: "Science_Ch15_Light_P3_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch16_p3",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 16,
+            chapterTitle: "Water: A Precious Resource",
+            displayTitle: "Water: A Precious Resource — Paper 3 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch16_WaterAPreciousResource_P3_QuestionPaper.md",
+            solutionsMD: "Science_Ch16_WaterAPreciousResource_P3_Solutions.md",
+            questionPaperHTML: "Science_Ch16_WaterAPreciousResource_P3.html",
+            questionPaperPDF: "Science_Ch16_WaterAPreciousResource_P3.pdf",
+            solvedGuideHTML: "Science_Ch16_WaterAPreciousResource_P3_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch17_p3",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 17,
+            chapterTitle: "Forest: Our Lifeline",
+            displayTitle: "Forest: Our Lifeline — Paper 3 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch17_ForestOurLifeline_P3_QuestionPaper.md",
+            solutionsMD: "Science_Ch17_ForestOurLifeline_P3_Solutions.md",
+            questionPaperHTML: "Science_Ch17_ForestOurLifeline_P3.html",
+            questionPaperPDF: "Science_Ch17_ForestOurLifeline_P3.pdf",
+            solvedGuideHTML: "Science_Ch17_ForestOurLifeline_P3_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch18_p3",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 18,
+            chapterTitle: "Wastewater Story",
+            displayTitle: "Wastewater Story — Paper 3 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch18_WastewaterStory_P3_QuestionPaper.md",
+            solutionsMD: "Science_Ch18_WastewaterStory_P3_Solutions.md",
+            questionPaperHTML: "Science_Ch18_WastewaterStory_P3.html",
+            questionPaperPDF: "Science_Ch18_WastewaterStory_P3.pdf",
+            solvedGuideHTML: "Science_Ch18_WastewaterStory_P3_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch19_p3",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 19,
+            chapterTitle: "Earth, Moon and the Sun",
+            displayTitle: "Earth, Moon and the Sun — Paper 3 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch19_EarthMoonAndTheSun_P3_QuestionPaper.md",
+            solutionsMD: "Science_Ch19_EarthMoonAndTheSun_P3_Solutions.md",
+            questionPaperHTML: "Science_Ch19_EarthMoonAndTheSun_P3.html",
+            questionPaperPDF: "Science_Ch19_EarthMoonAndTheSun_P3.pdf",
+            solvedGuideHTML: "Science_Ch19_EarthMoonAndTheSun_P3_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
