@@ -594,3 +594,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch06",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 6,
+            chapterTitle: "The Age of Reorganisation",
+            displayTitle: "The Age of Reorganisation — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch06_TheAgeOfReorganisation_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch06_TheAgeOfReorganisation_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch06_TheAgeOfReorganisation.html",
+            questionPaperPDF: "SocialScience_Ssch06_TheAgeOfReorganisation.pdf",
+            solvedGuideHTML: "SocialScience_Ssch06_TheAgeOfReorganisation_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
