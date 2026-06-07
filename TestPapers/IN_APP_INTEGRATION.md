@@ -1036,3 +1036,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch12",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 12,
+            chapterTitle: "वीराङ्गना पन्नाधाया (Panna Dhai, the Brave)",
+            displayTitle: "वीराङ्गना पन्नाधाया (Panna Dhai, the Brave) — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch12_ViranganaPannadhaya_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch12_ViranganaPannadhaya_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch12_ViranganaPannadhaya.html",
+            questionPaperPDF: "Sanskrit_Sch12_ViranganaPannadhaya.pdf",
+            solvedGuideHTML: "Sanskrit_Sch12_ViranganaPannadhaya_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
