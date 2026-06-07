@@ -58,9 +58,19 @@ struct OlympiadQuizResultView: View {
         let score = correct * paper.marksCorrect
                   + wrong * paper.marksWrong
                   + skipped * paper.marksSkipped
-        let pct = paper.maxMarks > 0
-            ? Int((Double(max(0, score)) / Double(paper.maxMarks)) * 100)
-            : 0
+        // Broken into distinct, explicitly-typed steps. The original single
+        // nested ternary (Int/Double conversions + division + literal * inside
+        // one expression) is exactly the shape that hangs/segfaults the Swift
+        // 5.5 type-checker on the Big-Sur iMac — Xcode's own type-checker flags
+        // it as "unable to type-check in reasonable time".
+        let pct: Int
+        if paper.maxMarks > 0 {
+            let safeScore: Int = max(0, score)
+            let ratio: Double = Double(safeScore) / Double(paper.maxMarks)
+            pct = Int(ratio * 100.0)
+        } else {
+            pct = 0
+        }
         return Tally(correct: correct, wrong: wrong, skipped: skipped,
                      scoreOutOfMax: score, percentage: pct)
     }
@@ -69,7 +79,11 @@ struct OlympiadQuizResultView: View {
 
     private var chrome: some View {
         HStack(spacing: 12) {
-            Button(action: { presentationMode.wrappedValue.dismiss() }) {
+            // Defer the dismiss one runloop tick: this result view is a .sheet
+            // over a pushed QuizView, and tearing down a sheet in the same
+            // commit as any nav change is the Big-Sur "entangling fence"
+            // EXC_BAD_ACCESS class. Deferring keeps the teardown isolated.
+            Button(action: { DispatchQueue.main.async { presentationMode.wrappedValue.dismiss() } }) {
                 Image(systemName: SFSymbolCompat.name("xmark.circle.fill"))
                     .font(.title3)
             }

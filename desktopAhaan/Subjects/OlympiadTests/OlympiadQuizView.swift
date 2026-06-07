@@ -66,7 +66,7 @@ struct OlympiadQuizView: View {
     private var header: some View {
         HStack(spacing: 14) {
             VStack(alignment: .leading, spacing: 2) {
-                Text(paper.subjectName + " — Chapter " + String(paper.chapterNumber))
+                Text("\(paper.subjectName) — Chapter \(paper.chapterNumber)")
                     .font(.caption)
                     .foregroundColor(.secondary)
                 Text(paper.chapterTitle)
@@ -162,7 +162,11 @@ struct OlympiadQuizView: View {
     }
 
     private func optionRow(q: OlympiadQuestion, optionIndex: Int, optionText: String) -> some View {
-        let letter = ["A", "B", "C", "D"][optionIndex]
+        // Defense-in-depth: the parser guarantees exactly 4 options, but a
+        // future/malformed paper with a 5th option would otherwise index past
+        // this 4-element literal and trap (EXC_BAD_INSTRUCTION) on the iMac.
+        let letters = ["A", "B", "C", "D"]
+        let letter = optionIndex < letters.count ? letters[optionIndex] : "?"
         let isSelected = selectedByQuestionId[q.id] == letter
         return Button {
             withAnimationRespectingReduceMotion(.easeInOut(duration: 0.15)) {

@@ -53,6 +53,7 @@ struct OlympiadHubView: View {
         }
         .background(Color(NSColor.windowBackgroundColor))
         .navigationTitle("Olympiad Tests")
+        .onDisappear { bannerDismissTask?.cancel() }
         .sheet(item: $presentedPaperSheet) { paper in
             ArticleBrowserView(
                 initialFile: paper.questionPaperHTML,
