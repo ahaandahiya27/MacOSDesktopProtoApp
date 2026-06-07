@@ -519,3 +519,78 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+## Registry entries — Social Science (socialscience_class7)
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch01",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 1,
+            chapterTitle: "Geographical Diversity of India",
+            displayTitle: "Geographical Diversity of India — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch01_GeographicalDiversityOfIndia_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch01_GeographicalDiversityOfIndia_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch01_GeographicalDiversityOfIndia.html",
+            questionPaperPDF: "SocialScience_Ssch01_GeographicalDiversityOfIndia.pdf",
+            solvedGuideHTML: "SocialScience_Ssch01_GeographicalDiversityOfIndia_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch02",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 2,
+            chapterTitle: "Understanding the Weather",
+            displayTitle: "Understanding the Weather — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch02_UnderstandingTheWeather_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch02_UnderstandingTheWeather_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch02_UnderstandingTheWeather.html",
+            questionPaperPDF: "SocialScience_Ssch02_UnderstandingTheWeather.pdf",
+            solvedGuideHTML: "SocialScience_Ssch02_UnderstandingTheWeather_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch03",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 3,
+            chapterTitle: "Climates of India",
+            displayTitle: "Climates of India — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch03_ClimatesOfIndia_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch03_ClimatesOfIndia_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch03_ClimatesOfIndia.html",
+            questionPaperPDF: "SocialScience_Ssch03_ClimatesOfIndia.pdf",
+            solvedGuideHTML: "SocialScience_Ssch03_ClimatesOfIndia_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch04",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 4,
+            chapterTitle: "New Beginnings: Cities and States",
+            displayTitle: "New Beginnings: Cities and States — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch04_NewBeginningsCitiesAndStates_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch04_NewBeginningsCitiesAndStates_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch04_NewBeginningsCitiesAndStates.html",
+            questionPaperPDF: "SocialScience_Ssch04_NewBeginningsCitiesAndStates.pdf",
+            solvedGuideHTML: "SocialScience_Ssch04_NewBeginningsCitiesAndStates_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch05",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 5,
+            chapterTitle: "The Rise of Empires",
+            displayTitle: "The Rise of Empires — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch05_TheRiseOfEmpires_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch05_TheRiseOfEmpires_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch05_TheRiseOfEmpires.html",
+            questionPaperPDF: "SocialScience_Ssch05_TheRiseOfEmpires.pdf",
+            solvedGuideHTML: "SocialScience_Ssch05_TheRiseOfEmpires_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
