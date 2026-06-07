@@ -781,3 +781,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch17",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 17,
+            chapterTitle: "India, a Home to Many",
+            displayTitle: "India, a Home to Many — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch17_IndiaAHomeToMany_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch17_IndiaAHomeToMany_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch17_IndiaAHomeToMany.html",
+            questionPaperPDF: "SocialScience_Ssch17_IndiaAHomeToMany.pdf",
+            solvedGuideHTML: "SocialScience_Ssch17_IndiaAHomeToMany_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
