@@ -1172,3 +1172,88 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch04_p3",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 4,
+            chapterTitle: "Heat",
+            displayTitle: "Heat — Paper 3 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch04_Heat_P3_QuestionPaper.md",
+            solutionsMD: "Science_Ch04_Heat_P3_Solutions.md",
+            questionPaperHTML: "Science_Ch04_Heat_P3.html",
+            questionPaperPDF: "Science_Ch04_Heat_P3.pdf",
+            solvedGuideHTML: "Science_Ch04_Heat_P3_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch05_p3",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 5,
+            chapterTitle: "Acids, Bases and Salts",
+            displayTitle: "Acids, Bases and Salts — Paper 3 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch05_AcidsBasesAndSalts_P3_QuestionPaper.md",
+            solutionsMD: "Science_Ch05_AcidsBasesAndSalts_P3_Solutions.md",
+            questionPaperHTML: "Science_Ch05_AcidsBasesAndSalts_P3.html",
+            questionPaperPDF: "Science_Ch05_AcidsBasesAndSalts_P3.pdf",
+            solvedGuideHTML: "Science_Ch05_AcidsBasesAndSalts_P3_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch06_p3",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 6,
+            chapterTitle: "Physical and Chemical Changes",
+            displayTitle: "Physical and Chemical Changes — Paper 3 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch06_PhysicalAndChemicalChanges_P3_QuestionPaper.md",
+            solutionsMD: "Science_Ch06_PhysicalAndChemicalChanges_P3_Solutions.md",
+            questionPaperHTML: "Science_Ch06_PhysicalAndChemicalChanges_P3.html",
+            questionPaperPDF: "Science_Ch06_PhysicalAndChemicalChanges_P3.pdf",
+            solvedGuideHTML: "Science_Ch06_PhysicalAndChemicalChanges_P3_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch07_p3",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 7,
+            chapterTitle: "Weather, Climate and Adaptations of Animals to Climate",
+            displayTitle: "Weather, Climate and Adaptations of Animals to Climate — Paper 3 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_P3_QuestionPaper.md",
+            solutionsMD: "Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_P3_Solutions.md",
+            questionPaperHTML: "Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_P3.html",
+            questionPaperPDF: "Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_P3.pdf",
+            solvedGuideHTML: "Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_P3_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch08_p3",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 8,
+            chapterTitle: "Winds, Storms and Cyclones",
+            displayTitle: "Winds, Storms and Cyclones — Paper 3 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch08_WindsStormsAndCyclones_P3_QuestionPaper.md",
+            solutionsMD: "Science_Ch08_WindsStormsAndCyclones_P3_Solutions.md",
+            questionPaperHTML: "Science_Ch08_WindsStormsAndCyclones_P3.html",
+            questionPaperPDF: "Science_Ch08_WindsStormsAndCyclones_P3.pdf",
+            solvedGuideHTML: "Science_Ch08_WindsStormsAndCyclones_P3_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```

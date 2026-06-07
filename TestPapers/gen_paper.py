@@ -171,6 +171,14 @@ def main():
         if len(q.get("distractors", [])) != 3:
             print(f"ERROR: Q{i+1} must have exactly 3 distractors")
             return 2
+    # Coerce a structured coverage field (dict/list) into the multi-line string
+    # the templates expect — authoring agents sometimes emit it as an object.
+    cov = c.get("coverage", "")
+    if isinstance(cov, dict):
+        c["coverage"] = "Coverage matrix:\n" + "\n".join(
+            f"- {k}: {v}" for k, v in cov.items())
+    elif isinstance(cov, list):
+        c["coverage"] = "Coverage matrix:\n" + "\n".join(f"- {x}" for x in cov)
     letters = balanced_letters(c["chapterId"])
     qp = build_qp(c, letters)
     sol = build_solutions(c, letters)
