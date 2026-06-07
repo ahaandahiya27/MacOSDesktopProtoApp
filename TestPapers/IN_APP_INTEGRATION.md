@@ -815,3 +815,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch19",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 19,
+            chapterTitle: "Infrastructure: Engine of India's Development",
+            displayTitle: "Infrastructure: Engine of India's Development — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch19_Infrastructure_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch19_Infrastructure_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch19_Infrastructure.html",
+            questionPaperPDF: "SocialScience_Ssch19_Infrastructure.pdf",
+            solvedGuideHTML: "SocialScience_Ssch19_Infrastructure_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
