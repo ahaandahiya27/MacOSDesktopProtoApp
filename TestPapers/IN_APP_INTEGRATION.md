@@ -696,3 +696,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch12",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 12,
+            chapterTitle: "Understanding Markets",
+            displayTitle: "Understanding Markets — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch12_UnderstandingMarkets_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch12_UnderstandingMarkets_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch12_UnderstandingMarkets.html",
+            questionPaperPDF: "SocialScience_Ssch12_UnderstandingMarkets.pdf",
+            solvedGuideHTML: "SocialScience_Ssch12_UnderstandingMarkets_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
