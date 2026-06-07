@@ -900,3 +900,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch04",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 4,
+            chapterTitle: "न लभ्यते चेत् आम्लं द्राक्षाफलम् (The Fox and the Grapes)",
+            displayTitle: "न लभ्यते चेत् आम्लं द्राक्षाफलम् (The Fox and the Grapes) — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch04_TheFoxAndTheGrapes_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch04_TheFoxAndTheGrapes_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch04_TheFoxAndTheGrapes.html",
+            questionPaperPDF: "Sanskrit_Sch04_TheFoxAndTheGrapes.pdf",
+            solvedGuideHTML: "Sanskrit_Sch04_TheFoxAndTheGrapes_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
