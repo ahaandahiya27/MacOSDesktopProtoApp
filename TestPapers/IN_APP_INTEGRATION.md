@@ -662,3 +662,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch10",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 10,
+            chapterTitle: "The Constitution of India — An Introduction",
+            displayTitle: "The Constitution of India — An Introduction — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch10_TheConstitutionOfIndia_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch10_TheConstitutionOfIndia_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch10_TheConstitutionOfIndia.html",
+            questionPaperPDF: "SocialScience_Ssch10_TheConstitutionOfIndia.pdf",
+            solvedGuideHTML: "SocialScience_Ssch10_TheConstitutionOfIndia_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
