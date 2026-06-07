@@ -679,3 +679,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch11",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 11,
+            chapterTitle: "From Barter to Money",
+            displayTitle: "From Barter to Money — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch11_FromBarterToMoney_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch11_FromBarterToMoney_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch11_FromBarterToMoney.html",
+            questionPaperPDF: "SocialScience_Ssch11_FromBarterToMoney.pdf",
+            solvedGuideHTML: "SocialScience_Ssch11_FromBarterToMoney_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
