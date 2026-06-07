@@ -1053,3 +1053,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch13",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 13,
+            chapterTitle: "वर्णमात्रा-परिचयः (Varna-Matra)",
+            displayTitle: "वर्णमात्रा-परिचयः (Varna-Matra) — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch13_VarnaMatraParichayah_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch13_VarnaMatraParichayah_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch13_VarnaMatraParichayah.html",
+            questionPaperPDF: "Sanskrit_Sch13_VarnaMatraParichayah.pdf",
+            solvedGuideHTML: "Sanskrit_Sch13_VarnaMatraParichayah_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
