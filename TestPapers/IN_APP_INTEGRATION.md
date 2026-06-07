@@ -968,3 +968,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch08",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 8,
+            chapterTitle: "हितं मनोहारि च दुर्लभं वचः (Hitam Manohari cha Durlabham Vachah)",
+            displayTitle: "हितं मनोहारि च दुर्लभं वचः (Hitam Manohari cha Durlabham Vachah) — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch08_HitamManohariChaDurlabhamVachah_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch08_HitamManohariChaDurlabhamVachah_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch08_HitamManohariChaDurlabhamVachah.html",
+            questionPaperPDF: "Sanskrit_Sch08_HitamManohariChaDurlabhamVachah.pdf",
+            solvedGuideHTML: "Sanskrit_Sch08_HitamManohariChaDurlabhamVachah_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
