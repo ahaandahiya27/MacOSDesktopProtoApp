@@ -611,3 +611,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch07",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 7,
+            chapterTitle: "The Gupta Era: An Age of Tireless Creativity",
+            displayTitle: "The Gupta Era: An Age of Tireless Creativity — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch07_TheGuptaEra_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch07_TheGuptaEra_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch07_TheGuptaEra.html",
+            questionPaperPDF: "SocialScience_Ssch07_TheGuptaEra.pdf",
+            solvedGuideHTML: "SocialScience_Ssch07_TheGuptaEra_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
