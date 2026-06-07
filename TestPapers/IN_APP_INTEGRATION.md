@@ -628,3 +628,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch08",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 8,
+            chapterTitle: "How the Land Becomes Sacred",
+            displayTitle: "How the Land Becomes Sacred — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch08_HowTheLandBecomesSacred_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch08_HowTheLandBecomesSacred_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch08_HowTheLandBecomesSacred.html",
+            questionPaperPDF: "SocialScience_Ssch08_HowTheLandBecomesSacred.pdf",
+            solvedGuideHTML: "SocialScience_Ssch08_HowTheLandBecomesSacred_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
