@@ -713,3 +713,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch13",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 13,
+            chapterTitle: "The Story of Indian Farming",
+            displayTitle: "The Story of Indian Farming — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch13_TheStoryOfIndianFarming_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch13_TheStoryOfIndianFarming_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch13_TheStoryOfIndianFarming.html",
+            questionPaperPDF: "SocialScience_Ssch13_TheStoryOfIndianFarming.pdf",
+            solvedGuideHTML: "SocialScience_Ssch13_TheStoryOfIndianFarming_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
