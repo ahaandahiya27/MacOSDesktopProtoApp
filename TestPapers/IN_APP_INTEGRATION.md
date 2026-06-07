@@ -730,3 +730,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch14",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 14,
+            chapterTitle: "India and Her Neighbours",
+            displayTitle: "India and Her Neighbours — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch14_IndiaAndHerNeighbours_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch14_IndiaAndHerNeighbours_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch14_IndiaAndHerNeighbours.html",
+            questionPaperPDF: "SocialScience_Ssch14_IndiaAndHerNeighbours.pdf",
+            solvedGuideHTML: "SocialScience_Ssch14_IndiaAndHerNeighbours_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
