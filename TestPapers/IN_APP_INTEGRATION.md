@@ -1019,3 +1019,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch11",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 11,
+            chapterTitle: "द्वीपेषु रम्यः द्वीपोऽण्डमानः (The Andaman Islands)",
+            displayTitle: "द्वीपेषु रम्यः द्वीपोऽण्डमानः (The Andaman Islands) — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah.html",
+            questionPaperPDF: "Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah.pdf",
+            solvedGuideHTML: "Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
