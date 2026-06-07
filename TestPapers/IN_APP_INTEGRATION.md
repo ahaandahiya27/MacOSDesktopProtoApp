@@ -1070,3 +1070,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch14",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 14,
+            chapterTitle: "शब्दरूपाणि (Shabda-Rupani)",
+            displayTitle: "शब्दरूपाणि (Shabda-Rupani) — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch14_ShabdaRupani_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch14_ShabdaRupani_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch14_ShabdaRupani.html",
+            questionPaperPDF: "Sanskrit_Sch14_ShabdaRupani.pdf",
+            solvedGuideHTML: "Sanskrit_Sch14_ShabdaRupani_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
