@@ -1986,6 +1986,9 @@
 		40F87C6CE1DE673D4DC36414 /* Science_Ch13_MotionAndTime_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = FBBAC1F69033C1C928CDAD54 /* Science_Ch13_MotionAndTime_Advanced_QuestionPaper.md */; };
 		87F51130EFC9B8D6EB8A4DE2 /* Science_Ch13_MotionAndTime_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = C8B376E1F0E2870C4359D677 /* Science_Ch13_MotionAndTime_Advanced_Solutions.md */; };
 		4EFC4DAB3501702B5CC5E260 /* Science_Ch13_MotionAndTime_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = B7669A73FF1010FB7467D960 /* Science_Ch13_MotionAndTime_Advanced_SolvedGuide.html */; };
+		04A3E3B47F984A06CAC1C916 /* Maths_Ch15_FindingTheUnknown_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = A3E1FBB638FCD3E38C452F8C /* Maths_Ch15_FindingTheUnknown_Advanced_QuestionPaper.md */; };
+		890F422778D8DC668001A59B /* Maths_Ch15_FindingTheUnknown_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 5A8DF8A93EBD5F367D71EDB0 /* Maths_Ch15_FindingTheUnknown_Advanced_Solutions.md */; };
+		BB66CE3EFF26D98C08251A86 /* Maths_Ch15_FindingTheUnknown_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = CC3EA0C9662BEE49C8B1C1E5 /* Maths_Ch15_FindingTheUnknown_Advanced_SolvedGuide.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -3989,6 +3992,9 @@
 		FBBAC1F69033C1C928CDAD54 /* Science_Ch13_MotionAndTime_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = "Science_Ch13_MotionAndTime_Advanced_QuestionPaper.md"; path = "desktopAhaan/Resources/TestPapers/Science_Ch13_MotionAndTime_Advanced_QuestionPaper.md"; sourceTree = SOURCE_ROOT; };
 		C8B376E1F0E2870C4359D677 /* Science_Ch13_MotionAndTime_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = "Science_Ch13_MotionAndTime_Advanced_Solutions.md"; path = "desktopAhaan/Resources/TestPapers/Science_Ch13_MotionAndTime_Advanced_Solutions.md"; sourceTree = SOURCE_ROOT; };
 		B7669A73FF1010FB7467D960 /* Science_Ch13_MotionAndTime_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Science_Ch13_MotionAndTime_Advanced_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Science_Ch13_MotionAndTime_Advanced_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		A3E1FBB638FCD3E38C452F8C /* Maths_Ch15_FindingTheUnknown_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = "Maths_Ch15_FindingTheUnknown_Advanced_QuestionPaper.md"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch15_FindingTheUnknown_Advanced_QuestionPaper.md"; sourceTree = SOURCE_ROOT; };
+		5A8DF8A93EBD5F367D71EDB0 /* Maths_Ch15_FindingTheUnknown_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = "Maths_Ch15_FindingTheUnknown_Advanced_Solutions.md"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch15_FindingTheUnknown_Advanced_Solutions.md"; sourceTree = SOURCE_ROOT; };
+		CC3EA0C9662BEE49C8B1C1E5 /* Maths_Ch15_FindingTheUnknown_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Maths_Ch15_FindingTheUnknown_Advanced_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch15_FindingTheUnknown_Advanced_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -8448,6 +8454,9 @@
 				40F87C6CE1DE673D4DC36414 /* Science_Ch13_MotionAndTime_Advanced_QuestionPaper.md in Resources */,
 				87F51130EFC9B8D6EB8A4DE2 /* Science_Ch13_MotionAndTime_Advanced_Solutions.md in Resources */,
 				4EFC4DAB3501702B5CC5E260 /* Science_Ch13_MotionAndTime_Advanced_SolvedGuide.html in Resources */,
+				04A3E3B47F984A06CAC1C916 /* Maths_Ch15_FindingTheUnknown_Advanced_QuestionPaper.md in Resources */,
+				890F422778D8DC668001A59B /* Maths_Ch15_FindingTheUnknown_Advanced_Solutions.md in Resources */,
+				BB66CE3EFF26D98C08251A86 /* Maths_Ch15_FindingTheUnknown_Advanced_SolvedGuide.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

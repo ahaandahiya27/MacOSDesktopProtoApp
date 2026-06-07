@@ -229,10 +229,11 @@ final class OlympiadExamHallTests: XCTestCase {
         // both the count here and the per-tier breakdown below.
         //
         // 2026-06-07: 69 foundation (19 Sci + 15 Maths + 15 Sanskrit
-        // + 20 SocSci) + 1 advanced (Science Ch13 anchor) = 70.
+        // + 20 SocSci) + 2 advanced (Science Ch13 + Maths Ch15
+        // anchors) = 71.
         let papers = OlympiadPaperRegistry.allPapers
-        XCTAssertEqual(papers.count, 70,
-                       "Expected 70 papers total. Got \(papers.count). Update this assertion when Paper 2 lands for a new chapter.")
+        XCTAssertEqual(papers.count, 71,
+                       "Expected 71 papers total. Got \(papers.count). Update this assertion when Paper 2 lands for a new chapter.")
     }
 
     func testFoundationTierIsTheDefault() {
@@ -248,11 +249,13 @@ final class OlympiadExamHallTests: XCTestCase {
     func testAdvancedTierIsExplicitlyTagged() {
         // Every chapter with a Paper 2 must carry tier=.advanced
         // (default is .foundation; adding a Paper 2 row requires the
-        // explicit opt-in). Today: only Science Ch13 has a Paper 2.
+        // explicit opt-in). Today: Science Ch13 + Maths Ch15 anchors.
         let advanced = OlympiadPaperRegistry.allPapers.filter { $0.tier == .advanced }
-        XCTAssertEqual(advanced.count, 1,
-                       "Expected 1 advanced-tier paper (Science Ch13 anchor), got \(advanced.count)")
-        XCTAssertEqual(advanced.first?.id, "olympiad_science_ch13_advanced")
+        XCTAssertEqual(advanced.count, 2,
+                       "Expected 2 advanced-tier papers (Sci Ch13 + Maths Ch15), got \(advanced.count)")
+        let ids = Set(advanced.map { $0.id })
+        XCTAssertEqual(ids, ["olympiad_science_ch13_advanced",
+                             "olympiad_maths_ch15_advanced"])
     }
 
     func testAdvancedPaperHasUniqueIdPerChapter() {

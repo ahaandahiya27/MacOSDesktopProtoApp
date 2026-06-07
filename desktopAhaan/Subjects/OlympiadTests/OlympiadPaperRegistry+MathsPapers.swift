@@ -209,13 +209,32 @@ extension OlympiadPaperRegistry {
             subjectName: "Maths",
             chapterNumber: 15,
             chapterTitle: "Finding the Unknown",
-            displayTitle: "Finding the Unknown — 60 MCQ Olympiad",
+            displayTitle: "Finding the Unknown — Paper 1 (Foundation)",
             questionPaperMD: "Maths_Ch15_FindingTheUnknown_QuestionPaper.md",
             solutionsMD: "Maths_Ch15_FindingTheUnknown_Solutions.md",
             questionPaperHTML: "Maths_Ch15_FindingTheUnknown.html",
             questionPaperPDF: "Maths_Ch15_FindingTheUnknown.pdf",
             suggestedTimeMinutes: 90,
             solvedGuideHTML: "Maths_Ch15_FindingTheUnknown_SolvedGuide.html"
+        ),
+        OlympiadPaper(
+            id: "olympiad_maths_ch15_advanced",
+            subjectId: "maths_class7",
+            subjectName: "Maths",
+            chapterNumber: 15,
+            chapterTitle: "Finding the Unknown",
+            displayTitle: "Finding the Unknown — Paper 2 (Advanced)",
+            questionPaperMD: "Maths_Ch15_FindingTheUnknown_Advanced_QuestionPaper.md",
+            solutionsMD: "Maths_Ch15_FindingTheUnknown_Advanced_Solutions.md",
+            // Reuses Paper 1's printable HTML + PDF until Advanced print
+            // assets are generated. See the matching Science Ch13
+            // Advanced entry for the reasoning — the tier=.advanced
+            // field is what makes this row distinct in the registry.
+            questionPaperHTML: "Maths_Ch15_FindingTheUnknown.html",
+            questionPaperPDF: "Maths_Ch15_FindingTheUnknown.pdf",
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Maths_Ch15_FindingTheUnknown_Advanced_SolvedGuide.html",
+            tier: .advanced
         )
     ]
 }
