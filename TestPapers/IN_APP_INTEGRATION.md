@@ -883,3 +883,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch03",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 3,
+            chapterTitle: "मित्राय नमः (Mitraya Namah)",
+            displayTitle: "मित्राय नमः (Mitraya Namah) — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch03_MitrayaNamah_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch03_MitrayaNamah_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch03_MitrayaNamah.html",
+            questionPaperPDF: "Sanskrit_Sch03_MitrayaNamah.pdf",
+            solvedGuideHTML: "Sanskrit_Sch03_MitrayaNamah_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
