@@ -1841,6 +1841,73 @@
 		8E27A204D469E7924D386CA3 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 38F9BADB44FE218FC4A8DB98 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance_Solutions.md */; };
 		929AFD55B6A0B8A16E5AEAD5 /* Maths_Ch15_FindingTheUnknown_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 378EC49E6AF34EBE75867CDA /* Maths_Ch15_FindingTheUnknown_SolvedGuide.html */; };
 		A03AAFD6221254CE42EA3ECC /* Science_Ch13_MotionAndTime_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = B9685DAFFFFE683ADC910AC5 /* Science_Ch13_MotionAndTime_SolvedGuide.html */; };
+		40ED50292BD060A8AB5AD285 /* Maths_Ch01_LargeNumbersAroundUs.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 06D9689FAF09D6FD0B08D0FB /* Maths_Ch01_LargeNumbersAroundUs.pdf */; };
+		A242240EDCB1206C90EE9D61 /* Maths_Ch02_ArithmeticExpressions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F06E72D409D39D8B25248B80 /* Maths_Ch02_ArithmeticExpressions.pdf */; };
+		FB5F0ACC0922DB04BB3FCBF3 /* Maths_Ch03_APeekBeyondThePoint.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EA47A066F154ED3C5216465F /* Maths_Ch03_APeekBeyondThePoint.pdf */; };
+		E96F85FCCA7ADD5E8FDC3005 /* Maths_Ch04_ExpressionsUsingLetterNumbers.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 658EE82673BD9B5BC630BA90 /* Maths_Ch04_ExpressionsUsingLetterNumbers.pdf */; };
+		F6B790857AEB031FB56CFF5E /* Maths_Ch05_ParallelAndIntersectingLines.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FE297ADB2027C7CF4843F2A5 /* Maths_Ch05_ParallelAndIntersectingLines.pdf */; };
+		E698371DFEF45E31E488C6B9 /* Maths_Ch06_NumberPlay.pdf in Resources */ = {isa = PBXBuildFile; fileRef = B4E22665C6FA0A9024124AD1 /* Maths_Ch06_NumberPlay.pdf */; };
+		AEDC8C06B1A9E0B732835FB3 /* Maths_Ch07_ATaleOfThreeIntersectingLines.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4DEB207EE8EF24696BC31F59 /* Maths_Ch07_ATaleOfThreeIntersectingLines.pdf */; };
+		BA42F41FC33FF58150EAEA87 /* Maths_Ch08_WorkingWithFractions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A65C5516EE6675245B1E53F5 /* Maths_Ch08_WorkingWithFractions.pdf */; };
+		89016D74EFE13D45C490869E /* Maths_Ch09_GeometricTwins.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2E25688EC82EAADE20730844 /* Maths_Ch09_GeometricTwins.pdf */; };
+		0F755B06A6C29E5A875AFF77 /* Maths_Ch10_OperationsWithIntegers.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 084F33796F6304969F02CF93 /* Maths_Ch10_OperationsWithIntegers.pdf */; };
+		51C616093C5CC21BE74BCA6C /* Maths_Ch11_FindingCommonGround.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A11B87E6B9B5D54F6FC7B6CE /* Maths_Ch11_FindingCommonGround.pdf */; };
+		CE75015739D4FD0BD339245B /* Maths_Ch12_AnotherPeekBeyondThePoint.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 699E9665661997BB5125BE01 /* Maths_Ch12_AnotherPeekBeyondThePoint.pdf */; };
+		8B28A426E5F1CBDC6DB3E9F7 /* Maths_Ch13_ConnectingTheDots.pdf in Resources */ = {isa = PBXBuildFile; fileRef = AB55F726E8E1413AB74E6945 /* Maths_Ch13_ConnectingTheDots.pdf */; };
+		AECCEEE255C76916B0331882 /* Maths_Ch14_ConstructionsAndTilings.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 813739AA0D1DCC49769E91DC /* Maths_Ch14_ConstructionsAndTilings.pdf */; };
+		AC9140562D9F47DEC440EB32 /* Sanskrit_Sch01_VandeBharatamataram.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FA22052F14E8411EE95950AB /* Sanskrit_Sch01_VandeBharatamataram.pdf */; };
+		445E3F6898379896168F32A6 /* Sanskrit_Sch02_NityamPibamahSubhashitarasam.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9C227A56341C2165236F056A /* Sanskrit_Sch02_NityamPibamahSubhashitarasam.pdf */; };
+		F53F4800F648A2583A21DE30 /* Sanskrit_Sch03_MitrayaNamah.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8944C9B8907A517AEA71507F /* Sanskrit_Sch03_MitrayaNamah.pdf */; };
+		3FA7ABEF583C4B3B8932599C /* Sanskrit_Sch04_TheFoxAndTheGrapes.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0EB358C890D931A4C03AF59F /* Sanskrit_Sch04_TheFoxAndTheGrapes.pdf */; };
+		AAE3F4A70507692BC9C1C75F /* Sanskrit_Sch05_SevaHiParamoDharmah.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4285162C2DF832B3369D21CD /* Sanskrit_Sch05_SevaHiParamoDharmah.pdf */; };
+		7BC7FD74F5AB867A0D3F49EB /* Sanskrit_Sch06_KridamaVayamShlokantyaksharim.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CF5F4CD2287AE12153C258CB /* Sanskrit_Sch06_KridamaVayamShlokantyaksharim.pdf */; };
+		390A4D1709FF7D95B9777B54 /* Sanskrit_Sch07_IshavasyamIdamSarvam.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 63E3B232A87FB460F275D0C3 /* Sanskrit_Sch07_IshavasyamIdamSarvam.pdf */; };
+		7A3C7152AF53CF497281EAA9 /* Sanskrit_Sch08_HitamManohariChaDurlabhamVachah.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3D5732B599C3C529C4EBF65D /* Sanskrit_Sch08_HitamManohariChaDurlabhamVachah.pdf */; };
+		C6D4544F379007B5F0A949E0 /* Sanskrit_Sch09_AnnadBhavantiBhutani.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FBA67655A10B09DDA9E38F75 /* Sanskrit_Sch09_AnnadBhavantiBhutani.pdf */; };
+		2C3E0592F52A0EADBEB79353 /* Sanskrit_Sch10_DashamahKah.pdf in Resources */ = {isa = PBXBuildFile; fileRef = B6E20AB098F246033FD7823F /* Sanskrit_Sch10_DashamahKah.pdf */; };
+		56A176B9A2FD54A3D276B73F /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 590A626827958893F01D46A6 /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah.pdf */; };
+		7D3B09032912BD886005A57A /* Sanskrit_Sch12_ViranganaPannadhaya.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A829F6BD01B44BCEEF2802FD /* Sanskrit_Sch12_ViranganaPannadhaya.pdf */; };
+		E12A92D53DF8E338FCA4E135 /* Sanskrit_Sch13_VarnaMatraParichayah.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7471E0729FDF494CC3FB6EFC /* Sanskrit_Sch13_VarnaMatraParichayah.pdf */; };
+		1F1003115D0E5F4C6C5609B0 /* Sanskrit_Sch14_ShabdaRupani.pdf in Resources */ = {isa = PBXBuildFile; fileRef = BADE27E4D48C38FE330AFF2E /* Sanskrit_Sch14_ShabdaRupani.pdf */; };
+		1FDE3C0C0468693C8D190EDC /* Sanskrit_Sch15_DhaturupaniVerbConjugations.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 626B805523CBA8002BA72744 /* Sanskrit_Sch15_DhaturupaniVerbConjugations.pdf */; };
+		3C57B14C41749701567A2128 /* Science_Ch01_NutritionInPlants.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 484C4DE6827CEE5E4498DBD6 /* Science_Ch01_NutritionInPlants.pdf */; };
+		118D0EF69B52A1898AD0BC5F /* Science_Ch02_NutritionInAnimals.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 698BDB1155EB18EB3D3760C0 /* Science_Ch02_NutritionInAnimals.pdf */; };
+		E5530D6BCE739DFDFA9E7AC9 /* Science_Ch03_FibreToFabric.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E6AFD0F86F20A3BE5F4E634D /* Science_Ch03_FibreToFabric.pdf */; };
+		5557346B2C38947911C712B9 /* Science_Ch04_Heat.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8C1C2DEF4172FE776D29502D /* Science_Ch04_Heat.pdf */; };
+		7F3ABBC3D31425F373ECB1B3 /* Science_Ch05_AcidsBasesAndSalts.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2D1A759098E8F275EF489E33 /* Science_Ch05_AcidsBasesAndSalts.pdf */; };
+		0653B7A4BC180DF18E961BCB /* Science_Ch06_PhysicalAndChemicalChanges.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 42958F1F690A099FED89B747 /* Science_Ch06_PhysicalAndChemicalChanges.pdf */; };
+		42AE0A0C04A7D3D812B2B611 /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EE4B65DBCADCA9671C73F0F6 /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate.pdf */; };
+		6188E732E86C35E19CAB4610 /* Science_Ch08_WindsStormsAndCyclones.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E7D3A3ED7822F8FE9A7341B0 /* Science_Ch08_WindsStormsAndCyclones.pdf */; };
+		00FAB38C9B93007716181607 /* Science_Ch09_Soil.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 99E3960731126E72B8F8F133 /* Science_Ch09_Soil.pdf */; };
+		0EAACF105F0964CFCAE209ED /* Science_Ch10_RespirationInOrganisms.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9EF353899512B3CF571FF867 /* Science_Ch10_RespirationInOrganisms.pdf */; };
+		74BB013C749C9BEA4CC43758 /* Science_Ch11_TransportationInAnimalsAndPlants.pdf in Resources */ = {isa = PBXBuildFile; fileRef = B66B31107B106C2E90360D2E /* Science_Ch11_TransportationInAnimalsAndPlants.pdf */; };
+		69591A8132CA15311B1D86A3 /* Science_Ch12_ReproductionInPlants.pdf in Resources */ = {isa = PBXBuildFile; fileRef = AEA611336198B49D3E7B3C68 /* Science_Ch12_ReproductionInPlants.pdf */; };
+		355F1DA8DB8EA6734712F043 /* Science_Ch14_ElectricCurrentAndItsEffect.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8C0003E409888612470099DE /* Science_Ch14_ElectricCurrentAndItsEffect.pdf */; };
+		EDEBEF2625623450E693EFC1 /* Science_Ch15_Light.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CE360F080BD326485E30A021 /* Science_Ch15_Light.pdf */; };
+		C6A7E06F254F03A107640E41 /* Science_Ch16_WaterAPreciousResource.pdf in Resources */ = {isa = PBXBuildFile; fileRef = B46FD0036162DE6683C36E63 /* Science_Ch16_WaterAPreciousResource.pdf */; };
+		D9C53F7026D37AD14005F37E /* Science_Ch17_ForestOurLifeline.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2C2E68D64747968FBDB824F1 /* Science_Ch17_ForestOurLifeline.pdf */; };
+		693B8928FD44CE5958CDF874 /* Science_Ch18_WastewaterStory.pdf in Resources */ = {isa = PBXBuildFile; fileRef = BFA10E23521F47855A2B5D08 /* Science_Ch18_WastewaterStory.pdf */; };
+		31AB12BE62D0C2E33E55B300 /* Science_Ch19_EarthMoonAndTheSun.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 50CE14C21E4E3342394BD601 /* Science_Ch19_EarthMoonAndTheSun.pdf */; };
+		DA8A12122C5F13412BEDCE70 /* SocialScience_Ssch01_GeographicalDiversityOfIndia.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CB86187B6D777055696168C9 /* SocialScience_Ssch01_GeographicalDiversityOfIndia.pdf */; };
+		38C3464D5EA0E1780DB7E4A2 /* SocialScience_Ssch02_UnderstandingTheWeather.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 164FF3DED098499B53A7782F /* SocialScience_Ssch02_UnderstandingTheWeather.pdf */; };
+		2F08413F41D3D18D4CFC36C2 /* SocialScience_Ssch03_ClimatesOfIndia.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FFC8519C0F2B8F73A136BBB5 /* SocialScience_Ssch03_ClimatesOfIndia.pdf */; };
+		FCA7B53FF3EC1DC213B8F82A /* SocialScience_Ssch04_NewBeginningsCitiesAndStates.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 5058F957372F4067E9D79973 /* SocialScience_Ssch04_NewBeginningsCitiesAndStates.pdf */; };
+		3D2A99423C3790C4173F7306 /* SocialScience_Ssch05_TheRiseOfEmpires.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E0EDFD4B7E430B83B272505F /* SocialScience_Ssch05_TheRiseOfEmpires.pdf */; };
+		E094E8BCB10C122CDAADAE7B /* SocialScience_Ssch06_TheAgeOfReorganisation.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 26CF7F32337B7DF04DE6121F /* SocialScience_Ssch06_TheAgeOfReorganisation.pdf */; };
+		4E78AF6A4B81655D3C5E7934 /* SocialScience_Ssch07_TheGuptaEra.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 98BE5A8AB250395E07986A9A /* SocialScience_Ssch07_TheGuptaEra.pdf */; };
+		76F179F58F6B75966A0AD98F /* SocialScience_Ssch08_HowTheLandBecomesSacred.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CD63B10E3D6376E76754EFFB /* SocialScience_Ssch08_HowTheLandBecomesSacred.pdf */; };
+		7CF25232C97327A764DAF74C /* SocialScience_Ssch09_TypesOfGovernments.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CC36C71DD56658DCF6EDDE98 /* SocialScience_Ssch09_TypesOfGovernments.pdf */; };
+		DABEB005AE5C84EAEF8E2053 /* SocialScience_Ssch10_TheConstitutionOfIndia.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 30D2D24F147B73448A2A19AD /* SocialScience_Ssch10_TheConstitutionOfIndia.pdf */; };
+		2B72DB37D9D0111BB0DAFF9F /* SocialScience_Ssch11_FromBarterToMoney.pdf in Resources */ = {isa = PBXBuildFile; fileRef = B419269E14A1BA43BDD73AB4 /* SocialScience_Ssch11_FromBarterToMoney.pdf */; };
+		24322194B03E2F2D31EE954C /* SocialScience_Ssch12_UnderstandingMarkets.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9BA2ED6D59A9781AF92D2496 /* SocialScience_Ssch12_UnderstandingMarkets.pdf */; };
+		276B082711588637EFB4DA55 /* SocialScience_Ssch13_TheStoryOfIndianFarming.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 989BB9E92F055EA837DB23E1 /* SocialScience_Ssch13_TheStoryOfIndianFarming.pdf */; };
+		B4DB2A32D5F81516EE379EF3 /* SocialScience_Ssch14_IndiaAndHerNeighbours.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3B3501CC4C302343096F3F2E /* SocialScience_Ssch14_IndiaAndHerNeighbours.pdf */; };
+		BA7FF32DF95454EC423B8D25 /* SocialScience_Ssch15_EmpiresAndKingdoms6thTo10thCenturies.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E714131EFB98D647E72CBCDE /* SocialScience_Ssch15_EmpiresAndKingdoms6thTo10thCenturies.pdf */; };
+		C65A97D58830C10F254C612B /* SocialScience_Ssch16_TurningTides11thAnd12thCenturies.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 364BAB2C28AEA1B916F9FA9B /* SocialScience_Ssch16_TurningTides11thAnd12thCenturies.pdf */; };
+		62E15BFC9E313096A9D710A6 /* SocialScience_Ssch17_IndiaAHomeToMany.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A7C170E554F5DD8B9D3BBE7E /* SocialScience_Ssch17_IndiaAHomeToMany.pdf */; };
+		7ED32507DBB7A41A9B2A2831 /* SocialScience_Ssch18_TheStateTheGovernmentAndYou.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CCF6B0AEBE3740717608989F /* SocialScience_Ssch18_TheStateTheGovernmentAndYou.pdf */; };
+		7B99FB40034B50EB0B5EDF37 /* SocialScience_Ssch19_Infrastructure.pdf in Resources */ = {isa = PBXBuildFile; fileRef = B50F85CF17609EB76784B873 /* SocialScience_Ssch19_Infrastructure.pdf */; };
+		47727B371E8D8A4589147BB7 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0D40DDA8E1DF0F1329CD83A7 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance.pdf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -3699,6 +3766,73 @@
 		38F9BADB44FE218FC4A8DB98 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = "SocialScience_Ssch20_BanksAndTheMagicOfFinance_Solutions.md"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch20_BanksAndTheMagicOfFinance_Solutions.md"; sourceTree = SOURCE_ROOT; };
 		378EC49E6AF34EBE75867CDA /* Maths_Ch15_FindingTheUnknown_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Maths_Ch15_FindingTheUnknown_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch15_FindingTheUnknown_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
 		B9685DAFFFFE683ADC910AC5 /* Science_Ch13_MotionAndTime_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Science_Ch13_MotionAndTime_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Science_Ch13_MotionAndTime_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		06D9689FAF09D6FD0B08D0FB /* Maths_Ch01_LargeNumbersAroundUs.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Maths_Ch01_LargeNumbersAroundUs.pdf"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch01_LargeNumbersAroundUs.pdf"; sourceTree = SOURCE_ROOT; };
+		F06E72D409D39D8B25248B80 /* Maths_Ch02_ArithmeticExpressions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Maths_Ch02_ArithmeticExpressions.pdf"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch02_ArithmeticExpressions.pdf"; sourceTree = SOURCE_ROOT; };
+		EA47A066F154ED3C5216465F /* Maths_Ch03_APeekBeyondThePoint.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Maths_Ch03_APeekBeyondThePoint.pdf"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch03_APeekBeyondThePoint.pdf"; sourceTree = SOURCE_ROOT; };
+		658EE82673BD9B5BC630BA90 /* Maths_Ch04_ExpressionsUsingLetterNumbers.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Maths_Ch04_ExpressionsUsingLetterNumbers.pdf"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch04_ExpressionsUsingLetterNumbers.pdf"; sourceTree = SOURCE_ROOT; };
+		FE297ADB2027C7CF4843F2A5 /* Maths_Ch05_ParallelAndIntersectingLines.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Maths_Ch05_ParallelAndIntersectingLines.pdf"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch05_ParallelAndIntersectingLines.pdf"; sourceTree = SOURCE_ROOT; };
+		B4E22665C6FA0A9024124AD1 /* Maths_Ch06_NumberPlay.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Maths_Ch06_NumberPlay.pdf"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch06_NumberPlay.pdf"; sourceTree = SOURCE_ROOT; };
+		4DEB207EE8EF24696BC31F59 /* Maths_Ch07_ATaleOfThreeIntersectingLines.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Maths_Ch07_ATaleOfThreeIntersectingLines.pdf"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch07_ATaleOfThreeIntersectingLines.pdf"; sourceTree = SOURCE_ROOT; };
+		A65C5516EE6675245B1E53F5 /* Maths_Ch08_WorkingWithFractions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Maths_Ch08_WorkingWithFractions.pdf"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch08_WorkingWithFractions.pdf"; sourceTree = SOURCE_ROOT; };
+		2E25688EC82EAADE20730844 /* Maths_Ch09_GeometricTwins.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Maths_Ch09_GeometricTwins.pdf"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch09_GeometricTwins.pdf"; sourceTree = SOURCE_ROOT; };
+		084F33796F6304969F02CF93 /* Maths_Ch10_OperationsWithIntegers.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Maths_Ch10_OperationsWithIntegers.pdf"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch10_OperationsWithIntegers.pdf"; sourceTree = SOURCE_ROOT; };
+		A11B87E6B9B5D54F6FC7B6CE /* Maths_Ch11_FindingCommonGround.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Maths_Ch11_FindingCommonGround.pdf"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch11_FindingCommonGround.pdf"; sourceTree = SOURCE_ROOT; };
+		699E9665661997BB5125BE01 /* Maths_Ch12_AnotherPeekBeyondThePoint.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Maths_Ch12_AnotherPeekBeyondThePoint.pdf"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch12_AnotherPeekBeyondThePoint.pdf"; sourceTree = SOURCE_ROOT; };
+		AB55F726E8E1413AB74E6945 /* Maths_Ch13_ConnectingTheDots.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Maths_Ch13_ConnectingTheDots.pdf"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch13_ConnectingTheDots.pdf"; sourceTree = SOURCE_ROOT; };
+		813739AA0D1DCC49769E91DC /* Maths_Ch14_ConstructionsAndTilings.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Maths_Ch14_ConstructionsAndTilings.pdf"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch14_ConstructionsAndTilings.pdf"; sourceTree = SOURCE_ROOT; };
+		FA22052F14E8411EE95950AB /* Sanskrit_Sch01_VandeBharatamataram.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Sanskrit_Sch01_VandeBharatamataram.pdf"; path = "desktopAhaan/Resources/TestPapers/Sanskrit_Sch01_VandeBharatamataram.pdf"; sourceTree = SOURCE_ROOT; };
+		9C227A56341C2165236F056A /* Sanskrit_Sch02_NityamPibamahSubhashitarasam.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Sanskrit_Sch02_NityamPibamahSubhashitarasam.pdf"; path = "desktopAhaan/Resources/TestPapers/Sanskrit_Sch02_NityamPibamahSubhashitarasam.pdf"; sourceTree = SOURCE_ROOT; };
+		8944C9B8907A517AEA71507F /* Sanskrit_Sch03_MitrayaNamah.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Sanskrit_Sch03_MitrayaNamah.pdf"; path = "desktopAhaan/Resources/TestPapers/Sanskrit_Sch03_MitrayaNamah.pdf"; sourceTree = SOURCE_ROOT; };
+		0EB358C890D931A4C03AF59F /* Sanskrit_Sch04_TheFoxAndTheGrapes.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Sanskrit_Sch04_TheFoxAndTheGrapes.pdf"; path = "desktopAhaan/Resources/TestPapers/Sanskrit_Sch04_TheFoxAndTheGrapes.pdf"; sourceTree = SOURCE_ROOT; };
+		4285162C2DF832B3369D21CD /* Sanskrit_Sch05_SevaHiParamoDharmah.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Sanskrit_Sch05_SevaHiParamoDharmah.pdf"; path = "desktopAhaan/Resources/TestPapers/Sanskrit_Sch05_SevaHiParamoDharmah.pdf"; sourceTree = SOURCE_ROOT; };
+		CF5F4CD2287AE12153C258CB /* Sanskrit_Sch06_KridamaVayamShlokantyaksharim.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Sanskrit_Sch06_KridamaVayamShlokantyaksharim.pdf"; path = "desktopAhaan/Resources/TestPapers/Sanskrit_Sch06_KridamaVayamShlokantyaksharim.pdf"; sourceTree = SOURCE_ROOT; };
+		63E3B232A87FB460F275D0C3 /* Sanskrit_Sch07_IshavasyamIdamSarvam.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Sanskrit_Sch07_IshavasyamIdamSarvam.pdf"; path = "desktopAhaan/Resources/TestPapers/Sanskrit_Sch07_IshavasyamIdamSarvam.pdf"; sourceTree = SOURCE_ROOT; };
+		3D5732B599C3C529C4EBF65D /* Sanskrit_Sch08_HitamManohariChaDurlabhamVachah.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Sanskrit_Sch08_HitamManohariChaDurlabhamVachah.pdf"; path = "desktopAhaan/Resources/TestPapers/Sanskrit_Sch08_HitamManohariChaDurlabhamVachah.pdf"; sourceTree = SOURCE_ROOT; };
+		FBA67655A10B09DDA9E38F75 /* Sanskrit_Sch09_AnnadBhavantiBhutani.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Sanskrit_Sch09_AnnadBhavantiBhutani.pdf"; path = "desktopAhaan/Resources/TestPapers/Sanskrit_Sch09_AnnadBhavantiBhutani.pdf"; sourceTree = SOURCE_ROOT; };
+		B6E20AB098F246033FD7823F /* Sanskrit_Sch10_DashamahKah.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Sanskrit_Sch10_DashamahKah.pdf"; path = "desktopAhaan/Resources/TestPapers/Sanskrit_Sch10_DashamahKah.pdf"; sourceTree = SOURCE_ROOT; };
+		590A626827958893F01D46A6 /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah.pdf"; path = "desktopAhaan/Resources/TestPapers/Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah.pdf"; sourceTree = SOURCE_ROOT; };
+		A829F6BD01B44BCEEF2802FD /* Sanskrit_Sch12_ViranganaPannadhaya.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Sanskrit_Sch12_ViranganaPannadhaya.pdf"; path = "desktopAhaan/Resources/TestPapers/Sanskrit_Sch12_ViranganaPannadhaya.pdf"; sourceTree = SOURCE_ROOT; };
+		7471E0729FDF494CC3FB6EFC /* Sanskrit_Sch13_VarnaMatraParichayah.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Sanskrit_Sch13_VarnaMatraParichayah.pdf"; path = "desktopAhaan/Resources/TestPapers/Sanskrit_Sch13_VarnaMatraParichayah.pdf"; sourceTree = SOURCE_ROOT; };
+		BADE27E4D48C38FE330AFF2E /* Sanskrit_Sch14_ShabdaRupani.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Sanskrit_Sch14_ShabdaRupani.pdf"; path = "desktopAhaan/Resources/TestPapers/Sanskrit_Sch14_ShabdaRupani.pdf"; sourceTree = SOURCE_ROOT; };
+		626B805523CBA8002BA72744 /* Sanskrit_Sch15_DhaturupaniVerbConjugations.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Sanskrit_Sch15_DhaturupaniVerbConjugations.pdf"; path = "desktopAhaan/Resources/TestPapers/Sanskrit_Sch15_DhaturupaniVerbConjugations.pdf"; sourceTree = SOURCE_ROOT; };
+		484C4DE6827CEE5E4498DBD6 /* Science_Ch01_NutritionInPlants.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Science_Ch01_NutritionInPlants.pdf"; path = "desktopAhaan/Resources/TestPapers/Science_Ch01_NutritionInPlants.pdf"; sourceTree = SOURCE_ROOT; };
+		698BDB1155EB18EB3D3760C0 /* Science_Ch02_NutritionInAnimals.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Science_Ch02_NutritionInAnimals.pdf"; path = "desktopAhaan/Resources/TestPapers/Science_Ch02_NutritionInAnimals.pdf"; sourceTree = SOURCE_ROOT; };
+		E6AFD0F86F20A3BE5F4E634D /* Science_Ch03_FibreToFabric.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Science_Ch03_FibreToFabric.pdf"; path = "desktopAhaan/Resources/TestPapers/Science_Ch03_FibreToFabric.pdf"; sourceTree = SOURCE_ROOT; };
+		8C1C2DEF4172FE776D29502D /* Science_Ch04_Heat.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Science_Ch04_Heat.pdf"; path = "desktopAhaan/Resources/TestPapers/Science_Ch04_Heat.pdf"; sourceTree = SOURCE_ROOT; };
+		2D1A759098E8F275EF489E33 /* Science_Ch05_AcidsBasesAndSalts.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Science_Ch05_AcidsBasesAndSalts.pdf"; path = "desktopAhaan/Resources/TestPapers/Science_Ch05_AcidsBasesAndSalts.pdf"; sourceTree = SOURCE_ROOT; };
+		42958F1F690A099FED89B747 /* Science_Ch06_PhysicalAndChemicalChanges.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Science_Ch06_PhysicalAndChemicalChanges.pdf"; path = "desktopAhaan/Resources/TestPapers/Science_Ch06_PhysicalAndChemicalChanges.pdf"; sourceTree = SOURCE_ROOT; };
+		EE4B65DBCADCA9671C73F0F6 /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate.pdf"; path = "desktopAhaan/Resources/TestPapers/Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate.pdf"; sourceTree = SOURCE_ROOT; };
+		E7D3A3ED7822F8FE9A7341B0 /* Science_Ch08_WindsStormsAndCyclones.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Science_Ch08_WindsStormsAndCyclones.pdf"; path = "desktopAhaan/Resources/TestPapers/Science_Ch08_WindsStormsAndCyclones.pdf"; sourceTree = SOURCE_ROOT; };
+		99E3960731126E72B8F8F133 /* Science_Ch09_Soil.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Science_Ch09_Soil.pdf"; path = "desktopAhaan/Resources/TestPapers/Science_Ch09_Soil.pdf"; sourceTree = SOURCE_ROOT; };
+		9EF353899512B3CF571FF867 /* Science_Ch10_RespirationInOrganisms.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Science_Ch10_RespirationInOrganisms.pdf"; path = "desktopAhaan/Resources/TestPapers/Science_Ch10_RespirationInOrganisms.pdf"; sourceTree = SOURCE_ROOT; };
+		B66B31107B106C2E90360D2E /* Science_Ch11_TransportationInAnimalsAndPlants.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Science_Ch11_TransportationInAnimalsAndPlants.pdf"; path = "desktopAhaan/Resources/TestPapers/Science_Ch11_TransportationInAnimalsAndPlants.pdf"; sourceTree = SOURCE_ROOT; };
+		AEA611336198B49D3E7B3C68 /* Science_Ch12_ReproductionInPlants.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Science_Ch12_ReproductionInPlants.pdf"; path = "desktopAhaan/Resources/TestPapers/Science_Ch12_ReproductionInPlants.pdf"; sourceTree = SOURCE_ROOT; };
+		8C0003E409888612470099DE /* Science_Ch14_ElectricCurrentAndItsEffect.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Science_Ch14_ElectricCurrentAndItsEffect.pdf"; path = "desktopAhaan/Resources/TestPapers/Science_Ch14_ElectricCurrentAndItsEffect.pdf"; sourceTree = SOURCE_ROOT; };
+		CE360F080BD326485E30A021 /* Science_Ch15_Light.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Science_Ch15_Light.pdf"; path = "desktopAhaan/Resources/TestPapers/Science_Ch15_Light.pdf"; sourceTree = SOURCE_ROOT; };
+		B46FD0036162DE6683C36E63 /* Science_Ch16_WaterAPreciousResource.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Science_Ch16_WaterAPreciousResource.pdf"; path = "desktopAhaan/Resources/TestPapers/Science_Ch16_WaterAPreciousResource.pdf"; sourceTree = SOURCE_ROOT; };
+		2C2E68D64747968FBDB824F1 /* Science_Ch17_ForestOurLifeline.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Science_Ch17_ForestOurLifeline.pdf"; path = "desktopAhaan/Resources/TestPapers/Science_Ch17_ForestOurLifeline.pdf"; sourceTree = SOURCE_ROOT; };
+		BFA10E23521F47855A2B5D08 /* Science_Ch18_WastewaterStory.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Science_Ch18_WastewaterStory.pdf"; path = "desktopAhaan/Resources/TestPapers/Science_Ch18_WastewaterStory.pdf"; sourceTree = SOURCE_ROOT; };
+		50CE14C21E4E3342394BD601 /* Science_Ch19_EarthMoonAndTheSun.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "Science_Ch19_EarthMoonAndTheSun.pdf"; path = "desktopAhaan/Resources/TestPapers/Science_Ch19_EarthMoonAndTheSun.pdf"; sourceTree = SOURCE_ROOT; };
+		CB86187B6D777055696168C9 /* SocialScience_Ssch01_GeographicalDiversityOfIndia.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "SocialScience_Ssch01_GeographicalDiversityOfIndia.pdf"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch01_GeographicalDiversityOfIndia.pdf"; sourceTree = SOURCE_ROOT; };
+		164FF3DED098499B53A7782F /* SocialScience_Ssch02_UnderstandingTheWeather.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "SocialScience_Ssch02_UnderstandingTheWeather.pdf"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch02_UnderstandingTheWeather.pdf"; sourceTree = SOURCE_ROOT; };
+		FFC8519C0F2B8F73A136BBB5 /* SocialScience_Ssch03_ClimatesOfIndia.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "SocialScience_Ssch03_ClimatesOfIndia.pdf"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch03_ClimatesOfIndia.pdf"; sourceTree = SOURCE_ROOT; };
+		5058F957372F4067E9D79973 /* SocialScience_Ssch04_NewBeginningsCitiesAndStates.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "SocialScience_Ssch04_NewBeginningsCitiesAndStates.pdf"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch04_NewBeginningsCitiesAndStates.pdf"; sourceTree = SOURCE_ROOT; };
+		E0EDFD4B7E430B83B272505F /* SocialScience_Ssch05_TheRiseOfEmpires.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "SocialScience_Ssch05_TheRiseOfEmpires.pdf"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch05_TheRiseOfEmpires.pdf"; sourceTree = SOURCE_ROOT; };
+		26CF7F32337B7DF04DE6121F /* SocialScience_Ssch06_TheAgeOfReorganisation.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "SocialScience_Ssch06_TheAgeOfReorganisation.pdf"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch06_TheAgeOfReorganisation.pdf"; sourceTree = SOURCE_ROOT; };
+		98BE5A8AB250395E07986A9A /* SocialScience_Ssch07_TheGuptaEra.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "SocialScience_Ssch07_TheGuptaEra.pdf"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch07_TheGuptaEra.pdf"; sourceTree = SOURCE_ROOT; };
+		CD63B10E3D6376E76754EFFB /* SocialScience_Ssch08_HowTheLandBecomesSacred.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "SocialScience_Ssch08_HowTheLandBecomesSacred.pdf"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch08_HowTheLandBecomesSacred.pdf"; sourceTree = SOURCE_ROOT; };
+		CC36C71DD56658DCF6EDDE98 /* SocialScience_Ssch09_TypesOfGovernments.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "SocialScience_Ssch09_TypesOfGovernments.pdf"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch09_TypesOfGovernments.pdf"; sourceTree = SOURCE_ROOT; };
+		30D2D24F147B73448A2A19AD /* SocialScience_Ssch10_TheConstitutionOfIndia.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "SocialScience_Ssch10_TheConstitutionOfIndia.pdf"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch10_TheConstitutionOfIndia.pdf"; sourceTree = SOURCE_ROOT; };
+		B419269E14A1BA43BDD73AB4 /* SocialScience_Ssch11_FromBarterToMoney.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "SocialScience_Ssch11_FromBarterToMoney.pdf"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch11_FromBarterToMoney.pdf"; sourceTree = SOURCE_ROOT; };
+		9BA2ED6D59A9781AF92D2496 /* SocialScience_Ssch12_UnderstandingMarkets.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "SocialScience_Ssch12_UnderstandingMarkets.pdf"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch12_UnderstandingMarkets.pdf"; sourceTree = SOURCE_ROOT; };
+		989BB9E92F055EA837DB23E1 /* SocialScience_Ssch13_TheStoryOfIndianFarming.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "SocialScience_Ssch13_TheStoryOfIndianFarming.pdf"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch13_TheStoryOfIndianFarming.pdf"; sourceTree = SOURCE_ROOT; };
+		3B3501CC4C302343096F3F2E /* SocialScience_Ssch14_IndiaAndHerNeighbours.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "SocialScience_Ssch14_IndiaAndHerNeighbours.pdf"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch14_IndiaAndHerNeighbours.pdf"; sourceTree = SOURCE_ROOT; };
+		E714131EFB98D647E72CBCDE /* SocialScience_Ssch15_EmpiresAndKingdoms6thTo10thCenturies.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "SocialScience_Ssch15_EmpiresAndKingdoms6thTo10thCenturies.pdf"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch15_EmpiresAndKingdoms6thTo10thCenturies.pdf"; sourceTree = SOURCE_ROOT; };
+		364BAB2C28AEA1B916F9FA9B /* SocialScience_Ssch16_TurningTides11thAnd12thCenturies.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "SocialScience_Ssch16_TurningTides11thAnd12thCenturies.pdf"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch16_TurningTides11thAnd12thCenturies.pdf"; sourceTree = SOURCE_ROOT; };
+		A7C170E554F5DD8B9D3BBE7E /* SocialScience_Ssch17_IndiaAHomeToMany.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "SocialScience_Ssch17_IndiaAHomeToMany.pdf"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch17_IndiaAHomeToMany.pdf"; sourceTree = SOURCE_ROOT; };
+		CCF6B0AEBE3740717608989F /* SocialScience_Ssch18_TheStateTheGovernmentAndYou.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "SocialScience_Ssch18_TheStateTheGovernmentAndYou.pdf"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch18_TheStateTheGovernmentAndYou.pdf"; sourceTree = SOURCE_ROOT; };
+		B50F85CF17609EB76784B873 /* SocialScience_Ssch19_Infrastructure.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "SocialScience_Ssch19_Infrastructure.pdf"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch19_Infrastructure.pdf"; sourceTree = SOURCE_ROOT; };
+		0D40DDA8E1DF0F1329CD83A7 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "SocialScience_Ssch20_BanksAndTheMagicOfFinance.pdf"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch20_BanksAndTheMagicOfFinance.pdf"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -7997,6 +8131,73 @@
 				8E27A204D469E7924D386CA3 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance_Solutions.md in Resources */,
 				929AFD55B6A0B8A16E5AEAD5 /* Maths_Ch15_FindingTheUnknown_SolvedGuide.html in Resources */,
 				A03AAFD6221254CE42EA3ECC /* Science_Ch13_MotionAndTime_SolvedGuide.html in Resources */,
+				40ED50292BD060A8AB5AD285 /* Maths_Ch01_LargeNumbersAroundUs.pdf in Resources */,
+				A242240EDCB1206C90EE9D61 /* Maths_Ch02_ArithmeticExpressions.pdf in Resources */,
+				FB5F0ACC0922DB04BB3FCBF3 /* Maths_Ch03_APeekBeyondThePoint.pdf in Resources */,
+				E96F85FCCA7ADD5E8FDC3005 /* Maths_Ch04_ExpressionsUsingLetterNumbers.pdf in Resources */,
+				F6B790857AEB031FB56CFF5E /* Maths_Ch05_ParallelAndIntersectingLines.pdf in Resources */,
+				E698371DFEF45E31E488C6B9 /* Maths_Ch06_NumberPlay.pdf in Resources */,
+				AEDC8C06B1A9E0B732835FB3 /* Maths_Ch07_ATaleOfThreeIntersectingLines.pdf in Resources */,
+				BA42F41FC33FF58150EAEA87 /* Maths_Ch08_WorkingWithFractions.pdf in Resources */,
+				89016D74EFE13D45C490869E /* Maths_Ch09_GeometricTwins.pdf in Resources */,
+				0F755B06A6C29E5A875AFF77 /* Maths_Ch10_OperationsWithIntegers.pdf in Resources */,
+				51C616093C5CC21BE74BCA6C /* Maths_Ch11_FindingCommonGround.pdf in Resources */,
+				CE75015739D4FD0BD339245B /* Maths_Ch12_AnotherPeekBeyondThePoint.pdf in Resources */,
+				8B28A426E5F1CBDC6DB3E9F7 /* Maths_Ch13_ConnectingTheDots.pdf in Resources */,
+				AECCEEE255C76916B0331882 /* Maths_Ch14_ConstructionsAndTilings.pdf in Resources */,
+				AC9140562D9F47DEC440EB32 /* Sanskrit_Sch01_VandeBharatamataram.pdf in Resources */,
+				445E3F6898379896168F32A6 /* Sanskrit_Sch02_NityamPibamahSubhashitarasam.pdf in Resources */,
+				F53F4800F648A2583A21DE30 /* Sanskrit_Sch03_MitrayaNamah.pdf in Resources */,
+				3FA7ABEF583C4B3B8932599C /* Sanskrit_Sch04_TheFoxAndTheGrapes.pdf in Resources */,
+				AAE3F4A70507692BC9C1C75F /* Sanskrit_Sch05_SevaHiParamoDharmah.pdf in Resources */,
+				7BC7FD74F5AB867A0D3F49EB /* Sanskrit_Sch06_KridamaVayamShlokantyaksharim.pdf in Resources */,
+				390A4D1709FF7D95B9777B54 /* Sanskrit_Sch07_IshavasyamIdamSarvam.pdf in Resources */,
+				7A3C7152AF53CF497281EAA9 /* Sanskrit_Sch08_HitamManohariChaDurlabhamVachah.pdf in Resources */,
+				C6D4544F379007B5F0A949E0 /* Sanskrit_Sch09_AnnadBhavantiBhutani.pdf in Resources */,
+				2C3E0592F52A0EADBEB79353 /* Sanskrit_Sch10_DashamahKah.pdf in Resources */,
+				56A176B9A2FD54A3D276B73F /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah.pdf in Resources */,
+				7D3B09032912BD886005A57A /* Sanskrit_Sch12_ViranganaPannadhaya.pdf in Resources */,
+				E12A92D53DF8E338FCA4E135 /* Sanskrit_Sch13_VarnaMatraParichayah.pdf in Resources */,
+				1F1003115D0E5F4C6C5609B0 /* Sanskrit_Sch14_ShabdaRupani.pdf in Resources */,
+				1FDE3C0C0468693C8D190EDC /* Sanskrit_Sch15_DhaturupaniVerbConjugations.pdf in Resources */,
+				3C57B14C41749701567A2128 /* Science_Ch01_NutritionInPlants.pdf in Resources */,
+				118D0EF69B52A1898AD0BC5F /* Science_Ch02_NutritionInAnimals.pdf in Resources */,
+				E5530D6BCE739DFDFA9E7AC9 /* Science_Ch03_FibreToFabric.pdf in Resources */,
+				5557346B2C38947911C712B9 /* Science_Ch04_Heat.pdf in Resources */,
+				7F3ABBC3D31425F373ECB1B3 /* Science_Ch05_AcidsBasesAndSalts.pdf in Resources */,
+				0653B7A4BC180DF18E961BCB /* Science_Ch06_PhysicalAndChemicalChanges.pdf in Resources */,
+				42AE0A0C04A7D3D812B2B611 /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate.pdf in Resources */,
+				6188E732E86C35E19CAB4610 /* Science_Ch08_WindsStormsAndCyclones.pdf in Resources */,
+				00FAB38C9B93007716181607 /* Science_Ch09_Soil.pdf in Resources */,
+				0EAACF105F0964CFCAE209ED /* Science_Ch10_RespirationInOrganisms.pdf in Resources */,
+				74BB013C749C9BEA4CC43758 /* Science_Ch11_TransportationInAnimalsAndPlants.pdf in Resources */,
+				69591A8132CA15311B1D86A3 /* Science_Ch12_ReproductionInPlants.pdf in Resources */,
+				355F1DA8DB8EA6734712F043 /* Science_Ch14_ElectricCurrentAndItsEffect.pdf in Resources */,
+				EDEBEF2625623450E693EFC1 /* Science_Ch15_Light.pdf in Resources */,
+				C6A7E06F254F03A107640E41 /* Science_Ch16_WaterAPreciousResource.pdf in Resources */,
+				D9C53F7026D37AD14005F37E /* Science_Ch17_ForestOurLifeline.pdf in Resources */,
+				693B8928FD44CE5958CDF874 /* Science_Ch18_WastewaterStory.pdf in Resources */,
+				31AB12BE62D0C2E33E55B300 /* Science_Ch19_EarthMoonAndTheSun.pdf in Resources */,
+				DA8A12122C5F13412BEDCE70 /* SocialScience_Ssch01_GeographicalDiversityOfIndia.pdf in Resources */,
+				38C3464D5EA0E1780DB7E4A2 /* SocialScience_Ssch02_UnderstandingTheWeather.pdf in Resources */,
+				2F08413F41D3D18D4CFC36C2 /* SocialScience_Ssch03_ClimatesOfIndia.pdf in Resources */,
+				FCA7B53FF3EC1DC213B8F82A /* SocialScience_Ssch04_NewBeginningsCitiesAndStates.pdf in Resources */,
+				3D2A99423C3790C4173F7306 /* SocialScience_Ssch05_TheRiseOfEmpires.pdf in Resources */,
+				E094E8BCB10C122CDAADAE7B /* SocialScience_Ssch06_TheAgeOfReorganisation.pdf in Resources */,
+				4E78AF6A4B81655D3C5E7934 /* SocialScience_Ssch07_TheGuptaEra.pdf in Resources */,
+				76F179F58F6B75966A0AD98F /* SocialScience_Ssch08_HowTheLandBecomesSacred.pdf in Resources */,
+				7CF25232C97327A764DAF74C /* SocialScience_Ssch09_TypesOfGovernments.pdf in Resources */,
+				DABEB005AE5C84EAEF8E2053 /* SocialScience_Ssch10_TheConstitutionOfIndia.pdf in Resources */,
+				2B72DB37D9D0111BB0DAFF9F /* SocialScience_Ssch11_FromBarterToMoney.pdf in Resources */,
+				24322194B03E2F2D31EE954C /* SocialScience_Ssch12_UnderstandingMarkets.pdf in Resources */,
+				276B082711588637EFB4DA55 /* SocialScience_Ssch13_TheStoryOfIndianFarming.pdf in Resources */,
+				B4DB2A32D5F81516EE379EF3 /* SocialScience_Ssch14_IndiaAndHerNeighbours.pdf in Resources */,
+				BA7FF32DF95454EC423B8D25 /* SocialScience_Ssch15_EmpiresAndKingdoms6thTo10thCenturies.pdf in Resources */,
+				C65A97D58830C10F254C612B /* SocialScience_Ssch16_TurningTides11thAnd12thCenturies.pdf in Resources */,
+				62E15BFC9E313096A9D710A6 /* SocialScience_Ssch17_IndiaAHomeToMany.pdf in Resources */,
+				7ED32507DBB7A41A9B2A2831 /* SocialScience_Ssch18_TheStateTheGovernmentAndYou.pdf in Resources */,
+				7B99FB40034B50EB0B5EDF37 /* SocialScience_Ssch19_Infrastructure.pdf in Resources */,
+				47727B371E8D8A4589147BB7 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

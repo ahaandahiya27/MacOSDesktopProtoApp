@@ -376,10 +376,33 @@ def patch(text: str) -> tuple[str, list[str]]:
     return out, log
 
 
+def _augment_with_disk_discovery() -> None:
+    """Auto-discover any files in OlympiadTests/ or Resources/TestPapers/
+    that aren't yet in SWIFT_FILES / RESOURCE_FILES so a future agent
+    can drop new papers / PDFs into the directories and re-run without
+    editing the manifest. The manifest stays as the authoritative
+    inventory (so diffs surface intent), but disk truth supplements it.
+    """
+    repo_root = Path(__file__).resolve().parent.parent
+    for d, ext_filter, target in [
+        ("desktopAhaan/Subjects/OlympiadTests", (".swift",), SWIFT_FILES),
+        ("desktopAhaan/Resources/TestPapers", (".md", ".html", ".pdf"), RESOURCE_FILES),
+    ]:
+        full = repo_root / d
+        if not full.exists():
+            continue
+        for p in sorted(full.rglob("*")):
+            if p.is_file() and p.suffix in ext_filter:
+                rel = str(p.relative_to(repo_root))
+                if rel not in target:
+                    target.append(rel)
+
+
 def main() -> int:
     if not PBXPROJ.exists():
         print(f"ERROR: {PBXPROJ} not found", file=sys.stderr)
         return 1
+    _augment_with_disk_discovery()
     original = PBXPROJ.read_text(encoding="utf-8")
     patched, log = patch(original)
     for line in log:
