@@ -59,12 +59,26 @@ def balanced_letters(seed_str):
 SLOTS = ("A", "B", "C", "D")
 
 
+def paper_label(c):
+    """Optional ladder designation, e.g. 'Paper 3 — (progressively harder)'.
+    Returns '' when no 'paperN' field is present (Paper-1 backward compat)."""
+    n = c.get("paperN")
+    if not n:
+        return ""
+    return f"Paper {n} — (progressively harder)"
+
+
 def build_qp(c, letters):
     L = []
     a = L.append
-    a(f"# Olympiad Test Paper — {c['subjectLine']}")
+    lbl = paper_label(c)
+    title_suffix = f" — Paper {c['paperN']}" if c.get("paperN") else ""
+    a(f"# Olympiad Test Paper — {c['subjectLine']}{title_suffix}")
     a(f"## Chapter {c['chapterNum']}: {c['chapterTitle']}")
     a("")
+    if lbl:
+        a(f"**{lbl}**")
+        a("")
     a("| | |")
     a("|---|---|")
     a(f"| **Subject** | {c['subject']} |")
@@ -101,8 +115,13 @@ def build_qp(c, letters):
 def build_solutions(c, letters):
     L = []
     a = L.append
-    a(f"# Solutions — {c['subjectLine']}, Chapter {c['chapterNum']}: {c['chapterTitle']}")
+    sol_suffix = f" — Paper {c['paperN']}" if c.get("paperN") else ""
+    a(f"# Solutions — {c['subjectLine']}, Chapter {c['chapterNum']}: {c['chapterTitle']}{sol_suffix}")
     a("")
+    lbl = paper_label(c)
+    if lbl:
+        a(f"**{lbl}**")
+        a("")
     a("Marking: **+4** correct, **−1** wrong, **0** unattempted. Maximum marks **240**.")
     a("")
     a("<!--")

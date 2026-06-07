@@ -13,10 +13,13 @@ import sys
 
 
 def main():
-    if len(sys.argv) != 7:
+    if len(sys.argv) not in (7, 8):
         print(__doc__)
         return 2
     oly_id, subject_id, subject_name, chnum, chtitle, stem = sys.argv[1:7]
+    paper_n = sys.argv[7] if len(sys.argv) == 8 else ""
+    display_title = (f"{chtitle} — Paper {paper_n} — 60 MCQ Olympiad"
+                     if paper_n else f"{chtitle} — 60 MCQ Olympiad")
     here = os.path.dirname(os.path.abspath(__file__))
     path = os.path.join(here, "IN_APP_INTEGRATION.md")
     block = f"""
@@ -27,7 +30,7 @@ def main():
             subjectName: "{subject_name}",
             chapterNumber: {chnum},
             chapterTitle: "{chtitle}",
-            displayTitle: "{chtitle} — 60 MCQ Olympiad",
+            displayTitle: "{display_title}",
             questionPaperMD: "{stem}_QuestionPaper.md",
             solutionsMD: "{stem}_Solutions.md",
             questionPaperHTML: "{stem}.html",
