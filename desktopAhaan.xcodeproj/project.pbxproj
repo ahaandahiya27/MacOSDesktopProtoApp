@@ -1839,6 +1839,8 @@
 		4ACFA98EE02ED98E2D9D21C1 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance.html in Resources */ = {isa = PBXBuildFile; fileRef = F7AF3F32FC87FA500982F194 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance.html */; };
 		C3ED5F75C224D6CB45C74886 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 7E9E76D6BD203C1DB151EC4E /* SocialScience_Ssch20_BanksAndTheMagicOfFinance_QuestionPaper.md */; };
 		8E27A204D469E7924D386CA3 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 38F9BADB44FE218FC4A8DB98 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance_Solutions.md */; };
+		929AFD55B6A0B8A16E5AEAD5 /* Maths_Ch15_FindingTheUnknown_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 378EC49E6AF34EBE75867CDA /* Maths_Ch15_FindingTheUnknown_SolvedGuide.html */; };
+		A03AAFD6221254CE42EA3ECC /* Science_Ch13_MotionAndTime_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = B9685DAFFFFE683ADC910AC5 /* Science_Ch13_MotionAndTime_SolvedGuide.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -3695,6 +3697,8 @@
 		F7AF3F32FC87FA500982F194 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "SocialScience_Ssch20_BanksAndTheMagicOfFinance.html"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch20_BanksAndTheMagicOfFinance.html"; sourceTree = SOURCE_ROOT; };
 		7E9E76D6BD203C1DB151EC4E /* SocialScience_Ssch20_BanksAndTheMagicOfFinance_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = "SocialScience_Ssch20_BanksAndTheMagicOfFinance_QuestionPaper.md"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch20_BanksAndTheMagicOfFinance_QuestionPaper.md"; sourceTree = SOURCE_ROOT; };
 		38F9BADB44FE218FC4A8DB98 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = "SocialScience_Ssch20_BanksAndTheMagicOfFinance_Solutions.md"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch20_BanksAndTheMagicOfFinance_Solutions.md"; sourceTree = SOURCE_ROOT; };
+		378EC49E6AF34EBE75867CDA /* Maths_Ch15_FindingTheUnknown_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Maths_Ch15_FindingTheUnknown_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch15_FindingTheUnknown_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		B9685DAFFFFE683ADC910AC5 /* Science_Ch13_MotionAndTime_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Science_Ch13_MotionAndTime_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Science_Ch13_MotionAndTime_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -7991,6 +7995,8 @@
 				4ACFA98EE02ED98E2D9D21C1 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance.html in Resources */,
 				C3ED5F75C224D6CB45C74886 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance_QuestionPaper.md in Resources */,
 				8E27A204D469E7924D386CA3 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance_Solutions.md in Resources */,
+				929AFD55B6A0B8A16E5AEAD5 /* Maths_Ch15_FindingTheUnknown_SolvedGuide.html in Resources */,
+				A03AAFD6221254CE42EA3ECC /* Science_Ch13_MotionAndTime_SolvedGuide.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

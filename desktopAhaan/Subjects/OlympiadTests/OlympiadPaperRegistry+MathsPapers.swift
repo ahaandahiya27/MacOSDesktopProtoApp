@@ -200,7 +200,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Maths_Ch15_FindingTheUnknown_Solutions.md",
             questionPaperHTML: "Maths_Ch15_FindingTheUnknown.html",
             questionPaperPDF: "Maths_Ch15_FindingTheUnknown.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Maths_Ch15_FindingTheUnknown_SolvedGuide.html"
         )
     ]
 }

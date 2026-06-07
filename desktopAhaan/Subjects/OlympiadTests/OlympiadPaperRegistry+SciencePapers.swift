@@ -174,7 +174,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Science_Ch13_MotionAndTime_Solutions.md",
             questionPaperHTML: "Science_Ch13_MotionAndTime.html",
             questionPaperPDF: "Science_Ch13_MotionAndTime.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Science_Ch13_MotionAndTime_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_science_ch14",

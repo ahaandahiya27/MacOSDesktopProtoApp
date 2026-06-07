@@ -30,6 +30,12 @@ struct OlympiadHubView: View {
     /// The print-ready HTML sheet (the Read Paper CTA target). nil →
     /// no sheet up.
     @State private var presentedPaperSheet: OlympiadPaper?
+    /// The hand-authored / generator-built Solved Guide HTML sheet
+    /// (topic-clustered cards with correct answer highlighted +
+    /// worked solution per question). Only papers whose
+    /// `solvedGuideHTML` is non-nil have this CTA — Science Ch13 +
+    /// Maths Ch15 today.
+    @State private var presentedGuideSheet: OlympiadPaper?
     /// Banner shown briefly after a successful Save PDF — gives the
     /// parent a confirmation that the file landed where they asked.
     @State private var savedToURL: URL?
@@ -61,6 +67,19 @@ struct OlympiadHubView: View {
                 articleTitle: "Question Paper + Solutions — \(paper.chapterTitle)"
             )
             .frame(minWidth: 760, minHeight: 560)
+        }
+        .sheet(item: $presentedGuideSheet) { paper in
+            // The Solved Guide is a bundled SwiftUI-rendered HTML —
+            // topic-clustered question cards with correct answers
+            // highlighted + worked solution per question. Reuses
+            // ArticleBrowserView so the rendering path is the proven
+            // NSTextView one (no WKWebView risk on Big Sur AMD GPU).
+            ArticleBrowserView(
+                initialFile: paper.solvedGuideHTML ?? "",
+                chapterFolder: "TestPapers",
+                articleTitle: "Solved Guide — \(paper.chapterTitle)"
+            )
+            .frame(minWidth: 760, minHeight: 600)
         }
     }
 
@@ -213,6 +232,26 @@ struct OlympiadHubView: View {
                 .buttonStyle(.plain)
                 .help("Open the print-style HTML — questions, answer key and worked solutions.")
                 .accessibilityLabel("Open paper — \(paper.chapterTitle)")
+
+                // Conditional Solved Guide CTA — only appears when the
+                // paper carries a `solvedGuideHTML` (Science Ch13 + Maths
+                // Ch15 today). The Solved Guide is a topic-clustered
+                // worked-solutions document with the correct answer
+                // highlighted on every question — designed for revision
+                // rather than first-attempt rehearsal.
+                if paper.solvedGuideHTML != nil {
+                    Button {
+                        presentedGuideSheet = paper
+                    } label: {
+                        actionLabel(icon: "book.fill",
+                                    text: "Solved Guide",
+                                    tint: DesignTokens.BrandColor.primaryAction,
+                                    filled: false)
+                    }
+                    .buttonStyle(.plain)
+                    .help("Open the topic-clustered solved guide with worked solutions for all 60 questions.")
+                    .accessibilityLabel("Solved guide — \(paper.chapterTitle)")
+                }
 
                 Button {
                     savePDF(for: paper)

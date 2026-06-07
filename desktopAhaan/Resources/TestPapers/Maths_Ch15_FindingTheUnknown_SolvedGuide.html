@@ -1,0 +1,1099 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finding the Unknown — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Finding the Unknown<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Word → Equation <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Brackets <span style="opacity:.6;font-size:.85em;">· 5 Q</span></a></li>
+    <li><a href="#cluster-3">Fractions <span style="opacity:.6;font-size:.85em;">· 9 Q</span></a></li>
+    <li><a href="#cluster-4">Variables on Both Sides <span style="opacity:.6;font-size:.85em;">· 5 Q</span></a></li>
+    <li><a href="#cluster-5">Checking by Substitution <span style="opacity:.6;font-size:.85em;">· 5 Q</span></a></li>
+    <li><a href="#cluster-6">Patterns → Equation <span style="opacity:.6;font-size:.85em;">· 4 Q</span></a></li>
+    <li><a href="#cluster-7">Age &amp; Number Problems <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-8">Money &amp; Coins <span style="opacity:.6;font-size:.85em;">· 4 Q</span></a></li>
+    <li><a href="#cluster-9">Geometry &amp; Sharing <span style="opacity:.6;font-size:.85em;">· 8 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Word → Equation</h2></div>
+    <div class="cluster-rule"><b>Key rule.</b> Pick a letter for the unknown, translate each phrase literally, then equate. The verb is your equals sign.</div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">The phrase "7 less than twice a number n" is written as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2(n − 7)</span></li>
+        <li class="correct"><span class="lab">B</span><span>2n − 7</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>7 − 2n</span></li>
+        <li class=""><span class="lab">D</span><span>2n + 7</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Twice a number" = 2n; "7 less than" it = 2n − 7. (2(n − 7) would be "7 less than the number, then doubled".)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">"When 5 is added to thrice a number, the result is 26." As an equation this is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>3(x + 5) = 26</span></li>
+        <li class=""><span class="lab">B</span><span>5x + 3 = 26</span></li>
+        <li class=""><span class="lab">C</span><span>3x − 5 = 26</span></li>
+        <li class="correct"><span class="lab">D</span><span>3x + 5 = 26</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Thrice a number" = 3x; "5 added" = 3x + 5; "result is 26" → 3x + 5 = 26.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">A number increased by 8 equals three times the result of decreasing the same number by 4. The number is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>8</span></li>
+        <li class=""><span class="lab">B</span><span>5</span></li>
+        <li class=""><span class="lab">C</span><span>14</span></li>
+        <li class="correct"><span class="lab">D</span><span>10</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>x + 8 = 3(x − 4) → x + 8 = 3x − 12 → 8 + 12 = 3x − x → 20 = 2x → x = 10. Check: 10 + 8 = 18 = 3(10 − 4) = 18. ✓ (Forgetting to distribute the 3 over −4, i.e. x + 8 = 3x − 4, gives the trap 6.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">A number increased by 12 becomes three times the number. The number is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4</span></li>
+        <li class="correct"><span class="lab">B</span><span>6</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>12</span></li>
+        <li class=""><span class="lab">D</span><span>3</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>x + 12 = 3x → 12 = 2x → x = 6.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">The sum of a number and its successor is 5 less than three times the number. The number is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5</span></li>
+        <li class=""><span class="lab">B</span><span>4</span></li>
+        <li class=""><span class="lab">C</span><span>7</span></li>
+        <li class="correct"><span class="lab">D</span><span>6</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Number = x, successor = x + 1. "Sum is 5 less than three times the number" → x + (x + 1) = 3x − 5 → 2x + 1 = 3x − 5 → 1 + 5 = 3x − 2x → x = 6. Check: 6 + 7 = 13 = 3·6 − 5 = 13. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">Find a number such that doubling it and adding 3 gives the same result as tripling it and subtracting 2.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>1</span></li>
+        <li class=""><span class="lab">C</span><span>−5</span></li>
+        <li class=""><span class="lab">D</span><span>6</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>2x + 3 = 3x − 2 → 3 + 2 = 3x − 2x → x = 5. Check: 2·5 + 3 = 13 = 3·5 − 2. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">"When a number is divided by 5 and 3 is added, the result is 8." The number is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>40</span></li>
+        <li class="correct"><span class="lab">B</span><span>25</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>55</span></li>
+        <li class=""><span class="lab">D</span><span>15</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>x/5 + 3 = 8 → x/5 = 5 → x = 25.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">"The cost of n notebooks at ₹15 each, after a ₹20 discount on the bill" is written as:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>15n − 20</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>15(n − 20)</span></li>
+        <li class=""><span class="lab">C</span><span>20 − 15n</span></li>
+        <li class=""><span class="lab">D</span><span>15n + 20</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cost of n notebooks = 15n; "after a ₹20 discount" = 15n − 20.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">Twice a number minus 7 equals the number plus 5. The number is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>6</span></li>
+        <li class="correct"><span class="lab">B</span><span>12</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>2</span></li>
+        <li class=""><span class="lab">D</span><span>−12</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>2x − 7 = x + 5 → x = 12. Check: 2·12 − 7 = 17 = 12 + 5. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">Find the positive integer for which 3 times the integer is 8 more than twice the integer.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4</span></li>
+        <li class=""><span class="lab">B</span><span>16</span></li>
+        <li class="correct"><span class="lab">C</span><span>8</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>24</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>3x = 2x + 8 → x = 8. Check: 3·8 = 24 = 2·8 + 8. ✓ --- *Solutions complete: 60 / 60.*</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Brackets</h2></div>
+    <div class="cluster-rule"><b>Key rule.</b> Multiply through the bracket FIRST, then collect like terms. Distribute, simplify, isolate.</div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">Solve: 3(2x + 1) = 27.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>6</span></li>
+        <li class=""><span class="lab">B</span><span>9</span></li>
+        <li class=""><span class="lab">C</span><span>5</span></li>
+        <li class="correct"><span class="lab">D</span><span>4</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>3(2x + 1) = 27 → 6x + 3 = 27 → 6x = 24 → x = 4. Check: 3(8 + 1) = 27. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">Solve: 5 − 2(x − 1) = 1.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>−3</span></li>
+        <li class="correct"><span class="lab">B</span><span>3</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>2</span></li>
+        <li class=""><span class="lab">D</span><span>4</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>5 − 2(x − 1) = 1 → 5 − 2x + 2 = 1 → 7 − 2x = 1 → 2x = 6 → x = 3. (The trap is writing 5 − 2x − 2; the bracket flips the sign of −1 to +2.) Check: 5 − 2(2) = 1. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">Solve: 2(3x − 1) = 4(x + 2).</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>3</span></li>
+        <li class=""><span class="lab">B</span><span>10</span></li>
+        <li class="correct"><span class="lab">C</span><span>5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>1</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>2(3x − 1) = 4(x + 2) → 6x − 2 = 4x + 8 → 2x = 10 → x = 5. Check: 2·14 = 28 = 4·7. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">Solve: 3 − (2x − 5) = 4.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4</span></li>
+        <li class=""><span class="lab">B</span><span>−2</span></li>
+        <li class="correct"><span class="lab">C</span><span>2</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>6</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>3 − (2x − 5) = 4 → 3 − 2x + 5 = 4 → 8 − 2x = 4 → 2x = 4 → x = 2. Check: 3 − (4 − 5) = 3 − (−1) = 4. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">Solve: 2(x + 4) − 3 = x + 9.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>4</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>5</span></li>
+        <li class=""><span class="lab">C</span><span>9</span></li>
+        <li class=""><span class="lab">D</span><span>1</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>2(x + 4) − 3 = x + 9 → 2x + 8 − 3 = x + 9 → 2x + 5 = x + 9 → x = 4. Check: 2·8 − 3 = 13 = 4 + 9. ✓</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Fractions</h2></div>
+    <div class="cluster-rule"><b>Key rule.</b> Multiply both sides by the LCM (or cross-multiply if the equation is one fraction = another). Clear the denominators before transposing.</div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">One-third of a number exceeds one-fourth of the same number by 5. The number is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>60</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>5</span></li>
+        <li class=""><span class="lab">C</span><span>20</span></li>
+        <li class=""><span class="lab">D</span><span>12</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Exceeds by 5" → x/3 − x/4 = 5. Multiply by 12: 4x − 3x = 60 → x = 60. Check: 60/3 − 60/4 = 20 − 15 = 5. ✓ (Reading "exceeds by 5" as x/3 = x/4 + 5 gives the same equation; the trap 5 is the difference itself.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">Solve: (2x − 1)/3 = 5.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>7</span></li>
+        <li class="correct"><span class="lab">B</span><span>8</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>16</span></li>
+        <li class=""><span class="lab">D</span><span>23</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(2x − 1)/3 = 5 → 2x − 1 = 15 → 2x = 16 → x = 8. Check: (16 − 1)/3 = 5. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">Solve: x/2 + x/3 = 10.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>6</span></li>
+        <li class=""><span class="lab">B</span><span>4</span></li>
+        <li class=""><span class="lab">C</span><span>24</span></li>
+        <li class="correct"><span class="lab">D</span><span>12</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>x/2 + x/3 = 10 → multiply by 6: 3x + 2x = 60 → 5x = 60 → x = 12. Check: 6 + 4 = 10. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">Half of a number, decreased by 6, equals one-third of the same number. The number is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>12</span></li>
+        <li class=""><span class="lab">B</span><span>18</span></li>
+        <li class=""><span class="lab">C</span><span>9</span></li>
+        <li class="correct"><span class="lab">D</span><span>36</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Half of a number, decreased by 6" = x/2 − 6; this equals one-third of it: x/2 − 6 = x/3. Multiply by 6: 3x − 36 = 2x → x = 36. Check: 36/2 − 6 = 12 = 36/3. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">Solve: (x − 3)/2 = (x + 1)/4.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5</span></li>
+        <li class=""><span class="lab">B</span><span>3</span></li>
+        <li class=""><span class="lab">C</span><span>11</span></li>
+        <li class="correct"><span class="lab">D</span><span>7</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(x − 3)/2 = (x + 1)/4 → cross-multiply: 4(x − 3) = 2(x + 1) → 4x − 12 = 2x + 2 → 2x = 14 → x = 7. Check: 4/2 = 2 = 8/4. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">Solve: 2x/3 − x/2 = 1.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>3</span></li>
+        <li class=""><span class="lab">B</span><span>2</span></li>
+        <li class="correct"><span class="lab">C</span><span>6</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>12</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>2x/3 − x/2 = 1 → multiply by 6: 4x − 3x = 6 → x = 6. Check: 12/3 − 6/2 = 4 − 3 = 1. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">Solve: (x − 1)/2 + (x + 1)/3 = 4.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4</span></li>
+        <li class=""><span class="lab">B</span><span>6</span></li>
+        <li class="correct"><span class="lab">C</span><span>5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>7</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(x − 1)/2 + (x + 1)/3 = 4. Multiply by 6: 3(x − 1) + 2(x + 1) = 24 → 3x − 3 + 2x + 2 = 24 → 5x − 1 = 24 → 5x = 25 → x = 5. Check: 4/2 + 6/3 = 2 + 2 = 4. ✓ (Dropping a sign on the brackets, e.g. 3x − 3 + 2x − 2, gives 5x = 29 and no clean answer — a signal you distributed wrongly.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">Solve: x/2 + 4 = x − 1.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5</span></li>
+        <li class=""><span class="lab">B</span><span>6</span></li>
+        <li class=""><span class="lab">C</span><span>8</span></li>
+        <li class="correct"><span class="lab">D</span><span>10</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>x/2 + 4 = x − 1 → 4 + 1 = x − x/2 → 5 = x/2 → x = 10. Check: 10/2 + 4 = 9 = 10 − 1. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">Solve: (2x + 1)/3 = (x + 4)/2.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5</span></li>
+        <li class=""><span class="lab">B</span><span>7</span></li>
+        <li class=""><span class="lab">C</span><span>8</span></li>
+        <li class="correct"><span class="lab">D</span><span>10</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(2x + 1)/3 = (x + 4)/2 → cross-multiply: 2(2x + 1) = 3(x + 4) → 4x + 2 = 3x + 12 → x = 10. Check: 21/3 = 7 = 14/2. ✓</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Variables on Both Sides</h2></div>
+    <div class="cluster-rule"><b>Key rule.</b> Move all x-terms to one side and all constants to the other in ONE pass. Subtract the smaller x-coefficient to keep x positive.</div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">Solve: 7x + 4 = 3x + 20.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>6</span></li>
+        <li class=""><span class="lab">B</span><span>2</span></li>
+        <li class="correct"><span class="lab">C</span><span>4</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>3</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>7x + 4 = 3x + 20 → 7x − 3x = 20 − 4 → 4x = 16 → x = 4. Check: 7·4 + 4 = 32 = 3·4 + 20. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">Solve: 4(x − 1) = 2(x + 3).</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2</span></li>
+        <li class=""><span class="lab">B</span><span>7</span></li>
+        <li class=""><span class="lab">C</span><span>1</span></li>
+        <li class="correct"><span class="lab">D</span><span>5</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>4(x − 1) = 2(x + 3) → 4x − 4 = 2x + 6 → 2x = 10 → x = 5. Check: 4·4 = 16 = 2·8. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">Solve: 3(x + 2) = 2(x + 5).</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>4</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>6</span></li>
+        <li class=""><span class="lab">C</span><span>16</span></li>
+        <li class=""><span class="lab">D</span><span>2</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>3(x + 2) = 2(x + 5) → 3x + 6 = 2x + 10 → x = 4. Check: 3·6 = 18 = 2·9. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">Solve: 12 − 3x = 2x − 8.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2</span></li>
+        <li class=""><span class="lab">B</span><span>−4</span></li>
+        <li class="correct"><span class="lab">C</span><span>4</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>5</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>12 − 3x = 2x − 8 → 12 + 8 = 2x + 3x → 20 = 5x → x = 4. Check: 12 − 12 = 0 = 8 − 8. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">Solve: 6x − 5 = 4x + 7.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1</span></li>
+        <li class="correct"><span class="lab">B</span><span>6</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>3</span></li>
+        <li class=""><span class="lab">D</span><span>11</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>6x − 5 = 4x + 7 → 2x = 12 → x = 6. Check: 36 − 5 = 31 = 24 + 7. ✓</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Checking by Substitution</h2></div>
+    <div class="cluster-rule"><b>Key rule.</b> Plug the candidate back into the ORIGINAL equation. LHS = RHS confirms; anything else means the candidate is wrong.</div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">Which value of x satisfies 5x − 7 = 2x + 5?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2</span></li>
+        <li class=""><span class="lab">B</span><span>3</span></li>
+        <li class=""><span class="lab">C</span><span>6</span></li>
+        <li class="correct"><span class="lab">D</span><span>4</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>5x − 7 = 2x + 5 → 3x = 12 → x = 4. Check: 20 − 7 = 13 = 8 + 5. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">For which equation is x = 3 the solution?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2x + 1 = 5</span></li>
+        <li class=""><span class="lab">B</span><span>x − 3 = 3</span></li>
+        <li class="correct"><span class="lab">C</span><span>4x − 5 = 7</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>x/3 = 9</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Test x = 3: (A) 2·3 + 1 = 7 ≠ 5; (B) 3 − 3 = 0 ≠ 3; (C) 4·3 − 5 = 7 ✓; (D) 3/3 = 1 ≠ 9. So (C).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">x = −2 is a solution of which equation?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>3x + 1 = 5</span></li>
+        <li class="correct"><span class="lab">B</span><span>2x + 9 = 5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>x − 2 = 0</span></li>
+        <li class=""><span class="lab">D</span><span>4x = 8</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Test x = −2: (B) 2(−2) + 9 = 5 ✓. The others: (A) −5 ≠ 5, (C) −4 ≠ 0, (D) −8 ≠ 8. So (B).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">x = 2 is a solution of every equation below **except**:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>3x − 1 = 5</span></li>
+        <li class="correct"><span class="lab">B</span><span>2x + 3 = 5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>x + 4 = 6</span></li>
+        <li class=""><span class="lab">D</span><span>5x = 10</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Test x = 2: (A) 5 = 5 ✓, (B) 2·2 + 3 = 7 ≠ 5 ✗, (C) 6 = 6 ✓, (D) 10 = 10 ✓. The exception is (B).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">Which value of x satisfies BOTH 2x − 1 = x + 3 and x/2 + 1 = 3?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>3</span></li>
+        <li class=""><span class="lab">B</span><span>2</span></li>
+        <li class="correct"><span class="lab">C</span><span>4</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>5</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Solve each and find the common value. First: 2x − 1 = x + 3 → x = 4. Second: x/2 + 1 = 3 → x/2 = 2 → x = 4. Both give x = 4, so 4 satisfies both. ✓ (A value satisfying only one equation — e.g. checking just the first — is the trap.)</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Patterns → Equation</h2></div>
+    <div class="cluster-rule"><b>Key rule.</b> Read the rule that turns the position number into the term. Then equate that rule to the target value and solve.</div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">A matchstick pattern uses 4 sticks for 1 square, 7 for 2 squares, 10 for 3 squares (each extra square adds 3 sticks). How many squares can be made with exactly 31 sticks?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>7</span></li>
+        <li class=""><span class="lab">B</span><span>9</span></li>
+        <li class="correct"><span class="lab">C</span><span>10</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>11</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sticks for n squares = 3n + 1. Set 3n + 1 = 31 → 3n = 30 → n = 10. Check: 3·10 + 1 = 31. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">In the sequence 3, 5, 7, 9, … (nth term 2n + 1), which term equals 25?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the 11th</span></li>
+        <li class="correct"><span class="lab">B</span><span>the 12th</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the 13th</span></li>
+        <li class=""><span class="lab">D</span><span>the 24th</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>2n + 1 = 25 → 2n = 24 → n = 12. So the 12th term.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">A taxi charges ₹50 fixed plus ₹12 per km. A ride costing ₹158 covered how many km?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>8</span></li>
+        <li class="correct"><span class="lab">B</span><span>9</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>10</span></li>
+        <li class=""><span class="lab">D</span><span>12</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>50 + 12k = 158 → 12k = 108 → k = 9.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">In the pattern 5, 8, 11, 14, … (each term is 3 more than the one before), which term equals 47?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the 16th</span></li>
+        <li class=""><span class="lab">B</span><span>the 14th</span></li>
+        <li class=""><span class="lab">C</span><span>the 47th</span></li>
+        <li class="correct"><span class="lab">D</span><span>the 15th</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The terms go up by 3 from a first term of 5, so the nth term is 5 + 3(n − 1) = 3n + 2. Set 3n + 2 = 47 → 3n = 45 → n = 15. So 47 is the 15th term. Check: 3·15 + 2 = 47. ✓ (Picking 47 itself is the "the value IS the position" trap.)</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-7">
+    <div class="cluster-head"><div class="cluster-num">7</div><h2>Age &amp; Number Problems</h2></div>
+    <div class="cluster-rule"><b>Key rule.</b> Let x = today's value. Future = x + years; past = x − years. Set up the relation from the verbal condition.</div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">If 4x − 9 = 2x + 7, then the value of 3x + 1 is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>25</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>24</span></li>
+        <li class=""><span class="lab">C</span><span>17</span></li>
+        <li class=""><span class="lab">D</span><span>9</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>4x − 9 = 2x + 7 → 4x − 2x = 7 + 9 → 2x = 16 → x = 8. Then 3x + 1 = 3·8 + 1 = 25. (Stopping at 3x = 24 gives the trap 24; using 2x + 1 gives 17.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">The sum of three consecutive integers is 72. The largest of them is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>23</span></li>
+        <li class="correct"><span class="lab">B</span><span>25</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>24</span></li>
+        <li class=""><span class="lab">D</span><span>21</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Let the integers be n, n + 1, n + 2. Sum = 3n + 3 = 72 → 3n = 69 → n = 23. Largest = n + 2 = 25. (23 is the smallest — a common trap.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">A father is 4 times as old as his son, and the sum of their ages is 50 years. The son's age is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>40</span></li>
+        <li class=""><span class="lab">B</span><span>12</span></li>
+        <li class="correct"><span class="lab">C</span><span>10</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>8</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Son = s, father = 4s. s + 4s = 50 → 5s = 50 → s = 10. (40 is the father's age.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">Reena is 5 years older than Sam. In 3 years the sum of their ages will be 33. Sam's present age is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>11</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>8</span></li>
+        <li class=""><span class="lab">C</span><span>16</span></li>
+        <li class=""><span class="lab">D</span><span>14</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Now: Sam = s, Reena = s + 5. In 3 years: (s + 3) + (s + 5 + 3) = 33 → 2s + 11 = 33 → 2s = 22 → s = 11. Check: in 3 years 14 + 19 = 33. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">In a two-digit number the units digit is 3 more than the tens digit, and the sum of the two digits is 11. The number is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>47</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>74</span></li>
+        <li class=""><span class="lab">C</span><span>38</span></li>
+        <li class=""><span class="lab">D</span><span>29</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>tens = t, units = t + 3. Digit-sum: t + (t + 3) = 11 → 2t + 3 = 11 → 2t = 8 → t = 4, units = 7. The number is 47. Check: 4 + 7 = 11 and 7 = 4 + 3. ✓ (74 reverses the digits; 38 and 29 also sum to 11 but their units digit is not 3 more than the tens digit.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">The sum of two numbers is 30, and one is 6 more than the other. The larger number is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>18</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>12</span></li>
+        <li class=""><span class="lab">C</span><span>24</span></li>
+        <li class=""><span class="lab">D</span><span>15</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Numbers x and x + 6. x + (x + 6) = 30 → 2x = 24 → x = 12. Larger = x + 6 = 18.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">A two-digit number has digit-sum 9, and its tens digit is twice its units digit. The number is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>36</span></li>
+        <li class=""><span class="lab">B</span><span>72</span></li>
+        <li class=""><span class="lab">C</span><span>81</span></li>
+        <li class="correct"><span class="lab">D</span><span>63</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>units = u, tens = 2u. Digit-sum 2u + u = 9 → 3u = 9 → u = 3, tens = 6 → the number is 63. Check: 6 + 3 = 9 and 6 = 2·3. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">When 4 is subtracted from a number and the result is divided by 3, the answer is 5. The number is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>11</span></li>
+        <li class=""><span class="lab">B</span><span>15</span></li>
+        <li class="correct"><span class="lab">C</span><span>19</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>23</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(x − 4)/3 = 5 → x − 4 = 15 → x = 19.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">The sum of four consecutive integers is 90. The smallest of them is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>20</span></li>
+        <li class="correct"><span class="lab">B</span><span>21</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>22</span></li>
+        <li class=""><span class="lab">D</span><span>24</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>n + (n+1) + (n+2) + (n+3) = 90 → 4n + 6 = 90 → 4n = 84 → n = 21. Check: 21 + 22 + 23 + 24 = 90. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">A mother is 26 years older than her daughter. In 6 years she will be 3 times as old as her daughter. The daughter's present age is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>7</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>5</span></li>
+        <li class=""><span class="lab">C</span><span>8</span></li>
+        <li class=""><span class="lab">D</span><span>10</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>daughter = d, mother = d + 26. In 6 years: (d + 26 + 6) = 3(d + 6) → d + 32 = 3d + 18 → 14 = 2d → d = 7. Check: mother 33; in 6 years 39 = 3·13. ✓</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-8">
+    <div class="cluster-head"><div class="cluster-num">8</div><h2>Money &amp; Coins</h2></div>
+    <div class="cluster-rule"><b>Key rule.</b> Total value = (count) × (denomination), summed across coin types. Write one equation per stated condition.</div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">Four pencils and a ₹10 sharpener together cost ₹38. The cost of one pencil (in ₹) is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>7</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>9</span></li>
+        <li class=""><span class="lab">C</span><span>12</span></li>
+        <li class=""><span class="lab">D</span><span>6</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>4x + 10 = 38 → 4x = 28 → x = 7.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">A box holds twenty ₹1 and ₹2 coins worth ₹35 in all. The number of ₹2 coins is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5</span></li>
+        <li class="correct"><span class="lab">B</span><span>15</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>10</span></li>
+        <li class=""><span class="lab">D</span><span>20</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Let t = number of ₹2 coins; then 20 − t are ₹1 coins. 2t + 1·(20 − t) = 35 → t + 20 = 35 → t = 15. Check: 15·2 + 5·1 = 35. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">A family bought 5 tickets for ₹155. Adult tickets cost ₹40 and child tickets ₹25. The number of child tickets bought was:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>3</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>2</span></li>
+        <li class=""><span class="lab">C</span><span>5</span></li>
+        <li class=""><span class="lab">D</span><span>4</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Child tickets = c, adult = 5 − c. 40(5 − c) + 25c = 155 → 200 − 40c + 25c = 155 → 200 − 15c = 155 → 15c = 45 → c = 3. Check: 3 child (₹75) + 2 adult (₹80) = ₹155. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">A shopkeeper sold 30 fruits for ₹201, charging ₹8 per apple and ₹5 per orange. The number of apples sold was:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>13</span></li>
+        <li class="correct"><span class="lab">B</span><span>17</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>15</span></li>
+        <li class=""><span class="lab">D</span><span>20</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>apples = a, oranges = 30 − a. 8a + 5(30 − a) = 201 → 8a + 150 − 5a = 201 → 3a = 51 → a = 17. Check: 17·8 + 13·5 = 136 + 65 = 201. ✓</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-9">
+    <div class="cluster-head"><div class="cluster-num">9</div><h2>Geometry &amp; Sharing</h2></div>
+    <div class="cluster-rule"><b>Key rule.</b> For perimeter: 2(l + b) = P. For angles in a triangle: sum to 180°. For sharing: write each share as a multiple of one variable, then equate to the total.</div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">The length of a rectangle is 5 cm more than its breadth, and its perimeter is 50 cm. The breadth (in cm) is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>10</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>15</span></li>
+        <li class=""><span class="lab">C</span><span>20</span></li>
+        <li class=""><span class="lab">D</span><span>7.5</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>breadth = b, length = b + 5. Perimeter 2(b + 5 + b) = 50 → 2(2b + 5) = 50 → 2b + 5 = 25 → 2b = 20 → b = 10. (Length is 15.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">The length of a rectangle is twice its breadth, and its perimeter is 54 cm. The length (in cm) is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>18</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>9</span></li>
+        <li class=""><span class="lab">C</span><span>27</span></li>
+        <li class=""><span class="lab">D</span><span>12</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>breadth = b, length = 2b. Perimeter = 2(2b + b) = 6b = 54 → b = 9. Length = 2b = 18. Check: 2(18 + 9) = 54. ✓ (9 is the breadth — the classic "answered the wrong unknown" trap.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">₹120 is shared between A and B so that A gets twice as much as B. B's share (in ₹) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>80</span></li>
+        <li class=""><span class="lab">B</span><span>60</span></li>
+        <li class="correct"><span class="lab">C</span><span>40</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>30</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>B = b, A = 2b. 2b + b = 120 → 3b = 120 → b = 40. (A gets 80.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">Two angles of a triangle are equal, and the third is 30° more than each of them. Each equal angle measures:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>30°</span></li>
+        <li class=""><span class="lab">B</span><span>80°</span></li>
+        <li class=""><span class="lab">C</span><span>40°</span></li>
+        <li class="correct"><span class="lab">D</span><span>50°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>x + x + (x + 30) = 180 → 3x + 30 = 180 → 3x = 150 → x = 50. Each equal angle = 50° (third = 80°). ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">₹90 is divided among three friends so that the second gets twice the first and the third gets three times the first. The third friend's share (in ₹) is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>45</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>15</span></li>
+        <li class=""><span class="lab">C</span><span>30</span></li>
+        <li class=""><span class="lab">D</span><span>90</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>first = a, second = 2a, third = 3a. a + 2a + 3a = 90 → 6a = 90 → a = 15. Third = 3a = 45. Check: 15 + 30 + 45 = 90. ✓ (15 is the first friend's share, 30 the second — both are traps.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">An isosceles triangle has two equal sides of length x and a base of length (x − 2). Its perimeter is 25. Then x equals:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>7</span></li>
+        <li class=""><span class="lab">B</span><span>11</span></li>
+        <li class="correct"><span class="lab">C</span><span>9</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>8</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>x + x + (x − 2) = 25 → 3x − 2 = 25 → 3x = 27 → x = 9. Check: 9 + 9 + 7 = 25. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">₹600 is shared among A, B and C so that B gets ₹50 more than A and C gets ₹50 more than B. A's share (in ₹) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>200</span></li>
+        <li class=""><span class="lab">B</span><span>250</span></li>
+        <li class="correct"><span class="lab">C</span><span>150</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>100</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A = a, B = a + 50, C = a + 100. Sum = 3a + 150 = 600 → 3a = 450 → a = 150. Check: 150 + 200 + 250 = 600. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">The angles of a triangle are in the ratio 1 : 2 : 3. The largest angle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>30°</span></li>
+        <li class=""><span class="lab">B</span><span>60°</span></li>
+        <li class=""><span class="lab">C</span><span>120°</span></li>
+        <li class="correct"><span class="lab">D</span><span>90°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Angles x, 2x, 3x. x + 2x + 3x = 180 → 6x = 180 → x = 30. Largest = 3x = 90°.</p></div>
+      </div>
+    </div>
+  </section>
+  <aside class="cheat">
+    <h2>Cheat-sheet</h2>
+    <p class="sub">If you can do these five, you can do every question above.</p>
+    <div class="rules">
+      <div class="rule"><div class="star">★</div><div><b>Translate carefully.</b><span>Let x = the unknown. The verb is your equals sign.</span></div></div>
+      <div class="rule"><div class="star">★</div><div><b>Clear denominators first.</b><span>Multiply through by the LCM; THEN transpose.</span></div></div>
+      <div class="rule"><div class="star">★</div><div><b>Group all x on one side.</b><span>Subtract the smaller coefficient; keep x positive.</span></div></div>
+      <div class="rule"><div class="star">★</div><div><b>Check by substitution.</b><span>LHS must equal RHS after plugging x back.</span></div></div>
+      <div class="rule"><div class="star">★</div><div><b>Write one equation per condition.</b><span>Two conditions → two equations (or one substituted into the other).</span></div></div>
+    </div></aside>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>
