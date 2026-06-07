@@ -175,4 +175,76 @@ final class OlympiadExamHallTests: XCTestCase {
         XCTAssertFalse(html.contains("<p>Pick the right tag:"),
                        "Raw <p> in the stem should not slip through")
     }
+
+    // MARK: - Cross-subject coverage contract
+    //
+    // The Exam Hall pass (timer, autosave, exit guard, score report)
+    // routes EVERY paper through the same `OlympiadQuizView`, so the
+    // feature is universal-by-construction. These tests pin the input
+    // contract — if anyone adds a future paper or edits a registry
+    // entry such that the contract breaks, the feature silently
+    // disables for that one paper. The pin catches that at commit time.
+
+    func testEveryRegistryPaperHasPositiveSuggestedTime() {
+        let papers = OlympiadPaperRegistry.allPapers
+        XCTAssertFalse(papers.isEmpty, "Registry must ship at least one paper")
+        for p in papers {
+            XCTAssertGreaterThan(
+                p.suggestedTimeMinutes, 0,
+                "\(p.id) has suggestedTimeMinutes=\(p.suggestedTimeMinutes); timer needs >0 to start the countdown"
+            )
+        }
+    }
+
+    func testEveryRegistryPaperHasPositiveMaxMarks() {
+        // OlympiadScoreReportRenderer.computeTally divides by maxMarks
+        // to compute percentage. A 0 would force the safe branch
+        // (pct = 0) for every kid, regardless of how they did.
+        for p in OlympiadPaperRegistry.allPapers {
+            XCTAssertGreaterThan(
+                p.maxMarks, 0,
+                "\(p.id) has maxMarks=\(p.maxMarks); percentage math needs >0"
+            )
+        }
+    }
+
+    func testAllFourSubjectsHaveAtLeastOnePaper() {
+        // Catches a regression where a subject's registry sister file
+        // is reverted to an empty array, or where the `allPapers`
+        // composition drops a subject. The Exam Hall UX needs to be
+        // visible from every subject in the hub.
+        let bySubject = Dictionary(grouping: OlympiadPaperRegistry.allPapers,
+                                   by: { $0.subjectName })
+        for subject in ["Science", "Maths", "Sanskrit", "Social Science"] {
+            XCTAssertNotNil(bySubject[subject],
+                            "Subject '\(subject)' is missing from OlympiadPaperRegistry.allPapers")
+            XCTAssertGreaterThan(bySubject[subject]?.count ?? 0, 0,
+                                 "Subject '\(subject)' should have ≥1 paper")
+        }
+    }
+
+    func testRegistryHasExactly69PapersToday() {
+        // Soft canary on the current 19+15+15+20 inventory. If a paper
+        // is added or removed, this fails and the author is forced to
+        // bump the expected count in lock-step — which is the same
+        // pattern used by EntitlementsSnapshotTest and the pack-id
+        // collision ratchet.
+        let papers = OlympiadPaperRegistry.allPapers
+        XCTAssertEqual(papers.count, 69,
+                       "Expected 69 papers (19 Science + 15 Maths + 15 Sanskrit + 20 Social Science). Got \(papers.count).")
+    }
+
+    func testMarkingSchemeIsUniformAcrossAllPapers() {
+        // The Exam Hall countdown ribbon, autosave, and score report
+        // all assume the +4/-1/0/240 scheme. A future per-paper
+        // override would need to be explicitly opted-into and
+        // documented; until then, lock the contract.
+        for p in OlympiadPaperRegistry.allPapers {
+            XCTAssertEqual(p.marksCorrect, 4, "\(p.id) marksCorrect")
+            XCTAssertEqual(p.marksWrong, -1, "\(p.id) marksWrong")
+            XCTAssertEqual(p.marksSkipped, 0, "\(p.id) marksSkipped")
+            XCTAssertEqual(p.maxMarks, 240, "\(p.id) maxMarks")
+            XCTAssertEqual(p.questionCount, 60, "\(p.id) questionCount")
+        }
+    }
 }
