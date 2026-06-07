@@ -645,3 +645,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch09",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 9,
+            chapterTitle: "From the Rulers to the Ruled: Types of Governments",
+            displayTitle: "From the Rulers to the Ruled: Types of Governments — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch09_TypesOfGovernments_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch09_TypesOfGovernments_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch09_TypesOfGovernments.html",
+            questionPaperPDF: "SocialScience_Ssch09_TypesOfGovernments.pdf",
+            solvedGuideHTML: "SocialScience_Ssch09_TypesOfGovernments_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
