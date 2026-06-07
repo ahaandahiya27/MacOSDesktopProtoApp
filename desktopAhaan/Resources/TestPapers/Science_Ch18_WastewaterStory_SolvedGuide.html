@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wastewater Story — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Wastewater Story<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">Used water released from homes, industries and farms is collectively given the name:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sludge</span></li>
+        <li class=""><span class="lab">B</span><span>scum</span></li>
+        <li class="correct"><span class="lab">C</span><span>sewage</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>biogas</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Wastewater from homes, industries and farms is collectively called sewage.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">Sewage is best described as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a solid waste left behind after water dries up</span></li>
+        <li class="correct"><span class="lab">B</span><span>a liquid carrying suspended and dissolved impurities</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a gas given off by rotting waste</span></li>
+        <li class=""><span class="lab">D</span><span>pure rainwater collected from rooftops</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sewage is a liquid that carries both suspended and dissolved impurities — it is not a solid, a gas, or clean rainwater.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">The network of underground pipes that carries sewage away from a city is called the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>sewerage</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>aeration tank</span></li>
+        <li class=""><span class="lab">C</span><span>digester</span></li>
+        <li class=""><span class="lab">D</span><span>grit chamber</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The system of underground pipes that carries sewage away is the sewerage.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">Which of these is **not** normally a part of household wastewater?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>water from washing clothes</span></li>
+        <li class=""><span class="lab">B</span><span>water from the kitchen sink</span></li>
+        <li class="correct"><span class="lab">C</span><span>molten iron from a furnace</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>water flushed from the toilet</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Washing water, kitchen-sink water and toilet flush are all household wastewater; molten iron from a furnace is not — it is industrial, not used water from a home.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">The impurities present in sewage are together referred to as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>nutrients only</span></li>
+        <li class="correct"><span class="lab">B</span><span>contaminants</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>minerals</span></li>
+        <li class=""><span class="lab">D</span><span>sediments only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>All the impurities in sewage are together called contaminants. (Nutrients and sediments are only part of the picture.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">Human faeces, leftover food and cooking oils in sewage are examples of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>inorganic impurities</span></li>
+        <li class=""><span class="lab">B</span><span>dissolved metals</span></li>
+        <li class=""><span class="lab">C</span><span>harmless salts</span></li>
+        <li class="correct"><span class="lab">D</span><span>organic matter</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Faeces, food and oils come from living things, so they are organic matter (not inorganic salts or metals).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">Nitrates and phosphates dissolved in sewage are classified as:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>inorganic impurities</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>organic matter</span></li>
+        <li class=""><span class="lab">C</span><span>suspended solids</span></li>
+        <li class=""><span class="lab">D</span><span>micro-organisms</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Nitrates and phosphates are dissolved chemicals with no carbon-based living origin, so they are inorganic impurities.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">Cholera and typhoid in a locality can spread when:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>treated water is used to recharge groundwater</span></li>
+        <li class=""><span class="lab">B</span><span>biogas is burnt as a fuel</span></li>
+        <li class=""><span class="lab">C</span><span>sludge is converted into manure</span></li>
+        <li class="correct"><span class="lab">D</span><span>untreated sewage mixes with drinking water</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Waterborne diseases like cholera and typhoid spread when untreated sewage mixes with the drinking-water supply. Recharging groundwater with treated water, burning biogas and making manure do not spread them.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">Sewage is carried from the city to the place where it is cleaned. That place is the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>sewage treatment plant</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>septic tank</span></li>
+        <li class=""><span class="lab">C</span><span>overhead water tank</span></li>
+        <li class=""><span class="lab">D</span><span>river bank</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sewage is carried to a sewage treatment plant, where it is cleaned. (A septic tank serves a single building, not a city.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">The very first step when sewage enters a treatment plant is to pass it through:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>an aeration tank</span></li>
+        <li class=""><span class="lab">B</span><span>a sludge digester</span></li>
+        <li class="correct"><span class="lab">C</span><span>bar screens</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a chlorination chamber</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The first stage is the bar screens. Aeration and digestion come much later, and chlorination is not the opening step.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">Bar screens at the start of a treatment plant are meant to remove:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>dissolved nitrates</span></li>
+        <li class=""><span class="lab">B</span><span>harmful bacteria</span></li>
+        <li class=""><span class="lab">C</span><span>fine sand and grit</span></li>
+        <li class="correct"><span class="lab">D</span><span>large floating objects such as rags, cans and plastic bags</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bar screens catch large floating objects — rags, cans, plastic bags. They cannot remove dissolved chemicals, bacteria or fine grit.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">After the bar screens, the sewage is taken to a tank where its speed is reduced so that sand, grit and small pebbles can:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>settle to the bottom</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>float to the surface as scum</span></li>
+        <li class=""><span class="lab">C</span><span>dissolve in the water</span></li>
+        <li class=""><span class="lab">D</span><span>turn into biogas</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Slowing the water lets the heavy sand, grit and pebbles settle to the bottom; they do not float, dissolve or become gas.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">The speed of water is deliberately **slowed** in the grit-and-sand removal tank so that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>bacteria can multiply faster</span></li>
+        <li class=""><span class="lab">B</span><span>oil rises more quickly</span></li>
+        <li class=""><span class="lab">C</span><span>the pipes do not burst</span></li>
+        <li class="correct"><span class="lab">D</span><span>heavy sand and pebbles get time to sink</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Reducing the speed gives the heavy sand and pebbles time to sink under gravity. The slowing has nothing to do with bacteria, oil or pipe pressure.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">In the settling tank, the solids that sink to the bottom are called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>scum</span></li>
+        <li class=""><span class="lab">B</span><span>grit</span></li>
+        <li class="correct"><span class="lab">C</span><span>sludge</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>biogas</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Solids that sink to the bottom of the settling tank are called sludge.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">In the settling tank, oil and grease that float to the top and are skimmed off are called:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>scum</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>sludge</span></li>
+        <li class=""><span class="lab">C</span><span>manure</span></li>
+        <li class=""><span class="lab">D</span><span>silt</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Light floatables such as oil and grease that are skimmed off the top are called scum.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">The settled sludge is removed from the bottom of the settling tank by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>bubbling air through it</span></li>
+        <li class=""><span class="lab">B</span><span>burning it in place</span></li>
+        <li class=""><span class="lab">C</span><span>skimming it off the surface</span></li>
+        <li class="correct"><span class="lab">D</span><span>a scraper that pushes it to the centre/bottom</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Settled sludge is removed by a scraper that moves it along the tank floor — not by aeration, burning or surface skimming.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">Which pair correctly matches the material with where it is collected in the settling tank?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>sludge — bottom; scum — top</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>sludge — top; scum — bottom</span></li>
+        <li class=""><span class="lab">C</span><span>both at the top</span></li>
+        <li class=""><span class="lab">D</span><span>both at the bottom</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sludge is heavy and settles at the bottom; scum is light and floats at the top. So: sludge — bottom, scum — top.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">The sludge collected from the settling tank is then sent to a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>bar screen</span></li>
+        <li class=""><span class="lab">B</span><span>sundial</span></li>
+        <li class="correct"><span class="lab">C</span><span>digester</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>grit chamber</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The collected sludge is sent to a digester, where bacteria act on it.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">Inside the sludge digester, the bacteria that act on the sludge work:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>in the absence of oxygen (anaerobically)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>only in bright sunlight</span></li>
+        <li class=""><span class="lab">C</span><span>in the presence of plenty of oxygen</span></li>
+        <li class=""><span class="lab">D</span><span>only at freezing temperatures</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In the digester the bacteria work without oxygen — anaerobically. Sunlight, abundant oxygen and freezing are not involved.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">The anaerobic decomposition of sludge in the digester produces a useful gas called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>oxygen</span></li>
+        <li class="correct"><span class="lab">B</span><span>biogas</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>chlorine</span></li>
+        <li class=""><span class="lab">D</span><span>ozone</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Anaerobic digestion of sludge releases biogas, a useful fuel — not oxygen, chlorine or ozone.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">Biogas produced in the digester is valuable because it can be used as a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>fertiliser sprayed on fields</span></li>
+        <li class="correct"><span class="lab">B</span><span>fuel</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>disinfectant for drinking water</span></li>
+        <li class=""><span class="lab">D</span><span>building material</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Biogas can be burnt, so it is valued as a fuel — not as a fertiliser, disinfectant or building material.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">After digestion, the leftover digested sludge is dried and used as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>drinking water</span></li>
+        <li class=""><span class="lab">B</span><span>bar-screen material</span></li>
+        <li class=""><span class="lab">C</span><span>scum</span></li>
+        <li class="correct"><span class="lab">D</span><span>manure</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>After digestion the dried sludge is used as manure. It is certainly not drinking water or scum.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">The clarified water leaving the settling tank is next sent to an aeration tank, where:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sand is allowed to settle</span></li>
+        <li class=""><span class="lab">B</span><span>large objects are screened out</span></li>
+        <li class=""><span class="lab">C</span><span>the water is frozen</span></li>
+        <li class="correct"><span class="lab">D</span><span>air is bubbled through the water</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The clarified water is sent to an aeration tank, where air is bubbled through it. (Settling and screening happen earlier.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">Air is bubbled through the aeration tank mainly to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>cool the water down</span></li>
+        <li class="correct"><span class="lab">B</span><span>help aerobic bacteria grow and consume the remaining organic waste</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>push sand to the bottom</span></li>
+        <li class=""><span class="lab">D</span><span>produce biogas</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bubbling air supplies oxygen so aerobic bacteria can grow and eat the remaining organic waste — not to cool the water or make biogas.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">The bacteria that clean up the leftover human waste, food and soaps in the aeration tank are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>anaerobic bacteria</span></li>
+        <li class=""><span class="lab">B</span><span>not bacteria at all, but viruses</span></li>
+        <li class="correct"><span class="lab">C</span><span>aerobic bacteria</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the same bacteria used in the digester</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The aeration tank relies on aerobic bacteria (they need the bubbled air). Anaerobic bacteria belong to the digester.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">The water that finally leaves a treatment plant is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>always pure enough to drink straight away</span></li>
+        <li class="correct"><span class="lab">B</span><span>much cleaner, but not guaranteed to be safe drinking water</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>dirtier than when it came in</span></li>
+        <li class=""><span class="lab">D</span><span>exactly the same as raw sewage</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The outgoing water is much cleaner but is not guaranteed safe to drink — a classic trap. It is certainly not dirtier or unchanged.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">After treatment, the cleaned water is commonly:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sent back to the bar screens</span></li>
+        <li class=""><span class="lab">B</span><span>re-mixed with fresh sludge</span></li>
+        <li class=""><span class="lab">C</span><span>stored as biogas</span></li>
+        <li class="correct"><span class="lab">D</span><span>released into a water body or used to recharge groundwater</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cleaned water is released into a water body or used to recharge groundwater. It is not returned to the bar screens or stored as gas.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">Good **sanitation** in a community most directly helps to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>increase the number of waterborne diseases</span></li>
+        <li class="correct"><span class="lab">B</span><span>reduce the spread of diseases like cholera and typhoid</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>speed up river pollution</span></li>
+        <li class=""><span class="lab">D</span><span>raise the cost of biogas</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Good sanitation reduces the spread of diseases like cholera and typhoid; it does not increase disease or pollution.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">Which of the following should **never** be thrown down the kitchen drain?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>plain water used to rinse a glass</span></li>
+        <li class=""><span class="lab">B</span><span>a small amount of clean water</span></li>
+        <li class=""><span class="lab">C</span><span>water-soluble hand soap</span></li>
+        <li class="correct"><span class="lab">D</span><span>used cooking oil</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Used cooking oil must never go down the drain — it clogs pipes and hampers treatment. Plain or soapy rinse water is fine.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">Throwing used cooking oil down the drain is discouraged mainly because it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>makes the water taste sweet</span></li>
+        <li class=""><span class="lab">B</span><span>speeds up the bar screens</span></li>
+        <li class="correct"><span class="lab">C</span><span>clogs pipes and hinders sewage treatment</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>is the best food for aerobic bacteria</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Used cooking oil clogs pipes and disrupts treatment; it does not sweeten water, speed up screens, or feed the bacteria usefully.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">A low-cost, on-site way to handle human waste for a single home where there is no sewer connection is a:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>septic tank</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>sewage treatment plant</span></li>
+        <li class=""><span class="lab">C</span><span>bar screen</span></li>
+        <li class=""><span class="lab">D</span><span>grit chamber</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A septic tank is the low-cost, on-site option for a single home with no sewer connection. A full treatment plant, bar screen or grit chamber are parts of a municipal system.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">Which of these is an environment-friendly toilet that turns human waste into manure using earthworms?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a vermi-processing toilet</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a flush-only toilet connected to a river</span></li>
+        <li class=""><span class="lab">C</span><span>an aeration tank</span></li>
+        <li class=""><span class="lab">D</span><span>a sundial toilet</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A vermi-processing toilet uses earthworms to turn human waste into manure.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">Put these treatment stages in the correct order: (i) aeration with air, (ii) bar screens, (iii) settling tank for sludge and scum, (iv) grit-and-sand removal.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>i → ii → iii → iv</span></li>
+        <li class="correct"><span class="lab">B</span><span>ii → iv → iii → i</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>iv → ii → i → iii</span></li>
+        <li class=""><span class="lab">D</span><span>iii → i → ii → iv</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct order is bar screens (ii) → grit-and-sand removal (iv) → settling tank (iii) → aeration (i).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">Which step happens **earlier** in the plant?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>aeration of clarified water</span></li>
+        <li class=""><span class="lab">B</span><span>drying of digested sludge into manure</span></li>
+        <li class=""><span class="lab">C</span><span>production of biogas</span></li>
+        <li class="correct"><span class="lab">D</span><span>removal of grit and sand</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Grit and sand are removed near the start, long before aeration, sludge drying or biogas production. So grit-and-sand removal happens earlier.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">A worker says, "Sand and pebbles are removed before the sludge settles out." This statement is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>wrong — the settling tank comes first</span></li>
+        <li class=""><span class="lab">B</span><span>wrong — sand is removed last of all</span></li>
+        <li class="correct"><span class="lab">C</span><span>correct — grit removal comes before the settling tank</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>correct only on rainy days</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Grit removal does come before the settling tank, so the worker's statement is correct.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">Bar screens **cannot** remove which of the following from sewage?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>plastic bags</span></li>
+        <li class=""><span class="lab">B</span><span>sticks and rags</span></li>
+        <li class=""><span class="lab">C</span><span>empty cans</span></li>
+        <li class="correct"><span class="lab">D</span><span>dissolved nitrates and phosphates</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bar screens catch only large solids; they cannot remove dissolved nitrates and phosphates. They do catch plastic, sticks, rags and cans.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">Which statement about the aeration tank is correct?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>it relies on anaerobic bacteria</span></li>
+        <li class=""><span class="lab">B</span><span>it removes large floating cans</span></li>
+        <li class="correct"><span class="lab">C</span><span>it relies on aerobic bacteria and a supply of air</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>it produces biogas as its main job</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The aeration tank relies on aerobic bacteria plus a supply of air. It is not anaerobic, does not screen cans, and does not mainly make biogas.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">The main reason a treatment plant must clean sewage before releasing it into a river is to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>make the river water taste better</span></li>
+        <li class="correct"><span class="lab">B</span><span>prevent water pollution and the spread of disease</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>increase the river's depth</span></li>
+        <li class=""><span class="lab">D</span><span>provide grit for construction</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sewage is treated before release to prevent water pollution and disease — not to change the river's taste, depth or supply grit.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">Which sequence correctly traces a drop of dirty water from a home to a river?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>home → river → sewer → treatment plant</span></li>
+        <li class=""><span class="lab">B</span><span>treatment plant → home → sewer → river</span></li>
+        <li class="correct"><span class="lab">C</span><span>home → sewer → treatment plant → river</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>home → treatment plant → sewer → river</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A drop travels home → sewer → treatment plant → river. The other orders put the river or plant in the wrong place.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">A treatment plant's bar screen breaks down and lets plastic bags through. The most likely immediate problem is that:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the next tanks and pipes get choked by the plastic</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>biogas production doubles</span></li>
+        <li class=""><span class="lab">C</span><span>the water instantly becomes drinkable</span></li>
+        <li class=""><span class="lab">D</span><span>aerobic bacteria die at once</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>If plastic bags get past the broken bar screen, they choke the following tanks and pipes. They do not boost biogas or purify water.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">Both the sludge digester and the aeration tank rely on bacteria. The key difference is that:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the digester works without oxygen; the aeration tank needs oxygen</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the digester uses oxygen-loving bacteria; the aeration tank uses oxygen-hating bacteria</span></li>
+        <li class=""><span class="lab">C</span><span>neither uses bacteria</span></li>
+        <li class=""><span class="lab">D</span><span>both need bright sunlight</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The digester works without oxygen (anaerobic); the aeration tank needs oxygen (aerobic). That is the key difference between the two bacterial stages.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">By-products from the sludge digester that are actually **useful** are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>scum and grit</span></li>
+        <li class=""><span class="lab">B</span><span>plastic bags and rags</span></li>
+        <li class="correct"><span class="lab">C</span><span>biogas (fuel) and digested sludge (manure)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>chlorine and ozone</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The digester's useful by-products are biogas (a fuel) and digested sludge (manure). Scum, grit, plastic and chlorine are not its products.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">After the bar screens and grit removal, the partly cleaned sewage goes next to the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>river</span></li>
+        <li class="correct"><span class="lab">B</span><span>settling tank</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>home taps</span></li>
+        <li class=""><span class="lab">D</span><span>overhead tank</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>After bar screens and grit removal, the partly cleaned sewage flows to the settling tank — not straight to the river or the taps.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">"Treated water from a plant is safe to drink directly." This statement is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>always true</span></li>
+        <li class=""><span class="lab">B</span><span>true only in summer</span></li>
+        <li class=""><span class="lab">C</span><span>true because all bacteria are removed</span></li>
+        <li class="correct"><span class="lab">D</span><span>false — it is cleaner but usually still not fit for drinking</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Treated water is cleaner but usually still not fit to drink directly — so the claim is false. (This is the standard trap.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">Untreated sewage discharged into a river is a major cause of:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>water pollution and waterborne diseases</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>cleaner drinking water downstream</span></li>
+        <li class=""><span class="lab">C</span><span>faster groundwater recharge</span></li>
+        <li class=""><span class="lab">D</span><span>more biogas in homes</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Untreated sewage in a river causes water pollution and waterborne diseases — not cleaner water or more biogas.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">The contaminant in sewage that is **alive** and can directly cause illness is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>dissolved phosphate</span></li>
+        <li class="correct"><span class="lab">B</span><span>disease-causing microbe</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>suspended sand</span></li>
+        <li class=""><span class="lab">D</span><span>floating cooking oil</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The living contaminant is the disease-causing microbe. Phosphate, sand and oil are not alive.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">Which of the following best explains why grit and sand are removed early, before the settling tank?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>so the heavy, abrasive particles don't damage equipment and don't clog the sludge handling later</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>because sand is the most poisonous part of sewage</span></li>
+        <li class=""><span class="lab">C</span><span>because sand is needed to make biogas</span></li>
+        <li class=""><span class="lab">D</span><span>because the settling tank cannot hold any solids</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Grit and sand are abrasive and heavy; removing them early protects equipment and prevents them clogging the sludge handling later. They are not the most poisonous part and are not needed for biogas.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">Plant managers often run sewage slowly through tanks chiefly to give:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the water time to evaporate</span></li>
+        <li class=""><span class="lab">B</span><span>the pipes time to rust</span></li>
+        <li class="correct"><span class="lab">C</span><span>solids time to settle out by gravity</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the gas time to escape into homes</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Running the sewage slowly lets solids settle out by gravity — the whole point of the settling and grit tanks. It is not about evaporation, rust or gas.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">Which practice helps keep public places sanitary and is usually managed by municipal bodies?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>dumping garbage into open drains</span></li>
+        <li class="correct"><span class="lab">B</span><span>regular cleaning of streets, drains and public toilets</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>pouring chemicals down household sinks</span></li>
+        <li class=""><span class="lab">D</span><span>blocking the sewers with plastic</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Municipal bodies keep public places sanitary by regularly cleaning streets, drains and public toilets — not by dumping or blocking.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">A village builds a biogas plant fed with animal dung and human waste. The bacteria that produce its gas are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>aerobic, needing lots of air</span></li>
+        <li class=""><span class="lab">B</span><span>the same as those on bar screens</span></li>
+        <li class="correct"><span class="lab">C</span><span>anaerobic, working without oxygen</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>found only in the aeration tank</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A biogas plant's gas comes from anaerobic bacteria working without oxygen, just like the digester. Aerobic bacteria need air and would not make the gas.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">Which of these correctly describes scum?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>light, floatable matter such as oil and grease skimmed off the top</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>heavy solids that sink to the bottom</span></li>
+        <li class=""><span class="lab">C</span><span>the gas produced by the digester</span></li>
+        <li class=""><span class="lab">D</span><span>the manure made from dried sludge</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Scum is the light, floatable matter (oil and grease) skimmed off the top — not the heavy sinking sludge, the gas, or the manure.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">If the aeration tank's air supply is switched off for a long time, the most likely result is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>aerobic bacteria thrive even more</span></li>
+        <li class=""><span class="lab">B</span><span>biogas is produced instead of clean water</span></li>
+        <li class="correct"><span class="lab">C</span><span>the aerobic bacteria struggle and organic waste is poorly cleaned</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the sludge turns into scum</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Without bubbled air the aerobic bacteria struggle, so the organic waste is poorly cleaned. They do not thrive, and the tank does not start making biogas.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">Which of the following is the correct early-to-late order of what is **removed**?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>dissolved organic matter → grit/sand → big objects → scum</span></li>
+        <li class="correct"><span class="lab">B</span><span>big objects → grit/sand → settled sludge/floating scum → remaining dissolved organic matter</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>settled sludge → big objects → grit → dissolved matter</span></li>
+        <li class=""><span class="lab">D</span><span>scum → dissolved matter → grit → big objects</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>What is removed runs early-to-late: big objects (bar screens) → grit/sand → settled sludge and floating scum → remaining dissolved organic matter (aeration).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">A factory secretly pipes toxic chemicals straight into the sewer. The main danger is that these chemicals:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>can poison the helpful bacteria and pass into rivers, harming life</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>make the bar screens work faster</span></li>
+        <li class=""><span class="lab">C</span><span>turn instantly into harmless manure</span></li>
+        <li class=""><span class="lab">D</span><span>increase the drinking-water supply</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Toxic chemicals can poison the helpful bacteria and pass on into rivers, harming life. They do not speed up screens or become manure.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">The single biggest public-health benefit of building proper toilets and sewers in a town is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>more electricity for homes</span></li>
+        <li class="correct"><span class="lab">B</span><span>fewer waterborne diseases such as cholera and dysentery</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>taller buildings</span></li>
+        <li class=""><span class="lab">D</span><span>cheaper plastic bags</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Proper toilets and sewers chiefly bring fewer waterborne diseases such as cholera and dysentery — not electricity, taller buildings or cheaper plastic.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">Which of these is **not** an organic contaminant typically found in sewage?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>leftover food scraps</span></li>
+        <li class=""><span class="lab">B</span><span>human faeces</span></li>
+        <li class=""><span class="lab">C</span><span>cooking oil</span></li>
+        <li class="correct"><span class="lab">D</span><span>dissolved iron from a factory</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Food scraps, faeces and cooking oil are organic; dissolved iron from a factory is inorganic, so it is the odd one out.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">Choose the correct statement about the order of biological treatment:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>both the sludge and the water are treated in the very same tank with no air</span></li>
+        <li class="correct"><span class="lab">B</span><span>sludge is digested anaerobically, while the separate clarified water is aerated aerobically</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the clarified water is digested without air and the sludge is aerated</span></li>
+        <li class=""><span class="lab">D</span><span>bacteria are used only on the bar screens</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The sludge is digested anaerobically (no air) while the separate clarified water is aerated aerobically (with air). The two biological stages are distinct.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">After all the treatment steps, what happens to the dried digested sludge?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>it is sent back to the bar screens</span></li>
+        <li class=""><span class="lab">B</span><span>it is poured straight into the river untreated</span></li>
+        <li class="correct"><span class="lab">C</span><span>it is used as manure on fields</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>it is burnt to make scum</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The dried digested sludge is used as manure on fields — not returned to screens, poured into rivers, or burnt.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">Why is it wise to avoid pouring medicines, tea leaves and chemicals down the drain?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>they help the aerobic bacteria grow</span></li>
+        <li class=""><span class="lab">B</span><span>they make biogas burn brighter</span></li>
+        <li class=""><span class="lab">C</span><span>they turn sewage into drinking water</span></li>
+        <li class="correct"><span class="lab">D</span><span>they can choke pipes and harm the bacteria that treatment depends on</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Medicines, tea leaves and chemicals can choke pipes and harm the bacteria that treatment relies on, so they should be kept out of drains.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">A student claims, "Once water passes the bar screen it has no impurities left." The claim is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>correct — the bar screen removes everything</span></li>
+        <li class=""><span class="lab">B</span><span>correct only for rainwater</span></li>
+        <li class=""><span class="lab">C</span><span>wrong — bar screens add new impurities</span></li>
+        <li class="correct"><span class="lab">D</span><span>wrong — bar screens only catch large objects; dissolved and microscopic impurities still remain</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bar screens only catch large objects; dissolved and microscopic impurities remain. So the claim that no impurities are left is wrong. --- *Solutions complete: 60 / 60.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

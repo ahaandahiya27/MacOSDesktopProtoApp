@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Working With Fractions — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Working With Fractions<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">The phrase "the product of 1/2 and 1/3" equals:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5/6</span></li>
+        <li class="correct"><span class="lab">B</span><span>1/6</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>2/3</span></li>
+        <li class=""><span class="lab">D</span><span>1/5</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Product of 1/2 and 1/3" = 1/2 × 1/3 = (1×1)/(2×3) = 1/6. (Adding the two, 1/2 + 1/3 = 5/6, is the trap (A).)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">3 × 1/4 equals:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>3/12</span></li>
+        <li class=""><span class="lab">B</span><span>1/12</span></li>
+        <li class=""><span class="lab">C</span><span>4/3</span></li>
+        <li class="correct"><span class="lab">D</span><span>3/4</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>3 × 1/4 = 1/4 + 1/4 + 1/4 = 3/4. Multiply the whole number into the numerator only; the denominator (the piece size) does not change. (3/12 wrongly multiplies the denominator too.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">Which expression correctly represents "2/5 of 30"?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2/5 ÷ 30</span></li>
+        <li class=""><span class="lab">B</span><span>2/5 + 30</span></li>
+        <li class="correct"><span class="lab">C</span><span>2/5 × 30</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>30 ÷ 2/5</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The word "of" means multiply, so "2/5 of 30" = 2/5 × 30. (Division and addition are the standard distractors.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">The reciprocal of 3/7 is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>7/3</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>−3/7</span></li>
+        <li class=""><span class="lab">C</span><span>3/7</span></li>
+        <li class=""><span class="lab">D</span><span>1/3</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The reciprocal swaps numerator and denominator: 3/7 → 7/3. (The reciprocal is not the negative.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">Compute 7 × 3/5 and write it as a mixed number.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>21/35</span></li>
+        <li class=""><span class="lab">B</span><span>10/5</span></li>
+        <li class="correct"><span class="lab">C</span><span>4 1/5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>3 2/5</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>7 × 3/5 = 21/5. As a mixed number, 21 ÷ 5 = 4 remainder 1, so 4 1/5. (21/35 wrongly multiplies the denominator.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">What is 2/3 of 3/5?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5/8</span></li>
+        <li class=""><span class="lab">B</span><span>6/8</span></li>
+        <li class="correct"><span class="lab">C</span><span>2/5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>2/15</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"2/3 of 3/5" = 2/3 × 3/5 = 6/15 = 2/5 in lowest terms. (Leaving it as 6/15-style unreduced or adding gives the distractors.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">Compute 5/6 ÷ 2/3.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5/9</span></li>
+        <li class=""><span class="lab">B</span><span>10/18</span></li>
+        <li class=""><span class="lab">C</span><span>4/5</span></li>
+        <li class="correct"><span class="lab">D</span><span>5/4</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>5/6 ÷ 2/3 = 5/6 × 3/2 (flip the divisor) = 15/12 = 5/4. (5/9 comes from multiplying instead of flipping; 10/18 is the unreduced wrong product.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">How many 1/2-cup servings can be poured from 3 cups of juice?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>6</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>3/2</span></li>
+        <li class=""><span class="lab">C</span><span>1 1/2</span></li>
+        <li class=""><span class="lab">D</span><span>3</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>3 ÷ 1/2 asks "how many halves fit in 3?" = 3 × 2 = 6. Dividing by a number below 1 gives a result larger than 3. (3/2 flips the wrong fraction.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">Which of these multiplications gives a result SMALLER than 8?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>8 × 5/4</span></li>
+        <li class=""><span class="lab">B</span><span>8 × 1</span></li>
+        <li class="correct"><span class="lab">C</span><span>8 × 3/4</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>8 × 9/8</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Multiplying by a fraction LESS than 1 shrinks a number. Only 8 × 3/4 = 6 &lt; 8; 8 × 5/4 = 10 and 8 × 9/8 = 9 are larger, and 8 × 1 = 8.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">The reciprocal of the whole number 5 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5</span></li>
+        <li class="correct"><span class="lab">B</span><span>1/5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>−5</span></li>
+        <li class=""><span class="lab">D</span><span>0</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A whole number 5 = 5/1, so its reciprocal is 1/5 (their product is 1). (5 itself is not its own reciprocal.)</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">Dividing a number by which of the following is the same as multiplying it by 4/5?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4/5</span></li>
+        <li class=""><span class="lab">B</span><span>5</span></li>
+        <li class="correct"><span class="lab">C</span><span>5/4</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>20</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Dividing by 5/4 = multiplying by its reciprocal 4/5. So dividing by 5/4 matches multiplying by 4/5. (Dividing by 4/5 would equal multiplying by 5/4 — the reversed trap.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">A rectangle has length 2/3 m and breadth 3/4 m. Its area (in m²) is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>1/2</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>5/7</span></li>
+        <li class=""><span class="lab">C</span><span>17/12</span></li>
+        <li class=""><span class="lab">D</span><span>6/7</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Area = length × breadth = 2/3 × 3/4 = 6/12 = 1/2 m². (5/7 and 6/7 come from adding numerators/denominators.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">Convert the mixed number 2 1/2 to an improper fraction.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4/2</span></li>
+        <li class="correct"><span class="lab">B</span><span>5/2</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>3/2</span></li>
+        <li class=""><span class="lab">D</span><span>21/2</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>2 1/2 = (2×2 + 1)/2 = 5/2. (4/2 forgets the +1; 21/2 mis-places digits.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">Compute 2 1/2 × 1 1/3 by first converting to improper fractions.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2 1/6</span></li>
+        <li class="correct"><span class="lab">B</span><span>3 1/3</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>2 1/2</span></li>
+        <li class=""><span class="lab">D</span><span>3 2/3</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Convert first: 2 1/2 = 5/2, 1 1/3 = 4/3. Product = 5/2 × 4/3 = 20/6 = 10/3 = 3 1/3. (Multiplying whole parts separately is the classic mixed-number error.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">A 4 1/2-acre plot is divided into 3/4-acre shares. How many shares are there?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>3</span></li>
+        <li class=""><span class="lab">B</span><span>12</span></li>
+        <li class="correct"><span class="lab">C</span><span>6</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>4 1/2</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>4 1/2 ÷ 3/4 = 9/2 ÷ 3/4 = 9/2 × 4/3 = 36/6 = 6 shares. Dividing by a fraction below 1 yields more pieces than the acreage.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">Which statement is TRUE?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Multiplying any number by 2/3 makes it larger.</span></li>
+        <li class=""><span class="lab">B</span><span>Dividing 6 by 1/2 gives 3.</span></li>
+        <li class="correct"><span class="lab">C</span><span>Dividing a number by 1/4 multiplies it by 4.</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>The reciprocal of 1 is 0.</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Dividing by 1/4 means multiplying by 4 (its reciprocal) — TRUE. (B) 6 ÷ 1/2 = 12, not 3; (A) ×2/3 shrinks a number; (D) reciprocal of 1 is 1, not 0.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">Half OF a third equals:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5/6</span></li>
+        <li class="correct"><span class="lab">B</span><span>1/6</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>2/3</span></li>
+        <li class=""><span class="lab">D</span><span>1/3</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Half of a third" = 1/2 × 1/3 = 1/6 (of means multiply, not add). 1/2 + 1/3 = 5/6 is the trap (A).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">Ahaan spends 1/3 of his money on a book, then 1/4 of what remains on a pen. What fraction of his original money is left?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5/12</span></li>
+        <li class=""><span class="lab">B</span><span>1/4</span></li>
+        <li class=""><span class="lab">C</span><span>2/3</span></li>
+        <li class="correct"><span class="lab">D</span><span>1/2</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>After the book, 1 − 1/3 = 2/3 remains. The pen costs 1/4 of 2/3 = 1/6. Left = 2/3 − 1/6 = 4/6 − 1/6 = 3/6 = 1/2. (5/12 = 1/4 + 1/6 confuses "spent" with "left".)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">A recipe needs 1 1/2 cups of flour per cake. How many cups are needed for 2 2/3 cakes?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>4</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>4 1/2</span></li>
+        <li class=""><span class="lab">C</span><span>3</span></li>
+        <li class=""><span class="lab">D</span><span>4 1/6</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Flour = 1 1/2 × 2 2/3 = 3/2 × 8/3 = 24/6 = 4 cups. (4 1/2 and 4 1/6 come from not converting both mixed numbers.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">Compute 3/4 × 20.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>15</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>80</span></li>
+        <li class=""><span class="lab">C</span><span>60</span></li>
+        <li class=""><span class="lab">D</span><span>5</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>3/4 × 20 = (3 × 20)/4 = 60/4 = 15. (60 forgets to divide by 4; 5 divides by 4 but drops the 3.)</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">Which product is the LARGEST?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>12 × 1/2</span></li>
+        <li class=""><span class="lab">B</span><span>12 × 2/3</span></li>
+        <li class=""><span class="lab">C</span><span>12 × 3/4</span></li>
+        <li class="correct"><span class="lab">D</span><span>12 × 5/6</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>All share the multiplier 12, so the largest fraction wins: 5/6 &gt; 3/4 &gt; 2/3 &gt; 1/2. Thus 12 × 5/6 = 10 is the largest.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">The value of 4/9 × 3/8, in lowest terms, is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>12/72</span></li>
+        <li class="correct"><span class="lab">B</span><span>1/6</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>7/17</span></li>
+        <li class=""><span class="lab">D</span><span>1/12</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>4/9 × 3/8 = 12/72. Reduce by 12: 1/6. (12/72 is correct but not in lowest terms; 7/17 adds across.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">A tortoise walks 1/4 km each hour. How far does it walk in 3 1/2 hours?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>3 1/2 km</span></li>
+        <li class=""><span class="lab">B</span><span>14 km</span></li>
+        <li class=""><span class="lab">C</span><span>1 1/8 km</span></li>
+        <li class="correct"><span class="lab">D</span><span>7/8 km</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Distance = 1/4 × 3 1/2 = 1/4 × 7/2 = 7/8 km. (3 1/2 ignores the rate; 14 multiplies wrongly.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">1 ÷ 2/3 equals:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2/3</span></li>
+        <li class="correct"><span class="lab">B</span><span>3/2</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>1/3</span></li>
+        <li class=""><span class="lab">D</span><span>2</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>1 ÷ 2/3 = 1 × 3/2 = 3/2. Flip the divisor and multiply; the answer exceeds 1 because you divide by less than 1.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">Two-thirds of the students in a class of 30 wear glasses, and 1/5 of those who wear glasses also wear caps. How many students wear both?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>20</span></li>
+        <li class=""><span class="lab">B</span><span>6</span></li>
+        <li class="correct"><span class="lab">C</span><span>4</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>5</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Glasses = 2/3 × 30 = 20. Both glasses and caps = 1/5 × 20 = 4. (20 stops at the first step; 6 = 1/5 of 30 skips the chaining.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">Which of the following equals 2/3 ÷ 4?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>8/3</span></li>
+        <li class=""><span class="lab">B</span><span>2/12</span></li>
+        <li class=""><span class="lab">C</span><span>2/7</span></li>
+        <li class="correct"><span class="lab">D</span><span>1/6</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>2/3 ÷ 4 = 2/3 × 1/4 = 2/12 = 1/6. Dividing by a whole number = multiplying by its reciprocal. (8/3 multiplies by 4 instead.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">A pole 6 m long is painted; 2/3 of it is red and 1/2 of the rest is blue. What length (in m) is blue?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4</span></li>
+        <li class=""><span class="lab">B</span><span>3</span></li>
+        <li class=""><span class="lab">C</span><span>2</span></li>
+        <li class="correct"><span class="lab">D</span><span>1</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Red = 2/3 × 6 = 4 m, so 2 m remain. Blue = 1/2 of that rest = 1/2 × 2 = 1 m. (Taking 1/2 of the whole pole gives 3 — the trap.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">Which pair of fractions are reciprocals of each other?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>2/5 and 5/2</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>3/4 and 3/4</span></li>
+        <li class=""><span class="lab">C</span><span>2/3 and 3/4</span></li>
+        <li class=""><span class="lab">D</span><span>1/2 and 2/4</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Reciprocals multiply to 1: 2/5 × 5/2 = 10/10 = 1. So 2/5 and 5/2. (1/2 and 2/4 are equal, not reciprocal.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">A 3/4 m ribbon is cut into pieces each 1/8 m long. How many pieces are obtained?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>3/32</span></li>
+        <li class="correct"><span class="lab">B</span><span>6</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>8</span></li>
+        <li class=""><span class="lab">D</span><span>4</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>3/4 ÷ 1/8 = 3/4 × 8 = 24/4 = 6 pieces. Many small 1/8 m pieces fit in 3/4 m. (3/32 multiplies instead of dividing.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">Without computing exactly, which is true about 15 × 4/5?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>It is more than 15.</span></li>
+        <li class=""><span class="lab">B</span><span>It equals 15.</span></li>
+        <li class="correct"><span class="lab">C</span><span>It is less than 15.</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>It is less than 4/5.</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>4/5 is less than 1, so 15 × 4/5 = 12 is LESS than 15. Multiplying by a proper fraction shrinks the number. (It is certainly more than 4/5, so (D) is false.)</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">Compute (2/3) × (9/10) × (5/6).</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>1/2</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>16/19</span></li>
+        <li class=""><span class="lab">C</span><span>90/180</span></li>
+        <li class=""><span class="lab">D</span><span>3/5</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(2/3) × (9/10) × (5/6) = (2×9×5)/(3×10×6) = 90/180 = 1/2. (90/180 is correct but unreduced.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">A jug holds 2 1/4 litres. How many 3/8-litre glasses can be filled from it?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>6</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>8</span></li>
+        <li class=""><span class="lab">C</span><span>5</span></li>
+        <li class=""><span class="lab">D</span><span>27/32</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>2 1/4 ÷ 3/8 = 9/4 ÷ 3/8 = 9/4 × 8/3 = 72/12 = 6 glasses. (27/32 multiplies instead of dividing.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">Three-quarters of a number is 18. The number is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>13 1/2</span></li>
+        <li class=""><span class="lab">B</span><span>72</span></li>
+        <li class=""><span class="lab">C</span><span>27</span></li>
+        <li class="correct"><span class="lab">D</span><span>24</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>3/4 of the number = 18, so number = 18 ÷ 3/4 = 18 × 4/3 = 72/3 = 24. Check: 3/4 × 24 = 18. ✓ (13 1/2 = 3/4 × 18 multiplies instead of dividing; 72 multiplies by 4 only.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">The expression "5 ÷ 1/3" gives the same result as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5 × 1/3</span></li>
+        <li class=""><span class="lab">B</span><span>5 + 3</span></li>
+        <li class="correct"><span class="lab">C</span><span>5 × 3</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>1/3 × 5</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Dividing by 1/3 = multiplying by its reciprocal 3, so 5 ÷ 1/3 = 5 × 3 = 15. (5 × 1/3 multiplies by the divisor itself.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">Which of these is equal to 1?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>7/8 × 8/7</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>3/4 + 1/4 × 0</span></li>
+        <li class=""><span class="lab">C</span><span>2/3 ÷ 2/3 × 1/2</span></li>
+        <li class=""><span class="lab">D</span><span>5/6 × 6/5 × 1/2</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>7/8 × 8/7 = 56/56 = 1 (a number times its reciprocal). (B) = 3/4; (C) = 1 × 1/2 = 1/2; (D) = 1 × 1/2 = 1/2.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">1/2 of 1/3 of 1/4 equals:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>3/9</span></li>
+        <li class=""><span class="lab">B</span><span>3/24</span></li>
+        <li class=""><span class="lab">C</span><span>1/9</span></li>
+        <li class="correct"><span class="lab">D</span><span>1/24</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>1/2 × 1/3 × 1/4 = (1×1×1)/(2×3×4) = 1/24. (3/24 = 3/24 adds numerators; 1/9 adds denominators-style.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">A car covers 3/5 of a 200 km journey before lunch. How many kilometres remain after lunch?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>120</span></li>
+        <li class=""><span class="lab">B</span><span>40</span></li>
+        <li class=""><span class="lab">C</span><span>60</span></li>
+        <li class="correct"><span class="lab">D</span><span>80</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Travelled 3/5 of 200 = 120 km, so remaining = 200 − 120 = 80 km. (Equivalently 2/5 × 200 = 80.) (120 answers the wrong part.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">Compute 2 1/3 ÷ 1 1/6.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>14/18</span></li>
+        <li class="correct"><span class="lab">B</span><span>2</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>49/18</span></li>
+        <li class=""><span class="lab">D</span><span>1 1/2</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>2 1/3 ÷ 1 1/6 = 7/3 ÷ 7/6 = 7/3 × 6/7 = 42/21 = 2. (49/18 multiplies the fractions; 14/18 mishandles the reciprocal.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">Which value makes the sentence true: 3/8 × ___ = 3/8?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0</span></li>
+        <li class=""><span class="lab">B</span><span>8/3</span></li>
+        <li class="correct"><span class="lab">C</span><span>1</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>3/8</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A number times 1 is itself, so 3/8 × 1 = 3/8. The multiplicative identity is 1. (×0 gives 0; ×3/8 gives 9/64.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">A wall is painted at 2/5 of a wall per hour. How long, in hours, to paint the whole wall?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2/5</span></li>
+        <li class=""><span class="lab">B</span><span>2</span></li>
+        <li class=""><span class="lab">C</span><span>7/5</span></li>
+        <li class="correct"><span class="lab">D</span><span>5/2</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Whole wall ÷ rate = 1 ÷ 2/5 = 1 × 5/2 = 5/2 hours. Dividing by a rate below 1 takes more than 1 hour. (2/5 and 7/5 misuse the reciprocal.)</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">Of the cake, Riya ate 1/4 and Sam ate 2/3 of what was left. What fraction of the whole cake did Sam eat?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>1/2</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>11/12</span></li>
+        <li class=""><span class="lab">C</span><span>2/3</span></li>
+        <li class=""><span class="lab">D</span><span>1/4</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>After Riya, 1 − 1/4 = 3/4 remains. Sam ate 2/3 of that: 2/3 × 3/4 = 6/12 = 1/2 of the whole cake. (2/3 forgets it is "of the remainder".)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">The product 5/12 × 8 equals:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5/96</span></li>
+        <li class=""><span class="lab">B</span><span>40/96</span></li>
+        <li class=""><span class="lab">C</span><span>13/12</span></li>
+        <li class="correct"><span class="lab">D</span><span>10/3</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>5/12 × 8 = (5 × 8)/12 = 40/12 = 10/3. (40/96 wrongly multiplies the denominator by 8 too.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">Which statement about reciprocals is FALSE?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>The reciprocal of a proper fraction is greater than 1.</span></li>
+        <li class=""><span class="lab">B</span><span>Zero has no reciprocal.</span></li>
+        <li class=""><span class="lab">C</span><span>The reciprocal of 1 is 1.</span></li>
+        <li class="correct"><span class="lab">D</span><span>Every fraction is larger than its reciprocal.</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>FALSE statement: a fraction is NOT always larger than its reciprocal — 1/2's reciprocal is 2, which is bigger. (A), (B), (C) are all true: a proper fraction flips to &gt;1, 0 has no reciprocal, and 1's reciprocal is 1.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">A tank fills 3/4 of its volume in 1 hour. At the same rate, what fraction fills in 1/3 hour?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>9/4</span></li>
+        <li class=""><span class="lab">B</span><span>3/7</span></li>
+        <li class=""><span class="lab">C</span><span>13/12</span></li>
+        <li class="correct"><span class="lab">D</span><span>1/4</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Fraction filled = 3/4 × 1/3 = 3/12 = 1/4 in 1/3 hour. (9/4 divides instead of multiplying; 13/12 adds.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">Solve: (1/2 + 1/3) × 6/5.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>1</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>5/6</span></li>
+        <li class=""><span class="lab">C</span><span>6/5</span></li>
+        <li class=""><span class="lab">D</span><span>11/30</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>1/2 + 1/3 = 5/6; then 5/6 × 6/5 = 30/30 = 1 (reciprocal pair). (Forgetting to add inside the bracket first gives the distractors.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">A garden is 5/6 of an acre; 3/10 of it is planted with roses. The rose area (in acres) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>8/16</span></li>
+        <li class=""><span class="lab">B</span><span>4/5</span></li>
+        <li class="correct"><span class="lab">C</span><span>1/4</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>15/16</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rose area = 3/10 of 5/6 = 3/10 × 5/6 = 15/60 = 1/4 acre. (8/16 and 15/16 mis-multiply or fail to reduce.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">If 2/3 of a number equals 1/2 of another number, and the first number is 9, the second number is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>6</span></li>
+        <li class="correct"><span class="lab">B</span><span>12</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>3</span></li>
+        <li class=""><span class="lab">D</span><span>27/4</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>First number 9: 2/3 × 9 = 6. This equals 1/2 of the second, so 1/2 × x = 6 → x = 12. Check: 1/2 × 12 = 6. ✓ (6 stops at the first value; 27/4 mishandles the reciprocal.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">A piece of cloth 7/8 m long is shared equally among 7 children. Each child gets (in m):</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>7/8</span></li>
+        <li class="correct"><span class="lab">B</span><span>1/8</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>49/8</span></li>
+        <li class=""><span class="lab">D</span><span>1/7</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Share each = 7/8 ÷ 7 = 7/8 × 1/7 = 7/56 = 1/8 m. (7/8 forgets to divide; 49/8 multiplies by 7.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">Which division gives the LARGEST result?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>6 ÷ 1/2</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>6 ÷ 2</span></li>
+        <li class=""><span class="lab">C</span><span>6 ÷ 3</span></li>
+        <li class=""><span class="lab">D</span><span>6 ÷ 1</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Dividing by a number below 1 gives the biggest result: 6 ÷ 1/2 = 12, while 6 ÷ 1 = 6, 6 ÷ 2 = 3, 6 ÷ 3 = 2. So (A).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">Compute 1 1/4 × 4/5.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>1</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>5/4</span></li>
+        <li class=""><span class="lab">C</span><span>4/5</span></li>
+        <li class=""><span class="lab">D</span><span>25/16</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>1 1/4 × 4/5 = 5/4 × 4/5 = 20/20 = 1. (5/4 and 4/5 forget to multiply the whole; 25/16 squares the wrong term.)</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">A worker paints 2/7 of a fence in a day. What fraction is left unpainted after 2 days?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4/7</span></li>
+        <li class=""><span class="lab">B</span><span>2/7</span></li>
+        <li class="correct"><span class="lab">C</span><span>3/7</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>5/7</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In 2 days the worker paints 2 × 2/7 = 4/7, so unpainted = 1 − 4/7 = 3/7. (2/7 is one day's work; 4/7 is the painted part, not the leftover.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">The area of a square of side 2/3 cm is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>8/3 cm²</span></li>
+        <li class=""><span class="lab">B</span><span>4/6 cm²</span></li>
+        <li class="correct"><span class="lab">C</span><span>4/9 cm²</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>4/3 cm²</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Area of a square = side² = (2/3)² = 2/3 × 2/3 = 4/9 cm². (8/3 and 4/3 mishandle the squaring; 4/6 fails to square the denominator.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">By what number must 3/5 be multiplied to give 1?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>5/3</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>3/5</span></li>
+        <li class=""><span class="lab">C</span><span>5</span></li>
+        <li class=""><span class="lab">D</span><span>3</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>We need 3/5 × ? = 1, so ? is the reciprocal 5/3 (since 3/5 × 5/3 = 1). (3/5 and 5 are tempting but only 5/3 works.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">A bottle holds 3/4 litre. Two-thirds of it is poured out. How much (in litre) is poured out?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1/4</span></li>
+        <li class="correct"><span class="lab">B</span><span>1/2</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>17/12</span></li>
+        <li class=""><span class="lab">D</span><span>3/8</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Poured out = 2/3 of 3/4 = 2/3 × 3/4 = 6/12 = 1/2 litre. (1/4 is the part LEFT; 3/8 mis-multiplies.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">Compute 9 ÷ 3/4.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>27/4</span></li>
+        <li class="correct"><span class="lab">B</span><span>12</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>3/4</span></li>
+        <li class=""><span class="lab">D</span><span>27</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>9 ÷ 3/4 = 9 × 4/3 = 36/3 = 12. Dividing by a fraction below 1 gives more than 9. (27/4 multiplies by 3/4; 27 multiplies by 3 only.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">Half of a half of a half of a whole pizza is what fraction of the pizza?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1/2</span></li>
+        <li class=""><span class="lab">B</span><span>1/6</span></li>
+        <li class=""><span class="lab">C</span><span>3/2</span></li>
+        <li class="correct"><span class="lab">D</span><span>1/8</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Half of a half of a half = (1/2)³ = 1/2 × 1/2 × 1/2 = 1/8 of the pizza. (1/6 adds the halves; 3/2 adds them as wholes.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">A road 3/5 km long is being repaired; 2/3 of it is finished. How many kilometres are still unrepaired?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2/5</span></li>
+        <li class="correct"><span class="lab">B</span><span>1/5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>2/3</span></li>
+        <li class=""><span class="lab">D</span><span>1/3</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Repaired = 2/3 of 3/5 = 2/3 × 3/5 = 6/15 = 2/5 km, so unrepaired = 3/5 − 2/5 = 1/5 km. (2/5 is the repaired length; 1/3 is the un-done fraction, not the length.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">Which expression equals 4?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>1/2 ÷ 1/8</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>1/2 × 4</span></li>
+        <li class=""><span class="lab">C</span><span>8 ÷ 1/2</span></li>
+        <li class=""><span class="lab">D</span><span>1/8 ÷ 1/2</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>1/2 ÷ 1/8 = 1/2 × 8 = 4. Checking the others: (B) 1/2 × 4 = 2; (C) 8 ÷ 1/2 = 8 × 2 = 16; (D) 1/8 ÷ 1/2 = 1/8 × 2 = 1/4. Only (A) equals 4. (The trap is thinking division must shrink the value — dividing by 1/8 multiplies by 8.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">A recipe for 4 people needs 2/3 cup of sugar. For 6 people you need (in cups):</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1/2</span></li>
+        <li class=""><span class="lab">B</span><span>4/9</span></li>
+        <li class="correct"><span class="lab">C</span><span>1</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>8/9</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sugar per person = 2/3 ÷ 4 = 2/3 × 1/4 = 2/12 = 1/6 cup. For 6 people: 6 × 1/6 = 1 cup. (4/9 scales by 2/3 instead of unitary; 1/2 under-scales.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">Anil reads 1/5 of a book on Monday and 1/4 of the remaining pages on Tuesday. What fraction of the whole book has he read by Tuesday night?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>9/20</span></li>
+        <li class="correct"><span class="lab">B</span><span>2/5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>1/5</span></li>
+        <li class=""><span class="lab">D</span><span>3/5</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Monday: read 1/5, leaving 4/5. Tuesday: 1/4 of the remaining 4/5 = 1/4 × 4/5 = 4/20 = 1/5. Total read = 1/5 + 1/5 = 2/5. (9/20 mis-adds; 3/5 over-counts.) --- *Solutions complete: 60 / 60.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

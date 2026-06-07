@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Virangana Pannadhaya — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Virangana Pannadhaya<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">The heroine of this chapter is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Panna Dhai (पन्नाधाया)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Rani Lakshmi Bai</span></li>
+        <li class=""><span class="lab">C</span><span>Panna's own son</span></li>
+        <li class=""><span class="lab">D</span><span>the assassin</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The heroine is Panna Dhai (पन्नाधाया). Not Lakshmi Bai, her son, or the assassin.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">पन्नाधाया is described as a वीराङ्गना, meaning:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a queen</span></li>
+        <li class=""><span class="lab">B</span><span>a wet-nurse only</span></li>
+        <li class="correct"><span class="lab">C</span><span>a brave woman / heroine</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a soldier</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>वीराङ्गना means 'a brave woman / heroine'. She was a heroic wet-nurse, but the word means 'heroine', not 'queen' or 'soldier'.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">Panna Dhai served as the ____ of the young prince.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>mother</span></li>
+        <li class=""><span class="lab">B</span><span>teacher</span></li>
+        <li class=""><span class="lab">C</span><span>cook</span></li>
+        <li class="correct"><span class="lab">D</span><span>wet-nurse / foster-mother (धाया)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Panna was the wet-nurse / foster-mother (धाया) of the prince. Not his birth mother, teacher, or cook.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">The young prince she protected was:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Udai Singh II of Mewar</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Bankim Chandra</span></li>
+        <li class=""><span class="lab">C</span><span>the assassin's son</span></li>
+        <li class=""><span class="lab">D</span><span>Veer Savarkar</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>She protected Udai Singh II of Mewar. Bankim Chandra and Veer Savarkar are from other chapters.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">The kingdom in the story is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Magadha</span></li>
+        <li class="correct"><span class="lab">B</span><span>Mewar</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Kalinga</span></li>
+        <li class=""><span class="lab">D</span><span>the Andamans</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The kingdom is Mewar. Magadha, Kalinga and the Andamans are from other chapters.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">The story of Panna Dhai is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a fox fable</span></li>
+        <li class="correct"><span class="lab">B</span><span>a historical account of loyalty and sacrifice</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a chemistry lesson</span></li>
+        <li class=""><span class="lab">D</span><span>a banking story</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>It is a historical account of loyalty and sacrifice. Not a fable, a chemistry lesson, or a banking story.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">धाया means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a queen</span></li>
+        <li class=""><span class="lab">B</span><span>a soldier</span></li>
+        <li class=""><span class="lab">C</span><span>a prince</span></li>
+        <li class="correct"><span class="lab">D</span><span>a wet-nurse / foster-mother</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>धाया means a wet-nurse / foster-mother. Not a queen, soldier, or prince.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">धाया is glossed as धात्री, meaning:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a foster-mother / nurse</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a warrior</span></li>
+        <li class=""><span class="lab">C</span><span>a bedroom</span></li>
+        <li class=""><span class="lab">D</span><span>a palace</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>धाया = धात्री = 'a foster-mother / nurse'. Not a warrior, a bedroom, or a palace.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">धाया (with long आ) must not be confused with धैर्य, which means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a wet-nurse</span></li>
+        <li class="correct"><span class="lab">B</span><span>patience / courage</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a bedroom</span></li>
+        <li class=""><span class="lab">D</span><span>a plot</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>धैर्य means 'patience / courage', distinct from धाया (wet-nurse). It is not a bedroom or a plot.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">The difference between धाया and धैर्य shows that in Sanskrit:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>vowel length and quality (आ vs ऐ) distinguish words</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>all vowels sound the same</span></li>
+        <li class=""><span class="lab">C</span><span>spelling never matters</span></li>
+        <li class=""><span class="lab">D</span><span>words have no genders</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>धाया vs धैर्य shows that vowel length and quality (आ vs ऐ) distinguish words. Vowels are not all the same, spelling does matter, and words do have genders.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">As Udai Singh's धाया, Panna had the duty of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ruling the kingdom</span></li>
+        <li class=""><span class="lab">B</span><span>leading the army</span></li>
+        <li class="correct"><span class="lab">C</span><span>nursing and protecting the prince</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>plotting against him</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>As his धाया, Panna nursed and protected the prince. She did not rule, lead the army, or plot against him.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">An evil-minded rival plotted to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>crown the prince</span></li>
+        <li class=""><span class="lab">B</span><span>teach the prince</span></li>
+        <li class=""><span class="lab">C</span><span>free the prince</span></li>
+        <li class="correct"><span class="lab">D</span><span>kill the young prince in his sleep</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The rival plotted to kill the prince in his sleep. Not to crown, teach, or free him.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">कुतन्त्रम् means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a good plan</span></li>
+        <li class=""><span class="lab">B</span><span>a bedroom</span></li>
+        <li class=""><span class="lab">C</span><span>a wet-nurse</span></li>
+        <li class="correct"><span class="lab">D</span><span>an evil plot / wicked scheme</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>कुतन्त्रम् means 'an evil plot / wicked scheme'. Not a good plan, a bedroom, or a wet-nurse.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">छलेन means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>by truth</span></li>
+        <li class="correct"><span class="lab">B</span><span>by deception / trickery</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>by force only</span></li>
+        <li class=""><span class="lab">D</span><span>by accident</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>छलेन means 'by deception / trickery'. Not by truth, force alone, or accident.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">The assassin came मारयितुम्, that is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>to protect</span></li>
+        <li class=""><span class="lab">B</span><span>to crown</span></li>
+        <li class="correct"><span class="lab">C</span><span>to kill (the prince)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>to teach</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>मारयितुम् means 'to kill' - the assassin's purpose. Not to protect, crown, or teach.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">The plot targeted the prince while he was:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>asleep in his bedroom</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>leading a battle</span></li>
+        <li class=""><span class="lab">C</span><span>studying Sanskrit</span></li>
+        <li class=""><span class="lab">D</span><span>crossing a river</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The plot targeted the prince asleep in his bedroom. Not in battle, studying, or crossing a river.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">The rival's scheme combined छल (deception) and कुतन्त्रम् (an evil plot), aiming at:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the prince's education</span></li>
+        <li class=""><span class="lab">B</span><span>the wet-nurse's reward</span></li>
+        <li class=""><span class="lab">C</span><span>a coral reef</span></li>
+        <li class="correct"><span class="lab">D</span><span>the murder of the future king</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The scheme aimed at murdering the future king. Not the prince's education, a reward, or a reef.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">To save the prince, Panna placed in his bed:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a wooden doll</span></li>
+        <li class="correct"><span class="lab">B</span><span>her own son</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the assassin</span></li>
+        <li class=""><span class="lab">D</span><span>another prince</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Panna placed her own son in the prince's bed. Not a doll, the assassin, or another prince.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">Panna placed her own son in the prince's:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>राजगृह gate</span></li>
+        <li class="correct"><span class="lab">B</span><span>शयनागारम् (bedroom)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>battlefield</span></li>
+        <li class=""><span class="lab">D</span><span>river</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>She placed him in the prince's शयनागारम् (bedroom). Not the palace gate, a battlefield, or a river.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">शयनागारम् means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a palace gate</span></li>
+        <li class=""><span class="lab">B</span><span>a battlefield</span></li>
+        <li class="correct"><span class="lab">C</span><span>a bedroom</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a prison</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>शयनागारम् means 'a bedroom'. Not a gate, a battlefield, or a prison.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">Panna did this knowing that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>no one would be harmed</span></li>
+        <li class=""><span class="lab">B</span><span>the prince would die</span></li>
+        <li class="correct"><span class="lab">C</span><span>her own son would be killed in the prince's place</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the assassin would flee</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>She knew her own son would be killed in the prince's place. It was not harmless, the prince did not die, and the assassin did not flee.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">By this act, Panna saved:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>her own son</span></li>
+        <li class="correct"><span class="lab">B</span><span>the future king (the prince)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the assassin</span></li>
+        <li class=""><span class="lab">D</span><span>the palace treasure</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>By her act Panna saved the future king. Not her own son (who died), the assassin, or treasure.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">Panna's substitution worked because the assassin:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>spared everyone</span></li>
+        <li class="correct"><span class="lab">B</span><span>killed the boy in the prince's bed, thinking he was the prince</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>recognised the trick</span></li>
+        <li class=""><span class="lab">D</span><span>killed the wrong kingdom's prince</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>It worked because the assassin killed the boy in the prince's bed, thinking he was the prince. He did not spare everyone, see through the trick, or attack another kingdom.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">सर्वस्वत्याग means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a small gift</span></li>
+        <li class=""><span class="lab">B</span><span>a royal feast</span></li>
+        <li class=""><span class="lab">C</span><span>a clever trick</span></li>
+        <li class="correct"><span class="lab">D</span><span>the sacrifice of one's everything</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>सर्वस्वत्याग means 'the sacrifice of one's everything'. Not a small gift, a feast, or a trick.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">सर्वस्वम् is glossed as स्वीयं सम्पूर्णम्, meaning:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a tiny part</span></li>
+        <li class=""><span class="lab">B</span><span>someone else's wealth</span></li>
+        <li class=""><span class="lab">C</span><span>a bedroom</span></li>
+        <li class="correct"><span class="lab">D</span><span>one's complete own (all one has)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>सर्वस्वम् = स्वीयं सम्पूर्णम् = 'one's complete own'. Not a tiny part, another's wealth, or a bedroom.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">For Panna, सर्वस्वत्याग specifically meant giving up:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>her own life</span></li>
+        <li class=""><span class="lab">B</span><span>her wealth</span></li>
+        <li class="correct"><span class="lab">C</span><span>her own son's life</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>her position as nurse</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>For Panna it meant giving up her own son's life. She did not give her own life, mere wealth, or her position.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">The chapter stresses that Panna herself:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>died in the prince's place</span></li>
+        <li class="correct"><span class="lab">B</span><span>survived; it was her son who died</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>fled the kingdom</span></li>
+        <li class=""><span class="lab">D</span><span>killed the assassin</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Panna herself survived; it was her son who died. She did not die, flee, or kill the assassin.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">Panna's sacrifice is called unique because she gave up:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>her own life like a soldier</span></li>
+        <li class=""><span class="lab">B</span><span>a small sum of money</span></li>
+        <li class="correct"><span class="lab">C</span><span>her child's life for someone else's child</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a single day of work</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Her sacrifice is unique because she gave her child's life for another's child. Not her own life, a small sum, or a day's work.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">Saying Panna 'lost her own life' is wrong because the one who died was:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Panna herself</span></li>
+        <li class=""><span class="lab">B</span><span>the prince</span></li>
+        <li class=""><span class="lab">C</span><span>the assassin</span></li>
+        <li class="correct"><span class="lab">D</span><span>her own son, placed in the prince's bed</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The one who died was her own son, placed in the prince's bed. It was not Panna, the prince, or the assassin.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">The events of the story took place in the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>6th century</span></li>
+        <li class=""><span class="lab">B</span><span>20th century</span></li>
+        <li class=""><span class="lab">C</span><span>2nd century BCE</span></li>
+        <li class="correct"><span class="lab">D</span><span>16th century (षोडशे शतके)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The events were in the 16th century (षोडशे शतके). Not the 6th, 20th, or 2nd century BCE.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">षोडशे शतके means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>in the sixth century</span></li>
+        <li class="correct"><span class="lab">B</span><span>in the sixteenth century</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>in the sixtieth year</span></li>
+        <li class=""><span class="lab">D</span><span>in sixteen days</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>षोडशे शतके means 'in the sixteenth century'. Not the sixth century, sixtieth year, or sixteen days.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">षोडशम् is the ordinal meaning:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sixth</span></li>
+        <li class=""><span class="lab">B</span><span>sixty</span></li>
+        <li class="correct"><span class="lab">C</span><span>sixteenth</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>sixteen (the count)</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>षोडशम् is the ordinal 'sixteenth'. 'Sixth' is षष्ठम्, 'sixty' षष्टिः, and 'sixteen' (cardinal) षोडश.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">The 16th century is roughly the time of:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Mewar's Maharana lineage (the 1500s)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the Maurya empire</span></li>
+        <li class=""><span class="lab">C</span><span>the Gupta empire</span></li>
+        <li class=""><span class="lab">D</span><span>the modern Republic</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The 16th century is the time of Mewar's Maharana lineage (the 1500s). Not the Maurya or Gupta empire, or the modern Republic.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">स्वर्णिमाक्षरैः means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>in golden letters</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>in black water</span></li>
+        <li class=""><span class="lab">C</span><span>in a bedroom</span></li>
+        <li class=""><span class="lab">D</span><span>by deception</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>स्वर्णिमाक्षरैः means 'in golden letters'. Not 'in black water' (कालापानी), 'in a bedroom', or 'by deception'.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">Saying Panna's name is written स्वर्णिमाक्षरैः is an idiom for being:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>secretly hidden</span></li>
+        <li class=""><span class="lab">B</span><span>quickly forgotten</span></li>
+        <li class="correct"><span class="lab">C</span><span>permanently honoured by history</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>punished</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Being written in golden letters is an idiom for being permanently honoured by history. Not hidden, forgotten, or punished.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">Panna's name is honoured among India's:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>wealthy merchants</span></li>
+        <li class=""><span class="lab">B</span><span>foreign rulers</span></li>
+        <li class="correct"><span class="lab">C</span><span>brave women (वीराङ्गनासु)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>assassins</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Her name is honoured among India's brave women (वीराङ्गनासु). Not merchants, foreign rulers, or assassins.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">वीराङ्गना means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a brave / heroic woman</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a wet-nurse</span></li>
+        <li class=""><span class="lab">C</span><span>a bedroom</span></li>
+        <li class=""><span class="lab">D</span><span>a deception</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>वीराङ्गना means 'a brave / heroic woman'. A wet-nurse is धाया, a bedroom शयनागारम्, and deception छल.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">Writing a name 'in golden letters' in history means the person is remembered as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a forgotten servant</span></li>
+        <li class=""><span class="lab">B</span><span>an ordinary citizen</span></li>
+        <li class=""><span class="lab">C</span><span>a villain</span></li>
+        <li class="correct"><span class="lab">D</span><span>a great and noble example</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>It means the person is remembered as a great and noble example. Not a forgotten servant, an ordinary citizen, or a villain.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">मारयितुम् means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>he killed</span></li>
+        <li class=""><span class="lab">B</span><span>let him kill</span></li>
+        <li class="correct"><span class="lab">C</span><span>to kill</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>killing (a noun)</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>मारयितुम् means 'to kill' (infinitive). 'He killed' is अमारयत्; 'let him kill' an imperative; and it is not a noun.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">मारयितुम् is a/an:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>past-tense verb</span></li>
+        <li class=""><span class="lab">B</span><span>ordinal number</span></li>
+        <li class="correct"><span class="lab">C</span><span>infinitive (with the -तुम् ending)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>gerund</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>मारयितुम् is an infinitive (-तुम् ending). It is not a past-tense verb, an ordinal, or a gerund.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">The -तुम् ending marks the Sanskrit:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>past tense</span></li>
+        <li class=""><span class="lab">B</span><span>plural</span></li>
+        <li class=""><span class="lab">C</span><span>dative case</span></li>
+        <li class="correct"><span class="lab">D</span><span>infinitive ('to do X')</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The -तुम् ending marks the infinitive ('to do X'). It does not mark past tense, plural, or the dative.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">Which of these is also an infinitive?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>अमारयत् ('he killed')</span></li>
+        <li class=""><span class="lab">B</span><span>अगणयत् ('he counted')</span></li>
+        <li class=""><span class="lab">C</span><span>गच्छति ('he goes')</span></li>
+        <li class="correct"><span class="lab">D</span><span>गन्तुम् ('to go')</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>गन्तुम् ('to go') is also an infinitive (-तुम्). अमारयत् and अगणयत् are past tense, and गच्छति is present.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">The PAST tense 'he killed' would be:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>अमारयत्</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>मारयितुम्</span></li>
+        <li class=""><span class="lab">C</span><span>मारयिष्यति</span></li>
+        <li class=""><span class="lab">D</span><span>मारयतु</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>'He killed' is अमारयत्. मारयितुम् is the infinitive, मारयिष्यति future, and मारयतु imperative.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">The assassin came मारयितुम् tells us his ____, not that he succeeded.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>past success</span></li>
+        <li class=""><span class="lab">B</span><span>name</span></li>
+        <li class="correct"><span class="lab">C</span><span>purpose (to kill)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>kingdom</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>मारयितुम् ('to kill') gives the assassin's purpose, not that he succeeded. Not his name or kingdom.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">दुष्टबुद्धि means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>foolish / stupid</span></li>
+        <li class="correct"><span class="lab">B</span><span>evil-minded (with a corrupt intellect)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>very wise</span></li>
+        <li class=""><span class="lab">D</span><span>very brave</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>दुष्टबुद्धि means 'evil-minded' (corrupt intellect). It does not mean foolish, wise, or brave.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">दुष्टबुद्धि breaks into दुष्ट + बुद्धि, meaning:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>'wicked' + 'intellect' = evil-minded</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>'foolish' + 'intellect'</span></li>
+        <li class=""><span class="lab">C</span><span>'brave' + 'mind'</span></li>
+        <li class=""><span class="lab">D</span><span>'good' + 'plan'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>दुष्ट ('wicked') + बुद्धि ('intellect') = 'evil-minded'. The other splits are wrong.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">The villain in the story was:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>foolish but kind</span></li>
+        <li class=""><span class="lab">B</span><span>wise and good</span></li>
+        <li class=""><span class="lab">C</span><span>brave and loyal</span></li>
+        <li class="correct"><span class="lab">D</span><span>clever but wicked (दुष्ट), not merely foolish (मूर्ख)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The villain was clever but wicked (दुष्ट), not merely foolish (मूर्ख). He was not kind, good, or loyal.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">Distinguishing दुष्ट (wicked) from मूर्ख (foolish) tells us the rival was:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>morally bad, not intellectually weak</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>intellectually weak, not bad</span></li>
+        <li class=""><span class="lab">C</span><span>both good and wise</span></li>
+        <li class=""><span class="lab">D</span><span>a loyal servant</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>दुष्ट (wicked) vs मूर्ख (foolish) shows the rival was morally bad, not intellectually weak. He was not good, wise, or loyal.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">राजगृह means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a prince</span></li>
+        <li class=""><span class="lab">B</span><span>a bedroom</span></li>
+        <li class="correct"><span class="lab">C</span><span>the royal palace</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a prison</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>राजगृह means 'the royal palace'. A prince is राजपुत्र, a bedroom शयनागारम्, and a prison कारागारम्.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">राजपुत्र means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the royal palace</span></li>
+        <li class="correct"><span class="lab">B</span><span>a prince</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a wet-nurse</span></li>
+        <li class=""><span class="lab">D</span><span>a deception</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>राजपुत्र means 'a prince'. The palace is राजगृह, a wet-nurse धाया, and deception छल.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">The assassin entered the राजपुत्र's शयनागार inside the राजगृह, that is, the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>palace's bedroom inside a prince</span></li>
+        <li class=""><span class="lab">B</span><span>prince inside a bedroom-palace</span></li>
+        <li class=""><span class="lab">C</span><span>prison inside a palace</span></li>
+        <li class="correct"><span class="lab">D</span><span>prince's bedroom inside the royal palace</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>He entered the prince's (राजपुत्र) bedroom (शयनागार) inside the royal palace (राजगृह). The other readings swap the words.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">Swapping राजगृह and राजपुत्र is an error because one is a ____ and the other a ____.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>place (palace) ... person (prince)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>person ... place</span></li>
+        <li class=""><span class="lab">C</span><span>both places</span></li>
+        <li class=""><span class="lab">D</span><span>both persons</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>राजगृह is a place (palace) and राजपुत्र a person (prince). The reversal and 'both same' options are wrong.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">छलेन (by deception) and कुतन्त्रम् (an evil plot) describe the rival's:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>honest request</span></li>
+        <li class=""><span class="lab">B</span><span>kind gift</span></li>
+        <li class=""><span class="lab">C</span><span>loyal service</span></li>
+        <li class="correct"><span class="lab">D</span><span>treacherous method of attack</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>छलेन and कुतन्त्रम् describe the rival's treacherous method of attack. Not an honest request, a gift, or service.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">The rival relied on छल (deception) rather than:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>an open, honest challenge</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a clever plot</span></li>
+        <li class=""><span class="lab">C</span><span>a wicked scheme</span></li>
+        <li class=""><span class="lab">D</span><span>a hidden assassin</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The rival relied on deception rather than an open, honest challenge. He did use a clever, wicked plot and a hidden assassin - those are not the contrast.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">कुतन्त्रम् (कु + तन्त्रम्) suggests a plan that is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>good and noble</span></li>
+        <li class="correct"><span class="lab">B</span><span>bad / wicked (the prefix कु- means 'bad')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>very large</span></li>
+        <li class=""><span class="lab">D</span><span>brand new</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>कु- means 'bad', so कुतन्त्रम् is a bad/wicked plan. Not good, large, or new.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">Which word-meaning pair is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>धाया = a prince</span></li>
+        <li class=""><span class="lab">B</span><span>मारयितुम् = he killed</span></li>
+        <li class="correct"><span class="lab">C</span><span>शयनागारम् = bedroom</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>सर्वस्वम् = a small gift</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>शयनागारम् = bedroom. धाया is a wet-nurse (not a prince), मारयितुम् is 'to kill' (not 'he killed'), and सर्वस्वम् is 'one's everything' (not a small gift).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">Which grammar pair is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>मारयितुम् = past tense</span></li>
+        <li class="correct"><span class="lab">B</span><span>मारयितुम् = infinitive ('to kill'); षोडशम् = ordinal ('sixteenth')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>षोडशम् = the count 'sixteen'</span></li>
+        <li class=""><span class="lab">D</span><span>धाया = a verb</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>मारयितुम् is an infinitive and षोडशम् the ordinal 'sixteenth'. The other options misname these.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">The central theme of this chapter is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a fox and grapes</span></li>
+        <li class="correct"><span class="lab">B</span><span>Panna Dhai's supreme sacrifice and loyalty in saving the prince</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the cycle of food</span></li>
+        <li class=""><span class="lab">D</span><span>types of government</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The theme is Panna Dhai's supreme sacrifice and loyalty in saving the prince. Not the fox fable, the food cycle, or government.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">Putting it together, पन्नाधाया is honoured स्वर्णिमाक्षरैः because she:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>sacrificed her own son's life to save the future king</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>won a great battle</span></li>
+        <li class=""><span class="lab">C</span><span>wrote a famous poem</span></li>
+        <li class=""><span class="lab">D</span><span>ruled Mewar herself</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>She is honoured in golden letters because she sacrificed her own son's life to save the future king. Not for a battle, a poem, or ruling Mewar.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">A student claims: 'Panna gave up her own life, and मारयितुम् is past tense.' The best correction is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Panna gave up her own son's life (she survived), and मारयितुम् is the infinitive 'to kill'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the student is fully correct</span></li>
+        <li class=""><span class="lab">C</span><span>Panna gave up her son's life, but मारयितुम् is past</span></li>
+        <li class=""><span class="lab">D</span><span>Panna gave up her own life, and मारयितुम् is the infinitive</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Panna gave up her own son's life (she survived), and मारयितुम् is the infinitive 'to kill'. The other options keep one or both errors.</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

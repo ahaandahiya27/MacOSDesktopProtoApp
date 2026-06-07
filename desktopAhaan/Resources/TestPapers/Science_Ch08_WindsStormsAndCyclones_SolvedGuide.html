@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Winds Storms And Cyclones — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Winds Storms And Cyclones<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">Which statement about air is correct?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Air has no weight and exerts no pressure.</span></li>
+        <li class=""><span class="lab">B</span><span>Air exerts pressure only downward.</span></li>
+        <li class=""><span class="lab">C</span><span>Air exerts pressure only at sea level.</span></li>
+        <li class="correct"><span class="lab">D</span><span>Air has weight and exerts pressure in all directions.</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Air is matter: it has mass (weight) and, like any fluid, it presses equally in every direction — up, down and sideways. It does not press only downward or only at sea level.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">Wind is best described as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>air that is being heated by the Sun</span></li>
+        <li class=""><span class="lab">B</span><span>water vapour rising into the sky</span></li>
+        <li class="correct"><span class="lab">C</span><span>air moving from a region of higher pressure to a region of lower pressure</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>air moving from a region of lower pressure to a region of higher pressure</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Wind is simply moving air, and air always flows from where the pressure is higher to where it is lower. Heating by itself is not wind; the *movement* it sets up is.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">A little water is boiled in a tin can, the cap is screwed on tightly, and the can is then cooled. The can gets crushed because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the cold water outside pushes the walls in</span></li>
+        <li class=""><span class="lab">B</span><span>the metal shrinks and tears</span></li>
+        <li class="correct"><span class="lab">C</span><span>the air and steam inside cool, their pressure drops, and the higher outside air pressure crushes it</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>cooling creates extra air inside that pushes the walls</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Boiling drives out most air and fills the can with steam; capping it traps low-density hot gas. On cooling, the steam condenses and the trapped gas contracts, so the inside pressure drops well below the outside air pressure, which then crushes the can. (The walls are pushed in by air, not by cold water or shrinking metal.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">At a beach on a hot afternoon you feel a cool wind blowing from the sea toward the land. This sea breeze happens because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the sea heats up faster than the land</span></li>
+        <li class="correct"><span class="lab">B</span><span>the land heats up faster than the sea, so warm air over the land rises and cooler sea air moves in</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the land is always cooler than the sea</span></li>
+        <li class=""><span class="lab">D</span><span>sea water evaporates and pushes the air toward land</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Land heats faster than water under the same Sun. The hot air over the land expands, becomes lighter and rises, lowering the pressure there; cooler, higher-pressure air from over the sea flows in to replace it — a sea breeze.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">You hold two inflated balloons hanging side by side a few centimetres apart and blow a stream of air through the gap between them. The balloons will:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>move apart</span></li>
+        <li class=""><span class="lab">B</span><span>stay exactly where they are</span></li>
+        <li class=""><span class="lab">C</span><span>both rise upward</span></li>
+        <li class="correct"><span class="lab">D</span><span>move toward each other</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The fast air stream you blow between the balloons has lower pressure than the still air on their outer sides. The higher outside pressure pushes the balloons together, so they move toward each other. (The common guess "move apart" is the trap.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">Inside the towering clouds of a thunderstorm, the chief reason for the violent activity is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>cold dry air sinking quickly to the ground</span></li>
+        <li class=""><span class="lab">B</span><span>lightning being created first and then pulling up the air</span></li>
+        <li class="correct"><span class="lab">C</span><span>rapidly rising warm, moist air together with falling water drops</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the ground heating the clouds from below by touch</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A thunderstorm's energy comes from warm, moisture-laden air shooting upward while water drops fall back down through it. Lightning is a *result* of this churning, not its cause; cold sinking air would suppress a storm.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">Air over the equator and air over the poles are heated very differently by the Sun. The direct result of this uneven heating is that:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>large-scale wind currents are set up that move heat around the planet</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>there is no wind anywhere on Earth</span></li>
+        <li class=""><span class="lab">C</span><span>the poles become hotter than the equator</span></li>
+        <li class=""><span class="lab">D</span><span>air stops having any weight near the equator</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The equator receives far more direct sunlight than the poles. This temperature difference creates pressure differences, which drive large-scale wind currents that carry heat from hot regions toward cold ones.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">As a cyclone forms over a warm ocean, water vapour in the rising air condenses into droplets. This condensation helps the cyclone grow because it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>cools the air and stops the wind</span></li>
+        <li class=""><span class="lab">B</span><span>makes the air heavier so it sinks back down</span></li>
+        <li class="correct"><span class="lab">C</span><span>releases heat, which warms the air further, lowers the pressure more, and pulls in even faster wind</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>adds weight that raises the pressure at the centre</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>When water vapour condenses it releases its stored (latent) heat. That extra warmth makes the rising air even lighter, drops the central pressure further, and pulls in faster wind carrying still more moist air — a self-strengthening loop.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">Wind blows fast over the curved top of a roof while the air inside the house is still. During a storm a poorly tied roof tends to be lifted off because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the rain makes the roof float</span></li>
+        <li class="correct"><span class="lab">B</span><span>the fast air above the roof has lower pressure than the still air below, so the roof is pushed up</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the still air below has lower pressure and sucks the roof down</span></li>
+        <li class=""><span class="lab">D</span><span>wind always pushes roofs straight down</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Fast wind streaming over the curved roof has lower pressure than the still air trapped inside the house. The greater pressure below then pushes the roof upward, so a loosely tied roof can be lifted off.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">The calm, clear, low-pressure region at the very centre of a cyclone is called the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>eye</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>eye wall</span></li>
+        <li class=""><span class="lab">C</span><span>storm surge</span></li>
+        <li class=""><span class="lab">D</span><span>front</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The calm, clear, low-pressure centre of a cyclone is the eye. The violent ring around it is the eye wall.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">Two identical sealed tins are taken to the top of a tall mountain and to the seashore. Compared with the seashore tin, the mountain-top tin experiences:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>greater outside air pressure</span></li>
+        <li class="correct"><span class="lab">B</span><span>lower outside air pressure, because there is less air above it</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>exactly the same outside air pressure</span></li>
+        <li class=""><span class="lab">D</span><span>no air pressure at all</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Air pressure comes from the weight of the air column above you. On a mountain there is less air overhead, so the outside pressure is lower than at the seashore.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">On a hot day the air just above a sun-baked open field tends to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sink, because hot air is heavier</span></li>
+        <li class=""><span class="lab">B</span><span>stay perfectly still</span></li>
+        <li class="correct"><span class="lab">C</span><span>rise, because it expands, becomes lighter, and is pushed up</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>turn into water</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sun-heated air over a hot field expands, grows less dense (lighter) and is pushed up by the cooler, denser air around it. Hot air rises; it does not sink or sit still.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">The single greatest cause of death and destruction along the coast when a cyclone makes landfall is usually the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>storm surge — a huge rise of sea water flooding the low coast</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>lightning strikes</span></li>
+        <li class=""><span class="lab">C</span><span>loud thunder</span></li>
+        <li class=""><span class="lab">D</span><span>hailstones</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The deadliest part of a landfalling cyclone is usually the storm surge — a great heap of sea water driven onto the low coast, drowning huge areas. Lightning, thunder and hail cause far less of the destruction.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">A balloon is stretched over the mouth of an empty bottle, and the bottle is then placed in a bowl of hot water. The balloon inflates because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>hot water leaks into the bottle</span></li>
+        <li class=""><span class="lab">B</span><span>the glass squeezes the air upward</span></li>
+        <li class="correct"><span class="lab">C</span><span>the air inside warms, expands, and pushes the balloon outward</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the balloon makes its own air</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Warm water heats the air inside the bottle; the air expands and, having nowhere else to go, pushes out into the balloon and inflates it. No water enters and the balloon makes no air of its own.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">At night the wind at a coast usually blows from the land toward the sea (a land breeze) because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the land stays warmer than the sea all night</span></li>
+        <li class=""><span class="lab">B</span><span>the sea cools faster than the land</span></li>
+        <li class="correct"><span class="lab">C</span><span>the land cools faster than the sea, so now the warmer air is over the sea and rises, drawing air out from the land</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>winds always reverse at sunset for no reason</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>At night the land loses heat faster than the sea, so now the sea is the warmer surface. Air over the sea rises, lowering pressure there, and cooler air flows out from the land toward the sea — a land breeze.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">When a cyclone alert is issued for a coastal area, the safest immediate action is to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>go to the beach to watch the waves</span></li>
+        <li class="correct"><span class="lab">B</span><span>move to a safer place such as a cyclone shelter and follow official instructions</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>ignore it unless the wind is already strong</span></li>
+        <li class=""><span class="lab">D</span><span>drive toward the sea to escape inland traffic</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The right response to a cyclone alert is to move to a safe place such as a cyclone shelter and follow the authorities' instructions. Going to the beach or toward the sea, or ignoring the warning, is dangerous.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">The flash of lightning and the rumble of thunder are produced at the same instant, yet we usually see the lightning before we hear the thunder. This is because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>thunder happens a few seconds after lightning</span></li>
+        <li class="correct"><span class="lab">B</span><span>light travels much faster than sound</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>sound travels faster than light</span></li>
+        <li class=""><span class="lab">D</span><span>the eye reacts before the ear by several seconds</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Light and sound are made together in a lightning stroke, but light travels enormously faster than sound, so the flash reaches our eyes well before the thunder reaches our ears.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">India's summer monsoon brings heavy rain mainly because, in summer, the moisture-laden winds blow:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>from the sea toward the land</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>from the land toward the sea</span></li>
+        <li class=""><span class="lab">C</span><span>straight downward from the sky</span></li>
+        <li class=""><span class="lab">D</span><span>from the poles toward the equator</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In summer the land heats more than the sea, drawing moist air inland from the sea toward the land; that sea-to-land flow carries the rain of the summer monsoon.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">A strip of paper is held just below your lower lip and you blow hard straight across its top surface. The free end of the strip will:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>be pushed straight down</span></li>
+        <li class=""><span class="lab">B</span><span>not move at all</span></li>
+        <li class="correct"><span class="lab">C</span><span>lift up</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>curl toward your mouth</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Blowing across the top of the strip makes the air there move fast, so its pressure drops below the still air underneath. The higher pressure below then lifts the free end up.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">A cyclone gathers strength over warm tropical seas but quickly weakens after it moves onto land. The main reason it weakens over land is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the land is colder than space</span></li>
+        <li class=""><span class="lab">B</span><span>buildings physically block the wind</span></li>
+        <li class=""><span class="lab">C</span><span>the eye closes up on contact with soil</span></li>
+        <li class="correct"><span class="lab">D</span><span>it is cut off from the warm, moist sea air that fed it</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A cyclone is fed by warm, moist air from a warm sea. Once it moves over land it loses that supply of warm moist air, so it weakens. (Buildings and "cold land" are not the main reason.)</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">The narrow ring of the most violent, fastest winds and heaviest rain in a cyclone is the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>eye wall</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>eye</span></li>
+        <li class=""><span class="lab">C</span><span>calm centre</span></li>
+        <li class=""><span class="lab">D</span><span>outer edge, where the storm is mildest</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The eye wall is the narrow ring just around the eye, where the winds are fastest and the rain heaviest — the most violent part of the cyclone.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">Air pressure pushes on us from every side, yet we are not crushed. The best explanation is that:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the pressure of the fluids and air inside our body pushes outward and balances it</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>air pressure is too weak to be felt at all</span></li>
+        <li class=""><span class="lab">C</span><span>our skin is completely airtight and stiff</span></li>
+        <li class=""><span class="lab">D</span><span>gravity cancels the air pressure exactly</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The fluids and air inside our body push outward with about the same pressure as the atmosphere pushes inward, so the forces balance and we are not crushed. Air pressure is real and strong; gravity does not cancel it.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">The instrument used to measure the speed of the wind is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>thermometer</span></li>
+        <li class=""><span class="lab">B</span><span>barometer</span></li>
+        <li class="correct"><span class="lab">C</span><span>anemometer</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>rain gauge</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Wind speed is measured with an anemometer. (A thermometer measures temperature, a barometer pressure, a rain gauge rainfall.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">Why does air rush in to take the place of warm air that has risen above a hot region?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>because the cooler air is attracted by sunlight</span></li>
+        <li class=""><span class="lab">B</span><span>because cooler air is lighter than warm air</span></li>
+        <li class=""><span class="lab">C</span><span>because the Sun pulls the air sideways</span></li>
+        <li class="correct"><span class="lab">D</span><span>because the rising warm air leaves a region of lower pressure behind it</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>When warm air rises away from a hot region it leaves lower pressure behind. Surrounding higher-pressure air then rushes in to fill that low-pressure region. Cooler air is denser, not lighter, so options B and C are wrong.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">During a severe cyclone, people are advised **not** to drink water from open, flooded sources mainly because:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the flood water is likely contaminated and can spread disease</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>flood water is too cold</span></li>
+        <li class=""><span class="lab">C</span><span>the water has too much salt to taste good</span></li>
+        <li class=""><span class="lab">D</span><span>open water reflects lightning</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Flood water during a cyclone is usually contaminated with sewage and debris and can spread disease, so people are told not to drink from open flooded sources.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">By day the air pressure over the warm land is lower than over the cooler sea. Knowing wind blows from high to low pressure, the daytime breeze must blow:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>from the land to the sea</span></li>
+        <li class="correct"><span class="lab">B</span><span>from the sea to the land</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>straight up only</span></li>
+        <li class=""><span class="lab">D</span><span>in a full circle with no net direction</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Wind flows from high pressure to low pressure. Here the sea has the higher pressure and the land the lower, so the daytime breeze blows from the sea to the land.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">A sealed plastic bottle is filled with hot air and capped, then put in a refrigerator for an hour. When taken out it is found dented inward. The dent appears because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the fridge squeezed it mechanically</span></li>
+        <li class=""><span class="lab">B</span><span>cold makes plastic expand and fold</span></li>
+        <li class="correct"><span class="lab">C</span><span>the cooled air inside lost pressure, so the outside air pressed the sides in</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>water from the fridge soaked into the plastic</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cooling the trapped air shrinks it and lowers its pressure below the outside air pressure, which then presses the bottle's sides inward, denting it. (The fridge does not squeeze it mechanically.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">A coastal town keeps getting accurate cyclone warnings a day or two in advance. The technology most responsible for this early warning is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the sundial</span></li>
+        <li class=""><span class="lab">B</span><span>the household thermometer</span></li>
+        <li class="correct"><span class="lab">C</span><span>weather satellites and radar</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the kitchen pressure cooker</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Modern early warnings come from weather satellites and radar, which spot and track cyclones a day or two ahead. A sundial, thermometer or pressure cooker cannot do this.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">Lightning is essentially:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sunlight reflected off rain</span></li>
+        <li class=""><span class="lab">B</span><span>burning gas in the upper air</span></li>
+        <li class=""><span class="lab">C</span><span>sound turning into light</span></li>
+        <li class="correct"><span class="lab">D</span><span>a huge electric spark caused by charges built up in storm clouds</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Lightning is a giant electric spark: charges build up inside towering storm clouds and then jump as a huge discharge. It is not reflected sunlight or burning gas.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">Coastal regions of India have a more moderate, less extreme daily temperature than far-inland regions largely because:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>water heats and cools more slowly than land, so sea breezes keep the coast milder</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the sea has no effect on coastal climate</span></li>
+        <li class=""><span class="lab">C</span><span>inland air has no weight</span></li>
+        <li class=""><span class="lab">D</span><span>the coast receives no sunlight</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Water heats and cools much more slowly than land, so the nearby sea moderates coastal temperatures and the daily sea/land breezes keep the coast milder than the far interior.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">A train standing on a platform is about to be passed by a fast express. A person standing very close to the platform edge can be dangerously pulled toward the moving train because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the fast-moving train pushes air against the person</span></li>
+        <li class="correct"><span class="lab">B</span><span>the fast air between the person and the train has lower pressure, so the higher pressure behind the person pushes them in</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the train magnetically attracts people</span></li>
+        <li class=""><span class="lab">D</span><span>the rails vibrate and pull people forward</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The fast train drags the air between it and the person, making that air move quickly and so lowering its pressure. The higher pressure on the person's far side then pushes them toward the train — which is why one must stand well back.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">Which statement correctly compares a tornado with a cyclone?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a tornado is always far larger than a cyclone</span></li>
+        <li class=""><span class="lab">B</span><span>a tornado has no spinning motion</span></li>
+        <li class=""><span class="lab">C</span><span>tornadoes and cyclones are exactly the same size</span></li>
+        <li class="correct"><span class="lab">D</span><span>a tornado is generally a much smaller, narrower, very violent whirling column of air</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A tornado is generally a much smaller, narrower but extremely violent whirling column of air, while a cyclone is a far larger system. Both spin, so "no spinning" and "same size" are wrong.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">In the self-feeding cycle of a growing cyclone, which sequence is correct?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>pressure rises → wind slows → cyclone weakens</span></li>
+        <li class=""><span class="lab">B</span><span>cold air sinks → it warms the sea → wind stops</span></li>
+        <li class="correct"><span class="lab">C</span><span>moist air rises → vapour condenses → heat released → pressure falls → faster wind rushes in → more moist air rises</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>lightning forms → it heats the sea → the eye widens</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The growing-cyclone loop runs: moist air rises → vapour condenses → heat is released → central pressure falls → faster wind rushes in → it brings still more moist air, repeating the cycle. Rising pressure or sinking cold air would stop a cyclone, not build one.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">Recorded wind speeds in the eye wall of a strong cyclone can reach roughly:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5 to 10 km/h</span></li>
+        <li class=""><span class="lab">B</span><span>30 to 40 km/h</span></li>
+        <li class=""><span class="lab">C</span><span>the same as a gentle breeze</span></li>
+        <li class="correct"><span class="lab">D</span><span>150 to 250 km/h</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In a strong cyclone the eye-wall winds can reach roughly 150 to 250 km/h — far above a gentle breeze.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">Two neighbouring regions of the atmosphere have a large pressure difference between them. Compared with two regions whose pressures are nearly equal, the wind between the first pair will be:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>weaker</span></li>
+        <li class="correct"><span class="lab">B</span><span>stronger</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>exactly the same</span></li>
+        <li class=""><span class="lab">D</span><span>absent</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The bigger the pressure difference between two regions, the harder the air is pushed from high to low — so a large pressure difference gives a stronger wind.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">An anemometer often has small cups mounted on arms that spin in the wind. The **faster** the cups spin, the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>lower the wind speed</span></li>
+        <li class=""><span class="lab">B</span><span>higher the air temperature</span></li>
+        <li class="correct"><span class="lab">C</span><span>higher the wind speed</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>heavier the rainfall</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An anemometer's cups are spun by the wind: the faster they spin, the higher the wind speed. (It does not measure temperature or rainfall.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">The sea breeze and the land breeze both occur because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the Moon pulls the air toward the coast</span></li>
+        <li class="correct"><span class="lab">B</span><span>land and water heat up and cool down at different rates</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>sea water is saltier than land</span></li>
+        <li class=""><span class="lab">D</span><span>the coast is always windier than inland</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Both the sea breeze and the land breeze arise because land and water heat up and cool down at different rates, creating the pressure differences that drive the breezes.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">A weather report says the air pressure over a region has suddenly **fallen** sharply. This most likely signals:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>an approaching storm or cyclone, because storms are low-pressure systems</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>clear, calm, settled weather ahead</span></li>
+        <li class=""><span class="lab">C</span><span>that the wind will completely stop</span></li>
+        <li class=""><span class="lab">D</span><span>that the temperature has dropped to freezing</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Storms and cyclones are low-pressure systems, so a sharp, sudden fall in air pressure usually warns that a storm is approaching — not that calm, settled weather is on the way.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">Why does a cyclone's storm surge cause such severe flooding of low-lying coasts?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the surge is only rainwater collecting slowly</span></li>
+        <li class=""><span class="lab">B</span><span>the sea level drops, exposing dry land</span></li>
+        <li class=""><span class="lab">C</span><span>the surge is made entirely of fresh river water</span></li>
+        <li class="correct"><span class="lab">D</span><span>the very low pressure and fierce winds heap up a great mound of sea water that washes far inland</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A cyclone's very low central pressure and fierce winds pile up a great mound of sea water (the storm surge) that washes far inland, flooding low coasts. It is not slow rainwater or river water, and the sea does not retreat.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">A glass tumbler is filled to the brim with water, a stiff card is held over the mouth, and the tumbler is quickly turned upside down. The card and water stay in place because:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the air pressure pushing up on the card is greater than the weight of the water pushing down</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the water is glued to the card</span></li>
+        <li class=""><span class="lab">C</span><span>water cannot fall when upside down</span></li>
+        <li class=""><span class="lab">D</span><span>the glass holds the water by magnetism</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The atmosphere pushes up on the card with a pressure equal to the weight of many metres of air — far more than the weight of the small column of water in the glass — so the card and water are held in place.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">On a calm, very hot and humid summer afternoon, conditions are ripe for a thunderstorm because such weather provides:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>cold, dry, sinking air</span></li>
+        <li class=""><span class="lab">B</span><span>strong steady wind from the poles</span></li>
+        <li class=""><span class="lab">C</span><span>low humidity and clear skies for days</span></li>
+        <li class="correct"><span class="lab">D</span><span>plenty of warm, moisture-rich air that can rise quickly</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Thunderstorms need plenty of warm, moisture-rich air that can rise quickly. A hot, humid afternoon supplies exactly that. Cold dry or low-humidity air would not build a storm.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">During India's **winter** months the prevailing winds over much of the country tend to blow:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>from the sea toward the land, bringing heavy rain</span></li>
+        <li class=""><span class="lab">B</span><span>straight upward</span></li>
+        <li class=""><span class="lab">C</span><span>from the equator toward the poles, bringing snow</span></li>
+        <li class="correct"><span class="lab">D</span><span>from the land toward the sea, so they are mostly dry</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In winter the land cools more than the sea, so winds tend to blow from the land out toward the sea. Because they come off the dry land, the winter winds are mostly dry — the opposite of the summer monsoon.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">Which of these is a sound safety measure to take when a cyclone warning is in force?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>keep all doors and windows wide open to let the wind pass through</span></li>
+        <li class="correct"><span class="lab">B</span><span>store drinking water and keep emergency supplies and a radio ready</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>go outside to take photographs of the storm</span></li>
+        <li class=""><span class="lab">D</span><span>shelter under a tall lone tree</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A sound cyclone precaution is to store drinking water and keep emergency supplies and a radio ready. Leaving windows wide open, going out to photograph the storm, or sheltering under a lone tall tree are all unsafe.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">Wind blows hard across the open mouth of a chimney at the top of a house. As a result, smoke inside is drawn **up** the chimney more strongly. This is because the fast wind across the top:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>raises the pressure at the chimney mouth</span></li>
+        <li class=""><span class="lab">B</span><span>blows fresh air down into the room</span></li>
+        <li class=""><span class="lab">C</span><span>has no effect on the smoke</span></li>
+        <li class="correct"><span class="lab">D</span><span>lowers the pressure at the chimney mouth, so the higher pressure below pushes the smoke up</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Fast wind across the chimney mouth lowers the pressure there. The higher pressure of the still air inside the house then pushes the smoke up and out through the chimney.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">Put the early life of a cyclone in the right order: (i) wind spirals inward, gaining speed (ii) the Sun heats the ocean and warm moist air rises (iii) water vapour condenses, releasing heat and dropping the pressure further. The correct order is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>(i) → (ii) → (iii)</span></li>
+        <li class=""><span class="lab">B</span><span>(iii) → (ii) → (i)</span></li>
+        <li class="correct"><span class="lab">C</span><span>(ii) → (iii) → (i)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>(ii) → (i) → (iii)</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A cyclone begins with the Sun heating the ocean so warm moist air rises (ii); that vapour then condenses, releasing heat and dropping the pressure further (iii); the falling pressure finally makes the wind spiral inward, gaining speed (i). Order: (ii) → (iii) → (i).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">The very low pressure at the centre of a cyclone is important because it:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>is what draws the surrounding air rushing inward as fierce wind</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>keeps the wind from blowing at all</span></li>
+        <li class=""><span class="lab">C</span><span>makes the sea level rise far out at sea only</span></li>
+        <li class=""><span class="lab">D</span><span>warms the upper atmosphere and dries it out</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The very low pressure at the centre is exactly what pulls the surrounding higher-pressure air rushing inward, and that inrush is the cyclone's fierce wind. Low pressure drives the wind, it does not stop it.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">Which set of features correctly describes a cyclone from centre outward?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>violent eye → calm eye wall → still outer ring</span></li>
+        <li class=""><span class="lab">B</span><span>high-pressure eye → dry eye wall → no clouds</span></li>
+        <li class="correct"><span class="lab">C</span><span>calm low-pressure eye → violent eye wall → outer spiralling clouds</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>calm eye → calm eye wall → calm edge</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>From the centre outward a cyclone has a calm, low-pressure eye, then the violent eye wall, then bands of outer spiralling clouds. The eye and edges are not the violent parts.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">A region of the atmosphere is being warmed strongly from below. Over time this region tends to develop:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>higher pressure, because warm air is heavier</span></li>
+        <li class="correct"><span class="lab">B</span><span>lower pressure, because the warm air expands and rises away</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>no change in pressure</span></li>
+        <li class=""><span class="lab">D</span><span>zero air pressure</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Air warmed from below expands, becomes lighter and rises away, leaving lower pressure behind. Warm air is less dense, so it does not raise the pressure.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">A weather station reports that its anemometer cups are spinning very slowly today. This tells us that:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the wind is light today</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the air is very hot</span></li>
+        <li class=""><span class="lab">C</span><span>heavy rain is falling</span></li>
+        <li class=""><span class="lab">D</span><span>the air pressure is extremely high</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The anemometer cups are turned by the wind, so very slow cups mean the wind is light that day. Spin speed does not report temperature, rain or pressure directly.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">Why does the sea breeze typically arrive only **during the day** and not at night?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the sea is only warm at night</span></li>
+        <li class=""><span class="lab">B</span><span>wind cannot blow after sunset</span></li>
+        <li class="correct"><span class="lab">C</span><span>only during the day does the land heat faster than the sea, creating the needed pressure difference</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the Sun blows the wind directly toward shore</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The sea breeze needs the land to be warmer than the sea, which only happens by day when the land heats faster under the Sun. At night that condition is gone (it even reverses), so the daytime sea breeze does not blow at night.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">Before a cyclone strikes, fishermen are warned not to go out to sea chiefly because:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the violent winds and high waves can capsize their boats</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the fish swim away during storms</span></li>
+        <li class=""><span class="lab">C</span><span>sea water becomes too cold to sail in</span></li>
+        <li class=""><span class="lab">D</span><span>cyclones make the sea water disappear</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Before a cyclone the sea has violent winds and high waves that can capsize fishing boats, so fishermen are warned to stay ashore. The fish, water temperature and "disappearing sea" are not the reason.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">A small ball is held in the upward stream of air from a hair-dryer pointed straight up; the ball hovers and even resists being pushed sideways out of the stream. The ball stays in the stream because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the air is sticky and glues the ball</span></li>
+        <li class=""><span class="lab">B</span><span>the ball is weightless inside the stream</span></li>
+        <li class=""><span class="lab">C</span><span>the dryer's heat lifts the ball by magnetism</span></li>
+        <li class="correct"><span class="lab">D</span><span>the fast-moving air in the stream has lower pressure, so the slower air around pushes the ball back in</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The fast air inside the dryer's stream has lower pressure than the slower air around it. If the ball drifts to the edge, the higher surrounding pressure pushes it back into the stream, so it hovers and resists being knocked out.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">The modern reason coastal communities suffer fewer cyclone deaths than they did a century ago is mostly that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>cyclones have become much weaker over time</span></li>
+        <li class=""><span class="lab">B</span><span>the sea no longer floods the coast</span></li>
+        <li class=""><span class="lab">C</span><span>people have stopped living near the coast entirely</span></li>
+        <li class="correct"><span class="lab">D</span><span>accurate satellite warnings now give people time to evacuate to shelters</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Far fewer people die in cyclones today mainly because accurate satellite warnings give time to evacuate to shelters. Cyclones are not weaker, the sea still floods, and the coast is still inhabited.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">Which correctly orders the events of a thunderstorm developing into rain?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>rain falls first, then warm air rises, then clouds form</span></li>
+        <li class="correct"><span class="lab">B</span><span>warm moist air rises and cools → water vapour forms tall clouds → drops grow heavy and fall as rain</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>lightning strikes the ground → clouds appear → air warms</span></li>
+        <li class=""><span class="lab">D</span><span>cold air sinks → the sea heats → rain rises into the sky</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A thunderstorm's rain forms in order: warm moist air rises and cools → its water vapour builds tall clouds → the drops grow heavy and fall as rain. Rain or lightning cannot come first, and cold sinking air would not start it.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">The whole pattern of winds and the monsoon over India is ultimately driven by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the Moon's gravity alone</span></li>
+        <li class="correct"><span class="lab">B</span><span>the uneven heating of the Earth's land, sea and atmosphere by the Sun</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>ocean currents with no role for the Sun</span></li>
+        <li class=""><span class="lab">D</span><span>the spinning of household fans</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Sun's uneven heating of land, sea and atmosphere creates the pressure differences that drive all winds, including the monsoon. The Moon and household fans are not responsible, and ocean currents themselves are ultimately Sun-driven.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">In the bottle-and-balloon activity, after the hot-water bath the same bottle is moved into a bowl of ice water. The balloon will now:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>get sucked inward / collapse into the bottle as the air inside cools and its pressure drops</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>inflate even more</span></li>
+        <li class=""><span class="lab">C</span><span>stay exactly as it was in the hot water</span></li>
+        <li class=""><span class="lab">D</span><span>pop off and float away</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cooling the bottle in ice water shrinks the trapped air and drops its pressure below the outside air, so the balloon is sucked inward / collapses into the bottle — the reverse of the hot-water case.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">As a cyclone intensifies over the sea, the pressure at its centre and the speed of its winds change in which way?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the centre pressure rises and the winds get faster</span></li>
+        <li class="correct"><span class="lab">B</span><span>the centre pressure falls lower and the winds get faster</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the centre pressure falls and the winds get slower</span></li>
+        <li class=""><span class="lab">D</span><span>both the pressure and the wind speed stay constant</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>As a cyclone intensifies its central pressure falls even lower, and because air rushes harder toward that deeper low, the winds get faster. (Falling pressure with faster — not slower — wind is the key pairing.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">A coastal town has a steady sea breeze every afternoon. On one unusual afternoon the land is actually cooler than the sea. That afternoon you would expect:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>an even stronger than usual sea breeze</span></li>
+        <li class=""><span class="lab">B</span><span>the wind to blow straight upward</span></li>
+        <li class="correct"><span class="lab">C</span><span>the usual sea breeze to weaken or reverse, since the needed pressure difference is gone or flipped</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>no change, because sea breezes never depend on temperature</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A sea breeze needs the land warmer than the sea. If on some afternoon the land is actually cooler than the sea, the required pressure difference is gone or flipped, so the usual sea breeze weakens or even reverses.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">Houses in cyclone-prone coastal areas are sometimes built with strong, well-anchored roofs rather than light loose ones mainly to resist the fact that fast wind over a roof:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>raises the pressure above the roof and presses it down safely</span></li>
+        <li class=""><span class="lab">B</span><span>cools the roof and cracks it</span></li>
+        <li class=""><span class="lab">C</span><span>has no measurable effect on roofs</span></li>
+        <li class="correct"><span class="lab">D</span><span>lowers the pressure above the roof, creating an upward lift that can tear it off</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Fast wind over a roof lowers the pressure above it, creating an upward lift that can tear a loose roof off. Strong, well-anchored roofs resist that lift — which is why coastal homes use them.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">The eye of a cyclone is calm and clear, while the eye wall just around it is the most violent part. A ship that passes through a cyclone may therefore experience:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>steady mild wind the entire time</span></li>
+        <li class="correct"><span class="lab">B</span><span>fierce wind, then a sudden calm, then fierce wind again from the other side</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>no wind at all throughout</span></li>
+        <li class=""><span class="lab">D</span><span>calm, then violent, then permanently calm</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>As the cyclone passes over, a ship first meets the fierce eye-wall winds, then the sudden calm of the eye, then the fierce eye-wall winds again from the opposite direction as the far wall arrives. --- *Solutions complete: 60 / 60.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

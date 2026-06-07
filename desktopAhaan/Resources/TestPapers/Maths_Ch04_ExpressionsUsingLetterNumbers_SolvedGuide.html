@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expressions Using Letter Numbers — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Expressions Using Letter Numbers<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">Shabnam is always 3 years older than Aftab. Using a for Aftab's age, Shabnam's age is written as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>3a</span></li>
+        <li class="correct"><span class="lab">B</span><span>a + 3</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>3 − a</span></li>
+        <li class=""><span class="lab">D</span><span>a/3</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Shabnam's age is always Aftab's age + 3. With Aftab's age = a, Shabnam's age = a + 3. (3a would mean three times Aftab's age; 3 − a reverses the relation.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">The expression 4n means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4 + n</span></li>
+        <li class=""><span class="lab">B</span><span>4 − n</span></li>
+        <li class="correct"><span class="lab">C</span><span>4 × n</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>n ÷ 4</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>By convention 4n is shorthand for 4 × n — the multiplication sign is simply dropped. It does NOT mean 4 + n; with n = 5, 4n = 20, not 9.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">The value of 5m + 3 when m = 2 is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>13</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>10</span></li>
+        <li class=""><span class="lab">C</span><span>25</span></li>
+        <li class=""><span class="lab">D</span><span>16</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Substitute m = 2: 5m + 3 = 5 × 2 + 3 = 10 + 3 = 13. (Reading 5m as 5 + m gives 10 — the trap; 5(m+3) gives 25.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">Writing 7 × k without the multiplication sign gives:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>7 + k</span></li>
+        <li class=""><span class="lab">B</span><span>k7</span></li>
+        <li class="correct"><span class="lab">C</span><span>7k</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>k/7</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Dropping the × sign and writing the number before the letter gives 7k. (k7 violates the number-first convention; 7 + k changes the operation.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">If a = −4, then the value of 10 − a is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>6</span></li>
+        <li class=""><span class="lab">B</span><span>40</span></li>
+        <li class=""><span class="lab">C</span><span>−14</span></li>
+        <li class="correct"><span class="lab">D</span><span>14</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The letter carries its whole sign: 10 − a = 10 − (−4) = 10 + 4 = 14. (Ignoring the negative sign gives the trap 6; 10 × (−4) would give −40.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">The perimeter of a square of side q is given by the formula:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>q + 4</span></li>
+        <li class=""><span class="lab">B</span><span>q⁴</span></li>
+        <li class=""><span class="lab">C</span><span>q/4</span></li>
+        <li class="correct"><span class="lab">D</span><span>4q</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Perimeter of a square = 4 × side = 4q. (q + 4 adds instead of multiplies; q⁴ raises to a power.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">The expression l + b + l + b simplifies to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2lb</span></li>
+        <li class=""><span class="lab">B</span><span>l²b²</span></li>
+        <li class=""><span class="lab">C</span><span>4lb</span></li>
+        <li class="correct"><span class="lab">D</span><span>2l + 2b</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>l + b + l + b = (l + l) + (b + b) = 2l + 2b. The like terms l + l make 2l, not l²; and l and b are unlike, so they stay separate (not 2lb).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">The sequence 4, 8, 12, 16, … has nth term 4n. Its 29th term is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>116</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>33</span></li>
+        <li class=""><span class="lab">C</span><span>120</span></li>
+        <li class=""><span class="lab">D</span><span>429</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The nth term is 4n, so the 29th term is 4 × 29 = 116. (33 comes from 29 + 4; "429" mistakenly writes the digits side by side.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">Simplify: 5a + 3b − 2a + 7b − b.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>12ab</span></li>
+        <li class=""><span class="lab">B</span><span>3a + 9</span></li>
+        <li class=""><span class="lab">C</span><span>3a + 11b</span></li>
+        <li class="correct"><span class="lab">D</span><span>3a + 9b</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Collect like terms: a-terms 5a − 2a = 3a; b-terms 3b + 7b − b = 9b. Total 3a + 9b. (3a + 11b forgets to subtract the −b; 12ab wrongly merges unlike terms.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">A matchstick pattern uses 3n + 1 sticks for the nth figure. The 10th figure needs:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>30</span></li>
+        <li class=""><span class="lab">B</span><span>34</span></li>
+        <li class="correct"><span class="lab">C</span><span>31</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>301</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Substitute n = 10 into 3n + 1: 3 × 10 + 1 = 30 + 1 = 31. (Stopping at 3n = 30 gives the trap 30; "301" writes the digits together.)</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">If p = 3 and q = 5, the value of 2pq − p² is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>39</span></li>
+        <li class=""><span class="lab">B</span><span>24</span></li>
+        <li class="correct"><span class="lab">C</span><span>21</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>51</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>2pq − p² with p = 3, q = 5: 2 × 3 × 5 − 3² = 30 − 9 = 21. (Forgetting to square, 30 − 3 = 27 isn't offered; 2 × 3 × 5 + 3² = 39 adds wrongly; 30 + ... gives 51.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">A rectangle has length (x + 5) and breadth x. Its perimeter, simplified, is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>4x + 10</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>2x + 5</span></li>
+        <li class=""><span class="lab">C</span><span>4x + 5</span></li>
+        <li class=""><span class="lab">D</span><span>x² + 5x</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Perimeter = 2(length + breadth) = 2((x + 5) + x) = 2(2x + 5) = 4x + 10. (2x + 5 forgets to double; x² + 5x multiplies instead of adding.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">The coefficient of the letter-number in the term 8y is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>y</span></li>
+        <li class="correct"><span class="lab">B</span><span>8</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>8y</span></li>
+        <li class=""><span class="lab">D</span><span>1</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In 8y the number multiplying the letter-number is the coefficient, so it is 8. (y is the letter-number itself; 1 would be the coefficient of a bare y.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">Parthiv makes L-shapes from matchsticks using 2 sticks per L. The number of sticks for n L-shapes is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>n + 2</span></li>
+        <li class=""><span class="lab">B</span><span>n²</span></li>
+        <li class="correct"><span class="lab">C</span><span>2n</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>2 + n²</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Each L uses 2 sticks, so n L-shapes use 2 × n = 2n sticks. (n + 2 adds rather than multiplies; n² squares.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">Which of these pairs are LIKE terms?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>3x and 3y</span></li>
+        <li class=""><span class="lab">B</span><span>5a and 5a²</span></li>
+        <li class="correct"><span class="lab">C</span><span>7m and 2m</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>4p and 4q</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Like terms have the same letter part. 7m and 2m share the letter m, so they are like. (3x &amp; 3y, 4p &amp; 4q have different letters; 5a &amp; 5a² have different powers.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">The perimeter of a regular pentagon with side q is 5q. When q = 6 cm, the perimeter is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>11 cm</span></li>
+        <li class=""><span class="lab">B</span><span>56 cm</span></li>
+        <li class=""><span class="lab">C</span><span>25 cm</span></li>
+        <li class="correct"><span class="lab">D</span><span>30 cm</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Perimeter = 5q; with q = 6, 5 × 6 = 30 cm. (5 + 6 = 11 adds; "56" writes digits together; 25 = 5².)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">Simplify: 6x + 9 − 4x − 2.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>9x</span></li>
+        <li class=""><span class="lab">B</span><span>11x</span></li>
+        <li class=""><span class="lab">C</span><span>2x + 11</span></li>
+        <li class="correct"><span class="lab">D</span><span>2x + 7</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Collect like terms: x-terms 6x − 4x = 2x; numbers 9 − 2 = 7. Result 2x + 7. (Merging everything into 9x or 11x wrongly adds unlike terms; 2x + 11 adds the numbers wrongly.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">The sum of three consecutive numbers can be written, using n for the middle number, as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>3n + 1</span></li>
+        <li class=""><span class="lab">B</span><span>n³</span></li>
+        <li class="correct"><span class="lab">C</span><span>3n</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>3n − 1</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Three consecutive numbers about a middle n are (n − 1), n, (n + 1); their sum is (n − 1) + n + (n + 1) = 3n. (3n + 1 / 3n − 1 keep a leftover that actually cancels.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">If t = 6, the value of the expression 4t − 9 is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>15</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>1</span></li>
+        <li class=""><span class="lab">C</span><span>33</span></li>
+        <li class=""><span class="lab">D</span><span>24</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Substitute t = 6: 4t − 9 = 4 × 6 − 9 = 24 − 9 = 15. (24 forgets to subtract; reading 4t as 4 + t gives 1.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">"5 more than twice a number x" is written as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2(x + 5)</span></li>
+        <li class="correct"><span class="lab">B</span><span>2x + 5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>5x + 2</span></li>
+        <li class=""><span class="lab">D</span><span>2x − 5</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Twice a number" = 2x; "5 more than" it = 2x + 5. (2(x + 5) doubles after adding 5; 5x + 2 swaps the roles.)</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">Simplify: 3a + 4a + 5a.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>12a</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>12a³</span></li>
+        <li class=""><span class="lab">C</span><span>60a</span></li>
+        <li class=""><span class="lab">D</span><span>12 + a</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>All three terms are like (letter a), so 3a + 4a + 5a = (3 + 4 + 5)a = 12a. (12a³ wrongly multiplies the powers; 60a multiplies the coefficients.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">If a = 2 and b = 5, the value of 3a + 2b is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>16</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>10</span></li>
+        <li class=""><span class="lab">C</span><span>25</span></li>
+        <li class=""><span class="lab">D</span><span>30</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>3a + 2b with a = 2, b = 5: 3 × 2 + 2 × 5 = 6 + 10 = 16. (Reading 3a as 3 + a etc. gives 10; "25" comes from 5².)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">The term that is UNLIKE the others in {7x, −3x, x, 7} is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>7x</span></li>
+        <li class=""><span class="lab">B</span><span>−3x</span></li>
+        <li class=""><span class="lab">C</span><span>x</span></li>
+        <li class="correct"><span class="lab">D</span><span>7</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>7x, −3x and x are all like terms (letter x); 7 has no letter, so it is the odd one out — a constant, unlike the others.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">A taxi-style rule charges a fixed 50 plus 12 for each unit n. The expression for the total is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>50n + 12</span></li>
+        <li class=""><span class="lab">B</span><span>62n</span></li>
+        <li class=""><span class="lab">C</span><span>600n</span></li>
+        <li class="correct"><span class="lab">D</span><span>12n + 50</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Fixed 50 plus 12 for each of n units = 12 × n + 50 = 12n + 50. (50n + 12 swaps which quantity is multiplied; 62n adds the two numbers first.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">The expression 9 − 2k, when k = −3, equals:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>3</span></li>
+        <li class=""><span class="lab">B</span><span>6</span></li>
+        <li class=""><span class="lab">C</span><span>−15</span></li>
+        <li class="correct"><span class="lab">D</span><span>15</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>9 − 2k with k = −3: 9 − 2 × (−3) = 9 − (−6) = 9 + 6 = 15. (Dropping the sign of k gives 9 − 6 = 3; mis-signing gives −15.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">Simplify: 10m − 3m + m.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>8m</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>7m</span></li>
+        <li class=""><span class="lab">C</span><span>6m</span></li>
+        <li class=""><span class="lab">D</span><span>14m</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>All like terms (m): 10m − 3m + m = (10 − 3 + 1)m = 8m. (7m forgets the final + m; 6m subtracts it.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">A shop sells pencils at price c and erasers at price d. Buying 5 pencils and 4 erasers costs:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>9cd</span></li>
+        <li class="correct"><span class="lab">B</span><span>5c + 4d</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>20cd</span></li>
+        <li class=""><span class="lab">D</span><span>4c + 5d</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>5 pencils at c plus 4 erasers at d cost 5c + 4d; c and d are unlike, so the terms stay separate (not 9cd or 20cd). (4c + 5d swaps the counts.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">The value of x² + 3x when x = 4 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>19</span></li>
+        <li class="correct"><span class="lab">B</span><span>28</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>14</span></li>
+        <li class=""><span class="lab">D</span><span>44</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>x² + 3x with x = 4: 4² + 3 × 4 = 16 + 12 = 28. (Forgetting to square, 4 + 12 = 16 gives the trap 16; 14 = ... mis-reads 3x.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">Which expression equals l + l + l?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>l³</span></li>
+        <li class="correct"><span class="lab">B</span><span>3l</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>l + 3</span></li>
+        <li class=""><span class="lab">D</span><span>3 + l</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>l + l + l is three l's added = 3l. (l³ would be l × l × l; l + 3 / 3 + l add a number instead of counting the l's.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">The next two terms after 5x in the pattern x, 2x, 3x, 4x, 5x, … are:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>6x and 7x</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>6 and 7</span></li>
+        <li class=""><span class="lab">C</span><span>x⁶ and x⁷</span></li>
+        <li class=""><span class="lab">D</span><span>25x and 36x</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The pattern's nth term is nx, so after 5x come 6x and 7x. (Dropping the letter gives 6 and 7; squaring the position gives 36x for the 6th.)</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">Across three days a stall earns: Day1 5c + 4d, Day2 3c + 6d, Day3 10c + d. The simplified total is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>28cd</span></li>
+        <li class="correct"><span class="lab">B</span><span>18c + 11d</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>18cd + 11</span></li>
+        <li class=""><span class="lab">D</span><span>11c + 18d</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Add like terms across the three days. c-terms: 5c + 3c + 10c = 18c; d-terms: 4d + 6d + d = 11d. Total 18c + 11d. (28cd / 18cd + 11 wrongly merge unlike terms; 11c + 18d swaps the totals.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">If a = 3, b = 4 and c = 0, the value of a + bc is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>7</span></li>
+        <li class=""><span class="lab">B</span><span>0</span></li>
+        <li class=""><span class="lab">C</span><span>12</span></li>
+        <li class="correct"><span class="lab">D</span><span>3</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>a + bc with a = 3, b = 4, c = 0 means a + (b × c) = 3 + 4 × 0 = 3 + 0 = 3. (Adding all three, 3 + 4 + 0 = 7, is the trap; (a + b)c = 0.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">Simplify: 4(2x).</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>8x</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>6x</span></li>
+        <li class=""><span class="lab">C</span><span>2x + 4</span></li>
+        <li class=""><span class="lab">D</span><span>8 + x</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>4(2x) = 4 × 2 × x = 8x. (6x adds the coefficients 4 + 2; 2x + 4 / 8 + x treat the product as a sum.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">The expression "the cost of n books at 15 each, then 20 taken off" is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>15(n − 20)</span></li>
+        <li class=""><span class="lab">B</span><span>20 − 15n</span></li>
+        <li class=""><span class="lab">C</span><span>15n + 20</span></li>
+        <li class="correct"><span class="lab">D</span><span>15n − 20</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cost of n books at 15 each = 15n; "20 taken off" = 15n − 20. (15(n − 20) subtracts inside; 20 − 15n reverses the order; 15n + 20 adds.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">In the expression 6x − 7, the number 6 is called the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>constant term</span></li>
+        <li class="correct"><span class="lab">B</span><span>coefficient of x</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>like term</span></li>
+        <li class=""><span class="lab">D</span><span>variable</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In 6x − 7 the number 6 multiplies the letter x, so it is the coefficient of x. (−7 is the constant term; x is the variable.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">Two expressions are EQUAL when they:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>look the same on paper</span></li>
+        <li class=""><span class="lab">B</span><span>have the same first letter</span></li>
+        <li class="correct"><span class="lab">C</span><span>give the same value for every substitution</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>both contain a coefficient</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Two expressions are equal when they give the same value for every substitution (e.g. l + b + l + b and 2l + 2b). Looking alike or sharing a first letter is irrelevant.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">Simplify: 2l + 3b + 4l − b.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>6l + 2b</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>8lb</span></li>
+        <li class=""><span class="lab">C</span><span>6l + 4b</span></li>
+        <li class=""><span class="lab">D</span><span>9lb</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Collect like terms: l-terms 2l + 4l = 6l; b-terms 3b − b = 2b. Result 6l + 2b. (8lb / 9lb wrongly merge unlike terms.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">The perimeter of an equilateral triangle of side s is 3s. If the perimeter is to be written for side s = 12 cm, it is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>15 cm</span></li>
+        <li class="correct"><span class="lab">B</span><span>36 cm</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>27 cm</span></li>
+        <li class=""><span class="lab">D</span><span>312 cm</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Perimeter of an equilateral triangle = 3s; with s = 12, 3 × 12 = 36 cm. (3 + 12 = 15 adds; "312" writes digits together; 27 = 3³.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">If x = 5, the value of 2(x + 3) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>13</span></li>
+        <li class=""><span class="lab">B</span><span>11</span></li>
+        <li class="correct"><span class="lab">C</span><span>16</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>25</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>2(x + 3) with x = 5: 2 × (5 + 3) = 2 × 8 = 16. (2x + 3 = 13 forgets to distribute the 2 over the 3; 2 × 5 + ... mis-steps to 11; 5² = 25.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">The sum of any two even numbers, written with letters as 2a and 2b, is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2ab</span></li>
+        <li class=""><span class="lab">B</span><span>4ab</span></li>
+        <li class="correct"><span class="lab">C</span><span>2(a + b)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a + b</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>2a + 2b = 2(a + b), which is 2 times a whole number, hence even. The factored form shows divisibility by 2. (2ab / 4ab wrongly multiply; a + b drops the factor 2.)</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">Simplify: 7p − p.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>7</span></li>
+        <li class=""><span class="lab">B</span><span>0</span></li>
+        <li class=""><span class="lab">C</span><span>7p</span></li>
+        <li class="correct"><span class="lab">D</span><span>6p</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>7p − p means 7p − 1p = (7 − 1)p = 6p. (Treating −p as −1 of nothing gives 7 or 0; 7p ignores the subtraction.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">The value of 100 ÷ n when n = 4 is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>25</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>400</span></li>
+        <li class=""><span class="lab">C</span><span>96</span></li>
+        <li class=""><span class="lab">D</span><span>104</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>100 ÷ n with n = 4: 100 ÷ 4 = 25. (400 multiplies; 96 subtracts; 104 adds.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">"Twice the sum of a number and 5" is written as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2x + 5</span></li>
+        <li class="correct"><span class="lab">B</span><span>2(x + 5)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>2x − 5</span></li>
+        <li class=""><span class="lab">D</span><span>x + 10</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"The sum of a number and 5" = (x + 5); "twice" it = 2(x + 5). (2x + 5 doubles only the number; x + 10 mis-distributes.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">Simplify: 3x + 5 + 2x + 7.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>5x + 12</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>17x</span></li>
+        <li class=""><span class="lab">C</span><span>5x + 35</span></li>
+        <li class=""><span class="lab">D</span><span>6x + 12</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Group like terms: x-terms 3x + 2x = 5x; numbers 5 + 7 = 12. Result 5x + 12. (17x / 6x + 12 wrongly merge x's and numbers; 5x + 35 multiplies the numbers.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">If m = −2, the value of m² + 3 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1</span></li>
+        <li class="correct"><span class="lab">B</span><span>7</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>−1</span></li>
+        <li class=""><span class="lab">D</span><span>−7</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>m² + 3 with m = −2: (−2)² + 3 = 4 + 3 = 7. (Squaring a negative gives +4; mistakenly writing −4 gives −1 or 1.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">The number of months in y years is given by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>y + 12</span></li>
+        <li class=""><span class="lab">B</span><span>y/12</span></li>
+        <li class="correct"><span class="lab">C</span><span>12y</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>y − 12</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>1 year = 12 months, so y years = 12 × y = 12y months. (y + 12 adds; y/12 divides; y − 12 subtracts.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">Simplify: 9a − 4b − 3a + 4b.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>6a</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>6a + 8b</span></li>
+        <li class=""><span class="lab">C</span><span>6ab</span></li>
+        <li class=""><span class="lab">D</span><span>6a − 8b</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Collect like terms: a-terms 9a − 3a = 6a; b-terms −4b + 4b = 0. Result 6a. (6a + 8b / 6a − 8b mishandle the b-terms that actually cancel; 6ab merges unlike terms.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">The term 3a² and the term 5a are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>like terms</span></li>
+        <li class=""><span class="lab">B</span><span>equal terms</span></li>
+        <li class="correct"><span class="lab">C</span><span>unlike terms</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>both constants</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>3a² has the letter part a² while 5a has the letter part a; different powers make them unlike terms, so they cannot be combined.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">If the perimeter of a square is 4s, then for a square whose side is doubled to 2s the perimeter is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4s</span></li>
+        <li class=""><span class="lab">B</span><span>6s</span></li>
+        <li class=""><span class="lab">C</span><span>16s</span></li>
+        <li class="correct"><span class="lab">D</span><span>8s</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Perimeter = 4 × side. With side 2s, perimeter = 4 × (2s) = 8s. (4s keeps the old side; 6s adds 4s + 2s; 16s squares the doubling.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">The value of (a + b)² when a = 1 and b = 2 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5</span></li>
+        <li class=""><span class="lab">B</span><span>3</span></li>
+        <li class=""><span class="lab">C</span><span>6</span></li>
+        <li class="correct"><span class="lab">D</span><span>9</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(a + b)² with a = 1, b = 2: (1 + 2)² = 3² = 9. (Computing a² + b² = 1 + 4 = 5 is the classic trap; 1 + 2 = 3 forgets to square; 6 = 2 × 3.)</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">A pattern uses 2n + 3 tiles for the nth shape. The number of EXTRA tiles added going from the 4th shape to the 5th shape is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>3</span></li>
+        <li class=""><span class="lab">B</span><span>5</span></li>
+        <li class="correct"><span class="lab">C</span><span>2</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>13</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Tiles for the nth shape = 2n + 3. 5th shape: 2 × 5 + 3 = 13; 4th shape: 2 × 4 + 3 = 11. Extra added = 13 − 11 = 2 (the coefficient of n). (3 is the constant; 5 / 13 misread the question.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">Simplify: 5(x + 2) + 3x. (Treat 5(x + 2) as 5x + 10.)</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>8x + 2</span></li>
+        <li class="correct"><span class="lab">B</span><span>8x + 10</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>5x + 12</span></li>
+        <li class=""><span class="lab">D</span><span>8x + 12</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>5(x + 2) + 3x = (5x + 10) + 3x = (5x + 3x) + 10 = 8x + 10. (8x + 2 mishandles the 10; 5x + 12 forgets to distribute the 5; 8x + 12 adds wrongly.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">The total length of a caterpillar made of n square segments, each of side 1 unit, placed in a row so the whole is n units long, plus a 2-unit head, is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2n</span></li>
+        <li class="correct"><span class="lab">B</span><span>n + 2</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>3n</span></li>
+        <li class=""><span class="lab">D</span><span>2n + 2</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The n body-segments give a length of n units, and the head adds 2 units, so the total length is n + 2. (2n doubles the body; 3n / 2n + 2 over-count.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">If x = 10, which expression has the GREATEST value?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>x + 9</span></li>
+        <li class=""><span class="lab">B</span><span>2x − 5</span></li>
+        <li class=""><span class="lab">C</span><span>x²÷ 10</span></li>
+        <li class="correct"><span class="lab">D</span><span>3x − 8</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>With x = 10: (A) 10 + 9 = 19; (B) 2 × 10 − 5 = 15; (C) 10² ÷ 10 = 100 ÷ 10 = 10; (D) 3 × 10 − 8 = 30 − 8 = 22. The greatest is (D) 22.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">Using n for the middle number, the three consecutive numbers (n − 1), n, (n + 1) add up to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>3n + 3</span></li>
+        <li class="correct"><span class="lab">B</span><span>3n</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>n³</span></li>
+        <li class=""><span class="lab">D</span><span>3n − 3</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(n − 1) + n + (n + 1) = 3n: the −1 and +1 cancel, leaving 3n — exactly 3 times the middle number. (3n + 3 / 3n − 3 keep a leftover that actually cancels.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">Simplify: 4a + 7 − a + 3 − 2a.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a + 10</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a + 4</span></li>
+        <li class=""><span class="lab">C</span><span>7a + 10</span></li>
+        <li class=""><span class="lab">D</span><span>a − 10</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Collect like terms: a-terms 4a − a − 2a = a; numbers 7 + 3 = 10. Result a + 10. (a + 4 mishandles the numbers; 7a + 10 wrongly adds a coefficient.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">A square has side (n + 1). Its perimeter, simplified, is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>n + 4</span></li>
+        <li class=""><span class="lab">B</span><span>4n + 1</span></li>
+        <li class="correct"><span class="lab">C</span><span>4n + 4</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>n² + 1</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Perimeter of a square = 4 × side = 4(n + 1) = 4n + 4. (n + 4 forgets to multiply the n; 4n + 1 distributes only over the n; n² + 1 squares.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">If x = 2, the values of 3x and 3 + x are, respectively:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>6 and 5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>5 and 6</span></li>
+        <li class=""><span class="lab">C</span><span>6 and 6</span></li>
+        <li class=""><span class="lab">D</span><span>5 and 5</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>3x with x = 2 is 3 × 2 = 6; 3 + x is 3 + 2 = 5. So the values are 6 and 5 respectively. (Swapping them gives 5 and 6 — the 3x = 3 + x confusion.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">A rule says: output = 4 × (input) − 1. When the input is 7, the output is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>28</span></li>
+        <li class="correct"><span class="lab">B</span><span>27</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>24</span></li>
+        <li class=""><span class="lab">D</span><span>11</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Output = 4 × input − 1. With input 7: 4 × 7 − 1 = 28 − 1 = 27. (28 forgets the −1; 4 × (7 − 1) = 24 subtracts before multiplying; 4 + 7 = 11 adds.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">The total earnings from selling 3 books at price b and 2 pens at price p, fully simplified, is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5bp</span></li>
+        <li class=""><span class="lab">B</span><span>6bp</span></li>
+        <li class="correct"><span class="lab">C</span><span>3b + 2p</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>2b + 3p</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>3 books at price b cost 3b; 2 pens at price p cost 2p; b and p are unlike terms, so the total stays 3b + 2p (it cannot collapse to 5bp or 6bp). (2b + 3p swaps the counts.) --- *Solutions complete: 60 / 60.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

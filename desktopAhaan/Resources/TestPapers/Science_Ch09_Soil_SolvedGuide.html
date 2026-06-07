@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Soil — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Soil<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">The layered top-to-bottom slice of soil, showing all its horizons, is called the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>soil texture</span></li>
+        <li class=""><span class="lab">B</span><span>percolation rate</span></li>
+        <li class="correct"><span class="lab">C</span><span>soil profile</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>humus layer</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The complete vertical top-to-bottom section through soil, showing all its horizons, is the soil profile. ("Texture" is about particle size; "percolation rate" is a drainage measure.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">Which horizon of a soil profile is the dark, humus-rich topsoil where most plant roots grow?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the C horizon</span></li>
+        <li class=""><span class="lab">B</span><span>the R horizon</span></li>
+        <li class=""><span class="lab">C</span><span>the B horizon</span></li>
+        <li class="correct"><span class="lab">D</span><span>the A horizon</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The A horizon is the topsoil — dark, rich in humus and minerals, and the layer where most roots grow. The O horizon is the surface litter, B is the lighter subsoil, C is broken parent rock.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">Arrange the soil horizons in order from the surface downward.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>bedrock, C, B, A, O</span></li>
+        <li class=""><span class="lab">B</span><span>A, O, B, C, bedrock</span></li>
+        <li class="correct"><span class="lab">C</span><span>O, A, B, C, bedrock</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>O, B, A, C, bedrock</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>From the surface downward the horizons run O (organic litter), A (topsoil), B (subsoil), C (weathered rock), then bedrock — so O, A, B, C, bedrock.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">Soil is formed mainly by the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sudden cooling of lava in one night</span></li>
+        <li class=""><span class="lab">B</span><span>freezing of rainwater in winter</span></li>
+        <li class="correct"><span class="lab">C</span><span>slow weathering of rocks over a very long time</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>rapid evaporation of river water</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Soil forms by the slow weathering of rocks — water, wind, ice, and living things break rock into fine particles over a very long time. It is a gradual process, not a sudden one.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">The dark, crumbly material formed from decayed plant and animal remains in the top layer of soil is called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>clay</span></li>
+        <li class=""><span class="lab">B</span><span>silt</span></li>
+        <li class=""><span class="lab">C</span><span>bedrock</span></li>
+        <li class="correct"><span class="lab">D</span><span>humus</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Humus is the dark, crumbly material formed from decayed plant and animal remains; it makes the topsoil fertile. Clay and silt are mineral particles; bedrock is solid rock.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">A gardener digs a pit and finds, just under the topsoil, a lighter, harder layer where minerals washed down from above have collected. This layer is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>A horizon</span></li>
+        <li class=""><span class="lab">B</span><span>C horizon</span></li>
+        <li class=""><span class="lab">C</span><span>O horizon</span></li>
+        <li class="correct"><span class="lab">D</span><span>B horizon</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Just below the topsoil (A horizon) lies the B horizon (subsoil) — lighter and harder, where clay and minerals washed down from above accumulate.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">The solid, unweathered rock at the very bottom of a soil profile is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>subsoil (B horizon)</span></li>
+        <li class="correct"><span class="lab">B</span><span>bedrock (R horizon)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>topsoil (A horizon)</span></li>
+        <li class=""><span class="lab">D</span><span>organic layer (O horizon)</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The bottom of a soil profile is the unweathered solid rock, the bedrock or R horizon. Topsoil (A horizon), subsoil (B horizon) and the organic layer (O horizon) all lie above it.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">Which statement about how soil forms is correct?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Soil forms in a few days after heavy rain.</span></li>
+        <li class=""><span class="lab">B</span><span>Soil is made entirely of living organisms.</span></li>
+        <li class=""><span class="lab">C</span><span>Soil never contains any rock material.</span></li>
+        <li class="correct"><span class="lab">D</span><span>Building a centimetre of new topsoil can take hundreds of years.</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Soil forms extremely slowly — building even one centimetre of new topsoil can take hundreds of years. Soil is not made entirely of living things, it does contain rock-derived mineral particles, and it certainly does not form in a few days.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">A desert soil often shows almost no O horizon. The most likely reason is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>too much rainfall washes the O horizon away</span></li>
+        <li class=""><span class="lab">B</span><span>wind packs the particles too tightly</span></li>
+        <li class=""><span class="lab">C</span><span>deserts have no bedrock underneath</span></li>
+        <li class="correct"><span class="lab">D</span><span>there is very little plant litter to form humus</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The O horizon is built from plant litter turning into humus. Deserts have very few plants, so there is little litter — hence almost no O horizon. (It is not washed away by rain — deserts get little rain.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">Which of these correctly pairs a soil type with its particle size?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>clayey — largest particles</span></li>
+        <li class=""><span class="lab">B</span><span>sandy — smallest particles</span></li>
+        <li class="correct"><span class="lab">C</span><span>sandy — largest particles</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>loamy — only one particle size</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sandy soil has the largest particles, clayey soil the smallest, and loamy soil is a mixture of several particle sizes. So the correct pairing is "sandy — largest particles."</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">Water rushes straight through sandy soil mainly because:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the large gaps between big particles let water drain fast</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>sand particles dissolve in water</span></li>
+        <li class=""><span class="lab">C</span><span>sand repels water</span></li>
+        <li class=""><span class="lab">D</span><span>sand has no air spaces at all</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Big sand particles leave large gaps (pores) between them, so water drains straight through quickly. Sand does not dissolve, does not repel water, and it does have air spaces.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">Which soil holds the most water and drains the slowest?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sandy soil</span></li>
+        <li class="correct"><span class="lab">B</span><span>clayey soil</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>loamy soil</span></li>
+        <li class=""><span class="lab">D</span><span>silt alone</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Clayey soil has the tiniest, most tightly packed particles, so it drains slowest and holds the most water. Sandy drains fastest; loamy is in between.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">Loamy soil is the best for growing most crops because it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>is made only of large sand grains</span></li>
+        <li class="correct"><span class="lab">B</span><span>holds enough water for roots yet lets the extra drain away</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>never contains any humus</span></li>
+        <li class=""><span class="lab">D</span><span>is the same as pure clay</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Loam is a balanced mix of sand, silt, clay and humus, so it holds enough water for roots yet still lets surplus water drain — ideal for most crops. It is not pure clay and does contain humus.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">Two pots are filled to the same level — one with sandy soil, one with clayey soil — and equal water is poured on each. After ten minutes the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>sandy pot has drained more water out of the bottom</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>clayey pot has drained more water out of the bottom</span></li>
+        <li class=""><span class="lab">C</span><span>both drain exactly the same amount</span></li>
+        <li class=""><span class="lab">D</span><span>neither lets any water through</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sandy soil has a high percolation rate, so far more water drains out of the bottom of the sandy pot than the clayey one in the same ten minutes. (The clayey pot holds the water and lets little through.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">Black cotton soil of the Deccan plateau, which becomes very sticky when wet and cracks when dry, is mainly:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sandy soil</span></li>
+        <li class=""><span class="lab">B</span><span>pure silt</span></li>
+        <li class=""><span class="lab">C</span><span>loose gravel</span></li>
+        <li class="correct"><span class="lab">D</span><span>clayey soil</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Black cotton soil (Deccan plateau) is sticky when wet, cracks when dry, and holds water — these are the signs of clayey soil.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">Which property best explains why sandy soil dries out quickly after rain?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>high percolation rate and low water-holding capacity</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>high water-holding capacity</span></li>
+        <li class=""><span class="lab">C</span><span>very small air gaps</span></li>
+        <li class=""><span class="lab">D</span><span>very high humus content</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sandy soil drains fast (high percolation rate) and holds little water (low water-holding capacity), so it loses its moisture quickly and dries out soon after rain.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">Soil is described as "teeming with life." Which best supports this statement?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Soil is only broken rock with nothing living in it.</span></li>
+        <li class="correct"><span class="lab">B</span><span>A single gram of soil can contain millions of micro-organisms.</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Only earthworms live in soil and nothing else.</span></li>
+        <li class=""><span class="lab">D</span><span>Living things avoid soil completely.</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Soil is "alive" because a single gram can hold millions of micro-organisms (plus worms, insects, fungi). The other options deny that soil contains life.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">Roughly, the four main ingredients of soil are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only sand and water</span></li>
+        <li class="correct"><span class="lab">B</span><span>mineral particles, air, water, and humus</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>plastic, glass, metal, and stone</span></li>
+        <li class=""><span class="lab">D</span><span>only humus and air</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The four main ingredients of soil are mineral particles, air, water, and humus (organic matter). Plastic/glass/metal are pollutants, not natural soil components.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">When a soil is completely water-logged after heavy rain, plant roots can struggle because the soil now has very little:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>air</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>water</span></li>
+        <li class=""><span class="lab">C</span><span>clay</span></li>
+        <li class=""><span class="lab">D</span><span>weight</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>When soil is water-logged, water fills the pore spaces and pushes the air out, so the roots get very little air (oxygen) — which is why they struggle.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">Which agent is **not** normally responsible for weathering rock into soil over time?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a single bolt of lightning</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>flowing and freezing water</span></li>
+        <li class=""><span class="lab">C</span><span>growing plant roots</span></li>
+        <li class=""><span class="lab">D</span><span>wind</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Weathering is the slow break-up of rock by water (flowing and freezing), wind, and growing roots over long times. A single bolt of lightning is a one-off event, not a normal soil-forming weathering agent.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">A student heats a sample of moist soil in a dry test tube and sees droplets form on the cooler upper walls. This shows that soil contains:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>plastic</span></li>
+        <li class=""><span class="lab">B</span><span>air</span></li>
+        <li class="correct"><span class="lab">C</span><span>moisture (water)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>salt only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Heating moist soil drives off water as vapour, which condenses into droplets on the cooler glass — proof that the soil contained moisture (water).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">To show that soil contains **air**, the best simple demonstration is to:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>drop a lump of dry soil into water and watch bubbles rise</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>heat the soil until droplets appear on the glass</span></li>
+        <li class=""><span class="lab">C</span><span>rub the soil between your fingers</span></li>
+        <li class=""><span class="lab">D</span><span>weigh the soil on a balance</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Dropping a lump of dry soil into water makes bubbles rise as water fills the pore spaces and pushes the trapped air out — a simple proof that soil contains air. (Heating shows water; weighing and rubbing show neither directly.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">Percolation rate is best defined as the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>weight of soil per unit volume</span></li>
+        <li class=""><span class="lab">B</span><span>amount of humus in the soil</span></li>
+        <li class=""><span class="lab">C</span><span>number of organisms in the soil</span></li>
+        <li class="correct"><span class="lab">D</span><span>speed at which water seeps down through soil</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Percolation rate is the speed at which water seeps down through soil (volume of water ÷ time). It is not a weight, a humus measure, or an organism count.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">In an experiment, 200 mL of water takes 20 minutes to percolate through a soil sample. The percolation rate is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0.1 mL/min</span></li>
+        <li class="correct"><span class="lab">B</span><span>10 mL/min</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>4000 mL/min</span></li>
+        <li class=""><span class="lab">D</span><span>220 mL/min</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Percolation rate = volume ÷ time = 200 mL ÷ 20 min = 10 mL/min. (Multiplying instead of dividing gives the trap 4000.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">150 mL of water percolates through a soil column in 5 minutes. The percolation rate is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>30 mL/min</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>750 mL/min</span></li>
+        <li class=""><span class="lab">C</span><span>3 mL/min</span></li>
+        <li class=""><span class="lab">D</span><span>145 mL/min</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rate = 150 mL ÷ 5 min = 30 mL/min. (750 = 150 × 5, the multiply trap; 145 = 150 − 5, the subtract trap.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">Soil X lets 300 mL through in 10 minutes; soil Y lets 300 mL through in 30 minutes. Which soil is more likely sandy?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>soil Y, because it is slower</span></li>
+        <li class=""><span class="lab">B</span><span>both are equally sandy</span></li>
+        <li class=""><span class="lab">C</span><span>neither — sand never lets water through</span></li>
+        <li class="correct"><span class="lab">D</span><span>soil X, because it has the higher percolation rate</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Same volume (300 mL): soil X takes 10 min, soil Y takes 30 min. X is faster, so X has the higher percolation rate — the mark of sandy soil. (Slower = clayey.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">A loamy sample drains 240 mL of water in 8 minutes. Its percolation rate is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>248 mL/min</span></li>
+        <li class="correct"><span class="lab">B</span><span>30 mL/min</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>0.03 mL/min</span></li>
+        <li class=""><span class="lab">D</span><span>1920 mL/min</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rate = 240 mL ÷ 8 min = 30 mL/min. (248 = 240 + 8 is the add trap.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">A sandy soil has a percolation rate of 25 mL/min. How long will 200 mL of water take to percolate through it?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>8 minutes</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>5000 minutes</span></li>
+        <li class=""><span class="lab">C</span><span>0.125 minutes</span></li>
+        <li class=""><span class="lab">D</span><span>175 minutes</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Time = volume ÷ rate = 200 mL ÷ 25 mL/min = 8 minutes. (Multiplying 200 × 25 gives the trap 5000.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">Soil P percolates 200 mL in 8 minutes; soil Q percolates 360 mL in 12 minutes. Which has the **higher** percolation rate?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>soil Q</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>soil P</span></li>
+        <li class=""><span class="lab">C</span><span>both equal</span></li>
+        <li class=""><span class="lab">D</span><span>cannot be compared</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rate of P = 200 ÷ 8 = 25 mL/min; rate of Q = 360 ÷ 12 = 30 mL/min. Q (30) &gt; P (25), so soil Q has the higher rate.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">Two soils drain equal volumes of water. Sandy soil takes 4 minutes; clayey soil takes 40 minutes. The ratio of their percolation rates (sandy : clayey) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1 : 10</span></li>
+        <li class=""><span class="lab">B</span><span>4 : 40</span></li>
+        <li class="correct"><span class="lab">C</span><span>10 : 1</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>1 : 1</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>For equal volumes, rate is inversely proportional to time. Sandy : clayey rate = (1/4) : (1/40) = 10 : 1. (Writing 4 : 40 = 1 : 10 reverses it — the classic trap.)</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">Water-holding capacity is **highest** in:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>clayey soil</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>sandy soil</span></li>
+        <li class=""><span class="lab">C</span><span>gravel</span></li>
+        <li class=""><span class="lab">D</span><span>coarse sand</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Clayey soil, with its tiny tightly-packed particles, holds the most water — the highest water-holding capacity. Sand, gravel and coarse sand all drain freely.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">Which soil type usually has the **best aeration** (most air for roots)?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>water-logged soil</span></li>
+        <li class=""><span class="lab">B</span><span>clayey soil</span></li>
+        <li class="correct"><span class="lab">C</span><span>sandy soil</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>compacted clay</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sandy soil has large air-filled gaps between its big particles, so it is the best aerated. Clayey, compacted and water-logged soils all squeeze out the air.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">Paddy (rice) is grown in fields that are kept flooded with water. The most suitable soil for paddy is therefore:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sandy soil, because it drains fast</span></li>
+        <li class=""><span class="lab">B</span><span>gravel, because it has big gaps</span></li>
+        <li class="correct"><span class="lab">C</span><span>clayey soil, because it holds water</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>dry desert soil</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Paddy fields are kept flooded, so the soil must retain water — clayey soil, which holds water well, suits paddy best. Sandy soil and gravel would drain the water away.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">Cotton grows best in:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>water-logged clay that never drains</span></li>
+        <li class=""><span class="lab">B</span><span>solid bedrock</span></li>
+        <li class=""><span class="lab">C</span><span>pure beach sand with no nutrients</span></li>
+        <li class="correct"><span class="lab">D</span><span>loamy or sandy-loam soil rich in humus</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cotton grows best in well-drained but humus-rich loamy or sandy-loam soil — enough water plus good aeration. Water-logged clay, bedrock and nutrient-free sand are all unsuitable.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">A farmer's field stays water-logged for days after every rain, and crops keep rotting. To improve drainage he should mix in some:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>more fine clay</span></li>
+        <li class=""><span class="lab">B</span><span>plastic sheeting</span></li>
+        <li class="correct"><span class="lab">C</span><span>sand</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>extra water</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Mixing in sand opens up larger pore spaces, raising the percolation rate so the water-logged clay drains better. Adding more clay or water makes it worse; plastic sheeting blocks drainage.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">Which crop is best matched to a soil that holds water well and is poorly aerated?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>groundnut in dry sand</span></li>
+        <li class="correct"><span class="lab">B</span><span>paddy (rice)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>cactus</span></li>
+        <li class=""><span class="lab">D</span><span>watermelon on a sand dune</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A soil that holds water well but is poorly aerated is clayey soil, and the crop matched to flooded, water-holding soil is paddy (rice). Cactus, groundnut and watermelon all prefer dry, sandy conditions.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">A cactus naturally thrives in:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>water-logged clay</span></li>
+        <li class=""><span class="lab">B</span><span>flooded paddy fields</span></li>
+        <li class=""><span class="lab">C</span><span>thick humus bog</span></li>
+        <li class="correct"><span class="lab">D</span><span>well-drained sandy soil</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A cactus is adapted to dry conditions and thrives in well-drained sandy soil. Water-logged clay, flooded paddy fields and humus bogs would rot its roots.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">Which sequence of soils is in **increasing** order of percolation rate (slowest to fastest)?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>clayey, loamy, sandy</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>sandy, loamy, clayey</span></li>
+        <li class=""><span class="lab">C</span><span>loamy, sandy, clayey</span></li>
+        <li class=""><span class="lab">D</span><span>sandy, clayey, loamy</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Percolation rate increases (slowest to fastest) as particle size grows: clayey (slowest) &lt; loamy (medium) &lt; sandy (fastest). So clayey, loamy, sandy.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">The wearing-away and removal of fertile topsoil by wind or water is called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>percolation</span></li>
+        <li class=""><span class="lab">B</span><span>weathering</span></li>
+        <li class=""><span class="lab">C</span><span>crop rotation</span></li>
+        <li class="correct"><span class="lab">D</span><span>soil erosion</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The wearing-away and removal of fertile topsoil by wind or water is soil erosion. Percolation is water seeping down; weathering forms soil; crop rotation maintains fertility.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">Which human activity speeds up soil erosion the most?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>planting trees along field edges</span></li>
+        <li class="correct"><span class="lab">B</span><span>cutting down forests on hill slopes</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>building check-dams in gullies</span></li>
+        <li class=""><span class="lab">D</span><span>ploughing along the contour</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cutting down forests on hill slopes removes the roots that bind the soil, so rain washes the topsoil away — the biggest erosion-accelerator listed. Planting trees, check-dams and contour ploughing all reduce erosion.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">Cutting flat, step-like platforms into a hillside to slow water and stop soil washing down is called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>contour ploughing</span></li>
+        <li class=""><span class="lab">B</span><span>crop rotation</span></li>
+        <li class=""><span class="lab">C</span><span>overgrazing</span></li>
+        <li class="correct"><span class="lab">D</span><span>terracing</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cutting flat, step-like platforms into a hillside is terracing; it slows water and stops soil washing down. Contour ploughing follows the slope's lines; crop rotation and overgrazing are unrelated.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">Ploughing **along** the elevation lines of a slope, so each furrow traps water instead of channelling it downhill, is called:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>contour ploughing</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>terracing</span></li>
+        <li class=""><span class="lab">C</span><span>deforestation</span></li>
+        <li class=""><span class="lab">D</span><span>mulching</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Ploughing along the slope's elevation (contour) lines so each furrow traps water is contour ploughing. Terracing cuts steps; deforestation and mulching are different practices.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">Why does keeping a field covered with plants or mulch reduce soil erosion?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>The cover makes the soil heavier so it cannot move.</span></li>
+        <li class=""><span class="lab">B</span><span>Mulch turns soil into solid rock.</span></li>
+        <li class=""><span class="lab">C</span><span>The cover stops all rain from ever reaching the ground.</span></li>
+        <li class="correct"><span class="lab">D</span><span>Plant roots and mulch break the force of rain and hold the soil in place.</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Plant roots bind the soil and the leafy cover/mulch breaks the force of falling raindrops, so the soil is held in place and washes away less. The cover does not turn soil to rock or block all rain.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">Rows of trees planted to slow down wind and protect a field from wind erosion are called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>check-dams</span></li>
+        <li class=""><span class="lab">B</span><span>terraces</span></li>
+        <li class="correct"><span class="lab">C</span><span>shelter belts</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>furrows</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rows of trees planted to slow the wind and shield a field from wind erosion are shelter belts. Check-dams trap runoff in gullies; terraces and furrows are ground-shaping methods.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">Crop rotation helps keep soil fertile mainly because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>it removes all the soil's water</span></li>
+        <li class=""><span class="lab">B</span><span>it makes the soil purely sandy</span></li>
+        <li class="correct"><span class="lab">C</span><span>growing legumes restores nitrogen taken out by cereal crops</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>it stops the soil from ever being ploughed</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Crop rotation keeps soil fertile because growing legumes restores the nitrogen that cereal crops remove, so fertility is renewed without heavy fertiliser use.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">In a cereal–legume–cereal rotation, the legume (such as gram or peas) helps because bacteria in its roots:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>fix nitrogen from the air into the soil</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>eat up the soil's nitrogen</span></li>
+        <li class=""><span class="lab">C</span><span>turn the soil into clay</span></li>
+        <li class=""><span class="lab">D</span><span>increase the percolation rate to zero</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Legumes host Rhizobium bacteria in their root nodules; these bacteria fix nitrogen from the air into the soil as usable nitrates — the opposite of eating it up.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">Which of these is a form of **soil pollution**?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>earthworms moving through the soil</span></li>
+        <li class="correct"><span class="lab">B</span><span>plastic waste and harmful chemicals dumped on the soil</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>rain percolating through the soil</span></li>
+        <li class=""><span class="lab">D</span><span>humus forming from fallen leaves</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Dumping plastic waste and harmful chemicals on the soil is soil pollution. Earthworms, percolating rain and humus from fallen leaves are all natural and beneficial.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">Deforesting a steep hillside is especially harmful because, with the tree roots gone:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the soil becomes more fertile</span></li>
+        <li class=""><span class="lab">B</span><span>percolation completely stops</span></li>
+        <li class="correct"><span class="lab">C</span><span>heavy rain washes the loose topsoil away easily</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the soil holds more water than before</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Once the tree roots that held the soil are gone, heavy rain on the bare hillside easily washes the loose topsoil away. Deforestation lowers fertility and water retention, not raises them.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">A field of bare, dry soil on a windy plain is most at risk from:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>water-logging</span></li>
+        <li class="correct"><span class="lab">B</span><span>wind erosion</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>too much humus</span></li>
+        <li class=""><span class="lab">D</span><span>crop rotation</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bare, dry soil on a windy plain has no cover and loose fine particles, so it is most at risk from wind erosion. (Dry soil is not at risk of water-logging.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">Why is losing topsoil to erosion such a serious problem for farming?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Topsoil regrows fully within a week.</span></li>
+        <li class=""><span class="lab">B</span><span>Topsoil has no nutrients anyway.</span></li>
+        <li class="correct"><span class="lab">C</span><span>Topsoil is the humus-rich layer where crops feed, and it takes centuries to rebuild.</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Erosion only removes harmless bedrock.</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The topsoil is the humus-rich layer where crops get their nutrients, and because soil forms so slowly it takes centuries to rebuild — so losing it is a serious, near-permanent loss.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">A farmer wants a soil that holds enough water for vegetables but still drains after rain and is easy to till. He should choose:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>pure sand</span></li>
+        <li class="correct"><span class="lab">B</span><span>loamy soil</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>pure clay</span></li>
+        <li class=""><span class="lab">D</span><span>solid bedrock</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A soil that holds enough water for vegetables yet still drains and is easy to till is loamy soil — the balanced mix. Pure sand drains too fast, pure clay water-logs, and bedrock is not soil.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">Equal volumes of water are poured on three samples. Sandy drains in 2 min, loamy in 6 min, clayey in 18 min. Which has the **lowest** percolation rate?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>loamy</span></li>
+        <li class="correct"><span class="lab">B</span><span>clayey</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>sandy</span></li>
+        <li class=""><span class="lab">D</span><span>all equal</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>For equal volumes, the soil that takes the longest time has the lowest rate. Clayey takes 18 min (longest), so clayey has the lowest percolation rate. Sandy (2 min) is fastest.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">A soil column drains 300 mL in 6 minutes; a second column of the same soil drains 600 mL. Assuming the same rate, the second takes:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>12 minutes</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>3 minutes</span></li>
+        <li class=""><span class="lab">C</span><span>1 minute</span></li>
+        <li class=""><span class="lab">D</span><span>6 minutes</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rate = 300 mL ÷ 6 min = 50 mL/min. Time for 600 mL = 600 ÷ 50 = 12 minutes. (Doubling the volume doubles the time, from 6 to 12 min.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">Which statement about loamy soil is **false**?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>It is a mixture of sand, silt, clay and humus.</span></li>
+        <li class="correct"><span class="lab">B</span><span>It has the slowest percolation rate of all soils.</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>It is well suited to most crops.</span></li>
+        <li class=""><span class="lab">D</span><span>It holds water moderately well.</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Loamy soil does NOT have the slowest percolation rate — clayey soil does; loam drains moderately. The other three statements (a mix of sand/silt/clay/humus, suited to most crops, holds water moderately) are all true, so the false one is option (B).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">A gram of garden soil supports more living organisms than a gram of beach sand mainly because garden soil:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>is heavier</span></li>
+        <li class=""><span class="lab">B</span><span>has larger particles</span></li>
+        <li class=""><span class="lab">C</span><span>contains no air</span></li>
+        <li class="correct"><span class="lab">D</span><span>is rich in humus and holds moisture for organisms</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Garden soil is rich in humus and holds moisture, providing food and water for organisms, so it supports far more life than dry, nutrient-poor beach sand. Weight and particle size are not the reason.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">Soil A drains 100 mL in 4 min; soil B drains 100 mL in 4 min as well, but soil B's sample is twice as deep. The slower-percolating arrangement, per unit depth, is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>soil B</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>soil A</span></li>
+        <li class=""><span class="lab">C</span><span>both identical per unit depth</span></li>
+        <li class=""><span class="lab">D</span><span>neither lets water through</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Both drain 100 mL in 4 min, so both have the same overall rate — but soil B's column is twice as deep, so per unit depth the water moves more slowly through it. Hence soil B is the slower-percolating arrangement per unit depth.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">Why does over-watering a clayey-soil pot often harm the plant?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Clay drains so fast the roots dry out.</span></li>
+        <li class=""><span class="lab">B</span><span>Clay has too much air already.</span></li>
+        <li class="correct"><span class="lab">C</span><span>Clay holds the extra water and starves the roots of air.</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Clay turns the water into humus.</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Clayey soil holds the extra water in its tiny pores, pushing out the air, so the roots are starved of oxygen and the plant suffers. (Clay drains slowly, not fast, and does not turn water into humus.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">A hill farmer plants crops in straight up-and-down rows on a steep slope and clears all the trees. After the monsoon his field has deep channels and lost soil. The single best change he could make is to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>plough up-and-down even more</span></li>
+        <li class=""><span class="lab">B</span><span>cut down the remaining vegetation</span></li>
+        <li class=""><span class="lab">C</span><span>pour extra water on the slope</span></li>
+        <li class="correct"><span class="lab">D</span><span>terrace the slope and plough along the contour</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The damage comes from up-and-down ploughing on a bare, deforested slope. The best fix is to terrace the slope and plough along the contour, so water is trapped instead of channelling downhill. Ploughing up-and-down more or clearing more vegetation makes it worse.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">Which best describes the role of percolation for groundwater?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Percolation removes all water from the ground.</span></li>
+        <li class="correct"><span class="lab">B</span><span>Water that percolates down helps refill underground water stores.</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Percolation only matters in deserts.</span></li>
+        <li class=""><span class="lab">D</span><span>Percolation has no effect on groundwater.</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Water that percolates downward through the soil seeps into the ground and helps refill underground water stores (aquifers). It does not remove all groundwater, and it matters everywhere, not just in deserts.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">A soil sample lets 480 mL of water through in 12 minutes. At the same rate, how much water would percolate in 5 minutes?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>40 mL</span></li>
+        <li class=""><span class="lab">B</span><span>2400 mL</span></li>
+        <li class="correct"><span class="lab">C</span><span>200 mL</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>96 mL</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rate = 480 mL ÷ 12 min = 40 mL/min. In 5 min the volume = 40 × 5 = 200 mL. (2400 = 480 × 5 is the multiply trap; 96 = 480 ÷ 5 ignores the rate.) --- *Solutions complete: 60 / 60.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

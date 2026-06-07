@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Respiration In Organisms — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Respiration In Organisms<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">During respiration, the food broken down to release energy in our cells is mainly:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>protein</span></li>
+        <li class=""><span class="lab">B</span><span>fat</span></li>
+        <li class="correct"><span class="lab">C</span><span>glucose</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>vitamins</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Respiration breaks down food to release energy, and the chief fuel is glucose (a simple sugar). Proteins and fats can be used in special situations, but the everyday fuel of the cell is glucose.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">Which statement correctly separates breathing from respiration?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>breathing releases energy; respiration exchanges gases</span></li>
+        <li class="correct"><span class="lab">B</span><span>breathing is the exchange of gases; respiration releases energy inside cells</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>breathing and respiration mean exactly the same thing</span></li>
+        <li class=""><span class="lab">D</span><span>respiration happens only in the lungs, breathing in the cells</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Breathing is only the physical exchange of air (taking in oxygen-rich air, giving out carbon-dioxide-rich air). Respiration is the chemical process inside the cells that breaks down glucose to release energy. They are not the same — breathing supplies the oxygen that respiration uses.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">A jar of exhaled air is bubbled through clear limewater. What is observed, and why?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>it stays clear, because exhaled air has no carbon dioxide</span></li>
+        <li class=""><span class="lab">B</span><span>it turns blue, because of extra oxygen</span></li>
+        <li class=""><span class="lab">C</span><span>it turns red, because of water vapour</span></li>
+        <li class="correct"><span class="lab">D</span><span>it turns milky, because exhaled air is rich in carbon dioxide</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Carbon dioxide turns limewater milky. Exhaled air is rich in CO₂, so the limewater goes milky. ("Stays clear" wrongly assumes exhaled air has no CO₂.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">The correct word equation for aerobic respiration is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>glucose + oxygen → carbon dioxide + water + energy</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>glucose → alcohol + carbon dioxide + energy</span></li>
+        <li class=""><span class="lab">C</span><span>carbon dioxide + water → glucose + oxygen</span></li>
+        <li class=""><span class="lab">D</span><span>glucose + carbon dioxide → oxygen + water + energy</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Aerobic respiration: glucose + oxygen → carbon dioxide + water + energy. Option (C) is photosynthesis written backwards, and (B) is the anaerobic (yeast) equation.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">A yeast cell respiring in dough without oxygen produces:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>lactic acid and energy</span></li>
+        <li class=""><span class="lab">B</span><span>carbon dioxide and water only</span></li>
+        <li class=""><span class="lab">C</span><span>oxygen and glucose</span></li>
+        <li class="correct"><span class="lab">D</span><span>alcohol, carbon dioxide and energy</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Without oxygen (anaerobic), yeast carries out fermentation: glucose → alcohol + carbon dioxide + energy. Lactic acid is what *our muscle* cells make, not yeast.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">After sprinting hard, an athlete's leg muscles ache and cramp. The substance responsible is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>lactic acid</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>alcohol</span></li>
+        <li class=""><span class="lab">C</span><span>carbon dioxide</span></li>
+        <li class=""><span class="lab">D</span><span>glucose</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>When muscles run short of oxygen during a sprint, they respire anaerobically and make lactic acid, which builds up and causes the ache and cramp.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">Anaerobic respiration is best described as the breakdown of glucose:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only inside the lungs</span></li>
+        <li class=""><span class="lab">B</span><span>using large amounts of oxygen</span></li>
+        <li class="correct"><span class="lab">C</span><span>in the absence of oxygen</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>only in green plants</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"An-aerobic" literally means "without air (oxygen)". So anaerobic respiration is the breakdown of glucose in the absence of oxygen.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">During inhalation, the diaphragm:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>flattens and moves down, and the chest cavity gets larger</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>domes up, and the chest cavity gets smaller</span></li>
+        <li class=""><span class="lab">C</span><span>stays still while only the ribs move</span></li>
+        <li class=""><span class="lab">D</span><span>flattens and moves down, and the chest cavity gets smaller</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>On inhalation the diaphragm contracts, flattens and moves down; together with the ribs swinging up and out, this enlarges the chest cavity so air flows in. (Option D pairs the right diaphragm move with the wrong volume change — a trap.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">The correct path of air entering the human body is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>nostrils → lungs → trachea → nasal cavity</span></li>
+        <li class=""><span class="lab">B</span><span>trachea → nostrils → nasal cavity → lungs</span></li>
+        <li class="correct"><span class="lab">C</span><span>nostrils → nasal cavity → trachea → lungs</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>nasal cavity → nostrils → lungs → trachea</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Air travels: nostrils → nasal cavity → trachea (windpipe) → lungs. The other orders scramble this path.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">Insects such as cockroaches take in air through small openings called:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>spiracles</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>gills</span></li>
+        <li class=""><span class="lab">C</span><span>stomata</span></li>
+        <li class=""><span class="lab">D</span><span>lenticels</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Insects such as cockroaches take in air through tiny holes called spiracles. (Gills are for fish, stomata and lenticels are for plants.)</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">A fish kept in a sealed bag of boiled (air-free) water soon dies. The best reason is that:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>gills extract dissolved oxygen from water, and boiled water has lost it</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>fish breathe by swallowing water into their lungs</span></li>
+        <li class=""><span class="lab">C</span><span>fish need carbon dioxide dissolved in the water</span></li>
+        <li class=""><span class="lab">D</span><span>boiled water is too heavy for the gills to pump</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Fish do not have lungs; their gills extract oxygen *dissolved* in the water. Boiling drives the dissolved oxygen out, so the fish suffocates even though it is surrounded by water.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">A person breathes 18 times per minute at rest. About how many breaths is that in 5 minutes?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>36</span></li>
+        <li class=""><span class="lab">B</span><span>23</span></li>
+        <li class=""><span class="lab">C</span><span>360</span></li>
+        <li class="correct"><span class="lab">D</span><span>90</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>18 breaths/minute × 5 minutes = 90 breaths. (36 would be 18 × 2; 360 multiplies by 20 by mistake.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">Which organ takes in oxygen in an earthworm?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>gills</span></li>
+        <li class="correct"><span class="lab">B</span><span>its moist skin</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>lungs</span></li>
+        <li class=""><span class="lab">D</span><span>spiracles</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An earthworm has no lungs or gills; it takes in oxygen through its moist skin, which is why it must stay damp.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">The part of the respiratory system commonly called the windpipe is the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>trachea</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>diaphragm</span></li>
+        <li class=""><span class="lab">C</span><span>larynx</span></li>
+        <li class=""><span class="lab">D</span><span>bronchus</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The trachea is the windpipe — the tube carrying air from the throat toward the lungs.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">During heavy exercise our breathing rate rises mainly because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the lungs shrink and need refilling</span></li>
+        <li class="correct"><span class="lab">B</span><span>muscles need more oxygen and more carbon dioxide must be removed</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the diaphragm has stopped working</span></li>
+        <li class=""><span class="lab">D</span><span>the body is trying to cool the blood</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Hard exercise makes muscles respire faster, so they need more oxygen and produce more carbon dioxide. Breathing speeds up to supply the extra O₂ and clear the extra CO₂.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">A frog can take in oxygen through:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>gills only</span></li>
+        <li class=""><span class="lab">B</span><span>spiracles only</span></li>
+        <li class=""><span class="lab">C</span><span>stomata in its skin</span></li>
+        <li class="correct"><span class="lab">D</span><span>both its moist skin and its lungs</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A frog is special: it can take in oxygen both through its moist skin and through its lungs.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">In plants, the tiny pores on the surface of leaves used for gas exchange are the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>lenticels</span></li>
+        <li class=""><span class="lab">B</span><span>spiracles</span></li>
+        <li class=""><span class="lab">C</span><span>alveoli</span></li>
+        <li class="correct"><span class="lab">D</span><span>stomata</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Leaves exchange gases through tiny pores called stomata. (Lenticels are on stems, spiracles on insects, alveoli in human lungs.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">The breakdown of glucose with the release of energy takes place:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only in the lungs</span></li>
+        <li class="correct"><span class="lab">B</span><span>in the cells of the body</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>only in the blood</span></li>
+        <li class=""><span class="lab">D</span><span>only in the nostrils</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Respiration — the actual breakdown of glucose to release energy — happens inside the body's cells, not in the lungs or blood (those only transport the gases).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">Which of these is the correct comparison of the energy released per glucose molecule?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>anaerobic respiration releases more energy than aerobic respiration</span></li>
+        <li class="correct"><span class="lab">B</span><span>aerobic respiration releases more energy than anaerobic respiration</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>both release exactly the same energy</span></li>
+        <li class=""><span class="lab">D</span><span>anaerobic respiration releases no energy at all</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Aerobic respiration breaks glucose down completely, releasing much more energy per glucose molecule than anaerobic respiration, which only breaks it down partly (into alcohol or lactic acid).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">The muscle that lies below the lungs and helps in breathing is the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>diaphragm</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>trachea</span></li>
+        <li class=""><span class="lab">C</span><span>bronchus</span></li>
+        <li class=""><span class="lab">D</span><span>heart</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The diaphragm is the dome-shaped sheet of muscle below the lungs that drives breathing movements.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">A muscle cramp after running is usually relieved by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>running even faster</span></li>
+        <li class=""><span class="lab">B</span><span>holding your breath</span></li>
+        <li class="correct"><span class="lab">C</span><span>rest, massage or a hot bath</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>drinking less water</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Lactic-acid cramps ease once oxygen returns and the acid is cleared; rest, gentle massage or a hot bath all help, so the body can finish breaking down the lactic acid.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">Compared with breathing in air, a fish must pump water over its gills almost continuously because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>water has no oxygen at all</span></li>
+        <li class=""><span class="lab">B</span><span>gills cannot move on their own</span></li>
+        <li class=""><span class="lab">C</span><span>fish do not respire</span></li>
+        <li class="correct"><span class="lab">D</span><span>water contains far less dissolved oxygen than air does</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Water holds far less dissolved oxygen than the same volume of air, so a fish must keep passing a steady stream of water over its gills to gather enough oxygen.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">During exhalation, the ribs and the chest cavity respectively:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>move up and out; cavity gets larger</span></li>
+        <li class="correct"><span class="lab">B</span><span>move down and in; cavity gets smaller</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>stay still; cavity gets larger</span></li>
+        <li class=""><span class="lab">D</span><span>move down and in; cavity gets larger</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>On exhalation the diaphragm relaxes (domes up) and the ribs move down and in, so the chest cavity gets smaller and air is pushed out.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">Which set lists three organs/structures used for taking in oxygen by three DIFFERENT organisms?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>gills (human), lungs (fish), spiracles (earthworm)</span></li>
+        <li class=""><span class="lab">B</span><span>stomata (fish), lungs (earthworm), gills (human)</span></li>
+        <li class=""><span class="lab">C</span><span>spiracles (fish), gills (cockroach), lungs (frog)</span></li>
+        <li class="correct"><span class="lab">D</span><span>gills (fish), lungs (human), moist skin (earthworm)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A correct set must match each organ to the right organism: gills (fish), lungs (human), moist skin (earthworm). The other sets mismatch organs and organisms.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">When you exhale onto a cold mirror, it fogs up. This shows exhaled air contains more:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>oxygen</span></li>
+        <li class="correct"><span class="lab">B</span><span>water vapour</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>nitrogen</span></li>
+        <li class=""><span class="lab">D</span><span>glucose</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The mirror fogs because exhaled air carries extra water vapour, which condenses on the cold glass.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">A swimmer's breathing rate is measured as 15 per minute before a race and 35 per minute just after. The rise happens because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the lungs have become smaller</span></li>
+        <li class=""><span class="lab">B</span><span>the heart has stopped beating</span></li>
+        <li class="correct"><span class="lab">C</span><span>the body needs to supply more oxygen and remove more carbon dioxide</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>less energy is needed during the race</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Swimming hard makes the muscles respire faster, so the body must take in more oxygen and remove more carbon dioxide — hence the jump from 15 to 35 breaths per minute.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">Yeast is used to make bread rise. The gas that forms the bubbles in the dough is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>oxygen</span></li>
+        <li class=""><span class="lab">B</span><span>water vapour</span></li>
+        <li class="correct"><span class="lab">C</span><span>carbon dioxide</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>nitrogen</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Yeast fermenting in dough gives off carbon dioxide; the trapped bubbles of CO₂ make the bread rise.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">Roots of a plant obtain oxygen for respiration:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>from sunlight falling on the leaves</span></li>
+        <li class="correct"><span class="lab">B</span><span>from air present in the spaces between soil particles</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>from carbon dioxide in the air</span></li>
+        <li class=""><span class="lab">D</span><span>only from water in the soil</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Soil has air in the spaces between its particles; roots take in oxygen from this trapped air for their own respiration.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">Which statement about breathing rate is correct?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>it is lower at rest and rises during exercise</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>it is highest while sleeping and lowest while running</span></li>
+        <li class=""><span class="lab">C</span><span>it stays exactly the same whatever you do</span></li>
+        <li class=""><span class="lab">D</span><span>it only changes if you hold your breath</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Breathing rate is lowest at rest and rises during exercise (the opposite of option B, which is the trap).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">The thin-walled, balloon-like sacs in the lungs where oxygen passes into the blood are the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>bronchi</span></li>
+        <li class="correct"><span class="lab">B</span><span>alveoli</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>spiracles</span></li>
+        <li class=""><span class="lab">D</span><span>bronchioles</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The tiny balloon-like air sacs in the lungs are the alveoli; their thin walls let oxygen pass into the surrounding blood.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">A plant carries out respiration:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>both day and night</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>only during the day</span></li>
+        <li class=""><span class="lab">C</span><span>only at night</span></li>
+        <li class=""><span class="lab">D</span><span>never, because it makes its own food</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Plants respire both day and night. (They photosynthesise only in light, but respiration never stops — the trap is thinking plants only respire at night.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">Which is the most complete statement about gas exchange in respiration?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>we take in carbon dioxide and give out oxygen</span></li>
+        <li class=""><span class="lab">B</span><span>we take in and give out only oxygen</span></li>
+        <li class="correct"><span class="lab">C</span><span>we take in oxygen and give out carbon dioxide</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>we take in nitrogen and give out carbon dioxide</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In respiration we take in oxygen and give out carbon dioxide. (Taking in CO₂ and giving out O₂ is photosynthesis in plants — a common mix-up.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">In the stem of a woody plant, gas exchange takes place through openings called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>stomata</span></li>
+        <li class=""><span class="lab">B</span><span>spiracles</span></li>
+        <li class=""><span class="lab">C</span><span>alveoli</span></li>
+        <li class="correct"><span class="lab">D</span><span>lenticels</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Woody stems exchange gases through small openings called lenticels. (Stomata are on leaves.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">The air we breathe out, compared with the air we breathe in, has:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>more oxygen and less carbon dioxide</span></li>
+        <li class=""><span class="lab">B</span><span>more oxygen and more carbon dioxide</span></li>
+        <li class=""><span class="lab">C</span><span>the same amounts of both gases</span></li>
+        <li class="correct"><span class="lab">D</span><span>less oxygen and more carbon dioxide</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Compared with inhaled air, exhaled air has less oxygen (some was used up) and more carbon dioxide (a product of respiration).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">During the rising of bread dough, yeast is carrying out:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>anaerobic respiration, producing alcohol and carbon dioxide</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>aerobic respiration, producing only water</span></li>
+        <li class=""><span class="lab">C</span><span>photosynthesis, producing glucose</span></li>
+        <li class=""><span class="lab">D</span><span>breathing through tiny lungs</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In the dough, yeast lacks oxygen and respires anaerobically, producing alcohol and carbon dioxide — the CO₂ makes the dough rise.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">Cockroaches and other insects carry air to their body tissues through a network of tubes called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>bronchi</span></li>
+        <li class=""><span class="lab">B</span><span>gills</span></li>
+        <li class=""><span class="lab">C</span><span>alveoli</span></li>
+        <li class="correct"><span class="lab">D</span><span>tracheae</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>From the spiracles, air travels through a branching network of fine air tubes called tracheae that carry it directly to the insect's tissues.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">Which sequence shows the breathing movements in the correct order during one inhalation?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>diaphragm contracts → ribs move up and out → chest expands → air rushes in</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>diaphragm relaxes → ribs move down → chest shrinks → air goes out</span></li>
+        <li class=""><span class="lab">C</span><span>ribs move down → diaphragm domes up → chest expands → air rushes in</span></li>
+        <li class=""><span class="lab">D</span><span>air rushes in → diaphragm relaxes → ribs move down → chest shrinks</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>One inhalation, in order: diaphragm contracts → ribs move up and out → chest expands → air rushes in. The other orders describe exhalation or scramble the steps.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">A burning candle and a respiring animal both:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>release oxygen and use carbon dioxide</span></li>
+        <li class=""><span class="lab">B</span><span>need no oxygen at all</span></li>
+        <li class="correct"><span class="lab">C</span><span>use oxygen and release energy and carbon dioxide</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>produce only water and no gases</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A burning candle and a respiring animal both take in oxygen and release energy plus carbon dioxide — respiration is like a slow, controlled "burning" of glucose.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">Which organism does NOT use lungs to take in oxygen?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>human</span></li>
+        <li class=""><span class="lab">B</span><span>frog</span></li>
+        <li class="correct"><span class="lab">C</span><span>fish</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>dog</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A fish does not have lungs; it uses gills. Humans, frogs and dogs all use lungs (a frog also uses its skin), so the fish is the odd one out.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">After a fizzy fermentation experiment, a candle lowered into the gas above the liquid goes out. The gas is most likely:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>oxygen</span></li>
+        <li class=""><span class="lab">B</span><span>hydrogen</span></li>
+        <li class=""><span class="lab">C</span><span>nitrogen</span></li>
+        <li class="correct"><span class="lab">D</span><span>carbon dioxide</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A flame needs oxygen; if the candle goes out, the gas does not support burning. Fermentation gives off carbon dioxide, which puts the flame out.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">The number of breaths a person takes in one minute is called the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>heart rate</span></li>
+        <li class=""><span class="lab">B</span><span>pulse</span></li>
+        <li class="correct"><span class="lab">C</span><span>breathing rate</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>respiration product</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The number of breaths taken in one minute is the breathing rate. (Heart rate and pulse count heartbeats, not breaths.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">Mountaineers at very high altitude often feel breathless. The best Class-7 reason is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the air there has more carbon dioxide</span></li>
+        <li class=""><span class="lab">B</span><span>their lungs stop working in the cold</span></li>
+        <li class="correct"><span class="lab">C</span><span>the air there is thinner, so each breath supplies less oxygen</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>there is no air at all on mountains</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>High up, the air is thinner (lower pressure), so each breath carries less oxygen; the body feels short of oxygen and breathing speeds up — that breathless feeling.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">Which pairing of organism and breathing organ is INCORRECT?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>cockroach — gills</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>fish — gills</span></li>
+        <li class=""><span class="lab">C</span><span>earthworm — moist skin</span></li>
+        <li class=""><span class="lab">D</span><span>human — lungs</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The incorrect pair is "cockroach — gills". A cockroach breathes through spiracles and tracheae, not gills. The other three pairings are all correct.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">During vigorous exercise, when oxygen supply to muscles cannot keep up, the muscles partly switch to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>photosynthesis</span></li>
+        <li class=""><span class="lab">B</span><span>breathing through the skin</span></li>
+        <li class=""><span class="lab">C</span><span>aerobic respiration only</span></li>
+        <li class="correct"><span class="lab">D</span><span>anaerobic respiration, forming lactic acid</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>When oxygen can't reach the muscles fast enough during vigorous exercise, they switch partly to anaerobic respiration, forming lactic acid.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">A balloon attached to the mouth of a flask of sugar solution with yeast slowly inflates. The gas inflating it is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>oxygen made by the yeast</span></li>
+        <li class=""><span class="lab">B</span><span>water vapour</span></li>
+        <li class=""><span class="lab">C</span><span>nitrogen from the air</span></li>
+        <li class="correct"><span class="lab">D</span><span>carbon dioxide from anaerobic respiration</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Yeast in sugar solution respires anaerobically, releasing carbon dioxide that collects in and inflates the balloon. (Yeast does not *make* oxygen.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">Which statement is TRUE?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>every living cell, plant or animal, respires</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>only animals respire; plants only photosynthesise</span></li>
+        <li class=""><span class="lab">C</span><span>respiration stops in animals while they sleep</span></li>
+        <li class=""><span class="lab">D</span><span>only the lungs respire in a human</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Every living cell — in plants as well as animals, awake or asleep — respires to release the energy it needs to stay alive.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">Two test tubes of limewater are set up: tube X receives air breathed OUT, tube Y receives ordinary room air pushed in by a pump for the same time. Which is correct?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Y turns milky much faster than X</span></li>
+        <li class="correct"><span class="lab">B</span><span>X turns milky much faster than Y</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>neither changes at all</span></li>
+        <li class=""><span class="lab">D</span><span>both turn milky equally fast</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Tube X receives *exhaled* air (CO₂-rich) and tube Y receives ordinary room air. The exhaled-air tube (X) turns milky far faster because exhaled air carries much more carbon dioxide. So "X turns milky much faster than Y" is the correct statement.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">The voice box, located in the throat above the windpipe, is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>bronchus</span></li>
+        <li class=""><span class="lab">B</span><span>diaphragm</span></li>
+        <li class=""><span class="lab">C</span><span>alveolus</span></li>
+        <li class="correct"><span class="lab">D</span><span>larynx</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The voice box sitting at the top of the windpipe is the larynx.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">A student says, "Fish breathe water." The most accurate correction is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>fish do breathe water directly into their lungs</span></li>
+        <li class=""><span class="lab">B</span><span>fish make their own oxygen from water</span></li>
+        <li class="correct"><span class="lab">C</span><span>fish take in oxygen dissolved in water using their gills</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>fish do not need oxygen at all</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The accurate correction to "fish breathe water" is that fish take in oxygen *dissolved* in water using their gills — they do not breathe water into lungs, nor make their own oxygen.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">At rest a person breathes about 15–18 times per minute. Which value would you most expect just after climbing several flights of stairs?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5 per minute</span></li>
+        <li class=""><span class="lab">B</span><span>16 per minute</span></li>
+        <li class="correct"><span class="lab">C</span><span>30 per minute</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>0 per minute</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Resting rate is about 15–18 per minute; after climbing stairs it rises well above that, so ~30 per minute is the expected value. (16 is a resting value; 0 and 5 are impossible after exertion.)</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">Which best explains why air rushes INTO the lungs during inhalation?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the lungs pull the air in like a magnet</span></li>
+        <li class="correct"><span class="lab">B</span><span>the chest cavity expands, lowering the pressure inside the lungs</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the diaphragm pushes the air in from below</span></li>
+        <li class=""><span class="lab">D</span><span>the air is heavier than the lungs</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>When the chest cavity expands, the same amount of air now fills a bigger space, so the pressure inside the lungs drops below outside pressure and air rushes in. (Lungs do not "pull" air like a magnet.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">Earthworms come to the surface of waterlogged soil after heavy rain mainly because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>they want to drink the rainwater</span></li>
+        <li class="correct"><span class="lab">B</span><span>the water fills the soil spaces, leaving too little air for skin breathing</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the soil becomes too cold for them</span></li>
+        <li class=""><span class="lab">D</span><span>they breathe better when fully underwater</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Earthworms breathe through moist skin using oxygen from soil air. Heavy rain fills the soil spaces with water, leaving too little air, so the worms surface to get oxygen.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">A green plant in a sealed dark box for a night will:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>release oxygen and use carbon dioxide</span></li>
+        <li class=""><span class="lab">B</span><span>neither take in nor give out any gas</span></li>
+        <li class="correct"><span class="lab">C</span><span>use oxygen and release carbon dioxide through respiration</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>carry out photosynthesis as usual</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In the dark a plant cannot photosynthesise, but it still respires: it uses oxygen and releases carbon dioxide.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">Which of these is a product common to BOTH aerobic respiration and the fermentation of sugar by yeast?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>carbon dioxide</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>lactic acid</span></li>
+        <li class=""><span class="lab">C</span><span>oxygen</span></li>
+        <li class=""><span class="lab">D</span><span>alcohol</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Aerobic respiration gives carbon dioxide + water; yeast fermentation gives alcohol + carbon dioxide. The product common to both is carbon dioxide.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">The main job of the hair and mucus inside the nasal cavity is to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>add oxygen to the air</span></li>
+        <li class="correct"><span class="lab">B</span><span>trap dust and germs and clean the incoming air</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>cool the lungs down</span></li>
+        <li class=""><span class="lab">D</span><span>produce energy</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The hairs and sticky mucus in the nasal cavity trap dust and germs, cleaning (and warming and moistening) the air before it reaches the lungs.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">During exhalation, air leaves the lungs because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the chest cavity expands and pressure drops</span></li>
+        <li class=""><span class="lab">B</span><span>the ribs move further up and out</span></li>
+        <li class="correct"><span class="lab">C</span><span>the diaphragm relaxes and the chest cavity shrinks, raising the pressure inside</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the lungs make extra oxygen that must escape</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>On exhalation the diaphragm relaxes and the chest cavity shrinks; squeezing the air into a smaller space raises the pressure inside the lungs above outside pressure, so air flows out.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">A jar holds a small germinating-seed setup that uses up the oxygen; a candle lowered in goes out and limewater turns milky. This shows the seeds were:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>photosynthesising, giving out oxygen</span></li>
+        <li class="correct"><span class="lab">B</span><span>respiring, using oxygen and giving out carbon dioxide</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>not alive</span></li>
+        <li class=""><span class="lab">D</span><span>giving out only water vapour</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The seeds used up the oxygen (candle goes out) and released carbon dioxide (limewater turns milky) — the signs of living seeds respiring, not photosynthesising.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">Which statement comparing breathing in different animals is correct?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a cockroach uses gills while a fish uses spiracles</span></li>
+        <li class="correct"><span class="lab">B</span><span>a fish uses gills while a cockroach uses tracheae</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>an earthworm uses lungs while a human uses skin</span></li>
+        <li class=""><span class="lab">D</span><span>a frog uses spiracles while an earthworm uses gills</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct comparison is "a fish uses gills while a cockroach uses tracheae." The other options swap the breathing organs between animals.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">A bicycle pump and the human breathing system are alike because both:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>change the volume of a space to move air in and out</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>burn glucose to release energy</span></li>
+        <li class=""><span class="lab">C</span><span>make oxygen from water</span></li>
+        <li class=""><span class="lab">D</span><span>turn limewater milky</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Both a bicycle pump and the breathing system work by changing the volume of a space, which changes the pressure and so moves air in and out. (The pump does not burn glucose; that part is unique to respiration.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">Why must even a sleeping person keep breathing, although the muscles are barely moving?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>cells stop respiring during sleep, so air must be stored</span></li>
+        <li class=""><span class="lab">B</span><span>breathing only happens during exercise</span></li>
+        <li class=""><span class="lab">C</span><span>the lungs need air to make glucose at night</span></li>
+        <li class="correct"><span class="lab">D</span><span>every living cell keeps respiring and needs a constant oxygen supply</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Every living cell keeps respiring even during sleep, so it needs a constant oxygen supply — which is why breathing never stops, awake or asleep. --- *Solutions complete: 60 / 60.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banks And The Magic Of Finance — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Banks And The Magic Of Finance<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">'Financial infrastructure' is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the roads and bridges of a country</span></li>
+        <li class=""><span class="lab">B</span><span>the schools and hospitals of a country</span></li>
+        <li class="correct"><span class="lab">C</span><span>the network of banks, payment systems, stock markets and institutions that move and manage money</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the army and the police</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Financial infrastructure is banks, payment systems, stock markets and institutions that move and manage money. Roads are physical infrastructure, schools social, and the army state machinery.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">Financial infrastructure is said to ____ physical infrastructure.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>replace</span></li>
+        <li class="correct"><span class="lab">B</span><span>complement</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>destroy</span></li>
+        <li class=""><span class="lab">D</span><span>have nothing to do with</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Financial infrastructure complements physical infrastructure, moving money rather than goods. It does not replace, destroy, or stand apart from it.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">Which is part of financial infrastructure?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>highways and ports</span></li>
+        <li class=""><span class="lab">B</span><span>schools and hospitals</span></li>
+        <li class="correct"><span class="lab">C</span><span>banks and the stock market</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>power grids and pipelines</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Banks and the stock market are financial infrastructure. Highways and ports are transport, schools and hospitals social, and grids and pipelines physical-utility infrastructure.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">A 'bank' is a financial institution that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only prints the country's currency</span></li>
+        <li class=""><span class="lab">B</span><span>only builds roads</span></li>
+        <li class="correct"><span class="lab">C</span><span>collects money as deposits and lends money as loans</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>only sells shares to people</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A bank collects deposits and lends loans. Printing currency is the RBI's job, road-building is not a bank's, and selling shares is the stock market.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">The claim 'a bank just keeps your money safe in a locker' is wrong because a bank:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>keeps every rupee untouched in a vault</span></li>
+        <li class="correct"><span class="lab">B</span><span>lends most of the deposits out as loans, keeping only some as reserves</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>never lends to anyone</span></li>
+        <li class=""><span class="lab">D</span><span>gives all the money away free</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A bank lends most deposits out as loans, keeping some as reserves - connecting savers and borrowers. It does not keep every rupee idle, refuse to lend, or give money away.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">A 'savings account' is mainly for:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a company's daily business with very frequent transactions</span></li>
+        <li class=""><span class="lab">B</span><span>locking money away for a fixed period only</span></li>
+        <li class="correct"><span class="lab">C</span><span>keeping money safe while earning some interest, with easy withdrawals</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>buying shares on the stock market</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A savings account keeps money safe, earns interest and allows easy withdrawals. Heavy daily business use is a current account, locking money for a period is a fixed deposit, and buying shares is the stock market.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">A 'fixed deposit' account:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>allows unlimited daily withdrawals</span></li>
+        <li class="correct"><span class="lab">B</span><span>locks money away for a set period and usually pays higher interest</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>pays no interest at all</span></li>
+        <li class=""><span class="lab">D</span><span>is a share in a company</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A fixed deposit locks money for a set period at higher interest. It is not for unlimited withdrawals, interest-free, or a company share.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">A 'current account' is most suited to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a child saving pocket money slowly</span></li>
+        <li class=""><span class="lab">B</span><span>locking savings away for five years</span></li>
+        <li class="correct"><span class="lab">C</span><span>a business making many transactions each day</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>buying a single share</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A current account suits businesses with frequent daily transactions. Slow saving suits a savings account, locking money a fixed deposit, and share-buying the stock market.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">A 'deposit' is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>money placed in a bank account that can be withdrawn and often earns interest</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>money borrowed from a bank to repay later</span></li>
+        <li class=""><span class="lab">C</span><span>a share of a company's profit</span></li>
+        <li class=""><span class="lab">D</span><span>the original sum before interest</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A deposit is money placed in a bank, withdrawable and often interest-earning. Borrowed money is a loan, a profit share is a dividend, and the original sum is the principal.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">'Interest' is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the original sum of money deposited</span></li>
+        <li class="correct"><span class="lab">B</span><span>the extra money a bank pays a depositor, or charges a borrower, over time for the use of money</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a share of a company's profit</span></li>
+        <li class=""><span class="lab">D</span><span>a paper cheque</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Interest is the extra money paid or charged over time for the use of money. The original sum is the principal, a profit share a dividend, and a cheque a payment instrument.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">'Compounding' means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>earning interest on interest already added, so money grows faster over time</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>spending money as fast as possible</span></li>
+        <li class=""><span class="lab">C</span><span>keeping money idle with no growth</span></li>
+        <li class=""><span class="lab">D</span><span>losing money to inflation</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Compounding is earning interest on interest, speeding growth. It is not fast spending, idle money, or losing to inflation.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">The story of doubling rice grains on a chessboard illustrates:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>how money sits idle in a locker</span></li>
+        <li class="correct"><span class="lab">B</span><span>how compounding makes amounts grow surprisingly fast</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>how cheques are written</span></li>
+        <li class=""><span class="lab">D</span><span>how the RBI prints currency</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The doubling rice grains show how compounding grows amounts surprisingly fast. It is not about idle money, cheques, or printing currency.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">The 'principal' is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the interest earned on a deposit</span></li>
+        <li class=""><span class="lab">B</span><span>a share of company profit</span></li>
+        <li class="correct"><span class="lab">C</span><span>the original sum of money lent or saved, before any interest is added</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the benchmark rate set by the RBI</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The principal (Latin principalis, 'chief') is the original sum before interest. Interest, a dividend and the benchmark rate are different.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">Money left to compound for many years tends to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>shrink to nothing</span></li>
+        <li class="correct"><span class="lab">B</span><span>grow faster than money earning simple interest once</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>stay exactly the same forever</span></li>
+        <li class=""><span class="lab">D</span><span>turn into a company share</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Compounding (interest on interest) makes money grow faster over time than a single simple-interest payment. It does not shrink, stay fixed, or become a share.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">A 'loan' is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>money deposited for safekeeping</span></li>
+        <li class=""><span class="lab">B</span><span>a share of a company</span></li>
+        <li class=""><span class="lab">C</span><span>the RBI's benchmark rate</span></li>
+        <li class="correct"><span class="lab">D</span><span>an amount borrowed from a bank, to be repaid later with interest</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A loan is borrowed money repaid later with interest. A deposit is money kept safe, a share is company ownership, and the benchmark rate is set by the RBI.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">'Credit', from the Latin for 'to trust', is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>money printed by the RBI</span></li>
+        <li class="correct"><span class="lab">B</span><span>money lent in the trust that it will be repaid</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a share traded on the market</span></li>
+        <li class=""><span class="lab">D</span><span>a paper cheque</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Credit (Latin credere, 'to trust') is money lent in trust of repayment. It is not printed currency, a share, or a cheque.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">When a bank gives a loan, it expects the borrower to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>never repay anything</span></li>
+        <li class=""><span class="lab">B</span><span>repay less than was borrowed</span></li>
+        <li class=""><span class="lab">C</span><span>become the bank's owner</span></li>
+        <li class="correct"><span class="lab">D</span><span>repay the amount later, with interest</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A borrower repays the loan with interest. They do not repay nothing, repay less, or become the bank's owner.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">A family borrowing from a bank to build a house is taking a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>deposit, earning them interest</span></li>
+        <li class=""><span class="lab">B</span><span>dividend from a company</span></li>
+        <li class="correct"><span class="lab">C</span><span>loan, to be repaid with interest</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>share in the bank</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Borrowing to build a house is a loan, repaid with interest. A deposit earns interest for the saver, a dividend is a profit share, and a share is company ownership.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">Banks mainly earn money from:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>printing their own currency</span></li>
+        <li class="correct"><span class="lab">B</span><span>the gap between the higher interest they charge borrowers and the lower interest they pay depositors</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>charging nothing to anyone</span></li>
+        <li class=""><span class="lab">D</span><span>giving away free loans</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Banks earn from charging borrowers more interest than they pay depositors. They do not print currency, charge nothing, or give free loans.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">The claim 'money in a savings account just sits idle in the bank' is wrong because the bank:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>locks every rupee away untouched</span></li>
+        <li class=""><span class="lab">B</span><span>loses all the money immediately</span></li>
+        <li class="correct"><span class="lab">C</span><span>lends most of the deposit out, paying you some interest and charging borrowers more</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>prints new money instead</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The bank lends most of your deposit out, keeping your savings working in the economy. It does not lock it away, lose it, or print money.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">Your savings deposited in a bank help the economy by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sitting unused in a locker</span></li>
+        <li class=""><span class="lab">B</span><span>being burned for safety</span></li>
+        <li class=""><span class="lab">C</span><span>leaving the country at once</span></li>
+        <li class="correct"><span class="lab">D</span><span>funding loans for homes, businesses and farms</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Deposited savings are lent out to fund homes, businesses and farms. They are not idle, burned, or sent abroad.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">If a bank pays depositors 4% interest and charges borrowers 9%, its earnings come from:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>printing the extra 5% as new notes</span></li>
+        <li class="correct"><span class="lab">B</span><span>the 5% difference between the two rates</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the depositors paying a fee of 9%</span></li>
+        <li class=""><span class="lab">D</span><span>a dividend from the RBI</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The bank earns the 5% gap between what it charges and what it pays. It does not print the difference, charge depositors 9%, or get an RBI dividend.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">Banks connect:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only the rich with each other</span></li>
+        <li class=""><span class="lab">B</span><span>only foreign countries</span></li>
+        <li class=""><span class="lab">C</span><span>only the government with itself</span></li>
+        <li class="correct"><span class="lab">D</span><span>savers (who deposit) and borrowers (who take loans)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Banks connect savers and borrowers, channelling deposits into loans. They are not for the rich only, foreign-only, or the government alone.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">The 'Jan Dhan Yojana' (2014) aimed to make banking:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>available only to the wealthy</span></li>
+        <li class=""><span class="lab">B</span><span>illegal for ordinary people</span></li>
+        <li class=""><span class="lab">C</span><span>replaced by barter</span></li>
+        <li class="correct"><span class="lab">D</span><span>inclusive, so that everyone could have a bank account</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Jan Dhan Yojana (2014) made banking inclusive, helping everyone open accounts. It was not for the wealthy only, illegal, or a return to barter.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">The Jan Dhan Yojana was launched in:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1935</span></li>
+        <li class=""><span class="lab">B</span><span>1950</span></li>
+        <li class=""><span class="lab">C</span><span>1853</span></li>
+        <li class="correct"><span class="lab">D</span><span>2014</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Jan Dhan Yojana was launched in 2014. 1935 is the RBI's founding, 1950 the Constitution, and 1853 the railways.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">Making banking 'inclusive' through Jan Dhan matters because it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>keeps banks closed to the poor</span></li>
+        <li class=""><span class="lab">B</span><span>removes the need for banks</span></li>
+        <li class="correct"><span class="lab">C</span><span>brings savings, payments and credit within reach of all, not just the well-off</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>gives free money to everyone</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Inclusive banking brings savings, payments and credit to everyone, not just the well-off. It does not exclude the poor, remove banks, or give free money.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">The 'Reserve Bank of India' (RBI) is best described as:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>India's central bank, the 'banker to banks'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>an ordinary bank where people open savings accounts</span></li>
+        <li class=""><span class="lab">C</span><span>a stock market</span></li>
+        <li class=""><span class="lab">D</span><span>a private moneylender</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The RBI is India's central bank, the banker to banks. It is not an ordinary people's bank, the stock market, or a private lender.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">The RBI was established in:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2014</span></li>
+        <li class="correct"><span class="lab">B</span><span>1935</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>1950</span></li>
+        <li class=""><span class="lab">D</span><span>1853</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The RBI was established in 1935. 2014 is Jan Dhan, 1950 the Constitution, and 1853 the railways.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">The claim 'the RBI is just another bank where people open accounts' is wrong because:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the RBI is the central bank; the commercial banks themselves keep accounts at the RBI</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the RBI has no role in banking</span></li>
+        <li class=""><span class="lab">C</span><span>ordinary people bank only at the RBI</span></li>
+        <li class=""><span class="lab">D</span><span>the RBI is a foreign bank</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The RBI is the central bank - commercial banks keep accounts there, not ordinary people. It is central to banking, not a people's bank, and not foreign.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">One key job of the RBI is to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sell shares to the public</span></li>
+        <li class=""><span class="lab">B</span><span>build highways</span></li>
+        <li class="correct"><span class="lab">C</span><span>print the country's currency</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>run village schools</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The RBI prints the country's currency (and supervises banking). Selling shares is the stock market, and highways and schools are other infrastructure.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">Calling the RBI the 'banker to banks' means it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>opens savings accounts for schoolchildren</span></li>
+        <li class="correct"><span class="lab">B</span><span>holds accounts for, and lends to, the commercial banks</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>sells groceries</span></li>
+        <li class=""><span class="lab">D</span><span>builds dams</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>As 'banker to banks', the RBI holds accounts for and lends to commercial banks. It does not serve schoolchildren's accounts, sell groceries, or build dams.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">The RBI also supervises the banking system, which means it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ignores what banks do</span></li>
+        <li class=""><span class="lab">B</span><span>competes with banks for customers</span></li>
+        <li class=""><span class="lab">C</span><span>prints shares for companies</span></li>
+        <li class="correct"><span class="lab">D</span><span>regulates banks to keep the system safe and sound</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The RBI regulates and supervises banks to keep the system safe. It does not ignore banks, compete for retail customers, or print shares.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">The 'benchmark interest rate' is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the base interest rate the RBI fixes for lending money to commercial banks</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the price of a single company share</span></li>
+        <li class=""><span class="lab">C</span><span>the fee for a cheque</span></li>
+        <li class=""><span class="lab">D</span><span>a dividend paid to savers</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The benchmark rate is the RBI's base rate for lending to commercial banks. It is not a share price, a cheque fee, or a dividend.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">By changing the benchmark interest rate, the RBI can influence:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the height of buildings</span></li>
+        <li class=""><span class="lab">B</span><span>the number of airports</span></li>
+        <li class=""><span class="lab">C</span><span>the price of a single share only</span></li>
+        <li class="correct"><span class="lab">D</span><span>how cheaply or dearly banks lend, and thus borrowing across the economy</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Changing the benchmark rate affects how cheaply banks lend, shaping borrowing across the economy. It does not set building heights, airport counts, or one share's price.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">'Inflation', which the RBI tries to keep in check, is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a general rise in prices over time, so money buys less</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a fall in prices, so money buys more</span></li>
+        <li class=""><span class="lab">C</span><span>the printing of cheques</span></li>
+        <li class=""><span class="lab">D</span><span>a share of company profit</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Inflation (Latin inflare, 'to blow up') is a general rise in prices, reducing money's buying power; the RBI tries to control it. It is not falling prices, cheques, or a dividend.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">The RBI trying to keep inflation in check helps because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>rising prices always help everyone</span></li>
+        <li class=""><span class="lab">B</span><span>the value of money does not matter</span></li>
+        <li class="correct"><span class="lab">C</span><span>stable prices protect the value of people's money</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>inflation is good without limit</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Keeping inflation in check protects the value of money. Runaway rising prices erode savings, money's value does matter, and unlimited inflation is harmful.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">A 'cheque' is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a paper instrument that orders a bank to pay a named person from your account</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a unit of ownership in a company</span></li>
+        <li class=""><span class="lab">C</span><span>the central bank of India</span></li>
+        <li class=""><span class="lab">D</span><span>the interest on a deposit</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A cheque orders a bank to pay a named person from your account. A company unit is a share, the central bank is the RBI, and interest is a separate thing.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">Compared with a paper cheque, an electronic transfer is usually:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>much slower than a cheque</span></li>
+        <li class=""><span class="lab">B</span><span>impossible to do</span></li>
+        <li class=""><span class="lab">C</span><span>a way to print new money</span></li>
+        <li class="correct"><span class="lab">D</span><span>faster, moving money between accounts almost instantly</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Electronic transfers move money between accounts almost instantly, faster than a cheque. They are not slower, impossible, or money-printing.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">Whether by cheque or electronic transfer, what actually moves is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a brand-new currency each time</span></li>
+        <li class="correct"><span class="lab">B</span><span>the same rupees, between bank accounts</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>company shares</span></li>
+        <li class=""><span class="lab">D</span><span>printed paper notes only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cheques and electronic transfers move the same rupees between accounts. They do not create a new currency, move shares, or require paper notes.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">'UPI' stands for:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a unit of ownership in a company</span></li>
+        <li class=""><span class="lab">B</span><span>the central bank of India</span></li>
+        <li class=""><span class="lab">C</span><span>a paper cheque</span></li>
+        <li class="correct"><span class="lab">D</span><span>Unified Payments Interface, an instant electronic payment system used on a smartphone</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>UPI is the Unified Payments Interface, an instant smartphone payment system. A company unit is a share, the central bank is the RBI, and a cheque is paper.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">UPI is described in the chapter as:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>'India's gift to the world'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a foreign invention India copied</span></li>
+        <li class=""><span class="lab">C</span><span>a kind of paper cheque</span></li>
+        <li class=""><span class="lab">D</span><span>the central bank</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>UPI is called 'India's gift to the world'. It is not a foreign copy, a paper cheque, or the central bank.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">Paying a shopkeeper instantly by scanning a code on your phone uses:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a paper cheque</span></li>
+        <li class="correct"><span class="lab">B</span><span>UPI, moving rupees between bank accounts</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a company share</span></li>
+        <li class=""><span class="lab">D</span><span>a fixed deposit</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A phone-code instant payment is UPI, moving rupees between accounts. It is not a cheque, a share, or a fixed deposit.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">UPI and electronic transfers are best described as:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>faster ways to move the same money, not a new kind of money</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a brand-new currency replacing the rupee</span></li>
+        <li class=""><span class="lab">C</span><span>a form of barter</span></li>
+        <li class=""><span class="lab">D</span><span>company shares</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>UPI and electronic transfers move the same rupees faster - new methods, not new money. They are not a new currency, barter, or shares.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">A 'share' is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>money deposited in a savings account</span></li>
+        <li class=""><span class="lab">B</span><span>a loan from a bank</span></li>
+        <li class="correct"><span class="lab">C</span><span>a unit of ownership in a company; buying one makes you a part-owner</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the benchmark interest rate</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A share is a unit of ownership in a company, making the buyer a part-owner. It is not a deposit, a loan, or the benchmark rate.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">The 'stock market' is a place where people:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>buy and sell shares in companies</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>deposit money for safekeeping only</span></li>
+        <li class=""><span class="lab">C</span><span>print the country's currency</span></li>
+        <li class=""><span class="lab">D</span><span>take out home loans</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The stock market is where shares in companies are bought and sold. Safe deposits are at banks, currency is printed by the RBI, and home loans come from banks.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">Buying a share in a company makes you:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a part-owner of that company</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a lender to the bank</span></li>
+        <li class=""><span class="lab">C</span><span>an employee of the company</span></li>
+        <li class=""><span class="lab">D</span><span>the owner of the whole company</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Buying a share makes you a part-owner of the company. It does not make you a bank lender, an employee, or the sole owner.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">A 'dividend' is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the share of a company's profit paid to each shareholder</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the interest a bank pays on a deposit</span></li>
+        <li class=""><span class="lab">C</span><span>the original sum saved</span></li>
+        <li class=""><span class="lab">D</span><span>a paper cheque</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A dividend (Latin dividendum, 'a thing to be divided') is a shareholder's share of company profit. Deposit interest, the principal and a cheque are different.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">A shareholder may earn money when the company:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only when it goes bankrupt</span></li>
+        <li class="correct"><span class="lab">B</span><span>makes a profit and pays a dividend, or the share's price rises</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>only by printing money</span></li>
+        <li class=""><span class="lab">D</span><span>only by issuing cheques</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A shareholder earns through dividends from profit or a rising share price. Bankruptcy, printing money and cheques are not how shareholders earn.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">The stock market is part of India's:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>transport infrastructure</span></li>
+        <li class=""><span class="lab">B</span><span>social infrastructure</span></li>
+        <li class="correct"><span class="lab">C</span><span>financial infrastructure</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>energy infrastructure</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The stock market is financial infrastructure. It is not transport, social, or energy infrastructure.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">The claim 'buying shares is just like a savings account - the money is sure to grow' is wrong because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>shares always grow faster than savings, with no risk</span></li>
+        <li class=""><span class="lab">B</span><span>shares can never lose value</span></li>
+        <li class="correct"><span class="lab">C</span><span>shares can rise OR fall with the company and the market, so they carry real risk</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a savings account is riskier than shares</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Shares can rise or fall, carrying real risk, unlike a fixed-interest savings deposit. They are not risk-free, can lose value, and are riskier than savings, not less.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">A key difference between a savings deposit and a share is that a savings deposit:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>is safe and earns fixed interest, while a share is an investment that can gain or lose value</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>can lose value while a share is always safe</span></li>
+        <li class=""><span class="lab">C</span><span>is a company ownership unit while a share is a deposit</span></li>
+        <li class=""><span class="lab">D</span><span>pays a dividend while a share pays interest</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A savings deposit is safe with fixed interest; a share can gain or lose value. The other options reverse or confuse the two.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">Shares are best described as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a guaranteed, risk-free way to grow money</span></li>
+        <li class=""><span class="lab">B</span><span>the same as a fixed deposit</span></li>
+        <li class="correct"><span class="lab">C</span><span>an investment carrying risk, not a guaranteed saving</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>money kept in a locker</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Shares are a risky investment, not a guaranteed saving. They are not risk-free, the same as a fixed deposit, or locker money.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">The claim 'it's fine to share your OTP if the caller says they are from your bank' is wrong because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>banks always need your OTP over the phone</span></li>
+        <li class=""><span class="lab">B</span><span>sharing an OTP keeps your money safe</span></li>
+        <li class=""><span class="lab">C</span><span>only foreigners commit fraud</span></li>
+        <li class="correct"><span class="lab">D</span><span>a genuine bank never asks for your OTP, PIN or password - anyone who does is trying to commit fraud</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A genuine bank never asks for your OTP, PIN or password; anyone who does is a fraudster. Sharing it endangers your money, and fraud is not foreigner-only.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">To stay safe with digital money, you should:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>share your PIN with any caller</span></li>
+        <li class=""><span class="lab">B</span><span>write your password on your card</span></li>
+        <li class=""><span class="lab">C</span><span>post your OTP online</span></li>
+        <li class="correct"><span class="lab">D</span><span>never share your OTP, PIN or password with anyone</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Staying safe means never sharing your OTP, PIN or password. Sharing them with callers, writing them on cards, or posting them online invites fraud.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">If someone calls pretending to be from your bank and asks for your OTP, you should:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>refuse, and report it on the cyber-fraud helpline 1930</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>give them the OTP immediately</span></li>
+        <li class=""><span class="lab">C</span><span>give them your PIN as well</span></li>
+        <li class=""><span class="lab">D</span><span>thank them and send money</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Refuse to share the OTP and report the fraud attempt on helpline 1930. Giving the OTP or PIN, or sending money, would help the fraudster.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">The cyber-fraud helpline number given in the chapter is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1935</span></li>
+        <li class="correct"><span class="lab">B</span><span>1930</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>2014</span></li>
+        <li class=""><span class="lab">D</span><span>1853</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The cyber-fraud helpline is 1930. 1935 is the RBI's founding year, 2014 Jan Dhan, and 1853 the railways.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">The word 'bank' comes from the Italian 'banca', meaning:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'cheque'</span></li>
+        <li class=""><span class="lab">B</span><span>'currency'</span></li>
+        <li class=""><span class="lab">C</span><span>'company'</span></li>
+        <li class="correct"><span class="lab">D</span><span>'bench' - medieval moneylenders worked at benches in markets</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bank is from Italian banca ('bench'); a failed moneylender had his banca rotta ('broken bench'), giving 'bankrupt'. It is not from cheque, currency, or company.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">The word 'bankrupt' comes from 'banca rotta', meaning:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a full vault of gold</span></li>
+        <li class=""><span class="lab">B</span><span>a new company share</span></li>
+        <li class=""><span class="lab">C</span><span>a printed bank note</span></li>
+        <li class="correct"><span class="lab">D</span><span>a 'broken bench' - a moneylender who had failed</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bankrupt comes from banca rotta ('broken bench'), a failed moneylender. It is not a gold vault, a share, or a note.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">'Finance', from the Latin 'finis' ('end'), once meant settling a debt and now means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the management of money - saving, lending and investing</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the building of roads</span></li>
+        <li class=""><span class="lab">C</span><span>the flying of aircraft</span></li>
+        <li class=""><span class="lab">D</span><span>the growing of crops</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Finance (Latin finis, 'end') now means managing money - saving, lending and investing. It is not road-building, aviation, or farming.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">A student says, 'A bank just stores money in a locker, the RBI is where I open my account, and shares are a safe, sure way to grow money.' The best correction is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>all three statements are correct</span></li>
+        <li class=""><span class="lab">B</span><span>a bank stores money but the RBI is for accounts</span></li>
+        <li class=""><span class="lab">C</span><span>shares are safe but a bank does lend money</span></li>
+        <li class="correct"><span class="lab">D</span><span>a bank lends most deposits out, the RBI is the banker to banks (not for ordinary accounts), and shares carry real risk</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A bank lends most deposits out, the RBI is the banker to banks (not for ordinary accounts), and shares carry real risk - correcting all three errors. The other options keep one or more misconceptions.</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

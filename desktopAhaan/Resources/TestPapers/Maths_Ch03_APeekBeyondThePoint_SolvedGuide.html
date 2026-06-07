@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>APeek Beyond The Point — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>APeek Beyond The Point<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">A screw reaches the 7th small mark past 2 on a ruler whose centimetres are each split into 10 equal parts. Its length is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2.07 cm</span></li>
+        <li class="correct"><span class="lab">B</span><span>2.7 cm</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>2.17 cm</span></li>
+        <li class=""><span class="lab">D</span><span>0.27 cm</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The space from 2 to 3 is split into 10 tenths; the 7th mark past 2 is 2 and 7 tenths = 2.7 cm. (2.07 would be 7 hundredths — the "put the digit in the wrong place" trap.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">How many wholes and tenths make up 34 tenths (34/10)?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>34 wholes and 0 tenths</span></li>
+        <li class="correct"><span class="lab">B</span><span>3 wholes and 4 tenths</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>4 wholes and 3 tenths</span></li>
+        <li class=""><span class="lab">D</span><span>30 wholes and 4 tenths</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>34 tenths = 30 tenths + 4 tenths. Since 10 tenths = 1 whole, 30 tenths = 3 wholes. So 34/10 = 3 wholes and 4 tenths. (Reading the digits straight off as "4 wholes 3 tenths" reverses them — trap C.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">The first place to the right of the decimal point is called the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>oneths place</span></li>
+        <li class=""><span class="lab">B</span><span>hundredths place</span></li>
+        <li class="correct"><span class="lab">C</span><span>tenths place</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>units place</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>There is no "oneths" place. Immediately right of the point is the TENTHS place, then hundredths, then thousandths.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">How many hundredths are there in one whole unit?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>10</span></li>
+        <li class=""><span class="lab">B</span><span>1000</span></li>
+        <li class=""><span class="lab">C</span><span>50</span></li>
+        <li class="correct"><span class="lab">D</span><span>100</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A unit holds 10 tenths and each tenth holds 10 hundredths, so a whole holds 10 × 10 = 100 hundredths. (10 is hundredths-in-a-tenth — the trap.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">An 8 9/10-unit sheet is folded exactly in half along its length. Its new length is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4.95 units</span></li>
+        <li class=""><span class="lab">B</span><span>4.5 units</span></li>
+        <li class=""><span class="lab">C</span><span>4.4 units</span></li>
+        <li class="correct"><span class="lab">D</span><span>4.45 units</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Half of 8 9/10 = 8.9 ÷ 2 = 4.45 units. It falls between 4.4 and 4.5, exactly at 4 and 45 hundredths. (4.5 is the careless "round up" answer.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">In the number 47.305, the value of the digit 3 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>3</span></li>
+        <li class="correct"><span class="lab">B</span><span>0.3</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>0.03</span></li>
+        <li class=""><span class="lab">D</span><span>0.003</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In 47.305 the 3 is in the tenths place, so its value is 3 tenths = 0.3. (0.03 mistakes it for hundredths.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">Which of these decimals is the largest?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>0.4</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>0.04</span></li>
+        <li class=""><span class="lab">C</span><span>0.39</span></li>
+        <li class=""><span class="lab">D</span><span>0.198</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Compare from the left. Tenths digits: 0.4 → 4, 0.39 → 3, 0.198 → 1, 0.04 → 0. The largest tenths digit wins: 0.4. (Picking 0.39 because "more digits" is the classic length trap.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">Written as a decimal, the fraction 7/100 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0.7</span></li>
+        <li class=""><span class="lab">B</span><span>7.0</span></li>
+        <li class="correct"><span class="lab">C</span><span>0.07</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>0.007</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>7/100 means 7 hundredths = 0.07. (0.7 = 7 tenths = 70/100; 0.007 = 7 thousandths.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">Arrange in increasing order: 0.5, 0.45, 0.405, 0.054.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0.5, 0.45, 0.405, 0.054</span></li>
+        <li class=""><span class="lab">B</span><span>0.054, 0.45, 0.405, 0.5</span></li>
+        <li class="correct"><span class="lab">C</span><span>0.054, 0.405, 0.45, 0.5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>0.405, 0.45, 0.5, 0.054</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Pad to thousandths: 0.500, 0.450, 0.405, 0.054. Increasing: 0.054 &lt; 0.405 &lt; 0.45 &lt; 0.5. So (C).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">Which list contains numbers that are ALL equal to one another?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>4.5, 4.50, 4.500</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>4.5, 4.05, 4.005</span></li>
+        <li class=""><span class="lab">C</span><span>0.5, 0.50, 0.05</span></li>
+        <li class=""><span class="lab">D</span><span>4.5, 45.0, 0.45</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Trailing zeros never change a value: 4.5 = 4.50 = 4.500 (all four and five tenths). In (B) the digits sit in different places (4.05, 4.005 differ); (C) has 0.05 ≠ 0.5; (D) mixes 0.45 in. So (A).</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">The sum 12.7 + 3.45 + 0.8 equals:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>16.15</span></li>
+        <li class=""><span class="lab">B</span><span>25.5</span></li>
+        <li class=""><span class="lab">C</span><span>15.95</span></li>
+        <li class="correct"><span class="lab">D</span><span>16.95</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Align points: 12.70 + 3.45 + 0.80. Hundredths: 0+5+0=5; tenths: 7+4+8=19 → write 9, carry 1; ones: 2+3+0+1=6; tens: 1. Total 16.95. (16.15 drops the tenths carry; 25.5 is a misalignment slip.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">A ribbon is 2.5 m long. Pieces of 0.85 m and 1.2 m are cut off. The length remaining is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0.35 m</span></li>
+        <li class=""><span class="lab">B</span><span>0.55 m</span></li>
+        <li class="correct"><span class="lab">C</span><span>0.45 m</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>1.45 m</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>2.5 − 0.85 − 1.2 = 2.50 − 0.85 = 1.65; 1.65 − 1.20 = 0.45 m. (0.55 mis-borrows; 1.45 forgets one cut.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">The fraction equal to the decimal 0.08 in its simplest form is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>8/10</span></li>
+        <li class="correct"><span class="lab">B</span><span>2/25</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>1/8</span></li>
+        <li class=""><span class="lab">D</span><span>4/5</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>0.08 = 8/100. Divide top and bottom by 4: 2/25. (8/10 misreads the place; 1/8 = 0.125.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">A number is "4 ones, 0 tenths, 7 hundredths, 2 thousandths". Adding 0.5 to it gives:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4.122</span></li>
+        <li class=""><span class="lab">B</span><span>9.072</span></li>
+        <li class=""><span class="lab">C</span><span>4.077</span></li>
+        <li class="correct"><span class="lab">D</span><span>4.572</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"4 ones, 0 tenths, 7 hundredths, 2 thousandths" = 4.072. Adding 0.5 (= 5 tenths): 4.072 + 0.500 = 4.572. (4.122 wrongly adds 0.5 into the hundredths; 9.072 adds 5 instead of 0.5.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">Expressed as a sum of place values, 2.745 equals:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2 + 5/10 + 4/100 + 7/1000</span></li>
+        <li class=""><span class="lab">B</span><span>2 + 7/100 + 4/1000 + 5/10000</span></li>
+        <li class=""><span class="lab">C</span><span>2 + 4/10 + 7/100 + 5/1000</span></li>
+        <li class="correct"><span class="lab">D</span><span>2 + 7/10 + 4/100 + 5/1000</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>2.745 = 2 ones + 7 tenths + 4 hundredths + 5 thousandths = 2 + 7/10 + 4/100 + 5/1000. (Option A scrambles the tenths and thousandths digits.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">On the number line, 1.04 lies between:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>1.0 and 1.1</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>1.4 and 1.5</span></li>
+        <li class=""><span class="lab">C</span><span>1 and 2, exactly at the 4th tenth-mark</span></li>
+        <li class=""><span class="lab">D</span><span>0 and 1</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>1.04 = 1 unit + 0 tenths + 4 hundredths, so it sits between 1.0 and 1.1 (just past 1, at the 4th hundredth-mark). It does NOT reach the 4th tenth-mark — that would be 1.4.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">Which decimal is exactly halfway between 0.3 and 0.4?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0.7</span></li>
+        <li class=""><span class="lab">B</span><span>0.34</span></li>
+        <li class="correct"><span class="lab">C</span><span>0.35</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>0.30</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Halfway between 0.30 and 0.40 is their average: (0.30 + 0.40) ÷ 2 = 0.70 ÷ 2 = 0.35. (0.34 is not the midpoint; 0.7 is the sum, not the midpoint.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">Reading 6.305, the correct words are:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>six and three hundred five thousandths</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>six point three zero five</span></li>
+        <li class=""><span class="lab">C</span><span>six and thirty-five hundredths</span></li>
+        <li class=""><span class="lab">D</span><span>sixty-three point five</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>6.305 = 6 ones and 305 thousandths, read "six and three hundred five thousandths". (B) just names digits; (C) "thirty-five hundredths" = 0.35, wrong.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">Which of the following is true?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0.6 &lt; 0.59</span></li>
+        <li class=""><span class="lab">B</span><span>0.6 = 0.06</span></li>
+        <li class="correct"><span class="lab">C</span><span>0.6 &gt; 0.59</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>0.6 &lt; 0.060</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Compare 0.6 and 0.59: tenths 6 vs 5, so 0.6 &gt; 0.59. (0.6 = 0.60 &gt; 0.59 by one hundredth.) The other statements are false.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">Sonu's lower arm is 2 7/10 units and his upper arm is 3 6/10 units. The total length is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>6.3 units</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>5.13 units</span></li>
+        <li class=""><span class="lab">C</span><span>6.13 units</span></li>
+        <li class=""><span class="lab">D</span><span>5.3 units</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>2 7/10 + 3 6/10 = 2.7 + 3.6. Tenths 7+6 = 13 → 3 tenths, carry 1; ones 2+3+1 = 6. Total 6.3 units. (5.3 forgets the carry.)</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">Subtract: 7.2 − 3.45.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4.75</span></li>
+        <li class="correct"><span class="lab">B</span><span>3.75</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>3.85</span></li>
+        <li class=""><span class="lab">D</span><span>4.65</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>7.2 − 3.45 = 7.20 − 3.45. Hundredths 0−5 borrow → 10−5=5; tenths 1−4 borrow → 11−4=7; ones 6−3=3. Result 3.75. (4.75 forgets a borrow.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">The decimal 0.25 is the same as the fraction:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1/2</span></li>
+        <li class=""><span class="lab">B</span><span>2/5</span></li>
+        <li class="correct"><span class="lab">C</span><span>1/4</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>1/25</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>0.25 = 25/100 = 1/4. (1/2 = 0.5, 2/5 = 0.4, 1/25 = 0.04.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">Which number is the smallest?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>0.009</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>0.1</span></li>
+        <li class=""><span class="lab">C</span><span>0.011</span></li>
+        <li class=""><span class="lab">D</span><span>0.02</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Pad to thousandths: 0.009, 0.100, 0.011, 0.020. Smallest is 0.009. (Picking 0.011 over 0.02 by "more digits" is the trap; comparing place by place, 0.009 &lt; 0.011 &lt; 0.02 &lt; 0.1.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">Petrol costs ₹96.726 per litre. Rounded to the nearest paise (two decimal places) this is about:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>₹96.72</span></li>
+        <li class=""><span class="lab">B</span><span>₹96.7</span></li>
+        <li class="correct"><span class="lab">C</span><span>₹96.73</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>₹97.26</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>₹96.726 → look at the third decimal (6 ≥ 5), so round the hundredths up: 96.73. (96.72 truncates instead of rounding; 96.7 rounds too far.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">What number must be added to 3.6 to make 5?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>8.6</span></li>
+        <li class=""><span class="lab">B</span><span>2.4</span></li>
+        <li class=""><span class="lab">C</span><span>1.6</span></li>
+        <li class="correct"><span class="lab">D</span><span>1.4</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>5 − 3.6 = 5.0 − 3.6 = 1.4. Check: 3.6 + 1.4 = 5.0. ✓ (2.4 = 6 − 3.6 slip; 1.6 = 5 − 3.4 slip.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">The place value of the 8 in 5.182 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>8 tenths</span></li>
+        <li class=""><span class="lab">B</span><span>8 thousandths</span></li>
+        <li class=""><span class="lab">C</span><span>8 ones</span></li>
+        <li class="correct"><span class="lab">D</span><span>8 hundredths</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In 5.182 the 8 is in the hundredths place → 8 hundredths. (Tenths would be the 1; thousandths the 2.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">A pencil costs ₹4.75 and an eraser ₹2.50. Paying with a ₹10 note, the change received is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>₹3.25</span></li>
+        <li class="correct"><span class="lab">B</span><span>₹2.75</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>₹2.25</span></li>
+        <li class=""><span class="lab">D</span><span>₹3.75</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cost = 4.75 + 2.50 = 7.25. Change = 10.00 − 7.25 = 2.75. (3.25 = 10 − 6.75 slip; 2.25 mis-borrows.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">Which of these is NOT equal to 4.5?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4.50</span></li>
+        <li class=""><span class="lab">B</span><span>4.500</span></li>
+        <li class="correct"><span class="lab">C</span><span>4.05</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>04.50</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>4.50, 4.500, 04.50 all equal 4.5 (trailing/leading zeros add nothing). But 4.05 = 4 and 5 hundredths ≠ 4.5. So the one NOT equal is (C).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">Going from 0.7 to 1.2 in steps of 0.1, how many steps are needed?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4</span></li>
+        <li class="correct"><span class="lab">B</span><span>5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>6</span></li>
+        <li class=""><span class="lab">D</span><span>12</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>From 0.7 to 1.2 is a rise of 0.5; in steps of 0.1 that is 0.5 ÷ 0.1 = 5 steps (0.7→0.8→0.9→1.0→1.1→1.2). So 5.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">The difference between the largest and smallest of 0.6, 0.66, 0.06, 0.606 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0.66</span></li>
+        <li class="correct"><span class="lab">B</span><span>0.6</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>0.546</span></li>
+        <li class=""><span class="lab">D</span><span>0.606</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Largest is 0.66, smallest is 0.06. 0.66 − 0.06 = 0.60 = 0.6. (0.606 is not the extreme; 0.546 = 0.606 − 0.06 mis-picks the largest.)</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">Three rods of lengths 0.45 m, 1.2 m and 0.8 m are joined end to end. The total length is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>2.45 m</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>1.53 m</span></li>
+        <li class=""><span class="lab">C</span><span>2.05 m</span></li>
+        <li class=""><span class="lab">D</span><span>2.35 m</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>0.45 + 1.2 + 0.8 = 0.45 + 1.20 + 0.80. Hundredths 5; tenths 4+2+8=14 → 4, carry 1; ones 0+1+0+1=2. Total 2.45 m. (2.05 drops the tenths carry.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">The decimal for 3/5 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0.35</span></li>
+        <li class="correct"><span class="lab">B</span><span>0.6</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>0.3</span></li>
+        <li class=""><span class="lab">D</span><span>3.5</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>3/5 = 6/10 = 0.6. (0.35 reads the digits literally; 0.3 confuses 3/5 with 3/10.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">Counting up by hundredths, the number that comes just after 4.99 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4.991</span></li>
+        <li class="correct"><span class="lab">B</span><span>5.00</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>4.100</span></li>
+        <li class=""><span class="lab">D</span><span>5.99</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Counting by hundredths, after 4.99 comes 4.99 + 0.01 = 5.00. (4.991 jumps to thousandths; 5.99 jumps by a whole.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">Which sum is correct?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>0.3 + 0.4 = 0.7</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>0.3 + 0.4 = 0.07</span></li>
+        <li class=""><span class="lab">C</span><span>0.3 + 0.4 = 0.34</span></li>
+        <li class=""><span class="lab">D</span><span>0.3 + 0.4 = 7.0</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Add 0.3 + 0.4" → tenths 3 + 4 = 7 tenths = 0.7. (0.07 puts it in hundredths; the others misplace the digit.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">In the number 2.745, the digit with place value 4/100 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2</span></li>
+        <li class=""><span class="lab">B</span><span>7</span></li>
+        <li class=""><span class="lab">C</span><span>5</span></li>
+        <li class="correct"><span class="lab">D</span><span>4</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Place value 4/100 means a digit worth 4 hundredths. In 2.745 the hundredths digit is 4. So the digit is 4.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">A jug holds 1.5 L. After pouring out 0.75 L, the amount left is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>0.75 L</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>0.85 L</span></li>
+        <li class=""><span class="lab">C</span><span>1.25 L</span></li>
+        <li class=""><span class="lab">D</span><span>0.5 L</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>1.5 − 0.75 = 1.50 − 0.75 = 0.75 L. Check: 0.75 + 0.75 = 1.50. ✓ (1.25 mis-borrows; 0.5 subtracts only 1.0.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">How many tenths are there in 2.3?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>23</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>5</span></li>
+        <li class=""><span class="lab">C</span><span>230</span></li>
+        <li class=""><span class="lab">D</span><span>2.3</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>2.3 = 23 tenths (2 wholes = 20 tenths, plus 3 tenths). So 23. (5 = 2+3 careless; 230 = number of hundredths.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">Which decimal equals 1 1/4?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1.14</span></li>
+        <li class=""><span class="lab">B</span><span>1.4</span></li>
+        <li class="correct"><span class="lab">C</span><span>1.25</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>1.025</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>1 1/4 = 1 + 0.25 = 1.25. (1.4 confuses 1/4 with 4 tenths; 1.14 places the 1 wrongly.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">The value of 5 − 0.5 − 0.05 is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>4.45</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>4.5</span></li>
+        <li class=""><span class="lab">C</span><span>4.95</span></li>
+        <li class=""><span class="lab">D</span><span>4.4</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>5 − 0.5 − 0.05 = 5.00 − 0.50 = 4.50; 4.50 − 0.05 = 4.45. (4.5 forgets the hundredths subtraction; 4.95 subtracts only 0.05.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">A wire 2.5 m long is cut into 5 equal pieces. Each piece is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0.25 m</span></li>
+        <li class=""><span class="lab">B</span><span>0.05 m</span></li>
+        <li class=""><span class="lab">C</span><span>5 m</span></li>
+        <li class="correct"><span class="lab">D</span><span>0.5 m</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>2.5 m ÷ 5 = 0.5 m each. Check: 0.5 × 5 = 2.5. ✓ (0.05 misplaces the decimal; 5 forgets to divide.)</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">Which of these is greater than 0.5 but less than 0.6?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>0.56</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>0.06</span></li>
+        <li class=""><span class="lab">C</span><span>0.65</span></li>
+        <li class=""><span class="lab">D</span><span>0.49</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Need a number with tenths digit 5 and more than 0.50: 0.56 (between 0.5 and 0.6). 0.49 &lt; 0.5; 0.65 &gt; 0.6; 0.06 far below. So (A).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">When you write 0.2, 0.02 and 0.002, each is how many times the next?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>100 times</span></li>
+        <li class=""><span class="lab">B</span><span>2 times</span></li>
+        <li class=""><span class="lab">C</span><span>the same size</span></li>
+        <li class="correct"><span class="lab">D</span><span>10 times larger</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Going 0.2 → 0.02 → 0.002, the 2 shifts one place smaller each time, so each number is 10 times the one after it; equivalently 0.2 is 10 times larger than 0.02. So "10 times larger". (100 times confuses two shifts; "same size" is the zero-dilemma misconception.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">A box weighs 3.25 kg empty and 8.1 kg when full. The contents weigh:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5.85 kg</span></li>
+        <li class="correct"><span class="lab">B</span><span>4.85 kg</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>5.15 kg</span></li>
+        <li class=""><span class="lab">D</span><span>11.35 kg</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Contents = full − empty = 8.1 − 3.25 = 8.10 − 3.25 = 4.85 kg. (5.85 / 5.15 are borrow slips; 11.35 adds instead of subtracts.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">The number 0.405 read as a fraction over 1000 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>45/1000</span></li>
+        <li class=""><span class="lab">B</span><span>4050/1000</span></li>
+        <li class=""><span class="lab">C</span><span>405/100</span></li>
+        <li class="correct"><span class="lab">D</span><span>405/1000</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>0.405 = 405 thousandths = 405/1000. (45/1000 drops the 0; 405/100 = 4.05 wrong place; 4050/1000 = 4.05 too.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">Which point is closest to 3 on the number line?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>3.2</span></li>
+        <li class=""><span class="lab">B</span><span>2.85</span></li>
+        <li class="correct"><span class="lab">C</span><span>3.09</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>2.7</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Distances to 3: |3.09−3| = 0.09, |2.85−3| = 0.15, |3.2−3| = 0.2, |2.7−3| = 0.3. Smallest is 0.09, so 3.09 is closest. (3.2 looks "just past 3" but 0.2 &gt; 0.09.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">A shopkeeper sells cloth at ₹85.50 per metre. The cost of 2 metres is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>₹170.00</span></li>
+        <li class="correct"><span class="lab">B</span><span>₹171.00</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>₹170.50</span></li>
+        <li class=""><span class="lab">D</span><span>₹85.50</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>85.50 × 2 = 171.00. (Tenths/hundredths: 85.50 + 85.50 = 171.00.) (₹170.00 forgets the 50 paise twice; ₹170.50 doubles only the rupees.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">Which is the correct ascending order of 0.2, 0.02, 0.002, 0.22?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0.2, 0.22, 0.02, 0.002</span></li>
+        <li class=""><span class="lab">B</span><span>0.22, 0.2, 0.02, 0.002</span></li>
+        <li class=""><span class="lab">C</span><span>0.02, 0.002, 0.2, 0.22</span></li>
+        <li class="correct"><span class="lab">D</span><span>0.002, 0.02, 0.2, 0.22</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Pad to thousandths and order: 0.002, 0.020, 0.200, 0.220 → ascending 0.002, 0.02, 0.2, 0.22. So (D). (Option A is descending-tail confusion.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">Compute 75.345 + 86.691.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>161.036</span></li>
+        <li class=""><span class="lab">B</span><span>162.936</span></li>
+        <li class="correct"><span class="lab">C</span><span>162.036</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>161.936</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Align: 75.345 + 86.691. Thousandths 5+1=6; hundredths 4+9=13 → 3 carry 1; tenths 3+6+1=10 → 0 carry 1; ones 5+6+1=12 → 2 carry 1; tens 7+8+1=16. Total 162.036. (161.936 mishandles a carry.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">A digital scale reads 0.7 kg, but the true value has an extra 3 hundredths. The true value is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0.37 kg</span></li>
+        <li class=""><span class="lab">B</span><span>1.0 kg</span></li>
+        <li class=""><span class="lab">C</span><span>0.703 kg</span></li>
+        <li class="correct"><span class="lab">D</span><span>0.73 kg</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"3 hundredths extra" = 0.03 added to 0.70: 0.70 + 0.03 = 0.73 kg. (0.703 puts the 3 in thousandths; 0.37 swaps the digits.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">By how much is 0.9 greater than 0.85?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0.5</span></li>
+        <li class=""><span class="lab">B</span><span>0.15</span></li>
+        <li class="correct"><span class="lab">C</span><span>0.05</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>0.04</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>0.9 − 0.85 = 0.90 − 0.85 = 0.05. (0.15 mis-borrows; 0.5 ignores the hundredths.)</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">Which fraction does NOT give a terminating (ending) decimal?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1/2</span></li>
+        <li class=""><span class="lab">B</span><span>1/4</span></li>
+        <li class=""><span class="lab">C</span><span>1/5</span></li>
+        <li class="correct"><span class="lab">D</span><span>1/3</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A fraction terminates only if its denominator (in lowest terms) uses just the primes 2 and 5. 1/2 = 0.5, 1/4 = 0.25, 1/5 = 0.2 all terminate; but 1/3 = 0.333… never ends (3 is neither 2 nor 5). So (D).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">A runner covers 100.05 m, 99.9 m and 100.5 m in three trials. The longest trial is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>99.9 m</span></li>
+        <li class=""><span class="lab">B</span><span>100.05 m</span></li>
+        <li class="correct"><span class="lab">C</span><span>100.5 m</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>all equal</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Pad to hundredths: 100.05, 99.90, 100.50. Compare whole parts: 100 &gt; 99, so 99.9 is out. Between 100.05 and 100.50, tenths 0 vs 5 → 100.5 is larger. So (C).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">The number 6 tenths + 8 thousandths, with no hundredths, is written:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0.68</span></li>
+        <li class="correct"><span class="lab">B</span><span>0.608</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>0.680</span></li>
+        <li class=""><span class="lab">D</span><span>0.0608</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>6 tenths + 0 hundredths + 8 thousandths = 0.608. (0.68 drops the hundredths place and shifts the 8; 0.680 = 6 tenths 8 hundredths.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">Two pieces of string measure 1.35 m and 1.6 m. Their total length is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1.51 m</span></li>
+        <li class="correct"><span class="lab">B</span><span>2.95 m</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>2.41 m</span></li>
+        <li class=""><span class="lab">D</span><span>3.01 m</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>1.35 + 1.6 = 1.35 + 1.60. Hundredths 5; tenths 3+6=9; ones 1+1=2. Total 2.95 m. (1.51 mis-aligns the ends instead of the points — the alignment trap.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">The decimal point in a number separates the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>tens from the units</span></li>
+        <li class=""><span class="lab">B</span><span>tenths from the hundredths</span></li>
+        <li class="correct"><span class="lab">C</span><span>whole part from the fractional part</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>positive from the negative part</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The decimal point separates the whole (units and up) part from the fractional (tenths and down) part. (It is not between tens/units or tenths/hundredths.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">Sara spent ₹12.50, ₹6.75 and ₹0.80. She started with ₹25. She has left:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>₹4.95</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>₹5.05</span></li>
+        <li class=""><span class="lab">C</span><span>₹5.95</span></li>
+        <li class=""><span class="lab">D</span><span>₹4.05</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Spent = 12.50 + 6.75 + 0.80 = 20.05. Left = 25.00 − 20.05 = 4.95. (5.05 mis-borrows; 4.05 drops a carry in the sum.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">Which of these decimals lies between 4.4 and 4.5?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>4.45</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>4.5</span></li>
+        <li class=""><span class="lab">C</span><span>4.04</span></li>
+        <li class=""><span class="lab">D</span><span>4.54</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A number between 4.4 and 4.5 must keep 4.4… with the next digit 0–9: 4.45 fits (4.40 &lt; 4.45 &lt; 4.50). 4.04 and 4.54 are outside; 4.5 is the endpoint, not between. So (A).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">The greatest decimal you can write using each of the digits 3, 0 and 5 once, with one digit before the point, is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>5.30</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>5.03</span></li>
+        <li class=""><span class="lab">C</span><span>0.53</span></li>
+        <li class=""><span class="lab">D</span><span>3.50</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Greatest value: put the biggest digit before the point and arrange the rest in descending order → 5.30. (5.03 is smaller in the hundredths; 3.50 has a smaller whole part; 0.53 &lt; 1.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">A jump of 0.1 on the number line, starting at 0.95, lands on:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0.96</span></li>
+        <li class="correct"><span class="lab">B</span><span>1.05</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>0.105</span></li>
+        <li class=""><span class="lab">D</span><span>1.5</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>0.95 + 0.1 = 0.95 + 0.10 = 1.05. (0.96 adds only 0.01; 0.105 mis-shifts the place; 1.5 adds 0.55.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">The total of 0.125, 0.875 and 0.5 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1.0</span></li>
+        <li class=""><span class="lab">B</span><span>1.25</span></li>
+        <li class=""><span class="lab">C</span><span>0.15</span></li>
+        <li class="correct"><span class="lab">D</span><span>1.5</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>0.125 + 0.875 + 0.5: 0.125 + 0.875 = 1.000; 1.000 + 0.5 = 1.5. (1.25 leaves the 0.5 as 0.05; 0.15 mis-aligns.) --- *Solutions complete: 60 / 60.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

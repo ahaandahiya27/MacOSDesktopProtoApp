@@ -1909,6 +1909,73 @@
 		7B99FB40034B50EB0B5EDF37 /* SocialScience_Ssch19_Infrastructure.pdf in Resources */ = {isa = PBXBuildFile; fileRef = B50F85CF17609EB76784B873 /* SocialScience_Ssch19_Infrastructure.pdf */; };
 		47727B371E8D8A4589147BB7 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0D40DDA8E1DF0F1329CD83A7 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance.pdf */; };
 		3DB98307F3BB343592DC7010 /* OlympiadPaperReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C083109A9F66B12919BE85A7 /* OlympiadPaperReaderView.swift */; };
+		46F3ACC42BE3EF8C7155E4AC /* Maths_Ch01_LargeNumbersAroundUs_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 89E8479A53C7F1AA26B6079A /* Maths_Ch01_LargeNumbersAroundUs_SolvedGuide.html */; };
+		8C6EA3FA058433B0DACF2675 /* Maths_Ch02_ArithmeticExpressions_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 49BBFC7E7F7FD026279114BE /* Maths_Ch02_ArithmeticExpressions_SolvedGuide.html */; };
+		DC4BB45AF7DC5BE6557A4C63 /* Maths_Ch03_APeekBeyondThePoint_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 793B9C958D70BDBAC136C82A /* Maths_Ch03_APeekBeyondThePoint_SolvedGuide.html */; };
+		14DCD552AF6ED2562106E9A4 /* Maths_Ch04_ExpressionsUsingLetterNumbers_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = D5028008A04B1CEF6A9C83BE /* Maths_Ch04_ExpressionsUsingLetterNumbers_SolvedGuide.html */; };
+		2DDF5256460EC89C7A688B72 /* Maths_Ch05_ParallelAndIntersectingLines_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 948DB09705C6E78DBD4FEEA8 /* Maths_Ch05_ParallelAndIntersectingLines_SolvedGuide.html */; };
+		9CC1A0E48996F9AFB521EFEC /* Maths_Ch06_NumberPlay_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 56303D32D75396CD795B4F6D /* Maths_Ch06_NumberPlay_SolvedGuide.html */; };
+		75566D21D7297A2599C3C512 /* Maths_Ch07_ATaleOfThreeIntersectingLines_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 4C0AB478A9D014F40F57BDD1 /* Maths_Ch07_ATaleOfThreeIntersectingLines_SolvedGuide.html */; };
+		EB7DB0FC0F4CE519D6717A4F /* Maths_Ch08_WorkingWithFractions_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 19DB93902450F3EA60462614 /* Maths_Ch08_WorkingWithFractions_SolvedGuide.html */; };
+		1C5DE57A71135AAF4F02A6D2 /* Maths_Ch09_GeometricTwins_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 4C18661A51B33CBFF2C87073 /* Maths_Ch09_GeometricTwins_SolvedGuide.html */; };
+		892A8934672CBCA838F5757E /* Maths_Ch10_OperationsWithIntegers_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 5CF9C75EBB04A0461628ED71 /* Maths_Ch10_OperationsWithIntegers_SolvedGuide.html */; };
+		993CDC38F44E2284A8CDC805 /* Maths_Ch11_FindingCommonGround_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 044E619E02F7E452D7C1DE14 /* Maths_Ch11_FindingCommonGround_SolvedGuide.html */; };
+		8D3A8A72A11D80813DFA928A /* Maths_Ch12_AnotherPeekBeyondThePoint_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = B03F8DF6D9164FF6BA8E6B7A /* Maths_Ch12_AnotherPeekBeyondThePoint_SolvedGuide.html */; };
+		9EE78D97501273C2F855DCCD /* Maths_Ch13_ConnectingTheDots_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 69CCE590947608B7D96C762E /* Maths_Ch13_ConnectingTheDots_SolvedGuide.html */; };
+		32338252CBEF31F726D60165 /* Maths_Ch14_ConstructionsAndTilings_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = BFA6C78B2454681121A7E526 /* Maths_Ch14_ConstructionsAndTilings_SolvedGuide.html */; };
+		8905FADF3E31E0D9FC15DBFF /* Sanskrit_Sch01_VandeBharatamataram_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = E09353C276A7497D2A0F2FC5 /* Sanskrit_Sch01_VandeBharatamataram_SolvedGuide.html */; };
+		77E2C7AB970D3B4E361B6787 /* Sanskrit_Sch02_NityamPibamahSubhashitarasam_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = D8E1857EE8E95D4B525B3A5A /* Sanskrit_Sch02_NityamPibamahSubhashitarasam_SolvedGuide.html */; };
+		C5393E2E837E61C0AC0BF1E5 /* Sanskrit_Sch03_MitrayaNamah_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 94972201692AC538D14E4745 /* Sanskrit_Sch03_MitrayaNamah_SolvedGuide.html */; };
+		479E5C16A263599D0CCC17E0 /* Sanskrit_Sch04_TheFoxAndTheGrapes_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = BFB6EB66081EEE9CAE11364B /* Sanskrit_Sch04_TheFoxAndTheGrapes_SolvedGuide.html */; };
+		17148AC1B1F068B969AA858F /* Sanskrit_Sch05_SevaHiParamoDharmah_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 4E82EBAEA97ADE90F89EF1EB /* Sanskrit_Sch05_SevaHiParamoDharmah_SolvedGuide.html */; };
+		229E1A5D308B90E027ED436B /* Sanskrit_Sch06_KridamaVayamShlokantyaksharim_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 11885515814113EA2D1F32EF /* Sanskrit_Sch06_KridamaVayamShlokantyaksharim_SolvedGuide.html */; };
+		CC1CD0769C59B5908198525E /* Sanskrit_Sch07_IshavasyamIdamSarvam_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = DE2CDD048C53F51FF729194A /* Sanskrit_Sch07_IshavasyamIdamSarvam_SolvedGuide.html */; };
+		CE2E5471E48842D4D427FA36 /* Sanskrit_Sch08_HitamManohariChaDurlabhamVachah_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = BB42FBA9DFA5FDED4B1AD5D5 /* Sanskrit_Sch08_HitamManohariChaDurlabhamVachah_SolvedGuide.html */; };
+		47CB37D553B51F86B9507F71 /* Sanskrit_Sch09_AnnadBhavantiBhutani_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 7DA47B59A12CE4B0EFACA13C /* Sanskrit_Sch09_AnnadBhavantiBhutani_SolvedGuide.html */; };
+		6C95F34211DB09E1E5DE7039 /* Sanskrit_Sch10_DashamahKah_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = E5F7C49F880FEA0846B81306 /* Sanskrit_Sch10_DashamahKah_SolvedGuide.html */; };
+		4651A09186F01A87DA134E5F /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 6FCAFF6D4E31E1A508CFB304 /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_SolvedGuide.html */; };
+		7237239EA50AE2B701D7A9A4 /* Sanskrit_Sch12_ViranganaPannadhaya_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 01DDE5909E30E8B2D3F0BF43 /* Sanskrit_Sch12_ViranganaPannadhaya_SolvedGuide.html */; };
+		D797BE2C1ECB903212715F61 /* Sanskrit_Sch13_VarnaMatraParichayah_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 6BF53171D63477E95497CCCB /* Sanskrit_Sch13_VarnaMatraParichayah_SolvedGuide.html */; };
+		A385FB009C9E809D80F914FD /* Sanskrit_Sch14_ShabdaRupani_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 82673F08E646F7D69E17AB8A /* Sanskrit_Sch14_ShabdaRupani_SolvedGuide.html */; };
+		9EC8471848A222D8F09A62FC /* Sanskrit_Sch15_DhaturupaniVerbConjugations_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = E70612553506E3428EBA6525 /* Sanskrit_Sch15_DhaturupaniVerbConjugations_SolvedGuide.html */; };
+		70F07141FD7CB4E30F667279 /* Science_Ch01_NutritionInPlants_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = E0B9BB9FE28EFE3F779D845F /* Science_Ch01_NutritionInPlants_SolvedGuide.html */; };
+		B6885B8CB2F965EC66427D26 /* Science_Ch02_NutritionInAnimals_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 5813B7E8951D58CA73B003A1 /* Science_Ch02_NutritionInAnimals_SolvedGuide.html */; };
+		2912D253C441AD661CC610BE /* Science_Ch03_FibreToFabric_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = E85A5AE1ADCD51E5D2D6631B /* Science_Ch03_FibreToFabric_SolvedGuide.html */; };
+		2B644C72DF86AF96912640DE /* Science_Ch04_Heat_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = BEB17D27C1E27CC03AB07B39 /* Science_Ch04_Heat_SolvedGuide.html */; };
+		B07AE47C704B20A9F765878D /* Science_Ch05_AcidsBasesAndSalts_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = F67D29E77B6503F99043686B /* Science_Ch05_AcidsBasesAndSalts_SolvedGuide.html */; };
+		037EA5B21FBA699644A99674 /* Science_Ch06_PhysicalAndChemicalChanges_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 45CBAA509C6DCCE475DD7259 /* Science_Ch06_PhysicalAndChemicalChanges_SolvedGuide.html */; };
+		590F4135143EE3CB0841B984 /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = EDAE812D187E2A4AD419B770 /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_SolvedGuide.html */; };
+		08FB02951ADC1D2CB61F3B92 /* Science_Ch08_WindsStormsAndCyclones_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 3F5129844FD2628375DF5BEA /* Science_Ch08_WindsStormsAndCyclones_SolvedGuide.html */; };
+		D209D3FE75A07E266EFF21CD /* Science_Ch09_Soil_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = E5A72DBABC0D281C66D4371F /* Science_Ch09_Soil_SolvedGuide.html */; };
+		63DF64B3236E92C689167A70 /* Science_Ch10_RespirationInOrganisms_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = AEBA1A843394F372A6ED83F1 /* Science_Ch10_RespirationInOrganisms_SolvedGuide.html */; };
+		53D267749055594F241EC69D /* Science_Ch11_TransportationInAnimalsAndPlants_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 81C86EAD0576BFF28F00DC08 /* Science_Ch11_TransportationInAnimalsAndPlants_SolvedGuide.html */; };
+		42A7DD82DEDDC025C7900256 /* Science_Ch12_ReproductionInPlants_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = E97D5F7A8D27E8366D3223AC /* Science_Ch12_ReproductionInPlants_SolvedGuide.html */; };
+		D91EBEFD56F85642D6E10C81 /* Science_Ch14_ElectricCurrentAndItsEffect_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 20FC69CD93146AA2FBD70EBF /* Science_Ch14_ElectricCurrentAndItsEffect_SolvedGuide.html */; };
+		88BAD5AD3D62B66E75754415 /* Science_Ch15_Light_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 4FA0BD69428FFF4DE2A87C78 /* Science_Ch15_Light_SolvedGuide.html */; };
+		3463A309092940D6F3069BD4 /* Science_Ch16_WaterAPreciousResource_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 3A46BF6B03BE3D03D25C8A43 /* Science_Ch16_WaterAPreciousResource_SolvedGuide.html */; };
+		6919D2B5CB8DF286BABD4CC7 /* Science_Ch17_ForestOurLifeline_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 2F60C5F4F9BF3C0E19B75866 /* Science_Ch17_ForestOurLifeline_SolvedGuide.html */; };
+		D8B736D216CF64C0B25846D1 /* Science_Ch18_WastewaterStory_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = FDE3C8CE90E53D92ABC5848A /* Science_Ch18_WastewaterStory_SolvedGuide.html */; };
+		870600451E67AC280BC382CD /* Science_Ch19_EarthMoonAndTheSun_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = EE3C046FAE5F20E35A4DC9D8 /* Science_Ch19_EarthMoonAndTheSun_SolvedGuide.html */; };
+		4BCDA3A240B8421AD532FC28 /* SocialScience_Ssch01_GeographicalDiversityOfIndia_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 11A249EF43248BB0EEA5B4A1 /* SocialScience_Ssch01_GeographicalDiversityOfIndia_SolvedGuide.html */; };
+		88250F7B85B6414DCF843061 /* SocialScience_Ssch02_UnderstandingTheWeather_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 3BDBFB8B9991553F851BC79F /* SocialScience_Ssch02_UnderstandingTheWeather_SolvedGuide.html */; };
+		DBFF3F1ACECAA386EADC7FDD /* SocialScience_Ssch03_ClimatesOfIndia_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = D66B9F3356A82B306324FF13 /* SocialScience_Ssch03_ClimatesOfIndia_SolvedGuide.html */; };
+		133087C1ADF12A2778CFDBFE /* SocialScience_Ssch04_NewBeginningsCitiesAndStates_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 8987F486620DF2F8EEF9446B /* SocialScience_Ssch04_NewBeginningsCitiesAndStates_SolvedGuide.html */; };
+		3854DE2E8ED55CE80B934526 /* SocialScience_Ssch05_TheRiseOfEmpires_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 74B61CE151E822ECC8C93C7A /* SocialScience_Ssch05_TheRiseOfEmpires_SolvedGuide.html */; };
+		B5AE8A95CA750503F4EE7DC2 /* SocialScience_Ssch06_TheAgeOfReorganisation_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 8B423A410806928DC9BCA87A /* SocialScience_Ssch06_TheAgeOfReorganisation_SolvedGuide.html */; };
+		8FC7F1346CEAAA7986C78AB2 /* SocialScience_Ssch07_TheGuptaEra_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 79CA94E834D1B3D471F2EEDF /* SocialScience_Ssch07_TheGuptaEra_SolvedGuide.html */; };
+		3B9ECD58B51BDE6E1E44FAEF /* SocialScience_Ssch08_HowTheLandBecomesSacred_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = CBC900CDB9E5E4FC4FFFF490 /* SocialScience_Ssch08_HowTheLandBecomesSacred_SolvedGuide.html */; };
+		E63E81E37ED56E14218159D9 /* SocialScience_Ssch09_TypesOfGovernments_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = DA7457AC929026C9049BAF77 /* SocialScience_Ssch09_TypesOfGovernments_SolvedGuide.html */; };
+		604F9982437DE9705AC69D8B /* SocialScience_Ssch10_TheConstitutionOfIndia_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = F8BC51121D4F961705B722BA /* SocialScience_Ssch10_TheConstitutionOfIndia_SolvedGuide.html */; };
+		026DA3B9CB995C9634FE8254 /* SocialScience_Ssch11_FromBarterToMoney_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 4C51BBAE71273F5A970CEBE3 /* SocialScience_Ssch11_FromBarterToMoney_SolvedGuide.html */; };
+		FD861FCE6D40570825CD26F9 /* SocialScience_Ssch12_UnderstandingMarkets_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 754DD34C70F2D6B738868B66 /* SocialScience_Ssch12_UnderstandingMarkets_SolvedGuide.html */; };
+		01B785FB1D9DBBB9BA5F980E /* SocialScience_Ssch13_TheStoryOfIndianFarming_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 68A7E8A2185786F1D9457485 /* SocialScience_Ssch13_TheStoryOfIndianFarming_SolvedGuide.html */; };
+		0ABB882F29679789534DF3E4 /* SocialScience_Ssch14_IndiaAndHerNeighbours_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = EE0FB721405566736C631698 /* SocialScience_Ssch14_IndiaAndHerNeighbours_SolvedGuide.html */; };
+		5B9655123B8AD9F2ED5818EB /* SocialScience_Ssch15_EmpiresAndKingdoms6thTo10thCenturies_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 42ABE23CD5FF486BA5890E9F /* SocialScience_Ssch15_EmpiresAndKingdoms6thTo10thCenturies_SolvedGuide.html */; };
+		A1B811D3E5675CCC5DFC69A2 /* SocialScience_Ssch16_TurningTides11thAnd12thCenturies_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 9EFE8918412B47ED42B01B04 /* SocialScience_Ssch16_TurningTides11thAnd12thCenturies_SolvedGuide.html */; };
+		D6F4438AD3213EB79C4631F8 /* SocialScience_Ssch17_IndiaAHomeToMany_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 4F408CCB5883E8C5A1371918 /* SocialScience_Ssch17_IndiaAHomeToMany_SolvedGuide.html */; };
+		F491A0DE2781F423F11C53A4 /* SocialScience_Ssch18_TheStateTheGovernmentAndYou_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 47B1854F4BCA616E57CB85E4 /* SocialScience_Ssch18_TheStateTheGovernmentAndYou_SolvedGuide.html */; };
+		3F0AB847F4F9847F38DBFECA /* SocialScience_Ssch19_Infrastructure_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = D15006BCB9CA0F380C7C1D28 /* SocialScience_Ssch19_Infrastructure_SolvedGuide.html */; };
+		9645A2DCFEC6E3F143BF1E38 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 08A558C7C948F637461107D4 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance_SolvedGuide.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -3835,6 +3902,73 @@
 		B50F85CF17609EB76784B873 /* SocialScience_Ssch19_Infrastructure.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "SocialScience_Ssch19_Infrastructure.pdf"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch19_Infrastructure.pdf"; sourceTree = SOURCE_ROOT; };
 		0D40DDA8E1DF0F1329CD83A7 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; name = "SocialScience_Ssch20_BanksAndTheMagicOfFinance.pdf"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch20_BanksAndTheMagicOfFinance.pdf"; sourceTree = SOURCE_ROOT; };
 		C083109A9F66B12919BE85A7 /* OlympiadPaperReaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "OlympiadPaperReaderView.swift"; path = "desktopAhaan/Subjects/OlympiadTests/OlympiadPaperReaderView.swift"; sourceTree = SOURCE_ROOT; };
+		89E8479A53C7F1AA26B6079A /* Maths_Ch01_LargeNumbersAroundUs_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Maths_Ch01_LargeNumbersAroundUs_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch01_LargeNumbersAroundUs_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		49BBFC7E7F7FD026279114BE /* Maths_Ch02_ArithmeticExpressions_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Maths_Ch02_ArithmeticExpressions_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch02_ArithmeticExpressions_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		793B9C958D70BDBAC136C82A /* Maths_Ch03_APeekBeyondThePoint_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Maths_Ch03_APeekBeyondThePoint_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch03_APeekBeyondThePoint_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		D5028008A04B1CEF6A9C83BE /* Maths_Ch04_ExpressionsUsingLetterNumbers_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Maths_Ch04_ExpressionsUsingLetterNumbers_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch04_ExpressionsUsingLetterNumbers_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		948DB09705C6E78DBD4FEEA8 /* Maths_Ch05_ParallelAndIntersectingLines_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Maths_Ch05_ParallelAndIntersectingLines_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch05_ParallelAndIntersectingLines_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		56303D32D75396CD795B4F6D /* Maths_Ch06_NumberPlay_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Maths_Ch06_NumberPlay_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch06_NumberPlay_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		4C0AB478A9D014F40F57BDD1 /* Maths_Ch07_ATaleOfThreeIntersectingLines_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Maths_Ch07_ATaleOfThreeIntersectingLines_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch07_ATaleOfThreeIntersectingLines_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		19DB93902450F3EA60462614 /* Maths_Ch08_WorkingWithFractions_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Maths_Ch08_WorkingWithFractions_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch08_WorkingWithFractions_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		4C18661A51B33CBFF2C87073 /* Maths_Ch09_GeometricTwins_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Maths_Ch09_GeometricTwins_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch09_GeometricTwins_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		5CF9C75EBB04A0461628ED71 /* Maths_Ch10_OperationsWithIntegers_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Maths_Ch10_OperationsWithIntegers_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch10_OperationsWithIntegers_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		044E619E02F7E452D7C1DE14 /* Maths_Ch11_FindingCommonGround_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Maths_Ch11_FindingCommonGround_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch11_FindingCommonGround_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		B03F8DF6D9164FF6BA8E6B7A /* Maths_Ch12_AnotherPeekBeyondThePoint_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Maths_Ch12_AnotherPeekBeyondThePoint_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch12_AnotherPeekBeyondThePoint_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		69CCE590947608B7D96C762E /* Maths_Ch13_ConnectingTheDots_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Maths_Ch13_ConnectingTheDots_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch13_ConnectingTheDots_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		BFA6C78B2454681121A7E526 /* Maths_Ch14_ConstructionsAndTilings_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Maths_Ch14_ConstructionsAndTilings_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Maths_Ch14_ConstructionsAndTilings_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		E09353C276A7497D2A0F2FC5 /* Sanskrit_Sch01_VandeBharatamataram_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Sanskrit_Sch01_VandeBharatamataram_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Sanskrit_Sch01_VandeBharatamataram_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		D8E1857EE8E95D4B525B3A5A /* Sanskrit_Sch02_NityamPibamahSubhashitarasam_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Sanskrit_Sch02_NityamPibamahSubhashitarasam_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Sanskrit_Sch02_NityamPibamahSubhashitarasam_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		94972201692AC538D14E4745 /* Sanskrit_Sch03_MitrayaNamah_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Sanskrit_Sch03_MitrayaNamah_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Sanskrit_Sch03_MitrayaNamah_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		BFB6EB66081EEE9CAE11364B /* Sanskrit_Sch04_TheFoxAndTheGrapes_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Sanskrit_Sch04_TheFoxAndTheGrapes_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Sanskrit_Sch04_TheFoxAndTheGrapes_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		4E82EBAEA97ADE90F89EF1EB /* Sanskrit_Sch05_SevaHiParamoDharmah_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Sanskrit_Sch05_SevaHiParamoDharmah_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Sanskrit_Sch05_SevaHiParamoDharmah_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		11885515814113EA2D1F32EF /* Sanskrit_Sch06_KridamaVayamShlokantyaksharim_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Sanskrit_Sch06_KridamaVayamShlokantyaksharim_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Sanskrit_Sch06_KridamaVayamShlokantyaksharim_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		DE2CDD048C53F51FF729194A /* Sanskrit_Sch07_IshavasyamIdamSarvam_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Sanskrit_Sch07_IshavasyamIdamSarvam_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Sanskrit_Sch07_IshavasyamIdamSarvam_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		BB42FBA9DFA5FDED4B1AD5D5 /* Sanskrit_Sch08_HitamManohariChaDurlabhamVachah_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Sanskrit_Sch08_HitamManohariChaDurlabhamVachah_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Sanskrit_Sch08_HitamManohariChaDurlabhamVachah_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		7DA47B59A12CE4B0EFACA13C /* Sanskrit_Sch09_AnnadBhavantiBhutani_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Sanskrit_Sch09_AnnadBhavantiBhutani_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Sanskrit_Sch09_AnnadBhavantiBhutani_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		E5F7C49F880FEA0846B81306 /* Sanskrit_Sch10_DashamahKah_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Sanskrit_Sch10_DashamahKah_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Sanskrit_Sch10_DashamahKah_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		6FCAFF6D4E31E1A508CFB304 /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		01DDE5909E30E8B2D3F0BF43 /* Sanskrit_Sch12_ViranganaPannadhaya_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Sanskrit_Sch12_ViranganaPannadhaya_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Sanskrit_Sch12_ViranganaPannadhaya_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		6BF53171D63477E95497CCCB /* Sanskrit_Sch13_VarnaMatraParichayah_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Sanskrit_Sch13_VarnaMatraParichayah_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Sanskrit_Sch13_VarnaMatraParichayah_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		82673F08E646F7D69E17AB8A /* Sanskrit_Sch14_ShabdaRupani_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Sanskrit_Sch14_ShabdaRupani_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Sanskrit_Sch14_ShabdaRupani_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		E70612553506E3428EBA6525 /* Sanskrit_Sch15_DhaturupaniVerbConjugations_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Sanskrit_Sch15_DhaturupaniVerbConjugations_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Sanskrit_Sch15_DhaturupaniVerbConjugations_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		E0B9BB9FE28EFE3F779D845F /* Science_Ch01_NutritionInPlants_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Science_Ch01_NutritionInPlants_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Science_Ch01_NutritionInPlants_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		5813B7E8951D58CA73B003A1 /* Science_Ch02_NutritionInAnimals_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Science_Ch02_NutritionInAnimals_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Science_Ch02_NutritionInAnimals_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		E85A5AE1ADCD51E5D2D6631B /* Science_Ch03_FibreToFabric_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Science_Ch03_FibreToFabric_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Science_Ch03_FibreToFabric_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		BEB17D27C1E27CC03AB07B39 /* Science_Ch04_Heat_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Science_Ch04_Heat_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Science_Ch04_Heat_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		F67D29E77B6503F99043686B /* Science_Ch05_AcidsBasesAndSalts_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Science_Ch05_AcidsBasesAndSalts_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Science_Ch05_AcidsBasesAndSalts_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		45CBAA509C6DCCE475DD7259 /* Science_Ch06_PhysicalAndChemicalChanges_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Science_Ch06_PhysicalAndChemicalChanges_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Science_Ch06_PhysicalAndChemicalChanges_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		EDAE812D187E2A4AD419B770 /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		3F5129844FD2628375DF5BEA /* Science_Ch08_WindsStormsAndCyclones_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Science_Ch08_WindsStormsAndCyclones_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Science_Ch08_WindsStormsAndCyclones_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		E5A72DBABC0D281C66D4371F /* Science_Ch09_Soil_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Science_Ch09_Soil_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Science_Ch09_Soil_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		AEBA1A843394F372A6ED83F1 /* Science_Ch10_RespirationInOrganisms_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Science_Ch10_RespirationInOrganisms_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Science_Ch10_RespirationInOrganisms_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		81C86EAD0576BFF28F00DC08 /* Science_Ch11_TransportationInAnimalsAndPlants_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Science_Ch11_TransportationInAnimalsAndPlants_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Science_Ch11_TransportationInAnimalsAndPlants_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		E97D5F7A8D27E8366D3223AC /* Science_Ch12_ReproductionInPlants_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Science_Ch12_ReproductionInPlants_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Science_Ch12_ReproductionInPlants_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		20FC69CD93146AA2FBD70EBF /* Science_Ch14_ElectricCurrentAndItsEffect_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Science_Ch14_ElectricCurrentAndItsEffect_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Science_Ch14_ElectricCurrentAndItsEffect_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		4FA0BD69428FFF4DE2A87C78 /* Science_Ch15_Light_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Science_Ch15_Light_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Science_Ch15_Light_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		3A46BF6B03BE3D03D25C8A43 /* Science_Ch16_WaterAPreciousResource_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Science_Ch16_WaterAPreciousResource_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Science_Ch16_WaterAPreciousResource_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		2F60C5F4F9BF3C0E19B75866 /* Science_Ch17_ForestOurLifeline_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Science_Ch17_ForestOurLifeline_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Science_Ch17_ForestOurLifeline_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		FDE3C8CE90E53D92ABC5848A /* Science_Ch18_WastewaterStory_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Science_Ch18_WastewaterStory_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Science_Ch18_WastewaterStory_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		EE3C046FAE5F20E35A4DC9D8 /* Science_Ch19_EarthMoonAndTheSun_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "Science_Ch19_EarthMoonAndTheSun_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/Science_Ch19_EarthMoonAndTheSun_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		11A249EF43248BB0EEA5B4A1 /* SocialScience_Ssch01_GeographicalDiversityOfIndia_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "SocialScience_Ssch01_GeographicalDiversityOfIndia_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch01_GeographicalDiversityOfIndia_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		3BDBFB8B9991553F851BC79F /* SocialScience_Ssch02_UnderstandingTheWeather_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "SocialScience_Ssch02_UnderstandingTheWeather_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch02_UnderstandingTheWeather_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		D66B9F3356A82B306324FF13 /* SocialScience_Ssch03_ClimatesOfIndia_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "SocialScience_Ssch03_ClimatesOfIndia_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch03_ClimatesOfIndia_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		8987F486620DF2F8EEF9446B /* SocialScience_Ssch04_NewBeginningsCitiesAndStates_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "SocialScience_Ssch04_NewBeginningsCitiesAndStates_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch04_NewBeginningsCitiesAndStates_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		74B61CE151E822ECC8C93C7A /* SocialScience_Ssch05_TheRiseOfEmpires_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "SocialScience_Ssch05_TheRiseOfEmpires_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch05_TheRiseOfEmpires_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		8B423A410806928DC9BCA87A /* SocialScience_Ssch06_TheAgeOfReorganisation_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "SocialScience_Ssch06_TheAgeOfReorganisation_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch06_TheAgeOfReorganisation_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		79CA94E834D1B3D471F2EEDF /* SocialScience_Ssch07_TheGuptaEra_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "SocialScience_Ssch07_TheGuptaEra_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch07_TheGuptaEra_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		CBC900CDB9E5E4FC4FFFF490 /* SocialScience_Ssch08_HowTheLandBecomesSacred_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "SocialScience_Ssch08_HowTheLandBecomesSacred_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch08_HowTheLandBecomesSacred_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		DA7457AC929026C9049BAF77 /* SocialScience_Ssch09_TypesOfGovernments_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "SocialScience_Ssch09_TypesOfGovernments_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch09_TypesOfGovernments_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		F8BC51121D4F961705B722BA /* SocialScience_Ssch10_TheConstitutionOfIndia_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "SocialScience_Ssch10_TheConstitutionOfIndia_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch10_TheConstitutionOfIndia_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		4C51BBAE71273F5A970CEBE3 /* SocialScience_Ssch11_FromBarterToMoney_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "SocialScience_Ssch11_FromBarterToMoney_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch11_FromBarterToMoney_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		754DD34C70F2D6B738868B66 /* SocialScience_Ssch12_UnderstandingMarkets_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "SocialScience_Ssch12_UnderstandingMarkets_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch12_UnderstandingMarkets_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		68A7E8A2185786F1D9457485 /* SocialScience_Ssch13_TheStoryOfIndianFarming_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "SocialScience_Ssch13_TheStoryOfIndianFarming_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch13_TheStoryOfIndianFarming_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		EE0FB721405566736C631698 /* SocialScience_Ssch14_IndiaAndHerNeighbours_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "SocialScience_Ssch14_IndiaAndHerNeighbours_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch14_IndiaAndHerNeighbours_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		42ABE23CD5FF486BA5890E9F /* SocialScience_Ssch15_EmpiresAndKingdoms6thTo10thCenturies_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "SocialScience_Ssch15_EmpiresAndKingdoms6thTo10thCenturies_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch15_EmpiresAndKingdoms6thTo10thCenturies_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		9EFE8918412B47ED42B01B04 /* SocialScience_Ssch16_TurningTides11thAnd12thCenturies_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "SocialScience_Ssch16_TurningTides11thAnd12thCenturies_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch16_TurningTides11thAnd12thCenturies_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		4F408CCB5883E8C5A1371918 /* SocialScience_Ssch17_IndiaAHomeToMany_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "SocialScience_Ssch17_IndiaAHomeToMany_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch17_IndiaAHomeToMany_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		47B1854F4BCA616E57CB85E4 /* SocialScience_Ssch18_TheStateTheGovernmentAndYou_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "SocialScience_Ssch18_TheStateTheGovernmentAndYou_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch18_TheStateTheGovernmentAndYou_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		D15006BCB9CA0F380C7C1D28 /* SocialScience_Ssch19_Infrastructure_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "SocialScience_Ssch19_Infrastructure_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch19_Infrastructure_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
+		08A558C7C948F637461107D4 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; name = "SocialScience_Ssch20_BanksAndTheMagicOfFinance_SolvedGuide.html"; path = "desktopAhaan/Resources/TestPapers/SocialScience_Ssch20_BanksAndTheMagicOfFinance_SolvedGuide.html"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -5582,8 +5716,27 @@
 				0CBCC4B6C038BC06E09FDE6D,
 				363B0237945792B675DB30B1,
 				DEA3BFAA0D7B719A17B7F549,
+				50FC70F307728604197360C9 /* OlympiadTests */,
 			);
 			path = "Subjects";
+			sourceTree = "<group>";
+		};
+		50FC70F307728604197360C9 /* OlympiadTests */ = {
+			isa = PBXGroup;
+			children = (
+				0CD6303421E855116A075E8F /* OlympiadHubView.swift */,
+				66E204C7773BC9AF563A64C0 /* OlympiadPaper.swift */,
+				61E9E18D509A911A77CE713E /* OlympiadPaperParser.swift */,
+				C083109A9F66B12919BE85A7 /* OlympiadPaperReaderView.swift */,
+				BFA0EFC8A1A3A7E024F887F2 /* OlympiadPaperRegistry.swift */,
+				92064A3FC0F8A197F8BC16D8 /* OlympiadPaperRegistry+MathsPapers.swift */,
+				709383275F3DFF417813A1BC /* OlympiadPaperRegistry+SanskritPapers.swift */,
+				6DD78EC9D91D5E3A579D2661 /* OlympiadPaperRegistry+SciencePapers.swift */,
+				5B33A4F59C30EF98D728EAF9 /* OlympiadPaperRegistry+SocialSciencePapers.swift */,
+				57DBC1E9AD28F71BC0631019 /* OlympiadQuizResultView.swift */,
+				F6BC5AB3CE6CA289FABD07F4 /* OlympiadQuizView.swift */,
+			);
+			path = "OlympiadTests";
 			sourceTree = "<group>";
 		};
 		DEA3BFAA0D7B719A17B7F549 /* AI */ = {
@@ -8200,6 +8353,73 @@
 				7ED32507DBB7A41A9B2A2831 /* SocialScience_Ssch18_TheStateTheGovernmentAndYou.pdf in Resources */,
 				7B99FB40034B50EB0B5EDF37 /* SocialScience_Ssch19_Infrastructure.pdf in Resources */,
 				47727B371E8D8A4589147BB7 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance.pdf in Resources */,
+				46F3ACC42BE3EF8C7155E4AC /* Maths_Ch01_LargeNumbersAroundUs_SolvedGuide.html in Resources */,
+				8C6EA3FA058433B0DACF2675 /* Maths_Ch02_ArithmeticExpressions_SolvedGuide.html in Resources */,
+				DC4BB45AF7DC5BE6557A4C63 /* Maths_Ch03_APeekBeyondThePoint_SolvedGuide.html in Resources */,
+				14DCD552AF6ED2562106E9A4 /* Maths_Ch04_ExpressionsUsingLetterNumbers_SolvedGuide.html in Resources */,
+				2DDF5256460EC89C7A688B72 /* Maths_Ch05_ParallelAndIntersectingLines_SolvedGuide.html in Resources */,
+				9CC1A0E48996F9AFB521EFEC /* Maths_Ch06_NumberPlay_SolvedGuide.html in Resources */,
+				75566D21D7297A2599C3C512 /* Maths_Ch07_ATaleOfThreeIntersectingLines_SolvedGuide.html in Resources */,
+				EB7DB0FC0F4CE519D6717A4F /* Maths_Ch08_WorkingWithFractions_SolvedGuide.html in Resources */,
+				1C5DE57A71135AAF4F02A6D2 /* Maths_Ch09_GeometricTwins_SolvedGuide.html in Resources */,
+				892A8934672CBCA838F5757E /* Maths_Ch10_OperationsWithIntegers_SolvedGuide.html in Resources */,
+				993CDC38F44E2284A8CDC805 /* Maths_Ch11_FindingCommonGround_SolvedGuide.html in Resources */,
+				8D3A8A72A11D80813DFA928A /* Maths_Ch12_AnotherPeekBeyondThePoint_SolvedGuide.html in Resources */,
+				9EE78D97501273C2F855DCCD /* Maths_Ch13_ConnectingTheDots_SolvedGuide.html in Resources */,
+				32338252CBEF31F726D60165 /* Maths_Ch14_ConstructionsAndTilings_SolvedGuide.html in Resources */,
+				8905FADF3E31E0D9FC15DBFF /* Sanskrit_Sch01_VandeBharatamataram_SolvedGuide.html in Resources */,
+				77E2C7AB970D3B4E361B6787 /* Sanskrit_Sch02_NityamPibamahSubhashitarasam_SolvedGuide.html in Resources */,
+				C5393E2E837E61C0AC0BF1E5 /* Sanskrit_Sch03_MitrayaNamah_SolvedGuide.html in Resources */,
+				479E5C16A263599D0CCC17E0 /* Sanskrit_Sch04_TheFoxAndTheGrapes_SolvedGuide.html in Resources */,
+				17148AC1B1F068B969AA858F /* Sanskrit_Sch05_SevaHiParamoDharmah_SolvedGuide.html in Resources */,
+				229E1A5D308B90E027ED436B /* Sanskrit_Sch06_KridamaVayamShlokantyaksharim_SolvedGuide.html in Resources */,
+				CC1CD0769C59B5908198525E /* Sanskrit_Sch07_IshavasyamIdamSarvam_SolvedGuide.html in Resources */,
+				CE2E5471E48842D4D427FA36 /* Sanskrit_Sch08_HitamManohariChaDurlabhamVachah_SolvedGuide.html in Resources */,
+				47CB37D553B51F86B9507F71 /* Sanskrit_Sch09_AnnadBhavantiBhutani_SolvedGuide.html in Resources */,
+				6C95F34211DB09E1E5DE7039 /* Sanskrit_Sch10_DashamahKah_SolvedGuide.html in Resources */,
+				4651A09186F01A87DA134E5F /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_SolvedGuide.html in Resources */,
+				7237239EA50AE2B701D7A9A4 /* Sanskrit_Sch12_ViranganaPannadhaya_SolvedGuide.html in Resources */,
+				D797BE2C1ECB903212715F61 /* Sanskrit_Sch13_VarnaMatraParichayah_SolvedGuide.html in Resources */,
+				A385FB009C9E809D80F914FD /* Sanskrit_Sch14_ShabdaRupani_SolvedGuide.html in Resources */,
+				9EC8471848A222D8F09A62FC /* Sanskrit_Sch15_DhaturupaniVerbConjugations_SolvedGuide.html in Resources */,
+				70F07141FD7CB4E30F667279 /* Science_Ch01_NutritionInPlants_SolvedGuide.html in Resources */,
+				B6885B8CB2F965EC66427D26 /* Science_Ch02_NutritionInAnimals_SolvedGuide.html in Resources */,
+				2912D253C441AD661CC610BE /* Science_Ch03_FibreToFabric_SolvedGuide.html in Resources */,
+				2B644C72DF86AF96912640DE /* Science_Ch04_Heat_SolvedGuide.html in Resources */,
+				B07AE47C704B20A9F765878D /* Science_Ch05_AcidsBasesAndSalts_SolvedGuide.html in Resources */,
+				037EA5B21FBA699644A99674 /* Science_Ch06_PhysicalAndChemicalChanges_SolvedGuide.html in Resources */,
+				590F4135143EE3CB0841B984 /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_SolvedGuide.html in Resources */,
+				08FB02951ADC1D2CB61F3B92 /* Science_Ch08_WindsStormsAndCyclones_SolvedGuide.html in Resources */,
+				D209D3FE75A07E266EFF21CD /* Science_Ch09_Soil_SolvedGuide.html in Resources */,
+				63DF64B3236E92C689167A70 /* Science_Ch10_RespirationInOrganisms_SolvedGuide.html in Resources */,
+				53D267749055594F241EC69D /* Science_Ch11_TransportationInAnimalsAndPlants_SolvedGuide.html in Resources */,
+				42A7DD82DEDDC025C7900256 /* Science_Ch12_ReproductionInPlants_SolvedGuide.html in Resources */,
+				D91EBEFD56F85642D6E10C81 /* Science_Ch14_ElectricCurrentAndItsEffect_SolvedGuide.html in Resources */,
+				88BAD5AD3D62B66E75754415 /* Science_Ch15_Light_SolvedGuide.html in Resources */,
+				3463A309092940D6F3069BD4 /* Science_Ch16_WaterAPreciousResource_SolvedGuide.html in Resources */,
+				6919D2B5CB8DF286BABD4CC7 /* Science_Ch17_ForestOurLifeline_SolvedGuide.html in Resources */,
+				D8B736D216CF64C0B25846D1 /* Science_Ch18_WastewaterStory_SolvedGuide.html in Resources */,
+				870600451E67AC280BC382CD /* Science_Ch19_EarthMoonAndTheSun_SolvedGuide.html in Resources */,
+				4BCDA3A240B8421AD532FC28 /* SocialScience_Ssch01_GeographicalDiversityOfIndia_SolvedGuide.html in Resources */,
+				88250F7B85B6414DCF843061 /* SocialScience_Ssch02_UnderstandingTheWeather_SolvedGuide.html in Resources */,
+				DBFF3F1ACECAA386EADC7FDD /* SocialScience_Ssch03_ClimatesOfIndia_SolvedGuide.html in Resources */,
+				133087C1ADF12A2778CFDBFE /* SocialScience_Ssch04_NewBeginningsCitiesAndStates_SolvedGuide.html in Resources */,
+				3854DE2E8ED55CE80B934526 /* SocialScience_Ssch05_TheRiseOfEmpires_SolvedGuide.html in Resources */,
+				B5AE8A95CA750503F4EE7DC2 /* SocialScience_Ssch06_TheAgeOfReorganisation_SolvedGuide.html in Resources */,
+				8FC7F1346CEAAA7986C78AB2 /* SocialScience_Ssch07_TheGuptaEra_SolvedGuide.html in Resources */,
+				3B9ECD58B51BDE6E1E44FAEF /* SocialScience_Ssch08_HowTheLandBecomesSacred_SolvedGuide.html in Resources */,
+				E63E81E37ED56E14218159D9 /* SocialScience_Ssch09_TypesOfGovernments_SolvedGuide.html in Resources */,
+				604F9982437DE9705AC69D8B /* SocialScience_Ssch10_TheConstitutionOfIndia_SolvedGuide.html in Resources */,
+				026DA3B9CB995C9634FE8254 /* SocialScience_Ssch11_FromBarterToMoney_SolvedGuide.html in Resources */,
+				FD861FCE6D40570825CD26F9 /* SocialScience_Ssch12_UnderstandingMarkets_SolvedGuide.html in Resources */,
+				01B785FB1D9DBBB9BA5F980E /* SocialScience_Ssch13_TheStoryOfIndianFarming_SolvedGuide.html in Resources */,
+				0ABB882F29679789534DF3E4 /* SocialScience_Ssch14_IndiaAndHerNeighbours_SolvedGuide.html in Resources */,
+				5B9655123B8AD9F2ED5818EB /* SocialScience_Ssch15_EmpiresAndKingdoms6thTo10thCenturies_SolvedGuide.html in Resources */,
+				A1B811D3E5675CCC5DFC69A2 /* SocialScience_Ssch16_TurningTides11thAnd12thCenturies_SolvedGuide.html in Resources */,
+				D6F4438AD3213EB79C4631F8 /* SocialScience_Ssch17_IndiaAHomeToMany_SolvedGuide.html in Resources */,
+				F491A0DE2781F423F11C53A4 /* SocialScience_Ssch18_TheStateTheGovernmentAndYou_SolvedGuide.html in Resources */,
+				3F0AB847F4F9847F38DBFECA /* SocialScience_Ssch19_Infrastructure_SolvedGuide.html in Resources */,
+				9645A2DCFEC6E3F143BF1E38 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance_SolvedGuide.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

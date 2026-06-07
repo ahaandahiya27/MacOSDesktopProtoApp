@@ -170,10 +170,28 @@ def merge(qpaper: dict, sols: dict) -> dict[int, Question]:
     return out
 
 
-def render(paper_id: str, questions: dict[int, Question]) -> str:
-    if paper_id not in CLUSTERS_BY_PAPER:
-        raise SystemExit(f"unknown paper-id '{paper_id}'; add to CLUSTERS_BY_PAPER")
-    title, clusters = CLUSTERS_BY_PAPER[paper_id]
+def numeric_bin_clusters(title: str, total: int) -> tuple[str, list[tuple[str, str, list[int]]]]:
+    """Bulk-generator fallback. Group questions into 6 sets of 10
+    ("Set 1 · Q1–Q10", "Set 2 · Q11–Q20", …). The rule column is
+    left empty so cards don't show a misleading per-set hint."""
+    bins: list[tuple[str, str, list[int]]] = []
+    set_no = 1
+    for start in range(1, total + 1, 10):
+        end = min(start + 9, total)
+        nums = list(range(start, end + 1))
+        bins.append((f"Set {set_no} · Q{start}–Q{end}", "", nums))
+        set_no += 1
+    return (title, bins)
+
+
+def render(paper_id: str, questions: dict[int, Question],
+           bulk_title: str | None = None) -> str:
+    if bulk_title is not None:
+        title, clusters = numeric_bin_clusters(bulk_title, len(questions))
+    elif paper_id in CLUSTERS_BY_PAPER:
+        title, clusters = CLUSTERS_BY_PAPER[paper_id]
+    else:
+        raise SystemExit(f"unknown paper-id '{paper_id}'; add to CLUSTERS_BY_PAPER or use --bulk")
 
     def esc(s: str) -> str:
         return html_lib.escape(s, quote=False)
@@ -234,21 +252,24 @@ def render(paper_id: str, questions: dict[int, Question]) -> str:
             pieces.append('    </div>')
         pieces.append('  </section>')
 
-    # Closing cheat sheet
-    pieces.append("""  <aside class="cheat">
+    # Closing cheat sheet — only for hand-authored papers; bulk-mode
+    # papers don't get a curated cheat-sheet because the per-paper rules
+    # would have to be authored individually.
+    if bulk_title is None:
+        pieces.append("""  <aside class="cheat">
     <h2>Cheat-sheet</h2>
     <p class="sub">If you can do these five, you can do every question above.</p>
     <div class="rules">""")
-    cheats = [
-        ("Translate carefully.", "Let x = the unknown. The verb is your equals sign."),
-        ("Clear denominators first.", "Multiply through by the LCM; THEN transpose."),
-        ("Group all x on one side.", "Subtract the smaller coefficient; keep x positive."),
-        ("Check by substitution.", "LHS must equal RHS after plugging x back."),
-        ("Write one equation per condition.", "Two conditions → two equations (or one substituted into the other)."),
-    ]
-    for title2, body in cheats:
-        pieces.append(f'      <div class="rule"><div class="star">★</div><div><b>{title2}</b><span>{esc(body)}</span></div></div>')
-    pieces.append('    </div></aside>')
+        cheats = [
+            ("Translate carefully.", "Let x = the unknown. The verb is your equals sign."),
+            ("Clear denominators first.", "Multiply through by the LCM; THEN transpose."),
+            ("Group all x on one side.", "Subtract the smaller coefficient; keep x positive."),
+            ("Check by substitution.", "LHS must equal RHS after plugging x back."),
+            ("Write one equation per condition.", "Two conditions → two equations (or one substituted into the other)."),
+        ]
+        for title2, body in cheats:
+            pieces.append(f'      <div class="rule"><div class="star">★</div><div><b>{title2}</b><span>{esc(body)}</span></div></div>')
+        pieces.append('    </div></aside>')
 
     pieces.append('  <div class="closer"><h2>You\'ve seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>')
 
@@ -332,13 +353,76 @@ STYLE_BLOCK_BODY = """<link rel="preconnect" href="https://fonts.googleapis.com"
 </head>"""
 
 
+def derive_title_from_filename(stem: str) -> str:
+    """Turn 'Science_Ch01_NutritionInPlants' into 'Nutrition in Plants'.
+    Splits on _, drops the subject + chapter prefix, then inserts a
+    space before each interior capital letter. Used by --bulk."""
+    # Strip "_QuestionPaper" suffix if present (callers may pass either
+    # the bare stem or the QuestionPaper-suffixed version).
+    if stem.endswith("_QuestionPaper"):
+        stem = stem[: -len("_QuestionPaper")]
+    parts = stem.split("_")
+    if len(parts) < 3:
+        return stem
+    # parts: [subject, "ChNN" or "SchNN", camelTitle, …]
+    camel = "_".join(parts[2:])
+    out = []
+    for i, ch in enumerate(camel):
+        if i > 0 and ch.isupper() and camel[i - 1].islower():
+            out.append(" ")
+        out.append(ch)
+    return "".join(out)
+
+
+def run_bulk(papers_dir: Path) -> int:
+    """For every `*_QuestionPaper.md` in papers_dir, emit
+    `<stem>_SolvedGuide.html` if it doesn't already exist."""
+    qps = sorted(papers_dir.glob("*_QuestionPaper.md"))
+    written = 0
+    skipped_existing = 0
+    skipped_no_sols = 0
+    for qp in qps:
+        stem = qp.name[: -len("_QuestionPaper.md")]
+        sols_path = papers_dir / f"{stem}_Solutions.md"
+        out_path = papers_dir / f"{stem}_SolvedGuide.html"
+        if out_path.exists():
+            skipped_existing += 1
+            continue
+        if not sols_path.exists():
+            skipped_no_sols += 1
+            print(f"  skip {stem}: no Solutions.md", file=sys.stderr)
+            continue
+        qpaper = parse_question_paper(qp.read_text(encoding="utf-8"))
+        sols = parse_solutions(sols_path.read_text(encoding="utf-8"))
+        questions = merge(qpaper, sols)
+        if len(questions) < 50:
+            print(f"  skip {stem}: only {len(questions)} merged questions", file=sys.stderr)
+            continue
+        title = derive_title_from_filename(stem)
+        html_out = render(paper_id="<bulk>", questions=questions, bulk_title=title)
+        out_path.write_text(html_out, encoding="utf-8")
+        written += 1
+        print(f"  ✔ {out_path.name} ({len(html_out)//1024} KB, {len(questions)} Q)")
+    print(f"\nbulk done: wrote {written}, kept {skipped_existing} existing, "
+          f"skipped {skipped_no_sols} without Solutions.md")
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--question-paper", required=True)
-    ap.add_argument("--solutions", required=True)
-    ap.add_argument("--out", required=True)
-    ap.add_argument("--paper", required=True, choices=list(CLUSTERS_BY_PAPER.keys()))
+    ap.add_argument("--bulk", help="generate guides for EVERY paper in this dir "
+                                   "(skips ones that already have a SolvedGuide.html)")
+    ap.add_argument("--question-paper")
+    ap.add_argument("--solutions")
+    ap.add_argument("--out")
+    ap.add_argument("--paper", choices=list(CLUSTERS_BY_PAPER.keys()))
     args = ap.parse_args()
+
+    if args.bulk:
+        return run_bulk(Path(args.bulk))
+
+    if not (args.question_paper and args.solutions and args.out and args.paper):
+        ap.error("either --bulk DIR or all of --question-paper/--solutions/--out/--paper required")
 
     qpaper_text = Path(args.question_paper).read_text(encoding="utf-8")
     sols_text = Path(args.solutions).read_text(encoding="utf-8")

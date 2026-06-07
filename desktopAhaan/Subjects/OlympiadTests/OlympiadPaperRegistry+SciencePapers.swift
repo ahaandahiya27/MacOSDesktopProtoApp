@@ -18,7 +18,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Science_Ch01_NutritionInPlants_Solutions.md",
             questionPaperHTML: "Science_Ch01_NutritionInPlants.html",
             questionPaperPDF: "Science_Ch01_NutritionInPlants.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Science_Ch01_NutritionInPlants_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_science_ch02",
@@ -31,7 +32,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Science_Ch02_NutritionInAnimals_Solutions.md",
             questionPaperHTML: "Science_Ch02_NutritionInAnimals.html",
             questionPaperPDF: "Science_Ch02_NutritionInAnimals.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Science_Ch02_NutritionInAnimals_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_science_ch03",
@@ -44,7 +46,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Science_Ch03_FibreToFabric_Solutions.md",
             questionPaperHTML: "Science_Ch03_FibreToFabric.html",
             questionPaperPDF: "Science_Ch03_FibreToFabric.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Science_Ch03_FibreToFabric_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_science_ch04",
@@ -57,7 +60,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Science_Ch04_Heat_Solutions.md",
             questionPaperHTML: "Science_Ch04_Heat.html",
             questionPaperPDF: "Science_Ch04_Heat.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Science_Ch04_Heat_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_science_ch05",
@@ -70,7 +74,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Science_Ch05_AcidsBasesAndSalts_Solutions.md",
             questionPaperHTML: "Science_Ch05_AcidsBasesAndSalts.html",
             questionPaperPDF: "Science_Ch05_AcidsBasesAndSalts.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Science_Ch05_AcidsBasesAndSalts_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_science_ch06",
@@ -83,7 +88,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Science_Ch06_PhysicalAndChemicalChanges_Solutions.md",
             questionPaperHTML: "Science_Ch06_PhysicalAndChemicalChanges.html",
             questionPaperPDF: "Science_Ch06_PhysicalAndChemicalChanges.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Science_Ch06_PhysicalAndChemicalChanges_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_science_ch07",
@@ -96,7 +102,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_Solutions.md",
             questionPaperHTML: "Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate.html",
             questionPaperPDF: "Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_science_ch08",
@@ -109,7 +116,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Science_Ch08_WindsStormsAndCyclones_Solutions.md",
             questionPaperHTML: "Science_Ch08_WindsStormsAndCyclones.html",
             questionPaperPDF: "Science_Ch08_WindsStormsAndCyclones.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Science_Ch08_WindsStormsAndCyclones_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_science_ch09",
@@ -122,7 +130,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Science_Ch09_Soil_Solutions.md",
             questionPaperHTML: "Science_Ch09_Soil.html",
             questionPaperPDF: "Science_Ch09_Soil.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Science_Ch09_Soil_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_science_ch10",
@@ -135,7 +144,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Science_Ch10_RespirationInOrganisms_Solutions.md",
             questionPaperHTML: "Science_Ch10_RespirationInOrganisms.html",
             questionPaperPDF: "Science_Ch10_RespirationInOrganisms.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Science_Ch10_RespirationInOrganisms_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_science_ch11",
@@ -148,7 +158,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Science_Ch11_TransportationInAnimalsAndPlants_Solutions.md",
             questionPaperHTML: "Science_Ch11_TransportationInAnimalsAndPlants.html",
             questionPaperPDF: "Science_Ch11_TransportationInAnimalsAndPlants.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Science_Ch11_TransportationInAnimalsAndPlants_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_science_ch12",
@@ -161,7 +172,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Science_Ch12_ReproductionInPlants_Solutions.md",
             questionPaperHTML: "Science_Ch12_ReproductionInPlants.html",
             questionPaperPDF: "Science_Ch12_ReproductionInPlants.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Science_Ch12_ReproductionInPlants_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_science_ch13",
@@ -188,7 +200,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Science_Ch14_ElectricCurrentAndItsEffect_Solutions.md",
             questionPaperHTML: "Science_Ch14_ElectricCurrentAndItsEffect.html",
             questionPaperPDF: "Science_Ch14_ElectricCurrentAndItsEffect.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Science_Ch14_ElectricCurrentAndItsEffect_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_science_ch15",
@@ -201,7 +214,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Science_Ch15_Light_Solutions.md",
             questionPaperHTML: "Science_Ch15_Light.html",
             questionPaperPDF: "Science_Ch15_Light.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Science_Ch15_Light_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_science_ch16",
@@ -214,7 +228,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Science_Ch16_WaterAPreciousResource_Solutions.md",
             questionPaperHTML: "Science_Ch16_WaterAPreciousResource.html",
             questionPaperPDF: "Science_Ch16_WaterAPreciousResource.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Science_Ch16_WaterAPreciousResource_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_science_ch17",
@@ -227,7 +242,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Science_Ch17_ForestOurLifeline_Solutions.md",
             questionPaperHTML: "Science_Ch17_ForestOurLifeline.html",
             questionPaperPDF: "Science_Ch17_ForestOurLifeline.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Science_Ch17_ForestOurLifeline_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_science_ch18",
@@ -240,7 +256,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Science_Ch18_WastewaterStory_Solutions.md",
             questionPaperHTML: "Science_Ch18_WastewaterStory.html",
             questionPaperPDF: "Science_Ch18_WastewaterStory.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Science_Ch18_WastewaterStory_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_science_ch19",
@@ -253,7 +270,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Science_Ch19_EarthMoonAndTheSun_Solutions.md",
             questionPaperHTML: "Science_Ch19_EarthMoonAndTheSun.html",
             questionPaperPDF: "Science_Ch19_EarthMoonAndTheSun.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Science_Ch19_EarthMoonAndTheSun_SolvedGuide.html"
         )
     ]
 }

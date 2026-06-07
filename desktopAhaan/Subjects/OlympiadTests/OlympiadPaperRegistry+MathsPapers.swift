@@ -18,7 +18,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Maths_Ch01_LargeNumbersAroundUs_Solutions.md",
             questionPaperHTML: "Maths_Ch01_LargeNumbersAroundUs.html",
             questionPaperPDF: "Maths_Ch01_LargeNumbersAroundUs.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Maths_Ch01_LargeNumbersAroundUs_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_maths_ch02",
@@ -31,7 +32,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Maths_Ch02_ArithmeticExpressions_Solutions.md",
             questionPaperHTML: "Maths_Ch02_ArithmeticExpressions.html",
             questionPaperPDF: "Maths_Ch02_ArithmeticExpressions.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Maths_Ch02_ArithmeticExpressions_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_maths_ch03",
@@ -44,7 +46,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Maths_Ch03_APeekBeyondThePoint_Solutions.md",
             questionPaperHTML: "Maths_Ch03_APeekBeyondThePoint.html",
             questionPaperPDF: "Maths_Ch03_APeekBeyondThePoint.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Maths_Ch03_APeekBeyondThePoint_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_maths_ch04",
@@ -57,7 +60,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Maths_Ch04_ExpressionsUsingLetterNumbers_Solutions.md",
             questionPaperHTML: "Maths_Ch04_ExpressionsUsingLetterNumbers.html",
             questionPaperPDF: "Maths_Ch04_ExpressionsUsingLetterNumbers.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Maths_Ch04_ExpressionsUsingLetterNumbers_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_maths_ch05",
@@ -70,7 +74,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Maths_Ch05_ParallelAndIntersectingLines_Solutions.md",
             questionPaperHTML: "Maths_Ch05_ParallelAndIntersectingLines.html",
             questionPaperPDF: "Maths_Ch05_ParallelAndIntersectingLines.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Maths_Ch05_ParallelAndIntersectingLines_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_maths_ch06",
@@ -83,7 +88,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Maths_Ch06_NumberPlay_Solutions.md",
             questionPaperHTML: "Maths_Ch06_NumberPlay.html",
             questionPaperPDF: "Maths_Ch06_NumberPlay.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Maths_Ch06_NumberPlay_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_maths_ch07",
@@ -96,7 +102,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Maths_Ch07_ATaleOfThreeIntersectingLines_Solutions.md",
             questionPaperHTML: "Maths_Ch07_ATaleOfThreeIntersectingLines.html",
             questionPaperPDF: "Maths_Ch07_ATaleOfThreeIntersectingLines.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Maths_Ch07_ATaleOfThreeIntersectingLines_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_maths_ch08",
@@ -109,7 +116,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Maths_Ch08_WorkingWithFractions_Solutions.md",
             questionPaperHTML: "Maths_Ch08_WorkingWithFractions.html",
             questionPaperPDF: "Maths_Ch08_WorkingWithFractions.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Maths_Ch08_WorkingWithFractions_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_maths_ch09",
@@ -122,7 +130,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Maths_Ch09_GeometricTwins_Solutions.md",
             questionPaperHTML: "Maths_Ch09_GeometricTwins.html",
             questionPaperPDF: "Maths_Ch09_GeometricTwins.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Maths_Ch09_GeometricTwins_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_maths_ch10",
@@ -135,7 +144,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Maths_Ch10_OperationsWithIntegers_Solutions.md",
             questionPaperHTML: "Maths_Ch10_OperationsWithIntegers.html",
             questionPaperPDF: "Maths_Ch10_OperationsWithIntegers.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Maths_Ch10_OperationsWithIntegers_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_maths_ch11",
@@ -148,7 +158,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Maths_Ch11_FindingCommonGround_Solutions.md",
             questionPaperHTML: "Maths_Ch11_FindingCommonGround.html",
             questionPaperPDF: "Maths_Ch11_FindingCommonGround.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Maths_Ch11_FindingCommonGround_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_maths_ch12",
@@ -161,7 +172,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Maths_Ch12_AnotherPeekBeyondThePoint_Solutions.md",
             questionPaperHTML: "Maths_Ch12_AnotherPeekBeyondThePoint.html",
             questionPaperPDF: "Maths_Ch12_AnotherPeekBeyondThePoint.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Maths_Ch12_AnotherPeekBeyondThePoint_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_maths_ch13",
@@ -174,7 +186,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Maths_Ch13_ConnectingTheDots_Solutions.md",
             questionPaperHTML: "Maths_Ch13_ConnectingTheDots.html",
             questionPaperPDF: "Maths_Ch13_ConnectingTheDots.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Maths_Ch13_ConnectingTheDots_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_maths_ch14",
@@ -187,7 +200,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Maths_Ch14_ConstructionsAndTilings_Solutions.md",
             questionPaperHTML: "Maths_Ch14_ConstructionsAndTilings.html",
             questionPaperPDF: "Maths_Ch14_ConstructionsAndTilings.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Maths_Ch14_ConstructionsAndTilings_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_maths_ch15",

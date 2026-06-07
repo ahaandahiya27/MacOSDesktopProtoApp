@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electric Current And Its Effect — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Electric Current And Its Effect<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">In the symbol for a single electric cell, the **longer thin line** and the **shorter thick line** stand for, respectively:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the positive terminal and the negative terminal</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the negative terminal and the positive terminal</span></li>
+        <li class=""><span class="lab">C</span><span>the wire and the switch</span></li>
+        <li class=""><span class="lab">D</span><span>two equal terminals with no fixed sign</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In a cell symbol the longer thin line is the positive (+) terminal and the shorter thick line is the negative (−) terminal. So the pair stands for the positive terminal and the negative terminal.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">A battery is correctly built from three identical cells by joining them so that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the positive terminal of one cell touches the positive terminal of the next</span></li>
+        <li class=""><span class="lab">B</span><span>all three negative terminals are joined at one point</span></li>
+        <li class="correct"><span class="lab">C</span><span>the positive terminal of one cell joins the negative terminal of the next, in a row</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the cells are stacked with a gap of air between each pair</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cells form a battery only when joined in a row with the positive terminal of one touching the negative terminal of the next. Joining like-to-like (+ to +) makes them oppose; an air gap breaks the loop.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">Two identical cells are placed in a torch the **wrong way** — positive terminal facing positive terminal in the middle. The bulb will:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>glow twice as bright</span></li>
+        <li class=""><span class="lab">B</span><span>glow at normal brightness</span></li>
+        <li class="correct"><span class="lab">C</span><span>not glow, because the cells oppose each other</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>glow, but only half as bright</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Putting two cells positive-against-positive makes their pushes oppose and cancel. With equal cells the net push is zero, so no current flows and the bulb does not glow.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">A circuit has one cell and one bulb, and the bulb glows dimly. A student replaces the single cell with a battery of two cells joined end-to-end (+ to −) the right way. The bulb now:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>glows more brightly</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>glows more dimly</span></li>
+        <li class=""><span class="lab">C</span><span>goes out completely</span></li>
+        <li class=""><span class="lab">D</span><span>glows exactly as before</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A battery of two cells joined correctly (+ to −) gives a larger total push than one cell, so more current flows and the bulb glows more brightly. (The trap is to think "more cells = dimmer" — that is the misconception in Q53.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">The symbol drawn as a **small circle with a cross (×) inside it** represents a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>cell</span></li>
+        <li class=""><span class="lab">B</span><span>switch</span></li>
+        <li class="correct"><span class="lab">C</span><span>bulb</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>fuse</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A small circle with a cross inside it is the standard symbol for a bulb. (A cell is two parallel lines; a fuse is a line with a small box/loop.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">Which circuit symbol is drawn simply as a **plain straight line**?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a cell</span></li>
+        <li class="correct"><span class="lab">B</span><span>a connecting wire</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a bulb</span></li>
+        <li class=""><span class="lab">D</span><span>an open switch</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A plain straight line is simply a connecting wire. A cell, a bulb and a switch all have extra marks added to the line.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">In a circuit diagram an electrician draws a small gap in the line with a tilted arm lifted away from one contact. This symbol means the switch is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>closed, and current flows</span></li>
+        <li class="correct"><span class="lab">B</span><span>open, and current does not flow</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a fuse that has melted</span></li>
+        <li class=""><span class="lab">D</span><span>a battery being charged</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A small gap with a tilted arm lifted away from one contact is the symbol for an **open** switch: the loop is broken there, so current does not flow.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">A simple circuit is wired as: cell → wire → bulb → wire → **open switch** → back to cell. With the switch in this state the bulb is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>glowing brightly</span></li>
+        <li class=""><span class="lab">B</span><span>glowing dimly</span></li>
+        <li class="correct"><span class="lab">C</span><span>not glowing</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>glowing and then slowly fading</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The switch in the loop is open, so the circuit is broken and no current can flow. With an open switch the bulb does not glow at all (not "dim", not "fading").</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">A torch bulb does **not** light when its switch is pressed. Which of these is **not** a possible reason?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>one of the connecting wires is broken</span></li>
+        <li class=""><span class="lab">B</span><span>the cell is dead</span></li>
+        <li class="correct"><span class="lab">C</span><span>the circuit is a complete closed loop</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the bulb's filament is fused</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A broken wire, a dead cell and a fused filament would all stop the bulb glowing — so each is a possible reason. A **complete closed loop** would let the bulb glow, so it is NOT a reason for failure. The "not a possible reason" answer is the closed-loop option.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">For a bulb to glow in a circuit, the essential condition is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the circuit must be open at one point</span></li>
+        <li class="correct"><span class="lab">B</span><span>the circuit must form a complete closed loop</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>there must be at least three cells</span></li>
+        <li class=""><span class="lab">D</span><span>the switch must be open</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A bulb glows only when current can flow, and current flows only round a complete closed loop. An open circuit or an open switch stops it; the number of cells is not the essential condition.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">A battery is made of four identical 1.5 V cells joined correctly in a row (+ to −). The total voltage pushing current round the circuit is about:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1.5 V</span></li>
+        <li class=""><span class="lab">B</span><span>0.375 V</span></li>
+        <li class="correct"><span class="lab">C</span><span>6 V</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>4 V</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Four 1.5 V cells joined correctly in a row add up: 4 × 1.5 = 6 V. (Dividing instead of adding gives the trap 0.375 V; using just one cell gives 1.5 V.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">Two pieces of wire, P and Q, are each connected in turn across the same cell with the same bulb. With P the bulb is bright; with Q the bulb is dim. The most likely explanation is that:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>wire Q has a higher resistance than wire P</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>wire Q is a perfect insulator</span></li>
+        <li class=""><span class="lab">C</span><span>wire P is broken inside</span></li>
+        <li class=""><span class="lab">D</span><span>wire Q has no resistance at all</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Same cell and same bulb, but Q gives a dimmer bulb — so less current flows through Q. More opposition to current means higher resistance, so wire Q has the higher resistance. (A perfect insulator or a broken wire would give no glow at all, not a dim one.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">Which of the following is the best **conductor** of electric current, and would let a bulb glow if used as the connecting link?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a dry wooden stick</span></li>
+        <li class=""><span class="lab">B</span><span>a rubber band</span></li>
+        <li class="correct"><span class="lab">C</span><span>a copper wire</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a plastic ruler</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Of the choices, only the copper wire is a good conductor, so only it completes the circuit and lets the bulb glow. Wood, rubber and plastic are insulators.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">A student joins a bulb to a cell using a strip of **dry rubber** in place of one wire. The bulb does not glow because rubber is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a good conductor</span></li>
+        <li class=""><span class="lab">B</span><span>a low-melting-point metal</span></li>
+        <li class=""><span class="lab">C</span><span>magnetic</span></li>
+        <li class="correct"><span class="lab">D</span><span>an insulator, so the loop is not completed electrically</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rubber is an insulator: it does not let current pass, so the loop is not completed electrically and the bulb stays dark.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">Electric current passing through a wire always makes the wire:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>cooler than the surroundings</span></li>
+        <li class=""><span class="lab">B</span><span>glow with light, whatever the wire</span></li>
+        <li class="correct"><span class="lab">C</span><span>warmer, because of the heating effect of current</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>lose all of its resistance</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Whenever current flows through a wire, the wire warms up — this is the heating effect of current. (Only special high-resistance wires get hot enough to glow; an ordinary wire just warms, but it does heat.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">Two wires of the **same length and material** carry the same current. Wire X is thin and has high resistance; wire Y is thick and has low resistance. Compared with Y, wire X gets:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>cooler</span></li>
+        <li class=""><span class="lab">B</span><span>exactly as hot</span></li>
+        <li class="correct"><span class="lab">C</span><span>hotter</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>magnetised but not heated</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Same current flows in both. The wire with higher resistance turns more electrical energy into heat, so the thin high-resistance wire X gets hotter than the thick low-resistance wire Y.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">The coil inside an electric room heater is made of **nichrome** rather than copper because nichrome:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>has a very high resistance and a high melting point, so it heats up and glows without melting</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>is a much better conductor than copper</span></li>
+        <li class=""><span class="lab">C</span><span>is magnetic</span></li>
+        <li class=""><span class="lab">D</span><span>is cheaper than any other metal</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Nichrome is chosen for heater coils because it has a very high resistance (so it produces a lot of heat) and a high melting point (so it can glow red-hot without melting). Copper, being a far better conductor, would barely heat.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">As the current through a given heating wire is increased, the amount of heat produced in the wire each second:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>decreases</span></li>
+        <li class=""><span class="lab">B</span><span>becomes zero</span></li>
+        <li class=""><span class="lab">C</span><span>stays exactly the same</span></li>
+        <li class="correct"><span class="lab">D</span><span>increases</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>More current through the same wire produces more heat each second (the heating effect grows with the current). It does not stay the same or fall.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">The filament of an electric bulb glows white-hot when current flows. It is made of **tungsten** mainly because tungsten:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>is a magnetic metal</span></li>
+        <li class="correct"><span class="lab">B</span><span>has an extremely high melting point, so it can get white-hot without melting</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>is an insulator</span></li>
+        <li class=""><span class="lab">D</span><span>melts very easily at a low temperature</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Tungsten is used for bulb filaments because of its extremely high melting point: it can be heated white-hot to give light without melting away.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">Which set of appliances **all** work mainly on the **heating effect** of electric current?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>electric iron, toaster, immersion water heater</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>electric bell, crane magnet, loudspeaker</span></li>
+        <li class=""><span class="lab">C</span><span>ceiling fan, mixer, water pump</span></li>
+        <li class=""><span class="lab">D</span><span>compass, bar magnet, torch</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Electric iron, toaster and immersion water heater all work by the heating effect (a high-resistance element gets hot). The bell, crane magnet and loudspeaker use the magnetic effect; fan, mixer and pump use motors (magnetic effect too).</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">An electric toaster and a ceiling fan are both running. The toaster mainly uses the ____ effect of current, while the fan mainly uses the ____ effect.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>heating; magnetic</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>magnetic; heating</span></li>
+        <li class=""><span class="lab">C</span><span>heating; heating</span></li>
+        <li class=""><span class="lab">D</span><span>magnetic; magnetic</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A toaster heats food using the heating effect of current; a ceiling fan uses a motor, which runs on the magnetic effect of current. In order: heating, then magnetic.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">An electric fuse is best described as a short piece of wire that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>is a very good conductor with a high melting point</span></li>
+        <li class=""><span class="lab">B</span><span>increases the current in the circuit</span></li>
+        <li class=""><span class="lab">C</span><span>stores electric charge for later use</span></li>
+        <li class="correct"><span class="lab">D</span><span>has a low melting point and melts to break the circuit when the current is too high</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A fuse is a short piece of wire with a **low melting point**. When the current is too high it melts and breaks the circuit. It does not store charge or increase current, and it is deliberately NOT a high-melting-point conductor.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">The fuse "protects" the appliances in a circuit. It does this by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>staying solid and carrying any current, however large</span></li>
+        <li class=""><span class="lab">B</span><span>glowing to warn the user without breaking the circuit</span></li>
+        <li class="correct"><span class="lab">C</span><span>melting and **breaking** the circuit when the current rises above a safe value</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>making the current flow faster</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The fuse protects by **melting and breaking** the circuit when the current rises above a safe value, cutting off the current before wires overheat. It does not safely carry any current, nor merely glow.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">A house circuit is rated to carry safely up to 5 A. Which fuse should be fitted in it?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a 5 A fuse, so it melts only if the current goes above the safe limit</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a 50 A fuse, so it never melts</span></li>
+        <li class=""><span class="lab">C</span><span>a 0.5 A fuse, so it melts during normal use</span></li>
+        <li class=""><span class="lab">D</span><span>no fuse, to avoid interruptions</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The fuse rating should match the safe limit, so fit a 5 A fuse: it carries normal current but melts if the current goes above 5 A. A 50 A fuse never protects; a 0.5 A fuse would melt during normal use; no fuse means no protection.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">Too many high-power appliances are switched on at the same socket. The current grows very large and the fuse melts. This situation is an example of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a short circuit caused by bare wires touching</span></li>
+        <li class="correct"><span class="lab">B</span><span>overloading the circuit</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the magnetic effect of current</span></li>
+        <li class=""><span class="lab">D</span><span>the cell being connected the wrong way</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Too many high-power appliances on one socket draw a very large total current — this is overloading. (A short circuit is specifically bare live and neutral wires touching, which is a different fault.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">After a fuse has melted ("blown"), the correct action is to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>replace it with a thicker copper wire so it can never blow again</span></li>
+        <li class="correct"><span class="lab">B</span><span>find and remove the fault, then fit a new fuse of the correct rating</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>join the two melted ends together with tape and reuse it</span></li>
+        <li class=""><span class="lab">D</span><span>replace it with a fuse of a much higher rating to avoid trouble</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The right action is to find and remove the fault, then fit a fresh fuse of the **correct** rating. Using a thicker wire, a much higher rating, or taping the ends all defeat the fuse's protective purpose.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">A modern device that does the fuse's job but can simply be **switched back on** after it trips, instead of being replaced, is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>tungsten filament</span></li>
+        <li class=""><span class="lab">B</span><span>electromagnet</span></li>
+        <li class=""><span class="lab">C</span><span>electric cell</span></li>
+        <li class="correct"><span class="lab">D</span><span>MCB (miniature circuit breaker)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A miniature circuit breaker (MCB) does the fuse's job but can simply be switched back on after it trips, instead of being replaced. An electromagnet, a cell and a filament do not protect a circuit this way.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">Someone replaces a blown 5 A fuse with a thick copper wire that will never melt. The danger of doing this is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the bulb will glow more dimly</span></li>
+        <li class="correct"><span class="lab">B</span><span>the circuit can now overheat and catch fire without anything breaking the current</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the cells will be charged the wrong way</span></li>
+        <li class=""><span class="lab">D</span><span>the magnetic effect will become too strong</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A wire that never melts removes the protection: if a fault sends a huge current, nothing breaks the circuit, so the wiring can overheat and start a fire. That is the danger of "fuse-replaced-by-thick-wire".</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">In 1820, Hans Christian Oersted noticed that a magnetic compass needle placed near a wire **moved** when:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the wire was simply lying on the table with no current</span></li>
+        <li class=""><span class="lab">B</span><span>the wire was painted a different colour</span></li>
+        <li class="correct"><span class="lab">C</span><span>an electric current was switched on in the wire</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the wire was made shorter</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Oersted saw the compass needle move only when an electric **current was switched on** in the wire. A dead wire, a coat of paint, or a shorter length do not deflect the needle.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">Oersted's experiment showed that an electric current flowing in a wire produces:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only heat and never any magnetism</span></li>
+        <li class=""><span class="lab">B</span><span>light only</span></li>
+        <li class=""><span class="lab">C</span><span>sound but no magnetism</span></li>
+        <li class="correct"><span class="lab">D</span><span>a magnetic field around the wire</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Oersted's experiment showed that an electric current in a wire produces a **magnetic field** around the wire — the magnetic effect of current. It is not "only heat", "sound", or "light only".</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">A compass needle lies still below a straight wire. When the current in the wire is switched on, the needle swings aside. If the current is then switched **off**, the needle:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>keeps pointing in the deflected direction for ever</span></li>
+        <li class=""><span class="lab">B</span><span>melts</span></li>
+        <li class=""><span class="lab">C</span><span>starts spinning continuously</span></li>
+        <li class="correct"><span class="lab">D</span><span>swings back to its original (north–south) direction</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The deflection lasts only while current flows. Switch the current off and the magnetic effect vanishes, so the needle swings back to its normal north–south direction. It does not stay deflected, spin or melt.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">A current-carrying wire is wound into a coil around a soft-iron nail to make an **electromagnet**. Compared with the straight wire alone, the coil-and-iron arrangement gives:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a much stronger magnetic effect</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>no magnetic effect at all</span></li>
+        <li class=""><span class="lab">C</span><span>a weaker magnetic effect</span></li>
+        <li class=""><span class="lab">D</span><span>only a heating effect, never magnetism</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Winding the wire into a coil around a soft-iron core concentrates the magnetic effect, giving a much stronger magnet than a single straight wire carrying the same current.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">Three things are tried on the same electromagnet, one at a time: (i) more turns of wire, (ii) more current, (iii) keeping an iron core inside the coil. Each of these, on its own, makes the electromagnet:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>weaker</span></li>
+        <li class="correct"><span class="lab">B</span><span>stronger</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>lose its magnetism</span></li>
+        <li class=""><span class="lab">D</span><span>reverse into an insulator</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Each of more turns, more current, and keeping an iron core inside the coil makes an electromagnet **stronger**. None of them weakens it or destroys its magnetism.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">The biggest reason an electromagnet is more useful than an ordinary permanent bar magnet for lifting and dropping iron scrap is that an electromagnet:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>is always magnetic and can never be switched off</span></li>
+        <li class=""><span class="lab">B</span><span>works without any electric current</span></li>
+        <li class=""><span class="lab">C</span><span>is made of plastic</span></li>
+        <li class="correct"><span class="lab">D</span><span>can be switched on to lift and switched off to drop the load</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The key advantage is control: an electromagnet can be switched on to lift a load and switched off to drop it — a permanent magnet cannot be turned off. (It is not "always magnetic", not plastic, and it does need current.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">A crane at a scrap yard uses a large electromagnet. As the operator drives the crane over a mixed heap, the electromagnet will pick up:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>nothing at all, because electromagnets cannot lift things</span></li>
+        <li class=""><span class="lab">B</span><span>every object in the heap, whatever it is made of</span></li>
+        <li class=""><span class="lab">C</span><span>only the plastic and rubber objects</span></li>
+        <li class="correct"><span class="lab">D</span><span>iron and steel objects, but not the aluminium, copper or plastic</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An electromagnet attracts only magnetic materials — iron and steel — and not aluminium, copper, plastic, etc. So at a scrap yard it picks up the iron and steel but leaves the rest.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">In a working electromagnet the soft-iron core is essential because the iron:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>blocks the current completely</span></li>
+        <li class=""><span class="lab">B</span><span>keeps the magnetism for ever, even with no current</span></li>
+        <li class="correct"><span class="lab">C</span><span>strongly increases the magnetic effect while current flows, then loses it when current stops</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>cools the coil down</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>While current flows, the soft-iron core strongly increases the magnetic effect; when the current stops, soft iron loses its magnetism almost at once. That is exactly why soft iron (not steel) is used and why the magnet can be switched off.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">An electromagnet stops working (loses its magnetism) the moment the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>iron core is painted</span></li>
+        <li class="correct"><span class="lab">B</span><span>electric current is switched off</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>number of turns is increased</span></li>
+        <li class=""><span class="lab">D</span><span>wire is made of copper</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An electromagnet's magnetism depends on the current. The moment the current is switched off, it loses its magnetism. Painting the core, adding turns, or using copper wire do not switch it off.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">In an electric bell, the part that becomes a magnet and pulls the iron arm (armature) towards it when current flows is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>gong</span></li>
+        <li class="correct"><span class="lab">B</span><span>electromagnet (coil on the iron core)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>spring</span></li>
+        <li class=""><span class="lab">D</span><span>hammer head</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In an electric bell the coil wound on the iron core becomes the **electromagnet**; it is the part that becomes a magnet and pulls the iron armature towards it when current flows. The gong, spring and hammer do not become magnets.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">In an electric bell, the moment the electromagnet pulls the armature across and the hammer strikes the gong, the contact at the screw is **broken**. The immediate result is that:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the current stops, the electromagnet loses its magnetism, and the spring pulls the armature back</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the current grows larger and the bell melts</span></li>
+        <li class=""><span class="lab">C</span><span>the electromagnet becomes a permanent magnet</span></li>
+        <li class=""><span class="lab">D</span><span>the bell rings just once and then stops for good</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>When the armature is pulled across and the contact at the screw breaks, the circuit opens: the current stops, the electromagnet loses its magnetism, and the spring pulls the armature back. (It does not become permanent, and the current does not grow.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">An electric bell rings continuously (a buzzing sound) rather than giving a single strike because:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the contact keeps making and breaking, so the cycle repeats again and again</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the battery voltage keeps rising</span></li>
+        <li class=""><span class="lab">C</span><span>the electromagnet never switches off once started</span></li>
+        <li class=""><span class="lab">D</span><span>the gong is itself a magnet</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>As the armature returns, the contact is remade, current flows again, the electromagnet pulls once more — the contact keeps making and breaking, so the strike repeats again and again, giving a continuous buzzing.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">Which single sequence correctly describes one cycle of an electric bell, starting from the switch being pressed?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>hammer hits gong → current stops → electromagnet pulls armature → spring breaks</span></li>
+        <li class="correct"><span class="lab">B</span><span>current flows → electromagnet pulls armature → hammer hits gong → contact breaks → current stops → spring returns armature → contact remakes</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>spring pulls armature → contact breaks → current flows for ever</span></li>
+        <li class=""><span class="lab">D</span><span>gong becomes a magnet → armature melts → bell stops</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>One full cycle is: current flows → electromagnet pulls the armature → hammer hits the gong → the contact breaks → current stops → the spring returns the armature → the contact remakes (and it all repeats). The other sequences put the steps out of order.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">A current-carrying coil with **no** iron core is wound with the same wire and carries the same current as an identical coil **with** a soft-iron core inside it. The coil with the iron core is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the stronger magnet</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the weaker magnet</span></li>
+        <li class=""><span class="lab">C</span><span>exactly equal in strength</span></li>
+        <li class=""><span class="lab">D</span><span>not a magnet at all</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>With the same wire and same current, the coil **with** the soft-iron core is the stronger magnet, because the iron core greatly boosts the magnetic effect.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">A student wants to make her electromagnet **stronger** without changing the battery. The most sensible single change is to:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>wind many more turns of wire on the same iron core</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>remove the iron core</span></li>
+        <li class=""><span class="lab">C</span><span>use fewer turns of wire</span></li>
+        <li class=""><span class="lab">D</span><span>replace the iron core with a wooden stick</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Without changing the battery, the most sensible single change to strengthen the electromagnet is to wind many more turns of wire on the same iron core. Removing the core, using fewer turns, or a wooden core would all weaken it.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">Which statement about the heating and magnetic effects is correct?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a current produces only a heating effect, never a magnetic one</span></li>
+        <li class=""><span class="lab">B</span><span>a current produces only a magnetic effect, never a heating one</span></li>
+        <li class="correct"><span class="lab">C</span><span>a current passing through a wire produces both a heating effect and a magnetic effect at the same time</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>heat and magnetism are produced only after the current is switched off</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A current flowing through a wire produces **both** a heating effect (the wire warms) and a magnetic effect (a magnetic field forms) at the same time — they are two effects of the one current, not one or the other, and they occur while the current flows.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">Which device makes use of the **magnetic effect** of electric current?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>an electric toaster</span></li>
+        <li class="correct"><span class="lab">B</span><span>an electric bell</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>an immersion water heater</span></li>
+        <li class=""><span class="lab">D</span><span>an incandescent filament bulb</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An electric bell works through an electromagnet, so it uses the **magnetic** effect. A toaster, immersion heater and filament bulb all use the heating effect.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">A bulb is joined to a single cell and glows. A second identical cell is now added in the **same direction** (+ to −), making a two-cell battery. Compared with one cell, the bulb is now:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>brighter, because the two cells together push a larger current</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>dimmer, because two cells share the work</span></li>
+        <li class=""><span class="lab">C</span><span>off, because two cells cancel out</span></li>
+        <li class=""><span class="lab">D</span><span>unchanged, because cells make no difference</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Adding a second identical cell in the same direction (+ to −) makes a two-cell battery whose pushes add, driving a larger current, so the bulb glows brighter. (Cells "sharing the work" or "cancelling out" are misconceptions.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">Two cells are joined positive-to-positive and negative-to-negative (facing against each other) before being put in a circuit with a bulb. The bulb:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>glows extra brightly</span></li>
+        <li class=""><span class="lab">B</span><span>glows with twice the current</span></li>
+        <li class=""><span class="lab">C</span><span>glows normally</span></li>
+        <li class="correct"><span class="lab">D</span><span>does not glow, because the cells push against each other and cancel out</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Joined positive-to-positive and negative-to-negative, the two cells push against each other and cancel out, so effectively no current flows and the bulb does not glow.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">A circuit is drawn as: cell → closed switch → bulb → back to cell. The bulb glows. A student then opens the switch only. The bulb goes out because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the cell has been used up</span></li>
+        <li class=""><span class="lab">B</span><span>the switch turned into a fuse</span></li>
+        <li class=""><span class="lab">C</span><span>the bulb's resistance dropped to zero</span></li>
+        <li class="correct"><span class="lab">D</span><span>the loop is now broken, so no current can flow</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Opening the switch breaks the loop, so no current can flow and the bulb goes out. (The cell is not used up, and the resistance does not drop to zero; the switch does not become a fuse.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">A nichrome heater coil and a copper connecting wire carry the **same current**. The nichrome coil becomes red-hot while the copper wire stays cool mainly because:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>nichrome has a much higher resistance than copper, so far more heat is produced in it</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>copper carries no current</span></li>
+        <li class=""><span class="lab">C</span><span>nichrome is magnetic and copper is not</span></li>
+        <li class=""><span class="lab">D</span><span>copper has a lower melting point than nichrome</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>With the same current, the wire of higher resistance produces far more heat. Nichrome has a much higher resistance than copper, so the nichrome coil glows red-hot while the copper wire stays cool. (Copper does carry the current; the difference is resistance, not magnetism or melting point.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">Which of these correctly pairs a circuit component with its job?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>switch — to make or break the circuit</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>bulb — to break the circuit when current is high</span></li>
+        <li class=""><span class="lab">C</span><span>fuse — to store charge</span></li>
+        <li class=""><span class="lab">D</span><span>cell — to measure the current</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct pairing is switch — to make or break the circuit. (A bulb gives light, not over-current protection; a fuse breaks the circuit, it does not store charge; a cell supplies energy, it does not measure current.)</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">An immersion rod (used to heat a bucket of water) and an electric bell are compared. They depend, respectively, on the ____ effect and the ____ effect of current.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>magnetic; heating</span></li>
+        <li class="correct"><span class="lab">B</span><span>heating; magnetic</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>heating; heating</span></li>
+        <li class=""><span class="lab">D</span><span>magnetic; magnetic</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An immersion rod heats water using the heating effect; an electric bell rings using an electromagnet, which is the magnetic effect. In order: heating, then magnetic.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">A circuit is drawn with the cell symbol's longer line on the left. Current in the external wires is taken to flow out of the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>shorter thick line (negative terminal) round to the longer line</span></li>
+        <li class=""><span class="lab">B</span><span>middle of the cell symbol</span></li>
+        <li class="correct"><span class="lab">C</span><span>longer thin line (positive terminal) round to the shorter line</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>bulb towards the switch only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In the external wires, current is taken to flow out of the positive terminal — the longer thin line — round the circuit back to the shorter (negative) line. It does not start from the middle or from the bulb.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">A child claims: "Adding a second cell the right way always makes a bulb dimmer." This claim is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>correct, because more cells slow the current</span></li>
+        <li class="correct"><span class="lab">B</span><span>wrong; correctly adding a cell increases the push and makes the bulb brighter</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>correct only for tungsten bulbs</span></li>
+        <li class=""><span class="lab">D</span><span>wrong; the bulb always goes out</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The claim is wrong. Adding a cell correctly (+ to −) increases the total push, so more current flows and the bulb gets **brighter**, not dimmer. (Connecting it the wrong way is what reduces the push.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">The reason a thin fuse wire melts before the thick household wiring overheats is that, for the same large current, the thin fuse wire:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>carries no current at all</span></li>
+        <li class="correct"><span class="lab">B</span><span>has a higher resistance and a low melting point, so it heats up fastest and melts first</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>is a magnet</span></li>
+        <li class=""><span class="lab">D</span><span>is a better conductor than the household wire</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>For the same large current, the thin fuse wire has a higher resistance and a low melting point, so it heats up the fastest and melts first — before the thicker household wiring can overheat. That is why the fuse is the deliberate weak link.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">A safety claim says: "A fuse protects a circuit by **conducting** the extra current safely away without ever breaking." This claim is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>correct — that is exactly how a fuse works</span></li>
+        <li class=""><span class="lab">B</span><span>wrong — a fuse increases the current instead</span></li>
+        <li class=""><span class="lab">C</span><span>correct only for MCBs</span></li>
+        <li class="correct"><span class="lab">D</span><span>wrong — a fuse protects precisely by **melting and breaking** the circuit when the current is too high</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The claim is wrong. A fuse does not conduct the extra current away; it protects precisely by **melting and breaking** the circuit when the current is too high. (It also does not increase the current.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">Which observation would best convince you that a current is flowing in a hidden wire, **without** cutting the wire open?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a nearby compass needle deflects when the supply is switched on</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the wire changes colour</span></li>
+        <li class=""><span class="lab">C</span><span>the wire becomes heavier</span></li>
+        <li class=""><span class="lab">D</span><span>the wire becomes longer</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A current produces a magnetic field, which deflects a nearby compass needle. So if a compass needle deflects when the supply is switched on, current is flowing — and you never had to cut the wire. Colour, weight and length do not change with current.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">A coil electromagnet lifts at most 5 paper clips with one cell. With **two cells** joined correctly (more current) and **more turns** added, the number of paper clips it can lift will most likely:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>increase</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>decrease</span></li>
+        <li class=""><span class="lab">C</span><span>stay exactly the same</span></li>
+        <li class=""><span class="lab">D</span><span>drop to zero</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>More current (from two cells) and more turns both strengthen the electromagnet, so it can lift **more** paper clips than before. The count increases, not decreases.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">In an electric bell, the role of the **springy metal strip** carrying the armature is to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>keep the electromagnet switched on permanently</span></li>
+        <li class="correct"><span class="lab">B</span><span>pull the armature back so the contact is remade and the cycle repeats</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>melt when the current is too high</span></li>
+        <li class=""><span class="lab">D</span><span>measure the voltage of the cell</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The springy metal strip pulls the armature back once the magnet releases it, so the contact is remade and the make-break cycle repeats. It does not keep the magnet on, melt, or measure voltage.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">A bulb, a cell and a switch are connected in a single loop, but the bulb does not light even with the switch closed and the cell fresh. A check shows a tiny break in one wire. This break makes the circuit:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a closed circuit that should still light</span></li>
+        <li class=""><span class="lab">B</span><span>a battery of two cells</span></li>
+        <li class=""><span class="lab">C</span><span>a short circuit that lights the bulb brighter</span></li>
+        <li class="correct"><span class="lab">D</span><span>an open circuit, so no current flows and the bulb stays dark</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A tiny break in a wire leaves a gap in the loop, making it an **open** circuit: no current flows, so the bulb stays dark even with a closed switch and a fresh cell. (A break is not a closed circuit and not a short circuit.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">Identify the **incorrect** statement.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>an electromagnet can be switched on and off, but a permanent bar magnet cannot</span></li>
+        <li class=""><span class="lab">B</span><span>an electromagnet will attract iron and steel objects</span></li>
+        <li class=""><span class="lab">C</span><span>an electromagnet made stronger by adding turns and current can lift more iron</span></li>
+        <li class="correct"><span class="lab">D</span><span>an electromagnet attracts plastic, aluminium and wood just as strongly as iron</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Statements about switching on/off, attracting iron and steel, and lifting more when made stronger are all true. The **incorrect** statement is that an electromagnet attracts plastic, aluminium and wood as strongly as iron — it attracts only magnetic materials like iron and steel. --- *Solutions complete: 60 / 60.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

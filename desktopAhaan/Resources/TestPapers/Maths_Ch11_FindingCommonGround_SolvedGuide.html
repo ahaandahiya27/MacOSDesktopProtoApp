@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finding Common Ground — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Finding Common Ground<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">The HCF of two numbers is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>smallest number that both numbers divide into</span></li>
+        <li class="correct"><span class="lab">B</span><span>largest number that divides both numbers exactly</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>product of the two numbers</span></li>
+        <li class=""><span class="lab">D</span><span>sum of all common factors of the two numbers</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The HCF (Highest Common Factor) is the largest number that divides both numbers exactly. (A) describes the LCM — the smallest number both divide into. The HCF is about dividing INTO the numbers; the LCM is what the numbers divide into.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">Find the HCF of 24 and 36.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>6</span></li>
+        <li class=""><span class="lab">B</span><span>4</span></li>
+        <li class="correct"><span class="lab">C</span><span>12</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>72</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>24 = 2³ × 3, 36 = 2² × 3². Common primes to the lowest power: 2² × 3 = 12. (72 is the LCM — taking highest powers gives the trap.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">Find the LCM of 12 and 18.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>36</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>6</span></li>
+        <li class=""><span class="lab">C</span><span>72</span></li>
+        <li class=""><span class="lab">D</span><span>216</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>12 = 2² × 3, 18 = 2 × 3². LCM takes every prime to its highest power: 2² × 3² = 36. (6 is the HCF; 216 = 12 × 18 is the product, which only equals the LCM for co-prime numbers.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">Sameeksha tiles a 12 ft × 16 ft floor with the largest equal square tiles of whole-foot side that fit exactly. The side of each tile is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>16 ft</span></li>
+        <li class=""><span class="lab">B</span><span>2 ft</span></li>
+        <li class="correct"><span class="lab">C</span><span>4 ft</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>48 ft</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The tile side must divide both 12 and 16 exactly, so it must be a common factor; the largest is HCF(12, 16). 12 = 2²×3, 16 = 2⁴, so HCF = 2² = 4 ft. (16 ft is the "HCF = the bigger number" trap; the HCF can't exceed the smaller dimension.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">For the same 12 ft × 16 ft floor, the number of largest square tiles needed is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>6</span></li>
+        <li class=""><span class="lab">B</span><span>4</span></li>
+        <li class=""><span class="lab">C</span><span>48</span></li>
+        <li class="correct"><span class="lab">D</span><span>12</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>With 4 ft tiles the floor is (12 ÷ 4) × (16 ÷ 4) = 3 × 4 = 12 tiles. (A bigger tile gives FEWER tiles, so the HCF gives the fewest tiles for an exact fit.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">Which of these pairs is co-prime (HCF = 1)?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>8 and 15</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>9 and 15</span></li>
+        <li class=""><span class="lab">C</span><span>8 and 12</span></li>
+        <li class=""><span class="lab">D</span><span>10 and 25</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>8 = 2³ and 15 = 3 × 5 share no prime, so HCF(8, 15) = 1 — co-prime. The others share a factor: 8 &amp; 12 share 4, 9 &amp; 15 share 3, 10 &amp; 25 share 5. (Co-prime numbers need not themselves be prime — 8 and 15 are both composite.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">The LCM of two co-prime numbers 7 and 9 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1</span></li>
+        <li class=""><span class="lab">B</span><span>16</span></li>
+        <li class="correct"><span class="lab">C</span><span>63</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>7</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>7 and 9 are co-prime (HCF = 1), so their LCM equals their product: 7 × 9 = 63.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">Two bells ring at intervals of 6 minutes and 8 minutes. If they ring together now, after how many minutes do they next ring together?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>48</span></li>
+        <li class=""><span class="lab">B</span><span>14</span></li>
+        <li class=""><span class="lab">C</span><span>2</span></li>
+        <li class="correct"><span class="lab">D</span><span>24</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>They ring together at common multiples of 6 and 8; the first is LCM(6, 8). 6 = 2×3, 8 = 2³, LCM = 2³×3 = 24 minutes. (48 = 6 × 8 is the trap — the product overshoots because they share the factor 2.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">The product of two numbers is 216 and their HCF is 6. Their LCM is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>36</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>1296</span></li>
+        <li class=""><span class="lab">C</span><span>30</span></li>
+        <li class=""><span class="lab">D</span><span>210</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>HCF × LCM = product, so LCM = product ÷ HCF = 216 ÷ 6 = 36. (1296 = 216 × 6 multiplies instead of divides; 210 = 216 − 6 subtracts.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">For any two numbers, HCF × LCM equals:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the sum of the two numbers</span></li>
+        <li class="correct"><span class="lab">B</span><span>the product of the two numbers</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the larger of the two numbers</span></li>
+        <li class=""><span class="lab">D</span><span>the difference of the two numbers</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>For any two numbers, HCF × LCM = the product of the two numbers. This lets you find one if you know the other.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">Using 12 = 2² × 3 and 18 = 2 × 3², the HCF of 12 and 18 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2² × 3² = 36</span></li>
+        <li class=""><span class="lab">B</span><span>2² × 3 = 12</span></li>
+        <li class=""><span class="lab">C</span><span>2³ × 3 = 24</span></li>
+        <li class="correct"><span class="lab">D</span><span>2 × 3 = 6</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>HCF takes each COMMON prime to its LOWEST power: from 2² × 3 and 2 × 3², the lowest powers are 2¹ and 3¹, giving 2 × 3 = 6. (36 uses highest powers — that's the LCM; 12 keeps 2² instead of the lower 2¹.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">Using 12 = 2² × 3 and 18 = 2 × 3², the LCM of 12 and 18 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2 × 3 = 6</span></li>
+        <li class=""><span class="lab">B</span><span>2² × 3 = 12</span></li>
+        <li class="correct"><span class="lab">C</span><span>2² × 3² = 36</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>2³ × 3³ = 216</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>LCM takes every prime to its HIGHEST power: 2² (from 12) and 3² (from 18), giving 2² × 3² = 36. (6 uses lowest powers — that's the HCF; 216 multiplies the two numbers.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">Two numbers have HCF 6 and LCM 72. If one number is 24, the other is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>36</span></li>
+        <li class="correct"><span class="lab">B</span><span>18</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>12</span></li>
+        <li class=""><span class="lab">D</span><span>8</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>HCF × LCM = product of the two numbers: 6 × 72 = 432. Other number = 432 ÷ 24 = 18. Check: HCF(24, 18) = 6 and LCM(24, 18) = 72. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">The longest tape that can measure 7 m, 3.85 m and 12.95 m an exact whole number of times is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>7 cm</span></li>
+        <li class=""><span class="lab">B</span><span>5 cm</span></li>
+        <li class="correct"><span class="lab">C</span><span>35 cm</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>70 cm</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Convert to cm: 700, 385, 1295. The longest exact measuring length is HCF(700, 385, 1295). 700 = 2²×5²×7, 385 = 5×7×11, 1295 = 5×7×37. Common: 5 × 7 = 35 cm. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">Which statement is always TRUE?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>The HCF of two numbers is never larger than the smaller number.</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>The LCM of two numbers is never larger than the larger number.</span></li>
+        <li class=""><span class="lab">C</span><span>The HCF of two numbers is always one of the two numbers.</span></li>
+        <li class=""><span class="lab">D</span><span>The LCM of two numbers always equals their product.</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The HCF divides the smaller number, so it can never exceed it — always true. (B) is false (the LCM is usually larger than both); (C) fails for e.g. 12 and 16 (HCF 4 is neither); (D) holds only for co-prime pairs.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">Find the HCF of 18, 24 and 30.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2</span></li>
+        <li class=""><span class="lab">B</span><span>3</span></li>
+        <li class=""><span class="lab">C</span><span>12</span></li>
+        <li class="correct"><span class="lab">D</span><span>6</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>18 = 2×3², 24 = 2³×3, 30 = 2×3×5. Common primes to lowest power: 2 × 3 = 6.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">Find the LCM of 4, 6 and 8.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>24</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>12</span></li>
+        <li class=""><span class="lab">C</span><span>48</span></li>
+        <li class=""><span class="lab">D</span><span>16</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>4 = 2², 6 = 2×3, 8 = 2³. LCM takes highest powers: 2³ × 3 = 24. Check: 24 ÷ 4, ÷6, ÷8 are all whole. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">Three traffic lights change every 24 s, 36 s and 54 s. Having just changed together, after how long do all three change together again?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>108 s</span></li>
+        <li class="correct"><span class="lab">B</span><span>216 s</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>6 s</span></li>
+        <li class=""><span class="lab">D</span><span>324 s</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>All three change together at LCM(24, 36, 54). 24 = 2³×3, 36 = 2²×3², 54 = 2×3³. Highest powers: 2³ × 3³ = 8 × 27 = 216 s. (6 s is the HCF — the trap of dividing instead.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">The greatest number that divides both 70 and 125 leaving remainder 0 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>25</span></li>
+        <li class=""><span class="lab">B</span><span>7</span></li>
+        <li class="correct"><span class="lab">C</span><span>5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>10</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Divides both leaving remainder 0" means a common factor; the greatest is HCF(70, 125). 70 = 2×5×7, 125 = 5³. Common: 5.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">Two numbers are in the ratio 3 : 4 and their HCF is 5. The two numbers are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>3 and 4</span></li>
+        <li class=""><span class="lab">B</span><span>9 and 12</span></li>
+        <li class=""><span class="lab">C</span><span>30 and 40</span></li>
+        <li class="correct"><span class="lab">D</span><span>15 and 20</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Numbers in ratio 3 : 4 can be written 3k and 4k. Since 3 and 4 are co-prime, their HCF is k. Given HCF = 5, take k = 5: the numbers are 15 and 20. Check: HCF(15, 20) = 5 and 15 : 20 = 3 : 4. ✓ (30 and 40 have HCF 10, not 5; 3 and 4 have HCF 1.)</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">The LCM of 15 and 20 is 60. Their HCF is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>3</span></li>
+        <li class=""><span class="lab">C</span><span>4</span></li>
+        <li class=""><span class="lab">D</span><span>300</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>HCF × LCM = product, so HCF = (15 × 20) ÷ LCM = 300 ÷ 60 = 5. (300 forgets to divide.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">Which of the following is NOT a common multiple of 4 and 6?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>12</span></li>
+        <li class="correct"><span class="lab">B</span><span>18</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>36</span></li>
+        <li class=""><span class="lab">D</span><span>24</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Common multiples of 4 and 6 are multiples of LCM(4, 6) = 12: 12, 24, 36, 48… 18 is a multiple of 6 but not of 4, so it is NOT a common multiple. (12, 24, 36 all are.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">The number of common factors of 24 and 36 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>3</span></li>
+        <li class=""><span class="lab">B</span><span>4</span></li>
+        <li class="correct"><span class="lab">C</span><span>6</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>12</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Common factors of two numbers are exactly the factors of their HCF. HCF(24, 36) = 12, and 12 has factors 1, 2, 3, 4, 6, 12 — that is 6 common factors.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">Two gears have 8 and 12 teeth and mesh together. After how many teeth of the larger gear pass do they return to their starting position together?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>96 teeth</span></li>
+        <li class=""><span class="lab">B</span><span>2 teeth</span></li>
+        <li class=""><span class="lab">C</span><span>4 teeth</span></li>
+        <li class="correct"><span class="lab">D</span><span>24 teeth</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The gears realign after a number of teeth that is a multiple of both 8 and 12 — the LCM. 8 = 2³, 12 = 2²×3, LCM = 2³×3 = 24 teeth. (96 = 8 × 12 overshoots.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">The HCF of two numbers is 1. Which must be true?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>The numbers are co-prime and their LCM equals their product.</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Both numbers are prime.</span></li>
+        <li class=""><span class="lab">C</span><span>The numbers are equal.</span></li>
+        <li class=""><span class="lab">D</span><span>One number divides the other.</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>HCF = 1 means the numbers are co-prime, and for co-prime numbers LCM = product. (B) is false — 8 and 15 are co-prime yet neither is prime; (C) and (D) are false (equal numbers share a factor &gt; 1, and if one divides the other the HCF is the smaller, not 1).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">The HCF of 1794 and 2346 by repeated subtraction/division (Euclid) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>23</span></li>
+        <li class="correct"><span class="lab">B</span><span>138</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>46</span></li>
+        <li class=""><span class="lab">D</span><span>6</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Euclid: 2346 = 1×1794 + 552; 1794 = 3×552 + 138; 552 = 4×138 + 0. So HCF = 138. (138 = 2 × 3 × 23.) Listing factors here would be hopeless — that's the point of Euclid's method.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">The smallest number that is exactly divisible by each of 1, 2, 3, 4, 5 and 6 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>30</span></li>
+        <li class=""><span class="lab">B</span><span>720</span></li>
+        <li class=""><span class="lab">C</span><span>120</span></li>
+        <li class="correct"><span class="lab">D</span><span>60</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Smallest number divisible by 1–6 = LCM(1,2,3,4,5,6). Highest powers among them: 2² (from 4), 3 (from 3 or 6), 5 (from 5): 4 × 3 × 5 = 60. (120 and 720 are larger common multiples, not the LEAST.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">Two ribbons of length 36 cm and 48 cm are cut into equal pieces of the greatest possible length with none left over. The length of each piece is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>6 cm</span></li>
+        <li class="correct"><span class="lab">B</span><span>12 cm</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>4 cm</span></li>
+        <li class=""><span class="lab">D</span><span>24 cm</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Greatest equal piece length = HCF(36, 48). 36 = 2²×3², 48 = 2⁴×3, HCF = 2²×3 = 12 cm. (24 divides 48 but not 36.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">For the ribbons in the previous question, the total number of equal pieces obtained is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>12</span></li>
+        <li class=""><span class="lab">B</span><span>4</span></li>
+        <li class="correct"><span class="lab">C</span><span>7</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>8</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>With 12 cm pieces: 36 ÷ 12 + 48 ÷ 12 = 3 + 4 = 7 pieces.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">If two numbers are both multiples of their HCF h, then h is also a factor of:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>their sum and their difference</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>only the larger number</span></li>
+        <li class=""><span class="lab">C</span><span>neither their sum nor their difference</span></li>
+        <li class=""><span class="lab">D</span><span>only their product, never their sum</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>If h divides both a and b, then it divides a + b and a − b (since each is a sum/difference of multiples of h). This is exactly why Euclid's algorithm works.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">The prime factorisation of 360 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2³ × 3 × 5</span></li>
+        <li class=""><span class="lab">B</span><span>2² × 3² × 5</span></li>
+        <li class="correct"><span class="lab">C</span><span>2³ × 3² × 5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>2³ × 3² × 5²</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>360 = 2 × 180 = 2² × 90 = 2³ × 45 = 2³ × 9 × 5 = 2³ × 3² × 5. Check: 8 × 9 × 5 = 360. ✓ (2³×3×5 = 120 and 2²×3²×5 = 180 are wrong prime powers.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">The HCF of 2² × 3 × 5 and 2 × 3² × 7 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2² × 3² × 5 × 7 = 1260</span></li>
+        <li class=""><span class="lab">B</span><span>2² × 3² = 36</span></li>
+        <li class=""><span class="lab">C</span><span>2 × 3 × 5 × 7 = 210</span></li>
+        <li class="correct"><span class="lab">D</span><span>2 × 3 = 6</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>HCF takes common primes to the lowest power. Both have 2 (powers 2 and 1 → take 2¹) and 3 (powers 1 and 2 → take 3¹); 5 and 7 are not common. HCF = 2 × 3 = 6. (1260 is the LCM; 210 wrongly includes the non-common 5 and 7.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">The LCM of 2² × 3 × 5 and 2 × 3² × 7 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2 × 3 = 6</span></li>
+        <li class="correct"><span class="lab">B</span><span>2² × 3² × 5 × 7 = 1260</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>2³ × 3³ × 5 × 7</span></li>
+        <li class=""><span class="lab">D</span><span>2² × 3 × 5 = 60</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>LCM takes every prime to its highest power: 2² (from the first), 3² (from the second), and 5 and 7 once each: 2² × 3² × 5 × 7 = 4 × 9 × 35 = 1260. (6 is the HCF.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">The greatest number that divides 43, 91 and 183 leaving the same remainder 3 in each case is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>4</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>8</span></li>
+        <li class=""><span class="lab">C</span><span>20</span></li>
+        <li class=""><span class="lab">D</span><span>40</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A number leaving the same remainder when dividing 43, 91, 183 must divide their differences exactly: 91 − 43 = 48, 183 − 91 = 92, 183 − 43 = 140. HCF(48, 92, 140): 48 = 2⁴×3, 92 = 2²×23, 140 = 2²×5×7 → common 2² = 4. Check: 43 = 4×10 + 3, 91 = 4×22 + 3, 183 = 4×45 + 3. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">A shopkeeper has 84 kg of one type of rice and 108 kg of another. He packs each type into bags of equal, largest possible size (one type per bag). The bag size is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>6 kg</span></li>
+        <li class=""><span class="lab">B</span><span>24 kg</span></li>
+        <li class="correct"><span class="lab">C</span><span>12 kg</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>4 kg</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Largest equal bag size (one type per bag) = HCF(84, 108). 84 = 2²×3×7, 108 = 2²×3³, HCF = 2²×3 = 12 kg. (24 divides neither exactly.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">For the rice in the previous question, the total number of bags is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>32</span></li>
+        <li class=""><span class="lab">B</span><span>7</span></li>
+        <li class=""><span class="lab">C</span><span>9</span></li>
+        <li class="correct"><span class="lab">D</span><span>16</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>With 12 kg bags: 84 ÷ 12 + 108 ÷ 12 = 7 + 9 = 16 bags.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">Which pair has its LCM equal to the larger of the two numbers?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>6 and 8</span></li>
+        <li class=""><span class="lab">B</span><span>4 and 6</span></li>
+        <li class="correct"><span class="lab">C</span><span>6 and 12</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>9 and 15</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The LCM equals the larger number exactly when the smaller number divides the larger. Testing each: 6 &amp; 8 → LCM 24; 4 &amp; 6 → LCM 12; 9 &amp; 15 → LCM 45; but 6 &amp; 12 → 6 divides 12, so LCM = 12 = the larger number. Hence (C) 6 and 12.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">If a and b are two numbers with a a factor of b, then HCF(a, b) and LCM(a, b) are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>HCF = b, LCM = a</span></li>
+        <li class="correct"><span class="lab">B</span><span>HCF = a, LCM = b</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>HCF = 1, LCM = ab</span></li>
+        <li class=""><span class="lab">D</span><span>HCF = a, LCM = ab</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>If a is a factor of b, then a divides b, so the largest common factor is a itself (HCF = a) and the smallest common multiple is b itself (LCM = b). E.g. a = 4, b = 12: HCF 4, LCM 12.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">Two bells ring at intervals of 18 minutes and 24 minutes. If they ring together at 9:00 am, they next ring together at:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>9:42 am</span></li>
+        <li class=""><span class="lab">B</span><span>10:00 am</span></li>
+        <li class=""><span class="lab">C</span><span>11:00 am</span></li>
+        <li class="correct"><span class="lab">D</span><span>10:12 am</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Next together after LCM(18, 24) minutes. 18 = 2×3², 24 = 2³×3, LCM = 2³×3² = 72 min = 1 h 12 min. 9:00 + 1:12 = 10:12 am. (9:42 adds only 42 min; 11:00 overshoots.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">The smallest number which when divided by 12, 15 and 20 leaves remainder 5 in each case is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>60</span></li>
+        <li class="correct"><span class="lab">B</span><span>65</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>305</span></li>
+        <li class=""><span class="lab">D</span><span>55</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Remainder 5 each time means (number − 5) is divisible by 12, 15, 20 → it is a multiple of LCM(12,15,20). 12 = 2²×3, 15 = 3×5, 20 = 2²×5 → LCM = 2²×3×5 = 60. Smallest number = 60 + 5 = 65. (60 forgets to add the remainder.)</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">The HCF of two consecutive whole numbers (such as 14 and 15) is always:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>1</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>2</span></li>
+        <li class=""><span class="lab">C</span><span>the smaller number</span></li>
+        <li class=""><span class="lab">D</span><span>their product</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Two consecutive whole numbers share no common factor greater than 1 (any common divisor would divide their difference 1), so their HCF is always 1 — they are always co-prime.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">The LCM of two numbers is 12 times their HCF. The sum of the HCF and LCM is 403, and one number is 93. The other number is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>93</span></li>
+        <li class=""><span class="lab">B</span><span>31</span></li>
+        <li class=""><span class="lab">C</span><span>372</span></li>
+        <li class="correct"><span class="lab">D</span><span>124</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Let HCF = h; LCM = 12h. h + 12h = 403 → 13h = 403 → h = 31, LCM = 372. HCF × LCM = product = 31 × 372 = 11532. Other number = 11532 ÷ 93 = 124. Check: HCF(93, 124) = 31, LCM = 372. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">Find the smallest 4-digit number exactly divisible by 8, 12 and 18.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>1008</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>1080</span></li>
+        <li class=""><span class="lab">C</span><span>1044</span></li>
+        <li class=""><span class="lab">D</span><span>1000</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Must be divisible by LCM(8, 12, 18). 8 = 2³, 12 = 2²×3, 18 = 2×3² → LCM = 2³×3² = 72. Smallest 4-digit multiple of 72: 1000 ÷ 72 ≈ 13.9, so 14 × 72 = 1008. ✓ (1080 = 15×72 is larger; 1000 isn't a multiple of 72.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">A florist has 24 roses and 36 tulips. She makes identical bouquets using all the flowers, each bouquet with the same number of roses and the same number of tulips. The largest number of bouquets she can make is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>6</span></li>
+        <li class=""><span class="lab">B</span><span>24</span></li>
+        <li class="correct"><span class="lab">C</span><span>12</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>4</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Each bouquet gets an equal share of both, so the number of bouquets must divide 24 and 36; the largest is HCF(24, 36) = 12. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">For the bouquets in the previous question, each bouquet contains:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4 roses and 6 tulips</span></li>
+        <li class="correct"><span class="lab">B</span><span>2 roses and 3 tulips</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>3 roses and 2 tulips</span></li>
+        <li class=""><span class="lab">D</span><span>6 roses and 9 tulips</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>With 12 bouquets: 24 ÷ 12 = 2 roses and 36 ÷ 12 = 3 tulips each.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">The LCM of two numbers is 180 and their HCF is 6. If one number is 36, the other is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>30</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>60</span></li>
+        <li class=""><span class="lab">C</span><span>45</span></li>
+        <li class=""><span class="lab">D</span><span>90</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>HCF × LCM = product: 6 × 180 = 1080. Other number = 1080 ÷ 36 = 30. Check: HCF(36, 30) = 6, LCM = 180. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">Which of these CANNOT be the HCF and LCM of a pair of numbers?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>HCF 4, LCM 24</span></li>
+        <li class=""><span class="lab">B</span><span>HCF 6, LCM 90</span></li>
+        <li class="correct"><span class="lab">C</span><span>HCF 8, LCM 60</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>HCF 5, LCM 60</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The HCF must divide the LCM for a valid pair. (A) 4 | 24 ✓; (B) 6 | 90 ✓; (D) 5 | 60 ✓; (C) 8 ∤ 60 (60 ÷ 8 isn't whole) — impossible. So (C) cannot occur.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">Three pieces of wire of lengths 144 cm, 180 cm and 192 cm are cut into equal pieces of the greatest possible length. The number of such pieces is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>12</span></li>
+        <li class="correct"><span class="lab">B</span><span>43</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>36</span></li>
+        <li class=""><span class="lab">D</span><span>16</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Greatest equal piece length = HCF(144, 180, 192). 144 = 2⁴×3², 180 = 2²×3²×5, 192 = 2⁶×3 → common 2²×3 = 12 cm. Pieces = 144/12 + 180/12 + 192/12 = 12 + 15 + 16 = 43.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">Two numbers are co-prime. Which of these can be their LCM if the numbers are 12 and 35?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>7</span></li>
+        <li class=""><span class="lab">B</span><span>105</span></li>
+        <li class=""><span class="lab">C</span><span>60</span></li>
+        <li class="correct"><span class="lab">D</span><span>420</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>12 and 35 are co-prime (12 = 2²×3, 35 = 5×7 share nothing), so LCM = product = 12 × 35 = 420. (7 is just a factor; 105 = 3×5×7 misses the 2²; 60 ignores 35.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">A number when divided by 6, 9 and 15 leaves no remainder, and lies between 100 and 200. The number is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>90</span></li>
+        <li class=""><span class="lab">B</span><span>135</span></li>
+        <li class="correct"><span class="lab">C</span><span>180</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>120</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Divisible by 6, 9 and 15 means a multiple of LCM(6, 9, 15). 6 = 2×3, 9 = 3², 15 = 3×5 → LCM = 2×3²×5 = 90. Multiples of 90 between 100 and 200: 180. (90 is below 100; 135 is divisible by 9 and 15 but not 6.)</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">Mira jogs around a track in 4 minutes, Sam in 6 minutes, and Lina in 9 minutes. Starting together, they are all back at the start together after:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>18 min</span></li>
+        <li class="correct"><span class="lab">B</span><span>36 min</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>24 min</span></li>
+        <li class=""><span class="lab">D</span><span>54 min</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>All back together after LCM(4, 6, 9). 4 = 2², 6 = 2×3, 9 = 3² → LCM = 2²×3² = 36 min. (18 is a multiple of 6 and 9 but not 4.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">If HCF(x, 18) = 6 and x is a two-digit number less than 30, then x could be:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>24</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>15</span></li>
+        <li class=""><span class="lab">C</span><span>18</span></li>
+        <li class=""><span class="lab">D</span><span>27</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Test HCF with 18 = 2 × 3² for each option. 24 = 2³ × 3 → common primes to lowest power 2¹ × 3¹ = 6 ✓. The others fail: HCF(15, 18) = 3, HCF(18, 18) = 18, HCF(27, 18) = 9. Only 24 gives HCF 6.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">The product of the HCF and LCM of 16 and 20 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4</span></li>
+        <li class=""><span class="lab">B</span><span>80</span></li>
+        <li class="correct"><span class="lab">C</span><span>320</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>36</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Product of HCF and LCM equals the product of the numbers: 16 × 20 = 320. (No need to find HCF and LCM separately — the identity gives it directly. HCF(16,20) = 4, LCM = 80, and 4 × 80 = 320. ✓)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">The greatest number of children among whom 25 sweets and 35 chocolates can be distributed so that each child gets the same number of sweets and the same number of chocolates is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>60</span></li>
+        <li class=""><span class="lab">B</span><span>7</span></li>
+        <li class=""><span class="lab">C</span><span>10</span></li>
+        <li class="correct"><span class="lab">D</span><span>5</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Each child gets equal sweets and equal chocolates, so the number of children divides both 25 and 35; the greatest is HCF(25, 35) = 5. (Each child then gets 5 sweets and 7 chocolates.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">Two numbers have a product of 2400 and an LCM of 120. Their HCF is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>10</span></li>
+        <li class="correct"><span class="lab">B</span><span>20</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>24</span></li>
+        <li class=""><span class="lab">D</span><span>12</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>HCF = product ÷ LCM = 2400 ÷ 120 = 20. Check: HCF must divide LCM, and 20 | 120. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">The smallest number that, when 7 is added to it, becomes exactly divisible by 8, 12 and 16 is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>41</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>48</span></li>
+        <li class=""><span class="lab">C</span><span>55</span></li>
+        <li class=""><span class="lab">D</span><span>89</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>number + 7 is divisible by 8, 12, 16 → a multiple of LCM(8,12,16) = 2⁴×3 = 48. Smallest such: 48, so number = 48 − 7 = 41. Check: 41 + 7 = 48 ÷ 8, ÷12, ÷16 all whole. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">Buses to two towns leave a stop every 15 minutes and every 25 minutes. They leave together at 8:00 am. The next time both leave together is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>8:40 am</span></li>
+        <li class=""><span class="lab">B</span><span>9:30 am</span></li>
+        <li class=""><span class="lab">C</span><span>9:00 am</span></li>
+        <li class="correct"><span class="lab">D</span><span>9:15 am</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Leave together at common multiples of 15 and 25 → LCM(15, 25). 15 = 3×5, 25 = 5² → LCM = 3×5² = 75 min = 1 h 15 min. 8:00 + 1:15 = 9:15 am. (8:40 adds only 40 min; 9:30 = 90 min overshoots.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">A rectangular courtyard 5 m 25 cm long and 3 m 78 cm broad is to be paved with identical square tiles of the largest possible size. The side of each tile is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>12 cm</span></li>
+        <li class=""><span class="lab">B</span><span>7 cm</span></li>
+        <li class="correct"><span class="lab">C</span><span>21 cm</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>9 cm</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Convert: 525 cm × 378 cm. Largest square tile side = HCF(525, 378). 525 = 3×5²×7, 378 = 2×3³×7 → common 3 × 7 = 21 cm. (12, 9 don't divide 525.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">For the courtyard in the previous question, the least number of square tiles required is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>450</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>525</span></li>
+        <li class=""><span class="lab">C</span><span>378</span></li>
+        <li class=""><span class="lab">D</span><span>900</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>With 21 cm tiles: (525 ÷ 21) × (378 ÷ 21) = 25 × 18 = 450 tiles.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">The HCF of two numbers is 13 and their LCM is 1989. How many such pairs of numbers (a, b) with a &lt; b exist?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1</span></li>
+        <li class=""><span class="lab">B</span><span>4</span></li>
+        <li class=""><span class="lab">C</span><span>3</span></li>
+        <li class="correct"><span class="lab">D</span><span>2</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>HCF = 13 means both numbers are 13a and 13b with a, b co-prime; LCM = 13ab = 1989 → ab = 153 = 9 × 17 = 3² × 17. Co-prime factor pairs (a, b) of 153 with a &lt; b: (1, 153) and (9, 17). That gives 2 pairs: (13, 1989) and (117, 221). So 2 such pairs. ✓ --- *Solutions complete: 60 / 60.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

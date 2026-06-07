@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Water APrecious Resource — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Water APrecious Resource<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">Water exists on Earth in three forms. Which set lists all three correctly?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ice, rain, snow</span></li>
+        <li class="correct"><span class="lab">B</span><span>ice, liquid water, water vapour</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>liquid water, steam, clouds</span></li>
+        <li class=""><span class="lab">D</span><span>ice, dew, fog</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Water exists in three **states**: solid (ice), liquid (liquid water) and gas (water vapour). The other lists mix in things that are not separate states — rain and snow are just falling liquid/solid water, "steam" and "clouds" are forms of vapour/droplets, and dew and fog are condensed liquid water. Only (B) names the three true states.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">When wet clothes dry in the Sun, the liquid water turns directly into:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ice</span></li>
+        <li class="correct"><span class="lab">B</span><span>water vapour</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>clouds</span></li>
+        <li class=""><span class="lab">D</span><span>rain</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>When wet clothes dry in the Sun, the liquid water gains heat and changes straight into **water vapour** (evaporation). It does not freeze to ice, and it does not jump to clouds or rain — those are later stages of the cycle.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">Which process in the water cycle is **mainly powered by the Sun**?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>condensation of vapour into cloud droplets</span></li>
+        <li class=""><span class="lab">B</span><span>precipitation as rain</span></li>
+        <li class="correct"><span class="lab">C</span><span>evaporation of water from oceans and land</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>infiltration of rain into the soil</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Sun's heat is what lifts water from oceans and land into the air, so **evaporation** is the Sun-powered step. Condensation and precipitation happen as the vapour cools and falls; infiltration is gravity pulling water into the soil — none of these needs the Sun directly.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">Dew forms on grass on a cold morning. This is an example of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>evaporation</span></li>
+        <li class=""><span class="lab">B</span><span>precipitation</span></li>
+        <li class=""><span class="lab">C</span><span>infiltration</span></li>
+        <li class="correct"><span class="lab">D</span><span>condensation</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Dew is liquid water that appears when water vapour in the cool morning air touches cold grass and changes from gas to liquid — that is **condensation**. (It is the reverse of evaporation, and it is not falling precipitation.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">In the water cycle, clouds are formed when:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>rain falls back into the ocean</span></li>
+        <li class=""><span class="lab">B</span><span>liquid water freezes into ice on the ground</span></li>
+        <li class=""><span class="lab">C</span><span>rivers carry water to the sea</span></li>
+        <li class="correct"><span class="lab">D</span><span>water vapour high in the cool air condenses into tiny droplets</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Clouds are made of tiny water droplets. They form when **water vapour high in the cool air condenses** into those droplets. Rain falling, water freezing on the ground, or rivers reaching the sea are different events.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">Plants release water vapour into the air from their leaves. This step of the water cycle is called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>evaporation</span></li>
+        <li class=""><span class="lab">B</span><span>condensation</span></li>
+        <li class="correct"><span class="lab">C</span><span>transpiration</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>precipitation</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Water vapour given off through the leaves of plants is **transpiration** — the plant's contribution to the water cycle. Evaporation is from open water/soil; condensation and precipitation are later stages.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">Rain, snow and hail are all grouped under one stage of the water cycle. That stage is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>evaporation</span></li>
+        <li class=""><span class="lab">B</span><span>condensation</span></li>
+        <li class=""><span class="lab">C</span><span>transpiration</span></li>
+        <li class="correct"><span class="lab">D</span><span>precipitation</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rain, snow and hail are all forms of water falling from the sky, grouped together as **precipitation**. Evaporation and transpiration add vapour to the air; condensation makes clouds; only precipitation brings water back down.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">The total amount of water on Earth, over the years, stays roughly the same because water in the cycle is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>only changing its form and location, not its total amount</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>constantly being created by rain</span></li>
+        <li class=""><span class="lab">C</span><span>constantly being destroyed by evaporation</span></li>
+        <li class=""><span class="lab">D</span><span>slowly leaking into outer space</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Water in the cycle keeps moving and changing state, but it is neither created nor destroyed — it only **changes its form and location**, so the total amount on Earth stays roughly constant. Rain does not "make" new water, evaporation does not destroy it, and it does not escape to space in any meaningful amount.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">Put these water-cycle events in their natural order: precipitation, evaporation, condensation.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>condensation → evaporation → precipitation</span></li>
+        <li class=""><span class="lab">B</span><span>evaporation → precipitation → condensation</span></li>
+        <li class=""><span class="lab">C</span><span>precipitation → evaporation → condensation</span></li>
+        <li class="correct"><span class="lab">D</span><span>evaporation → condensation → precipitation</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The natural sequence is: the Sun evaporates water (evaporation) → the vapour cools and forms clouds (condensation) → the clouds release rain/snow (precipitation). So the order is **evaporation → condensation → precipitation**. The other orders put condensation or precipitation in the wrong place.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">About what fraction of all the water on Earth is in the seas and oceans?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>about 97%</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>about 50%</span></li>
+        <li class=""><span class="lab">C</span><span>about 2%</span></li>
+        <li class=""><span class="lab">D</span><span>about 0.5%</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The seas and oceans hold the overwhelming majority of Earth's water — **about 97%**. That is exactly why so little is left as usable fresh water. 50%, 2% or 0.5% badly underestimate the ocean share.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">Sea water cannot be used directly for drinking or for watering crops mainly because it is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>too cold</span></li>
+        <li class=""><span class="lab">B</span><span>frozen</span></li>
+        <li class=""><span class="lab">C</span><span>too deep</span></li>
+        <li class="correct"><span class="lab">D</span><span>salty</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sea water cannot be drunk or used on crops mainly because it is **salty** — the dissolved salt harms us and most plants. Temperature, freezing or depth are not the core reason.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">A student says, "Earth has plenty of water, so we can never run short of water to drink." The best correction is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the statement is fully correct</span></li>
+        <li class=""><span class="lab">B</span><span>Earth actually has very little water of any kind</span></li>
+        <li class="correct"><span class="lab">C</span><span>most of Earth's water is salty or frozen, so usable fresh water is very limited</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>all sea water is fresh and drinkable</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The student's mistake is confusing "lots of water" with "lots of usable water." The correct fix: **most of Earth's water is salty or frozen, so the usable fresh water is very limited.** Earth does have plenty of water (so (B) is wrong), and sea water is not drinkable (so (D) is wrong).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">Most of Earth's **fresh** water is not easily available to us because it is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>all in the air as vapour</span></li>
+        <li class="correct"><span class="lab">B</span><span>frozen in ice-caps and glaciers or stored deep underground</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>entirely inside plants</span></li>
+        <li class=""><span class="lab">D</span><span>locked inside ocean salt</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The largest part of Earth's *fresh* water is locked away — **frozen in ice-caps and glaciers, or stored deep underground** — so it is not easy to use. It is not all in the air, inside plants, or "inside ocean salt."</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">Which statement about Earth's water is correct?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>most of Earth's water is fresh and ready to drink</span></li>
+        <li class=""><span class="lab">B</span><span>there is no salt water on Earth</span></li>
+        <li class="correct"><span class="lab">C</span><span>only a tiny fraction of Earth's water is fresh water we can readily use</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>glaciers contain no fresh water</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The accurate statement is that **only a tiny fraction of Earth's water is fresh water we can readily use.** Most is salty ocean water; there certainly is salt water and glacier ice; so (A), (B) and (D) are all false.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">India has about 17% of the world's people but only about 4% of the world's fresh water. This tells us that India:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>has more than enough water for everyone</span></li>
+        <li class=""><span class="lab">B</span><span>has no fresh water at all</span></li>
+        <li class="correct"><span class="lab">C</span><span>is under water stress, with limited fresh water for a large population</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>should export its fresh water</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Having about 17% of the world's people but only about 4% of its fresh water means a large population must share a small water supply — India is **under water stress**. It is not "more than enough" (A), it does have some fresh water (B), and exporting it (D) would worsen the shortage.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">The water that fills the spaces between soil particles and rocks below the ground is called:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>ground water</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>surface water</span></li>
+        <li class=""><span class="lab">C</span><span>sea water</span></li>
+        <li class=""><span class="lab">D</span><span>rain water</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Water that fills the spaces (pores) between soil particles and rocks beneath the surface is **ground water**. Surface water sits on top (rivers, ponds); sea water and rain water are different stores.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">The **water table** is best described as the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>flat top of the ocean</span></li>
+        <li class="correct"><span class="lab">B</span><span>upper level of the water stored underground</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>deepest river in a region</span></li>
+        <li class=""><span class="lab">D</span><span>layer of clouds before rain</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The water table is the **upper level of the water stored underground** — the depth below which the ground is saturated. It is not the ocean top, a river, or a cloud layer.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">After a long spell of good rain over a region with open soil, the water table is most likely to:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>rise</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>fall</span></li>
+        <li class=""><span class="lab">C</span><span>disappear</span></li>
+        <li class=""><span class="lab">D</span><span>turn salty</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Good rain on open soil lets water infiltrate and recharge the ground water, so the saturated zone fills upward and the water table **rises**. It does not fall, vanish, or turn salty from rainfall.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">The seeping of rain water down through the soil to reach the ground water is called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>evaporation</span></li>
+        <li class=""><span class="lab">B</span><span>condensation</span></li>
+        <li class=""><span class="lab">C</span><span>transpiration</span></li>
+        <li class="correct"><span class="lab">D</span><span>infiltration</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rain water seeping down through the soil to join the ground water is **infiltration**. Evaporation and transpiration move water up as vapour; condensation makes clouds — none of those is downward seeping.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">An **aquifer** is best described as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a large surface lake</span></li>
+        <li class=""><span class="lab">B</span><span>a machine that pumps water</span></li>
+        <li class=""><span class="lab">C</span><span>a cloud full of rain</span></li>
+        <li class="correct"><span class="lab">D</span><span>a layer of porous rock or gravel underground that stores water</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An aquifer is **a layer of porous rock or gravel underground that stores water** in its pore spaces. It is not a surface lake, a pump, or a cloud.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">Ground water is replenished ("recharged") mainly when:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>rain water infiltrates through the soil into the aquifer</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>factories release waste water into rivers</span></li>
+        <li class=""><span class="lab">C</span><span>people pump water out for irrigation</span></li>
+        <li class=""><span class="lab">D</span><span>the Sun evaporates water from the sea</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Ground water is recharged when **rain water infiltrates through the soil into the aquifer**. Releasing factory waste pollutes, pumping removes water, and ocean evaporation feeds clouds — none of these refills the aquifer.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">In a village, the amount of ground water pumped out each year is greater than the amount that seeps back in. Over several years the water table will:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>stay exactly the same</span></li>
+        <li class=""><span class="lab">B</span><span>keep rising</span></li>
+        <li class="correct"><span class="lab">C</span><span>keep falling</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>rise then fall back to the start</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>If the water pumped out each year exceeds what seeps back in, the underground store shrinks year on year, so the water table will **keep falling**. It cannot stay the same (more out than in), keep rising, or rebound on its own.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">Which everyday observation is the clearest sign that the water table in an area has fallen over the years?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the village pond fills up after rain</span></li>
+        <li class=""><span class="lab">B</span><span>clouds form in the sky before the monsoon</span></li>
+        <li class=""><span class="lab">C</span><span>dew collects on the grass each morning</span></li>
+        <li class="correct"><span class="lab">D</span><span>hand-pumps and wells that once gave water now run dry</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The clearest long-term sign of a falling water table is that **hand-pumps and wells that once gave water now run dry** — the saturated level has dropped below them. A pond filling after rain, clouds forming, or dew on grass are short-term surface events, not signs of a falling table.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">Which of the following would tend to **lower** the water table?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>pumping out large amounts of ground water for irrigation</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>building recharge pits in the colony</span></li>
+        <li class=""><span class="lab">C</span><span>heavy, steady monsoon rain on open ground</span></li>
+        <li class=""><span class="lab">D</span><span>planting many trees</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>**Pumping out large amounts of ground water for irrigation** removes water faster than it is replaced, lowering the table. Recharge pits, heavy rain on open ground and planting trees all *raise* or protect the table.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">A town paves over its open grounds and parks with concrete. The most direct effect on ground water is that:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>less rain water can soak in, so recharge falls and the water table tends to drop</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>more rain water now infiltrates the soil</span></li>
+        <li class=""><span class="lab">C</span><span>the water table rises faster</span></li>
+        <li class=""><span class="lab">D</span><span>the rain becomes salty</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Concreting over open ground stops rain from soaking in, so **less water recharges the ground water and the water table tends to drop.** Paving does not increase infiltration, raise the table, or salt the rain.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">Which of these is **not** a cause of the falling water table?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a rapidly growing population needing more water</span></li>
+        <li class=""><span class="lab">B</span><span>covering large areas with roads and concrete</span></li>
+        <li class="correct"><span class="lab">C</span><span>heavy rainfall soaking into open soil</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>intensive irrigation drawing a lot of ground water</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>All of growing population, paving with concrete, and intensive irrigation *lower* the water table. **Heavy rainfall soaking into open soil** does the opposite — it recharges and raises the table — so it is *not* a cause of a falling water table.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">Cutting down forests (deforestation) tends to lower the water table because, with fewer trees:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>less rain water is held back and allowed to soak in, so recharge drops</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the Sun stops shining</span></li>
+        <li class=""><span class="lab">C</span><span>the rain becomes salty</span></li>
+        <li class=""><span class="lab">D</span><span>rivers stop flowing entirely</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Trees and their roots, plus the leaf litter beneath forests, slow run-off and help rain soak in. With fewer trees, **less rain water is held back and allowed to infiltrate, so recharge drops** and the table falls. The Sun, salt and rivers stopping are not the mechanism.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">Which combination of changes would push a region's water table **down** the fastest?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>good rainfall, many recharge pits, and forests</span></li>
+        <li class="correct"><span class="lab">B</span><span>rising population, more industry, and heavy paving with scanty rainfall</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>drip irrigation and rooftop rainwater harvesting</span></li>
+        <li class=""><span class="lab">D</span><span>planting trees and mending leaks</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A water table drops fastest when little comes in and a lot goes out. **Rising population, more industry, and heavy paving combined with scanty rainfall** maximise demand and minimise recharge. The other options are all conservation measures that protect or raise the table.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">Two neighbouring colonies get the same rainfall. Colony X has open soil and gardens; Colony Y is fully concreted. After the monsoon, the water table is likely to be higher under:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Colony Y, because concrete traps water</span></li>
+        <li class=""><span class="lab">B</span><span>neither — concrete and soil behave the same</span></li>
+        <li class=""><span class="lab">C</span><span>Colony Y, because gardens use up water</span></li>
+        <li class="correct"><span class="lab">D</span><span>Colony X, because open soil lets rain infiltrate and recharge the ground water</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Open soil lets rain infiltrate and recharge the ground water, while full concrete makes it run off. So after the monsoon the table is higher under **Colony X, because its open soil lets rain soak in.** Concrete does not trap or store ground water, and gardens do not "use up" the recharge advantage.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">Which single action would best help **raise** a falling water table in a city?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>paving over all the parks</span></li>
+        <li class=""><span class="lab">B</span><span>pumping more ground water for swimming pools</span></li>
+        <li class="correct"><span class="lab">C</span><span>building rainwater-harvesting recharge pits so rain soaks into the ground</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>cutting down street trees</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The action that best *raises* a falling city water table is **building rainwater-harvesting recharge pits so rain soaks into the ground.** Paving parks, pumping more, and cutting trees all push the table down.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">A farmer switches a field from flood irrigation to drip irrigation. The effect on ground water is that the field now:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>wastes much more water, lowering the water table faster</span></li>
+        <li class=""><span class="lab">B</span><span>makes the ground water salty</span></li>
+        <li class=""><span class="lab">C</span><span>needs no water at all</span></li>
+        <li class="correct"><span class="lab">D</span><span>uses much less water, easing the demand on ground water</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Switching from flood to drip irrigation means the field now **uses much less water, easing the demand on ground water.** Drip does not waste more water, the crop still needs some water (not "none"), and it does not make ground water salty.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">Among the common irrigation methods, the one that **wastes the most water** is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>flood (surface) irrigation</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>sprinkler irrigation</span></li>
+        <li class=""><span class="lab">C</span><span>drip irrigation</span></li>
+        <li class=""><span class="lab">D</span><span>watering each plant by hand</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>**Flood (surface) irrigation** covers the whole field with water, so most of it evaporates or drains away unused — it wastes the most. Sprinklers waste less, and drip and hand-watering are the most economical.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">Drip irrigation saves water mainly because it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sprays water high into the air over the whole field</span></li>
+        <li class=""><span class="lab">B</span><span>waters only at night</span></li>
+        <li class=""><span class="lab">C</span><span>floods the entire basin</span></li>
+        <li class="correct"><span class="lab">D</span><span>delivers water drop by drop directly to each plant's root zone</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Drip irrigation saves water because it **delivers water drop by drop directly to each plant's root zone**, so almost none is lost to the bare soil between plants. Spraying high, flooding the basin, or watering only at night do not capture this targeting.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">A gardener wants to water a row of tomato plants using the **least** water. The best method is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>flooding the whole bed</span></li>
+        <li class=""><span class="lab">B</span><span>a sprinkler running all day</span></li>
+        <li class="correct"><span class="lab">C</span><span>a drip system delivering water at each plant's roots</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>hosing the leaves from above</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>To use the least water on a row of plants, a **drip system delivering water at each plant's roots** is best. Flooding the bed, an all-day sprinkler, or hosing the leaves all lose far more water.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">"Rainwater harvesting" means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>buying bottled water in the rainy season</span></li>
+        <li class=""><span class="lab">B</span><span>pumping ground water faster during the rains</span></li>
+        <li class=""><span class="lab">C</span><span>draining all rain water quickly into the sea</span></li>
+        <li class="correct"><span class="lab">D</span><span>collecting and storing rain where it falls, or letting it soak in to recharge ground water</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rainwater harvesting means **collecting and storing rain where it falls, or letting it soak in to recharge ground water.** Buying bottled water, pumping faster, or draining rain to the sea are the opposite of harvesting.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">A household leads the rain falling on its rooftop through a pipe into an underground tank. This is an example of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>drip irrigation</span></li>
+        <li class="correct"><span class="lab">B</span><span>rooftop rainwater harvesting</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>deforestation</span></li>
+        <li class=""><span class="lab">D</span><span>flood irrigation</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Leading rooftop rain through a pipe into an underground tank is **rooftop rainwater harvesting** — capturing the rain that falls on the building. It is not irrigation or deforestation.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">A recharge pit dug in a colony helps the water table because it:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>lets collected rain water seep down into the aquifer</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>pumps water out of the ground</span></li>
+        <li class=""><span class="lab">C</span><span>seals the soil with concrete</span></li>
+        <li class=""><span class="lab">D</span><span>evaporates water into the air</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A recharge pit works by **letting collected rain water seep down into the aquifer**, topping up the ground water. It does not pump water out, seal the soil, or evaporate water.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">A bawri (step well) and a tanka are traditional Indian structures used for:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>generating electricity</span></li>
+        <li class=""><span class="lab">B</span><span>cooking food</span></li>
+        <li class=""><span class="lab">C</span><span>measuring rainfall</span></li>
+        <li class="correct"><span class="lab">D</span><span>storing or harvesting rain and ground water</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A bawri (step well) and a tanka are traditional Indian water structures for **storing or harvesting rain and ground water** for later use. They do not generate electricity, cook, or measure rainfall.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">After a city makes rooftop rainwater harvesting common, its ground water table over a few years tends to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>fall sharply</span></li>
+        <li class=""><span class="lab">B</span><span>become salty</span></li>
+        <li class="correct"><span class="lab">C</span><span>rise, because more rain is directed into the ground instead of running off</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>stay frozen</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>When rooftop rainwater harvesting becomes common, more rain is sent into the ground instead of running off, so over a few years the water table tends to **rise**. It does not fall sharply, turn salty, or freeze.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">World Water Day, observed to remind people about saving water, falls on:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5 June</span></li>
+        <li class=""><span class="lab">B</span><span>1 January</span></li>
+        <li class=""><span class="lab">C</span><span>14 November</span></li>
+        <li class="correct"><span class="lab">D</span><span>22 March</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>World Water Day is observed on **22 March** each year. (5 June is World Environment Day; the others are unrelated.)</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">During a severe water shortage, garden plants that do not get enough water will most likely:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>wilt — their leaves and stems droop</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>grow taller and greener</span></li>
+        <li class=""><span class="lab">C</span><span>turn into vapour</span></li>
+        <li class=""><span class="lab">D</span><span>start flowering more</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Plants that do not get enough water lose firmness in their cells and **wilt — their leaves and stems droop.** Lack of water does not make them grow taller, vaporise, or flower more.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">Water scarcity affects people most directly by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>giving everyone more drinking water</span></li>
+        <li class=""><span class="lab">B</span><span>cooling the whole town</span></li>
+        <li class=""><span class="lab">C</span><span>raising the water table</span></li>
+        <li class="correct"><span class="lab">D</span><span>making it hard to get enough water for drinking, cooking, washing and crops</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Water scarcity hits people most directly by **making it hard to get enough water for drinking, cooking, washing and crops.** It does not give more water, cool the town, or raise the water table.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">A dripping tap can waste around 30 litres of water in a single day. The best response is to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ignore it, since one tap is too small to matter</span></li>
+        <li class=""><span class="lab">B</span><span>open the tap fully so it stops dripping</span></li>
+        <li class="correct"><span class="lab">C</span><span>mend the leak promptly to stop the waste</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>leave a bucket forever under every tap</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Since even a slow drip wastes large amounts over a day, the right response is to **mend the leak promptly to stop the waste.** Ignoring it, opening the tap fully, or catching the drips forever all fail to save the water.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">Which everyday habit saves the **most** water during a bath?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a long shower</span></li>
+        <li class=""><span class="lab">B</span><span>leaving the tap running while soaping</span></li>
+        <li class="correct"><span class="lab">C</span><span>using a bucket and mug instead of a long shower</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>filling the bathtub to the top</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>**Using a bucket and mug instead of a long shower** uses the least water for a bath. A long shower, a running tap while soaping, and a full bathtub all use much more.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">Closing the tap while brushing your teeth helps because it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>makes the toothpaste work better</span></li>
+        <li class="correct"><span class="lab">B</span><span>stops clean water from running away unused</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>raises the sea level</span></li>
+        <li class=""><span class="lab">D</span><span>speeds up the water cycle</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Closing the tap while brushing **stops clean water from running away unused** down the drain. It has nothing to do with toothpaste working better, sea level, or the speed of the water cycle.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">Which set of actions all help **conserve** fresh water?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>rainwater harvesting, drip irrigation, mending leaks</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>paving open ground, flood irrigation, leaving taps running</span></li>
+        <li class=""><span class="lab">C</span><span>cutting forests, draining ponds, long showers</span></li>
+        <li class=""><span class="lab">D</span><span>over-pumping wells, concreting parks, ignoring leaks</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>**Rainwater harvesting, drip irrigation and mending leaks** all save fresh water. The other sets (paving, flood irrigation, leaving taps running; cutting forests, draining ponds, long showers; over-pumping, concreting, ignoring leaks) all waste it.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">A school wants to reduce its demand on ground water. Which plan is best?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>drill more bore wells and pump harder</span></li>
+        <li class="correct"><span class="lab">B</span><span>harvest rooftop rain into a recharge pit and fix all leaking taps</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>pave the playground to keep it clean</span></li>
+        <li class=""><span class="lab">D</span><span>leave the garden sprinklers on overnight</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>To cut its demand on ground water, the school should **harvest rooftop rain into a recharge pit and fix all leaking taps** — adding supply and stopping waste. Drilling more bore wells, paving the playground, or running sprinklers overnight all increase use or reduce recharge.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">Which statement correctly compares water amounts on Earth?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>fresh usable water is far more than ocean water</span></li>
+        <li class=""><span class="lab">B</span><span>glacier ice is the largest source of drinking water we use daily</span></li>
+        <li class=""><span class="lab">C</span><span>all the water is fresh</span></li>
+        <li class="correct"><span class="lab">D</span><span>ocean (salty) water is far more than the fresh water we can readily use</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Comparing the stores, **ocean (salty) water is far more than the fresh water we can readily use** — roughly 97% versus a tiny percentage. Fresh usable water is *not* more than ocean water, not all water is fresh, and glacier ice is frozen, not our daily drinking source.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">Ice, liquid water and water vapour are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>three different substances</span></li>
+        <li class="correct"><span class="lab">B</span><span>the same substance (water) in three different states</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>three different chemicals that only look similar</span></li>
+        <li class=""><span class="lab">D</span><span>only found on other planets</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Ice, liquid water and water vapour are **the same substance (water) in three different states** — solid, liquid and gas. They are not different substances or different chemicals.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">Steam rising from a hot pan of water cools near the ceiling and forms tiny droplets. This change is, in order:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>evaporation then condensation</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>condensation then evaporation</span></li>
+        <li class=""><span class="lab">C</span><span>freezing then melting</span></li>
+        <li class=""><span class="lab">D</span><span>precipitation then infiltration</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>First the water in the hot pan turns to steam/vapour (**evaporation**); then that vapour cools near the ceiling and turns back into tiny droplets (**condensation**). So the order is evaporation then condensation — not the reverse, and not freezing/melting.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">Why is **only a small fraction** of Earth's huge water store available to us as drinking water?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>because most of it is salty ocean water or frozen in ice</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>because the Sun dries it all up each day</span></li>
+        <li class=""><span class="lab">C</span><span>because plants drink most of it</span></li>
+        <li class=""><span class="lab">D</span><span>because it all flows to one country</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Only a small fraction of Earth's water is drinkable **because most of it is salty ocean water or frozen in ice.** The Sun does not dry it all up, plants do not drink most of it, and it does not all flow to one country.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">During the dry season, a river shrinks and the village wells go deeper to find water. This shows that in the dry season the water table has:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>risen</span></li>
+        <li class="correct"><span class="lab">B</span><span>fallen</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>turned to ice</span></li>
+        <li class=""><span class="lab">D</span><span>become salty</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In the dry season little water recharges the ground while use continues, so the water table has **fallen** — which is why the river shrinks and wells must be dug deeper. It has not risen, frozen, or turned salty.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">Which of these does **not** raise the water table?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>good monsoon rain on open soil</span></li>
+        <li class=""><span class="lab">B</span><span>rooftop rainwater harvesting into recharge pits</span></li>
+        <li class="correct"><span class="lab">C</span><span>over-pumping ground water for a new factory</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>building johads (small earthen check-dams) to hold rain</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Good monsoon rain on open soil, rooftop rainwater harvesting, and check-dams (johads) all *raise* the water table. **Over-pumping ground water for a new factory** removes water, so it does *not* raise the table.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">A region has scanty rainfall this year **and** a growing number of bore wells pumping ground water. The water table will most likely:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>rise sharply</span></li>
+        <li class="correct"><span class="lab">B</span><span>fall, because little water comes in while a lot is pumped out</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>stay exactly the same</span></li>
+        <li class=""><span class="lab">D</span><span>turn into vapour</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>With scanty rainfall (little recharge in) plus many bore wells (a lot pumped out), the water table will most likely **fall**. It cannot rise sharply, stay exactly the same, or turn into vapour under these conditions.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">The chief reason farmers are encouraged to move from flood irrigation to drip irrigation is to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>make crops grow taller overnight</span></li>
+        <li class="correct"><span class="lab">B</span><span>save water by cutting the large losses of flood irrigation</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>cool the soil</span></li>
+        <li class=""><span class="lab">D</span><span>increase evaporation from the field</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Farmers are encouraged to move from flood to drip irrigation mainly to **save water by cutting the large losses of flood irrigation.** It does not grow crops overnight, cool the soil, or increase evaporation.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">Which of the following is the correct chain for recharging ground water naturally?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>rain falls → infiltrates open soil → reaches the aquifer → water table rises</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>rain falls → runs off concrete → into drains → water table rises</span></li>
+        <li class=""><span class="lab">C</span><span>ground water is pumped out → soil dries → water table rises</span></li>
+        <li class=""><span class="lab">D</span><span>sea water evaporates → falls as snow → water table rises</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The natural recharge chain is **rain falls → infiltrates open soil → reaches the aquifer → water table rises.** Run-off over concrete into drains does not recharge; pumping water out lowers the table; and sea-evaporation-to-snow is not the local recharge route.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">A colony replaces its lawns and soil paths with full concrete and tiles, then complains its wells dry up. The most likely reason is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the concrete makes the water salty</span></li>
+        <li class=""><span class="lab">B</span><span>the Sun got hotter</span></li>
+        <li class="correct"><span class="lab">C</span><span>rain now runs off instead of soaking in, so the ground water is no longer recharged</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the sea level rose</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Replacing soil and lawns with concrete means **rain now runs off instead of soaking in, so the ground water is no longer recharged** and the wells dry up. The concrete does not salt the water, the Sun did not change, and the sea level is irrelevant here.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">Compared with spraying water over a whole field, drip irrigation also reduces weeds because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>it floods the weeds away</span></li>
+        <li class="correct"><span class="lab">B</span><span>only the crop's root zone is kept moist, so weeds between rows get little water</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>it sprays weedkiller</span></li>
+        <li class=""><span class="lab">D</span><span>it freezes the soil</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Drip irrigation keeps **only the crop's root zone moist, so weeds growing between the rows get little water** and struggle. It does not flood weeds away, spray weedkiller, or freeze the soil.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">Which statement best captures the chapter's main message, "Water is a precious resource"?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>water is unlimited, so we need not save it</span></li>
+        <li class="correct"><span class="lab">B</span><span>usable fresh water is scarce, so we must use and manage it carefully</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>only farmers need to save water</span></li>
+        <li class=""><span class="lab">D</span><span>the sea will always supply our drinking water</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The chapter's main message is that **usable fresh water is scarce, so we must use and manage it carefully.** Water is not unlimited, saving it is everyone's job (not only farmers), and the salty sea will not supply our drinking water.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">A town adopts all of these: rooftop rainwater harvesting, drip irrigation on nearby farms, fixing leaking pipes, and planting trees. Over a few years, the town's water table is most likely to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>fall faster than before</span></li>
+        <li class="correct"><span class="lab">B</span><span>rise, because recharge improves and wasteful use drops</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>turn salty</span></li>
+        <li class=""><span class="lab">D</span><span>stay exactly the same forever</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rooftop rainwater harvesting and recharge improve the inflow, while drip irrigation, fixing leaks and trees cut wasteful use and run-off. Together, over a few years, the town's water table is most likely to **rise**. It will not fall faster, turn salty, or stay frozen in place. --- *End of solutions. 60 questions, single correct option each. Key balanced A=15, B=15, C=14, D=16.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

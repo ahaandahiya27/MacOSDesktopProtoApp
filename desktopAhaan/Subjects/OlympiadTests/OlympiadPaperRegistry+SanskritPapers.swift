@@ -18,7 +18,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Sanskrit_Sch01_VandeBharatamataram_Solutions.md",
             questionPaperHTML: "Sanskrit_Sch01_VandeBharatamataram.html",
             questionPaperPDF: "Sanskrit_Sch01_VandeBharatamataram.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Sanskrit_Sch01_VandeBharatamataram_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_sanskrit_sch02",
@@ -31,7 +32,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Sanskrit_Sch02_NityamPibamahSubhashitarasam_Solutions.md",
             questionPaperHTML: "Sanskrit_Sch02_NityamPibamahSubhashitarasam.html",
             questionPaperPDF: "Sanskrit_Sch02_NityamPibamahSubhashitarasam.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Sanskrit_Sch02_NityamPibamahSubhashitarasam_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_sanskrit_sch03",
@@ -44,7 +46,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Sanskrit_Sch03_MitrayaNamah_Solutions.md",
             questionPaperHTML: "Sanskrit_Sch03_MitrayaNamah.html",
             questionPaperPDF: "Sanskrit_Sch03_MitrayaNamah.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Sanskrit_Sch03_MitrayaNamah_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_sanskrit_sch04",
@@ -57,7 +60,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Sanskrit_Sch04_TheFoxAndTheGrapes_Solutions.md",
             questionPaperHTML: "Sanskrit_Sch04_TheFoxAndTheGrapes.html",
             questionPaperPDF: "Sanskrit_Sch04_TheFoxAndTheGrapes.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Sanskrit_Sch04_TheFoxAndTheGrapes_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_sanskrit_sch05",
@@ -70,7 +74,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Sanskrit_Sch05_SevaHiParamoDharmah_Solutions.md",
             questionPaperHTML: "Sanskrit_Sch05_SevaHiParamoDharmah.html",
             questionPaperPDF: "Sanskrit_Sch05_SevaHiParamoDharmah.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Sanskrit_Sch05_SevaHiParamoDharmah_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_sanskrit_sch06",
@@ -83,7 +88,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Sanskrit_Sch06_KridamaVayamShlokantyaksharim_Solutions.md",
             questionPaperHTML: "Sanskrit_Sch06_KridamaVayamShlokantyaksharim.html",
             questionPaperPDF: "Sanskrit_Sch06_KridamaVayamShlokantyaksharim.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Sanskrit_Sch06_KridamaVayamShlokantyaksharim_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_sanskrit_sch07",
@@ -96,7 +102,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Sanskrit_Sch07_IshavasyamIdamSarvam_Solutions.md",
             questionPaperHTML: "Sanskrit_Sch07_IshavasyamIdamSarvam.html",
             questionPaperPDF: "Sanskrit_Sch07_IshavasyamIdamSarvam.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Sanskrit_Sch07_IshavasyamIdamSarvam_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_sanskrit_sch08",
@@ -109,7 +116,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Sanskrit_Sch08_HitamManohariChaDurlabhamVachah_Solutions.md",
             questionPaperHTML: "Sanskrit_Sch08_HitamManohariChaDurlabhamVachah.html",
             questionPaperPDF: "Sanskrit_Sch08_HitamManohariChaDurlabhamVachah.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Sanskrit_Sch08_HitamManohariChaDurlabhamVachah_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_sanskrit_sch09",
@@ -122,7 +130,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Sanskrit_Sch09_AnnadBhavantiBhutani_Solutions.md",
             questionPaperHTML: "Sanskrit_Sch09_AnnadBhavantiBhutani.html",
             questionPaperPDF: "Sanskrit_Sch09_AnnadBhavantiBhutani.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Sanskrit_Sch09_AnnadBhavantiBhutani_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_sanskrit_sch10",
@@ -135,7 +144,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Sanskrit_Sch10_DashamahKah_Solutions.md",
             questionPaperHTML: "Sanskrit_Sch10_DashamahKah.html",
             questionPaperPDF: "Sanskrit_Sch10_DashamahKah.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Sanskrit_Sch10_DashamahKah_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_sanskrit_sch11",
@@ -148,7 +158,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_Solutions.md",
             questionPaperHTML: "Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah.html",
             questionPaperPDF: "Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_sanskrit_sch12",
@@ -161,7 +172,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Sanskrit_Sch12_ViranganaPannadhaya_Solutions.md",
             questionPaperHTML: "Sanskrit_Sch12_ViranganaPannadhaya.html",
             questionPaperPDF: "Sanskrit_Sch12_ViranganaPannadhaya.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Sanskrit_Sch12_ViranganaPannadhaya_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_sanskrit_sch13",
@@ -174,7 +186,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Sanskrit_Sch13_VarnaMatraParichayah_Solutions.md",
             questionPaperHTML: "Sanskrit_Sch13_VarnaMatraParichayah.html",
             questionPaperPDF: "Sanskrit_Sch13_VarnaMatraParichayah.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Sanskrit_Sch13_VarnaMatraParichayah_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_sanskrit_sch14",
@@ -187,7 +200,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Sanskrit_Sch14_ShabdaRupani_Solutions.md",
             questionPaperHTML: "Sanskrit_Sch14_ShabdaRupani.html",
             questionPaperPDF: "Sanskrit_Sch14_ShabdaRupani.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Sanskrit_Sch14_ShabdaRupani_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_sanskrit_sch15",
@@ -200,7 +214,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "Sanskrit_Sch15_DhaturupaniVerbConjugations_Solutions.md",
             questionPaperHTML: "Sanskrit_Sch15_DhaturupaniVerbConjugations.html",
             questionPaperPDF: "Sanskrit_Sch15_DhaturupaniVerbConjugations.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Sanskrit_Sch15_DhaturupaniVerbConjugations_SolvedGuide.html"
         )
     ]
 }

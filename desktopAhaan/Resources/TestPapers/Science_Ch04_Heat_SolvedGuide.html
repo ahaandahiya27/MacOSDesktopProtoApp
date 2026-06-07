@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Heat — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Heat<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">A small cup of boiling water at 100 °C and a large bucket of warm water at 40 °C are placed side by side. Which statement is correct?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Both hold exactly the same amount of heat</span></li>
+        <li class="correct"><span class="lab">B</span><span>The cup has the higher temperature, but the bucket may hold more total heat because it has far more water</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>The bucket has the higher temperature but the cup holds more heat</span></li>
+        <li class=""><span class="lab">D</span><span>The cup holds more heat because hotter always means more heat</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Temperature tells how hot something is; heat is the *total* energy. The cup at 100 °C is hotter (higher temperature), but the bucket holds far more water, so it can hold more total heat even at a lower temperature. "Hotter always means more heat" (D) is the classic trap.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">Heat is best described as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a measure of how hot or cold a body is</span></li>
+        <li class=""><span class="lab">B</span><span>the average vibration of one atom</span></li>
+        <li class=""><span class="lab">C</span><span>the number marked on a thermometer</span></li>
+        <li class="correct"><span class="lab">D</span><span>a form of energy that flows from a hotter body to a colder one</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Heat is a form of energy that flows from a hotter body to a colder one until both reach the same temperature. The "degree of hotness" (A) defines *temperature*, not heat; (B) and (C) confuse temperature with heat.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">Two identical mugs are filled — one with 100 mL of water at 90 °C, the other with 200 mL of water at 90 °C. Which has the higher **temperature**?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the 100 mL mug</span></li>
+        <li class=""><span class="lab">B</span><span>the 200 mL mug</span></li>
+        <li class="correct"><span class="lab">C</span><span>both are at the same temperature</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the one that cools first</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Temperature is the degree of hotness and does not depend on how much water there is. Both mugs are at 90 °C, so both are at the same temperature — the larger one simply stores more heat.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">When a hot iron rod is dipped into a beaker of cold water and left alone, heat flows:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>from the water to the rod until the rod is hotter</span></li>
+        <li class=""><span class="lab">B</span><span>in both directions equally, so nothing changes</span></li>
+        <li class="correct"><span class="lab">C</span><span>from the rod to the water until both reach the same temperature</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>only if the water is stirred</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Heat always flows from the hotter object to the colder one. The rod is hotter, so heat flows from rod to water until both reach a common (equal) temperature; it does not flow back to make the rod hotter.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">A spoon left in a cup of hot tea slowly becomes warm. This shows that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the spoon is making its own heat</span></li>
+        <li class="correct"><span class="lab">B</span><span>heat flows from the hotter tea to the cooler spoon</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>temperature and heat are the same thing</span></li>
+        <li class=""><span class="lab">D</span><span>the tea is gaining heat from the spoon</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The tea is hotter than the spoon, so heat flows from the hotter tea to the cooler spoon, warming the spoon. The spoon makes no heat of its own, and the tea loses (not gains) heat.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">Most thermometers work because the liquid inside them:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>expands (takes up more space) when heated and contracts when cooled</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>changes colour when heated</span></li>
+        <li class=""><span class="lab">C</span><span>turns into a gas when heated</span></li>
+        <li class=""><span class="lab">D</span><span>gets heavier when heated</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A liquid expands (takes up more space) when heated and contracts when cooled. The thermometer turns this volume change into a moving thread; it does not rely on colour change, boiling, or weight change.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">When the bulb of a thermometer is warmed, the liquid thread rises up the tube. The thread rises because the liquid:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>expands and needs more room, so it climbs the narrow tube</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>is pushed up by air from below</span></li>
+        <li class=""><span class="lab">C</span><span>becomes lighter than the glass</span></li>
+        <li class=""><span class="lab">D</span><span>is boiling inside the bulb</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>When warmed, the liquid in the bulb expands and needs more room, so it is forced up the narrow tube, raising the thread. It is not pushed by air or made lighter than glass.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">The tube of a thermometer is made very **narrow** mainly so that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>less liquid is needed to fill it</span></li>
+        <li class=""><span class="lab">B</span><span>the liquid cannot escape</span></li>
+        <li class="correct"><span class="lab">C</span><span>even a small expansion of liquid moves the thread a large, easy-to-read distance</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the glass stays cooler</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A very narrow bore means even a tiny expansion of the liquid pushes the thread a large, easily seen distance, making fine temperatures readable. (Less liquid, no escape, cooler glass are not the main reason.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">A laboratory thermometer is dipped in melting ice and the liquid settles at the mark halfway between the 0 and 10 lines. The temperature is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>5 °C</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>0 °C</span></li>
+        <li class=""><span class="lab">C</span><span>10 °C</span></li>
+        <li class=""><span class="lab">D</span><span>15 °C</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Halfway between the 0 and 10 marks is 5 °C. (Melting ice is actually 0 °C, but the question fixes the thread's *position* at the midpoint, which reads 5.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">Which range is typical for a **clinical** thermometer used to measure human body temperature?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>35 °C to 42 °C</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>−10 °C to 110 °C</span></li>
+        <li class=""><span class="lab">C</span><span>0 °C to 100 °C</span></li>
+        <li class=""><span class="lab">D</span><span>0 °C to 50 °C</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A clinical thermometer is built to read human body temperatures, so its scale runs only about 35 °C to 42 °C. The wide −10 to 110 range belongs to a laboratory thermometer.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">A clinical thermometer has a sharp narrow bend (a "kink") in its tube. The kink is there to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>make the thermometer cheaper</span></li>
+        <li class=""><span class="lab">B</span><span>let the liquid expand faster</span></li>
+        <li class="correct"><span class="lab">C</span><span>stop the liquid thread from slipping back, so the reading holds until you read it</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>measure two temperatures at once</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The kink (a sharp narrow bend) stops the liquid thread from slipping back when the thermometer is removed from the body, so the reading stays put until you read it.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">Why does a **laboratory** thermometer usually have **no kink**?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Laboratory liquids never expand</span></li>
+        <li class=""><span class="lab">B</span><span>A kink would crack the glass in a lab</span></li>
+        <li class="correct"><span class="lab">C</span><span>It is read while still in contact with the substance, so the thread must move freely up and down</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Laboratory thermometers are always digital</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A laboratory thermometer is read *while still in contact* with the substance, so its thread must rise and fall freely as the temperature changes. A kink would trap the thread, so it is left out.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">A laboratory thermometer is marked from −10 °C to 110 °C. It would be the wrong tool to measure:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the temperature of warm milk at 45 °C</span></li>
+        <li class=""><span class="lab">B</span><span>the temperature of ice-cold water at 4 °C</span></li>
+        <li class=""><span class="lab">C</span><span>the temperature of a beaker of water being heated to 80 °C</span></li>
+        <li class="correct"><span class="lab">D</span><span>the exact body temperature of a feverish patient to one-tenth of a degree</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A lab thermometer spans a huge range, so its divisions are coarse (usually 1 °C). It cannot read a fever to one-tenth of a degree the way a clinical thermometer can, so it is the wrong tool for option (D). It handles 4, 45 and 80 °C fine.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">Before using a clinical thermometer, you give it a few sharp jerks/shakes. The reason is to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>warm it up before use</span></li>
+        <li class=""><span class="lab">B</span><span>clean the bulb</span></li>
+        <li class="correct"><span class="lab">C</span><span>bring the thread back down below normal body temperature so the next reading is correct</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>test whether the glass is strong</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Shaking jerks the trapped thread back down past the kink, below normal body temperature, so the next patient's reading starts from a low value and is correct. It is not for warming or cleaning.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">A clinical thermometer reads in the range 35 to 42 with small marks every 0.1 between the numbers. The liquid stops on the 2nd small mark past 37. The reading is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>37.0 °C</span></li>
+        <li class=""><span class="lab">B</span><span>39.0 °C</span></li>
+        <li class=""><span class="lab">C</span><span>37.02 °C</span></li>
+        <li class="correct"><span class="lab">D</span><span>37.2 °C</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Each small mark is 0.1 °C. Two small marks past 37 means 37 + 2 × 0.1 = 37.2 °C. (37.02 wrongly treats each mark as 0.01.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">The normal temperature of a healthy human body is about:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>42 °C</span></li>
+        <li class="correct"><span class="lab">B</span><span>37 °C</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>30 °C</span></li>
+        <li class=""><span class="lab">D</span><span>25 °C</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The normal temperature of a healthy human body is about 37 °C (roughly 98.6 °F). 42 °C would be a dangerous fever; 25–30 °C is far too low.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">On a laboratory thermometer scale, the big numbered marks are 10 apart and there are 10 equal small divisions between them. Each small division therefore stands for:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>1 °C</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>0.1 °C</span></li>
+        <li class=""><span class="lab">C</span><span>10 °C</span></li>
+        <li class=""><span class="lab">D</span><span>5 °C</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Ten equal divisions span 10 °C, so each division = 10 ÷ 10 = 1 °C. (0.1 °C would be right only if there were 100 divisions in that gap.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">A laboratory thermometer reads three small divisions above the 60 mark, where each small division is 1 °C. The temperature is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>60 °C</span></li>
+        <li class=""><span class="lab">B</span><span>90 °C</span></li>
+        <li class=""><span class="lab">C</span><span>30 °C</span></li>
+        <li class="correct"><span class="lab">D</span><span>63 °C</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Each small division is 1 °C, so three divisions above 60 means 60 + 3 = 63 °C. (90 and 30 ignore the stated 1 °C division size.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">A patient's clinical thermometer shows the thread halfway between the 38 and 39 marks. The reading is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>38.0 °C</span></li>
+        <li class="correct"><span class="lab">B</span><span>38.5 °C</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>39.0 °C</span></li>
+        <li class=""><span class="lab">D</span><span>37.5 °C</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Halfway between the 38 and 39 marks is 38 + 0.5 = 38.5 °C.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">Normal human body temperature of about 37 °C is the same as roughly 98.6 on the Fahrenheit scale. A child with a reading of 37 °C is therefore:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>at about the normal body temperature</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>running a high fever</span></li>
+        <li class=""><span class="lab">C</span><span>dangerously cold</span></li>
+        <li class=""><span class="lab">D</span><span>below the range any thermometer can show</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>37 °C is about 98.6 °F, the normal body temperature, so a 37 °C reading means the child is at about normal — not feverish and not dangerously cold.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">Heat travelling through a solid metal rod, from the hot end to the cold end, without the rod itself moving, is an example of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>convection</span></li>
+        <li class=""><span class="lab">B</span><span>radiation</span></li>
+        <li class="correct"><span class="lab">C</span><span>conduction</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>reflection</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Heat moving through a solid from the hot end to the cold end, while the solid itself stays put, is conduction. Convection needs the material to move; radiation needs no medium.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">One end of a metal spoon is held in a flame. After a while the other end becomes hot even though it was never in the flame. This is because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the heat radiated across the air gap</span></li>
+        <li class=""><span class="lab">B</span><span>hot metal floated up to the handle</span></li>
+        <li class=""><span class="lab">C</span><span>the spoon created its own heat</span></li>
+        <li class="correct"><span class="lab">D</span><span>heat was conducted along the metal from the hot end to the cold end</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Metal is a good conductor, so heat is conducted along the spoon from the flame end to the cool end, warming the handle. There is no air gap to radiate across along the metal, and the spoon makes no heat.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">Conduction is the **main** way heat travels through:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>liquids only</span></li>
+        <li class="correct"><span class="lab">B</span><span>solids</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>gases only</span></li>
+        <li class=""><span class="lab">D</span><span>empty space</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Conduction is the main way heat travels through solids (their particles pass energy along while staying in place). Fluids transfer heat chiefly by convection; empty space, only by radiation.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">Of the four objects below, heat will travel **fastest** by conduction through the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>wooden ruler</span></li>
+        <li class=""><span class="lab">B</span><span>plastic comb</span></li>
+        <li class=""><span class="lab">C</span><span>rubber band</span></li>
+        <li class="correct"><span class="lab">D</span><span>iron nail</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Metals are good conductors and non-metals (wood, plastic, rubber) are poor conductors, so heat travels fastest through the iron nail.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">A metal handle and a wooden handle are left in the same warm room for hours. When you touch them, the metal feels **colder** than the wood even though both are at room temperature. This is because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>metal is actually at a lower temperature than wood</span></li>
+        <li class=""><span class="lab">B</span><span>wood is warmer than the room</span></li>
+        <li class=""><span class="lab">C</span><span>your hand makes mistakes about metal only</span></li>
+        <li class="correct"><span class="lab">D</span><span>metal conducts heat away from your hand quickly, so your skin cools faster and feels colder</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Both are at room temperature, but metal conducts heat away from your warm hand quickly, cooling your skin fast, so it *feels* colder. Wood, a poor conductor, draws little heat, so it feels warmer. The metal is not actually colder.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">A cook stirs hot soup with a metal spoon and leaves it in the pot; soon the spoon's handle is too hot to hold. Replacing it with a wooden spoon helps because wood:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>is a good conductor, spreading heat away from the soup</span></li>
+        <li class="correct"><span class="lab">B</span><span>is a poor conductor (insulator), so little heat reaches the handle</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>absorbs the soup's heat and stores it safely</span></li>
+        <li class=""><span class="lab">D</span><span>reflects the heat back into the soup</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Wood is a poor conductor (insulator), so little heat reaches the handle, keeping it cool enough to hold. A good conductor (A) would make the handle hot — the opposite of what helps.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">Heat travelling through water or air by the actual **movement of the heated fluid** is called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>conduction</span></li>
+        <li class="correct"><span class="lab">B</span><span>convection</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>radiation</span></li>
+        <li class=""><span class="lab">D</span><span>insulation</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Heat carried by the actual movement of a heated fluid (the warm fluid itself rising and circulating) is convection. Conduction passes heat without bulk movement; radiation needs no medium.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">When water in a pan is heated from below, the warm water at the bottom:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>stays at the bottom because it is heavier</span></li>
+        <li class=""><span class="lab">B</span><span>instantly turns to steam</span></li>
+        <li class=""><span class="lab">C</span><span>conducts heat to the top without moving</span></li>
+        <li class="correct"><span class="lab">D</span><span>becomes lighter, rises, and cooler water sinks to take its place, setting up a circulating current</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Heated water at the bottom expands, becomes lighter (less dense), and rises; cooler, denser water sinks to replace it. This sets up a circulating convection current. Warm water does not stay at the bottom.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">Why is a room heater most effective when placed near the **floor** for heating, while an air-conditioner is fixed **high** on the wall?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Warm air rises and cool air sinks, so heating from low and cooling from high lets convection currents spread air through the whole room</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>It is only about which is cheaper to install</span></li>
+        <li class=""><span class="lab">C</span><span>Electric wires must be near the floor</span></li>
+        <li class=""><span class="lab">D</span><span>The position makes no difference to how the air moves</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Warm air rises and cool air sinks. Heating from near the floor lets warm air rise and spread; cooling from high on the wall lets cool air sink and circulate. Both use convection currents to mix the whole room.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">In a beaker of water heated at the centre of the bottom, a few coloured crystals dropped in will trace a path that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>stays still at the bottom</span></li>
+        <li class=""><span class="lab">B</span><span>shoots straight up and disappears</span></li>
+        <li class="correct"><span class="lab">C</span><span>rises in the middle and sinks along the sides, showing a convection current</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>sinks straight down only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The crystals reveal the convection current: heated water rises in the middle (over the flame) and sinks along the cooler sides, tracing a looping path. It neither stays still nor only sinks.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">Heat from the Sun reaches the Earth across empty space. It travels by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>conduction, through the air</span></li>
+        <li class=""><span class="lab">B</span><span>convection, through rising hot air</span></li>
+        <li class=""><span class="lab">C</span><span>all three equally</span></li>
+        <li class="correct"><span class="lab">D</span><span>radiation, which needs no material medium</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Between the Sun and Earth there is near-empty space with no air or matter to carry heat, so the heat must travel by radiation, which needs no material medium. Conduction and convection both need matter.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">Which mode of heat transfer can take place even through a **vacuum** (no air, no liquid, no solid)?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>conduction</span></li>
+        <li class="correct"><span class="lab">B</span><span>radiation</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>convection</span></li>
+        <li class=""><span class="lab">D</span><span>none — heat always needs a medium</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Only radiation can cross a vacuum, because it needs no medium. Conduction needs particles in contact and convection needs a moving fluid, so neither works in a vacuum.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">Standing near a glowing campfire, you feel warmth on your face even though the hot air rises straight up and does not blow toward you. The warmth you feel reaches you mainly by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>conduction through the ground</span></li>
+        <li class=""><span class="lab">B</span><span>convection blowing sideways</span></li>
+        <li class=""><span class="lab">C</span><span>the fire pushing cold air away</span></li>
+        <li class="correct"><span class="lab">D</span><span>radiation travelling straight from the fire to your skin</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The hot air rises straight up, so convection is not warming your face; instead, heat radiation travels in straight lines from the fire directly to your skin. That is why you feel warm facing the fire.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">All warm objects give off heat as radiation. Compared with a cool object, a **hotter** object:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>gives off no radiation</span></li>
+        <li class=""><span class="lab">B</span><span>radiates less heat each second</span></li>
+        <li class="correct"><span class="lab">C</span><span>radiates more heat each second</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>radiates the same as a cold object</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Every warm object radiates heat, and the hotter it is the more heat it radiates each second. So a hotter object radiates more than a cooler one.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">A teacher claims: "Radiation can pass through empty space, but conduction and convection both need some material (matter) to travel through." This statement is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>false — all three need matter</span></li>
+        <li class=""><span class="lab">B</span><span>false — only convection needs matter</span></li>
+        <li class=""><span class="lab">C</span><span>false — radiation also needs matter</span></li>
+        <li class="correct"><span class="lab">D</span><span>true</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The statement is true: radiation can cross empty space, while conduction (through particles) and convection (through a moving fluid) both need matter to travel through.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">A material that lets heat pass through it easily is called a heat **conductor**. Which list contains only good conductors?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>wood, plastic, copper</span></li>
+        <li class=""><span class="lab">B</span><span>air, wool, rubber</span></li>
+        <li class=""><span class="lab">C</span><span>glass, cork, iron</span></li>
+        <li class="correct"><span class="lab">D</span><span>copper, aluminium, iron</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Good conductors are metals: copper, aluminium and iron. The other lists mix in wood, plastic, air, wool, rubber, glass or cork, which are insulators (poor conductors).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">A material that does **not** let heat pass through easily is called an **insulator**. Which is the best insulator?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>trapped air (as in wool or a sweater)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>iron</span></li>
+        <li class=""><span class="lab">C</span><span>aluminium</span></li>
+        <li class=""><span class="lab">D</span><span>silver</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Trapped air is one of the best everyday insulators (poor conductors), which is why wool and sweaters keep us warm. Iron, aluminium and silver are all good conductors.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">Cooking pots are often made with a metal body but a **wooden or plastic handle**. The reason is that the metal body should ____ heat while the handle should ____ heat.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>block; conduct</span></li>
+        <li class=""><span class="lab">B</span><span>reflect; absorb</span></li>
+        <li class="correct"><span class="lab">C</span><span>conduct; not conduct (insulate)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>store; release</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The body should conduct heat (a metal pot to cook food), while the handle should *not* conduct heat (a wooden/plastic insulator) so it stays cool enough to hold. So: conduct; not conduct (insulate).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">Which everyday object depends on a material being a **poor** conductor of heat?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a copper-bottomed cooking pan</span></li>
+        <li class=""><span class="lab">B</span><span>the metal blade of a knife</span></li>
+        <li class="correct"><span class="lab">C</span><span>the plastic or wooden handle of a frying pan</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>an aluminium cooking foil</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The plastic or wooden handle works *because* it is a poor conductor, keeping the grip cool. The copper bottom, knife blade and aluminium foil all rely on being good conductors.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">A jacket "keeps you warm" not by making heat but by:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>being a poor conductor that slows the escape of your body's heat</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>producing heat from the cloth</span></li>
+        <li class=""><span class="lab">C</span><span>reflecting sunlight onto you</span></li>
+        <li class=""><span class="lab">D</span><span>conducting your heat away quickly</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A jacket makes no heat; it is a poor conductor (with trapped air) that slows the escape of your body's own heat, so you stay warm. It does not produce or reflect heat to warm you.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">Two cups of equally hot tea are left out: cup P is bare metal, cup Q is wrapped in a thick woollen cloth. After ten minutes:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>cup Q is hotter, because wool is a poor conductor and slows heat loss</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>cup P is hotter</span></li>
+        <li class=""><span class="lab">C</span><span>both are equally hot</span></li>
+        <li class=""><span class="lab">D</span><span>cup Q is hotter only if the tea was stirred</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Wool is a poor conductor, so the woollen wrap slows heat loss from cup Q, keeping it hotter than the bare metal cup P after ten minutes. Metal conducts heat away quickly, cooling P faster.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">Why do **woollen** clothes keep us warmer than an equal thickness of smooth cotton in winter?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Wool produces heat from the body's sweat</span></li>
+        <li class="correct"><span class="lab">B</span><span>Wool traps a lot of air, and trapped air is a poor conductor that slows heat loss</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Wool conducts the body's heat to the surface faster</span></li>
+        <li class=""><span class="lab">D</span><span>Wool is heavier, and heavy things are always warmer</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Wool's fibres trap a lot of air, and trapped air is a poor conductor, so it slows the escape of body heat — that is why wool feels warmer than smooth cotton. Wool does not make heat or conduct faster.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">Wearing **two thin sweaters** can feel warmer than **one thick one** of the same total thickness because the two-layer arrangement:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>traps an extra layer of air between the sweaters, and trapped air is a poor conductor</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>is heavier</span></li>
+        <li class=""><span class="lab">C</span><span>produces more heat</span></li>
+        <li class=""><span class="lab">D</span><span>reflects more light</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Two thin sweaters trap an extra layer of air between them, and trapped air is a poor conductor, so the layered arrangement slows heat loss better than a single thick layer of the same total thickness.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">A bird fluffs up its feathers on a cold day. This keeps it warmer because fluffing:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>traps more air among the feathers, and trapped air slows heat loss</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>makes its body produce more heat</span></li>
+        <li class=""><span class="lab">C</span><span>makes the feathers conduct heat better</span></li>
+        <li class=""><span class="lab">D</span><span>reflects sunlight onto the bird</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Fluffing feathers traps more air among them, and trapped air is a poor conductor, so it slows the bird's heat loss and keeps it warmer. The bird is not making extra heat or improving conduction.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">In **summer**, light-coloured (white) clothes are preferred over dark clothes because light colours:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>absorb more heat from sunlight</span></li>
+        <li class=""><span class="lab">B</span><span>make the body produce less heat</span></li>
+        <li class=""><span class="lab">C</span><span>conduct heat to the skin faster</span></li>
+        <li class="correct"><span class="lab">D</span><span>reflect away most of the sunlight, so the body absorbs less heat and stays cooler</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Light (white) clothes reflect away most of the sunlight, so the body absorbs less heat and stays cooler — ideal for summer. Dark clothes would absorb more and feel hotter.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">In **winter**, dark-coloured clothes can feel warmer in the daytime Sun because dark colours:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>reflect sunlight away</span></li>
+        <li class=""><span class="lab">B</span><span>trap more body heat than light colours</span></li>
+        <li class="correct"><span class="lab">C</span><span>absorb more of the Sun's heat than light colours do</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>produce heat from the Sun's light</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Dark colours absorb more of the Sun's heat than light colours, so on a sunny winter day dark clothes feel warmer by soaking up sunlight. They do not reflect it or make heat themselves.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">Two identical metal cans, one painted shiny white and one painted dull black, are left in bright sunshine. After an hour:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the white can is hotter</span></li>
+        <li class="correct"><span class="lab">B</span><span>the black can is hotter, because dark surfaces absorb more radiation</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>both are at exactly the same temperature</span></li>
+        <li class=""><span class="lab">D</span><span>the white can is hotter only if it is bigger</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Dark, dull surfaces absorb more radiation than shiny white ones, so the black-painted can heats up more in the Sun and ends up hotter than the white can.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">A coastal town has a **sea breeze** during the day. This means that during the day the wind blows:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>from the sea toward the land</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>from the land out to the sea</span></li>
+        <li class=""><span class="lab">C</span><span>straight upward only</span></li>
+        <li class=""><span class="lab">D</span><span>there is no wind in the daytime</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A sea breeze blows *from the sea toward the land*. (A land breeze would blow from land to sea — the opposite.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">During the **day**, the sea breeze blows from sea to land because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the sea heats up faster than the land</span></li>
+        <li class="correct"><span class="lab">B</span><span>the land heats up faster than the sea, so air rises over the warm land and cooler air flows in from over the sea</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the land stays cooler than the sea all day</span></li>
+        <li class=""><span class="lab">D</span><span>the Sun pulls air toward the water</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>By day the land heats up faster than the sea. Air rises over the warm land, and cooler air flows in from over the sea to take its place — that incoming wind is the sea breeze (sea → land).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">At **night** along the coast, a **land breeze** blows from land to sea. This happens because at night:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the sea cools faster than the land</span></li>
+        <li class="correct"><span class="lab">B</span><span>the land cools faster than the sea, so air rises over the warmer sea and cooler air flows out from the land</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the land stays hotter than the sea all night</span></li>
+        <li class=""><span class="lab">D</span><span>there is no temperature difference at night</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>At night the land cools faster than the sea, so now the sea is warmer. Air rises over the warmer sea and cooler air flows out from the land — a land breeze (land → sea).</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">A fisherman notices the wind blowing **out to sea** in the early morning before sunrise. This is a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sea breeze, caused by the warm land</span></li>
+        <li class=""><span class="lab">B</span><span>sign of a coming storm only</span></li>
+        <li class=""><span class="lab">C</span><span>breeze that needs the Sun directly overhead</span></li>
+        <li class="correct"><span class="lab">D</span><span>land breeze, because at night the land has cooled below the sea's temperature</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Wind blowing out to sea before sunrise is a land breeze: overnight the land has cooled below the sea's temperature, so air flows from the cooler land toward the warmer sea. It is not a sea breeze and does not need the Sun overhead.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">Sea breezes and land breezes are both examples of which mode of heat transfer at a large (coastal) scale?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>conduction</span></li>
+        <li class="correct"><span class="lab">B</span><span>convection</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>radiation</span></li>
+        <li class=""><span class="lab">D</span><span>reflection</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Both breezes are caused by warm air rising and cooler air flowing in to replace it, which is convection — here acting at the large coastal scale.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">The sea breeze and the land breeze blow in **opposite** directions because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the wind always reverses every hour</span></li>
+        <li class="correct"><span class="lab">B</span><span>by day the land is warmer than the sea, while by night the land is cooler than the sea</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the sea only heats up at night</span></li>
+        <li class=""><span class="lab">D</span><span>the Moon reverses the wind</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The direction depends on which surface is warmer. By day the land is warmer than the sea (sea breeze, sea → land); by night the land is cooler than the sea (land breeze, land → sea). The reversed temperature difference reverses the wind.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">A clinical thermometer is **not** suitable for measuring the temperature of boiling water at 100 °C because:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>its scale only goes up to about 42 °C, far below 100 °C</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>its liquid would freeze</span></li>
+        <li class=""><span class="lab">C</span><span>it has no kink</span></li>
+        <li class=""><span class="lab">D</span><span>it is too long</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A clinical thermometer's scale stops at about 42 °C, far below 100 °C, so it simply cannot show boiling-water temperature (and the heat could burst it). The kink is unrelated to this limit.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">To follow the temperature of water as it is heated steadily from cold up to nearly boiling, the right instrument is a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>clinical thermometer, because of its kink</span></li>
+        <li class=""><span class="lab">B</span><span>clinical thermometer, because it reads in °C</span></li>
+        <li class=""><span class="lab">C</span><span>any thermometer, since all read up to 110 °C</span></li>
+        <li class="correct"><span class="lab">D</span><span>laboratory thermometer, because its range (about −10 °C to 110 °C) covers the whole rise</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The water rises from cold to nearly boiling, so you need the wide range of a laboratory thermometer (about −10 °C to 110 °C). A clinical thermometer (35–42 °C) cannot cover that range, and not all thermometers read to 110 °C.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">On a cold morning, the metal frame of a bicycle feels colder to the touch than its rubber grips, although both have been outside all night at the same temperature. The best explanation is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the metal is genuinely many degrees colder than the rubber</span></li>
+        <li class=""><span class="lab">B</span><span>the rubber grips were warmed by the Sun overnight</span></li>
+        <li class="correct"><span class="lab">C</span><span>metal conducts heat away from your hand faster than rubber, so the metal feels colder</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>rubber makes its own heat</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Both are at the same temperature, but metal conducts heat away from your hand much faster than rubber, cooling your skin quickly, so the metal *feels* colder. The metal is not actually colder, and rubber makes no heat.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">Tea stays hot longer in a thermos flask partly because the flask has a near-**vacuum** between its two walls. The vacuum chiefly stops heat loss by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>radiation</span></li>
+        <li class=""><span class="lab">B</span><span>reflection of light</span></li>
+        <li class="correct"><span class="lab">C</span><span>conduction and convection, since both need matter to travel through</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>absorption of sunlight</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Conduction and convection both need matter to travel through, so removing the matter (a vacuum between the walls) blocks those two paths and greatly slows heat loss. (Radiation is cut separately by the silvered, shiny walls.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">A laboratory thermometer reads exactly halfway between the −10 and the 0 marks. The temperature is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5 °C</span></li>
+        <li class="correct"><span class="lab">B</span><span>−5 °C</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>−10 °C</span></li>
+        <li class=""><span class="lab">D</span><span>0 °C</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Halfway between the −10 and 0 marks is −5 °C. (Reading it as +5 ignores the minus sign — a designed trap.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">Houses in very hot, sunny regions are often **whitewashed** (painted white) on the outside because a white surface:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>absorbs the most sunlight, warming the house</span></li>
+        <li class=""><span class="lab">B</span><span>conducts heat into the walls quickly</span></li>
+        <li class="correct"><span class="lab">C</span><span>reflects most of the sunlight, so the house stays cooler inside</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>produces a cooling breeze</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A white surface reflects most of the sunlight instead of absorbing it, so a whitewashed house absorbs less heat and stays cooler inside in hot, sunny regions.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">A student lists how the three modes need a medium: "Conduction needs matter; convection needs a moving fluid; radiation needs no medium at all." How many of these three statements are correct?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>all three</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>only one</span></li>
+        <li class=""><span class="lab">C</span><span>only two</span></li>
+        <li class=""><span class="lab">D</span><span>none</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>All three statements are correct: conduction needs matter (particles in contact), convection needs a moving fluid, and radiation needs no medium at all. So the count is three. --- *Solutions complete: 60 / 60.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

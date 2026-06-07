@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Fox And The Grapes — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>The Fox And The Grapes<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">This chapter is the Sanskrit retelling of which fable?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>The Lion and the Mouse</span></li>
+        <li class="correct"><span class="lab">B</span><span>The Fox and the Grapes</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>The Tortoise and the Hare</span></li>
+        <li class=""><span class="lab">D</span><span>The Crow and the Pitcher</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>It is the Sanskrit retelling of 'The Fox and the Grapes'. The others are different fables.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">शृगालः means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>fox / jackal</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>lion</span></li>
+        <li class=""><span class="lab">C</span><span>grape</span></li>
+        <li class=""><span class="lab">D</span><span>vine</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>शृगालः is the fox/jackal. A lion is सिंहः, a grape द्राक्षा, and a vine लता.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">The central character (protagonist) of the story is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the grape-vine</span></li>
+        <li class=""><span class="lab">B</span><span>a teacher</span></li>
+        <li class="correct"><span class="lab">C</span><span>the fox (शृगालः)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the Sun</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The protagonist is the fox (शृगालः). The grape-vine, a teacher and the Sun are not the central character.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">Where does the fox wander in the story?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>in the ocean</span></li>
+        <li class=""><span class="lab">B</span><span>on a mountain peak</span></li>
+        <li class=""><span class="lab">C</span><span>in a city market</span></li>
+        <li class="correct"><span class="lab">D</span><span>in the forest (वने)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The fox wanders in the forest (वने). Not the ocean, a peak, or a market.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">शृगालः is glossed as लोमशा, referring to the animal's:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>thirst</span></li>
+        <li class="correct"><span class="lab">B</span><span>furry / hairy nature</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>wisdom</span></li>
+        <li class=""><span class="lab">D</span><span>wealth</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>लोमशा ('hairy') refers to the fox's furry nature. It is not thirst, wisdom, or wealth.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">At the start, the fox is described as श्रान्तः, meaning:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>tired / weary</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>happy</span></li>
+        <li class=""><span class="lab">C</span><span>wealthy</span></li>
+        <li class=""><span class="lab">D</span><span>wise</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>श्रान्तः means 'tired / weary'. It does not mean happy, wealthy, or wise.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">श्रान्तः is glossed as क्लान्तः, meaning:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>joyful</span></li>
+        <li class=""><span class="lab">B</span><span>angry</span></li>
+        <li class=""><span class="lab">C</span><span>sour</span></li>
+        <li class="correct"><span class="lab">D</span><span>weary / fatigued</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>श्रान्तः (glossed क्लान्तः) means weary/fatigued. Not joyful, angry, or sour.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">खिन्नः, used for the fox, means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>sad / dejected</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>tired</span></li>
+        <li class=""><span class="lab">C</span><span>thirsty</span></li>
+        <li class=""><span class="lab">D</span><span>brave</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>खिन्नः means 'sad / dejected'. Tired is श्रान्तः, thirsty पिपासायुक्तः, and brave वीरः.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">The fox is also full of पिपासा / तृषा, meaning:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>thirst</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>hunger</span></li>
+        <li class=""><span class="lab">C</span><span>anger</span></li>
+        <li class=""><span class="lab">D</span><span>sleep</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>पिपासा / तृषा means 'thirst'. Hunger is बुभुक्षा, anger क्रोधः, and sleep निद्रा.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">पिपासा is glossed as पातुम् इच्छा, meaning the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>wish to eat</span></li>
+        <li class="correct"><span class="lab">B</span><span>wish to drink</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>wish to sleep</span></li>
+        <li class=""><span class="lab">D</span><span>wish to run</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>पिपासा = पातुम् इच्छा = 'the wish to drink' (thirst). It is not the wish to eat, sleep, or run.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">Putting it together, the opening shows a fox that is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>rested, happy and full</span></li>
+        <li class=""><span class="lab">B</span><span>wealthy and proud</span></li>
+        <li class=""><span class="lab">C</span><span>angry and strong</span></li>
+        <li class="correct"><span class="lab">D</span><span>tired, sad and thirsty</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The opening shows a fox that is tired (श्रान्तः), sad (खिन्नः) and thirsty (पिपासायुक्तः). Not rested, wealthy, or strong.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">द्राक्षालता means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the grape-vine (the whole climbing plant)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a single grape</span></li>
+        <li class=""><span class="lab">C</span><span>a fox</span></li>
+        <li class=""><span class="lab">D</span><span>the forest</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>द्राक्षालता is the grape-vine, the whole climbing plant. A single grape is द्राक्षा; a fox is शृगालः; a forest वनम्.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">द्राक्षालता breaks into द्राक्षा + लता, meaning:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'fox' + 'forest'</span></li>
+        <li class=""><span class="lab">B</span><span>'sour' + 'fruit'</span></li>
+        <li class=""><span class="lab">C</span><span>'left' + 'right'</span></li>
+        <li class="correct"><span class="lab">D</span><span>'grape' + 'creeper' = grape-vine</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>द्राक्षा ('grape') + लता ('creeper') = grape-vine. The other splits are wrong.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">द्राक्षा by itself means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>grape (the fruit)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the whole vine</span></li>
+        <li class=""><span class="lab">C</span><span>a fox</span></li>
+        <li class=""><span class="lab">D</span><span>sourness</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>द्राक्षा by itself is the grape (fruit). The whole vine is द्राक्षालता, a fox शृगालः, and sourness आम्ल.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">द्राक्षाफलम् means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the creeper plant</span></li>
+        <li class=""><span class="lab">B</span><span>the forest</span></li>
+        <li class="correct"><span class="lab">C</span><span>the grape-fruit (the grapes)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the fox</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>द्राक्षाफलम् is the grape-fruit (the grapes). The plant is द्राक्षालता, the forest वनम्, and the fox शृगालः.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">Sanskrit using द्राक्षालता where English says 'grapevine' shows that Sanskrit often:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>uses fewer words than English always</span></li>
+        <li class=""><span class="lab">B</span><span>has no word for grape</span></li>
+        <li class=""><span class="lab">C</span><span>cannot form compounds</span></li>
+        <li class="correct"><span class="lab">D</span><span>compounds two words where one English word suffices</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sanskrit often compounds two words (द्राक्षा + लता) where English uses one. It does not always use fewer words, lacks no word for grape, and certainly forms compounds.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">उत्पतति means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>he jumps / leaps up</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>he sat down</span></li>
+        <li class=""><span class="lab">C</span><span>he slept</span></li>
+        <li class=""><span class="lab">D</span><span>he ate</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>उत्पतति means 'he leaps up'. It does not mean sat down, slept, or ate.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">In उत्पतति, उत् is a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>past-tense augment</span></li>
+        <li class="correct"><span class="lab">B</span><span>prefix (उपसर्ग) meaning 'up'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>case ending</span></li>
+        <li class=""><span class="lab">D</span><span>suffix meaning 'down'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>उत् is a prefix (उपसर्ग) meaning 'up'. It is not the past augment, a case ending, or a 'down' suffix.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">उत्पतति is in which tense?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>past</span></li>
+        <li class=""><span class="lab">B</span><span>future</span></li>
+        <li class="correct"><span class="lab">C</span><span>present ('he leaps up')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>imperative</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>उत्पतति is present tense, 'he leaps up'. The past would be उदपतत्; it is not future or imperative.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">The PAST-tense form of this verb is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>उत्पतति</span></li>
+        <li class=""><span class="lab">B</span><span>उत्पतिष्यति</span></li>
+        <li class=""><span class="lab">C</span><span>पततु</span></li>
+        <li class="correct"><span class="lab">D</span><span>उदपतत् (with the augment अ-)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The past tense is उदपतत्, with the augment अ-. उत्पतति is present, उत्पतिष्यति future, and पततु imperative.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">The difference between उत् in उत्पतति and the अ- in उदपतत् is that उत् is a ____ while अ- is the ____.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>augment ... prefix</span></li>
+        <li class="correct"><span class="lab">B</span><span>prefix (उपसर्ग) ... past-tense augment</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>case ending ... suffix</span></li>
+        <li class=""><span class="lab">D</span><span>verb ... noun</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>उत् is a prefix (उपसर्ग, 'up'); अ- is the past-tense augment. The other pairings reverse or misname them.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">A prefix (उपसर्ग) like उत्-:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>marks past tense</span></li>
+        <li class="correct"><span class="lab">B</span><span>attaches to the root and can change its meaning ('up')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>is a case ending</span></li>
+        <li class=""><span class="lab">D</span><span>is always silent</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A prefix attaches to the root and can change its meaning (उत् = 'up'). It does not mark past tense, act as a case ending, or stay silent.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">How many times does the fox jump for the grapes?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>exactly once</span></li>
+        <li class=""><span class="lab">B</span><span>never</span></li>
+        <li class=""><span class="lab">C</span><span>only in his sleep</span></li>
+        <li class="correct"><span class="lab">D</span><span>again and again (पुनः पुनः)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The fox jumps again and again (पुनः पुनः). Not exactly once, never, or only in sleep.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">The sequence एकवारम्, द्विवारम्, पुनः पुनः means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>left, right, behind</span></li>
+        <li class=""><span class="lab">B</span><span>tired, sad, thirsty</span></li>
+        <li class="correct"><span class="lab">C</span><span>once, twice, again and again</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>grape, vine, fruit</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>एकवारम्, द्विवारम्, पुनः पुनः = 'once, twice, again and again'. The other options are directions, states, or plant-words.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">The fox keeps jumping पुनः पुनः but:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>easily reaches them at once</span></li>
+        <li class="correct"><span class="lab">B</span><span>still cannot reach the grapes</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>decides not to try</span></li>
+        <li class=""><span class="lab">D</span><span>falls asleep instead</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Despite jumping again and again, the fox cannot reach the grapes. He does not reach them, refuse to try, or fall asleep.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">Unable to reach the grapes, the fox declares them:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sweet</span></li>
+        <li class=""><span class="lab">B</span><span>ripe</span></li>
+        <li class="correct"><span class="lab">C</span><span>sour (आम्लम्)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>poisonous</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The fox declares the grapes sour (आम्लम्). Not sweet, ripe, or poisonous.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">आम्लम् means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sweet</span></li>
+        <li class=""><span class="lab">B</span><span>tired</span></li>
+        <li class="correct"><span class="lab">C</span><span>sour</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>left</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>आम्लम् means 'sour'. Sweet is मधुरम्, tired श्रान्तः, and left वामतः.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">The chapter's title/punchline न लभ्यते चेत् आम्लं द्राक्षाफलम् means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the grapes are always sweet</span></li>
+        <li class="correct"><span class="lab">B</span><span>if it is not obtained, the grape-fruit is (called) sour</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the fox eats the grapes</span></li>
+        <li class=""><span class="lab">D</span><span>the vine is on the left</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>It means 'if the grape-fruit is not obtained, it is (called) sour'. The other readings are wrong.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">न लभ्यते चेत् means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the grapes are sweet</span></li>
+        <li class="correct"><span class="lab">B</span><span>if (it) is not obtained</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the fox is tired</span></li>
+        <li class=""><span class="lab">D</span><span>on the left side</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>न लभ्यते चेत् means 'if it is not obtained'. The other options are unrelated phrases.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">The fox's verdict 'आम्लम्' is his reaction to:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>failing to reach the grapes</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>eating too many grapes</span></li>
+        <li class=""><span class="lab">C</span><span>finding sweet grapes</span></li>
+        <li class=""><span class="lab">D</span><span>reaching the grapes easily</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>He calls the grapes sour because he fails to reach them. Not from eating, finding sweet ones, or reaching them easily.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">The moral of the fable is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>always give up quickly</span></li>
+        <li class=""><span class="lab">B</span><span>grapes are bad for you</span></li>
+        <li class="correct"><span class="lab">C</span><span>do not belittle ('call sour') what you fail to get</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>never enter a forest</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The moral is not to belittle what you fail to get. It is not about giving up, grapes being bad, or avoiding forests.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">The fox's real mistake, according to the chapter, is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the dishonest excuse, not the failure to jump</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>jumping too high</span></li>
+        <li class=""><span class="lab">C</span><span>being thirsty</span></li>
+        <li class=""><span class="lab">D</span><span>wandering in the forest</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The fox's real mistake is the dishonest excuse, not the failed jump. Being thirsty or wandering is not the mistake.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">Calling something 'sour' just because you couldn't get it is an example of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>honest effort</span></li>
+        <li class="correct"><span class="lab">B</span><span>dishonest rationalisation (making an excuse)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>noble sacrifice</span></li>
+        <li class=""><span class="lab">D</span><span>careful planning</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>It is dishonest rationalisation - an excuse. It is not honest effort, sacrifice, or planning.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">The chapter notes that working hard at something unreachable is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>exactly the fox's mistake</span></li>
+        <li class=""><span class="lab">B</span><span>always foolish</span></li>
+        <li class="correct"><span class="lab">C</span><span>a different, even noble, story - the fable targets the excuse, not the effort</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the same as calling it sour</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Hard work at the unreachable is a different, even noble, story; the fable targets the dishonest excuse, not the effort.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">If a student fails a test and says 'that subject is useless anyway', this is most like:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>honest study</span></li>
+        <li class=""><span class="lab">B</span><span>the Sun Salutation</span></li>
+        <li class=""><span class="lab">C</span><span>good company (सङ्गतिः)</span></li>
+        <li class="correct"><span class="lab">D</span><span>the fox calling the grapes sour</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Dismissing a subject after failing is just like the fox calling the grapes sour. It is not honest study, the Sun Salutation, or good company.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">The lesson 'do not belittle what you fail to get' warns against:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>trying hard</span></li>
+        <li class=""><span class="lab">B</span><span>helping others</span></li>
+        <li class=""><span class="lab">C</span><span>drinking water when thirsty</span></li>
+        <li class="correct"><span class="lab">D</span><span>making excuses to hide our own failure</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The lesson warns against making excuses to hide failure. It does not warn against effort, helping others, or drinking water.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">The direction words वामतः, दक्षिणतः, अग्रतः, पृष्ठतः are formed with the suffix:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>-आय (dative)</span></li>
+        <li class="correct"><span class="lab">B</span><span>तसिल् (-तः)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>-एन (instrumental)</span></li>
+        <li class=""><span class="lab">D</span><span>-स्य (genitive)</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>They are formed with the तसिल् suffix (-तः). -आय is dative, -एन instrumental, and -स्य genitive.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">Words made with the तसिल् (-तः) suffix are:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>direction adverbs ('in/at/towards that direction')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>verbs</span></li>
+        <li class=""><span class="lab">C</span><span>past-tense forms</span></li>
+        <li class=""><span class="lab">D</span><span>plural nouns</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>तसिल् (-तः) words are direction adverbs. They are not verbs, past-tense forms, or plural nouns.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">वामतः differs from the case forms of वाम because वामतः is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the accusative of वाम</span></li>
+        <li class="correct"><span class="lab">B</span><span>an adverb 'on the left side', not a noun case form</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a verb</span></li>
+        <li class=""><span class="lab">D</span><span>a past tense</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>वामतः is an adverb 'on the left side', distinct from वाम's case forms. It is not an accusative, a verb, or a past tense.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">Using the accusative of वाम instead of वामतः for 'on the left' is wrong because direction is shown by:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the तसिल् suffix -तः (वामतः)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the dative ending</span></li>
+        <li class=""><span class="lab">C</span><span>the past-tense augment</span></li>
+        <li class=""><span class="lab">D</span><span>a compound</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Direction is shown by the तसिल् suffix -तः (वामतः), not a case ending, augment, or compound.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">वामतः means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>on the left</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>on the right</span></li>
+        <li class=""><span class="lab">C</span><span>in front</span></li>
+        <li class=""><span class="lab">D</span><span>behind</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>वामतः means 'on the left'. Right is दक्षिणतः, front अग्रतः, and behind पृष्ठतः.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">दक्षिणतः means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>on the left</span></li>
+        <li class=""><span class="lab">B</span><span>in front</span></li>
+        <li class="correct"><span class="lab">C</span><span>on the right</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>behind</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>दक्षिणतः means 'on the right'. Left is वामतः, front अग्रतः, and behind पृष्ठतः.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">अग्रतः means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>behind</span></li>
+        <li class=""><span class="lab">B</span><span>on the left</span></li>
+        <li class="correct"><span class="lab">C</span><span>in front</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>on the right</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>अग्रतः means 'in front'. Behind is पृष्ठतः, left वामतः, and right दक्षिणतः.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">पृष्ठतः means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>in front</span></li>
+        <li class=""><span class="lab">B</span><span>on the left</span></li>
+        <li class="correct"><span class="lab">C</span><span>behind</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>on the right</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>पृष्ठतः means 'behind'. In front is अग्रतः, left वामतः, and right दक्षिणतः.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">पिपासा means 'thirst' and comes from the root:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>भुज् ('to eat')</span></li>
+        <li class="correct"><span class="lab">B</span><span>पा ('to drink')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>गम् ('to go')</span></li>
+        <li class=""><span class="lab">D</span><span>दृश् ('to see')</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>पिपासा (thirst) comes from पा ('to drink'). भुज् gives बुभुक्षा (hunger); गम् and दृश् are unrelated.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">बुभुक्षा means 'hunger' and comes from the root:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>पा ('to drink')</span></li>
+        <li class=""><span class="lab">B</span><span>पठ् ('to read')</span></li>
+        <li class=""><span class="lab">C</span><span>वद् ('to speak')</span></li>
+        <li class="correct"><span class="lab">D</span><span>भुज् ('to eat')</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>बुभुक्षा (hunger) comes from भुज् ('to eat'). पा gives पिपासा (thirst); पठ् and वद् are unrelated.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">The difference between पिपासा and बुभुक्षा is that one is the wish to ____ and the other the wish to ____.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>eat ... drink</span></li>
+        <li class=""><span class="lab">B</span><span>sleep ... run</span></li>
+        <li class=""><span class="lab">C</span><span>read ... write</span></li>
+        <li class="correct"><span class="lab">D</span><span>drink ... eat</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>पिपासा is the wish to drink (thirst); बुभुक्षा the wish to eat (hunger). The reversal and the others are wrong.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">Both पिपासा (thirst) and बुभुक्षा (hunger) are examples of Sanskrit's ____ pattern (X-want-to-do).</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>desiderative</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>past-tense</span></li>
+        <li class=""><span class="lab">C</span><span>imperative</span></li>
+        <li class=""><span class="lab">D</span><span>plural</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Both are desideratives (wish-to-do forms). They are not past-tense, imperative, or plural patterns.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">If a word is built from पा ('drink') to mean 'wish to drink', that word is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>बुभुक्षा (hunger)</span></li>
+        <li class=""><span class="lab">B</span><span>श्रान्तः (tired)</span></li>
+        <li class="correct"><span class="lab">C</span><span>पिपासा (thirst)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>आम्लम् (sour)</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The wish-to-drink word from पा is पिपासा (thirst). बुभुक्षा is hunger, श्रान्तः tired, and आम्लम् sour.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">Knowing the root lets you tell पिपासा from बुभुक्षा because the root names the ____ desired.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>direction</span></li>
+        <li class="correct"><span class="lab">B</span><span>action (drinking vs eating)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>colour</span></li>
+        <li class=""><span class="lab">D</span><span>number</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The root names the action desired - drinking (पा) vs eating (भुज्). It is not direction, colour, or number.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">श्रान्तः means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>tired</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>thirsty</span></li>
+        <li class=""><span class="lab">C</span><span>sour</span></li>
+        <li class=""><span class="lab">D</span><span>left</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>श्रान्तः means 'tired'. Thirsty is पिपासायुक्तः, sour आम्लम्, and left वामतः.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">A traveller who has walked all day and is exhausted is best described as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>आम्लम् (sour)</span></li>
+        <li class=""><span class="lab">B</span><span>वामतः (on the left)</span></li>
+        <li class=""><span class="lab">C</span><span>द्राक्षा (grape)</span></li>
+        <li class="correct"><span class="lab">D</span><span>श्रान्तः (tired)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An exhausted traveller is श्रान्तः (tired). The others mean sour, on-the-left, and grape.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">Which word-meaning pair is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>द्राक्षा = fox</span></li>
+        <li class=""><span class="lab">B</span><span>आम्लम् = sweet</span></li>
+        <li class=""><span class="lab">C</span><span>श्रान्तः = happy</span></li>
+        <li class="correct"><span class="lab">D</span><span>शृगालः = fox</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>शृगालः = fox. द्राक्षा is a grape, आम्लम् is sour (not sweet), and श्रान्तः is tired (not happy).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">Which direction pair is CORRECT?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>पृष्ठतः = behind</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>वामतः = on the right</span></li>
+        <li class=""><span class="lab">C</span><span>अग्रतः = behind</span></li>
+        <li class=""><span class="lab">D</span><span>दक्षिणतः = in front</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>पृष्ठतः = behind. वामतः is left (not right), अग्रतः is in front (not behind), and दक्षिणतः is right (not front).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">Which grammar pair is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>उत्पतति = past tense</span></li>
+        <li class=""><span class="lab">B</span><span>उत् = past-tense augment</span></li>
+        <li class=""><span class="lab">C</span><span>-तः = dative suffix</span></li>
+        <li class="correct"><span class="lab">D</span><span>उत्पतति = present tense ('leaps up')</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>उत्पतति is present tense. It is not past, उत् is a prefix (not the augment), and -तः is the direction suffix (not dative).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">The overall theme of this fable is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the value of saving money</span></li>
+        <li class="correct"><span class="lab">B</span><span>the folly of belittling what we fail to achieve</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the rise of empires</span></li>
+        <li class=""><span class="lab">D</span><span>the parts of a state</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The theme is the folly of belittling what we fail to achieve. It is not about saving money, empires, or the state.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">The chapter teaches both a moral and grammar; the grammar focus is on:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the dative case only</span></li>
+        <li class=""><span class="lab">B</span><span>banking terms</span></li>
+        <li class="correct"><span class="lab">C</span><span>the -तः direction words and vocabulary of thirst/hunger/tiredness</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the names of the Sun</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The grammar focus is the -तः direction words and the thirst/hunger/tiredness vocabulary. Not the dative, banking, or Sun-names.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">The fox would have been wiser to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>insist loudly that the grapes were sour</span></li>
+        <li class=""><span class="lab">B</span><span>blame the forest</span></li>
+        <li class="correct"><span class="lab">C</span><span>accept honestly that he could not reach the grapes</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>stop being thirsty</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>It would be wiser to accept honestly that he could not reach the grapes, rather than make excuses or blame others.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">Putting it together, the punchline न लभ्यते चेत् आम्लं द्राक्षाफलम् captures:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the fox happily eating sweet grapes</span></li>
+        <li class=""><span class="lab">B</span><span>a lesson about direction words</span></li>
+        <li class="correct"><span class="lab">C</span><span>the fox declaring the unreachable grapes 'sour' to excuse his failure</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the twelve names of the Sun</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The punchline captures the fox calling the unreachable grapes 'sour' to excuse his failure. Not eating them, a direction lesson, or Sun-names.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">A student claims: 'The fable's lesson is to give up early, and उत्पतति is past tense.' The best correction is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the student is fully correct</span></li>
+        <li class=""><span class="lab">B</span><span>the lesson is to give up, but उत्पतति is present</span></li>
+        <li class=""><span class="lab">C</span><span>the lesson is correct, and उत्पतति is past</span></li>
+        <li class="correct"><span class="lab">D</span><span>the lesson is not to belittle what you fail to get, and उत्पतति is present tense</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The lesson is not to belittle what you fail to get, and उत्पतति is present tense. The other options keep one or both errors.</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

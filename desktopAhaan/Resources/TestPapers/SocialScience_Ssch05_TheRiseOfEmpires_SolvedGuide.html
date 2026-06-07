@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Rise Of Empires — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>The Rise Of Empires<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">The word "empire" comes from the Latin word *imperium*. The chapter uses this origin mainly to make which point?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Empires were always ruled by Roman emperors</span></li>
+        <li class="correct"><span class="lab">B</span><span>An empire rests on one ruler holding supreme power over many lands</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Empires were named in Latin by their founders</span></li>
+        <li class=""><span class="lab">D</span><span>An empire is simply any very wealthy kingdom</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>*Imperium* is Latin for "supreme power", and the chapter uses the word's origin to stress that an empire is built on one ruler holding supreme power over many lands. (A) and (C) over-read it into Rome; (D) confuses an empire with mere wealth — size/wealth alone is not the defining trait.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">The clearest single difference between a kingdom and an empire is that an empire:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>is always richer than a kingdom</span></li>
+        <li class=""><span class="lab">B</span><span>has a larger army than a kingdom</span></li>
+        <li class="correct"><span class="lab">C</span><span>layers many kingdoms, with smaller kings paying tribute under one emperor</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>never allows the smaller kings to keep their thrones</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A kingdom is one ruler over one people/territory; an empire layers many kingdoms under one emperor, with smaller kings kept on as tributaries who pay tribute. (A)/(B) are just "more of the same" and not the defining difference. (D) is false — tributaries usually keep their thrones.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">A defeated king is allowed to keep his throne but must send the emperor gold, grain and elephants each year. The chapter would call this defeated king a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>satrap</span></li>
+        <li class=""><span class="lab">B</span><span>bureaucrat</span></li>
+        <li class=""><span class="lab">C</span><span>guild-head</span></li>
+        <li class="correct"><span class="lab">D</span><span>tributary (vassal)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A defeated ruler who keeps his throne but sends tribute (gold, grain, elephants) is a tributary, also called a vassal. A satrap (A) is an *appointed* provincial governor, not a king who pays tribute; (B) a bureaucrat is an official; (C) a guild-head leads traders.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">Which of the following is NOT one of the six features the chapter says an empire must maintain?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Holding regular elections to choose the emperor</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>A strong army</span></li>
+        <li class=""><span class="lab">C</span><span>Laws and a common currency</span></li>
+        <li class=""><span class="lab">D</span><span>Support for art and learning</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The six features are: army, administration, laws and currency, control over resources, support for art and learning, and communication. Empires were NOT democracies, so "holding regular elections to choose the emperor" (A) is not among them. (B), (C), (D) are all genuine features.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">Why does the chapter say an empire needs a "common currency, weights and measures"?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>To make the emperor personally richer than the kings</span></li>
+        <li class="correct"><span class="lab">B</span><span>So distant regions can trade and be taxed under one shared system</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Because coins were the only form of art the Mauryas valued</span></li>
+        <li class=""><span class="lab">D</span><span>To replace the need for an army</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A common currency, weights and measures let distant regions trade and be taxed under one shared system — a unifying administrative feature. (A) misreads the purpose; (C) confuses coins with art; (D) is false — currency does not replace the need for an army.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">An emperor "cannot personally rule every distant village." Which two features of an empire most directly solve this problem?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Art and learning, and a common currency</span></li>
+        <li class=""><span class="lab">B</span><span>Communication networks, and control over resources</span></li>
+        <li class=""><span class="lab">C</span><span>A strong army, and support for learning</span></li>
+        <li class="correct"><span class="lab">D</span><span>An administration of officials, and communication networks</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The administration (officials managing land, taxes and order) plus communication networks (to move messages and goods) are exactly the two features that let an emperor rule far-off villages he cannot visit. (B) names communication but pairs it with resources rather than administration; (A) and (C) miss administration entirely.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">Maintaining a large army is described as extremely expensive. According to the chapter, the wealth to pay for it came mainly from:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a thriving economy, especially trade</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>gifts sent by foreign kings</span></li>
+        <li class=""><span class="lab">C</span><span>gold dug personally by the emperor</span></li>
+        <li class=""><span class="lab">D</span><span>selling the emperor's old weapons</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Armies are hugely expensive (feeding, arming and paying soldiers, horses and elephants), and the chapter says the wealth came mainly from a thriving economy, especially trade. (B), (C) and (D) are not how empires actually funded their forces.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">Why did a wise ancient ruler work hard to build and control trade routes?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Trade routes let him avoid keeping any army</span></li>
+        <li class=""><span class="lab">B</span><span>Routes were the only way to send edicts</span></li>
+        <li class="correct"><span class="lab">C</span><span>More trade meant more goods, richer producers and more tax income</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Controlling routes ended the need for guilds</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A wise ruler built and controlled trade routes because more trade meant more goods, richer producers and more tax income for the treasury. (A) is false — trade does not remove the need for an army; (C)'s rivals (B)/(D) confuse routes with edicts or guilds.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">India's two great trade routes named in the chapter were the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Uttarapatha and the Dakṣhiṇapatha</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Ganga route and the Son route</span></li>
+        <li class=""><span class="lab">C</span><span>Silk Road and the Spice Route</span></li>
+        <li class=""><span class="lab">D</span><span>Royal Road and the King's Highway</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>India's two great routes were the Uttarapatha (northern) and the Dakṣhiṇapatha (southern). The Silk Road/Spice Route (C) and the invented "Royal Road" (D) are not the chapter's terms; the Ganga and Son (B) are rivers that aided Magadha, not the two named trade routes.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">A śhrenī of weavers fixes fair prices, shares news of demand, elects an honest head and settles its members' disputes by its own rules. This best shows that guilds:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>organised and governed themselves, helping trade flourish</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>were controlled day-to-day by the king's soldiers</span></li>
+        <li class=""><span class="lab">C</span><span>existed only to collect tribute for the emperor</span></li>
+        <li class=""><span class="lab">D</span><span>were small family workshops with no rules</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A guild (śhreni) that fixes prices, shares market news, elects an honest head and settles disputes by its own rules is organising and governing itself — which helped trade flourish. (B) is the opposite (kings let guilds be); (C) confuses guilds with tribute; (D) ignores their written rules and elected leaders.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">"An enlightened ancient ruler usually let guilds make and follow their own rules." The chapter suggests a king did this because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>he had no power to stop them</span></li>
+        <li class="correct"><span class="lab">B</span><span>self-governing guilds kept trade and tax revenue flowing smoothly</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>guilds paid no taxes at all</span></li>
+        <li class=""><span class="lab">D</span><span>the law forbade kings from touching trade</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An enlightened king let guilds self-govern because self-regulating guilds kept trade — and thus tax revenue — flowing smoothly. (A) wrongly says he was powerless; (C) is false (trade was taxed); (D) invents a law.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">Of the sixteen large kingdoms (mahājanapadas), the one that rose to become India's first great power was:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Gandhāra</span></li>
+        <li class=""><span class="lab">B</span><span>Avanti</span></li>
+        <li class="correct"><span class="lab">C</span><span>Magadha</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Kalinga</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Of the sixteen mahājanapadas, Magadha (in south Bihar) rose to become India's first great power. Gandhāra and Avanti were rivals that faded; Kalinga was the region Ashoka later conquered, not the empire's core.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">Which combination BEST explains why Magadha grew more powerful than its rivals?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Fertile Ganga-plains land, iron ore, forests for elephants, and river trade</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Sea ports, a great navy, and ocean trade alone</span></li>
+        <li class=""><span class="lab">C</span><span>Snowy mountains and a protective cold desert</span></li>
+        <li class=""><span class="lab">D</span><span>Gold mines and control of the Silk Road</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Magadha's strength came from fertile Ganga-plains land, iron ore, forests for timber and elephants, and Ganga/Son river trade. (B) wrongly stresses a navy and sea ports; (C) describes the opposite terrain; (D) invents gold mines and the Silk Road.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">Iron from the nearby hills helped Magadha in two distinct ways at once. These were:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>building ships and minting coins</span></li>
+        <li class=""><span class="lab">B</span><span>trading iron abroad and paying tribute in iron</span></li>
+        <li class=""><span class="lab">C</span><span>iron temples and iron edicts</span></li>
+        <li class="correct"><span class="lab">D</span><span>iron ploughs for more food and iron weapons for a strong army</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Iron helped in two ways at once: iron ploughs grew more food, and iron weapons made the army strong. (A), (B), (C) describe uses (ships, temples, export tribute) that the chapter does not give for Magadhan iron.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">The Ganga and Son rivers were a major advantage to Magadha chiefly because they:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>marked the empire's only border</span></li>
+        <li class=""><span class="lab">B</span><span>were worshipped by the Nandas</span></li>
+        <li class="correct"><span class="lab">C</span><span>made it cheap and easy to move goods and troops</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>were full of iron ore</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Ganga and Son rivers made it cheap and easy to move goods and troops — a transport advantage. (A) wrongly makes them a border; (B) invents worship; (D) confuses the rivers with the iron hills.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">Who founded the Nanda dynasty in Magadha around the 5th century BCE?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Mahāpadma Nanda</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Dhana Nanda</span></li>
+        <li class=""><span class="lab">C</span><span>Ajātaśhatru</span></li>
+        <li class=""><span class="lab">D</span><span>Chandragupta Maurya</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Mahāpadma Nanda founded the Nanda dynasty around the 5th century BCE. Dhana Nanda (B) was its last king; Ajātaśhatru (C) was an earlier Magadhan king; Chandragupta Maurya (D) overthrew the Nandas later.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">Mahāpadma Nanda showed his economic power and built features of imperial rule by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>writing the Arthaśhāstra</span></li>
+        <li class=""><span class="lab">B</span><span>carving edicts on rock pillars</span></li>
+        <li class="correct"><span class="lab">C</span><span>unifying many kingdoms, issuing coins and keeping a huge army</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>defeating Alexander in Punjab</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Mahāpadma Nanda showed imperial power by unifying many kingdoms, issuing coins and keeping a huge army. The Arthaśhāstra (A) was Kauṭilya's; edicts (B) were Ashoka's; defeating Alexander (D) never happened — Alexander was in the northwest, not fighting the Nandas.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">The last Nanda king, Dhana Nanda, though very rich, lost the people's loyalty because he:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>gave away the whole treasury</span></li>
+        <li class="correct"><span class="lab">B</span><span>oppressed and over-taxed his subjects</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>refused to issue any coins</span></li>
+        <li class=""><span class="lab">D</span><span>handed the throne to Alexander</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Dhana Nanda, though very rich, was hated for oppressing and over-taxing his subjects, costing him their loyalty. (A), (C), (D) are inventions; his fault was oppression, not generosity or abdication.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">Around 326 BCE the Greek king Alexander of Macedonia reached northwest India after first conquering which great empire?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the Persian Empire</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the Maurya Empire</span></li>
+        <li class=""><span class="lab">C</span><span>the Nanda Empire</span></li>
+        <li class=""><span class="lab">D</span><span>the Roman Empire</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Alexander first conquered the mighty Persian Empire (to avenge earlier Persian attacks on Greece) before reaching northwest India around 326 BCE. The Maurya (B) and Nanda (C) empires were Indian and not conquered by him; the Roman Empire (D) came much later.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">A student writes, "Alexander conquered the whole of India." The chapter shows this is wrong because Alexander:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>never actually left Greece</span></li>
+        <li class=""><span class="lab">B</span><span>was defeated and killed by Porus</span></li>
+        <li class=""><span class="lab">C</span><span>conquered only the far south of India</span></li>
+        <li class="correct"><span class="lab">D</span><span>reached only the northwest and turned back when his soldiers refused to go further</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Alexander reached only the northwest, defeated Porus, and turned back when his tired soldiers refused to advance toward the Ganga — so he did not conquer all of India. (A) and (B) are false; (C) reverses it — he never reached the far south.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">Alexander defeated King Porus of the Pauravas, yet then turned homeward. The immediate reason given is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Chandragupta Maurya defeated him</span></li>
+        <li class="correct"><span class="lab">B</span><span>his tired soldiers refused to advance further</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>he ran out of weapons</span></li>
+        <li class=""><span class="lab">D</span><span>the Nandas paid him tribute to leave</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>After defeating Porus, Alexander turned homeward chiefly because his exhausted soldiers refused to go further. (A) is false (Chandragupta rose only later); (C)/(D) are inventions.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">The chapter says Alexander's real impact on India was mostly *indirect*. This is best explained by the fact that he:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>directly ruled India for fifty years</span></li>
+        <li class=""><span class="lab">B</span><span>personally founded the Maurya dynasty</span></li>
+        <li class=""><span class="lab">C</span><span>carved edicts across India in Greek</span></li>
+        <li class="correct"><span class="lab">D</span><span>left behind weak Greek satraps and opened contacts, rather than holding Indian land</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Alexander's impact was *indirect*: he left weak Greek satraps in the northwest and opened contacts, rather than holding Indian territory himself — which later helped Chandragupta. (A)/(B) are false; (C) confuses him with Ashoka and uses the wrong language.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">Around 321 BCE, Chandragupta Maurya founded the Maurya empire largely by:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>overthrowing the unpopular Nandas with Kauṭilya's help</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>inheriting the throne peacefully from Ashoka</span></li>
+        <li class=""><span class="lab">C</span><span>being appointed emperor by Alexander</span></li>
+        <li class=""><span class="lab">D</span><span>marrying into the Persian royal family</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Around 321 BCE Chandragupta Maurya founded the empire by overthrowing the unpopular Nandas with Kauṭilya's help, making Pāṭaliputra his capital. (B) reverses the generations (Ashoka was his grandson); (C)/(D) are inventions.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">Chandragupta could build so vast an empire so quickly partly because of conditions left after Alexander's death. Which condition helped him most in the northwest?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a strong united Greek army guarding India</span></li>
+        <li class=""><span class="lab">B</span><span>a peace treaty signed by Ashoka</span></li>
+        <li class="correct"><span class="lab">C</span><span>weak Greek satraps he could defeat or absorb</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the loyalty of the Nanda soldiers to him from birth</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>After Alexander's death the northwest was held by weak Greek satraps Chandragupta could defeat or absorb. (A) is the opposite; (B) is anachronistic (Ashoka came later); (D) is invented.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">Kauṭilya, the mentor of Chandragupta Maurya, is also known by which other name(s)?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Megasthenes</span></li>
+        <li class="correct"><span class="lab">B</span><span>Chāṇakya (Viṣhnugupta)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Porus</span></li>
+        <li class=""><span class="lab">D</span><span>Pāṇini</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Kauṭilya is also called Chāṇakya (and Viṣhnugupta). Megasthenes (A) was a Greek visitor to the court; Porus (C) was the king Alexander fought; Pāṇini (D) was a grammarian, not Chandragupta's mentor.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">The title of Kauṭilya's famous treatise, the *Arthaśhāstra*, is best described as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a book of poems praising the emperor</span></li>
+        <li class=""><span class="lab">B</span><span>a collection of Ashoka's edicts</span></li>
+        <li class="correct"><span class="lab">C</span><span>the science of governance and economics</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a Buddhist religious text</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The *Arthaśhāstra* means "the science of governance and economics", covering defence, administration, justice and welfare. It is not poetry (A), Ashoka's edicts (B), or a religious text (D).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">Which list correctly gives the seven parts (saptānga) of a state according to Kauṭilya?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>King, queen, priests, merchants, farmers, soldiers, slaves</span></li>
+        <li class=""><span class="lab">B</span><span>Army, navy, cavalry, forts, coins, roads, temples</span></li>
+        <li class=""><span class="lab">C</span><span>Land, sea, forests, mines, rivers, hills, cities</span></li>
+        <li class="correct"><span class="lab">D</span><span>King, ministers, territory and people, forts, treasury, army and justice, allies</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Kauṭilya's saptānga (seven limbs) are: king, ministers, territory and people, forts, treasury, army and justice, and allies. (A), (B), (C) are plausible-looking but invented lists that do not match the seven limbs.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">Why would Kauṭilya insist a strong state needs ALL seven limbs working together, not just a powerful king?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Because a state is like a body — if any one limb is weak, the whole suffers</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Because seven was a lucky number for the Mauryas</span></li>
+        <li class=""><span class="lab">C</span><span>Because tradition forbade a king from keeping a treasury</span></li>
+        <li class=""><span class="lab">D</span><span>Because the king alone was not allowed to make laws</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Kauṭilya treated the state like a body whose limbs must all work together — if any one of the seven is weak, the whole state suffers. (B), (C), (D) are inventions; the reasoning is the body/limbs analogy.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">In Kauṭilya's saptānga, the treasury and the army are listed as separate limbs. The best reason is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the treasury and army were never used together</span></li>
+        <li class=""><span class="lab">B</span><span>the army was paid in grain, never money</span></li>
+        <li class="correct"><span class="lab">C</span><span>one funds the state's needs while the other defends and enforces — different jobs</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the treasury belonged to the guilds, not the king</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The treasury funds the state's needs while the army defends and enforces — two different essential jobs, so each is a separate limb. (A), (B), (D) are false claims about how they were used or owned.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">Match the figure to the role: Chandragupta Maurya, Kauṭilya, Megasthenes. The correct matching is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Greek visitor; founder of the empire; author of the Arthaśhāstra</span></li>
+        <li class="correct"><span class="lab">B</span><span>founder of the Maurya empire; mentor and author of the Arthaśhāstra; Greek visitor to the Mauryan court</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>author of the Arthaśhāstra; Greek visitor; founder of the empire</span></li>
+        <li class=""><span class="lab">D</span><span>mentor; founder of the empire; the last Nanda king</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Chandragupta Maurya → founder of the empire (c. 321 BCE); Kauṭilya → mentor and author of the Arthaśhāstra; Megasthenes → Greek visitor to the Mauryan court. The other options scramble these roles.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">Ashoka, who ruled 268–232 BCE, was related to Chandragupta Maurya as his:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>father</span></li>
+        <li class=""><span class="lab">B</span><span>mentor</span></li>
+        <li class=""><span class="lab">C</span><span>brother</span></li>
+        <li class="correct"><span class="lab">D</span><span>grandson</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Ashoka (ruled 268–232 BCE) was Chandragupta Maurya's grandson. He was not his father, brother or mentor — Kauṭilya was the mentor, and Bindusāra (Chandragupta's son) was the generation between them.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">At the height of Ashoka's reign the empire covered almost the whole subcontinent EXCEPT:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the northwest, including parts of Afghanistan</span></li>
+        <li class=""><span class="lab">B</span><span>the Ganga plains</span></li>
+        <li class=""><span class="lab">C</span><span>modern Bangladesh</span></li>
+        <li class="correct"><span class="lab">D</span><span>the far south</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Ashoka's empire covered almost the whole subcontinent EXCEPT the far south. It DID include the northwest/Afghanistan, the Ganga plains and modern Bangladesh, so those are not the exception.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">The turning point in Ashoka's life was a terrible, bloody war fought against:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Kalinga (modern Odisha)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the Persians in the northwest</span></li>
+        <li class=""><span class="lab">C</span><span>Porus in Punjab</span></li>
+        <li class=""><span class="lab">D</span><span>the Nandas of Magadha</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The turning-point war was the bloody Kalinga war (modern Odisha). The northwest Persians (B) were Alexander's foe; Porus in Punjab (C) was Alexander's foe; the Nandas (D) were overthrown by Chandragupta, not Ashoka.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">A student claims, "Ashoka attacked Kalinga in order to spread Buddhism." Why is this the wrong way round?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Ashoka never actually fought at Kalinga</span></li>
+        <li class=""><span class="lab">B</span><span>Kalinga was already Buddhist before the war</span></li>
+        <li class="correct"><span class="lab">C</span><span>He attacked to expand his empire; the bloodshed afterwards led him toward dhamma</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Buddhism forbade any king from going to war</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The claim reverses cause and effect: Ashoka attacked Kalinga to *expand* his empire by conquest; the horror of the bloodshed afterwards led him toward dhamma and peace. (A)/(B) are false; (D) overstates a rule.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">We know Ashoka was genuinely shaken by Kalinga largely because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Megasthenes wrote about it in Greek</span></li>
+        <li class="correct"><span class="lab">B</span><span>he openly admitted his remorse in his own edicts</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Kauṭilya recorded it in the Arthaśhāstra</span></li>
+        <li class=""><span class="lab">D</span><span>a later king built a temple to mark it</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>We know Ashoka was genuinely shaken because he openly admitted his remorse in his own edicts — a rare, first-hand confession. Megasthenes (A) predates Kalinga's aftermath in this context; the Arthaśhāstra (C) is Kauṭilya's; (D) is invented.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">Ashoka's idea of *dhamma* is best described as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a new religion that replaced Buddhism</span></li>
+        <li class=""><span class="lab">B</span><span>a tax collected from tributary kings</span></li>
+        <li class="correct"><span class="lab">C</span><span>moral and ethical duty — honesty, non-violence, doing one's duties truthfully</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the science of warfare</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Dhamma is moral and ethical duty — honesty, non-violence and doing one's duties truthfully, living in harmony with the order of the universe. It is not a replacement religion (A), a tax (B), or warfare (D).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">Ashoka is called a "great communicator" because he spread dhamma mainly by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sending soldiers to repeat his words in every village</span></li>
+        <li class=""><span class="lab">B</span><span>printing books for every household</span></li>
+        <li class=""><span class="lab">C</span><span>building one great central temple</span></li>
+        <li class="correct"><span class="lab">D</span><span>engraving edicts on rocks and pillars across the empire</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Ashoka is called a "great communicator" because he engraved edicts on rocks and pillars across the empire. (A), (B), (C) are inventions — soldiers, printing and a single temple were not his method.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">Ashoka's edicts were mostly written in the ____ language using the ____ script.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Sanskrit; Devanagari</span></li>
+        <li class=""><span class="lab">B</span><span>Greek; Latin</span></li>
+        <li class="correct"><span class="lab">C</span><span>Prakrit; Brahmi</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Tamil; Brahmi</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Ashoka's edicts were mostly in the Prakrit language using the Brahmi script. Not Sanskrit/Devanagari (A), Greek/Latin (B), or Tamil (D) — Prakrit was the common spoken language, Brahmi the widely understood script.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">"Prakrit and Brahmi are really the same thing." Identify the correct correction:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Both are scripts used only by the Greeks</span></li>
+        <li class="correct"><span class="lab">B</span><span>Prakrit is a language (what people spoke); Brahmi is a script (a way of writing)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Brahmi is a language; Prakrit is a script</span></li>
+        <li class=""><span class="lab">D</span><span>Both are languages, and neither is a script</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correction to the classic mix-up: Prakrit is a *language* (what people spoke); Brahmi is a *script* (a way of writing). (A) and (D) deny one is a script; (C) reverses the two.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">Why might Ashoka have chosen the everyday Prakrit language rather than refined Sanskrit for his edicts?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Sanskrit had not yet been invented</span></li>
+        <li class=""><span class="lab">B</span><span>Prakrit was the only language that could be carved</span></li>
+        <li class=""><span class="lab">C</span><span>Prakrit was forbidden to commoners, making the message secret</span></li>
+        <li class="correct"><span class="lab">D</span><span>So that ordinary people could understand the messages directly</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Ashoka likely chose everyday Prakrit so ordinary people could understand his messages directly, rather than refined Sanskrit. (A) and (B) are false; (C) reverses the purpose (he wanted the message public, not secret).</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">Why might Ashoka have carved his edicts on rock and stone pillars rather than writing them on paper or cloth?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Stone is permanent and public, surviving weather and centuries</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Stone was cheaper than any other material</span></li>
+        <li class=""><span class="lab">C</span><span>Paper and cloth did not yet exist anywhere</span></li>
+        <li class=""><span class="lab">D</span><span>Carving could be done only in the Brahmi script</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Carving on rock and stone pillars made the messages permanent and public — stone survives weather and centuries. (B) is not the chapter's point; (C) is false; (D) confuses material with script.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">The Brahmi script is historically important beyond Ashoka's edicts because it is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the same as the modern Roman alphabet</span></li>
+        <li class="correct"><span class="lab">B</span><span>the ancestor of most of today's Indian scripts</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a script that no one has ever deciphered</span></li>
+        <li class=""><span class="lab">D</span><span>a language spoken only at the Mauryan court</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Brahmi is historically important as the ancestor of most of today's Indian scripts. It is not the Roman alphabet (A); it WAS deciphered (by James Prinsep) so (C) is false; it is a script, not a court language (D).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">The famous Mauryan artwork later chosen as India's national emblem is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Great Stūpa at Sanchi</span></li>
+        <li class=""><span class="lab">B</span><span>Dhauli rock elephant</span></li>
+        <li class="correct"><span class="lab">C</span><span>Lion Capital of the Sarnath pillar</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>terracotta dancing figure</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Lion Capital of the Sarnath pillar was adopted as India's national emblem. The Great Stūpa at Sanchi (A), the Dhauli rock elephant (B) and a terracotta figure (D) are other ancient artworks, not the emblem.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">On the Sarnath capital, the "capital" refers to the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>capital city of the Maurya empire</span></li>
+        <li class="correct"><span class="lab">B</span><span>carved top, or head, of the stone column</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>treasury of the empire</span></li>
+        <li class=""><span class="lab">D</span><span>main edict carved on the pillar</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Here "capital" means the carved top, or head, of the stone column (from Latin *caput*, "head") — a different word from a capital city (A). It is not the treasury (C) or an edict (D).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">Ashoka set up the lion pillar at Sarnath because Sarnath was the place where:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Ashoka was crowned emperor</span></li>
+        <li class=""><span class="lab">B</span><span>the Kalinga war was fought</span></li>
+        <li class=""><span class="lab">C</span><span>Chandragupta defeated the Nandas</span></li>
+        <li class="correct"><span class="lab">D</span><span>the Buddha gave his first teaching</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Ashoka set up the pillar at Sarnath because that is where the Buddha gave his first teaching. (A), (B), (C) are inventions — Sarnath's significance is its link to the Buddha.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">At the centre of India's national flag is the *dharmachakra*, taken from Mauryan art. It symbolises:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the wheel of dharma / the Buddha's teachings</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the wheel of a war chariot</span></li>
+        <li class=""><span class="lab">C</span><span>the sun-god of the Mauryas</span></li>
+        <li class=""><span class="lab">D</span><span>the trade routes of the empire</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The dharmachakra is the "wheel of dharma", symbolising the Buddha's teachings; it sits at the centre of India's national flag. It is not a chariot wheel (B), a sun-god (C), or trade routes (D).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">The Maurya empire ended around 185 BCE, roughly how long after Ashoka's death (232 BCE)?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>about two centuries</span></li>
+        <li class="correct"><span class="lab">B</span><span>about half a century</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>within a single year</span></li>
+        <li class=""><span class="lab">D</span><span>over three hundred years</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Maurya empire ended around 185 BCE, roughly half a century after Ashoka's death (232 BCE) — successors could not hold it together. (A), (C), (D) misjudge the span.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">Empires are described as "fragile" mainly because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>they were never actually very large</span></li>
+        <li class=""><span class="lab">B</span><span>they had no armies to defend themselves</span></li>
+        <li class="correct"><span class="lab">C</span><span>they rest on force, and distant regions break away when the centre weakens</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>emperors always refused to collect any tribute</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Empires are "fragile" because they rest mainly on force and the emperor's strength, so distant regions break away when the centre weakens. (A) is false (they were large); (B) is false (they had armies); (D) is false (tribute was collected).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">Which situation, according to the chapter, would MOST tempt a distant province to break away from an empire?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a strong emperor following another strong emperor</span></li>
+        <li class=""><span class="lab">B</span><span>lower tribute demands and a long peace</span></li>
+        <li class=""><span class="lab">C</span><span>the building of better roads to the capital</span></li>
+        <li class="correct"><span class="lab">D</span><span>a weak emperor following a strong one, plus heavier tribute demands</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A weak emperor following a strong one, combined with heavier tribute demands, most tempts a distant province to break away. (A), (B), (C) all describe *stabilising* conditions that would make breaking away less likely.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">The chapter calls an empire a "paradox." Which statement captures the paradox best?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>It can bring unity and prosperity, yet it rests on war and force and tends to fall apart</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>It is both very small and very large at once</span></li>
+        <li class=""><span class="lab">C</span><span>It has an emperor but no kings beneath him</span></li>
+        <li class=""><span class="lab">D</span><span>It collects tribute but spends nothing on an army</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The paradox: an empire can bring unity and prosperity, yet because it rests on war and force and distant regions drift away, it is fragile and tends to decline. (B), (C), (D) misstate what an empire is.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">Comparing the Nanda and Maurya states, which is the BEST single statement?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>The Nandas carved edicts while the Mauryas did not</span></li>
+        <li class=""><span class="lab">B</span><span>The Mauryas began the empire and the Nandas destroyed it</span></li>
+        <li class="correct"><span class="lab">C</span><span>The Nandas first unified Magadha's lands; the Mauryas then took over and expanded much further</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>The Nandas and Mauryas ruled at exactly the same time as rivals</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Comparing the two: the Nandas first unified Magadha's lands (showing early imperial features), and the Mauryas then took over and expanded much further. (A) reverses who carved edicts; (B) reverses the order; (D) is false — they ruled in succession, not as simultaneous rivals.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">Put these in correct chronological order: (i) Mahāpadma Nanda founds the Nanda dynasty, (ii) Ashoka fights the Kalinga war, (iii) Chandragupta founds the Maurya empire, (iv) Alexander reaches northwest India.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>(iv), (i), (iii), (ii)</span></li>
+        <li class="correct"><span class="lab">B</span><span>(i), (iv), (iii), (ii)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>(iii), (i), (iv), (ii)</span></li>
+        <li class=""><span class="lab">D</span><span>(i), (iii), (iv), (ii)</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Chronology: (i) Mahāpadma Nanda (5th century BCE) → (iv) Alexander reaches the northwest (c. 326 BCE) → (iii) Chandragupta founds the Maurya empire (c. 321 BCE) → (ii) Ashoka's Kalinga war (during 268–232 BCE). So the order is (i), (iv), (iii), (ii).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">A satrap, mentioned in connection with Alexander, was a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>tribute paid to the emperor</span></li>
+        <li class=""><span class="lab">B</span><span>Greek soldier in Alexander's bodyguard</span></li>
+        <li class=""><span class="lab">C</span><span>guild of moneylenders</span></li>
+        <li class="correct"><span class="lab">D</span><span>governor of a province left by the overlord to manage a far-off territory</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A satrap was a governor of a province, left by the overlord to manage a far-off territory (in the Persian and Greek empires). He was not a bodyguard (B), a guild (C), or a payment (A — that is tribute).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">Both a tributary king and a satrap let an emperor rule distant lands without being everywhere himself. The key difference is that a tributary:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>is an appointed official with no kingdom of his own, unlike a satrap</span></li>
+        <li class="correct"><span class="lab">B</span><span>keeps his own throne while paying tribute, whereas a satrap is an appointed provincial governor</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>rules a larger area than the emperor himself</span></li>
+        <li class=""><span class="lab">D</span><span>is always a Greek, while a satrap is always Indian</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Both let an emperor rule distant lands indirectly, but the key difference is that a tributary keeps his *own* throne while paying tribute, whereas a satrap is an *appointed* provincial governor with no kingdom of his own. (A) reverses this; (C) and (D) are false.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">The Mauryan cities are described as well-planned, prosperous and food-secure. This best illustrates which feature of an empire at work?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the absence of any army</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>strong administration and control over resources</span></li>
+        <li class=""><span class="lab">C</span><span>the lack of any common currency</span></li>
+        <li class=""><span class="lab">D</span><span>refusal to support art and learning</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Well-planned, prosperous, food-secure cities show strong administration and control over resources at work — two of the six features. (B), (C), (D) describe the *absence* of features, which is the opposite of what prosperous cities show.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">Suppose Dhana Nanda had ruled justly and kept his people's loyalty. Based on the chapter's reasoning, the most likely effect would be that:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the Nanda empire might have lasted longer and resisted Chandragupta's challenge</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Ashoka would never have been born</span></li>
+        <li class=""><span class="lab">C</span><span>Alexander would have conquered all of India</span></li>
+        <li class=""><span class="lab">D</span><span>Kauṭilya would have written two Arthaśhāstras</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>If Dhana Nanda had ruled justly and kept the people's loyalty, the Nanda empire might have lasted longer and resisted Chandragupta's challenge (which depended on Nanda unpopularity). (B), (C), (D) are unrelated leaps the chapter does not support.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">Suppose Ashoka had felt no remorse after Kalinga and kept conquering. The chapter's logic suggests that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the Maurya empire would have ended immediately</span></li>
+        <li class="correct"><span class="lab">B</span><span>he might have continued aggressive wars, and the dhamma edicts would not exist</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Brahmi script would never have been deciphered</span></li>
+        <li class=""><span class="lab">D</span><span>Chandragupta would have lost his throne</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Had Ashoka felt no remorse after Kalinga, he might have kept waging aggressive wars — and the dhamma edicts, which sprang from that remorse, would not exist. (A), (C), (D) are unconnected consequences.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">Imagine a new empire arises with a strong army, officials, coins and roads, but it ignores "support for art and learning." Using the chapter, the most likely weakness is that it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>cannot collect any tribute at all</span></li>
+        <li class=""><span class="lab">B</span><span>will have no soldiers within a year</span></li>
+        <li class=""><span class="lab">C</span><span>can never build a single fort</span></li>
+        <li class="correct"><span class="lab">D</span><span>lacks the unifying culture that helps bind its many peoples together</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An empire with army, officials, coins and roads but no support for art and learning lacks the unifying culture that helps bind its many peoples together — one of the six features. (A), (B), (C) are false; the missing feature is cultural unity, not soldiers, tribute or forts.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">A historian finds an Ashokan rock edict, in Prakrit and Brahmi, far from Pāṭaliputra near a frontier. The spread of such edicts is most useful for telling us:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the price of iron in Magadha</span></li>
+        <li class=""><span class="lab">B</span><span>the exact date Alexander was born</span></li>
+        <li class="correct"><span class="lab">C</span><span>roughly how far Ashoka's empire and influence reached</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>how many guilds existed in each city</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The spread of Ashokan edicts, especially far-flung ones, is most useful for telling us roughly how far his empire and influence reached. (A), (B), (D) are things an edict's location cannot reveal.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">Across the chapter, the deepest lesson about empires is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>once founded, an empire lasts forever</span></li>
+        <li class=""><span class="lab">B</span><span>empires need only a strong emperor and nothing else</span></li>
+        <li class=""><span class="lab">C</span><span>tribute alone, with no army or administration, is enough to rule</span></li>
+        <li class="correct"><span class="lab">D</span><span>building an empire is easy but holding one together is hard, so even the greatest decline</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The chapter's deepest lesson is that building an empire is easier than holding one together, so even the greatest empires eventually decline. (A), (B), (C) all contradict the chapter's point about fragility and the six features. --- *Solutions complete: 60 / 60.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

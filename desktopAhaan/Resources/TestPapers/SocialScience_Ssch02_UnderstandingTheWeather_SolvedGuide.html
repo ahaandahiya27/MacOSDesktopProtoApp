@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Understanding The Weather — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Understanding The Weather<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">Weather is best described as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>The average pattern of the atmosphere over about thirty years</span></li>
+        <li class="correct"><span class="lab">B</span><span>The state of the Earth's atmosphere at a particular time and place</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>The study of the instruments that measure the air</span></li>
+        <li class=""><span class="lab">D</span><span>The blanket of gases that surrounds the Earth</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Weather is the state of the Earth's atmosphere at a particular time and place — hot or cold, dry or rainy, calm or windy, right now and right here. (D) defines the atmosphere itself, not the weather; the "thirty-year average" option describes climate, not weather.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">A geographer says, "Mumbai is hot and humid all year round, while Leh is cold and dry." This statement describes:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>The weather of one afternoon in each place</span></li>
+        <li class=""><span class="lab">B</span><span>The atmospheric pressure of each place</span></li>
+        <li class="correct"><span class="lab">C</span><span>The climate, because it is the long-term average pattern</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>A weather forecast for the coming week</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A statement about how a place is "all year round" is about the long-term average pattern — that is climate, not weather. Weather would be one moment's conditions (an afternoon), so the "one afternoon" option is the weather trap, and a forecast is only about the near future.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">Almost all weather — clouds, rain, wind and storms — takes place in the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Highest, thinnest layer far above the Earth</span></li>
+        <li class=""><span class="lab">B</span><span>Empty space beyond the atmosphere</span></li>
+        <li class=""><span class="lab">C</span><span>Ocean, where most of the water is stored</span></li>
+        <li class="correct"><span class="lab">D</span><span>Layer just touching the ground, called the troposphere</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Almost all weather happens in the troposphere, the lowest layer of the atmosphere touching the ground, because the air, warmth and water vapour needed to make clouds and rain are concentrated there. The highest, thinnest layers are too dry; space and the ocean are not where atmospheric weather forms.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">The troposphere is thicker over the warm tropics and thinner over the cold poles. The best reason is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>The poles have more water vapour than the tropics</span></li>
+        <li class="correct"><span class="lab">B</span><span>Warm air spreads out while cold air shrinks</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>The tropics are closer to the Sun than the poles are</span></li>
+        <li class=""><span class="lab">D</span><span>Cold air is heavier and so pushes the layer higher</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Warm air spreads out (expands) so the troposphere is thicker over the warm tropics, while cold air shrinks so it is thinner over the cold poles. Being "closer to the Sun" is not the textbook reason, and cold air shrinking — not pushing the layer higher — is what actually happens at the poles.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">Which list contains ONLY elements of weather?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Temperature, soil colour, rivers, wind</span></li>
+        <li class=""><span class="lab">B</span><span>Pressure, mountains, humidity, rainfall</span></li>
+        <li class="correct"><span class="lab">C</span><span>Temperature, precipitation, pressure, wind</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Wind, oceans, humidity, forests</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The five elements of weather are temperature, precipitation, atmospheric pressure, wind and humidity. Only option (C) lists four of these and nothing else. Each of the other lists smuggles in non-weather items such as soil colour, rivers, mountains, oceans or forests.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">Krishnan in Chennai messages Amir in Kashmir that the day has turned "chilly." Why is this word, by itself, not enough for Amir to know how cold it really is?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>"Chilly" is a personal feeling, not a fixed, shared measurement</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Kashmir has no thermometers to compare with</span></li>
+        <li class=""><span class="lab">C</span><span>The two cities are in different layers of the atmosphere</span></li>
+        <li class=""><span class="lab">D</span><span>"Chilly" can only describe humidity, never temperature</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Chilly" is a personal feeling — what feels chilly to someone used to warm Chennai may feel mild to someone in cold Kashmir. Without a fixed measurement (a thermometer reading in °C), Amir cannot know the true temperature. The cities are in the same layer (the troposphere), and the word is about temperature, not humidity.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">A student lists five things needed to fully describe the weather but includes one wrong item. Which item should be REMOVED?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Atmospheric pressure</span></li>
+        <li class=""><span class="lab">B</span><span>Humidity</span></li>
+        <li class=""><span class="lab">C</span><span>Wind</span></li>
+        <li class="correct"><span class="lab">D</span><span>Soil fertility</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Temperature, precipitation, atmospheric pressure, wind and humidity are the five elements; soil fertility is not a weather element at all, so it is the wrong item to remove from a true list. Pressure, humidity and wind all genuinely belong.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">We give each element of weather its own scale or unit (such as °C for temperature and mb for pressure) mainly so that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>The weather changes more slowly</span></li>
+        <li class="correct"><span class="lab">B</span><span>Different people in different places can compare exact, shared values</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Only scientists are allowed to read the weather</span></li>
+        <li class=""><span class="lab">D</span><span>The instruments become cheaper to build</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A vague word like "hot" means different things to different people; a shared scale (°C, mb) turns a feeling into an exact number that anyone, anywhere, can compare. Standard units do not slow the weather down or make instruments cheaper, and they let everyone — not only scientists — read the values.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">Temperature is measured with a thermometer in which many designs use a coloured liquid in a thin tube. The liquid rises when it is warmer because:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>The liquid expands when heated and so climbs the tube</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Warm liquid weighs less and floats up</span></li>
+        <li class=""><span class="lab">C</span><span>The tube becomes wider in the heat</span></li>
+        <li class=""><span class="lab">D</span><span>Heat pushes air down into the tube</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Most liquids expand when heated, so the coloured liquid takes up more room and climbs the thin tube; it sinks when cooled. The liquid does not "float up" by weighing less, the glass tube does not widen, and no air is pushed down — those are made-up mechanisms.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">A cool day reads 15°C, which is the same as 59°F. This tells us that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>15°C is colder than 59°F</span></li>
+        <li class=""><span class="lab">B</span><span>Fahrenheit measures pressure, not temperature</span></li>
+        <li class=""><span class="lab">C</span><span>The thermometer is broken because the numbers differ</span></li>
+        <li class="correct"><span class="lab">D</span><span>Celsius and Fahrenheit are two scales used to report the same temperature</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>15°C and 59°F are the SAME temperature written on two different scales (Celsius and Fahrenheit), so neither is colder and the thermometer is not broken. Fahrenheit measures temperature, not pressure.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">A city's maximum temperature one day was 32°C and its minimum was 18°C. The temperature RANGE for that day is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>50°C</span></li>
+        <li class=""><span class="lab">B</span><span>25°C</span></li>
+        <li class="correct"><span class="lab">C</span><span>14°C</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>28°C</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Range = maximum − minimum = 32 − 18 = 14°C. The 50 trap adds the two readings, 25 is the mean (their average), and 28 has no basis.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">Using the same day (maximum 32°C, minimum 18°C), the MEAN (average) daily temperature is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>25°C</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>14°C</span></li>
+        <li class=""><span class="lab">C</span><span>50°C</span></li>
+        <li class=""><span class="lab">D</span><span>32°C</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Mean daily temperature = (maximum + minimum) ÷ 2 = (32 + 18) ÷ 2 = 50 ÷ 2 = 25°C. The 14 trap is the range (the difference), 50 is the un-halved sum, and 32 is just the maximum.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">On a summer day a town recorded a maximum of 38°C and a minimum of 26°C. Its mean daily temperature is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>12°C</span></li>
+        <li class="correct"><span class="lab">B</span><span>32°C</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>64°C</span></li>
+        <li class=""><span class="lab">D</span><span>26°C</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Mean = (38 + 26) ÷ 2 = 64 ÷ 2 = 32°C. The 12 trap is the range (38 − 26), 64 is the sum before halving, and 26 is just the minimum.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">Town X had a range of 6°C while town Y had a range of 15°C on the same day. This tells us that, on that day:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Town X was hotter than town Y</span></li>
+        <li class=""><span class="lab">B</span><span>Town Y had a higher average temperature</span></li>
+        <li class=""><span class="lab">C</span><span>Town X recorded more rainfall</span></li>
+        <li class="correct"><span class="lab">D</span><span>Town Y's temperature swung more between its high and low than town X's</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A larger range means a bigger swing between the day's high and low. Town Y's range (15°C) is bigger than town X's (6°C), so Y's temperature swung more. Range says nothing about which town was hotter, about average temperature, or about rainfall.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">Precipitation means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Any form of water — rain, snow, sleet or hail — that falls from the sky</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Only the rain that falls in the monsoon</span></li>
+        <li class=""><span class="lab">C</span><span>The water vapour invisible in the air</span></li>
+        <li class=""><span class="lab">D</span><span>The weight of the air pressing down on us</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Precipitation is ANY form of water that falls from the sky — rain, snow, sleet or hail — not only monsoon rain. Invisible water vapour stays in the air (so it has not fallen), and the weight of air is pressure, not precipitation.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">Match the form of precipitation to its description: small, hard balls of ice that fall from the sky are called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Sleet</span></li>
+        <li class=""><span class="lab">B</span><span>Snow</span></li>
+        <li class="correct"><span class="lab">C</span><span>Hail</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Dew</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Hail is small, hard balls of ice that fall from the sky. Sleet is frozen or partly frozen rain, snow is ice crystals, and dew forms on surfaces from condensation rather than falling as ice balls.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">Rainfall is measured with a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Barometer</span></li>
+        <li class="correct"><span class="lab">B</span><span>Rain gauge</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Hygrometer</span></li>
+        <li class=""><span class="lab">D</span><span>Anemometer</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rainfall is measured with a rain gauge: rain enters a funnel, collects in a measuring tube, and a scale reads the depth. A barometer measures pressure, a hygrometer humidity, and an anemometer wind speed.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">A rain gauge reading says the area got "5 mm of rainfall." This means that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Exactly 5 millilitres of rain were collected</span></li>
+        <li class=""><span class="lab">B</span><span>The rain fell for 5 minutes</span></li>
+        <li class=""><span class="lab">C</span><span>The temperature dropped by 5 degrees</span></li>
+        <li class="correct"><span class="lab">D</span><span>The rain would lie 5 millimetres deep on flat ground</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A rain-gauge reading is a DEPTH: "5 mm of rainfall" means the rain would lie 5 millimetres deep over flat ground. It is not 5 millilitres collected, not 5 minutes of rain, and has nothing to do with temperature.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">If snow, rather than rain, falls into a rain gauge, the correct step before reading the scale is to:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Let the snow melt first, then measure the depth of water</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Pour out the snow and report zero</span></li>
+        <li class=""><span class="lab">C</span><span>Weigh the snow on a balance instead</span></li>
+        <li class=""><span class="lab">D</span><span>Double the depth of the snow</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Snow must be melted to liquid water first, because the gauge's scale measures the depth of water, not loose snow. Pouring it out (reporting zero), weighing it, or doubling the snow depth would all give a wrong rainfall figure.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">Atmospheric pressure is best described as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>The amount of water vapour in the air</span></li>
+        <li class=""><span class="lab">B</span><span>The speed at which the wind is blowing</span></li>
+        <li class="correct"><span class="lab">C</span><span>The weight of all the air above and around us pressing down</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>The temperature of the upper atmosphere</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Atmospheric pressure is the weight of all the air above and around us pressing down. Water vapour is humidity, the speed of moving air is wind, and upper-atmosphere temperature is a different element entirely.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">As a climber goes higher up a tall mountain, the atmospheric pressure:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Increases, because the climber is closer to the sky</span></li>
+        <li class=""><span class="lab">B</span><span>Stays exactly the same all the way up</span></li>
+        <li class=""><span class="lab">C</span><span>Suddenly drops to zero at the summit</span></li>
+        <li class="correct"><span class="lab">D</span><span>Decreases, because less air is left above the climber</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Pressure is the weight of the air above you; the higher you climb, the less air is left above, so pressure decreases. It does not increase with height, it does not stay constant, and it falls gradually rather than dropping to zero at the summit.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">A child argues, "On a mountain you are nearer the top of the sky, so the pressure must be higher up there." The mistake is that pressure depends on:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>How close you are to the Sun</span></li>
+        <li class="correct"><span class="lab">B</span><span>The weight of the air ABOVE you, which is less up high</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>The temperature of the rock you stand on</span></li>
+        <li class=""><span class="lab">D</span><span>How much it has rained recently</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The child's error is forgetting that pressure depends on the weight of the air ABOVE you — and high up there is less air above, so pressure is lower, not higher. It does not depend on nearness to the Sun, the rock's temperature, or recent rain.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">Atmospheric pressure is measured with a barometer in units called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Degrees Celsius</span></li>
+        <li class=""><span class="lab">B</span><span>Millimetres</span></li>
+        <li class="correct"><span class="lab">C</span><span>Millibars</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Percent</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A barometer measures atmospheric pressure in millibars (mb); normal coastal pressure is about 1013 mb. Degrees Celsius are for temperature, millimetres for rainfall depth, and percent for relative humidity.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">Normal pressure at the sea coast is about 1013 mb. A "depression," which can grow into a storm, is a region where pressure:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Drops dramatically, below about 1000 mb</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Rises far above 1013 mb</span></li>
+        <li class=""><span class="lab">C</span><span>Stays fixed at exactly 1013 mb</span></li>
+        <li class=""><span class="lab">D</span><span>Cannot be measured at all</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A depression is a low-pressure region where pressure drops dramatically — below about 1000 mb — and can develop into a storm or cyclone. Rising far above normal would be high pressure, staying fixed describes no change, and depressions are certainly measurable on a barometer.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">Wind is best defined as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Water vapour rising from the sea</span></li>
+        <li class="correct"><span class="lab">B</span><span>Air moving from areas of high pressure to areas of low pressure</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>The weight of the air pressing down</span></li>
+        <li class=""><span class="lab">D</span><span>Air moving from low pressure to high pressure</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Wind is moving air, and air flows from areas of HIGH pressure to areas of LOW pressure (like air rushing out of a balloon). Rising vapour and the weight of air are different things, and "low to high" is exactly backwards.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">Complete the rule: "Wind blows from areas of ____ pressure toward areas of ____ pressure."</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>low; high</span></li>
+        <li class=""><span class="lab">B</span><span>warm; cold</span></li>
+        <li class=""><span class="lab">C</span><span>wet; dry</span></li>
+        <li class="correct"><span class="lab">D</span><span>high; low</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Air slides "downhill" in pressure: from high pressure toward low pressure. So the blanks are high; low. "Low; high" reverses it, and warm/cold or wet/dry are not the rule that defines wind direction.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">Two regions lie side by side: region P is HIGH pressure and region Q is LOW pressure. The wind between them will blow:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>From P toward Q</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>From Q toward P</span></li>
+        <li class=""><span class="lab">C</span><span>In a circle without going anywhere</span></li>
+        <li class=""><span class="lab">D</span><span>Only straight upward</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Wind blows from the high-pressure region to the low-pressure region, so it goes from P (high) toward Q (low). "Q toward P" reverses the rule; wind between two such regions flows across, not in a closed circle or straight up.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">If the difference in pressure between two nearby regions is made much larger, the wind between them will most likely:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Stop blowing</span></li>
+        <li class=""><span class="lab">B</span><span>Reverse its direction</span></li>
+        <li class="correct"><span class="lab">C</span><span>Blow faster</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Turn into rain</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The bigger the pressure difference, the faster the wind blows — so a much larger difference makes the wind speed up. A bigger difference would not stop the wind, reverse it, or turn it into rain.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">The two things we measure to describe a wind are its:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Colour and weight</span></li>
+        <li class="correct"><span class="lab">B</span><span>Speed and direction</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Temperature and humidity</span></li>
+        <li class=""><span class="lab">D</span><span>Depth and pressure</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A wind is described by its speed (how fast) and its direction (where it comes from). Colour, weight, temperature, humidity, depth and pressure are not the two quantities used to describe a wind.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">A wind vane has a pointer at one end and a tail at the other. When wind blows, the tail is pushed away so that the pointer:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Shows how fast the wind is blowing</span></li>
+        <li class=""><span class="lab">B</span><span>Measures the air's humidity</span></li>
+        <li class=""><span class="lab">C</span><span>Counts the raindrops falling</span></li>
+        <li class="correct"><span class="lab">D</span><span>Shows the direction from which the wind comes</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>When wind pushes the tail, the pointer swings to show the direction FROM which the wind is coming — that is the job of a wind vane. Wind speed is the anemometer's job, humidity the hygrometer's, and counting raindrops belongs to no instrument here.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">Which instrument measures wind SPEED by counting how fast its rotating cups spin?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Wind vane</span></li>
+        <li class=""><span class="lab">B</span><span>Barometer</span></li>
+        <li class="correct"><span class="lab">C</span><span>Anemometer</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Hygrometer</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An anemometer has rotating cups that spin faster in stronger wind, and a meter counts the spins to give the wind speed. A wind vane shows direction, a barometer pressure, and a hygrometer humidity.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">At an airport, a "wind sock" is used mainly to:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Help pilots judge the wind's direction and rough strength at a glance</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Catch and measure rainfall</span></li>
+        <li class=""><span class="lab">C</span><span>Measure the air pressure on the runway</span></li>
+        <li class=""><span class="lab">D</span><span>Record the temperature of the tarmac</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A wind sock at an airport lets a pilot judge the wind's direction and rough strength at a glance during take-off and landing. It does not measure rainfall, pressure or temperature.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">A weather station needs to record BOTH which way the wind comes from and how fast it is. The correct pair of instruments is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>A barometer and a thermometer</span></li>
+        <li class="correct"><span class="lab">B</span><span>A wind vane and an anemometer</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>A rain gauge and a hygrometer</span></li>
+        <li class=""><span class="lab">D</span><span>Two thermometers</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Direction needs a wind vane and speed needs an anemometer, so the pair is wind vane + anemometer. A barometer/thermometer pair measures pressure and temperature, a rain gauge/hygrometer pair rainfall and humidity, and two thermometers measure neither aspect of wind.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">Humidity refers to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>The weight of the air above us</span></li>
+        <li class=""><span class="lab">B</span><span>The speed of the wind</span></li>
+        <li class=""><span class="lab">C</span><span>The depth of rainfall collected</span></li>
+        <li class="correct"><span class="lab">D</span><span>The amount of water vapour present in the air</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Humidity is the amount of water vapour present in the air, usually given as relative humidity (a percentage). The weight of air is pressure, the speed of air is wind, and collected rainfall depth is precipitation.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">Relative humidity is usually given as a percentage. A reading of 100% would mean:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>The air is completely full of water vapour</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>The air is completely dry</span></li>
+        <li class=""><span class="lab">C</span><span>It is raining heavily right now</span></li>
+        <li class=""><span class="lab">D</span><span>The temperature has reached 100°C</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Relative humidity of 100% means the air is completely full of water vapour and can hold no more. 0% would be completely dry; 100% humidity does not by itself mean rain is falling, and it has nothing to do with a 100°C temperature.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">Dry weather usually shows a relative humidity of about 20%–40%, while humid weather is about 60%–80%. So a reading of 75% best describes air that is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Very dry and crisp</span></li>
+        <li class=""><span class="lab">B</span><span>Below freezing</span></li>
+        <li class="correct"><span class="lab">C</span><span>Damp and sticky</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Free of all water vapour</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Humid weather runs about 60%–80%, so 75% sits in the humid band: damp and sticky. Dry/crisp air is 20%–40%; "below freezing" is about temperature, not humidity; and 75% is far from free of vapour.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">Wet clothes hung out to dry will dry MOST SLOWLY when the relative humidity is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Very low, such as 25%</span></li>
+        <li class="correct"><span class="lab">B</span><span>Very high, such as 90%</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Exactly 0%</span></li>
+        <li class=""><span class="lab">D</span><span>The same speed no matter what the humidity is</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>When relative humidity is very high (e.g. 90%), the air is already nearly full of vapour, so it accepts very little more and wet clothes dry most slowly. At very low humidity they dry fast; 0% never really happens; and drying speed clearly does depend on humidity.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">Wet clothes dry faster in Jaipur (low humidity) than in Kochi (high humidity) because, where humidity is high, the air:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Is too cold to let water evaporate</span></li>
+        <li class=""><span class="lab">B</span><span>Has too much pressure pressing the water in</span></li>
+        <li class=""><span class="lab">C</span><span>Is moving too fast over the clothes</span></li>
+        <li class="correct"><span class="lab">D</span><span>Is already nearly full of vapour, so it accepts very little more from the clothes</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Where humidity is high, the air is already nearly full of water vapour, so it can take in very little more from the wet clothes — they dry slowly. It is not about the air being too cold, pressure pressing water in, or the wind speed.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">The instrument used to measure humidity is the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Hygrometer</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Barometer</span></li>
+        <li class=""><span class="lab">C</span><span>Anemometer</span></li>
+        <li class=""><span class="lab">D</span><span>Rain gauge</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Humidity is measured with a hygrometer. A barometer measures pressure, an anemometer wind speed, and a rain gauge rainfall.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">A student claims, "A barometer and a thermometer measure pretty much the same thing." The correct reply is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>They are the same; both measure temperature</span></li>
+        <li class=""><span class="lab">B</span><span>Both measure humidity</span></li>
+        <li class="correct"><span class="lab">C</span><span>A barometer measures pressure while a thermometer measures temperature — two different elements</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>A barometer measures rainfall and a thermometer measures wind</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A barometer and a thermometer measure two DIFFERENT elements: the barometer measures atmospheric pressure (the weight of the air) and the thermometer measures temperature (how hot or cold the air is). They are not the same, neither measures humidity, and neither measures rainfall or wind.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">A muggy day shows very high humidity, yet it does not rain. The best explanation is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>High humidity always brings rain, so the day is unusual</span></li>
+        <li class="correct"><span class="lab">B</span><span>Rain falls only when the air cools enough for the vapour to condense; high humidity alone is not enough</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>The hygrometer must be broken</span></li>
+        <li class=""><span class="lab">D</span><span>Humidity and rain have nothing to do with each other</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>High humidity only means the air holds a lot of vapour; rain falls only when that air cools enough to reach its dew point so the vapour condenses. So a muggy day can stay rainless — the hygrometer is fine, and humidity and rain are clearly related, just not the same thing.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">Before modern instruments existed, people forecast the weather mainly by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Reading printed forecasts in newspapers</span></li>
+        <li class=""><span class="lab">B</span><span>Using satellites and computers</span></li>
+        <li class=""><span class="lab">C</span><span>Measuring pressure with barometers</span></li>
+        <li class="correct"><span class="lab">D</span><span>Carefully watching the behaviour of animals and plants</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Before modern instruments, people forecast weather by carefully watching the behaviour of animals and plants (ants, frogs, birds, pine cones). Newspapers, satellites/computers and barometers are all modern tools, not the old way.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">Which of these is a traditional "Nature's clue" once used to sense that rain or a storm was coming?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Ants carrying their eggs to higher ground</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>A rising barometer reading</span></li>
+        <li class=""><span class="lab">C</span><span>A digital thermometer beeping</span></li>
+        <li class=""><span class="lab">D</span><span>A weather satellite passing overhead</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Ants carrying their eggs to higher ground is a classic traditional "Nature's clue" warning of coming rain. A barometer reading, a digital thermometer and a weather satellite are all modern instruments, not natural signs.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">Animals and plants can react to coming rain before people notice it because they:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Are smarter than meteorologists</span></li>
+        <li class=""><span class="lab">B</span><span>Can read the barometer themselves</span></li>
+        <li class="correct"><span class="lab">C</span><span>Are exposed to the air all the time, so changes in pressure and humidity affect their bodies and behaviour</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Always know the date the monsoon will arrive</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Animals and plants are exposed to the air all the time, so the changes in pressure and humidity that come before rain affect their bodies and behaviour, making them react early. They are not "smarter," they cannot read instruments, and they do not know exact dates.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">A real weakness of relying only on "Nature's clues" to forecast weather is that the clues are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Always perfectly accurate</span></li>
+        <li class="correct"><span class="lab">B</span><span>Tied to one place and give only vague, short warnings like "rain is coming"</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Measured precisely in numbers</span></li>
+        <li class=""><span class="lab">D</span><span>Gathered from across the whole country at once</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Nature's clues are tied to one place and give only vague, short warnings such as "rain is coming" — that is their real weakness. They are not always accurate, not measured precisely in numbers, and not gathered nationwide at once (that is what meteorology adds).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">Meteorology is best defined as the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Study of rocks and soil</span></li>
+        <li class=""><span class="lab">B</span><span>Study of the oceans and tides</span></li>
+        <li class=""><span class="lab">C</span><span>Art of guessing the weather from the sky</span></li>
+        <li class="correct"><span class="lab">D</span><span>Systematic study of weather and how it changes</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Meteorology is the systematic study of weather and how it changes, and it is the basis of forecasting. It is not the study of rocks/soil or oceans/tides, and it is the opposite of mere guessing.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">How does meteorology differ from simply reading Nature's clues?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Meteorology measures each element precisely and gathers data over time, instead of relying on a single vague sign</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Meteorology uses only one animal as its guide</span></li>
+        <li class=""><span class="lab">C</span><span>Meteorology ignores all instruments</span></li>
+        <li class=""><span class="lab">D</span><span>Meteorology can only describe today, never predict ahead</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Meteorology measures each element precisely and gathers data from many places over time, instead of relying on a single vague natural sign. It does not use only one animal, it depends on instruments rather than ignoring them, and it does predict ahead, not just describe today.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">A child says, "Meteorologists just look at the sky and guess." The accurate correction is that they:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Do indeed only guess</span></li>
+        <li class=""><span class="lab">B</span><span>Only read the behaviour of frogs and ants</span></li>
+        <li class="correct"><span class="lab">C</span><span>Use instruments to measure each element, collect data from many places over time, and apply scientific methods</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Rely entirely on newspaper reports</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Meteorologists do not guess: they use instruments to measure each element, collect data from many places over time, and apply scientific methods to predict the weather. They do not rely only on frogs and ants or on newspaper reports.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">A weather station is useful chiefly because it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Removes the need for any instruments</span></li>
+        <li class=""><span class="lab">B</span><span>Predicts the weather without any data</span></li>
+        <li class=""><span class="lab">C</span><span>Can only measure rainfall</span></li>
+        <li class="correct"><span class="lab">D</span><span>Brings all the different weather instruments together in one place, read at regular times</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A weather station is useful because it brings all the different instruments (thermometer, rain gauge, barometer, wind vane, anemometer, hygrometer) together in one place, read at regular times. It does not remove the need for instruments, cannot predict without data, and measures more than just rainfall.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">An Automated Weather Station (AWS) differs from an ordinary weather station mainly in that it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Cannot measure rainfall</span></li>
+        <li class="correct"><span class="lab">B</span><span>Uses sensors to measure and record data by itself, without a person present</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Only works during the daytime</span></li>
+        <li class=""><span class="lab">D</span><span>Measures climate instead of weather</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An Automated Weather Station (AWS) uses sensors to measure and record weather data by itself, without a person present. It can measure rainfall, can work day and night, and still measures weather (not climate).</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">Why is an Automated Weather Station especially useful in remote or risky places?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>It can keep recording on its own where it is hard or dangerous for people to stay</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>It is cheaper than a thermometer</span></li>
+        <li class=""><span class="lab">C</span><span>It needs an operator to read it every hour</span></li>
+        <li class=""><span class="lab">D</span><span>It only works inside cities</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Because an AWS records on its own, it is ideal for remote or risky places where it is hard or dangerous for people to stay. It is not chosen for being cheaper than a thermometer, it does NOT need an hourly operator (that is the opposite of automated), and it is not limited to cities.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">To bring together a thermometer, rain gauge, barometer, wind vane, anemometer and hygrometer in one place, and read them at set times, you would set up a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Climate map</span></li>
+        <li class=""><span class="lab">B</span><span>Wind sock</span></li>
+        <li class="correct"><span class="lab">C</span><span>Weather station</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Depression</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Gathering all those instruments in one place and reading them at set times is exactly what a weather station does. A climate map shows long-term averages, a wind sock shows wind at an airport, and a depression is a low-pressure region — none of these gather the instruments.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">The chief reason accurate weather forecasts matter so much is that they:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Make the weather change less often</span></li>
+        <li class="correct"><span class="lab">B</span><span>Give people and governments time to prepare for floods, cyclones, droughts and heat waves</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Replace the need for any instruments</span></li>
+        <li class=""><span class="lab">D</span><span>Lower the air pressure during storms</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Accurate forecasts matter because they give people and governments time to prepare for floods, cyclones, droughts and heat waves. Forecasts do not make the weather change less, do not replace instruments, and do not alter the air pressure during storms.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">In India, the official body that gathers weather data and issues forecasts and warnings is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>National Rain Gauge Office</span></li>
+        <li class=""><span class="lab">B</span><span>Department of Climate History</span></li>
+        <li class=""><span class="lab">C</span><span>Indian Wind Vane Society</span></li>
+        <li class="correct"><span class="lab">D</span><span>India Meteorological Department</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In India the India Meteorological Department gathers weather data and issues forecasts and warnings. The other three are invented names with no such role.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">A fisherman is told by a forecast not to sail today because a storm is expected. This shows that forecasts are valuable because they:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Warn people in advance so they can stay safe</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Stop the storm from forming</span></li>
+        <li class=""><span class="lab">C</span><span>Measure how deep the sea is</span></li>
+        <li class=""><span class="lab">D</span><span>Increase the day's humidity</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Telling a fisherman not to sail because a storm is coming shows the value of forecasts: they warn people in advance so they can stay safe. Forecasts cannot stop a storm forming, do not measure sea depth, and do not change the humidity.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">Over a few hours a weather station records the barometer FALLING, the hygrometer RISING, the wind SPEEDING UP and the sky CLOUDING over. The best forecast is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Clear, calm, dry weather</span></li>
+        <li class="correct"><span class="lab">B</span><span>Wet, stormy weather is on the way</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>A drop in temperature with no clouds</span></li>
+        <li class=""><span class="lab">D</span><span>Nothing will change at all</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A falling barometer (pressure dropping), rising humidity, strengthening wind and clouding sky all point the same way: wet, stormy weather is on the way. Clear/calm/dry weather, a cloudless temperature drop, or "no change" all contradict the clues.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">In the same situation, the FALLING barometer is an early sign of trouble because falling pressure often marks:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Perfectly settled, clear weather</span></li>
+        <li class=""><span class="lab">B</span><span>A rise in the mountain's height</span></li>
+        <li class="correct"><span class="lab">C</span><span>The arrival of a depression, the seed of a storm</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>The end of all wind</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Falling pressure often marks the arrival of a depression — a low-pressure system that is the seed of a storm — which is why a dropping barometer is an early warning. It does not signal settled clear weather, a change in altitude, or the end of all wind.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">A weather report says a hill station read 650 mb while a nearby coastal town read 1013 mb at the same time. The most sensible explanation is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>The hill station's barometer is broken</span></li>
+        <li class=""><span class="lab">B</span><span>The coast is colder than the hill station</span></li>
+        <li class=""><span class="lab">C</span><span>The hill station had heavier rain</span></li>
+        <li class="correct"><span class="lab">D</span><span>Pressure is lower at the hill station because it is higher up, with less air above it</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The hill station reads lower pressure (650 mb) than the coast (1013 mb) because it is higher up, with less air above it pressing down — exactly as pressure should behave with altitude. The barometer is not broken, the reading is not explained by the coast being colder, and heavier rain does not cause that gap.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">A traveller climbing to a high pass feels breathless and dizzy. Linking this to the chapter, the best reason is that high up the air is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Heavier, with more oxygen than at the coast</span></li>
+        <li class="correct"><span class="lab">B</span><span>Thinner, with lower pressure and less oxygen</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Completely free of any gases</span></li>
+        <li class=""><span class="lab">D</span><span>Full of rain that blocks breathing</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>High up the air is thinner, so both the pressure and the amount of oxygen are lower, which is why climbers feel breathless and dizzy. The air is not heavier with more oxygen, it is not free of all gases, and the breathlessness is not caused by rain.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">Putting it all together, which pairing of weather element and its instrument is INCORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Temperature → thermometer</span></li>
+        <li class=""><span class="lab">B</span><span>Rainfall → rain gauge</span></li>
+        <li class="correct"><span class="lab">C</span><span>Humidity → barometer</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Wind speed → anemometer</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Humidity is measured with a hygrometer, NOT a barometer (which measures pressure), so "Humidity → barometer" is the incorrect pairing. Temperature → thermometer, rainfall → rain gauge, and wind speed → anemometer are all correct. --- *Solutions complete: 60 / 60.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

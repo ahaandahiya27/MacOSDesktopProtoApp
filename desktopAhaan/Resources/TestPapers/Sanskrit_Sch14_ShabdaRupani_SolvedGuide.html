@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shabda Rupani — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Shabda Rupani<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">How many विभक्ति (cases) does Sanskrit have?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>six</span></li>
+        <li class="correct"><span class="lab">B</span><span>seven</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>eight</span></li>
+        <li class=""><span class="lab">D</span><span>three</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sanskrit has seven cases (विभक्ति). With the vocative counted separately there are eight noun-forms; six is the Latin count.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">Counting the vocative (सम्बोधन) separately, how many noun-forms are there in all?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>six</span></li>
+        <li class=""><span class="lab">B</span><span>seven</span></li>
+        <li class=""><span class="lab">C</span><span>ten</span></li>
+        <li class="correct"><span class="lab">D</span><span>eight</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Seven cases plus the vocative make eight forms. Six is Latin's count, seven omits the vocative, and ten is too many.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">सप्तविभक्तयः means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the seven vowels</span></li>
+        <li class=""><span class="lab">B</span><span>the seven days</span></li>
+        <li class="correct"><span class="lab">C</span><span>the seven cases</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the seven sages</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>सप्तविभक्तयः means 'the seven cases'. Not the vowels, days, or sages.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">The seven cases run from प्रथमा to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>चतुर्थी</span></li>
+        <li class="correct"><span class="lab">B</span><span>सप्तमी</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>पञ्चमी</span></li>
+        <li class=""><span class="lab">D</span><span>अष्टमी</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The seven cases run from प्रथमा (1st) to सप्तमी (7th). चतुर्थी and पञ्चमी are in between, and there is no अष्टमी case.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">Each noun is declined across the seven cases and how many numbers?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>two</span></li>
+        <li class=""><span class="lab">B</span><span>one</span></li>
+        <li class=""><span class="lab">C</span><span>seven</span></li>
+        <li class="correct"><span class="lab">D</span><span>three (singular, dual, plural)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Each noun is declined in three numbers - singular, dual and plural. Not two, one, or seven.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">The vocative (सम्बोधन) is usually:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the first case</span></li>
+        <li class=""><span class="lab">B</span><span>not used at all</span></li>
+        <li class="correct"><span class="lab">C</span><span>shown alongside the cases but counted separately</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the same as the genitive</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The vocative is shown alongside the seven cases but counted separately. It is not the first case, unused, or the genitive.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">प्रथमा (the nominative) marks the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>subject (the doer)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>object</span></li>
+        <li class=""><span class="lab">C</span><span>'by' (the means)</span></li>
+        <li class=""><span class="lab">D</span><span>'of' (possession)</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>प्रथमा marks the subject. The object is द्वितीया, the means तृतीया, and possession षष्ठी.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">द्वितीया (the accusative) marks the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>object (what the action affects)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>subject</span></li>
+        <li class=""><span class="lab">C</span><span>'from'</span></li>
+        <li class=""><span class="lab">D</span><span>'in / on'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>द्वितीया marks the object. The subject is प्रथमा, 'from' पञ्चमी, and 'in/on' सप्तमी.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">तृतीया (the instrumental) means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'to / for'</span></li>
+        <li class="correct"><span class="lab">B</span><span>'by / with' (the means)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>'of'</span></li>
+        <li class=""><span class="lab">D</span><span>'in / on'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>तृतीया means 'by / with' (the means). 'To/for' is चतुर्थी, 'of' षष्ठी, and 'in/on' सप्तमी.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">The case meaning 'by/with' (the means) is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>प्रथमा (nominative)</span></li>
+        <li class=""><span class="lab">B</span><span>षष्ठी (genitive)</span></li>
+        <li class=""><span class="lab">C</span><span>सप्तमी (locative)</span></li>
+        <li class="correct"><span class="lab">D</span><span>तृतीया (instrumental)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>'By/with' (the means) is the तृतीया (instrumental). The others are nominative, genitive and locative.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">चतुर्थी (the dative) means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'by / with'</span></li>
+        <li class="correct"><span class="lab">B</span><span>'to / for'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>'from'</span></li>
+        <li class=""><span class="lab">D</span><span>'in / on'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>चतुर्थी means 'to / for'. 'By/with' is तृतीया, 'from' पञ्चमी, and 'in/on' सप्तमी.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">पञ्चमी (the ablative) means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>'from'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>'to / for'</span></li>
+        <li class=""><span class="lab">C</span><span>'of'</span></li>
+        <li class=""><span class="lab">D</span><span>'in / on'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>पञ्चमी means 'from'. 'To/for' is चतुर्थी, 'of' षष्ठी, and 'in/on' सप्तमी.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">षष्ठी (genitive) means 'of', and सप्तमी (locative) means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'by'</span></li>
+        <li class="correct"><span class="lab">B</span><span>'in / on'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>'to'</span></li>
+        <li class=""><span class="lab">D</span><span>'from'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>सप्तमी (locative) means 'in / on'. 'By' is तृतीया, 'to' चतुर्थी, and 'from' पञ्चमी.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">The nominative singular of देव is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>देवम्</span></li>
+        <li class=""><span class="lab">B</span><span>देवेन</span></li>
+        <li class="correct"><span class="lab">C</span><span>देवः</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>देवाय</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The nominative singular of देव is देवः. देवम् is accusative, देवेन instrumental, and देवाय dative.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">The accusative singular of देव is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>देवम्</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>देवः</span></li>
+        <li class=""><span class="lab">C</span><span>देवात्</span></li>
+        <li class=""><span class="lab">D</span><span>देवे</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The accusative singular is देवम्. देवः is nominative, देवात् ablative, and देवे locative.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">The instrumental singular of देव is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>देवाय</span></li>
+        <li class=""><span class="lab">B</span><span>देवस्य</span></li>
+        <li class=""><span class="lab">C</span><span>देवः</span></li>
+        <li class="correct"><span class="lab">D</span><span>देवेन</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The instrumental singular is देवेन ('by the god'). देवाय is dative, देवस्य genitive, and देवः nominative.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">The dative singular of देव is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>देवाय</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>देवात्</span></li>
+        <li class=""><span class="lab">C</span><span>देवेन</span></li>
+        <li class=""><span class="lab">D</span><span>देवम्</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The dative singular is देवाय ('to/for the god'). देवात् is ablative, देवेन instrumental, and देवम् accusative.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">The ablative singular of देव is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>देवाय</span></li>
+        <li class=""><span class="lab">B</span><span>देवस्य</span></li>
+        <li class=""><span class="lab">C</span><span>देवे</span></li>
+        <li class="correct"><span class="lab">D</span><span>देवात्</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The ablative singular is देवात् ('from the god'). देवाय is dative, देवस्य genitive, and देवे locative.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">The genitive singular of देव is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>देवाय</span></li>
+        <li class=""><span class="lab">B</span><span>देवात्</span></li>
+        <li class=""><span class="lab">C</span><span>देवेन</span></li>
+        <li class="correct"><span class="lab">D</span><span>देवस्य</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The genitive singular is देवस्य ('of the god'). देवाय is dative, देवात् ablative, and देवेन instrumental.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">The locative singular of देव is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>देवः</span></li>
+        <li class="correct"><span class="lab">B</span><span>देवे</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>देवम्</span></li>
+        <li class=""><span class="lab">D</span><span>देवस्य</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The locative singular is देवे ('in/on the god'). देवः is nominative, देवम् accusative, and देवस्य genitive.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">The vocative singular of देव is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>हे देवः!</span></li>
+        <li class=""><span class="lab">B</span><span>हे देवाय!</span></li>
+        <li class="correct"><span class="lab">C</span><span>हे देव!</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>हे देवस्य!</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The vocative singular drops the -ः: हे देव!. हे देवः! keeps the nominative ending, and the others are dative/genitive forms.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">Sanskrit's three numbers are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>singular and plural only</span></li>
+        <li class=""><span class="lab">B</span><span>masculine, feminine, neuter</span></li>
+        <li class=""><span class="lab">C</span><span>past, present, future</span></li>
+        <li class="correct"><span class="lab">D</span><span>singular, dual and plural (एक/द्वि/बहु-वचन)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The three numbers are singular, dual and plural. Not two numbers, the genders, or the tenses.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">The द्विवचन (dual) is used for:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>exactly two</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>three or more</span></li>
+        <li class=""><span class="lab">C</span><span>one only</span></li>
+        <li class=""><span class="lab">D</span><span>any number</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The dual is for exactly two. Three or more take the plural, and one the singular.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">देवौ means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the two gods (dual)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the gods (plural)</span></li>
+        <li class=""><span class="lab">C</span><span>a god (singular)</span></li>
+        <li class=""><span class="lab">D</span><span>O god! (vocative)</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>देवौ is the dual, 'the two gods'. The plural is देवाः, the singular देवः, and the vocative हे देव!.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">For 'a few gods' (three or more), the correct number is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>द्विवचन (dual)</span></li>
+        <li class="correct"><span class="lab">B</span><span>बहुवचन (plural)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>एकवचन (singular)</span></li>
+        <li class=""><span class="lab">D</span><span>the vocative</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Three or more take the बहुवचन (plural). The dual is for two, the singular for one.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">English has lost the dual, but Sanskrit keeps it for:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>pairs and exactly-two contexts (eyes, hands, two brothers)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>all groups of people</span></li>
+        <li class=""><span class="lab">C</span><span>single objects</span></li>
+        <li class=""><span class="lab">D</span><span>past events</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sanskrit's dual is for pairs and exactly-two contexts. It is not for all groups, single objects, or tenses.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">Using देवौ for 'many gods' is wrong because देवौ is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>singular</span></li>
+        <li class=""><span class="lab">B</span><span>plural</span></li>
+        <li class="correct"><span class="lab">C</span><span>dual (exactly two), not plural</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>vocative</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>देवौ is dual (exactly two), so it cannot mean 'many'. It is not singular, plural, or vocative.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">कवि means 'poet'. Its nominative plural is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>कवयः</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>देवाः</span></li>
+        <li class=""><span class="lab">C</span><span>कविम्</span></li>
+        <li class=""><span class="lab">D</span><span>कविना</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The nominative plural of कवि is कवयः. देवाः is the अकारान्त plural, कविम् accusative singular, and कविना instrumental singular.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">The इकारान्त nominative-plural ending -अयः appears in:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>कवयः, हरयः, मुनयः</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>देवाः, रामाः</span></li>
+        <li class=""><span class="lab">C</span><span>गुरवः</span></li>
+        <li class=""><span class="lab">D</span><span>देवान्</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The -अयः plural appears in कवयः, हरयः, मुनयः (इकारान्त). देवाः/रामाः are अकारान्त, गुरवः उकारान्त, and देवान् is accusative plural.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">कवयः differs from देवाः because they belong to different:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>declension classes (इकारान्त vs अकारान्त)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>tenses</span></li>
+        <li class=""><span class="lab">C</span><span>genders</span></li>
+        <li class=""><span class="lab">D</span><span>numbers</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>कवयः and देवाः differ by declension class (इकारान्त vs अकारान्त), not tense, gender, or number (both are nominative plural).</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">हरि ('Hari') and मुनि ('sage') decline like:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>देव (अकारान्त)</span></li>
+        <li class=""><span class="lab">B</span><span>गुरु (उकारान्त)</span></li>
+        <li class=""><span class="lab">C</span><span>none of them</span></li>
+        <li class="correct"><span class="lab">D</span><span>कवि (इकारान्त)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>हरि and मुनि are इकारान्त, declining like कवि. They do not follow देव (अकारान्त) or गुरु (उकारान्त).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">गुरु belongs to which declension class?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>अकारान्त (ending in अ)</span></li>
+        <li class=""><span class="lab">B</span><span>इकारान्त (ending in इ)</span></li>
+        <li class=""><span class="lab">C</span><span>feminine</span></li>
+        <li class="correct"><span class="lab">D</span><span>उकारान्त (ending in उ)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>गुरु is उकारान्त (ending in उ). देव is अकारान्त, कवि इकारान्त; गुरु here is masculine, not feminine.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">The vocative singular of गुरु is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>हे गुरुः!</span></li>
+        <li class=""><span class="lab">B</span><span>हे गुरुम्!</span></li>
+        <li class=""><span class="lab">C</span><span>हे गुरवे!</span></li>
+        <li class="correct"><span class="lab">D</span><span>हे गुरो!</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The vocative singular of गुरु is हे गुरो!. हे गुरुः! keeps the nominative, हे गुरुम्! is accusative-like, and हे गुरवे! dative-like.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">Forming हे गुरो! from गुरु, the ending -ुः shifts to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>-आय</span></li>
+        <li class=""><span class="lab">B</span><span>-स्य</span></li>
+        <li class="correct"><span class="lab">C</span><span>-ओ</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>-एन</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The उकारान्त vocative shifts -ुः to -ओ (हे गुरो!). -आय is dative, -स्य genitive, and -एन instrumental.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">Like हे गुरो!, the vocative of साधु is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>हे साधुः!</span></li>
+        <li class="correct"><span class="lab">B</span><span>हे साधो!</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>हे साधाय!</span></li>
+        <li class=""><span class="lab">D</span><span>हे साधुना!</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>साधु, like गुरु, has the vocative हे साधो!. हे साधुः! keeps the nominative, and the others are dative/instrumental-like.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">विष्णु, like गुरु, has the vocative singular:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>हे विष्णुः!</span></li>
+        <li class=""><span class="lab">B</span><span>हे विष्णवे!</span></li>
+        <li class="correct"><span class="lab">C</span><span>हे विष्णो!</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>हे विष्णुम्!</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>विष्णु has the vocative हे विष्णो!. हे विष्णुः! keeps the nominative, हे विष्णवे! is dative-like, and हे विष्णुम्! accusative-like.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">The vocative singular of an अकारान्त noun like देव is formed by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>adding -ओ</span></li>
+        <li class=""><span class="lab">B</span><span>changing to -ए</span></li>
+        <li class="correct"><span class="lab">C</span><span>dropping the -ः (हे देव!)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>adding -स्य</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>For अकारान्त the vocative drops the -ः (हे देव!). -ओ is for उकारान्त, -ए for इकारान्त, and -स्य is the genitive.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">The vocative singular of an उकारान्त noun like गुरु is formed by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>dropping the -ः only</span></li>
+        <li class="correct"><span class="lab">B</span><span>changing -ुः to -ओ (हे गुरो!)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>changing to -ए</span></li>
+        <li class=""><span class="lab">D</span><span>adding -आय</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>For उकारान्त the vocative changes -ुः to -ओ (हे गुरो!). Dropping -ः is अकारान्त, -ए इकारान्त, and -आय the dative.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">The vocative singular of an इकारान्त noun like कवि is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>हे कविः!</span></li>
+        <li class=""><span class="lab">B</span><span>हे कवो!</span></li>
+        <li class="correct"><span class="lab">C</span><span>हे कवे! (-एः to -ए)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>हे कवाय!</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>For इकारान्त the vocative is हे कवे!. हे कविः! keeps the nominative, हे कवो! is उकारान्त-like, and हे कवाय! dative-like.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">The claim 'the vocative always looks exactly like the nominative' is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>always true</span></li>
+        <li class="correct"><span class="lab">B</span><span>false - it changes (हे देव!, हे गुरो!, हे कवे!)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>true only for plurals</span></li>
+        <li class=""><span class="lab">D</span><span>true only for the dual</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>It is false: the vocative changes (हे देव!, हे गुरो!, हे कवे!). It is not always like the nominative, nor only for plurals or the dual.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">The vocative case is used to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>show possession</span></li>
+        <li class=""><span class="lab">B</span><span>show the means</span></li>
+        <li class="correct"><span class="lab">C</span><span>call or address someone ('O ...!')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>show the object</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The vocative calls or addresses someone ('O ...!'). Possession is genitive, the means instrumental, and the object accusative.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">The two paradigm-words for अकारान्त masculine declension are:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>देव and राम</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>कवि and हरि</span></li>
+        <li class=""><span class="lab">C</span><span>गुरु and शम्भु</span></li>
+        <li class=""><span class="lab">D</span><span>देव and कवि</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>देव and राम are the अकारान्त paradigm-words. कवि/हरि are इकारान्त and गुरु/शम्भु उकारान्त.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">The paradigm-words for इकारान्त masculine declension are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>देव and राम</span></li>
+        <li class=""><span class="lab">B</span><span>गुरु and शम्भु</span></li>
+        <li class=""><span class="lab">C</span><span>कवि and गुरु</span></li>
+        <li class="correct"><span class="lab">D</span><span>कवि and हरि</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>कवि and हरि are इकारान्त. देव/राम are अकारान्त and गुरु/शम्भु उकारान्त.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">The paradigm-words for उकारान्त masculine declension are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>देव and राम</span></li>
+        <li class=""><span class="lab">B</span><span>कवि and हरि</span></li>
+        <li class=""><span class="lab">C</span><span>राम and कवि</span></li>
+        <li class="correct"><span class="lab">D</span><span>गुरु and शम्भु</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>गुरु and शम्भु are उकारान्त. देव/राम are अकारान्त and कवि/हरि इकारान्त.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">Common nouns like बाल, शिव and हस्त decline like:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>कवि (इकारान्त)</span></li>
+        <li class=""><span class="lab">B</span><span>गुरु (उकारान्त)</span></li>
+        <li class="correct"><span class="lab">C</span><span>देव (अकारान्त)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>none of them</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>बाल, शिव and हस्त are अकारान्त, declining like देव. They do not follow कवि or गुरु.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">Knowing the देव paradigm helps you decline ____ because they share the same endings.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only the word देव</span></li>
+        <li class=""><span class="lab">B</span><span>feminine nouns only</span></li>
+        <li class="correct"><span class="lab">C</span><span>hundreds of अकारान्त masculine nouns</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>all verbs</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The देव paradigm fits hundreds of अकारान्त masculine nouns. It is not for देव alone, feminine nouns, or verbs.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">Sanskrit, unlike Hindi, has:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only an oblique form plus postpositions</span></li>
+        <li class=""><span class="lab">B</span><span>no cases at all</span></li>
+        <li class=""><span class="lab">C</span><span>just two cases</span></li>
+        <li class="correct"><span class="lab">D</span><span>a separate ending for each case (no single 'oblique' form)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sanskrit has a separate ending for each case, with no single 'oblique'. It is not oblique-plus-postpositions, case-less, or two-case.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">Hindi compressed Sanskrit's case system into:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>eight full cases</span></li>
+        <li class="correct"><span class="lab">B</span><span>2-3 forms plus postpositions</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>no cases</span></li>
+        <li class=""><span class="lab">D</span><span>ten cases</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Hindi compressed the system into 2-3 forms plus postpositions. It did not keep eight full cases, drop all cases, or add a tenth.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">It is wrong to import Latin's six-case schema into Sanskrit because Sanskrit has:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only six cases</span></li>
+        <li class="correct"><span class="lab">B</span><span>seven cases plus the vocative (eight forms)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>only three cases</span></li>
+        <li class=""><span class="lab">D</span><span>no cases</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sanskrit has seven cases plus the vocative (eight forms), more than Latin's six. It is not six, three, or none.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">It is also wrong to import Hindi's 'oblique' into Sanskrit because Sanskrit:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>has only an oblique</span></li>
+        <li class=""><span class="lab">B</span><span>has no endings</span></li>
+        <li class=""><span class="lab">C</span><span>uses postpositions for everything</span></li>
+        <li class="correct"><span class="lab">D</span><span>keeps a distinct ending for every case</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sanskrit keeps a distinct ending for every case, with no oblique. It is not oblique-only, ending-less, or postposition-only.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">देवस्य means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>of the god (genitive)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>to the god (dative)</span></li>
+        <li class=""><span class="lab">C</span><span>by the god (instrumental)</span></li>
+        <li class=""><span class="lab">D</span><span>O god! (vocative)</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>देवस्य means 'of the god' (genitive). 'To the god' is देवाय, 'by the god' देवेन, and 'O god!' हे देव!.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">देवाय means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>of the god (genitive)</span></li>
+        <li class="correct"><span class="lab">B</span><span>to / for the god (dative)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>from the god (ablative)</span></li>
+        <li class=""><span class="lab">D</span><span>by the god (instrumental)</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>देवाय means 'to/for the god' (dative). 'Of the god' is देवस्य, 'from the god' देवात्, and 'by the god' देवेन.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">Confusing देवस्य with देवाय is an error because each case:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>means the same thing</span></li>
+        <li class="correct"><span class="lab">B</span><span>has its own ending and does one job (genitive 'of' vs dative 'to/for')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>is interchangeable</span></li>
+        <li class=""><span class="lab">D</span><span>is a verb form</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Each case has its own ending and one job: देवस्य 'of' (genitive) vs देवाय 'to/for' (dative). They are not the same, interchangeable, or verbs.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">'From the god' would be देवात्, which is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>genitive (षष्ठी)</span></li>
+        <li class=""><span class="lab">B</span><span>dative (चतुर्थी)</span></li>
+        <li class=""><span class="lab">C</span><span>locative (सप्तमी)</span></li>
+        <li class="correct"><span class="lab">D</span><span>ablative (पञ्चमी)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>देवात् ('from the god') is the ablative (पञ्चमी). The genitive is देवस्य, dative देवाय, and locative देवे.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">In देवः फलं खादति ('the god eats the fruit'), देवः is in the ____ case.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>accusative</span></li>
+        <li class=""><span class="lab">B</span><span>instrumental</span></li>
+        <li class="correct"><span class="lab">C</span><span>nominative (प्रथमा, the subject)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>genitive</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>देवः is the nominative (प्रथमा), the subject doing the eating. It is not accusative, instrumental, or genitive.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">In देवः फलं खादति, फलम् is in the ____ case.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>accusative (द्वितीया, the object)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>nominative</span></li>
+        <li class=""><span class="lab">C</span><span>dative</span></li>
+        <li class=""><span class="lab">D</span><span>ablative</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>फलम् is the accusative (द्वितीया), the object being eaten. It is not nominative, dative, or ablative.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">To say 'in the village' (ग्राम), you would use the ____ case.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>nominative: ग्रामः</span></li>
+        <li class="correct"><span class="lab">B</span><span>locative (सप्तमी): ग्रामे</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>accusative: ग्रामम्</span></li>
+        <li class=""><span class="lab">D</span><span>dative: ग्रामाय</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>'In the village' uses the locative (सप्तमी): ग्रामे. The nominative, accusative and dative forms mean other roles.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">Which form-and-case pair is CORRECT for देव?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>देवेन = genitive</span></li>
+        <li class=""><span class="lab">B</span><span>देवाय = ablative</span></li>
+        <li class="correct"><span class="lab">C</span><span>देवेन = instrumental ('by the god')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>देवे = nominative</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>देवेन is the instrumental ('by the god'). It is not genitive (देवस्य); देवाय is dative (not ablative); and देवे is locative (not nominative).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">Which paradigm pair is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>कवि = अकारान्त; गुरु = इकारान्त</span></li>
+        <li class=""><span class="lab">B</span><span>both = अकारान्त</span></li>
+        <li class="correct"><span class="lab">C</span><span>कवि = इकारान्त; गुरु = उकारान्त</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>both = उकारान्त</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>कवि is इकारान्त and गुरु उकारान्त. The other options misassign their classes.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">A student claims: 'Sanskrit has six cases like Latin, and देवौ means many gods.' The best correction is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Sanskrit has seven cases plus the vocative (eight forms), and देवौ means exactly two gods (dual)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the student is fully correct</span></li>
+        <li class=""><span class="lab">C</span><span>Sanskrit has eight forms, but देवौ is plural</span></li>
+        <li class=""><span class="lab">D</span><span>Sanskrit has six cases, and देवौ is dual</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sanskrit has seven cases plus the vocative (eight forms), and देवौ is the dual ('two gods'). The other options keep one or both errors.</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

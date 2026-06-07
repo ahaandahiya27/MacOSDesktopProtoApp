@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kridama Vayam Shlokantyaksharim — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Kridama Vayam Shlokantyaksharim<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">श्लोकान्त्याक्षरी is a game in which:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>shlokas are sung backwards</span></li>
+        <li class=""><span class="lab">B</span><span>the first letters are all removed</span></li>
+        <li class="correct"><span class="lab">C</span><span>each new shloka begins with the last letter of the previous one</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>only one shloka is recited</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In श्लोकान्त्याक्षरी each new verse begins with the last letter of the previous one. It is not singing backwards, removing first letters, or reciting one verse.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">श्लोकान्त्याक्षरी breaks into श्लोक + अन्त्य + अक्षर + ई, meaning:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'first letter of a verse'</span></li>
+        <li class=""><span class="lab">B</span><span>'a verse without letters'</span></li>
+        <li class=""><span class="lab">C</span><span>'a single letter'</span></li>
+        <li class="correct"><span class="lab">D</span><span>'verse' + 'last' + 'letter' + (game-name) = the last-letter shloka game</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>श्लोक ('verse') + अन्त्य ('last') + अक्षर ('letter') + ई names the last-letter shloka game. The other readings are wrong.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">The -ई suffix in श्लोकान्त्याक्षरी:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>makes it past tense</span></li>
+        <li class="correct"><span class="lab">B</span><span>turns the phrase into a feminine action/game-name</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>marks the dative</span></li>
+        <li class=""><span class="lab">D</span><span>negates the word</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The -ई suffix forms a feminine action/game-name. It does not mark past tense, the dative, or a negation.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">अन्त्य means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>first</span></li>
+        <li class=""><span class="lab">B</span><span>middle</span></li>
+        <li class=""><span class="lab">C</span><span>none</span></li>
+        <li class="correct"><span class="lab">D</span><span>last / final</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>अन्त्य means 'last / final'. It does not mean first, middle, or none.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">अक्षर means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>verse</span></li>
+        <li class=""><span class="lab">B</span><span>game</span></li>
+        <li class=""><span class="lab">C</span><span>fragrance</span></li>
+        <li class="correct"><span class="lab">D</span><span>letter / syllable</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>अक्षर means 'letter / syllable'. A verse is श्लोक, a game क्रीडा, and fragrance गन्ध.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">Reading श्लोकान्त्याक्षरी as merely 'last letter' misses that it names:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a single shloka</span></li>
+        <li class=""><span class="lab">B</span><span>a fragrance</span></li>
+        <li class="correct"><span class="lab">C</span><span>the GAME (the last-letter game), not just the letter</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a wicked person</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>श्लोकान्त्याक्षरी names the GAME, not just a letter. It is not a single shloka, a fragrance, or a wicked person.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">The verse विद्याहीना न शोभन्ते means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the knowledgeable never shine</span></li>
+        <li class=""><span class="lab">B</span><span>flowers always shine</span></li>
+        <li class="correct"><span class="lab">C</span><span>those without knowledge do not shine (look good)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>only the wealthy shine</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>It means those without knowledge do not truly shine. It does not say the knowledgeable never shine, that flowers always shine, or that only the wealthy shine.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">विद्याहीनाः means people who are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>without wealth</span></li>
+        <li class=""><span class="lab">B</span><span>without fragrance</span></li>
+        <li class="correct"><span class="lab">C</span><span>without knowledge / unlearned</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>without fame</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>विद्याहीनाः are those without knowledge (विद्या + हीन). Not without wealth, fragrance, or fame.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">According to the verse, even handsome people without विद्या:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>shine the most</span></li>
+        <li class="correct"><span class="lab">B</span><span>do not truly shine</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>become wealthy</span></li>
+        <li class=""><span class="lab">D</span><span>gain fame automatically</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Even the handsome, without knowledge, do not truly shine. They do not shine most, gain wealth, or gain automatic fame.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">The verse says the विद्याहीनाः are like:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>fragrant roses</span></li>
+        <li class=""><span class="lab">B</span><span>golden coins</span></li>
+        <li class="correct"><span class="lab">C</span><span>fragrance-less किंशुक flowers</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>tall mountains</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>They are likened to fragrance-less किंशुक flowers. Not fragrant roses, coins, or mountains.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">The point of comparing the unlearned to निर्गन्ध किंशुक flowers is that:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>outward beauty without knowledge lacks real worth, like colour without fragrance</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>flowers are useless</span></li>
+        <li class=""><span class="lab">C</span><span>knowledge is unimportant</span></li>
+        <li class=""><span class="lab">D</span><span>beauty alone is enough</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The simile shows outward beauty without knowledge lacks real worth, like bright colour with no scent. It does not say flowers are useless, knowledge unimportant, or beauty enough.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">किंशुक is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a kind of rose</span></li>
+        <li class=""><span class="lab">B</span><span>a fruit</span></li>
+        <li class=""><span class="lab">C</span><span>a bird</span></li>
+        <li class="correct"><span class="lab">D</span><span>a specific tree, the Flame of the Forest (Butea monosperma)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>किंशुक is the Flame of the Forest (Butea monosperma). It is not a rose, a fruit, or a bird.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">The किंशुक flower is famous for being:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>brilliantly coloured but without fragrance</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>fragrant but colourless</span></li>
+        <li class=""><span class="lab">C</span><span>tiny and white</span></li>
+        <li class=""><span class="lab">D</span><span>grown only underwater</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The किंशुक is brilliantly coloured but scent-less. It is not fragrant-but-colourless, tiny and white, or aquatic.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">निर्गन्धाः, describing the किंशुक, means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>fragrance-less / scent-less</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>colourful</span></li>
+        <li class=""><span class="lab">C</span><span>fragrant</span></li>
+        <li class=""><span class="lab">D</span><span>poisonous</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>निर्गन्धाः means 'scent-less'. It does not mean colourful, fragrant, or poisonous.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">Translating किंशुक as just 'flower' weakens the simile because it loses the detail of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the flower's size</span></li>
+        <li class=""><span class="lab">B</span><span>the flower's price</span></li>
+        <li class="correct"><span class="lab">C</span><span>brilliant colour with no fragrance</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the flower's name in English</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The simile depends on the किंशुक's bright colour yet no fragrance; 'flower' loses that. It is not about size, price, or an English name.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">The किंशुक simile teaches that a person may be ____ yet lack real worth without knowledge.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>outwardly attractive</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>fragrant</span></li>
+        <li class=""><span class="lab">C</span><span>wealthy</span></li>
+        <li class=""><span class="lab">D</span><span>wise</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>It teaches that one may be outwardly attractive yet lack worth without knowledge. The point is not fragrance, wealth, or wisdom (which is the missing thing).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">Just as the किंशुक has colour but no scent, the unlearned person has ____ but no ____.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>knowledge ... beauty</span></li>
+        <li class=""><span class="lab">B</span><span>fragrance ... colour</span></li>
+        <li class="correct"><span class="lab">C</span><span>good looks ... real worth (from knowledge)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>wealth ... poverty</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Like colour without scent, the unlearned has good looks but no real worth from knowledge. The other pairings reverse or distort the simile.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">In the wicked (खल), विद्या (knowledge) becomes:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>दान (giving)</span></li>
+        <li class=""><span class="lab">B</span><span>रक्षण (protection)</span></li>
+        <li class="correct"><span class="lab">C</span><span>विवाद (quarrel / dispute)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the sharing of learning</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In the wicked, knowledge becomes विवाद (quarrel). Giving, protection and sharing are its good uses.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">In the wicked, धन (wealth) becomes:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>दान (giving)</span></li>
+        <li class="correct"><span class="lab">B</span><span>मद (pride / arrogance)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>विवाद (quarrel)</span></li>
+        <li class=""><span class="lab">D</span><span>रक्षण (protection)</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In the wicked, wealth becomes मद (pride). Giving (दान) is its good use; quarrel and protection belong to knowledge and power.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">In the wicked, शक्ति (power) becomes:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>परिपीडन (oppression)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>रक्षण (protection)</span></li>
+        <li class=""><span class="lab">C</span><span>दान (giving)</span></li>
+        <li class=""><span class="lab">D</span><span>the sharing of learning</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In the wicked, power becomes परिपीडन (oppression). Protection (रक्षण) is its good use; giving and sharing belong to wealth and knowledge.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">खलस्य विद्या केन प्रयोजनेन भवति? (For what does the wicked use knowledge?)</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>दानाय (for giving)</span></li>
+        <li class=""><span class="lab">B</span><span>रक्षणाय (for protection)</span></li>
+        <li class=""><span class="lab">C</span><span>सेवायै (for service)</span></li>
+        <li class="correct"><span class="lab">D</span><span>विवादाय (for quarrel)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The wicked use knowledge विवादाय (for quarrel). Giving, protection and service are not its wicked use.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">The verse shows that in wicked hands, gifts like knowledge and power turn to:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>harm (quarrel, pride, oppression)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>service and protection</span></li>
+        <li class=""><span class="lab">C</span><span>sharing and giving</span></li>
+        <li class=""><span class="lab">D</span><span>fragrance and beauty</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In wicked hands the gifts turn to harm - quarrel, pride, oppression. In good hands they serve sharing, giving and protection.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">विवाद, मद and परिपीडन are the wicked uses of, respectively:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>power, knowledge and wealth</span></li>
+        <li class="correct"><span class="lab">B</span><span>knowledge, wealth and power</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>wealth, power and knowledge</span></li>
+        <li class=""><span class="lab">D</span><span>fame, beauty and birth</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>विवाद (quarrel) from knowledge, मद (pride) from wealth, परिपीडन (oppression) from power. The other orders are wrong.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">In the good (साधु), विद्या (knowledge) is used for:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>sharing learning</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>quarrel (विवाद)</span></li>
+        <li class=""><span class="lab">C</span><span>pride (मद)</span></li>
+        <li class=""><span class="lab">D</span><span>oppression (परिपीडन)</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In the good, knowledge is used for sharing learning. Quarrel, pride and oppression are its wicked uses.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">In the good, धन (wealth) is used for:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>pride (मद)</span></li>
+        <li class=""><span class="lab">B</span><span>quarrel (विवाद)</span></li>
+        <li class="correct"><span class="lab">C</span><span>giving (दान)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>oppression (परिपीडन)</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In the good, wealth is used for giving (दान). Pride is its wicked use; quarrel and oppression belong to knowledge and power.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">In the good, शक्ति (power) is used for:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>oppression (परिपीडन)</span></li>
+        <li class="correct"><span class="lab">B</span><span>protection (रक्षण)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>pride (मद)</span></li>
+        <li class=""><span class="lab">D</span><span>quarrel (विवाद)</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In the good, power is used for protection (रक्षण). Oppression is its wicked use; pride and quarrel belong to wealth and knowledge.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">The same विद्या, धन and शक्ति serve harm in the wicked but ____ in the good.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>quarrel, pride and oppression</span></li>
+        <li class=""><span class="lab">B</span><span>colour, scent and beauty</span></li>
+        <li class=""><span class="lab">C</span><span>sleep, fear and anger</span></li>
+        <li class="correct"><span class="lab">D</span><span>sharing, giving and protection</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In the good they serve sharing, giving and protection. The second set is the wicked use; the others are unrelated.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">The verse's lesson is that the value of knowledge, wealth and power depends on:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>their quantity alone</span></li>
+        <li class=""><span class="lab">B</span><span>their colour</span></li>
+        <li class=""><span class="lab">C</span><span>the time of day</span></li>
+        <li class="correct"><span class="lab">D</span><span>the character of the person who holds them</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Their value depends on the holder's character. Not on quantity alone, colour, or time of day.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">A powerful person who protects the weak rather than oppressing them is acting like the ____ of the verse.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>खल (wicked person)</span></li>
+        <li class=""><span class="lab">B</span><span>किंशुक (flower)</span></li>
+        <li class="correct"><span class="lab">C</span><span>साधु (good person)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>मूर्ख (fool)</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Using power to protect is the way of the साधु (good person). Not the खल, the किंशुक flower, or the मूर्ख.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">The verse's structure 'this for the wicked, the opposite for the good' is summed up as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>both use them the same way</span></li>
+        <li class="correct"><span class="lab">B</span><span>खलस्य साधोः विपरीतम् ('for the wicked and the good, it is opposite')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>only the wicked have them</span></li>
+        <li class=""><span class="lab">D</span><span>only the good have them</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The structure is खलस्य साधोः विपरीतम् - opposite uses. Both do not use them the same way, and both wicked and good can hold them.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">Saying both the wicked and the good use knowledge for quarrel:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>is exactly what the verse says</span></li>
+        <li class=""><span class="lab">B</span><span>is true for wealth only</span></li>
+        <li class=""><span class="lab">C</span><span>is the verse's main point</span></li>
+        <li class="correct"><span class="lab">D</span><span>is wrong - they use it in OPPOSITE ways</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>It is wrong: the wicked quarrel, the good share - opposite ways. The verse's point is precisely this contrast.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">The contrast विवाद vs sharing-of-learning shows that the SAME विद्या can be:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>used only for harm</span></li>
+        <li class=""><span class="lab">B</span><span>used only for good</span></li>
+        <li class=""><span class="lab">C</span><span>never used at all</span></li>
+        <li class="correct"><span class="lab">D</span><span>used for opposite ends by different people</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The same knowledge can be used for opposite ends depending on the person. It is not only harmful, only good, or unused.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">विपरीतम् in खलस्य साधोः विपरीतम् means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the same</span></li>
+        <li class=""><span class="lab">B</span><span>both</span></li>
+        <li class=""><span class="lab">C</span><span>none</span></li>
+        <li class="correct"><span class="lab">D</span><span>opposite / reversed</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>विपरीतम् means 'opposite / reversed'. It does not mean the same, both, or none.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">खलः means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a wicked person (with malicious intent)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a foolish person</span></li>
+        <li class=""><span class="lab">C</span><span>a learned person</span></li>
+        <li class=""><span class="lab">D</span><span>a fragrant flower</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>खलः is a wicked person, acting with malicious intent. A fool is मूर्खः, a learned person विद्वान्, and a flower पुष्पम्.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">मूर्खः means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a foolish person (without intent, just unwise)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a wicked person</span></li>
+        <li class=""><span class="lab">C</span><span>a wealthy person</span></li>
+        <li class=""><span class="lab">D</span><span>a famous person</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>मूर्खः is a foolish (unwise) person, without malicious intent. A wicked person is खलः, a wealthy one धनिकः, and a famous one यशस्वी.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">The difference between खलः and मूर्खः is that खलः is a ____ failure and मूर्खः is an ____ failure.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>intellectual ... moral</span></li>
+        <li class=""><span class="lab">B</span><span>financial ... social</span></li>
+        <li class="correct"><span class="lab">C</span><span>moral ... intellectual</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>physical ... mental</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>खलः is a moral failure (wicked); मूर्खः an intellectual failure (foolish). The reversal and the other pairs are wrong.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">The wicked verse of the chapter targets specifically the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>मूर्ख (the merely foolish)</span></li>
+        <li class=""><span class="lab">B</span><span>साधु (the good)</span></li>
+        <li class="correct"><span class="lab">C</span><span>खल (those who turn gifts to harm by choice)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>किंशुक (the flower)</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>It targets the खल, who turn gifts to harm by choice - not the merely foolish, the good, or the flower.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">Someone who deliberately uses learning to start quarrels is best called a:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>खलः (wicked person)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>मूर्खः (fool)</span></li>
+        <li class=""><span class="lab">C</span><span>साधुः (good person)</span></li>
+        <li class=""><span class="lab">D</span><span>यशस्विनी (famous one)</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Deliberately misusing learning makes one a खलः (wicked person). Not a mere fool, a good person, or a famous one.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">भारभूताः means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>treasures of the earth</span></li>
+        <li class=""><span class="lab">B</span><span>flowers of the forest</span></li>
+        <li class=""><span class="lab">C</span><span>rulers of the land</span></li>
+        <li class="correct"><span class="lab">D</span><span>burdens (on the earth)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>भारभूताः means 'burdens (on the earth)'. Not treasures, flowers, or rulers.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">भारभूताः breaks into भार + भूत, meaning:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'flower' + 'forest'</span></li>
+        <li class="correct"><span class="lab">B</span><span>'burden' + 'become' = having become a burden</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>'last' + 'letter'</span></li>
+        <li class=""><span class="lab">D</span><span>'wealth' + 'fame'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>भार ('burden') + भूत ('become') = 'having become a burden'. The other splits are wrong.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">According to the chapter, who is a भारभूतः (burden on the earth)?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a person without शीलम् (good character)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a person without wealth</span></li>
+        <li class=""><span class="lab">C</span><span>a person without fame</span></li>
+        <li class=""><span class="lab">D</span><span>a person without beauty</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>One without शीलम् (good character) is a burden on the earth. Lacking wealth, fame or beauty is not the criterion.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">भारभूताः is glossed as भारकराः, meaning:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>those who are treasures</span></li>
+        <li class="correct"><span class="lab">B</span><span>those who are burdens</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>those who are wise</span></li>
+        <li class=""><span class="lab">D</span><span>those who are wealthy</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>भारभूताः = भारकराः = 'those who are burdens'. Not treasures, the wise, or the wealthy.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">Calling the character-less person a 'burden on the earth' stresses that worth comes from:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>wealth alone</span></li>
+        <li class=""><span class="lab">B</span><span>beauty alone</span></li>
+        <li class="correct"><span class="lab">C</span><span>good character, not mere existence, looks or wealth</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>birth alone</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>It stresses that worth comes from good character, not from mere existence, looks, wealth, or birth.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">शीलम् means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>wealth</span></li>
+        <li class=""><span class="lab">B</span><span>beauty</span></li>
+        <li class=""><span class="lab">C</span><span>a flower</span></li>
+        <li class="correct"><span class="lab">D</span><span>character / moral conduct</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>शीलम् means 'character / moral conduct'. Wealth is धनम्, beauty रूपम्, and a flower पुष्पम्.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">शीलम् is glossed as वृत्तम् / आचरणम्, meaning:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>wealth</span></li>
+        <li class="correct"><span class="lab">B</span><span>conduct / behaviour</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>fragrance</span></li>
+        <li class=""><span class="lab">D</span><span>a game</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>शीलम् = वृत्तम् / आचरणम् = 'conduct / behaviour'. It is not wealth, fragrance, or a game.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">The chapter's anchor virtue, beyond looks, birth or fortune, is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>लक्ष्मीः (wealth)</span></li>
+        <li class="correct"><span class="lab">B</span><span>शीलम् (good character)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>रूपम् (beauty)</span></li>
+        <li class=""><span class="lab">D</span><span>कुलम् (birth)</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The anchor virtue is शीलम् (good character), valued above wealth, beauty and birth.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">A person who is rich and handsome but cruel and dishonest lacks the chapter's key virtue of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>धनम् (wealth)</span></li>
+        <li class="correct"><span class="lab">B</span><span>शीलम् (good character)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>रूपम् (beauty)</span></li>
+        <li class=""><span class="lab">D</span><span>यशः (fame)</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Such a person lacks शीलम् (good character), even while having wealth and beauty.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">विद्या means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>deep mystical insight only</span></li>
+        <li class=""><span class="lab">B</span><span>wealth</span></li>
+        <li class="correct"><span class="lab">C</span><span>learning / study / formal knowledge</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>character</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>विद्या is learning / formal knowledge (what schools teach). Deep insight is ज्ञान; wealth is धनम् and character शीलम्.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">ज्ञान differs from विद्या in that ज्ञान is more like:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>direct knowing / deep insight (what a sage realises)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>formal schooling</span></li>
+        <li class=""><span class="lab">C</span><span>wealth</span></li>
+        <li class=""><span class="lab">D</span><span>fragrance</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>ज्ञान is direct knowing / deep insight, while विद्या is formal learning. It is not schooling, wealth, or fragrance.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">विद्यालय ('place of विद्या') means a ____, while a ज्ञानी is a ____.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>wise person ... school</span></li>
+        <li class="correct"><span class="lab">B</span><span>school ... wise person</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>temple ... fool</span></li>
+        <li class=""><span class="lab">D</span><span>market ... king</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>विद्यालय is a school; a ज्ञानी is a wise person. The reversal and the other pairs are wrong.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">The chapter uses विद्या for what gives a person:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>fragrance</span></li>
+        <li class=""><span class="lab">B</span><span>wealth alone</span></li>
+        <li class=""><span class="lab">C</span><span>a long life</span></li>
+        <li class="correct"><span class="lab">D</span><span>social value through formal learning</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The chapter uses विद्या for the social value gained through formal learning. Not fragrance, wealth, or longevity.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">लक्ष्मीः in the chapter refers to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>knowledge</span></li>
+        <li class=""><span class="lab">B</span><span>character</span></li>
+        <li class=""><span class="lab">C</span><span>a flower</span></li>
+        <li class="correct"><span class="lab">D</span><span>wealth / fortune (personified)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>लक्ष्मीः refers to wealth / fortune (personified). It is not knowledge, character, or a flower.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">यशस्विनी means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>without fame</span></li>
+        <li class=""><span class="lab">B</span><span>wealthy</span></li>
+        <li class=""><span class="lab">C</span><span>foolish</span></li>
+        <li class="correct"><span class="lab">D</span><span>(a woman) endowed with fame</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>यशस्विनी means '(a woman) endowed with fame'. It does not mean without fame, wealthy, or foolish.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">यशस्विनी and यशस्वी relate to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>धनम् (wealth)</span></li>
+        <li class="correct"><span class="lab">B</span><span>यशः (fame / glory)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>शीलम् (character)</span></li>
+        <li class=""><span class="lab">D</span><span>विद्या (learning)</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Both relate to यशः (fame / glory). Not to wealth, character, or learning.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">Which word-meaning pair is CORRECT?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>शीलम् = character</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>खलः = a wise person</span></li>
+        <li class=""><span class="lab">C</span><span>किंशुक = a fragrant rose</span></li>
+        <li class=""><span class="lab">D</span><span>विद्या = wealth</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>शीलम् = character. खलः is wicked (not wise), किंशुक is a scent-less Flame of the Forest (not a fragrant rose), and विद्या is learning (not wealth).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">Which contrast pair is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>खलः = foolish; मूर्खः = wicked</span></li>
+        <li class=""><span class="lab">B</span><span>both खलः and मूर्खः = wise</span></li>
+        <li class="correct"><span class="lab">C</span><span>खलः = wicked; मूर्खः = foolish</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>both खलः and मूर्खः = wealthy</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>खलः is wicked and मूर्खः foolish. The reversal and 'both same' options are wrong.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">Which 'wicked vs good' use of knowledge is CORRECT?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>wicked use knowledge for विवाद (quarrel); good use it to share learning</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>wicked use it for giving; good for quarrel</span></li>
+        <li class=""><span class="lab">C</span><span>both use it for protection</span></li>
+        <li class=""><span class="lab">D</span><span>both use it for oppression</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The wicked use knowledge for विवाद (quarrel); the good share learning. The other options reverse or collapse the contrast.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">The overall theme of these shlokas is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>that character and knowledge give true worth, while gifts turn harmful in the wicked</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>that wealth is the only goal</span></li>
+        <li class=""><span class="lab">C</span><span>a fable about a fox</span></li>
+        <li class=""><span class="lab">D</span><span>banking and finance</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The theme is that character and knowledge give true worth, while gifts turn harmful in the wicked. It is not about wealth-only, a fox, or banking.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">Putting it together, the chapter teaches that a person is truly worthy through:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>looks and wealth alone</span></li>
+        <li class="correct"><span class="lab">B</span><span>विद्या (knowledge) and शीलम् (character), not looks, wealth or birth alone</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>fame alone</span></li>
+        <li class=""><span class="lab">D</span><span>fragrance alone</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>True worth comes from विद्या (knowledge) and शीलम् (character), not looks, wealth, fame, or birth alone.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">A student claims: 'किंशुक just means any flower, and खल and मूर्ख mean the same.' The best correction is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the student is fully correct</span></li>
+        <li class="correct"><span class="lab">B</span><span>किंशुक is the colourful but scent-less Flame of the Forest, and खल (wicked) differs from मूर्ख (foolish)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>किंशुक is any flower, but खल and मूर्ख differ</span></li>
+        <li class=""><span class="lab">D</span><span>किंशुक is the Flame of the Forest, and खल equals मूर्ख</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>किंशुक is the colourful but scent-less Flame of the Forest, and खल (wicked) differs from मूर्ख (foolish). The other options keep one or both errors.</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

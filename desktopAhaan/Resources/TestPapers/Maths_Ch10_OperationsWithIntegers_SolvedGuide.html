@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Operations With Integers — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Operations With Integers<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">A carrom coin at 0 is struck +6, then −9, then +1 on a number line. Its final position is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>−2</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>+2</span></li>
+        <li class=""><span class="lab">C</span><span>+16</span></li>
+        <li class=""><span class="lab">D</span><span>−16</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Track position: 0 + 6 = +6, then +6 + (−9) = −3, then −3 + 1 = −2. The trap +16 comes from adding magnitudes 6+9+1 ignoring direction; +2 forgets that the −9 strike overshoots 0.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">Compute (−13) + (+13) + (−13).</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>−39</span></li>
+        <li class="correct"><span class="lab">B</span><span>−13</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>+13</span></li>
+        <li class=""><span class="lab">D</span><span>0</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(−13) + (+13) = 0 (opposite tokens cancel), then 0 + (−13) = −13. Adding magnitudes gives the trap −39; cancelling the wrong pair gives +13.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">Subtracting a negative integer from another integer is the same as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>subtracting its magnitude</span></li>
+        <li class=""><span class="lab">B</span><span>leaving the number unchanged</span></li>
+        <li class="correct"><span class="lab">C</span><span>adding its opposite</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>multiplying by −1</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The golden rule: subtracting an integer = adding its opposite. So a − (−b) = a + b. It is not "multiply by −1" or any of the others.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">Evaluate (−8) − (−15).</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>7</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>−23</span></li>
+        <li class=""><span class="lab">C</span><span>−7</span></li>
+        <li class=""><span class="lab">D</span><span>23</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(−8) − (−15) = (−8) + (+15) = +7. Subtracting a negative ADDS. The trap −23 treats it as (−8) + (−15).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">The temperature was −4 °C at dawn and rose to 9 °C by noon. The change in temperature is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>−13 °C</span></li>
+        <li class=""><span class="lab">B</span><span>+5 °C</span></li>
+        <li class="correct"><span class="lab">C</span><span>+13 °C</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>−5 °C</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Change = final − initial = 9 − (−4) = 9 + 4 = +13 °C (a rise, so positive). −13 reverses the subtraction order; +5 just adds 9 + (−4) wrongly.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">Compute (−7) + (+12) + (−5).</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>−24</span></li>
+        <li class="correct"><span class="lab">B</span><span>0</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>10</span></li>
+        <li class=""><span class="lab">D</span><span>−10</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(−7) + (−5) = −12, then +12 + (−12) = 0. The +12 exactly cancels the two negatives. The trap −24 adds all magnitudes negative.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">Which of these equals a POSITIVE number?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>(−9) + (+4)</span></li>
+        <li class=""><span class="lab">B</span><span>(−6) − (−2)</span></li>
+        <li class="correct"><span class="lab">C</span><span>(−8) × (−2)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>(−3) × (+5)</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Test each: (A) −9+4 = −5; (B) −6−(−2) = −6+2 = −4; (C) (−8)×(−2) = +16 (negative × negative = positive) ✓; (D) (−3)×(+5) = −15. Only (C) is positive.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">The opposite (additive inverse) of (−7) + (+3) is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>+4</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>−4</span></li>
+        <li class=""><span class="lab">C</span><span>−10</span></li>
+        <li class=""><span class="lab">D</span><span>+10</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>First (−7) + (+3) = −4. Its opposite (additive inverse) is +4, since (−4) + (+4) = 0. The trap −4 forgets to take the opposite.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">Compute (−4) × (−2) × (−3).</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>−24</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>+24</span></li>
+        <li class=""><span class="lab">C</span><span>−9</span></li>
+        <li class=""><span class="lab">D</span><span>+9</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(−4) × (−2) = +8 (two negatives → positive), then +8 × (−3) = −24. Three negative factors (odd) → negative product. The trap +24 stops at the even-count rule too early.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">A diver is at −18 m. She rises 7 m and then descends 12 m. Her final depth is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>−7 m</span></li>
+        <li class=""><span class="lab">B</span><span>−13 m</span></li>
+        <li class=""><span class="lab">C</span><span>−37 m</span></li>
+        <li class="correct"><span class="lab">D</span><span>−23 m</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Start −18, rise 7: −18 + 7 = −11; descend 12: −11 + (−12) = −23 m. The trap −7 adds 7+12 wrongly as a single rise; −37 adds both moves as descents.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">Which sign rule is INCORRECT?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>(−)(−) = −</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>(+)(+) = +</span></li>
+        <li class=""><span class="lab">C</span><span>(+)(−) = −</span></li>
+        <li class=""><span class="lab">D</span><span>(−)(+) = −</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct rules are (+)(+)=+, (+)(−)=−, (−)(+)=−, (−)(−)=+. So "(−)(−) = −" in option (A) is the INCORRECT statement — two negatives give a POSITIVE.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">Evaluate (−3) × (5 − 8) + (−2) × (−4).</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1</span></li>
+        <li class=""><span class="lab">B</span><span>−17</span></li>
+        <li class=""><span class="lab">C</span><span>25</span></li>
+        <li class="correct"><span class="lab">D</span><span>17</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Brackets first: 5 − 8 = −3. So (−3) × (−3) = +9, and (−2) × (−4) = +8. Sum = 9 + 8 = 17. The trap 1 uses 9 + (−8); −17 mishandles a sign.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">The product of several non-zero integers is negative. This means the number of negative factors is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>odd</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>even</span></li>
+        <li class=""><span class="lab">C</span><span>exactly one</span></li>
+        <li class=""><span class="lab">D</span><span>exactly two</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A product is negative only when there is an ODD number of negative factors (so one survives unpaired). Even → positive. "Exactly one" is too restrictive (3, 5, … also work).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">Evaluate (−20) ÷ (+4).</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+5</span></li>
+        <li class="correct"><span class="lab">B</span><span>−5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>−16</span></li>
+        <li class=""><span class="lab">D</span><span>−24</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(−20) ÷ (+4) = −5 (different signs → negative). The trap +5 ignores the sign rule for division (same rules as multiplication).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">Evaluate (−48) ÷ (−6).</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>−8</span></li>
+        <li class=""><span class="lab">B</span><span>−42</span></li>
+        <li class=""><span class="lab">C</span><span>+42</span></li>
+        <li class="correct"><span class="lab">D</span><span>+8</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(−48) ÷ (−6) = +8 (same signs → positive). The trap −8 forgets that negative ÷ negative = positive.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">By how much is (−5) greater than (−12)?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>−7</span></li>
+        <li class=""><span class="lab">B</span><span>17</span></li>
+        <li class=""><span class="lab">C</span><span>−17</span></li>
+        <li class="correct"><span class="lab">D</span><span>7</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"How much greater" = (−5) − (−12) = −5 + 12 = +7. The trap −17 adds the magnitudes as negatives; −7 reverses the subtraction.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">Which expression has the LARGEST value?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>(−10) + (+3)</span></li>
+        <li class="correct"><span class="lab">B</span><span>(−3) − (−8)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>(−2) × (+3)</span></li>
+        <li class=""><span class="lab">D</span><span>(−1) × (−4)</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Values: (A) −10+3 = −7; (B) −3−(−8) = −3+8 = +5; (C) (−2)(+3) = −6; (D) (−1)(−4) = +4. The largest is +5, option (B). Watch that (D) = +4 is the runner-up.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">Evaluate 12 − 18 + 7 − (−3).</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>−16</span></li>
+        <li class=""><span class="lab">B</span><span>40</span></li>
+        <li class=""><span class="lab">C</span><span>10</span></li>
+        <li class="correct"><span class="lab">D</span><span>4</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>12 − 18 = −6; −6 + 7 = +1; +1 − (−3) = 1 + 3 = +4. The trap 10 mishandles the last "subtract a negative" as a subtraction; −16 adds wrongly.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">Which statement about 0 is TRUE for integers?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0 is the identity for multiplication</span></li>
+        <li class=""><span class="lab">B</span><span>0 has no opposite</span></li>
+        <li class="correct"><span class="lab">C</span><span>0 is the identity for addition</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>every integer times 0 is itself</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>0 is the additive identity: n + 0 = n for every integer. (1 is the multiplicative identity, so (A) is false; 0 IS its own opposite, so (B) is false; any integer × 0 = 0, so (D) is false.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">Evaluate (−2) × (−3) × (−1) × (−5).</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>−30</span></li>
+        <li class=""><span class="lab">B</span><span>+11</span></li>
+        <li class=""><span class="lab">C</span><span>−11</span></li>
+        <li class="correct"><span class="lab">D</span><span>+30</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Four negative factors (even count) → positive. Magnitude = 2·3·1·5 = 30, so the product is +30. The trap −30 wrongly keeps a negative sign.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">A submarine at −250 m rises in three equal stages and reaches −40 m. Each stage was:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+210 m</span></li>
+        <li class=""><span class="lab">B</span><span>−70 m</span></li>
+        <li class="correct"><span class="lab">C</span><span>+70 m</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>+90 m</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Total rise = (−40) − (−250) = −40 + 250 = +210 m over 3 equal stages → 210 ÷ 3 = +70 m each. The trap +210 forgets to divide by 3.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">If a × (−1) is computed for any integer a, the result is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>always negative</span></li>
+        <li class=""><span class="lab">B</span><span>always positive</span></li>
+        <li class=""><span class="lab">C</span><span>always 0</span></li>
+        <li class="correct"><span class="lab">D</span><span>the opposite of a</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>a × (−1) = −a, the opposite (additive inverse) of a, for every integer (e.g. 5 → −5, −5 → +5). It is not "always negative" — that fails when a is itself negative.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">Evaluate (−6) + (−6) + (−6) + (−6) + (−6).</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>−30</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>+30</span></li>
+        <li class=""><span class="lab">C</span><span>−24</span></li>
+        <li class=""><span class="lab">D</span><span>−36</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Five copies of −6: (−6) × 5 = −30. Repeated addition of a negative is multiplication by a positive count, staying negative. The trap +30 flips the sign.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">The value of (−15) − (−15) + (−15) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>−45</span></li>
+        <li class=""><span class="lab">B</span><span>0</span></li>
+        <li class="correct"><span class="lab">C</span><span>−15</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>+15</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(−15) − (−15) = (−15) + 15 = 0, then 0 + (−15) = −15. The trap 0 stops after the cancelling pair and ignores the last term.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">Which property is shown by (−6) × 3 = 3 × (−6)?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>associative</span></li>
+        <li class=""><span class="lab">B</span><span>distributive</span></li>
+        <li class="correct"><span class="lab">C</span><span>commutative</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>identity</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Swapping the order of the two factors with the product unchanged is the COMMUTATIVE property of multiplication (a × b = b × a). Associative is about grouping three or more.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">Evaluate (−100) ÷ (+25) × (−2).</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>−8</span></li>
+        <li class=""><span class="lab">B</span><span>+2</span></li>
+        <li class="correct"><span class="lab">C</span><span>+8</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>−2</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Left to right (÷ and × rank equally): (−100) ÷ (+25) = −4, then (−4) × (−2) = +8 (two negatives → positive). The trap −8 forgets the final sign flip.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">In a quiz, +3 is given for a right answer and −2 for a wrong one. Riya answers 10 questions, gets 7 right and 3 wrong. Her score is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>15</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>21</span></li>
+        <li class=""><span class="lab">C</span><span>27</span></li>
+        <li class=""><span class="lab">D</span><span>13</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Right answers: 7 × (+3) = +21. Wrong answers: 3 × (−2) = −6. Score = 21 + (−6) = +15. The trap 21 forgets the penalties; 27 adds the penalty as a gain.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">Which value of the blank makes (−8) + ___ = −3 true?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>−5</span></li>
+        <li class="correct"><span class="lab">B</span><span>+5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>−11</span></li>
+        <li class=""><span class="lab">D</span><span>+11</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(−8) + x = −3 → x = (−3) − (−8) = −3 + 8 = +5. Check: −8 + 5 = −3 ✓. The trap −5 reverses the subtraction.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">Evaluate (−4)².</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>−16</span></li>
+        <li class="correct"><span class="lab">B</span><span>+16</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>−8</span></li>
+        <li class=""><span class="lab">D</span><span>+8</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(−4)² = (−4) × (−4) = +16 (the negative is squared, two negative factors → positive). The trap −16 confuses it with −4².</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">Evaluate −4² (square first, then apply the sign).</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+16</span></li>
+        <li class="correct"><span class="lab">B</span><span>−16</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>−8</span></li>
+        <li class=""><span class="lab">D</span><span>+8</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Here only the 4 is squared, then the sign applies: −4² = −(4 × 4) = −16. Contrast with Q29 — the brackets in (−4)² change everything. The trap +16 wrongly squares the sign too.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">The sum of an integer and its opposite, added to (−9), gives:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0</span></li>
+        <li class=""><span class="lab">B</span><span>−18</span></li>
+        <li class="correct"><span class="lab">C</span><span>−9</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>+9</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An integer plus its opposite equals 0 (additive inverse property); then 0 + (−9) = −9. So the result is −9, which sits at option (C). The trap 0 ignores the added (−9); +9 takes the wrong sign.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">Evaluate 5 − [3 − (−2)].</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4</span></li>
+        <li class="correct"><span class="lab">B</span><span>0</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>6</span></li>
+        <li class=""><span class="lab">D</span><span>10</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Innermost bracket: 3 − (−2) = 3 + 2 = 5. Then 5 − [5] = 0. The trap 4 mishandles −(−2) as −2 inside the bracket (3 − 2 = 1, giving 5 − 1 = 4).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">A lift starts at floor +3, goes down 8 floors, then up 2 floors. It is now at floor:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+13</span></li>
+        <li class="correct"><span class="lab">B</span><span>−3</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>+9</span></li>
+        <li class=""><span class="lab">D</span><span>−9</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>+3 down 8: 3 + (−8) = −5; up 2: −5 + 2 = −3 (floor −3, i.e. 3rd basement). The trap +9 treats every move as upward.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">Evaluate (−7) × (−1) × 0 × (−4).</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>0</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>+28</span></li>
+        <li class=""><span class="lab">C</span><span>−28</span></li>
+        <li class=""><span class="lab">D</span><span>−7</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Any product containing a factor of 0 is 0, regardless of the other signs. So (−7)(−1)(0)(−4) = 0. The traps +28/−28 ignore the zero factor.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">Which is the correct order to evaluate (−6) + 4 × (−3)?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>add first: (−2) × (−3) = 6</span></li>
+        <li class=""><span class="lab">B</span><span>left to right: (−6 + 4) × (−3) = 6</span></li>
+        <li class="correct"><span class="lab">C</span><span>multiply first: (−6) + (−12) = −18</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>multiply first: (−6) + (+12) = 6</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Order of operations: multiplication before addition. So 4 × (−3) = −12 first, then (−6) + (−12) = −18. Doing the addition first (option B) is the classic precedence error giving a wrong 6.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">By how much does (−4) × 6 differ from 4 × (−6)?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>48</span></li>
+        <li class=""><span class="lab">B</span><span>−48</span></li>
+        <li class=""><span class="lab">C</span><span>24</span></li>
+        <li class="correct"><span class="lab">D</span><span>0</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(−4) × 6 = −24 and 4 × (−6) = −24; both equal −24, so they differ by 0. This illustrates commutativity of sign placement. The trap 48 takes |−24| + |−24|.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">Evaluate (−2) × (−2) × (−2).</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>−8</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>+8</span></li>
+        <li class=""><span class="lab">C</span><span>+6</span></li>
+        <li class=""><span class="lab">D</span><span>−6</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(−2) × (−2) = +4, then +4 × (−2) = −8. Three negative factors (odd) → negative. The trap +8 stops at the even-pair stage; that's the value of (−2)² not (−2)³.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">A shopkeeper made a profit of ₹120 on Monday, a loss of ₹85 on Tuesday, and a loss of ₹60 on Wednesday. Over the three days he:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>gained ₹25</span></li>
+        <li class=""><span class="lab">B</span><span>gained ₹95</span></li>
+        <li class=""><span class="lab">C</span><span>lost ₹145</span></li>
+        <li class="correct"><span class="lab">D</span><span>lost ₹25</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Profit +120, then losses −85 and −60: 120 + (−85) + (−60) = 120 − 145 = −25, i.e. a net LOSS of ₹25. The trap "gained ₹25" mis-signs the net; "lost ₹145" forgets the profit.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">If p is a negative integer, then p × p × p is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>positive</span></li>
+        <li class=""><span class="lab">B</span><span>zero</span></li>
+        <li class=""><span class="lab">C</span><span>cannot be determined</span></li>
+        <li class="correct"><span class="lab">D</span><span>negative</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>p negative: p × p = positive, then × p (negative) = negative. An odd power of a negative is negative. So p³ is always negative (it is determinate, ruling out (C)).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">Evaluate (18 − 25) × (−4).</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>+28</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>−28</span></li>
+        <li class=""><span class="lab">C</span><span>+43</span></li>
+        <li class=""><span class="lab">D</span><span>−7</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bracket first: 18 − 25 = −7. Then (−7) × (−4) = +28 (two negatives → positive). The trap −28 forgets the sign rule; −7 forgets to multiply.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">The product (−1) × (−2) × (−3) × … × (−10) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>negative</span></li>
+        <li class=""><span class="lab">B</span><span>zero</span></li>
+        <li class=""><span class="lab">C</span><span>−55</span></li>
+        <li class="correct"><span class="lab">D</span><span>positive</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Ten negative factors (−1 through −10). Even count → POSITIVE product. (Its magnitude is 10! = 3 628 800.) The trap "negative" miscounts the parity; −55 confuses product with a sum.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">Replace the box: (−12) ÷ ___ = +4.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+3</span></li>
+        <li class=""><span class="lab">B</span><span>+48</span></li>
+        <li class="correct"><span class="lab">C</span><span>−3</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>−48</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(−12) ÷ x = +4 means x = (−12) ÷ (+4) = −3 (negative ÷ ... gives the missing factor; check (−12) ÷ (−3) = +4 ✓). The trap +3 ignores that dividing a negative by a positive can't give +4.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">Evaluate (−5) − (−5) − (−5).</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>−15</span></li>
+        <li class=""><span class="lab">B</span><span>−5</span></li>
+        <li class="correct"><span class="lab">C</span><span>+5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>+15</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(−5) − (−5) − (−5) = (−5) + 5 + 5 = +5. Both subtractions of −5 add 5. The trap −15 treats all three as additions of −5; −5 stops after the first cancellation.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">The temperature at midnight was −6 °C and dropped a further 9 °C by 3 a.m. The 3 a.m. temperature is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+3 °C</span></li>
+        <li class=""><span class="lab">B</span><span>+15 °C</span></li>
+        <li class=""><span class="lab">C</span><span>−3 °C</span></li>
+        <li class="correct"><span class="lab">D</span><span>−15 °C</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Start −6 °C, drop a further 9: −6 + (−9) = −15 °C. "Dropped" means add a negative. The trap +3 subtracts wrongly; +15 mis-signs the result.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">Which expression equals the largest integer?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>(−2) × (−2) × (−2)</span></li>
+        <li class="correct"><span class="lab">B</span><span>(−3) × (−3)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>(−4) × (+2)</span></li>
+        <li class=""><span class="lab">D</span><span>(−10) + (+2)</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Values: (A) (−2)³ = −8; (B) (−3)(−3) = +9; (C) (−4)(+2) = −8; (D) −10+2 = −8. The largest is +9, option (B).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">Evaluate (−36) ÷ (−9) − (−2).</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2</span></li>
+        <li class=""><span class="lab">B</span><span>−2</span></li>
+        <li class="correct"><span class="lab">C</span><span>6</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>−6</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(−36) ÷ (−9) = +4 (same signs → positive), then +4 − (−2) = 4 + 2 = +6. The trap 2 treats the last step as 4 − 2.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">Using the distributive idea, (−7) × 99 equals:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>(−7) × 100 + (−7) = −707</span></li>
+        <li class="correct"><span class="lab">B</span><span>(−7) × 100 + 7 = −693</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>(−7) × 100 + (+700) = 0</span></li>
+        <li class=""><span class="lab">D</span><span>(−7) × 90 + 9 = −621</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>99 = 100 − 1, so (−7) × 99 = (−7) × 100 − (−7) × 1 = −700 + 7 = −693, written as "(−7) × 100 + 7" = −693. Option (A) wrongly adds (−7) again (= −707); (C) wrongly cancels with +700 (= 0); (D) splits 99 as 90 + 9 but evaluates to −621 (it drops the ×7 on the 9, since (−7)×90 + (−7)×9 = −630 − 63 = −693, not −621). Only (B) is correct.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">If the product of two integers is +24 and one of them is −3, the other is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>−8</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>+8</span></li>
+        <li class=""><span class="lab">C</span><span>+72</span></li>
+        <li class=""><span class="lab">D</span><span>−72</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>product = +24, one factor −3, so other = 24 ÷ (−3) = −8 (need (−3) × (−8) = +24 ✓; two negatives give the positive product). The trap +8 forgets the second factor must be negative.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">Evaluate 0 − (−14).</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>−14</span></li>
+        <li class=""><span class="lab">B</span><span>0</span></li>
+        <li class=""><span class="lab">C</span><span>cannot subtract</span></li>
+        <li class="correct"><span class="lab">D</span><span>+14</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>0 − (−14) = 0 + 14 = +14. Subtracting a negative adds. The trap −14 treats it as 0 + (−14); subtraction of integers is always possible, ruling out (C).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">A football team's goal difference changed by −2, +5, −4, and +3 over four matches. The net change is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>−2</span></li>
+        <li class="correct"><span class="lab">B</span><span>+2</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>+14</span></li>
+        <li class=""><span class="lab">D</span><span>−14</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Net = (−2) + 5 + (−4) + 3 = (−2 − 4) + (5 + 3) = −6 + 8 = +2. The trap −2 mis-signs; +14 / −14 add magnitudes.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">Which list of integers is in increasing (ascending) order?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>−1, −5, 0, 3</span></li>
+        <li class=""><span class="lab">B</span><span>3, 0, −1, −5</span></li>
+        <li class=""><span class="lab">C</span><span>0, −1, 3, −5</span></li>
+        <li class="correct"><span class="lab">D</span><span>−5, −1, 0, 3</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>On the number line, more-negative is smaller. Ascending: −5 &lt; −1 &lt; 0 &lt; 3, i.e. (−5, −1, 0, 3), option (D). (A) puts −1 before −5 wrongly; (B) and (C) are descending or scrambled.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">Evaluate (−3) × [(−4) + (+9)].</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+15</span></li>
+        <li class=""><span class="lab">B</span><span>+39</span></li>
+        <li class="correct"><span class="lab">C</span><span>−15</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>−39</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bracket: (−4) + (+9) = +5. Then (−3) × (+5) = −15 (different signs → negative). The trap +15 forgets the sign; −39 mis-distributes (−3)(−4) and (−3)(9) with a sign slip.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">The expression (−a) where a = −11 equals:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>−11</span></li>
+        <li class=""><span class="lab">B</span><span>0</span></li>
+        <li class="correct"><span class="lab">C</span><span>+11</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>−22</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>−a means the opposite of a. With a = −11, −a = −(−11) = +11. The trap −11 forgets to take the opposite (just copies a).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">Evaluate (−2)³ × (−1)².</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>−8</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>+8</span></li>
+        <li class=""><span class="lab">C</span><span>+16</span></li>
+        <li class=""><span class="lab">D</span><span>−16</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(−2)³ = (−2)(−2)(−2) = −8 (odd power of a negative). (−1)² = +1. Product = (−8) × (+1) = −8. The trap +8 wrongly makes the cube positive.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">Two integers have a sum of −3 and a product of −18. The integers are:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>−6 and 3</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>6 and −3</span></li>
+        <li class=""><span class="lab">C</span><span>−9 and 6</span></li>
+        <li class=""><span class="lab">D</span><span>−2 and −1</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Need sum −3, product −18. Test −6 and 3: −6 + 3 = −3 ✓ and (−6) × 3 = −18 ✓. (Option (B) 6 + (−3) = 3, not −3; (C) sums to −3 but product = −54; (D) product = +2.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">Evaluate (−7) − 4 × (−3) + (−5).</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>36</span></li>
+        <li class=""><span class="lab">B</span><span>−24</span></li>
+        <li class=""><span class="lab">C</span><span>30</span></li>
+        <li class="correct"><span class="lab">D</span><span>0</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Multiplication first: 4 × (−3) = −12, so the expression is (−7) − (−12) + (−5) = −7 + 12 − 5 = 0. The trap 36 ignores precedence; −24 mis-signs the −(−12) term.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">On a number line, you start at +2, move 3 units left, then 6 units left, then 4 units right. You land at:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>−1</span></li>
+        <li class="correct"><span class="lab">B</span><span>−3</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>+1</span></li>
+        <li class=""><span class="lab">D</span><span>+15</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Start +2, left 3: 2 + (−3) = −1; left 6: −1 + (−6) = −7; right 4: −7 + 4 = −3. The trap −1 stops after the first move; +15 adds all magnitudes.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">Which equals (−9) − (−4) − (+2)?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>−15</span></li>
+        <li class="correct"><span class="lab">B</span><span>−7</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>−3</span></li>
+        <li class=""><span class="lab">D</span><span>+7</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(−9) − (−4) − (+2) = −9 + 4 − 2 = −7. The trap −15 treats −(−4) as −4 and −(+2) wrongly; −3 mis-signs.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">The product of an EVEN number of negative integers (all non-zero) is always:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>negative</span></li>
+        <li class="correct"><span class="lab">B</span><span>zero</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>positive</span></li>
+        <li class=""><span class="lab">D</span><span>equal to the number of factors</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An EVEN number of negative factors pairs off completely (each (−)(−) = +), so the product is always POSITIVE. None of the factors is zero, so it cannot be zero. "Positive" is option (B).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">Evaluate [(−6) + (+2)] × [(−3) − (−1)].</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>+8</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>−8</span></li>
+        <li class=""><span class="lab">C</span><span>−12</span></li>
+        <li class=""><span class="lab">D</span><span>+12</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>First bracket: (−6) + (+2) = −4. Second bracket: (−3) − (−1) = −3 + 1 = −2. Product: (−4) × (−2) = +8 (two negatives → positive). The trap −8 forgets the sign rule; −12 mis-handles the second bracket. --- *Solutions complete: 60 / 60.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

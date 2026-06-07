@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Number Play — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Number Play<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">In the "taller children in front" game, each child calls out how many TALLER children stand ahead of them in the line. Which of these numbers can the FIRST child in the line never say anything but?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the height of the tallest child</span></li>
+        <li class=""><span class="lab">B</span><span>the number of children behind them</span></li>
+        <li class=""><span class="lab">C</span><span>any number from 0 upward</span></li>
+        <li class="correct"><span class="lab">D</span><span>0</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The first child in the line has nobody standing ahead of them, so the number of taller children in front is exactly 0 — always. (Being the "tallest" is option-A's trap: saying 0 only means no one taller is ahead, which is automatic for the front position regardless of height.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">A line of 5 children plays the "taller in front" game. Which of these called-out sequences (front to back) is IMPOSSIBLE?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0, 1, 2, 3, 4</span></li>
+        <li class="correct"><span class="lab">B</span><span>0, 1, 2, 3, 5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>0, 0, 0, 0, 0</span></li>
+        <li class=""><span class="lab">D</span><span>0, 1, 0, 2, 1</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A child can name at most as many taller children as there are people ahead. In a line of 5, the back child has only 4 ahead, so the largest possible call is 4. "0, 1, 2, 3, 5" ends in 5 — impossible. The others obey the bound (every value ≤ number ahead).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">Five number cards, each showing an odd number, are laid down. Which total can they NEVER add up to?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>30</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>41</span></li>
+        <li class=""><span class="lab">C</span><span>25</span></li>
+        <li class=""><span class="lab">D</span><span>15</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Five odd numbers always add to an ODD total (odd count of odds → odd). 30 is even, so it can never be the sum. 41, 25 and 15 are all odd and are achievable. So the impossible total is 30.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">What is the parity of the sum 7 + 9 + 11 + 13 + 15 + 17 (six odd numbers)?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>it depends on the actual values</span></li>
+        <li class=""><span class="lab">B</span><span>odd</span></li>
+        <li class="correct"><span class="lab">C</span><span>even</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>neither even nor odd</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Six odd numbers is an EVEN count of odds, so the sum is even. (Actual sum 7+9+11+13+15+17 = 72, even.) Parity is fixed by the count, not the values — so "it depends" is the trap.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">The Virahāṅka–Fibonacci sequence begins 1, 2, 3, 5, 8, 13, 21, … . What is the very next term after 21?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>33</span></li>
+        <li class=""><span class="lab">B</span><span>42</span></li>
+        <li class="correct"><span class="lab">C</span><span>34</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>29</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Each term is the sum of the two before: after …, 13, 21 the next is 13 + 21 = 34. (Adding a constant like +12 to get 33 is the "fixed gap" misconception.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">In a cryptarithm, T + T + T = UT, where UT is a two-digit number whose units digit equals T. What digit is T?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>9</span></li>
+        <li class=""><span class="lab">B</span><span>0</span></li>
+        <li class=""><span class="lab">C</span><span>2</span></li>
+        <li class="correct"><span class="lab">D</span><span>5</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>T + T + T = 3T must be a two-digit number ending in T. Try T = 5: 3×5 = 15, ends in 5 = T, with U = 1. ✓ T = 2 gives 6 (one digit, no U); larger T overshoots the ending-in-T condition. So T = 5.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">A 3×3 grid is filled with the digits 1 to 9, each used exactly once. What is the SMALLEST sum any single row can possibly have?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>24</span></li>
+        <li class="correct"><span class="lab">B</span><span>6</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>1</span></li>
+        <li class=""><span class="lab">D</span><span>15</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The smallest a row can be is the three smallest distinct digits: 1 + 2 + 3 = 6. (1 would need a single cell, not a row sum — that's the trap.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">In a 3×3 grid filled with 1–9 (no repeats), the three row sums are 13, 17 and one unknown value. What is the third row sum?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>15</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>16</span></li>
+        <li class=""><span class="lab">C</span><span>30</span></li>
+        <li class=""><span class="lab">D</span><span>14</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The three row sums always total 1+2+…+9 = 45 (the 45-invariant). So the third = 45 − 13 − 17 = 15.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">Ahaan claims he wrote down 7 whole numbers that add to an EVEN total, and that exactly 3 of them are odd. Is this possible?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Yes, if the even numbers are large enough</span></li>
+        <li class="correct"><span class="lab">B</span><span>No — an odd count of odd numbers makes the total odd</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Yes, if one of the numbers is zero</span></li>
+        <li class=""><span class="lab">D</span><span>Only if all 7 numbers are odd</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Exactly 3 odd numbers is an ODD count of odds, which forces an ODD total. An odd total can never be even, so it is impossible — no matter how large the even numbers are. Answer: No.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">How many different rhythms of exactly 4 beats can be made using short (1-beat) and long (2-beat) syllables?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4</span></li>
+        <li class=""><span class="lab">B</span><span>6</span></li>
+        <li class=""><span class="lab">C</span><span>8</span></li>
+        <li class="correct"><span class="lab">D</span><span>5</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rhythm counts follow 1, 2, 3, 5, … (each the sum of the previous two). For 1 beat: 1 way; 2 beats: 2; 3 beats: 3; 4 beats: 3 + 2 = 5. So 5 rhythms.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">The sum of three distinct digits chosen from 1–9 is 24. Which three digits must they be?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>7, 8, 9</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>8, 9, 6</span></li>
+        <li class=""><span class="lab">C</span><span>9, 9, 6</span></li>
+        <li class=""><span class="lab">D</span><span>6, 8, 7</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Three distinct digits from 1–9 summing to 24 must be the three largest, 7 + 8 + 9 = 24 (the maximum). 8+9+6 = 23 and 6+8+7 = 21 fall short; 9,9,6 repeats a digit. So 7, 8, 9.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">Which of the following sums is ODD?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the sum of four odd numbers</span></li>
+        <li class=""><span class="lab">B</span><span>the sum of the first 10 even numbers</span></li>
+        <li class="correct"><span class="lab">C</span><span>the sum of seven odd numbers</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the sum of three even numbers and two odd numbers</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Parity of each: four odds → even; first 10 evens → even; three evens + two odds → even (two odds make even); seven odds → ODD (odd count of odds). So the odd one is "the sum of seven odd numbers."</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">In the Virahāṅka–Fibonacci sequence 1, 1, 2, 3, 5, 8, 13, … , what is the 9th term?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>21</span></li>
+        <li class=""><span class="lab">B</span><span>55</span></li>
+        <li class=""><span class="lab">C</span><span>13</span></li>
+        <li class="correct"><span class="lab">D</span><span>34</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>1, 1, 2, 3, 5, 8, 13, 21, 34 — the 9th term is 34. (21 is the 8th — an off-by-one trap.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">A 3×3 grid is to be filled with 1–9 (no repeats). One row is required to sum to 26. Why is this impossible?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>26 is even and rows must be odd</span></li>
+        <li class="correct"><span class="lab">B</span><span>The greatest possible row sum is 7 + 8 + 9 = 24</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>26 is not divisible by 3</span></li>
+        <li class=""><span class="lab">D</span><span>Only the middle row can reach 26</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The largest a row of three distinct digits from 1–9 can reach is 7 + 8 + 9 = 24. Since 26 &gt; 24, no row can sum to 26. (Divisibility by 3 is irrelevant here.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">Two odd numbers are written as 2m + 1 and 2n + 1. Their sum equals 2(m + n + 1). What does this PROVE?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>odd + odd is sometimes even</span></li>
+        <li class=""><span class="lab">B</span><span>the sum depends on m and n</span></li>
+        <li class="correct"><span class="lab">C</span><span>odd + odd is always even</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>odd + odd is always odd</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(2m+1) + (2n+1) = 2m + 2n + 2 = 2(m + n + 1), a multiple of 2 — hence even — for ALL whole m, n. This is a general proof that odd + odd is ALWAYS even (not just in examples).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">In the cryptarithm T + T + T = UT (units digit of the answer equals T), what is the digit U?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>1</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>2</span></li>
+        <li class=""><span class="lab">C</span><span>3</span></li>
+        <li class=""><span class="lab">D</span><span>5</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>From Q6, 5 + 5 + 5 = 15, so UT = 15: the tens digit U = 1.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">Which list of numbers follows the Virahāṅka–Fibonacci RULE (each term is the sum of the previous two), starting from 4 and 7?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>4, 7, 11, 18, 29</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>4, 7, 10, 13, 16</span></li>
+        <li class=""><span class="lab">C</span><span>4, 7, 28, 196</span></li>
+        <li class=""><span class="lab">D</span><span>4, 7, 11, 19, 30</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Apply "add the previous two" from 4, 7: 4+7 = 11, 7+11 = 18, 11+18 = 29 → 4, 7, 11, 18, 29. (Option B adds a constant 3; D mis-adds 11+8.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">A child in the "taller in front" game says "3". What does this tell you for certain?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the child is the third tallest</span></li>
+        <li class=""><span class="lab">B</span><span>there are exactly 3 children behind this child</span></li>
+        <li class=""><span class="lab">C</span><span>the child is 3rd in line</span></li>
+        <li class="correct"><span class="lab">D</span><span>exactly 3 taller children stand ahead of this child</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The number a child calls is, by the rule of the game, exactly how many TALLER children stand ahead of them — here, 3. It says nothing certain about their rank, position in line, or how many are behind.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">Each consecutive pair of terms in 1, 1, 2, 3, 5, 8, 13, 21, … has a ratio. As we go further along, these ratios get closer and closer to which value?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>exactly 2</span></li>
+        <li class=""><span class="lab">B</span><span>exactly 1.5</span></li>
+        <li class="correct"><span class="lab">C</span><span>about 1.618</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>about 3.14</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Ratios of consecutive terms (2/1, 3/2, 5/3, 8/5, 13/8, …) close in on the golden ratio φ ≈ 1.618. (Not 2, 1.5, or π ≈ 3.14.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">In the cryptarithm AB + BA = 132, where A and B are single digits, what is A + B?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>11</span></li>
+        <li class="correct"><span class="lab">B</span><span>12</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>6</span></li>
+        <li class=""><span class="lab">D</span><span>13</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>AB + BA = (10A + B) + (10B + A) = 11A + 11B = 11(A + B) = 132 → A + B = 132 ÷ 11 = 12.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">Kishor wants to pick some odd cards that add to 30. Which number of odd cards CAN give a total of 30?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>4</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>3</span></li>
+        <li class=""><span class="lab">C</span><span>5</span></li>
+        <li class=""><span class="lab">D</span><span>7</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An EVEN count of odd cards gives an even sum; an odd count gives odd. 30 is even, so the count must be even — among the options only 4 is even. (4 odds, e.g. 3+5+9+13 = 30. ✓)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">Using the identity 1 + 1 + 2 + 3 + 5 + … + Fₙ = Fₙ₊₂ − 1, find 1 + 1 + 2 + 3 + 5 + 8 + 13 + 21.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>53</span></li>
+        <li class="correct"><span class="lab">B</span><span>54</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>55</span></li>
+        <li class=""><span class="lab">D</span><span>88</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Add directly: 1+1 = 2, +2 = 4, +3 = 7, +5 = 12, +8 = 20, +13 = 33, +21 = 54. (The identity gives F₁₀ − 1 = 55 − 1 = 54 too — choosing 55 forgets the "−1".)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">A 3×3 grid is filled with 1–9 (no repeats). What is the sum of ALL three row sums added together?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>36</span></li>
+        <li class=""><span class="lab">B</span><span>40</span></li>
+        <li class=""><span class="lab">C</span><span>30</span></li>
+        <li class="correct"><span class="lab">D</span><span>45</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The nine entries are 1–9 once each, totalling 45; the three row sums partition all nine cells, so they add to 45 (the 45-invariant) regardless of arrangement.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">In the "taller children in front" game with several children, which statement is ALWAYS true?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>someone always says a number bigger than 0</span></li>
+        <li class=""><span class="lab">B</span><span>the called-out numbers are always in increasing order</span></li>
+        <li class="correct"><span class="lab">C</span><span>the first child always says 0</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>every child says a different number</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The front child has no one ahead, so they always call 0 — always true. The numbers need not increase, need not all differ, and no one is forced to exceed 0 (e.g. everyone in increasing-height order calls 0).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">A two-digit number is a "palindrome" if reading it left-to-right gives the same as right-to-left (like 44 or 77). How many two-digit palindromes are there?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>10</span></li>
+        <li class=""><span class="lab">B</span><span>18</span></li>
+        <li class="correct"><span class="lab">C</span><span>9</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>11</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Two-digit palindromes have equal digits: 11, 22, 33, 44, 55, 66, 77, 88, 99 — that's 9. (10 wrongly counts 00; 11/18 over-count.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">Which of these statements about parity is the only one that is FALSE?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>even + even = even</span></li>
+        <li class=""><span class="lab">B</span><span>odd + odd = even</span></li>
+        <li class=""><span class="lab">C</span><span>even + odd = odd</span></li>
+        <li class="correct"><span class="lab">D</span><span>odd + odd = odd</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>even+even = even ✓, odd+odd = even ✓, even+odd = odd ✓ are all true. "odd + odd = odd" is FALSE (two odds give an even). So the false one is (D).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">The Virahāṅka–Fibonacci sequence 1, 2, 3, 5, 8, … . What is the sum of its 6th and 7th terms (counting 1 as the 1st)?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>34</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>21</span></li>
+        <li class=""><span class="lab">C</span><span>13</span></li>
+        <li class=""><span class="lab">D</span><span>55</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sequence 1, 2, 3, 5, 8, 13, 21: 6th term = 13, 7th term = 21, sum = 13 + 21 = 34. (This sum is also the 8th term.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">In a 3×3 grid of 1–9 (no repeats), one circled row sum is given as 4. Why is the grid impossible?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4 is even</span></li>
+        <li class="correct"><span class="lab">B</span><span>the least sum of three distinct digits from 1–9 is 6</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the row repeats a digit</span></li>
+        <li class=""><span class="lab">D</span><span>4 is not a multiple of 3</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The smallest possible sum of three distinct digits from 1–9 is 1 + 2 + 3 = 6, so a row can never sum to 4. (Being even or not a multiple of 3 is not the reason.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">The number 121 is a palindrome. What is the NEXT palindrome larger than 121?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>122</span></li>
+        <li class=""><span class="lab">B</span><span>211</span></li>
+        <li class="correct"><span class="lab">C</span><span>131</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>212</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Palindromes just above 121: 122 isn't a palindrome (221 reversed), but 131 reads the same both ways and is the next one larger than 121. (211 reverses to 112; 212 is larger than 131.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">Three consecutive Virahāṅka–Fibonacci terms are x, y and 21, where x + y = 21. If y = 13, what is x?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5</span></li>
+        <li class="correct"><span class="lab">B</span><span>8</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>9</span></li>
+        <li class=""><span class="lab">D</span><span>7</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Consecutive terms satisfy x + y = (next term) = 21. With y = 13, x = 21 − 13 = 8. (Indeed …, 8, 13, 21, … is the Fibonacci run.)</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">A digit T satisfies T + T = a two-digit number whose tens digit is 1. What is the smallest such T?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>6</span></li>
+        <li class=""><span class="lab">B</span><span>7</span></li>
+        <li class=""><span class="lab">C</span><span>4</span></li>
+        <li class="correct"><span class="lab">D</span><span>5</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>2T must be a two-digit number with tens digit 1, i.e. 10 ≤ 2T ≤ 19. The smallest T with 2T ≥ 10 is T = 5 (2×5 = 10). (T = 4 gives 8, only one digit.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">In a line of children playing the "taller in front" game, the last (back) child says "0". What does this mean?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>no taller child stands ahead of the back child</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the line has only one child</span></li>
+        <li class=""><span class="lab">C</span><span>the back child is the shortest</span></li>
+        <li class=""><span class="lab">D</span><span>the back child is shorter than everyone ahead</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Calling "0" always means no taller child stands ahead — that is its exact meaning for any position, including the back. It does NOT force the line to have one child or make that child the shortest (others ahead could be shorter).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">Which of the following can be the sum of FIVE consecutive whole numbers?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>32</span></li>
+        <li class=""><span class="lab">B</span><span>36</span></li>
+        <li class=""><span class="lab">C</span><span>38</span></li>
+        <li class="correct"><span class="lab">D</span><span>30</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Five consecutive whole numbers n, …, n+4 sum to 5n + 10 = 5(n + 2), a multiple of 5. Among the options only 30 is a multiple of 5 (30 = 4+5+6+7+8). 32, 36, 38 are impossible.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">In the cryptarithm 1A + A1 = 33 (A is a single digit), what is A?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1</span></li>
+        <li class="correct"><span class="lab">B</span><span>2</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>3</span></li>
+        <li class=""><span class="lab">D</span><span>0</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>1A + A1 = (10 + A) + (10A + 1) = 11 + 11A = 33 → 11A = 22 → A = 2. Check: 12 + 21 = 33. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">How many different rhythms of exactly 5 beats can be made from short (1-beat) and long (2-beat) syllables?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5</span></li>
+        <li class=""><span class="lab">B</span><span>13</span></li>
+        <li class="correct"><span class="lab">C</span><span>8</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>21</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rhythm counts: 1, 2, 3, 5, 8 for 1, 2, 3, 4, 5 beats. So 5 beats give 8 rhythms (5 + 3 from the recurrence). (13 is for 6 beats.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">A sum of several odd numbers turned out to be even. Which is the only possible number of odd numbers below?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>6</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>5</span></li>
+        <li class=""><span class="lab">C</span><span>3</span></li>
+        <li class=""><span class="lab">D</span><span>1</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A sum of odds is even only when the COUNT of odds is even. Among the options only 6 is even, so 6 odd numbers can sum to even. (5, 3, 1 are odd counts → odd total.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">The product (not sum) of two odd numbers is always:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>odd</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>even</span></li>
+        <li class=""><span class="lab">C</span><span>a multiple of 4</span></li>
+        <li class=""><span class="lab">D</span><span>sometimes even, sometimes odd</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Odd × odd = odd: writing them 2m+1 and 2n+1, the product is 4mn + 2m + 2n + 1 = 2(2mn + m + n) + 1, which is one more than an even number — odd. (Multiple of 4 fails, e.g. 3×5 = 15.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">In a 3×3 grid filled with 1–9, the first two columns sum to 15 and 18. What does the third column sum to?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>14</span></li>
+        <li class=""><span class="lab">B</span><span>11</span></li>
+        <li class="correct"><span class="lab">C</span><span>12</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>13</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The three column sums also total 45 (every cell counted once). So the third column = 45 − 15 − 18 = 12.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">The first child in a "taller in front" line of 4 says "0". The numbers called are 0, a, b, c. What is the GREATEST value c (the back child) could possibly say?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4</span></li>
+        <li class="correct"><span class="lab">B</span><span>3</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>2</span></li>
+        <li class=""><span class="lab">D</span><span>1</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In a line of 4, the back child has 3 people ahead, so at most 3 of them can be taller — the greatest value c can call is 3. (4 would need 4 children ahead, but only 3 exist.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">Which number is divisible by 9?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>343</span></li>
+        <li class=""><span class="lab">B</span><span>512</span></li>
+        <li class=""><span class="lab">C</span><span>700</span></li>
+        <li class="correct"><span class="lab">D</span><span>234</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A number is divisible by 9 when its digit sum is. 2+3+4 = 9 ✓ (234). 3+4+3 = 10, 5+1+2 = 8, 7+0+0 = 7 — none divisible by 9. So 234.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">Two consecutive terms of a Virahāṅka–Fibonacci-type sequence are 19 and 31. What was the term just BEFORE the 19?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>12</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>11</span></li>
+        <li class=""><span class="lab">C</span><span>13</span></li>
+        <li class=""><span class="lab">D</span><span>50</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In an "add the previous two" sequence, the term before 19 plus 19 gives the next term 31, so it is 31 − 19 = 12. Check: 12, 19, 31 (12 + 19 = 31). ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">A teacher says: "I checked that 3 + 5 = 8 is even, 7 + 9 = 16 is even, and 11 + 13 = 24 is even, so odd + odd is always even." What is the status of her reasoning?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>It is a complete proof because she tried several cases</span></li>
+        <li class=""><span class="lab">B</span><span>Examples can prove a statement if there are at least three</span></li>
+        <li class=""><span class="lab">C</span><span>The conclusion is false</span></li>
+        <li class="correct"><span class="lab">D</span><span>The conclusion is true but examples alone do not prove it</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Checking three examples cannot PROVE a universal claim — examples can only suggest a pattern or disprove it with a counterexample. The conclusion happens to be true (provable by 2m+1 + 2n+1 = even), but her reasoning by examples is not a proof.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">Starting a Virahāṅka–Fibonacci-type rule with 2 and 5 gives 2, 5, 7, 12, 19, … . What is the term after 19?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>24</span></li>
+        <li class=""><span class="lab">B</span><span>26</span></li>
+        <li class="correct"><span class="lab">C</span><span>31</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>38</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Continue 2, 5, 7, 12, 19 by adding the last two: 12 + 19 = 31. (Same recurrence, different start.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">In a cryptarithm each DIFFERENT letter must stand for a DIFFERENT digit. In "AB + BA = 132", why can A and B not both equal 6?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>because 66 + 66 = 132 and that would be allowed</span></li>
+        <li class="correct"><span class="lab">B</span><span>because different letters must be different digits</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>because 6 is not a valid digit</span></li>
+        <li class=""><span class="lab">D</span><span>because A must always be larger than B</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In a cryptarithm, different LETTERS must stand for different digits; A and B are different letters, so they cannot both be 6. (Also 66 + 66 = 132 numerically, but the rule, not the arithmetic, forbids it.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">How many odd numbers are there from 1 to 20 inclusive, and is their SUM odd or even?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>10 odd numbers, sum even</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>10 odd numbers, sum odd</span></li>
+        <li class=""><span class="lab">C</span><span>9 odd numbers, sum odd</span></li>
+        <li class=""><span class="lab">D</span><span>11 odd numbers, sum even</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Odd numbers from 1 to 20: 1, 3, 5, …, 19 — that's 10 of them. Ten is an EVEN count of odds, so their sum is even (in fact 100). So: 10 odd numbers, sum even.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">A 3×3 grid is filled with 1–9 (no repeats). The top row sums to 6 and the bottom row sums to 24. What must the middle row sum to?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>14</span></li>
+        <li class=""><span class="lab">B</span><span>16</span></li>
+        <li class="correct"><span class="lab">C</span><span>15</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>12</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Row sums total 45. With top = 6 and bottom = 24, the middle = 45 − 6 − 24 = 15.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">The Virahāṅka–Fibonacci sequence (1, 2, 3, 5, 8, 13, …) has terms that are alternately odd and even in the pattern O, E, O, O, E, O, O, E, … . What is the parity of the 8th term (counting from 1 as the 1st)?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>odd</span></li>
+        <li class="correct"><span class="lab">B</span><span>even</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>it alternates each time</span></li>
+        <li class=""><span class="lab">D</span><span>cannot be determined</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Terms 1, 2, 3, 5, 8, 13, 21, 34: the 8th term is 34, which is even. (The parity pattern O, E, O, O, E, O, O, E confirms the 8th slot is E.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">Which group of three distinct digits from 1–9 has a sum that is NOT possible as a single row of a 3×3 grid of 1–9?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1, 2, 3</span></li>
+        <li class=""><span class="lab">B</span><span>7, 8, 9</span></li>
+        <li class=""><span class="lab">C</span><span>4, 5, 6</span></li>
+        <li class="correct"><span class="lab">D</span><span>1, 2, 2</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A valid row uses three DISTINCT digits. "1, 2, 2" repeats 2, so it cannot be a row of a 1–9 grid (every digit appears once). 1+2+3 = 6, 7+8+9 = 24, 4+5+6 = 15 are all legal sums; 1,2,2 is the impossible set.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">When a whole number N is doubled, the result always ends in an EVEN digit. Which of these can therefore NEVER be the units digit of 2N?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>7</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>4</span></li>
+        <li class=""><span class="lab">C</span><span>0</span></li>
+        <li class=""><span class="lab">D</span><span>8</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Doubling any whole number gives an even result, so 2N always ends in an even digit (0, 2, 4, 6 or 8). 7 is odd, so it can NEVER be the units digit of 2N. (4, 0, 8 are all even and possible.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">In the cryptarithm AA + A = BA, where A and B are single non-zero digits and the answer's units digit is A, what is A?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>9</span></li>
+        <li class=""><span class="lab">B</span><span>5</span></li>
+        <li class="correct"><span class="lab">C</span><span>impossible for any such A</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>7</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>AA + A = 11A + A = 12A. For the answer to end in A we need 12A ≡ A (mod 10), i.e. 2A ≡ 0 (mod 10), so A = 0 or 5; A is non-zero, so A = 5 → 12×5 = 60, which ends in 0, not 5. No non-zero digit works, so it is impossible.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">The sum 2 + 4 + 6 + … + 20 (the first ten even numbers) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>100</span></li>
+        <li class=""><span class="lab">B</span><span>90</span></li>
+        <li class=""><span class="lab">C</span><span>120</span></li>
+        <li class="correct"><span class="lab">D</span><span>110</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>2 + 4 + … + 20 = 2(1 + 2 + … + 10) = 2 × 55 = 110. (90 forgets the doubling; 100 is the count-of-odds sum from Q45.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">A palindrome reads the same forwards and backwards. Which of these three-digit numbers is a palindrome?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>120</span></li>
+        <li class="correct"><span class="lab">B</span><span>252</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>102</span></li>
+        <li class=""><span class="lab">D</span><span>210</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A palindrome reads the same reversed. 252 reversed is 252 ✓. 120→021, 102→201, 210→012 — none match. So 252.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">Reading the "taller in front" sequence 0, 1, 1, 3 for a line of 4 children: which statement MUST be false?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the 2nd child has 1 taller child ahead</span></li>
+        <li class=""><span class="lab">B</span><span>the 4th child has 3 taller children ahead</span></li>
+        <li class="correct"><span class="lab">C</span><span>the 1st child says a number larger than 0</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the 3rd child has 1 taller child ahead</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In the sequence 0, 1, 1, 3 the FIRST child calls 0 (nobody ahead), so "the 1st child says a number larger than 0" MUST be false. The other statements correctly read off the sequence (2nd→1, 4th→3, 3rd→1), all of which are possible.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">The 10th and 11th terms of 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, … are 55 and 89. What is the 12th term?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>121</span></li>
+        <li class=""><span class="lab">B</span><span>134</span></li>
+        <li class=""><span class="lab">C</span><span>110</span></li>
+        <li class="correct"><span class="lab">D</span><span>144</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>12th term = 10th + 11th = 55 + 89 = 144. (Adding wrong pairs gives the traps 134/110/121.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">Kishor adds an EVEN count of odd numbers. The total is guaranteed to be:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>odd</span></li>
+        <li class="correct"><span class="lab">B</span><span>even</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a multiple of 4</span></li>
+        <li class=""><span class="lab">D</span><span>sometimes odd, sometimes even</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An EVEN count of odd numbers always sums to an even number (the odds pair up). It need not be a multiple of 4 (e.g. 3 + 3 = 6). So the total is guaranteed even.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">In the cryptarithm ABC × 1 = CBA, where ABC is a three-digit number, which kind of number must ABC be?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a palindrome</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a multiple of 9</span></li>
+        <li class=""><span class="lab">C</span><span>an even number</span></li>
+        <li class=""><span class="lab">D</span><span>a multiple of 11 only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>ABC × 1 = ABC, and the puzzle sets this equal to CBA. ABC = CBA means the number reads the same reversed — it must be a palindrome. (It need not be even, a multiple of 9, or a multiple of 11.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">A number when written and then reversed gives the same value, and it lies between 100 and 200. How many such numbers are there?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>11</span></li>
+        <li class=""><span class="lab">B</span><span>9</span></li>
+        <li class="correct"><span class="lab">C</span><span>10</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>20</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A number between 100 and 200 reading the same reversed has the form 1X1 (first and last digit 1). X can be 0–9: 101, 111, …, 191 — that's 10 numbers.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">Six children play "taller in front" and call out 0, 1, 2, 1, 4, 0. Which child's number is DEFINITELY impossible given that only 6 children are in the line?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the child who said 4</span></li>
+        <li class=""><span class="lab">B</span><span>the 1st child who said 0</span></li>
+        <li class=""><span class="lab">C</span><span>the last child who said 0</span></li>
+        <li class="correct"><span class="lab">D</span><span>none — all six numbers are individually possible</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Each value must not exceed the number of children ahead: positions 1–6 have 0,1,2,3,4,5 ahead. The calls 0,1,2,1,4,0 satisfy 0≤0, 1≤1, 2≤2, 1≤3, 4≤4, 0≤5 — every value is individually possible. So none is definitely impossible.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">Using the rule that the sum of the first n Virahāṅka–Fibonacci terms (1, 1, 2, 3, 5, 8) equals Fₙ₊₂ − 1, find 1 + 1 + 2 + 3 + 5.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>12</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>11</span></li>
+        <li class=""><span class="lab">C</span><span>13</span></li>
+        <li class=""><span class="lab">D</span><span>15</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Add directly: 1 + 1 + 2 + 3 + 5 = 12. (The identity gives F₇ − 1 = 13 − 1 = 12 too — choosing 13 forgets the "−1".)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">Five distinct odd numbers are added. Without knowing the numbers, which of these can you be SURE the total is NOT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>35</span></li>
+        <li class="correct"><span class="lab">B</span><span>100</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>49</span></li>
+        <li class=""><span class="lab">D</span><span>63</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Five distinct odd numbers form an ODD count of odds, so their sum is always ODD. 100 is even, so the total can never be 100. (35, 49, 63 are all odd and achievable.) --- *Solutions complete: 60 / 60.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

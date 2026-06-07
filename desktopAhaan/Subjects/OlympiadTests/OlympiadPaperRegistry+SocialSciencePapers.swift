@@ -18,7 +18,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "SocialScience_Ssch01_GeographicalDiversityOfIndia_Solutions.md",
             questionPaperHTML: "SocialScience_Ssch01_GeographicalDiversityOfIndia.html",
             questionPaperPDF: "SocialScience_Ssch01_GeographicalDiversityOfIndia.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "SocialScience_Ssch01_GeographicalDiversityOfIndia_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_socialscience_ssch02",
@@ -31,7 +32,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "SocialScience_Ssch02_UnderstandingTheWeather_Solutions.md",
             questionPaperHTML: "SocialScience_Ssch02_UnderstandingTheWeather.html",
             questionPaperPDF: "SocialScience_Ssch02_UnderstandingTheWeather.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "SocialScience_Ssch02_UnderstandingTheWeather_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_socialscience_ssch03",
@@ -44,7 +46,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "SocialScience_Ssch03_ClimatesOfIndia_Solutions.md",
             questionPaperHTML: "SocialScience_Ssch03_ClimatesOfIndia.html",
             questionPaperPDF: "SocialScience_Ssch03_ClimatesOfIndia.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "SocialScience_Ssch03_ClimatesOfIndia_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_socialscience_ssch04",
@@ -57,7 +60,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "SocialScience_Ssch04_NewBeginningsCitiesAndStates_Solutions.md",
             questionPaperHTML: "SocialScience_Ssch04_NewBeginningsCitiesAndStates.html",
             questionPaperPDF: "SocialScience_Ssch04_NewBeginningsCitiesAndStates.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "SocialScience_Ssch04_NewBeginningsCitiesAndStates_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_socialscience_ssch05",
@@ -70,7 +74,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "SocialScience_Ssch05_TheRiseOfEmpires_Solutions.md",
             questionPaperHTML: "SocialScience_Ssch05_TheRiseOfEmpires.html",
             questionPaperPDF: "SocialScience_Ssch05_TheRiseOfEmpires.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "SocialScience_Ssch05_TheRiseOfEmpires_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_socialscience_ssch06",
@@ -83,7 +88,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "SocialScience_Ssch06_TheAgeOfReorganisation_Solutions.md",
             questionPaperHTML: "SocialScience_Ssch06_TheAgeOfReorganisation.html",
             questionPaperPDF: "SocialScience_Ssch06_TheAgeOfReorganisation.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "SocialScience_Ssch06_TheAgeOfReorganisation_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_socialscience_ssch07",
@@ -96,7 +102,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "SocialScience_Ssch07_TheGuptaEra_Solutions.md",
             questionPaperHTML: "SocialScience_Ssch07_TheGuptaEra.html",
             questionPaperPDF: "SocialScience_Ssch07_TheGuptaEra.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "SocialScience_Ssch07_TheGuptaEra_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_socialscience_ssch08",
@@ -109,7 +116,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "SocialScience_Ssch08_HowTheLandBecomesSacred_Solutions.md",
             questionPaperHTML: "SocialScience_Ssch08_HowTheLandBecomesSacred.html",
             questionPaperPDF: "SocialScience_Ssch08_HowTheLandBecomesSacred.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "SocialScience_Ssch08_HowTheLandBecomesSacred_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_socialscience_ssch09",
@@ -122,7 +130,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "SocialScience_Ssch09_TypesOfGovernments_Solutions.md",
             questionPaperHTML: "SocialScience_Ssch09_TypesOfGovernments.html",
             questionPaperPDF: "SocialScience_Ssch09_TypesOfGovernments.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "SocialScience_Ssch09_TypesOfGovernments_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_socialscience_ssch10",
@@ -135,7 +144,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "SocialScience_Ssch10_TheConstitutionOfIndia_Solutions.md",
             questionPaperHTML: "SocialScience_Ssch10_TheConstitutionOfIndia.html",
             questionPaperPDF: "SocialScience_Ssch10_TheConstitutionOfIndia.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "SocialScience_Ssch10_TheConstitutionOfIndia_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_socialscience_ssch11",
@@ -148,7 +158,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "SocialScience_Ssch11_FromBarterToMoney_Solutions.md",
             questionPaperHTML: "SocialScience_Ssch11_FromBarterToMoney.html",
             questionPaperPDF: "SocialScience_Ssch11_FromBarterToMoney.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "SocialScience_Ssch11_FromBarterToMoney_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_socialscience_ssch12",
@@ -161,7 +172,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "SocialScience_Ssch12_UnderstandingMarkets_Solutions.md",
             questionPaperHTML: "SocialScience_Ssch12_UnderstandingMarkets.html",
             questionPaperPDF: "SocialScience_Ssch12_UnderstandingMarkets.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "SocialScience_Ssch12_UnderstandingMarkets_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_socialscience_ssch13",
@@ -174,7 +186,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "SocialScience_Ssch13_TheStoryOfIndianFarming_Solutions.md",
             questionPaperHTML: "SocialScience_Ssch13_TheStoryOfIndianFarming.html",
             questionPaperPDF: "SocialScience_Ssch13_TheStoryOfIndianFarming.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "SocialScience_Ssch13_TheStoryOfIndianFarming_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_socialscience_ssch14",
@@ -187,7 +200,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "SocialScience_Ssch14_IndiaAndHerNeighbours_Solutions.md",
             questionPaperHTML: "SocialScience_Ssch14_IndiaAndHerNeighbours.html",
             questionPaperPDF: "SocialScience_Ssch14_IndiaAndHerNeighbours.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "SocialScience_Ssch14_IndiaAndHerNeighbours_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_socialscience_ssch15",
@@ -200,7 +214,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "SocialScience_Ssch15_EmpiresAndKingdoms6thTo10thCenturies_Solutions.md",
             questionPaperHTML: "SocialScience_Ssch15_EmpiresAndKingdoms6thTo10thCenturies.html",
             questionPaperPDF: "SocialScience_Ssch15_EmpiresAndKingdoms6thTo10thCenturies.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "SocialScience_Ssch15_EmpiresAndKingdoms6thTo10thCenturies_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_socialscience_ssch16",
@@ -213,7 +228,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "SocialScience_Ssch16_TurningTides11thAnd12thCenturies_Solutions.md",
             questionPaperHTML: "SocialScience_Ssch16_TurningTides11thAnd12thCenturies.html",
             questionPaperPDF: "SocialScience_Ssch16_TurningTides11thAnd12thCenturies.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "SocialScience_Ssch16_TurningTides11thAnd12thCenturies_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_socialscience_ssch17",
@@ -226,7 +242,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "SocialScience_Ssch17_IndiaAHomeToMany_Solutions.md",
             questionPaperHTML: "SocialScience_Ssch17_IndiaAHomeToMany.html",
             questionPaperPDF: "SocialScience_Ssch17_IndiaAHomeToMany.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "SocialScience_Ssch17_IndiaAHomeToMany_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_socialscience_ssch18",
@@ -239,7 +256,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "SocialScience_Ssch18_TheStateTheGovernmentAndYou_Solutions.md",
             questionPaperHTML: "SocialScience_Ssch18_TheStateTheGovernmentAndYou.html",
             questionPaperPDF: "SocialScience_Ssch18_TheStateTheGovernmentAndYou.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "SocialScience_Ssch18_TheStateTheGovernmentAndYou_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_socialscience_ssch19",
@@ -252,7 +270,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "SocialScience_Ssch19_Infrastructure_Solutions.md",
             questionPaperHTML: "SocialScience_Ssch19_Infrastructure.html",
             questionPaperPDF: "SocialScience_Ssch19_Infrastructure.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "SocialScience_Ssch19_Infrastructure_SolvedGuide.html"
         ),
         OlympiadPaper(
             id: "olympiad_socialscience_ssch20",
@@ -265,7 +284,8 @@ extension OlympiadPaperRegistry {
             solutionsMD: "SocialScience_Ssch20_BanksAndTheMagicOfFinance_Solutions.md",
             questionPaperHTML: "SocialScience_Ssch20_BanksAndTheMagicOfFinance.html",
             questionPaperPDF: "SocialScience_Ssch20_BanksAndTheMagicOfFinance.pdf",
-            suggestedTimeMinutes: 90
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "SocialScience_Ssch20_BanksAndTheMagicOfFinance_SolvedGuide.html"
         )
     ]
 }

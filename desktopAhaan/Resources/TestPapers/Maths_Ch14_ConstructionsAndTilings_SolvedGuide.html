@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Constructions And Tilings — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Constructions And Tilings<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">In a construction, a "straightedge" is used to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>measure exact lengths in centimetres</span></li>
+        <li class="correct"><span class="lab">B</span><span>draw straight lines only (it carries no markings)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>measure angles like a protractor</span></li>
+        <li class=""><span class="lab">D</span><span>swing arcs of equal radius</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A straightedge is an *unmarked* ruler — its only job is to draw straight lines. It carries no scale (so it cannot measure lengths) and is not a protractor; swinging arcs is the compass's job.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">To construct the perpendicular bisector of a segment XY, you draw arcs from X and from Y. For the construction to work, those arcs must be drawn with:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>any two different radii</span></li>
+        <li class=""><span class="lab">B</span><span>a radius exactly equal to half of XY</span></li>
+        <li class=""><span class="lab">C</span><span>a radius equal to the full length XY only</span></li>
+        <li class="correct"><span class="lab">D</span><span>the same radius from both X and Y, that radius being more than half of XY</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Both arcs must be the SAME radius (so each crossing is equidistant from X and Y), and that radius must exceed half of XY or the arcs won't reach far enough to cross. "Exactly half" makes the arcs meet only on the segment (no upper/lower crossings); different radii destroy the equidistance.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">Every point lying on the perpendicular bisector of segment AB is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>equidistant from A and B</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>closer to A than to B</span></li>
+        <li class=""><span class="lab">C</span><span>the midpoint of AB and nothing else</span></li>
+        <li class=""><span class="lab">D</span><span>always inside segment AB</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The perpendicular bisector is precisely the locus of points equidistant from A and B. The midpoint is just ONE such point; the whole line is equidistant, and points on it can lie far outside the segment.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">The perpendicular bisector construction crosses the segment XY at its midpoint AND meets it at an angle of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>45°</span></li>
+        <li class=""><span class="lab">B</span><span>60°</span></li>
+        <li class="correct"><span class="lab">C</span><span>90°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>30°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>By definition the perpendicular bisector meets the segment at a right angle, 90°, while also cutting it in half. That is exactly the "perpendicular" in the name.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">Why does the equal-arc construction land exactly on the midpoint of XY, with no measuring?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Because the compass secretly measures half the length</span></li>
+        <li class="correct"><span class="lab">B</span><span>Because each arc-crossing is the same distance from X as from Y, so the line through them is the segment's mirror line</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Because any two arcs always cross at a midpoint</span></li>
+        <li class=""><span class="lab">D</span><span>Because the straightedge is marked at its centre</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Each arc-crossing is found at equal radius from X and from Y, so it is equidistant from both endpoints — it lies on the segment's mirror line. Two such crossings fix that mirror line, which cuts XY at its midpoint. No length is ever measured; equidistance does the work.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">A regular polygon's interior angle must satisfy which condition for the polygon to tile the plane by itself?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>It must divide 360° a whole number of times</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>It must be a multiple of 90°</span></li>
+        <li class=""><span class="lab">C</span><span>It must be less than 90°</span></li>
+        <li class=""><span class="lab">D</span><span>It must be greater than 100°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>For corners to surround a point with no gap/overlap, copies of the interior angle must fill exactly 360°, i.e. 360° ÷ (interior angle) must be a whole number. Being a multiple of 90° or "small" is neither necessary nor sufficient (120° tiles though it isn't a multiple of 90°).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">Four squares meet exactly at a point in a square tiling because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>squares are the only four-sided shapes</span></li>
+        <li class=""><span class="lab">B</span><span>squares have four equal sides</span></li>
+        <li class="correct"><span class="lab">C</span><span>4 × 90° = 360°, filling the full turn with no gap or overlap</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>two squares already make 360°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A square's interior angle is 90°, and four of them give 4 × 90° = 360° — a full turn with no gap or overlap. Having four equal sides (B) is true but is not the tiling reason; two squares give only 180°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">How many equilateral triangles meet at each vertex in a triangular tiling?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>3</span></li>
+        <li class=""><span class="lab">B</span><span>4</span></li>
+        <li class=""><span class="lab">C</span><span>5</span></li>
+        <li class="correct"><span class="lab">D</span><span>6</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Each interior angle of an equilateral triangle is 60°, and 360° ÷ 60° = 6, so six triangles meet at every vertex.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">How many regular hexagons meet at each vertex when hexagons tile the plane?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2</span></li>
+        <li class="correct"><span class="lab">B</span><span>3</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>4</span></li>
+        <li class=""><span class="lab">D</span><span>6</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A regular hexagon's interior angle is 120°, and 360° ÷ 120° = 3, so three hexagons meet at each vertex (the honeycomb pattern).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">A regular pentagon has interior angle 108°. Why can't regular pentagons tile the plane by themselves?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Pentagons have an odd number of sides</span></li>
+        <li class=""><span class="lab">B</span><span>108° is too large to fit any tiling</span></li>
+        <li class="correct"><span class="lab">C</span><span>360 ÷ 108 is not a whole number, so they leave a gap or overlap at a vertex</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Pentagons are not regular polygons</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A regular pentagon's interior angle is 108°, and 360 ÷ 108 ≈ 3.33 — not a whole number. Three pentagons give 324° (a 36° gap) and four give 432° (overlap), so they cannot surround a point cleanly.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">To construct a 60° angle with compass and straightedge, you essentially build the corner of which figure?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>An equilateral triangle</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>A square</span></li>
+        <li class=""><span class="lab">C</span><span>A regular hexagon</span></li>
+        <li class=""><span class="lab">D</span><span>A right-angled isosceles triangle</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The 60° construction copies the corner of an equilateral triangle: equal-radius arcs build three equal sides, whose corners are all 60°. A square's corner is 90°, a hexagon's 120°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">Bisecting a 60° angle with only a compass and straightedge produces an angle of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>15°</span></li>
+        <li class=""><span class="lab">B</span><span>45°</span></li>
+        <li class=""><span class="lab">C</span><span>20°</span></li>
+        <li class="correct"><span class="lab">D</span><span>30°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bisecting halves the angle: 60° ÷ 2 = 30°. (Bisecting again would give 15°, the trap option A.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">A student bisects a right angle, then bisects one of the two resulting angles. The smaller of the final pieces measures:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>45°</span></li>
+        <li class=""><span class="lab">B</span><span>30°</span></li>
+        <li class="correct"><span class="lab">C</span><span>22.5°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>15°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bisect 90° → two 45° angles. Bisect one 45° → two 22.5° pieces. The smallest piece present is 22.5°. (45° is the in-between stage; 30° comes from bisecting 60°, not 90°.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">Which of these can be constructed using only a compass and straightedge?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Trisecting a general 60° angle into three 20° angles</span></li>
+        <li class="correct"><span class="lab">B</span><span>A 30° angle (by bisecting a constructed 60° angle)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>A 20° angle directly</span></li>
+        <li class=""><span class="lab">D</span><span>A 1° angle by repeated bisection</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A 30° angle is constructible — bisect a constructed 60°. Trisecting a general angle (so 60° → three 20°s) is provably impossible with these tools, so a 20° angle "directly" is out, and an exact 1° cannot be reached by halving from 60°/90° either.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">The seven pieces of a tangram are cut from a single square and rearranged into the shape of a swan. The swan's total area compared with the original square is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>larger, because the swan looks bigger</span></li>
+        <li class=""><span class="lab">B</span><span>smaller, because gaps appear</span></li>
+        <li class="correct"><span class="lab">C</span><span>exactly the same</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>it depends on how the pieces are turned</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rearranging the same seven pieces only moves them; nothing is added or removed, so the swan has exactly the same area as the original square. "Looks bigger" and "gaps appear" are perception traps.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">The deep reason rearranging tangram pieces conserves area is that:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>sliding, turning or flipping a piece changes its position but not its size</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the pieces are all triangles</span></li>
+        <li class=""><span class="lab">C</span><span>a square always has the largest area</span></li>
+        <li class=""><span class="lab">D</span><span>seven pieces always cover the same region</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sliding, turning or flipping a piece is a rigid motion: it changes position, never size. So a fixed set of pieces re-adds to the same total area no matter the arrangement.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">A regular octagon has an interior angle of 135°. Can regular octagons tile the plane on their own?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Yes, four of them meet at a vertex</span></li>
+        <li class=""><span class="lab">B</span><span>Yes, three of them meet at a vertex</span></li>
+        <li class=""><span class="lab">C</span><span>Yes, two of them meet at a vertex</span></li>
+        <li class="correct"><span class="lab">D</span><span>No, because 360 ÷ 135 is not a whole number</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A regular octagon's interior angle is 135°, and 360 ÷ 135 ≈ 2.67 — not a whole number. Two octagons give 270° (a 90° gap), three give 405° (overlap), so octagons cannot tile alone.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">At a tiling vertex, two regular octagons (135° each) meet along with one more regular polygon that fits exactly. That polygon must have an interior angle of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>45°</span></li>
+        <li class="correct"><span class="lab">B</span><span>90°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>120°</span></li>
+        <li class=""><span class="lab">D</span><span>60°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Two octagons contribute 2 × 135° = 270°. The leftover to reach a full 360° is 360° − 270° = 90°, so the third polygon's interior angle is 90°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">The polygon in the previous situation (one that fills the leftover angle beside two octagons) is a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>regular hexagon</span></li>
+        <li class=""><span class="lab">B</span><span>regular triangle</span></li>
+        <li class="correct"><span class="lab">C</span><span>square</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>regular pentagon</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A regular polygon with a 90° interior angle is a square. (This is the classic octagon–square semi-regular tiling.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">Three regular pentagons (108° each) are placed around a point. The angle still left uncovered is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>36°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>0° (they tile)</span></li>
+        <li class=""><span class="lab">C</span><span>72°</span></li>
+        <li class=""><span class="lab">D</span><span>45°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Three pentagons give 3 × 108° = 324°. The angle left uncovered is 360° − 324° = 36°. (A 0° leftover would mean they tile, which they don't.)</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">If your compass slipped so the two arcs for a perpendicular bisector had DIFFERENT radii, the line you draw would:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>still be the exact perpendicular bisector</span></li>
+        <li class="correct"><span class="lab">B</span><span>not pass through the midpoint and not be perpendicular — it would tilt and miss</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>become an angle bisector instead</span></li>
+        <li class=""><span class="lab">D</span><span>be parallel to XY</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Unequal radii destroy the equidistance: the two crossings are no longer the same distance from X and Y, so the line through them tilts, misses the midpoint, and is not perpendicular. It is neither the true perpendicular bisector nor an angle bisector.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">A "construction" in this chapter is special because the figure is exact by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>careful measuring with a ruler</span></li>
+        <li class=""><span class="lab">B</span><span>tracing over a printed shape</span></li>
+        <li class=""><span class="lab">C</span><span>using a protractor accurately</span></li>
+        <li class="correct"><span class="lab">D</span><span>geometry — equal radii and equidistance — not measurement</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A construction is *exact by geometry* — equal radii force equal distances, guaranteeing the result without any measuring. Ruler/protractor measuring (A, C) or tracing (B) would only be approximate; that is precisely what makes constructions special.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">Which statement about trisecting and bisecting angles is TRUE?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Bisecting a general angle is possible, but trisecting a general angle is impossible with these tools</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Both bisecting and trisecting a general angle are easy with compass and straightedge</span></li>
+        <li class=""><span class="lab">C</span><span>Trisecting is possible but bisecting is not</span></li>
+        <li class=""><span class="lab">D</span><span>Neither can be done without a protractor</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>With compass and straightedge any angle can be BISECTED, but trisecting a *general* angle is provably impossible (you can make 30° = half of 60°, but not 20° = a third). So only A is true.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">To get a 15° angle using only a compass and straightedge, the cleanest route is to:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>construct 60°, bisect to 30°, bisect again to 15°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>construct 45° and subtract 30°</span></li>
+        <li class=""><span class="lab">C</span><span>trisect a 45° angle</span></li>
+        <li class=""><span class="lab">D</span><span>it cannot be constructed at all</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Construct 60° (equilateral corner), bisect to 30°, bisect again to 15°. Subtracting 30° from 45° isn't a single clean construction step here, and trisecting a 45° is impossible; 15° certainly IS constructible, ruling out D.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">A regular dodecagon (12 sides) has interior angle 150°. Around a point you place one dodecagon corner. To fill the rest of the 360° with two MORE equal polygons, each of those must have interior angle:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>90°</span></li>
+        <li class=""><span class="lab">B</span><span>60°</span></li>
+        <li class=""><span class="lab">C</span><span>120°</span></li>
+        <li class="correct"><span class="lab">D</span><span>105°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>One dodecagon corner is 150°. The remaining angle is 360° − 150° = 210°, shared by two equal polygons: 210° ÷ 2 = 105° each.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">Which set of regular polygons tile the plane EACH BY ITSELF?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Triangle, square, pentagon</span></li>
+        <li class=""><span class="lab">B</span><span>Square, hexagon, octagon</span></li>
+        <li class="correct"><span class="lab">C</span><span>Triangle, square, hexagon</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Pentagon, hexagon, heptagon</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Only triangle (60°), square (90°) and hexagon (120°) have interior angles dividing 360° a whole number of times, so only this trio tiles each on its own. Pentagons (108°) and octagons (135°) do not.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">A regular polygon has interior angle 144° (a regular decagon). The number of such polygons that would meet at a tiling vertex if they tiled would be 360 ÷ 144 = 2.5. This tells you the decagon:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>tiles, with 2 meeting at a vertex</span></li>
+        <li class="correct"><span class="lab">B</span><span>cannot tile by itself, because 2.5 is not a whole number</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>tiles, with 3 meeting at a vertex</span></li>
+        <li class=""><span class="lab">D</span><span>tiles, with 2.5 meeting at a vertex</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>360 ÷ 144 = 2.5 is not a whole number, so a whole number of decagons can never surround a point — the decagon cannot tile by itself. "2.5 tiles meet" (D) is meaningless; you can't have half a tile-corner at a vertex.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">Constructing the perpendicular bisector of segment XY gives you, as a free bonus, the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>exact midpoint of XY</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>angle bisector of angle X</span></li>
+        <li class=""><span class="lab">C</span><span>a 60° angle at X</span></li>
+        <li class=""><span class="lab">D</span><span>a tiling of the plane</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The perpendicular-bisector construction cuts XY exactly in half, so it hands you the midpoint for free — no measuring. It does not produce an angle bisector at X, a 60° angle, or a tiling.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">A rectangle is cut along a diagonal into two triangles, which are then slid together into a different shape. The total area has:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>doubled</span></li>
+        <li class=""><span class="lab">B</span><span>halved</span></li>
+        <li class="correct"><span class="lab">C</span><span>not changed</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>changed by the length of the diagonal</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cutting and rearranging is rigid motion only — the two triangles are merely slid into a new outline, so the total area is unchanged (conservation of area under rearrangement). The diagonal's length has nothing to do with total area.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">To bisect a given angle, from the vertex you draw an arc cutting both arms; then from those two crossing points you swing equal arcs to meet at a point P. The ray from the vertex to P works because P is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the midpoint of the original arc only</span></li>
+        <li class=""><span class="lab">B</span><span>always 30° from each arm</span></li>
+        <li class=""><span class="lab">C</span><span>the centre of the angle's circle</span></li>
+        <li class="correct"><span class="lab">D</span><span>equidistant from both arms, so the ray splits the angle evenly</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>P is built at equal distances from the two crossing points on the arms, which makes it equidistant from both arms. A point equidistant from both arms lies on the angle's bisector, so the ray V→P splits the angle into two equal halves.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">Equilateral triangles tile the plane. If instead you used the triangles to surround a point and only FIVE met there, the angle covered would be:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>360° (they still tile)</span></li>
+        <li class="correct"><span class="lab">B</span><span>300°, leaving a 60° gap</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>240°</span></li>
+        <li class=""><span class="lab">D</span><span>320°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Five equilateral triangles give 5 × 60° = 300°, which is 60° short of a full 360°, leaving a 60° gap. (Six are needed to actually tile.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">Which is the correct first step to construct a 60° angle at the end A of a ray AB?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>From A, draw an arc crossing the ray; from that crossing, with the SAME radius, swing an arc cutting the first arc</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Place the protractor at A and mark 60°</span></li>
+        <li class=""><span class="lab">C</span><span>Measure 60 mm along the ray</span></li>
+        <li class=""><span class="lab">D</span><span>Fold the paper at A</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>With compass and straightedge you start by swinging an arc from A across the ray, then from that crossing point swing the SAME radius to cut the arc — building the equilateral corner. Protractors, measuring or folding are not construction steps.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">Squares tile the plane and so do regular hexagons. The reason hexagons need only THREE at a vertex while squares need FOUR is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>hexagons are bigger than squares</span></li>
+        <li class=""><span class="lab">B</span><span>hexagons have more sides so more must meet</span></li>
+        <li class="correct"><span class="lab">C</span><span>a hexagon's interior angle (120°) is larger than a square's (90°), so fewer fill 360°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>it is just a coincidence</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The count is 360° ÷ (interior angle). A hexagon's 120° is larger than a square's 90°, so fewer hexagons fill the 360° (three vs four). It has nothing to do with physical size or "more sides means more meet".</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">A point is constructed at equal distance from both endpoints of a segment, on the same side. Joining it to a second such point on the other side produces a line that is the segment's:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>angle bisector</span></li>
+        <li class="correct"><span class="lab">B</span><span>perpendicular bisector</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>tangent</span></li>
+        <li class=""><span class="lab">D</span><span>parallel</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Two points each equidistant from both endpoints (one on each side) lie on the segment's mirror line; joining them gives the perpendicular bisector. Equidistance from the *endpoints* (not from arms) is the perpendicular-bisector signature.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">The interior angle of a regular polygon must divide 360° evenly for a self-tiling. The largest regular polygon (most sides) that can tile by itself is therefore the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>square</span></li>
+        <li class=""><span class="lab">B</span><span>regular pentagon</span></li>
+        <li class=""><span class="lab">C</span><span>regular octagon</span></li>
+        <li class="correct"><span class="lab">D</span><span>regular hexagon</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Self-tiling needs the interior angle to divide 360° evenly. Among regular polygons that holds only for the triangle, square and hexagon; the hexagon has the most sides of these, so it is the largest self-tiler. The octagon (135°) does not divide 360°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">Tiling (tessellation) is best defined as:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>covering a region with shapes leaving no gaps and no overlaps</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>covering a region with shapes that may overlap a little</span></li>
+        <li class=""><span class="lab">C</span><span>drawing a shape with a compass</span></li>
+        <li class=""><span class="lab">D</span><span>cutting a square into seven pieces</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Tiling (tessellation) means covering a region with shapes leaving NO gaps and NO overlaps. "May overlap a little" (B) violates the definition; the others describe constructions/tangrams.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">At a tiling vertex the corner angles meeting there must add to EXACTLY 360°. If they add to less than 360°, the result is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>an overlap of tiles</span></li>
+        <li class=""><span class="lab">B</span><span>a perfect tiling</span></li>
+        <li class="correct"><span class="lab">C</span><span>a gap (uncovered wedge)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a 90° corner</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Less than 360° at a vertex means the corners don't reach all the way round — an uncovered wedge, i.e. a gap. (More than 360° would force an overlap.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">If the angles meeting at a tiling vertex add to MORE than 360°, the result is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a gap</span></li>
+        <li class="correct"><span class="lab">B</span><span>an overlap (tiles pile on top of each other)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a perfect fit</span></li>
+        <li class=""><span class="lab">D</span><span>a perpendicular bisector</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>More than 360° means the corners run past a full turn and pile on top of one another — an overlap. (Less than 360° gives a gap; exactly 360° is the perfect fit.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">A mixed tiling uses squares (90°) and equilateral triangles (60°). At one vertex three triangles and two squares meet. The angles there total:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>330°</span></li>
+        <li class=""><span class="lab">B</span><span>300°</span></li>
+        <li class=""><span class="lab">C</span><span>390°</span></li>
+        <li class="correct"><span class="lab">D</span><span>360°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Three triangles + two squares = 3 × 60° + 2 × 90° = 180° + 180° = 360°. The angles fill a full turn exactly, so this is a valid vertex.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">A mixed tiling uses regular hexagons (120°) and equilateral triangles (60°). At a vertex two hexagons already meet; the number of triangles needed to complete the full 360° is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>two triangles</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>one triangle</span></li>
+        <li class=""><span class="lab">C</span><span>three triangles</span></li>
+        <li class=""><span class="lab">D</span><span>four triangles</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Two hexagons contribute 2 × 120° = 240°, leaving 360° − 240° = 120° to fill. Equilateral triangles are 60° each, so 120° ÷ 60° = 2 triangles complete the vertex. One triangle gives only 300° (a gap); three give 420° and four give 480° (overlaps).</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">A 90° angle is constructed and then bisected twice in succession (each time taking the smaller new angle and halving it). After the two bisections, the smallest angle present measures:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>45°</span></li>
+        <li class=""><span class="lab">B</span><span>30°</span></li>
+        <li class="correct"><span class="lab">C</span><span>22.5°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>60°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bisect 90° → 45°; bisect 45° → 22.5°. After two bisections the smallest angle present is 22.5°. (45° and 30° are intermediate/distractor values.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">Which of these angles is NOT directly constructible by combining a constructed 60° angle with bisections of it?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>30°</span></li>
+        <li class=""><span class="lab">B</span><span>15°</span></li>
+        <li class=""><span class="lab">C</span><span>90° (as 60° + 30°)</span></li>
+        <li class="correct"><span class="lab">D</span><span>20°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>From a constructed 60° you can bisect to 30°, bisect again to 15°, and add to make 90° (= 60° + 30°). But 20° would require trisecting 60°, which is impossible — so 20° is NOT constructible this way.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">You construct a 60° angle, then bisect it, then place the 30° angle next to the original 60°. The total angle formed is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>45°</span></li>
+        <li class=""><span class="lab">B</span><span>30°</span></li>
+        <li class=""><span class="lab">C</span><span>120°</span></li>
+        <li class="correct"><span class="lab">D</span><span>90°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The original is 60°; bisecting gives a 30° angle; placing the 30° beside the 60° gives 60° + 30° = 90°. (120° would be 60° + 60°.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">A tangram square is rearranged into a tall thin "tree" and into a wide squat "boat", using all seven pieces each time. The tree and the boat have:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>equal areas</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>different areas, the boat larger</span></li>
+        <li class=""><span class="lab">C</span><span>different areas, the tree larger</span></li>
+        <li class=""><span class="lab">D</span><span>areas that cannot be compared</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Both the "tree" and the "boat" use all seven pieces of the same square, so by conservation of area under rearrangement they have exactly equal areas. Appearance (tall vs wide) does not change total area.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">Which statement is the correct reason only triangles, squares and hexagons tile among regular polygons?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>They are the only shapes with equal sides</span></li>
+        <li class="correct"><span class="lab">B</span><span>Only their interior angles (60°, 90°, 120°) divide 360° a whole number of times</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>They are the only convex polygons</span></li>
+        <li class=""><span class="lab">D</span><span>Larger polygons are simply too heavy to tile</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The reason is pure arithmetic: only 60°, 90° and 120° divide 360° a whole number of times (6, 4 and 3 times). Equal sides, convexity and "weight" are irrelevant to whether a regular polygon tiles.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">A regular polygon whose interior angle is 120° will, at a tiling vertex, have how many of its corners meeting?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2</span></li>
+        <li class=""><span class="lab">B</span><span>4</span></li>
+        <li class="correct"><span class="lab">C</span><span>3</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>6</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>360° ÷ 120° = 3, so three of its corners meet at a vertex (this is the hexagon case).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">The interior angle of an equilateral triangle is 60°. The number meeting at a tiling vertex (six) multiplied by 60° gives:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>360°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>300°</span></li>
+        <li class=""><span class="lab">C</span><span>420°</span></li>
+        <li class=""><span class="lab">D</span><span>240°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>6 × 60° = 360°, a full turn — which is exactly why six equilateral triangles tile around a point.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">You want to construct a 45° angle with compass and straightedge. The correct route is to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>trisect a 135° angle</span></li>
+        <li class=""><span class="lab">B</span><span>measure it with a protractor</span></li>
+        <li class=""><span class="lab">C</span><span>bisect a 60° angle</span></li>
+        <li class="correct"><span class="lab">D</span><span>construct a right angle (90°) and bisect it</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Construct a right angle (90°) and bisect it: 90° ÷ 2 = 45°. Bisecting 60° gives 30°, not 45°; trisecting 135° is impossible; a protractor isn't a construction.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">The perpendicular bisector of a segment is, in precise terms, the set of ALL points that are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>inside the segment</span></li>
+        <li class="correct"><span class="lab">B</span><span>the same distance from both endpoints</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>closer to the left endpoint</span></li>
+        <li class=""><span class="lab">D</span><span>exactly the midpoint</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Precisely, the perpendicular bisector is the set of ALL points the same distance from both endpoints (the locus). The midpoint (D) is just one of those points, not the whole set.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">Three regular hexagons (120° each) meet at a vertex. The angle they cover is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>240°</span></li>
+        <li class=""><span class="lab">B</span><span>300°</span></li>
+        <li class="correct"><span class="lab">C</span><span>360°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>480°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>3 × 120° = 360°, a full turn — so three hexagons exactly surround a vertex with no gap or overlap.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">A student claims "any regular polygon can tile the plane." The simplest single counterexample is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>square</span></li>
+        <li class="correct"><span class="lab">B</span><span>regular pentagon</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>equilateral triangle</span></li>
+        <li class=""><span class="lab">D</span><span>regular hexagon</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The regular pentagon (108°) is the simplest counterexample: 108° does not divide 360°, so it cannot tile alone. Triangle, square and hexagon all DO tile, so they're not counterexamples.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">To construct a 90° angle (a perpendicular at a point P on a line) the construction relies on building a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>60° angle and doubling it</span></li>
+        <li class=""><span class="lab">B</span><span>regular pentagon</span></li>
+        <li class=""><span class="lab">C</span><span>tangram</span></li>
+        <li class="correct"><span class="lab">D</span><span>perpendicular bisector / equal-arc construction so the line meets at a right angle</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A right angle is built from the equal-arc / perpendicular construction, which by design meets the line at 90°. Doubling a 60° gives 120° (not 90°); a pentagon or tangram is irrelevant.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">Two equilateral triangles and two squares are arranged around a point. The total of their corner angles is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>300°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>360°</span></li>
+        <li class=""><span class="lab">C</span><span>330°</span></li>
+        <li class=""><span class="lab">D</span><span>270°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>2 × 60° + 2 × 90° = 120° + 180° = 300°. That is 60° short of 360°, so it is NOT a valid vertex — but the question only asks the total, which is 300°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">A regular polygon's interior angle is 140°. The value 360 ÷ 140 is between 2 and 3 (about 2.57). This polygon:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>tiles with 2 meeting at a vertex</span></li>
+        <li class=""><span class="lab">B</span><span>tiles with 3 meeting at a vertex</span></li>
+        <li class="correct"><span class="lab">C</span><span>cannot tile the plane by itself</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>tiles with 2.57 meeting at a vertex</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>360 ÷ 140 ≈ 2.57 is not a whole number, so no whole number of these polygons can surround a point — it cannot tile by itself. ("2.57 meeting" is meaningless.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">Bisecting an angle requires finding a point equidistant from both arms. The tool that locates such a point exactly, without measuring, is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a protractor</span></li>
+        <li class="correct"><span class="lab">B</span><span>equal-radius compass arcs</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a marked ruler</span></li>
+        <li class=""><span class="lab">D</span><span>a set square</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Equal-radius compass arcs locate a point equidistant from both arms exactly, without measuring — that is what makes angle bisection a true construction. A protractor or marked ruler would only measure approximately.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">A floor is to be tiled with regular pentagons only. Pushing three pentagons (108° each) snug at a corner leaves a wedge. Four pentagons would overshoot. This shows pentagons:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>tile with three at a vertex</span></li>
+        <li class=""><span class="lab">B</span><span>tile with four at a vertex</span></li>
+        <li class=""><span class="lab">C</span><span>tile only if cut in half</span></li>
+        <li class="correct"><span class="lab">D</span><span>cannot tile, since neither 3 nor 4 of them makes exactly 360°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Three pentagons give 324° (a 36° wedge left) and four give 432° (overlap); since neither hits exactly 360°, regular pentagons cannot tile the plane. Cutting them in half changes the shape, so that doesn't count.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">Which pair of facts is BOTH true?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>A general angle can be bisected with compass and straightedge; pentagons cannot tile the plane</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>A general angle can be trisected with compass and straightedge; pentagons tile the plane</span></li>
+        <li class=""><span class="lab">C</span><span>Constructions need a protractor; hexagons cannot tile</span></li>
+        <li class=""><span class="lab">D</span><span>The perpendicular bisector misses the midpoint; squares cannot tile</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>True facts: a general angle CAN be bisected with these tools, and regular pentagons CANNOT tile. Option B reverses both (trisection is impossible; pentagons don't tile), and C, D each contain a false claim (constructions need no protractor; hexagons DO tile; the perpendicular bisector hits the midpoint; squares DO tile).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">The interior angle of a regular polygon increases as the number of sides increases. This is why, among regular polygons, the ability to self-tile STOPS after the hexagon: any polygon with more sides has an interior angle that is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>less than 90°, too small</span></li>
+        <li class="correct"><span class="lab">B</span><span>more than 120° but not a whole-number divisor of 360°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>exactly 360°</span></li>
+        <li class=""><span class="lab">D</span><span>negative</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Beyond the hexagon, each regular polygon's interior angle exceeds 120° (heptagon ≈128.6°, octagon 135°, …) yet never again divides 360° a whole number of times, so none of them can self-tile. The angle is never less than 90°, never 360°, never negative.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">A 30° angle has been constructed (by bisecting 60°). Constructing one more 30° angle beside it and then a third gives a total angle of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>60°</span></li>
+        <li class=""><span class="lab">B</span><span>120°</span></li>
+        <li class="correct"><span class="lab">C</span><span>90°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>30°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Three 30° angles placed in a row give 3 × 30° = 90°. (Two would give 60°; four would give 120°.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">The single rule that governs ALL of plane tiling — deciding which shapes fit around a point — is that the angles meeting at any vertex must sum to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>exactly 180°</span></li>
+        <li class=""><span class="lab">B</span><span>exactly 270°</span></li>
+        <li class=""><span class="lab">C</span><span>any amount up to 360°</span></li>
+        <li class="correct"><span class="lab">D</span><span>exactly 360°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The single governing rule of plane tiling is that the corner angles meeting at any vertex must sum to EXACTLY 360° — a full turn — with no gap (less) and no overlap (more). "Any amount up to 360°" is the trap that allows gaps. --- *Solutions complete: 60 / 60.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

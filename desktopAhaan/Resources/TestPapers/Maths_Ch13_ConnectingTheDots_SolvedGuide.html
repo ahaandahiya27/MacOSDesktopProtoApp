@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Connecting The Dots — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Connecting The Dots<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">Which of these statements is a "statistical" statement — a likely conclusion drawn from data, not a certainty?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>A person 6 ft tall is more likely to be an adult than a toddler.</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>A triangle has exactly three sides.</span></li>
+        <li class=""><span class="lab">C</span><span>The sum of 12 and 8 is 20.</span></li>
+        <li class=""><span class="lab">D</span><span>A square has four equal sides.</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A statistical statement reasons from data to a *likely* (not certain) conclusion. "A person 6 ft tall is more likely to be an adult than a toddler" is a likelihood claim from a pattern. The others are definitions/arithmetic facts — certain, not statistical.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">Shubman scored 23, 7, 10, 52, 18 in 5 matches (total 110); Yashasvi scored 26, 53, 2, 15 in 4 matches (total 96). Why is comparing only the totals unfair here?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Totals are never useful in cricket.</span></li>
+        <li class=""><span class="lab">B</span><span>Shubman's highest score is the only thing that matters.</span></li>
+        <li class=""><span class="lab">C</span><span>Yashasvi's scores are all even.</span></li>
+        <li class="correct"><span class="lab">D</span><span>They played different numbers of matches, so more matches allow a larger total — compare the per-match mean instead.</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Shubman played 5 matches, Yashasvi 4. More innings give more chances to pile up runs, so the raw total is biased toward whoever batted more often. A fair comparison divides by the number of matches (the mean). The "bigger total = better" reflex is exactly the trap.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">The mean of 0, 17, 21, 90 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>19</span></li>
+        <li class=""><span class="lab">B</span><span>90</span></li>
+        <li class="correct"><span class="lab">C</span><span>32</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>128</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Mean = (0 + 17 + 21 + 90) ÷ 4 = 128 ÷ 4 = 32. (128 is the total, not the mean — option D is the classic forgot-to-divide slip.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">The median of 0, 17, 21, 90 is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>19</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>21</span></li>
+        <li class=""><span class="lab">C</span><span>17</span></li>
+        <li class=""><span class="lab">D</span><span>32</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sort: 0, 17, 21, 90. Even count (4), so the median is the average of the two middle values: (17 + 21) ÷ 2 = 19. (32 is the mean; don't confuse the two.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">The mode of 5, 3, 5, 7, 5, 8, 3 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>3</span></li>
+        <li class=""><span class="lab">B</span><span>7</span></li>
+        <li class="correct"><span class="lab">C</span><span>5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>8</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Count frequencies: 5 appears 3 times, 3 appears twice, 7 and 8 once each. The mode is 5.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">The range of the marks 45, 78, 33, 90, 60 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>90</span></li>
+        <li class=""><span class="lab">B</span><span>45</span></li>
+        <li class=""><span class="lab">C</span><span>33</span></li>
+        <li class="correct"><span class="lab">D</span><span>57</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Range = largest − smallest = 90 − 33 = 57. (90 is just the maximum, a common mistake.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">The mean of five numbers is 20. Four of them are 18, 22, 15 and 25. The fifth number is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>20</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>80</span></li>
+        <li class=""><span class="lab">C</span><span>18</span></li>
+        <li class=""><span class="lab">D</span><span>25</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Total of five = mean × count = 20 × 5 = 100. Sum of the four known = 18 + 22 + 15 + 25 = 80. Fifth = 100 − 80 = 20.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">A shopkeeper wants to decide which shoe size to stock the most of. Which representative value should he use?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Mean</span></li>
+        <li class=""><span class="lab">B</span><span>Median</span></li>
+        <li class="correct"><span class="lab">C</span><span>Mode</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Range</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Which size sells most often" asks for the most frequent value — the mode. Mean or median could land on a half-size nobody wears.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">To find the median of 7, 3, 9, 5, 11, 4 a student must FIRST:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>add all the values</span></li>
+        <li class="correct"><span class="lab">B</span><span>sort the values in order</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>find the most frequent value</span></li>
+        <li class=""><span class="lab">D</span><span>divide by 6</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The median is the middle of the *sorted* list, so you must sort first. You never need to add or divide for a median.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">The median of 7, 3, 9, 5, 11, 4 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5</span></li>
+        <li class=""><span class="lab">B</span><span>5.5</span></li>
+        <li class="correct"><span class="lab">C</span><span>6</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>7</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sort: 3, 4, 5, 7, 9, 11. Even count, two middle values 5 and 7, median = (5 + 7) ÷ 2 = 6.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">A bar graph uses the scale 1 cm = 10 runs. A player's bar is 4.5 cm tall. The runs scored are:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>45</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>14.5</span></li>
+        <li class=""><span class="lab">C</span><span>4.5</span></li>
+        <li class=""><span class="lab">D</span><span>450</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>1 cm = 10 runs, so 4.5 cm = 4.5 × 10 = 45 runs.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">Using the scale 1 cm = 10 runs, a player who scored 75 runs needs a bar of height:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>75 cm</span></li>
+        <li class="correct"><span class="lab">B</span><span>7.5 cm</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>0.75 cm</span></li>
+        <li class=""><span class="lab">D</span><span>750 cm</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>75 runs ÷ 10 runs-per-cm = 7.5 cm.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">The mean of the first five whole numbers 0, 1, 2, 3, 4 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2.5</span></li>
+        <li class=""><span class="lab">B</span><span>10</span></li>
+        <li class=""><span class="lab">C</span><span>3</span></li>
+        <li class="correct"><span class="lab">D</span><span>2</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Mean = (0 + 1 + 2 + 3 + 4) ÷ 5 = 10 ÷ 5 = 2. (10 is the total.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">The mean of 12, 15, 18, 11, 14 is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>14</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>15</span></li>
+        <li class=""><span class="lab">C</span><span>12</span></li>
+        <li class=""><span class="lab">D</span><span>70</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sum = 12 + 15 + 18 + 11 + 14 = 70; mean = 70 ÷ 5 = 14.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">The mode of 4, 7, 4, 9, 7, 4, 2 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>7</span></li>
+        <li class=""><span class="lab">B</span><span>9</span></li>
+        <li class="correct"><span class="lab">C</span><span>4</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>2</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Frequencies: 4 appears 3 times (most), 7 twice, others once. Mode = 4.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">Player A scored 28, 31, 29, 32 and Player B scored 5, 55, 2, 58. Both have a mean of 30. Which is more consistent, and why?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Player A, because the range (4) is much smaller than B's range (56).</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Player B, because the total is the same.</span></li>
+        <li class=""><span class="lab">C</span><span>Player B, because B has the highest single score.</span></li>
+        <li class=""><span class="lab">D</span><span>They are equally consistent because the means are equal.</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Both means are 30, so consistency is judged by spread. A's range = 32 − 28 = 4; B's range = 58 − 2 = 56. Smaller range = more consistent, so Player A. Equal means do NOT mean equal consistency.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">The seven daily temperatures (°C) were 30, 32, 31, 30, 33, 30, 35. The mode is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>31</span></li>
+        <li class="correct"><span class="lab">B</span><span>30</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>32</span></li>
+        <li class=""><span class="lab">D</span><span>35</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Frequencies: 30 appears 3 times — more than any other. Mode = 30.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">For the temperatures 30, 32, 31, 30, 33, 30, 35 (°C), the median is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>30</span></li>
+        <li class=""><span class="lab">B</span><span>32</span></li>
+        <li class=""><span class="lab">C</span><span>33</span></li>
+        <li class="correct"><span class="lab">D</span><span>31</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sort: 30, 30, 30, 31, 32, 33, 35. Seven values, the 4th is the middle = 31. (The mode 30 is a tempting wrong pick.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">Five test scores are 60, 60, 70, 80, 80. Which statement is TRUE?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>The data has a single mode.</span></li>
+        <li class=""><span class="lab">B</span><span>The mode is 70.</span></li>
+        <li class="correct"><span class="lab">C</span><span>The mean is 70 and the median is 70.</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>The range is 80.</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Data 60, 60, 70, 80, 80: mean = 350 ÷ 5 = 70, median (middle of sorted) = 70 — both true, so C. There are two modes (60 and 80), so A is false; "mode is 70" is false (70 occurs once); range = 80 − 60 = 20, not 80.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">The mean weight of 4 boys is 35 kg. If a fifth boy weighing 45 kg joins, the new mean weight is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>37 kg</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>40 kg</span></li>
+        <li class=""><span class="lab">C</span><span>36 kg</span></li>
+        <li class=""><span class="lab">D</span><span>45 kg</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>New total = old total + 45 = (4 × 35) + 45 = 140 + 45 = 185. New mean = 185 ÷ 5 = 37.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">A data set of 6 values has mean 12. If every value is increased by 4, the new mean is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>12</span></li>
+        <li class=""><span class="lab">B</span><span>48</span></li>
+        <li class="correct"><span class="lab">C</span><span>16</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>72</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Adding the same constant to every value raises the mean by that constant: 12 + 4 = 16. (Multiplying the count is a misread.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">The mean of 8 numbers is 21. If one number, 14, is removed, the mean of the remaining 7 numbers is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>21</span></li>
+        <li class="correct"><span class="lab">B</span><span>22</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>20</span></li>
+        <li class=""><span class="lab">D</span><span>8</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Total = 21 × 8 = 168. Remove 14: 168 − 14 = 154. New mean = 154 ÷ 7 = 22.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">A bar graph has bars for four fruits: Apple 25, Banana 40, Mango 15, Orange 20 (sales in kg). Which fruit's bar is tallest, and by how much does it beat the shortest?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Banana; 25 kg taller than the shortest</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Apple; 10 kg taller than the shortest</span></li>
+        <li class=""><span class="lab">C</span><span>Mango; 15 kg taller than the shortest</span></li>
+        <li class=""><span class="lab">D</span><span>Banana; 40 kg taller than the shortest</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Tallest bar = Banana (40 kg). Shortest = Mango (15 kg). Difference = 40 − 15 = 25 kg.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">The median of the four values 12, 7, 9, 20 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>9</span></li>
+        <li class=""><span class="lab">B</span><span>14.5</span></li>
+        <li class=""><span class="lab">C</span><span>12</span></li>
+        <li class="correct"><span class="lab">D</span><span>10.5</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sort: 7, 9, 12, 20. Even count, median = (9 + 12) ÷ 2 = 10.5.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">Which set of numbers has its mean, median and mode ALL equal to 5?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>3, 4, 5, 7</span></li>
+        <li class="correct"><span class="lab">B</span><span>5, 5, 5, 5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>1, 5, 9</span></li>
+        <li class=""><span class="lab">D</span><span>4, 5, 6, 8</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>For 5, 5, 5, 5: mean = 5, median = 5, mode = 5 — all equal. Check the others: 3, 4, 5, 7 has mean 4.75; 1, 5, 9 has mean 5 and median 5 but no mode; 4, 5, 6, 8 has mean 5.75 and no mode. Only the all-5 set has mean, median AND mode all equal to 5.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">A bar graph's vertical axis starts at 90 instead of 0. A value rises from 92 to 96. Why does the bar look like it nearly doubled?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Because 96 is double 48.</span></li>
+        <li class=""><span class="lab">B</span><span>Because 96 − 92 = 4 is a large jump.</span></li>
+        <li class="correct"><span class="lab">C</span><span>Because the eye reads bar heights as if measured from zero, so a truncated axis exaggerates the difference.</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Because bar graphs always exaggerate.</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The eye judges a bar's value by its height as if it grew from zero. With the axis truncated at 90, the visible part of the 96-bar is far longer than that of the 92-bar, so a 4-unit change looks huge. The real change is only about 4%.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">In the list 2, 4, 4, 4, 6, 100 which representative value is MOST distorted (pulled away from the typical value) by the 100?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>The mode</span></li>
+        <li class=""><span class="lab">B</span><span>The median</span></li>
+        <li class="correct"><span class="lab">C</span><span>The mean</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>The smallest value</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The mean uses every value, so the outlier 100 drags it far above the cluster around 4. The mode (4) and median (4) ignore the extreme. So the mean is most distorted.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">Seven students' marks are 8, 6, 7, 9, 6, 10, 5. The mean (to one decimal place) is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>7.3</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>7.0</span></li>
+        <li class=""><span class="lab">C</span><span>6.0</span></li>
+        <li class=""><span class="lab">D</span><span>51</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sum = 8 + 6 + 7 + 9 + 6 + 10 + 5 = 51. Mean = 51 ÷ 7 = 7.285… ≈ 7.3.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">The mean of six numbers is 15. Five of them are 10, 12, 18, 20 and 14. The sixth number is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>16</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>15</span></li>
+        <li class=""><span class="lab">C</span><span>90</span></li>
+        <li class=""><span class="lab">D</span><span>14</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Total = 15 × 6 = 90. Known sum = 10 + 12 + 18 + 20 + 14 = 74. Sixth = 90 − 74 = 16.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">A pictograph uses one symbol = 5 books. A shelf shows 6½ symbols. The number of books is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>11</span></li>
+        <li class=""><span class="lab">B</span><span>30</span></li>
+        <li class=""><span class="lab">C</span><span>65</span></li>
+        <li class="correct"><span class="lab">D</span><span>32.5</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>1 symbol = 5 books, 6½ symbols = 6.5 × 5 = 32.5 books.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">The runs of five players read off a bar graph are 30, 45, 45, 60 and 20. The mode of these runs is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>30</span></li>
+        <li class="correct"><span class="lab">B</span><span>45</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>60</span></li>
+        <li class=""><span class="lab">D</span><span>20</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Runs 30, 45, 45, 60, 20: 45 occurs twice, every other once. Mode = 45.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">Which is the correct order of these representative values for the data 2, 2, 2, 5, 8, 100?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>mean &lt; median &lt; mode</span></li>
+        <li class=""><span class="lab">B</span><span>mean = median = mode</span></li>
+        <li class="correct"><span class="lab">C</span><span>mode &lt; median &lt; mean</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>median &lt; mode &lt; mean</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Data 2, 2, 2, 5, 8, 100: mode = 2; median = (2 + 5) ÷ 2 = 3.5; mean = 119 ÷ 6 ≈ 19.8. So mode &lt; median &lt; mean — the outlier pulls the mean far right.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">A double bar graph compares two classes' favourite-sport counts. For Cricket, Class A = 18 and Class B = 12; for Football, Class A = 10 and Class B = 22. Which sport shows the LARGER gap between the two classes?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Cricket, gap 6</span></li>
+        <li class=""><span class="lab">B</span><span>Football, gap 32</span></li>
+        <li class=""><span class="lab">C</span><span>Cricket, gap 18</span></li>
+        <li class="correct"><span class="lab">D</span><span>Football, gap 12</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cricket gap = 18 − 12 = 6; Football gap = |10 − 22| = 12. Football's gap (12) is larger. (32 is the sum of the two football bars, a distractor.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">The mean of 10 numbers was found to be 25. Later it was discovered that one number was read as 36 instead of the correct 56. The corrected mean is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>25</span></li>
+        <li class=""><span class="lab">B</span><span>23</span></li>
+        <li class="correct"><span class="lab">C</span><span>27</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>45</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A value was understated by 56 − 36 = 20, so the recorded total was 20 too low. Old total = 25 × 10 = 250; true total = 270; corrected mean = 270 ÷ 10 = 27.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">A class of 30 students has a mean height of 140 cm; another class of 20 students has a mean height of 150 cm. The mean height of all 50 students is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>145 cm</span></li>
+        <li class="correct"><span class="lab">B</span><span>144 cm</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>146 cm</span></li>
+        <li class=""><span class="lab">D</span><span>290 cm</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Combine totals: (30 × 140) + (20 × 150) = 4200 + 3000 = 7200; over 50 students = 144 cm. (Averaging 140 and 150 to 145 ignores the unequal group sizes — the trap.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">Six observations are arranged as 4, 7, x, 13, 16, 20 in increasing order, and their median is 11. The value of x is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>9</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>11</span></li>
+        <li class=""><span class="lab">C</span><span>10</span></li>
+        <li class=""><span class="lab">D</span><span>13</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Six sorted values; median = average of the 3rd and 4th = (x + 13) ÷ 2 = 11, so x + 13 = 22, x = 9.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">The mode of the data 2, 2, 3, 3, 5, 5, 7 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2</span></li>
+        <li class=""><span class="lab">B</span><span>3</span></li>
+        <li class=""><span class="lab">C</span><span>5</span></li>
+        <li class="correct"><span class="lab">D</span><span>There is no single mode (2, 3 and 5 each appear twice)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Each of 2, 3 and 5 appears exactly twice; no single value is most frequent, so there is no single mode.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">Reading a bar graph, monthly rainfall (mm) is Jun 80, Jul 120, Aug 100, Sep 60. The mean monthly rainfall is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>80 mm</span></li>
+        <li class="correct"><span class="lab">B</span><span>90 mm</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>100 mm</span></li>
+        <li class=""><span class="lab">D</span><span>360 mm</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Mean = (80 + 120 + 100 + 60) ÷ 4 = 360 ÷ 4 = 90 mm.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">For the data 5, 8, 8, 11, 13 the value of (mean − median) is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>1</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>0</span></li>
+        <li class=""><span class="lab">C</span><span>−1</span></li>
+        <li class=""><span class="lab">D</span><span>8</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Data 5, 8, 8, 11, 13: mean = 45 ÷ 5 = 9; median (3rd value) = 8; mean − median = 9 − 8 = 1.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">A batter's scores are 0, 17, 21, 90. Another batter's scores are 67, 55, 18, 35. Comparing their ranges, who is the MORE consistent batter?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>The first batter, range 90</span></li>
+        <li class=""><span class="lab">B</span><span>The first batter, range 49</span></li>
+        <li class=""><span class="lab">C</span><span>They are equally consistent</span></li>
+        <li class="correct"><span class="lab">D</span><span>The second batter, range 49</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>First batter's range = 90 − 0 = 90; second batter's range = 67 − 18 = 49. Smaller range = more consistent, so the second batter (range 49). Option B attaches "range 49" to the wrong batter — a swap trap.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">The mean of 9 numbers is 30. If three more numbers with mean 42 are added, the mean of all 12 numbers is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>36</span></li>
+        <li class="correct"><span class="lab">B</span><span>33</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>35</span></li>
+        <li class=""><span class="lab">D</span><span>72</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Combined total = (9 × 30) + (3 × 42) = 270 + 126 = 396; over 12 = 33.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">A data set is 10, 14, 16, 16, 19, 21 (sorted). If the value 14 is changed to 27, which measure does NOT change at all?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>The mean</span></li>
+        <li class=""><span class="lab">B</span><span>The range</span></li>
+        <li class=""><span class="lab">C</span><span>The median</span></li>
+        <li class="correct"><span class="lab">D</span><span>The mode</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Changing the 14 to 27 re-sorts to 10, 16, 16, 19, 21, 27. The mode stays 16 (still the only repeated value). The mean, range (was 11, now 17) and median (was 16, now (16+19)/2 = 17.5) all change. So the mode is unchanged.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">Eight friends' ages are 11, 12, 12, 13, 13, 13, 14, 16. Which statement is TRUE?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>mode = 12, median = 13</span></li>
+        <li class="correct"><span class="lab">B</span><span>mode = 13, median = 13</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>mode = 13, median = 12.5</span></li>
+        <li class=""><span class="lab">D</span><span>mode = 14, median = 13</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Ages 11, 12, 12, 13, 13, 13, 14, 16: 13 appears most → mode = 13. Eight values, median = average of 4th and 5th = (13 + 13) ÷ 2 = 13. So mode = 13, median = 13.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">A survey records the number of pets per house: 0, 1, 0, 2, 1, 0, 3, 1, 0. The mode number of pets is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>0</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>1</span></li>
+        <li class=""><span class="lab">C</span><span>2</span></li>
+        <li class=""><span class="lab">D</span><span>3</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Pets 0, 1, 0, 2, 1, 0, 3, 1, 0: 0 appears 4 times, 1 appears 3 times. Mode = 0. (Picking 1 because "1 pet" feels typical is the slip.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">The mean of five consecutive whole numbers is 12. The largest of them is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>12</span></li>
+        <li class=""><span class="lab">B</span><span>16</span></li>
+        <li class="correct"><span class="lab">C</span><span>14</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>10</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Five consecutive whole numbers with mean 12 are centred on 12: 10, 11, 12, 13, 14. The largest is 14. (For an odd run of consecutive numbers, the mean equals the middle value.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">A bar graph shows weekly savings (₹): Mon 20, Tue 0, Wed 40, Thu 30, Fri 10. The mean DAILY saving over these five days is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>₹25</span></li>
+        <li class="correct"><span class="lab">B</span><span>₹20</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>₹30</span></li>
+        <li class=""><span class="lab">D</span><span>₹100</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Mean daily saving = (20 + 0 + 40 + 30 + 10) ÷ 5 = 100 ÷ 5 = ₹20. The zero still counts as one of the 5 days — dividing by 4 is the trap.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">The median of the seven values 14, 9, 21, 7, 18, 12, 9 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>9</span></li>
+        <li class=""><span class="lab">B</span><span>18</span></li>
+        <li class=""><span class="lab">C</span><span>14</span></li>
+        <li class="correct"><span class="lab">D</span><span>12</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sort: 7, 9, 9, 12, 14, 18, 21. Seven values, the 4th is the middle = 12.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">In a data set the mean is much greater than the median. This most likely indicates:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a few unusually large values (outliers) pulling the mean up</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>all values are equal</span></li>
+        <li class=""><span class="lab">C</span><span>the data was not sorted</span></li>
+        <li class=""><span class="lab">D</span><span>the mode equals the mean</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>When the mean sits well above the median, a few large outliers are pulling the mean up while the median (the middle) stays near the cluster. Sorting doesn't change the mean, and equal modes/means aren't implied.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">Five numbers have a mean of 8. Four of them are 6, 9, 7 and 11. The fifth number is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>8</span></li>
+        <li class="correct"><span class="lab">B</span><span>7</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>40</span></li>
+        <li class=""><span class="lab">D</span><span>5</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Total = 8 × 5 = 40. Known sum = 6 + 9 + 7 + 11 = 33. Fifth = 40 − 33 = 7.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">A pictograph of cars sold uses one car symbol = 4 cars. Showroom X shows 7 symbols, Showroom Y shows 5½ symbols. How many more cars did X sell than Y?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4</span></li>
+        <li class=""><span class="lab">B</span><span>8</span></li>
+        <li class=""><span class="lab">C</span><span>1.5</span></li>
+        <li class="correct"><span class="lab">D</span><span>6</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>X = 7 × 4 = 28 cars; Y = 5.5 × 4 = 22 cars. Difference = 28 − 22 = 6 cars. (Subtracting the symbols, 7 − 5.5 = 1.5, then forgetting to scale gives the C trap.)</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">For the data 3, 7, 7, 7, 9, 11, 12 the mode, median and mean are respectively:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>7, 7, 8</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>7, 8, 7</span></li>
+        <li class=""><span class="lab">C</span><span>9, 7, 8</span></li>
+        <li class=""><span class="lab">D</span><span>7, 7, 7</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Data 3, 7, 7, 7, 9, 11, 12: mode = 7 (three times); median = 4th value = 7; mean = (3 + 7 + 7 + 7 + 9 + 11 + 12) ÷ 7 = 56 ÷ 7 = 8. So mode 7, median 7, mean 8 → "7, 7, 8", which is option A. (Option D, "7, 7, 7", wrongly takes the mean to be 7 too.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">Two sections both have mean marks 60. Section P has range 8; Section Q has range 40. Which conclusion is correct?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Section Q's marks are more tightly clustered.</span></li>
+        <li class="correct"><span class="lab">B</span><span>Section P's marks are more consistent (less spread out).</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Section P must have the higher total.</span></li>
+        <li class=""><span class="lab">D</span><span>The means being equal means the marks are identical.</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Equal means (60) but Section P's range is 8 versus Q's 40, so P's marks are bunched closely — more consistent / less spread. Larger range (Q) means more scatter, not tighter. Equal means never imply identical marks.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">The mean of 6, 10, 14, x and 20 is 13. The value of x is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>13</span></li>
+        <li class=""><span class="lab">B</span><span>65</span></li>
+        <li class=""><span class="lab">C</span><span>50</span></li>
+        <li class="correct"><span class="lab">D</span><span>15</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Total = 13 × 5 = 65. Known sum = 6 + 10 + 14 + 20 = 50. x = 65 − 50 = 15.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">A bar graph (scale 1 unit = 2 students) shows the bar for "walks to school" reaching 9 units. The number of students who walk to school is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>9</span></li>
+        <li class=""><span class="lab">B</span><span>11</span></li>
+        <li class="correct"><span class="lab">C</span><span>18</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>4.5</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>1 unit = 2 students, 9 units = 9 × 2 = 18 students.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">The marks of 9 students are 10, 12, 12, 14, 15, 15, 15, 18, 19. The difference (mode − median) is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>0</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>2</span></li>
+        <li class=""><span class="lab">C</span><span>1</span></li>
+        <li class=""><span class="lab">D</span><span>3</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Marks 10, 12, 12, 14, 15, 15, 15, 18, 19: mode = 15 (three times); nine values, median = 5th = 15. Mode − median = 15 − 15 = 0.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">A data set of 5 numbers has mean 14 and range 12, with smallest value 8. The largest value is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>14</span></li>
+        <li class="correct"><span class="lab">B</span><span>20</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>26</span></li>
+        <li class=""><span class="lab">D</span><span>12</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Range = largest − smallest, so largest = smallest + range = 8 + 12 = 20. (The mean 14 is a distractor not needed here.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">The mean of three numbers is 10 and the mean of two other numbers is 15. The mean of all five numbers together is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>12.5</span></li>
+        <li class=""><span class="lab">B</span><span>13</span></li>
+        <li class="correct"><span class="lab">C</span><span>12</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>25</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Total = (3 × 10) + (2 × 15) = 30 + 30 = 60; over 5 numbers = 60 ÷ 5 = 12. (Averaging 10 and 15 to 12.5 ignores the unequal counts — the trap.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">A bar graph compares trees planted: 2021 → 30, 2022 → 45, 2023 → 60, 2024 → 45. Which value is both the mode and equal to the median of the four numbers?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>30</span></li>
+        <li class=""><span class="lab">B</span><span>60</span></li>
+        <li class="correct"><span class="lab">C</span><span>45</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>60 is the median, 45 is the mode</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Trees 30, 45, 60, 45: mode = 45 (appears twice). Sort 30, 45, 45, 60; median = (45 + 45) ÷ 2 = 45. Both the mode and the median equal 45.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">A list of 6 numbers reads 5, 9, 11, 11, 14, x. The mode is 11 and the mean is 11. The value of x is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>11</span></li>
+        <li class="correct"><span class="lab">B</span><span>16</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>14</span></li>
+        <li class=""><span class="lab">D</span><span>9</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Mean 11 over 6 numbers → total = 66. Known sum = 5 + 9 + 11 + 11 + 14 = 50, so x = 66 − 50 = 16. The mode stays 11 (11 still appears twice; 16 once), consistent with the conditions.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">A magazine shows a bar graph where the vertical axis starts at 50, and Brand A's bar (value 54) looks twice as tall as Brand B's bar (value 52). The honest conclusion is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Brand A sold about twice as much as Brand B.</span></li>
+        <li class=""><span class="lab">B</span><span>The graph cannot be read at all.</span></li>
+        <li class=""><span class="lab">C</span><span>Brand B sold nothing.</span></li>
+        <li class="correct"><span class="lab">D</span><span>Brand A and Brand B sold almost the same amount; the truncated axis exaggerated a tiny 2-unit gap.</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>With the axis starting at 50, only the slivers above 50 are shown: 54 → 4 units, 52 → 2 units, so one bar looks twice the other even though the real values (54 vs 52) are almost equal. The honest reading: nearly the same sales; the truncated axis exaggerated a 2-unit gap. --- *End of solutions.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

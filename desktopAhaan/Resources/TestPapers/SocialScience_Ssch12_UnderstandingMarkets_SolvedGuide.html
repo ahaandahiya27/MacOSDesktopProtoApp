@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Understanding Markets — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Understanding Markets<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">A 'market' is best described as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only a large building with many shops</span></li>
+        <li class=""><span class="lab">B</span><span>only an online shopping app</span></li>
+        <li class=""><span class="lab">C</span><span>only a government office</span></li>
+        <li class="correct"><span class="lab">D</span><span>any arrangement, physical or online, where people buy and sell goods and services</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A market is any arrangement where buying and selling happen, physical or online. It is not limited to a building, an app, or a government office.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">The claim 'a market is always a physical place you can walk into' is wrong because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>markets exist only inside malls</span></li>
+        <li class=""><span class="lab">B</span><span>only village haats are real markets</span></li>
+        <li class="correct"><span class="lab">C</span><span>a market can be an online app or website too - what makes it a market is the exchange, not the building</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>markets never involve money</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A market is defined by buying and selling at a price, which can happen online. It is not mall-only, haat-only, or money-free.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">The 16th-century Hampi Bazaar is used in the chapter as an example of a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>modern shopping app</span></li>
+        <li class=""><span class="lab">B</span><span>government tax office</span></li>
+        <li class="correct"><span class="lab">C</span><span>grand historical market</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>certification mark</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Hampi Bazaar illustrates a glorious historical market. It is not an app, a tax office, or a certification mark.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">Markets exist mainly because people:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>are forbidden to make anything at home</span></li>
+        <li class=""><span class="lab">B</span><span>must obey the government's shopping orders</span></li>
+        <li class=""><span class="lab">C</span><span>want to avoid all trade</span></li>
+        <li class="correct"><span class="lab">D</span><span>have needs and wants they cannot all produce themselves</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Markets exist so people can obtain the goods and services they need and want but cannot all make themselves. They are not about a home-making ban, government orders, or avoiding trade.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">The difference between a 'need' and a 'want' is best shown by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>both are exactly the same thing</span></li>
+        <li class=""><span class="lab">B</span><span>needs are luxuries and wants are essentials</span></li>
+        <li class=""><span class="lab">C</span><span>only the government decides which is which</span></li>
+        <li class="correct"><span class="lab">D</span><span>food and water are needs, while a video game is a want</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Needs are essentials like food and water; wants are extras like a video game. The terms are not identical, not reversed, and not government-decided.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">Every market must have at least:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a king, an army and a temple</span></li>
+        <li class=""><span class="lab">B</span><span>gold coins and nothing else</span></li>
+        <li class="correct"><span class="lab">C</span><span>buyers, sellers and an agreed price</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a government inspector present at all times</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A market needs buyers, sellers and an agreed price. A king/army/temple, gold coins alone, or a permanent inspector are not the defining features.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">The 'price' in a market is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>always fixed by the buyer alone</span></li>
+        <li class=""><span class="lab">B</span><span>the cost of building the shop</span></li>
+        <li class="correct"><span class="lab">C</span><span>the amount at which a buyer will buy and a seller will sell</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a tax paid to the government</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Price is the amount at which buyer and seller agree to trade. It is not buyer-only, the shop's building cost, or a tax.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">If a market has goods and sellers but no one willing to buy, it lacks a key feature:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>buyers</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>sellers</span></li>
+        <li class=""><span class="lab">C</span><span>goods</span></li>
+        <li class=""><span class="lab">D</span><span>a building</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Without willing buyers the market is missing one of its three essentials. Sellers and goods are present, and a building is not essential.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">'Negotiation' (bargaining) in a market is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the government setting one fixed price for all</span></li>
+        <li class=""><span class="lab">B</span><span>a tax added at the till</span></li>
+        <li class=""><span class="lab">C</span><span>the study of old coins</span></li>
+        <li class="correct"><span class="lab">D</span><span>buyer and seller discussing until they agree on a price</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Negotiation is bargaining between buyer and seller to agree a price. It is not government price-fixing, a tax, or numismatics.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">A 'just right' price is one that is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>as low as absolutely possible, even at a loss to the seller</span></li>
+        <li class="correct"><span class="lab">B</span><span>high enough for the seller to profit and low enough for the buyer to be willing to pay</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>as high as the seller can possibly demand</span></li>
+        <li class=""><span class="lab">D</span><span>always set by the buyer alone</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The 'just right' price balances the seller's profit and the buyer's willingness. It is not rock-bottom (loss-making), sky-high, or buyer-set.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">The belief 'the lower the price, the better; a seller should always sell as cheap as possible' is wrong because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>low prices are illegal</span></li>
+        <li class="correct"><span class="lab">B</span><span>too low a price means no profit or a loss, so the seller may stop selling</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>buyers dislike low prices</span></li>
+        <li class=""><span class="lab">D</span><span>the government bans cheap goods</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A price too low leaves the seller with no profit or a loss, so they may quit selling - bad for everyone. Low prices are not illegal, disliked by buyers, or banned.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">A buyer offers 40 rupees and the seller asks 60 rupees; they settle at 50 rupees. This settling is an example of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a government subsidy</span></li>
+        <li class="correct"><span class="lab">B</span><span>negotiation reaching a 'just right' price</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>an export deal</span></li>
+        <li class=""><span class="lab">D</span><span>a certification mark</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bargaining from 40 and 60 to 50 rupees is negotiation arriving at a 'just right' price. It is not a subsidy, an export, or a mark.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">'Demand' is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the quantity sellers are willing to sell</span></li>
+        <li class=""><span class="lab">B</span><span>the cost of making a good</span></li>
+        <li class="correct"><span class="lab">C</span><span>the quantity consumers are willing and able to buy at a particular price</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the tax on a good</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Demand is what consumers will and can buy at a price. What sellers will sell is supply; making-cost and tax are different.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">'Supply' is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the quantity consumers wish to buy</span></li>
+        <li class="correct"><span class="lab">B</span><span>the quantity sellers are willing and able to sell at a particular price</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the price printed on a pack</span></li>
+        <li class=""><span class="lab">D</span><span>the government's subsidy</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Supply is what sellers will and can sell at a price. What consumers want is demand; the printed price is MRP; government help is a subsidy.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">The claim 'when more people want something, its price falls' is wrong because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>more demand always lowers the price</span></li>
+        <li class=""><span class="lab">B</span><span>demand has no effect at all on price</span></li>
+        <li class=""><span class="lab">C</span><span>only the government sets all prices</span></li>
+        <li class="correct"><span class="lab">D</span><span>when many buyers chase a limited supply, the price usually RISES</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Strong demand against limited supply tends to push price up, not down. Demand does affect price, and prices are usually not all government-set.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">In general, demand pushes price ____ and plentiful supply pushes price ____.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>down ... up</span></li>
+        <li class=""><span class="lab">B</span><span>up ... up</span></li>
+        <li class="correct"><span class="lab">C</span><span>up ... down</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>down ... down</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Demand pushes price up while plentiful supply pushes it down; the 'just right' price is where they meet. The other pairings are wrong.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">The 'just right' market price is found:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>where demand and supply meet</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>where demand is zero</span></li>
+        <li class=""><span class="lab">C</span><span>where supply is zero</span></li>
+        <li class=""><span class="lab">D</span><span>where the government forbids all sales</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The settling price is where demand and supply balance. Zero demand or supply, or a sales ban, would not yield a working price.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">A sudden shortage of onions, with demand unchanged, will most likely make their price:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>fall to zero</span></li>
+        <li class="correct"><span class="lab">B</span><span>rise</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>stay exactly the same forever</span></li>
+        <li class=""><span class="lab">D</span><span>become illegal</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Less supply against steady demand pushes the price up. It does not fall to zero, stay fixed, or become illegal.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">The claim 'if there is no physical shop, there is no real market' is wrong because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>online stores never have prices</span></li>
+        <li class=""><span class="lab">B</span><span>only buildings can host trade</span></li>
+        <li class=""><span class="lab">C</span><span>online sellers are not real sellers</span></li>
+        <li class="correct"><span class="lab">D</span><span>an online store with buyers, sellers and prices is just as much a market as a haat or mall</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A market is wherever buyers and sellers meet at a price, including online. Online stores do have prices and real sellers, and trade needs no building.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">An example of an 'online market' is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a shopping app where many sellers offer goods to buyers</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the 16th-century Hampi Bazaar</span></li>
+        <li class=""><span class="lab">C</span><span>a weekly village haat</span></li>
+        <li class=""><span class="lab">D</span><span>a city shopping mall</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A shopping app is an online market. Hampi Bazaar, a haat and a mall are physical markets.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">A 'haat' is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a permanent online app</span></li>
+        <li class=""><span class="lab">B</span><span>a market open every single day</span></li>
+        <li class=""><span class="lab">C</span><span>a government tax office</span></li>
+        <li class="correct"><span class="lab">D</span><span>a periodic rural market that gathers on fixed days of the week</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A haat is a periodic rural market held on fixed days. It is not an app, a daily market, or a tax office.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">A 'domestic' market is one in which trade happens:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>between two or more different countries</span></li>
+        <li class="correct"><span class="lab">B</span><span>within a single country</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>only on the internet</span></li>
+        <li class=""><span class="lab">D</span><span>only in ancient times</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A domestic market is trade within one country; an international market crosses borders. It is not internet-only or ancient-only.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">'Export' means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>buying goods from another country and bringing them home</span></li>
+        <li class=""><span class="lab">B</span><span>selling goods within one's own village</span></li>
+        <li class=""><span class="lab">C</span><span>storing goods in a warehouse</span></li>
+        <li class="correct"><span class="lab">D</span><span>selling goods produced in one country to a buyer in another country</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Export is selling a country's goods to a buyer abroad. Buying from abroad is import; village selling and storage are neither.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">'Import' means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>selling one's goods to another country</span></li>
+        <li class="correct"><span class="lab">B</span><span>buying goods from other countries and bringing them into one's own</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>making goods in a factory</span></li>
+        <li class=""><span class="lab">D</span><span>holding a periodic rural market</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Import is bringing in goods from abroad. Selling abroad is export; making goods is production; a periodic rural market is a haat.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">India buying crude oil from another country is an example of:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>an import</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>an export</span></li>
+        <li class=""><span class="lab">C</span><span>a domestic sale</span></li>
+        <li class=""><span class="lab">D</span><span>a subsidy</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bringing oil in from abroad is an import. Selling abroad is export, trade within India is domestic, and a subsidy is government support.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">A 'wholesaler' is a trader who:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>buys goods in bulk from producers and sells them to retailers</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>sells small quantities directly to final consumers</span></li>
+        <li class=""><span class="lab">C</span><span>uses up the goods as the final buyer</span></li>
+        <li class=""><span class="lab">D</span><span>inspects goods for the government</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A wholesaler buys in bulk from producers and sells to retailers. Selling small amounts to consumers is a retailer's job; the final buyer is a consumer; an inspector is a regulator.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">A 'retailer' is a shopkeeper who:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>buys in bulk from producers to resell to shops</span></li>
+        <li class=""><span class="lab">B</span><span>manufactures the goods</span></li>
+        <li class="correct"><span class="lab">C</span><span>sells goods in small quantities to final consumers for use</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>exports goods abroad</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A retailer sells small quantities to consumers. Bulk-buying for resale to shops is a wholesaler, making goods is a producer, and selling abroad is exporting.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">The main difference between a wholesaler and a retailer is that a wholesaler:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>deals in bulk and sells to retailers, while a retailer sells small amounts to consumers</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>sells to consumers, while a retailer buys in bulk</span></li>
+        <li class=""><span class="lab">C</span><span>makes the goods, while a retailer exports them</span></li>
+        <li class=""><span class="lab">D</span><span>inspects goods, while a retailer taxes them</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Wholesalers handle bulk and sell to retailers; retailers sell small quantities to consumers. The other options reverse or confuse these roles.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">Buying a single notebook from a neighbourhood shop is buying from a:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>retailer</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>wholesaler</span></li>
+        <li class=""><span class="lab">C</span><span>producer</span></li>
+        <li class=""><span class="lab">D</span><span>exporter</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A neighbourhood shop selling you one notebook is a retailer. A wholesaler sells in bulk, a producer makes goods, and an exporter sells abroad.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">A 'distributor' mainly:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>uses up the goods as the final consumer</span></li>
+        <li class=""><span class="lab">B</span><span>prints the MRP on packs</span></li>
+        <li class="correct"><span class="lab">C</span><span>supplies goods from manufacturers and wholesalers to retailers, especially across distances</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>sets the country's tax rates</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A distributor moves goods from makers and wholesalers to retailers, often over distances. The final user is a consumer; MRP and tax-setting are different.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">An 'aggregator' is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a factory that makes the goods</span></li>
+        <li class="correct"><span class="lab">B</span><span>a website or app that combines offers from multiple sellers in one place</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a single shop with one owner</span></li>
+        <li class=""><span class="lab">D</span><span>a government inspector</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An aggregator is an app or website organising many sellers' offers together. It is not a factory, a single shop, or an inspector.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">A food-delivery app that lists dishes from many different restaurants is acting as an:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>producer</span></li>
+        <li class="correct"><span class="lab">B</span><span>aggregator</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>wholesaler</span></li>
+        <li class=""><span class="lab">D</span><span>exporter</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Combining many sellers' offers in one app is an aggregator's role. A producer makes goods, a wholesaler sells bulk, and an exporter sells abroad.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">The usual chain from maker to user runs:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>consumer, then retailer, then producer, then wholesaler</span></li>
+        <li class=""><span class="lab">B</span><span>retailer, then producer, then consumer, then wholesaler</span></li>
+        <li class="correct"><span class="lab">C</span><span>producer, then wholesaler, then distributor, then retailer, then consumer</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>consumer, then producer, then retailer, then wholesaler</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Goods flow producer to wholesaler to distributor to retailer to consumer. The other orders scramble the chain.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">In the supply chain, the 'consumer' is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>trader who buys in bulk to resell</span></li>
+        <li class=""><span class="lab">B</span><span>factory that makes the good</span></li>
+        <li class="correct"><span class="lab">C</span><span>person who finally buys and uses the good</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>app that lists many sellers</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The consumer is the final buyer and user. The bulk reseller is a wholesaler, the maker is a producer, and the listing app is an aggregator.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">The Surat textile market is used in the chapter to illustrate:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>an online aggregator app</span></li>
+        <li class=""><span class="lab">B</span><span>a government tax office</span></li>
+        <li class=""><span class="lab">C</span><span>a certification mark for food</span></li>
+        <li class="correct"><span class="lab">D</span><span>a real-life supply chain moving cloth from producers to consumers</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Surat's textile market shows a living supply chain for cloth. It is not an app, a tax office, or a food mark.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">In the Surat textile example, the goods pass through several hands before reaching you because:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>each step (bulk buying, distribution, retailing) moves the cloth closer and in usable quantities to the buyer</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the law requires exactly five owners</span></li>
+        <li class=""><span class="lab">C</span><span>the cloth must be taxed at each separate shop</span></li>
+        <li class=""><span class="lab">D</span><span>consumers are forbidden to buy directly</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Each link adds value by moving and dividing the cloth toward the buyer. There is no five-owner law, per-shop tax rule, or ban on direct buying as the reason.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">The belief 'middlemen like wholesalers and retailers are useless and just make things expensive' is wrong because they:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>do nothing at all in the chain</span></li>
+        <li class=""><span class="lab">B</span><span>only raise prices with no benefit</span></li>
+        <li class=""><span class="lab">C</span><span>replace the producers entirely</span></li>
+        <li class="correct"><span class="lab">D</span><span>add real value - buying in bulk, storing, reaching far shops and splitting goods into small amounts</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Middlemen add genuine value by bulk-buying, storing, distributing far and selling small near you, making goods cheaper to move and easier to buy. They are not useless or mere price-raisers, and they do not replace producers.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">A wholesaler buying 1,000 shirts and a retailer selling them one at a time near your home shows that middlemen:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>serve no purpose and waste money</span></li>
+        <li class="correct"><span class="lab">B</span><span>make goods more convenient to buy in small, nearby quantities</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>force everyone to buy 1,000 shirts at once</span></li>
+        <li class=""><span class="lab">D</span><span>stop goods from ever reaching consumers</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The wholesaler-retailer split lets you buy a single shirt conveniently nearby - clear value. Middlemen are not purposeless, do not force bulk buying, and do help goods reach consumers.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">Without retailers, an ordinary buyer wanting just one item would have to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>pay no money at all</span></li>
+        <li class=""><span class="lab">B</span><span>get the item free from the government</span></li>
+        <li class=""><span class="lab">C</span><span>never obtain the item under any circumstances</span></li>
+        <li class="correct"><span class="lab">D</span><span>buy in bulk straight from producers, which is costly and inconvenient</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Without retailers you'd buy bulk directly from producers - costly and inconvenient, showing why retailers add value. It would not become free, government-given, or impossible.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">Beyond making money, markets benefit society by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>keeping different communities strictly apart</span></li>
+        <li class=""><span class="lab">B</span><span>banning all conversation between people</span></li>
+        <li class=""><span class="lab">C</span><span>serving only the government</span></li>
+        <li class="correct"><span class="lab">D</span><span>building trusted relationships and acting as melting pots of culture</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Markets build trust and mix cultures, connecting people, traditions and ideas. They do not separate communities, ban conversation, or serve only the government.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">The Ima Keithal of Imphal is notable because it is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a famous market run by women</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>an online food-delivery app</span></li>
+        <li class=""><span class="lab">C</span><span>a government tax office</span></li>
+        <li class=""><span class="lab">D</span><span>a certification mark for cloth</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Ima Keithal of Imphal is a famous women-run market. It is not an app, a tax office, or a certification mark.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">The Ima Keithal example best supports the idea that markets:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>can be social and cultural centres, not just places to make money</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>are only ever run by the government</span></li>
+        <li class=""><span class="lab">C</span><span>never involve women</span></li>
+        <li class=""><span class="lab">D</span><span>exist only online</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A women-run cultural market shows markets as social and cultural centres. They are not government-only, womenless, or online-only.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">Saying a market is a 'melting pot of culture' means it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>melts metal to make coins</span></li>
+        <li class="correct"><span class="lab">B</span><span>brings together people, traditions and ideas from many backgrounds</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>keeps each culture entirely separate</span></li>
+        <li class=""><span class="lab">D</span><span>sells only one kind of food</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A 'melting pot' market mixes people, traditions and ideas. It is not literal metal-melting, culture-separating, or single-product.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">One role of the government in markets is to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>personally buy everything for every citizen</span></li>
+        <li class=""><span class="lab">B</span><span>ban all private selling</span></li>
+        <li class="correct"><span class="lab">C</span><span>control prices and ensure quality and safety</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>set the price of nothing at all</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Governments help control prices and ensure quality and safety, among other roles. They do not buy everything, ban private trade, or stay entirely out of pricing.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">A 'subsidy' is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a tax added to every purchase</span></li>
+        <li class=""><span class="lab">B</span><span>the highest price printed on a pack</span></li>
+        <li class="correct"><span class="lab">C</span><span>money the government gives to lower a price or support producers</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a periodic rural market</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A subsidy (Latin subsidium, 'help') is government money to lower prices or support producers. A purchase tax, the printed MRP, and a haat are different.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">By giving farmers a subsidy on seeds, the government aims to:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>lower the cost and support the producers</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>raise the price for buyers as much as possible</span></li>
+        <li class=""><span class="lab">C</span><span>ban farming</span></li>
+        <li class=""><span class="lab">D</span><span>tax the farmers more</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A seed subsidy lowers costs and supports producers. It does not aim to raise prices, ban farming, or tax farmers more.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">'Public goods' are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>goods sold only to the richest buyers</span></li>
+        <li class="correct"><span class="lab">B</span><span>services or commodities accessible to all, whose use by one does not use them up for others, usually provided by the government</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>goods that vanish after one person uses them</span></li>
+        <li class=""><span class="lab">D</span><span>goods made only for export</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Public goods are available to all and not used up by one person's use, usually government-provided. They are not rich-only, single-use, or export-only.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">Which is the best example of a public good?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a chocolate bar bought and eaten by one child</span></li>
+        <li class=""><span class="lab">B</span><span>a single shirt sold to one buyer</span></li>
+        <li class=""><span class="lab">C</span><span>a privately owned bicycle</span></li>
+        <li class="correct"><span class="lab">D</span><span>a public street light that everyone can use</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A street light serves everyone without being used up - a public good. A chocolate, a sold shirt and a private bicycle are private goods used by one owner.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">The government curbs pollution from markets and factories mainly to:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>protect society and the environment</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>raise the price of pollution for profit</span></li>
+        <li class=""><span class="lab">C</span><span>help factories pollute more</span></li>
+        <li class=""><span class="lab">D</span><span>ban all manufacturing</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Curbing pollution protects society and the environment. It is not done for profit, to encourage pollution, or to ban all manufacturing.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">The FSSAI certification mark on a product tells a consumer that the item is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a food product that meets safety standards</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>an electrical appliance rated for energy use</span></li>
+        <li class=""><span class="lab">C</span><span>a graded agricultural product</span></li>
+        <li class=""><span class="lab">D</span><span>an industrial item meeting ISI standards</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>FSSAI marks food safety. Energy ratings are BEE Star, graded farm produce is AGMARK, and industrial standards are ISI/BIS.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">The ISI / BIS mark mainly assures the quality of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>packaged food only</span></li>
+        <li class="correct"><span class="lab">B</span><span>industrial and manufactured goods meeting Indian standards</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>fresh farm produce only</span></li>
+        <li class=""><span class="lab">D</span><span>the energy efficiency of appliances</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>ISI/BIS marks industrial and manufactured goods to Indian standards. Food is FSSAI, farm produce AGMARK, and energy efficiency BEE Star.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">The AGMARK certification is used for:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>electrical appliances' energy use</span></li>
+        <li class="correct"><span class="lab">B</span><span>agricultural products, showing they are graded for quality</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>packaged drinking water's electrical safety</span></li>
+        <li class=""><span class="lab">D</span><span>industrial machine parts</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>AGMARK grades agricultural produce. Energy use is BEE Star, and machine parts fall under ISI/BIS.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">The BEE Star label on a refrigerator tells a buyer about its:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>food safety</span></li>
+        <li class="correct"><span class="lab">B</span><span>energy efficiency</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>agricultural grade</span></li>
+        <li class=""><span class="lab">D</span><span>Persian market origin</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The BEE Star label rates energy efficiency. Food safety is FSSAI, farm grading is AGMARK, and 'Persian market' refers to a bazaar.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">A shopper wanting a safe packaged snack should look for the ____ mark, while one buying an energy-saving fan should look for the ____ label.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>BEE Star ... FSSAI</span></li>
+        <li class=""><span class="lab">B</span><span>AGMARK ... ISI</span></li>
+        <li class="correct"><span class="lab">C</span><span>FSSAI ... BEE Star</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>ISI ... AGMARK</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>FSSAI signals food safety and BEE Star signals energy efficiency. The other pairings mismatch the marks.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">'MRP' printed on a pack is the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>maximum price, taxes included, at which the product may be sold to a consumer</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>minimum price a seller must charge</span></li>
+        <li class=""><span class="lab">C</span><span>tax-free factory cost</span></li>
+        <li class=""><span class="lab">D</span><span>price only wholesalers pay</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>MRP is the highest price, including taxes, a consumer can be charged. It is not a minimum, a factory cost, or a wholesaler-only price.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">A shop tries to sell a snack above its printed MRP. This is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>not allowed, because MRP is the maximum a consumer may be charged</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>perfectly fine, since MRP is only a suggestion</span></li>
+        <li class=""><span class="lab">C</span><span>required by law every time</span></li>
+        <li class=""><span class="lab">D</span><span>the same thing as a subsidy</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Charging above MRP is not allowed, as MRP is the legal maximum consumer price. It is not a mere suggestion, a requirement, or a subsidy.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">To judge a product's quality before buying online, a consumer can use:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only the brightness of the advertisement</span></li>
+        <li class=""><span class="lab">B</span><span>only the seller's promises</span></li>
+        <li class=""><span class="lab">C</span><span>nothing but the price</span></li>
+        <li class="correct"><span class="lab">D</span><span>certification marks, labels and other buyers' reviews</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Marks, labels and genuine reviews help judge quality. Flashy ads, seller promises and price alone are unreliable guides.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">A 'bazaar' is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a periodic market held only on fixed days</span></li>
+        <li class=""><span class="lab">B</span><span>an online aggregator app</span></li>
+        <li class=""><span class="lab">C</span><span>a government subsidy</span></li>
+        <li class="correct"><span class="lab">D</span><span>a permanent market of many shops along streets or in an enclosure</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A bazaar (Persian) is a permanent market of many shops. A fixed-day market is a haat, an app is an aggregator, and a subsidy is government support.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">'Commerce' means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the printing of bank notes</span></li>
+        <li class=""><span class="lab">B</span><span>the study of old coins</span></li>
+        <li class="correct"><span class="lab">C</span><span>the buying and selling of goods and services on a large scale</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a periodic rural market</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Commerce (Latin com- + merx, 'goods together') is large-scale buying and selling, the root of 'merchant' and 'e-commerce'. Note-printing, numismatics and a haat are different.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">A student says, 'The cheapest seller is always best, and an online store isn't a real market.' The best correction is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the cheapest seller is always best, and online stores are not markets</span></li>
+        <li class=""><span class="lab">B</span><span>only malls are markets, and prices do not matter</span></li>
+        <li class="correct"><span class="lab">C</span><span>a 'just right' price keeps sellers in business, and any place - online or physical - with buyers, sellers and a price is a market</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>markets need neither buyers nor sellers</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Too-cheap selling can drive sellers out, so the 'just right' price matters; and a market is any arrangement with buyers, sellers and a price, including online. The other options repeat the misconceptions.</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

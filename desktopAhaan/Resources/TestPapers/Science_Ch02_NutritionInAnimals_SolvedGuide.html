@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nutrition In Animals — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Nutrition In Animals<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">The five steps of nutrition occur in a fixed order. Which sequence is correct?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Ingestion → Absorption → Digestion → Assimilation → Egestion</span></li>
+        <li class=""><span class="lab">B</span><span>Digestion → Ingestion → Absorption → Egestion → Assimilation</span></li>
+        <li class="correct"><span class="lab">C</span><span>Ingestion → Digestion → Absorption → Assimilation → Egestion</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Ingestion → Digestion → Assimilation → Absorption → Egestion</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The five steps run: ingestion (taking food in) → digestion (breaking it down) → absorption (passing nutrients to the blood) → assimilation (cells using them) → egestion (removing undigested waste). Only option C lists this exact order. The others scramble it — e.g. putting absorption before digestion is impossible, because nothing can be absorbed until it is first broken small enough to cross the gut wall.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">A student says, "Once I swallow food, my body can use it straight away." The flaw in this statement is that the food must still be:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ingested only</span></li>
+        <li class="correct"><span class="lab">B</span><span>digested and absorbed before cells can use it</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>egested before it can be used</span></li>
+        <li class=""><span class="lab">D</span><span>assimilated before it is digested</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Swallowed food is large and locked in complex molecules; cells can use it only after it is *digested* into simple molecules and then *absorbed* into the blood. So the missing steps are digestion and absorption. "Ingested only" is what already happened; egestion and assimilation come later, and assimilation can never precede digestion.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">Which step of nutrition actually delivers nutrients **into the blood**?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>digestion</span></li>
+        <li class=""><span class="lab">B</span><span>egestion</span></li>
+        <li class=""><span class="lab">C</span><span>assimilation</span></li>
+        <li class="correct"><span class="lab">D</span><span>absorption</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Absorption is precisely the step in which the simple nutrients pass from the small intestine into the bloodstream. Digestion only breaks food down (no blood transfer yet); assimilation is cells *using* what is already in the blood; egestion removes waste.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">"Assimilation" is best described as the step in which:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>absorbed nutrients are used by cells for energy, growth, and repair</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>complex food is broken into simple molecules</span></li>
+        <li class=""><span class="lab">C</span><span>food is taken into the mouth</span></li>
+        <li class=""><span class="lab">D</span><span>undigested waste leaves the body</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Assimilation is the use of absorbed nutrients by body cells for energy, growth, and repair. Option B describes digestion, C describes ingestion, and D describes egestion — classic step-mix-up distractors.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">Removal of **undigested** food from the body is called egestion. This is different from excretion because excretion removes:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the same undigested food, just by another name</span></li>
+        <li class="correct"><span class="lab">B</span><span>waste produced inside cells (such as during energy release)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>water only</span></li>
+        <li class=""><span class="lab">D</span><span>bacteria from the gut</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Egestion removes *undigested food* that never entered the cells. Excretion is different: it removes wastes produced *inside the body's cells* (for example during the release of energy). So they are not the same process under a different name (A), nor merely water (C) or bacteria (D).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">Why can't a single molecule of starch from a roti simply pass straight into your blood the moment you swallow?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>because starch is poisonous until cooked</span></li>
+        <li class="correct"><span class="lab">B</span><span>because the starch molecule is too large until enzymes break it into simple sugar</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>because the blood does not touch the stomach</span></li>
+        <li class=""><span class="lab">D</span><span>because starch is absorbed only in the large intestine</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Starch is a giant molecule; the gut wall only lets through small, simple sugar molecules. Until enzymes (starting with salivary amylase) cut the starch into simple sugars, it is too large to be absorbed. It is not poisonous (A), the blood does reach the gut wall via capillaries (C), and starch is mostly absorbed in the small intestine, not the large (D).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">A butterfly sipping nectar and a snake swallowing a whole egg differ mainly in their step of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>absorption</span></li>
+        <li class=""><span class="lab">B</span><span>assimilation</span></li>
+        <li class=""><span class="lab">C</span><span>egestion</span></li>
+        <li class="correct"><span class="lab">D</span><span>ingestion</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A butterfly sucking nectar through a proboscis and a snake swallowing prey whole are both *taking food in* — they differ in their mode of **ingestion**. Absorption, assimilation, and egestion are later, internal steps that are broadly similar.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">An Amoeba pushes out finger-like extensions to surround a food particle. These extensions are called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>villi</span></li>
+        <li class=""><span class="lab">B</span><span>cilia</span></li>
+        <li class=""><span class="lab">C</span><span>flagella</span></li>
+        <li class="correct"><span class="lab">D</span><span>pseudopodia</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Amoeba extends temporary cytoplasmic projections called **pseudopodia** ("false feet") to surround food. Villi line the human intestine; cilia and flagella are hair-like motion structures, not feeding arms in Amoeba.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">A housefly cannot chew. It pours digestive juice onto solid food and then sucks up the liquid. This shows that, in the housefly:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>no digestion occurs at all</span></li>
+        <li class=""><span class="lab">B</span><span>absorption happens before ingestion</span></li>
+        <li class="correct"><span class="lab">C</span><span>some digestion begins **outside** the body before ingestion is complete</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>egestion happens first</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The housefly releases digestive juice onto solid food *outside* its body and then sucks up the liquefied result — so **some digestion begins outside the body** before ingestion is complete. Digestion clearly does occur (so not A), and absorption/egestion still come in their normal later order.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">A mosquito's mouthparts and a cow's flat-topped teeth are different because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>mosquitoes are larger than cows</span></li>
+        <li class="correct"><span class="lab">B</span><span>the kind of food an animal eats shapes its feeding tools</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>all insects suck and all mammals grind, with no exceptions</span></li>
+        <li class=""><span class="lab">D</span><span>cows do not need to feed</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Feeding tools match the food: a mosquito pierces and sucks fluids, a cow grinds tough grass with flat molars. So **the kind of food an animal eats shapes its feeding tools**. Size (A) is irrelevant, the "no exceptions" rule (C) is false (e.g. a butterfly is an insect that sucks while a grasshopper chews), and cows obviously feed (D).</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">An adult human has 32 teeth. Which set is used mainly for **biting and cutting** food?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>incisors</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>canines</span></li>
+        <li class=""><span class="lab">C</span><span>premolars</span></li>
+        <li class=""><span class="lab">D</span><span>molars</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The flat, chisel-edged front teeth, the **incisors**, do the biting and cutting. Canines tear, premolars and molars grind — a different job for each shape.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">A carnivore such as a dog has long, pointed teeth on each side of its front teeth, well suited to **tearing** flesh. These are the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>incisors</span></li>
+        <li class=""><span class="lab">B</span><span>molars</span></li>
+        <li class="correct"><span class="lab">C</span><span>canines</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>premolars</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The long, pointed teeth beside the incisors are the **canines**, well shaped for tearing flesh — prominent in carnivores like dogs. Incisors cut, premolars/molars grind.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">The hardest substance in the human body, which forms the outer covering of the crown of a tooth, is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>dentine</span></li>
+        <li class=""><span class="lab">B</span><span>pulp</span></li>
+        <li class="correct"><span class="lab">C</span><span>enamel</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>bone</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>**Enamel** is the hard outer covering of the crown and is the hardest substance in the human body. Dentine lies beneath it, pulp is the soft inner core, and bone is not part of the visible tooth surface.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">The central part of a tooth, which contains nerves and blood vessels, is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>crown</span></li>
+        <li class=""><span class="lab">B</span><span>enamel</span></li>
+        <li class=""><span class="lab">C</span><span>root</span></li>
+        <li class="correct"><span class="lab">D</span><span>pulp cavity</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The **pulp cavity** at the centre of the tooth holds the nerves and blood vessels — which is why a deep cavity hurts. The crown is the visible top, enamel is the outer coat, and the root anchors the tooth in the jaw.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">Tooth decay begins when bacteria act on left-over sugar and release acid that attacks the enamel. The best single reason to brush after sweets is therefore that brushing:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>makes the teeth whiter only</span></li>
+        <li class=""><span class="lab">B</span><span>replaces lost enamel</span></li>
+        <li class="correct"><span class="lab">C</span><span>removes the sugar before bacteria can turn it into enamel-attacking acid</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>kills the tongue's taste buds</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Decay starts when mouth bacteria turn left-over sugar into acid that attacks enamel. Brushing **removes the sugar before the bacteria can make that acid** — that is the real protective action. Brushing does not rebuild lost enamel (B), whiteness alone (A) is cosmetic, and it should not harm taste buds (D).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">Counting an adult's grinding teeth: there are 8 premolars and 12 molars. The total number of grinding teeth is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>12</span></li>
+        <li class=""><span class="lab">B</span><span>32</span></li>
+        <li class=""><span class="lab">C</span><span>8</span></li>
+        <li class="correct"><span class="lab">D</span><span>20</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Grinding teeth = premolars + molars = 8 + 12 = **20**. (12 counts only molars; 8 counts only premolars; 32 is all the teeth, not just the grinders — three tempting miscounts.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">Saliva does more than wet the food. The enzyme in saliva begins the digestion of:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>starch</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>fats</span></li>
+        <li class=""><span class="lab">C</span><span>proteins</span></li>
+        <li class=""><span class="lab">D</span><span>water</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The enzyme in saliva (salivary amylase) begins the digestion of **starch**. Proteins are first attacked in the stomach by pepsin; fats are handled later with bile and pancreatic enzymes; water needs no digestion.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">If you chew a plain piece of bread for a long time without swallowing, it slowly tastes sweeter. This is because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the bread absorbs sugar from the tongue</span></li>
+        <li class="correct"><span class="lab">B</span><span>salivary amylase breaks starch into simpler sugars</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the acid in saliva caramelises the bread</span></li>
+        <li class=""><span class="lab">D</span><span>bacteria add sugar to the bread</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Chewing plain bread tastes sweeter over time because **salivary amylase breaks the starch into simpler sugars**, which taste sweet. The bread does not absorb sugar from the tongue (A), saliva is not hot or acidic enough to caramelise (C), and bacteria do not add sugar that fast (D).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">Three pairs of glands in the mouth release saliva. Apart from starting starch digestion, saliva also helps by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>absorbing nutrients into the blood</span></li>
+        <li class=""><span class="lab">B</span><span>storing undigested waste</span></li>
+        <li class=""><span class="lab">C</span><span>producing hydrochloric acid</span></li>
+        <li class="correct"><span class="lab">D</span><span>moistening food so it can be swallowed easily</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Besides starting starch digestion, saliva **moistens the food so it can be swallowed** smoothly and rolled into a soft lump. Absorption (A) happens in the intestine, HCl (C) is made in the stomach, and waste storage (B) is the large intestine's job.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">After you swallow, food is pushed down the food pipe by a wave-like squeezing of its muscular wall. This movement is called:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>peristalsis</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>rumination</span></li>
+        <li class=""><span class="lab">C</span><span>emulsification</span></li>
+        <li class=""><span class="lab">D</span><span>absorption</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The wave-like muscular squeezing that pushes food down the food pipe is **peristalsis**. Rumination is cud-chewing in cows, emulsification is bile's action on fat, and absorption is nutrient uptake.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">A person lying flat on their back can still swallow water and it reaches the stomach. The reason peristalsis can move food even against gravity is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>gravity always helps swallowing</span></li>
+        <li class="correct"><span class="lab">B</span><span>muscles of the food pipe contract in a sequence that pushes food forward</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the food pipe is a straight vertical drop</span></li>
+        <li class=""><span class="lab">D</span><span>water is lighter than air</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Swallowing works lying down because the **food-pipe muscles contract in a coordinated sequence** that actively pushes the lump forward — it does not rely on gravity (so A is false, and the pipe is not a straight vertical drop, C). Water being "light" (D) is irrelevant.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">The food pipe (oesophagus) carries food from the mouth region to the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>stomach</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>liver</span></li>
+        <li class=""><span class="lab">C</span><span>small intestine</span></li>
+        <li class=""><span class="lab">D</span><span>large intestine</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The oesophagus carries food from the throat region straight to the **stomach**. The small and large intestines come after the stomach; the liver is a gland off to the side, not on the food's swallowing path.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">The stomach is a J-shaped muscular bag. Its strong walls help digestion mainly by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>absorbing all nutrients into the blood</span></li>
+        <li class=""><span class="lab">B</span><span>reabsorbing water from waste</span></li>
+        <li class=""><span class="lab">C</span><span>producing bile</span></li>
+        <li class="correct"><span class="lab">D</span><span>churning the food and mixing it thoroughly with digestive juices</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The stomach's muscular walls mainly **churn the food and mix it thoroughly with gastric juices**. Most absorption happens later in the small intestine (A), bile is made by the liver (C), and water reabsorption is the large intestine's role (B).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">The gastric juice of the stomach contains hydrochloric acid, mucus, and a protein-digesting enzyme called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>amylase</span></li>
+        <li class="correct"><span class="lab">B</span><span>pepsin</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>bile</span></li>
+        <li class=""><span class="lab">D</span><span>trypsin</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The protein-digesting enzyme in gastric juice is **pepsin**. Amylase digests starch (mouth/pancreas), bile is not an enzyme (it emulsifies fat), and trypsin is a pancreatic protein-enzyme, not a stomach one.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">Pepsin works best in a strongly acidic setting. The hydrochloric acid in the stomach therefore has the double job of killing germs in food **and**:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>cooling the food</span></li>
+        <li class=""><span class="lab">B</span><span>breaking down fats into droplets</span></li>
+        <li class="correct"><span class="lab">C</span><span>creating the acidic conditions that let pepsin act</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>absorbing sugar</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Besides killing germs in food, the stomach's hydrochloric acid **creates the acidic conditions that allow pepsin to work** (pepsin needs strong acid). It does not cool food (A), break fats into droplets (B — that is bile), or absorb sugar (D).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">The stomach is itself made largely of protein, yet pepsin and acid do not normally digest the stomach wall. The protection comes from:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>bile coating the stomach</span></li>
+        <li class="correct"><span class="lab">B</span><span>a layer of mucus lining the inner wall</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the wall being made of bone</span></li>
+        <li class=""><span class="lab">D</span><span>the wall having no proteins at all</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Even though the stomach wall is made of protein, **a layer of mucus lines the inner wall** and shields it from the acid and pepsin. The wall is not made of bone (C) and certainly contains proteins (D); bile (A) is not involved in stomach protection.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">The thick, semi-liquid paste of partly digested food that the stomach releases into the small intestine is called:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>chyme</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>bile</span></li>
+        <li class=""><span class="lab">C</span><span>cud</span></li>
+        <li class=""><span class="lab">D</span><span>saliva</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The thick, semi-liquid paste of partly digested food released from the stomach is called **chyme**. Cud is the regurgitated grass of a ruminant, bile is the liver's fat-fluid, and saliva is the mouth's secretion.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">In which order does food pass through these three organs?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>stomach → oesophagus → small intestine</span></li>
+        <li class=""><span class="lab">B</span><span>small intestine → stomach → oesophagus</span></li>
+        <li class="correct"><span class="lab">C</span><span>oesophagus → stomach → small intestine</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>oesophagus → small intestine → stomach</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Following the food's path: mouth → **oesophagus → stomach → small intestine**. Option C is the only correct order; the others place the stomach or small intestine before the oesophagus, which never happens.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">The small intestine is the **longest** part of the food canal (about 6 metres in an adult). The single biggest reason it is so long and coiled is to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>store undigested food</span></li>
+        <li class="correct"><span class="lab">B</span><span>provide a large surface and enough time to digest food and absorb nutrients</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>make hydrochloric acid</span></li>
+        <li class=""><span class="lab">D</span><span>churn food the way the stomach does</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The small intestine is long and coiled chiefly to **provide a large surface area and enough time to finish digestion and absorb the nutrients**. It does not store waste (A — that is the large intestine), make HCl (C — the stomach), or churn like the stomach (D).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">Two secretions empty into the first part of the small intestine to complete digestion: bile from the liver and a juice rich in enzymes from the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>gall bladder</span></li>
+        <li class=""><span class="lab">B</span><span>stomach</span></li>
+        <li class=""><span class="lab">C</span><span>salivary glands</span></li>
+        <li class="correct"><span class="lab">D</span><span>pancreas</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Into the first part of the small intestine empties bile (from the liver) and an enzyme-rich juice from the **pancreas** (pancreatic juice). The gall bladder only *stores* bile; the stomach and salivary glands act earlier in the canal.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">The inner wall of the small intestine is covered with millions of tiny finger-like projections. Their main purpose is to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>grind the food</span></li>
+        <li class="correct"><span class="lab">B</span><span>greatly increase the surface area for absorption</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>make the intestine acidic</span></li>
+        <li class=""><span class="lab">D</span><span>store bile</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The finger-like projections exist to **greatly increase the surface area for absorption**, so more nutrients pass into the blood per second. They do not grind food (A), make the gut acidic (C), or store bile (D).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">These finger-like projections of the small-intestine wall are called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>cilia</span></li>
+        <li class="correct"><span class="lab">B</span><span>villi</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>pseudopodia</span></li>
+        <li class=""><span class="lab">D</span><span>sphincters</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>These projections lining the small-intestine wall are the **villi**. Cilia are tiny beating hairs, pseudopodia belong to Amoeba, and sphincters are ring muscles that open and close passages.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">Inside each villus are tiny blood vessels. This tells us that, right at the villus, the step taking place is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ingestion</span></li>
+        <li class=""><span class="lab">B</span><span>digestion of protein</span></li>
+        <li class="correct"><span class="lab">C</span><span>absorption of nutrients into the blood</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>egestion</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Because each villus contains tiny blood vessels (capillaries), the step happening there is **absorption of nutrients into the blood**. Ingestion is at the mouth, protein digestion happens before this in the stomach, and egestion is waste removal at the far end.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">Suppose a disease flattened the villi so the inner wall of the small intestine became smooth. The most direct result would be:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>faster digestion of starch in the mouth</span></li>
+        <li class="correct"><span class="lab">B</span><span>poorer absorption of nutrients, so the person stays undernourished even while eating</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>more bile produced</span></li>
+        <li class=""><span class="lab">D</span><span>stronger churning by the stomach</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Flattening the villi removes most of the absorbing surface, so the most direct effect is **poorer absorption — the person stays undernourished even while eating enough**. It would not speed up mouth digestion (A), increase bile (C), or strengthen stomach churning (D); those are unrelated organs.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">The large intestine is shorter and wider than the small intestine. Its chief job is to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>digest proteins</span></li>
+        <li class=""><span class="lab">B</span><span>absorb digested sugars into the blood</span></li>
+        <li class=""><span class="lab">C</span><span>produce pepsin</span></li>
+        <li class="correct"><span class="lab">D</span><span>absorb water from the undigested residue</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The large intestine's chief job is to **absorb water from the undigested residue**, turning it into solid waste. It does not digest proteins (A) or absorb sugars into the blood (B — the small intestine does that), and pepsin is a stomach enzyme (C).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">If the large intestine absorbs **too much** water from the waste, the likely result is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>hard, dry stools that are difficult to egest (constipation)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>loose, watery stools</span></li>
+        <li class=""><span class="lab">C</span><span>vomiting of acid</span></li>
+        <li class=""><span class="lab">D</span><span>faster digestion of fats</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>If too much water is pulled out, the leftover becomes **hard, dry stools that are difficult to egest — constipation**. Too *little* water removal would cause loose stools (B); vomiting acid (C) and faster fat digestion (D) are unrelated to large-intestine water uptake.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">The undigested, solid waste is stored for a short time and then removed through the anus. This final step is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>absorption</span></li>
+        <li class=""><span class="lab">B</span><span>assimilation</span></li>
+        <li class="correct"><span class="lab">C</span><span>egestion</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>ingestion</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Removing the stored solid waste through the anus is the final step, **egestion**. Absorption and assimilation happen earlier and deal with useful nutrients; ingestion is the very first step.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">The largest gland in the human body, which makes bile, is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>pancreas</span></li>
+        <li class=""><span class="lab">B</span><span>salivary gland</span></li>
+        <li class="correct"><span class="lab">C</span><span>liver</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>gall bladder</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The largest gland in the human body, and the maker of bile, is the **liver**. The pancreas makes enzyme juice, salivary glands make saliva, and the gall bladder only stores bile (it is not a gland that makes it).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">Bile is stored, between meals, in a small sac called the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>rumen</span></li>
+        <li class=""><span class="lab">B</span><span>duodenum</span></li>
+        <li class="correct"><span class="lab">C</span><span>gall bladder</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>pancreas</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Between meals, bile is stored in the **gall bladder**, a small sac, and released when fatty food arrives. The rumen is a cow's stomach chamber, the duodenum is the start of the small intestine, and the pancreas makes a different juice.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">Bile contains **no digestive enzyme**, yet it greatly helps the digestion of fats. It does this by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>chemically breaking fat into amino acids</span></li>
+        <li class=""><span class="lab">B</span><span>turning fat into starch</span></li>
+        <li class=""><span class="lab">C</span><span>absorbing the fat into the blood directly</span></li>
+        <li class="correct"><span class="lab">D</span><span>breaking large fat globules into tiny droplets so enzymes can act on them more easily</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bile carries no enzyme, yet it helps fat digestion by **breaking large fat globules into tiny droplets** (emulsification), giving fat-digesting enzymes far more surface to act on. It does not chemically cut fat into amino acids (A — fats give fatty acids, not amino acids), turn fat to starch (B), or absorb fat directly (C).</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">A patient whose gall bladder has been removed often finds **fatty** meals hardest to handle. This fits the idea that bile mainly assists the digestion of:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>fats</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>starch</span></li>
+        <li class=""><span class="lab">C</span><span>proteins</span></li>
+        <li class=""><span class="lab">D</span><span>water</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Without a gall bladder, bile is no longer concentrated and released in a burst, so **fatty** meals are hardest to handle — confirming that bile mainly assists the digestion of **fats**. Starch (B), proteins (C), and water (D) do not depend on bile.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">The pancreatic juice contains enzymes that act on carbohydrates, proteins, **and** fats. This makes the pancreas special because most other digestive juices:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only absorb water</span></li>
+        <li class=""><span class="lab">B</span><span>contain no enzymes</span></li>
+        <li class=""><span class="lab">C</span><span>are made in the mouth</span></li>
+        <li class="correct"><span class="lab">D</span><span>act on only one or two food types</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The pancreatic juice is special because it acts on carbohydrates, proteins, *and* fats together, whereas **most other digestive juices act on only one or two food types** (e.g. saliva on starch alone, gastric juice mainly on protein). It is full of enzymes (so not B), is not made in the mouth (C), and is for digestion, not water absorption (A).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">Cows, buffaloes, goats and deer are grouped together as **ruminants** chiefly because they:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>all eat meat</span></li>
+        <li class=""><span class="lab">B</span><span>digest food inside a single cell</span></li>
+        <li class=""><span class="lab">C</span><span>have only one stomach chamber</span></li>
+        <li class="correct"><span class="lab">D</span><span>swallow grass quickly and later return it to the mouth to chew again</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Ruminants are grouped together because they **swallow grass quickly and later bring it back to the mouth to chew again** (chewing the cud). They are plant-eaters, not meat-eaters (A); they have a four-chambered, not single-chambered, stomach (C); and they digest in organs, not inside one cell (D refers to Amoeba).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">The partly digested grass that a cow brings back up to chew slowly while resting is called:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>cud</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>bile</span></li>
+        <li class=""><span class="lab">C</span><span>chyme</span></li>
+        <li class=""><span class="lab">D</span><span>mucus</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The partly digested grass a cow returns to its mouth to chew at leisure is called **cud**. Chyme is the human stomach paste, bile is the liver's fluid, and mucus is a protective slime.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">A ruminant's stomach has four chambers. The largest chamber, where microbes start breaking down the grass, is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>abomasum</span></li>
+        <li class="correct"><span class="lab">B</span><span>rumen</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>reticulum</span></li>
+        <li class=""><span class="lab">D</span><span>omasum</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The largest of the four chambers, where microbes first attack the grass, is the **rumen**. The reticulum, omasum, and abomasum are the smaller, later chambers.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">Grass is rich in cellulose. Cows can live on grass even though, like humans, they make no enzyme to digest cellulose. They manage because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>they cook the grass first</span></li>
+        <li class=""><span class="lab">B</span><span>cellulose needs no digestion</span></li>
+        <li class="correct"><span class="lab">C</span><span>microbes living in the rumen break the cellulose down for them</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>their saliva contains cellulase</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cows cannot make a cellulose-digesting enzyme themselves; they manage because **microbes living in the rumen break the cellulose down for them**. They do not cook grass (A), cellulose certainly needs digestion (B), and their saliva does not contain cellulase (D) — the microbes supply that ability.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">A human eats the same grass and gets almost nothing from it, but a cow thrives on it. The best single reason is that the human:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>lacks both the rumen microbes and the re-chewing system that break down cellulose</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>has no stomach</span></li>
+        <li class=""><span class="lab">C</span><span>cannot swallow grass</span></li>
+        <li class=""><span class="lab">D</span><span>digests grass in the mouth</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A human gets little from grass because the human **lacks both the rumen microbes and the cud re-chewing system** that together break down cellulose. The human does have a stomach (B), can swallow grass (C), and does not digest grass in the mouth (D) — none of those is the real reason.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">In which chamber of a ruminant's stomach does acid-and-enzyme digestion happen, much like in a human stomach?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>rumen</span></li>
+        <li class=""><span class="lab">B</span><span>reticulum</span></li>
+        <li class="correct"><span class="lab">C</span><span>abomasum</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>omasum</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Acid-and-enzyme digestion, like that in a human stomach, happens in the **abomasum**, the "true stomach" chamber. The rumen and reticulum host microbial breakdown, and the omasum mainly absorbs water.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">Re-chewing the cud is useful because grinding the grass more finely:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>makes the grass taste sweeter</span></li>
+        <li class=""><span class="lab">B</span><span>turns cellulose into protein instantly</span></li>
+        <li class=""><span class="lab">C</span><span>removes the need for any stomach</span></li>
+        <li class="correct"><span class="lab">D</span><span>exposes more surface for microbes and enzymes to act on</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Re-chewing the cud grinds the grass finer, which **exposes more surface for microbes and enzymes to act on**, speeding cellulose breakdown. It does not change taste (A), turn cellulose into protein (B), or remove the need for a stomach (C).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">Amoeba is a single-celled animal. It captures its food by surrounding it with pseudopodia. The food then ends up trapped inside a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>villus</span></li>
+        <li class=""><span class="lab">B</span><span>gall bladder</span></li>
+        <li class="correct"><span class="lab">C</span><span>food vacuole</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>rumen</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>After the pseudopodia wrap around the food, it is trapped inside a **food vacuole**, where enzymes digest it. A villus and gall bladder are human structures; the rumen is a cow's stomach chamber.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">Inside the Amoeba, digestive enzymes are released **into the food vacuole**. This is comparable, in a human, to enzymes acting:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>inside the cavity of the stomach and intestine</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>inside the brain</span></li>
+        <li class=""><span class="lab">C</span><span>on the skin surface</span></li>
+        <li class=""><span class="lab">D</span><span>in the blood only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In Amoeba the enzymes are released into the food vacuole — a closed pocket where digestion happens. The human parallel is enzymes acting **inside the cavity of the stomach and intestine** (also enclosed spaces). It is not in the brain (B), on the skin (C), or only in the blood (D).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">Which statement correctly compares nutrition in Amoeba and in a human?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only the human carries out digestion; Amoeba does not</span></li>
+        <li class=""><span class="lab">B</span><span>the human takes in food but never assimilates it</span></li>
+        <li class=""><span class="lab">C</span><span>Amoeba absorbs food but never egests</span></li>
+        <li class="correct"><span class="lab">D</span><span>both carry out all five steps, but Amoeba does them within one cell while a human uses many organs</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct comparison: **both Amoeba and humans carry out all five steps of nutrition, but Amoeba does them within a single cell while a human uses many specialised organs.** Amoeba does digest (so A is false), it does egest (C false), and humans do assimilate (B false).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">The way an Amoeba engulfs a food particle with its pseudopodia is most similar to which everyday image?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a hand cupping and wrapping around a marble</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a straw sucking up juice</span></li>
+        <li class=""><span class="lab">C</span><span>a sieve straining water</span></li>
+        <li class=""><span class="lab">D</span><span>a knife cutting bread</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Pseudopodia flowing around and wrapping a food particle is most like **a hand cupping and wrapping around a marble** — surrounding and enclosing it. A straw sucking (B) is more like a butterfly's proboscis, a sieve straining (C) is like baleen filtering, and a knife cutting (D) is like incisors.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">After an Amoeba has digested and absorbed the useful part of its meal, the leftover undigested matter is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>thrown out when the vacuole reaches the cell surface (egestion)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>kept forever inside the cell</span></li>
+        <li class=""><span class="lab">C</span><span>turned into a new pseudopodium</span></li>
+        <li class=""><span class="lab">D</span><span>passed to a neighbouring cell</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Leftover undigested matter in Amoeba is **thrown out when the food vacuole reaches the cell surface and discharges its contents** — this is egestion in a single cell. It is not kept forever (B), recycled into a pseudopodium (C), or passed to a neighbour (D).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">A pseudopodium is a "temporary" structure, unlike a human's stomach. The key difference this points to is that Amoeba:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>has permanent organs for each step</span></li>
+        <li class="correct"><span class="lab">B</span><span>makes structures as needed rather than having fixed organs</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>cannot move at all</span></li>
+        <li class=""><span class="lab">D</span><span>digests food outside its body</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A pseudopodium being temporary tells us that Amoeba **makes structures as it needs them rather than having fixed organs** — a single cell improvises. So it does *not* have permanent organs (A), it certainly can move (C), and its digestion occurs inside the cell, not outside (D).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">The glucose absorbed from your food is finally "burnt" inside your cells to release energy. The tiny structures in the cell where this energy release mainly happens are the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>villi</span></li>
+        <li class="correct"><span class="lab">B</span><span>mitochondria</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>food vacuoles</span></li>
+        <li class=""><span class="lab">D</span><span>salivary glands</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Glucose is "burnt" to release energy mainly inside the **mitochondria**, the cell's energy structures. Villi absorb nutrients, food vacuoles are Amoeba's digestion pockets, and salivary glands make saliva — none release the cell's energy.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">After a meal, a growing child uses some of the absorbed amino acids to build new muscle. This use of absorbed nutrients to build and repair tissue is the step called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ingestion</span></li>
+        <li class=""><span class="lab">B</span><span>digestion</span></li>
+        <li class=""><span class="lab">C</span><span>egestion</span></li>
+        <li class="correct"><span class="lab">D</span><span>assimilation</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Using absorbed amino acids to build new muscle and repair tissue is the step called **assimilation**. Ingestion is taking food in, digestion is breaking it down, and egestion is waste removal.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">A person eats well but their digestion (in the gut) works fine while their cells cannot use glucose properly. The step that is failing here is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>assimilation</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>digestion</span></li>
+        <li class=""><span class="lab">C</span><span>absorption</span></li>
+        <li class=""><span class="lab">D</span><span>ingestion</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Digestion and absorption are working fine, but the *cells cannot use the glucose* — so the failing step is the cellular use of nutrients, i.e. **assimilation**. It is not ingestion, digestion, or absorption, all of which the question says are working.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">Trace one mouthful of rice through the body. In which organ is its **starch digestion first started** and in which is the resulting sugar **mainly absorbed**?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>started in the mouth; absorbed in the small intestine</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>started in the stomach; absorbed in the large intestine</span></li>
+        <li class=""><span class="lab">C</span><span>started in the small intestine; absorbed in the stomach</span></li>
+        <li class=""><span class="lab">D</span><span>started in the liver; absorbed in the mouth</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Starch is first attacked by salivary amylase in the **mouth**; the resulting simple sugar is **mainly absorbed in the small intestine** (through the villi). Stomach acid does not start starch digestion (B), the small intestine does not start it (C), and the liver/mouth absorption pairing (D) is nonsense.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">A meal of paneer (a protein-rich food) is eaten. Order the places where it is chiefly broken down and where its building blocks are absorbed.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>protein broken down in the large intestine; absorbed in the stomach</span></li>
+        <li class=""><span class="lab">B</span><span>protein broken down only in the mouth; absorbed in the large intestine</span></li>
+        <li class="correct"><span class="lab">C</span><span>protein broken down mainly in the stomach and small intestine; building blocks absorbed in the small intestine</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>protein not broken down at all; absorbed whole in the mouth</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Protein (paneer) is broken down mainly by pepsin in the **stomach** and finished by enzymes in the **small intestine**; its building blocks (amino acids) are then **absorbed in the small intestine** through the villi. It is not handled in the mouth alone (B), nor in the large intestine (A), and protein is certainly digested rather than absorbed whole (D). --- *Solutions complete: 60 / 60.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

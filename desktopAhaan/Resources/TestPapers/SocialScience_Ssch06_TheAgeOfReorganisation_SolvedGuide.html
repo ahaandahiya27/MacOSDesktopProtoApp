@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Age Of Reorganisation — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>The Age Of Reorganisation<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">Historians call the period from roughly the 2nd century BCE to the 3rd century CE the 'Age of Reorganisation' chiefly because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>one new empire reorganised the whole subcontinent under a single ruler</span></li>
+        <li class="correct"><span class="lab">B</span><span>old regions were repeatedly reshaped into many new, competing kingdoms</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the Mauryan administration was reorganised into larger provinces</span></li>
+        <li class=""><span class="lab">D</span><span>foreign rulers reorganised India into a single Silk-Route state</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The name marks how the political map kept being rearranged: after the Mauryas broke up, regions were reshaped into many rival kingdoms that fought and allied for power. There was no single unifying empire in this age, and the reorganisation was of the whole map of kingdoms, not merely of Mauryan provinces.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">What actually triggered the breakup of the Maurya Empire?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>an Indo-Greek army stormed and burned the Mauryan capital</span></li>
+        <li class=""><span class="lab">B</span><span>the Kushanas under Kanishka annexed it</span></li>
+        <li class=""><span class="lab">C</span><span>a Satavahana invasion from the Deccan toppled it</span></li>
+        <li class="correct"><span class="lab">D</span><span>its last emperor was assassinated by his own commander-in-chief</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The empire broke from WITHIN: around 185 BCE the last Maurya ruler was assassinated by his commander-in-chief, Pushyamitra Shunga. The foreign peoples entered the northwest only later, after the breakup had weakened the frontier; they did not cause the collapse.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">The general who killed the last Maurya emperor around 185 BCE and began a new dynasty was:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Kharavela of Kalinga</span></li>
+        <li class="correct"><span class="lab">B</span><span>Pushyamitra Shunga</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Kanishka the Kushana</span></li>
+        <li class=""><span class="lab">D</span><span>Gautamiputra Satakarni</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Pushyamitra Shunga, the Mauryan commander-in-chief, assassinated the last emperor and founded the Shunga dynasty. Kharavela ruled Kalinga, Kanishka was a later Kushana, and Gautamiputra was a Satavahana, none of whom ended Mauryan rule.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">'The invaders came only after the Mauryas fell.' This ordering of events best supports the conclusion that:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the internal breakup came first and left the northwest weak, which then let invaders in</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the invaders' attacks were the cause of the Mauryan collapse</span></li>
+        <li class=""><span class="lab">C</span><span>the Mauryas and the invaders ruled India at the same time</span></li>
+        <li class=""><span class="lab">D</span><span>the northwest had never belonged to the Mauryas</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Because the breakup is dated before the invasions, it cannot have been caused by them; instead the collapse left the frontier undefended, and the Indo-Greeks, Shakas and Kushanas exploited that opening afterwards. Cause precedes effect here.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">Which single statement best captures the chapter's overall picture of the Age of Reorganisation?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>endless warfare made it a cultural dark age with no achievements</span></li>
+        <li class="correct"><span class="lab">B</span><span>intense political competition and rich cultural blending went hand in hand</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>it was a peaceful age with no wars, only trade</span></li>
+        <li class=""><span class="lab">D</span><span>every kingdom in it was ruled by foreign invaders</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The chapter's big idea is that this was at once an age of fierce war-and-alliance competition AND a time of remarkable cultural confluence: new art schools, busy trade and great Sanskrit texts. War and cultural flowering happened together; one did not cancel the other.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">Apart from open warfare, the chief means by which kingdoms of this age won and secured territory was:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>matrimonial alliances between royal families</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>holding elections among the nobles</span></li>
+        <li class=""><span class="lab">C</span><span>sending out Buddhist missionaries</span></li>
+        <li class=""><span class="lab">D</span><span>abolishing every rival kingdom's identity</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Kings married their children into other dynasties to seal peace and join lands, a deliberate political tool that often achieved what war could not. These were monarchies, not elective states, and the alliances kept rival identities alive rather than abolishing them.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">A king gives his daughter in marriage to a neighbouring prince to end a long rivalry and link their lands. The chapter would read this mainly as:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>an act of diplomacy, politics conducted through marriage</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a purely private family celebration with no wider meaning</span></li>
+        <li class=""><span class="lab">C</span><span>a religious sacrifice to win the gods' favour</span></li>
+        <li class=""><span class="lab">D</span><span>a method of collecting annual tribute</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A matrimonial alliance was a tool of POLITICS, not just a wedding: it cemented friendship and merged territories between dynasties. It was diplomatic, not a private affair, not a religious rite, and not a tribute payment.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">Why would a ruler of this age perform the ashvamedha (horse-sacrifice) yajna?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>to proclaim himself a supreme king, claiming every land his freed horse crossed unchallenged</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>to select the next emperor by drawing lots</span></li>
+        <li class=""><span class="lab">C</span><span>to formalise a marriage alliance with another dynasty</span></li>
+        <li class=""><span class="lab">D</span><span>to mark the first day of a new calendar era</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The ashvamedha was a Vedic ritual asserting supreme kingship: a horse was let loose and all the territory it wandered across unopposed was claimed by the king. It was about declaring paramount power, not elections, marriages or calendars.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">That a widowed Satavahana queen is recorded as performing the ashvamedha yajna is used by the chapter to show that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only men ever wielded power in these kingdoms</span></li>
+        <li class=""><span class="lab">B</span><span>the ritual had nothing to do with claiming kingship</span></li>
+        <li class=""><span class="lab">C</span><span>the Satavahanas had given up Vedic rituals entirely</span></li>
+        <li class="correct"><span class="lab">D</span><span>royal women could exercise real political and ritual authority</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A queen performing this supreme-kingship ritual shows that Satavahana royal women held genuine authority, consistent with kings taking mother-names and queens donating land and commissioning inscriptions. It contradicts the idea that women were mere royal decoration.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">The Shunga dynasty is best remembered in the chapter for:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>building a sea-trading empire that reached Rome</span></li>
+        <li class="correct"><span class="lab">B</span><span>reviving Vedic rituals and adorning the Bharhut Stupa</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>controlling the Silk Route across Central Asia</span></li>
+        <li class=""><span class="lab">D</span><span>issuing the Shaka Samvat calendar</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Shungas of north and central India revived Vedic ritual and are linked to the carved railings of the Bharhut Stupa. Sea trade with Rome was the southern and Satavahana story, the Silk Route the Kushanas', and the Shaka era the Shakas'.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">The Shungas revived Vedic ritual, yet the Bharhut Stupa they adorned is a Buddhist monument. This pairing best illustrates that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the Shungas had secretly become Buddhist rulers</span></li>
+        <li class="correct"><span class="lab">B</span><span>supporting one tradition did not prevent the making of fine art for another in this age</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the Bharhut Stupa was really a Vedic temple</span></li>
+        <li class=""><span class="lab">D</span><span>Buddhism had completely vanished by Shunga times</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A Vedic-reviving dynasty still connected with carved railings on a Buddhist stupa shows the age's mixing of traditions; reviving one set of rituals did not stop art for another. It does not make the Shungas Buddhist, nor the stupa a Vedic temple, and Buddhism was clearly still alive.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">In this chapter, a 'stupa' is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>an anthology of Tamil love-and-heroism poems</span></li>
+        <li class="correct"><span class="lab">B</span><span>a dome-shaped Buddhist monument, often with carved railings and reliefs</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a low dam built across a river to feed canals</span></li>
+        <li class=""><span class="lab">D</span><span>a free-standing Greek-style victory pillar</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A stupa is a dome-shaped Buddhist monument, frequently decorated with carved railings depicting religious stories. The poem anthology is Sangam literature, the river dam is an anicut, and the pillar describes something like the Heliodorus pillar.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">The Shungas held power mainly in:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the far south, in the Tamil country</span></li>
+        <li class=""><span class="lab">B</span><span>the Deccan plateau</span></li>
+        <li class=""><span class="lab">C</span><span>the Central Asian steppe</span></li>
+        <li class="correct"><span class="lab">D</span><span>north and central India</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Shungas were a north-and-central-Indian dynasty. The Tamil south belonged to the Cholas, Cheras and Pandyas, the Deccan to the Satavahanas, and Central Asia to peoples like the Kushanas.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">The Satavahanas built their power in which region?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the Tamil far south</span></li>
+        <li class=""><span class="lab">B</span><span>north and central India</span></li>
+        <li class=""><span class="lab">C</span><span>the northwest frontier</span></li>
+        <li class="correct"><span class="lab">D</span><span>the Deccan plateau</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Satavahanas were the great dynasty of the Deccan. The Tamil south had the three crowned kingdoms, north-central India the Shungas, and the northwest saw the Indo-Greeks, Shakas and Kushanas.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">Satavahana coins that show ships are taken as direct evidence that the dynasty:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>worshipped the sea as a god</span></li>
+        <li class=""><span class="lab">B</span><span>had lost all its land territory</span></li>
+        <li class="correct"><span class="lab">C</span><span>carried on a flourishing sea trade</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>built warships to fight the Kushanas</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Ships stamped on Satavahana coins point to active maritime trade, which reached as far as Rome. The coins are read as evidence of commerce, not sea-worship, territorial loss, or naval war with the inland Kushanas.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">A Satavahana king bears the name 'Gautamiputra'. What does this naming custom tell us?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>kings were named after the god they worshipped</span></li>
+        <li class=""><span class="lab">B</span><span>'Gautami' was the dynasty's founding city</span></li>
+        <li class=""><span class="lab">C</span><span>the name marks him out as a Buddhist monk</span></li>
+        <li class="correct"><span class="lab">D</span><span>kings could be named after their mothers, signalling the standing of royal women</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>'Gautamiputra' means 'son of Gautami', a mother-name. The Satavahana custom of mother-names reflects the real influence of royal women. It is not a god's name, a city, or a monastic title.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">Royal women like Gautami Balashri are known to us mainly because they:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>donated land and had their gifts recorded in inscriptions</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>led Satavahana armies into battle against Rome</span></li>
+        <li class=""><span class="lab">C</span><span>composed the Sangam poems of the Tamil south</span></li>
+        <li class=""><span class="lab">D</span><span>designed the Gandhara style of sculpture</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Gautami Balashri and other Satavahana royal women donated land and had inscriptions carved recording their gifts, which is how historians know of them. They were not army commanders against Rome, Tamil Sangam poets, or Gandhara sculptors.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">Mother-names, land-donating queens and a queen's ashvamedha together overturn which common belief about these kingdoms?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>that the Satavahanas lived in the Deccan</span></li>
+        <li class=""><span class="lab">B</span><span>that coins can serve as historical evidence</span></li>
+        <li class=""><span class="lab">C</span><span>that the age saw frequent warfare</span></li>
+        <li class="correct"><span class="lab">D</span><span>that queens were merely decorative and only kings ever held power</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>All three facts show royal women wielding real authority, directly contradicting the belief that queens were mere decoration. The other statements are accepted facts that this evidence does not challenge.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">The Satavahanas' trade reaching as far as Rome is best explained by their:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sharing a land border with the Roman Empire</span></li>
+        <li class=""><span class="lab">B</span><span>membership of the Roman Empire as a province</span></li>
+        <li class="correct"><span class="lab">C</span><span>control of Deccan ports and sea routes to the west</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>control of the overland Silk Route through China</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sea routes from the Deccan's western ports linked the Satavahanas to Roman markets. They did not border Rome, were never a Roman province, and the overland Silk Route was the Kushanas' domain, not theirs.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">King Kharavela, famous in this chapter, ruled the kingdom of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the Deccan, as a Satavahana ruler</span></li>
+        <li class=""><span class="lab">B</span><span>Gandhara, as a Kushana ruler</span></li>
+        <li class=""><span class="lab">C</span><span>the Tamil south, as a Chera ruler</span></li>
+        <li class="correct"><span class="lab">D</span><span>Kalinga, as a Chedi ruler</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Kharavela was the Chedi king of Kalinga. He was neither a Satavahana of the Deccan, a Kushana of Gandhara, nor a Chera of the Tamil south.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">Kharavela is described as a 'monk-king' because he:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>gave up his throne to become a wandering monk</span></li>
+        <li class=""><span class="lab">B</span><span>was a Buddhist bhikkhu who never actually ruled</span></li>
+        <li class="correct"><span class="lab">C</span><span>was a devout follower of Jainism while still ruling as king</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>founded a brand-new monastic religion of his own</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Kharavela combined kingship with deep devotion to Jainism, hence 'monk-king'. He did not abdicate, was not a non-ruling Buddhist monk, and did not invent a new religion.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">Most of what we know about Kharavela comes from the Hathigumpha inscription. This illustrates the historian's reliance on:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Sangam poetry written about him in Tamil</span></li>
+        <li class=""><span class="lab">B</span><span>Roman trade records that name him</span></li>
+        <li class="correct"><span class="lab">C</span><span>inscriptions, writing carved into lasting material, as historical sources</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>coins struck with his portrait</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Hathigumpha inscription is carved writing recording a ruler's deeds, exactly the kind of inscription historians depend on. It is not Tamil poetry, a Roman record, or a coin portrait.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">An 'inscription', as the chapter uses the term, is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a coin stamped with a king's face</span></li>
+        <li class=""><span class="lab">B</span><span>a poem memorised and recited aloud</span></li>
+        <li class=""><span class="lab">C</span><span>a painting on a cave wall</span></li>
+        <li class="correct"><span class="lab">D</span><span>writing carved into stone or metal, often recording a ruler's deeds or gifts</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An inscription is text cut into a lasting material such as stone or metal, frequently recording deeds, gifts or beliefs. A stamped coin, an oral poem and a wall painting are different kinds of evidence.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">The 'three crowned kingdoms' of the southern Tamil country were the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Shungas, Satavahanas and Chedis</span></li>
+        <li class=""><span class="lab">B</span><span>Indo-Greeks, Shakas and Kushanas</span></li>
+        <li class="correct"><span class="lab">C</span><span>Cholas, Cheras and Pandyas</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Mauryas, Nandas and Guptas</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Tamil south's three crowned kingdoms were the Cholas, Cheras and Pandyas. The other sets belong to north/central-Indian dynasties, the northwestern invaders, and the great northern empires respectively.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">The 'Sangam Age' takes its name from:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a series of great battles among southern kings</span></li>
+        <li class="correct"><span class="lab">B</span><span>anthologies of early Tamil poetry composed in the south</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>an assembly that elected the Chola king</span></li>
+        <li class=""><span class="lab">D</span><span>a Buddhist council held in the Deccan</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sangam literature, the oldest Tamil poetry on love, heroism and generosity, gives the Sangam Age its name. It is named for a body of poetry, not for battles, a royal election, or a Buddhist council.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">Sangam poems mostly sing of:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>love, heroism and generosity</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the rules of Vedic sacrifice</span></li>
+        <li class=""><span class="lab">C</span><span>the lives of the Kushana emperors</span></li>
+        <li class=""><span class="lab">D</span><span>the trade laws of the Silk Route</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sangam literature expresses themes of love, heroism and generosity. It is Tamil court-and-life poetry, not a manual of Vedic ritual, a Kushana chronicle, or Silk-Route trade law.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">Finding Roman gold coins in the Tamil south is best explained by the fact that the southern kingdoms:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>were conquered and taxed by Rome</span></li>
+        <li class=""><span class="lab">B</span><span>minted their own coins in Roman workshops</span></li>
+        <li class="correct"><span class="lab">C</span><span>traded by sea with the Roman world</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>sent their kings to be crowned in Rome</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Roman coins in the south reflect brisk sea trade between the Tamil kingdoms and Rome. They were never Roman subjects, did not mint in Rome, and their kings were crowned at home.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">Which pairing of region and power is correct for this age?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the Deccan, the Cholas</span></li>
+        <li class=""><span class="lab">B</span><span>Kalinga, the Cheras</span></li>
+        <li class="correct"><span class="lab">C</span><span>the Tamil far south, the Pandyas</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the northwest, the Pandyas</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Pandyas were a Tamil southern kingdom. The Cholas (also Tamil south) did not rule the Deccan (that was the Satavahanas), Kalinga was the Chedis' (not the Cheras'), and the northwest belonged to the invaders, not the Pandyas.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">The Grand Anicut (Kallanai) built by the Cholas was:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a stupa raised over relics of the Buddha</span></li>
+        <li class=""><span class="lab">B</span><span>a Greek-style victory pillar</span></li>
+        <li class=""><span class="lab">C</span><span>a coastal fort built to keep out Roman ships</span></li>
+        <li class="correct"><span class="lab">D</span><span>an ancient dam across the Kaveri to spread its water over the delta</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Grand Anicut is an ancient dam across the Kaveri that diverted water across the delta, making it a rich rice region. It is not a stupa, a pillar, or a fort.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">An 'anicut', as the word's Tamil roots show, is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a low dam built to raise river water and divert it into canals</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a royal marriage treaty between dynasties</span></li>
+        <li class=""><span class="lab">C</span><span>a dome-shaped Buddhist monument</span></li>
+        <li class=""><span class="lab">D</span><span>a counted calendar era</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>From Tamil anai ('dam') + kattu ('to build'), an anicut is a low dam that lifts river water into canals. It is not a marriage treaty (alliance), a monument (stupa), or a calendar (samvat).</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">Why did the Grand Anicut matter so much to Chola prosperity?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>it blocked Roman ships from entering Chola ports</span></li>
+        <li class=""><span class="lab">B</span><span>it served as the dynasty's main fortress</span></li>
+        <li class="correct"><span class="lab">C</span><span>it watered the Kaveri delta, turning it into a rich rice-growing region that fed the kingdom</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>it marked the boundary with the Pandya kingdom</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>By spreading the Kaveri's water across the delta, the Anicut created one of India's richest rice lands, feeding the population and armies behind Chola power. It was an irrigation work, not a naval barrier, a fortress, or a boundary marker.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">The Cheras and Pandyas of the south grew wealthy chiefly through:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>control of the overland Silk Route</span></li>
+        <li class=""><span class="lab">B</span><span>tribute paid to them by the Kushana empire</span></li>
+        <li class=""><span class="lab">C</span><span>gold mines in the Central Asian steppe</span></li>
+        <li class="correct"><span class="lab">D</span><span>sea-trade, including trade with Rome</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Cheras and Pandyas prospered on sea trade, reaching as far as Rome. The Silk Route was the Kushanas' overland network; they received no Kushana tribute and held no Central Asian mines.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">Roman writers' knowledge of pepper and other goods from the Tamil coast is best taken as evidence of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a Roman military conquest of south India</span></li>
+        <li class="correct"><span class="lab">B</span><span>active sea trade linking south India and the Mediterranean</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Roman settlers founding the southern kingdoms</span></li>
+        <li class=""><span class="lab">D</span><span>the Tamil kings ruling parts of Italy</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Roman familiarity with Tamil-coast goods points to lively maritime commerce between south India and the Mediterranean: trade, not conquest, colonisation, or Tamil rule in Italy.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">Which best contrasts how the Satavahanas and the Tamil kingdoms each reached Rome?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the Satavahanas by land, the Tamils by sea</span></li>
+        <li class="correct"><span class="lab">B</span><span>both reached Rome by sea trade rather than by land</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the Tamils by land, the Satavahanas by sea</span></li>
+        <li class=""><span class="lab">D</span><span>both reached Rome along the overland Silk Route</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Both the Deccan Satavahanas and the southern Tamil kingdoms traded with Rome by SEA, using their coastal ports. Neither relied on the overland Silk Route, which connected China to the Mediterranean through the Kushana lands.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">The Indo-Greeks who entered the northwest were descended from:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the satraps (governors) left behind by Alexander</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the Shunga kings of central India</span></li>
+        <li class=""><span class="lab">C</span><span>the Chedi rulers of Kalinga</span></li>
+        <li class=""><span class="lab">D</span><span>the Kushana emperors of Central Asia</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Indo-Greeks descended from the Greek satraps Alexander left in the northwest. They were not Shungas, Chedis, or Kushanas.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">The Heliodorus pillar, set up by a Greek ambassador who honoured an Indian god, is used to show that the Indo-Greeks:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>forced Greek gods on every Indian subject</span></li>
+        <li class=""><span class="lab">B</span><span>refused all contact with Indian religion</span></li>
+        <li class="correct"><span class="lab">C</span><span>blended Greek and Indian culture, even adopting Indian beliefs</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>destroyed Indian temples wherever they ruled</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A Greek envoy raising a pillar in devotion to an Indian deity shows cultural blending, with the Indo-Greeks absorbing Indian beliefs. It is the opposite of forcing Greek gods, shunning Indian religion, or destroying temples.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">Indo-Greek coins are especially valuable to historians because they:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>were never actually used for trade</span></li>
+        <li class=""><span class="lab">B</span><span>were all minted in the city of Rome</span></li>
+        <li class="correct"><span class="lab">C</span><span>supply most of what we know about these rulers, including their names and portraits</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>recorded the Sangam poems in Greek</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Much of our knowledge of the Indo-Greek kings comes from their coins, which preserve names and portraits. The coins were real trade currency, not Roman-minted, and carried no Tamil Sangam poetry.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">The Indo-Greeks managing to enter India is itself a consequence of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>an invitation from the Chola kings</span></li>
+        <li class=""><span class="lab">B</span><span>the building of the Silk Route by the Kushanas</span></li>
+        <li class="correct"><span class="lab">C</span><span>the weakening of the northwest frontier after the Mauryan breakup</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the start of the Shaka Samvat calendar</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Mauryan collapse left the northwest poorly defended, opening the door to the Indo-Greeks. The southern Cholas did not invite them, the Kushana Silk Route came later, and the Shaka era is unrelated to their arrival.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">Which statement about the foreign rulers in India is most accurate?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>they were largely absorbed into Indian culture, which remained dominant</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>they wiped out Indian culture and replaced it with their own</span></li>
+        <li class=""><span class="lab">C</span><span>they kept entirely apart, mixing nothing</span></li>
+        <li class=""><span class="lab">D</span><span>they ruled the whole subcontinent as one empire</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Though they arrived as conquerors, the Indo-Greeks and Kushanas were deeply influenced by India's culture, producing blends in which Indian themes stayed dominant. They neither erased Indian culture, nor stayed wholly separate, nor unified all India.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">The Shakas are also known as the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Indo-Greeks</span></li>
+        <li class="correct"><span class="lab">B</span><span>Indo-Scythians</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Indo-Romans</span></li>
+        <li class=""><span class="lab">D</span><span>Indo-Cholas</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Shakas are called the Indo-Scythians. The Indo-Greeks were a different group of invaders; 'Indo-Romans' and 'Indo-Cholas' are not terms used in the chapter.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">Which lasting timekeeping system is associated with the Shaka period?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the Shaka Samvat calendar</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the Roman Julian calendar</span></li>
+        <li class=""><span class="lab">C</span><span>the Sangam poetry cycle</span></li>
+        <li class=""><span class="lab">D</span><span>the ashvamedha festival calendar</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A calendar era, the Shaka Samvat, was developed in the Shaka period and India's national calendar still uses it. The Julian calendar is Roman, and the other two are not calendars at all.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">A 'samvat' is best defined as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a low dam across a river</span></li>
+        <li class=""><span class="lab">B</span><span>a dome-shaped Buddhist shrine</span></li>
+        <li class="correct"><span class="lab">C</span><span>a counted era or calendar beginning from a fixed event</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a royal marriage alliance</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>From Sanskrit samvatsara ('year'), a samvat is a reckoned era counted from a fixed starting point. The dam is an anicut, the shrine a stupa, and the marriage a matrimonial alliance.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">That India still uses a national calendar based on the Shaka era shows that this age:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>produced nothing that survived its own time</span></li>
+        <li class="correct"><span class="lab">B</span><span>left lasting marks on Indian life, not just ruins</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>was entirely the work of Roman officials</span></li>
+        <li class=""><span class="lab">D</span><span>had no contact with Indian traditions</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A living national calendar rooted in the Shaka era is proof the age left enduring legacies. It is evidence against the ideas that nothing survived, that Romans ran it, or that it was cut off from Indian tradition.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">The most famous Kushana ruler in the chapter is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Kharavela</span></li>
+        <li class="correct"><span class="lab">B</span><span>Kanishka</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Pushyamitra</span></li>
+        <li class=""><span class="lab">D</span><span>Gautamiputra</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Kanishka is the great Kushana king. Kharavela was a Chedi, Pushyamitra a Shunga, and Gautamiputra a Satavahana.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">The Kushanas' wealth and importance rested largely on their control of:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the Silk Route linking China to the Mediterranean</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the Grand Anicut on the Kaveri</span></li>
+        <li class=""><span class="lab">C</span><span>the carved railings of the Bharhut Stupa</span></li>
+        <li class=""><span class="lab">D</span><span>the Sangam poetry academies</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Kushanas commanded stretches of the Silk Route, the great overland trade network between China and the Mediterranean. The Anicut was Chola, the Bharhut railings Shunga, and the Sangam academies Tamil.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">The 'Silk Route' is best described as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a sea lane running from the Deccan straight to Rome</span></li>
+        <li class=""><span class="lab">B</span><span>a road built by the Cholas across the Kaveri delta</span></li>
+        <li class=""><span class="lab">C</span><span>a travelling circuit followed by Tamil poets</span></li>
+        <li class="correct"><span class="lab">D</span><span>a network of overland trade routes connecting China with the Mediterranean through Central Asia</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Silk Route was an overland network through Central Asia and Persia linking China to the Mediterranean. It was not a single Deccan sea lane, a Chola delta road, or a poets' circuit.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">What does Kanishka's coinage reveal about him?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>that he rejected all religion</span></li>
+        <li class=""><span class="lab">B</span><span>that he ruled the Tamil south</span></li>
+        <li class=""><span class="lab">C</span><span>that he never engaged in any trade</span></li>
+        <li class="correct"><span class="lab">D</span><span>his royal titles and the various gods he honoured</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Kanishka's coins record his titles and depict a range of gods he honoured, evidence of his power and the era's religious mixing. They do not show him rejecting religion, ruling the Tamil south, or shunning trade.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">The Kushanas controlling the Silk Route while the Satavahanas traded by sea shows that, in this age, India:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>was tied into long-distance trade by both land and sea</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>traded only within its own villages</span></li>
+        <li class=""><span class="lab">C</span><span>was completely cut off from the outside world</span></li>
+        <li class=""><span class="lab">D</span><span>depended on a single trade route for everything</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Kushana overland trade plus Satavahana and southern sea trade means India was linked to distant markets by both land and sea at once, not isolated, village-bound, or reliant on one route.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">The Gandhara school of art is best described as:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a Greco-Buddhist style giving Buddhist subjects Hellenistic forms like wavy hair and toga-like robes</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>an indigenous style carving figures in spotted red sandstone</span></li>
+        <li class=""><span class="lab">C</span><span>a school of Tamil poetry from the south</span></li>
+        <li class=""><span class="lab">D</span><span>a style of dam-and-canal engineering</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Gandhara art clothed Buddhist subjects in Greek and Roman forms, such as wavy hair and toga-like robes, a Greco-Buddhist fusion of the northwest. The red-sandstone description is the Mathura school; the others are not art schools at all.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">The Mathura school of art is distinguished by:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>indigenous Indian figures carved in spotted red sandstone with fuller, rounder forms</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Hellenistic robes and wavy Greek hair</span></li>
+        <li class=""><span class="lab">C</span><span>poems about love and heroism</span></li>
+        <li class=""><span class="lab">D</span><span>ship designs stamped on coins</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Mathura school was an indigenous style centred on Mathura, carving fuller, rounder figures in spotted red sandstone. The Greek robes belong to Gandhara, the love-and-heroism poems to Sangam literature, and the ships to Satavahana coins.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">The key difference between the Gandhara and Mathura schools is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Gandhara was Tamil while Mathura was Greek</span></li>
+        <li class=""><span class="lab">B</span><span>both were purely Greek with no Indian element</span></li>
+        <li class="correct"><span class="lab">C</span><span>Gandhara fused Greek forms with Buddhist subjects, while Mathura was an indigenous Indian style</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>both were styles of Tamil poetry, not sculpture</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Gandhara is the Greco-Buddhist, Hellenistic-influenced school of the northwest; Mathura is the home-grown Indian school in red sandstone. Neither is Tamil, neither is purely Greek, and both are sculpture, not poetry.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">Gandhara sculpture giving the Buddha Greek-style robes and wavy hair is a clear example of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>one culture completely destroying another</span></li>
+        <li class=""><span class="lab">B</span><span>art produced with no foreign influence at all</span></li>
+        <li class="correct"><span class="lab">C</span><span>cultural confluence, different traditions blending into a new shared style</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a return to purely Vedic ritual</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A Buddhist figure rendered in Greek forms is textbook cultural confluence, traditions flowing together into something new. It is not destruction of a culture, nor influence-free, nor a Vedic revival.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">'Cultural confluence', as the chapter uses it, means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the total replacement of one culture by another</span></li>
+        <li class="correct"><span class="lab">B</span><span>the blending of different cultures into new shared styles while a dominant local character remains</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>keeping every culture strictly separate</span></li>
+        <li class=""><span class="lab">D</span><span>the spread of a single culture with no change at all</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cultural confluence is the flowing-together of cultures to make new shared styles, with a strong local character surviving, exactly what happened in Indian art and coinage of this age. It is neither replacement, nor strict separation, nor unchanging spread.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">Which great works of Sanskrit literature does the chapter link to this age?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the Sangam Tamil anthologies</span></li>
+        <li class=""><span class="lab">B</span><span>the Arthashastra of the Mauryan court</span></li>
+        <li class=""><span class="lab">C</span><span>the Hathigumpha inscription</span></li>
+        <li class="correct"><span class="lab">D</span><span>the Mahabharata and the Ramayana</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The chapter ties the flourishing of Sanskrit literature, including the Mahabharata and Ramayana, to this age. The Sangam anthologies are Tamil, the Arthashastra belongs to the earlier Mauryan period, and Hathigumpha is an inscription, not literature.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">The fact that foreign rulers' coins and art ended up with 'Indian themes always at the heart' supports the idea that India:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>violently expelled every foreign influence</span></li>
+        <li class=""><span class="lab">B</span><span>was completely Hellenised, losing its identity</span></li>
+        <li class=""><span class="lab">C</span><span>stopped all artistic activity during the invasions</span></li>
+        <li class="correct"><span class="lab">D</span><span>absorbed and transformed the newcomers rather than being erased by them</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Indian themes staying central in blended coins and art shows India absorbing and reshaping foreign influences while keeping its identity, not expelling them, not being wholly Hellenised, and certainly not halting art.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">The chapter's claim that this was a time of 'remarkable cultural confluence' rests on examples such as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a single uniform style imposed across all of India</span></li>
+        <li class=""><span class="lab">B</span><span>the complete absence of any foreign element</span></li>
+        <li class="correct"><span class="lab">C</span><span>Gandhara art, Kanishka's many-gods coins, and flourishing Sanskrit texts</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the disappearance of India's own religions</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Greco-Buddhist Gandhara art, Kanishka's coins honouring many gods, and a surge in Sanskrit literature are the concrete proofs of confluence. There was no single imposed style, foreign elements were clearly present, and Indian religions thrived.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">Why does the chapter stress that without coins and inscriptions we would know far less about this age?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>because no one living then could read or write</span></li>
+        <li class=""><span class="lab">B</span><span>because the period left behind no buildings at all</span></li>
+        <li class=""><span class="lab">C</span><span>because all written histories of it were translations from Rome</span></li>
+        <li class="correct"><span class="lab">D</span><span>because so much of our evidence for its rulers, trade and religion is physical, not written chronicles</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Coins (ships, titles, gods) and inscriptions (Hathigumpha, Nashik, Naneghat) carry much of what we know, since continuous written chronicles are scarce, hence their value. It is not that no one was literate, that nothing was built, or that Rome wrote its history.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">Which list contains ONLY items historians use as physical sources for this age?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>coins, cave inscriptions and sculptures</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>coins, election ballots and newspapers</span></li>
+        <li class=""><span class="lab">C</span><span>emails, photographs and passports</span></li>
+        <li class=""><span class="lab">D</span><span>constitutions, voter rolls and tax software</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Coins, cave inscriptions and sculptures are exactly the durable physical sources the chapter relies on. The other lists contain modern items that did not exist in this age.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">Which sequence places these events in correct chronological order (earliest first)?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Kanishka's Kushana rule, then the Maurya breakup, then the rise of the Satavahanas</span></li>
+        <li class="correct"><span class="lab">B</span><span>Maurya breakup, then the rise of the Satavahanas, then Kanishka's Kushana rule</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the rise of the Satavahanas, then Kanishka's Kushana rule, then the Maurya breakup</span></li>
+        <li class=""><span class="lab">D</span><span>Kanishka's Kushana rule, then the rise of the Satavahanas, then the Maurya breakup</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Maurya breakup (c. 185 BCE) came first; the Satavahanas rose in the 2nd century BCE; Kanishka's Kushanas peaked in the 2nd century CE. So breakup, then Satavahanas, then Kanishka is the right order.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">A student writes: 'The Age of Reorganisation proves that political division and cultural creativity can occur together.' The best support from the chapter is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the whole subcontinent was peacefully unified under one ruler</span></li>
+        <li class="correct"><span class="lab">B</span><span>constant wars among many kingdoms coincided with new art schools, busy trade and great Sanskrit works</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>all art and trade stopped until a single empire returned</span></li>
+        <li class=""><span class="lab">D</span><span>foreign rulers banned every form of Indian culture</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The age shows division and creativity side by side: rival kingdoms warred and allied while Gandhara and Mathura art, far-reaching trade and Sanskrit literature flourished. The age was not unified, art and trade did not stop, and Indian culture was not banned.</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

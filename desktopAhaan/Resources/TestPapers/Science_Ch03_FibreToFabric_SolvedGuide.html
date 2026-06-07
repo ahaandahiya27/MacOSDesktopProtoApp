@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fibre To Fabric — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Fibre To Fabric<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">Which of the following pairs are **both** animal fibres?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>cotton and silk</span></li>
+        <li class=""><span class="lab">B</span><span>jute and wool</span></li>
+        <li class=""><span class="lab">C</span><span>flax and cotton</span></li>
+        <li class="correct"><span class="lab">D</span><span>wool and silk</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Animal fibres come from animals: wool (sheep, goat, yak, camel) and silk (silkworm). Cotton, jute and flax are plant fibres. Only "wool and silk" has two animal fibres.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">Wool and silk feel different from cotton mainly because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>all three are made of the same material</span></li>
+        <li class=""><span class="lab">B</span><span>cotton is made of protein and wool of cellulose</span></li>
+        <li class=""><span class="lab">C</span><span>silk is a synthetic fibre and cotton is natural</span></li>
+        <li class="correct"><span class="lab">D</span><span>wool and silk are made of protein, while cotton is made of cellulose</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Animal fibres (wool, silk) are made of protein; plant fibres (cotton) are made of cellulose. The different chemistry gives the different feel. (Option C reverses the two.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">A burning sample gives a smell like burning hair. The fibre is most likely:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>cotton</span></li>
+        <li class=""><span class="lab">B</span><span>jute</span></li>
+        <li class="correct"><span class="lab">C</span><span>wool</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>flax</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Protein fibres smell like burning hair when burnt; cellulose fibres (cotton, jute, flax) smell like burning paper. Of the choices, only wool is a protein fibre, so the smell of burning hair points to wool.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">Which of these is **not** a wool-yielding animal?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>yak</span></li>
+        <li class=""><span class="lab">B</span><span>camel</span></li>
+        <li class=""><span class="lab">C</span><span>goat</span></li>
+        <li class="correct"><span class="lab">D</span><span>silk moth</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The silk moth gives silk, not wool. Yak, camel and goat all yield wool, so the odd one out is the silk moth.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">The thick coat of hair on a sheep, from which wool is obtained, is called the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>fleece</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>cocoon</span></li>
+        <li class=""><span class="lab">C</span><span>sericin</span></li>
+        <li class=""><span class="lab">D</span><span>burr</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The thick coat of hair on a sheep is the fleece. A cocoon belongs to a silkworm, sericin is silk gum, and a burr is a bit of plant debris.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">The main reason a sheep grows a thick fleece is to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>provide wool for humans</span></li>
+        <li class=""><span class="lab">B</span><span>keep the animal cool in summer</span></li>
+        <li class=""><span class="lab">C</span><span>protect it from insect bites</span></li>
+        <li class="correct"><span class="lab">D</span><span>trap a layer of air that keeps the animal warm</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The fleece insulates the sheep by trapping a layer of air, keeping it warm in cold weather. (Providing wool for humans is a use we make of it, not the animal's reason for growing it.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">Pashmina, one of the softest and warmest wools, comes from a kind of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sheep</span></li>
+        <li class=""><span class="lab">B</span><span>silkworm</span></li>
+        <li class="correct"><span class="lab">C</span><span>goat</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>camel</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Pashmina is the very fine, warm wool obtained from a special kind of goat (the pashmina/changthangi goat), not from sheep, silkworm or camel.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">Wool keeps you warmer than a smooth plant fibre of the same thickness mainly because wool fibres:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>trap more air between and within the fibres</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>are heavier</span></li>
+        <li class=""><span class="lab">C</span><span>are coloured</span></li>
+        <li class=""><span class="lab">D</span><span>are made of cellulose</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Wool fibres are crimped and trap a lot of still air both between and within the fibres; trapped air is a poor conductor, so it keeps you warm. Smooth plant fibres trap far less air. (Colour and weight have nothing to do with warmth.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">In India, sheep reared for wool are found in the highlands of states such as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Kerala and Tamil Nadu</span></li>
+        <li class=""><span class="lab">B</span><span>West Bengal and Odisha</span></li>
+        <li class="correct"><span class="lab">C</span><span>Jammu &amp; Kashmir and Himachal Pradesh</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Goa and Andhra Pradesh</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In India, wool sheep are reared in the cold highlands such as Jammu &amp; Kashmir and Himachal Pradesh (also Uttarakhand, Sikkim, Arunachal). Warm coastal states like Kerala are not wool regions.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">The correct order of the **first three** steps in processing wool is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>scouring → shearing → sorting</span></li>
+        <li class="correct"><span class="lab">B</span><span>shearing → scouring → sorting</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>sorting → shearing → scouring</span></li>
+        <li class=""><span class="lab">D</span><span>shearing → sorting → scouring</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The processing order begins shearing → scouring → sorting. You must first cut the fleece (shear), then wash it (scour), then grade it (sort). The other orders put washing or sorting before the fleece is even removed.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">Shearing is best done in spring or early summer rather than winter because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>wool grows faster in summer</span></li>
+        <li class="correct"><span class="lab">B</span><span>removing the fleece in cold winter would leave the sheep without protection from the cold</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the dye sticks better in summer</span></li>
+        <li class=""><span class="lab">D</span><span>shears work only in warm weather</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>If the fleece were sheared off in winter, the sheep would lose its insulation in the cold and could fall ill. Shearing in spring/summer leaves time for new wool to grow before the next winter.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">Scouring is the step in which the sheared fleece is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>washed to remove grease, dust and dirt</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>cut from the sheep's body</span></li>
+        <li class=""><span class="lab">C</span><span>dyed in different colours</span></li>
+        <li class=""><span class="lab">D</span><span>twisted into yarn</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Scouring is the thorough washing of sheared wool in warm water to remove grease, dust and dirt. Cutting it off is shearing; colouring is dyeing; twisting into yarn is rolling/spinning.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">If the scouring step were skipped, the most direct problem would be that the wool:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>would be too short</span></li>
+        <li class=""><span class="lab">B</span><span>could not be dyed at all</span></li>
+        <li class=""><span class="lab">C</span><span>would catch fire easily</span></li>
+        <li class="correct"><span class="lab">D</span><span>would stay full of grease and dirt, spoiling later steps</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Scouring removes grease and dirt. Skip it and the wool stays greasy and dirty, which spoils sorting, dyeing and spinning later. (It can still be dyed, just badly; it does not become short or flammable because of skipping.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">Sorting separates the cleaned wool into different grades on the basis of features such as:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>texture, length and colour</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the price of the sheep</span></li>
+        <li class=""><span class="lab">C</span><span>the season it was sheared</span></li>
+        <li class=""><span class="lab">D</span><span>the country of origin only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sorting grades the cleaned wool by physical features of the fibre — texture, length and colour. The price of the sheep or the country alone are not sorting criteria.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">"Picking out the burrs" in wool processing means removing:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the grease from the fibre</span></li>
+        <li class=""><span class="lab">B</span><span>the dye from the wool</span></li>
+        <li class="correct"><span class="lab">C</span><span>small bits of plant material caught in the fleece</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the skin from the fleece</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Burrs are small bits of plant material (seeds, leaf fragments) caught in the fleece; picking them out removes this plant debris. Grease is removed by scouring, not burr-picking.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">In wool processing, dyeing comes **after** sorting and picking burrs but **before** rolling into yarn. Natural fleece before dyeing is usually:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>creamy white</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>bright red</span></li>
+        <li class=""><span class="lab">C</span><span>jet black</span></li>
+        <li class=""><span class="lab">D</span><span>deep blue</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Raw, undyed fleece is naturally a creamy white, which is why it can then be dyed into many colours. It is not naturally red, black or blue.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">The very last of the six wool steps turns the cleaned, coloured fibres into:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a fleece</span></li>
+        <li class="correct"><span class="lab">B</span><span>yarn ready for weaving</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>raw cocoons</span></li>
+        <li class=""><span class="lab">D</span><span>sericin</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The final (sixth) step rolls/combs the cleaned, dyed fibres into yarn ready to be woven into fabric. A fleece is the raw start; cocoons and sericin belong to silk.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">A factory removes burrs **before** scouring the fleece. The most likely result is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the wool will be cleaner than usual</span></li>
+        <li class="correct"><span class="lab">B</span><span>the grease and dirt make it hard to spot and remove the burrs, so burrs are missed</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>nothing changes, since order does not matter</span></li>
+        <li class=""><span class="lab">D</span><span>the wool will be dyed automatically</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Burrs are easiest to see and remove on clean wool. Doing burr-picking before scouring means the grease and dirt hide the burrs, so many are missed — order matters here.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">The serious occupational disease that wool **sorters** are at risk of is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the common cold</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>sorter's disease (anthrax)</span></li>
+        <li class=""><span class="lab">C</span><span>malaria</span></li>
+        <li class=""><span class="lab">D</span><span>tooth decay</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Wool sorters who breathe in spores from raw fleece are at risk of sorter's disease (a form of anthrax). The other illnesses listed are unrelated to wool sorting.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">Sorter's disease is caused by:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>bacterial spores (Bacillus anthracis) present in raw fleece</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a virus in the dye</span></li>
+        <li class=""><span class="lab">C</span><span>eating wool</span></li>
+        <li class=""><span class="lab">D</span><span>cold weather alone</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sorter's disease is caused by spores of the bacterium Bacillus anthracis that can be present in raw fleece — it is bacterial, not viral, and not caused by cold weather or by eating wool.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">A wool sorter is most likely to catch sorter's disease by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>drinking warm water used in scouring</span></li>
+        <li class="correct"><span class="lab">B</span><span>inhaling dust and spores from the raw fleece</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>touching dyed yarn</span></li>
+        <li class=""><span class="lab">D</span><span>wearing a finished sweater</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A sorter catches the disease mainly by inhaling dust and spores from the raw fleece while handling it. Dyed yarn and finished sweaters have already been cleaned, and scouring water is not the route.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">Which step in wool processing carries the **highest** risk of sorter's disease?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>rolling the finished yarn</span></li>
+        <li class=""><span class="lab">B</span><span>wearing a woollen scarf</span></li>
+        <li class="correct"><span class="lab">C</span><span>handling raw, unwashed fleece during sorting</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>buying wool from a shop</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The risk is highest when handling raw, unwashed fleece (the sorting stage), because that is when the spores are still present. Finished/processed wool and shop-bought sweaters carry little risk.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">The buyer of a finished, scoured and dyed woollen sweater is at very low risk of sorter's disease because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sweaters are made of cotton</span></li>
+        <li class=""><span class="lab">B</span><span>the disease only affects sheep</span></li>
+        <li class="correct"><span class="lab">C</span><span>the fleece has been cleaned and processed, removing the spores before the wool reaches the shop</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the dye kills all bacteria in the body</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>By the time wool reaches a shop it has been scoured and processed, removing the spores, so the buyer of a finished sweater is at very low risk. (Sweaters here are wool, not cotton, and the disease is not "sheep-only.")</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">A sensible safety measure in a modern wool factory is to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>make sorters work without masks to save cost</span></li>
+        <li class=""><span class="lab">B</span><span>skip the scouring step</span></li>
+        <li class=""><span class="lab">C</span><span>shear the sheep in winter</span></li>
+        <li class="correct"><span class="lab">D</span><span>provide masks, gloves and good ventilation, and disinfect fleece before sorting</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sensible safety means protecting the worker: masks, gloves, good ventilation and disinfecting the fleece before sorting. Working without masks or skipping cleaning steps would increase risk.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">Two sheep breeds are compared. Merino has very few coarse "guard" hairs; Lincoln has many. Which breed gives the **finer, softer** wool?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Merino</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Lincoln</span></li>
+        <li class=""><span class="lab">C</span><span>both give equally soft wool</span></li>
+        <li class=""><span class="lab">D</span><span>neither gives soft wool</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Fine, soft wool comes from breeds with very few coarse guard hairs. Merino has very few guard hairs, so Merino gives the finer, softer wool; Lincoln (many guard hairs) is coarser.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">A sheep's fleece contains two kinds of hair. The coarse outer hairs are the **guard hairs**, and the fine inner hairs form the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>cocoon</span></li>
+        <li class=""><span class="lab">B</span><span>burrs</span></li>
+        <li class="correct"><span class="lab">C</span><span>undercoat</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>sericin</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A fleece has coarse outer guard hairs and a fine inner undercoat. The fine inner hairs form the undercoat. (Cocoon and sericin belong to silk; burrs are plant debris.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">The reason sorting is needed before spinning fine yarn is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>all the fibres in a fleece are exactly the same</span></li>
+        <li class=""><span class="lab">B</span><span>sorting adds colour to the wool</span></li>
+        <li class=""><span class="lab">C</span><span>sorting removes the grease</span></li>
+        <li class="correct"><span class="lab">D</span><span>a fleece mixes coarse and fine hairs of different lengths, which must be separated for the right quality</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A single fleece mixes coarse and fine hairs of different lengths and colours. To spin fine, even yarn you must first sort and separate these — that is why sorting precedes spinning. (Sorting does not add colour or remove grease.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">Why should a woollen sweater be washed in **cool** water with a mild detergent rather than hot water?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>hot water has no effect on wool</span></li>
+        <li class="correct"><span class="lab">B</span><span>hot water and rough washing make the fibres lock together and the sweater shrinks</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>cool water dyes the wool</span></li>
+        <li class=""><span class="lab">D</span><span>wool dissolves in cold water</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Hot water plus rough agitation makes wool fibres' tiny scales interlock, so the garment felts and shrinks permanently. Cool water and gentle handling prevent this. (Wool does not dissolve in cold water.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">A child washes a pure-wool sweater in very hot water and scrubs it hard. The most likely result is that the sweater:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>grows larger</span></li>
+        <li class=""><span class="lab">B</span><span>changes into cotton</span></li>
+        <li class=""><span class="lab">C</span><span>stays exactly the same size</span></li>
+        <li class="correct"><span class="lab">D</span><span>shrinks and becomes matted</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Very hot water and hard scrubbing felt the fibres together, so the sweater shrinks and becomes matted — it does not grow, turn into cotton, or stay unchanged.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">Sericulture is the term for the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>rearing of silkworms for silk</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>rearing of sheep for wool</span></li>
+        <li class=""><span class="lab">C</span><span>weaving of cotton</span></li>
+        <li class=""><span class="lab">D</span><span>dyeing of wool</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sericulture is the rearing of silkworms for silk. Rearing sheep is for wool; weaving cotton and dyeing wool are different activities.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">The silkworm is actually the **larva** (caterpillar) of the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>honeybee</span></li>
+        <li class=""><span class="lab">B</span><span>butterfly</span></li>
+        <li class="correct"><span class="lab">C</span><span>silk moth</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>housefly</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The silkworm is the larva (caterpillar) of the silk moth — not of a bee, butterfly or housefly.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">The correct order of the silk moth's life cycle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>egg → pupa → larva → adult moth</span></li>
+        <li class=""><span class="lab">B</span><span>larva → egg → adult moth → pupa</span></li>
+        <li class="correct"><span class="lab">C</span><span>egg → larva → pupa → adult moth</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>adult moth → pupa → larva → egg</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The silk moth's life cycle is egg → larva (silkworm) → pupa (in the cocoon) → adult moth. The other orders place the stages out of sequence.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">The stage at which the insect spins silk around itself is when it changes from a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>egg into a larva</span></li>
+        <li class="correct"><span class="lab">B</span><span>larva into a pupa, forming the cocoon</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>pupa into an adult moth</span></li>
+        <li class=""><span class="lab">D</span><span>adult moth into an egg</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The insect spins silk while changing from larva into pupa, forming the cocoon around itself. That larva-to-pupa transition is the cocoon-spinning stage; the other transitions do not produce silk.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">The favourite food of the common (mulberry) silkworm is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>oak leaves</span></li>
+        <li class=""><span class="lab">B</span><span>rose petals</span></li>
+        <li class="correct"><span class="lab">C</span><span>mulberry leaves</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>wheat grains</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The common mulberry silkworm feeds mainly on mulberry leaves — that is why it is called the mulberry silkworm. Oak leaves feed tasar worms; roses and wheat are not its food.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">The cocoon is best described as:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a single continuous silk thread wound around the pupa</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>many short threads glued together randomly</span></li>
+        <li class=""><span class="lab">C</span><span>a layer of wool</span></li>
+        <li class=""><span class="lab">D</span><span>the egg of the moth</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A cocoon is a single continuous silk thread spun around the pupa — it is this one long thread that makes silk valuable, not many short glued pieces.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">In commercial silk-making the cocoon is treated with steam or boiling water **before** the moth comes out. The main reason is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>it makes the moth grow faster</span></li>
+        <li class=""><span class="lab">B</span><span>it dyes the silk</span></li>
+        <li class="correct"><span class="lab">C</span><span>if the moth bit its way out, it would break the single long thread into many short pieces</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>it feeds the pupa</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The cocoon is steamed/boiled before the moth emerges because an emerging moth would bite through the cocoon and break the single long thread into many short, less useful pieces. (It is not done to feed or grow the insect.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">Reeling is the step in which silk thread is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>cut from a sheep</span></li>
+        <li class="correct"><span class="lab">B</span><span>unwound from the softened cocoon</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>dyed black</span></li>
+        <li class=""><span class="lab">D</span><span>woven into a saree</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Reeling is unwinding the silk thread from the softened cocoon. Cutting from a sheep is shearing (wool); dyeing and weaving are later, separate steps.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">Cocoons are placed in hot water before reeling. The hot water mainly:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>colours the silk</span></li>
+        <li class="correct"><span class="lab">B</span><span>softens the sericin (gum) so the thread can be unwound</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>hatches the eggs</span></li>
+        <li class=""><span class="lab">D</span><span>feeds the silkworm</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Hot water softens the sericin, the gum holding the silk thread together, so the thread can be found and unwound. It does not colour the silk, hatch eggs or feed the worm.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">Several cocoons' threads are often combined during reeling because a single fibre is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>too thick to use</span></li>
+        <li class=""><span class="lab">B</span><span>the wrong colour</span></li>
+        <li class="correct"><span class="lab">C</span><span>too thin and weak to use on its own</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>made of cotton</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A single silk fibre is extremely thin and weak, so during reeling several cocoons' threads are combined into one stronger strand. (It is not too thick, nor the wrong colour, nor cotton.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">After reeling, silk is made into cloth by **weaving**, in which:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>threads are washed in warm water</span></li>
+        <li class=""><span class="lab">B</span><span>the cocoon is boiled</span></li>
+        <li class=""><span class="lab">C</span><span>the moth lays eggs</span></li>
+        <li class="correct"><span class="lab">D</span><span>lengthwise (warp) and crosswise (weft) threads are interlaced on a loom</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Weaving interlaces lengthwise warp threads with crosswise weft threads on a loom to make fabric. Washing, boiling and egg-laying are not weaving.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">Which sequence shows the correct journey from silkworm to silk fabric?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>reeling → cocoon → fabric → weaving</span></li>
+        <li class=""><span class="lab">B</span><span>weaving → cocoon → reeling → fabric</span></li>
+        <li class=""><span class="lab">C</span><span>fabric → weaving → reeling → cocoon</span></li>
+        <li class="correct"><span class="lab">D</span><span>cocoon → reeling → weaving → fabric</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The journey is: the worm spins a cocoon → reeling unwinds the thread → weaving makes cloth → fabric. So cocoon → reeling → weaving → fabric is correct.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">The white silk most widely produced in the world comes from the **mulberry** silkworm. India is also well known for non-mulberry silks such as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>nylon and polyester</span></li>
+        <li class=""><span class="lab">B</span><span>cotton and jute</span></li>
+        <li class="correct"><span class="lab">C</span><span>tasar, eri and muga</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>wool and pashmina</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Besides mulberry (white) silk, India is famous for the non-mulberry silks tasar, eri and muga. Nylon/polyester are synthetic; cotton/jute are plant fibres; wool/pashmina are not silk.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">Muga silk, prized for its natural golden colour, is mainly associated with which region of India?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Punjab</span></li>
+        <li class=""><span class="lab">B</span><span>Kerala</span></li>
+        <li class=""><span class="lab">C</span><span>Gujarat</span></li>
+        <li class="correct"><span class="lab">D</span><span>Assam</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Muga silk, with its natural golden sheen, is the speciality of Assam. It is not associated with Punjab, Kerala or Gujarat.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">Some people object to traditional silk-making on ethical grounds because:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the pupae inside the cocoons are killed when the cocoons are boiled</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>silkworms are fed too much</span></li>
+        <li class=""><span class="lab">C</span><span>silk is too cheap</span></li>
+        <li class=""><span class="lab">D</span><span>the moths are kept as pets</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The ethical objection is that the pupae inside the cocoons are killed when the cocoons are boiled to keep the thread whole. The other options are not the reason for the objection.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">Which statement correctly matches a fibre to its source?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>silk — from a plant's seed pods</span></li>
+        <li class="correct"><span class="lab">B</span><span>silk — from a silkworm's cocoon; wool — from an animal's fleece</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>wool — from a silkworm's cocoon</span></li>
+        <li class=""><span class="lab">D</span><span>cotton — from a sheep's fleece</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct match is: silk comes from a silkworm's cocoon and wool from an animal's fleece. The other options swap or misassign the sources.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">Compared with natural fibres, synthetic fibres such as polyester and nylon are generally:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>made from plants and animals</span></li>
+        <li class=""><span class="lab">B</span><span>always warmer than wool</span></li>
+        <li class=""><span class="lab">C</span><span>spun by silkworms</span></li>
+        <li class="correct"><span class="lab">D</span><span>man-made from petroleum, durable and wrinkle-resistant, but not biodegradable</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Synthetic fibres like polyester and nylon are man-made from petroleum: durable and wrinkle-resistant but not biodegradable. They are not from plants/animals, not warmer than wool, and not spun by silkworms.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">A "80% wool + 20% polyester" blend is used in sweaters because the polyester:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>makes the sweater smell of hair</span></li>
+        <li class=""><span class="lab">B</span><span>turns the wool into cotton</span></li>
+        <li class="correct"><span class="lab">C</span><span>adds strength and helps the wool keep its shape</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>is cheaper than air</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A little polyester added to wool adds strength and helps the garment keep its shape (resist stretching). It does not turn wool into cotton or make it smell of hair.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">Both wool and silk are animal fibres, yet wool is bulky and warm while silk is smooth and glossy. The best explanation is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>silk is actually a plant fibre</span></li>
+        <li class=""><span class="lab">B</span><span>wool is man-made</span></li>
+        <li class=""><span class="lab">C</span><span>they are chemically identical</span></li>
+        <li class="correct"><span class="lab">D</span><span>they are made of different proteins arranged differently (crimped keratin vs smooth fibroin)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Both are proteins, but different ones arranged differently — crimped, scaly keratin makes wool bulky and warm, while smooth fibroin makes silk glossy. Silk is not a plant fibre and wool is not man-made, so they are not identical.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">A single mulberry cocoon can yield one continuous silk thread that is roughly:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>hundreds to over a thousand metres long</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a few centimetres long</span></li>
+        <li class=""><span class="lab">C</span><span>exactly one metre long</span></li>
+        <li class=""><span class="lab">D</span><span>shorter than a human hair</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A single mulberry cocoon's thread is remarkably long — roughly hundreds to over a thousand metres — which is what makes one cocoon so useful. The other lengths are far too short.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">Which everyday observation best shows that wool is an **animal** fibre rather than a plant fibre?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>it is sheared from the body of a living sheep</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>it is woven into cloth</span></li>
+        <li class=""><span class="lab">C</span><span>it can be dyed different colours</span></li>
+        <li class=""><span class="lab">D</span><span>it keeps you warm</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The clearest sign that wool is an animal fibre is that it is sheared from the body of a living sheep. Being woven, dyed or warm are true of plant fibres too, so they do not prove animal origin.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">A label reads "100% silk." Tracing it back to its true biological origin, this fabric began as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the seed hair of a plant</span></li>
+        <li class="correct"><span class="lab">B</span><span>the cocoon spun by the larva of the silk moth</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the fleece of a goat</span></li>
+        <li class=""><span class="lab">D</span><span>the stem of a jute plant</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Tracing "100% silk" back to its origin, the fabric began as the cocoon spun by the larva (silkworm) of the silk moth — not seed hair, goat fleece or jute stems.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">In wool processing, which single step **both** improves the look of the wool **and** does **not** clean or align it?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>scouring</span></li>
+        <li class="correct"><span class="lab">B</span><span>dyeing</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>shearing</span></li>
+        <li class=""><span class="lab">D</span><span>sorting</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Among the steps, dyeing improves the look (adds colour) but does not clean the wool (scouring does) or align/spin it (rolling does). So dyeing is the step that fits.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">Why is sericin removed during reeling rather than left on the thread?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>it is a stiff gum that sticks the thread to the cocoon and to itself, so the thread cannot be unwound or woven smoothly while it is on</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>it is poisonous to wear</span></li>
+        <li class=""><span class="lab">C</span><span>it is the wrong colour for dyeing</span></li>
+        <li class=""><span class="lab">D</span><span>it makes the silk too thin</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sericin is a stiff gum that glues the thread to itself and to the cocoon; while it is on, the thread cannot be unwound or woven smoothly, so it is softened/removed during reeling. (It is not removed because it is poisonous or the wrong colour.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">A trader claims his "vicuña wool" is rare and costly because the vicuña gives very little wool per year. This reasoning is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>wrong, because vicuña is a plant</span></li>
+        <li class="correct"><span class="lab">B</span><span>reasonable, because a fibre that an animal produces only in tiny amounts is naturally scarce and expensive</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>wrong, because all wools cost the same</span></li>
+        <li class=""><span class="lab">D</span><span>wrong, because vicuña wool is synthetic</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The reasoning is sound: a fibre that an animal makes only in tiny amounts each year is naturally scarce, which raises its price. Vicuña is an animal (a llama relative), its wool is natural, and wools certainly do not all cost the same.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">A factory wants to produce the **finest, softest** woollen yarn. Which combination of choices makes the most sense?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a fine-wool breed (few guard hairs) plus careful sorting of the fleece</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a coarse breed, no sorting</span></li>
+        <li class=""><span class="lab">C</span><span>skipping scouring to save the fibres</span></li>
+        <li class=""><span class="lab">D</span><span>using a silkworm instead of a sheep</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>To get the finest, softest yarn you want a fine-wool breed (few guard hairs) and careful sorting of the fleece. A coarse breed with no sorting gives rough yarn, skipping scouring spoils it, and a silkworm gives silk not wool.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">Which of the following correctly pairs an animal with the fibre it provides?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sheep → silk</span></li>
+        <li class=""><span class="lab">B</span><span>silk moth → wool</span></li>
+        <li class=""><span class="lab">C</span><span>mulberry plant → silk</span></li>
+        <li class="correct"><span class="lab">D</span><span>yak → wool</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Correct pairing: yak → wool. Sheep give wool (not silk), the silk moth gives silk (not wool), and a mulberry plant is the silkworm's food, not a silk source.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">A student says, "Boiling the cocoon is only done to clean it." The most accurate correction is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the student is fully right</span></li>
+        <li class=""><span class="lab">B</span><span>boiling dyes the silk</span></li>
+        <li class="correct"><span class="lab">C</span><span>boiling chiefly softens the sericin for reeling and kills the pupa so the long thread stays whole — cleaning is not its main purpose</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the cocoon is never boiled</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The student is wrong: boiling mainly softens the sericin for reeling and kills the pupa so the long thread is not broken — cleaning is not its main purpose. (The cocoon is indeed boiled, and boiling does not dye it.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">Putting the wool steps in order, which is the **fourth** step (after shearing, scouring and sorting)?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>shearing again</span></li>
+        <li class="correct"><span class="lab">B</span><span>picking out the burrs</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>reeling</span></li>
+        <li class=""><span class="lab">D</span><span>weaving the saree</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The six steps run shearing, scouring, sorting, picking burrs, dyeing, rolling. After shearing, scouring and sorting, the fourth step is picking out the burrs. (Reeling and weaving belong to silk.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">Which chain correctly traces wool from animal to wearable yarn?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>dyeing → shearing → rolling → scouring → sorting → picking burrs</span></li>
+        <li class=""><span class="lab">B</span><span>scouring → sorting → shearing → dyeing → rolling → picking burrs</span></li>
+        <li class=""><span class="lab">C</span><span>rolling → dyeing → picking burrs → sorting → scouring → shearing</span></li>
+        <li class="correct"><span class="lab">D</span><span>shearing → scouring → sorting → picking burrs → dyeing → rolling into yarn</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct wool chain is shearing → scouring → sorting → picking burrs → dyeing → rolling into yarn. The other chains scramble this order.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">A health officer wants to cut down sorter's disease in a wool unit. The single most effective measure is to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>dye the wool in brighter colours</span></li>
+        <li class="correct"><span class="lab">B</span><span>disinfect the raw fleece and give sorters masks, gloves and good ventilation</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>shear the sheep more often</span></li>
+        <li class=""><span class="lab">D</span><span>sell only finished sweaters</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The most effective control attacks the source and protects the worker: disinfect the raw fleece and provide masks, gloves and good ventilation. Dyeing colours, shearing frequency and selling finished sweaters do not reduce a sorter's exposure to spores. --- *Solutions complete: 60 / 60.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

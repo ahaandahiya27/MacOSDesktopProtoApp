@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dashamah Kah — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Dashamah Kah<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">In the parable, how many boys cross the river?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>nine</span></li>
+        <li class=""><span class="lab">B</span><span>seven</span></li>
+        <li class="correct"><span class="lab">C</span><span>ten</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>twelve</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Ten boys (दश बालकाः) cross the river. The whole parable depends on the number being ten, not nine, seven, or twelve.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">दशमः कः? means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Where is the river?</span></li>
+        <li class=""><span class="lab">B</span><span>How many boys?</span></li>
+        <li class=""><span class="lab">C</span><span>Who is the leader?</span></li>
+        <li class="correct"><span class="lab">D</span><span>Who is the tenth?</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>दशमः कः? means 'Who is the tenth?'. It does not ask where the river is, how many boys, or who the leader is.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">What do the ten boys do at the start of the story?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>cross a river (by swimming)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>climb a mountain</span></li>
+        <li class=""><span class="lab">C</span><span>build a house</span></li>
+        <li class=""><span class="lab">D</span><span>light a fire</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The boys cross a river by swimming. They do not climb a mountain, build a house, or light a fire.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">नदीं तीर्त्वा पारं गताः means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>having crossed the river, they went to the other bank</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>they built a river</span></li>
+        <li class=""><span class="lab">C</span><span>they drank the river</span></li>
+        <li class=""><span class="lab">D</span><span>they sang by the river</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>It means 'having crossed the river, they went to the other bank'. The other readings are wrong.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">After crossing, each boy wants to make sure that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the river is deep</span></li>
+        <li class=""><span class="lab">B</span><span>the bank is far</span></li>
+        <li class=""><span class="lab">C</span><span>the sun has set</span></li>
+        <li class="correct"><span class="lab">D</span><span>all ten are safe (none drowned)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Each boy wants to be sure all ten are safe. The depth of the river, distance of the bank, and time of day are not the concern.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">The whole parable depends on the number of boys being:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>any number</span></li>
+        <li class=""><span class="lab">B</span><span>unknown</span></li>
+        <li class=""><span class="lab">C</span><span>always changing</span></li>
+        <li class="correct"><span class="lab">D</span><span>ten</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The parable depends on there being exactly ten boys. Not any number, an unknown, or a changing one.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">When each boy counts, he counts only:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>nine (नव)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>ten</span></li>
+        <li class=""><span class="lab">C</span><span>eight</span></li>
+        <li class=""><span class="lab">D</span><span>eleven</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Each boy counts only nine (नव). Not ten, eight, or eleven.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">Each boy counts only nine because he:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>forgets to count himself</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>cannot count past nine</span></li>
+        <li class=""><span class="lab">C</span><span>loses one boy in the river</span></li>
+        <li class=""><span class="lab">D</span><span>counts too fast</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Each counts nine because he forgets to count himself. It is not an inability to count, a lost boy, or counting too fast.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">Counting nine, each boy wrongly concludes that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>all are safe</span></li>
+        <li class="correct"><span class="lab">B</span><span>the tenth has drowned</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>there were only nine</span></li>
+        <li class=""><span class="lab">D</span><span>one boy ran away</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Counting nine, each wrongly concludes the tenth drowned. The truth is all are safe; there were ten, and none ran away.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">मग्नः, the word for the supposedly lost boy, means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>lost in a forest</span></li>
+        <li class="correct"><span class="lab">B</span><span>submerged / drowned</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>asleep</span></li>
+        <li class=""><span class="lab">D</span><span>hidden</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>मग्नः means 'submerged / drowned'. It does not mean lost in a forest, asleep, or hidden.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">The boys' mistake is that the 'missing tenth' is actually:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>really drowned</span></li>
+        <li class=""><span class="lab">B</span><span>an eleventh boy</span></li>
+        <li class=""><span class="lab">C</span><span>the traveler</span></li>
+        <li class="correct"><span class="lab">D</span><span>the counter himself (each forgot to count himself)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The 'missing tenth' is the counter himself, whom each boy forgot to count. He is not really drowned, an eleventh boy, or the traveler.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">Each boy in turn miscounts, so the error is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>made by only one boy</span></li>
+        <li class=""><span class="lab">B</span><span>a problem with the river</span></li>
+        <li class="correct"><span class="lab">C</span><span>shared by all of them, each forgetting himself</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>caused by the traveler</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The error is shared by all - each forgets himself. It is not one boy's, the river's, or the traveler's fault.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">Who finally counts the boys correctly?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the पथिकः (the passing traveler)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the youngest boy</span></li>
+        <li class=""><span class="lab">C</span><span>the leader alone</span></li>
+        <li class=""><span class="lab">D</span><span>no one</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The passing पथिकः counts correctly. Not the youngest boy, the leader alone, or no one.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">The traveler reveals the truth by saying:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>दशमः मग्नः ('the tenth drowned')</span></li>
+        <li class=""><span class="lab">B</span><span>नव बालकाः ('nine boys')</span></li>
+        <li class="correct"><span class="lab">C</span><span>दशमः त्वम् असि ('you are the tenth')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>नदी गभीरा ('the river is deep')</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>He says 'दशमः त्वम् असि' ('you are the tenth'). The other lines are not his revelation.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">दशमः त्वम् असि means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>you are the tenth</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the tenth is lost</span></li>
+        <li class=""><span class="lab">C</span><span>I am the tenth</span></li>
+        <li class=""><span class="lab">D</span><span>there is no tenth</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>दशमः त्वम् असि means 'you are the tenth'. It does not say the tenth is lost, that 'I' am the tenth, or that there is no tenth.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">The 'tenth' the boys were searching for turns out to be:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>an outsider</span></li>
+        <li class="correct"><span class="lab">B</span><span>the leader / counter himself</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the traveler</span></li>
+        <li class=""><span class="lab">D</span><span>truly drowned</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The 'tenth' is the leader / counter himself. He is not an outsider, the traveler, or truly drowned.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">Only the outside viewer (the पथिकः) counts correctly because he:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>can count higher than nine</span></li>
+        <li class=""><span class="lab">B</span><span>is himself the tenth boy</span></li>
+        <li class=""><span class="lab">C</span><span>saved a drowning boy</span></li>
+        <li class="correct"><span class="lab">D</span><span>is not caught up in the boys' own mistake and counts all of them</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The outside viewer counts all of them, free of the boys' self-forgetting error. It is not about counting higher, being the tenth, or a rescue.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">The boys were 'blinded' because they:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>could not see the river</span></li>
+        <li class=""><span class="lab">B</span><span>were asleep</span></li>
+        <li class="correct"><span class="lab">C</span><span>trusted their own count without checking it from outside</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>never counted at all</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>They trusted their own count without an outside check. They could see the river, were awake, and did count (wrongly).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">In the Vedantic reading, 'you are the tenth' points to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a real drowning</span></li>
+        <li class=""><span class="lab">B</span><span>a tenth river</span></li>
+        <li class="correct"><span class="lab">C</span><span>the Self that was missing all along</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>an eleventh boy</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Vedantically, 'you are the tenth' points to the Self that was missing all along. Not a real drowning, a river, or an eleventh boy.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">The parable is linked to the Vedantic teaching:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>वन्दे मातरम्</span></li>
+        <li class=""><span class="lab">B</span><span>सेवा परमो धर्मः</span></li>
+        <li class="correct"><span class="lab">C</span><span>तत्त्वमसि ('you are That')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>अन्नाद् भवन्ति भूतानि</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>It illustrates तत्त्वमसि ('you are That'). The others are from different chapters and themes.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">The deeper point of the story is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>rivers are dangerous</span></li>
+        <li class=""><span class="lab">B</span><span>counting is useless</span></li>
+        <li class=""><span class="lab">C</span><span>ten is an unlucky number</span></li>
+        <li class="correct"><span class="lab">D</span><span>what we search for (the Self) is the very one searching</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The deeper point is that the Self we search for is the very one searching. It is not about dangerous rivers, useless counting, or unlucky numbers.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">Reading दशमः त्वम् असि as only a queue-position misses:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the number of boys</span></li>
+        <li class=""><span class="lab">B</span><span>the name of the river</span></li>
+        <li class=""><span class="lab">C</span><span>the time of day</span></li>
+        <li class="correct"><span class="lab">D</span><span>its metaphysical meaning (the Self is what was missing)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A mere queue-position reading misses the metaphysical meaning (the Self is what was missing). Not the boy-count, river-name, or time.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">The 'lost tenth' was never truly lost because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>he swam away</span></li>
+        <li class="correct"><span class="lab">B</span><span>he was present all along - the one doing the counting</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>he was the traveler</span></li>
+        <li class=""><span class="lab">D</span><span>he was an eleventh boy</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>He was present all along as the counter. He did not swim away, was not the traveler, and was not an eleventh boy.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">The Sanskrit ordinals प्रथमः, द्वितीयः, तृतीयः mean:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>one, two, three (cardinals)</span></li>
+        <li class=""><span class="lab">B</span><span>tenth, ninth, eighth</span></li>
+        <li class="correct"><span class="lab">C</span><span>first, second, third</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>this, that, the other</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>प्रथमः, द्वितीयः, तृतीयः are the ordinals 'first, second, third'. They are not cardinals, the high ordinals, or demonstratives.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">दशमः means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ten (the count)</span></li>
+        <li class=""><span class="lab">B</span><span>second</span></li>
+        <li class="correct"><span class="lab">C</span><span>tenth</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>ninth</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>दशमः is the ordinal 'tenth'. The cardinal 'ten' is दश; 'second' is द्वितीयः and 'ninth' नवमः.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">Ordinal numbers (प्रथमः ... दशमः) tell us a thing's:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>weight</span></li>
+        <li class=""><span class="lab">B</span><span>colour</span></li>
+        <li class="correct"><span class="lab">C</span><span>position in order (first, second, ...)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>price</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Ordinals tell position in order. They do not tell weight, colour, or price.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">The ordinal for 'second' is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>प्रथमः</span></li>
+        <li class="correct"><span class="lab">B</span><span>द्वितीयः</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>तृतीयः</span></li>
+        <li class=""><span class="lab">D</span><span>दशमः</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>'Second' is द्वितीयः. प्रथमः is first, तृतीयः third, and दशमः tenth.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">The difference between दश and दशमः is that दश is the ____ and दशमः is the ____.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>cardinal 'ten' ... ordinal 'tenth'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>ordinal 'tenth' ... cardinal 'ten'</span></li>
+        <li class=""><span class="lab">C</span><span>both mean 'ten'</span></li>
+        <li class=""><span class="lab">D</span><span>both mean 'tenth'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>दश is the cardinal 'ten'; दशमः the ordinal 'tenth'. The reversal and 'both same' options are wrong.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">If the boys had been counted in order, the leader would be the ____ they kept missing.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>प्रथमः (first)</span></li>
+        <li class=""><span class="lab">B</span><span>द्वितीयः (second)</span></li>
+        <li class=""><span class="lab">C</span><span>नवमः (ninth)</span></li>
+        <li class="correct"><span class="lab">D</span><span>दशमः (tenth)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The leader is the दशमः (tenth) they kept missing. Not the first, second, or ninth.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">तीर्त्वा means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>before crossing</span></li>
+        <li class=""><span class="lab">B</span><span>while crossing</span></li>
+        <li class=""><span class="lab">C</span><span>unable to cross</span></li>
+        <li class="correct"><span class="lab">D</span><span>having crossed / having swum across</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>तीर्त्वा means 'having crossed / swum across'. It does not mean before crossing, while crossing, or unable to cross.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">तीर्त्वा is a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>present-tense verb</span></li>
+        <li class="correct"><span class="lab">B</span><span>gerund (an indeclinable 'having done X')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>ordinal number</span></li>
+        <li class=""><span class="lab">D</span><span>noun</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>तीर्त्वा is a gerund ('having done X'). It is not a present-tense verb, an ordinal, or a noun.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">In नदीं तीर्त्वा पारं गताः, the gerund तीर्त्वा marks the action that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>happens last</span></li>
+        <li class=""><span class="lab">B</span><span>never happens</span></li>
+        <li class="correct"><span class="lab">C</span><span>happens first (crossing), before they reach the bank</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>is in the future</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The gerund marks the crossing as happening first, before reaching the bank. It is not last, non-occurring, or future.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">A gerund like तीर्त्वा links two actions by showing one is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>done at the same instant only</span></li>
+        <li class="correct"><span class="lab">B</span><span>completed before the next ('having crossed, they went')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>never completed</span></li>
+        <li class=""><span class="lab">D</span><span>in the future</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A gerund shows one action completed before the next. Not simultaneous-only, never completed, or future.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">अगणयत् means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>he will count</span></li>
+        <li class=""><span class="lab">B</span><span>let him count</span></li>
+        <li class="correct"><span class="lab">C</span><span>he counted</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>he sang</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>अगणयत् means 'he counted' (past). Not 'will count', 'let him count', or 'he sang'.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">The tense of अगणयत् is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>imperfect past (laN-lakara)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>present</span></li>
+        <li class=""><span class="lab">C</span><span>future</span></li>
+        <li class=""><span class="lab">D</span><span>optative</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>अगणयत् is the imperfect past (लङ्-लकार). It is not present, future, or optative.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">अगणयत् comes from the root गण्, meaning:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>to sing</span></li>
+        <li class="correct"><span class="lab">B</span><span>to count / enumerate</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>to swim</span></li>
+        <li class=""><span class="lab">D</span><span>to drown</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>अगणयत् comes from गण् ('to count'). गा is 'to sing'; swimming and drowning are other roots.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">गण् ('to count') must not be confused with गा, which means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>to sing</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>to count</span></li>
+        <li class=""><span class="lab">C</span><span>to cross</span></li>
+        <li class=""><span class="lab">D</span><span>to drown</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>गा means 'to sing', distinct from गण् ('to count'). It does not mean count, cross, or drown.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">'He counts' (present) and 'he counted' (past) of गण् are:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>गणयति and अगणयत्</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>गायति and अगायत्</span></li>
+        <li class=""><span class="lab">C</span><span>तरति and अतरत्</span></li>
+        <li class=""><span class="lab">D</span><span>जानाति and अजानात्</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>गण् gives गणयति (present) and अगणयत् (past). गायति/अगायत् is from गा (sing); तरति/अतरत् from तृ (cross); जानाति/अजानात् from ज्ञा (know).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">Listening for the consonant tells गण् (count) from गा (sing); गणयति means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>he sings</span></li>
+        <li class="correct"><span class="lab">B</span><span>he counts</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>he swims</span></li>
+        <li class=""><span class="lab">D</span><span>he knows</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>गणयति means 'he counts'. 'He sings' is गायति, 'he swims' तरति, and 'he knows' जानाति.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">कतमः means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>which (of two)?</span></li>
+        <li class="correct"><span class="lab">B</span><span>which (of many)?</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>who?</span></li>
+        <li class=""><span class="lab">D</span><span>what?</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>कतमः asks 'which of many?'. 'Which of two?' is कतरः, 'who?' कः, and 'what?' किम्.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">कतरः means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>which (of two)?</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>which (of many)?</span></li>
+        <li class=""><span class="lab">C</span><span>when?</span></li>
+        <li class=""><span class="lab">D</span><span>where?</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>कतरः asks 'which of two?'. 'Which of many?' is कतमः, 'when?' कदा, and 'where?' कुत्र.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">The difference between कतमः and कतरः is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>कतमः asks 'which of two', कतरः 'which of many'</span></li>
+        <li class=""><span class="lab">B</span><span>they are identical</span></li>
+        <li class=""><span class="lab">C</span><span>both ask 'who'</span></li>
+        <li class="correct"><span class="lab">D</span><span>कतमः asks 'which of many', कतरः 'which of two'</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>कतमः asks 'which of many' and कतरः 'which of two'. The reversal, 'identical', and 'both who' options are wrong.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">To ask 'which one of the ten boys drowned?', the precise word is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>कतरः (which of two)</span></li>
+        <li class=""><span class="lab">B</span><span>कः (who, generally)</span></li>
+        <li class=""><span class="lab">C</span><span>किम् (what)</span></li>
+        <li class="correct"><span class="lab">D</span><span>कतमः (which of many)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Choosing among ten uses कतमः (which of many). कतरः is for two, कः is general 'who', and किम् is 'what'.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">If choosing between just two paths, the correct 'which?' is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>कतरः</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>कतमः</span></li>
+        <li class=""><span class="lab">C</span><span>कति</span></li>
+        <li class=""><span class="lab">D</span><span>कदा</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>For two options the correct word is कतरः. कतमः is for many, कति is 'how many', and कदा is 'when'.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">पथिकः means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a proper name</span></li>
+        <li class="correct"><span class="lab">B</span><span>a wayfarer / traveler (a common noun, not a name)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a river</span></li>
+        <li class=""><span class="lab">D</span><span>a number</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>पथिकः is a common noun, 'a wayfarer / traveler'. It is not a proper name, a river, or a number.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">Words like पथिकः, यायावरः and अध्वगः all mean:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a traveler / wanderer</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a counter</span></li>
+        <li class=""><span class="lab">C</span><span>a river</span></li>
+        <li class=""><span class="lab">D</span><span>a boy</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>पथिकः, यायावरः and अध्वगः all mean a traveler / wanderer. Not a counter, a river, or a boy.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">In the parable, the पथिकः is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the leader of the boys</span></li>
+        <li class="correct"><span class="lab">B</span><span>an anonymous wayfarer who acts as the teacher figure</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a named king</span></li>
+        <li class=""><span class="lab">D</span><span>the drowned boy</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The पथिकः is an anonymous wayfarer acting as the teacher figure. He is not the leader, a named king, or a drowned boy.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">मग्नः means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>delighted</span></li>
+        <li class=""><span class="lab">B</span><span>counting</span></li>
+        <li class="correct"><span class="lab">C</span><span>submerged / drowned</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>crossing</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>मग्नः means 'submerged / drowned'. It does not mean delighted, counting, or crossing.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">The boys feared that the tenth was मग्नः, that is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>delighted on the bank</span></li>
+        <li class="correct"><span class="lab">B</span><span>drowned in the river</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>singing a song</span></li>
+        <li class=""><span class="lab">D</span><span>counting the others</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>They feared the tenth was मग्नः (drowned in the river). Not delighted, singing, or counting.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">विषण्णाः means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>delighted</span></li>
+        <li class=""><span class="lab">B</span><span>counting</span></li>
+        <li class=""><span class="lab">C</span><span>crossing</span></li>
+        <li class="correct"><span class="lab">D</span><span>sad / dejected</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>विषण्णाः means 'sad / dejected'. It does not mean delighted, counting, or crossing.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">प्रहृष्टाः means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sad</span></li>
+        <li class=""><span class="lab">B</span><span>drowned</span></li>
+        <li class=""><span class="lab">C</span><span>tired</span></li>
+        <li class="correct"><span class="lab">D</span><span>delighted / overjoyed</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>प्रहृष्टाः means 'delighted / overjoyed' (from हृष्). It does not mean sad, drowned, or tired.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">The boys go from विषण्णाः to प्रहृष्टाः, that is, from:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>sad to delighted</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>delighted to sad</span></li>
+        <li class=""><span class="lab">C</span><span>tired to rested</span></li>
+        <li class=""><span class="lab">D</span><span>wet to dry</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>They go from विषण्णाः (sad) to प्रहृष्टाः (delighted). Not the reverse, tired-to-rested, or wet-to-dry.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">The boys' joy (हर्ष) on finding the tenth is distinct from आश्चर्य and विस्मय, which mean:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sadness and fear</span></li>
+        <li class=""><span class="lab">B</span><span>joy and joy</span></li>
+        <li class="correct"><span class="lab">C</span><span>surprise and wonder</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>counting and crossing</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>आश्चर्य and विस्मय mean surprise and wonder, distinct from हर्ष (joy). They are not sadness/fear, joy, or counting/crossing.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">Which word-meaning pair is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>पथिकः = a river</span></li>
+        <li class=""><span class="lab">B</span><span>अगणयत् = he sang</span></li>
+        <li class="correct"><span class="lab">C</span><span>मग्नः = drowned</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>प्रहृष्टाः = sad</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>मग्नः = drowned. पथिकः is a traveler (not a river), अगणयत् is 'he counted' (not 'he sang'), and प्रहृष्टाः is delighted (not sad).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">Which grammar pair is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>तीर्त्वा = present tense; अगणयत् = future</span></li>
+        <li class="correct"><span class="lab">B</span><span>तीर्त्वा = gerund ('having crossed'); अगणयत् = imperfect past ('he counted')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>अगणयत् = optative</span></li>
+        <li class=""><span class="lab">D</span><span>तीर्त्वा = an ordinal number</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>तीर्त्वा is a gerund and अगणयत् the imperfect past. The other options misname the forms.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">Which interrogative pair is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>कतमः = which of two; कतरः = which of many</span></li>
+        <li class=""><span class="lab">B</span><span>both = who</span></li>
+        <li class=""><span class="lab">C</span><span>both = what</span></li>
+        <li class="correct"><span class="lab">D</span><span>कतमः = which of many; कतरः = which of two</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>कतमः = which of many and कतरः = which of two. The reversal and 'both who/what' options are wrong.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">The central theme of this chapter is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the parable that the missing 'tenth' is the Self / the counter himself</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a fox and grapes</span></li>
+        <li class=""><span class="lab">C</span><span>banking and finance</span></li>
+        <li class=""><span class="lab">D</span><span>the rise of empires</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The theme is the Tenth-Man parable: the missing 'tenth' is the Self / the counter himself. Not the fox fable, banking, or empires.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">The chapter pairs the parable with grammar lessons on:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only the dative case</span></li>
+        <li class=""><span class="lab">B</span><span>direction words (-तः)</span></li>
+        <li class="correct"><span class="lab">C</span><span>ordinals, the gerund (तीर्त्वा), the imperfect past (अगणयत्) and कतमः</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the six tastes</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>It pairs the parable with ordinals, the gerund, the imperfect past and कतमः. Not only the dative, direction words, or tastes.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">Putting it together, 'दशमः त्वम् असि' teaches that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the tenth truly drowned</span></li>
+        <li class=""><span class="lab">B</span><span>there were really nine boys</span></li>
+        <li class=""><span class="lab">C</span><span>the traveler was the tenth</span></li>
+        <li class="correct"><span class="lab">D</span><span>the tenth was never lost - each boy forgot to count himself, and the Self was present all along</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>It teaches that the tenth was never lost - each forgot to count himself, and the Self was present all along. The other readings are wrong.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">A student claims: 'अगणयत् means he will count, and कतमः asks which of two.' The best correction is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the student is fully correct</span></li>
+        <li class="correct"><span class="lab">B</span><span>अगणयत् is past ('he counted'), and कतमः asks 'which of many' (कतरः is 'which of two')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>अगणयत् is past, and कतमः asks which of two</span></li>
+        <li class=""><span class="lab">D</span><span>अगणयत् is future, and कतमः asks which of many</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>अगणयत् is past ('he counted'), and कतमः asks 'which of many' (कतरः is 'which of two'). The other options keep one or both errors.</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

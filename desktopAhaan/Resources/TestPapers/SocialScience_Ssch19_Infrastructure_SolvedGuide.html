@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Infrastructure — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Infrastructure<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">'Infrastructure' means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only the tallest buildings in a city</span></li>
+        <li class=""><span class="lab">B</span><span>the money a country prints</span></li>
+        <li class="correct"><span class="lab">C</span><span>the basic facilities and systems a country needs to function</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the laws a parliament passes</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Infrastructure is the basic facilities and systems a country needs (physical and social). It is not just tall buildings, money, or laws.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">The chapter calls infrastructure the ____ of India's development.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>enemy</span></li>
+        <li class=""><span class="lab">B</span><span>smallest part</span></li>
+        <li class="correct"><span class="lab">C</span><span>engine</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>final result only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Infrastructure is the engine of India's development. It is not its enemy, smallest part, or merely a final result.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">Infrastructure is divided into two main types:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ancient and modern</span></li>
+        <li class=""><span class="lab">B</span><span>cheap and expensive</span></li>
+        <li class="correct"><span class="lab">C</span><span>physical and social</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>visible and imaginary</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The two types are physical (transport, utilities, communication, energy) and social (schools, hospitals, courts, parks). The other pairings are not the chapter's types.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">The word 'infrastructure' comes from Latin roots meaning:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>'below' and 'a building' - the structure that lies beneath everything else</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>'above' and 'the sky'</span></li>
+        <li class=""><span class="lab">C</span><span>'fast' and 'road'</span></li>
+        <li class=""><span class="lab">D</span><span>'far' and 'to share'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Infrastructure is from infra ('below') + structura ('a building'). 'Far + to share' gives telecommunication; the others are invented.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">The claim 'infrastructure means only roads and buildings' is wrong because it also includes:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>social facilities and invisible systems like power grids and water pipelines</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>nothing beyond roads</span></li>
+        <li class=""><span class="lab">C</span><span>only the army</span></li>
+        <li class=""><span class="lab">D</span><span>only money</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Infrastructure also covers social facilities (schools, hospitals) and invisible systems (power grids, water pipes, networks). It is not roads-only, the army, or money.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">'Physical infrastructure' includes:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>schools, hospitals, courts and parks</span></li>
+        <li class=""><span class="lab">B</span><span>only money and banks</span></li>
+        <li class="correct"><span class="lab">C</span><span>transport, utilities, communication and energy systems</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>only laws and courts</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Physical infrastructure is transport, utilities, communication and energy. Schools, hospitals, courts and parks are social infrastructure.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">'Social infrastructure' includes:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>roads, ports, power grids and pipelines</span></li>
+        <li class=""><span class="lab">B</span><span>only highways</span></li>
+        <li class=""><span class="lab">C</span><span>only airports</span></li>
+        <li class="correct"><span class="lab">D</span><span>schools, hospitals, courts and parks</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Social infrastructure is schools, hospitals, courts and parks, supporting wellbeing. Roads, ports and grids are physical infrastructure.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">A new highway is an example of ____ infrastructure, while a new hospital is ____ infrastructure.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>social ... physical</span></li>
+        <li class=""><span class="lab">B</span><span>physical ... physical</span></li>
+        <li class=""><span class="lab">C</span><span>social ... social</span></li>
+        <li class="correct"><span class="lab">D</span><span>physical ... social</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A highway is physical infrastructure; a hospital is social infrastructure. The other pairings misclassify them.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">The claim 'schools and hospitals aren't really infrastructure - only roads and power are' is wrong because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>schools and hospitals are physical infrastructure</span></li>
+        <li class=""><span class="lab">B</span><span>only roads count as infrastructure</span></li>
+        <li class="correct"><span class="lab">C</span><span>social infrastructure (schools, hospitals, sanitation) is one of the two arms of infrastructure</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>nothing is infrastructure</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Infrastructure has two arms: physical (roads, power) and social (schools, hospitals, sanitation). Healthy, educated people matter as much as roads.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">Why does a country need both physical and social infrastructure?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only roads matter for development</span></li>
+        <li class=""><span class="lab">B</span><span>only schools matter for development</span></li>
+        <li class="correct"><span class="lab">C</span><span>healthy, educated people are as vital to development as good roads and power</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>neither matters at all</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Development needs both: physical infrastructure moves goods and power, while social infrastructure builds healthy, educated people. Neither alone is enough.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">Power grids, water pipelines and communication networks are infrastructure that is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>not really infrastructure at all</span></li>
+        <li class="correct"><span class="lab">B</span><span>largely invisible yet essential</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>only social infrastructure</span></li>
+        <li class=""><span class="lab">D</span><span>only found abroad</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Invisible systems like power grids, water pipes and networks are essential physical infrastructure. They are infrastructure, are physical not social, and are found in India.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">Infrastructure is called the 'backbone' of development because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>it has nothing to do with the economy</span></li>
+        <li class="correct"><span class="lab">B</span><span>economic activity depends on transport, power, water and communication working</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>it slows development down</span></li>
+        <li class=""><span class="lab">D</span><span>it matters only to tourists</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A working economy depends on transport, power, water and communication, so infrastructure is the backbone of development. It is not economy-irrelevant, a brake, or tourist-only.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">A region with poor roads, unreliable power and few schools is likely to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>develop fastest of all</span></li>
+        <li class=""><span class="lab">B</span><span>need no infrastructure</span></li>
+        <li class="correct"><span class="lab">C</span><span>struggle to develop economically and socially</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>have the best hospitals automatically</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Weak physical and social infrastructure hampers development. It does not speed growth, remove the need for infrastructure, or guarantee good hospitals.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">India's road network is described as the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>world's smallest</span></li>
+        <li class=""><span class="lab">B</span><span>only one highway long</span></li>
+        <li class=""><span class="lab">C</span><span>entirely unpaved</span></li>
+        <li class="correct"><span class="lab">D</span><span>world's second-largest</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>India has the world's second-largest road network. It is not the smallest, a single highway, or entirely unpaved.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">The 'Golden Quadrilateral' is a highway network connecting:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only Delhi and Mumbai</span></li>
+        <li class=""><span class="lab">B</span><span>four foreign capitals</span></li>
+        <li class=""><span class="lab">C</span><span>four small villages</span></li>
+        <li class="correct"><span class="lab">D</span><span>Delhi, Mumbai, Chennai and Kolkata</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Golden Quadrilateral links Delhi, Mumbai, Chennai and Kolkata. It is not just two cities, foreign capitals, or villages.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">'NH44' is notable as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a metro line in one city</span></li>
+        <li class="correct"><span class="lab">B</span><span>a major national highway of India</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a sea port</span></li>
+        <li class=""><span class="lab">D</span><span>a solar park</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>NH44 is a major (the longest) national highway of India. It is not a metro line, a port, or a solar park.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">An 'expressway' is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a slow village lane</span></li>
+        <li class=""><span class="lab">B</span><span>an underground metro line</span></li>
+        <li class=""><span class="lab">C</span><span>a sea route between ports</span></li>
+        <li class="correct"><span class="lab">D</span><span>a high-speed national road joining cities across states, built by the central government</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An expressway is a high-speed national road across states, built by the central government. It is not a village lane, a metro, or a sea route.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">The Golden Quadrilateral and NH44 are examples of ____ infrastructure.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>physical (transport)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>social</span></li>
+        <li class=""><span class="lab">C</span><span>imaginary</span></li>
+        <li class=""><span class="lab">D</span><span>foreign-only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Highways are physical (transport) infrastructure. They are not social, imaginary, or foreign-only.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">Good highways help development mainly by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>blocking all trade</span></li>
+        <li class=""><span class="lab">B</span><span>replacing the need for schools</span></li>
+        <li class="correct"><span class="lab">C</span><span>moving goods and people quickly between regions</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>stopping people from travelling</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Highways speed the movement of goods and people, aiding development. They do not block trade, replace schools, or stop travel.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">The Indian Railways were first built in:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1947, at independence</span></li>
+        <li class="correct"><span class="lab">B</span><span>1853, during colonial rule</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>1995, by J.C. Bose</span></li>
+        <li class=""><span class="lab">D</span><span>ancient times</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The railways began in 1853 under colonial rule. They were not built in 1947, by J.C. Bose, or in ancient times.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">The claim 'the British built railways in India to help Indians' is wrong because they built them mainly to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>give Indians free travel</span></li>
+        <li class=""><span class="lab">B</span><span>help Indian farmers only</span></li>
+        <li class="correct"><span class="lab">C</span><span>export India's raw materials, sell British goods, and move troops to control India</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>spread Indian culture abroad</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The British built the 1853 railways for their own benefit - exporting raw materials, selling British goods and moving troops. The railways only later became India's lifeline.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">Today the Indian Railways carry about:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>20 people a day</span></li>
+        <li class=""><span class="lab">B</span><span>no passengers at all</span></li>
+        <li class=""><span class="lab">C</span><span>only freight, never people</span></li>
+        <li class="correct"><span class="lab">D</span><span>20 million people a day</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The railways carry about 20 million people a day, a national lifeline. They carry far more than 20 people, do carry passengers, and move both people and freight.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">The railways are described as having turned from a colonial tool into:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a national lifeline for India</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a useless ruin</span></li>
+        <li class=""><span class="lab">C</span><span>a purely British-owned company today</span></li>
+        <li class=""><span class="lab">D</span><span>a metro system only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The colonial-era railways became India's national lifeline. They are not a ruin, British-owned today, or merely a metro.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">The railways' history shows that infrastructure built for one purpose can:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>never be used for anything else</span></li>
+        <li class=""><span class="lab">B</span><span>only ever harm a country</span></li>
+        <li class=""><span class="lab">C</span><span>vanish after a few years</span></li>
+        <li class="correct"><span class="lab">D</span><span>later serve a very different, wider purpose</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Railways built for colonial gain later became India's lifeline, showing infrastructure can serve new purposes. It is not single-use, only harmful, or short-lived.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">The railways and roads together form part of India's ____ infrastructure.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>social</span></li>
+        <li class="correct"><span class="lab">B</span><span>transport (physical)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>communication-only</span></li>
+        <li class=""><span class="lab">D</span><span>energy-only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Railways and roads are transport, a physical infrastructure. They are not social, communication, or energy infrastructure.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">A 'metro' is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a fast urban rail system, often underground or elevated, that helps commuters avoid road traffic</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a national highway between states</span></li>
+        <li class=""><span class="lab">C</span><span>a sea port</span></li>
+        <li class=""><span class="lab">D</span><span>a power grid</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A metro is a fast urban rail system (often underground or elevated) easing city traffic. It is not a highway, a port, or a power grid.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">Metros are especially useful in:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>busy cities, to move many commuters and reduce road congestion</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>empty deserts with no people</span></li>
+        <li class=""><span class="lab">C</span><span>the open sea</span></li>
+        <li class=""><span class="lab">D</span><span>the upper atmosphere</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Metros serve busy cities, moving commuters and easing congestion. They are not for empty deserts, the sea, or the sky.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">'Aviation', from the Latin for 'bird', is the activity of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sailing ships between ports</span></li>
+        <li class="correct"><span class="lab">B</span><span>flying aircraft and running air transport</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>building roads</span></li>
+        <li class=""><span class="lab">D</span><span>laying water pipes</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Aviation (Latin avis, 'bird') is flying aircraft and running air transport. Ships are shipping, roads are road transport, and pipes are utilities.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">India is said to have about:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only 1 airport</span></li>
+        <li class=""><span class="lab">B</span><span>no airports at all</span></li>
+        <li class=""><span class="lab">C</span><span>159 sea ports and no airports</span></li>
+        <li class="correct"><span class="lab">D</span><span>159 airports</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>India has about 159 airports. It is not one, none, or 159 sea ports.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">Airports and aircraft are part of India's ____ infrastructure.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>transport (physical)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>social</span></li>
+        <li class=""><span class="lab">C</span><span>energy-only</span></li>
+        <li class=""><span class="lab">D</span><span>imaginary</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Air transport is physical (transport) infrastructure. It is not social, energy, or imaginary.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">A 'port' is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a town with a harbour where ships load and unload cargo</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a high-speed road</span></li>
+        <li class=""><span class="lab">C</span><span>an underground metro</span></li>
+        <li class=""><span class="lab">D</span><span>a power station</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A port (Latin portus, 'harbour') is a harbour town where ships load and unload cargo. It is not a road, a metro, or a power station.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">India's busy sea ports are found on:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>both its coasts</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>only in the Himalayas</span></li>
+        <li class=""><span class="lab">C</span><span>only in deserts</span></li>
+        <li class=""><span class="lab">D</span><span>only abroad</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>India has busy sea ports on both coasts. They are not in the Himalayas, deserts, or only abroad.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">'TEU' (Twenty-foot Equivalent Unit) measures:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the speed of a metro train</span></li>
+        <li class=""><span class="lab">B</span><span>the height of an airport</span></li>
+        <li class="correct"><span class="lab">C</span><span>container-ship and port capacity, in standard containers</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the length of a highway</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>TEU measures container-ship and port capacity in standard containers. It is not metro speed, airport height, or highway length.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">A port handling more TEUs than another is handling:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>more standard shipping containers</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>fewer containers</span></li>
+        <li class=""><span class="lab">C</span><span>more aircraft</span></li>
+        <li class=""><span class="lab">D</span><span>more trains</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>More TEUs means more standard containers handled. It does not mean fewer containers, aircraft, or trains.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">The claim 'modern communication technology like radio was invented entirely in the West' is wrong because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>India never worked on radio at all</span></li>
+        <li class=""><span class="lab">B</span><span>radio was invented in ancient times</span></li>
+        <li class=""><span class="lab">C</span><span>the British invented everything in 1853</span></li>
+        <li class="correct"><span class="lab">D</span><span>the Indian scientist J.C. Bose demonstrated radio-wave communication and improved the 'coherer' detector</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>J.C. Bose demonstrated radio-wave communication and improved the coherer before such work became famous abroad. India contributed to the science of communication.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">J.C. Bose's pioneering wireless work dates to about:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>1895</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>1853</span></li>
+        <li class=""><span class="lab">C</span><span>1947</span></li>
+        <li class=""><span class="lab">D</span><span>ancient times</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bose's wireless work dates to about 1895. 1853 is the railways, 1947 independence, and ancient times far too early.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">A 'coherer', improved by J.C. Bose, was a device that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>carried passengers on rails</span></li>
+        <li class=""><span class="lab">B</span><span>pumped water to homes</span></li>
+        <li class=""><span class="lab">C</span><span>generated solar power</span></li>
+        <li class="correct"><span class="lab">D</span><span>decoded transmitted wireless signals</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The coherer was an early device, improved by Bose, that decoded wireless signals. It did not carry passengers, pump water, or generate solar power.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">A 'patent' is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a tax on imported goods</span></li>
+        <li class=""><span class="lab">B</span><span>a kind of highway</span></li>
+        <li class=""><span class="lab">C</span><span>a sea port</span></li>
+        <li class="correct"><span class="lab">D</span><span>a government-granted right to be the only one who can make, sell or use an invention for a number of years</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A patent is a government right to be the sole maker, seller or user of an invention for some years. It is not a tax, a highway, or a port.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">J.C. Bose is noted for choosing:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>to patent every idea and grow rich</span></li>
+        <li class="correct"><span class="lab">B</span><span>not to patent much of his work</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>to keep all his work secret forever</span></li>
+        <li class=""><span class="lab">D</span><span>to invent nothing at all</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bose chose not to patent much of his work. He did not patent everything, hide it forever, or invent nothing.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">'Telecommunication', from Greek and Latin roots, means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>building roads between far cities</span></li>
+        <li class="correct"><span class="lab">B</span><span>sending information over long distances by phone, radio or internet</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>flying aircraft long distances</span></li>
+        <li class=""><span class="lab">D</span><span>shipping cargo by sea</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Telecommunication (Greek tele 'far' + Latin communicare 'to share') is sending information over long distances. It is not road-building, flying, or shipping.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">'Energy infrastructure' includes:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>dams, solar parks and wind farms</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>schools and hospitals</span></li>
+        <li class=""><span class="lab">C</span><span>courts and parks</span></li>
+        <li class=""><span class="lab">D</span><span>ports and airports</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Energy infrastructure includes dams, solar parks and wind farms. Schools and hospitals and courts and parks are social, and ports and airports are transport.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">A 'utility', from the Latin for 'useful', is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a basic public service like water, electricity or gas supplied to homes</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a high-speed expressway</span></li>
+        <li class=""><span class="lab">C</span><span>a wireless coherer</span></li>
+        <li class=""><span class="lab">D</span><span>a shipping container</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A utility (Latin utilis, 'useful') is a basic public service such as water, electricity or gas. It is not a road, a coherer, or a container.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">Energy and utilities matter to all other infrastructure because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>they are unrelated to anything else</span></li>
+        <li class=""><span class="lab">B</span><span>only homes use power</span></li>
+        <li class=""><span class="lab">C</span><span>power harms development</span></li>
+        <li class="correct"><span class="lab">D</span><span>transport, communication and social services all need power and water to run</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Power and water underpin transport, communication and social services, so energy and utilities support everything else. They are not unrelated, home-only, or harmful.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">Solar parks and wind farms are examples of energy infrastructure that is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>powered only by burning coal</span></li>
+        <li class="correct"><span class="lab">B</span><span>based on cleaner, renewable sources</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>not really infrastructure</span></li>
+        <li class=""><span class="lab">D</span><span>purely social infrastructure</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Solar parks and wind farms use cleaner, renewable energy. They are not coal-only, non-infrastructure, or social infrastructure.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">Courts and parks, alongside schools and hospitals, are examples of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>physical transport infrastructure</span></li>
+        <li class="correct"><span class="lab">B</span><span>social infrastructure</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>energy infrastructure</span></li>
+        <li class=""><span class="lab">D</span><span>communication infrastructure</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Courts and parks are social infrastructure, supporting wellbeing. They are not transport, energy, or communication infrastructure.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">Good social infrastructure helps development by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only moving goods faster</span></li>
+        <li class=""><span class="lab">B</span><span>replacing the need for roads</span></li>
+        <li class=""><span class="lab">C</span><span>harming people's wellbeing</span></li>
+        <li class="correct"><span class="lab">D</span><span>producing healthy, educated people who can contribute to society</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Social infrastructure builds healthy, educated people who drive development. It is not about moving goods, replacing roads, or harming wellbeing.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">Sanitation, listed under social infrastructure, mainly supports:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>people's health and wellbeing</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>faster aircraft</span></li>
+        <li class=""><span class="lab">C</span><span>bigger ports</span></li>
+        <li class=""><span class="lab">D</span><span>longer highways</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sanitation supports health and wellbeing, a social-infrastructure goal. It is not about aircraft, ports, or highways.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">The claim 'only the government is responsible for public infrastructure' is wrong because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>citizens may damage it freely</span></li>
+        <li class=""><span class="lab">B</span><span>infrastructure needs no care</span></li>
+        <li class="correct"><span class="lab">C</span><span>caring for public infrastructure is a collective responsibility of citizens too</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>only foreigners maintain it</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>While the government builds and maintains infrastructure, citizens share responsibility - using it well, not damaging it, and reporting problems. It is not free to damage, care-free, or foreigner-maintained.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">Caring for public infrastructure as a citizen includes:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>using it well, not damaging it, and reporting problems</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>breaking it whenever convenient</span></li>
+        <li class=""><span class="lab">C</span><span>ignoring all damage</span></li>
+        <li class=""><span class="lab">D</span><span>leaving everything to foreign countries</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Citizens care for infrastructure by using it well, not damaging it, and reporting problems. Breaking it, ignoring damage and leaving it to foreigners are the opposite.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">A student who keeps a public park clean and reports a broken streetlight is showing:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>that infrastructure is only the government's job</span></li>
+        <li class="correct"><span class="lab">B</span><span>collective responsibility for shared infrastructure</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>that infrastructure needs no care</span></li>
+        <li class=""><span class="lab">D</span><span>foreign control of infrastructure</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Keeping a park clean and reporting faults is collective responsibility for shared infrastructure. It is not leaving it to government, care-free, or foreign control.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">Treating infrastructure as a shared duty matters because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>damaged infrastructure helps a country develop</span></li>
+        <li class=""><span class="lab">B</span><span>care makes no difference</span></li>
+        <li class="correct"><span class="lab">C</span><span>well-cared-for infrastructure lasts longer and serves everyone better</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>only the rich benefit from it</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Shared care keeps infrastructure lasting and serving everyone. Damage harms development, care does matter, and infrastructure benefits all, not only the rich.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">'Sustainable infrastructure' is built with:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the most polluting materials available</span></li>
+        <li class=""><span class="lab">B</span><span>no concern for the environment</span></li>
+        <li class="correct"><span class="lab">C</span><span>clean energy and eco-friendly materials to minimise pollution and harm to biodiversity</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>only ancient tools</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sustainable infrastructure uses clean energy and eco-friendly materials to limit pollution and protect biodiversity. It is not pollution-heavy, environment-blind, or tool-limited.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">A 'living root bridge', a natural piece of infrastructure, is made by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>pouring concrete over a river</span></li>
+        <li class="correct"><span class="lab">B</span><span>guiding tree roots to grow across a stream, as by the Khasi and Jaintia tribes of Meghalaya</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>laying steel rails</span></li>
+        <li class=""><span class="lab">D</span><span>building a metro tunnel</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A living root bridge is grown by guiding tree roots across a stream, by the Khasi and Jaintia tribes of Meghalaya - sustainable, natural infrastructure. It is not concrete, rails, or a tunnel.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">Living root bridges show that infrastructure can be:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only made of concrete and steel</span></li>
+        <li class=""><span class="lab">B</span><span>always harmful to nature</span></li>
+        <li class="correct"><span class="lab">C</span><span>sustainable and in harmony with nature</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>impossible to build naturally</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Living root bridges show sustainable, nature-friendly infrastructure. It need not be concrete-and-steel, is not always harmful, and can be natural.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">Building with clean energy and eco-friendly materials makes infrastructure more:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>polluting and wasteful</span></li>
+        <li class=""><span class="lab">B</span><span>expensive with no benefit</span></li>
+        <li class=""><span class="lab">C</span><span>useless to people</span></li>
+        <li class="correct"><span class="lab">D</span><span>sustainable, harming the environment less</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Clean energy and eco-friendly materials make infrastructure sustainable, with less environmental harm. It is not more polluting, benefit-free, or useless.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">The idea of caring for infrastructure has ancient roots in:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a 1995 wireless experiment</span></li>
+        <li class="correct"><span class="lab">B</span><span>Kautilya's Arthashastra</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the Golden Quadrilateral</span></li>
+        <li class=""><span class="lab">D</span><span>the Constitution of 1950</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Concern for infrastructure has ancient roots in Kautilya's Arthashastra. Bose's wireless work, the Golden Quadrilateral and the Constitution are far later.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">That the Arthashastra discussed infrastructure shows that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>infrastructure was unknown before modern times</span></li>
+        <li class=""><span class="lab">B</span><span>only the British thought about it</span></li>
+        <li class="correct"><span class="lab">C</span><span>caring for roads and public works is an ancient Indian concern, not only a modern one</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>infrastructure does not matter</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Arthashastra shows infrastructure was an ancient Indian concern, not only modern. It was not unknown, British-only, or unimportant.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">Which pairing of facility and type is correct?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a power grid - social infrastructure; a hospital - physical infrastructure</span></li>
+        <li class="correct"><span class="lab">B</span><span>a power grid - physical infrastructure; a hospital - social infrastructure</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>both are social infrastructure</span></li>
+        <li class=""><span class="lab">D</span><span>both are transport infrastructure</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A power grid is physical infrastructure; a hospital is social infrastructure. The other options misclassify them.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">'Logistics', important to infrastructure, is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the flying of aircraft</span></li>
+        <li class="correct"><span class="lab">B</span><span>the detailed organising of moving, storing and supplying goods</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the worship of a deity</span></li>
+        <li class=""><span class="lab">D</span><span>a kind of tax</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Logistics (Greek logistike, 'skill in calculating') is organising the movement, storage and supply of goods. It is not flying, worship, or a tax.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">A student says, 'Infrastructure means only roads, the British built railways to help Indians, and only the government must care for it.' The best correction is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>all three statements are correct</span></li>
+        <li class=""><span class="lab">B</span><span>infrastructure is only roads, but citizens must care for it</span></li>
+        <li class=""><span class="lab">C</span><span>the British built railways to help Indians, and citizens share the duty</span></li>
+        <li class="correct"><span class="lab">D</span><span>infrastructure includes social and invisible systems too, the British built railways for their own benefit, and caring for it is a collective duty</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Infrastructure includes social and invisible systems, the 1853 railways served British interests, and its care is a collective duty - correcting all three errors. The other options keep one or more misconceptions.</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reproduction In Plants — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Reproduction In Plants<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">Which of the following is a feature of **asexual** reproduction?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>only one parent is involved and no gametes fuse</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>gametes fuse to form a zygote</span></li>
+        <li class=""><span class="lab">C</span><span>two parents are always needed</span></li>
+        <li class=""><span class="lab">D</span><span>seeds are always produced</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Asexual reproduction needs only one parent and involves no fusion of gametes (no fertilisation); the offspring are clones. Two parents and gamete fusion belong to sexual reproduction, and seeds are not always produced (e.g. a stem cutting).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">A gardener cuts a piece of a rose stem and plants it; it grows into a new rose plant. This is an example of:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>vegetative propagation</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>sexual reproduction</span></li>
+        <li class=""><span class="lab">C</span><span>spore formation</span></li>
+        <li class=""><span class="lab">D</span><span>fertilisation</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Growing a whole new plant from a piece of stem of one parent — with no flower, pollen or seed — is vegetative propagation, a kind of asexual reproduction.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">New Bryophyllum plants grow from buds present on the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>tips of its roots</span></li>
+        <li class="correct"><span class="lab">B</span><span>margins of its leaves</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>inside of its flowers</span></li>
+        <li class=""><span class="lab">D</span><span>surface of its seeds</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bryophyllum is the classic example: tiny buds form along the notches at the margins of its leaves, and each can grow into a new plant.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">The "eyes" of a potato are actually:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>seeds formed after fertilisation</span></li>
+        <li class=""><span class="lab">B</span><span>ovules waiting to be dispersed</span></li>
+        <li class="correct"><span class="lab">C</span><span>buds that can grow into new plants</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>tiny roots</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The 'eyes' of a potato are buds on the swollen underground stem (tuber); planting a piece with an eye grows a new plant. They are not seeds or roots.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">Yeast reproduces by a process in which a small outgrowth forms on the parent and detaches. This is called:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>budding</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>spore formation</span></li>
+        <li class=""><span class="lab">C</span><span>fragmentation</span></li>
+        <li class=""><span class="lab">D</span><span>pollination</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In yeast, a small outgrowth (bud) forms on the parent, grows, and detaches to become a new yeast cell — this is budding (also seen in Hydra).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">Spirogyra, a green alga, multiplies mainly by breaking into pieces, each piece growing into a new individual. This is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>fragmentation</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>budding</span></li>
+        <li class=""><span class="lab">C</span><span>vegetative propagation by leaf</span></li>
+        <li class=""><span class="lab">D</span><span>cross-pollination</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Spirogyra breaks (fragments) into pieces, and each piece grows into a new filament. This mode is fragmentation.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">Bread mould (Rhizopus) and ferns both reproduce by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>budding</span></li>
+        <li class=""><span class="lab">B</span><span>seed dispersal by wind</span></li>
+        <li class=""><span class="lab">C</span><span>stem cuttings</span></li>
+        <li class="correct"><span class="lab">D</span><span>spore formation</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Both bread mould (Rhizopus) and ferns reproduce by spore formation — tiny spores that spread and germinate into new individuals.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">Spores are especially useful to fungi because they:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>can survive unfavourable conditions and spread easily by wind</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>need two parents to form</span></li>
+        <li class=""><span class="lab">C</span><span>are heavy and stay near the parent</span></li>
+        <li class=""><span class="lab">D</span><span>are produced only inside flowers</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Spores have a tough protective coat, so they can survive unfavourable conditions, and being light they are carried far and wide by wind — both are why spores are so successful for fungi and ferns.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">Which list contains **only** plants grown by vegetative propagation in everyday gardening?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>potato, ginger, sugarcane, money plant</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>mango, coconut, balsam, maple</span></li>
+        <li class=""><span class="lab">C</span><span>yeast, Hydra, Spirogyra, Rhizopus</span></li>
+        <li class=""><span class="lab">D</span><span>drumstick, madar, castor, lotus</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Potato (tuber buds), ginger (underground stem), sugarcane (stem cuttings) and money plant (stem cuttings) are all everyday examples of vegetative propagation. The other lists mix in seed-bearing plants or budding/fragmenting organisms.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">A student says, "Plants grown from a cutting of one parent are exact copies of that parent." This statement is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>wrong, because cuttings always mix two parents' traits</span></li>
+        <li class=""><span class="lab">B</span><span>wrong, because cuttings produce seeds first</span></li>
+        <li class="correct"><span class="lab">C</span><span>correct, because asexual offspring are clones of the single parent</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>correct only if the plant also flowers</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In asexual reproduction there is a single parent and no mixing of gametes, so the offspring are genetically identical — clones. Hence the statement is correct, and cuttings do not first make seeds.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">The **male** reproductive part of a flower is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>pistil</span></li>
+        <li class=""><span class="lab">B</span><span>ovary</span></li>
+        <li class="correct"><span class="lab">C</span><span>stamen</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>stigma</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The stamen is the male reproductive part of the flower (it makes pollen). The pistil/carpel, with its ovary and stigma, is the female part.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">A stamen is made up of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>stigma and style</span></li>
+        <li class=""><span class="lab">B</span><span>petal and sepal</span></li>
+        <li class=""><span class="lab">C</span><span>ovary and ovule</span></li>
+        <li class="correct"><span class="lab">D</span><span>anther and filament</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A stamen has two parts: the anther (which makes pollen) sitting on top of a stalk called the filament.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">Inside the flower, pollen grains are produced by the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>stigma</span></li>
+        <li class="correct"><span class="lab">B</span><span>anther</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>ovary</span></li>
+        <li class=""><span class="lab">D</span><span>ovule</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Pollen grains, which carry the male gametes, are produced in the anther of the stamen.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">The pistil (carpel) of a flower consists of, from top to bottom:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>stigma, style, ovary</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>anther, filament, ovary</span></li>
+        <li class=""><span class="lab">C</span><span>petal, sepal, ovule</span></li>
+        <li class=""><span class="lab">D</span><span>ovary, style, anther</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The pistil (carpel) is the female part: from top to bottom it is the stigma, then the style, then the ovary (which holds the ovules).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">The female gametes of a flowering plant are found inside the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>anther</span></li>
+        <li class="correct"><span class="lab">B</span><span>ovules</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>filament</span></li>
+        <li class=""><span class="lab">D</span><span>stigma</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The female gametes (eggs) are inside the ovules, which lie within the ovary of the pistil.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">A flower that has **both** stamens and pistil is described as:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>bisexual</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>unisexual</span></li>
+        <li class=""><span class="lab">C</span><span>asexual</span></li>
+        <li class=""><span class="lab">D</span><span>seedless</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A flower that carries both stamens (male) and a pistil (female) is bisexual. If it had only one of them it would be unisexual.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">A papaya tree bears separate male flowers and female flowers. These flowers are best described as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>bisexual</span></li>
+        <li class=""><span class="lab">B</span><span>spore-bearing</span></li>
+        <li class="correct"><span class="lab">C</span><span>unisexual</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>self-pollinating</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Separate male and female flowers means each flower has only one kind of reproductive part, so these flowers are unisexual (as in papaya).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">Pollination is correctly defined as the transfer of pollen from the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ovary to the ovule</span></li>
+        <li class=""><span class="lab">B</span><span>seed to the soil</span></li>
+        <li class=""><span class="lab">C</span><span>stigma to the anther</span></li>
+        <li class="correct"><span class="lab">D</span><span>anther to the stigma</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Pollination is, by definition, the transfer of pollen from the anther (where it is made) to the stigma (where it lands).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">The sticky, often feathery part of the flower on which pollen lands is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>filament</span></li>
+        <li class="correct"><span class="lab">B</span><span>stigma</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>anther</span></li>
+        <li class=""><span class="lab">D</span><span>sepal</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The stigma, the sticky and often feathery top of the pistil, is where pollen lands. The anther produces pollen and the filament holds the anther up.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">When pollen from a flower is carried to the stigma of **another flower on the same plant**, the pollination is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>self-pollination</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>cross-pollination</span></li>
+        <li class=""><span class="lab">C</span><span>fertilisation</span></li>
+        <li class=""><span class="lab">D</span><span>fragmentation</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Pollen reaching the stigma of the SAME plant — even a different flower on that plant — is still self-pollination. Cross-pollination needs a different plant of the same kind.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">Cross-pollination occurs when pollen reaches the stigma of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the same flower</span></li>
+        <li class="correct"><span class="lab">B</span><span>a flower on a different plant of the same kind</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>another flower on the same plant</span></li>
+        <li class=""><span class="lab">D</span><span>any plant of any kind</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cross-pollination is when pollen reaches the stigma of a flower on a DIFFERENT plant of the same kind. Same flower or same plant would be self-pollination.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">Which set of flower features would most suit pollination by **insects**?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>dull colour, no scent, no nectar</span></li>
+        <li class="correct"><span class="lab">B</span><span>bright colour, sweet scent, and nectar</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>very light, dry, powdery pollen and no petals</span></li>
+        <li class=""><span class="lab">D</span><span>flowers hidden underwater</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Insects are drawn by sight, smell and food, so insect-pollinated flowers tend to be brightly coloured and sweetly scented, with nectar as a reward.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">Wind-pollinated flowers typically have pollen that is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sticky and heavy</span></li>
+        <li class=""><span class="lab">B</span><span>wrapped in a hard fruit</span></li>
+        <li class=""><span class="lab">C</span><span>brightly coloured and scented</span></li>
+        <li class="correct"><span class="lab">D</span><span>light and produced in large amounts</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Wind cannot aim, so wind-pollinated flowers make pollen that is light and in large amounts, raising the chance that some lands on a stigma. Sticky/heavy or showy pollen suits insects.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">A flower is small, green, scentless and produces huge amounts of light, dry pollen. Its likely pollinating agent is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>insects</span></li>
+        <li class=""><span class="lab">B</span><span>water only</span></li>
+        <li class="correct"><span class="lab">C</span><span>wind</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>birds attracted by colour</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Small, green, scentless flowers offer no attraction to insects; producing huge amounts of light, dry pollen is the give-away that the agent is wind.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">Fertilisation in a flowering plant is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>transfer of pollen to the stigma</span></li>
+        <li class=""><span class="lab">B</span><span>scattering of seeds by wind</span></li>
+        <li class=""><span class="lab">C</span><span>ripening of the ovary into a fruit</span></li>
+        <li class="correct"><span class="lab">D</span><span>fusion of the male gamete with the egg inside the ovule</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Fertilisation is the fusion of the male gamete (from the pollen) with the female gamete (egg) inside the ovule, forming a zygote. Pollen transfer and fruit ripening are separate steps.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">Which statement correctly separates pollination from fertilisation?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>they are two names for the same event</span></li>
+        <li class=""><span class="lab">B</span><span>pollination needs water but fertilisation does not</span></li>
+        <li class=""><span class="lab">C</span><span>fertilisation happens first, then pollination</span></li>
+        <li class="correct"><span class="lab">D</span><span>pollination is the transfer of pollen; fertilisation is the fusion of gametes</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>This is the classic trap: pollination is only the TRANSFER of pollen to the stigma; fertilisation is the later FUSION of the male and female gametes. They are different events, pollination first.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">After a pollen grain lands on the stigma, the male gamete reaches the ovule by travelling through a:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>pollen tube growing down the style</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>hollow filament</span></li>
+        <li class=""><span class="lab">C</span><span>hole in the petal</span></li>
+        <li class=""><span class="lab">D</span><span>root hair</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>After landing on the stigma, the pollen grain grows a pollen tube down through the style to carry the male gamete to the ovule.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">Pollination must happen **before** fertilisation can occur because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the ovary ripens into the fruit first</span></li>
+        <li class="correct"><span class="lab">B</span><span>pollen has to reach the stigma before the male gamete can fuse with the egg</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>seeds are dispersed before the gametes meet</span></li>
+        <li class=""><span class="lab">D</span><span>the petals must fall off first</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Fertilisation needs the male gamete (carried by pollen) to reach the egg; that gamete cannot get there until pollen has first been transferred to the stigma. So pollination must come before fertilisation.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">The immediate product formed when the male gamete fuses with the female gamete is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>fruit</span></li>
+        <li class=""><span class="lab">B</span><span>seed coat</span></li>
+        <li class=""><span class="lab">C</span><span>stigma</span></li>
+        <li class="correct"><span class="lab">D</span><span>zygote</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The fusion of the male and female gametes forms a single cell called the zygote, which later develops into the embryo of the seed.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">After fertilisation, the **ovary** of the flower develops into the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>seed</span></li>
+        <li class=""><span class="lab">B</span><span>pollen</span></li>
+        <li class="correct"><span class="lab">C</span><span>fruit</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>new flower</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>After fertilisation, the ovary ripens and develops into the fruit (which encloses the seeds).</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">After fertilisation, each **ovule** develops into a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>fruit</span></li>
+        <li class="correct"><span class="lab">B</span><span>seed</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>stamen</span></li>
+        <li class=""><span class="lab">D</span><span>petal</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>After fertilisation, each ovule inside the ovary develops into a seed. (The ovary itself becomes the fruit.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">A fruit is found to contain many seeds inside it. This tells us the flower's ovary had:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only one ovule</span></li>
+        <li class=""><span class="lab">B</span><span>many anthers</span></li>
+        <li class=""><span class="lab">C</span><span>no ovules</span></li>
+        <li class="correct"><span class="lab">D</span><span>many ovules</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Each seed comes from one ovule, so a fruit with many seeds must have formed from an ovary that contained many ovules.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">After fertilisation, what usually happens to the petals, stamens and stigma of the flower?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>they grow into the fruit</span></li>
+        <li class=""><span class="lab">B</span><span>they turn into seeds</span></li>
+        <li class=""><span class="lab">C</span><span>they become the ovary</span></li>
+        <li class="correct"><span class="lab">D</span><span>they wither and fall off</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Once fertilisation is done, the parts that are no longer needed — the petals, stamens and stigma — usually wither and fall off, while the ovary grows into the fruit.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">Which sequence of events is in the correct order?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>pollination → fertilisation → fruit and seeds form</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>fertilisation → pollination → fruit forms</span></li>
+        <li class=""><span class="lab">C</span><span>seed dispersal → pollination → fertilisation</span></li>
+        <li class=""><span class="lab">D</span><span>fruit forms → pollination → fertilisation</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct order is: pollination (pollen reaches stigma) → fertilisation (gametes fuse) → fruit and seeds form. The other orders reverse or misplace these steps.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">A mango fruit develops from the flower's ovary, and inside it the single big stone (seed) develops from the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>anther</span></li>
+        <li class=""><span class="lab">B</span><span>filament</span></li>
+        <li class=""><span class="lab">C</span><span>stigma</span></li>
+        <li class="correct"><span class="lab">D</span><span>ovule</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The fruit forms from the ovary, while the seed (the mango stone) forms from the ovule inside that ovary.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">Seed dispersal mainly helps plants by:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>preventing overcrowding and spreading plants to new places</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>making seeds heavier</span></li>
+        <li class=""><span class="lab">C</span><span>speeding up pollination</span></li>
+        <li class=""><span class="lab">D</span><span>stopping fertilisation</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Dispersal carries seeds away from the parent, which prevents overcrowding and lets the plant colonise new places where there is room, light, water and minerals.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">If all the seeds of a plant simply fell and grew right below the parent, the seedlings would most suffer from:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>too few of their own kind nearby</span></li>
+        <li class=""><span class="lab">B</span><span>being unable to photosynthesise</span></li>
+        <li class="correct"><span class="lab">C</span><span>competition for light, water, minerals and space</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>too much room to spread</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>If seeds all grew right under the parent, the seedlings would crowd together and fight one another (and the parent) for light, water, minerals and space — exactly what dispersal avoids.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">Coconut seeds are well suited to dispersal by **water** because they are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>tiny and dry</span></li>
+        <li class=""><span class="lab">B</span><span>covered with hooks</span></li>
+        <li class="correct"><span class="lab">C</span><span>light, with a spongy, buoyant husk that floats</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>explosive when ripe</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A coconut floats because of its light, fibrous, spongy and buoyant husk, so it is well suited to dispersal by water (it can even cross the sea).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">Drumstick and maple seeds have wing-like or hairy structures. These are adaptations for dispersal by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>water</span></li>
+        <li class="correct"><span class="lab">B</span><span>wind</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>animals that eat them</span></li>
+        <li class=""><span class="lab">D</span><span>explosion</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Wings (maple) and hairs (drumstick) let seeds catch the air and be carried far, so these are adaptations for dispersal by wind.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">Seeds of plants such as Xanthium that bear tiny hooks or spines are usually dispersed by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>bursting open suddenly</span></li>
+        <li class=""><span class="lab">B</span><span>floating on water</span></li>
+        <li class=""><span class="lab">C</span><span>being blown far by wind</span></li>
+        <li class="correct"><span class="lab">D</span><span>sticking to the fur of animals</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Tiny hooks or spines catch on the fur of passing animals, so the seeds are carried away stuck to the animal — dispersal by animals.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">The pods of castor and balsam burst open when ripe and fling their seeds out. This is dispersal by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>wind</span></li>
+        <li class=""><span class="lab">B</span><span>water</span></li>
+        <li class=""><span class="lab">C</span><span>insects</span></li>
+        <li class="correct"><span class="lab">D</span><span>explosion (sudden bursting)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Castor and balsam fruits dry, build up tension, and suddenly burst open, flinging seeds away from the parent — dispersal by explosion (sudden bursting).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">The light, hairy seeds of the madar (Calotropis) plant are matched to which agent of dispersal?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>wind</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>water</span></li>
+        <li class=""><span class="lab">C</span><span>animals' digestive systems</span></li>
+        <li class=""><span class="lab">D</span><span>explosion</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Madar (Calotropis) seeds are very light and bear silky hairs that act like parachutes, so they are carried by wind.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">A juicy berry is eaten by a bird; the hard seeds pass out unharmed far away. This describes seed dispersal by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>wind</span></li>
+        <li class="correct"><span class="lab">B</span><span>animals</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>water</span></li>
+        <li class=""><span class="lab">D</span><span>explosion</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>When an animal eats a juicy fruit, the tough seeds pass out unharmed in its droppings far from the parent — dispersal by animals.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">Which seed feature is **least** likely to help with wind dispersal?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>being very light</span></li>
+        <li class=""><span class="lab">B</span><span>having a hairy parachute</span></li>
+        <li class="correct"><span class="lab">C</span><span>being heavy with a thick stony coat</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>having flat wings</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Wind dispersal relies on seeds being light, often with hairs or wings to catch the air. A seed that is heavy with a thick stony coat is the least suited to being blown about.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">A plant lives in still pond water and produces light, spongy floating fruits. The most suitable dispersal agent is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>wind through a forest canopy</span></li>
+        <li class=""><span class="lab">B</span><span>animal fur</span></li>
+        <li class="correct"><span class="lab">C</span><span>water</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>explosion</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A still-water plant with light, spongy floating fruits is adapted for dispersal by water, which carries the floating fruit to new spots.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">Reproduction by seeds (sexual reproduction) differs from vegetative propagation mainly because seeds:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>result from two parents' gametes and so offspring can vary</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>are formed without any flower</span></li>
+        <li class=""><span class="lab">C</span><span>always produce exact clones of one parent</span></li>
+        <li class=""><span class="lab">D</span><span>cannot be dispersed</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Seeds form from the fusion of gametes from (usually) two parents, so the offspring can vary and differ from the parents. Vegetative propagation, in contrast, makes identical clones from one parent.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">A farmer wants every new sugarcane plant to be identical to one prized parent plant. The best method is to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>collect and sow its seeds</span></li>
+        <li class=""><span class="lab">B</span><span>wait for wind pollination</span></li>
+        <li class=""><span class="lab">C</span><span>cross-pollinate it with another variety</span></li>
+        <li class="correct"><span class="lab">D</span><span>plant stem cuttings from that parent</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>To get plants identical to one prized parent, the farmer should use vegetative propagation — stem cuttings — because asexual offspring are clones. Seeds or cross-pollination would introduce variation.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">Hydra, a tiny water animal, develops a small bulge that grows and separates into a new individual. This same mode of reproduction is also seen in:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>potato</span></li>
+        <li class=""><span class="lab">B</span><span>ferns</span></li>
+        <li class="correct"><span class="lab">C</span><span>yeast</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>coconut</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Hydra reproduces by budding (a bulge grows and separates). Among the choices, yeast also reproduces by budding.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">Which of these correctly pairs an organism with its mode of asexual reproduction?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Rhizopus (bread mould) - spore formation</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Spirogyra - spore formation</span></li>
+        <li class=""><span class="lab">C</span><span>yeast - fragmentation</span></li>
+        <li class=""><span class="lab">D</span><span>potato - budding</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bread mould (Rhizopus) reproduces by spore formation — the correct pairing. Spirogyra fragments, yeast buds, and the potato propagates vegetatively, so the other pairings are wrong.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">A money-plant cutting placed in a glass of water grows roots and becomes a new plant. This shows that vegetative propagation can occur from a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>seed</span></li>
+        <li class=""><span class="lab">B</span><span>spore</span></li>
+        <li class="correct"><span class="lab">C</span><span>stem</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>pollen grain</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A money-plant cutting is a piece of STEM that grows roots and becomes a new plant, showing vegetative propagation from a stem.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">Which statement about pollen is correct?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>pollen is produced inside the ovary</span></li>
+        <li class=""><span class="lab">B</span><span>pollen becomes the seed after dispersal</span></li>
+        <li class="correct"><span class="lab">C</span><span>pollen carries the male gamete and is made in the anther</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>pollen lands on the filament during pollination</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Pollen carries the male gamete and is produced in the anther. It is not made in the ovary, does not become the seed, and lands on the stigma (not the filament).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">In a bisexual flower, self-pollination is possible because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>it has flowers on two different plants</span></li>
+        <li class=""><span class="lab">B</span><span>it has no pistil</span></li>
+        <li class=""><span class="lab">C</span><span>it produces spores instead of pollen</span></li>
+        <li class="correct"><span class="lab">D</span><span>both the anther (pollen) and the stigma are present in the same flower</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A bisexual flower has both the pollen-bearing anther and the stigma in the same flower, so pollen can reach its own stigma — self-pollination is possible.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">A drumstick seed has papery wings; a coconut has a spongy husk. The reason their structures differ is that they are adapted to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the same dispersal agent</span></li>
+        <li class="correct"><span class="lab">B</span><span>different dispersal agents - wind for one, water for the other</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>animal dispersal in both cases</span></li>
+        <li class=""><span class="lab">D</span><span>explosive dispersal in both cases</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Different seed structures match different agents: a drumstick's papery wings suit wind, while a coconut's spongy husk suits water. So they are adapted to different dispersal agents.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">Why can a banana plant produce fruit even though its cultivated variety makes no usable seeds?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>it reproduces only by spores</span></li>
+        <li class=""><span class="lab">B</span><span>its seeds are dispersed by wind before we see them</span></li>
+        <li class="correct"><span class="lab">C</span><span>it is grown by vegetative propagation from its stem, not from seeds</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>it does not need to reproduce at all</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cultivated bananas are seedless, yet they keep being grown because new banana plants are raised by vegetative propagation from the parent (its stem/sucker), not from seeds.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">A flower is pollinated successfully, but no fertilisation follows and no fruit forms. The most reasonable explanation is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the ovary turned straight into seeds</span></li>
+        <li class="correct"><span class="lab">B</span><span>the male gamete never fused with the egg in the ovule</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the petals failed to wither</span></li>
+        <li class=""><span class="lab">D</span><span>the stigma rejected the stamen</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Pollination (pollen on the stigma) does not guarantee fertilisation. If the male gamete never fuses with the egg in the ovule, there is no zygote, so no seed and no fruit form.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">Place these in the correct life-cycle order: (i) seed germinates into a new plant, (ii) flower is pollinated, (iii) fruit with seeds forms, (iv) fertilisation occurs.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>(i) → (ii) → (iii) → (iv)</span></li>
+        <li class="correct"><span class="lab">B</span><span>(ii) → (iv) → (iii) → (i)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>(iv) → (ii) → (i) → (iii)</span></li>
+        <li class=""><span class="lab">D</span><span>(iii) → (i) → (ii) → (iv)</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The life-cycle order is: the flower is pollinated (ii), fertilisation occurs (iv), a fruit with seeds forms (iii), and a seed then germinates into a new plant (i). So (ii) → (iv) → (iii) → (i).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">Which observation would best show that a plant reproduced **sexually** rather than by vegetative propagation?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the new plant grew from a buried stem tuber</span></li>
+        <li class=""><span class="lab">B</span><span>the new plant grew from a stem cutting</span></li>
+        <li class=""><span class="lab">C</span><span>the new plant grew from a leaf-margin bud</span></li>
+        <li class="correct"><span class="lab">D</span><span>the new plant grew from a seed formed inside a fruit</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sexual reproduction makes seeds (from fertilisation) inside fruits, so a plant grown from a seed formed in a fruit shows sexual reproduction. Tubers, leaf-buds and cuttings are all vegetative (asexual).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">A bee crawls into a bright, scented flower to drink nectar and leaves dusted with pollen, which it carries to the next flower. The bee is acting as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>an agent of fertilisation</span></li>
+        <li class="correct"><span class="lab">B</span><span>an agent of pollination</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>an agent of seed dispersal</span></li>
+        <li class=""><span class="lab">D</span><span>a parent in vegetative propagation</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The bee carries pollen from one flower to another's stigma, so it is acting as an agent of pollination. (Fertilisation is the later fusion of gametes, which the bee does not perform.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">Two strawberry varieties are deliberately cross-pollinated to combine their best traits in the offspring. This deliberate crossing is called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>fragmentation</span></li>
+        <li class="correct"><span class="lab">B</span><span>hybridisation</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>budding</span></li>
+        <li class=""><span class="lab">D</span><span>self-pollination</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Deliberately cross-pollinating two different varieties to combine their good traits in the offspring is called hybridisation.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">A gardener notices new plants sprouting directly from the underground stem of a ginger plant, with no flowers, seeds or pollen involved anywhere. The gardener should conclude that the ginger reproduced by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sexual reproduction through pollination</span></li>
+        <li class=""><span class="lab">B</span><span>seed dispersal by animals</span></li>
+        <li class="correct"><span class="lab">C</span><span>vegetative propagation (asexual reproduction)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>spore formation</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>New plants growing straight from the underground stem, with no flower, seed or pollen, is vegetative propagation — a form of asexual reproduction. --- *Solutions complete: 60 / 60.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

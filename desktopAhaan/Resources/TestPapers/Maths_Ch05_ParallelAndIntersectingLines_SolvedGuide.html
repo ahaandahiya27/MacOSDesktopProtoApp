@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parallel And Intersecting Lines — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Parallel And Intersecting Lines<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">Two distinct straight lines in a plane can intersect in at most how many points?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>1</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>0</span></li>
+        <li class=""><span class="lab">C</span><span>2</span></li>
+        <li class=""><span class="lab">D</span><span>infinitely many</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Two distinct straight lines, once they touch, immediately separate (a straight line can't bend back to meet again). So they share **at most one** point. (Zero if parallel, one if intersecting — but "at most" is 1.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">Two straight lines cross at a point, forming four angles. One of them is 110°. The angle vertically opposite to it measures:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>70°</span></li>
+        <li class=""><span class="lab">B</span><span>90°</span></li>
+        <li class="correct"><span class="lab">C</span><span>110°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>250°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Vertically opposite angles are always equal, regardless of how the lines cross. So the angle opposite 110° is **110°**. Trap: 70° is the *adjacent* (linear-pair) angle, not the opposite.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">Two lines intersect and one of the four angles is 110°. The angle adjacent to it (its linear pair) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>110°</span></li>
+        <li class=""><span class="lab">B</span><span>90°</span></li>
+        <li class=""><span class="lab">C</span><span>80°</span></li>
+        <li class="correct"><span class="lab">D</span><span>70°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Adjacent angles on a straight line form a linear pair summing to 180°. So 180° − 110° = **70°**. Trap (A) 110° confuses adjacent with vertically opposite.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">When two lines cross so that all four angles are equal, each angle is 360 ÷ 4. Such lines are called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>parallel</span></li>
+        <li class="correct"><span class="lab">B</span><span>perpendicular</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>transversal</span></li>
+        <li class=""><span class="lab">D</span><span>co-interior</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>All four equal ⇒ each = 360 ÷ 4 = 90°. Lines crossing at right angles are **perpendicular**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">Two adjacent angles on a straight line form a linear pair. If one is 4 times the other, the larger angle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>36°</span></li>
+        <li class=""><span class="lab">B</span><span>120°</span></li>
+        <li class="correct"><span class="lab">C</span><span>144°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>150°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Let the smaller be x; the larger is 4x. Linear pair: x + 4x = 180 ⇒ 5x = 180 ⇒ x = 36. Larger = 4·36 = **144°**. Trap (A) 36° is the *smaller* angle.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">Opposite edges of a rectangular sheet of paper are ____ and adjacent edges are ____.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>perpendicular; parallel</span></li>
+        <li class="correct"><span class="lab">B</span><span>parallel; perpendicular</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>parallel; parallel</span></li>
+        <li class=""><span class="lab">D</span><span>perpendicular; perpendicular</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Opposite edges of a sheet run the same way and never meet — **parallel**. Adjacent edges meet at a 90° corner — **perpendicular**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">A transversal crosses two lines at two distinct points. The total number of angles formed is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4</span></li>
+        <li class=""><span class="lab">B</span><span>6</span></li>
+        <li class="correct"><span class="lab">C</span><span>8</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>12</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Each crossing of the transversal makes 4 angles; two crossings ⇒ 4 × 2 = **8** angles.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">A transversal cuts two parallel lines. A corresponding angle at the first line is 73°. The matching corresponding angle at the second line is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>17°</span></li>
+        <li class=""><span class="lab">B</span><span>107°</span></li>
+        <li class=""><span class="lab">C</span><span>287°</span></li>
+        <li class="correct"><span class="lab">D</span><span>73°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Corresponding angles are equal when the lines are parallel, so the matching angle is **73°**. Traps: 107° is its co-interior/linear-pair partner; 17° is its complement (irrelevant here).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">A transversal cuts two parallel lines. One co-interior (same-side interior) angle is 118°. The other co-interior angle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>118°</span></li>
+        <li class="correct"><span class="lab">B</span><span>62°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>72°</span></li>
+        <li class=""><span class="lab">D</span><span>242°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Co-interior (same-side interior) angles are supplementary on parallel lines: 180° − 118° = **62°**. Trap (A) 118° wrongly assumes they are equal.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">Two lines cross. One angle is 35°. Its vertically opposite angle and its linear-pair neighbour are, respectively:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>35° and 145°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>35° and 35°</span></li>
+        <li class=""><span class="lab">C</span><span>145° and 145°</span></li>
+        <li class=""><span class="lab">D</span><span>55° and 145°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Vertically opposite to 35° is **35°**; the linear-pair neighbour is 180° − 35° = 145°. So **35° and 145°**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">Two intersecting lines form four angles a, b, c, d in order around the point. Which statement is ALWAYS true, whatever the lines?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a = b</span></li>
+        <li class="correct"><span class="lab">B</span><span>a = c</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a = b = c = d</span></li>
+        <li class=""><span class="lab">D</span><span>a + c = 180°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Whatever the lines, opposite angles are equal: a = c (and b = d). a = b only if perpendicular; a + c = 180° is false in general (a + b = 180° is the true relation). So **a = c**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">A transversal cuts two parallel lines, making just two distinct angle measures. If one measure is 72°, the two measures are:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>72° and 108°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>72° and 90°</span></li>
+        <li class=""><span class="lab">C</span><span>72° and 18°</span></li>
+        <li class=""><span class="lab">D</span><span>72° only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A transversal on parallel lines gives angles of just two sizes that are supplementary: 72° and 180° − 72° = 108°. So **72° and 108°**. Trap (B) 72°+90° and (C) 72°+18° misuse complement/right-angle ideas.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">Line a ⊥ line b, and line b ∥ line c. The angle between line a and line c is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0°</span></li>
+        <li class=""><span class="lab">B</span><span>45°</span></li>
+        <li class="correct"><span class="lab">C</span><span>90°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>180°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>a ⊥ b means 90° between them. b ∥ c means c has b's direction, so a meets c at the same 90°. Answer **90°**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">At an intersection of two lines, one angle is x° and an adjacent angle is (x + 40)°. The value of x is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>80</span></li>
+        <li class=""><span class="lab">B</span><span>110</span></li>
+        <li class=""><span class="lab">C</span><span>90</span></li>
+        <li class="correct"><span class="lab">D</span><span>70</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Adjacent angles on a line: x + (x + 40) = 180 ⇒ 2x = 140 ⇒ x = **70**. Trap (C) 110 is the value of the second angle, not x.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">Two parallel lines are cut by a transversal. A pair of alternate interior angles measure (2x + 10)° and (3x − 20)°. The value of x is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>30</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>10</span></li>
+        <li class=""><span class="lab">C</span><span>6</span></li>
+        <li class=""><span class="lab">D</span><span>38</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Alternate interior angles are equal: 2x + 10 = 3x − 20 ⇒ 30 = x ⇒ x = **30**. (Then each angle = 70°.) Trap (B) 10 comes from wrongly setting the sum to 180.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">A transversal cuts two parallel lines p and q. An angle of 65° is formed at p. Its corresponding angle, an alternate angle, and a co-interior angle to it measure, respectively:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>65°, 115°, 115°</span></li>
+        <li class=""><span class="lab">B</span><span>115°, 65°, 65°</span></li>
+        <li class="correct"><span class="lab">C</span><span>65°, 65°, 115°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>65°, 65°, 65°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Corresponding = 65° (equal), alternate = 65° (equal), co-interior = 180° − 65° = 115° (supplementary). So **65°, 65°, 115°**. Trap (D) wrongly makes the co-interior angle equal too.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">Which of these conditions guarantees that two lines cut by a transversal are parallel?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a pair of co-interior angles add to 200°</span></li>
+        <li class="correct"><span class="lab">B</span><span>a pair of alternate angles are equal</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a pair of co-interior angles are equal</span></li>
+        <li class=""><span class="lab">D</span><span>the transversal is perpendicular to only one of the lines</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Equal alternate angles force the lines parallel. (A) co-interior must sum to *180°*, not 200°; (C) equal co-interior would mean each 90° only — not a general parallel test; (D) is about one line only. Answer **alternate angles equal**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">Two parallel lines are cut by a transversal. One co-interior angle is twice the other. The smaller co-interior angle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>30°</span></li>
+        <li class=""><span class="lab">B</span><span>90°</span></li>
+        <li class=""><span class="lab">C</span><span>120°</span></li>
+        <li class="correct"><span class="lab">D</span><span>60°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Co-interior angles are supplementary. Let the smaller be x, larger 2x: x + 2x = 180 ⇒ x = 60. Smaller = **60°**. Trap (A) 30 ignores that they must add to 180°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">Two lines intersect. The sum of the two angles that are vertically opposite to each other in ONE such pair (i.e. an angle plus its vertically-opposite partner) is 86°. Each of these two angles measures:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>43°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>86°</span></li>
+        <li class=""><span class="lab">C</span><span>94°</span></li>
+        <li class=""><span class="lab">D</span><span>172°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An angle and its vertically opposite partner are equal, so each = 86° ÷ 2 = **43°**. Trap (B) 86° forgets to halve.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">Two parallel lines are cut by a transversal. Two corresponding angles are (5x)° and (3x + 40)°. The common value of each corresponding angle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>20°</span></li>
+        <li class="correct"><span class="lab">B</span><span>100°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>60°</span></li>
+        <li class=""><span class="lab">D</span><span>140°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Corresponding angles equal: 5x = 3x + 40 ⇒ 2x = 40 ⇒ x = 20, so each = 5·20 = **100°**. Trap (A) 20° gives x, not the angle.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">Which statement is FALSE?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Vertically opposite angles are always equal.</span></li>
+        <li class=""><span class="lab">B</span><span>Corresponding angles are equal only when the two lines are parallel.</span></li>
+        <li class="correct"><span class="lab">C</span><span>Co-interior angles between two parallel lines are equal.</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Adjacent angles on a straight line add to 180°.</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Co-interior angles between parallel lines are **supplementary, not equal** — so "they are equal" is the FALSE statement. The other three are all true.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">A transversal cuts two lines (NOT stated to be parallel). At the first line a pair of corresponding positions has 80°; at the second line the corresponding angle is measured to be 95°. From this you can conclude the two lines are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>parallel</span></li>
+        <li class=""><span class="lab">B</span><span>perpendicular</span></li>
+        <li class=""><span class="lab">C</span><span>coincident</span></li>
+        <li class="correct"><span class="lab">D</span><span>not parallel</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Corresponding angles are equal *only* when the lines are parallel. Here they differ (80° vs 95°), so the lines are **not parallel**. Trap (A) reverses the rule.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">Three angles around the meeting point of two intersecting lines are marked 2y, 3y, and 2y reading around. The fourth angle equals:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2y</span></li>
+        <li class="correct"><span class="lab">B</span><span>3y</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>5y</span></li>
+        <li class=""><span class="lab">D</span><span>y</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Going round, the 1st and 3rd (both 2y) are a vertically opposite pair (equal ✓). The remaining pair is the 2nd and 4th, which are also vertically opposite, so the 4th = the 2nd = **3y**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">In the figure, lines AB and CD cross at O. ∠AOC = (3x − 10)° and ∠BOD = (2x + 25)° are vertically opposite. Then ∠AOC measures:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>35°</span></li>
+        <li class=""><span class="lab">B</span><span>60°</span></li>
+        <li class="correct"><span class="lab">C</span><span>95°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>105°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Vertically opposite ⇒ 3x − 10 = 2x + 25 ⇒ x = 35. ∠AOC = 3·35 − 10 = **95°**. Trap (A) 35 reports x instead of the angle.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">A transversal t cuts parallel lines m and n. At m it makes an angle of 40° with the transversal on one side. The acute angle the transversal makes with n is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>40°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>50°</span></li>
+        <li class=""><span class="lab">C</span><span>140°</span></li>
+        <li class=""><span class="lab">D</span><span>20°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The transversal cuts the parallels at the same inclination, so the acute angle at n equals the acute angle at m = **40°** (corresponding/alternate equality). Trap (B) 50° is the complement.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">Two parallel lines are cut by a transversal. The two co-interior (same-side interior) angles measure (4x)° and (5x − 18)°. Then x equals:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>18</span></li>
+        <li class="correct"><span class="lab">B</span><span>22</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>20</span></li>
+        <li class=""><span class="lab">D</span><span>30</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Co-interior angles are supplementary: 4x + (5x − 18) = 180 ⇒ 9x = 198 ⇒ x = **22**. Trap (B-vs-C): setting them *equal* gives x = 18 (option A), the classic co-interior slip.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">Ray OP stands on a line, making two angles 3x and 2x on either side. Then x is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>18°</span></li>
+        <li class=""><span class="lab">B</span><span>60°</span></li>
+        <li class=""><span class="lab">C</span><span>72°</span></li>
+        <li class="correct"><span class="lab">D</span><span>36°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Ray OP on a line ⇒ the two angles form a linear pair: 3x + 2x = 180 ⇒ 5x = 180 ⇒ x = **36°**. Trap (B) 60° comes from dividing 180 by 3.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">A transversal cuts two parallel lines. One of the eight angles is 124°. How many of the eight angles equal 124°?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1</span></li>
+        <li class=""><span class="lab">B</span><span>2</span></li>
+        <li class="correct"><span class="lab">C</span><span>4</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>8</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Eight angles take two supplementary sizes, four of each. So **4** of them equal 124° (its vertically opposite + the two corresponding-position equals). Trap (B) 2 forgets the corresponding pair at the other line.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">Two lines are perpendicular. A third line is parallel to the first. The angle between this third line and the second line is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>90°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>45°</span></li>
+        <li class=""><span class="lab">C</span><span>0°</span></li>
+        <li class=""><span class="lab">D</span><span>cannot be found</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Perpendicular lines: 90° between first and second. A line parallel to the first keeps its direction, so it meets the second at the same **90°**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">Lines l and m are parallel, cut by transversal t. ∠1 (above l, right of t) = 118°. Its alternate interior angle (below l) pairs with the interior angle at m. The alternate interior angle measure is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>62°</span></li>
+        <li class="correct"><span class="lab">B</span><span>118°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>90°</span></li>
+        <li class=""><span class="lab">D</span><span>236°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Alternate interior angles are equal on parallel lines, so the alternate of 118° is **118°**. Trap (A) 62° wrongly treats them as supplementary (that's co-interior).</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">At a crossing of two lines, the four angles in order are p, q, p, q. Given p = 3q, then q equals:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>30°</span></li>
+        <li class=""><span class="lab">B</span><span>60°</span></li>
+        <li class=""><span class="lab">C</span><span>135°</span></li>
+        <li class="correct"><span class="lab">D</span><span>45°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Around the point the four angles are p, q, p, q with p + q = 180° (adjacent linear pair). With p = 3q: 3q + q = 180 ⇒ 4q = 180 ⇒ q = **45°**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">A transversal makes co-interior angles (x + 30)° and (2x)° with two parallel lines. The larger co-interior angle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>50°</span></li>
+        <li class=""><span class="lab">B</span><span>80°</span></li>
+        <li class="correct"><span class="lab">C</span><span>100°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>130°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Co-interior supplementary: (x + 30) + 2x = 180 ⇒ 3x = 150 ⇒ x = 50. The two angles are 80° and 100°; the larger is **100°**. Trap (B) 80° is the smaller.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">Two angles are both supplementary AND equal to each other. Each angle is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>90°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>60°</span></li>
+        <li class=""><span class="lab">C</span><span>45°</span></li>
+        <li class=""><span class="lab">D</span><span>180°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Both supplementary AND equal": x + x = 180 ⇒ x = **90°**. Trap (D) 180° is the sum, not each angle.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">A transversal cuts two parallel lines. The bisector of one of the co-interior angles and the bisector of the other co-interior angle meet at an angle of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>45°</span></li>
+        <li class=""><span class="lab">B</span><span>60°</span></li>
+        <li class="correct"><span class="lab">C</span><span>90°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>120°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The two co-interior angles sum to 180°; their halves sum to 90°. In the triangle formed by the two bisectors and the transversal, the bisectors meet at 180° − 90° = **90°**. (A neat classic result.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">In a figure, line PQ ∥ line RS, and a transversal meets PQ at A and RS at B. ∠PAB = 5x° and ∠ABS = 4x° are co-interior angles. Then ∠PAB measures:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>20°</span></li>
+        <li class=""><span class="lab">B</span><span>80°</span></li>
+        <li class=""><span class="lab">C</span><span>120°</span></li>
+        <li class="correct"><span class="lab">D</span><span>100°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>∠PAB and ∠ABS are co-interior ⇒ supplementary: 5x + 4x = 180 ⇒ 9x = 180 ⇒ x = 20. ∠PAB = 5·20 = **100°**. Trap (B) 80° is ∠ABS.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">Which of the following pairs of angles need NOT be equal even when two lines are cut by a transversal?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>vertically opposite angles</span></li>
+        <li class="correct"><span class="lab">B</span><span>corresponding angles when the lines are not parallel</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>angles in a linear pair that are both right angles</span></li>
+        <li class=""><span class="lab">D</span><span>two angles each equal to 90°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Vertically opposite angles, right-angle linear pairs, and two 90° angles are always equal. But **corresponding angles when the lines are NOT parallel** need not be equal — that's the answer.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">Two parallel lines are cut by a transversal so that a pair of alternate angles are (60 − x)° and (2x)°. Each of these alternate angles measures:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>40°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>20°</span></li>
+        <li class=""><span class="lab">C</span><span>60°</span></li>
+        <li class=""><span class="lab">D</span><span>120°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Alternate angles equal: 60 − x = 2x ⇒ 60 = 3x ⇒ x = 20, so each = 2·20 = **40°**. Trap (B) 20° reports x, not the angle.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">Lines a and b are parallel. A transversal makes an interior angle of 105° with a on one side. The interior angle with b on the SAME side of the transversal is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>165°</span></li>
+        <li class=""><span class="lab">B</span><span>105°</span></li>
+        <li class="correct"><span class="lab">C</span><span>75°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>90°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The SAME-side interior angle pairs as co-interior with 105°, so it is supplementary: 180° − 105° = **75°**. Trap (B) 105° wrongly treats them as equal (that would be alternate, opposite side).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">At an intersection, an angle and its vertically opposite angle are (4x + 5)° and (6x − 25)°. The value of x is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>10</span></li>
+        <li class="correct"><span class="lab">B</span><span>15</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>20</span></li>
+        <li class=""><span class="lab">D</span><span>30</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Vertically opposite ⇒ equal: 4x + 5 = 6x − 25 ⇒ 30 = 2x ⇒ x = **15**. Trap (A) 10 comes from a sign slip.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">A transversal cuts lines u and v. Corresponding angles are 88° (at u) and 88° (at v). What can you conclude?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>u and v are perpendicular</span></li>
+        <li class=""><span class="lab">B</span><span>u and v meet at 88°</span></li>
+        <li class=""><span class="lab">C</span><span>nothing at all</span></li>
+        <li class="correct"><span class="lab">D</span><span>u and v are parallel</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Equal corresponding angles guarantee the lines are **parallel** (the converse rule). Trap (C) "meet at 88°" misreads the equality.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">Lines l ∥ m, cut by transversal t. One interior angle on the left of t at l is 7x° and the co-interior angle at m is 2x°. Then the angle 7x° measures:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>20°</span></li>
+        <li class=""><span class="lab">B</span><span>40°</span></li>
+        <li class="correct"><span class="lab">C</span><span>140°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>120°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The given interior angle at l and the co-interior angle at m are supplementary: 7x + 2x = 180 ⇒ 9x = 180 ⇒ x = 20. So 7x = **140°**. Trap (D) 120° = 6x, an arithmetic slip.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">Two lines intersect, and one of the four angles is a right angle. The number of the four angles that are right angles is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>4</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>2</span></li>
+        <li class=""><span class="lab">C</span><span>3</span></li>
+        <li class=""><span class="lab">D</span><span>1</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>If one of the four angles is 90°, its linear-pair neighbour is 90°, its vertically opposite is 90°, and the fourth is 90° too. So **4** of them are right angles.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">A transversal cuts two parallel lines. An exterior angle on one line is 130°. The interior angle on the same side of the transversal, at that SAME crossing (its linear pair), is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>130°</span></li>
+        <li class="correct"><span class="lab">B</span><span>50°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>65°</span></li>
+        <li class=""><span class="lab">D</span><span>230°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The exterior angle (130°) and the interior angle at the same crossing are a linear pair: 180° − 130° = **50°**. Trap (A) 130° forgets the straight-line sum.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">Parallel lines l and m are cut by transversal t. ∠a and ∠b are alternate exterior angles, with ∠a = (3x + 15)° and ∠b = (4x − 5)°. Then ∠a measures:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>20°</span></li>
+        <li class=""><span class="lab">B</span><span>60°</span></li>
+        <li class=""><span class="lab">C</span><span>105°</span></li>
+        <li class="correct"><span class="lab">D</span><span>75°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Alternate exterior angles are equal on parallel lines: 3x + 15 = 4x − 5 ⇒ 20 = x. ∠a = 3·20 + 15 = **75°**. Trap (A) 20 reports x.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">Two roads cross. The angle in the north-east "corner" between them is 65°. The angle in the south-west corner is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>25°</span></li>
+        <li class=""><span class="lab">B</span><span>115°</span></li>
+        <li class="correct"><span class="lab">C</span><span>65°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>130°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The NE corner and the SW corner are vertically opposite, hence equal: **65°**. Trap (B/D) 115°/130° treat them as supplementary/double.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">A transversal cuts two parallel lines, and one of the eight angles is a right angle. Then:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>all eight angles are right angles</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>exactly two are right angles</span></li>
+        <li class=""><span class="lab">C</span><span>exactly four of the eight angles are right angles</span></li>
+        <li class=""><span class="lab">D</span><span>only that one angle is a right angle</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>With a right angle present, that whole crossing becomes four 90° angles, and corresponding angles at the parallel line are 90° too — so **all eight** angles are right angles. (This is why a perpendicular transversal makes a fully right-angled grid.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">Two parallel lines are cut by a transversal. The difference between a pair of co-interior angles is 40°. The larger co-interior angle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>70°</span></li>
+        <li class="correct"><span class="lab">B</span><span>110°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>90°</span></li>
+        <li class=""><span class="lab">D</span><span>140°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Co-interior sum 180°, difference 40°. Larger = (180 + 40) ÷ 2 = **110°** (smaller 70°). Trap (A) 70° is the smaller angle.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">Lines AB and CD intersect at O. ∠AOC = 50°. Ray OE is drawn so that ∠COE = 90° (OE between OC and OB region). Then ∠EOB equals:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>130°</span></li>
+        <li class=""><span class="lab">B</span><span>50°</span></li>
+        <li class=""><span class="lab">C</span><span>90°</span></li>
+        <li class="correct"><span class="lab">D</span><span>40°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A, O, B are collinear so ∠AOB = 180°. ∠AOC + ∠COE + ∠EOB = 180° ⇒ 50° + 90° + ∠EOB = 180° ⇒ ∠EOB = **40°**. Trap (B) 50° just echoes ∠AOC.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">A transversal cuts parallel lines so that an alternate interior angle is 3 times its co-interior partner on the same line. (The alternate interior angle and the co-interior angle here form a linear pair on the cut line.) The alternate interior angle is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>135°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>90°</span></li>
+        <li class=""><span class="lab">C</span><span>120°</span></li>
+        <li class=""><span class="lab">D</span><span>45°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The alternate-interior angle and the co-interior angle sharing that vertex form a linear pair (sum 180°). With alternate = 3 × co-interior: 3k + k = 180 ⇒ k = 45 ⇒ alternate = **135°**. Trap (D) 45° is the co-interior partner.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">Which set of three angle measures could be the three angles among the four formed by two intersecting lines (the fourth being the remaining one)?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>60°, 60°, 60°</span></li>
+        <li class=""><span class="lab">B</span><span>100°, 100°, 100°</span></li>
+        <li class="correct"><span class="lab">C</span><span>50°, 130°, 50°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>40°, 40°, 140°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Four angles around a crossing come in two equal vertically-opposite pairs, with adjacent ones supplementary. **50°, 130°, 50°** works: fourth angle = 130°, pairs 50/50 and 130/130, and 50 + 130 = 180 ✓. (B) needs four equal 60°s impossible; (D) 100° three times can't sum correctly.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">Lines p ∥ q. A transversal makes a 3:2 ratio between a pair of co-interior angles. The smaller of the two angles is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>36°</span></li>
+        <li class="correct"><span class="lab">B</span><span>72°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>54°</span></li>
+        <li class=""><span class="lab">D</span><span>108°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Co-interior angles sum to 180° in ratio 3:2 ⇒ 5 parts = 180° ⇒ 1 part = 36°. Smaller = 2 parts = **72°**. Trap (A) 36° is one part, not the smaller angle.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">A transversal crosses two parallel lines at exactly 90°. The number of distinct angle measures among the eight angles is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>8</span></li>
+        <li class=""><span class="lab">B</span><span>2</span></li>
+        <li class=""><span class="lab">C</span><span>4</span></li>
+        <li class="correct"><span class="lab">D</span><span>1</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>At 90° every one of the eight angles is a right angle, so there is just **1** distinct measure (90°). Trap (B) 2 forgets the perpendicular case collapses both sizes to 90°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">∠1 and ∠2 are corresponding angles for two parallel lines, and ∠2 and ∠3 form a linear pair. If ∠1 = 116°, then ∠3 equals:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>64°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>116°</span></li>
+        <li class=""><span class="lab">C</span><span>90°</span></li>
+        <li class=""><span class="lab">D</span><span>26°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>∠1 = ∠2 = 116° (corresponding, parallel). ∠2 and ∠3 are a linear pair ⇒ ∠3 = 180° − 116° = **64°**. Trap (B) 116° forgets the linear-pair step.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">Two parallel lines are cut by a transversal. An alternate-interior angle and a co-interior angle that share the same vertex on one of the lines satisfy: their measures are in ratio 2:1. Each unknown — the alternate-interior angle — measures:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>60°</span></li>
+        <li class=""><span class="lab">B</span><span>90°</span></li>
+        <li class="correct"><span class="lab">C</span><span>120°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>135°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The alternate-interior angle and the co-interior angle at that vertex form a linear pair (sum 180°) in ratio 2:1 ⇒ 2k + k = 180 ⇒ k = 60. Alternate-interior = 2k = **120°**. Trap (A) 60° is the co-interior partner.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">Lines m and n are crossed by a transversal. Corresponding angles measure (x + 25)° at m and (2x − 15)° at n, and m ∥ n. Then the corresponding angle measure is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>40°</span></li>
+        <li class="correct"><span class="lab">B</span><span>65°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>50°</span></li>
+        <li class=""><span class="lab">D</span><span>80°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Corresponding angles equal (m ∥ n): x + 25 = 2x − 15 ⇒ 40 = x. Angle = 40 + 25 = **65°**. Trap (A) 40 reports x.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">A transversal cuts two parallel lines l and m. ∠A on l and ∠B on m are a pair of alternate angles, and ∠A is 30° less than twice ∠B. Then ∠A measures:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>15°</span></li>
+        <li class=""><span class="lab">B</span><span>45°</span></li>
+        <li class=""><span class="lab">C</span><span>60°</span></li>
+        <li class="correct"><span class="lab">D</span><span>30°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Alternate angles are equal: ∠A = ∠B. Given ∠A = 2∠B − 30 ⇒ ∠B = 2∠B − 30 ⇒ ∠B = 30, so ∠A = **30°**. Trap (C) 60° doubles incorrectly.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">Two intersecting lines make four angles; three of them are (x)°, (x)°, and (2x)°. The value of x is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>60</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>45</span></li>
+        <li class=""><span class="lab">C</span><span>72</span></li>
+        <li class=""><span class="lab">D</span><span>90</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Four angles around a crossing form two vertically-opposite pairs. Three given are x, x, 2x, so the pair x, x is one vertically-opposite pair and 2x belongs to the other (whose partner is also 2x). Sum = x + x + 2x + 2x = 6x = 360 ⇒ x = **60**. Check: 60° + 60° + 120° + 120° = 360° ✓. Trap (D) 90 would force all four equal, contradicting x ≠ 2x.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">Lines a ∥ b, cut by a transversal. The bisector of one of the corresponding angles and the line b enclose what angle, if the corresponding angle is 80°? (The bisector makes 40° with the transversal; find the acute angle it makes with b.)</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>20°</span></li>
+        <li class=""><span class="lab">B</span><span>80°</span></li>
+        <li class="correct"><span class="lab">C</span><span>40°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>60°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The corresponding angle is 80°, so its bisector makes 40° with the transversal. Because the angle's other arm lies along line b's direction... measuring the acute angle the bisector makes with b: 80° − 40° = **40°**. Trap (D) 80° forgets the bisecting.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">A transversal cuts two lines. If a pair of co-interior angles measure 100° and 90°, the two lines are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>parallel</span></li>
+        <li class="correct"><span class="lab">B</span><span>not parallel</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>perpendicular</span></li>
+        <li class=""><span class="lab">D</span><span>coincident</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>For parallel lines co-interior angles must sum to 180°. Here 100° + 90° = 190° ≠ 180°, so the lines are **not parallel**. Trap (A) assumes parallel without checking the sum.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">Parallel lines l and m are cut by a transversal. ∠P is an interior angle at l and ∠Q is the alternate interior angle at m. A second transversal cuts the same lines making ∠Q's alternate angle equal to ∠P. If ∠P = 67°, then the alternate interior angle ∠Q equals:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>23°</span></li>
+        <li class=""><span class="lab">B</span><span>113°</span></li>
+        <li class=""><span class="lab">C</span><span>134°</span></li>
+        <li class="correct"><span class="lab">D</span><span>67°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>∠Q is the alternate interior angle of ∠P across the (first) transversal between the parallel lines, so ∠Q = ∠P = **67°** (alternate interior angles equal). The second-transversal clause is consistent extra detail. Trap (C) 113° treats them as co-interior (supplementary).</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATale Of Three Intersecting Lines — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>ATale Of Three Intersecting Lines<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">Which of the following correctly names the parts of triangle ∆ABC?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Vertices A, B, C; sides AB, BC, CA; angles ∠A, ∠B, ∠C</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Vertices AB, BC, CA; sides A, B, C; angles ∠A, ∠B, ∠C</span></li>
+        <li class=""><span class="lab">C</span><span>Vertices A, B, C; sides ∠A, ∠B, ∠C; angles AB, BC, CA</span></li>
+        <li class=""><span class="lab">D</span><span>Sides A, B, C; vertices AB, BC, CA; angles ∆ABC</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A triangle ∆ABC has three corner points called vertices (A, B, C), three sides that are segments joining the pairs of vertices (AB, BC, CA), and three angles where the sides meet (∠A, ∠B, ∠C). The other options swap the roles of vertices, sides and angles.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">Three points P, Q, R are marked so that PQ = 4 cm, QR = 3 cm and PR = 7 cm. What can you say about them?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>They form a scalene triangle</span></li>
+        <li class="correct"><span class="lab">B</span><span>They are collinear, so no triangle is formed</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>They form an isosceles triangle</span></li>
+        <li class=""><span class="lab">D</span><span>They form an obtuse triangle</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Check the triangle inequality on the longest gap: PQ + QR = 4 + 3 = 7, which equals PR = 7, not greater than it. When the two shorter lengths just reach (sum = third), the points lie on one straight line — they are collinear and enclose no area, so no triangle forms.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">Two angles of a triangle are 48° and 67°. The third angle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>75°</span></li>
+        <li class=""><span class="lab">B</span><span>115°</span></li>
+        <li class="correct"><span class="lab">C</span><span>65°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>55°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Angle sum = 180°, so third = 180° − (48° + 67°) = 180° − 115° = 65°. The trap 115° is the sum of the two given angles, and 75° comes from a slip.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">Can a triangle have sides 5 cm, 8 cm and 13 cm?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Yes, because all three sides are different</span></li>
+        <li class=""><span class="lab">B</span><span>Yes, because 8 + 13 &gt; 5</span></li>
+        <li class=""><span class="lab">C</span><span>No, because the sides are too long</span></li>
+        <li class="correct"><span class="lab">D</span><span>No, because 5 + 8 = 13 is not greater than 13</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Test the two shortest against the longest: 5 + 8 = 13, which is NOT greater than 13. The inequality must be strict, so no triangle exists. "8 + 13 &gt; 5" is true but irrelevant — you must check the two SHORT sides against the longest.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">Two sides of a triangle measure 7 cm and 10 cm. The third side x must satisfy:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>7 &lt; x &lt; 10</span></li>
+        <li class="correct"><span class="lab">B</span><span>3 &lt; x &lt; 17</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>x &lt; 17</span></li>
+        <li class=""><span class="lab">D</span><span>3 ≤ x ≤ 17</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The third side lies strictly between the difference and the sum of the other two: 10 − 7 = 3 and 10 + 7 = 17, so 3 &lt; x &lt; 17. The endpoints are excluded (the ≤ form in (D) is the classic trap; equality gives a degenerate line).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">A triangle has angles 40°, 60° and 80°. Classified by its angles it is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Acute</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Right</span></li>
+        <li class=""><span class="lab">C</span><span>Obtuse</span></li>
+        <li class=""><span class="lab">D</span><span>Equiangular and right</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>All three angles (40°, 60°, 80°) are less than 90°, so the triangle is acute. "Acute" requires ALL angles under 90°, which holds here.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">An exterior angle of a triangle measures 120°. One of the two interior angles not adjacent to it is 70°. The other one is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>60°</span></li>
+        <li class=""><span class="lab">B</span><span>110°</span></li>
+        <li class=""><span class="lab">C</span><span>70°</span></li>
+        <li class="correct"><span class="lab">D</span><span>50°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The exterior angle equals the sum of the two remote (non-adjacent) interior angles: 120° = 70° + other, so the other = 50°. The trap 70° just repeats the given angle.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">In ∆ABC, ∠A = 90° and ∠B = 90° is claimed. Such a triangle:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Is a right isosceles triangle</span></li>
+        <li class=""><span class="lab">B</span><span>Is obtuse</span></li>
+        <li class="correct"><span class="lab">C</span><span>Has its third angle equal to 0°, so it cannot exist</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Has third angle 90° too</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Two 90° angles already total 180°, leaving 0° for the third — impossible, since all three must sum to exactly 180°. A triangle can have at most one right angle, so this triangle cannot exist.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">A triangle has angles 90°, 45° and 45°. By sides AND by angles it is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Right-angled and isosceles</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Acute and isosceles</span></li>
+        <li class=""><span class="lab">C</span><span>Right-angled and scalene</span></li>
+        <li class=""><span class="lab">D</span><span>Obtuse and isosceles</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>One 90° angle ⇒ right-angled. The two 45° angles are equal, so the two sides opposite them are equal ⇒ isosceles. Hence right-angled AND isosceles.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">Which set of three lengths (in cm) CANNOT form a triangle?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>6, 6, 6</span></li>
+        <li class=""><span class="lab">B</span><span>4, 9, 6</span></li>
+        <li class=""><span class="lab">C</span><span>5, 12, 13</span></li>
+        <li class="correct"><span class="lab">D</span><span>2, 3, 6</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Test each: 2 + 3 = 5 &lt; 6, so 2, 3, 6 fails the inequality. The others pass (6+6&gt;6; 4+6&gt;9; 5+12&gt;13), so 2, 3, 6 cannot form a triangle.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">In an isosceles triangle the vertex angle (between the two equal sides) is 40°. Each base angle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>40°</span></li>
+        <li class="correct"><span class="lab">B</span><span>70°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>80°</span></li>
+        <li class=""><span class="lab">D</span><span>100°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In an isosceles triangle the two base angles are equal. With vertex angle 40°, the base angles share 180° − 40° = 140°, so each = 70°. The trap 40° wrongly copies the vertex angle.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">The angles of a triangle are in the ratio 2 : 3 : 4. The largest angle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>40°</span></li>
+        <li class=""><span class="lab">B</span><span>60°</span></li>
+        <li class="correct"><span class="lab">C</span><span>80°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>90°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Ratio 2 : 3 : 4 has 9 parts = 180°, so one part = 20°. The largest angle = 4 × 20° = 80°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">An altitude of a triangle is best described as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Any one of the three sides</span></li>
+        <li class=""><span class="lab">B</span><span>A line joining a vertex to the midpoint of the opposite side</span></li>
+        <li class=""><span class="lab">C</span><span>The longest side of the triangle</span></li>
+        <li class="correct"><span class="lab">D</span><span>The perpendicular segment from a vertex to the opposite side</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An altitude is the perpendicular segment from a vertex straight down (at 90°) to the opposite side. Option (B) describes a median, and a side or the longest side is not an altitude in general.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">In a right-angled triangle, the two altitudes drawn from the vertices of the acute angles coincide with:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>The two legs (the sides meeting at the right angle)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>The hypotenuse and one leg</span></li>
+        <li class=""><span class="lab">C</span><span>The three medians</span></li>
+        <li class=""><span class="lab">D</span><span>Lines that always fall outside the triangle</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In a right triangle, each leg is already perpendicular to the other, so dropping a perpendicular from an acute-angle vertex to the opposite side just lands along the other leg. Thus the two legs ARE the altitudes from the acute vertices.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">Two sides of a triangle are 8 cm and 5 cm. The third side must lie strictly between:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5 cm and 8 cm</span></li>
+        <li class=""><span class="lab">B</span><span>8 cm and 13 cm</span></li>
+        <li class="correct"><span class="lab">C</span><span>3 cm and 13 cm</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>0 cm and 13 cm</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Third side lies strictly between 8 − 5 = 3 and 8 + 5 = 13, i.e. between 3 cm and 13 cm. "0 cm and 13 cm" ignores the lower bound from the difference.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">In ∆ABC, ∠A = 2∠B and ∠C = 3∠B. The measure of ∠B is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>60°</span></li>
+        <li class="correct"><span class="lab">B</span><span>30°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>45°</span></li>
+        <li class=""><span class="lab">D</span><span>36°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>∠A + ∠B + ∠C = 2∠B + ∠B + 3∠B = 6∠B = 180°, so ∠B = 30°. (Then ∠A = 60°, ∠C = 90°.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">A triangle has exactly two equal angles, each 65°. Classified by its sides it is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Isosceles</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Equilateral</span></li>
+        <li class=""><span class="lab">C</span><span>Scalene</span></li>
+        <li class=""><span class="lab">D</span><span>Cannot be decided</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Two equal angles (65° and 65°) mean the two sides opposite them are equal, so the triangle has exactly two equal sides — isosceles. (It is not equilateral, since the third angle is 50°.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">The exterior angle of a triangle at vertex C equals 130°, and the interior angle at A is 55°. The interior angle at B is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>65°</span></li>
+        <li class=""><span class="lab">B</span><span>50°</span></li>
+        <li class=""><span class="lab">C</span><span>60°</span></li>
+        <li class="correct"><span class="lab">D</span><span>75°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Exterior angle at C = sum of the two remote interior angles A and B: 130° = 55° + ∠B, so ∠B = 75°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">Which statement about the angles of a triangle is always TRUE?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>A triangle can have two obtuse angles</span></li>
+        <li class="correct"><span class="lab">B</span><span>A triangle has at least two acute angles</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>A triangle can have two right angles</span></li>
+        <li class=""><span class="lab">D</span><span>Every triangle has exactly one acute angle</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A triangle can have at most one angle that is 90° or more (two such would already reach 180°), so at least two angles must be acute. Options (A) and (C) are impossible, and (D) is false (e.g. an equilateral triangle has three acute angles).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">An equilateral triangle has perimeter 27 cm. Each of its angles measures:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>90°</span></li>
+        <li class=""><span class="lab">B</span><span>45°</span></li>
+        <li class="correct"><span class="lab">C</span><span>60°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>27°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An equilateral triangle has all three angles equal: each = 180°/3 = 60°, regardless of perimeter. The 27 cm is a distractor.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">The three sides of a triangle are 3x, 4x and 5x and its perimeter is 60 cm. The longest side is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>15 cm</span></li>
+        <li class=""><span class="lab">B</span><span>20 cm</span></li>
+        <li class=""><span class="lab">C</span><span>12 cm</span></li>
+        <li class="correct"><span class="lab">D</span><span>25 cm</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>3x + 4x + 5x = 12x = 60, so x = 5 cm. The longest side = 5x = 25 cm. The trap 15 cm is 3x (the shortest side).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">In ∆PQR, the exterior angle at R is 105° and ∠P = 60°. Then ∠Q equals:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>45°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>55°</span></li>
+        <li class=""><span class="lab">C</span><span>75°</span></li>
+        <li class=""><span class="lab">D</span><span>105°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Exterior angle at R = ∠P + ∠Q, so 105° = 60° + ∠Q, giving ∠Q = 45°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">How many of these can be the angles of a single triangle: (40°, 60°, 80°), (90°, 90°, 0°), (30°, 60°, 90°), (50°, 50°, 80°)?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1</span></li>
+        <li class=""><span class="lab">B</span><span>2</span></li>
+        <li class="correct"><span class="lab">C</span><span>3</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>4</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Check each: (40,60,80) sums to 180 ✓; (90,90,0) has a 0° "angle" — invalid; (30,60,90) sums to 180 ✓; (50,50,80) sums to 180 ✓. Three valid sets.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">A triangle has one angle of 110°. The other two angles:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Are both obtuse</span></li>
+        <li class="correct"><span class="lab">B</span><span>Must be acute and add up to 70°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Add up to 110°</span></li>
+        <li class=""><span class="lab">D</span><span>Can include a right angle</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The remaining two angles total 180° − 110° = 70°. Since their sum is only 70°, each is under 70° &lt; 90°, so both are acute. They cannot include a right angle (that would need ≥90° but only 70° is left).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">The smallest whole-number length (in cm) that can be the third side of a triangle whose other two sides are 6 cm and 9 cm is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>3 cm</span></li>
+        <li class=""><span class="lab">B</span><span>2 cm</span></li>
+        <li class=""><span class="lab">C</span><span>15 cm</span></li>
+        <li class="correct"><span class="lab">D</span><span>4 cm</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The third side must satisfy 9 − 6 = 3 &lt; side, so side &gt; 3. The smallest whole number greater than 3 is 4 cm. (3 cm itself is excluded — it would be degenerate.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">In a triangle the second angle is twice the first and the third is 20° more than the first. The first angle is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>40°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>30°</span></li>
+        <li class=""><span class="lab">C</span><span>50°</span></li>
+        <li class=""><span class="lab">D</span><span>35°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Let first = x. Then x + 2x + (x + 20°) = 4x + 20° = 180°, so 4x = 160°, x = 40°. (Angles: 40°, 80°, 60°.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">A triangle has sides 7 cm, 7 cm and 7 cm. Choose the FULLY correct classification:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Equilateral and right</span></li>
+        <li class="correct"><span class="lab">B</span><span>Equilateral and acute</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Isosceles and obtuse</span></li>
+        <li class=""><span class="lab">D</span><span>Scalene and acute</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Equal sides (7, 7, 7) make it equilateral; all angles are 60° &lt; 90°, so it is acute. Hence equilateral and acute. An equilateral triangle can never be right or obtuse.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">An exterior angle of a triangle is always:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Equal to the adjacent interior angle</span></li>
+        <li class=""><span class="lab">B</span><span>Less than each remote interior angle</span></li>
+        <li class=""><span class="lab">C</span><span>Equal to the sum of all three interior angles</span></li>
+        <li class="correct"><span class="lab">D</span><span>Equal to the sum of the two remote interior angles</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>By the exterior angle theorem, an exterior angle of a triangle always equals the sum of the two remote (non-adjacent) interior angles. (It is supplementary to — not equal to — the adjacent interior angle.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">The sum of the three exterior angles of any triangle (one at each vertex) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>180°</span></li>
+        <li class=""><span class="lab">B</span><span>270°</span></li>
+        <li class="correct"><span class="lab">C</span><span>360°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Depends on the triangle</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>At each vertex the interior and exterior angles sum to 180°, so the three exterior angles total 3 × 180° − 180° = 540° − 180° = 360°. The sum of exterior angles of any triangle is always 360°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">In ∆ABC, AB = AC and ∠B = 50°. The vertex angle ∠A is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>80°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>50°</span></li>
+        <li class=""><span class="lab">C</span><span>100°</span></li>
+        <li class=""><span class="lab">D</span><span>65°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>AB = AC makes the base angles equal, so ∠C = ∠B = 50°. Then the vertex angle ∠A = 180° − 50° − 50° = 80°. The trap 50° wrongly copies a base angle.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">Which of these CAN form a triangle?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1 cm, 2 cm, 3 cm</span></li>
+        <li class="correct"><span class="lab">B</span><span>4 cm, 5 cm, 8 cm</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>2 cm, 4 cm, 7 cm</span></li>
+        <li class=""><span class="lab">D</span><span>3 cm, 3 cm, 6 cm</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Test each: 1+2 = 3 not &gt; 3 (fail); 2+4 = 6 &lt; 7 (fail); 4+5 = 9 &gt; 8 ✓; 3+3 = 6 not &gt; 6 (fail). Only 4, 5, 8 works.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">A right-angled triangle cannot also be:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Isosceles</span></li>
+        <li class=""><span class="lab">B</span><span>Scalene</span></li>
+        <li class=""><span class="lab">C</span><span>A triangle with a 30° angle</span></li>
+        <li class="correct"><span class="lab">D</span><span>Obtuse</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A right triangle has one 90° angle; a second angle of 90° or more (obtuse) would push the total past 180°. So a right triangle cannot also be obtuse. It can be isosceles (45-45-90) or scalene (30-60-90).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">Two angles of a triangle add up to 122°. The third angle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>48°</span></li>
+        <li class=""><span class="lab">B</span><span>68°</span></li>
+        <li class="correct"><span class="lab">C</span><span>58°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>122°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Third angle = 180° − 122° = 58°. The trap 122° repeats the given sum.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">In ∆ABC the angles satisfy ∠A : ∠B : ∠C = 1 : 1 : 4. The triangle is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Obtuse and isosceles</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Right and isosceles</span></li>
+        <li class=""><span class="lab">C</span><span>Acute and equilateral</span></li>
+        <li class=""><span class="lab">D</span><span>Acute and scalene</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Ratio 1 : 1 : 4 over 6 parts of 180° gives 30°, 30°, 120°. The 120° angle makes it obtuse; the two equal 30° angles make it isosceles. Hence obtuse and isosceles.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">To construct ∆ABC with AB = 4 cm, AC = 5 cm and BC = 6 cm using a compass, you should:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Draw AB = 4 cm, then arc 6 cm from A and arc 5 cm from A</span></li>
+        <li class="correct"><span class="lab">B</span><span>Draw AB = 4 cm, then arc 5 cm from A and arc 6 cm from B; their crossing is C</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Draw three separate segments and hope they meet</span></li>
+        <li class=""><span class="lab">D</span><span>Draw AB = 4 cm and a perpendicular of 5 cm at A</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Draw the base AB = 4 cm. From A swing an arc of radius 5 cm (= AC); from B swing an arc of radius 6 cm (= BC). Where the arcs cross is C, equidistant correctly from both ends. Option (A) wrongly swings both arcs from A.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">A student claims a triangle with sides 3 cm, 4 cm and 9 cm can be built. The truth is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Yes — the sides are all different</span></li>
+        <li class=""><span class="lab">B</span><span>Yes — 4 + 9 &gt; 3</span></li>
+        <li class="correct"><span class="lab">C</span><span>No — 3 + 4 = 7 is less than 9, so the short sides cannot meet</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>No — only equal sides can form a triangle</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The two short sides: 3 + 4 = 7, which is less than 9. They cannot reach across to meet, so no triangle closes. "All sides different" and "4 + 9 &gt; 3" are irrelevant to whether it can be built.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">In an isosceles triangle one base angle is 35°. The vertex angle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>35°</span></li>
+        <li class=""><span class="lab">B</span><span>70°</span></li>
+        <li class=""><span class="lab">C</span><span>145°</span></li>
+        <li class="correct"><span class="lab">D</span><span>110°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The two base angles are equal: 35° each. Vertex angle = 180° − (35° + 35°) = 180° − 70° = 110°. The trap 70° is the sum of the base angles, not the vertex angle.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">The exterior angle at one vertex of a triangle is 95°, and the two remote interior angles are equal. Each of them is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>47.5°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>95°</span></li>
+        <li class=""><span class="lab">C</span><span>42.5°</span></li>
+        <li class=""><span class="lab">D</span><span>85°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The exterior angle equals the sum of the two equal remote interior angles: 95° = 2x, so x = 47.5°. The trap 42.5° comes from wrongly using 85° (the supplement) and halving.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">A triangle has angles x, x + 10° and x + 20°. The largest angle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>50°</span></li>
+        <li class=""><span class="lab">B</span><span>60°</span></li>
+        <li class="correct"><span class="lab">C</span><span>70°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>80°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>x + (x + 10°) + (x + 20°) = 3x + 30° = 180°, so 3x = 150°, x = 50°. The largest angle = x + 20° = 70°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">Which is impossible for the side lengths (in cm) of a triangle?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5, 5, 9</span></li>
+        <li class="correct"><span class="lab">B</span><span>10, 1, 8</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>7, 8, 9</span></li>
+        <li class=""><span class="lab">D</span><span>6, 6, 6</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Check each against the inequality: 5+5 = 10 &gt; 9 ✓; 7+8 = 15 &gt; 9 ✓; for 10, 1, 8 the two short sides 1 + 8 = 9 &lt; 10 (fail); 6+6 &gt; 6 ✓. So 10, 1, 8 is impossible.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">In ∆ABC, side BC is extended to D. If ∠ACD (the exterior angle) = 118° and ∠ABC = 73°, then ∠BAC is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>45°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>35°</span></li>
+        <li class=""><span class="lab">C</span><span>55°</span></li>
+        <li class=""><span class="lab">D</span><span>62°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The exterior angle ∠ACD = sum of the two remote interior angles ∠ABC and ∠BAC: 118° = 73° + ∠BAC, so ∠BAC = 45°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">A triangle has two sides of length 9 cm and the third side is also a whole number of cm. The largest the third side can be is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>9 cm</span></li>
+        <li class=""><span class="lab">B</span><span>18 cm</span></li>
+        <li class=""><span class="lab">C</span><span>16 cm</span></li>
+        <li class="correct"><span class="lab">D</span><span>17 cm</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>With two sides of 9 cm, the third side must be less than 9 + 9 = 18, so the largest whole number is 17 cm. The trap 18 cm forgets the inequality is strict.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">If each base angle of an isosceles triangle is twice the vertex angle, the vertex angle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>30°</span></li>
+        <li class=""><span class="lab">B</span><span>45°</span></li>
+        <li class="correct"><span class="lab">C</span><span>36°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>72°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Let the vertex angle = v; each base angle = 2v. Then 2v + 2v + v = 5v = 180°, so v = 36°. (Base angles are 72° each.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">A triangle is described as having all sides different and all angles less than 90°. It is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Isosceles and right</span></li>
+        <li class="correct"><span class="lab">B</span><span>Scalene and acute</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Scalene and obtuse</span></li>
+        <li class=""><span class="lab">D</span><span>Equilateral and acute</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"All sides different" ⇒ scalene; "all angles less than 90°" ⇒ acute. So scalene and acute.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">The altitude from the right-angle vertex of a right triangle:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Is one of the legs</span></li>
+        <li class=""><span class="lab">B</span><span>Coincides with the hypotenuse</span></li>
+        <li class=""><span class="lab">C</span><span>Falls outside the triangle</span></li>
+        <li class="correct"><span class="lab">D</span><span>Falls inside, perpendicular to the hypotenuse</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The altitude from the right-angle vertex is the perpendicular dropped to the hypotenuse; it falls inside the triangle, meeting the hypotenuse at a right angle. It is not a leg (those are the altitudes from the acute vertices).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">Two sides of a triangle are 11 cm and 4 cm. The number of whole-number values the third side can take is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>7</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>5</span></li>
+        <li class=""><span class="lab">C</span><span>8</span></li>
+        <li class=""><span class="lab">D</span><span>15</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Third side x satisfies 11 − 4 = 7 &lt; x &lt; 11 + 4 = 15, so x ∈ {8, 9, 10, 11, 12, 13, 14} — that is 7 whole-number values. The trap 5 forgets to count both ends; 15 just lists numbers up to the sum.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">In ∆ABC, ∠A = 3x, ∠B = 2x and ∠C = x. The triangle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Acute</span></li>
+        <li class="correct"><span class="lab">B</span><span>Right-angled</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Obtuse</span></li>
+        <li class=""><span class="lab">D</span><span>Equilateral</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>3x + 2x + x = 6x = 180°, so x = 30°. Angles are 90°, 60°, 30° — exactly one right angle, so the triangle is right-angled.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">An exterior angle of a triangle measures 70°. Then the interior angle adjacent to it is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>70°</span></li>
+        <li class=""><span class="lab">B</span><span>20°</span></li>
+        <li class="correct"><span class="lab">C</span><span>110°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>290°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The interior angle adjacent to an exterior angle is its supplement: 180° − 70° = 110°. (The remote interior angles, not the adjacent one, sum to 70°.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">A triangle has an angle of 100° and an angle of 50°. Classified by sides, it is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Equilateral</span></li>
+        <li class=""><span class="lab">B</span><span>Isosceles</span></li>
+        <li class=""><span class="lab">C</span><span>Right isosceles</span></li>
+        <li class="correct"><span class="lab">D</span><span>Scalene</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Third angle = 180° − 100° − 50° = 30°. The angles 100°, 50°, 30° are all different, so the sides opposite them are all different ⇒ scalene.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">A triangle has angles 35°, 35° and 110°. Classified by its sides AND by its angles it is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Scalene and obtuse</span></li>
+        <li class="correct"><span class="lab">B</span><span>Isosceles and obtuse</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Isosceles and acute</span></li>
+        <li class=""><span class="lab">D</span><span>Equilateral and obtuse</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Two equal angles (35° and 35°) mean the two sides opposite them are equal, so the triangle is isosceles. One angle, 110°, is greater than 90°, so by the angle classification the triangle is obtuse. Hence isosceles and obtuse. It is not scalene (two angles are equal) and not acute (110° exceeds 90°).</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">In an obtuse triangle, the foot of an altitude from a vertex of an acute angle:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Can lie outside the triangle, on the extension of the base</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Always lies inside the triangle</span></li>
+        <li class=""><span class="lab">C</span><span>Is always the midpoint of the base</span></li>
+        <li class=""><span class="lab">D</span><span>Coincides with the obtuse vertex</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In an obtuse triangle, the perpendicular dropped from an acute-angle vertex to the (extended) opposite side has its foot OUTSIDE the triangle, on the extension of the base. So it can lie outside — it is not always inside.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">In ∆ABC, ∠A = 70° and the exterior angle at B equals 130°. Then ∠C is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>50°</span></li>
+        <li class=""><span class="lab">B</span><span>70°</span></li>
+        <li class="correct"><span class="lab">C</span><span>60°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>40°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Exterior angle at B = sum of the two remote interior angles A and C: 130° = 70° + ∠C, so ∠C = 60°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">A triangle has sides 5 cm and 5 cm with an included angle of 60°. The triangle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Scalene</span></li>
+        <li class=""><span class="lab">B</span><span>Right-angled</span></li>
+        <li class=""><span class="lab">C</span><span>Obtuse isosceles</span></li>
+        <li class="correct"><span class="lab">D</span><span>Equilateral</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Two sides equal (5, 5) with the included angle 60°: the base angles are equal and share 180° − 60° = 120°, so each = 60°. All three angles are 60°, making it equilateral (and so the third side is also 5 cm).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">For three lengths to form a triangle, it is ENOUGH to check that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>The sum of the two largest exceeds the smallest</span></li>
+        <li class="correct"><span class="lab">B</span><span>The sum of the two smallest exceeds the largest</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>All three are different</span></li>
+        <li class=""><span class="lab">D</span><span>Each is less than the sum of the other two squared</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>It is enough to check that the sum of the two SMALLEST sides exceeds the largest — if that holds, every other pair sum (which is even larger) automatically exceeds the remaining side. Checking the two largest against the smallest (A) is automatic and proves nothing.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">In ∆PQR, the exterior angle at R is 150° and ∠P = 2∠Q. Then ∠Q equals:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>30°</span></li>
+        <li class=""><span class="lab">B</span><span>75°</span></li>
+        <li class="correct"><span class="lab">C</span><span>50°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>60°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Exterior angle at R = ∠P + ∠Q (remote interior angles). With ∠P = 2∠Q: 150° = 2∠Q + ∠Q = 3∠Q, so ∠Q = 50°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">A triangle with angles 89°, 89° and 2° is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Acute</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Obtuse</span></li>
+        <li class=""><span class="lab">C</span><span>Right-angled</span></li>
+        <li class=""><span class="lab">D</span><span>Not a valid triangle</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>All three angles — 89°, 89°, 2° — are less than 90°, so by the angle classification the triangle is acute. (It looks nearly flat, but every angle is still under 90°.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">The sides of a triangle are consecutive whole numbers and the perimeter is 12 cm. The shortest side is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2 cm</span></li>
+        <li class=""><span class="lab">B</span><span>5 cm</span></li>
+        <li class=""><span class="lab">C</span><span>4 cm</span></li>
+        <li class="correct"><span class="lab">D</span><span>3 cm</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Consecutive sides n−1, n, n+1 sum to 3n = 12, so n = 4: sides 3, 4, 5. Triangle inequality holds (3 + 4 &gt; 5), and the shortest side is 3 cm.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">In ∆ABC, the bisector from A is drawn, and ∠B = 50°, ∠C = 70°. The angle ∠BAC is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>50°</span></li>
+        <li class="correct"><span class="lab">B</span><span>60°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>70°</span></li>
+        <li class=""><span class="lab">D</span><span>120°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>∠BAC = 180° − ∠B − ∠C = 180° − 50° − 70° = 60°. The angle bisector mentioned in the stem is a distractor — it does not change ∠BAC itself.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">Two exterior angles of a triangle are 100° and 140°. The third interior angle (at the remaining vertex) is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>60°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>40°</span></li>
+        <li class=""><span class="lab">C</span><span>80°</span></li>
+        <li class=""><span class="lab">D</span><span>120°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The interior angles at those two vertices are 180° − 100° = 80° and 180° − 140° = 40°. The third interior angle = 180° − 80° − 40° = 60°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">A triangle has two sides of length 6 cm and 8 cm, and the third side c is a whole number of cm. How many different whole-number values can c take?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>9</span></li>
+        <li class=""><span class="lab">B</span><span>13</span></li>
+        <li class="correct"><span class="lab">C</span><span>11</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>14</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The third side c lies strictly between the difference and the sum of the other two: 8 − 6 = 2 &lt; c &lt; 8 + 6 = 14. So c can be any whole number from 3 up to 13, that is {3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13} — exactly 11 values. The trap 13 counts up to the sum without excluding both endpoints; 14 forgets the inequality is strict.</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

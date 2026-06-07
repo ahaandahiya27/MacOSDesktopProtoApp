@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nutrition In Plants — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Nutrition In Plants<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">An organism that builds its own food from simple inorganic raw materials using an outside energy source is called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a heterotroph</span></li>
+        <li class="correct"><span class="lab">B</span><span>an autotroph</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a saprotroph</span></li>
+        <li class=""><span class="lab">D</span><span>a parasite</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An organism that builds its own food from simple inorganic raw materials (CO₂, water, minerals) using an outside energy source (sunlight) is an *autotroph* (auto = self). A heterotroph (A) eats others; a saprotroph (C) feeds on dead matter; a parasite (D) takes food from a living host — all three depend on ready-made food.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">A child argues, "Plants must get their food from the soil, because that is where their roots are." The single best piece of evidence against this is that:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>lettuce can be grown to full size in water-only nutrient baths with no soil at all</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>roots are usually white, not green</span></li>
+        <li class=""><span class="lab">C</span><span>soil contains many minerals</span></li>
+        <li class=""><span class="lab">D</span><span>plants also need sunlight</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Food from soil" is the classic misconception. The decisive evidence is hydroponics: lettuce (and many crops) can be grown to full size in water-only nutrient baths with *no soil at all*. If food came from soil, this would be impossible. White roots (B), the presence of minerals (C), and needing sunlight (D) are all true facts but do not directly refute the "food comes from soil" claim — only the no-soil-grown plant does.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">In the word equation for photosynthesis, the two raw materials taken in are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>glucose and oxygen</span></li>
+        <li class=""><span class="lab">B</span><span>oxygen and water</span></li>
+        <li class="correct"><span class="lab">C</span><span>carbon dioxide and water</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>glucose and carbon dioxide</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Photosynthesis takes *in* carbon dioxide and water as raw materials. Glucose and oxygen (A) are the products, not the inputs; (B) and (D) each mix a product with a raw material.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">The two products formed during photosynthesis are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>carbon dioxide and water</span></li>
+        <li class="correct"><span class="lab">B</span><span>glucose and oxygen</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>water and oxygen</span></li>
+        <li class=""><span class="lab">D</span><span>glucose and carbon dioxide</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The products of photosynthesis are glucose (food) and oxygen. Carbon dioxide and water (A) are the raw materials; (C) and (D) again confuse inputs with outputs.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">Leaves look green because chlorophyll:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>absorbs green light strongly</span></li>
+        <li class=""><span class="lab">B</span><span>is made of green sugar</span></li>
+        <li class="correct"><span class="lab">C</span><span>reflects green light while absorbing red and blue</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>turns sunlight into a green colour</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Chlorophyll *reflects* green light (which is why we see green) while *absorbing* the red and blue light it uses to power photosynthesis. It does not absorb green strongly (A) — if it did, leaves would not look green; (B) and (D) are nonsense distractors.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">A potted plant is sealed inside a clear glass jar and left in **bright sunlight** for a day. Compared with the open air, the air inside the jar will become:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>richer in oxygen than ordinary air</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>pure carbon dioxide</span></li>
+        <li class=""><span class="lab">C</span><span>richer in carbon dioxide than ordinary air</span></li>
+        <li class=""><span class="lab">D</span><span>completely free of all gases</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In bright sunlight photosynthesis runs strongly, consuming CO₂ and releasing O₂ at a rate that far exceeds the plant's own respiration. So the sealed air becomes *richer in oxygen* than ordinary air. (C) reverses the gases (that is the dark case); (B) and (D) are impossible.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">The same sealed jar with the plant is now kept in a **completely dark** cupboard for a day. The air inside will become:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>richer in carbon dioxide, because the plant only respires</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>richer in oxygen, because the plant still photosynthesises</span></li>
+        <li class=""><span class="lab">C</span><span>unchanged, because plants do nothing in the dark</span></li>
+        <li class=""><span class="lab">D</span><span>pure oxygen</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In complete darkness there is no photosynthesis, but the plant still *respires* — taking in O₂ and giving out CO₂ — so the sealed air becomes richer in carbon dioxide. (B) wrongly assumes photosynthesis in the dark; (C) wrongly assumes plants are inert at night; (D) is impossible.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">A leaf is tested with iodine after a few hours in sunlight and turns blue-black. This proves the leaf has made:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>protein</span></li>
+        <li class=""><span class="lab">B</span><span>chlorophyll</span></li>
+        <li class=""><span class="lab">C</span><span>oxygen</span></li>
+        <li class="correct"><span class="lab">D</span><span>starch</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Iodine turns blue-black in the presence of *starch*. A blue-black leaf therefore shows the leaf has made starch (from the glucose of photosynthesis). Iodine does not test for protein (A), chlorophyll (B), or oxygen (C).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">Before the starch test, a green leaf is first boiled in alcohol. The purpose of this step is to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>add starch to the leaf</span></li>
+        <li class=""><span class="lab">B</span><span>make the leaf greener</span></li>
+        <li class=""><span class="lab">C</span><span>kill insects on the leaf</span></li>
+        <li class="correct"><span class="lab">D</span><span>remove the green chlorophyll so the colour change is easy to see</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Boiling the leaf in alcohol dissolves out the green chlorophyll, decolourising the leaf so the blue-black starch colour is easy to see against a pale background. It does not add starch (A), make the leaf greener (B), or kill insects (C) — in fact it removes the green.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">The tiny pores on a leaf through which carbon dioxide enters and oxygen leaves are the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>stomata</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>xylem</span></li>
+        <li class=""><span class="lab">C</span><span>phloem</span></li>
+        <li class=""><span class="lab">D</span><span>chlorophyll</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The tiny pores that let CO₂ in and O₂ out are the *stomata* (mostly on the leaf underside). Xylem (B) carries water, phloem (C) carries food, and chlorophyll (D) is a pigment, not a pore.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">Cuscuta (amarbel) is a pale, yellow-orange climbing plant with no green colour. From this we can correctly conclude that Cuscuta:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>photosynthesises faster than green plants</span></li>
+        <li class=""><span class="lab">B</span><span>makes its food at night</span></li>
+        <li class=""><span class="lab">C</span><span>is a kind of fungus</span></li>
+        <li class="correct"><span class="lab">D</span><span>has very little chlorophyll and steals food from a host plant</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Green colour means chlorophyll; a pale, yellow-orange plant has little or none and therefore cannot make its own food, so it must steal food from a host — i.e. it is a parasite. It cannot photosynthesise faster (A) or "at night" (B) without chlorophyll, and lacking chlorophyll does not make it a fungus (C); Cuscuta is still a plant.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">A pitcher plant grows in soil that is very poor in one mineral, so it traps and digests insects. The insect provides the plant mainly with:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>energy, because the plant cannot photosynthesise</span></li>
+        <li class="correct"><span class="lab">B</span><span>nitrogen</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>carbon dioxide</span></li>
+        <li class=""><span class="lab">D</span><span>water</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Pitcher plants grow in nitrogen-poor soil, so they trap insects to obtain *nitrogen*, not energy. Trap (A): they are green and still photosynthesise for their energy. They get CO₂ from air (C) and water from soil (D) like any plant.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">A student says, "Venus flytraps catch insects because they cannot make their own food." The correct reply is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>true — they have no chlorophyll</span></li>
+        <li class=""><span class="lab">B</span><span>true — they get all their energy from insects</span></li>
+        <li class="correct"><span class="lab">C</span><span>false — they have green leaves and still photosynthesise; insects only supply nitrogen</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>false — they actually eat soil</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The student's claim is false. Venus flytraps have green leaves and photosynthesise for their energy; they catch insects only to obtain *nitrogen* missing from their boggy soil. (A) and (B) repeat the "they can't make food / get energy from insects" misconception; (D) is wrong — they do not eat soil.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">Mushrooms growing on a rotting log obtain food by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>photosynthesis in their caps</span></li>
+        <li class="correct"><span class="lab">B</span><span>secreting digestive juices onto the dead wood and absorbing the digested matter</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>catching insects</span></li>
+        <li class=""><span class="lab">D</span><span>taking food from a living host</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Mushrooms are fungi (saprotrophs): they grow thread-like hyphae into dead matter, secrete digestive juices *outside* the body, and absorb the digested food. They have no chlorophyll, so (A) is wrong; they do not trap insects (C) or feed on a living host (D) — the wood here is dead.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">A lichen growing on a bare rock is a partnership between:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>two fungi</span></li>
+        <li class=""><span class="lab">B</span><span>two algae</span></li>
+        <li class="correct"><span class="lab">C</span><span>a fungus and an alga</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a plant and an animal</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A lichen is a symbiotic partnership of a *fungus* (which provides shelter and absorbs water/minerals) and an *alga* (which makes food by photosynthesis). It is not two fungi (A), two algae (B), or a plant-and-animal pair (D).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">In the lichen partnership, the **food-making** job is done by the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>fungus</span></li>
+        <li class="correct"><span class="lab">B</span><span>alga</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>rock</span></li>
+        <li class=""><span class="lab">D</span><span>neither — it absorbs food from rain</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Within a lichen, the green *alga* contains chlorophyll and does the food-making (photosynthesis); the fungus provides housing and water. So the alga, not the fungus (A) or the rock (C), makes the food; (D) is wrong because food is made, not absorbed from rain.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">Farmers grow pulses (legumes) and then plough them back into a field because the bacteria in their root nodules:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>eat harmful insects</span></li>
+        <li class=""><span class="lab">B</span><span>make the soil greener</span></li>
+        <li class="correct"><span class="lab">C</span><span>fix nitrogen from the air into the soil</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>absorb extra water</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Legume root nodules house *Rhizobium*, which fixes nitrogen from the air into a form plants can use, enriching the soil. Ploughing the legumes back returns this nitrogen to the field. The bacteria do not eat insects (A), simply "green" the soil (B), or absorb water (D).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">The bacterium that lives in the root nodules of legumes and enriches the soil with nitrogen is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Rhizobium</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Cuscuta</span></li>
+        <li class=""><span class="lab">C</span><span>chlorophyll</span></li>
+        <li class=""><span class="lab">D</span><span>amoeba</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The nitrogen-fixing bacterium of legume root nodules is *Rhizobium*. Cuscuta (B) is a parasitic plant, chlorophyll (C) is a pigment, and amoeba (D) is a protozoan — none fix nitrogen in legume roots.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">Green plants are called the **producers** of a food chain because they:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>eat the most food</span></li>
+        <li class=""><span class="lab">B</span><span>are the largest organisms</span></li>
+        <li class="correct"><span class="lab">C</span><span>make the food on which all other organisms ultimately depend</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>produce the most oxygen at night</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Green plants are called *producers* because they make the food (using sunlight) on which every other organism in a food chain ultimately depends. They do not necessarily eat the most (A) or grow the largest (B); and they release oxygen by day, not "at night" (D).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">Which of these is the correct order of who depends on whom?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>grass → goat → tiger</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>goat → grass → tiger</span></li>
+        <li class=""><span class="lab">C</span><span>tiger → goat → grass</span></li>
+        <li class=""><span class="lab">D</span><span>grass → tiger → goat</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A food chain runs producer → primary consumer → higher consumer: grass (producer) → goat (eats grass) → tiger (eats goat). The other orders put a consumer before its food, which is impossible.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">A green leaf, a green stem of a small plant, and a white (non-green) flower petal are each tested for starch after a day in the sun. Which is/are likely to turn blue-black?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only the leaf</span></li>
+        <li class=""><span class="lab">B</span><span>none of them</span></li>
+        <li class=""><span class="lab">C</span><span>all three</span></li>
+        <li class="correct"><span class="lab">D</span><span>the leaf and the green stem</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>After a day in the sun, the starch test is positive wherever chlorophyll allowed photosynthesis. Both the green leaf and the green stem contain chlorophyll, so both make starch and turn blue-black; the white (non-green) petal has no chlorophyll, so it cannot make starch and stays pale. Hence *the leaf and the green stem* test positive. (A) forgets the green stem also photosynthesises; (C) wrongly includes the white petal; (B) "none" ignores that green parts do make starch.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">A plant is given everything it needs **except** that one leaf is partly covered with black paper. After a day in the sun, the iodine test on that leaf shows:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the whole leaf turns blue-black</span></li>
+        <li class=""><span class="lab">B</span><span>only the covered part turns blue-black</span></li>
+        <li class="correct"><span class="lab">C</span><span>only the uncovered (light-exposed) part turns blue-black</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>no part of the leaf turns blue-black</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Photosynthesis (and hence starch) needs light. The covered part got no light, so only the *uncovered, light-exposed* part makes starch and turns blue-black. (A) ignores the covering; (B) reverses it; (D) wrongly says no starch forms at all.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">Why do most leaves have a broad, flat, thin shape?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>to store large amounts of water</span></li>
+        <li class="correct"><span class="lab">B</span><span>to catch the maximum sunlight over a large surface</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>to make them heavy so they do not blow away</span></li>
+        <li class=""><span class="lab">D</span><span>to keep insects away</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A broad, flat, thin leaf exposes a large surface to the sun, catching the maximum sunlight for photosynthesis (and the thinness lets light and gases reach all cells). It is not for storing water (A), for weight (C), or to repel insects (D).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">Water absorbed by the roots is carried up to the leaves through the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>stomata</span></li>
+        <li class=""><span class="lab">B</span><span>phloem</span></li>
+        <li class=""><span class="lab">C</span><span>chlorophyll</span></li>
+        <li class="correct"><span class="lab">D</span><span>xylem</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Water absorbed by the roots travels up to the leaves through the *xylem*. Stomata (A) are gas pores, phloem (B) carries food downward/outward, and chlorophyll (C) is a pigment.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">The food (glucose) made in the leaves is carried to the rest of the plant through the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>xylem</span></li>
+        <li class="correct"><span class="lab">B</span><span>phloem</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>stomata</span></li>
+        <li class=""><span class="lab">D</span><span>roots</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The glucose made in the leaves is carried to the rest of the plant through the *phloem*. Xylem (A) carries water *up*; stomata (C) are gas pores; roots (D) absorb water, they do not transport made food.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">Some desert plants have green stems and very few or no leaves. These green stems:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>cannot photosynthesise at all</span></li>
+        <li class="correct"><span class="lab">B</span><span>take over the job of photosynthesis</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>only store water and never make food</span></li>
+        <li class=""><span class="lab">D</span><span>are actually parasites</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>When a plant has green stems and few leaves (as in many desert plants), the green stems contain chlorophyll and *take over photosynthesis*. So (A) is wrong; they do more than store water (C); and having green stems does not make them parasites (D).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">During the **day**, a healthy green plant in sunlight:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only takes in oxygen</span></li>
+        <li class=""><span class="lab">B</span><span>does neither photosynthesis nor respiration</span></li>
+        <li class="correct"><span class="lab">C</span><span>photosynthesises and respires, with a large net release of oxygen</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>only releases carbon dioxide</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>By day a green plant *both* photosynthesises and respires. Photosynthesis far outpaces respiration, so there is a large *net release of oxygen*. (A) and (D) describe only respiration; (B) wrongly says it does nothing.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">At **night**, the same plant:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>photosynthesises faster than in the day</span></li>
+        <li class=""><span class="lab">B</span><span>stops all life processes</span></li>
+        <li class=""><span class="lab">C</span><span>releases a large amount of oxygen</span></li>
+        <li class="correct"><span class="lab">D</span><span>only respires — taking in oxygen and giving out carbon dioxide</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>At night there is no light, so photosynthesis stops and the plant *only respires* — taking in O₂ and giving out CO₂, just like animals. It does not photosynthesise faster (A), release lots of O₂ (C), or stop all life processes (B) — respiration continues.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">A pot of soil is sterilised so it has no Rhizobium or other nitrogen-fixing bacteria, and a bean plant is grown in it with plenty of water and sunlight but no fertiliser. Over weeks the plant is most likely to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>grow faster than normal</span></li>
+        <li class="correct"><span class="lab">B</span><span>show poor growth from lack of nitrogen</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>die immediately for lack of carbon dioxide</span></li>
+        <li class=""><span class="lab">D</span><span>turn into a parasite</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>With no nitrogen-fixing bacteria and no fertiliser, the soil cannot supply nitrogen, which plants need to build proteins. The plant will show *poor growth from lack of nitrogen*. It will not grow faster (A); it gets CO₂ from the air, so it will not "die for lack of CO₂" (C); and plants do not turn into parasites (D).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">Which gas do plants take **in** through their stomata for photosynthesis?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>oxygen</span></li>
+        <li class=""><span class="lab">B</span><span>nitrogen</span></li>
+        <li class="correct"><span class="lab">C</span><span>carbon dioxide</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>hydrogen</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Plants take *in* carbon dioxide through their stomata for photosynthesis. They release O₂ as a product (A); atmospheric nitrogen gas (B) cannot be used directly; hydrogen (D) is not involved.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">The energy that drives photosynthesis comes from:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>sunlight</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the soil</span></li>
+        <li class=""><span class="lab">C</span><span>the minerals in fertiliser</span></li>
+        <li class=""><span class="lab">D</span><span>the warmth of the plant's own body</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The energy that powers photosynthesis comes from *sunlight*, captured by chlorophyll. It does not come from the soil (B), from fertiliser minerals (C), or from the plant's own warmth (D).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">A teacher covers a leaf with a transparent plastic bag for a day in the sun. Tiny water droplets collect inside the bag. These mainly come from the leaf through:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the xylem tubes opening at the surface</span></li>
+        <li class="correct"><span class="lab">B</span><span>water vapour escaping from the stomata</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the roots</span></li>
+        <li class=""><span class="lab">D</span><span>melting chlorophyll</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Droplets inside the bag come from water vapour the leaf releases (transpiration) through its *stomata*, which then condenses on the cool plastic. Xylem (A) does not open at the surface; the roots (C) are not bagged; chlorophyll does not "melt" (D).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">Which one of the following is an autotroph?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a mushroom</span></li>
+        <li class=""><span class="lab">B</span><span>a Cuscuta vine</span></li>
+        <li class="correct"><span class="lab">C</span><span>a mango tree</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a Venus flytrap getting its nitrogen from insects</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An autotroph makes its own food by photosynthesis: the *mango tree* qualifies. A mushroom (A) is a saprotroph, a Cuscuta vine (B) is a parasite, and a Venus flytrap getting nitrogen from insects (D) — though green — is described here in its insect-trapping (heterotrophic supplement) role, making the mango tree the clean autotroph answer.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">A heterotroph is best described as an organism that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>makes its own food from sunlight</span></li>
+        <li class=""><span class="lab">B</span><span>has chlorophyll in every cell</span></li>
+        <li class=""><span class="lab">C</span><span>lives only in water</span></li>
+        <li class="correct"><span class="lab">D</span><span>depends on other organisms for its food</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A heterotroph cannot make its own food and so *depends on other organisms* for it. Making food from sunlight (A) describes an autotroph; living in water (B) is irrelevant; having chlorophyll in every cell (C) is false even for plants and would point to an autotroph.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">Cuscuta is classified as a **parasite** rather than a saprotroph because it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>feeds on dead and decaying matter</span></li>
+        <li class=""><span class="lab">B</span><span>makes its own food</span></li>
+        <li class="correct"><span class="lab">C</span><span>takes food from a **living** host plant, harming it</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>catches insects</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cuscuta is a *parasite* because it takes food from a *living* host plant and harms it. A saprotroph feeds on *dead* matter (A); Cuscuta does not make its own food (B) — it lacks chlorophyll; and it does not catch insects (D).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">Repeatedly growing the same crop drains the soil of one nutrient in particular, which farmers then replace with manure or fertilisers. That nutrient is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>oxygen</span></li>
+        <li class=""><span class="lab">B</span><span>carbon</span></li>
+        <li class=""><span class="lab">C</span><span>glucose</span></li>
+        <li class="correct"><span class="lab">D</span><span>nitrogen</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Repeatedly cropping the same field drains *nitrogen* most of all, which farmers replace with manure or fertilisers (or by growing legumes). Oxygen (A) and carbon (B) come from air; glucose (C) is food the plant makes itself, not a soil nutrient.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">Although air is about 78% nitrogen gas, most plants cannot use it directly because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the nitrogen in air is the wrong colour</span></li>
+        <li class="correct"><span class="lab">B</span><span>plants cannot absorb nitrogen gas directly; it must first be fixed into the soil</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>plants do not need nitrogen at all</span></li>
+        <li class=""><span class="lab">D</span><span>leaves have no stomata for nitrogen</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Although air is ~78% nitrogen gas, plants *cannot absorb nitrogen gas directly*; it must first be "fixed" into soil compounds (by Rhizobium or fertilisers) before roots can take it up. The colour claim (A) is silly; plants do need nitrogen (C); and stomata handle CO₂/O₂, not nitrogen uptake (D).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">Which statement is **incorrect**?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Autotrophs make their own food.</span></li>
+        <li class=""><span class="lab">B</span><span>Saprotrophs feed on dead and decaying matter.</span></li>
+        <li class="correct"><span class="lab">C</span><span>Parasites make their own food and give some to a host.</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Insectivorous plants trap insects for nitrogen.</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The incorrect statement is "Parasites make their own food and give some to a host." Parasites do the opposite — they *take* food from a host and harm it. The other three statements (autotrophs make their own food; saprotrophs feed on dead matter; insectivorous plants trap insects for nitrogen) are all correct.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">A bean seed is sprouted on damp cotton wool in a dark cupboard. For the first several days it still grows a shoot. This is possible because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>it photosynthesises in the dark</span></li>
+        <li class="correct"><span class="lab">B</span><span>it lives off food stored inside the seed</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the cotton wool feeds it</span></li>
+        <li class=""><span class="lab">D</span><span>it becomes a saprotroph</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A seed sprouting in the dark grows by living off the *food stored inside the seed* (the cotyledons). It cannot photosynthesise in the dark (A); the cotton wool only holds moisture, it is not food (C); and it does not become a saprotroph (D).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">Which combination of conditions is **necessary** for a green leaf to photosynthesise?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>sunlight, chlorophyll, carbon dioxide and water</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>sunlight, oxygen, glucose and water</span></li>
+        <li class=""><span class="lab">C</span><span>darkness, chlorophyll and oxygen</span></li>
+        <li class=""><span class="lab">D</span><span>chlorophyll, glucose and nitrogen</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Photosynthesis needs four things together: *sunlight, chlorophyll, carbon dioxide and water*. Option B lists oxygen and glucose, which are *products*; C demands darkness (wrong); D includes glucose (a product) and nitrogen (a mineral, not a photosynthesis input).</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">A green plant is kept in a closed box that is supplied with light but from which **all carbon dioxide has been removed** (absorbed by a chemical). The leaf is then tested with iodine. The result is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>it does not turn blue-black, because a raw material (CO₂) was missing</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>it turns blue-black, because light alone makes starch</span></li>
+        <li class=""><span class="lab">C</span><span>it turns blue-black, because chlorophyll is present</span></li>
+        <li class=""><span class="lab">D</span><span>it turns red</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Carbon dioxide is a raw material. With all CO₂ removed, no glucose (and hence no starch) can form even in light, so the iodine test does *not* turn blue-black. (B) wrongly says light alone suffices; (C) ignores the missing raw material; (D) is not what iodine does with starch absent.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">The chief difference in nutrition between a green plant and an animal is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the plant eats other organisms; the animal makes its own food</span></li>
+        <li class="correct"><span class="lab">B</span><span>the plant makes its own food; the animal must obtain ready-made food</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>both make their own food</span></li>
+        <li class=""><span class="lab">D</span><span>neither needs food</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The key nutritional difference is that the *plant makes its own food* (autotroph) while the *animal must obtain ready-made food* (heterotroph). Option A reverses this; C is false (animals cannot make food); D is false (both need food).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">Extra glucose made in the leaves is stored in many plants in the form of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>oxygen</span></li>
+        <li class=""><span class="lab">B</span><span>carbon dioxide</span></li>
+        <li class=""><span class="lab">C</span><span>chlorophyll</span></li>
+        <li class="correct"><span class="lab">D</span><span>starch</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Extra glucose made in the leaves is stored as *starch* (insoluble, easy to stockpile). Oxygen (A) and carbon dioxide (B) are gases involved in the reaction, not storage forms; chlorophyll (C) is a pigment, not stored food.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">A potato tuber and a wheat grain both turn deep blue-black with iodine. This tells us they are rich stores of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>protein</span></li>
+        <li class=""><span class="lab">B</span><span>fat</span></li>
+        <li class="correct"><span class="lab">C</span><span>starch</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>chlorophyll</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Iodine turns blue-black only with *starch*, so a deep blue-black potato and wheat grain are rich starch stores. The test does not detect protein (A), fat (B), or chlorophyll (D).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">Two identical green plants are kept in sunlight. Plant X is in normal air; plant Y is in air from which carbon dioxide has been removed. After a day, the starch test will be positive in:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>both plants</span></li>
+        <li class=""><span class="lab">B</span><span>plant Y only</span></li>
+        <li class=""><span class="lab">C</span><span>neither plant</span></li>
+        <li class="correct"><span class="lab">D</span><span>plant X only</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Plant X (normal air) has CO₂, makes starch → positive. Plant Y (CO₂ removed) lacks a raw material, makes no starch → negative. So the starch test is positive in *plant X only*. (A) and (B) wrongly include Y; (C) wrongly excludes X.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">Which of the following correctly pairs an organism with its mode of nutrition?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>mushroom — autotroph</span></li>
+        <li class=""><span class="lab">B</span><span>Cuscuta — saprotroph</span></li>
+        <li class=""><span class="lab">C</span><span>mango tree — parasite</span></li>
+        <li class="correct"><span class="lab">D</span><span>Rhizobium in legume roots — symbiotic (mutually helpful) partner</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct pairing is *Rhizobium in legume roots — symbiotic partner* (the bacterium and plant both benefit). A mushroom is a saprotroph, not an autotroph (A); a mango tree is an autotroph, not a parasite (C); and Cuscuta is a parasite, not a saprotroph (B).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">In a sealed terrarium kept in good light, a small plant can survive for a long time because the gases roughly balance: the plant's photosynthesis uses the ___ that its own respiration releases, and respiration uses the oxygen that photosynthesis releases. The blank is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>oxygen</span></li>
+        <li class=""><span class="lab">B</span><span>nitrogen</span></li>
+        <li class="correct"><span class="lab">C</span><span>carbon dioxide</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>glucose</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In a sealed, lit terrarium the gases balance: the plant's *photosynthesis* uses the *carbon dioxide* released by its own *respiration*, while respiration uses the oxygen photosynthesis makes. So the blank is carbon dioxide. Oxygen (A) is the gas going the other way; nitrogen (B) and glucose (D) are not part of this gas exchange loop.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">Which is the most accurate statement about a leaf's green colour and its food-making?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>A leaf must be green to carry out photosynthesis, because chlorophyll does the light-capturing.</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Any colour of leaf photosynthesises equally well.</span></li>
+        <li class=""><span class="lab">C</span><span>Green leaves cannot photosynthesise.</span></li>
+        <li class=""><span class="lab">D</span><span>Colour has nothing to do with photosynthesis.</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Because chlorophyll is what captures light, a leaf must contain chlorophyll (be functionally green) to photosynthesise — so "a leaf must be green ... because chlorophyll does the light-capturing" is the accurate statement. (B) is false (a white, chlorophyll-free part cannot); (C) is false; (D) ignores chlorophyll's central role.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">A red-leaved copper beech tree still grows tall and healthy in full sun. The best explanation is that:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>it has chlorophyll, but a red pigment masks the green colour</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>it does not need to photosynthesise</span></li>
+        <li class=""><span class="lab">C</span><span>it gets all its food from the soil</span></li>
+        <li class=""><span class="lab">D</span><span>it is a parasite</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A copper beech is healthy because it still *has chlorophyll*; a red pigment (anthocyanin) simply *masks* the green. It does photosynthesise (so A is right, B wrong); it does not get food from soil (C); and it is not a parasite (D).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">Place these in the correct sequence of a green plant making and using food:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>glucose made → carbon dioxide and water taken in → starch stored</span></li>
+        <li class="correct"><span class="lab">B</span><span>carbon dioxide and water taken in → glucose made in light → starch stored</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>starch stored → glucose made → raw materials taken in</span></li>
+        <li class=""><span class="lab">D</span><span>oxygen taken in → glucose made → starch stored</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct order is: *raw materials (CO₂ + water) taken in → glucose made in light → starch stored*. Option A puts glucose before its raw materials; C reverses the whole sequence; D starts with oxygen being taken in, which is respiration, not photosynthesis.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">A gardener notices a Cuscuta vine has wrapped around her hibiscus and the hibiscus is wilting. The Cuscuta is acting as a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>saprotroph helping the hibiscus</span></li>
+        <li class=""><span class="lab">B</span><span>symbiotic partner</span></li>
+        <li class=""><span class="lab">C</span><span>producer</span></li>
+        <li class="correct"><span class="lab">D</span><span>parasite harming its host</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A Cuscuta vine taking food from a living, wilting hibiscus is a *parasite harming its host*. It is not a saprotroph helping anything (A), not a mutually beneficial symbiotic partner (B), and not a producer (C) — it makes no food of its own.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">Which experiment best shows that **sunlight** is needed for photosynthesis?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>cover part of a leaf with black paper, then do the starch test on the whole leaf</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>keep a plant in coloured water</span></li>
+        <li class=""><span class="lab">C</span><span>count the stomata on a leaf</span></li>
+        <li class=""><span class="lab">D</span><span>weigh a leaf before and after a day</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>To show *sunlight* is needed, you keep everything else equal and vary only light: cover part of a leaf with black paper, then do the starch test — only the lit part turns blue-black. Coloured water (B) shows xylem transport; counting stomata (C) and weighing (D) test other things.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">Which experiment best shows that **chlorophyll** is needed for photosynthesis?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>keep a plant in the dark for two days</span></li>
+        <li class=""><span class="lab">B</span><span>put a leaf in iodine straightaway</span></li>
+        <li class=""><span class="lab">C</span><span>seal a plant in a jar</span></li>
+        <li class="correct"><span class="lab">D</span><span>do the starch test on a variegated (part-green, part-white) leaf and compare the parts</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>To show *chlorophyll* is needed, use a *variegated leaf* (part green, part white) where light and water are identical for both parts — only the green (chlorophyll-containing) part makes starch. Darkness (A) tests light, not chlorophyll; iodine straightaway (B) tests nothing controlled; sealing a jar (C) tests gases.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">On a variegated leaf (green at the edges, white in the middle) left in sunlight, the iodine starch test turns blue-black:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only in the white (non-green) middle</span></li>
+        <li class="correct"><span class="lab">B</span><span>only in the green parts</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>over the whole leaf equally</span></li>
+        <li class=""><span class="lab">D</span><span>nowhere on the leaf</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>On a variegated leaf, only the green (chlorophyll-bearing) parts can photosynthesise, so the iodine test turns blue-black *only in the green parts*. The white middle (A) has no chlorophyll and stays pale; (C) and (D) are therefore wrong.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">The overall reason green plants are vital to nearly all life on Earth is that they:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>trap sunlight's energy as food and release the oxygen that other organisms breathe</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>are very beautiful</span></li>
+        <li class=""><span class="lab">C</span><span>take up space in forests</span></li>
+        <li class=""><span class="lab">D</span><span>only release carbon dioxide</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Green plants are vital because they *trap sunlight's energy as food and release the oxygen* that other organisms breathe — the dual basis of almost all life. Being beautiful (B) or taking up space (C) is trivial, and they release oxygen (not only CO₂), so (D) is false.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">A farmer who has just harvested a heavy crop wants to restore soil nitrogen **without** chemical fertiliser. The best choice is to:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>grow a legume crop whose roots carry Rhizobium</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>leave the field bare for a year</span></li>
+        <li class=""><span class="lab">C</span><span>burn the field</span></li>
+        <li class=""><span class="lab">D</span><span>water the field with extra water</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>To restore soil nitrogen without chemical fertiliser, *grow a legume crop whose roots carry Rhizobium*, which fixes atmospheric nitrogen into the soil. Leaving the field bare (B) adds no nitrogen; burning (C) destroys organic matter; extra water (D) does not supply nitrogen.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">A houseplant kept in a dim corner away from any window slowly yellows and weakens, even though it is watered. The most likely reason is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>it is releasing too much oxygen</span></li>
+        <li class=""><span class="lab">B</span><span>it is drowning in water</span></li>
+        <li class=""><span class="lab">C</span><span>it has become a parasite</span></li>
+        <li class="correct"><span class="lab">D</span><span>without enough light it cannot photosynthesise enough food to stay healthy</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In a dim corner the plant cannot get *enough light to photosynthesise* enough food, so it weakens and yellows despite watering. Releasing oxygen does not harm it (A); it is not drowning (B is a different problem and not implied); and it does not become a parasite (C).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">Which statement about insectivorous plants is **true**?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>They have no chlorophyll.</span></li>
+        <li class=""><span class="lab">B</span><span>They get all their energy from digesting insects.</span></li>
+        <li class="correct"><span class="lab">C</span><span>They grow in nitrogen-poor soil and trap insects to obtain nitrogen, while still photosynthesising.</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>They are the same as parasitic plants.</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Insectivorous plants *grow in nitrogen-poor soil and trap insects to obtain nitrogen, while still photosynthesising* for energy. They do have chlorophyll (A is false), do not get all energy from insects (B is false), and are not the same as parasites, which take food from a living host (D is false).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">A sealed jar contains a green plant **and** a small lit candle, kept in bright light. The plant can help keep the candle burning longer than an empty sealed jar would, because the plant:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>supplies oxygen, which a flame needs, through photosynthesis</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>supplies carbon dioxide that feeds the flame</span></li>
+        <li class=""><span class="lab">C</span><span>puts the flame out faster</span></li>
+        <li class=""><span class="lab">D</span><span>absorbs the candle's heat</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In bright light the plant photosynthesises and releases *oxygen*, which a flame needs to keep burning — so the plant helps the candle last longer than in an empty sealed jar. A flame is not "fed" by CO₂ (B); the plant does not put the flame out faster (C) or matter here by absorbing heat (D).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">Which single statement best captures the central idea of the chapter "Nutrition in Plants"?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>All plants get their food ready-made from the soil.</span></li>
+        <li class=""><span class="lab">B</span><span>Only fungi can make food from sunlight.</span></li>
+        <li class=""><span class="lab">C</span><span>Plants and animals make food in exactly the same way.</span></li>
+        <li class="correct"><span class="lab">D</span><span>Green plants make their own food by photosynthesis, while some plants and other organisms feed in special ways (parasitic, insectivorous, saprotrophic, symbiotic).</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The chapter's central idea: *green plants make their own food by photosynthesis, while some plants and other organisms feed in special ways (parasitic, insectivorous, saprotrophic, symbiotic)*. (A) repeats the "food from soil" misconception; (B) is false; (C) wrongly equates plant and animal nutrition. --- *Solutions complete: 60 / 60.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

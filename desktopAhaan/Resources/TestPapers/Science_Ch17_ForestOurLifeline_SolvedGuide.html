@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Forest Our Lifeline — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Forest Our Lifeline<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">A forest is best described as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a large number of tall trees growing close together</span></li>
+        <li class=""><span class="lab">B</span><span>a place where only wild animals live, with no plants</span></li>
+        <li class=""><span class="lab">C</span><span>any open area covered with grass and a few bushes</span></li>
+        <li class="correct"><span class="lab">D</span><span>a system of trees, shrubs, herbs, climbers, animals and micro-organisms living together</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A forest is not just a crowd of tall trees — it is a whole system of trees, shrubs, herbs, climbers, animals, birds, insects and micro-organisms living together and depending on one another. The other options leave out most of the community.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">The topmost, leafy "roof" of a forest, formed by the branches of the tallest trees, is called the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>understorey</span></li>
+        <li class=""><span class="lab">B</span><span>forest floor</span></li>
+        <li class=""><span class="lab">C</span><span>humus layer</span></li>
+        <li class="correct"><span class="lab">D</span><span>canopy</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The canopy is the topmost branchy "roof" made by the crowns of the tallest trees. The understorey and forest floor are lower layers; humus is decomposed matter in the soil.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">The branchy, leafy top part of a single tree is its:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>crown</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>canopy</span></li>
+        <li class=""><span class="lab">C</span><span>understorey</span></li>
+        <li class=""><span class="lab">D</span><span>trunk</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The crown is the branchy, leafy top of a single tree. The canopy is the combined roof formed by many crowns together — a property of the whole forest, not one tree.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">Small trees and shrubs that grow in the shade below the tallest trees make up the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>canopy</span></li>
+        <li class="correct"><span class="lab">B</span><span>understorey</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>crown</span></li>
+        <li class=""><span class="lab">D</span><span>emergent layer</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Smaller trees and shrubs growing in the shade beneath the tallest trees form the understorey. The canopy and emergent layer are at the top; the crown belongs to one tree.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">Plants of the **forest floor**, such as herbs and ferns, usually receive:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>more sunlight than the canopy trees</span></li>
+        <li class=""><span class="lab">B</span><span>exactly the same sunlight as the canopy</span></li>
+        <li class=""><span class="lab">C</span><span>no light at all, so they make food from soil</span></li>
+        <li class="correct"><span class="lab">D</span><span>only the sunlight that filters down through the upper layers</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Floor herbs and ferns get only the sunlight that filters down through the canopy and understorey above them. They still make their own food by photosynthesis (so "from soil" is wrong); they certainly do not get more light than the canopy.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">The branches at the top of tall forest trees interlock to form a canopy. The main reason different plants grow at different heights in a forest is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the soil is different at each height</span></li>
+        <li class=""><span class="lab">B</span><span>competition for animals</span></li>
+        <li class="correct"><span class="lab">C</span><span>competition for sunlight</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>taller plants are always older</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Plants grow at different heights chiefly because they compete for sunlight — the tallest grab it first, and shorter plants survive on what filters through. Soil and age are not the main driver.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">A herb that needs full, direct sunlight is most likely to grow well:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>in a sunny gap where a big tree has fallen</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>on the dark forest floor under a dense canopy</span></li>
+        <li class=""><span class="lab">C</span><span>only in the topmost canopy</span></li>
+        <li class=""><span class="lab">D</span><span>inside the trunk of a tree</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A sun-loving herb does best in a bright gap where a big tree has fallen and light reaches the ground. Under a dense canopy it is too shady; it cannot live up in the canopy or inside a trunk.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">Which set lists the forest layers in order from **top to bottom**?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>forest floor → shrubs → understorey → canopy</span></li>
+        <li class="correct"><span class="lab">B</span><span>canopy → understorey → shrubs → forest floor</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>shrubs → canopy → forest floor → understorey</span></li>
+        <li class=""><span class="lab">D</span><span>understorey → canopy → shrubs → forest floor</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>From top to bottom the layers run canopy → understorey → shrubs → forest floor. The other orders jumble these levels.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">On the forest floor, dead leaves, twigs and animal droppings are broken down mainly by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>tall canopy trees</span></li>
+        <li class=""><span class="lab">B</span><span>sunlight alone</span></li>
+        <li class="correct"><span class="lab">C</span><span>decomposers such as fungi and micro-organisms</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>grazing deer</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Dead leaves, twigs and droppings on the floor are broken down by decomposers — fungi and micro-organisms. Canopy trees, sunlight alone and grazing deer do not do this recycling work.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">The dark, soft, nutrient-rich material formed when decomposers break down dead leaves and droppings is called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sand</span></li>
+        <li class=""><span class="lab">B</span><span>canopy</span></li>
+        <li class="correct"><span class="lab">C</span><span>humus</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>nectar</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The dark, nutrient-rich material made when decomposers break down dead matter is humus. Canopy is a layer, sand is mineral grains, and nectar is a flower sugar.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">A student says, "Decomposers are harmful because they make things rot and should be removed from the forest." The best correction is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>correct — rotting spreads disease, so decomposers are harmful</span></li>
+        <li class="correct"><span class="lab">B</span><span>decomposers are essential; they recycle dead matter into humus that feeds new plants</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>decomposers only live in ponds, not forests</span></li>
+        <li class=""><span class="lab">D</span><span>decomposers eat living trees, so they damage the forest</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>This is the decomposer trap. Decomposers are essential, not harmful: by rotting dead matter into humus they recycle nutrients that feed new plants. Without them the forest would choke on dead material.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">Imagine every decomposer in a forest suddenly vanished. Over time the forest would most likely:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>stay exactly the same</span></li>
+        <li class="correct"><span class="lab">B</span><span>become buried under dead matter and starved of recycled nutrients</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>grow faster because nothing breaks down its leaves</span></li>
+        <li class=""><span class="lab">D</span><span>immediately turn into a desert overnight</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>With no decomposers, dead leaves and bodies would pile up and the locked-in nutrients would never return to the soil — the forest would be buried in dead matter and starved of recycled nutrients. (It would not improve, nor change overnight.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">Decomposers return the nutrients from dead plants and animals to the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>air, where plants cannot use them</span></li>
+        <li class=""><span class="lab">B</span><span>canopy, where animals eat them</span></li>
+        <li class="correct"><span class="lab">C</span><span>soil, where plant roots can take them up again</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>sunlight, which carries them away</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Decomposers return nutrients to the soil, where plant roots can absorb them again. This closes the loop; the air, canopy and sunlight do not store these nutrients for roots.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">The continuous movement of nutrients from soil → plants → animals → dead matter → decomposers → soil is best called the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>water cycle only</span></li>
+        <li class="correct"><span class="lab">B</span><span>nutrient (recycling) cycle of the forest</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>food chain reversing itself</span></li>
+        <li class=""><span class="lab">D</span><span>carbon-only cycle</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The repeating path soil → plants → animals → dead matter → decomposers → soil is the forest's nutrient (recycling) cycle. It involves more than water and more than carbon, and it is not a food chain run backwards.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">In a forest food chain, the **producers** are the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>tigers and other carnivores</span></li>
+        <li class=""><span class="lab">B</span><span>deer and other herbivores</span></li>
+        <li class="correct"><span class="lab">C</span><span>green plants</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>fungi and bacteria</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Producers are the green plants — they make food from sunlight. Herbivores (deer), carnivores (tiger) and decomposers (fungi) all depend on that food; they do not produce it.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">In the food chain grass → deer → tiger, the deer is a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>producer</span></li>
+        <li class=""><span class="lab">B</span><span>decomposer</span></li>
+        <li class="correct"><span class="lab">C</span><span>herbivore (and the tiger's prey)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>carnivore that eats the tiger</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In grass → deer → tiger, the deer eats the plant (so it is a herbivore) and is itself eaten by the tiger (so it is the tiger's prey). It is neither a producer nor a carnivore.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">A **food web** differs from a single food chain because a food web:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>has no producers</span></li>
+        <li class=""><span class="lab">B</span><span>leaves out all the animals</span></li>
+        <li class=""><span class="lab">C</span><span>always has exactly three organisms</span></li>
+        <li class="correct"><span class="lab">D</span><span>shows many interlinked food chains in the forest</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A food web is many food chains interlinked, because most animals eat, and are eaten by, more than one kind of organism. It still has producers and animals; it is not fixed at three organisms.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">In this web, the grasshopper is eaten by both:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>grass and frogs</span></li>
+        <li class=""><span class="lab">B</span><span>tigers and hawks</span></li>
+        <li class=""><span class="lab">C</span><span>deer and snakes</span></li>
+        <li class="correct"><span class="lab">D</span><span>frogs and small birds</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Trace Web 1: grasshoppers are eaten by frogs, and the small birds also eat grasshoppers. So the grasshopper is eaten by both frogs and small birds. Tigers eat deer (not grasshoppers); snakes eat frogs.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">If a disease killed almost all the **frogs** in this web, the most direct effect would be:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the grass would disappear</span></li>
+        <li class="correct"><span class="lab">B</span><span>grasshopper numbers would tend to rise and snake food would fall</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>tigers would immediately die out</span></li>
+        <li class=""><span class="lab">D</span><span>nothing would change anywhere</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Frogs eat grasshoppers and are eaten by snakes. Remove most frogs and grasshoppers face one fewer predator (numbers tend to rise) while snakes lose a food source (their food falls). Grass would not vanish, and tigers (on the deer chain) are unaffected at first.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">In this web, which animal eats prey from **two different** food chains?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the hawk (it eats both snakes and small birds)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the grasshopper</span></li>
+        <li class=""><span class="lab">C</span><span>the deer</span></li>
+        <li class=""><span class="lab">D</span><span>the frog</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The hawk eats snakes (grass → grasshopper → frog → snake → hawk) and also eats small birds (grass → grasshopper → small bird → hawk) — prey from two different chains. The deer, grasshopper and frog each sit on a single chain here.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">The ultimate source of energy for **every** organism in this forest web is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the tiger at the top</span></li>
+        <li class=""><span class="lab">B</span><span>the humus in the soil</span></li>
+        <li class="correct"><span class="lab">C</span><span>the Sun, captured by green plants</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the decomposers on the floor</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Every chain in the web starts with green plants, which capture energy from the Sun. So the ultimate energy source for all organisms is the Sun. The tiger, humus and decomposers are not energy sources for the whole web.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">If hunters removed all the **tigers** from this web, the most likely first effect is that:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the deer population would tend to increase</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the grass would vanish at once</span></li>
+        <li class=""><span class="lab">C</span><span>the hawks would stop eating snakes</span></li>
+        <li class=""><span class="lab">D</span><span>the frogs would start eating tigers</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Tigers eat deer. Remove the tigers and the deer lose their main predator, so the deer population tends to increase first. Grass would not vanish at once, and the hawk-snake link is on another chain.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">Forests are often called the "green lungs" of the Earth because their plants:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>take in oxygen and release carbon dioxide</span></li>
+        <li class="correct"><span class="lab">B</span><span>release oxygen and absorb carbon dioxide</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>breathe exactly like animal lungs</span></li>
+        <li class=""><span class="lab">D</span><span>store water in the air</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Forests are the "green lungs" because their plants release oxygen and absorb carbon dioxide during photosynthesis. They do not breathe like animal lungs, and option A reverses the gases.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">During the day, a forest helps keep the air's gases balanced mainly because its plants:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only respire and give out CO₂</span></li>
+        <li class="correct"><span class="lab">B</span><span>photosynthesise, taking in CO₂ and giving out O₂</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>absorb all oxygen from the air</span></li>
+        <li class=""><span class="lab">D</span><span>make no gases at all</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>By day, forest plants photosynthesise — taking in CO₂ and giving out O₂ — which helps keep the air's gases in balance. They do not only respire, nor absorb all the oxygen, nor make no gases.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">Cutting down a large area of forest tends to **increase** the amount of which gas in the air?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>oxygen</span></li>
+        <li class=""><span class="lab">B</span><span>water vapour only</span></li>
+        <li class=""><span class="lab">C</span><span>nitrogen only</span></li>
+        <li class="correct"><span class="lab">D</span><span>carbon dioxide</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cutting a large forest removes plants that were absorbing CO₂, so the amount of carbon dioxide in the air tends to rise. Oxygen, nitrogen and water vapour are not the gas that increases here.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">Forest roots help **prevent floods and soil erosion** mainly by:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>gripping the soil and slowing rainwater so it soaks in</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>drinking up entire rivers</span></li>
+        <li class=""><span class="lab">C</span><span>blocking sunlight from the ground</span></li>
+        <li class=""><span class="lab">D</span><span>pushing the soil downhill faster</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Roots grip the soil and the leaf litter slows the rain so water soaks in rather than rushing off — this is how forests curb erosion and floods. They do not drink rivers dry or push soil downhill.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">After a hillside forest is cut down, heavy rain on the bare slope is most likely to cause:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>less soil erosion than before</span></li>
+        <li class="correct"><span class="lab">B</span><span>more soil erosion and a greater chance of floods</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the soil to become richer in humus</span></li>
+        <li class=""><span class="lab">D</span><span>no change to the slope at all</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Strip a hillside of forest and there are no roots to hold the soil or slow the rain, so heavy rain causes more soil erosion and a greater flood risk — the opposite of "less erosion."</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">Forests help **recharge groundwater** because tree cover and leaf litter:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>turn groundwater into oxygen</span></li>
+        <li class=""><span class="lab">B</span><span>seal the soil so no water can enter</span></li>
+        <li class=""><span class="lab">C</span><span>send all rainwater straight to the sea</span></li>
+        <li class="correct"><span class="lab">D</span><span>let rainwater soak slowly into the ground instead of running off</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Forest cover and litter let rainwater soak slowly into the ground, recharging the groundwater, instead of running straight off. They do not seal the soil or rush water to the sea.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">Through transpiration and shade, large forests tend to influence the local climate by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>making the area hotter and drier</span></li>
+        <li class=""><span class="lab">B</span><span>stopping all wind permanently</span></li>
+        <li class="correct"><span class="lab">C</span><span>adding moisture to the air and helping bring rainfall</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>having no effect on rainfall at all</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Through transpiration (releasing water vapour) and shade, large forests add moisture to the air and help bring rainfall, cooling and dampening the local climate — they do not dry the area or stop wind.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">A forest is called a "lifeline" because it provides, all at once:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only timber for furniture</span></li>
+        <li class="correct"><span class="lab">B</span><span>oxygen, clean water, soil protection, climate control and habitat for wildlife</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>only a home for tigers</span></li>
+        <li class=""><span class="lab">D</span><span>only firewood for villages</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A forest is a "lifeline" because it gives oxygen, clean water, soil protection, climate control and wildlife habitat — all at once. The other options each name just one narrow use.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">Which of these is a **product** we get from forests?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>plastic</span></li>
+        <li class=""><span class="lab">B</span><span>petrol</span></li>
+        <li class="correct"><span class="lab">C</span><span>gum, honey, timber and medicinal herbs</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>glass</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Gum, honey, timber and medicinal herbs are genuine forest products. Plastic, petrol and glass are manufactured from other raw materials, not harvested from a forest.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">A single fallen forest tree slowly rots over years. The nutrients locked in its wood are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>lost forever from the forest</span></li>
+        <li class="correct"><span class="lab">B</span><span>returned to the soil by decomposers for new plants to use</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>carried up into the canopy</span></li>
+        <li class=""><span class="lab">D</span><span>turned directly into sunlight</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>As a fallen tree rots, decomposers return the nutrients in its wood to the soil for new plants to use — they are recycled, not lost, raised to the canopy, or turned into sunlight.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">Which chain correctly shows the path of **energy** in a forest?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>tiger → deer → grass → Sun</span></li>
+        <li class=""><span class="lab">B</span><span>deer → tiger → grass → Sun</span></li>
+        <li class=""><span class="lab">C</span><span>grass → Sun → tiger → deer</span></li>
+        <li class="correct"><span class="lab">D</span><span>Sun → grass → deer → tiger</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Energy flows Sun → grass → deer → tiger: plants capture the Sun's energy, herbivores eat plants, carnivores eat herbivores. The other chains run the arrows backwards or jumble the order.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">In a forest, the number of **carnivores** like tigers is usually much smaller than the number of deer because:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>much less energy is available higher up the food chain</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>tigers cannot move</span></li>
+        <li class=""><span class="lab">C</span><span>deer never get eaten</span></li>
+        <li class=""><span class="lab">D</span><span>carnivores do not need food</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Much less energy is available higher up a food chain (most is used up at each step), so the top carnivores like tigers can only be few, while the deer below them are many. The other options are false.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">A wheat field has millions of plants of one kind growing together for one season. It is **not** called a forest because a forest:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>must contain at least one tiger</span></li>
+        <li class="correct"><span class="lab">B</span><span>is a stable, many-layered community of many different species lasting many years</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>is always smaller than a field</span></li>
+        <li class=""><span class="lab">D</span><span>has no animals in it</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A wheat field is one species, one layer, lasting one season; a forest is a stable, many-layered community of many different species lasting many years — that is the real difference, not the presence of a tiger or its size.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">Which statement about a forest is **correct**?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a forest is simply a collection of trees and nothing else</span></li>
+        <li class=""><span class="lab">B</span><span>decomposers play no role in a forest</span></li>
+        <li class=""><span class="lab">C</span><span>forests have no effect on the air we breathe</span></li>
+        <li class="correct"><span class="lab">D</span><span>a forest is a community of plants, animals and micro-organisms that depend on one another</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct statement is that a forest is a community of plants, animals and micro-organisms that depend on one another. "Just trees," "no effect on air," and "decomposers play no role" are all wrong.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">After a forest fire clears an open patch, over the following years the area usually:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>stays bare rock forever</span></li>
+        <li class=""><span class="lab">B</span><span>becomes a desert that never recovers</span></li>
+        <li class=""><span class="lab">C</span><span>turns instantly into a full grown forest the next morning</span></li>
+        <li class="correct"><span class="lab">D</span><span>is recolonised by herbs, then shrubs, then trees — the forest regrows</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>After a clearing, the patch is recolonised step by step — first herbs, then shrubs, then trees — and the forest regrows. It neither stays bare forever nor springs up overnight nor becomes permanent desert.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">The fact that a burnt or cleared forest can slowly grow back shows that a forest is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>dynamic — it grows and regenerates naturally over time</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>completely unchanging and fixed</span></li>
+        <li class=""><span class="lab">C</span><span>man-made and cannot recover on its own</span></li>
+        <li class=""><span class="lab">D</span><span>the same as a crop field</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The fact that a burnt or cleared forest grows back shows a forest is dynamic — it grows and regenerates naturally over time. It is therefore not fixed, not man-made-only, and not the same as a crop field.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">Of canopy, understorey and forest floor, the layer that receives the **least** sunlight is the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>forest floor</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>understorey</span></li>
+        <li class=""><span class="lab">C</span><span>canopy</span></li>
+        <li class=""><span class="lab">D</span><span>all three receive equal sunlight</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sunlight is caught first by the canopy, less reaches the understorey, and least of all reaches the forest floor at the bottom. So the forest floor receives the least sunlight.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">Which organism in a forest is a **decomposer**?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a deer</span></li>
+        <li class=""><span class="lab">B</span><span>a mango tree</span></li>
+        <li class="correct"><span class="lab">C</span><span>a mushroom (fungus)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a hawk</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A mushroom is a fungus — a decomposer that breaks down dead matter. A deer is a herbivore, a mango tree a producer, and a hawk a carnivore.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">In this second web, the fox gets its food from:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>plants directly</span></li>
+        <li class="correct"><span class="lab">B</span><span>two chains — it eats both rabbits and snakes</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>insects only</span></li>
+        <li class=""><span class="lab">D</span><span>the fungi on the floor</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In Web 2 the fox eats rabbits (trees → rabbit → fox) and also eats snakes (trees → insect → small bird → snake → fox) — food from two chains. It does not eat plants, insects directly, or the floor fungi.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">If the **rabbits** in this web were wiped out, which animal would be most directly short of food?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the snake</span></li>
+        <li class=""><span class="lab">B</span><span>the small bird</span></li>
+        <li class=""><span class="lab">C</span><span>the insect</span></li>
+        <li class="correct"><span class="lab">D</span><span>the fox (it loses one of its prey)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Foxes eat both rabbits and snakes. Wipe out the rabbits and the fox loses one of its two prey, so it is the animal most directly short of food. Snakes, small birds and insects do not feed on rabbits.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">In this second web, the dead bodies of foxes, snakes and trees are returned to the soil by the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>fungi and bacteria (decomposers)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>small birds</span></li>
+        <li class=""><span class="lab">C</span><span>rabbits</span></li>
+        <li class=""><span class="lab">D</span><span>insects</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>When foxes, snakes and trees die, the fungi and bacteria (decomposers) on the floor break them down and return their nutrients to the soil. Rabbits, small birds and insects are not decomposers.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">If the number of **insects** in this web increased sharply, the most likely first effect is that:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>small birds would have more food and could increase</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the trees would grow taller</span></li>
+        <li class=""><span class="lab">C</span><span>the foxes would disappear at once</span></li>
+        <li class=""><span class="lab">D</span><span>the fungi would stop working</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Small birds eat insects, so a sharp rise in insects means more food for small birds, whose numbers could then increase first. The trees, foxes and fungi are not the most direct first responders.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">Counting the chains in this web, the rabbit and the insect both depend, in the end, on the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>foxes for energy</span></li>
+        <li class=""><span class="lab">B</span><span>snakes for energy</span></li>
+        <li class="correct"><span class="lab">C</span><span>trees and shrubs (the producers) for energy</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>decomposers for energy</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Follow every chain back to its start: both the rabbit (trees → rabbit) and the insect (trees → insect) feed on the trees and shrubs — the producers — for their energy. Foxes, snakes and decomposers are not the base.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">Match the layer to its typical resident: the **canopy** is the most likely home of:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>birds and monkeys feeding among the high branches</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>ground beetles in the litter</span></li>
+        <li class=""><span class="lab">C</span><span>earthworms and fungi</span></li>
+        <li class=""><span class="lab">D</span><span>moss growing in deep shade</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The canopy, high among the branches, is the typical home of birds and monkeys. Earthworms, fungi, litter beetles and deep-shade moss all belong to the forest floor, not the canopy.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">Earthworms, fungi and many beetles live mainly on or in the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>canopy</span></li>
+        <li class=""><span class="lab">B</span><span>crowns of the tallest trees</span></li>
+        <li class=""><span class="lab">C</span><span>emergent layer</span></li>
+        <li class="correct"><span class="lab">D</span><span>forest floor</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Earthworms, fungi and many beetles live mainly on or in the forest floor, among the leaf litter — not in the canopy, crowns or emergent layer at the top.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">Which is the best reason a forest's soil is usually **rich and fertile**?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the canopy blocks all the rain</span></li>
+        <li class=""><span class="lab">B</span><span>animals plough the soil with their feet</span></li>
+        <li class="correct"><span class="lab">C</span><span>decomposers constantly turn fallen leaves and dead matter into humus</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>there is no sunlight at the bottom</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Forest soil is rich because decomposers constantly turn fallen leaves and dead matter into humus, recharging the soil with nutrients. Blocked rain, animal feet and lack of sunlight do not make soil fertile.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">A keystone animal such as the tiger keeps deer numbers in check. If tigers vanish, deer may multiply and overgraze. This shows that in a forest:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>removing one species can disturb many others</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>animals have no effect on plants</span></li>
+        <li class=""><span class="lab">C</span><span>plants and animals are completely independent</span></li>
+        <li class=""><span class="lab">D</span><span>more deer is always good for the forest</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>When losing the tiger lets the deer multiply and overgraze, it shows that removing one species can disturb many others in a forest. Animals clearly do affect plants, and more deer is not always good.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">Which chain of events follows large-scale **deforestation**?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>fewer trees → more soil erosion, less rainfall, lost habitat and more CO₂</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>more trees → more rain → richer soil</span></li>
+        <li class=""><span class="lab">C</span><span>fewer trees → more oxygen in the air</span></li>
+        <li class=""><span class="lab">D</span><span>fewer trees → groundwater rises everywhere</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Large-scale deforestation sets off: fewer trees → more soil erosion, less rainfall, lost habitat and more CO₂. The other chains wrongly claim benefits from cutting trees.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">A villager notices the stream near a freshly cleared forest now floods in the rains and dries up in summer. The best explanation is that, without the forest:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the trees were drinking all the floodwater</span></li>
+        <li class=""><span class="lab">B</span><span>the Sun stopped shining on the hill</span></li>
+        <li class=""><span class="lab">C</span><span>the stream moved to a new place</span></li>
+        <li class="correct"><span class="lab">D</span><span>rainwater now runs off fast instead of soaking in to feed the stream slowly</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Without the forest, rainwater now runs off fast instead of soaking in, so the stream floods in the rains and dries up in summer — the slow, steady release is gone. The trees were not "drinking floodwater," and the Sun and stream did not move.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">The plants of a forest are the **producers** because they:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>eat other animals</span></li>
+        <li class=""><span class="lab">B</span><span>break down dead leaves</span></li>
+        <li class="correct"><span class="lab">C</span><span>make their own food using sunlight, water and carbon dioxide</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>cannot make food and must be fed</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Plants are producers because they make their own food using sunlight, water and carbon dioxide. They do not eat animals, break down dead leaves, or depend on being fed.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">Which pairing of forest role and organism is **correct**?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>producer — tiger</span></li>
+        <li class="correct"><span class="lab">B</span><span>herbivore — deer</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>decomposer — deer</span></li>
+        <li class=""><span class="lab">D</span><span>carnivore — grass</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct pairing is herbivore — deer. Tigers are carnivores (not producers), deer are not decomposers, and grass is a producer (not a carnivore).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">Two students argue. Aman: "A forest is only useful for the wood we cut from it." Bina: "A forest gives oxygen, holds the soil, recharges water and shelters wildlife." Who is right?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Aman, because wood is the only product</span></li>
+        <li class=""><span class="lab">B</span><span>both are equally wrong</span></li>
+        <li class="correct"><span class="lab">C</span><span>Bina, because a forest provides many life-supporting services</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>neither — forests do nothing useful</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bina is right: a forest provides many life-supporting services — oxygen, soil holding, water recharge and wildlife shelter — not just wood. Aman's "wood only" view misses almost everything a forest does.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">In the food chain leaves → caterpillar → small bird → snake, the **snake** is a:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>carnivore at the top of this chain</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>herbivore</span></li>
+        <li class=""><span class="lab">C</span><span>producer</span></li>
+        <li class=""><span class="lab">D</span><span>decomposer</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In leaves → caterpillar → small bird → snake, the snake eats the bird and nothing in this chain eats the snake, so it is a carnivore at the top of this chain — not a producer, herbivore or decomposer.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">Why does removing the **canopy** trees badly hurt the lower forest layers and animals?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>it suddenly exposes shade plants and floor animals to harsh sun, heat and rain</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>it has no effect on them</span></li>
+        <li class=""><span class="lab">C</span><span>it makes the floor colder than the canopy</span></li>
+        <li class=""><span class="lab">D</span><span>it gives the floor plants too little carbon dioxide</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Removing the canopy suddenly exposes shade-adapted plants and floor animals to harsh sun, heat and pounding rain that they are not built for, harming the lower layers. It does not leave them unaffected or make the floor colder.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">Sunlight filtering through the canopy is **important** for the forest because it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>is harmful and should be blocked completely</span></li>
+        <li class="correct"><span class="lab">B</span><span>lets shade-loving understorey and floor plants make enough food to survive</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>only warms the animals, not the plants</span></li>
+        <li class=""><span class="lab">D</span><span>has no role once the canopy exists</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Filtered sunlight matters because it lets shade-loving understorey and floor plants make enough food to survive. The light is helpful, not harmful, and it feeds plants, not just animals.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">A forest captures and stores carbon mainly in its:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the empty air between trees</span></li>
+        <li class=""><span class="lab">B</span><span>animals' fur</span></li>
+        <li class=""><span class="lab">C</span><span>flowing streams</span></li>
+        <li class="correct"><span class="lab">D</span><span>wood, leaves and soil (as plants take in CO₂)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A forest stores carbon mainly in its wood, leaves and soil as the plants take in CO₂ and build it into their tissues and humus. Animal fur, streams and the air between trees are not the main carbon stores.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">Putting it together: which single statement best explains why a forest is called "our lifeline"?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>it only gives us timber and firewood to sell</span></li>
+        <li class=""><span class="lab">B</span><span>it matters only to the animals that live in it, not to people</span></li>
+        <li class=""><span class="lab">C</span><span>it is simply a large group of trees with no other use</span></li>
+        <li class="correct"><span class="lab">D</span><span>it supplies oxygen, recycles nutrients, holds soil and water, balances climate, and shelters countless species — all together</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A forest is "our lifeline" because, all together, it supplies oxygen, recycles nutrients, holds soil and water, balances the climate and shelters countless species. The single-use options each miss the bigger picture.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">Which action would best help **conserve** a forest and the services it provides?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>clearing it for a single crop to use the land</span></li>
+        <li class=""><span class="lab">B</span><span>removing all the decomposers to stop rotting</span></li>
+        <li class="correct"><span class="lab">C</span><span>protecting it and planting trees where forest has been lost</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>cutting the canopy so more light reaches the floor</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Conserving a forest means protecting it and planting trees where forest has been lost (afforestation). Clearing it for one crop, removing decomposers, or cutting the canopy would all damage the forest, not conserve it. --- *Solutions complete: 60 / 60.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>
