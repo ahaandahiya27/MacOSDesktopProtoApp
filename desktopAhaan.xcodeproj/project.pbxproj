@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F5A897694C1904F1B48428B6 /* OlympiadExamHallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 804281C682CA544AAED9AB0A /* OlympiadExamHallTests.swift */; };
+		138FEA55EDB1FB0DBCAE5923 /* DataStore+OlympiadInProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 224CB75673E5463C36A63F4E /* DataStore+OlympiadInProgress.swift */; };
+		0D81EC8F034A6B022A948476 /* OlympiadScoreReportRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD618AB12189D91A951A19E /* OlympiadScoreReportRenderer.swift */; };
+		2C029E25047B927A6E290EA4 /* OlympiadInProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = B184C68E6905749BCF66DC06 /* OlympiadInProgress.swift */; };
 		1B1E4857A54A1A060AFA221D /* OlympiadAttemptStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2379FBA2843E5D161EF4FD7 /* OlympiadAttemptStoreTests.swift */; };
 		15A1C8263C91C4E724862054 /* DataStore+OlympiadAttempts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED63CB506D0EF75A308A464 /* DataStore+OlympiadAttempts.swift */; };
 		B42B84DC8257984E6FAC35E3 /* OlympiadAttempt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF9D8A3C42F676C2507631B /* OlympiadAttempt.swift */; };
@@ -1999,6 +2003,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		804281C682CA544AAED9AB0A /* OlympiadExamHallTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OlympiadExamHallTests.swift"; sourceTree = "<group>"; };
+		224CB75673E5463C36A63F4E /* DataStore+OlympiadInProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DataStore+OlympiadInProgress.swift"; path = "desktopAhaan/Services/Persistence/DataStore+OlympiadInProgress.swift"; sourceTree = SOURCE_ROOT; };
+		EAD618AB12189D91A951A19E /* OlympiadScoreReportRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "OlympiadScoreReportRenderer.swift"; path = "desktopAhaan/Subjects/OlympiadTests/OlympiadScoreReportRenderer.swift"; sourceTree = SOURCE_ROOT; };
+		B184C68E6905749BCF66DC06 /* OlympiadInProgress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "OlympiadInProgress.swift"; path = "desktopAhaan/Subjects/OlympiadTests/OlympiadInProgress.swift"; sourceTree = SOURCE_ROOT; };
 		B2379FBA2843E5D161EF4FD7 /* OlympiadAttemptStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OlympiadAttemptStoreTests.swift"; sourceTree = "<group>"; };
 		2ED63CB506D0EF75A308A464 /* DataStore+OlympiadAttempts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DataStore+OlympiadAttempts.swift"; path = "desktopAhaan/Services/Persistence/DataStore+OlympiadAttempts.swift"; sourceTree = SOURCE_ROOT; };
 		BAF9D8A3C42F676C2507631B /* OlympiadAttempt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "OlympiadAttempt.swift"; path = "desktopAhaan/Subjects/OlympiadTests/OlympiadAttempt.swift"; sourceTree = SOURCE_ROOT; };
@@ -5742,6 +5750,8 @@
 				57DBC1E9AD28F71BC0631019 /* OlympiadQuizResultView.swift */,
 				F6BC5AB3CE6CA289FABD07F4 /* OlympiadQuizView.swift */,
 				BAF9D8A3C42F676C2507631B /* OlympiadAttempt.swift */,
+				B184C68E6905749BCF66DC06 /* OlympiadInProgress.swift */,
+				EAD618AB12189D91A951A19E /* OlympiadScoreReportRenderer.swift */,
 			);
 			path = "OlympiadTests";
 			sourceTree = "<group>";
@@ -6844,6 +6854,7 @@
 			children = (
 				90B49E84319614C65B594FBD,
 				6D033327D5539F6B20268E1C,
+				804281C682CA544AAED9AB0A,
 				B2379FBA2843E5D161EF4FD7,
 				EE16B7C3922887568E380970,
 				2F38BAC271BDA29E29792AF4,
@@ -8958,6 +8969,9 @@
 				2439D2CEEA66EDC1782FBFBD /* OlympiadPaperParser.swift in Sources */,
 				AEC67FB0E8037FB8FEA660F4 /* OlympiadPaperRegistry.swift in Sources */,
 				F91890D798DC6299C96DF455 /* OlympiadHubView.swift in Sources */,
+				138FEA55EDB1FB0DBCAE5923 /* DataStore+OlympiadInProgress.swift in Sources */,
+				0D81EC8F034A6B022A948476 /* OlympiadScoreReportRenderer.swift in Sources */,
+				2C029E25047B927A6E290EA4 /* OlympiadInProgress.swift in Sources */,
 				15A1C8263C91C4E724862054 /* DataStore+OlympiadAttempts.swift in Sources */,
 				B42B84DC8257984E6FAC35E3 /* OlympiadAttempt.swift in Sources */,
 				CD09A4827E5030D26956F32F /* OlympiadQuizView.swift in Sources */,
@@ -8976,6 +8990,7 @@
 			files = (
 				2DC7D36BAFAE805A6B22A156 /* AchievementCatalogTests.swift in Sources */,
 				A908AA9CC53871E3064BD852 /* AchievementEngineTests.swift in Sources */,
+				F5A897694C1904F1B48428B6 /* OlympiadExamHallTests.swift in Sources */,
 				1B1E4857A54A1A060AFA221D /* OlympiadAttemptStoreTests.swift in Sources */,
 				6BF1A2ACB165187441889CCB /* AchievementGalleryViewTests.swift in Sources */,
 				EB3F75EC4D600F2F5B2199FE /* AdaptiveDifficultyBandTests.swift in Sources */,

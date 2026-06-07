@@ -225,10 +225,21 @@ struct OlympiadHubView: View {
             attemptHistoryRow(for: paper)
             HStack(spacing: 12) {
                 NavigationLink(destination: OlympiadQuizView(paper: paper)) {
-                    actionLabel(icon: "play.circle.fill",
-                                text: "Take Quiz",
-                                tint: DesignTokens.BrandColor.primaryAction,
-                                filled: true)
+                    if let inProgress = DataStore.shared.inProgressOlympiad(forPaperId: paper.id) {
+                        // Quiz is mid-flight — kid quit without
+                        // submitting. "Resume Quiz · Q23/60" surfaces
+                        // both the action and the depth they left at.
+                        let q = inProgress.currentIndex + 1
+                        actionLabel(icon: "arrow.uturn.right.circle.fill",
+                                    text: "Resume Quiz · Q\(q)/\(paper.questionCount)",
+                                    tint: DesignTokens.BrandColor.mnemonicAccent,
+                                    filled: true)
+                    } else {
+                        actionLabel(icon: "play.circle.fill",
+                                    text: "Take Quiz",
+                                    tint: DesignTokens.BrandColor.primaryAction,
+                                    filled: true)
+                    }
                 }
                 .buttonStyle(.plain)
                 .help("Take this Olympiad paper as a 60-question interactive quiz.")

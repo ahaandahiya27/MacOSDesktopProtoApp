@@ -311,6 +311,17 @@ final class DataStore: ObservableObject {
     /// `olympiad_attempts.json` at most once per process.
     var didHydrateOlympiadAttempts = false
 
+    /// Mid-quiz state keyed by paperId so the kid can resume an
+    /// un-submitted attempt. Hydrated lazily from
+    /// `olympiad_in_progress.json` on first access/write (see
+    /// `DataStore+OlympiadInProgress.swift`). NOT `@Published` — the
+    /// hub re-reads imperatively in `onAppear`, the quiz view writes
+    /// imperatively on each state change.
+    var olympiadInProgress: [String: OlympiadInProgress] = [:]
+    /// One-shot guard so the lazy hydrate of `olympiadInProgress`
+    /// reads `olympiad_in_progress.json` at most once per process.
+    var didHydrateOlympiadInProgress = false
+
     @Published var lastSaveError: String?
 
     // `internal` (default) so save/load helpers in the extension files

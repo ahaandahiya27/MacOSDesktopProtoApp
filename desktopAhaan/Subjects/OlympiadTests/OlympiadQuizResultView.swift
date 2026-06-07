@@ -1,4 +1,5 @@
 import SwiftUI
+import AppKit
 
 // MARK: - OlympiadQuizResultView
 //
@@ -72,6 +73,37 @@ struct OlympiadQuizResultView: View {
         DataStore.shared.recordOlympiadAttempt(attempt)
     }
 
+    /// Open an `NSSavePanel` for the kid (or parent) to save the
+    /// per-question score report as a styled HTML file. We don't emit
+    /// PDF directly — the parent prints to PDF from Preview/Safari if
+    /// they want one. See OlympiadScoreReportRenderer for the
+    /// rationale (WKWebView createPDF is risky on Big Sur's AMD GPU,
+    /// PDFKit page layout is fiddly).
+    private func saveScoreReport() {
+        let html = OlympiadScoreReportRenderer.render(
+            paper: paper,
+            questions: questions,
+            selectedByQuestionId: selectedByQuestionId
+        )
+        let panel = NSSavePanel()
+        panel.title = "Save Score Report"
+        let stem = (paper.questionPaperPDF as NSString).deletingPathExtension
+        panel.nameFieldStringValue = "\(stem)_ScoreReport.html"
+        panel.directoryURL = FileManager.default.urls(for: .downloadsDirectory, in: .userDomainMask).first
+        panel.canCreateDirectories = true
+        panel.isExtensionHidden = false
+        panel.begin { response in
+            guard response == .OK, let dest = panel.url else { return }
+            do {
+                try html.data(using: .utf8)?.write(to: dest, options: .atomic)
+            } catch {
+                CrashReporter.shared.logDataIssue(
+                    "OlympiadResult: write score report to '\(dest.path)' failed: \(error.localizedDescription)"
+                )
+            }
+        }
+    }
+
     // MARK: - Score math
 
     private struct Tally {
@@ -131,6 +163,12 @@ struct OlympiadQuizResultView: View {
             Text("Results — \(paper.chapterTitle)")
                 .font(.body.weight(.semibold))
             Spacer()
+            Button(action: { saveScoreReport() }) {
+                Label("Save Report", systemImage: SFSymbolCompat.name("arrow.down.doc.fill"))
+                    .font(.callout.weight(.semibold))
+            }
+            .help("Save a printable HTML score report. Open in Preview or Safari to print or save as PDF.")
+            .accessibilityLabel("Save score report")
         }
         .padding(.horizontal, 12).padding(.vertical, 10)
         .background(Color(NSColor.controlBackgroundColor))
