@@ -38,22 +38,35 @@ enum AnswerValidator {
         if !uTokens.isEmpty && uTokens == tTokens { return true }
         // Leading-number rule. If the user gave a single numeric token and
         // the truth STARTS with that same number followed by a non-digit
-        // (so "1000 presses" matches but "10000" against "1000-something"
-        // doesn't accidentally match a prefix), accept. Both sides have
-        // already been comma-stripped, so this is a clean digit compare.
+        // AND the truth is a SENTENCE (has a period somewhere OR has many
+        // tokens), accept. The sentence-check is crucial: it lets
+        // "1000" match the worked-solution prose "1,000 presses; one
+        // thousand hundreds make a lakh." while still REJECTING "8" vs
+        // the short-fact truth "8 teeth" (the kid must give the unit
+        // when the truth is short — the existing
+        // partialTokenMatchFails fixture pins that contract).
+        //
+        // Heuristic: truth is treated as a sentence if it contains "." or
+        // ";" OR has ≥5 tokens. "8 teeth" has 2 tokens and no
+        // punctuation → still strict. "1000 presses; one thousand
+        // hundreds make a lakh." has many tokens + period → leading-
+        // number rule fires.
         if uTokens.count == 1, let first = uTokens.first,
            Double(first) != nil,
-           leadsWithNumber(t, number: first) {
+           leadsWithNumber(t, number: first),
+           truthLooksLikeSentence(t, tokenCount: tTokens.count) {
             return true
         }
-        // Sibling rule: truth is a single number, user gave the same digits
-        // surrounded by non-numeric context ("1000 presses" → truth "1000").
-        // Symmetric to the above so the validator is reversible.
-        if tTokens.count == 1, let first = tTokens.first,
-           Double(first) != nil,
-           leadsWithNumber(u, number: first) {
-            return true
-        }
+        return false
+    }
+
+    /// `true` if the truth is shaped like a sentence — long enough or
+    /// punctuated enough that the kid shouldn't be expected to type it
+    /// verbatim. Used to gate the leading-number rule so short-fact
+    /// truths like "8 teeth" still require the kid to type the unit.
+    private static func truthLooksLikeSentence(_ s: String, tokenCount: Int) -> Bool {
+        if tokenCount >= 5 { return true }
+        if s.contains(".") || s.contains(";") { return true }
         return false
     }
 
