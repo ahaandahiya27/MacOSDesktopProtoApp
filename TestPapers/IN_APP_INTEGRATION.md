@@ -849,3 +849,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch01",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 1,
+            chapterTitle: "वन्दे भारतमातरम् (Vande Bharatamataram)",
+            displayTitle: "वन्दे भारतमातरम् (Vande Bharatamataram) — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch01_VandeBharatamataram_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch01_VandeBharatamataram_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch01_VandeBharatamataram.html",
+            questionPaperPDF: "Sanskrit_Sch01_VandeBharatamataram.pdf",
+            solvedGuideHTML: "Sanskrit_Sch01_VandeBharatamataram_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
