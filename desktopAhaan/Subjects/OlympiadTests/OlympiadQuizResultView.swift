@@ -11,6 +11,7 @@ import SwiftUI
 //
 // Big Sur safety: pure SwiftUI, no Charts, animations gated.
 
+@MainActor
 struct OlympiadQuizResultView: View {
     let paper: OlympiadPaper
     let questions: [OlympiadQuestion]
