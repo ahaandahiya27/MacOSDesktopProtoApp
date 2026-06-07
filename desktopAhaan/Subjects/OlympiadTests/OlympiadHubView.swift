@@ -41,6 +41,13 @@ struct OlympiadHubView: View {
     @State private var savedToURL: URL?
     /// Auto-dismiss timer for the saved banner.
     @State private var bannerDismissTask: Task<Void, Never>?
+    /// Bumped after each return from a quiz so the per-card best/last
+    /// badges re-read from `DataStore.shared.olympiadAttempts(...)`.
+    /// `DataStore` isn't published for the attempts store (writes are
+    /// rare, batched), so the hub doesn't auto-refresh on @Published
+    /// — flipping this `@State` on appear forces a SwiftUI view-tree
+    /// re-evaluate which calls the snapshot helper afresh.
+    @State private var attemptsRefreshToken: Int = 0
 
     var body: some View {
         ScrollView {
@@ -59,6 +66,7 @@ struct OlympiadHubView: View {
         }
         .background(Color(NSColor.windowBackgroundColor))
         .navigationTitle("Olympiad Tests")
+        .onAppear { attemptsRefreshToken &+= 1 }
         .onDisappear { bannerDismissTask?.cancel() }
         .sheet(item: $presentedPaperSheet) { paper in
             // Native SwiftUI reader. The earlier `ArticleBrowserView`
@@ -214,6 +222,7 @@ struct OlympiadHubView: View {
                 statChip(icon: "clock", text: "\(paper.suggestedTimeMinutes) min")
                 statChip(icon: "star.circle", text: "\(paper.maxMarks) max")
             }
+            attemptHistoryRow(for: paper)
             HStack(spacing: 12) {
                 NavigationLink(destination: OlympiadQuizView(paper: paper)) {
                     actionLabel(icon: "play.circle.fill",
@@ -280,6 +289,76 @@ struct OlympiadHubView: View {
         .overlay(
             RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusCard)
                 .strokeBorder(DesignTokens.BrandColor.primaryAction.opacity(0.18), lineWidth: 1)
+        )
+    }
+
+    /// Per-paper attempt history badge row. Shows "Best: 86% · Last:
+    /// 3d ago · 42%" when the kid has attempted this paper, or a
+    /// muted "Not attempted yet" placeholder when they haven't. The
+    /// `attemptsRefreshToken` dependency forces re-evaluation when the
+    /// hub re-appears after a quiz (DataStore.olympiadAttempts isn't
+    /// `@Published` so we can't observe it directly).
+    @ViewBuilder
+    private func attemptHistoryRow(for paper: OlympiadPaper) -> some View {
+        // Read the token first so SwiftUI registers the dependency
+        // even on the `nil` branches.
+        let _ = attemptsRefreshToken
+        let best = DataStore.shared.bestOlympiadAttempt(forPaperId: paper.id)
+        let recent = DataStore.shared.mostRecentOlympiadAttempt(forPaperId: paper.id)
+        if let b = best, let r = recent {
+            HStack(spacing: 10) {
+                attemptBadge(icon: "trophy.fill",
+                             label: "Best",
+                             value: "\(b.percentage)%",
+                             tint: tint(forPercentage: b.percentage))
+                attemptBadge(icon: "clock.fill",
+                             label: "Last",
+                             value: "\(relativeTimeLabel(r.attemptedAt)) · \(r.percentage)%",
+                             tint: tint(forPercentage: r.percentage))
+                Spacer(minLength: 0)
+            }
+            .accessibilityElement(children: .combine)
+            .accessibilityLabel("Best score \(b.percentage) percent. Last attempt \(relativeTimeLabel(r.attemptedAt)), \(r.percentage) percent.")
+        } else {
+            Text("Not attempted yet")
+                .font(.caption)
+                .foregroundColor(.secondary)
+        }
+    }
+
+    /// Score-tier tint. Green ≥75, gold 50–74, gray <50. Matches the
+    /// rough "olympiad readiness" tiers a parent would intuit.
+    private func tint(forPercentage pct: Int) -> Color {
+        if pct >= 75 { return .green }
+        if pct >= 50 { return DesignTokens.BrandColor.mnemonicAccent }
+        return .gray
+    }
+
+    /// Short human-readable relative date — "today", "1d ago",
+    /// "2w ago", etc. Uses `RelativeDateTimeFormatter` (macOS 10.15+,
+    /// Big-Sur-safe). Big-Sur localisation may pick a slightly longer
+    /// form ("1 day ago" rather than "1d ago") which is fine.
+    private func relativeTimeLabel(_ date: Date) -> String {
+        let f = RelativeDateTimeFormatter()
+        f.unitsStyle = .abbreviated
+        return f.localizedString(for: date, relativeTo: Date())
+    }
+
+    private func attemptBadge(icon: String, label: String, value: String, tint: Color) -> some View {
+        HStack(spacing: 6) {
+            Image(systemName: SFSymbolCompat.name(icon))
+                .font(.caption.weight(.semibold))
+                .foregroundColor(tint)
+            Text(label)
+                .font(.caption)
+                .foregroundColor(.secondary)
+            Text(value)
+                .font(.caption.weight(.semibold).monospacedDigit())
+                .foregroundColor(tint)
+        }
+        .padding(.horizontal, 8).padding(.vertical, 3)
+        .background(
+            Capsule().fill(tint.opacity(0.10))
         )
     }
 

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1B1E4857A54A1A060AFA221D /* OlympiadAttemptStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2379FBA2843E5D161EF4FD7 /* OlympiadAttemptStoreTests.swift */; };
+		15A1C8263C91C4E724862054 /* DataStore+OlympiadAttempts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ED63CB506D0EF75A308A464 /* DataStore+OlympiadAttempts.swift */; };
+		B42B84DC8257984E6FAC35E3 /* OlympiadAttempt.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF9D8A3C42F676C2507631B /* OlympiadAttempt.swift */; };
 		3D356F7A6DC8B5968B75653C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0AE14BF9D99D9965BA51048F /* ContentView.swift */; };
 		BCB6ACD587E1D568F9BD7B9C /* desktopAhaanApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3AE744ACA14AC2F70D59010 /* desktopAhaanApp.swift */; };
 		D14E24688C8F43C1E89F4225 /* PracticeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBFADD0F0B96BA8AD2668A6C /* PracticeViewModel.swift */; };
@@ -1996,6 +1999,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B2379FBA2843E5D161EF4FD7 /* OlympiadAttemptStoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OlympiadAttemptStoreTests.swift"; sourceTree = "<group>"; };
+		2ED63CB506D0EF75A308A464 /* DataStore+OlympiadAttempts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DataStore+OlympiadAttempts.swift"; path = "desktopAhaan/Services/Persistence/DataStore+OlympiadAttempts.swift"; sourceTree = SOURCE_ROOT; };
+		BAF9D8A3C42F676C2507631B /* OlympiadAttempt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "OlympiadAttempt.swift"; path = "desktopAhaan/Subjects/OlympiadTests/OlympiadAttempt.swift"; sourceTree = SOURCE_ROOT; };
 		0434CE872FA733CD000C01F2 /* desktopAhaan.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = desktopAhaan.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		043BC1032FA79A3E006D6000 /* desktopAhaanTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = desktopAhaanTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AE14BF9D99D9965BA51048F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView.swift"; sourceTree = "<group>"; };
@@ -5735,6 +5741,7 @@
 				5B33A4F59C30EF98D728EAF9 /* OlympiadPaperRegistry+SocialSciencePapers.swift */,
 				57DBC1E9AD28F71BC0631019 /* OlympiadQuizResultView.swift */,
 				F6BC5AB3CE6CA289FABD07F4 /* OlympiadQuizView.swift */,
+				BAF9D8A3C42F676C2507631B /* OlympiadAttempt.swift */,
 			);
 			path = "OlympiadTests";
 			sourceTree = "<group>";
@@ -6837,6 +6844,7 @@
 			children = (
 				90B49E84319614C65B594FBD,
 				6D033327D5539F6B20268E1C,
+				B2379FBA2843E5D161EF4FD7,
 				EE16B7C3922887568E380970,
 				2F38BAC271BDA29E29792AF4,
 				F197B7986FF84189FF5469AD,
@@ -8950,6 +8958,8 @@
 				2439D2CEEA66EDC1782FBFBD /* OlympiadPaperParser.swift in Sources */,
 				AEC67FB0E8037FB8FEA660F4 /* OlympiadPaperRegistry.swift in Sources */,
 				F91890D798DC6299C96DF455 /* OlympiadHubView.swift in Sources */,
+				15A1C8263C91C4E724862054 /* DataStore+OlympiadAttempts.swift in Sources */,
+				B42B84DC8257984E6FAC35E3 /* OlympiadAttempt.swift in Sources */,
 				CD09A4827E5030D26956F32F /* OlympiadQuizView.swift in Sources */,
 				2CB840C52E1E6D4CE26288C0 /* OlympiadQuizResultView.swift in Sources */,
 				096ED451CA345370E6D25AA4 /* OlympiadPaperRegistry+MathsPapers.swift in Sources */,
@@ -8966,6 +8976,7 @@
 			files = (
 				2DC7D36BAFAE805A6B22A156 /* AchievementCatalogTests.swift in Sources */,
 				A908AA9CC53871E3064BD852 /* AchievementEngineTests.swift in Sources */,
+				1B1E4857A54A1A060AFA221D /* OlympiadAttemptStoreTests.swift in Sources */,
 				6BF1A2ACB165187441889CCB /* AchievementGalleryViewTests.swift in Sources */,
 				EB3F75EC4D600F2F5B2199FE /* AdaptiveDifficultyBandTests.swift in Sources */,
 				FE310557556F8CACFDDF2E9B /* AdaptiveDifficultyPersistenceTests.swift in Sources */,

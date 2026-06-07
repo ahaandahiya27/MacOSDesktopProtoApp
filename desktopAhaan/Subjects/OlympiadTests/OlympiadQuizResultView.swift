@@ -18,6 +18,18 @@ struct OlympiadQuizResultView: View {
     let selectedByQuestionId: [String: String]
 
     @Environment(\.presentationMode) private var presentationMode
+    /// One-shot guard so SwiftUI's onAppear-firing-twice (it does, on
+    /// Big Sur, when a .sheet is pushed onto a NavigationView) doesn't
+    /// log a duplicate row. Even though `recordOlympiadAttempt` is
+    /// itself idempotent on UUID, gating here avoids two identical
+    /// UUID generations racing.
+    ///
+    /// Uses `DataStore.shared` directly (not `@EnvironmentObject`)
+    /// because SwiftUI sheet content on Big Sur does NOT inherit
+    /// environment objects from its presenter — this view is sheet-
+    /// presented from `OlympiadQuizView`. Matches the convention used
+    /// by `QuickCheckQuizScene` + the Boss-Quiz views.
+    @State private var didRecordAttempt = false
 
     var body: some View {
         VStack(spacing: 0) {
@@ -34,6 +46,30 @@ struct OlympiadQuizResultView: View {
             }
             .background(Color(NSColor.windowBackgroundColor))
         }
+        .onAppear { recordAttemptOnce() }
+    }
+
+    /// Capture this submission into the persisted attempt store the
+    /// first time the result view appears. Idempotent — the
+    /// `didRecordAttempt` flag prevents the second SwiftUI onAppear
+    /// fire from creating a duplicate row.
+    private func recordAttemptOnce() {
+        guard !didRecordAttempt else { return }
+        didRecordAttempt = true
+        let t = tally
+        let pct = max(0, min(100, t.percentage))
+        let attempt = OlympiadAttempt(
+            id: UUID(),
+            paperId: paper.id,
+            attemptedAt: Date(),
+            correct: t.correct,
+            wrong: t.wrong,
+            skipped: t.skipped,
+            scoreOutOfMax: t.scoreOutOfMax,
+            maxMarks: paper.maxMarks,
+            percentage: pct
+        )
+        DataStore.shared.recordOlympiadAttempt(attempt)
     }
 
     // MARK: - Score math

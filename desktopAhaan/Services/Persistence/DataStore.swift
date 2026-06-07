@@ -300,6 +300,17 @@ final class DataStore: ObservableObject {
     /// `progress_history.json` at most once per process.
     var didHydrateProgressHistory = false
 
+    /// In-memory list of Olympiad-paper attempts (greenfield store; not
+    /// part of the SRS layer). Hydrated lazily from
+    /// `olympiad_attempts.json` on first access/write (see
+    /// `DataStore+OlympiadAttempts.swift`). NOT `@Published`: the only
+    /// readers (the hub badge + the result-view recorder) snapshot it
+    /// imperatively, never via a view-binding observer.
+    var olympiadAttempts: [OlympiadAttempt] = []
+    /// One-shot guard so the lazy hydrate of `olympiadAttempts` reads
+    /// `olympiad_attempts.json` at most once per process.
+    var didHydrateOlympiadAttempts = false
+
     @Published var lastSaveError: String?
 
     // `internal` (default) so save/load helpers in the extension files
