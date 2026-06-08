@@ -2379,3 +2379,54 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch07_p4",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 7,
+            chapterTitle: "Weather, Climate and Adaptations of Animals to Climate",
+            displayTitle: "Weather, Climate and Adaptations of Animals to Climate — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_P4_QuestionPaper.md",
+            solutionsMD: "Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_P4_Solutions.md",
+            questionPaperHTML: "Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_P4.html",
+            questionPaperPDF: "Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_P4.pdf",
+            solvedGuideHTML: "Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch08_p4",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 8,
+            chapterTitle: "Winds, Storms and Cyclones",
+            displayTitle: "Winds, Storms and Cyclones — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch08_WindsStormsAndCyclones_P4_QuestionPaper.md",
+            solutionsMD: "Science_Ch08_WindsStormsAndCyclones_P4_Solutions.md",
+            questionPaperHTML: "Science_Ch08_WindsStormsAndCyclones_P4.html",
+            questionPaperPDF: "Science_Ch08_WindsStormsAndCyclones_P4.pdf",
+            solvedGuideHTML: "Science_Ch08_WindsStormsAndCyclones_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch09_p4",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 9,
+            chapterTitle: "Soil",
+            displayTitle: "Soil — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch09_Soil_P4_QuestionPaper.md",
+            solutionsMD: "Science_Ch09_Soil_P4_Solutions.md",
+            questionPaperHTML: "Science_Ch09_Soil_P4.html",
+            questionPaperPDF: "Science_Ch09_Soil_P4.pdf",
+            solvedGuideHTML: "Science_Ch09_Soil_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
