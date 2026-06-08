@@ -2345,3 +2345,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch05_p4",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 5,
+            chapterTitle: "Acids, Bases and Salts",
+            displayTitle: "Acids, Bases and Salts — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch05_AcidsBasesAndSalts_P4_QuestionPaper.md",
+            solutionsMD: "Science_Ch05_AcidsBasesAndSalts_P4_Solutions.md",
+            questionPaperHTML: "Science_Ch05_AcidsBasesAndSalts_P4.html",
+            questionPaperPDF: "Science_Ch05_AcidsBasesAndSalts_P4.pdf",
+            solvedGuideHTML: "Science_Ch05_AcidsBasesAndSalts_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
