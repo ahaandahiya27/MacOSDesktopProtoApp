@@ -2498,3 +2498,71 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch14_p4",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 14,
+            chapterTitle: "Electric Current and Its Effect",
+            displayTitle: "Electric Current and Its Effect — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch14_ElectricCurrentAndItsEffect_P4_QuestionPaper.md",
+            solutionsMD: "Science_Ch14_ElectricCurrentAndItsEffect_P4_Solutions.md",
+            questionPaperHTML: "Science_Ch14_ElectricCurrentAndItsEffect_P4.html",
+            questionPaperPDF: "Science_Ch14_ElectricCurrentAndItsEffect_P4.pdf",
+            solvedGuideHTML: "Science_Ch14_ElectricCurrentAndItsEffect_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch15_p4",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 15,
+            chapterTitle: "Light",
+            displayTitle: "Light — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch15_Light_P4_QuestionPaper.md",
+            solutionsMD: "Science_Ch15_Light_P4_Solutions.md",
+            questionPaperHTML: "Science_Ch15_Light_P4.html",
+            questionPaperPDF: "Science_Ch15_Light_P4.pdf",
+            solvedGuideHTML: "Science_Ch15_Light_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch16_p4",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 16,
+            chapterTitle: "Water: A Precious Resource",
+            displayTitle: "Water: A Precious Resource — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch16_WaterAPreciousResource_P4_QuestionPaper.md",
+            solutionsMD: "Science_Ch16_WaterAPreciousResource_P4_Solutions.md",
+            questionPaperHTML: "Science_Ch16_WaterAPreciousResource_P4.html",
+            questionPaperPDF: "Science_Ch16_WaterAPreciousResource_P4.pdf",
+            solvedGuideHTML: "Science_Ch16_WaterAPreciousResource_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch17_p4",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 17,
+            chapterTitle: "Forest: Our Lifeline",
+            displayTitle: "Forest: Our Lifeline — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch17_ForestOurLifeline_P4_QuestionPaper.md",
+            solutionsMD: "Science_Ch17_ForestOurLifeline_P4_Solutions.md",
+            questionPaperHTML: "Science_Ch17_ForestOurLifeline_P4.html",
+            questionPaperPDF: "Science_Ch17_ForestOurLifeline_P4.pdf",
+            solvedGuideHTML: "Science_Ch17_ForestOurLifeline_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
