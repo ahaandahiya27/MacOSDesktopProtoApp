@@ -2192,3 +2192,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch10_p3",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 10,
+            chapterTitle: "दशमः कः? (Dashamah Kah? - Who Is the Tenth?)",
+            displayTitle: "दशमः कः? (Dashamah Kah? - Who Is the Tenth?) — Paper 3 — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch10_DashamahKah_P3_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch10_DashamahKah_P3_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch10_DashamahKah_P3.html",
+            questionPaperPDF: "Sanskrit_Sch10_DashamahKah_P3.pdf",
+            solvedGuideHTML: "Sanskrit_Sch10_DashamahKah_P3_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
