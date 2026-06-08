@@ -2430,3 +2430,71 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch10_p4",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 10,
+            chapterTitle: "Respiration in Organisms",
+            displayTitle: "Respiration in Organisms — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch10_RespirationInOrganisms_P4_QuestionPaper.md",
+            solutionsMD: "Science_Ch10_RespirationInOrganisms_P4_Solutions.md",
+            questionPaperHTML: "Science_Ch10_RespirationInOrganisms_P4.html",
+            questionPaperPDF: "Science_Ch10_RespirationInOrganisms_P4.pdf",
+            solvedGuideHTML: "Science_Ch10_RespirationInOrganisms_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch11_p4",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 11,
+            chapterTitle: "Transportation in Animals and Plants",
+            displayTitle: "Transportation in Animals and Plants — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch11_TransportationInAnimalsAndPlants_P4_QuestionPaper.md",
+            solutionsMD: "Science_Ch11_TransportationInAnimalsAndPlants_P4_Solutions.md",
+            questionPaperHTML: "Science_Ch11_TransportationInAnimalsAndPlants_P4.html",
+            questionPaperPDF: "Science_Ch11_TransportationInAnimalsAndPlants_P4.pdf",
+            solvedGuideHTML: "Science_Ch11_TransportationInAnimalsAndPlants_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch12_p4",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 12,
+            chapterTitle: "Reproduction in Plants",
+            displayTitle: "Reproduction in Plants — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch12_ReproductionInPlants_P4_QuestionPaper.md",
+            solutionsMD: "Science_Ch12_ReproductionInPlants_P4_Solutions.md",
+            questionPaperHTML: "Science_Ch12_ReproductionInPlants_P4.html",
+            questionPaperPDF: "Science_Ch12_ReproductionInPlants_P4.pdf",
+            solvedGuideHTML: "Science_Ch12_ReproductionInPlants_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch13_p4",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 13,
+            chapterTitle: "Motion and Time",
+            displayTitle: "Motion and Time — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch13_MotionAndTime_P4_QuestionPaper.md",
+            solutionsMD: "Science_Ch13_MotionAndTime_P4_Solutions.md",
+            questionPaperHTML: "Science_Ch13_MotionAndTime_P4.html",
+            questionPaperPDF: "Science_Ch13_MotionAndTime_P4.pdf",
+            solvedGuideHTML: "Science_Ch13_MotionAndTime_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
