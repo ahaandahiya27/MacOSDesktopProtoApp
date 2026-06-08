@@ -2124,3 +2124,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch06_p3",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 6,
+            chapterTitle: "क्रीडाम वयं श्लोकान्त्याक्षरीम् (Let Us Play Shloka-Antyakshari)",
+            displayTitle: "क्रीडाम वयं श्लोकान्त्याक्षरीम् (Let Us Play Shloka-Antyakshari) — Paper 3 — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch06_KridamaVayamShlokantyaksharim_P3_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch06_KridamaVayamShlokantyaksharim_P3_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch06_KridamaVayamShlokantyaksharim_P3.html",
+            questionPaperPDF: "Sanskrit_Sch06_KridamaVayamShlokantyaksharim_P3.pdf",
+            solvedGuideHTML: "Sanskrit_Sch06_KridamaVayamShlokantyaksharim_P3_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
