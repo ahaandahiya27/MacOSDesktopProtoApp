@@ -1614,3 +1614,88 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_mch11_p3",
+            subjectId: "maths_class7",
+            subjectName: "Maths",
+            chapterNumber: 11,
+            chapterTitle: "Finding Common Ground",
+            displayTitle: "Finding Common Ground — Paper 3 — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch11_FindingCommonGround_P3_QuestionPaper.md",
+            solutionsMD: "Maths_Ch11_FindingCommonGround_P3_Solutions.md",
+            questionPaperHTML: "Maths_Ch11_FindingCommonGround_P3.html",
+            questionPaperPDF: "Maths_Ch11_FindingCommonGround_P3.pdf",
+            solvedGuideHTML: "Maths_Ch11_FindingCommonGround_P3_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_mch12_p3",
+            subjectId: "maths_class7",
+            subjectName: "Maths",
+            chapterNumber: 12,
+            chapterTitle: "Another Peek Beyond the Point",
+            displayTitle: "Another Peek Beyond the Point — Paper 3 — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch12_AnotherPeekBeyondThePoint_P3_QuestionPaper.md",
+            solutionsMD: "Maths_Ch12_AnotherPeekBeyondThePoint_P3_Solutions.md",
+            questionPaperHTML: "Maths_Ch12_AnotherPeekBeyondThePoint_P3.html",
+            questionPaperPDF: "Maths_Ch12_AnotherPeekBeyondThePoint_P3.pdf",
+            solvedGuideHTML: "Maths_Ch12_AnotherPeekBeyondThePoint_P3_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_mch13_p3",
+            subjectId: "maths_class7",
+            subjectName: "Maths",
+            chapterNumber: 13,
+            chapterTitle: "Connecting the Dots",
+            displayTitle: "Connecting the Dots — Paper 3 — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch13_ConnectingTheDots_P3_QuestionPaper.md",
+            solutionsMD: "Maths_Ch13_ConnectingTheDots_P3_Solutions.md",
+            questionPaperHTML: "Maths_Ch13_ConnectingTheDots_P3.html",
+            questionPaperPDF: "Maths_Ch13_ConnectingTheDots_P3.pdf",
+            solvedGuideHTML: "Maths_Ch13_ConnectingTheDots_P3_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_mch14_p3",
+            subjectId: "maths_class7",
+            subjectName: "Maths",
+            chapterNumber: 14,
+            chapterTitle: "Constructions and Tilings",
+            displayTitle: "Constructions and Tilings — Paper 3 — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch14_ConstructionsAndTilings_P3_QuestionPaper.md",
+            solutionsMD: "Maths_Ch14_ConstructionsAndTilings_P3_Solutions.md",
+            questionPaperHTML: "Maths_Ch14_ConstructionsAndTilings_P3.html",
+            questionPaperPDF: "Maths_Ch14_ConstructionsAndTilings_P3.pdf",
+            solvedGuideHTML: "Maths_Ch14_ConstructionsAndTilings_P3_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_mch15_p3",
+            subjectId: "maths_class7",
+            subjectName: "Maths",
+            chapterNumber: 15,
+            chapterTitle: "Finding the Unknown",
+            displayTitle: "Finding the Unknown — Paper 3 — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch15_FindingTheUnknown_P3_QuestionPaper.md",
+            solutionsMD: "Maths_Ch15_FindingTheUnknown_P3_Solutions.md",
+            questionPaperHTML: "Maths_Ch15_FindingTheUnknown_P3.html",
+            questionPaperPDF: "Maths_Ch15_FindingTheUnknown_P3.pdf",
+            solvedGuideHTML: "Maths_Ch15_FindingTheUnknown_P3_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
