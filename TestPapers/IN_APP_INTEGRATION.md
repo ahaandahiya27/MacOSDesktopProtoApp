@@ -2668,3 +2668,71 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_mch05_p4",
+            subjectId: "maths_class7",
+            subjectName: "Maths",
+            chapterNumber: 5,
+            chapterTitle: "Parallel and Intersecting Lines",
+            displayTitle: "Parallel and Intersecting Lines — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch05_ParallelAndIntersectingLines_P4_QuestionPaper.md",
+            solutionsMD: "Maths_Ch05_ParallelAndIntersectingLines_P4_Solutions.md",
+            questionPaperHTML: "Maths_Ch05_ParallelAndIntersectingLines_P4.html",
+            questionPaperPDF: "Maths_Ch05_ParallelAndIntersectingLines_P4.pdf",
+            solvedGuideHTML: "Maths_Ch05_ParallelAndIntersectingLines_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_mch06_p4",
+            subjectId: "maths_class7",
+            subjectName: "Maths",
+            chapterNumber: 6,
+            chapterTitle: "Number Play",
+            displayTitle: "Number Play — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch06_NumberPlay_P4_QuestionPaper.md",
+            solutionsMD: "Maths_Ch06_NumberPlay_P4_Solutions.md",
+            questionPaperHTML: "Maths_Ch06_NumberPlay_P4.html",
+            questionPaperPDF: "Maths_Ch06_NumberPlay_P4.pdf",
+            solvedGuideHTML: "Maths_Ch06_NumberPlay_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_mch07_p4",
+            subjectId: "maths_class7",
+            subjectName: "Maths",
+            chapterNumber: 7,
+            chapterTitle: "A Tale of Three Intersecting Lines",
+            displayTitle: "A Tale of Three Intersecting Lines — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch07_ATaleOfThreeIntersectingLines_P4_QuestionPaper.md",
+            solutionsMD: "Maths_Ch07_ATaleOfThreeIntersectingLines_P4_Solutions.md",
+            questionPaperHTML: "Maths_Ch07_ATaleOfThreeIntersectingLines_P4.html",
+            questionPaperPDF: "Maths_Ch07_ATaleOfThreeIntersectingLines_P4.pdf",
+            solvedGuideHTML: "Maths_Ch07_ATaleOfThreeIntersectingLines_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_mch08_p4",
+            subjectId: "maths_class7",
+            subjectName: "Maths",
+            chapterNumber: 8,
+            chapterTitle: "Working with Fractions",
+            displayTitle: "Working with Fractions — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch08_WorkingWithFractions_P4_QuestionPaper.md",
+            solutionsMD: "Maths_Ch08_WorkingWithFractions_P4_Solutions.md",
+            questionPaperHTML: "Maths_Ch08_WorkingWithFractions_P4.html",
+            questionPaperPDF: "Maths_Ch08_WorkingWithFractions_P4.pdf",
+            solvedGuideHTML: "Maths_Ch08_WorkingWithFractions_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
