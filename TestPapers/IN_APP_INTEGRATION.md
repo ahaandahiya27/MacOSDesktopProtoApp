@@ -2277,3 +2277,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch15_p3",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 15,
+            chapterTitle: "धातुरूपाणि (Dhatu-Rupani: Verb Conjugations)",
+            displayTitle: "धातुरूपाणि (Dhatu-Rupani: Verb Conjugations) — Paper 3 — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch15_DhaturupaniVerbConjugations_P3_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch15_DhaturupaniVerbConjugations_P3_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch15_DhaturupaniVerbConjugations_P3.html",
+            questionPaperPDF: "Sanskrit_Sch15_DhaturupaniVerbConjugations_P3.pdf",
+            solvedGuideHTML: "Sanskrit_Sch15_DhaturupaniVerbConjugations_P3_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
