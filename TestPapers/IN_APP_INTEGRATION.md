@@ -2243,3 +2243,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch13_p3",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 13,
+            chapterTitle: "वर्णमात्रा-परिचयः (Varna-Matra: Vowel Quantity)",
+            displayTitle: "वर्णमात्रा-परिचयः (Varna-Matra: Vowel Quantity) — Paper 3 — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch13_VarnaMatraParichayah_P3_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch13_VarnaMatraParichayah_P3_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch13_VarnaMatraParichayah_P3.html",
+            questionPaperPDF: "Sanskrit_Sch13_VarnaMatraParichayah_P3.pdf",
+            solvedGuideHTML: "Sanskrit_Sch13_VarnaMatraParichayah_P3_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
