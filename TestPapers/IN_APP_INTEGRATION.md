@@ -1988,3 +1988,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch18_p3",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 18,
+            chapterTitle: "The State, the Government, and You",
+            displayTitle: "The State, the Government, and You — Paper 3 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch18_TheStateTheGovernmentAndYou_P3_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch18_TheStateTheGovernmentAndYou_P3_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch18_TheStateTheGovernmentAndYou_P3.html",
+            questionPaperPDF: "SocialScience_Ssch18_TheStateTheGovernmentAndYou_P3.pdf",
+            solvedGuideHTML: "SocialScience_Ssch18_TheStateTheGovernmentAndYou_P3_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
