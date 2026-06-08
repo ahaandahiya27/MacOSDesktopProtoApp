@@ -1784,3 +1784,88 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch06_p3",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 6,
+            chapterTitle: "The Age of Reorganisation",
+            displayTitle: "The Age of Reorganisation — Paper 3 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch06_TheAgeOfReorganisation_P3_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch06_TheAgeOfReorganisation_P3_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch06_TheAgeOfReorganisation_P3.html",
+            questionPaperPDF: "SocialScience_Ssch06_TheAgeOfReorganisation_P3.pdf",
+            solvedGuideHTML: "SocialScience_Ssch06_TheAgeOfReorganisation_P3_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch07_p3",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 7,
+            chapterTitle: "The Gupta Era",
+            displayTitle: "The Gupta Era — Paper 3 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch07_TheGuptaEra_P3_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch07_TheGuptaEra_P3_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch07_TheGuptaEra_P3.html",
+            questionPaperPDF: "SocialScience_Ssch07_TheGuptaEra_P3.pdf",
+            solvedGuideHTML: "SocialScience_Ssch07_TheGuptaEra_P3_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch08_p3",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 8,
+            chapterTitle: "How the Land Becomes Sacred",
+            displayTitle: "How the Land Becomes Sacred — Paper 3 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch08_HowTheLandBecomesSacred_P3_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch08_HowTheLandBecomesSacred_P3_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch08_HowTheLandBecomesSacred_P3.html",
+            questionPaperPDF: "SocialScience_Ssch08_HowTheLandBecomesSacred_P3.pdf",
+            solvedGuideHTML: "SocialScience_Ssch08_HowTheLandBecomesSacred_P3_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch09_p3",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 9,
+            chapterTitle: "Types of Governments",
+            displayTitle: "Types of Governments — Paper 3 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch09_TypesOfGovernments_P3_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch09_TypesOfGovernments_P3_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch09_TypesOfGovernments_P3.html",
+            questionPaperPDF: "SocialScience_Ssch09_TypesOfGovernments_P3.pdf",
+            solvedGuideHTML: "SocialScience_Ssch09_TypesOfGovernments_P3_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch10_p3",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 10,
+            chapterTitle: "The Constitution of India",
+            displayTitle: "The Constitution of India — Paper 3 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch10_TheConstitutionOfIndia_P3_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch10_TheConstitutionOfIndia_P3_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch10_TheConstitutionOfIndia_P3.html",
+            questionPaperPDF: "SocialScience_Ssch10_TheConstitutionOfIndia_P3.pdf",
+            solvedGuideHTML: "SocialScience_Ssch10_TheConstitutionOfIndia_P3_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
