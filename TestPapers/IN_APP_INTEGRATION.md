@@ -2022,3 +2022,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch20_p3",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 20,
+            chapterTitle: "Banks and the Magic of Finance",
+            displayTitle: "Banks and the Magic of Finance — Paper 3 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch20_BanksAndTheMagicOfFinance_P3_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch20_BanksAndTheMagicOfFinance_P3_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch20_BanksAndTheMagicOfFinance_P3.html",
+            questionPaperPDF: "SocialScience_Ssch20_BanksAndTheMagicOfFinance_P3.pdf",
+            solvedGuideHTML: "SocialScience_Ssch20_BanksAndTheMagicOfFinance_P3_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
