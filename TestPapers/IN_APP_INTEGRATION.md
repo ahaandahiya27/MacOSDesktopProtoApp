@@ -2362,3 +2362,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch06_p4",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 6,
+            chapterTitle: "Physical and Chemical Changes",
+            displayTitle: "Physical and Chemical Changes — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch06_PhysicalAndChemicalChanges_P4_QuestionPaper.md",
+            solutionsMD: "Science_Ch06_PhysicalAndChemicalChanges_P4_Solutions.md",
+            questionPaperHTML: "Science_Ch06_PhysicalAndChemicalChanges_P4.html",
+            questionPaperPDF: "Science_Ch06_PhysicalAndChemicalChanges_P4.pdf",
+            solvedGuideHTML: "Science_Ch06_PhysicalAndChemicalChanges_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
