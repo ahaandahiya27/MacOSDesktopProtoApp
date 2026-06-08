@@ -2260,3 +2260,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch14_p3",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 14,
+            chapterTitle: "शब्दरूपाणि (Shabda-Rupani: Noun Declensions)",
+            displayTitle: "शब्दरूपाणि (Shabda-Rupani: Noun Declensions) — Paper 3 — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch14_ShabdaRupani_P3_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch14_ShabdaRupani_P3_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch14_ShabdaRupani_P3.html",
+            questionPaperPDF: "Sanskrit_Sch14_ShabdaRupani_P3.pdf",
+            solvedGuideHTML: "Sanskrit_Sch14_ShabdaRupani_P3_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
