@@ -2736,3 +2736,71 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_mch09_p4",
+            subjectId: "maths_class7",
+            subjectName: "Maths",
+            chapterNumber: 9,
+            chapterTitle: "Geometric Twins",
+            displayTitle: "Geometric Twins — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch09_GeometricTwins_P4_QuestionPaper.md",
+            solutionsMD: "Maths_Ch09_GeometricTwins_P4_Solutions.md",
+            questionPaperHTML: "Maths_Ch09_GeometricTwins_P4.html",
+            questionPaperPDF: "Maths_Ch09_GeometricTwins_P4.pdf",
+            solvedGuideHTML: "Maths_Ch09_GeometricTwins_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_mch10_p4",
+            subjectId: "maths_class7",
+            subjectName: "Maths",
+            chapterNumber: 10,
+            chapterTitle: "Operations with Integers",
+            displayTitle: "Operations with Integers — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch10_OperationsWithIntegers_P4_QuestionPaper.md",
+            solutionsMD: "Maths_Ch10_OperationsWithIntegers_P4_Solutions.md",
+            questionPaperHTML: "Maths_Ch10_OperationsWithIntegers_P4.html",
+            questionPaperPDF: "Maths_Ch10_OperationsWithIntegers_P4.pdf",
+            solvedGuideHTML: "Maths_Ch10_OperationsWithIntegers_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_mch11_p4",
+            subjectId: "maths_class7",
+            subjectName: "Maths",
+            chapterNumber: 11,
+            chapterTitle: "Finding Common Ground",
+            displayTitle: "Finding Common Ground — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch11_FindingCommonGround_P4_QuestionPaper.md",
+            solutionsMD: "Maths_Ch11_FindingCommonGround_P4_Solutions.md",
+            questionPaperHTML: "Maths_Ch11_FindingCommonGround_P4.html",
+            questionPaperPDF: "Maths_Ch11_FindingCommonGround_P4.pdf",
+            solvedGuideHTML: "Maths_Ch11_FindingCommonGround_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_mch12_p4",
+            subjectId: "maths_class7",
+            subjectName: "Maths",
+            chapterNumber: 12,
+            chapterTitle: "Another Peek Beyond the Point",
+            displayTitle: "Another Peek Beyond the Point — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch12_AnotherPeekBeyondThePoint_P4_QuestionPaper.md",
+            solutionsMD: "Maths_Ch12_AnotherPeekBeyondThePoint_P4_Solutions.md",
+            questionPaperHTML: "Maths_Ch12_AnotherPeekBeyondThePoint_P4.html",
+            questionPaperPDF: "Maths_Ch12_AnotherPeekBeyondThePoint_P4.pdf",
+            solvedGuideHTML: "Maths_Ch12_AnotherPeekBeyondThePoint_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
