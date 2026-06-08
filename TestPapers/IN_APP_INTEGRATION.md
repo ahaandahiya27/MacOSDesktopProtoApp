@@ -1954,3 +1954,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch16_p3",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 16,
+            chapterTitle: "Turning Tides: 11th and 12th Centuries",
+            displayTitle: "Turning Tides: 11th and 12th Centuries — Paper 3 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch16_TurningTides11thAnd12thCenturies_P3_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch16_TurningTides11thAnd12thCenturies_P3_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch16_TurningTides11thAnd12thCenturies_P3.html",
+            questionPaperPDF: "SocialScience_Ssch16_TurningTides11thAnd12thCenturies_P3.pdf",
+            solvedGuideHTML: "SocialScience_Ssch16_TurningTides11thAnd12thCenturies_P3_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
