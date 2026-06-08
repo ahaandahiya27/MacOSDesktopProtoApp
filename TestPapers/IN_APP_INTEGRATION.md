@@ -2175,3 +2175,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch09_p3",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 9,
+            chapterTitle: "अन्नाद् भवन्ति भूतानि (Annad Bhavanti Bhutani)",
+            displayTitle: "अन्नाद् भवन्ति भूतानि (Annad Bhavanti Bhutani) — Paper 3 — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch09_AnnadBhavantiBhutani_P3_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch09_AnnadBhavantiBhutani_P3_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch09_AnnadBhavantiBhutani_P3.html",
+            questionPaperPDF: "Sanskrit_Sch09_AnnadBhavantiBhutani_P3.pdf",
+            solvedGuideHTML: "Sanskrit_Sch09_AnnadBhavantiBhutani_P3_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
