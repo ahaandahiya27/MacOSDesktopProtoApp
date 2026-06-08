@@ -2566,3 +2566,37 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch18_p4",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 18,
+            chapterTitle: "Wastewater Story",
+            displayTitle: "Wastewater Story — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch18_WastewaterStory_P4_QuestionPaper.md",
+            solutionsMD: "Science_Ch18_WastewaterStory_P4_Solutions.md",
+            questionPaperHTML: "Science_Ch18_WastewaterStory_P4.html",
+            questionPaperPDF: "Science_Ch18_WastewaterStory_P4.pdf",
+            solvedGuideHTML: "Science_Ch18_WastewaterStory_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch19_p4",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 19,
+            chapterTitle: "Earth, Moon and the Sun",
+            displayTitle: "Earth, Moon and the Sun — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch19_EarthMoonAndTheSun_P4_QuestionPaper.md",
+            solutionsMD: "Science_Ch19_EarthMoonAndTheSun_P4_Solutions.md",
+            questionPaperHTML: "Science_Ch19_EarthMoonAndTheSun_P4.html",
+            questionPaperPDF: "Science_Ch19_EarthMoonAndTheSun_P4.pdf",
+            solvedGuideHTML: "Science_Ch19_EarthMoonAndTheSun_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
