@@ -2600,3 +2600,71 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_mch01_p4",
+            subjectId: "maths_class7",
+            subjectName: "Maths",
+            chapterNumber: 1,
+            chapterTitle: "Large Numbers Around Us",
+            displayTitle: "Large Numbers Around Us — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch01_LargeNumbersAroundUs_P4_QuestionPaper.md",
+            solutionsMD: "Maths_Ch01_LargeNumbersAroundUs_P4_Solutions.md",
+            questionPaperHTML: "Maths_Ch01_LargeNumbersAroundUs_P4.html",
+            questionPaperPDF: "Maths_Ch01_LargeNumbersAroundUs_P4.pdf",
+            solvedGuideHTML: "Maths_Ch01_LargeNumbersAroundUs_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_mch02_p4",
+            subjectId: "maths_class7",
+            subjectName: "Maths",
+            chapterNumber: 2,
+            chapterTitle: "Arithmetic Expressions",
+            displayTitle: "Arithmetic Expressions — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch02_ArithmeticExpressions_P4_QuestionPaper.md",
+            solutionsMD: "Maths_Ch02_ArithmeticExpressions_P4_Solutions.md",
+            questionPaperHTML: "Maths_Ch02_ArithmeticExpressions_P4.html",
+            questionPaperPDF: "Maths_Ch02_ArithmeticExpressions_P4.pdf",
+            solvedGuideHTML: "Maths_Ch02_ArithmeticExpressions_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_mch03_p4",
+            subjectId: "maths_class7",
+            subjectName: "Maths",
+            chapterNumber: 3,
+            chapterTitle: "A Peek Beyond the Point",
+            displayTitle: "A Peek Beyond the Point — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch03_APeekBeyondThePoint_P4_QuestionPaper.md",
+            solutionsMD: "Maths_Ch03_APeekBeyondThePoint_P4_Solutions.md",
+            questionPaperHTML: "Maths_Ch03_APeekBeyondThePoint_P4.html",
+            questionPaperPDF: "Maths_Ch03_APeekBeyondThePoint_P4.pdf",
+            solvedGuideHTML: "Maths_Ch03_APeekBeyondThePoint_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_mch04_p4",
+            subjectId: "maths_class7",
+            subjectName: "Maths",
+            chapterNumber: 4,
+            chapterTitle: "Expressions Using Letter-Numbers",
+            displayTitle: "Expressions Using Letter-Numbers — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch04_ExpressionsUsingLetterNumbers_P4_QuestionPaper.md",
+            solutionsMD: "Maths_Ch04_ExpressionsUsingLetterNumbers_P4_Solutions.md",
+            questionPaperHTML: "Maths_Ch04_ExpressionsUsingLetterNumbers_P4.html",
+            questionPaperPDF: "Maths_Ch04_ExpressionsUsingLetterNumbers_P4.pdf",
+            solvedGuideHTML: "Maths_Ch04_ExpressionsUsingLetterNumbers_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
