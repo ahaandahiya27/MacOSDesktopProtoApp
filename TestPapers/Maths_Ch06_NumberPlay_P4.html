@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maths Ch06 NumberPlay P4</title>
+<style>
+@page { size: A4; margin: 18mm 16mm; }
+* { box-sizing: border-box; }
+body { font-family: Georgia, 'Times New Roman', serif; font-size: 12pt;
+       line-height: 1.45; color: #111; max-width: 820px; margin: 0 auto;
+       padding: 16px; }
+h1 { font-size: 19pt; margin: 0 0 2px; }
+h2 { font-size: 15pt; margin: 0 0 10px; color: #333; }
+h3 { font-size: 13pt; margin: 18px 0 6px; }
+table { border-collapse: collapse; margin: 8px 0 14px; }
+th, td { border: 1px solid #999; padding: 3px 9px; text-align: left;
+         font-size: 11pt; }
+.markbox { border: 2px solid #222; border-radius: 6px; padding: 8px 12px;
+           margin: 10px 0 16px; background: #f6f6f6; font-size: 11.5pt; }
+.q { margin: 9px 0 2px; }
+.opts { margin: 0 0 6px 22px; }
+.opts span { display: inline-block; min-width: 46%; vertical-align: top;
+             margin: 1px 0; }
+.sol { margin: 5px 0; }
+.pagebreak { page-break-before: always; }
+.note { color: #555; font-style: italic; font-size: 10.5pt; }
+hr { border: none; border-top: 1px solid #ccc; margin: 14px 0; }
+code { background: #eee; padding: 0 2px; }
+</style>
+</head>
+<body>
+<h1>Olympiad Test Paper — Mathematics (Class 7) — Paper 4</h1>
+<h2>Chapter 6: Number Play</h2>
+<p><strong>Paper 4 — (progressively harder)</strong></p>
+<table>
+<tr><th></th><th></th></tr>
+<tr><td><strong>Subject</strong></td><td>Mathematics (NCERT Class 7)</td></tr>
+<tr><td><strong>Chapter</strong></td><td>6 — Number Play</td></tr>
+<tr><td><strong>Total Questions</strong></td><td>60 (Multiple Choice, single correct)</td></tr>
+<tr><td><strong>Maximum Marks</strong></td><td>240</td></tr>
+<tr><td><strong>Suggested Time</strong></td><td>90 minutes</td></tr>
+</table>
+<p><strong>Marking scheme:</strong> <strong>+4</strong> for each correct answer · <strong>−1</strong> for each wrong answer · <strong>0</strong> if unattempted.</p>
+<p><strong>Instructions:</strong> Each question has four options (A), (B), (C), (D); exactly one is correct. An odd count of odd numbers forces an odd sum; the Virahanka-Fibonacci rule adds the two previous terms (not a constant ratio); in the taller-in-front game a call at position k can be at most k-1; Kaprekar&#x27;s routine fixes 6174 (4-digit) and 495 (3-digit), Collatz always falls to 1; a supercell must strictly exceed every edge-neighbour. Do not write on this paper — mark answers on your answer sheet.</p>
+<hr>
+<div class="q"><strong>1.</strong> Kishor adds up 7 numbers. He tells you their total is odd and that an EVEN number of them are even. What is the smallest possible count of ODD numbers he could have used?</div>
+<div class="opts"><span>(A) 0</span><span>(B) 1</span><span>(C) 2</span><span>(D) 7</span></div>
+<div class="q"><strong>2.</strong> A whole number is called &#x27;balanced&#x27; if it equals the sum of an even count of odd numbers plus any number of even numbers. Which of these totals can NEVER be balanced using exactly four odd numbers and three even numbers?</div>
+<div class="opts"><span>(A) 37</span><span>(B) 40</span><span>(C) 28</span><span>(D) 50</span></div>
+<div class="q"><strong>3.</strong> The numbers 1 to 50 are written down. How many of them have a digit-sum that is itself even?</div>
+<div class="opts"><span>(A) 25</span><span>(B) 26</span><span>(C) 23</span><span>(D) 24</span></div>
+<div class="q"><strong>4.</strong> A number N leaves remainder 2 when divided by 9. What is the remainder when the number formed by reversing N&#x27;s digits is divided by 9?</div>
+<div class="opts"><span>(A) 7</span><span>(B) 2</span><span>(C) 0</span><span>(D) cannot be determined</span></div>
+<div class="q"><strong>5.</strong> Five DISTINCT odd numbers are added and the total is the smallest it can possibly be. What is that smallest total?</div>
+<div class="opts"><span>(A) 15</span><span>(B) 9</span><span>(C) 35</span><span>(D) 25</span></div>
+<div class="q"><strong>6.</strong> A 4-digit number is divisible by 9, and its first three digits are 7, 3 and 1. What is the only possible units digit?</div>
+<div class="opts"><span>(A) 0</span><span>(B) 8</span><span>(C) 7</span><span>(D) 9</span></div>
+<div class="q"><strong>7.</strong> The product of three whole numbers is odd. What can you say for certain about the three numbers?</div>
+<div class="opts"><span>(A) all three are odd</span><span>(B) exactly one is odd</span><span>(C) at least one is even</span><span>(D) exactly two are odd</span></div>
+<div class="q"><strong>8.</strong> How many numbers from 1 to 99 have a digit-sum that is a multiple of 3 but are NOT themselves multiples of 3?</div>
+<div class="opts"><span>(A) 33</span><span>(B) 16</span><span>(C) 9</span><span>(D) 0</span></div>
+<div class="q"><strong>9.</strong> A number is divisible by 11 exactly when the alternating sum of its digits (units minus tens plus hundreds minus ...) is a multiple of 11 (including 0). Which of these is divisible by 11?</div>
+<div class="opts"><span>(A) 8196</span><span>(B) 8159</span><span>(C) 8195</span><span>(D) 8519</span></div>
+<div class="q"><strong>10.</strong> Two whole numbers add to an even total and multiply to an odd product. What must the two numbers be?</div>
+<div class="opts"><span>(A) both even</span><span>(B) both odd</span><span>(C) one odd and one even</span><span>(D) impossible — no such pair exists</span></div>
+<div class="q"><strong>11.</strong> Ahaan writes the numbers 1, 2, 3, ..., up to some n and finds their total is odd. Which of these values of n is IMPOSSIBLE?</div>
+<div class="opts"><span>(A) 5</span><span>(B) 6</span><span>(C) 8</span><span>(D) 9</span></div>
+<div class="q"><strong>12.</strong> A Virahanka-Fibonacci-type sequence (each term is the sum of the two before it) has 5th term 30 and 7th term 78. What is its 1st term?</div>
+<div class="opts"><span>(A) 6</span><span>(B) 3</span><span>(C) 12</span><span>(D) 9</span></div>
+<div class="q"><strong>13.</strong> The Virahanka-Fibonacci sequence is 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, ... . What is the units digit of the 24th term? (Units digits repeat with period 60: 1,1,2,3,5,8,3,1,4,5,9,4,3,7,0,7,7,4,1,5,6,1,7,8,...)</div>
+<div class="opts"><span>(A) 6</span><span>(B) 8</span><span>(C) 1</span><span>(D) 4</span></div>
+<div class="q"><strong>14.</strong> In a Virahanka-Fibonacci-type sequence each term is the sum of the two before it. The 6th term is 32 and the 8th term is 84. What is the 7th term?</div>
+<div class="opts"><span>(A) 26</span><span>(B) 52</span><span>(C) 42</span><span>(D) 62</span></div>
+<div class="q"><strong>15.</strong> Using the identity (sum of the first n Virahanka-Fibonacci terms) = (the (n+2)th term) − 1 for the sequence 1,1,2,3,5,8,13,21,34,55,89, what is 1+1+2+3+5+8+13+21+34+55?</div>
+<div class="opts"><span>(A) 144</span><span>(B) 142</span><span>(C) 88</span><span>(D) 143</span></div>
+<div class="q"><strong>16.</strong> Two consecutive terms of a Virahanka-Fibonacci-type sequence are 89 and 144. What is the term THREE places BEFORE the 89?</div>
+<div class="opts"><span>(A) 34</span><span>(B) 13</span><span>(C) 21</span><span>(D) 55</span></div>
+<div class="q"><strong>17.</strong> The Virahanka-Fibonacci sequence 1,1,2,3,5,8,13,21,34,... follows the parity pattern O,O,E,O,O,E,O,O,E,... (period 3). What is the parity of the 50th term?</div>
+<div class="opts"><span>(A) even</span><span>(B) odd</span><span>(C) it alternates</span><span>(D) cannot be determined</span></div>
+<div class="q"><strong>18.</strong> How many of the first 30 Virahanka-Fibonacci terms (1,1,2,3,5,8,...) are EVEN?</div>
+<div class="opts"><span>(A) 9</span><span>(B) 10</span><span>(C) 15</span><span>(D) 11</span></div>
+<div class="q"><strong>19.</strong> A Virahanka-Fibonacci-type sequence starts with two positive whole numbers a and b (a &lt; b) and its 4th term is 19. How many different starting pairs (a, b) are possible?</div>
+<div class="opts"><span>(A) 3</span><span>(B) 2</span><span>(C) 4</span><span>(D) 1</span></div>
+<div class="q"><strong>20.</strong> Counting how many ways to tile a strip of length 6 using 1-beat and 2-beat tiles gives a Virahanka-Fibonacci value. If a strip of length 9 has 55 tilings and a strip of length 10 has 89 tilings, how many tilings does a strip of length 11 have?</div>
+<div class="opts"><span>(A) 134</span><span>(B) 110</span><span>(C) 178</span><span>(D) 144</span></div>
+<div class="q"><strong>21.</strong> The ratio of consecutive Virahanka-Fibonacci terms approaches about 1.618. Roughly how many times larger is the 12th term than the 8th term?</div>
+<div class="opts"><span>(A) about 6.9 times</span><span>(B) about 4 times</span><span>(C) about 1.6 times</span><span>(D) about 11 times</span></div>
+<div class="q"><strong>22.</strong> A Virahanka-Fibonacci-type sequence has 1st term 4 and 2nd term 4. Every term after equals the sum of the two before. Which is the FIRST term that is NOT a multiple of 4?</div>
+<div class="opts"><span>(A) there is no such term — all terms are multiples of 4</span><span>(B) the 3rd term</span><span>(C) the 5th term</span><span>(D) the 8th term</span></div>
+<div class="q"><strong>23.</strong> In the taller-in-front game, the children call out (front to back) 0, 1, 2, 3, 4, 5, 6, 7. Exactly how tall is each child relative to the others?</div>
+<div class="opts"><span>(A) heights strictly increase from front to back</span><span>(B) each child is shorter than every child ahead — heights strictly decrease from front to back</span><span>(C) all children are the same height</span><span>(D) the tallest child is at the back</span></div>
+<div class="q"><strong>24.</strong> A line of 8 children plays taller-in-front. What is the largest number the back (8th) child could possibly call?</div>
+<div class="opts"><span>(A) 8</span><span>(B) 6</span><span>(C) 5</span><span>(D) 7</span></div>
+<div class="q"><strong>25.</strong> In a taller-in-front line, the calls front to back are 0, 1, 3, 2, 1. A child at position k can call at most k−1. Exactly one call breaks this bound. Which one?</div>
+<div class="opts"><span>(A) the 3rd child, who said 3</span><span>(B) the 4th child, who said 2</span><span>(C) the 2nd child, who said 1</span><span>(D) the 5th child, who said 1</span></div>
+<div class="q"><strong>26.</strong> In a taller-in-front line of n children, the calls read 0, 1, 2, ..., (n−1) from front to back. How many children in total are taller than the SECOND child?</div>
+<div class="opts"><span>(A) 0</span><span>(B) n − 2</span><span>(C) 2</span><span>(D) 1</span></div>
+<div class="q"><strong>27.</strong> A taller-in-front line of 6 children produces calls that are all DIFFERENT from one another. What is the only possible set of six calls?</div>
+<div class="opts"><span>(A) 1, 2, 3, 4, 5, 6</span><span>(B) 0, 1, 2, 3, 4, 6</span><span>(C) 0, 0, 1, 2, 3, 4</span><span>(D) 0, 1, 2, 3, 4, 5</span></div>
+<div class="q"><strong>28.</strong> In a taller-in-front line, a child calls the number 0. Which statement is GUARANTEED to be true about that child?</div>
+<div class="opts"><span>(A) that child is the tallest in the whole line</span><span>(B) that child is at the front of the line</span><span>(C) no child standing ahead of that child is taller than it</span><span>(D) that child is shorter than everyone behind it</span></div>
+<div class="q"><strong>29.</strong> Seven children of all different heights line up so the taller-in-front calls are 0, 1, 0, 1, 0, 1, 0. What is the position of the TALLEST child?</div>
+<div class="opts"><span>(A) 7th (back)</span><span>(B) 4th (middle)</span><span>(C) 1st (front)</span><span>(D) it cannot be determined</span></div>
+<div class="q"><strong>30.</strong> A taller-in-front line has calls 0, 1, 2, 1 (front to back) for 4 children of distinct heights. Counting all pairs of children where the front one is taller, how many such &#x27;taller-ahead&#x27; pairs are there in total?</div>
+<div class="opts"><span>(A) 3</span><span>(B) 4</span><span>(C) 6</span><span>(D) 2</span></div>
+<div class="q"><strong>31.</strong> In a taller-in-front line of n children with distinct heights, what is the LARGEST possible total of all the calls added together?</div>
+<div class="opts"><span>(A) n − 1</span><span>(B) n(n−1)/2</span><span>(C) n(n+1)/2</span><span>(D) n²</span></div>
+<div class="q"><strong>32.</strong> A 3×3 grid is filled with 1–9 (each once). A &#x27;supercell&#x27; is a cell strictly greater than every cell sharing an edge with it. What is the LARGEST number of supercells that can be forced to lie only on the four EDGE-MIDDLE cells (top, bottom, left, right middles)?</div>
+<div class="opts"><span>(A) 4</span><span>(B) 2</span><span>(C) 3</span><span>(D) 1</span></div>
+<div class="q"><strong>33.</strong> A 3×3 grid is filled with 1–9 (no repeats). What is the GREATEST possible value of the sum of the four corner cells?</div>
+<div class="opts"><span>(A) 24</span><span>(B) 30</span><span>(C) 28</span><span>(D) 26</span></div>
+<div class="q"><strong>34.</strong> In a 3×3 magic square of 1–9 (every row, column and main diagonal sums to 15), the top-left corner holds 2. What number is diagonally opposite it (bottom-right corner)?</div>
+<div class="opts"><span>(A) 8</span><span>(B) 6</span><span>(C) 4</span><span>(D) 9</span></div>
+<div class="q"><strong>35.</strong> A 3×3 magic square of 1–9 has magic sum 15. Every number in it is then MULTIPLIED by 3. What is the new magic sum?</div>
+<div class="opts"><span>(A) 15</span><span>(B) 18</span><span>(C) 45</span><span>(D) 135</span></div>
+<div class="q"><strong>36.</strong> In a 3×3 grid of 1–9 (no repeats) the centre holds 5. The top row sums to 18 and the left column sums to 8. The two share the top-left corner cell. If that corner holds 3, what do the remaining cells of the top row sum to?</div>
+<div class="opts"><span>(A) 13</span><span>(B) 12</span><span>(C) 15</span><span>(D) 17</span></div>
+<div class="q"><strong>37.</strong> A 3×3 grid is filled with 1–9 (no repeats). The two main diagonals share the centre cell, which holds 5. If one diagonal sums to 15 and the other to 21, what is the sum of all four corner cells?</div>
+<div class="opts"><span>(A) 26</span><span>(B) 30</span><span>(C) 20</span><span>(D) 21</span></div>
+<div class="q"><strong>38.</strong> A 3×3 grid of 1–9 (no repeats) has its three row sums all DIFFERENT. The first two row sums are 6 and 24. The third row sum must therefore be which value?</div>
+<div class="opts"><span>(A) 14</span><span>(B) 16</span><span>(C) 15</span><span>(D) 12</span></div>
+<div class="q"><strong>39.</strong> In a 3×3 grid of 1–9 (no repeats), what is the SMALLEST possible value of the largest row sum? (You want to make the biggest row as small as you can.)</div>
+<div class="opts"><span>(A) 16</span><span>(B) 15</span><span>(C) 14</span><span>(D) 24</span></div>
+<div class="q"><strong>40.</strong> A 3×3 grid of 1–9 (no repeats) is arranged so the cell holding 1 has the MOST edge-neighbours possible. How many neighbours does it then have, and can it ever be a supercell?</div>
+<div class="opts"><span>(A) 4 neighbours, and it can never be a supercell</span><span>(B) 4 neighbours, and it can be a supercell</span><span>(C) 2 neighbours, and it can be a supercell</span><span>(D) 3 neighbours, and it can never be a supercell</span></div>
+<div class="q"><strong>41.</strong> A 3×3 grid of 1–9 (no repeats) is filled so that exactly the cell with 9 and the cell with 8 are supercells (each strictly greater than all edge-neighbours). For both to be supercells, what must be true of the cells holding 9 and 8?</div>
+<div class="opts"><span>(A) 8 must be in the centre</span><span>(B) 9 must be in a corner and 8 in the centre</span><span>(C) 9 and 8 must be in the same row</span><span>(D) the cells holding 9 and 8 must not share an edge</span></div>
+<div class="q"><strong>42.</strong> A 3×3 magic square of 1–9 (magic sum 15) is rotated a quarter-turn (90°). Is the result still a magic square, and why?</div>
+<div class="opts"><span>(A) no — rotation destroys the diagonal sums</span><span>(B) yes — rows become columns and columns become rows, each still summing to 15, and the diagonals map to diagonals</span><span>(C) no — rotation moves the centre value off-centre</span><span>(D) only if the magic sum is even</span></div>
+<div class="q"><strong>43.</strong> A 3×3 grid of 1–9 (no repeats) has the four edge-middle cells (top, bottom, left, right) summing to 24 and the centre cell holding 5. What does the sum of the four corner cells equal?</div>
+<div class="opts"><span>(A) 21</span><span>(B) 20</span><span>(C) 29</span><span>(D) 16</span></div>
+<div class="q"><strong>44.</strong> Run the Collatz process (halve if even, else 3n+1) starting from 9. How many steps does it take to first reach 1?</div>
+<div class="opts"><span>(A) 20</span><span>(B) 18</span><span>(C) 19</span><span>(D) 17</span></div>
+<div class="q"><strong>45.</strong> In the Collatz process, what is the largest value reached when starting from 15 before it falls to 1?</div>
+<div class="opts"><span>(A) 88</span><span>(B) 160</span><span>(C) 52</span><span>(D) 120</span></div>
+<div class="q"><strong>46.</strong> A &#x27;number machine&#x27; rule says: if the number is even, subtract its largest digit; if odd, subtract 1; repeat. Starting from 24, what number does the machine reach after exactly 4 steps?</div>
+<div class="opts"><span>(A) 8</span><span>(B) 10</span><span>(C) 11</span><span>(D) 9</span></div>
+<div class="q"><strong>47.</strong> Starting the Collatz process from 1, what does the sequence do?</div>
+<div class="opts"><span>(A) it cycles forever as 1, 4, 2, 1, 4, 2, ...</span><span>(B) it stays at 1 and never moves</span><span>(C) it grows without bound</span><span>(D) it reaches 0</span></div>
+<div class="q"><strong>48.</strong> A &#x27;number machine&#x27; replaces a number by the SUM of the squares of its digits, repeating. Starting from 19, after how many steps does the machine first reach 1?</div>
+<div class="opts"><span>(A) 4</span><span>(B) 3</span><span>(C) 5</span><span>(D) 6</span></div>
+<div class="q"><strong>49.</strong> Run the Collatz process from 6. How many steps does it take to reach 1, and what is the first thing that happens to the even start?</div>
+<div class="opts"><span>(A) 6 steps, and 6 is first tripled to 19</span><span>(B) 9 steps, and 6 is first halved to 3</span><span>(C) 8 steps, and the even 6 is first halved to 3</span><span>(D) 7 steps, and 6 is first halved to 3</span></div>
+<div class="q"><strong>50.</strong> How many 4-digit palindromes are divisible by 4? (A 4-digit palindrome looks like abba.)</div>
+<div class="opts"><span>(A) 18</span><span>(B) 24</span><span>(C) 10</span><span>(D) 20</span></div>
+<div class="q"><strong>51.</strong> What is the largest 4-digit palindrome that is divisible by 9? (A 4-digit palindrome looks like abba.)</div>
+<div class="opts"><span>(A) 9909</span><span>(B) 9779</span><span>(C) 9999</span><span>(D) 9889</span></div>
+<div class="q"><strong>52.</strong> The LARGEST two-digit number that equals 4 times the sum of its own digits is which?</div>
+<div class="opts"><span>(A) 36</span><span>(B) 24</span><span>(C) 84</span><span>(D) 48</span></div>
+<div class="q"><strong>53.</strong> Reading a 3-digit palindrome aba, for how many such palindromes is the middle digit b exactly twice the outer digit a?</div>
+<div class="opts"><span>(A) 5</span><span>(B) 3</span><span>(C) 4</span><span>(D) 9</span></div>
+<div class="q"><strong>54.</strong> A two-digit number is added to the number formed by reversing its digits, and the result is 88. The two digits differ by 4. What is the larger of the two possible original numbers?</div>
+<div class="opts"><span>(A) 48</span><span>(B) 53</span><span>(C) 71</span><span>(D) 62</span></div>
+<div class="q"><strong>55.</strong> How many palindrome years are there from 1000 to 1999 inclusive? (A palindrome year reads the same forwards and backwards, like 1991.)</div>
+<div class="opts"><span>(A) 9</span><span>(B) 10</span><span>(C) 11</span><span>(D) 100</span></div>
+<div class="q"><strong>56.</strong> The cryptarithm AB + BA = 110 has A and B as the digits of two genuine two-digit numbers (neither A nor B is 0) and the digits A and B must be DIFFERENT. How many ordered pairs (A, B) satisfy it?</div>
+<div class="opts"><span>(A) 8</span><span>(B) 9</span><span>(C) 4</span><span>(D) 10</span></div>
+<div class="q"><strong>57.</strong> A 3-digit palindrome aba is multiplied by 1 and stays itself. Among all 3-digit palindromes, how many have an EVEN digit-sum?</div>
+<div class="opts"><span>(A) 50</span><span>(B) 40</span><span>(C) 90</span><span>(D) 45</span></div>
+<div class="q"><strong>58.</strong> Take any 3-digit number with distinct first and last digits, reverse it, and subtract the smaller from the larger. The result is always a multiple of which number?</div>
+<div class="opts"><span>(A) 99</span><span>(B) 9 only</span><span>(C) 11 only</span><span>(D) 100</span></div>
+<div class="q"><strong>59.</strong> What is the smallest 4-digit number that is a palindrome AND divisible by both 9 and 11?</div>
+<div class="opts"><span>(A) 1001</span><span>(B) 1221</span><span>(C) 1881</span><span>(D) 9999</span></div>
+<div class="q"><strong>60.</strong> A digit-rearrangement puzzle: using the digits 1, 2, 3, 4 each exactly once, form a 4-digit number. What is the difference between the largest and smallest such numbers?</div>
+<div class="opts"><span>(A) 3078</span><span>(B) 2987</span><span>(C) 3087</span><span>(D) 3177</span></div>
+<div class="pagebreak"></div>
+<h1>Solutions — Mathematics (Class 7), Chapter 6: Number Play — Paper 4</h1>
+<p><strong>Paper 4 — (progressively harder)</strong></p>
+<p>Marking: <strong>+4</strong> correct, <strong>−1</strong> wrong, <strong>0</strong> unattempted. Maximum marks <strong>240</strong>.</p>
+<h2>Answer Key</h2>
+<table>
+<tr><th>Q</th><th>Ans</th><th>Q</th><th>Ans</th><th>Q</th><th>Ans</th><th>Q</th><th>Ans</th><th>Q</th><th>Ans</th><th>Q</th><th>Ans</th></tr>
+<tr><td>1</td><td>B</td><td>11</td><td>C</td><td>21</td><td>A</td><td>31</td><td>B</td><td>41</td><td>D</td><td>51</td><td>C</td></tr>
+<tr><td>2</td><td>A</td><td>12</td><td>A</td><td>22</td><td>A</td><td>32</td><td>A</td><td>42</td><td>B</td><td>52</td><td>D</td></tr>
+<tr><td>3</td><td>D</td><td>13</td><td>B</td><td>23</td><td>B</td><td>33</td><td>B</td><td>43</td><td>D</td><td>53</td><td>C</td></tr>
+<tr><td>4</td><td>B</td><td>14</td><td>B</td><td>24</td><td>D</td><td>34</td><td>A</td><td>44</td><td>C</td><td>54</td><td>D</td></tr>
+<tr><td>5</td><td>D</td><td>15</td><td>D</td><td>25</td><td>A</td><td>35</td><td>C</td><td>45</td><td>B</td><td>55</td><td>B</td></tr>
+<tr><td>6</td><td>C</td><td>16</td><td>C</td><td>26</td><td>D</td><td>36</td><td>C</td><td>46</td><td>D</td><td>56</td><td>A</td></tr>
+<tr><td>7</td><td>A</td><td>17</td><td>B</td><td>27</td><td>D</td><td>37</td><td>A</td><td>47</td><td>A</td><td>57</td><td>D</td></tr>
+<tr><td>8</td><td>D</td><td>18</td><td>B</td><td>28</td><td>C</td><td>38</td><td>C</td><td>48</td><td>A</td><td>58</td><td>A</td></tr>
+<tr><td>9</td><td>C</td><td>19</td><td>A</td><td>29</td><td>C</td><td>39</td><td>B</td><td>49</td><td>C</td><td>59</td><td>C</td></tr>
+<tr><td>10</td><td>B</td><td>20</td><td>D</td><td>30</td><td>B</td><td>40</td><td>A</td><td>50</td><td>D</td><td>60</td><td>C</td></tr>
+</table>
+<p>Answer-key distribution: A = 15, B = 15, C = 15, D = 15.</p>
+<hr>
+<h2>Worked Solutions</h2>
+<p><strong>1. (B)</strong> An even count of evens contributes an even subtotal, so the parity of the whole total is decided by the odd numbers. An odd total requires an odd COUNT of odd numbers. Since 7 numbers are used and the even count is even (0, 2, 4 or 6), the odd count is 7, 5, 3 or 1 respectively — all odd, consistent. The smallest of these odd counts is 1 (six evens plus one odd). Thinking the count of odds could be 0 forgets that zero odds gives an even total; thinking it must be 2 confuses &#x27;even count of evens&#x27; with &#x27;even count of odds&#x27;.</p>
+<p><strong>2. (A)</strong> Four odd numbers sum to an even subtotal (even count of odds), and three even numbers add an even subtotal, so the grand total must be even. 40, 28 and 50 are even and reachable. 37 is odd, so it can never be the total of four odds plus three evens. Choosing an even-looking decoy fails; the parity is fixed even regardless of the actual values.</p>
+<p><strong>3. (D)</strong> List by tens. 1-9: even digit-sums are 2,4,6,8 -&gt; 4 numbers. 10-19: digit-sum = 1+units; even when units is odd (1,3,5,7,9) -&gt; 5 numbers (11,13,15,17,19). 20-29: 2+units even when units even (0,2,4,6,8) -&gt; 5. 30-39: like the tens-1 case -&gt; 5 (31,33,35,37,39). 40-49: like tens-2 -&gt; 5 (40,42,44,46,48). 50: 5+0=5 odd -&gt; 0. Total = 4+5+5+5+5 = 24. Forgetting that 10 itself (sum 1) is odd, or miscounting the 1-9 block, gives 25 or 26.</p>
+<p><strong>4. (B)</strong> A number and its digit-reversal have exactly the same digits, hence the same digit-sum, so they leave the same remainder on division by 9. Since N gives remainder 2, the reversal also gives remainder 2. Answering 7 assumes 9 minus the remainder (a divisibility-by-11 style mistake); &#x27;cannot be determined&#x27; overlooks that the digit set is unchanged.</p>
+<p><strong>5. (D)</strong> The five smallest distinct odd numbers are 1, 3, 5, 7, 9, summing to 25. Five odds (an odd count) always give an odd total, and 25 is odd as required. Using 1+3+5 = 9 only counts three numbers; using the first five whole numbers 1+2+3+4+5 = 15 wrongly includes evens.</p>
+<p><strong>6. (C)</strong> For divisibility by 9 the digit-sum must be a multiple of 9. So far 7+3+1 = 11; adding the units digit d must reach the next multiple of 9, which is 18, giving d = 7 (sum 18). The next multiple, 27, would need d = 16, impossible. Choosing 0 (keeping sum 11) or 9 (sum 20) fails the rule; 8 gives sum 19, not a multiple of 9.</p>
+<p><strong>7. (A)</strong> A product is odd only when every factor is odd; a single even factor introduces a factor of 2 and makes the product even. So all three must be odd. &#x27;Exactly one is odd&#x27; or &#x27;exactly two are odd&#x27; would each include at least one even number, forcing an even product.</p>
+<p><strong>8. (D)</strong> A number is divisible by 3 exactly when its digit-sum is a multiple of 3 — that is the divisibility rule for 3. So &#x27;digit-sum is a multiple of 3&#x27; and &#x27;the number is a multiple of 3&#x27; are the SAME condition. There can be no number satisfying one but not the other, giving 0. Counting the multiples of 3 (33 of them) or some subset is the trap; the two conditions are identical.</p>
+<p><strong>9. (C)</strong> Alternating sum (units − tens + hundreds − thousands) for 8195: 5 − 9 + 1 − 8 = −11, a multiple of 11, so divisible. For 8196: 6 − 9 + 1 − 8 = −10. For 8159: 9 − 5 + 1 − 8 = −3. For 8519: 9 − 1 + 5 − 8 = 5. Only 8195 gives a multiple of 11. Adding the digits straight (which tests for 9, not 11) is the trap.</p>
+<p><strong>10. (B)</strong> An odd product forces both factors odd. Two odd numbers also sum to an even total (odd + odd = even), so both conditions hold simultaneously. Both even would give an even product; one odd and one even gives an odd sum and an even product — neither matches. The pair certainly exists (e.g. 3 and 5).</p>
+<p><strong>11. (C)</strong> The sum 1+2+...+n equals n(n+1)/2. Its parity is odd exactly when n is 1 or 2 less than a multiple of 4, i.e. n ≡ 1 or 2 (mod 4). Check: n=5 -&gt; 15 odd (ok); n=6 -&gt; 21 odd (ok); n=9 -&gt; 45 odd (ok); n=8 -&gt; 36 even. So n = 8 cannot give an odd total. Picking 5, 6 or 9 ignores that those all DO give odd sums.</p>
+<p><strong>12. (A)</strong> Call the terms a, b, a+b, a+2b, 2a+3b (this is the 5th term) = 30, and the 7th term is 5a+8b = 78. From 2a+3b = 30 and 5a+8b = 78: multiply the first by 8 and the second by 3 -&gt; 16a+24b = 240 and 15a+24b = 234; subtract -&gt; a = 6. The 1st term is 6. Mis-tracking which combination is the 5th vs 7th term yields 3, 9 or 12.</p>
+<p><strong>13. (B)</strong> Listing units digits term by term: T1..T24 give 1,1,2,3,5,8,3,1,4,5,9,4,3,7,0,7,7,4,1,5,6,1,7,8. The 24th entry is 8. Stopping one early lands on 7 (the 23rd) or reading the 22nd gives 1; 6 is the 21st. Careful index counting confirms 8.</p>
+<p><strong>14. (B)</strong> The 8th term equals the 6th plus the 7th: 84 = 32 + (7th), so the 7th term is 52. Halving 84 to get 42, or halving the difference, are the traps; the rule is strictly term7 = term8 − term6.</p>
+<p><strong>15. (D)</strong> This is the sum of the first 10 terms, so it equals the 12th term minus 1. The 12th term is 144, so the sum is 143. Forgetting the &#x27;−1&#x27; gives 144; using the 11th term (89) path mis-shifts the index.</p>
+<p><strong>16. (C)</strong> Work backwards with earlier = later − the term after it. The term before 89 is 144 − 89 = 55. The term before 55 is 89 − 55 = 34. The term before 34 is 55 − 34 = 21. So three places before 89 is 21. Stopping one step early lands on 34, and going one too far reaches 13.</p>
+<p><strong>17. (B)</strong> Parity repeats every 3 terms as O,O,E. Term 50: 50 = 3×16 + 2, so it is the 2nd in a block, which is O (odd). Positions that are multiples of 3 are the even ones; 50 is not a multiple of 3, so it is odd. Assuming a simple O,E alternation is the trap.</p>
+<p><strong>18. (B)</strong> Even terms occur exactly at positions that are multiples of 3 (the parity pattern is O,O,E repeating). Among positions 1 to 30, the multiples of 3 are 3,6,9,...,30 — that is 30/3 = 10 of them. So 10 terms are even. Halving 30 to get 15 forgets that only one in three is even; off-by-one counting gives 9 or 11.</p>
+<p><strong>19. (A)</strong> The terms are a, b, a+b, a+2b, so the 4th term is a + 2b = 19. With a, b positive whole numbers and a &lt; b: b can be 1..9 but a = 19 − 2b must be positive and less than b. Try b=7 -&gt; a=5 (5&lt;7 ok); b=8 -&gt; a=3 (ok); b=9 -&gt; a=1 (ok); b=6 -&gt; a=7 (7&lt;6 false); b=10 -&gt; a=−1 (invalid). So 3 pairs: (5,7),(3,8),(1,9). Missing the a&lt;b condition or the positivity bound gives 2 or 4.</p>
+<p><strong>20. (D)</strong> The number of tilings of length n follows the rule (length n) = (length n−1) + (length n−2), because the last tile is either a 1-beat (leaving n−1) or a 2-beat (leaving n−2). So length 11 = 89 + 55 = 144. Adding incorrectly or doubling 89 to 178 are the traps.</p>
+<p><strong>21. (A)</strong> Each step multiplies by about 1.618. From the 8th to the 12th term is 4 steps, so the factor is about 1.618^4 ≈ 6.85, i.e. roughly 6.9. (Check with actual terms: 8th = 21, 12th = 144; 144/21 ≈ 6.86.) Using one factor of 1.618 ignores that there are 4 steps; multiplying 1.6 by 4 to get &#x27;4 times&#x27; confuses adding and multiplying.</p>
+<p><strong>22. (A)</strong> If two consecutive terms are both multiples of 4, their sum is also a multiple of 4, so the property never breaks. Starting 4, 4 keeps every later term divisible by 4 (4,4,8,12,20,32,...). Hence no term escapes. Guessing the 3rd, 5th or 8th term ignores that divisibility by 4 is inherited through the addition rule.</p>
+<p><strong>23. (B)</strong> A call of k means k taller children stand ahead. The kth child (position k, counting from 1) calls k−1, meaning EVERY one of the k−1 children ahead is taller. For this to hold for all positions, each child must be taller than the one behind, i.e. heights decrease from front to back (tallest at front). Reversing this reasoning gives the &#x27;increase&#x27; trap; equal heights would make every call 0.</p>
+<p><strong>24. (D)</strong> The back child has 7 children ahead, so at most 7 of them can be taller; the maximum call is 7. Saying 8 forgets that the child does not count itself; saying 6 or 5 undercounts the children ahead.</p>
+<p><strong>25. (A)</strong> Position k allows a maximum call of k−1 (only the k−1 children ahead can be taller). Position 3 may call at most 2, but it called 3 — impossible. Position 2 (max 1) called 1: fine. Position 4 (max 3) called 2: fine. Position 5 (max 4) called 1: fine. Only the 3rd child exceeds its bound.</p>
+<p><strong>26. (D)</strong> The 2nd child calls 1, meaning exactly one child AHEAD (the 1st) is taller. But could children behind also be taller? In the pattern 0,1,2,...,n−1 heights strictly decrease front to back, so everyone behind the 2nd child is shorter. Hence only the 1st child is taller than the 2nd — exactly 1. The call only counts those ahead, but the decreasing arrangement settles the rest. Answering 0 forgets the child ahead; &#x27;n−2&#x27; counts those behind as taller.</p>
+<p><strong>27. (D)</strong> Each child at position k calls a value from 0 to k−1, so the possible values overall are 0..5. Six distinct calls drawn from {0,1,2,3,4,5} must use every one of these six values exactly once, giving the set {0,1,2,3,4,5}. Including 6 exceeds the maximum (a child can call at most 5); repeating 0 breaks distinctness.</p>
+<p><strong>28. (C)</strong> A call of 0 means zero taller children stand AHEAD, i.e. that child is at least as tall as everyone in front of it. It need not be the overall tallest (someone behind could be taller) nor at the front (the 4th child can also call 0). Statements about children BEHIND are not constrained by the call.</p>
+<p><strong>29. (C)</strong> The tallest child has no one taller anywhere, so wherever it stands it must call 0 and every child behind that is taller-than-its-predecessors pattern must accommodate it. The 1st child always calls 0. For the tallest to be elsewhere, every child ahead of it would have to be shorter, yet positions 2,4,6 call 1 (one taller child ahead) — so the tallest sits ahead of those, at the front. Position 1 calling 0 with all later odd positions seeing exactly one taller child ahead is consistent only if the tallest is at the front. Assuming back or middle contradicts the calls.</p>
+<p><strong>30. (B)</strong> Each child&#x27;s call counts exactly the taller children standing ahead of it, so the TOTAL number of (ahead taller, this child) pairs is the sum of all calls: 0 + 1 + 2 + 1 = 4. This counts every inversion where a taller child precedes a shorter one. Summing only the nonzero distinct values (1+2 = 3) or the maximum (6 = all possible pairs) misses the correct tally.</p>
+<p><strong>31. (B)</strong> The total of all calls equals the number of pairs (front child taller than back child). The maximum occurs when heights decrease front to back, making EVERY pair count: the number of pairs among n children is n(n−1)/2. This equals 0+1+2+...+(n−1). Using n(n+1)/2 over-counts by including a child with itself; n−1 is just the back child&#x27;s maximum, not the total.</p>
+<p><strong>32. (A)</strong> The four edge-middle cells (top, bottom, left, right) are pairwise non-adjacent: no two of them share an edge — any two meet at most at a corner, which is a diagonal touch, not a shared edge. Each edge-middle has as its edge-neighbours only two corners and the centre. Put the four largest numbers 6, 7, 8, 9 in the four edge-middle cells and the five smallest numbers 1-5 in the four corners and the centre. Every edge-middle is then strictly greater than each of its neighbours (all of which are at most 5), so all four edge-middle cells are supercells at once, giving 4. The belief that the shared centre blocks more than two is mistaken — the centre need only be smaller than the surrounding edge-middles, which is easily arranged; answers 3 and 2 undercount for the same reason.</p>
+<p><strong>33. (B)</strong> To maximize the corner sum, place the four largest numbers 9, 8, 7, 6 in the corners: 9+8+7+6 = 30. The remaining 1–5 fill the edges and centre. Nothing forbids the four largest from all being corners. Using 9+8+7+5 = 29 or 9+8+6+5 = 28 fails to pick the top four; 24 picks 9+8+7 only.</p>
+<p><strong>34. (A)</strong> In any 3×3 magic square of 1–9 the centre is 5 and each main-diagonal pair of opposite corners sums to 2×5 = 10 (so the line through them with the centre totals 15). With the top-left = 2, the bottom-right = 10 − 2 = 8. Choosing 6 assumes corners pair to 8; choosing 4 or 9 ignores the fixed centre-5 relationship.</p>
+<p><strong>35. (C)</strong> Multiplying every cell by 3 multiplies each row&#x27;s sum by 3 as well, so the magic sum becomes 15 × 3 = 45. The square stays magic (all lines scale equally). Adding 3 to the sum gives 18 (confuses adding with multiplying); 135 multiplies by 9; 15 forgets the scaling entirely.</p>
+<p><strong>36. (C)</strong> The top row totals 18 and includes the corner 3, so the other two top-row cells sum to 18 − 3 = 15. (The left column and centre are extra context.) Subtracting from the wrong total (8 − 3 = 5, then 13) confuses row with column; 17 forgets to remove the corner.</p>
+<p><strong>37. (A)</strong> Each diagonal = (its two corners) + centre. Diagonal sums 15 and 21 include the centre 5 once each, so the four corners total (15 − 5) + (21 − 5) = 10 + 16 = 26. Adding the diagonals and subtracting 5 only once (15+21−5 = 31) or twice incorrectly gives 30 or other values.</p>
+<p><strong>38. (C)</strong> The nine numbers 1–9 total 45, and the three row sums add to 45. With two rows at 6 and 24, the third is 45 − 6 − 24 = 15. (6 = 1+2+3 and 24 = 7+8+9 are the only ways to hit those extremes, leaving 4+5+6 = 15.) Forgetting the total-45 constraint or mis-subtracting gives 14, 16 or 12.</p>
+<p><strong>39. (B)</strong> The three row sums add to 45, so their average is 15. The largest row sum is at least the average, i.e. at least 15, and 15 is achievable when all three rows equal 15 (as in a magic square). So the smallest the largest row can be is 15. Believing the rows must differ (forcing 16) ignores that equal rows are allowed; 14 is below the unavoidable average.</p>
+<p><strong>40. (A)</strong> The cell with the most edge-neighbours is the centre, which touches 4 cells. The value 1 is the smallest number, so every neighbour is larger; a supercell must be STRICTLY GREATER than all its neighbours, which 1 can never be. So 4 neighbours and never a supercell. Saying 1 can be a supercell contradicts its being the minimum; the centre has 4, not 2 or 3, neighbours.</p>
+<p><strong>41. (D)</strong> 9 is automatically a supercell wherever it sits (nothing is larger). For 8 to also be a supercell, none of 8&#x27;s neighbours may exceed it; the only number larger than 8 is 9, so 9 must not be a neighbour of 8 — they cannot share an edge (place them so they are non-adjacent, e.g. opposite corners). Putting 8 in the centre touches all cells including 9&#x27;s, killing its supercell status; same row often makes them adjacent.</p>
+<p><strong>42. (B)</strong> A 90° rotation turns each row into a column and each column into a row, so every line that summed to 15 still does; the two diagonals swap with each other and each still totals 15; the centre stays in the centre. Hence it remains magic. Rotation preserves all line-sums, so claims that diagonals break or the centre moves are false.</p>
+<p><strong>43. (D)</strong> The nine cells total 45 = (4 corners) + (4 edge-middles) + (centre). With edge-middles = 24 and centre = 5, the corners sum to 45 − 24 − 5 = 16. Forgetting to subtract the centre gives 45 − 24 = 21; subtracting the centre but not the edge-middles, or other slips, give 20 or 29.</p>
+<p><strong>44. (C)</strong> 9 -&gt; 28 -&gt; 14 -&gt; 7 -&gt; 22 -&gt; 11 -&gt; 34 -&gt; 17 -&gt; 52 -&gt; 26 -&gt; 13 -&gt; 40 -&gt; 20 -&gt; 10 -&gt; 5 -&gt; 16 -&gt; 8 -&gt; 4 -&gt; 2 -&gt; 1. Counting the arrows: that is 19 steps. Miscounting by including or excluding the final 1 gives 18 or 20.</p>
+<p><strong>45. (B)</strong> 15 -&gt; 46 -&gt; 23 -&gt; 70 -&gt; 35 -&gt; 106 -&gt; 53 -&gt; 160 -&gt; 80 -&gt; 40 -&gt; 20 -&gt; 10 -&gt; 5 -&gt; 16 -&gt; 8 -&gt; 4 -&gt; 2 -&gt; 1. The peak value is 160. Stopping at an earlier high point (106) or a later one gives the distractors; 160 is the true maximum.</p>
+<p><strong>46. (D)</strong> Step 1: 24 even, largest digit 4 -&gt; 20. Step 2: 20 even, largest digit 2 -&gt; 18. Step 3: 18 even, largest digit 8 -&gt; 10. Step 4: 10 even, largest digit 1 -&gt; 9. After 4 steps the value is 9. Stopping at step 3 (10) or miscounting digits gives 10 or 8.</p>
+<p><strong>47. (A)</strong> From 1 (odd): 3×1+1 = 4. From 4 (even): 2. From 2 (even): 1. So it loops 1 -&gt; 4 -&gt; 2 -&gt; 1 endlessly. It does not freeze at 1 (the 3n+1 rule still fires), never reaches 0 (you cannot halve down past 1), and does not grow unboundedly.</p>
+<p><strong>48. (A)</strong> 19 -&gt; 1²+9² = 1+81 = 82 -&gt; 8²+2² = 64+4 = 68 -&gt; 6²+8² = 36+64 = 100 -&gt; 1²+0²+0² = 1. Counting the arrows: 19-&gt;82-&gt;68-&gt;100-&gt;1 is 4 steps. Stopping at 100 (step 3) or overcounting gives the distractors.</p>
+<p><strong>49. (C)</strong> 6 is even, so halve: 6 -&gt; 3 -&gt; 10 -&gt; 5 -&gt; 16 -&gt; 8 -&gt; 4 -&gt; 2 -&gt; 1. Counting arrows gives 8 steps, and the first action on the even 6 is halving to 3. Tripling 6 would mean treating it as odd (wrong); miscounting the chain gives 7 or 9 steps.</p>
+<p><strong>50. (D)</strong> A 4-digit palindrome abba has last two digits &#x27;ba&#x27;, and divisibility by 4 depends on those last two digits being a multiple of 4. The number is 1001a + 110b. For divisibility by 4, consider the last two digits forming 10b + a (the value &#x27;ba&#x27;): need 10b + a ≡ 0 (mod 4), i.e. 2b + a ≡ 0 (mod 4). For each a (1..9) count valid b (0..9). a even: a=2,4,6,8 need 2b ≡ −a ≡ ... let&#x27;s count by 2b mod4 which is 0 if b even, 2 if b odd. Need 2b ≡ (−a) mod4. For a ≡0 mod4 (a=4,8): need 2b≡0 -&gt; b even (5 values each) = 10. For a ≡2 mod4 (a=2,6): need 2b≡2 -&gt; b odd (5 each) = 10. For a odd, a is odd so a mod4 is 1 or 3, but 2b is always even, so 2b+a is odd, never divisible by 4 — 0 solutions. Total = 10 + 10 = 20. Forgetting a cannot be 0 (it is the leading digit) or miscounting b parity gives 18 or 24.</p>
+<p><strong>51. (C)</strong> For abba, the digit-sum is 2a + 2b = 2(a+b); divisibility by 9 needs 2(a+b) a multiple of 9, so (a+b) must be a multiple of 9 (since 2 shares no factor 9), i.e. a+b = 9 or 18. To maximize, take a = 9; then b = 0 (sum 9) or b = 9 (sum 18). b = 9 gives 9999 (digit-sum 36, divisible by 9) — larger than 9909. So 9999. Stopping at a+b = 9 yields 9909; 9779 and 9889 fail the digit-sum-multiple-of-9 test.</p>
+<p><strong>52. (D)</strong> Let the number be 10t + u with digit-sum t + u; the condition 10t + u = 4(t + u) gives 6t = 3u, so u = 2t. Valid pairs: (t=1,u=2)-&gt;12, (t=2,u=4)-&gt;24, (t=3,u=6)-&gt;36, (t=4,u=8)-&gt;48; t=5 needs u=10 (impossible). The largest is 48 (check: 4×(4+8) = 48). Choosing 84 reverses the digits (84 = 4×12 is true but 84&#x27;s digit-sum is also 12, so 4×12 = 48 ≠ 84 — fails); 36 and 24 are valid but smaller.</p>
+<p><strong>53. (C)</strong> We need b = 2a with a from 1 to 9 (leading digit, nonzero) and b a single digit 0–9. a=1 -&gt; b=2 (121); a=2 -&gt; b=4 (242); a=3 -&gt; b=6 (363); a=4 -&gt; b=8 (484); a=5 -&gt; b=10 invalid. So 4 palindromes. Including a=0 (not allowed as leading digit) or a=5 over-counts to 5; missing one gives 3.</p>
+<p><strong>54. (D)</strong> Let the number be 10t + u; (10t+u) + (10u+t) = 11(t+u) = 88, so t+u = 8. Also |t − u| = 4. Solving t+u = 8 and t−u = 4 gives t = 6, u = 2 (or t = 2, u = 6). The two originals are 62 and 26; the larger is 62. Using a digit-difference of the wrong sign or sum gives 48, 53 or 71.</p>
+<p><strong>55. (B)</strong> A 4-digit palindrome in the 1000s has the form 1bb1 (first digit 1 forces last digit 1, and the two middle digits must match). The middle digit b runs 0 to 9, giving 1001, 1111, 1221, ..., 1991 — that is 10 years. Forgetting 1001 or 1991 as an endpoint gives 9 or 11.</p>
+<p><strong>56. (A)</strong> AB + BA = 11(A + B) = 110, so A + B = 10. With A and B each from 1 to 9: (1,9),(2,8),(3,7),(4,6),(6,4),(7,3),(8,2),(9,1) and (5,5). The distinctness rule removes (5,5), leaving 8 ordered pairs. Forgetting to drop (5,5) gives 9; counting only unordered pairs halves it to 4.</p>
+<p><strong>57. (D)</strong> A 3-digit palindrome aba has digit-sum 2a + b, whose parity equals the parity of b (since 2a is even). An even digit-sum needs b even: b in {0,2,4,6,8} = 5 choices, and a in {1,...,9} = 9 choices (leading digit nonzero). Total = 9 × 5 = 45. Using 10 choices for a (allowing 0) gives 50; using b odd gives the other 45 grouped wrongly.</p>
+<p><strong>58. (A)</strong> A 3-digit number is 100a + 10b + c; its reverse is 100c + 10b + a. The difference is 99a − 99c = 99(a − c), always a multiple of 99 (and hence of both 9 and 11). The single strongest correct statement is &#x27;a multiple of 99&#x27;. Saying only 9 or only 11 understates the guaranteed factor; 100 is not a factor.</p>
+<p><strong>59. (C)</strong> A 4-digit palindrome abba is always divisible by 11 (its alternating digit-sum a − b + b − a = 0). For divisibility by 9 the digit-sum 2(a+b) must be a multiple of 9, so a + b must be a multiple of 9. The smallest leading digit a = 1 needs b = 8 (a+b = 9), giving 1881. The smaller palindromes 1001 (a+b=1) and 1221 (a+b=3) fail the 9-rule; 9999 works but is far larger.</p>
+<p><strong>60. (C)</strong> Largest is 4321, smallest is 1234; difference 4321 − 1234 = 3087. Subtracting in the wrong column order (e.g. 4321 − 1243) gives the off-by distractors; careful subtraction confirms 3087.</p>
+</body>
+</html>
