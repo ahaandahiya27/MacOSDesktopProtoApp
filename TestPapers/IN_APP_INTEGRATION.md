@@ -4385,3 +4385,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch02_p5",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 2,
+            chapterTitle: "नित्यं पिबामः सुभाषितरसम् (Nityam Pibamah Subhashitarasam)",
+            displayTitle: "नित्यं पिबामः सुभाषितरसम् (Nityam Pibamah Subhashitarasam) — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch02_NityamPibamahSubhashitarasam_P5_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch02_NityamPibamahSubhashitarasam_P5_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch02_NityamPibamahSubhashitarasam_P5.html",
+            questionPaperPDF: "Sanskrit_Sch02_NityamPibamahSubhashitarasam_P5.pdf",
+            solvedGuideHTML: "Sanskrit_Sch02_NityamPibamahSubhashitarasam_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
