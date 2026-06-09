@@ -3773,3 +3773,88 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_mch01_p5",
+            subjectId: "maths_class7",
+            subjectName: "Maths",
+            chapterNumber: 1,
+            chapterTitle: "Large Numbers Around Us",
+            displayTitle: "Large Numbers Around Us — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch01_LargeNumbersAroundUs_P5_QuestionPaper.md",
+            solutionsMD: "Maths_Ch01_LargeNumbersAroundUs_P5_Solutions.md",
+            questionPaperHTML: "Maths_Ch01_LargeNumbersAroundUs_P5.html",
+            questionPaperPDF: "Maths_Ch01_LargeNumbersAroundUs_P5.pdf",
+            solvedGuideHTML: "Maths_Ch01_LargeNumbersAroundUs_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_mch02_p5",
+            subjectId: "maths_class7",
+            subjectName: "Maths",
+            chapterNumber: 2,
+            chapterTitle: "Arithmetic Expressions",
+            displayTitle: "Arithmetic Expressions — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch02_ArithmeticExpressions_P5_QuestionPaper.md",
+            solutionsMD: "Maths_Ch02_ArithmeticExpressions_P5_Solutions.md",
+            questionPaperHTML: "Maths_Ch02_ArithmeticExpressions_P5.html",
+            questionPaperPDF: "Maths_Ch02_ArithmeticExpressions_P5.pdf",
+            solvedGuideHTML: "Maths_Ch02_ArithmeticExpressions_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_mch03_p5",
+            subjectId: "maths_class7",
+            subjectName: "Maths",
+            chapterNumber: 3,
+            chapterTitle: "A Peek Beyond the Point",
+            displayTitle: "A Peek Beyond the Point — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch03_APeekBeyondThePoint_P5_QuestionPaper.md",
+            solutionsMD: "Maths_Ch03_APeekBeyondThePoint_P5_Solutions.md",
+            questionPaperHTML: "Maths_Ch03_APeekBeyondThePoint_P5.html",
+            questionPaperPDF: "Maths_Ch03_APeekBeyondThePoint_P5.pdf",
+            solvedGuideHTML: "Maths_Ch03_APeekBeyondThePoint_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_mch04_p5",
+            subjectId: "maths_class7",
+            subjectName: "Maths",
+            chapterNumber: 4,
+            chapterTitle: "Expressions Using Letter-Numbers",
+            displayTitle: "Expressions Using Letter-Numbers — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch04_ExpressionsUsingLetterNumbers_P5_QuestionPaper.md",
+            solutionsMD: "Maths_Ch04_ExpressionsUsingLetterNumbers_P5_Solutions.md",
+            questionPaperHTML: "Maths_Ch04_ExpressionsUsingLetterNumbers_P5.html",
+            questionPaperPDF: "Maths_Ch04_ExpressionsUsingLetterNumbers_P5.pdf",
+            solvedGuideHTML: "Maths_Ch04_ExpressionsUsingLetterNumbers_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_mch05_p5",
+            subjectId: "maths_class7",
+            subjectName: "Maths",
+            chapterNumber: 5,
+            chapterTitle: "Parallel and Intersecting Lines",
+            displayTitle: "Parallel and Intersecting Lines — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch05_ParallelAndIntersectingLines_P5_QuestionPaper.md",
+            solutionsMD: "Maths_Ch05_ParallelAndIntersectingLines_P5_Solutions.md",
+            questionPaperHTML: "Maths_Ch05_ParallelAndIntersectingLines_P5.html",
+            questionPaperPDF: "Maths_Ch05_ParallelAndIntersectingLines_P5.pdf",
+            solvedGuideHTML: "Maths_Ch05_ParallelAndIntersectingLines_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
