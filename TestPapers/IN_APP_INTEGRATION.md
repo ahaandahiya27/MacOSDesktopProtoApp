@@ -3705,3 +3705,71 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch16_p5",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 16,
+            chapterTitle: "Water: A Precious Resource",
+            displayTitle: "Water: A Precious Resource — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch16_WaterAPreciousResource_P5_QuestionPaper.md",
+            solutionsMD: "Science_Ch16_WaterAPreciousResource_P5_Solutions.md",
+            questionPaperHTML: "Science_Ch16_WaterAPreciousResource_P5.html",
+            questionPaperPDF: "Science_Ch16_WaterAPreciousResource_P5.pdf",
+            solvedGuideHTML: "Science_Ch16_WaterAPreciousResource_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch17_p5",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 17,
+            chapterTitle: "Forests: Our Lifeline",
+            displayTitle: "Forests: Our Lifeline — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch17_ForestOurLifeline_P5_QuestionPaper.md",
+            solutionsMD: "Science_Ch17_ForestOurLifeline_P5_Solutions.md",
+            questionPaperHTML: "Science_Ch17_ForestOurLifeline_P5.html",
+            questionPaperPDF: "Science_Ch17_ForestOurLifeline_P5.pdf",
+            solvedGuideHTML: "Science_Ch17_ForestOurLifeline_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch18_p5",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 18,
+            chapterTitle: "Wastewater Story",
+            displayTitle: "Wastewater Story — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch18_WastewaterStory_P5_QuestionPaper.md",
+            solutionsMD: "Science_Ch18_WastewaterStory_P5_Solutions.md",
+            questionPaperHTML: "Science_Ch18_WastewaterStory_P5.html",
+            questionPaperPDF: "Science_Ch18_WastewaterStory_P5.pdf",
+            solvedGuideHTML: "Science_Ch18_WastewaterStory_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch19_p5",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 19,
+            chapterTitle: "Earth, Moon and the Sun",
+            displayTitle: "Earth, Moon and the Sun — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch19_EarthMoonAndTheSun_P5_QuestionPaper.md",
+            solutionsMD: "Science_Ch19_EarthMoonAndTheSun_P5_Solutions.md",
+            questionPaperHTML: "Science_Ch19_EarthMoonAndTheSun_P5.html",
+            questionPaperPDF: "Science_Ch19_EarthMoonAndTheSun_P5.pdf",
+            solvedGuideHTML: "Science_Ch19_EarthMoonAndTheSun_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
