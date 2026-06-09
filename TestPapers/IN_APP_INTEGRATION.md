@@ -4028,3 +4028,54 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch01_p5",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 1,
+            chapterTitle: "Geographical Diversity of India",
+            displayTitle: "Geographical Diversity of India — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch01_GeographicalDiversityOfIndia_P5_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch01_GeographicalDiversityOfIndia_P5_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch01_GeographicalDiversityOfIndia_P5.html",
+            questionPaperPDF: "SocialScience_Ssch01_GeographicalDiversityOfIndia_P5.pdf",
+            solvedGuideHTML: "SocialScience_Ssch01_GeographicalDiversityOfIndia_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch02_p5",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 2,
+            chapterTitle: "Understanding the Weather",
+            displayTitle: "Understanding the Weather — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch02_UnderstandingTheWeather_P5_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch02_UnderstandingTheWeather_P5_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch02_UnderstandingTheWeather_P5.html",
+            questionPaperPDF: "SocialScience_Ssch02_UnderstandingTheWeather_P5.pdf",
+            solvedGuideHTML: "SocialScience_Ssch02_UnderstandingTheWeather_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch04_p5",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 4,
+            chapterTitle: "New Beginnings: Cities and States",
+            displayTitle: "New Beginnings: Cities and States — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch04_NewBeginningsCitiesAndStates_P5_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch04_NewBeginningsCitiesAndStates_P5_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch04_NewBeginningsCitiesAndStates_P5.html",
+            questionPaperPDF: "SocialScience_Ssch04_NewBeginningsCitiesAndStates_P5.pdf",
+            solvedGuideHTML: "SocialScience_Ssch04_NewBeginningsCitiesAndStates_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
