@@ -3195,3 +3195,88 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch01_p4",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 1,
+            chapterTitle: "वन्दे भारतमातरम् (Vande Bharatamataram)",
+            displayTitle: "वन्दे भारतमातरम् (Vande Bharatamataram) — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch01_VandeBharatamataram_P4_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch01_VandeBharatamataram_P4_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch01_VandeBharatamataram_P4.html",
+            questionPaperPDF: "Sanskrit_Sch01_VandeBharatamataram_P4.pdf",
+            solvedGuideHTML: "Sanskrit_Sch01_VandeBharatamataram_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch02_p4",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 2,
+            chapterTitle: "नित्यं पिबामः सुभाषितरसम् (Nityam Pibamah Subhashitarasam)",
+            displayTitle: "नित्यं पिबामः सुभाषितरसम् (Nityam Pibamah Subhashitarasam) — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch02_NityamPibamahSubhashitarasam_P4_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch02_NityamPibamahSubhashitarasam_P4_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch02_NityamPibamahSubhashitarasam_P4.html",
+            questionPaperPDF: "Sanskrit_Sch02_NityamPibamahSubhashitarasam_P4.pdf",
+            solvedGuideHTML: "Sanskrit_Sch02_NityamPibamahSubhashitarasam_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch03_p4",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 3,
+            chapterTitle: "मित्राय नमः (Mitraya Namah)",
+            displayTitle: "मित्राय नमः (Mitraya Namah) — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch03_MitrayaNamah_P4_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch03_MitrayaNamah_P4_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch03_MitrayaNamah_P4.html",
+            questionPaperPDF: "Sanskrit_Sch03_MitrayaNamah_P4.pdf",
+            solvedGuideHTML: "Sanskrit_Sch03_MitrayaNamah_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch04_p4",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 4,
+            chapterTitle: "न लभ्यते चेत् आम्लं द्राक्षाफलम् (The Fox and the Grapes)",
+            displayTitle: "न लभ्यते चेत् आम्लं द्राक्षाफलम् (The Fox and the Grapes) — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch04_TheFoxAndTheGrapes_P4_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch04_TheFoxAndTheGrapes_P4_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch04_TheFoxAndTheGrapes_P4.html",
+            questionPaperPDF: "Sanskrit_Sch04_TheFoxAndTheGrapes_P4.pdf",
+            solvedGuideHTML: "Sanskrit_Sch04_TheFoxAndTheGrapes_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch05_p4",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 5,
+            chapterTitle: "सेवा हि परमो धर्मः (Seva Hi Paramo Dharmah)",
+            displayTitle: "सेवा हि परमो धर्मः (Seva Hi Paramo Dharmah) — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch05_SevaHiParamoDharmah_P4_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch05_SevaHiParamoDharmah_P4_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch05_SevaHiParamoDharmah_P4.html",
+            questionPaperPDF: "Sanskrit_Sch05_SevaHiParamoDharmah_P4.pdf",
+            solvedGuideHTML: "Sanskrit_Sch05_SevaHiParamoDharmah_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
