@@ -3501,3 +3501,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch04_p5",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 4,
+            chapterTitle: "Heat",
+            displayTitle: "Heat — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch04_Heat_P5_QuestionPaper.md",
+            solutionsMD: "Science_Ch04_Heat_P5_Solutions.md",
+            questionPaperHTML: "Science_Ch04_Heat_P5.html",
+            questionPaperPDF: "Science_Ch04_Heat_P5.pdf",
+            solvedGuideHTML: "Science_Ch04_Heat_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
