@@ -4164,3 +4164,88 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch09_p5",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 9,
+            chapterTitle: "From the Rulers to the Ruled: Types of Governments",
+            displayTitle: "From the Rulers to the Ruled: Types of Governments — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch09_TypesOfGovernments_P5_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch09_TypesOfGovernments_P5_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch09_TypesOfGovernments_P5.html",
+            questionPaperPDF: "SocialScience_Ssch09_TypesOfGovernments_P5.pdf",
+            solvedGuideHTML: "SocialScience_Ssch09_TypesOfGovernments_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch10_p5",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 10,
+            chapterTitle: "The Constitution of India — An Introduction",
+            displayTitle: "The Constitution of India — An Introduction — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch10_TheConstitutionOfIndia_P5_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch10_TheConstitutionOfIndia_P5_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch10_TheConstitutionOfIndia_P5.html",
+            questionPaperPDF: "SocialScience_Ssch10_TheConstitutionOfIndia_P5.pdf",
+            solvedGuideHTML: "SocialScience_Ssch10_TheConstitutionOfIndia_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch11_p5",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 11,
+            chapterTitle: "From Barter to Money",
+            displayTitle: "From Barter to Money — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch11_FromBarterToMoney_P5_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch11_FromBarterToMoney_P5_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch11_FromBarterToMoney_P5.html",
+            questionPaperPDF: "SocialScience_Ssch11_FromBarterToMoney_P5.pdf",
+            solvedGuideHTML: "SocialScience_Ssch11_FromBarterToMoney_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch12_p5",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 12,
+            chapterTitle: "Understanding Markets",
+            displayTitle: "Understanding Markets — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch12_UnderstandingMarkets_P5_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch12_UnderstandingMarkets_P5_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch12_UnderstandingMarkets_P5.html",
+            questionPaperPDF: "SocialScience_Ssch12_UnderstandingMarkets_P5.pdf",
+            solvedGuideHTML: "SocialScience_Ssch12_UnderstandingMarkets_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch13_p5",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 13,
+            chapterTitle: "The Story of Indian Farming",
+            displayTitle: "The Story of Indian Farming — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch13_TheStoryOfIndianFarming_P5_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch13_TheStoryOfIndianFarming_P5_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch13_TheStoryOfIndianFarming_P5.html",
+            questionPaperPDF: "SocialScience_Ssch13_TheStoryOfIndianFarming_P5.pdf",
+            solvedGuideHTML: "SocialScience_Ssch13_TheStoryOfIndianFarming_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
