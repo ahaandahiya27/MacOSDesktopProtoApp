@@ -4436,3 +4436,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch05_p5",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 5,
+            chapterTitle: "सेवा हि परमो धर्मः (Seva Hi Paramo Dharmah)",
+            displayTitle: "सेवा हि परमो धर्मः (Seva Hi Paramo Dharmah) — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch05_SevaHiParamoDharmah_P5_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch05_SevaHiParamoDharmah_P5_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch05_SevaHiParamoDharmah_P5.html",
+            questionPaperPDF: "Sanskrit_Sch05_SevaHiParamoDharmah_P5.pdf",
+            solvedGuideHTML: "Sanskrit_Sch05_SevaHiParamoDharmah_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
