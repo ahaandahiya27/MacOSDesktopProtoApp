@@ -3280,3 +3280,88 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch06_p4",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 6,
+            chapterTitle: "क्रीडाम वयं श्लोकान्त्याक्षरीम् (Let Us Play Shloka-Antyakshari)",
+            displayTitle: "क्रीडाम वयं श्लोकान्त्याक्षरीम् (Let Us Play Shloka-Antyakshari) — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch06_KridamaVayamShlokantyaksharim_P4_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch06_KridamaVayamShlokantyaksharim_P4_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch06_KridamaVayamShlokantyaksharim_P4.html",
+            questionPaperPDF: "Sanskrit_Sch06_KridamaVayamShlokantyaksharim_P4.pdf",
+            solvedGuideHTML: "Sanskrit_Sch06_KridamaVayamShlokantyaksharim_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch07_p4",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 7,
+            chapterTitle: "ईशावास्यम् इदं सर्वम् (Ishavasyam Idam Sarvam)",
+            displayTitle: "ईशावास्यम् इदं सर्वम् (Ishavasyam Idam Sarvam) — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch07_IshavasyamIdamSarvam_P4_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch07_IshavasyamIdamSarvam_P4_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch07_IshavasyamIdamSarvam_P4.html",
+            questionPaperPDF: "Sanskrit_Sch07_IshavasyamIdamSarvam_P4.pdf",
+            solvedGuideHTML: "Sanskrit_Sch07_IshavasyamIdamSarvam_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch08_p4",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 8,
+            chapterTitle: "हितं मनोहारि च दुर्लभं वचः (Hitam Manohari cha Durlabham Vachah)",
+            displayTitle: "हितं मनोहारि च दुर्लभं वचः (Hitam Manohari cha Durlabham Vachah) — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch08_HitamManohariChaDurlabhamVachah_P4_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch08_HitamManohariChaDurlabhamVachah_P4_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch08_HitamManohariChaDurlabhamVachah_P4.html",
+            questionPaperPDF: "Sanskrit_Sch08_HitamManohariChaDurlabhamVachah_P4.pdf",
+            solvedGuideHTML: "Sanskrit_Sch08_HitamManohariChaDurlabhamVachah_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch09_p4",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 9,
+            chapterTitle: "अन्नाद् भवन्ति भूतानि (Annad Bhavanti Bhutani)",
+            displayTitle: "अन्नाद् भवन्ति भूतानि (Annad Bhavanti Bhutani) — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch09_AnnadBhavantiBhutani_P4_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch09_AnnadBhavantiBhutani_P4_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch09_AnnadBhavantiBhutani_P4.html",
+            questionPaperPDF: "Sanskrit_Sch09_AnnadBhavantiBhutani_P4.pdf",
+            solvedGuideHTML: "Sanskrit_Sch09_AnnadBhavantiBhutani_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch10_p4",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 10,
+            chapterTitle: "दशमः कः? (Dashamah Kah? - Who Is the Tenth?)",
+            displayTitle: "दशमः कः? (Dashamah Kah? - Who Is the Tenth?) — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch10_DashamahKah_P4_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch10_DashamahKah_P4_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch10_DashamahKah_P4.html",
+            questionPaperPDF: "Sanskrit_Sch10_DashamahKah_P4.pdf",
+            solvedGuideHTML: "Sanskrit_Sch10_DashamahKah_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
