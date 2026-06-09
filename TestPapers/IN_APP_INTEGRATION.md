@@ -3858,3 +3858,88 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_mch06_p5",
+            subjectId: "maths_class7",
+            subjectName: "Maths",
+            chapterNumber: 6,
+            chapterTitle: "Number Play",
+            displayTitle: "Number Play — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch06_NumberPlay_P5_QuestionPaper.md",
+            solutionsMD: "Maths_Ch06_NumberPlay_P5_Solutions.md",
+            questionPaperHTML: "Maths_Ch06_NumberPlay_P5.html",
+            questionPaperPDF: "Maths_Ch06_NumberPlay_P5.pdf",
+            solvedGuideHTML: "Maths_Ch06_NumberPlay_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_mch07_p5",
+            subjectId: "maths_class7",
+            subjectName: "Maths",
+            chapterNumber: 7,
+            chapterTitle: "A Tale of Three Intersecting Lines",
+            displayTitle: "A Tale of Three Intersecting Lines — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch07_ATaleOfThreeIntersectingLines_P5_QuestionPaper.md",
+            solutionsMD: "Maths_Ch07_ATaleOfThreeIntersectingLines_P5_Solutions.md",
+            questionPaperHTML: "Maths_Ch07_ATaleOfThreeIntersectingLines_P5.html",
+            questionPaperPDF: "Maths_Ch07_ATaleOfThreeIntersectingLines_P5.pdf",
+            solvedGuideHTML: "Maths_Ch07_ATaleOfThreeIntersectingLines_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_mch08_p5",
+            subjectId: "maths_class7",
+            subjectName: "Maths",
+            chapterNumber: 8,
+            chapterTitle: "Working with Fractions",
+            displayTitle: "Working with Fractions — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch08_WorkingWithFractions_P5_QuestionPaper.md",
+            solutionsMD: "Maths_Ch08_WorkingWithFractions_P5_Solutions.md",
+            questionPaperHTML: "Maths_Ch08_WorkingWithFractions_P5.html",
+            questionPaperPDF: "Maths_Ch08_WorkingWithFractions_P5.pdf",
+            solvedGuideHTML: "Maths_Ch08_WorkingWithFractions_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_mch09_p5",
+            subjectId: "maths_class7",
+            subjectName: "Maths",
+            chapterNumber: 9,
+            chapterTitle: "Geometric Twins",
+            displayTitle: "Geometric Twins — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch09_GeometricTwins_P5_QuestionPaper.md",
+            solutionsMD: "Maths_Ch09_GeometricTwins_P5_Solutions.md",
+            questionPaperHTML: "Maths_Ch09_GeometricTwins_P5.html",
+            questionPaperPDF: "Maths_Ch09_GeometricTwins_P5.pdf",
+            solvedGuideHTML: "Maths_Ch09_GeometricTwins_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_mch10_p5",
+            subjectId: "maths_class7",
+            subjectName: "Maths",
+            chapterNumber: 10,
+            chapterTitle: "Operations with Integers",
+            displayTitle: "Operations with Integers — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch10_OperationsWithIntegers_P5_QuestionPaper.md",
+            solutionsMD: "Maths_Ch10_OperationsWithIntegers_P5_Solutions.md",
+            questionPaperHTML: "Maths_Ch10_OperationsWithIntegers_P5.html",
+            questionPaperPDF: "Maths_Ch10_OperationsWithIntegers_P5.pdf",
+            solvedGuideHTML: "Maths_Ch10_OperationsWithIntegers_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
