@@ -2838,3 +2838,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_mch15_p4",
+            subjectId: "maths_class7",
+            subjectName: "Maths",
+            chapterNumber: 15,
+            chapterTitle: "Finding the Unknown",
+            displayTitle: "Finding the Unknown — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch15_FindingTheUnknown_P4_QuestionPaper.md",
+            solutionsMD: "Maths_Ch15_FindingTheUnknown_P4_Solutions.md",
+            questionPaperHTML: "Maths_Ch15_FindingTheUnknown_P4.html",
+            questionPaperPDF: "Maths_Ch15_FindingTheUnknown_P4.pdf",
+            solvedGuideHTML: "Maths_Ch15_FindingTheUnknown_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
