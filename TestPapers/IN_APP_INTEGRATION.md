@@ -2821,3 +2821,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_mch14_p4",
+            subjectId: "maths_class7",
+            subjectName: "Maths",
+            chapterNumber: 14,
+            chapterTitle: "Constructions and Tilings",
+            displayTitle: "Constructions and Tilings — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch14_ConstructionsAndTilings_P4_QuestionPaper.md",
+            solutionsMD: "Maths_Ch14_ConstructionsAndTilings_P4_Solutions.md",
+            questionPaperHTML: "Maths_Ch14_ConstructionsAndTilings_P4.html",
+            questionPaperPDF: "Maths_Ch14_ConstructionsAndTilings_P4.pdf",
+            solvedGuideHTML: "Maths_Ch14_ConstructionsAndTilings_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
