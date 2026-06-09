@@ -3586,3 +3586,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch09_p5",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 9,
+            chapterTitle: "Soil",
+            displayTitle: "Soil — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch09_Soil_P5_QuestionPaper.md",
+            solutionsMD: "Science_Ch09_Soil_P5_Solutions.md",
+            questionPaperHTML: "Science_Ch09_Soil_P5.html",
+            questionPaperPDF: "Science_Ch09_Soil_P5.pdf",
+            solvedGuideHTML: "Science_Ch09_Soil_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
