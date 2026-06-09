@@ -3467,3 +3467,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch02_p5",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 2,
+            chapterTitle: "Nutrition in Animals",
+            displayTitle: "Nutrition in Animals — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch02_NutritionInAnimals_P5_QuestionPaper.md",
+            solutionsMD: "Science_Ch02_NutritionInAnimals_P5_Solutions.md",
+            questionPaperHTML: "Science_Ch02_NutritionInAnimals_P5.html",
+            questionPaperPDF: "Science_Ch02_NutritionInAnimals_P5.pdf",
+            solvedGuideHTML: "Science_Ch02_NutritionInAnimals_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
