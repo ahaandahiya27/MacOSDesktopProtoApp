@@ -3569,3 +3569,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch08_p5",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 8,
+            chapterTitle: "Winds, Storms and Cyclones",
+            displayTitle: "Winds, Storms and Cyclones — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch08_WindsStormsAndCyclones_P5_QuestionPaper.md",
+            solutionsMD: "Science_Ch08_WindsStormsAndCyclones_P5_Solutions.md",
+            questionPaperHTML: "Science_Ch08_WindsStormsAndCyclones_P5.html",
+            questionPaperPDF: "Science_Ch08_WindsStormsAndCyclones_P5.pdf",
+            solvedGuideHTML: "Science_Ch08_WindsStormsAndCyclones_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
