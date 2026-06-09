@@ -3654,3 +3654,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch13_p5",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 13,
+            chapterTitle: "Motion and Time",
+            displayTitle: "Motion and Time — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch13_MotionAndTime_P5_QuestionPaper.md",
+            solutionsMD: "Science_Ch13_MotionAndTime_P5_Solutions.md",
+            questionPaperHTML: "Science_Ch13_MotionAndTime_P5.html",
+            questionPaperPDF: "Science_Ch13_MotionAndTime_P5.pdf",
+            solvedGuideHTML: "Science_Ch13_MotionAndTime_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
