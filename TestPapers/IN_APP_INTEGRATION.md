@@ -2804,3 +2804,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_maths_mch13_p4",
+            subjectId: "maths_class7",
+            subjectName: "Maths",
+            chapterNumber: 13,
+            chapterTitle: "Connecting the Dots",
+            displayTitle: "Connecting the Dots — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "Maths_Ch13_ConnectingTheDots_P4_QuestionPaper.md",
+            solutionsMD: "Maths_Ch13_ConnectingTheDots_P4_Solutions.md",
+            questionPaperHTML: "Maths_Ch13_ConnectingTheDots_P4.html",
+            questionPaperPDF: "Maths_Ch13_ConnectingTheDots_P4.pdf",
+            solvedGuideHTML: "Maths_Ch13_ConnectingTheDots_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
