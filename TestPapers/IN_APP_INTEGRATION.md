@@ -4538,3 +4538,88 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch11_p5",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 11,
+            chapterTitle: "द्वीपेषु रम्यः द्वीपोऽण्डमानः (The Andaman Islands)",
+            displayTitle: "द्वीपेषु रम्यः द्वीपोऽण्डमानः (The Andaman Islands) — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_P5_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_P5_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_P5.html",
+            questionPaperPDF: "Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_P5.pdf",
+            solvedGuideHTML: "Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch12_p5",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 12,
+            chapterTitle: "वीराङ्गना पन्नाधाया (Panna Dhai, the Brave)",
+            displayTitle: "वीराङ्गना पन्नाधाया (Panna Dhai, the Brave) — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch12_ViranganaPannadhaya_P5_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch12_ViranganaPannadhaya_P5_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch12_ViranganaPannadhaya_P5.html",
+            questionPaperPDF: "Sanskrit_Sch12_ViranganaPannadhaya_P5.pdf",
+            solvedGuideHTML: "Sanskrit_Sch12_ViranganaPannadhaya_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch13_p5",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 13,
+            chapterTitle: "वर्णमात्रा-परिचयः (Varna-Matra: Vowel Quantity)",
+            displayTitle: "वर्णमात्रा-परिचयः (Varna-Matra: Vowel Quantity) — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch13_VarnaMatraParichayah_P5_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch13_VarnaMatraParichayah_P5_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch13_VarnaMatraParichayah_P5.html",
+            questionPaperPDF: "Sanskrit_Sch13_VarnaMatraParichayah_P5.pdf",
+            solvedGuideHTML: "Sanskrit_Sch13_VarnaMatraParichayah_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch14_p5",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 14,
+            chapterTitle: "शब्दरूपाणि (Shabda-Rupani: Noun Declensions)",
+            displayTitle: "शब्दरूपाणि (Shabda-Rupani: Noun Declensions) — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch14_ShabdaRupani_P5_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch14_ShabdaRupani_P5_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch14_ShabdaRupani_P5.html",
+            questionPaperPDF: "Sanskrit_Sch14_ShabdaRupani_P5.pdf",
+            solvedGuideHTML: "Sanskrit_Sch14_ShabdaRupani_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch15_p5",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 15,
+            chapterTitle: "धातुरूपाणि (Dhatu-Rupani: Verb Conjugations)",
+            displayTitle: "धातुरूपाणि (Dhatu-Rupani: Verb Conjugations) — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "Sanskrit_Sch15_DhaturupaniVerbConjugations_P5_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch15_DhaturupaniVerbConjugations_P5_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch15_DhaturupaniVerbConjugations_P5.html",
+            questionPaperPDF: "Sanskrit_Sch15_DhaturupaniVerbConjugations_P5.pdf",
+            solvedGuideHTML: "Sanskrit_Sch15_DhaturupaniVerbConjugations_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
