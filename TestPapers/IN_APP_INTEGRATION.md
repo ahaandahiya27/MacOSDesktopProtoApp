@@ -2940,3 +2940,88 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch06_p4",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 6,
+            chapterTitle: "The Age of Reorganisation",
+            displayTitle: "The Age of Reorganisation — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch06_TheAgeOfReorganisation_P4_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch06_TheAgeOfReorganisation_P4_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch06_TheAgeOfReorganisation_P4.html",
+            questionPaperPDF: "SocialScience_Ssch06_TheAgeOfReorganisation_P4.pdf",
+            solvedGuideHTML: "SocialScience_Ssch06_TheAgeOfReorganisation_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch07_p4",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 7,
+            chapterTitle: "The Gupta Era: An Age of Tireless Creativity",
+            displayTitle: "The Gupta Era: An Age of Tireless Creativity — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch07_TheGuptaEra_P4_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch07_TheGuptaEra_P4_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch07_TheGuptaEra_P4.html",
+            questionPaperPDF: "SocialScience_Ssch07_TheGuptaEra_P4.pdf",
+            solvedGuideHTML: "SocialScience_Ssch07_TheGuptaEra_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch08_p4",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 8,
+            chapterTitle: "How the Land Becomes Sacred",
+            displayTitle: "How the Land Becomes Sacred — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch08_HowTheLandBecomesSacred_P4_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch08_HowTheLandBecomesSacred_P4_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch08_HowTheLandBecomesSacred_P4.html",
+            questionPaperPDF: "SocialScience_Ssch08_HowTheLandBecomesSacred_P4.pdf",
+            solvedGuideHTML: "SocialScience_Ssch08_HowTheLandBecomesSacred_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch09_p4",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 9,
+            chapterTitle: "From the Rulers to the Ruled: Types of Governments",
+            displayTitle: "From the Rulers to the Ruled: Types of Governments — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch09_TypesOfGovernments_P4_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch09_TypesOfGovernments_P4_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch09_TypesOfGovernments_P4.html",
+            questionPaperPDF: "SocialScience_Ssch09_TypesOfGovernments_P4.pdf",
+            solvedGuideHTML: "SocialScience_Ssch09_TypesOfGovernments_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch10_p4",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 10,
+            chapterTitle: "The Constitution of India — An Introduction",
+            displayTitle: "The Constitution of India — An Introduction — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch10_TheConstitutionOfIndia_P4_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch10_TheConstitutionOfIndia_P4_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch10_TheConstitutionOfIndia_P4.html",
+            questionPaperPDF: "SocialScience_Ssch10_TheConstitutionOfIndia_P4.pdf",
+            solvedGuideHTML: "SocialScience_Ssch10_TheConstitutionOfIndia_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
