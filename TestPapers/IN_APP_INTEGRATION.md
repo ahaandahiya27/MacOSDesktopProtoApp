@@ -4079,3 +4079,88 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch03_p5",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 3,
+            chapterTitle: "Climates of India",
+            displayTitle: "Climates of India — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch03_ClimatesOfIndia_P5_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch03_ClimatesOfIndia_P5_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch03_ClimatesOfIndia_P5.html",
+            questionPaperPDF: "SocialScience_Ssch03_ClimatesOfIndia_P5.pdf",
+            solvedGuideHTML: "SocialScience_Ssch03_ClimatesOfIndia_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch05_p5",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 5,
+            chapterTitle: "The Rise of Empires",
+            displayTitle: "The Rise of Empires — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch05_TheRiseOfEmpires_P5_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch05_TheRiseOfEmpires_P5_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch05_TheRiseOfEmpires_P5.html",
+            questionPaperPDF: "SocialScience_Ssch05_TheRiseOfEmpires_P5.pdf",
+            solvedGuideHTML: "SocialScience_Ssch05_TheRiseOfEmpires_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch06_p5",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 6,
+            chapterTitle: "The Age of Reorganisation",
+            displayTitle: "The Age of Reorganisation — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch06_TheAgeOfReorganisation_P5_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch06_TheAgeOfReorganisation_P5_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch06_TheAgeOfReorganisation_P5.html",
+            questionPaperPDF: "SocialScience_Ssch06_TheAgeOfReorganisation_P5.pdf",
+            solvedGuideHTML: "SocialScience_Ssch06_TheAgeOfReorganisation_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch07_p5",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 7,
+            chapterTitle: "The Gupta Era: An Age of Tireless Creativity",
+            displayTitle: "The Gupta Era: An Age of Tireless Creativity — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch07_TheGuptaEra_P5_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch07_TheGuptaEra_P5_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch07_TheGuptaEra_P5.html",
+            questionPaperPDF: "SocialScience_Ssch07_TheGuptaEra_P5.pdf",
+            solvedGuideHTML: "SocialScience_Ssch07_TheGuptaEra_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch08_p5",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 8,
+            chapterTitle: "How the Land Becomes Sacred",
+            displayTitle: "How the Land Becomes Sacred — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch08_HowTheLandBecomesSacred_P5_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch08_HowTheLandBecomesSacred_P5_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch08_HowTheLandBecomesSacred_P5.html",
+            questionPaperPDF: "SocialScience_Ssch08_HowTheLandBecomesSacred_P5.pdf",
+            solvedGuideHTML: "SocialScience_Ssch08_HowTheLandBecomesSacred_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
