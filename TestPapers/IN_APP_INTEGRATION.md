@@ -3450,3 +3450,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch01_p5",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 1,
+            chapterTitle: "Nutrition in Plants",
+            displayTitle: "Nutrition in Plants — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch01_NutritionInPlants_P5_QuestionPaper.md",
+            solutionsMD: "Science_Ch01_NutritionInPlants_P5_Solutions.md",
+            questionPaperHTML: "Science_Ch01_NutritionInPlants_P5.html",
+            questionPaperPDF: "Science_Ch01_NutritionInPlants_P5.pdf",
+            solvedGuideHTML: "Science_Ch01_NutritionInPlants_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
