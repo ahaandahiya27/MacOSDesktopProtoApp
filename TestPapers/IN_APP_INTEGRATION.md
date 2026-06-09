@@ -3025,3 +3025,88 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch11_p4",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 11,
+            chapterTitle: "From Barter to Money",
+            displayTitle: "From Barter to Money — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch11_FromBarterToMoney_P4_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch11_FromBarterToMoney_P4_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch11_FromBarterToMoney_P4.html",
+            questionPaperPDF: "SocialScience_Ssch11_FromBarterToMoney_P4.pdf",
+            solvedGuideHTML: "SocialScience_Ssch11_FromBarterToMoney_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch12_p4",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 12,
+            chapterTitle: "Understanding Markets",
+            displayTitle: "Understanding Markets — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch12_UnderstandingMarkets_P4_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch12_UnderstandingMarkets_P4_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch12_UnderstandingMarkets_P4.html",
+            questionPaperPDF: "SocialScience_Ssch12_UnderstandingMarkets_P4.pdf",
+            solvedGuideHTML: "SocialScience_Ssch12_UnderstandingMarkets_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch13_p4",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 13,
+            chapterTitle: "The Story of Indian Farming",
+            displayTitle: "The Story of Indian Farming — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch13_TheStoryOfIndianFarming_P4_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch13_TheStoryOfIndianFarming_P4_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch13_TheStoryOfIndianFarming_P4.html",
+            questionPaperPDF: "SocialScience_Ssch13_TheStoryOfIndianFarming_P4.pdf",
+            solvedGuideHTML: "SocialScience_Ssch13_TheStoryOfIndianFarming_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch14_p4",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 14,
+            chapterTitle: "India and Her Neighbours",
+            displayTitle: "India and Her Neighbours — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch14_IndiaAndHerNeighbours_P4_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch14_IndiaAndHerNeighbours_P4_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch14_IndiaAndHerNeighbours_P4.html",
+            questionPaperPDF: "SocialScience_Ssch14_IndiaAndHerNeighbours_P4.pdf",
+            solvedGuideHTML: "SocialScience_Ssch14_IndiaAndHerNeighbours_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch15_p4",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 15,
+            chapterTitle: "Empires and Kingdoms: 6th to 10th Centuries",
+            displayTitle: "Empires and Kingdoms: 6th to 10th Centuries — Paper 4 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch15_EmpiresAndKingdoms6thTo10thCenturies_P4_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch15_EmpiresAndKingdoms6thTo10thCenturies_P4_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch15_EmpiresAndKingdoms6thTo10thCenturies_P4.html",
+            questionPaperPDF: "SocialScience_Ssch15_EmpiresAndKingdoms6thTo10thCenturies_P4.pdf",
+            solvedGuideHTML: "SocialScience_Ssch15_EmpiresAndKingdoms6thTo10thCenturies_P4_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
