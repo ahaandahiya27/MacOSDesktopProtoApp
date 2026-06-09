@@ -3484,3 +3484,20 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_science_ch03_p5",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 3,
+            chapterTitle: "Fibre to Fabric",
+            displayTitle: "Fibre to Fabric — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "Science_Ch03_FibreToFabric_P5_QuestionPaper.md",
+            solutionsMD: "Science_Ch03_FibreToFabric_P5_Solutions.md",
+            questionPaperHTML: "Science_Ch03_FibreToFabric_P5.html",
+            questionPaperPDF: "Science_Ch03_FibreToFabric_P5.pdf",
+            solvedGuideHTML: "Science_Ch03_FibreToFabric_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
