@@ -4249,3 +4249,122 @@ All papers: `subjectId: "science_class7"`, `subjectName: "Science"`,
             suggestedTimeMinutes: 90
         ),
 ```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch14_p5",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 14,
+            chapterTitle: "India and Her Neighbours",
+            displayTitle: "India and Her Neighbours — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch14_IndiaAndHerNeighbours_P5_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch14_IndiaAndHerNeighbours_P5_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch14_IndiaAndHerNeighbours_P5.html",
+            questionPaperPDF: "SocialScience_Ssch14_IndiaAndHerNeighbours_P5.pdf",
+            solvedGuideHTML: "SocialScience_Ssch14_IndiaAndHerNeighbours_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch15_p5",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 15,
+            chapterTitle: "Empires and Kingdoms: 6th to 10th Centuries",
+            displayTitle: "Empires and Kingdoms: 6th to 10th Centuries — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch15_EmpiresAndKingdoms6thTo10thCenturies_P5_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch15_EmpiresAndKingdoms6thTo10thCenturies_P5_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch15_EmpiresAndKingdoms6thTo10thCenturies_P5.html",
+            questionPaperPDF: "SocialScience_Ssch15_EmpiresAndKingdoms6thTo10thCenturies_P5.pdf",
+            solvedGuideHTML: "SocialScience_Ssch15_EmpiresAndKingdoms6thTo10thCenturies_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch16_p5",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 16,
+            chapterTitle: "Turning Tides: 11th and 12th Centuries",
+            displayTitle: "Turning Tides: 11th and 12th Centuries — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch16_TurningTides11thAnd12thCenturies_P5_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch16_TurningTides11thAnd12thCenturies_P5_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch16_TurningTides11thAnd12thCenturies_P5.html",
+            questionPaperPDF: "SocialScience_Ssch16_TurningTides11thAnd12thCenturies_P5.pdf",
+            solvedGuideHTML: "SocialScience_Ssch16_TurningTides11thAnd12thCenturies_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch17_p5",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 17,
+            chapterTitle: "India, a Home to Many",
+            displayTitle: "India, a Home to Many — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch17_IndiaAHomeToMany_P5_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch17_IndiaAHomeToMany_P5_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch17_IndiaAHomeToMany_P5.html",
+            questionPaperPDF: "SocialScience_Ssch17_IndiaAHomeToMany_P5.pdf",
+            solvedGuideHTML: "SocialScience_Ssch17_IndiaAHomeToMany_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch18_p5",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 18,
+            chapterTitle: "The State, the Government, and You",
+            displayTitle: "The State, the Government, and You — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch18_TheStateTheGovernmentAndYou_P5_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch18_TheStateTheGovernmentAndYou_P5_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch18_TheStateTheGovernmentAndYou_P5.html",
+            questionPaperPDF: "SocialScience_Ssch18_TheStateTheGovernmentAndYou_P5.pdf",
+            solvedGuideHTML: "SocialScience_Ssch18_TheStateTheGovernmentAndYou_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch19_p5",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 19,
+            chapterTitle: "Infrastructure: Engine of India's Development",
+            displayTitle: "Infrastructure: Engine of India's Development — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch19_Infrastructure_P5_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch19_Infrastructure_P5_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch19_Infrastructure_P5.html",
+            questionPaperPDF: "SocialScience_Ssch19_Infrastructure_P5.pdf",
+            solvedGuideHTML: "SocialScience_Ssch19_Infrastructure_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
+
+```swift
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch20_p5",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 20,
+            chapterTitle: "Banks and the Magic of Finance",
+            displayTitle: "Banks and the Magic of Finance — Paper 5 — 60 MCQ Olympiad",
+            questionPaperMD: "SocialScience_Ssch20_BanksAndTheMagicOfFinance_P5_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch20_BanksAndTheMagicOfFinance_P5_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch20_BanksAndTheMagicOfFinance_P5.html",
+            questionPaperPDF: "SocialScience_Ssch20_BanksAndTheMagicOfFinance_P5.pdf",
+            solvedGuideHTML: "SocialScience_Ssch20_BanksAndTheMagicOfFinance_P5_SolvedGuide.html",
+            suggestedTimeMinutes: 90
+        ),
+```
