@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nityam Pibamah Subhashitarasam (Advanced) — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Nityam Pibamah Subhashitarasam (Advanced)<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">The five 'va' qualities are listed in the instrumental ('honoured BY ...'); विद्यया means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'to knowledge'</span></li>
+        <li class=""><span class="lab">B</span><span>'of knowledge'</span></li>
+        <li class="correct"><span class="lab">C</span><span>'by knowledge'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>'from knowledge'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>विद्यया means **'by knowledge'** (instrumental).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">The -या ending of विद्यया (from विद्या, an ā-stem) marks the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>instrumental ('by/with')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>dative ('to')</span></li>
+        <li class=""><span class="lab">C</span><span>ablative ('from')</span></li>
+        <li class=""><span class="lab">D</span><span>genitive ('of')</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The -या ending (from the ā-stem विद्या) marks the **instrumental ('by/with')**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">वपुषा ('by the body') is the instrumental of वपुस्, an irregular ____-stem noun.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>-आ stem</span></li>
+        <li class=""><span class="lab">B</span><span>-अ stem</span></li>
+        <li class=""><span class="lab">C</span><span>verb</span></li>
+        <li class="correct"><span class="lab">D</span><span>-उस् (consonant) stem</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>वपुषा ('by the body') is the instrumental of वपुस्, an irregular **-उस् (consonant) stem** noun.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">वस्त्रेण ('by dress') is the instrumental of वस्त्र, an a-stem neuter; the ending is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>-या</span></li>
+        <li class="correct"><span class="lab">B</span><span>-एण/-एन</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>-स्य</span></li>
+        <li class=""><span class="lab">D</span><span>-आय</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>वस्त्रेण (a-stem neuter) takes the instrumental ending **-एण/-एन**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">विनयेन means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'to humility'</span></li>
+        <li class="correct"><span class="lab">B</span><span>'by humility'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>'of humility'</span></li>
+        <li class=""><span class="lab">D</span><span>'from humility'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>विनयेन means **'by humility'**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">The five va-qualities, in the instrumental, are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>निद्रया, तन्द्रया, भयेन, क्रोधेन, आलस्येन</span></li>
+        <li class=""><span class="lab">B</span><span>जलेन, सत्येन, तपसा, ज्ञानेन</span></li>
+        <li class=""><span class="lab">C</span><span>चैत्रेण, वैशाखेन</span></li>
+        <li class="correct"><span class="lab">D</span><span>विद्यया, वपुषा, वाण्या, वस्त्रेण, विनयेन</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The five va-qualities, in the instrumental, are **विद्यया, वपुषा, वाण्या, वस्त्रेण, विनयेन**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">All five honouring words use the instrumental because the person is honoured ____ these qualities.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>BY / THROUGH</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>TO</span></li>
+        <li class=""><span class="lab">C</span><span>FROM</span></li>
+        <li class=""><span class="lab">D</span><span>OF</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>They use the instrumental because the person is honoured **BY / THROUGH** these qualities.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">हातव्याः (in षड् दोषाः हातव्याः) is a gerundive ('to-be-...') meaning:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'abandoned' (past)</span></li>
+        <li class=""><span class="lab">B</span><span>'abandoning now'</span></li>
+        <li class="correct"><span class="lab">C</span><span>'to be abandoned / given up'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>'he abandons'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>हातव्याः is a gerundive meaning **'to be abandoned / given up'**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">A gerundive (future passive participle) expresses:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>what SHOULD / MUST be done</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>what is happening now</span></li>
+        <li class=""><span class="lab">C</span><span>what happened</span></li>
+        <li class=""><span class="lab">D</span><span>a command to one person only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A gerundive (future passive participle) expresses **what SHOULD / MUST be done**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">The gerundive of कृ ('do'), 'to be done / ought to be done', is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>कृतवान्</span></li>
+        <li class=""><span class="lab">B</span><span>कर्तुम्</span></li>
+        <li class="correct"><span class="lab">C</span><span>कर्तव्य</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>करोति</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The gerundive of कृ is **कर्तव्य** ('to be done / ought to be done').</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">The gerundive of गम् ('go'), 'to be gone (to) / worth going to', is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>गत्वा</span></li>
+        <li class=""><span class="lab">B</span><span>गन्तुम्</span></li>
+        <li class=""><span class="lab">C</span><span>गतवान्</span></li>
+        <li class="correct"><span class="lab">D</span><span>गन्तव्य</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The gerundive of गम् is **गन्तव्य** ('to be gone to / worth going to').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">The gerundive of दृश् ('see'), 'to be seen / worth seeing', is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>दृष्ट्वा</span></li>
+        <li class="correct"><span class="lab">B</span><span>द्रष्टव्य</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>द्रष्टुम्</span></li>
+        <li class=""><span class="lab">D</span><span>दृष्टवान्</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The gerundive of दृश् is **द्रष्टव्य** ('to be seen / worth seeing').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">हातव्य, कर्तव्य and द्रष्टव्य all carry the gerundive suffix:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>-तुम्</span></li>
+        <li class=""><span class="lab">B</span><span>-त्वा</span></li>
+        <li class=""><span class="lab">C</span><span>-वत्</span></li>
+        <li class="correct"><span class="lab">D</span><span>-तव्य (also -अनीय / -य)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>हातव्य, कर्तव्य and द्रष्टव्य carry the gerundive suffix **-तव्य (also -अनीय / -य)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">षड् दोषाः हातव्याः means 'six faults are ____'.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>to be collected</span></li>
+        <li class="correct"><span class="lab">B</span><span>to be given up</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>praised</span></li>
+        <li class=""><span class="lab">D</span><span>sold</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>षड् दोषाः हातव्याः means 'six faults are **to be given up**'.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">The faults are to be given up by one who desires भूतिम्, that is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sleep</span></li>
+        <li class=""><span class="lab">B</span><span>enemies</span></li>
+        <li class="correct"><span class="lab">C</span><span>prosperity / well-being</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>laziness</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The faults are given up by one who desires भूतिम् — **prosperity / well-being**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">भूतिम् इच्छता ('by one desiring prosperity') uses इच्छता, the instrumental of the present participle, meaning:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>'by (the one) desiring'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>'to desire'</span></li>
+        <li class=""><span class="lab">C</span><span>'he desired'</span></li>
+        <li class=""><span class="lab">D</span><span>'desire!'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>इच्छता (instrumental of the present participle) means **'by (the one) desiring'**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">सुभाषितम् is grammatically:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>feminine</span></li>
+        <li class=""><span class="lab">B</span><span>masculine</span></li>
+        <li class="correct"><span class="lab">C</span><span>neuter (नपुंसकलिङ्ग), like ज्ञानम्</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>without gender</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>सुभाषितम् is **neuter (नपुंसकलिङ्ग), like ज्ञानम्**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">The nominative plural of the neuter सुभाषितम् is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>सुभाषितानि</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>सुभाषिताः</span></li>
+        <li class=""><span class="lab">C</span><span>सुभाषिता</span></li>
+        <li class=""><span class="lab">D</span><span>सुभाषितम्</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The neuter nominative plural is **सुभाषितानि**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">Writing सुभाषिताः for the plural is wrong because the -आः ending is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>singular</span></li>
+        <li class="correct"><span class="lab">B</span><span>masculine, not neuter (neuter plural is -आनि)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a verb ending</span></li>
+        <li class=""><span class="lab">D</span><span>feminine</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>सुभाषिताः is wrong because -आः is **masculine, not neuter** (neuter plural is -आनि).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">Like सुभाषितम्, the neuter ज्ञानम् ('knowledge') has the plural:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ज्ञानाः</span></li>
+        <li class=""><span class="lab">B</span><span>ज्ञाना</span></li>
+        <li class=""><span class="lab">C</span><span>ज्ञानम्</span></li>
+        <li class="correct"><span class="lab">D</span><span>ज्ञानानि</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Like सुभाषितम्, neuter ज्ञानम् has the plural **ज्ञानानि**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">सुभाषितम् = सु + भाषितम्, literally:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>'well-spoken' (a good saying)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>'badly spoken'</span></li>
+        <li class=""><span class="lab">C</span><span>'six faults'</span></li>
+        <li class=""><span class="lab">D</span><span>'a water-drop'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>सुभाषितम् = सु + भाषितम् = **'well-spoken' (a good saying)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">The प्रefix सु- means 'well/good'; its opposite दुर्- would give दुर्भाषितम्, meaning:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>well-spoken</span></li>
+        <li class=""><span class="lab">B</span><span>a good saying</span></li>
+        <li class=""><span class="lab">C</span><span>silence</span></li>
+        <li class="correct"><span class="lab">D</span><span>badly-spoken / harsh speech</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>दुर्भाषितम् (दुर् + भाषितम्) means **badly-spoken / harsh speech**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">सुभाषितरसम् (सुभाषित + रस) means the ____ of good sayings.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>enemy</span></li>
+        <li class="correct"><span class="lab">B</span><span>nectar / essence</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>fault</span></li>
+        <li class=""><span class="lab">D</span><span>clothing</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>सुभाषितरसम् means the **nectar / essence** of good sayings.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">नित्यं पिबामः सुभाषितरसम् means 'let us ____ drink the nectar of subhashitas'.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>never</span></li>
+        <li class=""><span class="lab">B</span><span>once</span></li>
+        <li class="correct"><span class="lab">C</span><span>daily / always (नित्यम्)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>sleepily</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>नित्यम् means **daily / always** — 'let us daily drink the nectar of subhashitas'.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">पिबामः ('let us drink', from पा) is a first-person plural; पा here is used:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>literally (drinking water)</span></li>
+        <li class="correct"><span class="lab">B</span><span>metaphorically ('drink in / imbibe' wisdom)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>as a past tense</span></li>
+        <li class=""><span class="lab">D</span><span>as a noun</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>पिबामः ... रसम् is used **metaphorically** ('drink in / imbibe' wisdom).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">How many 'va' (व) qualities honour a person?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>six</span></li>
+        <li class=""><span class="lab">B</span><span>three</span></li>
+        <li class="correct"><span class="lab">C</span><span>five (पञ्च)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>ten</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A person is honoured by **five (पञ्च)** 'va' qualities.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">How many faults (दोषाः) are to be given up?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>six (षट्/षड्)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>five</span></li>
+        <li class=""><span class="lab">C</span><span>ten</span></li>
+        <li class=""><span class="lab">D</span><span>two</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>**Six (षट्/षड्)** faults are to be given up.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">आलस्यम् and दीर्घसूत्रता are counted as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>one single fault</span></li>
+        <li class=""><span class="lab">B</span><span>both 'fear'</span></li>
+        <li class=""><span class="lab">C</span><span>both 'sleep'</span></li>
+        <li class="correct"><span class="lab">D</span><span>two DIFFERENT faults (general laziness vs delaying tasks)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>आलस्यम् and दीर्घसूत्रता are **two DIFFERENT faults** (general laziness vs delaying tasks).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">दीर्घसूत्रता (दीर्घ + सूत्र + ता) specifically means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>general laziness</span></li>
+        <li class=""><span class="lab">B</span><span>long life</span></li>
+        <li class=""><span class="lab">C</span><span>anger</span></li>
+        <li class="correct"><span class="lab">D</span><span>procrastination (drawing tasks out long)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>दीर्घसूत्रता (दीर्घ + सूत्र + ता) means **procrastination** (drawing tasks out long).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">आलस्यम् specifically means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>general laziness / inactivity</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>procrastination of specific tasks</span></li>
+        <li class=""><span class="lab">C</span><span>fear</span></li>
+        <li class=""><span class="lab">D</span><span>drowsiness</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>आलस्यम् means **general laziness / inactivity**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">निद्रा and तन्द्रा are also distinct: निद्रा is sleep and तन्द्रा is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>anger</span></li>
+        <li class=""><span class="lab">B</span><span>fear</span></li>
+        <li class="correct"><span class="lab">C</span><span>drowsiness / lethargy</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>procrastination</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>निद्रा is sleep; तन्द्रा is **drowsiness / lethargy**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">The six faults are: निद्रा, तन्द्रा, भयम्, क्रोधः, आलस्यम् and:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>विनय</span></li>
+        <li class="correct"><span class="lab">B</span><span>दीर्घसूत्रता</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>विद्या</span></li>
+        <li class=""><span class="lab">D</span><span>वस्त्र</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The sixth fault (after निद्रा, तन्द्रा, भयम्, क्रोधः, आलस्यम्) is **दीर्घसूत्रता**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">क्रोधः (anger) and भयम् (fear) are listed among the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>five honouring qualities</span></li>
+        <li class=""><span class="lab">B</span><span>twelve Sun-names</span></li>
+        <li class="correct"><span class="lab">C</span><span>six faults to abandon</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>rivers</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>क्रोधः and भयम् are listed among the **six faults to abandon**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">In the purification verse, the body (शरीरम्/गात्राणि) is cleaned by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>knowledge</span></li>
+        <li class="correct"><span class="lab">B</span><span>water (अद्भिः)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>anger</span></li>
+        <li class=""><span class="lab">D</span><span>sleep</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In the purification verse, the body is cleaned by **water (अद्भिः)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">The mind (मनः) is purified by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>water</span></li>
+        <li class=""><span class="lab">B</span><span>clothing</span></li>
+        <li class=""><span class="lab">C</span><span>fear</span></li>
+        <li class="correct"><span class="lab">D</span><span>truth (सत्येन)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The mind is purified by **truth (सत्येन)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">The intellect (बुद्धिः) is purified by:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>knowledge (ज्ञानेन)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>water</span></li>
+        <li class=""><span class="lab">C</span><span>sleep</span></li>
+        <li class=""><span class="lab">D</span><span>dress</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The intellect is purified by **knowledge (ज्ञानेन)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">ज्ञानेन ('by knowledge') in बुद्धिर्ज्ञानेन शुध्यति is in the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>instrumental (the means of purifying)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>dative</span></li>
+        <li class=""><span class="lab">C</span><span>ablative</span></li>
+        <li class=""><span class="lab">D</span><span>genitive</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>ज्ञानेन is in the **instrumental** (the means of purifying).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">The verse's point is that different things are cleaned by different ____.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>colours</span></li>
+        <li class="correct"><span class="lab">B</span><span>means (water, truth, knowledge)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>months</span></li>
+        <li class=""><span class="lab">D</span><span>numbers</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Different things are cleaned by different **means (water, truth, knowledge)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">Reading 'the intellect is cleaned by water' is wrong; the intellect is cleaned by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>water (जलेन)</span></li>
+        <li class=""><span class="lab">B</span><span>sleep</span></li>
+        <li class=""><span class="lab">C</span><span>clothing</span></li>
+        <li class="correct"><span class="lab">D</span><span>knowledge (ज्ञानेन)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The intellect is cleaned by **knowledge (ज्ञानेन)**, not water.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">विद्यया, वपुषा, ज्ञानेन and सत्येन are all in the same case, the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>dative</span></li>
+        <li class=""><span class="lab">B</span><span>accusative</span></li>
+        <li class="correct"><span class="lab">C</span><span>instrumental ('by')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>genitive</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>विद्यया, वपुषा, ज्ञानेन and सत्येन are all in the **instrumental ('by')**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">The chapter calls आलस्यम् the great ____ of those who wish to achieve.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>friend</span></li>
+        <li class=""><span class="lab">B</span><span>teacher</span></li>
+        <li class=""><span class="lab">C</span><span>nectar</span></li>
+        <li class="correct"><span class="lab">D</span><span>enemy (रिपुः)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The chapter calls आलस्यम् the great **enemy (रिपुः)** of those who wish to achieve.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">Which word-meaning pair is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>हातव्य = 'given up' (past)</span></li>
+        <li class=""><span class="lab">B</span><span>भूति = sleep</span></li>
+        <li class="correct"><span class="lab">C</span><span>हातव्य = 'to be given up'; भूति = prosperity</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>सुभाषितम् = a fault</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct pair: **हातव्य = 'to be given up'; भूति = prosperity**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">Which count is CORRECT?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>five va-qualities and six faults</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>six va-qualities and five faults</span></li>
+        <li class=""><span class="lab">C</span><span>ten and ten</span></li>
+        <li class=""><span class="lab">D</span><span>two and two</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct count: **five va-qualities and six faults**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">Which gender/plural is CORRECT for सुभाषितम्?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>masculine; plural सुभाषिताः</span></li>
+        <li class="correct"><span class="lab">B</span><span>neuter; plural सुभाषितानि</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>feminine; plural सुभाषिताः</span></li>
+        <li class=""><span class="lab">D</span><span>neuter; plural सुभाषिताः</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>सुभाषितम् is **neuter; plural सुभाषितानि**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">Which case statement is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>विद्यया = dative ('to knowledge')</span></li>
+        <li class="correct"><span class="lab">B</span><span>विद्यया = instrumental ('by knowledge')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>विद्यया = genitive</span></li>
+        <li class=""><span class="lab">D</span><span>विद्यया = nominative</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>**विद्यया = instrumental ('by knowledge')**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">Which fault-meaning pair is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>आलस्यम् = procrastination; दीर्घसूत्रता = laziness</span></li>
+        <li class=""><span class="lab">B</span><span>both = fear</span></li>
+        <li class=""><span class="lab">C</span><span>both = sleep</span></li>
+        <li class="correct"><span class="lab">D</span><span>आलस्यम् = laziness; दीर्घसूत्रता = procrastination</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct pair: **आलस्यम् = laziness; दीर्घसूत्रता = procrastination**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">Which purification pairing is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>बुद्धिः → water</span></li>
+        <li class=""><span class="lab">B</span><span>मनः → clothing</span></li>
+        <li class="correct"><span class="lab">C</span><span>बुद्धिः → ज्ञानेन (intellect by knowledge); गात्राणि → अद्भिः (body by water)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>शरीरम् → anger</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct pairing: **बुद्धिः → ज्ञानेन (intellect by knowledge); गात्राणि → अद्भिः (body by water)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">Which gerundive form is CORRECT?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>कृ → कर्तव्य ('to be done')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>कृ → कर्तुम् ('to be done')</span></li>
+        <li class=""><span class="lab">C</span><span>कृ → कृत्वा ('to be done')</span></li>
+        <li class=""><span class="lab">D</span><span>कृ → करोति ('to be done')</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct gerundive: **कृ → कर्तव्य ('to be done')**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">The instrumental विद्यया and the gerundive हातव्य respectively express:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the MEANS ('by knowledge') and an OBLIGATION ('to be given up')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the object and the subject</span></li>
+        <li class=""><span class="lab">C</span><span>the place and the time</span></li>
+        <li class=""><span class="lab">D</span><span>the past and the future tense</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>विद्यया and हातव्य express the **MEANS ('by knowledge') and an OBLIGATION ('to be given up')**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">'This book is to be read' (worth reading) would use the gerundive:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>पठित्वा</span></li>
+        <li class=""><span class="lab">B</span><span>पठितुम्</span></li>
+        <li class=""><span class="lab">C</span><span>पठति</span></li>
+        <li class="correct"><span class="lab">D</span><span>पठनीय / पठितव्य</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>'This book is to be read' uses the gerundive **पठनीय / पठितव्य**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">The five va-qualities (knowledge, body, speech, dress, humility) together teach that a person is honoured by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>wealth alone</span></li>
+        <li class=""><span class="lab">B</span><span>sleep</span></li>
+        <li class="correct"><span class="lab">C</span><span>a rounded set of inner and outer virtues</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>anger</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The five va-qualities teach that a person is honoured by **a rounded set of inner and outer virtues**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">The six faults (sleep, drowsiness, fear, anger, laziness, procrastination) are all:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>virtues to cultivate</span></li>
+        <li class="correct"><span class="lab">B</span><span>obstacles to success, to be abandoned</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>names of the Sun</span></li>
+        <li class=""><span class="lab">D</span><span>rivers</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The six faults are all **obstacles to success, to be abandoned**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">नित्यम् ('daily') in नित्यं पिबामः tells us the 'drinking' of wisdom should be:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a one-time event</span></li>
+        <li class=""><span class="lab">B</span><span>never done</span></li>
+        <li class="correct"><span class="lab">C</span><span>a daily, regular habit</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>done only when sad</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>नित्यम् ('daily') tells us the 'drinking' of wisdom should be **a daily, regular habit**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">The metaphor पिबामः ... रसम् ('we drink the nectar') compares subhashitas to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a heavy burden</span></li>
+        <li class=""><span class="lab">B</span><span>an enemy</span></li>
+        <li class=""><span class="lab">C</span><span>a fault</span></li>
+        <li class="correct"><span class="lab">D</span><span>a sweet, nourishing drink for the mind</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>पिबामः ... रसम् compares subhashitas to **a sweet, nourishing drink for the mind**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">सुभाषितानि (the plural) being neuter -आनि is parallel to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>नराः, देवाः (masculine plurals)</span></li>
+        <li class="correct"><span class="lab">B</span><span>ज्ञानानि, फलानि (other neuter plurals)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>नद्यः (feminine)</span></li>
+        <li class=""><span class="lab">D</span><span>a verb</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>सुभाषितानि (neuter -आनि) is parallel to **ज्ञानानि, फलानि (other neuter plurals)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">The chapter pairs its subhashitas with grammar lessons on:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>only the dative</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the instrumental, the gerundive (-तव्य), and neuter declension</span></li>
+        <li class=""><span class="lab">C</span><span>the six tastes</span></li>
+        <li class=""><span class="lab">D</span><span>ordinals only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The chapter pairs its subhashitas with lessons on **the instrumental, the gerundive (-तव्य), and neuter declension**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">The deeper message of the va-qualities + six-faults verses is to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>gather wealth</span></li>
+        <li class="correct"><span class="lab">B</span><span>cultivate virtues and abandon self-defeating habits</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>sleep more</span></li>
+        <li class=""><span class="lab">D</span><span>avoid all study</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The deeper message is to **cultivate virtues and abandon self-defeating habits**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">The single best summary of नित्यं पिबामः सुभाषितरसम् is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>let us daily imbibe the nectar of wise sayings</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>let us sleep daily</span></li>
+        <li class=""><span class="lab">C</span><span>wise sayings are useless</span></li>
+        <li class=""><span class="lab">D</span><span>drink water every day</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The best summary: **let us daily imbibe the nectar of wise sayings**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">The central theme of this chapter is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a fox and grapes</span></li>
+        <li class=""><span class="lab">B</span><span>banking</span></li>
+        <li class="correct"><span class="lab">C</span><span>subhashitas (wise sayings) on virtues, faults and self-improvement</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the rise of empires</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The central theme is **subhashitas (wise sayings) on virtues, faults and self-improvement**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">A student claims: 'सुभाषितम् is masculine (plural सुभाषिताः), and आलस्यम् = दीर्घसूत्रता.' The best correction is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the student is fully correct</span></li>
+        <li class=""><span class="lab">B</span><span>सुभाषितम् is neuter, but आलस्यम् = दीर्घसूत्रता</span></li>
+        <li class=""><span class="lab">C</span><span>सुभाषितम् is masculine, and the two faults differ</span></li>
+        <li class="correct"><span class="lab">D</span><span>सुभाषितम् is neuter (plural सुभाषितानि), and आलस्यम् (laziness) ≠ दीर्घसूत्रता (procrastination)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>सुभाषितम् is neuter (plural सुभाषितानि), and आलस्यम् (laziness) ≠ दीर्घसूत्रता (procrastination) — the student is wrong on both. --- *End of solutions. Maximum marks: 240.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>
