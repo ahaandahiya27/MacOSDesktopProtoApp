@@ -241,9 +241,14 @@ final class OlympiadExamHallTests: XCTestCase {
         // the first Sanskrit Advanced papers) = 37 advanced → 106 total.
         // 2026-06-11 (Wave 11): + Social Science Ssch06 (The Age of Reorganisation)
         // and Sanskrit Sch07/Sch08/Sch09/Sch10/Sch11/Sch12 = 44 advanced → 113 total.
+        // 2026-06-11 (Wave 12): + Sanskrit Sch01/Sch02/Sch03/Sch04/Sch05/Sch06 —
+        // wired the remaining on-disk Sanskrit Advanced triplets (Sanskrit now
+        // 15/15) = 50 advanced → 119 total.
+        // 2026-06-11 (Wave 13): + Science Ch12 (Reproduction in Plants) =
+        // 51 advanced → 120 total. Science now 15/19.
         let papers = OlympiadPaperRegistry.allPapers
-        XCTAssertEqual(papers.count, 113,
-                       "Expected 113 papers total. Got \(papers.count). Update this assertion when Paper 2 lands for a new chapter.")
+        XCTAssertEqual(papers.count, 120,
+                       "Expected 120 papers total. Got \(papers.count). Update this assertion when Paper 2 lands for a new chapter.")
     }
 
     func testFoundationTierIsTheDefault() {
@@ -263,10 +268,13 @@ final class OlympiadExamHallTests: XCTestCase {
         // rollout (2026-06-10) wired every on-disk Advanced triplet:
         // Maths Ch01–Ch15 (15), Science Ch01/Ch02/Ch03/Ch04/Ch05/Ch06/
         // Ch07/Ch08/Ch09/Ch10/Ch11/Ch13/Ch14/Ch15 (14), Social Science Ssch01–
-        // Ssch06 (6), Sanskrit Sch07–Sch15 (9) = 44.
+        // Ssch06 (6), Sanskrit Sch07–Sch15 (9) = 44. Wave 12 (2026-06-11) wired
+        // the remaining Sanskrit Sch01–Sch06 (6) → Sanskrit Sch01–Sch15 (15) = 50.
+        // Wave 13 (2026-06-11) wired Science Ch12 (Reproduction in Plants) →
+        // Science Ch01–Ch15 minus none gives 15, total 51.
         let advanced = OlympiadPaperRegistry.allPapers.filter { $0.tier == .advanced }
-        XCTAssertEqual(advanced.count, 44,
-                       "Expected 44 advanced-tier papers, got \(advanced.count)")
+        XCTAssertEqual(advanced.count, 51,
+                       "Expected 51 advanced-tier papers, got \(advanced.count)")
         let ids = Set(advanced.map { $0.id })
         XCTAssertEqual(ids, ["olympiad_science_ch01_advanced",
                              "olympiad_science_ch02_advanced",
@@ -279,6 +287,7 @@ final class OlympiadExamHallTests: XCTestCase {
                              "olympiad_science_ch09_advanced",
                              "olympiad_science_ch10_advanced",
                              "olympiad_science_ch11_advanced",
+                             "olympiad_science_ch12_advanced",
                              "olympiad_science_ch13_advanced",
                              "olympiad_science_ch14_advanced",
                              "olympiad_science_ch15_advanced",
@@ -303,6 +312,12 @@ final class OlympiadExamHallTests: XCTestCase {
                              "olympiad_socialscience_ssch04_advanced",
                              "olympiad_socialscience_ssch05_advanced",
                              "olympiad_socialscience_ssch06_advanced",
+                             "olympiad_sanskrit_sch01_advanced",
+                             "olympiad_sanskrit_sch02_advanced",
+                             "olympiad_sanskrit_sch03_advanced",
+                             "olympiad_sanskrit_sch04_advanced",
+                             "olympiad_sanskrit_sch05_advanced",
+                             "olympiad_sanskrit_sch06_advanced",
                              "olympiad_sanskrit_sch07_advanced",
                              "olympiad_sanskrit_sch08_advanced",
                              "olympiad_sanskrit_sch09_advanced",

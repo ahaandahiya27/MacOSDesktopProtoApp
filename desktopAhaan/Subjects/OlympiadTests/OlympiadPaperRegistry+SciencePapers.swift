@@ -491,6 +491,21 @@ extension OlympiadPaperRegistry {
             suggestedTimeMinutes: 90,
             solvedGuideHTML: "Science_Ch11_TransportationInAnimalsAndPlants_Advanced_SolvedGuide.html",
             tier: .advanced
+        ),
+        OlympiadPaper(
+            id: "olympiad_science_ch12_advanced",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 12,
+            chapterTitle: "Reproduction in Plants",
+            displayTitle: "Reproduction in Plants — Paper 2 (Advanced)",
+            questionPaperMD: "Science_Ch12_ReproductionInPlants_Advanced_QuestionPaper.md",
+            solutionsMD: "Science_Ch12_ReproductionInPlants_Advanced_Solutions.md",
+            questionPaperHTML: "Science_Ch12_ReproductionInPlants.html",
+            questionPaperPDF: "Science_Ch12_ReproductionInPlants.pdf",
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Science_Ch12_ReproductionInPlants_Advanced_SolvedGuide.html",
+            tier: .advanced
         )
     ]
 }
