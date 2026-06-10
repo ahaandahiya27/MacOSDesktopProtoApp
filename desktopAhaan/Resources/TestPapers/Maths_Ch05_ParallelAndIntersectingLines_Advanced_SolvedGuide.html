@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parallel And Intersecting Lines_Advanced — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Parallel And Intersecting Lines_Advanced<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">The complement of 35° is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>65°</span></li>
+        <li class="correct"><span class="lab">B</span><span>55°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>145°</span></li>
+        <li class=""><span class="lab">D</span><span>35°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Complement means "adds to 90°": 90° − 35° = 55°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">The supplement of 110° is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>110°</span></li>
+        <li class=""><span class="lab">B</span><span>90°</span></li>
+        <li class=""><span class="lab">C</span><span>20°</span></li>
+        <li class="correct"><span class="lab">D</span><span>70°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Supplement means "adds to 180°": 180° − 110° = 70°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">Two complementary angles are such that one is four times the other. The larger angle is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>72°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>18°</span></li>
+        <li class=""><span class="lab">C</span><span>144°</span></li>
+        <li class=""><span class="lab">D</span><span>36°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Let the angles be x and 4x; x + 4x = 90 → x = 18°, so the larger is 4 × 18 = 72°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">The supplement of an angle is three times the angle. The angle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>135°</span></li>
+        <li class=""><span class="lab">B</span><span>60°</span></li>
+        <li class="correct"><span class="lab">C</span><span>45°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>90°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>x + 3x = 180 → 4x = 180 → x = 45°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">An angle that equals its own complement measures:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>90°</span></li>
+        <li class="correct"><span class="lab">B</span><span>45°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>60°</span></li>
+        <li class=""><span class="lab">D</span><span>30°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>x + x = 90 → x = 45°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">An angle that equals its own supplement measures:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>45°</span></li>
+        <li class=""><span class="lab">B</span><span>180°</span></li>
+        <li class=""><span class="lab">C</span><span>60°</span></li>
+        <li class="correct"><span class="lab">D</span><span>90°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>x + x = 180 → x = 90°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">The complement of 1° is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>89°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>179°</span></li>
+        <li class=""><span class="lab">C</span><span>91°</span></li>
+        <li class=""><span class="lab">D</span><span>1°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>90° − 1° = 89°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">Two supplementary angles are in the ratio 2 : 3. The smaller angle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>108°</span></li>
+        <li class=""><span class="lab">B</span><span>36°</span></li>
+        <li class="correct"><span class="lab">C</span><span>72°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>60°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>2k + 3k = 180 → k = 36; the smaller is 2 × 36 = 72°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">For an angle of 50°, the supplement minus the complement equals:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>50°</span></li>
+        <li class="correct"><span class="lab">B</span><span>90°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>40°</span></li>
+        <li class=""><span class="lab">D</span><span>130°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Supplement = 130°, complement = 40°; 130° − 40° = 90°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">The complement of (90 − x)° is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>90°</span></li>
+        <li class=""><span class="lab">B</span><span>(90 + x)°</span></li>
+        <li class=""><span class="lab">C</span><span>x° more than a right angle</span></li>
+        <li class="correct"><span class="lab">D</span><span>x°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>90° − (90 − x)° = x°.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">Two angles form a linear pair; one is 65°. The other is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>115°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>25°</span></li>
+        <li class=""><span class="lab">C</span><span>65°</span></li>
+        <li class=""><span class="lab">D</span><span>295°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A linear pair sums to 180°: 180° − 65° = 115°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">Vertically opposite angles are always:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>supplementary</span></li>
+        <li class=""><span class="lab">B</span><span>complementary</span></li>
+        <li class="correct"><span class="lab">C</span><span>equal</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>right angles</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Vertically opposite angles are always equal.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">Two lines cross and one of the four angles is 40°. An angle adjacent to it measures:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>40°</span></li>
+        <li class="correct"><span class="lab">B</span><span>140°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>50°</span></li>
+        <li class=""><span class="lab">D</span><span>320°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An adjacent angle forms a linear pair with the 40° angle: 180° − 40° = 140°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">At a point on a straight line, three angles x, 2x and 3x are formed. The value of x is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>60°</span></li>
+        <li class=""><span class="lab">B</span><span>90°</span></li>
+        <li class=""><span class="lab">C</span><span>45°</span></li>
+        <li class="correct"><span class="lab">D</span><span>30°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>x + 2x + 3x = 180 → 6x = 180 → x = 30°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">The two angles of a linear pair are always:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>supplementary</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>equal</span></li>
+        <li class=""><span class="lab">C</span><span>complementary</span></li>
+        <li class=""><span class="lab">D</span><span>vertically opposite</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A linear pair always adds to 180°, i.e. the angles are supplementary.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">Two adjacent angles on a straight line are (2x + 10)° and (3x − 30)°. The value of x is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>50</span></li>
+        <li class=""><span class="lab">B</span><span>30</span></li>
+        <li class="correct"><span class="lab">C</span><span>40</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>20</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(2x + 10) + (3x − 30) = 180 → 5x − 20 = 180 → 5x = 200 → x = 40.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">Two lines intersect and one of the angles is 90°. The other three angles are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>45° each</span></li>
+        <li class="correct"><span class="lab">B</span><span>all 90°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>180° each</span></li>
+        <li class=""><span class="lab">D</span><span>30°, 60°, 90°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Intersecting lines with one right angle are perpendicular, so all four angles are 90°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">The angle vertically opposite to 123° measures:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>57°</span></li>
+        <li class=""><span class="lab">B</span><span>237°</span></li>
+        <li class=""><span class="lab">C</span><span>67°</span></li>
+        <li class="correct"><span class="lab">D</span><span>123°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Vertically opposite angles are equal, so it is 123°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">The angles around a single point add up to:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>360°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>180°</span></li>
+        <li class=""><span class="lab">C</span><span>90°</span></li>
+        <li class=""><span class="lab">D</span><span>270°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Angles around a point total 360°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">Three angles meeting at a point are 120°, 150° and x. Then x is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>30°</span></li>
+        <li class=""><span class="lab">B</span><span>60°</span></li>
+        <li class="correct"><span class="lab">C</span><span>90°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>120°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>120 + 150 + x = 360 → x = 90°.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">When two parallel lines are cut by a transversal, corresponding angles are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>supplementary</span></li>
+        <li class="correct"><span class="lab">B</span><span>equal</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>complementary</span></li>
+        <li class=""><span class="lab">D</span><span>reflex</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>With parallel lines, corresponding angles are equal.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">When two parallel lines are cut by a transversal, co-interior (same-side interior) angles are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>equal</span></li>
+        <li class=""><span class="lab">B</span><span>complementary</span></li>
+        <li class=""><span class="lab">C</span><span>vertically opposite</span></li>
+        <li class="correct"><span class="lab">D</span><span>supplementary</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Co-interior angles on parallel lines are supplementary (add to 180°).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">Two parallel lines are cut by a transversal; one angle is 70°. Its corresponding angle is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>70°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>110°</span></li>
+        <li class=""><span class="lab">C</span><span>20°</span></li>
+        <li class=""><span class="lab">D</span><span>35°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Corresponding angles on parallel lines are equal: 70°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">Two parallel lines are cut by a transversal; one alternate interior angle is 65°. The other is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>115°</span></li>
+        <li class=""><span class="lab">B</span><span>25°</span></li>
+        <li class="correct"><span class="lab">C</span><span>65°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>130°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Alternate interior angles on parallel lines are equal: 65°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">Two parallel lines are cut by a transversal; one co-interior angle is 110°. The other is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>110°</span></li>
+        <li class="correct"><span class="lab">B</span><span>70°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>250°</span></li>
+        <li class=""><span class="lab">D</span><span>90°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Co-interior angles are supplementary: 180° − 110° = 70°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">A transversal meets one of two parallel lines at 50°. The co-interior angle at the other line is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>50°</span></li>
+        <li class=""><span class="lab">B</span><span>40°</span></li>
+        <li class=""><span class="lab">C</span><span>100°</span></li>
+        <li class="correct"><span class="lab">D</span><span>130°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The co-interior angle is supplementary to the 50° angle: 180° − 50° = 130°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">Two parallel lines are cut by a transversal; one angle is 3x and its co-interior angle is 2x. Then x is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>36°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>60°</span></li>
+        <li class=""><span class="lab">C</span><span>90°</span></li>
+        <li class=""><span class="lab">D</span><span>18°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Co-interior angles add to 180°: 3x + 2x = 180 → x = 36°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">Alternate exterior angles are equal precisely when the two lines are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>perpendicular</span></li>
+        <li class=""><span class="lab">B</span><span>intersecting</span></li>
+        <li class="correct"><span class="lab">C</span><span>parallel</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>skew</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Alternate exterior angles are equal only when the lines are parallel.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">If a transversal makes a pair of corresponding angles equal, the two lines must be:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>perpendicular</span></li>
+        <li class="correct"><span class="lab">B</span><span>parallel</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>intersecting at 60°</span></li>
+        <li class=""><span class="lab">D</span><span>the same line</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Equal corresponding angles force the lines to be parallel.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">Two parallel lines cut by a transversal give alternate angles (x + 20)° and (2x − 40)°. Then x is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>20</span></li>
+        <li class=""><span class="lab">B</span><span>100</span></li>
+        <li class=""><span class="lab">C</span><span>80</span></li>
+        <li class="correct"><span class="lab">D</span><span>60</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Alternate angles are equal: x + 20 = 2x − 40 → x = 60.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">Two parallel lines cut by a transversal give co-interior angles (x + 30)° and (x − 10)°. Then x is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>80</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>70</span></li>
+        <li class=""><span class="lab">C</span><span>90</span></li>
+        <li class=""><span class="lab">D</span><span>100</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Co-interior angles are supplementary: (x + 30) + (x − 10) = 180 → 2x + 20 = 180 → x = 80.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">A transversal perpendicular to one of two parallel lines meets the other line at:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>45°</span></li>
+        <li class=""><span class="lab">B</span><span>60°</span></li>
+        <li class="correct"><span class="lab">C</span><span>90°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>30°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A line perpendicular to one of two parallels is perpendicular to the other too — 90°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">On two parallel lines a transversal makes a 45° angle. Its corresponding angle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>135°</span></li>
+        <li class="correct"><span class="lab">B</span><span>45°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>90°</span></li>
+        <li class=""><span class="lab">D</span><span>55°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Corresponding angles on parallel lines are equal: 45°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">Two parallel lines are cut by a transversal; one interior angle is 125°. Its co-interior angle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>125°</span></li>
+        <li class=""><span class="lab">B</span><span>65°</span></li>
+        <li class=""><span class="lab">C</span><span>35°</span></li>
+        <li class="correct"><span class="lab">D</span><span>55°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Co-interior to a 125° angle: 180° − 125° = 55°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">Two lines are cut by a transversal and a pair of co-interior angles sums to 170°. The lines are:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>not parallel</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>parallel</span></li>
+        <li class=""><span class="lab">C</span><span>perpendicular</span></li>
+        <li class=""><span class="lab">D</span><span>the same line</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Parallel lines force co-interior angles to total 180°; 170° ≠ 180°, so the lines are not parallel.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">Lines AB and CD intersect at O with ∠AOC = 50°. The angle ∠BOD is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>130°</span></li>
+        <li class=""><span class="lab">B</span><span>40°</span></li>
+        <li class="correct"><span class="lab">C</span><span>50°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>90°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>∠BOD is vertically opposite ∠AOC, so it equals 50°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">For the same crossing (∠AOC = 50°), the angle ∠AOD is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>50°</span></li>
+        <li class="correct"><span class="lab">B</span><span>130°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>40°</span></li>
+        <li class=""><span class="lab">D</span><span>90°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>∠AOD forms a linear pair with ∠AOC: 180° − 50° = 130°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">Two complementary angles differ such that one is 12° more than the other. The larger angle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>39°</span></li>
+        <li class=""><span class="lab">B</span><span>78°</span></li>
+        <li class=""><span class="lab">C</span><span>45°</span></li>
+        <li class="correct"><span class="lab">D</span><span>51°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>x + (x + 12) = 90 → 2x = 78 → x = 39, so the larger is 39 + 12 = 51°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">The bisector of an 80° angle creates two angles, each measuring:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>40°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>80°</span></li>
+        <li class=""><span class="lab">C</span><span>160°</span></li>
+        <li class=""><span class="lab">D</span><span>20°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A bisector halves the angle: 80° ÷ 2 = 40° each.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">An angle whose supplement is 20° more than the angle itself measures:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>100°</span></li>
+        <li class=""><span class="lab">B</span><span>90°</span></li>
+        <li class="correct"><span class="lab">C</span><span>80°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>70°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>x + 20 is the supplement, so x + (x + 20) = 180 → 2x = 160 → x = 80°.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">Three equal angles lie along a straight line. Each measures:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>90°</span></li>
+        <li class="correct"><span class="lab">B</span><span>60°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>45°</span></li>
+        <li class=""><span class="lab">D</span><span>120°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>3 equal angles on a line: 180° ÷ 3 = 60° each.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">Two complementary angles differ by 30°. The larger is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>30°</span></li>
+        <li class=""><span class="lab">B</span><span>45°</span></li>
+        <li class=""><span class="lab">C</span><span>75°</span></li>
+        <li class="correct"><span class="lab">D</span><span>60°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>x + (x + 30) = 90? No — complementary means sum 90 and difference 30: the angles are 60° and 30°, so the larger is 60°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">On two parallel lines, the bisectors of a pair of co-interior angles meet at:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>90°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>45°</span></li>
+        <li class=""><span class="lab">C</span><span>60°</span></li>
+        <li class=""><span class="lab">D</span><span>180°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The bisectors of two supplementary co-interior angles meet at a right angle, 90°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">An angle that is seven times its complement measures:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>11.25°</span></li>
+        <li class=""><span class="lab">B</span><span>70°</span></li>
+        <li class="correct"><span class="lab">C</span><span>78.75°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>82°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>x = 7(90 − x) → x = 630 − 7x → 8x = 630 → x = 78.75°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">The reflex angle corresponding to 100° is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>80°</span></li>
+        <li class="correct"><span class="lab">B</span><span>260°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>200°</span></li>
+        <li class=""><span class="lab">D</span><span>280°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Reflex = 360° − 100° = 260°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">Two coplanar lines that never meet are called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>perpendicular</span></li>
+        <li class=""><span class="lab">B</span><span>intersecting</span></li>
+        <li class=""><span class="lab">C</span><span>concurrent</span></li>
+        <li class="correct"><span class="lab">D</span><span>parallel</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Coplanar lines that never meet are parallel.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">The angle between two perpendicular lines is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>90°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>180°</span></li>
+        <li class=""><span class="lab">C</span><span>45°</span></li>
+        <li class=""><span class="lab">D</span><span>0°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Perpendicular lines meet at 90°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">Vertically opposite angles are formed by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>two parallel lines</span></li>
+        <li class=""><span class="lab">B</span><span>a single ray</span></li>
+        <li class="correct"><span class="lab">C</span><span>two intersecting lines</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>three concurrent lines</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Vertically opposite angles arise where two lines intersect.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">An acute angle is one that is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>exactly 90°</span></li>
+        <li class="correct"><span class="lab">B</span><span>less than 90°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>between 90° and 180°</span></li>
+        <li class=""><span class="lab">D</span><span>exactly 180°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An acute angle is less than 90°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">An obtuse angle measures:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>less than 90°</span></li>
+        <li class=""><span class="lab">B</span><span>exactly 90°</span></li>
+        <li class=""><span class="lab">C</span><span>exactly 180°</span></li>
+        <li class="correct"><span class="lab">D</span><span>between 90° and 180°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An obtuse angle lies strictly between 90° and 180°.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">A straight angle measures:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>180°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>90°</span></li>
+        <li class=""><span class="lab">C</span><span>360°</span></li>
+        <li class=""><span class="lab">D</span><span>270°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A straight angle is 180°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">Two adjacent angles share:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only an interior</span></li>
+        <li class=""><span class="lab">B</span><span>nothing</span></li>
+        <li class="correct"><span class="lab">C</span><span>a common vertex and a common arm</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>two arms only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Adjacent angles share a common vertex and one common arm.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">Two angles whose measures add to 90° are called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>supplementary</span></li>
+        <li class="correct"><span class="lab">B</span><span>complementary</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>vertically opposite</span></li>
+        <li class=""><span class="lab">D</span><span>adjacent</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Angles summing to 90° are complementary.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">If a pair of corresponding angles made by a transversal are unequal, the two lines are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>parallel</span></li>
+        <li class=""><span class="lab">B</span><span>perpendicular</span></li>
+        <li class=""><span class="lab">C</span><span>equal in length</span></li>
+        <li class="correct"><span class="lab">D</span><span>not parallel</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Unequal corresponding angles mean the lines are not parallel.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">In one full rotation a ray turns through:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>360°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>180°</span></li>
+        <li class=""><span class="lab">C</span><span>90°</span></li>
+        <li class=""><span class="lab">D</span><span>720°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A full rotation is 360°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">Two parallel lines are cut by a transversal. The four interior angles together add up to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>180°</span></li>
+        <li class=""><span class="lab">B</span><span>540°</span></li>
+        <li class="correct"><span class="lab">C</span><span>360°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>720°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The four interior angles form two linear pairs (180° + 180°) = 360°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">The two angles of a linear pair are in the ratio 1 : 2. The larger angle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>60°</span></li>
+        <li class="correct"><span class="lab">B</span><span>120°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>90°</span></li>
+        <li class=""><span class="lab">D</span><span>100°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>k + 2k = 180 → k = 60; the larger is 2 × 60 = 120°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">An angle that is 24° more than its complement measures:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>33°</span></li>
+        <li class=""><span class="lab">B</span><span>66°</span></li>
+        <li class=""><span class="lab">C</span><span>48°</span></li>
+        <li class="correct"><span class="lab">D</span><span>57°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>x = (90 − x) + 24 → 2x = 114 → x = 57°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">Two adjacent angles on a straight line are 5x and 4x. The larger of the two is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>100°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>80°</span></li>
+        <li class=""><span class="lab">C</span><span>20°</span></li>
+        <li class=""><span class="lab">D</span><span>90°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>5x + 4x = 180 → 9x = 180 → x = 20; the larger is 5 × 20 = 100°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">The angle between the hands of a clock at exactly 3 o'clock is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>30°</span></li>
+        <li class=""><span class="lab">B</span><span>180°</span></li>
+        <li class="correct"><span class="lab">C</span><span>90°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>45°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>At 3 o'clock the hour and minute hands are 3 hours apart; each hour is 30°, so 3 × 30° = 90°. --- *End of solutions. Maximum marks: 240.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>
