@@ -64,7 +64,7 @@ Legend: ✅ Advanced triplet complete · ❌ missing · 🟡 in progress
 | Ch06 | Physical and Chemical Changes | ✅ |
 | Ch07 | Weather, Climate & Animal Adaptations | ✅ |
 | Ch08 | Winds, Storms and Cyclones | ✅ |
-| Ch09 | Soil | ❌ |
+| Ch09 | Soil | ✅ |
 | Ch10 | Respiration in Organisms | ✅ |
 | Ch11 | Transportation in Animals and Plants | ❌ |
 | Ch12 | Reproduction in Plants | ❌ |
@@ -82,7 +82,7 @@ Legend: ✅ Advanced triplet complete · ❌ missing · 🟡 in progress
 | Ssch01 | Geographical Diversity of India | ✅ |
 | Ssch02 | Understanding the Weather | ✅ |
 | Ssch03 | Climates of India | ✅ |
-| Ssch04 | New Beginnings: Cities and States | ❌ |
+| Ssch04 | New Beginnings: Cities and States | ✅ |
 | Ssch05 | The Rise of Empires | ❌ |
 | Ssch06 | The Age of Reorganisation | ❌ |
 | Ssch07 | The Gupta Era | ❌ |
@@ -156,5 +156,14 @@ Legend: ✅ Advanced triplet complete · ❌ missing · 🟡 in progress
   `tier: .advanced`, pbxproj regenerated, `OlympiadExamHallTests` → 99 papers /
   69 foundation + 30 advanced). Build + full XCTest GREEN. Coverage: Maths 15/15,
   Science 12/19, Social Science 3/20, Sanskrit 0/15.
+- **2026-06-11 (Wave 8):** **32 / 69** chapters — added Science Ch09 (Soil,
+  authored by a concurrent agent) and Social Science Ssch04 (New Beginnings:
+  Cities and States, authored this session: 60 beyond-grade MCQs on the Second
+  Urbanisation, janapadas → mahaajanapadas, monarchies vs gana-sangha republics,
+  punch-marked coins, varna/jaati, the great trade routes and iron metallurgy,
+  balanced 15/15/15/15 key). Both authored + integrated (registry
+  `tier: .advanced`, pbxproj regenerated, `OlympiadExamHallTests` → 101 papers /
+  69 foundation + 32 advanced). Build + full XCTest GREEN. Coverage: Maths 15/15,
+  Science 14/19, Social Science 4/20, Sanskrit 0/15.
 - Flip each cell to ✅ as its commit lands; update the headline count here and in
   `V8_NEXT10H_LEDGER.md`.

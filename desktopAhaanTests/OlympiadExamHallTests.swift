@@ -233,11 +233,11 @@ final class OlympiadExamHallTests: XCTestCase {
         // anchors) = 71.
         // 2026-06-10 (v8 Advanced rollout): all on-disk Advanced
         // triplets wired — Maths Ch01–Ch15 (15), Science Ch01/Ch02/Ch03/
-        // Ch04/Ch05/Ch06/Ch07/Ch08/Ch10/Ch13/Ch14/Ch15 (12), Social Science
-        // Ssch01/Ssch02/Ssch03 (3) = 30 advanced → 99 total (69 foundation + 30).
+        // Ch04/Ch05/Ch06/Ch07/Ch08/Ch09/Ch10/Ch13/Ch14/Ch15 (13), Social
+        // Science Ssch01/Ssch02/Ssch03/Ssch04 (4) = 32 advanced → 101 total (69 + 32).
         let papers = OlympiadPaperRegistry.allPapers
-        XCTAssertEqual(papers.count, 99,
-                       "Expected 99 papers total. Got \(papers.count). Update this assertion when Paper 2 lands for a new chapter.")
+        XCTAssertEqual(papers.count, 101,
+                       "Expected 101 papers total. Got \(papers.count). Update this assertion when Paper 2 lands for a new chapter.")
     }
 
     func testFoundationTierIsTheDefault() {
@@ -256,11 +256,11 @@ final class OlympiadExamHallTests: XCTestCase {
         // explicit opt-in). Anchors: Science Ch13 + Maths Ch15. The v8
         // rollout (2026-06-10) wired every on-disk Advanced triplet:
         // Maths Ch01–Ch15 (15), Science Ch01/Ch02/Ch03/Ch04/Ch05/Ch06/
-        // Ch07/Ch08/Ch10/Ch13/Ch14/Ch15 (12), Social Science Ssch01/Ssch02/
-        // Ssch03 (3) = 30.
+        // Ch07/Ch08/Ch09/Ch10/Ch13/Ch14/Ch15 (13), Social Science Ssch01/
+        // Ssch02/Ssch03/Ssch04 (4) = 32.
         let advanced = OlympiadPaperRegistry.allPapers.filter { $0.tier == .advanced }
-        XCTAssertEqual(advanced.count, 30,
-                       "Expected 30 advanced-tier papers, got \(advanced.count)")
+        XCTAssertEqual(advanced.count, 32,
+                       "Expected 32 advanced-tier papers, got \(advanced.count)")
         let ids = Set(advanced.map { $0.id })
         XCTAssertEqual(ids, ["olympiad_science_ch01_advanced",
                              "olympiad_science_ch02_advanced",
@@ -270,6 +270,7 @@ final class OlympiadExamHallTests: XCTestCase {
                              "olympiad_science_ch06_advanced",
                              "olympiad_science_ch07_advanced",
                              "olympiad_science_ch08_advanced",
+                             "olympiad_science_ch09_advanced",
                              "olympiad_science_ch10_advanced",
                              "olympiad_science_ch13_advanced",
                              "olympiad_science_ch14_advanced",
@@ -291,7 +292,8 @@ final class OlympiadExamHallTests: XCTestCase {
                              "olympiad_maths_ch15_advanced",
                              "olympiad_socialscience_ssch01_advanced",
                              "olympiad_socialscience_ssch02_advanced",
-                             "olympiad_socialscience_ssch03_advanced"])
+                             "olympiad_socialscience_ssch03_advanced",
+                             "olympiad_socialscience_ssch04_advanced"])
     }
 
     func testAdvancedPaperHasUniqueIdPerChapter() {

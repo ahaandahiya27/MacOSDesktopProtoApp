@@ -343,6 +343,21 @@ extension OlympiadPaperRegistry {
             tier: .advanced
         ),
         OlympiadPaper(
+            id: "olympiad_science_ch09_advanced",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 9,
+            chapterTitle: "Soil",
+            displayTitle: "Soil — Paper 2 (Advanced)",
+            questionPaperMD: "Science_Ch09_Soil_Advanced_QuestionPaper.md",
+            solutionsMD: "Science_Ch09_Soil_Advanced_Solutions.md",
+            questionPaperHTML: "Science_Ch09_Soil.html",
+            questionPaperPDF: "Science_Ch09_Soil.pdf",
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Science_Ch09_Soil_Advanced_SolvedGuide.html",
+            tier: .advanced
+        ),
+        OlympiadPaper(
             id: "olympiad_science_ch15_advanced",
             subjectId: "science_class7",
             subjectName: "Science",

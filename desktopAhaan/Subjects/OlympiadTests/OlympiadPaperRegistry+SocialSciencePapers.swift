@@ -335,6 +335,21 @@ extension OlympiadPaperRegistry {
             suggestedTimeMinutes: 90,
             solvedGuideHTML: "SocialScience_Ssch03_ClimatesOfIndia_Advanced_SolvedGuide.html",
             tier: .advanced
+        ),
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch04_advanced",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 4,
+            chapterTitle: "New Beginnings: Cities and States",
+            displayTitle: "New Beginnings: Cities and States — Paper 2 (Advanced)",
+            questionPaperMD: "SocialScience_Ssch04_NewBeginningsCitiesAndStates_Advanced_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch04_NewBeginningsCitiesAndStates_Advanced_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch04_NewBeginningsCitiesAndStates.html",
+            questionPaperPDF: "SocialScience_Ssch04_NewBeginningsCitiesAndStates.pdf",
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "SocialScience_Ssch04_NewBeginningsCitiesAndStates_Advanced_SolvedGuide.html",
+            tier: .advanced
         )
     ]
 }

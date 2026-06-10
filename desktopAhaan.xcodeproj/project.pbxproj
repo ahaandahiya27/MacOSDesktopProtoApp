@@ -1763,6 +1763,9 @@
 		08FB02951ADC1D2CB61F3B92 /* Science_Ch08_WindsStormsAndCyclones_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 3F5129844FD2628375DF5BEA /* Science_Ch08_WindsStormsAndCyclones_SolvedGuide.html */; };
 		C532C5911FAC756A9278068F /* Science_Ch09_Soil.html in Resources */ = {isa = PBXBuildFile; fileRef = A866369323001634B67F13D9 /* Science_Ch09_Soil.html */; };
 		00FAB38C9B93007716181607 /* Science_Ch09_Soil.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 99E3960731126E72B8F8F133 /* Science_Ch09_Soil.pdf */; };
+		F65FF34E01ABC266D3116EDB /* Science_Ch09_Soil_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 905E81858B6A91A481C9206C /* Science_Ch09_Soil_Advanced_QuestionPaper.md */; };
+		23FFBB01020486B59B263533 /* Science_Ch09_Soil_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 1E3994B75799F04D425EF132 /* Science_Ch09_Soil_Advanced_Solutions.md */; };
+		0A82B47DDAA6D3B48570664F /* Science_Ch09_Soil_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 77E101B358EB554C20C73FA4 /* Science_Ch09_Soil_Advanced_SolvedGuide.html */; };
 		9739F5CDD2EBA80733B6EFC6 /* Science_Ch09_Soil_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 2C7A7C0B860D7E1C87FAA5A2 /* Science_Ch09_Soil_QuestionPaper.md */; };
 		832BE956583C0E07299F8C31 /* Science_Ch09_Soil_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = C7FB96D7DE8873B2A751925A /* Science_Ch09_Soil_Solutions.md */; };
 		D209D3FE75A07E266EFF21CD /* Science_Ch09_Soil_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = E5A72DBABC0D281C66D4371F /* Science_Ch09_Soil_SolvedGuide.html */; };
@@ -1854,6 +1857,9 @@
 		DBFF3F1ACECAA386EADC7FDD /* SocialScience_Ssch03_ClimatesOfIndia_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = D66B9F3356A82B306324FF13 /* SocialScience_Ssch03_ClimatesOfIndia_SolvedGuide.html */; };
 		5BAC918B2D9AE35A2E542D46 /* SocialScience_Ssch04_NewBeginningsCitiesAndStates.html in Resources */ = {isa = PBXBuildFile; fileRef = AAB1E6155603E163C366220C /* SocialScience_Ssch04_NewBeginningsCitiesAndStates.html */; };
 		FCA7B53FF3EC1DC213B8F82A /* SocialScience_Ssch04_NewBeginningsCitiesAndStates.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 5058F957372F4067E9D79973 /* SocialScience_Ssch04_NewBeginningsCitiesAndStates.pdf */; };
+		D5DC76C98B61D3E580079B2E /* SocialScience_Ssch04_NewBeginningsCitiesAndStates_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = D90F647060660CE0467FD875 /* SocialScience_Ssch04_NewBeginningsCitiesAndStates_Advanced_QuestionPaper.md */; };
+		D0F7253FE4B94CAA5861924A /* SocialScience_Ssch04_NewBeginningsCitiesAndStates_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 0C3FFE6A41F35EE51874C963 /* SocialScience_Ssch04_NewBeginningsCitiesAndStates_Advanced_Solutions.md */; };
+		87D2ADA22B233FFBBF243EB3 /* SocialScience_Ssch04_NewBeginningsCitiesAndStates_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 858F6E321A60D72A6F205807 /* SocialScience_Ssch04_NewBeginningsCitiesAndStates_Advanced_SolvedGuide.html */; };
 		DBFEBEBCB4152953AA8C9962 /* SocialScience_Ssch04_NewBeginningsCitiesAndStates_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 1671E2EDC13EB8AEEB322B4F /* SocialScience_Ssch04_NewBeginningsCitiesAndStates_QuestionPaper.md */; };
 		E5138E31B63BF99576F8C731 /* SocialScience_Ssch04_NewBeginningsCitiesAndStates_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 83BCEF4E6E57957AC79AC351 /* SocialScience_Ssch04_NewBeginningsCitiesAndStates_Solutions.md */; };
 		133087C1ADF12A2778CFDBFE /* SocialScience_Ssch04_NewBeginningsCitiesAndStates_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 8987F486620DF2F8EEF9446B /* SocialScience_Ssch04_NewBeginningsCitiesAndStates_SolvedGuide.html */; };
@@ -3342,6 +3348,9 @@
 		3F5129844FD2628375DF5BEA /* Science_Ch08_WindsStormsAndCyclones_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch08_WindsStormsAndCyclones_SolvedGuide.html"; sourceTree = "<group>"; };
 		A866369323001634B67F13D9 /* Science_Ch09_Soil.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch09_Soil.html"; sourceTree = "<group>"; };
 		99E3960731126E72B8F8F133 /* Science_Ch09_Soil.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Science_Ch09_Soil.pdf"; sourceTree = "<group>"; };
+		905E81858B6A91A481C9206C /* Science_Ch09_Soil_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch09_Soil_Advanced_QuestionPaper.md"; sourceTree = "<group>"; };
+		1E3994B75799F04D425EF132 /* Science_Ch09_Soil_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch09_Soil_Advanced_Solutions.md"; sourceTree = "<group>"; };
+		77E101B358EB554C20C73FA4 /* Science_Ch09_Soil_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch09_Soil_Advanced_SolvedGuide.html"; sourceTree = "<group>"; };
 		2C7A7C0B860D7E1C87FAA5A2 /* Science_Ch09_Soil_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch09_Soil_QuestionPaper.md"; sourceTree = "<group>"; };
 		C7FB96D7DE8873B2A751925A /* Science_Ch09_Soil_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch09_Soil_Solutions.md"; sourceTree = "<group>"; };
 		E5A72DBABC0D281C66D4371F /* Science_Ch09_Soil_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch09_Soil_SolvedGuide.html"; sourceTree = "<group>"; };
@@ -3433,6 +3442,9 @@
 		D66B9F3356A82B306324FF13 /* SocialScience_Ssch03_ClimatesOfIndia_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "SocialScience_Ssch03_ClimatesOfIndia_SolvedGuide.html"; sourceTree = "<group>"; };
 		AAB1E6155603E163C366220C /* SocialScience_Ssch04_NewBeginningsCitiesAndStates.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "SocialScience_Ssch04_NewBeginningsCitiesAndStates.html"; sourceTree = "<group>"; };
 		5058F957372F4067E9D79973 /* SocialScience_Ssch04_NewBeginningsCitiesAndStates.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "SocialScience_Ssch04_NewBeginningsCitiesAndStates.pdf"; sourceTree = "<group>"; };
+		D90F647060660CE0467FD875 /* SocialScience_Ssch04_NewBeginningsCitiesAndStates_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SocialScience_Ssch04_NewBeginningsCitiesAndStates_Advanced_QuestionPaper.md"; sourceTree = "<group>"; };
+		0C3FFE6A41F35EE51874C963 /* SocialScience_Ssch04_NewBeginningsCitiesAndStates_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SocialScience_Ssch04_NewBeginningsCitiesAndStates_Advanced_Solutions.md"; sourceTree = "<group>"; };
+		858F6E321A60D72A6F205807 /* SocialScience_Ssch04_NewBeginningsCitiesAndStates_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "SocialScience_Ssch04_NewBeginningsCitiesAndStates_Advanced_SolvedGuide.html"; sourceTree = "<group>"; };
 		1671E2EDC13EB8AEEB322B4F /* SocialScience_Ssch04_NewBeginningsCitiesAndStates_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SocialScience_Ssch04_NewBeginningsCitiesAndStates_QuestionPaper.md"; sourceTree = "<group>"; };
 		83BCEF4E6E57957AC79AC351 /* SocialScience_Ssch04_NewBeginningsCitiesAndStates_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SocialScience_Ssch04_NewBeginningsCitiesAndStates_Solutions.md"; sourceTree = "<group>"; };
 		8987F486620DF2F8EEF9446B /* SocialScience_Ssch04_NewBeginningsCitiesAndStates_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "SocialScience_Ssch04_NewBeginningsCitiesAndStates_SolvedGuide.html"; sourceTree = "<group>"; };
@@ -6091,6 +6103,9 @@
 				3F5129844FD2628375DF5BEA,
 				A866369323001634B67F13D9,
 				99E3960731126E72B8F8F133,
+				905E81858B6A91A481C9206C,
+				1E3994B75799F04D425EF132,
+				77E101B358EB554C20C73FA4,
 				2C7A7C0B860D7E1C87FAA5A2,
 				C7FB96D7DE8873B2A751925A,
 				E5A72DBABC0D281C66D4371F,
@@ -6182,6 +6197,9 @@
 				D66B9F3356A82B306324FF13,
 				AAB1E6155603E163C366220C,
 				5058F957372F4067E9D79973,
+				D90F647060660CE0467FD875,
+				0C3FFE6A41F35EE51874C963,
+				858F6E321A60D72A6F205807,
 				1671E2EDC13EB8AEEB322B4F,
 				83BCEF4E6E57957AC79AC351,
 				8987F486620DF2F8EEF9446B,
@@ -8974,6 +8992,9 @@
 				08FB02951ADC1D2CB61F3B92 /* Science_Ch08_WindsStormsAndCyclones_SolvedGuide.html in Resources */,
 				C532C5911FAC756A9278068F /* Science_Ch09_Soil.html in Resources */,
 				00FAB38C9B93007716181607 /* Science_Ch09_Soil.pdf in Resources */,
+				F65FF34E01ABC266D3116EDB /* Science_Ch09_Soil_Advanced_QuestionPaper.md in Resources */,
+				23FFBB01020486B59B263533 /* Science_Ch09_Soil_Advanced_Solutions.md in Resources */,
+				0A82B47DDAA6D3B48570664F /* Science_Ch09_Soil_Advanced_SolvedGuide.html in Resources */,
 				9739F5CDD2EBA80733B6EFC6 /* Science_Ch09_Soil_QuestionPaper.md in Resources */,
 				832BE956583C0E07299F8C31 /* Science_Ch09_Soil_Solutions.md in Resources */,
 				D209D3FE75A07E266EFF21CD /* Science_Ch09_Soil_SolvedGuide.html in Resources */,
@@ -9065,6 +9086,9 @@
 				DBFF3F1ACECAA386EADC7FDD /* SocialScience_Ssch03_ClimatesOfIndia_SolvedGuide.html in Resources */,
 				5BAC918B2D9AE35A2E542D46 /* SocialScience_Ssch04_NewBeginningsCitiesAndStates.html in Resources */,
 				FCA7B53FF3EC1DC213B8F82A /* SocialScience_Ssch04_NewBeginningsCitiesAndStates.pdf in Resources */,
+				D5DC76C98B61D3E580079B2E /* SocialScience_Ssch04_NewBeginningsCitiesAndStates_Advanced_QuestionPaper.md in Resources */,
+				D0F7253FE4B94CAA5861924A /* SocialScience_Ssch04_NewBeginningsCitiesAndStates_Advanced_Solutions.md in Resources */,
+				87D2ADA22B233FFBBF243EB3 /* SocialScience_Ssch04_NewBeginningsCitiesAndStates_Advanced_SolvedGuide.html in Resources */,
 				DBFEBEBCB4152953AA8C9962 /* SocialScience_Ssch04_NewBeginningsCitiesAndStates_QuestionPaper.md in Resources */,
 				E5138E31B63BF99576F8C731 /* SocialScience_Ssch04_NewBeginningsCitiesAndStates_Solutions.md in Resources */,
 				133087C1ADF12A2778CFDBFE /* SocialScience_Ssch04_NewBeginningsCitiesAndStates_SolvedGuide.html in Resources */,
