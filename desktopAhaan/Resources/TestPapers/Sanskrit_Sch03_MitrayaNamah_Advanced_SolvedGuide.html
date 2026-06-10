@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mitraya Namah (Advanced) — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Mitraya Namah (Advanced)<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">नमः governs its object in the dative; so 'salutation to Mitra' is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>मित्रः नमः</span></li>
+        <li class=""><span class="lab">B</span><span>मित्रम् नमः</span></li>
+        <li class="correct"><span class="lab">C</span><span>मित्राय नमः</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>मित्रस्य नमः</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>नमः governs the dative, so 'salutation to Mitra' is **मित्राय नमः**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">The dative (चतुर्थी विभक्ति) generally means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>'to / for'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>'by / with'</span></li>
+        <li class=""><span class="lab">C</span><span>'of'</span></li>
+        <li class=""><span class="lab">D</span><span>'from'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The dative (चतुर्थी) generally means **'to / for'**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">The dative ending that turns the a-stem मित्र into मित्राय is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>-एन</span></li>
+        <li class=""><span class="lab">B</span><span>-स्य</span></li>
+        <li class=""><span class="lab">C</span><span>-अम्</span></li>
+        <li class="correct"><span class="lab">D</span><span>-आय</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The dative ending that turns the a-stem मित्र into मित्राय is **-आय**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">नमः सूर्यः is wrong because सूर्यः is nominative; the correct dative is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>सूर्यम्</span></li>
+        <li class="correct"><span class="lab">B</span><span>सूर्याय</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>सूर्येण</span></li>
+        <li class=""><span class="lab">D</span><span>सूर्यात्</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>नमः सूर्यः is wrong (nominative); the correct dative is **सूर्याय**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">'Salutation to Ravi' (रवि, an i-stem) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>रविः नमः</span></li>
+        <li class="correct"><span class="lab">B</span><span>रवये नमः</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>रविम् नमः</span></li>
+        <li class=""><span class="lab">D</span><span>रवेः नमः</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>'Salutation to Ravi' (i-stem) is **रवये नमः**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">'Salutation to the guru' (गुरु, a u-stem) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>गुरुः नमः</span></li>
+        <li class=""><span class="lab">B</span><span>गुरुम् नमः</span></li>
+        <li class=""><span class="lab">C</span><span>गुरोः नमः</span></li>
+        <li class="correct"><span class="lab">D</span><span>गुरवे नमः</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>'Salutation to the guru' (u-stem) is **गुरवे नमः**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">So the dative singular is -आय for a-stems, -ये for रवि, and ____ for गुरु.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>-वे (गुरवे)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>-आय (गुर्वाय)</span></li>
+        <li class=""><span class="lab">C</span><span>-स्य</span></li>
+        <li class=""><span class="lab">D</span><span>-एन</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The dative is -आय for a-stems, -ये for रवि, and **-वे (गुरवे)** for गुरु.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">'Salutation to the teacher (आचार्य)' is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>आचार्यः नमः</span></li>
+        <li class=""><span class="lab">B</span><span>आचार्यम् नमः</span></li>
+        <li class="correct"><span class="lab">C</span><span>आचार्याय नमः</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>आचार्येण नमः</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>'Salutation to the teacher (आचार्य)' is **आचार्याय नमः**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">Besides नमः, the word स्वस्ति ('may it be well') also takes the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>dative ('स्वस्ति प्रजाभ्यः', well-being TO the people)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>accusative</span></li>
+        <li class=""><span class="lab">C</span><span>ablative</span></li>
+        <li class=""><span class="lab">D</span><span>instrumental</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>स्वस्ति also takes the **dative** ('स्वस्ति प्रजाभ्यः' — well-being TO the people).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">The ritual word स्वाहा (in offerings like 'अग्नये स्वाहा') likewise governs the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>genitive</span></li>
+        <li class=""><span class="lab">B</span><span>locative</span></li>
+        <li class="correct"><span class="lab">C</span><span>dative (अग्नये, 'to Agni')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>vocative</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>स्वाहा governs the **dative** (अग्नये स्वाहा, 'to Agni').</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">नमः, स्वस्ति and स्वाहा are grouped together because they all:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>are verbs</span></li>
+        <li class=""><span class="lab">B</span><span>mark the past tense</span></li>
+        <li class=""><span class="lab">C</span><span>are numbers</span></li>
+        <li class="correct"><span class="lab">D</span><span>govern the dative case</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>नमः, स्वस्ति and स्वाहा all **govern the dative case**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">The dative मित्राय answers the question:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'by whom?'</span></li>
+        <li class="correct"><span class="lab">B</span><span>'to whom (is the salutation)?'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>'from whom?'</span></li>
+        <li class=""><span class="lab">D</span><span>'whose?'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The dative मित्राय answers **'to whom (is the salutation)?'**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">सूर्यनमस्कारः is a single compound (समास), to be distinguished from the two-word phrase:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>सूर्यः नमः</span></li>
+        <li class=""><span class="lab">B</span><span>सूर्यम् नमः</span></li>
+        <li class=""><span class="lab">C</span><span>सूर्ये नमः</span></li>
+        <li class="correct"><span class="lab">D</span><span>सूर्याय नमस्कारः</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>सूर्यनमस्कारः (one compound) is distinguished from the two-word phrase **सूर्याय नमस्कारः**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">In the COMPOUND सूर्यनमस्कारः, the case-relation between सूर्य and नमस्कार is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>marked by a visible -आय</span></li>
+        <li class="correct"><span class="lab">B</span><span>hidden inside the compound (no separate ending shown)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the past tense</span></li>
+        <li class=""><span class="lab">D</span><span>plural</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In the compound सूर्यनमस्कारः, the case-relation is **hidden inside the compound** (no separate ending shown).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">नमस्कारः itself is नमस् + कारः, literally:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'a kind of posture'</span></li>
+        <li class=""><span class="lab">B</span><span>'a river'</span></li>
+        <li class="correct"><span class="lab">C</span><span>'a making of salutation' (a bow / act of homage)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>'the Sun'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>नमस्कारः = नमस् + कारः = **'a making of salutation' (a bow / act of homage)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">The twelve Sun-names (मित्र, रवि, सूर्य, भानु, ...) are an example of:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>synonyms (एकार्थकशब्दाः — many words, one meaning)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>antonyms</span></li>
+        <li class=""><span class="lab">C</span><span>verbs</span></li>
+        <li class=""><span class="lab">D</span><span>compounds</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The twelve Sun-names are **synonyms (एकार्थकशब्दाः — many words, one meaning)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">एकार्थकशब्दाः (एक + अर्थक + शब्दाः) means words that are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>of opposite meaning</span></li>
+        <li class=""><span class="lab">B</span><span>without meaning</span></li>
+        <li class="correct"><span class="lab">C</span><span>of one meaning (synonyms)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>of one letter</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>एकार्थकशब्दाः (एक + अर्थक + शब्दाः) means words **of one meaning (synonyms)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">The opposite of synonyms (एकार्थक) is antonyms, in Sanskrit:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>विलोमशब्दाः (opposite-meaning words)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>एकार्थकशब्दाः</span></li>
+        <li class=""><span class="lab">C</span><span>समासाः</span></li>
+        <li class=""><span class="lab">D</span><span>धातवः</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The opposite of synonyms is antonyms, in Sanskrit **विलोमशब्दाः**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">Which set is all SYNONYMS for the Sun?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>रविः, चन्द्रः, नदी, पर्वतः</span></li>
+        <li class="correct"><span class="lab">B</span><span>रविः, भानुः, आदित्यः, अर्कः</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>सूर्यः, हिमालयः, घटः</span></li>
+        <li class=""><span class="lab">D</span><span>मित्रः, शत्रुः, बालकः</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>**रविः, भानुः, आदित्यः, अर्कः** are all synonyms for the Sun.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">Which is NOT a name of the Sun?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>सविता</span></li>
+        <li class=""><span class="lab">B</span><span>भास्करः</span></li>
+        <li class=""><span class="lab">C</span><span>पूषा</span></li>
+        <li class="correct"><span class="lab">D</span><span>पर्वतराजः (the Himalaya)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>**पर्वतराजः (the Himalaya)** is NOT a name of the Sun.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">मित्र as a Sun-name means the Sun as the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>'friend' (of all beings)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>enemy</span></li>
+        <li class=""><span class="lab">C</span><span>moon</span></li>
+        <li class=""><span class="lab">D</span><span>river</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>मित्र as a Sun-name means the Sun as the **'friend' (of all beings)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">सूर्यनमस्कारः has exactly ____ postures, mirrored by ____ Sun-names.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>five ... ten</span></li>
+        <li class=""><span class="lab">B</span><span>ten ... twelve</span></li>
+        <li class=""><span class="lab">C</span><span>seven ... seven</span></li>
+        <li class="correct"><span class="lab">D</span><span>twelve ... twelve</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>सूर्यनमस्कारः has **twelve** postures, mirrored by **twelve** Sun-names.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">द्वादश means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>two</span></li>
+        <li class="correct"><span class="lab">B</span><span>twelve</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>ten</span></li>
+        <li class=""><span class="lab">D</span><span>twenty</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>द्वादश means **twelve**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">आचार्या (with final -आ) means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a male teacher</span></li>
+        <li class=""><span class="lab">B</span><span>a salutation</span></li>
+        <li class="correct"><span class="lab">C</span><span>a female teacher</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the Sun</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>आचार्या (final -आ) means **a female teacher**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">आचार्यः (with final -अः) means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a female teacher</span></li>
+        <li class="correct"><span class="lab">B</span><span>a male teacher</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a posture</span></li>
+        <li class=""><span class="lab">D</span><span>a river</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>आचार्यः (final -अः) means **a male teacher**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">The pair आचार्यः / आचार्या differs in:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>tense</span></li>
+        <li class=""><span class="lab">B</span><span>number</span></li>
+        <li class="correct"><span class="lab">C</span><span>gender (masculine vs feminine)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>case</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>आचार्यः / आचार्या differ in **gender (masculine vs feminine)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">By the same feminine formation, छात्र ('male student') becomes 'female student':</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>छात्रा</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>छात्रः</span></li>
+        <li class=""><span class="lab">C</span><span>छात्रम्</span></li>
+        <li class=""><span class="lab">D</span><span>छात्रेण</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>छात्र ('male student') → feminine **छात्रा** ('female student').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">बालक ('boy') forms the feminine 'girl' as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>बालकः</span></li>
+        <li class=""><span class="lab">B</span><span>बालकम्</span></li>
+        <li class=""><span class="lab">C</span><span>बालके</span></li>
+        <li class="correct"><span class="lab">D</span><span>बालिका</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>बालक ('boy') → feminine **बालिका** ('girl').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">देव ('god') forms the feminine 'goddess' as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>देवः</span></li>
+        <li class=""><span class="lab">B</span><span>देवम्</span></li>
+        <li class=""><span class="lab">C</span><span>देवाय</span></li>
+        <li class="correct"><span class="lab">D</span><span>देवी</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>देव ('god') → feminine **देवी** ('goddess').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">The feminine markers in आचार्या, बालिका and देवी are, respectively:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>-आ, -इका, -ई</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>-ई, -आ, -इका</span></li>
+        <li class=""><span class="lab">C</span><span>-अः, -अम्, -एन</span></li>
+        <li class=""><span class="lab">D</span><span>-आय, -स्य, -एन</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The feminine markers in आचार्या, बालिका, देवी are **-आ, -इका, -ई** respectively.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">'Salutation to the goddess' (देवी) in the dative is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>देवी नमः</span></li>
+        <li class=""><span class="lab">B</span><span>देवीम् नमः</span></li>
+        <li class="correct"><span class="lab">C</span><span>देव्यै नमः</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>देव्याः नमः</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>'Salutation to the goddess' (देवी) in the dative is **देव्यै नमः**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">The daily practice of सूर्यनमस्कारः is said to bring:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>laziness and fear</span></li>
+        <li class="correct"><span class="lab">B</span><span>health, vigour, brilliance and wisdom</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>wealth alone</span></li>
+        <li class=""><span class="lab">D</span><span>anger</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Daily सूर्यनमस्कारः is said to bring **health, vigour, brilliance and wisdom**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">स्वस्थं शरीरम् means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a sick body</span></li>
+        <li class=""><span class="lab">B</span><span>a strong enemy</span></li>
+        <li class="correct"><span class="lab">C</span><span>a healthy body</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a tall mountain</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>स्वस्थं शरीरम् means **a healthy body**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">Each posture of the Sun Salutation is paired with:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a fault to give up</span></li>
+        <li class="correct"><span class="lab">B</span><span>a mantra saluting the Sun by one of its twelve names</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a saying about pots</span></li>
+        <li class=""><span class="lab">D</span><span>a month's name only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Each posture is paired with **a mantra saluting the Sun by one of its twelve names**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">The first mantra of the Sun Salutation is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>वन्दे मातरम्</span></li>
+        <li class=""><span class="lab">B</span><span>ॐ शान्तिः</span></li>
+        <li class=""><span class="lab">C</span><span>रवये नमः</span></li>
+        <li class="correct"><span class="lab">D</span><span>मित्राय नमः</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The first mantra is **मित्राय नमः**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">'अग्नये नमः' ('salutation to Agni') uses the dative of अग्नि (an i-stem):</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>अग्नये</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>अग्निः</span></li>
+        <li class=""><span class="lab">C</span><span>अग्निम्</span></li>
+        <li class=""><span class="lab">D</span><span>अग्नेः</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>'अग्नये नमः' uses the dative of अग्नि (i-stem): **अग्नये**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">The reason मित्राय (not मित्रम्) follows नमः is that नमः requires:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the dative, not the accusative</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the accusative</span></li>
+        <li class=""><span class="lab">C</span><span>the nominative</span></li>
+        <li class=""><span class="lab">D</span><span>the genitive</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>मित्राय (not मित्रम्) follows नमः because नमः requires **the dative, not the accusative**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">'For the Sun' and 'to the Sun' are both expressed by the same Sanskrit case, the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>accusative</span></li>
+        <li class="correct"><span class="lab">B</span><span>dative (सूर्याय)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>ablative</span></li>
+        <li class=""><span class="lab">D</span><span>genitive</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>'For the Sun' and 'to the Sun' are both the **dative (सूर्याय)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">The compound सूर्यनमस्कारः packs into one word what सूर्याय नमस्कारः says in:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a verb</span></li>
+        <li class=""><span class="lab">B</span><span>a plural</span></li>
+        <li class=""><span class="lab">C</span><span>a question</span></li>
+        <li class="correct"><span class="lab">D</span><span>two words (with the dative shown)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>सूर्यनमस्कारः packs into one word what सूर्याय नमस्कारः says in **two words (with the dative shown)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">विलोमशब्दाः (antonyms) would be illustrated by a pair like:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>रवि / भानु (both 'Sun')</span></li>
+        <li class=""><span class="lab">B</span><span>सूर्य / आदित्य (both 'Sun')</span></li>
+        <li class="correct"><span class="lab">C</span><span>मित्र (friend) / शत्रु (enemy)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>अर्क / भास्कर (both 'Sun')</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Antonyms are illustrated by **मित्र (friend) / शत्रु (enemy)**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">The twelve Sun-names being synonyms means you may swap रवि for भानु and the meaning:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>becomes 'the moon'</span></li>
+        <li class=""><span class="lab">B</span><span>becomes 'a river'</span></li>
+        <li class=""><span class="lab">C</span><span>is lost</span></li>
+        <li class="correct"><span class="lab">D</span><span>stays 'the Sun'</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Swapping रवि for भानु keeps the meaning **'the Sun'** (synonyms).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">Which word-meaning pair is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>नमः = the Sun</span></li>
+        <li class=""><span class="lab">B</span><span>मित्र = the moon</span></li>
+        <li class="correct"><span class="lab">C</span><span>नमः = salutation; मित्र (here) = the Sun</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>सूर्यनमस्कारः = a river</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct pair: **नमः = salutation; मित्र (here) = the Sun**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">Which case statement is CORRECT?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>नमः governs the dative (चतुर्थी), e.g. मित्राय</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>नमः governs the nominative</span></li>
+        <li class=""><span class="lab">C</span><span>नमः governs the accusative</span></li>
+        <li class=""><span class="lab">D</span><span>नमः governs the ablative</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct case rule: **नमः governs the dative (चतुर्थी), e.g. मित्राय**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">Which dative form is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>रवि → रविः</span></li>
+        <li class="correct"><span class="lab">B</span><span>रवि → रवये; गुरु → गुरवे</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>गुरु → गुरुम्</span></li>
+        <li class=""><span class="lab">D</span><span>मित्र → मित्रम्</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct datives: **रवि → रवये; गुरु → गुरवे**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">Which gender pair is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>आचार्यः (female) / आचार्या (male)</span></li>
+        <li class="correct"><span class="lab">B</span><span>आचार्यः (male) / आचार्या (female)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>both are male</span></li>
+        <li class=""><span class="lab">D</span><span>both are female</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct gender pair: **आचार्यः (male) / आचार्या (female)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">Which is a set of SYNONYMS (एकार्थक)?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>मित्रः, शत्रुः</span></li>
+        <li class=""><span class="lab">B</span><span>दिनम्, रात्रिः</span></li>
+        <li class=""><span class="lab">C</span><span>उष्णम्, शीतम्</span></li>
+        <li class="correct"><span class="lab">D</span><span>सूर्यः, रविः, भानुः, आदित्यः</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A set of synonyms: **सूर्यः, रविः, भानुः, आदित्यः** (all 'Sun').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">Which is a pair of ANTONYMS (विलोम)?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>रवि / सूर्य</span></li>
+        <li class=""><span class="lab">B</span><span>भानु / अर्क</span></li>
+        <li class="correct"><span class="lab">C</span><span>मित्र (friend) / शत्रु (enemy)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>आदित्य / सविता</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A pair of antonyms: **मित्र (friend) / शत्रु (enemy)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">सूर्यनमस्कारः being a समास means it is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>one compound word</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>two separate words</span></li>
+        <li class=""><span class="lab">C</span><span>a verb</span></li>
+        <li class=""><span class="lab">D</span><span>a sentence</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>सूर्यनमस्कारः being a समास means it is **one compound word**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">The number of Sun-names equals the number of postures, both being:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>twelve (द्वादश)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>ten</span></li>
+        <li class=""><span class="lab">C</span><span>seven</span></li>
+        <li class=""><span class="lab">D</span><span>five</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Both the Sun-names and postures number **twelve (द्वादश)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">'Homage to the teacher' with a FEMALE teacher (आचार्या → dative आचार्यायै) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>आचार्या नमः</span></li>
+        <li class=""><span class="lab">B</span><span>आचार्याम् नमः</span></li>
+        <li class=""><span class="lab">C</span><span>आचार्यायाः नमः</span></li>
+        <li class="correct"><span class="lab">D</span><span>आचार्यायै नमः</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>With a female teacher (आचार्या → dative आचार्यायै): **आचार्यायै नमः**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">The dative is the natural case after नमः because a salutation is offered ____ someone.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>BY</span></li>
+        <li class=""><span class="lab">B</span><span>FROM</span></li>
+        <li class="correct"><span class="lab">C</span><span>TO</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>OF</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The dative follows नमः because a salutation is offered **TO** someone.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">'छात्राय पुस्तकं ददाति' ('gives a book to the student') shows the dative छात्राय as the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>doer</span></li>
+        <li class="correct"><span class="lab">B</span><span>recipient ('to the student')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>instrument</span></li>
+        <li class=""><span class="lab">D</span><span>place</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>छात्राय in 'छात्राय पुस्तकं ददाति' is the **recipient ('to the student')**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">The twelve names + twelve postures structure links सूर्यनमस्कारः to the twelve:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>rivers of India</span></li>
+        <li class=""><span class="lab">B</span><span>vowels</span></li>
+        <li class="correct"><span class="lab">C</span><span>months of the year</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>tenses</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The twelve names + postures link सूर्यनमस्कारः to the twelve **months of the year**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">नमस्कारः and नमः share the element नमस्, meaning:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the Sun</span></li>
+        <li class=""><span class="lab">B</span><span>a posture</span></li>
+        <li class=""><span class="lab">C</span><span>a month</span></li>
+        <li class="correct"><span class="lab">D</span><span>bowing / homage</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>नमस्कारः and नमः share नमस्, meaning **bowing / homage**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">'Salutation to Mitra, to Ravi, and to Surya' would be:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>मित्रः नमः, रविः नमः</span></li>
+        <li class="correct"><span class="lab">B</span><span>मित्राय नमः, रवये नमः, सूर्याय नमः</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>मित्रम्, रविम्, सूर्यम्</span></li>
+        <li class=""><span class="lab">D</span><span>मित्रेण, रविणा, सूर्येण</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>'Salutation to Mitra, to Ravi, and to Surya' is **मित्राय नमः, रवये नमः, सूर्याय नमः**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">The chapter pairs the Sun Salutation with grammar lessons on:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the dative (चतुर्थी), synonyms/antonyms, the compound समास, and feminine formation</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>only the locative</span></li>
+        <li class=""><span class="lab">C</span><span>the six tastes</span></li>
+        <li class=""><span class="lab">D</span><span>ordinals only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The chapter pairs the Sun Salutation with lessons on **the dative (चतुर्थी), synonyms/antonyms, the compound समास, and feminine formation**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">The deeper value the chapter attaches to सूर्यनमस्कारः is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>earning wealth</span></li>
+        <li class="correct"><span class="lab">B</span><span>physical and mental well-being through daily discipline</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>winning quarrels</span></li>
+        <li class=""><span class="lab">D</span><span>avoiding study</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The deeper value is **physical and mental well-being through daily discipline**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">The single best gloss of मित्राय नमः is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>'salutation to the Sun (as the friend, Mitra)'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>'the Sun salutes me'</span></li>
+        <li class=""><span class="lab">C</span><span>'friends of the Sun'</span></li>
+        <li class=""><span class="lab">D</span><span>'O Sun, come!'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>मित्राय नमः glosses as **'salutation to the Sun (as the friend, Mitra)'**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">The central theme of this chapter is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a fox and grapes</span></li>
+        <li class=""><span class="lab">B</span><span>banking</span></li>
+        <li class="correct"><span class="lab">C</span><span>the Sun Salutation, its twelve Sun-names, and the dative of नमः</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the rise of empires</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The central theme is **the Sun Salutation, its twelve Sun-names, and the dative of नमः**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">A student claims: 'नमः takes the nominative (नमः मित्रः), and the twelve Sun-names are antonyms.' The best correction is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the student is fully correct</span></li>
+        <li class=""><span class="lab">B</span><span>नमः takes the dative, but the Sun-names are antonyms</span></li>
+        <li class=""><span class="lab">C</span><span>नमः takes the nominative, and the Sun-names are synonyms</span></li>
+        <li class="correct"><span class="lab">D</span><span>नमः takes the dative (नमः मित्राय), and the twelve Sun-names are synonyms (all mean 'Sun')</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>नमः takes the dative (नमः मित्राय), and the twelve Sun-names are synonyms (all mean 'Sun') — the student is wrong on both. --- *End of solutions. Maximum marks: 240.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>
