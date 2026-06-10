@@ -286,6 +286,25 @@ extension OlympiadPaperRegistry {
             questionPaperPDF: "SocialScience_Ssch20_BanksAndTheMagicOfFinance.pdf",
             suggestedTimeMinutes: 90,
             solvedGuideHTML: "SocialScience_Ssch20_BanksAndTheMagicOfFinance_SolvedGuide.html"
+        ),
+        // ── Advanced (Paper 2) entry authored in the v8 rollout. Reuses
+        //    Paper 1's printable HTML + PDF; tier=.advanced marks the row,
+        //    and solvedGuideHTML points at the Advanced guide rendered by
+        //    scripts/make_solved_guide.py.
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch01_advanced",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 1,
+            chapterTitle: "Geographical Diversity of India",
+            displayTitle: "Geographical Diversity of India — Paper 2 (Advanced)",
+            questionPaperMD: "SocialScience_Ssch01_GeographicalDiversityOfIndia_Advanced_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch01_GeographicalDiversityOfIndia_Advanced_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch01_GeographicalDiversityOfIndia.html",
+            questionPaperPDF: "SocialScience_Ssch01_GeographicalDiversityOfIndia.pdf",
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "SocialScience_Ssch01_GeographicalDiversityOfIndia_Advanced_SolvedGuide.html",
+            tier: .advanced
         )
     ]
 }
