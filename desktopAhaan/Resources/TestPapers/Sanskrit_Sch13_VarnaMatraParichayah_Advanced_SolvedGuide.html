@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Varna Matra Parichayah (Advanced) — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Varna Matra Parichayah (Advanced)<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">Which vowel is ह्रस्व (short, 1 mātrā)?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>आ</span></li>
+        <li class=""><span class="lab">B</span><span>ई</span></li>
+        <li class="correct"><span class="lab">C</span><span>इ</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>ऊ</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>**इ** is a simple short (ह्रस्व) vowel, 1 mātrā. आ, ई and ऊ are all long (दीर्घ), 2 mātrās.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">Which vowel is दीर्घ (long, 2 mātrās)?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>आ</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>अ</span></li>
+        <li class=""><span class="lab">C</span><span>इ</span></li>
+        <li class=""><span class="lab">D</span><span>उ</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>**आ** is long (दीर्घ), 2 mātrās. अ, इ and उ are short, 1 mātrā each.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">The short–long pair that is correctly matched is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>आ (short) — अ (long)</span></li>
+        <li class=""><span class="lab">B</span><span>ई (short) — इ (long)</span></li>
+        <li class=""><span class="lab">C</span><span>ऊ (short) — उ (long)</span></li>
+        <li class="correct"><span class="lab">D</span><span>इ (short) — ई (long)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correctly matched short–long pair is **इ (short) — ई (long)**. The other rows reverse the lengths.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">The complete set of simple short vowels is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>आ, ई, ऊ, ॠ</span></li>
+        <li class="correct"><span class="lab">B</span><span>अ, इ, उ, ऋ</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>ए, ऐ, ओ, औ</span></li>
+        <li class=""><span class="lab">D</span><span>क, च, ट, त</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The simple short vowels are **अ, इ, उ, ऋ** (each 1 mātrā). आ/ई/ऊ/ॠ are their long counterparts; ए/ऐ/ओ/औ are long; क/च/ट/त are consonants.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">The vowel ए (as in देव) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>short (1 mātrā)</span></li>
+        <li class="correct"><span class="lab">B</span><span>long (2 mātrās), always</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>sometimes short</span></li>
+        <li class=""><span class="lab">D</span><span>a consonant</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>**ए is always long (2 mātrās)** — it has no short form. So the ए in देव counts as 2 mātrās.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">A special feature of ए, ऐ, ओ and औ is that they:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>are always short</span></li>
+        <li class=""><span class="lab">B</span><span>are consonants</span></li>
+        <li class=""><span class="lab">C</span><span>have three mātrās each</span></li>
+        <li class="correct"><span class="lab">D</span><span>are always दीर्घ (long) — they have no short form</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>ए, ऐ, ओ and औ **are always दीर्घ (long); they have no short version**, so they always count 2 mātrās.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">There is no 'short ओ' in standard Sanskrit because ओ is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>inherently long (2 mātrās)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>inherently short</span></li>
+        <li class=""><span class="lab">C</span><span>a consonant</span></li>
+        <li class=""><span class="lab">D</span><span>silent</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>There is no 'short ओ' because **ओ is inherently long (2 mātrās)** in standard Sanskrit.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">Counting only simple vowels, अ and आ differ in that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>आ is 1 mātrā, अ is 2 mātrās</span></li>
+        <li class=""><span class="lab">B</span><span>both are 1 mātrā</span></li>
+        <li class="correct"><span class="lab">C</span><span>अ is 1 mātrā, आ is 2 mātrās</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>both are 3 mātrās</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>**अ is 1 mātrā (short); आ is 2 mātrās (long)** — the same vowel-place, twice the duration.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">ऋ (as in ऋषि) is a:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>short vowel (1 mātrā)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>long vowel</span></li>
+        <li class=""><span class="lab">C</span><span>consonant</span></li>
+        <li class=""><span class="lab">D</span><span>प्लुत</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>**ऋ is a short vowel (1 mātrā)**, as in ऋषि. It is a true vowel, not a consonant.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">The long counterpart of ऋ is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ऌ</span></li>
+        <li class=""><span class="lab">B</span><span>ए</span></li>
+        <li class="correct"><span class="lab">C</span><span>ॠ</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>औ</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The long counterpart of ऋ is **ॠ** (rarely used, 2 mātrās).</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">Which row lists only दीर्घ (long) vowels?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>अ, इ, उ</span></li>
+        <li class=""><span class="lab">B</span><span>इ, उ, ऋ</span></li>
+        <li class=""><span class="lab">C</span><span>क, ख, ग</span></li>
+        <li class="correct"><span class="lab">D</span><span>आ, ई, ऊ</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>**आ, ई, ऊ** are all long (दीर्घ) vowels. The अ/इ/उ row is short, and क/ख/ग are consonants.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">Which row lists only ह्रस्व (short) vowels?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>आ, ई, ऊ</span></li>
+        <li class="correct"><span class="lab">B</span><span>अ, इ, उ</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>ए, ओ, औ</span></li>
+        <li class=""><span class="lab">D</span><span>ई, ऊ, ॠ</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>**अ, इ, उ** are all short (ह्रस्व). The आ/ई/ऊ row is long, and ए/ओ/औ are long.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">How many mātrās does the word कमल (क-म-ल) have?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2</span></li>
+        <li class=""><span class="lab">B</span><span>4</span></li>
+        <li class=""><span class="lab">C</span><span>6</span></li>
+        <li class="correct"><span class="lab">D</span><span>3</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>कमल = क(अ,1) + म(अ,1) + ल(अ,1) = **3 mātrās** (three short syllables).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">How many mātrās does गीता (गी-ता) have?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2</span></li>
+        <li class="correct"><span class="lab">B</span><span>4</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>3</span></li>
+        <li class=""><span class="lab">D</span><span>1</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>गीता = गी(ई,2) + ता(आ,2) = **4 mātrās**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">How many mātrās does नदी (न-दी) have?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2</span></li>
+        <li class=""><span class="lab">B</span><span>4</span></li>
+        <li class="correct"><span class="lab">C</span><span>3</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>5</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>नदी = न(अ,1) + दी(ई,2) = **3 mātrās**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">How many mātrās does देव (दे-व) have, remembering ए is long?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>3</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>2</span></li>
+        <li class=""><span class="lab">C</span><span>4</span></li>
+        <li class=""><span class="lab">D</span><span>1</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>देव = दे(ए,2) + व(अ,1) = **3 mātrās** — because ए is long (2).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">How many mātrās does गुरु (गु-रु) have?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1</span></li>
+        <li class=""><span class="lab">B</span><span>3</span></li>
+        <li class="correct"><span class="lab">C</span><span>2</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>4</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>गुरु = गु(उ,1) + रु(उ,1) = **2 mātrās** (two short syllables).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">How many mātrās does the word फलम् (फ-ल-म्) have? (म् carries no vowel.)</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>2</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>1</span></li>
+        <li class=""><span class="lab">C</span><span>3</span></li>
+        <li class=""><span class="lab">D</span><span>4</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>फलम् = फ(अ,1) + ल(अ,1) + म्(no vowel, 0) = **2 mātrās**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">How many mātrās does सेवा (से-वा) have, remembering ए is long?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2</span></li>
+        <li class="correct"><span class="lab">B</span><span>4</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>3</span></li>
+        <li class=""><span class="lab">D</span><span>5</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>सेवा = से(ए,2) + वा(आ,2) = **4 mātrās** — both syllables are long (ए and आ).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">How many mātrās does रमा (र-मा) have?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2</span></li>
+        <li class=""><span class="lab">B</span><span>4</span></li>
+        <li class=""><span class="lab">C</span><span>1</span></li>
+        <li class="correct"><span class="lab">D</span><span>3</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>रमा = र(अ,1) + मा(आ,2) = **3 mātrās**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">How many mātrās does हिमालय (हि-मा-ल-य) have?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>4</span></li>
+        <li class=""><span class="lab">C</span><span>6</span></li>
+        <li class=""><span class="lab">D</span><span>3</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>हिमालय = हि(इ,1) + मा(आ,2) + ल(अ,1) + य(अ,1) = **5 mātrās**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">Which word has exactly 4 mātrās?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>कमल (3)</span></li>
+        <li class=""><span class="lab">B</span><span>फलम् (2)</span></li>
+        <li class=""><span class="lab">C</span><span>गुरु (2)</span></li>
+        <li class="correct"><span class="lab">D</span><span>गीता (4)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>**गीता** counts 4 mātrās (2 + 2). कमल is 3, फलम् is 2, and गुरु is 2.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">Which word has the FEWEST mātrās?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>गीता (4)</span></li>
+        <li class="correct"><span class="lab">B</span><span>गुरु (2)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>हिमालय (5)</span></li>
+        <li class=""><span class="lab">D</span><span>सेवा (4)</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>**गुरु** has the fewest at 2 mātrās; गीता and सेवा are 4, हिमालय is 5.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">नदी and रमा have the same mātrā-count because each is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2 mātrās</span></li>
+        <li class=""><span class="lab">B</span><span>4 mātrās</span></li>
+        <li class="correct"><span class="lab">C</span><span>3 mātrās (1 + 2)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>1 mātrā</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>नदी (1 + 2) and रमा (1 + 2) each total **3 mātrās**, so they match.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">विद्या (वि-द्या) — the cluster द्य carries the vowel आ. Its total is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2 mātrās</span></li>
+        <li class="correct"><span class="lab">B</span><span>3 mātrās (1 + 2)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>4 mātrās</span></li>
+        <li class=""><span class="lab">D</span><span>5 mātrās</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>विद्या = वि(इ,1) + द्या(the cluster द्य carries आ, 2) = **3 mātrās**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">A word made of three short syllables (e.g. कमल) totals:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>6 mātrās</span></li>
+        <li class=""><span class="lab">B</span><span>1 mātrā</span></li>
+        <li class="correct"><span class="lab">C</span><span>3 mātrās</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>9 mātrās</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Three short syllables, each 1 mātrā, total **3 mātrās** (e.g. कमल).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">A प्लुत vowel lasts:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>3 mātrās</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>1 mātrā</span></li>
+        <li class=""><span class="lab">C</span><span>2 mātrās</span></li>
+        <li class=""><span class="lab">D</span><span>0 mātrās</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A प्लुत vowel lasts **3 mātrās** — three times a short vowel.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">In writing, a प्लुत vowel is marked by placing which numeral after it?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>२ (two)</span></li>
+        <li class=""><span class="lab">B</span><span>१ (one)</span></li>
+        <li class=""><span class="lab">C</span><span>०</span></li>
+        <li class="correct"><span class="lab">D</span><span>३ (three)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A प्लुत vowel is written with the numeral **३ (three)** placed after it, e.g. राम३.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">राम३ (with the ३ mark) tells the reader to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>say राम three times</span></li>
+        <li class=""><span class="lab">B</span><span>whisper the word</span></li>
+        <li class=""><span class="lab">C</span><span>skip the vowel</span></li>
+        <li class="correct"><span class="lab">D</span><span>hold the final vowel for three mātrās (a प्लुत call)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>राम३ tells the reader to **hold the final vowel for three mātrās** — a प्लुत (prolonged) call.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">The sacred syllable ओ३म् is chanted with the ओ held for:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>3 mātrās (प्लुत)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>1 mātrā</span></li>
+        <li class=""><span class="lab">C</span><span>2 mātrās</span></li>
+        <li class=""><span class="lab">D</span><span>no time</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In ओ३म्, the ओ is held for **3 mātrās** (प्लुत) during chanting.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">A प्लुत vowel is THREE times as long as a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>दीर्घ vowel</span></li>
+        <li class=""><span class="lab">B</span><span>consonant</span></li>
+        <li class="correct"><span class="lab">C</span><span>ह्रस्व (short) vowel</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>whole word</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A प्लुत vowel is three times as long as a **ह्रस्व (short)** vowel (3 mātrās vs 1).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">प्लुत vowels appear mainly in:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>quick everyday chatter</span></li>
+        <li class="correct"><span class="lab">B</span><span>chanting and long-distance calls (भो३ः!)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>counting money</span></li>
+        <li class=""><span class="lab">D</span><span>silent reading</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>प्लुत vowels appear mainly in **chanting and long-distance calls** (e.g. भो३ः!), not in quick everyday speech.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">If a chanter says ओ३म् quickly as a 2-mātrā vowel, the प्लुत has wrongly become a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>short vowel</span></li>
+        <li class=""><span class="lab">B</span><span>consonant</span></li>
+        <li class="correct"><span class="lab">C</span><span>दीर्घ (long) vowel</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>new word</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Said for only 2 mātrās, the प्लुत ओ३म् collapses into an ordinary **दीर्घ (long)** vowel.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">Ordering the three lengths of a single vowel sound from shortest to longest:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>प्लुत, दीर्घ, ह्रस्व</span></li>
+        <li class="correct"><span class="lab">B</span><span>ह्रस्व (1), दीर्घ (2), प्लुत (3)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>दीर्घ, ह्रस्व, प्लुत</span></li>
+        <li class=""><span class="lab">D</span><span>all are equal</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Shortest to longest: **ह्रस्व (1), दीर्घ (2), प्लुत (3)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">The ratio of mātrās ह्रस्व : दीर्घ : प्लुत is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1 : 1 : 1</span></li>
+        <li class=""><span class="lab">B</span><span>3 : 2 : 1</span></li>
+        <li class=""><span class="lab">C</span><span>2 : 4 : 6 only</span></li>
+        <li class="correct"><span class="lab">D</span><span>1 : 2 : 3</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The mātrā ratio ह्रस्व : दीर्घ : प्लुत is **1 : 2 : 3**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">A दीर्घ vowel held one extra mātrā longer (to three) would be pronounced as a:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>प्लुत vowel</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>short vowel</span></li>
+        <li class=""><span class="lab">C</span><span>consonant</span></li>
+        <li class=""><span class="lab">D</span><span>silent vowel</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A long (दीर्घ, 2-mātrā) vowel held one mātrā more becomes a **प्लुत** (3 mātrās).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">एकः कुक्कुटः ____ ('one rooster crows'). The correct verb is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>रौति (singular)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>रुवन्ति (plural)</span></li>
+        <li class=""><span class="lab">C</span><span>रौतु</span></li>
+        <li class=""><span class="lab">D</span><span>अरौत्</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>One rooster (एकः कुक्कुटः) is singular, so the verb is the singular **रौति** ('crows').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">बहवः कुक्कुटाः ____ ('many roosters crow'). The correct verb is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>रौति (singular)</span></li>
+        <li class="correct"><span class="lab">B</span><span>रुवन्ति (plural)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>रौति च</span></li>
+        <li class=""><span class="lab">D</span><span>रौषि</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Many roosters (बहवः कुक्कुटाः) is plural, so the verb is the plural **रुवन्ति** ('crow').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">Choosing रौति for one and रुवन्ति for many shows the verb agreeing with its subject in:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>gender</span></li>
+        <li class=""><span class="lab">B</span><span>vowel length</span></li>
+        <li class=""><span class="lab">C</span><span>case</span></li>
+        <li class="correct"><span class="lab">D</span><span>number</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Picking रौति for one and रुवन्ति for many shows subject–verb agreement in **number**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">वायसः and कुक्कुटः are both:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>vowels</span></li>
+        <li class=""><span class="lab">B</span><span>verbs</span></li>
+        <li class="correct"><span class="lab">C</span><span>birds</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>cases</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>वायसः (crow) and कुक्कुटः (rooster) are both **birds**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">शिखी नृत्यति ('the ____ dances'). शिखी is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>crow</span></li>
+        <li class=""><span class="lab">B</span><span>mouse</span></li>
+        <li class=""><span class="lab">C</span><span>pigeon</span></li>
+        <li class="correct"><span class="lab">D</span><span>peacock</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>शिखी is the **peacock** (literally 'the crested one'), so शिखी नृत्यति = 'the peacock dances'.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">नकुलः and मूषकः form a natural pair as predator and prey:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>crow and peacock</span></li>
+        <li class=""><span class="lab">B</span><span>pigeon and sparrow</span></li>
+        <li class="correct"><span class="lab">C</span><span>mongoose and mouse</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>rooster and cuckoo</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>नकुलः (mongoose) and मूषकः (mouse) are the natural predator–prey pair: **mongoose and mouse**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">चटका is small; the word means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a sparrow</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a peacock</span></li>
+        <li class=""><span class="lab">C</span><span>a crow</span></li>
+        <li class=""><span class="lab">D</span><span>a mongoose</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>चटका is the small **sparrow**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">कपोतः differs from चटका in that कपोतः is a ____ and चटका is a ____.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>crow ... peacock</span></li>
+        <li class="correct"><span class="lab">B</span><span>pigeon ... sparrow</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>sparrow ... pigeon</span></li>
+        <li class=""><span class="lab">D</span><span>mouse ... mongoose</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>कपोतः is a **pigeon** and चटका is a **sparrow**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">पुंस्कोकिलः stresses the bird's:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>colour</span></li>
+        <li class="correct"><span class="lab">B</span><span>maleness (a MALE cuckoo)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>size</span></li>
+        <li class=""><span class="lab">D</span><span>age</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>पुंस्कोकिलः (पुम् + कोकिल) stresses the bird's **maleness** — a MALE cuckoo.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">द्वौ वायसौ ____ ('the two crows cry'). For exactly two, the verb रु would take a ____ form (not the singular रौति).</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>singular</span></li>
+        <li class=""><span class="lab">B</span><span>noun</span></li>
+        <li class=""><span class="lab">C</span><span>vocative</span></li>
+        <li class="correct"><span class="lab">D</span><span>dual (agreeing with two)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>द्वौ वायसौ is exactly two, so रु must take a **dual** form to agree with the two — not the singular रौति.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">A भेदः is a type, and an उपभेदः is a sub-type; so within the भेदः 'vowels', a ह्रस्व/दीर्घ split is an example of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a verb</span></li>
+        <li class=""><span class="lab">B</span><span>a consonant</span></li>
+        <li class="correct"><span class="lab">C</span><span>उपभेदः (subdivisions)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a sentence</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A ह्रस्व/दीर्घ split inside the type 'vowels' is an example of **उपभेदः (subdivisions)** within a भेदः.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">A teacher opens the class with ध्यानं निदधतु, which politely means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>'please pay attention'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>'go home'</span></li>
+        <li class=""><span class="lab">C</span><span>'count the vowels'</span></li>
+        <li class=""><span class="lab">D</span><span>'be silent forever'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>ध्यानं निदधतु is a polite imperative meaning **'please pay attention'**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">In वर्णमात्रा the word वर्ण means 'sound/letter', NOT 'caste', because the topic is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>phonetics (sound-duration)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>social class</span></li>
+        <li class=""><span class="lab">C</span><span>geography</span></li>
+        <li class=""><span class="lab">D</span><span>mathematics</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In वर्णमात्रा, वर्ण means 'sound/letter' because the topic is **phonetics (sound-duration)**, not social class.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">That वर्ण can mean both 'letter' and 'caste' is an example of Sanskrit:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>having no meaning</span></li>
+        <li class=""><span class="lab">B</span><span>having only one meaning ever</span></li>
+        <li class=""><span class="lab">C</span><span>borrowing from English</span></li>
+        <li class="correct"><span class="lab">D</span><span>polysemy (one word, several context-set meanings)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>वर्ण meaning both 'letter' and 'caste' illustrates Sanskrit **polysemy** — one word, several context-set senses.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">Which classification is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ए is short (1 mātrā)</span></li>
+        <li class=""><span class="lab">B</span><span>अ is long (2 mātrās)</span></li>
+        <li class="correct"><span class="lab">C</span><span>औ is long (2 mātrās)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>आ is short (1 mātrā)</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct classification is **औ is long (2 mātrās)** — ए/ऐ/ओ/औ are always long. अ is short, आ is long, ए is long.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">Which mātrā-count is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>कमल = 6 mātrās</span></li>
+        <li class="correct"><span class="lab">B</span><span>गीता = 4 mātrās</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>गुरु = 4 mātrās</span></li>
+        <li class=""><span class="lab">D</span><span>नदी = 1 mātrā</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct count is **गीता = 4 mātrās** (2 + 2). कमल is 3, गुरु is 2, नदी is 3.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">Which वर्ण-quantity statement is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>प्लुत = 1 mātrā</span></li>
+        <li class=""><span class="lab">B</span><span>ह्रस्व = 2 mātrās</span></li>
+        <li class="correct"><span class="lab">C</span><span>दीर्घ = 2 mātrās; प्लुत = 3 mātrās</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>दीर्घ = 3 mātrās</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct statement is **दीर्घ = 2 mātrās; प्लुत = 3 mātrās**. ह्रस्व is 1.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">Which verb–number pairing is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>रौति = plural; रुवन्ति = singular</span></li>
+        <li class=""><span class="lab">B</span><span>both singular</span></li>
+        <li class=""><span class="lab">C</span><span>both plural</span></li>
+        <li class="correct"><span class="lab">D</span><span>रौति = singular; रुवन्ति = plural</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct pairing is **रौति = singular; रुवन्ति = plural**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">Comparing देव (3 mātrās) and गुरु (2 mātrās), the longer word is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>गुरु</span></li>
+        <li class="correct"><span class="lab">B</span><span>देव</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>they are equal</span></li>
+        <li class=""><span class="lab">D</span><span>neither has mātrās</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>**देव** (3 mātrās) is longer than गुरु (2 mātrās).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">The reason देव counts 3 (not 2) mātrās is that:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the ए is long (2) and the अ in व is short (1), giving 2 + 1</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>व is a vowel</span></li>
+        <li class=""><span class="lab">C</span><span>ए is short</span></li>
+        <li class=""><span class="lab">D</span><span>देव has a प्लुत</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>देव counts 3 because **the ए is long (2 mātrās) and the अ in व is short (1)**, giving 2 + 1 = 3.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">To turn the short syllable र (1 mātrā) into a दीर्घ syllable, change it to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>र्</span></li>
+        <li class="correct"><span class="lab">B</span><span>रा (2 mātrās)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>र३</span></li>
+        <li class=""><span class="lab">D</span><span>it cannot be lengthened</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>To make the short syllable र (1 mātrā) long, lengthen its vowel to आ: **रा** (2 mātrās).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">The numeral ३ written after ओ in ओ३म् signals a:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>प्लुत (3-mātrā) vowel</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>short vowel</span></li>
+        <li class=""><span class="lab">C</span><span>plural</span></li>
+        <li class=""><span class="lab">D</span><span>consonant cluster</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The ३ after ओ in ओ३म् marks a **प्लुत (3-mātrā)** vowel.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">Why is vowel-quantity (मात्रा) phonemic in Sanskrit?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>length never matters</span></li>
+        <li class=""><span class="lab">B</span><span>Sanskrit has no vowels</span></li>
+        <li class="correct"><span class="lab">C</span><span>length can change a word's meaning, so it must be observed (esp. in chanting)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>only consonants matter</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Vowel-quantity is phonemic because **length can change a word's meaning**, so it must be observed — especially in chanting.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">A student says: 'ए is a short vowel, and गीता has 2 mātrās.' The best correction is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the student is fully correct</span></li>
+        <li class=""><span class="lab">B</span><span>ए is long, but गीता has 2 mātrās</span></li>
+        <li class=""><span class="lab">C</span><span>ए is short, and गीता has 4 mātrās</span></li>
+        <li class="correct"><span class="lab">D</span><span>ए is long, and गीता has 4 mātrās (गी = 2, ता = 2)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>ए is a long vowel, and गीता has **4 mātrās** (गी = 2, ता = 2). The student is wrong on both points. --- *End of solutions. Maximum marks: 240.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>
