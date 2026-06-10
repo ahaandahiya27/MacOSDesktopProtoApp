@@ -1504,71 +1504,113 @@
 		D8BE09F64F8FB91A8C42C22D /* ch12_whatif.html in Resources */ = {isa = PBXBuildFile; fileRef = BF759BB1B72E6C4A18E6BF60 /* ch12_whatif.html */; };
 		5E0C18C08FE460DD77812CC5 /* Maths_Ch01_LargeNumbersAroundUs.html in Resources */ = {isa = PBXBuildFile; fileRef = 4592545A7E1E2A91B194A013 /* Maths_Ch01_LargeNumbersAroundUs.html */; };
 		40ED50292BD060A8AB5AD285 /* Maths_Ch01_LargeNumbersAroundUs.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 06D9689FAF09D6FD0B08D0FB /* Maths_Ch01_LargeNumbersAroundUs.pdf */; };
+		528CADEBC5A4B768813D132C /* Maths_Ch01_LargeNumbersAroundUs_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = C4035EF57215AFFA006CF520 /* Maths_Ch01_LargeNumbersAroundUs_Advanced_QuestionPaper.md */; };
+		CAC7651CFC931398B59653D1 /* Maths_Ch01_LargeNumbersAroundUs_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 11B69DB48ADC2DB3E5A1E888 /* Maths_Ch01_LargeNumbersAroundUs_Advanced_Solutions.md */; };
+		B85FDA0075D26781F6708FAA /* Maths_Ch01_LargeNumbersAroundUs_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = E58EBE6901FF1117C497326F /* Maths_Ch01_LargeNumbersAroundUs_Advanced_SolvedGuide.html */; };
 		4AC56F4F9E9533DA03FA53FA /* Maths_Ch01_LargeNumbersAroundUs_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = C0B1EA3B0D1095B41F579EE0 /* Maths_Ch01_LargeNumbersAroundUs_QuestionPaper.md */; };
 		D57EB5F7987AB07BD22346DD /* Maths_Ch01_LargeNumbersAroundUs_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 57DCF5F27FCF9BE73A21BC3A /* Maths_Ch01_LargeNumbersAroundUs_Solutions.md */; };
 		46F3ACC42BE3EF8C7155E4AC /* Maths_Ch01_LargeNumbersAroundUs_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 89E8479A53C7F1AA26B6079A /* Maths_Ch01_LargeNumbersAroundUs_SolvedGuide.html */; };
 		5A9A6B5FFDA0BE8C4474A2E2 /* Maths_Ch02_ArithmeticExpressions.html in Resources */ = {isa = PBXBuildFile; fileRef = 5AE3F543E7D8732894B81C0F /* Maths_Ch02_ArithmeticExpressions.html */; };
 		A242240EDCB1206C90EE9D61 /* Maths_Ch02_ArithmeticExpressions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F06E72D409D39D8B25248B80 /* Maths_Ch02_ArithmeticExpressions.pdf */; };
+		194F44E1BF1E3F75183538FA /* Maths_Ch02_ArithmeticExpressions_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 6D5384DC3CA0E226FAC444E7 /* Maths_Ch02_ArithmeticExpressions_Advanced_QuestionPaper.md */; };
+		789F4B3FF768E39224744176 /* Maths_Ch02_ArithmeticExpressions_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 53E5BD236340B4038D311E2C /* Maths_Ch02_ArithmeticExpressions_Advanced_Solutions.md */; };
+		1B83CC7482A7D0A0C4C13F42 /* Maths_Ch02_ArithmeticExpressions_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 31F3B736A988B29C79FFA735 /* Maths_Ch02_ArithmeticExpressions_Advanced_SolvedGuide.html */; };
 		579184DA0C605523231C928E /* Maths_Ch02_ArithmeticExpressions_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = B8E420423C85FF8724674B75 /* Maths_Ch02_ArithmeticExpressions_QuestionPaper.md */; };
 		D6FA5B8FAFEB3F040FB1FB15 /* Maths_Ch02_ArithmeticExpressions_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 9F3FB1F395942271F7EDD160 /* Maths_Ch02_ArithmeticExpressions_Solutions.md */; };
 		8C6EA3FA058433B0DACF2675 /* Maths_Ch02_ArithmeticExpressions_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 49BBFC7E7F7FD026279114BE /* Maths_Ch02_ArithmeticExpressions_SolvedGuide.html */; };
 		4C12E71388C3FD73364B41E3 /* Maths_Ch03_APeekBeyondThePoint.html in Resources */ = {isa = PBXBuildFile; fileRef = 0A4BAE834B69E600E753B83E /* Maths_Ch03_APeekBeyondThePoint.html */; };
 		FB5F0ACC0922DB04BB3FCBF3 /* Maths_Ch03_APeekBeyondThePoint.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EA47A066F154ED3C5216465F /* Maths_Ch03_APeekBeyondThePoint.pdf */; };
+		3693365F80E73BF12CE0887B /* Maths_Ch03_APeekBeyondThePoint_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = D837C84CD02B67EB644D94DA /* Maths_Ch03_APeekBeyondThePoint_Advanced_QuestionPaper.md */; };
+		B2B1DB5F5125E105B790BA9F /* Maths_Ch03_APeekBeyondThePoint_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = A7C5EF2621348A167C164405 /* Maths_Ch03_APeekBeyondThePoint_Advanced_Solutions.md */; };
+		29641C380D8676236DED9EBF /* Maths_Ch03_APeekBeyondThePoint_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 09881DFFB5713B02E0E291AD /* Maths_Ch03_APeekBeyondThePoint_Advanced_SolvedGuide.html */; };
 		FAB628261A400CA0E84E2C76 /* Maths_Ch03_APeekBeyondThePoint_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 620E2C6467F43ABB68450859 /* Maths_Ch03_APeekBeyondThePoint_QuestionPaper.md */; };
 		C668F0697E7BE1EACDEDA052 /* Maths_Ch03_APeekBeyondThePoint_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = A9C0A6759528901A4F66996C /* Maths_Ch03_APeekBeyondThePoint_Solutions.md */; };
 		DC4BB45AF7DC5BE6557A4C63 /* Maths_Ch03_APeekBeyondThePoint_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 793B9C958D70BDBAC136C82A /* Maths_Ch03_APeekBeyondThePoint_SolvedGuide.html */; };
 		33033F27AC581A19C18C450D /* Maths_Ch04_ExpressionsUsingLetterNumbers.html in Resources */ = {isa = PBXBuildFile; fileRef = 8CC373E3A5DAB602C4A20798 /* Maths_Ch04_ExpressionsUsingLetterNumbers.html */; };
 		E96F85FCCA7ADD5E8FDC3005 /* Maths_Ch04_ExpressionsUsingLetterNumbers.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 658EE82673BD9B5BC630BA90 /* Maths_Ch04_ExpressionsUsingLetterNumbers.pdf */; };
+		1B68409793B7427B5D519113 /* Maths_Ch04_ExpressionsUsingLetterNumbers_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 598D08A8891EBA8F215B60E4 /* Maths_Ch04_ExpressionsUsingLetterNumbers_Advanced_QuestionPaper.md */; };
+		33EDEA150965ED03DD295F40 /* Maths_Ch04_ExpressionsUsingLetterNumbers_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = C22164765A90340882FF52B6 /* Maths_Ch04_ExpressionsUsingLetterNumbers_Advanced_Solutions.md */; };
+		0F002347D074D8569EC05D74 /* Maths_Ch04_ExpressionsUsingLetterNumbers_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 6CA78FB91A7B99119A3372D1 /* Maths_Ch04_ExpressionsUsingLetterNumbers_Advanced_SolvedGuide.html */; };
 		312B52898A053C1D3D6D5955 /* Maths_Ch04_ExpressionsUsingLetterNumbers_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 636E83814E42D914EC1210FD /* Maths_Ch04_ExpressionsUsingLetterNumbers_QuestionPaper.md */; };
 		54E0FB8CD362954C8C776F9F /* Maths_Ch04_ExpressionsUsingLetterNumbers_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = CD91F671A199DDDF1D410550 /* Maths_Ch04_ExpressionsUsingLetterNumbers_Solutions.md */; };
 		14DCD552AF6ED2562106E9A4 /* Maths_Ch04_ExpressionsUsingLetterNumbers_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = D5028008A04B1CEF6A9C83BE /* Maths_Ch04_ExpressionsUsingLetterNumbers_SolvedGuide.html */; };
 		46F9726D4E47B4ACD83C487A /* Maths_Ch05_ParallelAndIntersectingLines.html in Resources */ = {isa = PBXBuildFile; fileRef = 7584391774663770BB36E683 /* Maths_Ch05_ParallelAndIntersectingLines.html */; };
 		F6B790857AEB031FB56CFF5E /* Maths_Ch05_ParallelAndIntersectingLines.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FE297ADB2027C7CF4843F2A5 /* Maths_Ch05_ParallelAndIntersectingLines.pdf */; };
+		BE676B45ADAD942B437E4EF2 /* Maths_Ch05_ParallelAndIntersectingLines_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = BFA7D1186D47427EEE08DDFB /* Maths_Ch05_ParallelAndIntersectingLines_Advanced_QuestionPaper.md */; };
+		D86F1109FFC963D6DC262F82 /* Maths_Ch05_ParallelAndIntersectingLines_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = D2702E902AB4BB3BE2C9D8E0 /* Maths_Ch05_ParallelAndIntersectingLines_Advanced_Solutions.md */; };
+		949EE5C1C2623E109A833A33 /* Maths_Ch05_ParallelAndIntersectingLines_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = C1A866694AA767EA557E3C62 /* Maths_Ch05_ParallelAndIntersectingLines_Advanced_SolvedGuide.html */; };
 		7BF669A1D9B0E1482FAEA73E /* Maths_Ch05_ParallelAndIntersectingLines_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 3E9DFF91790259ACF98FEB7C /* Maths_Ch05_ParallelAndIntersectingLines_QuestionPaper.md */; };
 		CF3C04629839C5D2347CA756 /* Maths_Ch05_ParallelAndIntersectingLines_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 6EBD46B0DB6D1D66A5DA8170 /* Maths_Ch05_ParallelAndIntersectingLines_Solutions.md */; };
 		2DDF5256460EC89C7A688B72 /* Maths_Ch05_ParallelAndIntersectingLines_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 948DB09705C6E78DBD4FEEA8 /* Maths_Ch05_ParallelAndIntersectingLines_SolvedGuide.html */; };
 		4F9C87A01161D6440EA6E76B /* Maths_Ch06_NumberPlay.html in Resources */ = {isa = PBXBuildFile; fileRef = F3AB3FF706800301B5C8CD29 /* Maths_Ch06_NumberPlay.html */; };
 		E698371DFEF45E31E488C6B9 /* Maths_Ch06_NumberPlay.pdf in Resources */ = {isa = PBXBuildFile; fileRef = B4E22665C6FA0A9024124AD1 /* Maths_Ch06_NumberPlay.pdf */; };
+		9D2C4107BEB10EB2DBC9C87A /* Maths_Ch06_NumberPlay_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = EC3ABE364F53EA87B3EDE059 /* Maths_Ch06_NumberPlay_Advanced_QuestionPaper.md */; };
+		6DCFA0DFC5543C32C86F40A3 /* Maths_Ch06_NumberPlay_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = D352E92A0719525C3E2AD85A /* Maths_Ch06_NumberPlay_Advanced_Solutions.md */; };
+		E534DD1784F76F8B87DDDDA1 /* Maths_Ch06_NumberPlay_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 2B4510F404F0C92C5D146128 /* Maths_Ch06_NumberPlay_Advanced_SolvedGuide.html */; };
 		052841C5DA85BD4E9882B8AA /* Maths_Ch06_NumberPlay_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = B513FF0D2AE43CCB2B2BBBD4 /* Maths_Ch06_NumberPlay_QuestionPaper.md */; };
 		11FED1D8A5224AA3BE581C67 /* Maths_Ch06_NumberPlay_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 0D2B47C7D78C6840F002E6D8 /* Maths_Ch06_NumberPlay_Solutions.md */; };
 		9CC1A0E48996F9AFB521EFEC /* Maths_Ch06_NumberPlay_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 56303D32D75396CD795B4F6D /* Maths_Ch06_NumberPlay_SolvedGuide.html */; };
 		A19DF7EF4117D15284D3A85B /* Maths_Ch07_ATaleOfThreeIntersectingLines.html in Resources */ = {isa = PBXBuildFile; fileRef = 2B48E2A076CAD1BB3FA98B73 /* Maths_Ch07_ATaleOfThreeIntersectingLines.html */; };
 		AEDC8C06B1A9E0B732835FB3 /* Maths_Ch07_ATaleOfThreeIntersectingLines.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4DEB207EE8EF24696BC31F59 /* Maths_Ch07_ATaleOfThreeIntersectingLines.pdf */; };
+		9692502F7B6EC8C5A0428D27 /* Maths_Ch07_ATaleOfThreeIntersectingLines_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 0C0EECF2381C711A86C2605C /* Maths_Ch07_ATaleOfThreeIntersectingLines_Advanced_QuestionPaper.md */; };
+		468E951ACE4BCF4D6282BE8F /* Maths_Ch07_ATaleOfThreeIntersectingLines_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = DF21C19CDFA522E5E704EFC7 /* Maths_Ch07_ATaleOfThreeIntersectingLines_Advanced_Solutions.md */; };
+		41BC6A6D5C1601B56FF12612 /* Maths_Ch07_ATaleOfThreeIntersectingLines_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 9EE32F3E916966CBF71D046C /* Maths_Ch07_ATaleOfThreeIntersectingLines_Advanced_SolvedGuide.html */; };
 		9340F9EAFAD4A2BBA070EA33 /* Maths_Ch07_ATaleOfThreeIntersectingLines_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 30945BEA6141D9439E40C7E8 /* Maths_Ch07_ATaleOfThreeIntersectingLines_QuestionPaper.md */; };
 		30B8C6590E6FDEF6D142B4FC /* Maths_Ch07_ATaleOfThreeIntersectingLines_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 0A85A2AD28B24FC01364DB1C /* Maths_Ch07_ATaleOfThreeIntersectingLines_Solutions.md */; };
 		75566D21D7297A2599C3C512 /* Maths_Ch07_ATaleOfThreeIntersectingLines_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 4C0AB478A9D014F40F57BDD1 /* Maths_Ch07_ATaleOfThreeIntersectingLines_SolvedGuide.html */; };
 		5B16563236FD230B77F18C49 /* Maths_Ch08_WorkingWithFractions.html in Resources */ = {isa = PBXBuildFile; fileRef = A9348C334BA8DECDAD282564 /* Maths_Ch08_WorkingWithFractions.html */; };
 		BA42F41FC33FF58150EAEA87 /* Maths_Ch08_WorkingWithFractions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A65C5516EE6675245B1E53F5 /* Maths_Ch08_WorkingWithFractions.pdf */; };
+		B10A185BB99BB5B496235B42 /* Maths_Ch08_WorkingWithFractions_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 6F0834C37CA38C19D14138F1 /* Maths_Ch08_WorkingWithFractions_Advanced_QuestionPaper.md */; };
+		E939D7E2850968467596BABC /* Maths_Ch08_WorkingWithFractions_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 9D5AF69D9F069AE6954BABD3 /* Maths_Ch08_WorkingWithFractions_Advanced_Solutions.md */; };
+		0193E329D26814C80083D7AC /* Maths_Ch08_WorkingWithFractions_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 30A6557CBAE1DCCE54733235 /* Maths_Ch08_WorkingWithFractions_Advanced_SolvedGuide.html */; };
 		663319570B11D141D21A3E40 /* Maths_Ch08_WorkingWithFractions_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = B52F565C4BF7DDA66AA51F80 /* Maths_Ch08_WorkingWithFractions_QuestionPaper.md */; };
 		6F0A442B8EF8D863C9EF0D82 /* Maths_Ch08_WorkingWithFractions_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = C1C5ECB0B04A7BAE8D669C9C /* Maths_Ch08_WorkingWithFractions_Solutions.md */; };
 		EB7DB0FC0F4CE519D6717A4F /* Maths_Ch08_WorkingWithFractions_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 19DB93902450F3EA60462614 /* Maths_Ch08_WorkingWithFractions_SolvedGuide.html */; };
 		86BEC8FB7AB05B5AE8D09023 /* Maths_Ch09_GeometricTwins.html in Resources */ = {isa = PBXBuildFile; fileRef = 7B9CEB55CF6933A7462E636F /* Maths_Ch09_GeometricTwins.html */; };
 		89016D74EFE13D45C490869E /* Maths_Ch09_GeometricTwins.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2E25688EC82EAADE20730844 /* Maths_Ch09_GeometricTwins.pdf */; };
+		B21E0329D9D7D26CE6AA89BC /* Maths_Ch09_GeometricTwins_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 7370E65D3EAA77FC0E5EB2FF /* Maths_Ch09_GeometricTwins_Advanced_QuestionPaper.md */; };
+		DD233B95855EB8DDC5918834 /* Maths_Ch09_GeometricTwins_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 26890E52BEF6B5A9435D7893 /* Maths_Ch09_GeometricTwins_Advanced_Solutions.md */; };
+		5AFC01F8B7F001A6DDF9DE84 /* Maths_Ch09_GeometricTwins_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = D041F713F433E737265D18B4 /* Maths_Ch09_GeometricTwins_Advanced_SolvedGuide.html */; };
 		BE0E118BC0D4FD4DB84E3AAF /* Maths_Ch09_GeometricTwins_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = BD0AB8CA997ADBD02AD1EE12 /* Maths_Ch09_GeometricTwins_QuestionPaper.md */; };
 		CCECB88CEAB751B4D821D937 /* Maths_Ch09_GeometricTwins_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 8E46B0799AD585324ABACE60 /* Maths_Ch09_GeometricTwins_Solutions.md */; };
 		1C5DE57A71135AAF4F02A6D2 /* Maths_Ch09_GeometricTwins_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 4C18661A51B33CBFF2C87073 /* Maths_Ch09_GeometricTwins_SolvedGuide.html */; };
 		44F3E046350B9EC99A9B8191 /* Maths_Ch10_OperationsWithIntegers.html in Resources */ = {isa = PBXBuildFile; fileRef = 5893419AB8E3D2A7DFE076B5 /* Maths_Ch10_OperationsWithIntegers.html */; };
 		0F755B06A6C29E5A875AFF77 /* Maths_Ch10_OperationsWithIntegers.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 084F33796F6304969F02CF93 /* Maths_Ch10_OperationsWithIntegers.pdf */; };
+		7ED22677BC0532CE0AB7B504 /* Maths_Ch10_OperationsWithIntegers_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = C599A1C4E3900781C5CD6584 /* Maths_Ch10_OperationsWithIntegers_Advanced_QuestionPaper.md */; };
+		C250FAE1F267901F90AFAEA6 /* Maths_Ch10_OperationsWithIntegers_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 162797632F318F909F6A231C /* Maths_Ch10_OperationsWithIntegers_Advanced_Solutions.md */; };
+		9655752019F773E2837E5D20 /* Maths_Ch10_OperationsWithIntegers_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 7B157255AC0E969E87A71131 /* Maths_Ch10_OperationsWithIntegers_Advanced_SolvedGuide.html */; };
 		941ABD34332571992A907440 /* Maths_Ch10_OperationsWithIntegers_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 2BEC88039FCF495CB1A680A7 /* Maths_Ch10_OperationsWithIntegers_QuestionPaper.md */; };
 		864D4632003C4604FF40C6A5 /* Maths_Ch10_OperationsWithIntegers_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = E5B513E0DD24124B6473D6AB /* Maths_Ch10_OperationsWithIntegers_Solutions.md */; };
 		892A8934672CBCA838F5757E /* Maths_Ch10_OperationsWithIntegers_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 5CF9C75EBB04A0461628ED71 /* Maths_Ch10_OperationsWithIntegers_SolvedGuide.html */; };
 		FB02F70386C0B21E691F1934 /* Maths_Ch11_FindingCommonGround.html in Resources */ = {isa = PBXBuildFile; fileRef = 0E7ED69A57842B46CECA488F /* Maths_Ch11_FindingCommonGround.html */; };
 		51C616093C5CC21BE74BCA6C /* Maths_Ch11_FindingCommonGround.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A11B87E6B9B5D54F6FC7B6CE /* Maths_Ch11_FindingCommonGround.pdf */; };
+		B8CF75842DD99E71333AC96A /* Maths_Ch11_FindingCommonGround_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 8F1BE75649EAD476F41D0E90 /* Maths_Ch11_FindingCommonGround_Advanced_QuestionPaper.md */; };
+		F32D012B9377714BC018DF4B /* Maths_Ch11_FindingCommonGround_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 2C1BE27A066D2B2864CAFB99 /* Maths_Ch11_FindingCommonGround_Advanced_Solutions.md */; };
+		E783720195EC2A2B22018DA2 /* Maths_Ch11_FindingCommonGround_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = A29C9C46EF60E2B8A7F5C09F /* Maths_Ch11_FindingCommonGround_Advanced_SolvedGuide.html */; };
 		63B1589C5E1AB78307E3B714 /* Maths_Ch11_FindingCommonGround_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 852F5200999143948ED36BC3 /* Maths_Ch11_FindingCommonGround_QuestionPaper.md */; };
 		E38CE34024B69EC7DCC8EA91 /* Maths_Ch11_FindingCommonGround_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 321909FBC41BFEF854314176 /* Maths_Ch11_FindingCommonGround_Solutions.md */; };
 		993CDC38F44E2284A8CDC805 /* Maths_Ch11_FindingCommonGround_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 044E619E02F7E452D7C1DE14 /* Maths_Ch11_FindingCommonGround_SolvedGuide.html */; };
 		F2BC28607FB167AF6EE40869 /* Maths_Ch12_AnotherPeekBeyondThePoint.html in Resources */ = {isa = PBXBuildFile; fileRef = A7AA619B09BE394B725B5196 /* Maths_Ch12_AnotherPeekBeyondThePoint.html */; };
 		CE75015739D4FD0BD339245B /* Maths_Ch12_AnotherPeekBeyondThePoint.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 699E9665661997BB5125BE01 /* Maths_Ch12_AnotherPeekBeyondThePoint.pdf */; };
+		08F9F3007364E7F201077A7D /* Maths_Ch12_AnotherPeekBeyondThePoint_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 9A154C1A6B5CE88F74D1E522 /* Maths_Ch12_AnotherPeekBeyondThePoint_Advanced_QuestionPaper.md */; };
+		4F69289C9A33A245BB364D72 /* Maths_Ch12_AnotherPeekBeyondThePoint_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = ACA724C0D8F987CB0DD9991F /* Maths_Ch12_AnotherPeekBeyondThePoint_Advanced_Solutions.md */; };
+		4DE9B8E3BF03B1EB54B7AB9A /* Maths_Ch12_AnotherPeekBeyondThePoint_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 0C64D0935D830E0F283726B0 /* Maths_Ch12_AnotherPeekBeyondThePoint_Advanced_SolvedGuide.html */; };
 		A7E84C209A7DE5126E92C390 /* Maths_Ch12_AnotherPeekBeyondThePoint_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 925C8E342037B9D122D1965F /* Maths_Ch12_AnotherPeekBeyondThePoint_QuestionPaper.md */; };
 		ACEA1A9FD6DD958F7440D768 /* Maths_Ch12_AnotherPeekBeyondThePoint_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = BD87EF9D98822FC086CE9BB2 /* Maths_Ch12_AnotherPeekBeyondThePoint_Solutions.md */; };
 		8D3A8A72A11D80813DFA928A /* Maths_Ch12_AnotherPeekBeyondThePoint_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = B03F8DF6D9164FF6BA8E6B7A /* Maths_Ch12_AnotherPeekBeyondThePoint_SolvedGuide.html */; };
 		509AE6E01F72B4C759E9F9CB /* Maths_Ch13_ConnectingTheDots.html in Resources */ = {isa = PBXBuildFile; fileRef = 218AA6AEB5EDDD4C151CBA89 /* Maths_Ch13_ConnectingTheDots.html */; };
 		8B28A426E5F1CBDC6DB3E9F7 /* Maths_Ch13_ConnectingTheDots.pdf in Resources */ = {isa = PBXBuildFile; fileRef = AB55F726E8E1413AB74E6945 /* Maths_Ch13_ConnectingTheDots.pdf */; };
+		325CE5C8A5172F5346EFB284 /* Maths_Ch13_ConnectingTheDots_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 957617F56BDE1DCC8106DB6C /* Maths_Ch13_ConnectingTheDots_Advanced_QuestionPaper.md */; };
+		96575F4927B838F2D743858D /* Maths_Ch13_ConnectingTheDots_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = E650C346DB6916762EBD78F5 /* Maths_Ch13_ConnectingTheDots_Advanced_Solutions.md */; };
+		28C4A734559E43E7C67C1A41 /* Maths_Ch13_ConnectingTheDots_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = F09F0224106948985A833E11 /* Maths_Ch13_ConnectingTheDots_Advanced_SolvedGuide.html */; };
 		082B5CCB524B2333D3A741DC /* Maths_Ch13_ConnectingTheDots_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 5468D6B3D240DADE5C245A9C /* Maths_Ch13_ConnectingTheDots_QuestionPaper.md */; };
 		A235BE72BE7CD6AB16F236B5 /* Maths_Ch13_ConnectingTheDots_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = E5126E7E7DFE291617CE059D /* Maths_Ch13_ConnectingTheDots_Solutions.md */; };
 		9EE78D97501273C2F855DCCD /* Maths_Ch13_ConnectingTheDots_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 69CCE590947608B7D96C762E /* Maths_Ch13_ConnectingTheDots_SolvedGuide.html */; };
 		0DCA5098EDF11C3EA33322F0 /* Maths_Ch14_ConstructionsAndTilings.html in Resources */ = {isa = PBXBuildFile; fileRef = 61906FC9F4D40DA134BC1C2C /* Maths_Ch14_ConstructionsAndTilings.html */; };
 		AECCEEE255C76916B0331882 /* Maths_Ch14_ConstructionsAndTilings.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 813739AA0D1DCC49769E91DC /* Maths_Ch14_ConstructionsAndTilings.pdf */; };
+		A9D5D50015454F3B0412FB06 /* Maths_Ch14_ConstructionsAndTilings_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 7BD75BE760B5F2813D560F4C /* Maths_Ch14_ConstructionsAndTilings_Advanced_QuestionPaper.md */; };
+		CC591A895E924394E8EAC90D /* Maths_Ch14_ConstructionsAndTilings_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = D131826CF906BE46167A0F82 /* Maths_Ch14_ConstructionsAndTilings_Advanced_Solutions.md */; };
+		BF9125D3ACF9582725D98AA4 /* Maths_Ch14_ConstructionsAndTilings_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 703313F19A46D9F448D2999D /* Maths_Ch14_ConstructionsAndTilings_Advanced_SolvedGuide.html */; };
 		FEA9CC4703113B0D2442774B /* Maths_Ch14_ConstructionsAndTilings_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 76E03D0FAEB640C84802AC7F /* Maths_Ch14_ConstructionsAndTilings_QuestionPaper.md */; };
 		93AE0029AC2C4D049AFC7C3E /* Maths_Ch14_ConstructionsAndTilings_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = F59A432DAA05E60FF52895AB /* Maths_Ch14_ConstructionsAndTilings_Solutions.md */; };
 		32338252CBEF31F726D60165 /* Maths_Ch14_ConstructionsAndTilings_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = BFA6C78B2454681121A7E526 /* Maths_Ch14_ConstructionsAndTilings_SolvedGuide.html */; };
@@ -1672,6 +1714,9 @@
 		2912D253C441AD661CC610BE /* Science_Ch03_FibreToFabric_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = E85A5AE1ADCD51E5D2D6631B /* Science_Ch03_FibreToFabric_SolvedGuide.html */; };
 		CE6E5EF7D2E113FE23CED94F /* Science_Ch04_Heat.html in Resources */ = {isa = PBXBuildFile; fileRef = 645EC429002186861FD63275 /* Science_Ch04_Heat.html */; };
 		5557346B2C38947911C712B9 /* Science_Ch04_Heat.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8C1C2DEF4172FE776D29502D /* Science_Ch04_Heat.pdf */; };
+		E9D8696D157B5DE332F2C332 /* Science_Ch04_Heat_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = DD08F27BE7E849662C96F0AE /* Science_Ch04_Heat_Advanced_QuestionPaper.md */; };
+		81CCB71DEDD160408697E012 /* Science_Ch04_Heat_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = D5CE4C86E8EA928E54729D17 /* Science_Ch04_Heat_Advanced_Solutions.md */; };
+		C22F9A680769012BDBA7B0A2 /* Science_Ch04_Heat_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = D3832D90568F59B2C288CDEE /* Science_Ch04_Heat_Advanced_SolvedGuide.html */; };
 		77605F17856B0D11C5CADB37 /* Science_Ch04_Heat_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 821DBC51834F3FEED7E7AF99 /* Science_Ch04_Heat_QuestionPaper.md */; };
 		721E18A0AB7EC0F69EDE3B5A /* Science_Ch04_Heat_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = F8B8A66B9C002655C1CDE3F3 /* Science_Ch04_Heat_Solutions.md */; };
 		2B644C72DF86AF96912640DE /* Science_Ch04_Heat_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = BEB17D27C1E27CC03AB07B39 /* Science_Ch04_Heat_SolvedGuide.html */; };
@@ -1725,11 +1770,17 @@
 		A03AAFD6221254CE42EA3ECC /* Science_Ch13_MotionAndTime_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = B9685DAFFFFE683ADC910AC5 /* Science_Ch13_MotionAndTime_SolvedGuide.html */; };
 		CB5B6AA37CDADCB82B56FF6B /* Science_Ch14_ElectricCurrentAndItsEffect.html in Resources */ = {isa = PBXBuildFile; fileRef = FA61904446E7B9C1C8E9DAF7 /* Science_Ch14_ElectricCurrentAndItsEffect.html */; };
 		355F1DA8DB8EA6734712F043 /* Science_Ch14_ElectricCurrentAndItsEffect.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8C0003E409888612470099DE /* Science_Ch14_ElectricCurrentAndItsEffect.pdf */; };
+		58FCEB9D46A315B9F2915EC6 /* Science_Ch14_ElectricCurrentAndItsEffect_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 31417A7AF5B9A9DDDDA84CA4 /* Science_Ch14_ElectricCurrentAndItsEffect_Advanced_QuestionPaper.md */; };
+		374F58E02DD951D8FBAB06D4 /* Science_Ch14_ElectricCurrentAndItsEffect_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 381FE52BD32054001F3BA481 /* Science_Ch14_ElectricCurrentAndItsEffect_Advanced_Solutions.md */; };
+		3FAE70EA738EB206FAE4EFFD /* Science_Ch14_ElectricCurrentAndItsEffect_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = FC3DE6B5695A7F78D270D91B /* Science_Ch14_ElectricCurrentAndItsEffect_Advanced_SolvedGuide.html */; };
 		BC19757DFD1AB33B02359EEA /* Science_Ch14_ElectricCurrentAndItsEffect_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 7FD50318DA8FA22C51B731FE /* Science_Ch14_ElectricCurrentAndItsEffect_QuestionPaper.md */; };
 		FE2A581148885EF2DD4EFF0B /* Science_Ch14_ElectricCurrentAndItsEffect_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 2D4A697E6AFBE9E579C41943 /* Science_Ch14_ElectricCurrentAndItsEffect_Solutions.md */; };
 		D91EBEFD56F85642D6E10C81 /* Science_Ch14_ElectricCurrentAndItsEffect_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 20FC69CD93146AA2FBD70EBF /* Science_Ch14_ElectricCurrentAndItsEffect_SolvedGuide.html */; };
 		E053E6C3FD35D99555577C04 /* Science_Ch15_Light.html in Resources */ = {isa = PBXBuildFile; fileRef = E019447B2CB75C21CCAD2725 /* Science_Ch15_Light.html */; };
 		EDEBEF2625623450E693EFC1 /* Science_Ch15_Light.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CE360F080BD326485E30A021 /* Science_Ch15_Light.pdf */; };
+		64A8526A266FEC12367AC502 /* Science_Ch15_Light_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 58BDC5BF3EFBE335EEDE2985 /* Science_Ch15_Light_Advanced_QuestionPaper.md */; };
+		A7C00D3A80BE19F4D0BC1A2C /* Science_Ch15_Light_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = EB326362FBA3D39C2CD2DE37 /* Science_Ch15_Light_Advanced_Solutions.md */; };
+		5A0FE6E34D65A22A9AFED002 /* Science_Ch15_Light_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 951E949D494AC0866235110E /* Science_Ch15_Light_Advanced_SolvedGuide.html */; };
 		B71E1DF05785DB893F340318 /* Science_Ch15_Light_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = F22BE39A6BFC061B31D597F9 /* Science_Ch15_Light_QuestionPaper.md */; };
 		A33740D49837D92C05C0FFA3 /* Science_Ch15_Light_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = AC455A5CF1DE9A5D94186BE9 /* Science_Ch15_Light_Solutions.md */; };
 		88BAD5AD3D62B66E75754415 /* Science_Ch15_Light_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 4FA0BD69428FFF4DE2A87C78 /* Science_Ch15_Light_SolvedGuide.html */; };
@@ -1755,6 +1806,9 @@
 		870600451E67AC280BC382CD /* Science_Ch19_EarthMoonAndTheSun_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = EE3C046FAE5F20E35A4DC9D8 /* Science_Ch19_EarthMoonAndTheSun_SolvedGuide.html */; };
 		5B0EE31AF582146523A4AE08 /* SocialScience_Ssch01_GeographicalDiversityOfIndia.html in Resources */ = {isa = PBXBuildFile; fileRef = 41C53336A2DB1645EB83BAB2 /* SocialScience_Ssch01_GeographicalDiversityOfIndia.html */; };
 		DA8A12122C5F13412BEDCE70 /* SocialScience_Ssch01_GeographicalDiversityOfIndia.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CB86187B6D777055696168C9 /* SocialScience_Ssch01_GeographicalDiversityOfIndia.pdf */; };
+		93F5736A4771983F044D06EB /* SocialScience_Ssch01_GeographicalDiversityOfIndia_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = C15ECD909E3AC5FFF9924DD5 /* SocialScience_Ssch01_GeographicalDiversityOfIndia_Advanced_QuestionPaper.md */; };
+		4965DF38082DE37811D32922 /* SocialScience_Ssch01_GeographicalDiversityOfIndia_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = B5FEA1899DF7811E0ADD6157 /* SocialScience_Ssch01_GeographicalDiversityOfIndia_Advanced_Solutions.md */; };
+		0D1B8D3FA688CDB7C6CE66C9 /* SocialScience_Ssch01_GeographicalDiversityOfIndia_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 488D242C7F8F7C44030A6323 /* SocialScience_Ssch01_GeographicalDiversityOfIndia_Advanced_SolvedGuide.html */; };
 		4AF3896A64E8EC4D853B8800 /* SocialScience_Ssch01_GeographicalDiversityOfIndia_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = ADFD496CE47929F6C296664A /* SocialScience_Ssch01_GeographicalDiversityOfIndia_QuestionPaper.md */; };
 		1DA4F4D66650C3AE92B5F971 /* SocialScience_Ssch01_GeographicalDiversityOfIndia_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 6275F271130BCE459B26DFFC /* SocialScience_Ssch01_GeographicalDiversityOfIndia_Solutions.md */; };
 		4BCDA3A240B8421AD532FC28 /* SocialScience_Ssch01_GeographicalDiversityOfIndia_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 11A249EF43248BB0EEA5B4A1 /* SocialScience_Ssch01_GeographicalDiversityOfIndia_SolvedGuide.html */; };
@@ -2999,71 +3053,113 @@
 		BF759BB1B72E6C4A18E6BF60 /* ch12_whatif.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "ch12_whatif.html"; sourceTree = "<group>"; };
 		4592545A7E1E2A91B194A013 /* Maths_Ch01_LargeNumbersAroundUs.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch01_LargeNumbersAroundUs.html"; sourceTree = "<group>"; };
 		06D9689FAF09D6FD0B08D0FB /* Maths_Ch01_LargeNumbersAroundUs.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Maths_Ch01_LargeNumbersAroundUs.pdf"; sourceTree = "<group>"; };
+		C4035EF57215AFFA006CF520 /* Maths_Ch01_LargeNumbersAroundUs_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch01_LargeNumbersAroundUs_Advanced_QuestionPaper.md"; sourceTree = "<group>"; };
+		11B69DB48ADC2DB3E5A1E888 /* Maths_Ch01_LargeNumbersAroundUs_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch01_LargeNumbersAroundUs_Advanced_Solutions.md"; sourceTree = "<group>"; };
+		E58EBE6901FF1117C497326F /* Maths_Ch01_LargeNumbersAroundUs_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch01_LargeNumbersAroundUs_Advanced_SolvedGuide.html"; sourceTree = "<group>"; };
 		C0B1EA3B0D1095B41F579EE0 /* Maths_Ch01_LargeNumbersAroundUs_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch01_LargeNumbersAroundUs_QuestionPaper.md"; sourceTree = "<group>"; };
 		57DCF5F27FCF9BE73A21BC3A /* Maths_Ch01_LargeNumbersAroundUs_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch01_LargeNumbersAroundUs_Solutions.md"; sourceTree = "<group>"; };
 		89E8479A53C7F1AA26B6079A /* Maths_Ch01_LargeNumbersAroundUs_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch01_LargeNumbersAroundUs_SolvedGuide.html"; sourceTree = "<group>"; };
 		5AE3F543E7D8732894B81C0F /* Maths_Ch02_ArithmeticExpressions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch02_ArithmeticExpressions.html"; sourceTree = "<group>"; };
 		F06E72D409D39D8B25248B80 /* Maths_Ch02_ArithmeticExpressions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Maths_Ch02_ArithmeticExpressions.pdf"; sourceTree = "<group>"; };
+		6D5384DC3CA0E226FAC444E7 /* Maths_Ch02_ArithmeticExpressions_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch02_ArithmeticExpressions_Advanced_QuestionPaper.md"; sourceTree = "<group>"; };
+		53E5BD236340B4038D311E2C /* Maths_Ch02_ArithmeticExpressions_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch02_ArithmeticExpressions_Advanced_Solutions.md"; sourceTree = "<group>"; };
+		31F3B736A988B29C79FFA735 /* Maths_Ch02_ArithmeticExpressions_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch02_ArithmeticExpressions_Advanced_SolvedGuide.html"; sourceTree = "<group>"; };
 		B8E420423C85FF8724674B75 /* Maths_Ch02_ArithmeticExpressions_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch02_ArithmeticExpressions_QuestionPaper.md"; sourceTree = "<group>"; };
 		9F3FB1F395942271F7EDD160 /* Maths_Ch02_ArithmeticExpressions_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch02_ArithmeticExpressions_Solutions.md"; sourceTree = "<group>"; };
 		49BBFC7E7F7FD026279114BE /* Maths_Ch02_ArithmeticExpressions_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch02_ArithmeticExpressions_SolvedGuide.html"; sourceTree = "<group>"; };
 		0A4BAE834B69E600E753B83E /* Maths_Ch03_APeekBeyondThePoint.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch03_APeekBeyondThePoint.html"; sourceTree = "<group>"; };
 		EA47A066F154ED3C5216465F /* Maths_Ch03_APeekBeyondThePoint.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Maths_Ch03_APeekBeyondThePoint.pdf"; sourceTree = "<group>"; };
+		D837C84CD02B67EB644D94DA /* Maths_Ch03_APeekBeyondThePoint_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch03_APeekBeyondThePoint_Advanced_QuestionPaper.md"; sourceTree = "<group>"; };
+		A7C5EF2621348A167C164405 /* Maths_Ch03_APeekBeyondThePoint_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch03_APeekBeyondThePoint_Advanced_Solutions.md"; sourceTree = "<group>"; };
+		09881DFFB5713B02E0E291AD /* Maths_Ch03_APeekBeyondThePoint_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch03_APeekBeyondThePoint_Advanced_SolvedGuide.html"; sourceTree = "<group>"; };
 		620E2C6467F43ABB68450859 /* Maths_Ch03_APeekBeyondThePoint_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch03_APeekBeyondThePoint_QuestionPaper.md"; sourceTree = "<group>"; };
 		A9C0A6759528901A4F66996C /* Maths_Ch03_APeekBeyondThePoint_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch03_APeekBeyondThePoint_Solutions.md"; sourceTree = "<group>"; };
 		793B9C958D70BDBAC136C82A /* Maths_Ch03_APeekBeyondThePoint_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch03_APeekBeyondThePoint_SolvedGuide.html"; sourceTree = "<group>"; };
 		8CC373E3A5DAB602C4A20798 /* Maths_Ch04_ExpressionsUsingLetterNumbers.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch04_ExpressionsUsingLetterNumbers.html"; sourceTree = "<group>"; };
 		658EE82673BD9B5BC630BA90 /* Maths_Ch04_ExpressionsUsingLetterNumbers.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Maths_Ch04_ExpressionsUsingLetterNumbers.pdf"; sourceTree = "<group>"; };
+		598D08A8891EBA8F215B60E4 /* Maths_Ch04_ExpressionsUsingLetterNumbers_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch04_ExpressionsUsingLetterNumbers_Advanced_QuestionPaper.md"; sourceTree = "<group>"; };
+		C22164765A90340882FF52B6 /* Maths_Ch04_ExpressionsUsingLetterNumbers_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch04_ExpressionsUsingLetterNumbers_Advanced_Solutions.md"; sourceTree = "<group>"; };
+		6CA78FB91A7B99119A3372D1 /* Maths_Ch04_ExpressionsUsingLetterNumbers_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch04_ExpressionsUsingLetterNumbers_Advanced_SolvedGuide.html"; sourceTree = "<group>"; };
 		636E83814E42D914EC1210FD /* Maths_Ch04_ExpressionsUsingLetterNumbers_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch04_ExpressionsUsingLetterNumbers_QuestionPaper.md"; sourceTree = "<group>"; };
 		CD91F671A199DDDF1D410550 /* Maths_Ch04_ExpressionsUsingLetterNumbers_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch04_ExpressionsUsingLetterNumbers_Solutions.md"; sourceTree = "<group>"; };
 		D5028008A04B1CEF6A9C83BE /* Maths_Ch04_ExpressionsUsingLetterNumbers_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch04_ExpressionsUsingLetterNumbers_SolvedGuide.html"; sourceTree = "<group>"; };
 		7584391774663770BB36E683 /* Maths_Ch05_ParallelAndIntersectingLines.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch05_ParallelAndIntersectingLines.html"; sourceTree = "<group>"; };
 		FE297ADB2027C7CF4843F2A5 /* Maths_Ch05_ParallelAndIntersectingLines.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Maths_Ch05_ParallelAndIntersectingLines.pdf"; sourceTree = "<group>"; };
+		BFA7D1186D47427EEE08DDFB /* Maths_Ch05_ParallelAndIntersectingLines_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch05_ParallelAndIntersectingLines_Advanced_QuestionPaper.md"; sourceTree = "<group>"; };
+		D2702E902AB4BB3BE2C9D8E0 /* Maths_Ch05_ParallelAndIntersectingLines_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch05_ParallelAndIntersectingLines_Advanced_Solutions.md"; sourceTree = "<group>"; };
+		C1A866694AA767EA557E3C62 /* Maths_Ch05_ParallelAndIntersectingLines_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch05_ParallelAndIntersectingLines_Advanced_SolvedGuide.html"; sourceTree = "<group>"; };
 		3E9DFF91790259ACF98FEB7C /* Maths_Ch05_ParallelAndIntersectingLines_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch05_ParallelAndIntersectingLines_QuestionPaper.md"; sourceTree = "<group>"; };
 		6EBD46B0DB6D1D66A5DA8170 /* Maths_Ch05_ParallelAndIntersectingLines_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch05_ParallelAndIntersectingLines_Solutions.md"; sourceTree = "<group>"; };
 		948DB09705C6E78DBD4FEEA8 /* Maths_Ch05_ParallelAndIntersectingLines_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch05_ParallelAndIntersectingLines_SolvedGuide.html"; sourceTree = "<group>"; };
 		F3AB3FF706800301B5C8CD29 /* Maths_Ch06_NumberPlay.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch06_NumberPlay.html"; sourceTree = "<group>"; };
 		B4E22665C6FA0A9024124AD1 /* Maths_Ch06_NumberPlay.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Maths_Ch06_NumberPlay.pdf"; sourceTree = "<group>"; };
+		EC3ABE364F53EA87B3EDE059 /* Maths_Ch06_NumberPlay_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch06_NumberPlay_Advanced_QuestionPaper.md"; sourceTree = "<group>"; };
+		D352E92A0719525C3E2AD85A /* Maths_Ch06_NumberPlay_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch06_NumberPlay_Advanced_Solutions.md"; sourceTree = "<group>"; };
+		2B4510F404F0C92C5D146128 /* Maths_Ch06_NumberPlay_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch06_NumberPlay_Advanced_SolvedGuide.html"; sourceTree = "<group>"; };
 		B513FF0D2AE43CCB2B2BBBD4 /* Maths_Ch06_NumberPlay_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch06_NumberPlay_QuestionPaper.md"; sourceTree = "<group>"; };
 		0D2B47C7D78C6840F002E6D8 /* Maths_Ch06_NumberPlay_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch06_NumberPlay_Solutions.md"; sourceTree = "<group>"; };
 		56303D32D75396CD795B4F6D /* Maths_Ch06_NumberPlay_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch06_NumberPlay_SolvedGuide.html"; sourceTree = "<group>"; };
 		2B48E2A076CAD1BB3FA98B73 /* Maths_Ch07_ATaleOfThreeIntersectingLines.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch07_ATaleOfThreeIntersectingLines.html"; sourceTree = "<group>"; };
 		4DEB207EE8EF24696BC31F59 /* Maths_Ch07_ATaleOfThreeIntersectingLines.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Maths_Ch07_ATaleOfThreeIntersectingLines.pdf"; sourceTree = "<group>"; };
+		0C0EECF2381C711A86C2605C /* Maths_Ch07_ATaleOfThreeIntersectingLines_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch07_ATaleOfThreeIntersectingLines_Advanced_QuestionPaper.md"; sourceTree = "<group>"; };
+		DF21C19CDFA522E5E704EFC7 /* Maths_Ch07_ATaleOfThreeIntersectingLines_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch07_ATaleOfThreeIntersectingLines_Advanced_Solutions.md"; sourceTree = "<group>"; };
+		9EE32F3E916966CBF71D046C /* Maths_Ch07_ATaleOfThreeIntersectingLines_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch07_ATaleOfThreeIntersectingLines_Advanced_SolvedGuide.html"; sourceTree = "<group>"; };
 		30945BEA6141D9439E40C7E8 /* Maths_Ch07_ATaleOfThreeIntersectingLines_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch07_ATaleOfThreeIntersectingLines_QuestionPaper.md"; sourceTree = "<group>"; };
 		0A85A2AD28B24FC01364DB1C /* Maths_Ch07_ATaleOfThreeIntersectingLines_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch07_ATaleOfThreeIntersectingLines_Solutions.md"; sourceTree = "<group>"; };
 		4C0AB478A9D014F40F57BDD1 /* Maths_Ch07_ATaleOfThreeIntersectingLines_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch07_ATaleOfThreeIntersectingLines_SolvedGuide.html"; sourceTree = "<group>"; };
 		A9348C334BA8DECDAD282564 /* Maths_Ch08_WorkingWithFractions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch08_WorkingWithFractions.html"; sourceTree = "<group>"; };
 		A65C5516EE6675245B1E53F5 /* Maths_Ch08_WorkingWithFractions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Maths_Ch08_WorkingWithFractions.pdf"; sourceTree = "<group>"; };
+		6F0834C37CA38C19D14138F1 /* Maths_Ch08_WorkingWithFractions_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch08_WorkingWithFractions_Advanced_QuestionPaper.md"; sourceTree = "<group>"; };
+		9D5AF69D9F069AE6954BABD3 /* Maths_Ch08_WorkingWithFractions_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch08_WorkingWithFractions_Advanced_Solutions.md"; sourceTree = "<group>"; };
+		30A6557CBAE1DCCE54733235 /* Maths_Ch08_WorkingWithFractions_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch08_WorkingWithFractions_Advanced_SolvedGuide.html"; sourceTree = "<group>"; };
 		B52F565C4BF7DDA66AA51F80 /* Maths_Ch08_WorkingWithFractions_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch08_WorkingWithFractions_QuestionPaper.md"; sourceTree = "<group>"; };
 		C1C5ECB0B04A7BAE8D669C9C /* Maths_Ch08_WorkingWithFractions_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch08_WorkingWithFractions_Solutions.md"; sourceTree = "<group>"; };
 		19DB93902450F3EA60462614 /* Maths_Ch08_WorkingWithFractions_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch08_WorkingWithFractions_SolvedGuide.html"; sourceTree = "<group>"; };
 		7B9CEB55CF6933A7462E636F /* Maths_Ch09_GeometricTwins.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch09_GeometricTwins.html"; sourceTree = "<group>"; };
 		2E25688EC82EAADE20730844 /* Maths_Ch09_GeometricTwins.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Maths_Ch09_GeometricTwins.pdf"; sourceTree = "<group>"; };
+		7370E65D3EAA77FC0E5EB2FF /* Maths_Ch09_GeometricTwins_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch09_GeometricTwins_Advanced_QuestionPaper.md"; sourceTree = "<group>"; };
+		26890E52BEF6B5A9435D7893 /* Maths_Ch09_GeometricTwins_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch09_GeometricTwins_Advanced_Solutions.md"; sourceTree = "<group>"; };
+		D041F713F433E737265D18B4 /* Maths_Ch09_GeometricTwins_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch09_GeometricTwins_Advanced_SolvedGuide.html"; sourceTree = "<group>"; };
 		BD0AB8CA997ADBD02AD1EE12 /* Maths_Ch09_GeometricTwins_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch09_GeometricTwins_QuestionPaper.md"; sourceTree = "<group>"; };
 		8E46B0799AD585324ABACE60 /* Maths_Ch09_GeometricTwins_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch09_GeometricTwins_Solutions.md"; sourceTree = "<group>"; };
 		4C18661A51B33CBFF2C87073 /* Maths_Ch09_GeometricTwins_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch09_GeometricTwins_SolvedGuide.html"; sourceTree = "<group>"; };
 		5893419AB8E3D2A7DFE076B5 /* Maths_Ch10_OperationsWithIntegers.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch10_OperationsWithIntegers.html"; sourceTree = "<group>"; };
 		084F33796F6304969F02CF93 /* Maths_Ch10_OperationsWithIntegers.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Maths_Ch10_OperationsWithIntegers.pdf"; sourceTree = "<group>"; };
+		C599A1C4E3900781C5CD6584 /* Maths_Ch10_OperationsWithIntegers_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch10_OperationsWithIntegers_Advanced_QuestionPaper.md"; sourceTree = "<group>"; };
+		162797632F318F909F6A231C /* Maths_Ch10_OperationsWithIntegers_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch10_OperationsWithIntegers_Advanced_Solutions.md"; sourceTree = "<group>"; };
+		7B157255AC0E969E87A71131 /* Maths_Ch10_OperationsWithIntegers_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch10_OperationsWithIntegers_Advanced_SolvedGuide.html"; sourceTree = "<group>"; };
 		2BEC88039FCF495CB1A680A7 /* Maths_Ch10_OperationsWithIntegers_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch10_OperationsWithIntegers_QuestionPaper.md"; sourceTree = "<group>"; };
 		E5B513E0DD24124B6473D6AB /* Maths_Ch10_OperationsWithIntegers_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch10_OperationsWithIntegers_Solutions.md"; sourceTree = "<group>"; };
 		5CF9C75EBB04A0461628ED71 /* Maths_Ch10_OperationsWithIntegers_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch10_OperationsWithIntegers_SolvedGuide.html"; sourceTree = "<group>"; };
 		0E7ED69A57842B46CECA488F /* Maths_Ch11_FindingCommonGround.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch11_FindingCommonGround.html"; sourceTree = "<group>"; };
 		A11B87E6B9B5D54F6FC7B6CE /* Maths_Ch11_FindingCommonGround.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Maths_Ch11_FindingCommonGround.pdf"; sourceTree = "<group>"; };
+		8F1BE75649EAD476F41D0E90 /* Maths_Ch11_FindingCommonGround_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch11_FindingCommonGround_Advanced_QuestionPaper.md"; sourceTree = "<group>"; };
+		2C1BE27A066D2B2864CAFB99 /* Maths_Ch11_FindingCommonGround_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch11_FindingCommonGround_Advanced_Solutions.md"; sourceTree = "<group>"; };
+		A29C9C46EF60E2B8A7F5C09F /* Maths_Ch11_FindingCommonGround_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch11_FindingCommonGround_Advanced_SolvedGuide.html"; sourceTree = "<group>"; };
 		852F5200999143948ED36BC3 /* Maths_Ch11_FindingCommonGround_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch11_FindingCommonGround_QuestionPaper.md"; sourceTree = "<group>"; };
 		321909FBC41BFEF854314176 /* Maths_Ch11_FindingCommonGround_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch11_FindingCommonGround_Solutions.md"; sourceTree = "<group>"; };
 		044E619E02F7E452D7C1DE14 /* Maths_Ch11_FindingCommonGround_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch11_FindingCommonGround_SolvedGuide.html"; sourceTree = "<group>"; };
 		A7AA619B09BE394B725B5196 /* Maths_Ch12_AnotherPeekBeyondThePoint.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch12_AnotherPeekBeyondThePoint.html"; sourceTree = "<group>"; };
 		699E9665661997BB5125BE01 /* Maths_Ch12_AnotherPeekBeyondThePoint.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Maths_Ch12_AnotherPeekBeyondThePoint.pdf"; sourceTree = "<group>"; };
+		9A154C1A6B5CE88F74D1E522 /* Maths_Ch12_AnotherPeekBeyondThePoint_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch12_AnotherPeekBeyondThePoint_Advanced_QuestionPaper.md"; sourceTree = "<group>"; };
+		ACA724C0D8F987CB0DD9991F /* Maths_Ch12_AnotherPeekBeyondThePoint_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch12_AnotherPeekBeyondThePoint_Advanced_Solutions.md"; sourceTree = "<group>"; };
+		0C64D0935D830E0F283726B0 /* Maths_Ch12_AnotherPeekBeyondThePoint_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch12_AnotherPeekBeyondThePoint_Advanced_SolvedGuide.html"; sourceTree = "<group>"; };
 		925C8E342037B9D122D1965F /* Maths_Ch12_AnotherPeekBeyondThePoint_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch12_AnotherPeekBeyondThePoint_QuestionPaper.md"; sourceTree = "<group>"; };
 		BD87EF9D98822FC086CE9BB2 /* Maths_Ch12_AnotherPeekBeyondThePoint_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch12_AnotherPeekBeyondThePoint_Solutions.md"; sourceTree = "<group>"; };
 		B03F8DF6D9164FF6BA8E6B7A /* Maths_Ch12_AnotherPeekBeyondThePoint_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch12_AnotherPeekBeyondThePoint_SolvedGuide.html"; sourceTree = "<group>"; };
 		218AA6AEB5EDDD4C151CBA89 /* Maths_Ch13_ConnectingTheDots.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch13_ConnectingTheDots.html"; sourceTree = "<group>"; };
 		AB55F726E8E1413AB74E6945 /* Maths_Ch13_ConnectingTheDots.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Maths_Ch13_ConnectingTheDots.pdf"; sourceTree = "<group>"; };
+		957617F56BDE1DCC8106DB6C /* Maths_Ch13_ConnectingTheDots_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch13_ConnectingTheDots_Advanced_QuestionPaper.md"; sourceTree = "<group>"; };
+		E650C346DB6916762EBD78F5 /* Maths_Ch13_ConnectingTheDots_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch13_ConnectingTheDots_Advanced_Solutions.md"; sourceTree = "<group>"; };
+		F09F0224106948985A833E11 /* Maths_Ch13_ConnectingTheDots_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch13_ConnectingTheDots_Advanced_SolvedGuide.html"; sourceTree = "<group>"; };
 		5468D6B3D240DADE5C245A9C /* Maths_Ch13_ConnectingTheDots_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch13_ConnectingTheDots_QuestionPaper.md"; sourceTree = "<group>"; };
 		E5126E7E7DFE291617CE059D /* Maths_Ch13_ConnectingTheDots_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch13_ConnectingTheDots_Solutions.md"; sourceTree = "<group>"; };
 		69CCE590947608B7D96C762E /* Maths_Ch13_ConnectingTheDots_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch13_ConnectingTheDots_SolvedGuide.html"; sourceTree = "<group>"; };
 		61906FC9F4D40DA134BC1C2C /* Maths_Ch14_ConstructionsAndTilings.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch14_ConstructionsAndTilings.html"; sourceTree = "<group>"; };
 		813739AA0D1DCC49769E91DC /* Maths_Ch14_ConstructionsAndTilings.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Maths_Ch14_ConstructionsAndTilings.pdf"; sourceTree = "<group>"; };
+		7BD75BE760B5F2813D560F4C /* Maths_Ch14_ConstructionsAndTilings_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch14_ConstructionsAndTilings_Advanced_QuestionPaper.md"; sourceTree = "<group>"; };
+		D131826CF906BE46167A0F82 /* Maths_Ch14_ConstructionsAndTilings_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch14_ConstructionsAndTilings_Advanced_Solutions.md"; sourceTree = "<group>"; };
+		703313F19A46D9F448D2999D /* Maths_Ch14_ConstructionsAndTilings_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch14_ConstructionsAndTilings_Advanced_SolvedGuide.html"; sourceTree = "<group>"; };
 		76E03D0FAEB640C84802AC7F /* Maths_Ch14_ConstructionsAndTilings_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch14_ConstructionsAndTilings_QuestionPaper.md"; sourceTree = "<group>"; };
 		F59A432DAA05E60FF52895AB /* Maths_Ch14_ConstructionsAndTilings_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Maths_Ch14_ConstructionsAndTilings_Solutions.md"; sourceTree = "<group>"; };
 		BFA6C78B2454681121A7E526 /* Maths_Ch14_ConstructionsAndTilings_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Maths_Ch14_ConstructionsAndTilings_SolvedGuide.html"; sourceTree = "<group>"; };
@@ -3167,6 +3263,9 @@
 		E85A5AE1ADCD51E5D2D6631B /* Science_Ch03_FibreToFabric_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch03_FibreToFabric_SolvedGuide.html"; sourceTree = "<group>"; };
 		645EC429002186861FD63275 /* Science_Ch04_Heat.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch04_Heat.html"; sourceTree = "<group>"; };
 		8C1C2DEF4172FE776D29502D /* Science_Ch04_Heat.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Science_Ch04_Heat.pdf"; sourceTree = "<group>"; };
+		DD08F27BE7E849662C96F0AE /* Science_Ch04_Heat_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch04_Heat_Advanced_QuestionPaper.md"; sourceTree = "<group>"; };
+		D5CE4C86E8EA928E54729D17 /* Science_Ch04_Heat_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch04_Heat_Advanced_Solutions.md"; sourceTree = "<group>"; };
+		D3832D90568F59B2C288CDEE /* Science_Ch04_Heat_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch04_Heat_Advanced_SolvedGuide.html"; sourceTree = "<group>"; };
 		821DBC51834F3FEED7E7AF99 /* Science_Ch04_Heat_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch04_Heat_QuestionPaper.md"; sourceTree = "<group>"; };
 		F8B8A66B9C002655C1CDE3F3 /* Science_Ch04_Heat_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch04_Heat_Solutions.md"; sourceTree = "<group>"; };
 		BEB17D27C1E27CC03AB07B39 /* Science_Ch04_Heat_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch04_Heat_SolvedGuide.html"; sourceTree = "<group>"; };
@@ -3220,11 +3319,17 @@
 		B9685DAFFFFE683ADC910AC5 /* Science_Ch13_MotionAndTime_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch13_MotionAndTime_SolvedGuide.html"; sourceTree = "<group>"; };
 		FA61904446E7B9C1C8E9DAF7 /* Science_Ch14_ElectricCurrentAndItsEffect.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch14_ElectricCurrentAndItsEffect.html"; sourceTree = "<group>"; };
 		8C0003E409888612470099DE /* Science_Ch14_ElectricCurrentAndItsEffect.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Science_Ch14_ElectricCurrentAndItsEffect.pdf"; sourceTree = "<group>"; };
+		31417A7AF5B9A9DDDDA84CA4 /* Science_Ch14_ElectricCurrentAndItsEffect_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch14_ElectricCurrentAndItsEffect_Advanced_QuestionPaper.md"; sourceTree = "<group>"; };
+		381FE52BD32054001F3BA481 /* Science_Ch14_ElectricCurrentAndItsEffect_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch14_ElectricCurrentAndItsEffect_Advanced_Solutions.md"; sourceTree = "<group>"; };
+		FC3DE6B5695A7F78D270D91B /* Science_Ch14_ElectricCurrentAndItsEffect_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch14_ElectricCurrentAndItsEffect_Advanced_SolvedGuide.html"; sourceTree = "<group>"; };
 		7FD50318DA8FA22C51B731FE /* Science_Ch14_ElectricCurrentAndItsEffect_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch14_ElectricCurrentAndItsEffect_QuestionPaper.md"; sourceTree = "<group>"; };
 		2D4A697E6AFBE9E579C41943 /* Science_Ch14_ElectricCurrentAndItsEffect_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch14_ElectricCurrentAndItsEffect_Solutions.md"; sourceTree = "<group>"; };
 		20FC69CD93146AA2FBD70EBF /* Science_Ch14_ElectricCurrentAndItsEffect_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch14_ElectricCurrentAndItsEffect_SolvedGuide.html"; sourceTree = "<group>"; };
 		E019447B2CB75C21CCAD2725 /* Science_Ch15_Light.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch15_Light.html"; sourceTree = "<group>"; };
 		CE360F080BD326485E30A021 /* Science_Ch15_Light.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Science_Ch15_Light.pdf"; sourceTree = "<group>"; };
+		58BDC5BF3EFBE335EEDE2985 /* Science_Ch15_Light_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch15_Light_Advanced_QuestionPaper.md"; sourceTree = "<group>"; };
+		EB326362FBA3D39C2CD2DE37 /* Science_Ch15_Light_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch15_Light_Advanced_Solutions.md"; sourceTree = "<group>"; };
+		951E949D494AC0866235110E /* Science_Ch15_Light_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch15_Light_Advanced_SolvedGuide.html"; sourceTree = "<group>"; };
 		F22BE39A6BFC061B31D597F9 /* Science_Ch15_Light_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch15_Light_QuestionPaper.md"; sourceTree = "<group>"; };
 		AC455A5CF1DE9A5D94186BE9 /* Science_Ch15_Light_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch15_Light_Solutions.md"; sourceTree = "<group>"; };
 		4FA0BD69428FFF4DE2A87C78 /* Science_Ch15_Light_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch15_Light_SolvedGuide.html"; sourceTree = "<group>"; };
@@ -3250,6 +3355,9 @@
 		EE3C046FAE5F20E35A4DC9D8 /* Science_Ch19_EarthMoonAndTheSun_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch19_EarthMoonAndTheSun_SolvedGuide.html"; sourceTree = "<group>"; };
 		41C53336A2DB1645EB83BAB2 /* SocialScience_Ssch01_GeographicalDiversityOfIndia.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "SocialScience_Ssch01_GeographicalDiversityOfIndia.html"; sourceTree = "<group>"; };
 		CB86187B6D777055696168C9 /* SocialScience_Ssch01_GeographicalDiversityOfIndia.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "SocialScience_Ssch01_GeographicalDiversityOfIndia.pdf"; sourceTree = "<group>"; };
+		C15ECD909E3AC5FFF9924DD5 /* SocialScience_Ssch01_GeographicalDiversityOfIndia_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SocialScience_Ssch01_GeographicalDiversityOfIndia_Advanced_QuestionPaper.md"; sourceTree = "<group>"; };
+		B5FEA1899DF7811E0ADD6157 /* SocialScience_Ssch01_GeographicalDiversityOfIndia_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SocialScience_Ssch01_GeographicalDiversityOfIndia_Advanced_Solutions.md"; sourceTree = "<group>"; };
+		488D242C7F8F7C44030A6323 /* SocialScience_Ssch01_GeographicalDiversityOfIndia_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "SocialScience_Ssch01_GeographicalDiversityOfIndia_Advanced_SolvedGuide.html"; sourceTree = "<group>"; };
 		ADFD496CE47929F6C296664A /* SocialScience_Ssch01_GeographicalDiversityOfIndia_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SocialScience_Ssch01_GeographicalDiversityOfIndia_QuestionPaper.md"; sourceTree = "<group>"; };
 		6275F271130BCE459B26DFFC /* SocialScience_Ssch01_GeographicalDiversityOfIndia_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SocialScience_Ssch01_GeographicalDiversityOfIndia_Solutions.md"; sourceTree = "<group>"; };
 		11A249EF43248BB0EEA5B4A1 /* SocialScience_Ssch01_GeographicalDiversityOfIndia_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "SocialScience_Ssch01_GeographicalDiversityOfIndia_SolvedGuide.html"; sourceTree = "<group>"; };
@@ -5664,71 +5772,113 @@
 			children = (
 				4592545A7E1E2A91B194A013,
 				06D9689FAF09D6FD0B08D0FB,
+				C4035EF57215AFFA006CF520,
+				11B69DB48ADC2DB3E5A1E888,
+				E58EBE6901FF1117C497326F,
 				C0B1EA3B0D1095B41F579EE0,
 				57DCF5F27FCF9BE73A21BC3A,
 				89E8479A53C7F1AA26B6079A,
 				5AE3F543E7D8732894B81C0F,
 				F06E72D409D39D8B25248B80,
+				6D5384DC3CA0E226FAC444E7,
+				53E5BD236340B4038D311E2C,
+				31F3B736A988B29C79FFA735,
 				B8E420423C85FF8724674B75,
 				9F3FB1F395942271F7EDD160,
 				49BBFC7E7F7FD026279114BE,
 				0A4BAE834B69E600E753B83E,
 				EA47A066F154ED3C5216465F,
+				D837C84CD02B67EB644D94DA,
+				A7C5EF2621348A167C164405,
+				09881DFFB5713B02E0E291AD,
 				620E2C6467F43ABB68450859,
 				A9C0A6759528901A4F66996C,
 				793B9C958D70BDBAC136C82A,
 				8CC373E3A5DAB602C4A20798,
 				658EE82673BD9B5BC630BA90,
+				598D08A8891EBA8F215B60E4,
+				C22164765A90340882FF52B6,
+				6CA78FB91A7B99119A3372D1,
 				636E83814E42D914EC1210FD,
 				CD91F671A199DDDF1D410550,
 				D5028008A04B1CEF6A9C83BE,
 				7584391774663770BB36E683,
 				FE297ADB2027C7CF4843F2A5,
+				BFA7D1186D47427EEE08DDFB,
+				D2702E902AB4BB3BE2C9D8E0,
+				C1A866694AA767EA557E3C62,
 				3E9DFF91790259ACF98FEB7C,
 				6EBD46B0DB6D1D66A5DA8170,
 				948DB09705C6E78DBD4FEEA8,
 				F3AB3FF706800301B5C8CD29,
 				B4E22665C6FA0A9024124AD1,
+				EC3ABE364F53EA87B3EDE059,
+				D352E92A0719525C3E2AD85A,
+				2B4510F404F0C92C5D146128,
 				B513FF0D2AE43CCB2B2BBBD4,
 				0D2B47C7D78C6840F002E6D8,
 				56303D32D75396CD795B4F6D,
 				2B48E2A076CAD1BB3FA98B73,
 				4DEB207EE8EF24696BC31F59,
+				0C0EECF2381C711A86C2605C,
+				DF21C19CDFA522E5E704EFC7,
+				9EE32F3E916966CBF71D046C,
 				30945BEA6141D9439E40C7E8,
 				0A85A2AD28B24FC01364DB1C,
 				4C0AB478A9D014F40F57BDD1,
 				A9348C334BA8DECDAD282564,
 				A65C5516EE6675245B1E53F5,
+				6F0834C37CA38C19D14138F1,
+				9D5AF69D9F069AE6954BABD3,
+				30A6557CBAE1DCCE54733235,
 				B52F565C4BF7DDA66AA51F80,
 				C1C5ECB0B04A7BAE8D669C9C,
 				19DB93902450F3EA60462614,
 				7B9CEB55CF6933A7462E636F,
 				2E25688EC82EAADE20730844,
+				7370E65D3EAA77FC0E5EB2FF,
+				26890E52BEF6B5A9435D7893,
+				D041F713F433E737265D18B4,
 				BD0AB8CA997ADBD02AD1EE12,
 				8E46B0799AD585324ABACE60,
 				4C18661A51B33CBFF2C87073,
 				5893419AB8E3D2A7DFE076B5,
 				084F33796F6304969F02CF93,
+				C599A1C4E3900781C5CD6584,
+				162797632F318F909F6A231C,
+				7B157255AC0E969E87A71131,
 				2BEC88039FCF495CB1A680A7,
 				E5B513E0DD24124B6473D6AB,
 				5CF9C75EBB04A0461628ED71,
 				0E7ED69A57842B46CECA488F,
 				A11B87E6B9B5D54F6FC7B6CE,
+				8F1BE75649EAD476F41D0E90,
+				2C1BE27A066D2B2864CAFB99,
+				A29C9C46EF60E2B8A7F5C09F,
 				852F5200999143948ED36BC3,
 				321909FBC41BFEF854314176,
 				044E619E02F7E452D7C1DE14,
 				A7AA619B09BE394B725B5196,
 				699E9665661997BB5125BE01,
+				9A154C1A6B5CE88F74D1E522,
+				ACA724C0D8F987CB0DD9991F,
+				0C64D0935D830E0F283726B0,
 				925C8E342037B9D122D1965F,
 				BD87EF9D98822FC086CE9BB2,
 				B03F8DF6D9164FF6BA8E6B7A,
 				218AA6AEB5EDDD4C151CBA89,
 				AB55F726E8E1413AB74E6945,
+				957617F56BDE1DCC8106DB6C,
+				E650C346DB6916762EBD78F5,
+				F09F0224106948985A833E11,
 				5468D6B3D240DADE5C245A9C,
 				E5126E7E7DFE291617CE059D,
 				69CCE590947608B7D96C762E,
 				61906FC9F4D40DA134BC1C2C,
 				813739AA0D1DCC49769E91DC,
+				7BD75BE760B5F2813D560F4C,
+				D131826CF906BE46167A0F82,
+				703313F19A46D9F448D2999D,
 				76E03D0FAEB640C84802AC7F,
 				F59A432DAA05E60FF52895AB,
 				BFA6C78B2454681121A7E526,
@@ -5832,6 +5982,9 @@
 				E85A5AE1ADCD51E5D2D6631B,
 				645EC429002186861FD63275,
 				8C1C2DEF4172FE776D29502D,
+				DD08F27BE7E849662C96F0AE,
+				D5CE4C86E8EA928E54729D17,
+				D3832D90568F59B2C288CDEE,
 				821DBC51834F3FEED7E7AF99,
 				F8B8A66B9C002655C1CDE3F3,
 				BEB17D27C1E27CC03AB07B39,
@@ -5885,11 +6038,17 @@
 				B9685DAFFFFE683ADC910AC5,
 				FA61904446E7B9C1C8E9DAF7,
 				8C0003E409888612470099DE,
+				31417A7AF5B9A9DDDDA84CA4,
+				381FE52BD32054001F3BA481,
+				FC3DE6B5695A7F78D270D91B,
 				7FD50318DA8FA22C51B731FE,
 				2D4A697E6AFBE9E579C41943,
 				20FC69CD93146AA2FBD70EBF,
 				E019447B2CB75C21CCAD2725,
 				CE360F080BD326485E30A021,
+				58BDC5BF3EFBE335EEDE2985,
+				EB326362FBA3D39C2CD2DE37,
+				951E949D494AC0866235110E,
 				F22BE39A6BFC061B31D597F9,
 				AC455A5CF1DE9A5D94186BE9,
 				4FA0BD69428FFF4DE2A87C78,
@@ -5915,6 +6074,9 @@
 				EE3C046FAE5F20E35A4DC9D8,
 				41C53336A2DB1645EB83BAB2,
 				CB86187B6D777055696168C9,
+				C15ECD909E3AC5FFF9924DD5,
+				B5FEA1899DF7811E0ADD6157,
+				488D242C7F8F7C44030A6323,
 				ADFD496CE47929F6C296664A,
 				6275F271130BCE459B26DFFC,
 				11A249EF43248BB0EEA5B4A1,
@@ -8463,71 +8625,113 @@
 				D8BE09F64F8FB91A8C42C22D /* ch12_whatif.html in Resources */,
 				5E0C18C08FE460DD77812CC5 /* Maths_Ch01_LargeNumbersAroundUs.html in Resources */,
 				40ED50292BD060A8AB5AD285 /* Maths_Ch01_LargeNumbersAroundUs.pdf in Resources */,
+				528CADEBC5A4B768813D132C /* Maths_Ch01_LargeNumbersAroundUs_Advanced_QuestionPaper.md in Resources */,
+				CAC7651CFC931398B59653D1 /* Maths_Ch01_LargeNumbersAroundUs_Advanced_Solutions.md in Resources */,
+				B85FDA0075D26781F6708FAA /* Maths_Ch01_LargeNumbersAroundUs_Advanced_SolvedGuide.html in Resources */,
 				4AC56F4F9E9533DA03FA53FA /* Maths_Ch01_LargeNumbersAroundUs_QuestionPaper.md in Resources */,
 				D57EB5F7987AB07BD22346DD /* Maths_Ch01_LargeNumbersAroundUs_Solutions.md in Resources */,
 				46F3ACC42BE3EF8C7155E4AC /* Maths_Ch01_LargeNumbersAroundUs_SolvedGuide.html in Resources */,
 				5A9A6B5FFDA0BE8C4474A2E2 /* Maths_Ch02_ArithmeticExpressions.html in Resources */,
 				A242240EDCB1206C90EE9D61 /* Maths_Ch02_ArithmeticExpressions.pdf in Resources */,
+				194F44E1BF1E3F75183538FA /* Maths_Ch02_ArithmeticExpressions_Advanced_QuestionPaper.md in Resources */,
+				789F4B3FF768E39224744176 /* Maths_Ch02_ArithmeticExpressions_Advanced_Solutions.md in Resources */,
+				1B83CC7482A7D0A0C4C13F42 /* Maths_Ch02_ArithmeticExpressions_Advanced_SolvedGuide.html in Resources */,
 				579184DA0C605523231C928E /* Maths_Ch02_ArithmeticExpressions_QuestionPaper.md in Resources */,
 				D6FA5B8FAFEB3F040FB1FB15 /* Maths_Ch02_ArithmeticExpressions_Solutions.md in Resources */,
 				8C6EA3FA058433B0DACF2675 /* Maths_Ch02_ArithmeticExpressions_SolvedGuide.html in Resources */,
 				4C12E71388C3FD73364B41E3 /* Maths_Ch03_APeekBeyondThePoint.html in Resources */,
 				FB5F0ACC0922DB04BB3FCBF3 /* Maths_Ch03_APeekBeyondThePoint.pdf in Resources */,
+				3693365F80E73BF12CE0887B /* Maths_Ch03_APeekBeyondThePoint_Advanced_QuestionPaper.md in Resources */,
+				B2B1DB5F5125E105B790BA9F /* Maths_Ch03_APeekBeyondThePoint_Advanced_Solutions.md in Resources */,
+				29641C380D8676236DED9EBF /* Maths_Ch03_APeekBeyondThePoint_Advanced_SolvedGuide.html in Resources */,
 				FAB628261A400CA0E84E2C76 /* Maths_Ch03_APeekBeyondThePoint_QuestionPaper.md in Resources */,
 				C668F0697E7BE1EACDEDA052 /* Maths_Ch03_APeekBeyondThePoint_Solutions.md in Resources */,
 				DC4BB45AF7DC5BE6557A4C63 /* Maths_Ch03_APeekBeyondThePoint_SolvedGuide.html in Resources */,
 				33033F27AC581A19C18C450D /* Maths_Ch04_ExpressionsUsingLetterNumbers.html in Resources */,
 				E96F85FCCA7ADD5E8FDC3005 /* Maths_Ch04_ExpressionsUsingLetterNumbers.pdf in Resources */,
+				1B68409793B7427B5D519113 /* Maths_Ch04_ExpressionsUsingLetterNumbers_Advanced_QuestionPaper.md in Resources */,
+				33EDEA150965ED03DD295F40 /* Maths_Ch04_ExpressionsUsingLetterNumbers_Advanced_Solutions.md in Resources */,
+				0F002347D074D8569EC05D74 /* Maths_Ch04_ExpressionsUsingLetterNumbers_Advanced_SolvedGuide.html in Resources */,
 				312B52898A053C1D3D6D5955 /* Maths_Ch04_ExpressionsUsingLetterNumbers_QuestionPaper.md in Resources */,
 				54E0FB8CD362954C8C776F9F /* Maths_Ch04_ExpressionsUsingLetterNumbers_Solutions.md in Resources */,
 				14DCD552AF6ED2562106E9A4 /* Maths_Ch04_ExpressionsUsingLetterNumbers_SolvedGuide.html in Resources */,
 				46F9726D4E47B4ACD83C487A /* Maths_Ch05_ParallelAndIntersectingLines.html in Resources */,
 				F6B790857AEB031FB56CFF5E /* Maths_Ch05_ParallelAndIntersectingLines.pdf in Resources */,
+				BE676B45ADAD942B437E4EF2 /* Maths_Ch05_ParallelAndIntersectingLines_Advanced_QuestionPaper.md in Resources */,
+				D86F1109FFC963D6DC262F82 /* Maths_Ch05_ParallelAndIntersectingLines_Advanced_Solutions.md in Resources */,
+				949EE5C1C2623E109A833A33 /* Maths_Ch05_ParallelAndIntersectingLines_Advanced_SolvedGuide.html in Resources */,
 				7BF669A1D9B0E1482FAEA73E /* Maths_Ch05_ParallelAndIntersectingLines_QuestionPaper.md in Resources */,
 				CF3C04629839C5D2347CA756 /* Maths_Ch05_ParallelAndIntersectingLines_Solutions.md in Resources */,
 				2DDF5256460EC89C7A688B72 /* Maths_Ch05_ParallelAndIntersectingLines_SolvedGuide.html in Resources */,
 				4F9C87A01161D6440EA6E76B /* Maths_Ch06_NumberPlay.html in Resources */,
 				E698371DFEF45E31E488C6B9 /* Maths_Ch06_NumberPlay.pdf in Resources */,
+				9D2C4107BEB10EB2DBC9C87A /* Maths_Ch06_NumberPlay_Advanced_QuestionPaper.md in Resources */,
+				6DCFA0DFC5543C32C86F40A3 /* Maths_Ch06_NumberPlay_Advanced_Solutions.md in Resources */,
+				E534DD1784F76F8B87DDDDA1 /* Maths_Ch06_NumberPlay_Advanced_SolvedGuide.html in Resources */,
 				052841C5DA85BD4E9882B8AA /* Maths_Ch06_NumberPlay_QuestionPaper.md in Resources */,
 				11FED1D8A5224AA3BE581C67 /* Maths_Ch06_NumberPlay_Solutions.md in Resources */,
 				9CC1A0E48996F9AFB521EFEC /* Maths_Ch06_NumberPlay_SolvedGuide.html in Resources */,
 				A19DF7EF4117D15284D3A85B /* Maths_Ch07_ATaleOfThreeIntersectingLines.html in Resources */,
 				AEDC8C06B1A9E0B732835FB3 /* Maths_Ch07_ATaleOfThreeIntersectingLines.pdf in Resources */,
+				9692502F7B6EC8C5A0428D27 /* Maths_Ch07_ATaleOfThreeIntersectingLines_Advanced_QuestionPaper.md in Resources */,
+				468E951ACE4BCF4D6282BE8F /* Maths_Ch07_ATaleOfThreeIntersectingLines_Advanced_Solutions.md in Resources */,
+				41BC6A6D5C1601B56FF12612 /* Maths_Ch07_ATaleOfThreeIntersectingLines_Advanced_SolvedGuide.html in Resources */,
 				9340F9EAFAD4A2BBA070EA33 /* Maths_Ch07_ATaleOfThreeIntersectingLines_QuestionPaper.md in Resources */,
 				30B8C6590E6FDEF6D142B4FC /* Maths_Ch07_ATaleOfThreeIntersectingLines_Solutions.md in Resources */,
 				75566D21D7297A2599C3C512 /* Maths_Ch07_ATaleOfThreeIntersectingLines_SolvedGuide.html in Resources */,
 				5B16563236FD230B77F18C49 /* Maths_Ch08_WorkingWithFractions.html in Resources */,
 				BA42F41FC33FF58150EAEA87 /* Maths_Ch08_WorkingWithFractions.pdf in Resources */,
+				B10A185BB99BB5B496235B42 /* Maths_Ch08_WorkingWithFractions_Advanced_QuestionPaper.md in Resources */,
+				E939D7E2850968467596BABC /* Maths_Ch08_WorkingWithFractions_Advanced_Solutions.md in Resources */,
+				0193E329D26814C80083D7AC /* Maths_Ch08_WorkingWithFractions_Advanced_SolvedGuide.html in Resources */,
 				663319570B11D141D21A3E40 /* Maths_Ch08_WorkingWithFractions_QuestionPaper.md in Resources */,
 				6F0A442B8EF8D863C9EF0D82 /* Maths_Ch08_WorkingWithFractions_Solutions.md in Resources */,
 				EB7DB0FC0F4CE519D6717A4F /* Maths_Ch08_WorkingWithFractions_SolvedGuide.html in Resources */,
 				86BEC8FB7AB05B5AE8D09023 /* Maths_Ch09_GeometricTwins.html in Resources */,
 				89016D74EFE13D45C490869E /* Maths_Ch09_GeometricTwins.pdf in Resources */,
+				B21E0329D9D7D26CE6AA89BC /* Maths_Ch09_GeometricTwins_Advanced_QuestionPaper.md in Resources */,
+				DD233B95855EB8DDC5918834 /* Maths_Ch09_GeometricTwins_Advanced_Solutions.md in Resources */,
+				5AFC01F8B7F001A6DDF9DE84 /* Maths_Ch09_GeometricTwins_Advanced_SolvedGuide.html in Resources */,
 				BE0E118BC0D4FD4DB84E3AAF /* Maths_Ch09_GeometricTwins_QuestionPaper.md in Resources */,
 				CCECB88CEAB751B4D821D937 /* Maths_Ch09_GeometricTwins_Solutions.md in Resources */,
 				1C5DE57A71135AAF4F02A6D2 /* Maths_Ch09_GeometricTwins_SolvedGuide.html in Resources */,
 				44F3E046350B9EC99A9B8191 /* Maths_Ch10_OperationsWithIntegers.html in Resources */,
 				0F755B06A6C29E5A875AFF77 /* Maths_Ch10_OperationsWithIntegers.pdf in Resources */,
+				7ED22677BC0532CE0AB7B504 /* Maths_Ch10_OperationsWithIntegers_Advanced_QuestionPaper.md in Resources */,
+				C250FAE1F267901F90AFAEA6 /* Maths_Ch10_OperationsWithIntegers_Advanced_Solutions.md in Resources */,
+				9655752019F773E2837E5D20 /* Maths_Ch10_OperationsWithIntegers_Advanced_SolvedGuide.html in Resources */,
 				941ABD34332571992A907440 /* Maths_Ch10_OperationsWithIntegers_QuestionPaper.md in Resources */,
 				864D4632003C4604FF40C6A5 /* Maths_Ch10_OperationsWithIntegers_Solutions.md in Resources */,
 				892A8934672CBCA838F5757E /* Maths_Ch10_OperationsWithIntegers_SolvedGuide.html in Resources */,
 				FB02F70386C0B21E691F1934 /* Maths_Ch11_FindingCommonGround.html in Resources */,
 				51C616093C5CC21BE74BCA6C /* Maths_Ch11_FindingCommonGround.pdf in Resources */,
+				B8CF75842DD99E71333AC96A /* Maths_Ch11_FindingCommonGround_Advanced_QuestionPaper.md in Resources */,
+				F32D012B9377714BC018DF4B /* Maths_Ch11_FindingCommonGround_Advanced_Solutions.md in Resources */,
+				E783720195EC2A2B22018DA2 /* Maths_Ch11_FindingCommonGround_Advanced_SolvedGuide.html in Resources */,
 				63B1589C5E1AB78307E3B714 /* Maths_Ch11_FindingCommonGround_QuestionPaper.md in Resources */,
 				E38CE34024B69EC7DCC8EA91 /* Maths_Ch11_FindingCommonGround_Solutions.md in Resources */,
 				993CDC38F44E2284A8CDC805 /* Maths_Ch11_FindingCommonGround_SolvedGuide.html in Resources */,
 				F2BC28607FB167AF6EE40869 /* Maths_Ch12_AnotherPeekBeyondThePoint.html in Resources */,
 				CE75015739D4FD0BD339245B /* Maths_Ch12_AnotherPeekBeyondThePoint.pdf in Resources */,
+				08F9F3007364E7F201077A7D /* Maths_Ch12_AnotherPeekBeyondThePoint_Advanced_QuestionPaper.md in Resources */,
+				4F69289C9A33A245BB364D72 /* Maths_Ch12_AnotherPeekBeyondThePoint_Advanced_Solutions.md in Resources */,
+				4DE9B8E3BF03B1EB54B7AB9A /* Maths_Ch12_AnotherPeekBeyondThePoint_Advanced_SolvedGuide.html in Resources */,
 				A7E84C209A7DE5126E92C390 /* Maths_Ch12_AnotherPeekBeyondThePoint_QuestionPaper.md in Resources */,
 				ACEA1A9FD6DD958F7440D768 /* Maths_Ch12_AnotherPeekBeyondThePoint_Solutions.md in Resources */,
 				8D3A8A72A11D80813DFA928A /* Maths_Ch12_AnotherPeekBeyondThePoint_SolvedGuide.html in Resources */,
 				509AE6E01F72B4C759E9F9CB /* Maths_Ch13_ConnectingTheDots.html in Resources */,
 				8B28A426E5F1CBDC6DB3E9F7 /* Maths_Ch13_ConnectingTheDots.pdf in Resources */,
+				325CE5C8A5172F5346EFB284 /* Maths_Ch13_ConnectingTheDots_Advanced_QuestionPaper.md in Resources */,
+				96575F4927B838F2D743858D /* Maths_Ch13_ConnectingTheDots_Advanced_Solutions.md in Resources */,
+				28C4A734559E43E7C67C1A41 /* Maths_Ch13_ConnectingTheDots_Advanced_SolvedGuide.html in Resources */,
 				082B5CCB524B2333D3A741DC /* Maths_Ch13_ConnectingTheDots_QuestionPaper.md in Resources */,
 				A235BE72BE7CD6AB16F236B5 /* Maths_Ch13_ConnectingTheDots_Solutions.md in Resources */,
 				9EE78D97501273C2F855DCCD /* Maths_Ch13_ConnectingTheDots_SolvedGuide.html in Resources */,
 				0DCA5098EDF11C3EA33322F0 /* Maths_Ch14_ConstructionsAndTilings.html in Resources */,
 				AECCEEE255C76916B0331882 /* Maths_Ch14_ConstructionsAndTilings.pdf in Resources */,
+				A9D5D50015454F3B0412FB06 /* Maths_Ch14_ConstructionsAndTilings_Advanced_QuestionPaper.md in Resources */,
+				CC591A895E924394E8EAC90D /* Maths_Ch14_ConstructionsAndTilings_Advanced_Solutions.md in Resources */,
+				BF9125D3ACF9582725D98AA4 /* Maths_Ch14_ConstructionsAndTilings_Advanced_SolvedGuide.html in Resources */,
 				FEA9CC4703113B0D2442774B /* Maths_Ch14_ConstructionsAndTilings_QuestionPaper.md in Resources */,
 				93AE0029AC2C4D049AFC7C3E /* Maths_Ch14_ConstructionsAndTilings_Solutions.md in Resources */,
 				32338252CBEF31F726D60165 /* Maths_Ch14_ConstructionsAndTilings_SolvedGuide.html in Resources */,
@@ -8631,6 +8835,9 @@
 				2912D253C441AD661CC610BE /* Science_Ch03_FibreToFabric_SolvedGuide.html in Resources */,
 				CE6E5EF7D2E113FE23CED94F /* Science_Ch04_Heat.html in Resources */,
 				5557346B2C38947911C712B9 /* Science_Ch04_Heat.pdf in Resources */,
+				E9D8696D157B5DE332F2C332 /* Science_Ch04_Heat_Advanced_QuestionPaper.md in Resources */,
+				81CCB71DEDD160408697E012 /* Science_Ch04_Heat_Advanced_Solutions.md in Resources */,
+				C22F9A680769012BDBA7B0A2 /* Science_Ch04_Heat_Advanced_SolvedGuide.html in Resources */,
 				77605F17856B0D11C5CADB37 /* Science_Ch04_Heat_QuestionPaper.md in Resources */,
 				721E18A0AB7EC0F69EDE3B5A /* Science_Ch04_Heat_Solutions.md in Resources */,
 				2B644C72DF86AF96912640DE /* Science_Ch04_Heat_SolvedGuide.html in Resources */,
@@ -8684,11 +8891,17 @@
 				A03AAFD6221254CE42EA3ECC /* Science_Ch13_MotionAndTime_SolvedGuide.html in Resources */,
 				CB5B6AA37CDADCB82B56FF6B /* Science_Ch14_ElectricCurrentAndItsEffect.html in Resources */,
 				355F1DA8DB8EA6734712F043 /* Science_Ch14_ElectricCurrentAndItsEffect.pdf in Resources */,
+				58FCEB9D46A315B9F2915EC6 /* Science_Ch14_ElectricCurrentAndItsEffect_Advanced_QuestionPaper.md in Resources */,
+				374F58E02DD951D8FBAB06D4 /* Science_Ch14_ElectricCurrentAndItsEffect_Advanced_Solutions.md in Resources */,
+				3FAE70EA738EB206FAE4EFFD /* Science_Ch14_ElectricCurrentAndItsEffect_Advanced_SolvedGuide.html in Resources */,
 				BC19757DFD1AB33B02359EEA /* Science_Ch14_ElectricCurrentAndItsEffect_QuestionPaper.md in Resources */,
 				FE2A581148885EF2DD4EFF0B /* Science_Ch14_ElectricCurrentAndItsEffect_Solutions.md in Resources */,
 				D91EBEFD56F85642D6E10C81 /* Science_Ch14_ElectricCurrentAndItsEffect_SolvedGuide.html in Resources */,
 				E053E6C3FD35D99555577C04 /* Science_Ch15_Light.html in Resources */,
 				EDEBEF2625623450E693EFC1 /* Science_Ch15_Light.pdf in Resources */,
+				64A8526A266FEC12367AC502 /* Science_Ch15_Light_Advanced_QuestionPaper.md in Resources */,
+				A7C00D3A80BE19F4D0BC1A2C /* Science_Ch15_Light_Advanced_Solutions.md in Resources */,
+				5A0FE6E34D65A22A9AFED002 /* Science_Ch15_Light_Advanced_SolvedGuide.html in Resources */,
 				B71E1DF05785DB893F340318 /* Science_Ch15_Light_QuestionPaper.md in Resources */,
 				A33740D49837D92C05C0FFA3 /* Science_Ch15_Light_Solutions.md in Resources */,
 				88BAD5AD3D62B66E75754415 /* Science_Ch15_Light_SolvedGuide.html in Resources */,
@@ -8714,6 +8927,9 @@
 				870600451E67AC280BC382CD /* Science_Ch19_EarthMoonAndTheSun_SolvedGuide.html in Resources */,
 				5B0EE31AF582146523A4AE08 /* SocialScience_Ssch01_GeographicalDiversityOfIndia.html in Resources */,
 				DA8A12122C5F13412BEDCE70 /* SocialScience_Ssch01_GeographicalDiversityOfIndia.pdf in Resources */,
+				93F5736A4771983F044D06EB /* SocialScience_Ssch01_GeographicalDiversityOfIndia_Advanced_QuestionPaper.md in Resources */,
+				4965DF38082DE37811D32922 /* SocialScience_Ssch01_GeographicalDiversityOfIndia_Advanced_Solutions.md in Resources */,
+				0D1B8D3FA688CDB7C6CE66C9 /* SocialScience_Ssch01_GeographicalDiversityOfIndia_Advanced_SolvedGuide.html in Resources */,
 				4AF3896A64E8EC4D853B8800 /* SocialScience_Ssch01_GeographicalDiversityOfIndia_QuestionPaper.md in Resources */,
 				1DA4F4D66650C3AE92B5F971 /* SocialScience_Ssch01_GeographicalDiversityOfIndia_Solutions.md in Resources */,
 				4BCDA3A240B8421AD532FC28 /* SocialScience_Ssch01_GeographicalDiversityOfIndia_SolvedGuide.html in Resources */,

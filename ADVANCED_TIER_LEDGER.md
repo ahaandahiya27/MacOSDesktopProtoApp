@@ -37,20 +37,20 @@ Legend: ✅ Advanced triplet complete · ❌ missing · 🟡 in progress
 ### Mathematics (15 chapters)
 | Ch | Title | Advanced |
 |----|-------|:--------:|
-| Ch01 | Large Numbers Around Us | ❌ |
-| Ch02 | Arithmetic Expressions | ❌ |
-| Ch03 | A Peek Beyond the Point | ❌ |
-| Ch04 | Expressions Using Letter-Numbers | ❌ |
-| Ch05 | Parallel and Intersecting Lines | ❌ |
-| Ch06 | Number Play | ❌ |
-| Ch07 | A Tale of Three Intersecting Lines | ❌ |
-| Ch08 | Working with Fractions | ❌ |
-| Ch09 | Geometric Twins (Symmetry) | ❌ |
-| Ch10 | Operations with Integers | ❌ |
-| Ch11 | Finding Common Ground (HCF/LCM) | ❌ |
-| Ch12 | Another Peek Beyond the Point | ❌ |
-| Ch13 | Connecting the Dots (Data Handling) | ❌ |
-| Ch14 | Constructions and Tilings | ❌ |
+| Ch01 | Large Numbers Around Us | ✅ |
+| Ch02 | Arithmetic Expressions | ✅ |
+| Ch03 | A Peek Beyond the Point | ✅ |
+| Ch04 | Expressions Using Letter-Numbers | ✅ |
+| Ch05 | Parallel and Intersecting Lines | ✅ |
+| Ch06 | Number Play | ✅ |
+| Ch07 | A Tale of Three Intersecting Lines | ✅ |
+| Ch08 | Working with Fractions | ✅ |
+| Ch09 | Geometric Twins (Symmetry) | ✅ |
+| Ch10 | Operations with Integers | ✅ |
+| Ch11 | Finding Common Ground (HCF/LCM) | ✅ |
+| Ch12 | Another Peek Beyond the Point | ✅ |
+| Ch13 | Connecting the Dots (Data Handling) | ✅ |
+| Ch14 | Constructions and Tilings | ✅ |
 | Ch15 | Finding the Unknown | ✅ (prototype) |
 
 ### Science (19 chapters)
@@ -59,7 +59,7 @@ Legend: ✅ Advanced triplet complete · ❌ missing · 🟡 in progress
 | Ch01 | Nutrition in Plants | ❌ |
 | Ch02 | Nutrition in Animals | ❌ |
 | Ch03 | Fibre to Fabric | ❌ |
-| Ch04 | Heat | ❌ |
+| Ch04 | Heat | ✅ |
 | Ch05 | Acids, Bases and Salts | ❌ |
 | Ch06 | Physical and Chemical Changes | ❌ |
 | Ch07 | Weather, Climate & Animal Adaptations | ❌ |
@@ -70,7 +70,7 @@ Legend: ✅ Advanced triplet complete · ❌ missing · 🟡 in progress
 | Ch12 | Reproduction in Plants | ❌ |
 | Ch13 | Motion and Time | ✅ (prototype) |
 | Ch14 | Electric Current and Its Effects | ❌ |
-| Ch15 | Light | ❌ |
+| Ch15 | Light | ✅ |
 | Ch16 | Water: A Precious Resource | ❌ |
 | Ch17 | Forests: Our Lifeline | ❌ |
 | Ch18 | Wastewater Story | ❌ |
@@ -79,7 +79,7 @@ Legend: ✅ Advanced triplet complete · ❌ missing · 🟡 in progress
 ### Social Science (20 chapters)
 | Ch | Title | Advanced |
 |----|-------|:--------:|
-| Ssch01 | Geographical Diversity of India | ❌ |
+| Ssch01 | Geographical Diversity of India | ✅ |
 | Ssch02 | Understanding the Weather | ❌ |
 | Ssch03 | Climates of India | ❌ |
 | Ssch04 | New Beginnings: Cities and States | ❌ |
@@ -123,5 +123,11 @@ Legend: ✅ Advanced triplet complete · ❌ missing · 🟡 in progress
 
 ## Running total
 - **Run start:** 2 / 69 chapters (Maths Ch15, Science Ch13 — prototypes).
+- **2026-06-10:** **19 / 69** chapters — Maths Ch01–Ch15 (all 15), Science
+  Ch04/Ch13/Ch15 (3), Social Science Ssch01 (1). All 19 are now both **authored**
+  (complete triplet on disk, triplet lint clean) **and integrated** (wired into
+  `OlympiadPaperRegistry` with `tier: .advanced`, bundled via the regenerated
+  pbxproj, and pinned by `OlympiadExamHallTests` → 88 papers / 69 foundation +
+  19 advanced). Build + full XCTest GREEN.
 - Flip each cell to ✅ as its commit lands; update the headline count here and in
   `V8_NEXT10H_LEDGER.md`.

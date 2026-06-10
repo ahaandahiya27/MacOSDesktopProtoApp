@@ -84,9 +84,36 @@ Solutions.md (worked prose with a check-by-substitution habit), then
 chapter pack JSON + source PDFs (`/Users/mac/Extra/Ahaan-Books/`). One chapter =
 one commit. Priority order: Maths → Science → Social Science → Sanskrit.
 
-| Chapter | Committed |
-|---------|-----------|
-| _(rolling — see ADVANCED_TIER_LEDGER.md for the live ✅/❌ grid)_ | |
+**Concurrency note (important):** this run executed alongside **two other
+identical v8 agents** in the same shared working tree (the documented
+"parallel shared-tree hazard"). The other two agents produced **content-only**
+Advanced triplets for Maths (no pbxproj regen, no registry wiring, no test
+bumps) — so their papers shipped as files but were *unreachable in-app*. This
+agent therefore took the **integrator** lane plus a non-colliding content
+subject (Social Science): commit content with explicit pathspec (`git commit --
+<paths>`, never `git add -A`), and periodically wire ALL committed Advanced
+papers into the Swift registry + `OlympiadExamHallTests` counts + regen the
+pbxproj so the collective content actually loads in the app. The pre-commit
+triplet check was scoped to staged files (commit `6913093`) so an unrelated
+mid-flight paper can't block a clean commit.
+
+**Authored by this agent:** Maths Ch01 (content), Social Science Ssch01
+(content). **Integrated (wired + bundled) by this agent:** all committed
+Advanced papers — see `ADVANCED_TIER_LEDGER.md` for the live ✅/❌ grid and the
+registry-wiring waves below.
+
+Integration waves (registry + tests + pbxproj):
+- **Wave 1:** wired Maths Ch01, Ch08, Ch10, Ch11, Ch12 (+ Ch15/Sci13 anchors) →
+  76 papers / 7 advanced. Build + full XCTest GREEN.
+- **Wave 2:** + Maths Ch02, Ch04, Ch06 and Social Science Ssch01 → 80 papers /
+  11 advanced. (Maths Ch03 content committed concurrently; bundled, wired in a
+  later wave.)
+- **Wave 3 (2026-06-10, final):** wired every remaining on-disk Advanced triplet
+  — Maths Ch03, Ch05, Ch07, Ch09, Ch13, Ch14 (6) and Science Ch04, Ch15 (2) →
+  **88 papers / 69 foundation + 19 advanced**. pbxproj regenerated (objectVersion
+  55), `OlympiadExamHallTests` count + id-set assertions bumped, `check_testpaper
+  _triplet` clean (364 papers, 0 orphans), `bash scripts/ci-build-test.sh` GREEN.
+  Maths is now 15/15 Advanced; Science 3/19; Social Science 1/20; Sanskrit 0/15.
 
 ## Notes / decisions
 

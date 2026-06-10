@@ -292,6 +292,40 @@ extension OlympiadPaperRegistry {
             questionPaperPDF: "Science_Ch19_EarthMoonAndTheSun.pdf",
             suggestedTimeMinutes: 90,
             solvedGuideHTML: "Science_Ch19_EarthMoonAndTheSun_SolvedGuide.html"
+        ),
+        // ── Advanced (Paper 2) entries authored in the v8 rollout. Each
+        //    reuses Paper 1's printable HTML + PDF; tier=.advanced makes
+        //    the row distinct, and solvedGuideHTML points at the Advanced
+        //    guide rendered by scripts/make_solved_guide.py.
+        OlympiadPaper(
+            id: "olympiad_science_ch04_advanced",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 4,
+            chapterTitle: "Heat",
+            displayTitle: "Heat — Paper 2 (Advanced)",
+            questionPaperMD: "Science_Ch04_Heat_Advanced_QuestionPaper.md",
+            solutionsMD: "Science_Ch04_Heat_Advanced_Solutions.md",
+            questionPaperHTML: "Science_Ch04_Heat.html",
+            questionPaperPDF: "Science_Ch04_Heat.pdf",
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Science_Ch04_Heat_Advanced_SolvedGuide.html",
+            tier: .advanced
+        ),
+        OlympiadPaper(
+            id: "olympiad_science_ch15_advanced",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 15,
+            chapterTitle: "Light",
+            displayTitle: "Light — Paper 2 (Advanced)",
+            questionPaperMD: "Science_Ch15_Light_Advanced_QuestionPaper.md",
+            solutionsMD: "Science_Ch15_Light_Advanced_Solutions.md",
+            questionPaperHTML: "Science_Ch15_Light.html",
+            questionPaperPDF: "Science_Ch15_Light.pdf",
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Science_Ch15_Light_Advanced_SolvedGuide.html",
+            tier: .advanced
         )
     ]
 }

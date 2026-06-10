@@ -231,9 +231,13 @@ final class OlympiadExamHallTests: XCTestCase {
         // 2026-06-07: 69 foundation (19 Sci + 15 Maths + 15 Sanskrit
         // + 20 SocSci) + 2 advanced (Science Ch13 + Maths Ch15
         // anchors) = 71.
+        // 2026-06-10 (v8 Advanced rollout): all on-disk Advanced
+        // triplets wired — 17 Maths/Science advanced (Maths Ch01–Ch15,
+        // Science Ch04/Ch13/Ch15) + 1 Social Science advanced (Ssch01) =
+        // 88 total (69 foundation + 19 advanced).
         let papers = OlympiadPaperRegistry.allPapers
-        XCTAssertEqual(papers.count, 71,
-                       "Expected 71 papers total. Got \(papers.count). Update this assertion when Paper 2 lands for a new chapter.")
+        XCTAssertEqual(papers.count, 88,
+                       "Expected 88 papers total. Got \(papers.count). Update this assertion when Paper 2 lands for a new chapter.")
     }
 
     func testFoundationTierIsTheDefault() {
@@ -249,13 +253,33 @@ final class OlympiadExamHallTests: XCTestCase {
     func testAdvancedTierIsExplicitlyTagged() {
         // Every chapter with a Paper 2 must carry tier=.advanced
         // (default is .foundation; adding a Paper 2 row requires the
-        // explicit opt-in). Today: Science Ch13 + Maths Ch15 anchors.
+        // explicit opt-in). Anchors: Science Ch13 + Maths Ch15. The v8
+        // rollout (2026-06-10) wired every on-disk Advanced triplet:
+        // Maths Ch01–Ch15 (15), Science Ch04/Ch13/Ch15 (3), Social
+        // Science Ssch01 (1) = 19 advanced-tier papers.
         let advanced = OlympiadPaperRegistry.allPapers.filter { $0.tier == .advanced }
-        XCTAssertEqual(advanced.count, 2,
-                       "Expected 2 advanced-tier papers (Sci Ch13 + Maths Ch15), got \(advanced.count)")
+        XCTAssertEqual(advanced.count, 19,
+                       "Expected 19 advanced-tier papers, got \(advanced.count)")
         let ids = Set(advanced.map { $0.id })
-        XCTAssertEqual(ids, ["olympiad_science_ch13_advanced",
-                             "olympiad_maths_ch15_advanced"])
+        XCTAssertEqual(ids, ["olympiad_science_ch04_advanced",
+                             "olympiad_science_ch13_advanced",
+                             "olympiad_science_ch15_advanced",
+                             "olympiad_maths_ch01_advanced",
+                             "olympiad_maths_ch02_advanced",
+                             "olympiad_maths_ch03_advanced",
+                             "olympiad_maths_ch04_advanced",
+                             "olympiad_maths_ch05_advanced",
+                             "olympiad_maths_ch06_advanced",
+                             "olympiad_maths_ch07_advanced",
+                             "olympiad_maths_ch08_advanced",
+                             "olympiad_maths_ch09_advanced",
+                             "olympiad_maths_ch10_advanced",
+                             "olympiad_maths_ch11_advanced",
+                             "olympiad_maths_ch12_advanced",
+                             "olympiad_maths_ch13_advanced",
+                             "olympiad_maths_ch14_advanced",
+                             "olympiad_maths_ch15_advanced",
+                             "olympiad_socialscience_ssch01_advanced"])
     }
 
     func testAdvancedPaperHasUniqueIdPerChapter() {
