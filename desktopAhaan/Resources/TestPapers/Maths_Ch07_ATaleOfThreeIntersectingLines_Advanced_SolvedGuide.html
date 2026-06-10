@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ATale Of Three Intersecting Lines_Advanced — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>ATale Of Three Intersecting Lines_Advanced<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">Two angles of a triangle are 50° and 60°. The third angle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>90°</span></li>
+        <li class=""><span class="lab">B</span><span>110°</span></li>
+        <li class="correct"><span class="lab">C</span><span>70°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>60°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Angle sum: 180° − 50° − 60° = 70°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">The angles of a triangle are in the ratio 1 : 2 : 3. The largest angle is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>90°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>60°</span></li>
+        <li class=""><span class="lab">C</span><span>30°</span></li>
+        <li class=""><span class="lab">D</span><span>120°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Parts 1 + 2 + 3 = 6 → one part = 30°; the largest is 3 × 30° = 90°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">A right triangle has one angle of 35° (besides the right angle). The third angle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>35°</span></li>
+        <li class=""><span class="lab">B</span><span>65°</span></li>
+        <li class=""><span class="lab">C</span><span>90°</span></li>
+        <li class="correct"><span class="lab">D</span><span>55°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>180° − 90° − 35° = 55°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">Each angle of an equilateral triangle measures:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>90°</span></li>
+        <li class="correct"><span class="lab">B</span><span>60°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>45°</span></li>
+        <li class=""><span class="lab">D</span><span>30°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>All three equal and summing to 180° gives 60° each.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">Two angles of a triangle are equal, each 70°. The third angle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>70°</span></li>
+        <li class=""><span class="lab">B</span><span>140°</span></li>
+        <li class="correct"><span class="lab">C</span><span>40°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>50°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>180° − 70° − 70° = 40°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">The angles of a triangle are 3x, 4x and 5x. The largest angle is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>75°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>60°</span></li>
+        <li class=""><span class="lab">C</span><span>45°</span></li>
+        <li class=""><span class="lab">D</span><span>90°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>3x + 4x + 5x = 180 → 12x = 180 → x = 15; the largest is 5 × 15 = 75°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">A triangle with angles 90°, 45°, 45° is best described as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>equilateral</span></li>
+        <li class=""><span class="lab">B</span><span>scalene</span></li>
+        <li class=""><span class="lab">C</span><span>acute isosceles</span></li>
+        <li class="correct"><span class="lab">D</span><span>right isosceles</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A right angle plus two equal 45° angles is a right isosceles triangle.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">Can a triangle have two right angles?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>yes, always</span></li>
+        <li class="correct"><span class="lab">B</span><span>no</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>only if it is isosceles</span></li>
+        <li class=""><span class="lab">D</span><span>only if equilateral</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Two right angles already total 180°, leaving nothing for the third angle — impossible.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">The angles of a triangle are x, x + 20 and x + 40. The largest angle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>40°</span></li>
+        <li class=""><span class="lab">B</span><span>60°</span></li>
+        <li class="correct"><span class="lab">C</span><span>80°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>100°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>x + (x+20) + (x+40) = 180 → 3x + 60 = 180 → x = 40; the largest is x + 40 = 80°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">Two angles of a triangle are 48° and 67°. The third is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>65°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>75°</span></li>
+        <li class=""><span class="lab">C</span><span>115°</span></li>
+        <li class=""><span class="lab">D</span><span>55°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>180° − 48° − 67° = 65°.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">An exterior angle of a triangle has remote interior angles 50° and 60°. The exterior angle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>70°</span></li>
+        <li class=""><span class="lab">B</span><span>60°</span></li>
+        <li class=""><span class="lab">C</span><span>130°</span></li>
+        <li class="correct"><span class="lab">D</span><span>110°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Exterior angle = sum of remote interiors = 50° + 60° = 110°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">An exterior angle is 120°; one remote interior angle is 70°. The other remote interior angle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>60°</span></li>
+        <li class="correct"><span class="lab">B</span><span>50°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>190°</span></li>
+        <li class=""><span class="lab">D</span><span>70°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>120° − 70° = 50°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">An exterior angle of a triangle is 130°. The interior angle adjacent to it is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>130°</span></li>
+        <li class=""><span class="lab">B</span><span>65°</span></li>
+        <li class="correct"><span class="lab">C</span><span>50°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>60°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The interior angle adjacent to a 130° exterior angle is its linear-pair partner: 180° − 130° = 50°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">An exterior angle equals 100°, and its two remote interior angles are equal. Each of them is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>50°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>100°</span></li>
+        <li class=""><span class="lab">C</span><span>80°</span></li>
+        <li class=""><span class="lab">D</span><span>40°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The two equal remote interiors sum to the exterior angle 100°, so each is 50°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">An exterior angle of an equilateral triangle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>60°</span></li>
+        <li class=""><span class="lab">B</span><span>90°</span></li>
+        <li class=""><span class="lab">C</span><span>60° less than a right angle</span></li>
+        <li class="correct"><span class="lab">D</span><span>120°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Each interior angle is 60°, so each exterior angle is 180° − 60° = 120°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">The sum of the three exterior angles of a triangle (one at each vertex) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>180°</span></li>
+        <li class="correct"><span class="lab">B</span><span>360°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>540°</span></li>
+        <li class=""><span class="lab">D</span><span>270°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The exterior angles of any triangle total 360°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">An exterior angle 3x equals the sum of remote interiors x and 80°. The exterior angle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>40°</span></li>
+        <li class=""><span class="lab">B</span><span>80°</span></li>
+        <li class="correct"><span class="lab">C</span><span>120°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>160°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>3x = x + 80 → 2x = 80 → x = 40, so the exterior angle 3x = 120°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">An exterior angle of a triangle is always greater than:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>either remote interior angle</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the sum of all three interior angles</span></li>
+        <li class=""><span class="lab">C</span><span>180°</span></li>
+        <li class=""><span class="lab">D</span><span>a straight angle</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>By the exterior-angle theorem it is the sum of the two remote interiors, hence larger than either of them.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">An exterior angle of 110° has remote interior angles 2y and 3y. The larger remote interior angle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>22°</span></li>
+        <li class=""><span class="lab">B</span><span>44°</span></li>
+        <li class=""><span class="lab">C</span><span>110°</span></li>
+        <li class="correct"><span class="lab">D</span><span>66°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>2y + 3y = 110 → 5y = 110 → y = 22; the larger remote interior is 3y = 66°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">If an exterior angle equals its adjacent interior angle, each measures:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>45°</span></li>
+        <li class="correct"><span class="lab">B</span><span>90°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>60°</span></li>
+        <li class=""><span class="lab">D</span><span>180°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>They form a linear pair and are equal, so each is 90°.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">Can sides of length 3, 4 and 8 form a triangle?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>yes</span></li>
+        <li class=""><span class="lab">B</span><span>only if right-angled</span></li>
+        <li class="correct"><span class="lab">C</span><span>no, since 3 + 4 &lt; 8</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>only if isosceles</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>3 + 4 = 7, which is less than 8, so the triangle inequality fails — no triangle.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">Do sides 5, 6 and 10 form a valid triangle?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>yes</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>no</span></li>
+        <li class=""><span class="lab">C</span><span>only if equilateral</span></li>
+        <li class=""><span class="lab">D</span><span>cannot tell</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>5 + 6 = 11 &gt; 10 (and the other pairs clearly exceed the third), so it is valid.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">For a triangle with two sides 7 and 9, the third side must lie between:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>7 and 9</span></li>
+        <li class=""><span class="lab">B</span><span>0 and 16</span></li>
+        <li class=""><span class="lab">C</span><span>1 and 7</span></li>
+        <li class="correct"><span class="lab">D</span><span>2 and 16</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The third side lies strictly between 9 − 7 = 2 and 9 + 7 = 16.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">Can sides 2, 2 and 5 form a triangle?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>yes</span></li>
+        <li class="correct"><span class="lab">B</span><span>no, since 2 + 2 &lt; 5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>yes, isosceles</span></li>
+        <li class=""><span class="lab">D</span><span>only if right-angled</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>2 + 2 = 4 &lt; 5, so no triangle is possible.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">With two sides 6 and 8, the smallest whole-number length for the third side is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1</span></li>
+        <li class=""><span class="lab">B</span><span>2</span></li>
+        <li class="correct"><span class="lab">C</span><span>3</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>14</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The third side must exceed 8 − 6 = 2, so the smallest whole number is 3.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">With two sides 6 and 8, the largest whole-number length for the third side is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>13</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>14</span></li>
+        <li class=""><span class="lab">C</span><span>2</span></li>
+        <li class=""><span class="lab">D</span><span>48</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The third side must be less than 6 + 8 = 14, so the largest whole number is 13.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">Which set of lengths CANNOT form a triangle?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>3, 4, 5</span></li>
+        <li class=""><span class="lab">B</span><span>2, 3, 4</span></li>
+        <li class=""><span class="lab">C</span><span>5, 5, 5</span></li>
+        <li class="correct"><span class="lab">D</span><span>1, 2, 3</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>1 + 2 = 3 is not greater than 3, so 1, 2, 3 cannot form a triangle.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">Can a triangle with all three sides 5 exist?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>no</span></li>
+        <li class="correct"><span class="lab">B</span><span>yes, it is equilateral</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>only if right-angled</span></li>
+        <li class=""><span class="lab">D</span><span>only if scalene</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>5 + 5 &gt; 5, so an equilateral triangle of side 5 exists.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">With two sides 10 and 4, the third side must be greater than:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>14</span></li>
+        <li class=""><span class="lab">B</span><span>4</span></li>
+        <li class="correct"><span class="lab">C</span><span>6</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>10</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The third side must be greater than 10 − 4 = 6.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">Do sides 8, 15 and 17 form a triangle?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>yes (in fact right-angled)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>no</span></li>
+        <li class=""><span class="lab">C</span><span>only if isosceles</span></li>
+        <li class=""><span class="lab">D</span><span>only if drawn small</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>8 + 15 = 23 &gt; 17, so it is a valid triangle — and since 8² + 15² = 64 + 225 = 289 = 17², it is right-angled.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">A triangle whose three sides are all different lengths is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>isosceles</span></li>
+        <li class=""><span class="lab">B</span><span>equilateral</span></li>
+        <li class=""><span class="lab">C</span><span>right-angled</span></li>
+        <li class="correct"><span class="lab">D</span><span>scalene</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>All sides different means the triangle is scalene.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">A triangle whose three angles are all less than 90° is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>right-angled</span></li>
+        <li class="correct"><span class="lab">B</span><span>acute</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>obtuse</span></li>
+        <li class=""><span class="lab">D</span><span>reflex</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>All angles below 90° defines an acute triangle.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">A triangle with one angle greater than 90° is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>acute</span></li>
+        <li class=""><span class="lab">B</span><span>right-angled</span></li>
+        <li class="correct"><span class="lab">C</span><span>obtuse</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>equilateral</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>One angle above 90° makes the triangle obtuse.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">An isosceles triangle has, at the least:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>two equal sides</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>three equal sides</span></li>
+        <li class=""><span class="lab">C</span><span>a right angle</span></li>
+        <li class=""><span class="lab">D</span><span>no equal sides</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An isosceles triangle has at least two equal sides.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">In any triangle, the angles opposite to two equal sides are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>supplementary</span></li>
+        <li class=""><span class="lab">B</span><span>complementary</span></li>
+        <li class=""><span class="lab">C</span><span>right angles</span></li>
+        <li class="correct"><span class="lab">D</span><span>equal</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The base-angles theorem: angles opposite equal sides are equal.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">An equilateral triangle is also:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>right-angled</span></li>
+        <li class="correct"><span class="lab">B</span><span>equiangular</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>obtuse</span></li>
+        <li class=""><span class="lab">D</span><span>scalene</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Equal sides force equal angles, so an equilateral triangle is also equiangular.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">The longest side of a right triangle is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>base</span></li>
+        <li class=""><span class="lab">B</span><span>altitude</span></li>
+        <li class="correct"><span class="lab">C</span><span>hypotenuse</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>median</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The side opposite the right angle, the hypotenuse, is the longest.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">Can a triangle be both right-angled and obtuse?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>no</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>yes</span></li>
+        <li class=""><span class="lab">C</span><span>only if isosceles</span></li>
+        <li class=""><span class="lab">D</span><span>only if equilateral</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A right angle already uses 90°; an obtuse angle would push the sum past 180° — impossible together.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">The number of acute angles in a right triangle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1</span></li>
+        <li class=""><span class="lab">B</span><span>3</span></li>
+        <li class=""><span class="lab">C</span><span>0</span></li>
+        <li class="correct"><span class="lab">D</span><span>2</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The right angle uses 90°, leaving two angles that must each be acute — two acute angles.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">A triangle can never have two:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>equal sides</span></li>
+        <li class="correct"><span class="lab">B</span><span>obtuse angles</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>acute angles</span></li>
+        <li class=""><span class="lab">D</span><span>equal angles</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Two obtuse angles would exceed 180° on their own, so a triangle can't have two.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">An isosceles triangle has a vertex angle of 40°. Each base angle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>40°</span></li>
+        <li class=""><span class="lab">B</span><span>100°</span></li>
+        <li class="correct"><span class="lab">C</span><span>70°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>140°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Base angles share the remaining 180° − 40° = 140°, so each is 70°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">An isosceles triangle has a base angle of 50°. Its vertex angle is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>80°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>50°</span></li>
+        <li class=""><span class="lab">C</span><span>100°</span></li>
+        <li class=""><span class="lab">D</span><span>130°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Vertex angle = 180° − 50° − 50° = 80°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">The two equal angles of an isosceles right triangle each measure:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>90°</span></li>
+        <li class=""><span class="lab">B</span><span>30°</span></li>
+        <li class=""><span class="lab">C</span><span>60°</span></li>
+        <li class="correct"><span class="lab">D</span><span>45°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A right angle leaves 90° split equally between two base angles: 45° each.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">If the vertex angle of an isosceles triangle equals each base angle, the triangle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>right-angled</span></li>
+        <li class="correct"><span class="lab">B</span><span>equilateral</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>obtuse</span></li>
+        <li class=""><span class="lab">D</span><span>scalene</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>If the vertex angle equals each base angle, all three are equal — the triangle is equilateral.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">A triangle has all three angles equal to 2x. Then x is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>60°</span></li>
+        <li class=""><span class="lab">B</span><span>90°</span></li>
+        <li class="correct"><span class="lab">C</span><span>30°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>45°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>2x + 2x + 2x = 180 → 6x = 180 → x = 30°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">The exterior angle at the base of an isosceles triangle whose base angle is 65° is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>115°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>65°</span></li>
+        <li class=""><span class="lab">C</span><span>130°</span></li>
+        <li class=""><span class="lab">D</span><span>50°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The exterior angle is the linear-pair partner of the 65° base angle: 180° − 65° = 115°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">The angles of a triangle are x, x + 10 and x + 20. The middle angle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>50°</span></li>
+        <li class=""><span class="lab">B</span><span>70°</span></li>
+        <li class=""><span class="lab">C</span><span>80°</span></li>
+        <li class="correct"><span class="lab">D</span><span>60°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>x + (x+10) + (x+20) = 180 → 3x + 30 = 180 → x = 50; the middle angle is x + 10 = 60°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">The angles of a triangle are in arithmetic progression with common difference 20°. The middle angle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>40°</span></li>
+        <li class="correct"><span class="lab">B</span><span>60°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>80°</span></li>
+        <li class=""><span class="lab">D</span><span>50°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In an AP the middle term is the mean; the three angles average 180° ÷ 3 = 60°, so the middle is 60°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">The vertex angle of an isosceles triangle is 100°. Each base angle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>80°</span></li>
+        <li class=""><span class="lab">B</span><span>50°</span></li>
+        <li class="correct"><span class="lab">C</span><span>40°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>100°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Base angles share 180° − 100° = 80°, so each is 40°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">In triangle ABC, ∠A = 90° and ∠B = ∠C. Each of ∠B and ∠C is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>45°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>60°</span></li>
+        <li class=""><span class="lab">C</span><span>30°</span></li>
+        <li class=""><span class="lab">D</span><span>90°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>90° leaves 90° split equally: ∠B = ∠C = 45°.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">The angles of a triangle are (x + 10)°, (x + 20)° and (x + 30)°. The largest is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>50°</span></li>
+        <li class=""><span class="lab">B</span><span>60°</span></li>
+        <li class=""><span class="lab">C</span><span>80°</span></li>
+        <li class="correct"><span class="lab">D</span><span>70°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>3x + 60 = 180 → x = 40; the largest is x + 30 = 70°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">One angle of a triangle equals the sum of the other two. That angle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>60°</span></li>
+        <li class="correct"><span class="lab">B</span><span>90°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>120°</span></li>
+        <li class=""><span class="lab">D</span><span>45°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>If one angle equals the sum of the others, it equals half of 180° — a right angle, 90°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">The angles of a triangle are in the ratio 2 : 3 : 4. The smallest angle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>80°</span></li>
+        <li class=""><span class="lab">B</span><span>60°</span></li>
+        <li class="correct"><span class="lab">C</span><span>40°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>20°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Parts 2 + 3 + 4 = 9 → one part = 20°; the smallest is 2 × 20 = 40°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">An equilateral triangle has perimeter 18. Each side is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>6</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>9</span></li>
+        <li class=""><span class="lab">C</span><span>3</span></li>
+        <li class=""><span class="lab">D</span><span>54</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>18 ÷ 3 = 6 per side.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">An isosceles triangle has perimeter 50 and base 20. Each equal side is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>30</span></li>
+        <li class=""><span class="lab">B</span><span>25</span></li>
+        <li class=""><span class="lab">C</span><span>10</span></li>
+        <li class="correct"><span class="lab">D</span><span>15</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The two equal sides share 50 − 20 = 30, so each is 15.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">If two angles of a triangle are 35° and 65°, the triangle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>right-angled</span></li>
+        <li class="correct"><span class="lab">B</span><span>acute</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>obtuse</span></li>
+        <li class=""><span class="lab">D</span><span>equilateral</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The third angle is 180° − 35° − 65° = 80°; all three are under 90°, so the triangle is acute.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">A triangle has sides 9, 12 and 15. It is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>acute</span></li>
+        <li class=""><span class="lab">B</span><span>obtuse</span></li>
+        <li class="correct"><span class="lab">C</span><span>right-angled</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>impossible</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>9² + 12² = 81 + 144 = 225 = 15², so it is right-angled.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">The largest angle of a triangle is always opposite the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>longest side</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>shortest side</span></li>
+        <li class=""><span class="lab">C</span><span>altitude</span></li>
+        <li class=""><span class="lab">D</span><span>median</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The largest angle sits opposite the longest side.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">In a triangle with sides 7, 7 and 10, the two equal angles are opposite the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>side of length 10</span></li>
+        <li class=""><span class="lab">B</span><span>altitude</span></li>
+        <li class=""><span class="lab">C</span><span>longest side</span></li>
+        <li class="correct"><span class="lab">D</span><span>two sides of length 7</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Equal angles lie opposite equal sides — here the two sides of length 7.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">The sum of the three interior angles of any triangle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>360°</span></li>
+        <li class="correct"><span class="lab">B</span><span>180°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>90°</span></li>
+        <li class=""><span class="lab">D</span><span>270°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The interior angles of any triangle always sum to 180°. --- *End of solutions. Maximum marks: 240.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>
