@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seva Hi Paramo Dharmah (Advanced) — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Seva Hi Paramo Dharmah (Advanced)<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">In यन्त्रवत् ('like a machine'), the -वत् means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'possessing'</span></li>
+        <li class=""><span class="lab">B</span><span>'lacking'</span></li>
+        <li class="correct"><span class="lab">C</span><span>'like / resembling'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>'by units of'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In यन्त्रवत् ('like a machine'), -वत् means **'like / resembling'**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">यन्त्रवत् is glossed यन्त्रम् इव; इव is the particle meaning:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>'like / as'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>'not'</span></li>
+        <li class=""><span class="lab">C</span><span>'and'</span></li>
+        <li class=""><span class="lab">D</span><span>'from'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>यन्त्रम् इव uses इव, the particle meaning **'like / as'**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">This 'like' -वत् is DIFFERENT from the -वत्/-मत् in धनवत् ('wealthy'), where -वत् means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'like'</span></li>
+        <li class=""><span class="lab">B</span><span>'lacking'</span></li>
+        <li class=""><span class="lab">C</span><span>'for'</span></li>
+        <li class="correct"><span class="lab">D</span><span>'possessing / having'</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The -वत्/-मत् in धनवत् ('wealthy') means **'possessing / having'** — a different use of -वत्.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">So धनवान् means 'wealthy' (possessing wealth), but सिंहवत् means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>possessing a lion</span></li>
+        <li class="correct"><span class="lab">B</span><span>like a lion</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>lacking a lion</span></li>
+        <li class=""><span class="lab">D</span><span>for the lion</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>धनवान् is 'wealthy', but सिंहवत् means **'like a lion'** (comparison).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">'He fought like a lion' would use:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>सिंहवान् (lion-possessing)</span></li>
+        <li class="correct"><span class="lab">B</span><span>सिंहवत् (like a lion)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>सिंहहीन</span></li>
+        <li class=""><span class="lab">D</span><span>सिंहाय</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>'He fought like a lion' uses **सिंहवत्** (like a lion).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">'A virtuous (virtue-possessing) man' would use the possessing -वत्:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>गुणवत् meaning 'like a virtue'</span></li>
+        <li class=""><span class="lab">B</span><span>गुणहीन</span></li>
+        <li class=""><span class="lab">C</span><span>गुणाय</span></li>
+        <li class="correct"><span class="lab">D</span><span>गुणवान्</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>'A virtue-possessing man' uses the possessing -वत्: **गुणवान्**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">The two -वत् senses are told apart by:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>context (a comparison 'like X' vs an attribute 'having X')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the time of day</span></li>
+        <li class=""><span class="lab">C</span><span>the colour</span></li>
+        <li class=""><span class="lab">D</span><span>the number</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The two -वत् senses are told apart by **context** (a comparison 'like X' vs an attribute 'having X').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">चिकित्सकः ('healer / physician') is an agent noun formed with the suffix:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>-इन्</span></li>
+        <li class=""><span class="lab">B</span><span>-तुम्</span></li>
+        <li class="correct"><span class="lab">C</span><span>-क (the agent / doer)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>-शस्</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>चिकित्सकः is an agent noun formed with the suffix **-क (the agent / doer)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">An agent noun names:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the doer of the action</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the object</span></li>
+        <li class=""><span class="lab">C</span><span>the place</span></li>
+        <li class=""><span class="lab">D</span><span>the time</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An agent noun names **the doer of the action**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">The agent suffix -तृ gives, from कृ ('do'), the doer:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>कृतम्</span></li>
+        <li class=""><span class="lab">B</span><span>कर्तुम्</span></li>
+        <li class="correct"><span class="lab">C</span><span>कर्तृ (कर्ता, 'doer')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>कुरुतः</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>From कृ, the -तृ agent noun is **कर्तृ (कर्ता, 'doer')**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">From दा ('give'), the -तृ agent noun 'giver' is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>दानम्</span></li>
+        <li class=""><span class="lab">B</span><span>दातुम्</span></li>
+        <li class=""><span class="lab">C</span><span>दत्तः</span></li>
+        <li class="correct"><span class="lab">D</span><span>दातृ (दाता)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>From दा, the -तृ agent noun 'giver' is **दातृ (दाता)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">From नी ('lead'), the -तृ agent noun 'leader' is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>नयनम्</span></li>
+        <li class="correct"><span class="lab">B</span><span>नेतृ (नेता)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>नेतुम्</span></li>
+        <li class=""><span class="lab">D</span><span>नीतः</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>From नी, the -तृ agent noun 'leader' is **नेतृ (नेता)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">रोगिन् ('one who has disease', the sick person) is formed with the possessor suffix:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>-क</span></li>
+        <li class=""><span class="lab">B</span><span>-तृ</span></li>
+        <li class=""><span class="lab">C</span><span>-वत् ('like')</span></li>
+        <li class="correct"><span class="lab">D</span><span>-इन् ('having / possessing')</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>रोगिन् ('one who has disease') is formed with the possessor suffix **-इन् ('having / possessing')**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">By the same -इन् suffix, धनिन् ('धनी') means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>poor</span></li>
+        <li class="correct"><span class="lab">B</span><span>wealthy (one having wealth)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a giver</span></li>
+        <li class=""><span class="lab">D</span><span>like wealth</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>धनिन् (धनी) means **wealthy** (one having wealth).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">ज्ञानिन् (ज्ञानी) and बलिन् (बली), with -इन्, mean:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ignorant and weak</span></li>
+        <li class=""><span class="lab">B</span><span>a healer and a patient</span></li>
+        <li class="correct"><span class="lab">C</span><span>knowledgeable and strong</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>like knowledge and like strength</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>ज्ञानिन् (ज्ञानी) and बलिन् (बली) mean **knowledgeable and strong**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">Matching role to suffix: the healer is चिकित्सकः (-क) and the sick one is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>रोगिन् (-इन्)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>कर्तृ</span></li>
+        <li class=""><span class="lab">C</span><span>दातृ</span></li>
+        <li class=""><span class="lab">D</span><span>यन्त्रवत्</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The healer is चिकित्सकः (-क); the sick one is **रोगिन् (-इन्)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">The particle हि in सेवा हि परमो धर्मः is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a negation</span></li>
+        <li class=""><span class="lab">B</span><span>a question marker</span></li>
+        <li class="correct"><span class="lab">C</span><span>emphatic ('verily / indeed')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a plural ending</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>हि is **emphatic ('verily / indeed')**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">परमः here means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>highest / supreme (in rank)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>first in time</span></li>
+        <li class=""><span class="lab">C</span><span>smallest</span></li>
+        <li class=""><span class="lab">D</span><span>last</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>परमः here means **highest / supreme (in rank)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">Reading परमो धर्मः as 'the first duty of the morning' is wrong because परमः means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>first in time</span></li>
+        <li class="correct"><span class="lab">B</span><span>highest in importance, not first in time</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the smallest duty</span></li>
+        <li class=""><span class="lab">D</span><span>an optional duty</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>परमः means **highest in importance, not first in time** — so 'the first duty of the morning' is wrong.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">परम belongs with उत्तम and श्रेष्ठ, all expressing:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the lowest</span></li>
+        <li class=""><span class="lab">B</span><span>the middle</span></li>
+        <li class=""><span class="lab">C</span><span>the first in a queue</span></li>
+        <li class="correct"><span class="lab">D</span><span>the highest / best</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>परम, उत्तम and श्रेष्ठ all express **the highest / best**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">सेवा differs from दान in that सेवा is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>service through one's time, body and presence</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>giving money from afar</span></li>
+        <li class=""><span class="lab">C</span><span>collecting degrees</span></li>
+        <li class=""><span class="lab">D</span><span>staying away</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>सेवा is **service through one's time, body and presence**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">दान is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>showing up in person</span></li>
+        <li class=""><span class="lab">B</span><span>bedside nursing</span></li>
+        <li class=""><span class="lab">C</span><span>earning a title</span></li>
+        <li class="correct"><span class="lab">D</span><span>giving money or goods (often from a distance)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>दान is **giving money or goods (often from a distance)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">A donor who only writes a cheque performs दान but not:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>दान</span></li>
+        <li class="correct"><span class="lab">B</span><span>सेवा (hands-on service)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>धर्म</span></li>
+        <li class=""><span class="lab">D</span><span>कषायम्</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A donor who only writes a cheque does दान but not **सेवा (hands-on service)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">The verb सेव् ('serve', आत्मनेपदी सेवते) in चिकित्सकः रोगिणः सेवते takes रोगिणः as its:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>subject</span></li>
+        <li class=""><span class="lab">B</span><span>instrument</span></li>
+        <li class="correct"><span class="lab">C</span><span>accusative object ('serves the sick')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>place</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In चिकित्सकः रोगिणः सेवते, रोगिणः is the **accusative object** ('serves the sick').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">रोगिणः here ('the sick', as object) is the accusative plural of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>चिकित्सक</span></li>
+        <li class="correct"><span class="lab">B</span><span>रोगिन्</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>कषाय</span></li>
+        <li class=""><span class="lab">D</span><span>उपाधि</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>रोगिणः ('the sick', object) is the accusative plural of **रोगिन्**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">कषायम् in the chapter means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a degree</span></li>
+        <li class=""><span class="lab">B</span><span>a machine</span></li>
+        <li class="correct"><span class="lab">C</span><span>a herbal decoction (medicine)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a position</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>कषायम् means **a herbal decoction (medicine)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">उपाधिः means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a degree / qualification</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a decoction</span></li>
+        <li class=""><span class="lab">C</span><span>service</span></li>
+        <li class=""><span class="lab">D</span><span>a machine</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>उपाधिः means **a degree / qualification**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">पदवी means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a medicine</span></li>
+        <li class=""><span class="lab">B</span><span>a patient</span></li>
+        <li class=""><span class="lab">C</span><span>a fragrance</span></li>
+        <li class="correct"><span class="lab">D</span><span>a position / post / title</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>पदवी means **a position / post / title**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">The doctor sets aside the pursuit of उपाधि and पदवी in order to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>earn more money</span></li>
+        <li class=""><span class="lab">B</span><span>rest</span></li>
+        <li class=""><span class="lab">C</span><span>travel</span></li>
+        <li class="correct"><span class="lab">D</span><span>serve the sick (सेवा)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The doctor sets aside उपाधि and पदवी in order to **serve the sick (सेवा)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">Describing the doctor as यन्त्रवत् praises his:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>tireless, steady, machine-like effort</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>love of money</span></li>
+        <li class=""><span class="lab">C</span><span>collection of titles</span></li>
+        <li class=""><span class="lab">D</span><span>laziness</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>यन्त्रवत् praises the doctor's **tireless, steady, machine-like effort**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">यन्त्र means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a physician</span></li>
+        <li class=""><span class="lab">B</span><span>a degree</span></li>
+        <li class="correct"><span class="lab">C</span><span>a machine</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a decoction</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>यन्त्र means **a machine**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">A volunteer who serves food for hours without tiring works:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>सिंहवत् only</span></li>
+        <li class="correct"><span class="lab">B</span><span>यन्त्रवत् (like a machine)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>रोगिवत्</span></li>
+        <li class=""><span class="lab">D</span><span>धनवत्</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A volunteer serving for hours without tiring works **यन्त्रवत् (like a machine)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">The thesis सेवा हि परमो धर्मः ranks duties by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the time of day</span></li>
+        <li class=""><span class="lab">B</span><span>their cost</span></li>
+        <li class="correct"><span class="lab">C</span><span>importance, with service highest</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>their length</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>सेवा हि परमो धर्मः ranks duties by **importance, with service highest**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">The chapter teaches that the highest duty is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>earning the most degrees</span></li>
+        <li class="correct"><span class="lab">B</span><span>selfless service to those in need</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>gaining the highest title</span></li>
+        <li class=""><span class="lab">D</span><span>becoming wealthy</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The highest duty is **selfless service to those in need**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">चिकित्सकः कान् सेवते? ('Whom does the physician serve?')</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the wealthy only</span></li>
+        <li class=""><span class="lab">B</span><span>the kings</span></li>
+        <li class=""><span class="lab">C</span><span>other doctors only</span></li>
+        <li class="correct"><span class="lab">D</span><span>रोगिणः (the sick)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>चिकित्सकः कान् सेवते? — he serves **रोगिणः (the sick)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">'देवदत्तः सिंहवत् युध्यते' means Devadatta fights:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>like a lion</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>possessing a lion</span></li>
+        <li class=""><span class="lab">C</span><span>against a lion</span></li>
+        <li class=""><span class="lab">D</span><span>for a lion</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>देवदत्तः सिंहवत् युध्यते means Devadatta fights **like a lion**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">'सः बलवान् अस्ति' means 'he is':</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>strong (strength-possessing)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>like strength</span></li>
+        <li class=""><span class="lab">C</span><span>without strength</span></li>
+        <li class=""><span class="lab">D</span><span>for strength</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>सः बलवान् अस्ति means 'he is **strong** (strength-possessing)'.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">The difference between सिंहवत् ('like a lion') and बलवान् ('strong') lies in:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>tense</span></li>
+        <li class="correct"><span class="lab">B</span><span>the two senses of -वत् (comparison vs possession)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>number</span></li>
+        <li class=""><span class="lab">D</span><span>gender</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The difference between सिंहवत् and बलवान् lies in **the two senses of -वत् (comparison vs possession)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">कर्ता ('doer'), दाता ('giver') and नेता ('leader') are all:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>-इन् possessor nouns</span></li>
+        <li class=""><span class="lab">B</span><span>infinitives</span></li>
+        <li class=""><span class="lab">C</span><span>ablatives</span></li>
+        <li class="correct"><span class="lab">D</span><span>-तृ agent nouns</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>कर्ता, दाता and नेता are all **-तृ agent nouns**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">रोगी, धनी and ज्ञानी are all:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>-तृ agent nouns</span></li>
+        <li class=""><span class="lab">B</span><span>verbs</span></li>
+        <li class="correct"><span class="lab">C</span><span>-इन् possessor nouns</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>ordinals</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>रोगी, धनी and ज्ञानी are all **-इन् possessor nouns**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">The emphatic हि could be replaced (in sense) by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>न ('not')</span></li>
+        <li class=""><span class="lab">B</span><span>किम् ('what')</span></li>
+        <li class=""><span class="lab">C</span><span>वा ('or')</span></li>
+        <li class="correct"><span class="lab">D</span><span>एव / खलु ('indeed / verily')</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The emphatic हि could be replaced by **एव / खलु ('indeed / verily')**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">The chapter uses a चिकित्सकः rather than a king to make the point that सेवा is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only for kings</span></li>
+        <li class=""><span class="lab">B</span><span>impossible</span></li>
+        <li class="correct"><span class="lab">C</span><span>open to anyone who serves, in any profession</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>about wealth</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Using a चिकित्सकः shows सेवा is **open to anyone who serves, in any profession**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">The doctor preparing कषायम् at the bedside is सेवा because it gives the patient the doctor's:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>time, skill and presence</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>money from afar</span></li>
+        <li class=""><span class="lab">C</span><span>degree</span></li>
+        <li class=""><span class="lab">D</span><span>title</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Preparing कषायम् at the bedside is सेवा because it gives the patient the doctor's **time, skill and presence**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">Which suffix-sense pair is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>यन्त्रवत् = 'possessing a machine'</span></li>
+        <li class="correct"><span class="lab">B</span><span>यन्त्रवत् = 'like a machine'; धनवत् = 'possessing wealth'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>धनवत् = 'like wealth'</span></li>
+        <li class=""><span class="lab">D</span><span>both -वत् always mean 'like'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct pair: **यन्त्रवत् = 'like a machine'; धनवत् = 'possessing wealth'**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">Which agent/possessor-suffix pair is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>चिकित्सक = the sick</span></li>
+        <li class="correct"><span class="lab">B</span><span>चिकित्सक (-क) = healer; रोगिन् (-इन्) = the sick</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>रोगिन् = the healer</span></li>
+        <li class=""><span class="lab">D</span><span>both name the medicine</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct pair: **चिकित्सक (-क) = healer; रोगिन् (-इन्) = the sick**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">Which word-meaning pair is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>सेवा = a degree</span></li>
+        <li class=""><span class="lab">B</span><span>दान = bedside nursing</span></li>
+        <li class=""><span class="lab">C</span><span>उपाधि = a decoction</span></li>
+        <li class="correct"><span class="lab">D</span><span>सेवा = service; दान = giving money/goods</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct pair: **सेवा = service; दान = giving money/goods**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">Which sense of परमः is CORRECT here?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>first in time</span></li>
+        <li class=""><span class="lab">B</span><span>the smallest</span></li>
+        <li class="correct"><span class="lab">C</span><span>highest in rank/importance</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>optional</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>परमः here means **highest in rank/importance**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">Which particle-meaning pair is CORRECT?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>हि = 'verily/indeed'; इव = 'like'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>हि = 'not'; इव = 'and'</span></li>
+        <li class=""><span class="lab">C</span><span>हि = 'or'</span></li>
+        <li class=""><span class="lab">D</span><span>इव = 'from'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct particles: **हि = 'verily/indeed'; इव = 'like'**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">कर्ता is to कृ ('do') as दाता is to:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>दा ('give')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>नी ('lead')</span></li>
+        <li class=""><span class="lab">C</span><span>गम् ('go')</span></li>
+        <li class=""><span class="lab">D</span><span>रोग ('disease')</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>कर्ता is to कृ as दाता is to **दा ('give')**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">A 'giver' (दाता) performs दान, while a 'server' performs:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>उपाधि</span></li>
+        <li class=""><span class="lab">B</span><span>पदवी</span></li>
+        <li class=""><span class="lab">C</span><span>कषाय</span></li>
+        <li class="correct"><span class="lab">D</span><span>सेवा</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A 'giver' (दाता) performs दान; a 'server' performs **सेवा**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">The chapter's deeper message is that titles and wealth matter less than:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the number of degrees</span></li>
+        <li class=""><span class="lab">B</span><span>the highest post</span></li>
+        <li class="correct"><span class="lab">C</span><span>hands-on, selfless service</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the largest donation</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Titles and wealth matter less than **hands-on, selfless service**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">यन्त्रवत् सेवते means 'he serves':</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only once</span></li>
+        <li class="correct"><span class="lab">B</span><span>tirelessly, like a machine</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>for a title</span></li>
+        <li class=""><span class="lab">D</span><span>like the wealthy</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>यन्त्रवत् सेवते means 'he serves **tirelessly, like a machine**'.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">The -इन् in रोगिन् makes a word meaning 'one who HAS' a disease, parallel to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>कर्तृ ('doer')</span></li>
+        <li class=""><span class="lab">B</span><span>यन्त्रवत् ('like a machine')</span></li>
+        <li class="correct"><span class="lab">C</span><span>धनिन् ('one who has wealth')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>दानम् ('giving')</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The -इन् in रोगिन् ('one who has disease') is parallel to **धनिन् ('one who has wealth')**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">The chapter pairs its message with grammar lessons on:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only the dative</span></li>
+        <li class=""><span class="lab">B</span><span>the six tastes</span></li>
+        <li class=""><span class="lab">C</span><span>ordinals only</span></li>
+        <li class="correct"><span class="lab">D</span><span>the two senses of -वत्, agent/possessor suffixes (-क/-तृ/-इन्), and the particle हि</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The chapter pairs its message with lessons on **the two senses of -वत्, agent/possessor suffixes (-क/-तृ/-इन्), and the particle हि**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">The single best summary of सेवा हि परमो धर्मः is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>wealth is the highest duty</span></li>
+        <li class="correct"><span class="lab">B</span><span>selfless service is the highest duty</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a degree is the highest duty</span></li>
+        <li class=""><span class="lab">D</span><span>a title is the highest duty</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The best summary: **selfless service is the highest duty**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">'अश्ववत् धावति' (runs like a horse) uses -वत् in the sense of:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>comparison ('like')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>possession ('having')</span></li>
+        <li class=""><span class="lab">C</span><span>lacking</span></li>
+        <li class=""><span class="lab">D</span><span>purpose</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>अश्ववत् धावति ('runs like a horse') uses -वत् in the sense of **comparison ('like')**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">'गुणवान् छात्रः' (a virtuous student) uses -वत् in the sense of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>comparison ('like')</span></li>
+        <li class="correct"><span class="lab">B</span><span>possession ('having virtue')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>lacking</span></li>
+        <li class=""><span class="lab">D</span><span>purpose</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>गुणवान् छात्रः ('a virtuous student') uses -वत् in the sense of **possession ('having virtue')**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">The chapter chooses a doctor's daily bedside work to show that परमो धर्मः is lived:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>in concrete, untiring service</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>by collecting honours</span></li>
+        <li class=""><span class="lab">C</span><span>by staying distant</span></li>
+        <li class=""><span class="lab">D</span><span>by becoming rich</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The doctor's daily bedside work shows परमो धर्मः lived **in concrete, untiring service**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">The central theme of this chapter is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a fox and grapes</span></li>
+        <li class=""><span class="lab">B</span><span>banking</span></li>
+        <li class="correct"><span class="lab">C</span><span>selfless service (सेवा) as the highest duty</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>vowel quantity</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The central theme is **selfless service (सेवा) as the highest duty**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">A student claims: 'यन्त्रवत् means possessing a machine, and परमः means first in time.' The best correction is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the student is fully correct</span></li>
+        <li class=""><span class="lab">B</span><span>यन्त्रवत् means 'like a machine', but परमः means first in time</span></li>
+        <li class=""><span class="lab">C</span><span>यन्त्रवत् means possessing a machine, and परमः means highest</span></li>
+        <li class="correct"><span class="lab">D</span><span>यन्त्रवत् means 'like a machine' (इव), and परमः means 'highest in rank'</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>यन्त्रवत् means 'like a machine' (इव), and परमः means 'highest in rank' — the student is wrong on both. --- *End of solutions. Maximum marks: 240.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>
