@@ -365,6 +365,21 @@ extension OlympiadPaperRegistry {
             suggestedTimeMinutes: 90,
             solvedGuideHTML: "SocialScience_Ssch05_TheRiseOfEmpires_Advanced_SolvedGuide.html",
             tier: .advanced
+        ),
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch06_advanced",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 6,
+            chapterTitle: "The Age of Reorganisation",
+            displayTitle: "The Age of Reorganisation — Paper 2 (Advanced)",
+            questionPaperMD: "SocialScience_Ssch06_TheAgeOfReorganisation_Advanced_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch06_TheAgeOfReorganisation_Advanced_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch06_TheAgeOfReorganisation.html",
+            questionPaperPDF: "SocialScience_Ssch06_TheAgeOfReorganisation.pdf",
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "SocialScience_Ssch06_TheAgeOfReorganisation_Advanced_SolvedGuide.html",
+            tier: .advanced
         )
     ]
 }

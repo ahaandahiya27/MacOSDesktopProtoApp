@@ -239,9 +239,11 @@ final class OlympiadExamHallTests: XCTestCase {
         // 2026-06-11 (Wave 10): + Social Science Ssch05 (The Rise of Empires) and
         // Sanskrit Sch13/Sch14/Sch15 (Varna-Matra, Shabda-Rupani, Dhatu-Rupani —
         // the first Sanskrit Advanced papers) = 37 advanced → 106 total.
+        // 2026-06-11 (Wave 11): + Social Science Ssch06 (The Age of Reorganisation)
+        // and Sanskrit Sch07/Sch08/Sch09/Sch10/Sch11/Sch12 = 44 advanced → 113 total.
         let papers = OlympiadPaperRegistry.allPapers
-        XCTAssertEqual(papers.count, 106,
-                       "Expected 106 papers total. Got \(papers.count). Update this assertion when Paper 2 lands for a new chapter.")
+        XCTAssertEqual(papers.count, 113,
+                       "Expected 113 papers total. Got \(papers.count). Update this assertion when Paper 2 lands for a new chapter.")
     }
 
     func testFoundationTierIsTheDefault() {
@@ -260,11 +262,11 @@ final class OlympiadExamHallTests: XCTestCase {
         // explicit opt-in). Anchors: Science Ch13 + Maths Ch15. The v8
         // rollout (2026-06-10) wired every on-disk Advanced triplet:
         // Maths Ch01–Ch15 (15), Science Ch01/Ch02/Ch03/Ch04/Ch05/Ch06/
-        // Ch07/Ch08/Ch09/Ch10/Ch11/Ch13/Ch14/Ch15 (14), Social Science Ssch01/
-        // Ssch02/Ssch03/Ssch04/Ssch05 (5), Sanskrit Sch13/Sch14/Sch15 (3) = 37.
+        // Ch07/Ch08/Ch09/Ch10/Ch11/Ch13/Ch14/Ch15 (14), Social Science Ssch01–
+        // Ssch06 (6), Sanskrit Sch07–Sch15 (9) = 44.
         let advanced = OlympiadPaperRegistry.allPapers.filter { $0.tier == .advanced }
-        XCTAssertEqual(advanced.count, 37,
-                       "Expected 37 advanced-tier papers, got \(advanced.count)")
+        XCTAssertEqual(advanced.count, 44,
+                       "Expected 44 advanced-tier papers, got \(advanced.count)")
         let ids = Set(advanced.map { $0.id })
         XCTAssertEqual(ids, ["olympiad_science_ch01_advanced",
                              "olympiad_science_ch02_advanced",
@@ -300,6 +302,13 @@ final class OlympiadExamHallTests: XCTestCase {
                              "olympiad_socialscience_ssch03_advanced",
                              "olympiad_socialscience_ssch04_advanced",
                              "olympiad_socialscience_ssch05_advanced",
+                             "olympiad_socialscience_ssch06_advanced",
+                             "olympiad_sanskrit_sch07_advanced",
+                             "olympiad_sanskrit_sch08_advanced",
+                             "olympiad_sanskrit_sch09_advanced",
+                             "olympiad_sanskrit_sch10_advanced",
+                             "olympiad_sanskrit_sch11_advanced",
+                             "olympiad_sanskrit_sch12_advanced",
                              "olympiad_sanskrit_sch13_advanced",
                              "olympiad_sanskrit_sch14_advanced",
                              "olympiad_sanskrit_sch15_advanced"])
