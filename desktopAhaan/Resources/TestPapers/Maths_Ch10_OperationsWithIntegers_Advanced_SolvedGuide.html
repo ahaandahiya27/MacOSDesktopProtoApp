@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Operations With Integers_Advanced — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Operations With Integers_Advanced<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">A token at 0 on a number line is moved −8, then +15, then −4. Its final position is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>−3</span></li>
+        <li class=""><span class="lab">B</span><span>+27</span></li>
+        <li class="correct"><span class="lab">C</span><span>+3</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>−27</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Add left to right: 0 + (−8) = −8; −8 + 15 = +7; +7 + (−4) = +3. The token lands at +3. Trap: forgetting the last −4 lands you at +7.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">Evaluate (−17) − (−9) − (+6).</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>−14</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>−32</span></li>
+        <li class=""><span class="lab">C</span><span>−20</span></li>
+        <li class=""><span class="lab">D</span><span>+2</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rewrite each subtraction as "add the opposite": (−17) + (+9) + (−6) = −17 + 9 − 6 = −14. Subtracting −9 ADDS 9; don't subtract it again.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">Evaluate (+12) + (−20) − (−7) − (+4).</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+5</span></li>
+        <li class=""><span class="lab">B</span><span>−9</span></li>
+        <li class=""><span class="lab">C</span><span>−45</span></li>
+        <li class="correct"><span class="lab">D</span><span>−5</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(+12) + (−20) − (−7) − (+4) = 12 − 20 + 7 − 4. Group: (12 + 7) − (20 + 4) = 19 − 24 = −5.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">Begin at +6; subtract −9; then subtract +20; then add −5. The result is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+10</span></li>
+        <li class="correct"><span class="lab">B</span><span>−10</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>−30</span></li>
+        <li class=""><span class="lab">D</span><span>0</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"subtract −9" means +9; "subtract +20" means −20; "add −5" means −5. So 6 + 9 − 20 − 5 = 15 − 25 = −10.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">Evaluate (−2) − (−4) − (−6) − (−8).</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>+16</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>−20</span></li>
+        <li class=""><span class="lab">C</span><span>−16</span></li>
+        <li class=""><span class="lab">D</span><span>+4</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Subtracting a negative adds: (−2) + 4 + 6 + 8 = −2 + 18 = +16. Every "−(−)" flips to a plus.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">The temperature was −5 °C at midnight, fell another 7 °C by 3 a.m., then rose 10 °C by noon. The noon temperature is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+2 °C</span></li>
+        <li class=""><span class="lab">B</span><span>−22 °C</span></li>
+        <li class="correct"><span class="lab">C</span><span>−2 °C</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>+8 °C</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Start −5, "fell 7 °C" means −7, "rose 10 °C" means +10: −5 − 7 + 10 = −12 + 10 = −2 °C.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">A diver at −22 m ascends 9 m, descends 13 m, then ascends 6 m. Her final depth is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>−26 m</span></li>
+        <li class="correct"><span class="lab">B</span><span>−20 m</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>+20 m</span></li>
+        <li class=""><span class="lab">D</span><span>−14 m</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Depth as signed values: −22 + 9 − 13 + 6. Combine ups (+9, +6 = +15) and downs (−13): −22 + 15 − 13 = −20 m.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">The sum of all integers from −6 to +9 (both inclusive) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+15</span></li>
+        <li class=""><span class="lab">B</span><span>+3</span></li>
+        <li class=""><span class="lab">C</span><span>+30</span></li>
+        <li class="correct"><span class="lab">D</span><span>+24</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The integers from −6 to +6 cancel in pairs and sum to 0. What's left is +7 + 8 + 9 = +24. Pairing-to-zero is the fast route.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">The sum of all integers from −11 to +13 (both inclusive) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+24</span></li>
+        <li class="correct"><span class="lab">B</span><span>+25</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>+2</span></li>
+        <li class=""><span class="lab">D</span><span>0</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Integers from −11 to +11 sum to 0 (each k pairs with −k, and 0 is neutral). Remaining: +12 + 13 = +25.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">An account is overdrawn at −₹320. A deposit of ₹500, a withdrawal of ₹260, then a deposit of ₹40 follow. The new balance is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+₹40</span></li>
+        <li class=""><span class="lab">B</span><span>−₹120</span></li>
+        <li class=""><span class="lab">C</span><span>+₹120</span></li>
+        <li class="correct"><span class="lab">D</span><span>−₹40</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Treat overdraft as −320: −320 + 500 − 260 + 40 = (500 + 40) − (320 + 260) = 540 − 580 = −40, i.e. still −₹40.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">Evaluate (−2) × (−3) × (−5).</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>−30</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>+30</span></li>
+        <li class=""><span class="lab">C</span><span>−10</span></li>
+        <li class=""><span class="lab">D</span><span>+10</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Three negative factors → odd count → product is negative. Magnitude 2 × 3 × 5 = 30, so the answer is −30.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">Evaluate (−1) × (−2) × (−3) × (−4).</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>−24</span></li>
+        <li class=""><span class="lab">B</span><span>+10</span></li>
+        <li class="correct"><span class="lab">C</span><span>+24</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>−10</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Four negative factors → even count → product is positive. Magnitude 1 × 2 × 3 × 4 = 24, so +24.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">The product of fifteen negative integers and four positive integers (none zero) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>positive</span></li>
+        <li class=""><span class="lab">B</span><span>zero</span></li>
+        <li class=""><span class="lab">C</span><span>cannot be decided</span></li>
+        <li class="correct"><span class="lab">D</span><span>negative</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Only the count of NEGATIVE factors decides the sign. Fifteen negatives is an odd count → negative; the four positives don't change that.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">Evaluate (−56) ÷ (+7).</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+8</span></li>
+        <li class="correct"><span class="lab">B</span><span>−8</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>−9</span></li>
+        <li class=""><span class="lab">D</span><span>−7</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Opposite signs in a division give a negative quotient: 56 ÷ 7 = 8, so (−56) ÷ (+7) = −8.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">Evaluate (−81) ÷ (−9).</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>−9</span></li>
+        <li class=""><span class="lab">B</span><span>+8</span></li>
+        <li class="correct"><span class="lab">C</span><span>+9</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>−72</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Same signs (both negative) give a positive quotient: 81 ÷ 9 = 9, so (−81) ÷ (−9) = +9.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">Evaluate (−6) × (+5) ÷ (−3).</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>+10</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>−10</span></li>
+        <li class=""><span class="lab">C</span><span>+90</span></li>
+        <li class=""><span class="lab">D</span><span>−90</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Left to right: (−6) × (+5) = −30 (opposite signs). Then (−30) ÷ (−3) = +10 (same signs).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">Evaluate (−2) raised to the power 5, i.e. (−2) × (−2) × (−2) × (−2) × (−2).</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>−32</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>+32</span></li>
+        <li class=""><span class="lab">C</span><span>−10</span></li>
+        <li class=""><span class="lab">D</span><span>+10</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An odd power of a negative is negative. 2⁵ = 32, so (−2)⁵ = −32.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">The product of two integers is +48. If one of them is −6, the other is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+8</span></li>
+        <li class=""><span class="lab">B</span><span>−42</span></li>
+        <li class=""><span class="lab">C</span><span>+42</span></li>
+        <li class="correct"><span class="lab">D</span><span>−8</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Product is positive (+48) but one factor is negative, so the other must be negative: 48 ÷ 6 = 8 → the missing factor is −8. Check: (−6) × (−8) = +48. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">Evaluate (−7) × [(−4) + (+9)].</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+35</span></li>
+        <li class=""><span class="lab">B</span><span>−7</span></li>
+        <li class="correct"><span class="lab">C</span><span>−35</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>+63</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Do the bracket first: (−4) + (+9) = +5. Then (−7) × (+5) = −35.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">Evaluate (−120) ÷ (−4) ÷ (−5).</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+6</span></li>
+        <li class="correct"><span class="lab">B</span><span>−6</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>+30</span></li>
+        <li class=""><span class="lab">D</span><span>−150</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Left to right: (−120) ÷ (−4) = +30 (same signs). Then (+30) ÷ (−5) = −6 (opposite signs).</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">Evaluate (−15) + (−5) × (−4).</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>−35</span></li>
+        <li class=""><span class="lab">B</span><span>+80</span></li>
+        <li class="correct"><span class="lab">C</span><span>+5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>−5</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Multiplication before addition: (−5) × (−4) = +20. Then (−15) + 20 = +5. Trap (B) comes from multiplying −15 in too early.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">Evaluate (−24) ÷ (−6) − (−3) × (+4).</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>+16</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>−8</span></li>
+        <li class=""><span class="lab">C</span><span>−16</span></li>
+        <li class=""><span class="lab">D</span><span>+8</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Do × and ÷ first: (−24) ÷ (−6) = +4 and (−3) × (+4) = −12. Now +4 − (−12) = 4 + 12 = +16.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">Evaluate 7 − [4 − (−3)] × 2.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+9</span></li>
+        <li class="correct"><span class="lab">B</span><span>−7</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>+7</span></li>
+        <li class=""><span class="lab">D</span><span>−1</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bracket first: 4 − (−3) = 7. Then 7 × 2 = 14. Finally 7 − 14 = −7.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">Evaluate (−3) × [5 − 9] + 4 × (−3).</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+24</span></li>
+        <li class=""><span class="lab">B</span><span>−24</span></li>
+        <li class=""><span class="lab">C</span><span>−12</span></li>
+        <li class="correct"><span class="lab">D</span><span>0</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bracket: 5 − 9 = −4, so (−3) × (−4) = +12. Also 4 × (−3) = −12. Sum: 12 + (−12) = 0.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">Evaluate (−48) ÷ [(−2) × (−4)].</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+6</span></li>
+        <li class="correct"><span class="lab">B</span><span>−6</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>−96</span></li>
+        <li class=""><span class="lab">D</span><span>+96</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bracket first: (−2) × (−4) = +8. Then (−48) ÷ 8 = −6.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">Evaluate 9 + (−4) × (−5) − (−8) ÷ 4.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+27</span></li>
+        <li class=""><span class="lab">B</span><span>+23</span></li>
+        <li class="correct"><span class="lab">C</span><span>+31</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>−13</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>× and ÷ first: (−4) × (−5) = +20 and (−8) ÷ 4 = −2. Now 9 + 20 − (−2) = 9 + 20 + 2 = +31.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">Evaluate [(−6) + 4] × [(−5) − (−9)].</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+8</span></li>
+        <li class=""><span class="lab">B</span><span>−28</span></li>
+        <li class=""><span class="lab">C</span><span>+28</span></li>
+        <li class="correct"><span class="lab">D</span><span>−8</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Each bracket: (−6) + 4 = −2 and (−5) − (−9) = −5 + 9 = +4. Then (−2) × (+4) = −8.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">Evaluate (−8) − (−8) × (−8).</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>−72</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>+56</span></li>
+        <li class=""><span class="lab">C</span><span>+72</span></li>
+        <li class=""><span class="lab">D</span><span>−56</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Multiplication first: (−8) × (−8) = +64. Then (−8) − (+64) = −72. Trap: doing the left subtraction first.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">Evaluate 144 ÷ (−12) + (−6) × (−2) − 5.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+5</span></li>
+        <li class=""><span class="lab">B</span><span>+19</span></li>
+        <li class=""><span class="lab">C</span><span>−29</span></li>
+        <li class="correct"><span class="lab">D</span><span>−5</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>÷ and × first: 144 ÷ (−12) = −12 and (−6) × (−2) = +12. Now −12 + 12 − 5 = −5.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">Evaluate (−4)² − (−5)².</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>−9</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>+9</span></li>
+        <li class=""><span class="lab">C</span><span>−41</span></li>
+        <li class=""><span class="lab">D</span><span>+41</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Squaring makes each positive: (−4)² = 16 and (−5)² = 25. Then 16 − 25 = −9.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">In a quiz, +5 marks are given for each correct answer and −3 for each wrong one. Meera gets 14 correct and 6 wrong. Her score is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+88</span></li>
+        <li class="correct"><span class="lab">B</span><span>+52</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>+28</span></li>
+        <li class=""><span class="lab">D</span><span>+70</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Correct: 14 × (+5) = +70. Wrong: 6 × (−3) = −18. Total = 70 − 18 = +52.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">A lift starts at floor +4, goes down 9 floors, up 3 floors, then down 6 floors. It ends at floor:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+8</span></li>
+        <li class=""><span class="lab">B</span><span>−2</span></li>
+        <li class="correct"><span class="lab">C</span><span>−8</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>+22</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Signed floors: +4 − 9 + 3 − 6 = (4 + 3) − (9 + 6) = 7 − 15 = −8, i.e. 8 floors below ground.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">A freezer's temperature drops 4 °C every hour, starting from −3 °C. After 5 hours it reads:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>−17 °C</span></li>
+        <li class=""><span class="lab">B</span><span>+17 °C</span></li>
+        <li class="correct"><span class="lab">C</span><span>−23 °C</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>−20 °C</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Drops 4 °C for 5 hours" is +5 × (−4) = −20 from the start. So −3 + (−20) = −23 °C.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">A snail climbs a smooth pole, rising +5 m each day and slipping −3 m each night. Its height above the start after 7 complete day-and-night cycles is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+35 m</span></li>
+        <li class="correct"><span class="lab">B</span><span>+14 m</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>+2 m</span></li>
+        <li class=""><span class="lab">D</span><span>+56 m</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Net change per full cycle = +5 + (−3) = +2 m. After 7 cycles: 7 × (+2) = +14 m.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">A football team scored 21 goals and conceded 29 over a season. Its goal difference is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>−8</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>+8</span></li>
+        <li class=""><span class="lab">C</span><span>−50</span></li>
+        <li class=""><span class="lab">D</span><span>+50</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Goal difference = scored − conceded = 21 − 29 = −8.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">A town lies at −150 m (below sea level); a nearby hilltop is at +280 m. The vertical distance between town and hilltop is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>130 m</span></li>
+        <li class=""><span class="lab">B</span><span>280 m</span></li>
+        <li class=""><span class="lab">C</span><span>150 m</span></li>
+        <li class="correct"><span class="lab">D</span><span>430 m</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Vertical separation = top − bottom = (+280) − (−150) = 280 + 150 = 430 m.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">A trader's weekly ledger reads +₹600, −₹420, −₹250, +₹350. The net result for the week is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>+₹280</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>−₹280</span></li>
+        <li class=""><span class="lab">C</span><span>+₹520</span></li>
+        <li class=""><span class="lab">D</span><span>−₹120</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>+600 − 420 − 250 + 350 = (600 + 350) − (420 + 250) = 950 − 670 = +280, a ₹280 profit.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">A number multiplied by −7 gives +63. The number is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+9</span></li>
+        <li class=""><span class="lab">B</span><span>−56</span></li>
+        <li class=""><span class="lab">C</span><span>+56</span></li>
+        <li class="correct"><span class="lab">D</span><span>−9</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>n × (−7) = +63 → n = 63 ÷ (−7) = −9. Check: (−9) × (−7) = +63. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">When −9 is subtracted from a number, the result is −4. The number is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+5</span></li>
+        <li class="correct"><span class="lab">B</span><span>−13</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>+13</span></li>
+        <li class=""><span class="lab">D</span><span>−5</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"−9 subtracted from a number" is n − (−9) = n + 9 = −4. So n = −4 − 9 = −13.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">A submarine descends at −6 m every minute, starting from the surface (0 m). Its depth after 9 minutes is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>−15 m</span></li>
+        <li class=""><span class="lab">B</span><span>+54 m</span></li>
+        <li class="correct"><span class="lab">C</span><span>−54 m</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>−3 m</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Descending −6 m/min for 9 min: 9 × (−6) = −54 m below the surface.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">The additive inverse of (−18) − (−25) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+7</span></li>
+        <li class="correct"><span class="lab">B</span><span>−7</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>−43</span></li>
+        <li class=""><span class="lab">D</span><span>+43</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>First the expression: (−18) − (−25) = −18 + 25 = +7. Its additive inverse is the number that adds to give 0, namely −7.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">The statement (−5) × [6 + (−8)] = (−5) × 6 + (−5) × (−8) illustrates the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>distributive property</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>commutative property</span></li>
+        <li class=""><span class="lab">C</span><span>associative property</span></li>
+        <li class=""><span class="lab">D</span><span>closure property</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Multiplying a sum factor-by-factor and adding — a × (b + c) = a×b + a×c — is the distributive property.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">For which value of ▢ is (−9) × ▢ = +54?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+6</span></li>
+        <li class=""><span class="lab">B</span><span>−45</span></li>
+        <li class="correct"><span class="lab">C</span><span>−6</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>+45</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(−9) × ▢ = +54 → ▢ = 54 ÷ (−9) = −6 (positive ÷ negative = negative). Check: (−9) × (−6) = +54. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">The only integer that is its own additive inverse is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+1</span></li>
+        <li class=""><span class="lab">B</span><span>−1</span></li>
+        <li class=""><span class="lab">C</span><span>there is none</span></li>
+        <li class="correct"><span class="lab">D</span><span>0</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A number's additive inverse adds to it to make 0. Only 0 + 0 = 0, so 0 is its own inverse.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">The value of (−1) raised to the power 200 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>−1</span></li>
+        <li class=""><span class="lab">B</span><span>+200</span></li>
+        <li class=""><span class="lab">C</span><span>−200</span></li>
+        <li class="correct"><span class="lab">D</span><span>+1</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An even power of −1 is +1 (the negatives pair off). 200 is even → +1.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">Evaluate (−1)¹⁰¹ + (−1)²⁰⁰.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+2</span></li>
+        <li class=""><span class="lab">B</span><span>−2</span></li>
+        <li class="correct"><span class="lab">C</span><span>0</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>+1</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(−1)¹⁰¹ = −1 (odd power) and (−1)²⁰⁰ = +1 (even power). Sum: −1 + 1 = 0.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">Which of these is the greatest: (−2)³, (−4)², −(4²), (−1)⁷?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>(−4)²</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>(−2)³</span></li>
+        <li class=""><span class="lab">C</span><span>−(4²)</span></li>
+        <li class=""><span class="lab">D</span><span>(−1)⁷</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Evaluate each: (−2)³ = −8; (−4)² = +16; −(4²) = −16; (−1)⁷ = −1. The greatest is +16 = (−4)².</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">Let s be the successor of −1 and p the predecessor of −1. The value of s + p is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0</span></li>
+        <li class="correct"><span class="lab">B</span><span>−2</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>+2</span></li>
+        <li class=""><span class="lab">D</span><span>−1</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Successor of −1 is 0; predecessor of −1 is −2. Sum = 0 + (−2) = −2.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">If a = −5 and b = 4, then a − b − ab equals:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>−29</span></li>
+        <li class=""><span class="lab">B</span><span>−9</span></li>
+        <li class="correct"><span class="lab">C</span><span>+11</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>−1</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>ab = (−5)(4) = −20. So a − b − ab = (−5) − 4 − (−20) = −9 + 20 = +11.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">On the set of integers, which operation is NOT always closed (can give a non-integer)?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>addition</span></li>
+        <li class=""><span class="lab">B</span><span>subtraction</span></li>
+        <li class=""><span class="lab">C</span><span>multiplication</span></li>
+        <li class="correct"><span class="lab">D</span><span>division</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Integers are closed under +, −, ×, but not ÷: e.g. (−7) ÷ 2 is not an integer. So division is the odd one out.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">Evaluate (−3) × (−5) × (−1) + (−2) × (−6).</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+27</span></li>
+        <li class="correct"><span class="lab">B</span><span>−3</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>+3</span></li>
+        <li class=""><span class="lab">D</span><span>−27</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(−3) × (−5) = +15, then × (−1) = −15. Also (−2) × (−6) = +12. Sum: −15 + 12 = −3.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">Evaluate [(−30) ÷ 6] × [(−20) ÷ (−4)].</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>−25</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>+25</span></li>
+        <li class=""><span class="lab">C</span><span>−1</span></li>
+        <li class=""><span class="lab">D</span><span>+1</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Each bracket: (−30) ÷ 6 = −5 and (−20) ÷ (−4) = +5. Then (−5) × (+5) = −25.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">Evaluate (−6) − 3 × [2 − (−5) × 2].</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>−42</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>−24</span></li>
+        <li class=""><span class="lab">C</span><span>−18</span></li>
+        <li class=""><span class="lab">D</span><span>+30</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Innermost first: (−5) × 2 = −10, so 2 − (−10) = 12. Then 3 × 12 = 36, and (−6) − 36 = −42.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">Evaluate (−1) + (−2) + (−3) + … + (−25).</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>−300</span></li>
+        <li class="correct"><span class="lab">B</span><span>−325</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>+325</span></li>
+        <li class=""><span class="lab">D</span><span>−650</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>This is −(1 + 2 + … + 25). The sum 1 + … + 25 = (25 × 26)/2 = 325, so the answer is −325.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">Evaluate (−2) multiplied by itself 7 times, i.e. (−2)⁷.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+128</span></li>
+        <li class=""><span class="lab">B</span><span>−14</span></li>
+        <li class=""><span class="lab">C</span><span>+14</span></li>
+        <li class="correct"><span class="lab">D</span><span>−128</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An odd power of a negative is negative; 2⁷ = 128, so (−2)⁷ = −128.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">Let x = (−8) ÷ (−4) and y = (−5) × (−2). Then x − y equals:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+8</span></li>
+        <li class=""><span class="lab">B</span><span>+12</span></li>
+        <li class="correct"><span class="lab">C</span><span>−8</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>−12</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>x = (−8) ÷ (−4) = +2; y = (−5) × (−2) = +10. Then x − y = 2 − 10 = −8.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">A sequence begins −2, +8, −32, … where each term is the previous one multiplied by −4. Its 5th term is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+512</span></li>
+        <li class=""><span class="lab">B</span><span>−128</span></li>
+        <li class=""><span class="lab">C</span><span>+128</span></li>
+        <li class="correct"><span class="lab">D</span><span>−512</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Multiply by −4 each step: −2, +8, −32, +128, −512. The 5th term is −512.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">Using the sequence in Q57, the sum of its first three terms (−2 + 8 − 32) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+26</span></li>
+        <li class=""><span class="lab">B</span><span>−42</span></li>
+        <li class="correct"><span class="lab">C</span><span>−26</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>+38</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>−2 + 8 − 32 = (−2 − 32) + 8 = −34 + 8 = −26.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">Evaluate 60 − {15 − [(−5) + (−7)] ÷ (−3)}.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>+41</span></li>
+        <li class="correct"><span class="lab">B</span><span>+49</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>+45</span></li>
+        <li class=""><span class="lab">D</span><span>+53</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Innermost: (−5) + (−7) = −12; then (−12) ÷ (−3) = +4. So {15 − 4} = 11, and 60 − 11 = +49.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">Use the distributive property to evaluate (−9) × 7 + (−9) × 3.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>−90</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>+90</span></li>
+        <li class=""><span class="lab">C</span><span>−36</span></li>
+        <li class=""><span class="lab">D</span><span>−63</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Factor out −9: (−9) × 7 + (−9) × 3 = (−9) × (7 + 3) = (−9) × 10 = −90. --- *End of solutions. Maximum marks: 240.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>
