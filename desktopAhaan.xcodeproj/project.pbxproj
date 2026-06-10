@@ -1715,6 +1715,9 @@
 		B6885B8CB2F965EC66427D26 /* Science_Ch02_NutritionInAnimals_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 5813B7E8951D58CA73B003A1 /* Science_Ch02_NutritionInAnimals_SolvedGuide.html */; };
 		117163933F039E3B32A9FFDE /* Science_Ch03_FibreToFabric.html in Resources */ = {isa = PBXBuildFile; fileRef = 24EB8E6093387076EA3D0741 /* Science_Ch03_FibreToFabric.html */; };
 		E5530D6BCE739DFDFA9E7AC9 /* Science_Ch03_FibreToFabric.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E6AFD0F86F20A3BE5F4E634D /* Science_Ch03_FibreToFabric.pdf */; };
+		F7F967531571B42D2651ACD1 /* Science_Ch03_FibreToFabric_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 91D6DB20FF402638D7B1941B /* Science_Ch03_FibreToFabric_Advanced_QuestionPaper.md */; };
+		16176F6E2B0C9A9EBD156CE2 /* Science_Ch03_FibreToFabric_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = F2626EB828220877D4D21664 /* Science_Ch03_FibreToFabric_Advanced_Solutions.md */; };
+		DB725CA83D4BC7C17653A2F4 /* Science_Ch03_FibreToFabric_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = A05FAAC6EAFDEC35F2890650 /* Science_Ch03_FibreToFabric_Advanced_SolvedGuide.html */; };
 		74E7FCAD8D759023CA670DFB /* Science_Ch03_FibreToFabric_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 4D4F102F8036119D1505DEE3 /* Science_Ch03_FibreToFabric_QuestionPaper.md */; };
 		4C2137B5AFE4FF2023B6DDA7 /* Science_Ch03_FibreToFabric_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = B4577022C1367FE9EACD0C6F /* Science_Ch03_FibreToFabric_Solutions.md */; };
 		2912D253C441AD661CC610BE /* Science_Ch03_FibreToFabric_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = E85A5AE1ADCD51E5D2D6631B /* Science_Ch03_FibreToFabric_SolvedGuide.html */; };
@@ -1832,6 +1835,9 @@
 		4BCDA3A240B8421AD532FC28 /* SocialScience_Ssch01_GeographicalDiversityOfIndia_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 11A249EF43248BB0EEA5B4A1 /* SocialScience_Ssch01_GeographicalDiversityOfIndia_SolvedGuide.html */; };
 		0B43566929AE90A87E77A1AE /* SocialScience_Ssch02_UnderstandingTheWeather.html in Resources */ = {isa = PBXBuildFile; fileRef = 7577FA7E390BC7E892C3BDD1 /* SocialScience_Ssch02_UnderstandingTheWeather.html */; };
 		38C3464D5EA0E1780DB7E4A2 /* SocialScience_Ssch02_UnderstandingTheWeather.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 164FF3DED098499B53A7782F /* SocialScience_Ssch02_UnderstandingTheWeather.pdf */; };
+		0683E4D198EB5AC9B42C30C3 /* SocialScience_Ssch02_UnderstandingTheWeather_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 4567F1B36611FD165F794283 /* SocialScience_Ssch02_UnderstandingTheWeather_Advanced_QuestionPaper.md */; };
+		02215C953270CA346EB3C571 /* SocialScience_Ssch02_UnderstandingTheWeather_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = FB99C07A831EE97018BA742E /* SocialScience_Ssch02_UnderstandingTheWeather_Advanced_Solutions.md */; };
+		CBFAFE050969A9706B8C5354 /* SocialScience_Ssch02_UnderstandingTheWeather_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = C651495E6A679C03265160B1 /* SocialScience_Ssch02_UnderstandingTheWeather_Advanced_SolvedGuide.html */; };
 		9ACC4C03F1E9B314FA5DBB13 /* SocialScience_Ssch02_UnderstandingTheWeather_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 5673F293392A172FFF8157F9 /* SocialScience_Ssch02_UnderstandingTheWeather_QuestionPaper.md */; };
 		831699C92D01853DA0EE90E9 /* SocialScience_Ssch02_UnderstandingTheWeather_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = DF2F66AC24ABFDDE553A1701 /* SocialScience_Ssch02_UnderstandingTheWeather_Solutions.md */; };
 		88250F7B85B6414DCF843061 /* SocialScience_Ssch02_UnderstandingTheWeather_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 3BDBFB8B9991553F851BC79F /* SocialScience_Ssch02_UnderstandingTheWeather_SolvedGuide.html */; };
@@ -3282,6 +3288,9 @@
 		5813B7E8951D58CA73B003A1 /* Science_Ch02_NutritionInAnimals_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch02_NutritionInAnimals_SolvedGuide.html"; sourceTree = "<group>"; };
 		24EB8E6093387076EA3D0741 /* Science_Ch03_FibreToFabric.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch03_FibreToFabric.html"; sourceTree = "<group>"; };
 		E6AFD0F86F20A3BE5F4E634D /* Science_Ch03_FibreToFabric.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Science_Ch03_FibreToFabric.pdf"; sourceTree = "<group>"; };
+		91D6DB20FF402638D7B1941B /* Science_Ch03_FibreToFabric_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch03_FibreToFabric_Advanced_QuestionPaper.md"; sourceTree = "<group>"; };
+		F2626EB828220877D4D21664 /* Science_Ch03_FibreToFabric_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch03_FibreToFabric_Advanced_Solutions.md"; sourceTree = "<group>"; };
+		A05FAAC6EAFDEC35F2890650 /* Science_Ch03_FibreToFabric_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch03_FibreToFabric_Advanced_SolvedGuide.html"; sourceTree = "<group>"; };
 		4D4F102F8036119D1505DEE3 /* Science_Ch03_FibreToFabric_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch03_FibreToFabric_QuestionPaper.md"; sourceTree = "<group>"; };
 		B4577022C1367FE9EACD0C6F /* Science_Ch03_FibreToFabric_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch03_FibreToFabric_Solutions.md"; sourceTree = "<group>"; };
 		E85A5AE1ADCD51E5D2D6631B /* Science_Ch03_FibreToFabric_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch03_FibreToFabric_SolvedGuide.html"; sourceTree = "<group>"; };
@@ -3399,6 +3408,9 @@
 		11A249EF43248BB0EEA5B4A1 /* SocialScience_Ssch01_GeographicalDiversityOfIndia_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "SocialScience_Ssch01_GeographicalDiversityOfIndia_SolvedGuide.html"; sourceTree = "<group>"; };
 		7577FA7E390BC7E892C3BDD1 /* SocialScience_Ssch02_UnderstandingTheWeather.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "SocialScience_Ssch02_UnderstandingTheWeather.html"; sourceTree = "<group>"; };
 		164FF3DED098499B53A7782F /* SocialScience_Ssch02_UnderstandingTheWeather.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "SocialScience_Ssch02_UnderstandingTheWeather.pdf"; sourceTree = "<group>"; };
+		4567F1B36611FD165F794283 /* SocialScience_Ssch02_UnderstandingTheWeather_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SocialScience_Ssch02_UnderstandingTheWeather_Advanced_QuestionPaper.md"; sourceTree = "<group>"; };
+		FB99C07A831EE97018BA742E /* SocialScience_Ssch02_UnderstandingTheWeather_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SocialScience_Ssch02_UnderstandingTheWeather_Advanced_Solutions.md"; sourceTree = "<group>"; };
+		C651495E6A679C03265160B1 /* SocialScience_Ssch02_UnderstandingTheWeather_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "SocialScience_Ssch02_UnderstandingTheWeather_Advanced_SolvedGuide.html"; sourceTree = "<group>"; };
 		5673F293392A172FFF8157F9 /* SocialScience_Ssch02_UnderstandingTheWeather_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SocialScience_Ssch02_UnderstandingTheWeather_QuestionPaper.md"; sourceTree = "<group>"; };
 		DF2F66AC24ABFDDE553A1701 /* SocialScience_Ssch02_UnderstandingTheWeather_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SocialScience_Ssch02_UnderstandingTheWeather_Solutions.md"; sourceTree = "<group>"; };
 		3BDBFB8B9991553F851BC79F /* SocialScience_Ssch02_UnderstandingTheWeather_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "SocialScience_Ssch02_UnderstandingTheWeather_SolvedGuide.html"; sourceTree = "<group>"; };
@@ -6019,6 +6031,9 @@
 				5813B7E8951D58CA73B003A1,
 				24EB8E6093387076EA3D0741,
 				E6AFD0F86F20A3BE5F4E634D,
+				91D6DB20FF402638D7B1941B,
+				F2626EB828220877D4D21664,
+				A05FAAC6EAFDEC35F2890650,
 				4D4F102F8036119D1505DEE3,
 				B4577022C1367FE9EACD0C6F,
 				E85A5AE1ADCD51E5D2D6631B,
@@ -6136,6 +6151,9 @@
 				11A249EF43248BB0EEA5B4A1,
 				7577FA7E390BC7E892C3BDD1,
 				164FF3DED098499B53A7782F,
+				4567F1B36611FD165F794283,
+				FB99C07A831EE97018BA742E,
+				C651495E6A679C03265160B1,
 				5673F293392A172FFF8157F9,
 				DF2F66AC24ABFDDE553A1701,
 				3BDBFB8B9991553F851BC79F,
@@ -8890,6 +8908,9 @@
 				B6885B8CB2F965EC66427D26 /* Science_Ch02_NutritionInAnimals_SolvedGuide.html in Resources */,
 				117163933F039E3B32A9FFDE /* Science_Ch03_FibreToFabric.html in Resources */,
 				E5530D6BCE739DFDFA9E7AC9 /* Science_Ch03_FibreToFabric.pdf in Resources */,
+				F7F967531571B42D2651ACD1 /* Science_Ch03_FibreToFabric_Advanced_QuestionPaper.md in Resources */,
+				16176F6E2B0C9A9EBD156CE2 /* Science_Ch03_FibreToFabric_Advanced_Solutions.md in Resources */,
+				DB725CA83D4BC7C17653A2F4 /* Science_Ch03_FibreToFabric_Advanced_SolvedGuide.html in Resources */,
 				74E7FCAD8D759023CA670DFB /* Science_Ch03_FibreToFabric_QuestionPaper.md in Resources */,
 				4C2137B5AFE4FF2023B6DDA7 /* Science_Ch03_FibreToFabric_Solutions.md in Resources */,
 				2912D253C441AD661CC610BE /* Science_Ch03_FibreToFabric_SolvedGuide.html in Resources */,
@@ -9007,6 +9028,9 @@
 				4BCDA3A240B8421AD532FC28 /* SocialScience_Ssch01_GeographicalDiversityOfIndia_SolvedGuide.html in Resources */,
 				0B43566929AE90A87E77A1AE /* SocialScience_Ssch02_UnderstandingTheWeather.html in Resources */,
 				38C3464D5EA0E1780DB7E4A2 /* SocialScience_Ssch02_UnderstandingTheWeather.pdf in Resources */,
+				0683E4D198EB5AC9B42C30C3 /* SocialScience_Ssch02_UnderstandingTheWeather_Advanced_QuestionPaper.md in Resources */,
+				02215C953270CA346EB3C571 /* SocialScience_Ssch02_UnderstandingTheWeather_Advanced_Solutions.md in Resources */,
+				CBFAFE050969A9706B8C5354 /* SocialScience_Ssch02_UnderstandingTheWeather_Advanced_SolvedGuide.html in Resources */,
 				9ACC4C03F1E9B314FA5DBB13 /* SocialScience_Ssch02_UnderstandingTheWeather_QuestionPaper.md in Resources */,
 				831699C92D01853DA0EE90E9 /* SocialScience_Ssch02_UnderstandingTheWeather_Solutions.md in Resources */,
 				88250F7B85B6414DCF843061 /* SocialScience_Ssch02_UnderstandingTheWeather_SolvedGuide.html in Resources */,

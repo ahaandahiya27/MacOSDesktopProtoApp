@@ -313,6 +313,21 @@ extension OlympiadPaperRegistry {
             tier: .advanced
         ),
         OlympiadPaper(
+            id: "olympiad_science_ch03_advanced",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 3,
+            chapterTitle: "Fibre to Fabric",
+            displayTitle: "Fibre to Fabric — Paper 2 (Advanced)",
+            questionPaperMD: "Science_Ch03_FibreToFabric_Advanced_QuestionPaper.md",
+            solutionsMD: "Science_Ch03_FibreToFabric_Advanced_Solutions.md",
+            questionPaperHTML: "Science_Ch03_FibreToFabric.html",
+            questionPaperPDF: "Science_Ch03_FibreToFabric.pdf",
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Science_Ch03_FibreToFabric_Advanced_SolvedGuide.html",
+            tier: .advanced
+        ),
+        OlympiadPaper(
             id: "olympiad_science_ch15_advanced",
             subjectId: "science_class7",
             subjectName: "Science",

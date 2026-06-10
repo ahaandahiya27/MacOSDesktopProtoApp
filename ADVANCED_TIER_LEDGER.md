@@ -58,7 +58,7 @@ Legend: ✅ Advanced triplet complete · ❌ missing · 🟡 in progress
 |----|-------|:--------:|
 | Ch01 | Nutrition in Plants | ✅ |
 | Ch02 | Nutrition in Animals | ✅ |
-| Ch03 | Fibre to Fabric | ❌ |
+| Ch03 | Fibre to Fabric | ✅ |
 | Ch04 | Heat | ✅ |
 | Ch05 | Acids, Bases and Salts | ✅ |
 | Ch06 | Physical and Chemical Changes | ✅ |
@@ -80,7 +80,7 @@ Legend: ✅ Advanced triplet complete · ❌ missing · 🟡 in progress
 | Ch | Title | Advanced |
 |----|-------|:--------:|
 | Ssch01 | Geographical Diversity of India | ✅ |
-| Ssch02 | Understanding the Weather | ❌ |
+| Ssch02 | Understanding the Weather | ✅ |
 | Ssch03 | Climates of India | ❌ |
 | Ssch04 | New Beginnings: Cities and States | ❌ |
 | Ssch05 | The Rise of Empires | ❌ |
@@ -131,5 +131,14 @@ Legend: ✅ Advanced triplet complete · ❌ missing · 🟡 in progress
   **and integrated** (wired into `OlympiadPaperRegistry` with `tier: .advanced`,
   bundled via the regenerated pbxproj, pinned by `OlympiadExamHallTests` → 95
   papers / 69 foundation + 26 advanced). Build + full XCTest GREEN.
+- **2026-06-10 (Wave 5):** **28 / 69** chapters — added Science Ch03 (Fibre to
+  Fabric, authored this session) and Social Science Ssch02 (Understanding the
+  Weather, authored by a concurrent content agent, integrated here). Both are
+  **authored** (complete triplet on disk, triplet lint clean — 373 papers, 0
+  orphans) **and integrated** (wired into `OlympiadPaperRegistry` with
+  `tier: .advanced`, bundled via the regenerated pbxproj, pinned by
+  `OlympiadExamHallTests` → 97 papers / 69 foundation + 28 advanced). Build +
+  full XCTest GREEN. Coverage now: Maths 15/15, Science 11/19, Social Science
+  2/20, Sanskrit 0/15.
 - Flip each cell to ✅ as its commit lands; update the headline count here and in
   `V8_NEXT10H_LEDGER.md`.

@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Understanding The Weather_Advanced — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Understanding The Weather_Advanced<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">The single best one-line difference between *weather* and *climate* is that weather is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the average of temperature alone, while climate adds rainfall</span></li>
+        <li class=""><span class="lab">B</span><span>about the sky, while climate is about the land</span></li>
+        <li class=""><span class="lab">C</span><span>measured by instruments, while climate is only guessed</span></li>
+        <li class="correct"><span class="lab">D</span><span>the state of the atmosphere at a particular place and time, while climate is its long-term average over many years</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>**Weather** is the state of the atmosphere at *one place and one time* — today's heat, drizzle and breeze; **climate** is the long-term *average* of that weather over many years. Confusing the snapshot with the average is the classic trap.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">Almost all of the weather we experience happens in the lowest layer of the atmosphere, the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>troposphere</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>mesosphere</span></li>
+        <li class=""><span class="lab">C</span><span>stratosphere</span></li>
+        <li class=""><span class="lab">D</span><span>thermosphere</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Nearly all weather — clouds, rain, storms — happens in the **troposphere**, the lowest layer where almost all the air's water vapour sits. The stratosphere above is calm and dry.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">The five elements that together describe the weather are temperature, precipitation, atmospheric pressure, wind and:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sunshine</span></li>
+        <li class="correct"><span class="lab">B</span><span>humidity</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>altitude</span></li>
+        <li class=""><span class="lab">D</span><span>latitude</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The five weather elements are temperature, precipitation, atmospheric pressure, wind and **humidity**. Altitude and latitude shape weather but are *places on Earth*, not elements you read off instruments.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">A meteorologist reads the morning data and writes "33 °C, light drizzle, 1003 hPa, breeze from the west, RH 78%." The "1003 hPa" is a measure of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>temperature</span></li>
+        <li class=""><span class="lab">B</span><span>humidity</span></li>
+        <li class="correct"><span class="lab">C</span><span>atmospheric pressure</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>wind speed</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Pressure is quoted in hectopascals (hPa), so **1003 hPa** is the **atmospheric pressure**. Temperature is the °C, humidity the RH%, and wind the "breeze from the west."</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">Temperature is measured with a thermometer; the instrument that measures the *amount of rainfall* is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>barometer</span></li>
+        <li class=""><span class="lab">B</span><span>anemometer</span></li>
+        <li class=""><span class="lab">C</span><span>hygrometer</span></li>
+        <li class="correct"><span class="lab">D</span><span>rain gauge</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rainfall is caught and measured by the **rain gauge**. The barometer reads pressure, the hygrometer humidity, the anemometer wind speed.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">A rain gauge collects rain in a measuring cylinder and the reading is given in **millimetres**. Those millimetres describe:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the depth to which water would stand on flat ground if none drained away</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the total volume of water that fell on the city</span></li>
+        <li class=""><span class="lab">C</span><span>the number of raindrops per minute</span></li>
+        <li class=""><span class="lab">D</span><span>the speed at which the rain fell</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A rain gauge reading in millimetres is the **depth** the water would stand on level ground if none drained or soaked away — not a volume. That is why two places can both report "20 mm" regardless of their size.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">Two rain gauges, one with a wide funnel and one with a narrow funnel, are left side by side in the same shower. They will record:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a larger reading for the wide funnel</span></li>
+        <li class="correct"><span class="lab">B</span><span>the same rainfall in mm, because depth does not depend on funnel width</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a larger reading for the narrow funnel</span></li>
+        <li class=""><span class="lab">D</span><span>no reading unless the funnels are equal</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Both gauges record **the same rainfall in mm**: a wider funnel catches more water *but* spreads it over a wider cylinder, so the depth comes out the same. Depth does not depend on funnel width.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">The instrument that measures **wind speed** is the anemometer; the one that shows the **direction** the wind blows *from* is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>barometer</span></li>
+        <li class=""><span class="lab">B</span><span>hygrometer</span></li>
+        <li class="correct"><span class="lab">C</span><span>wind vane</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>rain gauge</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The **wind vane** swings to show the direction the wind blows *from*; the anemometer's spinning cups measure how *fast* it blows.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">A wind vane points steadily to the east. Meteorologists would call this:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a west wind</span></li>
+        <li class=""><span class="lab">B</span><span>a still day</span></li>
+        <li class=""><span class="lab">C</span><span>a north wind</span></li>
+        <li class="correct"><span class="lab">D</span><span>an east wind</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A wind vane points *into* the wind — toward where the air comes from. Pointing east means the air arrives from the east, so it is named an **east wind**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">Winds are always named after the direction **from which** they come because:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>that direction tells you what kind of air — its temperature and moisture — is arriving</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>it sounds older and more poetic</span></li>
+        <li class=""><span class="lab">C</span><span>the wind vane can only point that way</span></li>
+        <li class=""><span class="lab">D</span><span>the law requires it</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Winds are named for where they come **from** because **that direction tells you the kind of air arriving** — a sea wind is moist, a desert wind dry, a polar wind cold. The name is really a forecast in disguise.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">Relative humidity is best described as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the total mass of all water on Earth</span></li>
+        <li class="correct"><span class="lab">B</span><span>how much water vapour the air holds compared with the most it could hold at that temperature, as a percentage</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the depth of rain in millimetres</span></li>
+        <li class=""><span class="lab">D</span><span>the pressure of the water in clouds</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Relative humidity is **how much vapour the air holds compared with the most it could hold at that temperature, written as a percentage**. At 100% the air is saturated and dew or rain can form.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">The instrument used to measure humidity is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>thermometer</span></li>
+        <li class=""><span class="lab">B</span><span>barometer</span></li>
+        <li class="correct"><span class="lab">C</span><span>hygrometer</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>wind vane</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Humidity is measured with the **hygrometer**. (A common version uses a wet-and-dry-bulb pair of thermometers.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">On a calm evening the air cools after sunset but no extra moisture is added. The relative humidity will:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>fall, because cold air holds more vapour</span></li>
+        <li class=""><span class="lab">B</span><span>drop to zero</span></li>
+        <li class=""><span class="lab">C</span><span>stay exactly the same</span></li>
+        <li class="correct"><span class="lab">D</span><span>rise, because cooler air can hold *less* vapour, so the same amount fills a larger share of the limit</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cooler air can hold **less** vapour, so as the evening cools the *same* amount of moisture fills a larger share of the (now smaller) limit — relative humidity **rises**, even though no water was added. Keep cooling and it reaches 100% and dew forms.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">Dew forms on grass on a clear, still night chiefly because:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the ground cools by radiating heat to the open sky, and the chilled air right above it can no longer hold all its vapour, which condenses</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the ground heats up and pushes water out</span></li>
+        <li class=""><span class="lab">C</span><span>clouds squeeze water onto the grass</span></li>
+        <li class=""><span class="lab">D</span><span>the wind blows water from rivers</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>On a clear, still night **the ground radiates its heat away to the open sky and cools; the chilled air just above it can no longer hold all its vapour, which condenses** as dew. Clouds or wind would prevent that cooling.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">A clear, cloudless night is usually **colder** than a cloudy one because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>clouds make their own heat</span></li>
+        <li class="correct"><span class="lab">B</span><span>clouds act like a blanket, trapping the heat the ground radiates; with no clouds, that heat escapes to space</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>clear nights are always in winter</span></li>
+        <li class=""><span class="lab">D</span><span>the stars cool the air</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>**Clouds act like a blanket**, absorbing and returning the heat the ground radiates at night. With a clear sky that heat escapes straight to space, so cloudless nights turn colder.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">The barometer reading is *falling* steadily through the afternoon. This most often warns of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>clear, dry, settled weather ahead</span></li>
+        <li class=""><span class="lab">B</span><span>a coming heat wave with no clouds</span></li>
+        <li class="correct"><span class="lab">C</span><span>approaching unsettled or stormy weather, since low pressure goes with rising, cloud-forming air</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>no change at all</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A **falling** barometer signals **approaching unsettled or stormy weather**: low pressure goes with rising air that cools, condenses and builds clouds. Rising pressure means settled, sinking air.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">Why does **warm air tend to lower** the atmospheric pressure beneath it?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>warm air is heavier and presses down harder</span></li>
+        <li class=""><span class="lab">B</span><span>warmth has no link to pressure</span></li>
+        <li class=""><span class="lab">C</span><span>warm air turns instantly into rain</span></li>
+        <li class="correct"><span class="lab">D</span><span>warm air expands, becomes less dense and rises, so it presses down less</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>**Warm air expands, grows less dense and rises**, so it presses down less — lowering the pressure beneath it. That is why hot regions and storm centres are low-pressure areas.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">Air generally moves from a region of **high pressure to low pressure**. This moving air is what we call:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>wind</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>humidity</span></li>
+        <li class=""><span class="lab">C</span><span>precipitation</span></li>
+        <li class=""><span class="lab">D</span><span>a cloud</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Air flowing from high pressure to low pressure *is* **wind**. The bigger the pressure difference, the stronger the wind.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">"Precipitation" is a single word that covers rain and also:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only fog</span></li>
+        <li class="correct"><span class="lab">B</span><span>snow, sleet and hail</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>wind and dust</span></li>
+        <li class=""><span class="lab">D</span><span>sunshine and shade</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Precipitation is any water falling from the sky: rain, **snow, sleet and hail**. Fog hangs in the air rather than falling, and wind/dust are not water.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">Hail can fall even in summer because hailstones form:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>on the warm ground and bounce up</span></li>
+        <li class=""><span class="lab">B</span><span>only when the surface temperature is below 0 °C</span></li>
+        <li class="correct"><span class="lab">C</span><span>high inside tall storm clouds where the air is freezing, and are tossed up and down gaining icy layers before they drop</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>from snow on mountains blown by wind</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Hailstones grow **high inside tall storm clouds where the air is below freezing; up-and-down currents toss them, adding icy layers** until they are heavy enough to fall — so hail can crash down even on a hot summer afternoon.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">The systematic, scientific study of the atmosphere and weather is called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>astronomy</span></li>
+        <li class=""><span class="lab">B</span><span>cartography</span></li>
+        <li class=""><span class="lab">C</span><span>geology</span></li>
+        <li class="correct"><span class="lab">D</span><span>meteorology</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The scientific study of the atmosphere and weather is **meteorology**; a person who does it is a meteorologist. Astronomy studies the stars, geology the rocks, cartography maps.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">In India, the official body that records weather data and issues forecasts and warnings is the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>India Meteorological Department (IMD)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>ISRO</span></li>
+        <li class=""><span class="lab">C</span><span>NDMA</span></li>
+        <li class=""><span class="lab">D</span><span>Survey of India</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>India's official weather body is the **India Meteorological Department (IMD)**, which records data and issues forecasts and warnings. ISRO runs space, NDMA manages disasters, Survey of India makes maps.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">An **Automated Weather Station (AWS)** is valuable mainly because it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>predicts the weather by itself without any scientists</span></li>
+        <li class="correct"><span class="lab">B</span><span>records data continuously and sends it automatically, even from remote places where no observer can sit</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>stops storms from forming</span></li>
+        <li class=""><span class="lab">D</span><span>measures only rainfall</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An Automated Weather Station's value is that it **records continuously and transmits data automatically, even from remote spots** where no observer could be posted — filling gaps in the network.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">Long before instruments, people forecast weather by reading Nature's clues — ants moving eggs to higher ground, frogs croaking loudly, pine cones closing up. These clues worked because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>it was pure coincidence every time</span></li>
+        <li class=""><span class="lab">B</span><span>the animals had been trained</span></li>
+        <li class="correct"><span class="lab">C</span><span>animals and plants can sense changes in humidity and pressure that come before rain</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the Sun told them</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The old animal-and-plant signs worked because **living things sense the humidity and pressure changes that precede rain** — ants, frogs and pine cones react to real physical cues, not magic or chance.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">Pine cones **close their scales** in damp air and open them in dry air. A closed pine cone therefore hints at:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>dry, sunny weather coming</span></li>
+        <li class=""><span class="lab">B</span><span>strong wind only</span></li>
+        <li class=""><span class="lab">C</span><span>a coming cold wave only</span></li>
+        <li class="correct"><span class="lab">D</span><span>damp, possibly rainy weather, because high humidity makes the scales swell shut</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Pine-cone scales swell shut in damp air, so a **closed cone hints at high humidity and possibly rain**; open scales mean dry air. It is a natural hygrometer.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">The proverb "Red sky at night, sailor's delight; red sky in morning, sailor's warning" can carry real information because weather in many places moves:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>from west to east, so a red sunset means clear weather is to the west and approaching, while a red sunrise means the clear belt has passed and clouds may follow</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>from east to west, so a red dawn (light through eastern clear air onto western clouds) hints at incoming bad weather</span></li>
+        <li class=""><span class="lab">C</span><span>straight up and down</span></li>
+        <li class=""><span class="lab">D</span><span>only at night</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In much of the world weather moves **from west to east**, so a red *sunset* (clear air to the west, lit through to clouds) means fine weather is approaching, while a red *sunrise* means the clear belt has already passed eastward and cloud may follow — the kernel of truth in the old rhyme.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">A "heat wave" is declared not by a single hot afternoon but when:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>it rains heavily for a week</span></li>
+        <li class="correct"><span class="lab">B</span><span>the temperature stays unusually high, well above normal, for several days together</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the wind stops for one hour</span></li>
+        <li class=""><span class="lab">D</span><span>the barometer rises once</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A heat wave is declared when **the temperature stays unusually high, well above normal, for several days running** — a sustained spell, not one hot afternoon.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">The chief danger of a heat wave to people is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>flooding of low areas</span></li>
+        <li class=""><span class="lab">B</span><span>frostbite</span></li>
+        <li class="correct"><span class="lab">C</span><span>heatstroke and dehydration, especially for the very young, the old and outdoor workers</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>lightning strikes</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The chief danger of a heat wave is **heatstroke and dehydration**, hitting the very young, the elderly and outdoor workers hardest. Forecasts let them take shelter and drink water.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">Why does accurate weather forecasting **save lives**, beyond mere convenience? Because warnings let people:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>buy umbrellas</span></li>
+        <li class=""><span class="lab">B</span><span>choose what to wear</span></li>
+        <li class=""><span class="lab">C</span><span>cancel cricket matches</span></li>
+        <li class="correct"><span class="lab">D</span><span>evacuate before a cyclone, store water before a drought, and stay indoors during a heat wave</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Forecasts save lives because warnings let people **evacuate before a cyclone, store water before a drought and stay indoors during a heat wave** — preparation, not just knowing what to wear.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">A coastal district receives an IMD "red alert" for a cyclone. The most sensible community response is to:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>move people from low, exposed areas to safe shelters and secure boats and loose objects in advance</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>wait until the wind actually arrives</span></li>
+        <li class=""><span class="lab">C</span><span>go to the beach to watch</span></li>
+        <li class=""><span class="lab">D</span><span>ignore it, since forecasts are guesses</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>On a cyclone red alert the right move is to **shift people from low, exposed areas to safe shelters and secure boats and loose objects in advance** — acting on the warning rather than waiting for the wind.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">At 6 a.m. a thermometer reads 18 °C and by 2 p.m. it reads 31 °C. The single biggest reason for the daily rise is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the Earth moving closer to the Sun by afternoon</span></li>
+        <li class="correct"><span class="lab">B</span><span>the Sun climbing higher, so its rays heat the ground more strongly through the morning</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>more rain at noon</span></li>
+        <li class=""><span class="lab">D</span><span>lower pressure at noon</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The day warms because **the Sun climbs higher through the morning and heats the ground more strongly**; the warmed ground then warms the air. The Earth's distance from the Sun barely changes over a day.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">The hottest part of a clear day is usually **early-to-mid afternoon, not exactly noon**, because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the Sun is brightest at 3 p.m.</span></li>
+        <li class=""><span class="lab">B</span><span>clouds always gather at noon</span></li>
+        <li class="correct"><span class="lab">C</span><span>the ground keeps absorbing more heat than it loses for a while after the Sun's peak, so temperature lags behind</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the thermometer is slow</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The hottest time lags past noon because **the ground keeps absorbing more heat than it loses for a while after the Sun's peak**, so the air goes on warming into the early afternoon.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">A maximum–minimum thermometer is read each day to find the day's highest and lowest temperatures. The **range** for the day is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the maximum plus the minimum</span></li>
+        <li class=""><span class="lab">B</span><span>the minimum only</span></li>
+        <li class=""><span class="lab">C</span><span>the average of the two</span></li>
+        <li class="correct"><span class="lab">D</span><span>the maximum minus the minimum</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The day's temperature **range = maximum − minimum**, found from a max–min thermometer. It tells how much the temperature swung that day.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">On Monday a town's max was 34 °C and min 22 °C; on Tuesday max 30 °C and min 24 °C. Which day had the **larger temperature range**, and by how much?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Monday, by 6 °C</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Tuesday, by 6 °C</span></li>
+        <li class=""><span class="lab">C</span><span>Monday, by 12 °C</span></li>
+        <li class=""><span class="lab">D</span><span>both equal</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Monday's range = 34 − 22 = **12 °C**; Tuesday's = 30 − 24 = 6 °C. So **Monday had the larger range, by 6 °C**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">Coastal cities like Mumbai usually have a **smaller day-to-night temperature range** than inland cities like Nagpur mainly because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the coast is always cloudy</span></li>
+        <li class="correct"><span class="lab">B</span><span>the sea, which warms and cools slowly, moderates the air over nearby land</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>coastal cities have more thermometers</span></li>
+        <li class=""><span class="lab">D</span><span>inland cities are higher up</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Coasts have a smaller day–night swing because **the sea warms and cools slowly and moderates the air over nearby land**. Inland, without that buffer, days are hotter and nights colder.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">Climbing a high mountain, you feel the air get **colder** as you go up the troposphere. This is because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>you are nearer the Sun so it should be hotter, but wind cools you</span></li>
+        <li class=""><span class="lab">B</span><span>snow on top makes its own cold</span></li>
+        <li class="correct"><span class="lab">C</span><span>the air is thinner and is mostly warmed from the ground up, so it cools with height</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>pressure has no effect on temperature</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Up a mountain it gets colder because **the air is thinner and is warmed mainly from the ground up**, so temperature falls with height — even though you are technically a little nearer the Sun.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">As you climb, the **atmospheric pressure** also:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>rises, because air piles up at the top</span></li>
+        <li class=""><span class="lab">B</span><span>becomes zero at once</span></li>
+        <li class=""><span class="lab">C</span><span>stays exactly the same everywhere</span></li>
+        <li class="correct"><span class="lab">D</span><span>falls, because there is less air above you pressing down</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Pressure **falls with height because there is less air above you pressing down**. That is why climbers carry oxygen and sealed packets puff up high on a mountain.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">Fog and cloud are really the same thing — tiny water droplets in the air. The difference is simply that:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>fog touches the ground while cloud floats higher up</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>fog is made of ice and cloud of water</span></li>
+        <li class=""><span class="lab">C</span><span>fog is at night and cloud by day</span></li>
+        <li class=""><span class="lab">D</span><span>cloud is heavier than fog</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Fog and cloud are the same tiny droplets; the only difference is that **fog sits on the ground while cloud floats higher up**. Walk into a hill fog and you are walking through a cloud.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">Low, grey, sheet-like clouds that often bring steady drizzle are broadly the **stratus** family; tall, towering clouds that pile up and bring thunderstorms are the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>cirrus family</span></li>
+        <li class="correct"><span class="lab">B</span><span>cumulus (cumulonimbus) family</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>stratus family again</span></li>
+        <li class=""><span class="lab">D</span><span>fog family</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Tall, piled-up clouds that bring thunderstorms are the **cumulus / cumulonimbus** family; low grey sheets that drizzle are stratus; high wispy ones are cirrus.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">Thin, wispy, high clouds made of ice crystals, often the first sign that weather may change in a day or two, are the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>cumulus clouds</span></li>
+        <li class=""><span class="lab">B</span><span>stratus clouds</span></li>
+        <li class="correct"><span class="lab">C</span><span>cirrus clouds</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>nimbus sheets</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Thin, wispy, high ice-crystal clouds are **cirrus**, often the first hint that the weather may change in a day or two.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">We hear thunder **after** we see lightning because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the thunder is made later than the flash</span></li>
+        <li class=""><span class="lab">B</span><span>our ears are slower than thunder</span></li>
+        <li class=""><span class="lab">C</span><span>thunder comes from a different cloud</span></li>
+        <li class="correct"><span class="lab">D</span><span>light travels far faster than sound, so the flash reaches us almost at once while the sound lags</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>We see lightning before we hear thunder because **light travels far faster than sound** — the flash arrives almost instantly while the bang lags behind.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">You see a lightning flash and count "one-thousand-one, one-thousand-two, one-thousand-three" — about 3 seconds — before the thunder. Since sound travels roughly 1 km in 3 seconds, the storm is about:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>1 km away</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>3 km away</span></li>
+        <li class=""><span class="lab">C</span><span>9 km away</span></li>
+        <li class=""><span class="lab">D</span><span>right overhead</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sound covers about 1 km every 3 seconds, so a 3-second gap puts the storm roughly **1 km away**. (A 9-second gap would mean about 3 km.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">The safest action during a thunderstorm is to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>shelter under a tall, isolated tree</span></li>
+        <li class="correct"><span class="lab">B</span><span>get indoors, away from open fields, water and tall lone objects</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>stand on a hilltop to watch</span></li>
+        <li class=""><span class="lab">D</span><span>hold a metal umbrella up high</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In a thunderstorm the safest place is **indoors, away from open fields, water and tall lone objects**. A solitary tree or hilltop is exactly where lightning tends to strike.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">Why is a "weather forecast" always given as a **probability or a range** ("70% chance of rain") rather than a flat certainty? Because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>meteorologists are lazy</span></li>
+        <li class=""><span class="lab">B</span><span>the law forbids certainty</span></li>
+        <li class="correct"><span class="lab">C</span><span>the atmosphere is so complex and ever-changing that even good data leaves some uncertainty</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>instruments never work</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Forecasts are given as probabilities because **the atmosphere is so complex and ever-changing that even good data leaves some uncertainty** — not because forecasters are careless.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">The further **ahead** a forecast tries to look (one day vs ten days), the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>more accurate it becomes</span></li>
+        <li class=""><span class="lab">B</span><span>longer the thermometer must be</span></li>
+        <li class=""><span class="lab">C</span><span>cheaper it is to make</span></li>
+        <li class="correct"><span class="lab">D</span><span>less reliable it becomes, because small errors grow over time</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A ten-day forecast is **less reliable than a one-day forecast because small errors grow over time** — the further ahead you look, the fuzzier it gets.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">Weather **satellites** add to ground stations because from space they can:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>photograph whole cloud systems and track storms moving across regions</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>measure the depth of rain in a single bucket</span></li>
+        <li class=""><span class="lab">C</span><span>feel the wind directly</span></li>
+        <li class=""><span class="lab">D</span><span>read the barometer on the ground</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Satellites add to ground stations by being able to **photograph whole cloud systems and track storms across regions** from above — a view no single ground gauge can give.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">A farmer hears a reliable forecast of heavy rain next week. The wisest use of that warning is to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ignore it and plant as usual</span></li>
+        <li class="correct"><span class="lab">B</span><span>adjust sowing, harvesting or drainage so the crop is protected and the rain is used well</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>sell the farm</span></li>
+        <li class=""><span class="lab">D</span><span>water the fields more right now</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A farmer should use a heavy-rain forecast to **adjust sowing, harvesting or drainage** so the crop is protected and the water used well — turning the warning into a plan.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">Humidity feels "sticky" on a hot, muggy day because high humidity:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>makes the air heavier to lift</span></li>
+        <li class=""><span class="lab">B</span><span>raises the air pressure sharply</span></li>
+        <li class="correct"><span class="lab">C</span><span>slows the evaporation of sweat from our skin, so we cannot cool down easily</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>carries dust</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Muggy air feels sticky because high humidity **slows the evaporation of sweat from the skin**, so the body cannot shed heat and we feel hotter.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">In a hot, **dry** desert, sweat evaporates fast, so a person may feel cooler than the thermometer suggests; in a hot, **humid** coast the same temperature feels hotter. The deciding factor is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the wind direction only</span></li>
+        <li class=""><span class="lab">B</span><span>the time of day only</span></li>
+        <li class=""><span class="lab">C</span><span>the altitude</span></li>
+        <li class="correct"><span class="lab">D</span><span>the humidity, because it controls how fast sweat evaporates</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The same temperature feels cooler in a dry desert and hotter on a humid coast because **humidity decides how fast sweat evaporates** — fast evaporation cools you, slow evaporation does not.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">Which everyday observation best shows that **air has weight / exerts pressure**?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a straw lets you drink because you lower the pressure inside and the outside air pushes the liquid up</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a balloon bursting in the Sun</span></li>
+        <li class=""><span class="lab">C</span><span>smoke rising from a fire</span></li>
+        <li class=""><span class="lab">D</span><span>a kite needing string</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A drinking **straw** shows air pressure at work: you lower the pressure inside, and the *outside* air pressing on the drink pushes it up the straw — proof that air has weight and pushes.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">Sea breeze blows from sea to land by **day**; land breeze from land to sea by **night**. The day-time sea breeze happens because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the sea heats faster than the land</span></li>
+        <li class="correct"><span class="lab">B</span><span>the land heats faster than the sea, so air rises over the warm land and cooler sea air flows in to replace it</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the Sun pulls the sea</span></li>
+        <li class=""><span class="lab">D</span><span>night air is heavier</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A daytime sea breeze blows inland because **the land heats faster than the sea; the air over the warm land rises and cooler sea air flows in to replace it**. At night the land cools faster and the flow reverses (land breeze).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">Put these in the correct chain for a sea breeze: (i) cooler air over the sea moves in to replace it; (ii) land heats up and the air above it rises; (iii) the Sun warms the coast in the morning.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>(ii) → (iii) → (i)</span></li>
+        <li class=""><span class="lab">B</span><span>(i) → (ii) → (iii)</span></li>
+        <li class="correct"><span class="lab">C</span><span>(iii) → (ii) → (i)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>(iii) → (i) → (ii)</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The sea-breeze chain runs **(iii) the Sun warms the coast → (ii) the land heats and its air rises → (i) cooler sea air moves in to replace it.** That replacing flow is the breeze.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">A "drought" is essentially a long shortfall of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sunshine</span></li>
+        <li class=""><span class="lab">B</span><span>pressure</span></li>
+        <li class=""><span class="lab">C</span><span>wind</span></li>
+        <li class="correct"><span class="lab">D</span><span>rainfall over a season or more, leaving little water for crops and people</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A drought is essentially a long shortfall of **rainfall over a season or more**, leaving too little water for crops and people.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">Why can a single very heavy downpour **still leave a region in drought**?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>one burst may run off quickly without soaking in or refilling reservoirs, so the long-term shortfall remains</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>heavy rain always ends a drought</span></li>
+        <li class=""><span class="lab">C</span><span>drought means too much rain</span></li>
+        <li class=""><span class="lab">D</span><span>the rain gauge missed it</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>One cloudburst can leave a drought because **the water may run off fast without soaking in or refilling reservoirs**, so the long-term shortfall remains. Droughts are about sustained totals, not a single storm.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">The water that evaporates from oceans, rivers and plants, rises, cools, condenses into clouds and falls again as precipitation describes the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>rock cycle</span></li>
+        <li class="correct"><span class="lab">B</span><span>water (hydrological) cycle</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>carbon cycle</span></li>
+        <li class=""><span class="lab">D</span><span>day–night cycle</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Water evaporating, rising, cooling, condensing into clouds and falling again is the **water (hydrological) cycle** — the engine behind all precipitation.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">Condensation — the step that *makes* clouds and dew — is water changing from:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>liquid to gas</span></li>
+        <li class=""><span class="lab">B</span><span>solid to gas</span></li>
+        <li class="correct"><span class="lab">C</span><span>gas (vapour) to liquid</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>liquid to solid</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Condensation, which makes clouds and dew, is water changing from **gas (vapour) to liquid**. Evaporation is the reverse.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">A balloon released from the ground rises and **expands** as it climbs because the air around it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>gets warmer</span></li>
+        <li class=""><span class="lab">B</span><span>pulls it up magnetically</span></li>
+        <li class=""><span class="lab">C</span><span>gets thicker</span></li>
+        <li class="correct"><span class="lab">D</span><span>presses on it less, since pressure falls with height</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A balloon expands as it rises because **the surrounding air presses on it less — pressure falls with height** — so the gas inside pushes out further.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">Standardised weather instruments are kept in a white, louvred **Stevenson screen** so that they:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>measure the true air temperature in shade with free airflow, not direct sunshine or rain</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>look neat in the garden</span></li>
+        <li class=""><span class="lab">C</span><span>stay hidden from people</span></li>
+        <li class=""><span class="lab">D</span><span>keep warm at night</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Instruments sit in a white, louvred Stevenson screen so they **read the true air temperature in shade with free airflow**, shielded from direct sun and rain that would give false highs.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">Two towns report the same 30 °C, but one reports RH 30% and the other RH 85%. A visitor will most likely feel **more uncomfortable** in the town with:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>RH 30%, because dry air burns</span></li>
+        <li class="correct"><span class="lab">B</span><span>RH 85%, because the muggy air stops sweat from evaporating</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>neither — temperature alone decides comfort</span></li>
+        <li class=""><span class="lab">D</span><span>the one with more wind only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>At the same 30 °C the **RH 85%** town feels worse, because the muggy air stops sweat from evaporating and cooling the body; the RH 30% town's dry air lets sweat work.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">The deepest reason weather forecasting has improved so much is the combination of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>more folklore and proverbs</span></li>
+        <li class=""><span class="lab">B</span><span>taller thermometers</span></li>
+        <li class="correct"><span class="lab">C</span><span>dense networks of stations and AWS, satellites, and computers that model the atmosphere from all that data</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>warmer winters</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Modern forecasting has leapt forward thanks to **dense networks of stations and AWS, satellites, and computers that model the atmosphere** from all that data — folklore alone could never reach today's accuracy.</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

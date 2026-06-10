@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fibre To Fabric_Advanced — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Fibre To Fabric_Advanced<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">Wool and silk are grouped together because both are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>plant fibres</span></li>
+        <li class="correct"><span class="lab">B</span><span>animal fibres</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>synthetic fibres</span></li>
+        <li class=""><span class="lab">D</span><span>mineral fibres</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Wool (from sheep, goat, yak, camel) and silk (from the silkworm) both come from animals, so they are animal fibres.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">Cotton, jute and flax are grouped together because all three are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>animal fibres</span></li>
+        <li class=""><span class="lab">B</span><span>synthetic fibres</span></li>
+        <li class="correct"><span class="lab">C</span><span>plant fibres</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>mineral fibres</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cotton, jute and flax all come from plants, so they are plant fibres made of cellulose.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">The protein that makes up wool fibre is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>fibroin</span></li>
+        <li class=""><span class="lab">B</span><span>cellulose</span></li>
+        <li class="correct"><span class="lab">C</span><span>keratin</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>casein</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Wool is made of the protein keratin — the same tough protein found in hair, nails and horn.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">The protein that makes up silk fibre is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>keratin</span></li>
+        <li class="correct"><span class="lab">B</span><span>fibroin</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>cellulose</span></li>
+        <li class=""><span class="lab">D</span><span>gluten</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Silk is made of the protein fibroin, secreted by the silkworm.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">Plant fibres such as cotton are chemically made of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>protein</span></li>
+        <li class="correct"><span class="lab">B</span><span>cellulose</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>keratin</span></li>
+        <li class=""><span class="lab">D</span><span>nylon</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Plant fibres such as cotton are made of cellulose, not protein.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">Which of the following animals does **not** yield wool?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Yak</span></li>
+        <li class=""><span class="lab">B</span><span>Camel</span></li>
+        <li class=""><span class="lab">C</span><span>Goat</span></li>
+        <li class="correct"><span class="lab">D</span><span>Woolly dog</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sheep, yak, goat and camel all yield wool; a "woolly dog" does not — it is not a wool-yielding animal.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">Pashmina shawls are made from the fine inner wool of the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Merino sheep</span></li>
+        <li class="correct"><span class="lab">B</span><span>Changthangi goat</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Angora rabbit</span></li>
+        <li class=""><span class="lab">D</span><span>Bactrian camel</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Pashmina is the fine inner wool of the Changthangi goat of Ladakh.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">The soft, fine hair found *underneath* the coarse outer hair of some sheep is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the burr</span></li>
+        <li class=""><span class="lab">B</span><span>the fleece grease</span></li>
+        <li class="correct"><span class="lab">C</span><span>the fine inner wool used for weaving</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>keratin scale</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Beneath the coarse outer (beard) hair lies the soft, fine inner wool that is actually woven into fabric.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">The complete coat of wool removed from a sheep in one piece is called the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>fleece</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>sliver</span></li>
+        <li class=""><span class="lab">C</span><span>roving</span></li>
+        <li class=""><span class="lab">D</span><span>yarn</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The whole coat of wool removed in one piece during shearing is the fleece.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">The correct order of the first two steps of wool processing is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>scouring, then shearing</span></li>
+        <li class="correct"><span class="lab">B</span><span>shearing, then scouring</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>sorting, then shearing</span></li>
+        <li class=""><span class="lab">D</span><span>dyeing, then shearing</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Wool processing begins with shearing (cutting the fleece), then scouring (washing it).</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">Shearing is best described as:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>painlessly cutting off the fleece using clippers</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>washing the wool to remove grease</span></li>
+        <li class=""><span class="lab">C</span><span>dyeing the wool in different colours</span></li>
+        <li class=""><span class="lab">D</span><span>twisting fibres into yarn</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Shearing is the painless cutting off of the fleece using clippers (the outer skin layer is dead).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">Shearing does not hurt the sheep because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sheep have no nerves</span></li>
+        <li class="correct"><span class="lab">B</span><span>the uppermost layer of skin is dead, like our hair and nails</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the wool is removed surgically</span></li>
+        <li class=""><span class="lab">D</span><span>the sheep is asleep</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Like our own hair and nails, the uppermost skin layer that carries the wool is dead, so cutting it does not hurt the sheep.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">Scouring is carried out mainly to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>colour the wool</span></li>
+        <li class="correct"><span class="lab">B</span><span>remove grease, dust and dirt from the sheared wool</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>sort the wool by length</span></li>
+        <li class=""><span class="lab">D</span><span>twist the fibres into thread</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Scouring washes the sheared wool in tanks to remove grease, dust and dirt.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">In the sequence "Shearing → ____ → Sorting → ...", the missing step is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>reeling</span></li>
+        <li class="correct"><span class="lab">B</span><span>scouring</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>dyeing</span></li>
+        <li class=""><span class="lab">D</span><span>spinning</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The sequence is Shearing → Scouring → Sorting, so the missing step is scouring.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">After scouring and sorting, the small fluffy fibres picked out of the hairy skin are called:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>burrs</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>fleece</span></li>
+        <li class=""><span class="lab">C</span><span>cocoons</span></li>
+        <li class=""><span class="lab">D</span><span>slivers</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The small fluffy fibres picked out of the hairy skin are the burrs that must be removed.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">Sorting is the process of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>washing the fleece in tanks</span></li>
+        <li class="correct"><span class="lab">B</span><span>separating the hairy skin into wool of different textures</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>colouring wool in many shades</span></li>
+        <li class=""><span class="lab">D</span><span>unwinding silk from a cocoon</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sorting separates the hairy skin (with its wool) into wool of different textures.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">Natural wool is white, black or brown; the step that gives it many colours is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>scouring</span></li>
+        <li class=""><span class="lab">B</span><span>shearing</span></li>
+        <li class="correct"><span class="lab">C</span><span>dyeing</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>reeling</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Natural wool comes in a few shades; dyeing gives it the wide range of colours we see.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">The last stage that turns processed wool fibres into thread is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>shearing</span></li>
+        <li class=""><span class="lab">B</span><span>scouring</span></li>
+        <li class="correct"><span class="lab">C</span><span>spinning into yarn</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>reeling</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The final step turns the processed fibres into thread by spinning into yarn.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">"Sorter's disease" is an occupational hazard of wool workers caused by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a fungus on mulberry leaves</span></li>
+        <li class="correct"><span class="lab">B</span><span>the bacterium *Bacillus anthracis* (anthrax) in raw wool</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>inhaling synthetic fibre dust</span></li>
+        <li class=""><span class="lab">D</span><span>excess dyeing chemicals</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sorter's disease is anthrax, caused by *Bacillus anthracis* spores present in raw wool.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">Sorter's disease mainly affects the worker's:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>skin only</span></li>
+        <li class="correct"><span class="lab">B</span><span>lungs (it is a respiratory infection)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>eyes</span></li>
+        <li class=""><span class="lab">D</span><span>bones</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Anthrax inhaled from raw wool is a respiratory infection, so it mainly attacks the lungs.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">Sericulture is defined as the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>rearing of silkworms to produce silk</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>growing of mulberry trees only</span></li>
+        <li class=""><span class="lab">C</span><span>rearing of sheep for wool</span></li>
+        <li class=""><span class="lab">D</span><span>keeping of honeybees</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sericulture is the rearing of silkworms to produce silk fibre.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">The silkworm is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>adult silk moth</span></li>
+        <li class="correct"><span class="lab">B</span><span>caterpillar (larva) of the silk moth</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>pupa inside the cocoon</span></li>
+        <li class=""><span class="lab">D</span><span>egg of the silk moth</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The silkworm is the caterpillar (larva) of the silk moth.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">"The silkworm is (a) a caterpillar (b) a larva." The correct statement is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only (a) is true</span></li>
+        <li class=""><span class="lab">B</span><span>only (b) is true</span></li>
+        <li class="correct"><span class="lab">C</span><span>both (a) and (b) are true</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>neither is true</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A silkworm is both a caterpillar and a larva — the two words describe the same stage — so both statements are true.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">The correct order of the silk moth's life cycle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>egg → pupa → larva → moth</span></li>
+        <li class="correct"><span class="lab">B</span><span>egg → larva → pupa → moth</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>larva → egg → moth → pupa</span></li>
+        <li class=""><span class="lab">D</span><span>moth → pupa → larva → egg</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The life cycle runs egg → larva (silkworm) → pupa (in the cocoon) → adult moth.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">The food eaten by the common (mulberry) silkworm is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>arjun leaves</span></li>
+        <li class=""><span class="lab">B</span><span>castor leaves</span></li>
+        <li class="correct"><span class="lab">C</span><span>mulberry leaves</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>banana leaves</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The common silkworm feeds on mulberry leaves (hence "mulberry silk").</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">The growing of mulberry trees to feed silkworms is called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>apiculture</span></li>
+        <li class="correct"><span class="lab">B</span><span>moriculture</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>floriculture</span></li>
+        <li class=""><span class="lab">D</span><span>silviculture</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Moriculture is the growing of mulberry trees to feed silkworms.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">From the list — sericulture, floriculture, moriculture, apiculture, silviculture — the **two** terms related to silk production are:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>sericulture and moriculture</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>floriculture and apiculture</span></li>
+        <li class=""><span class="lab">C</span><span>silviculture and floriculture</span></li>
+        <li class=""><span class="lab">D</span><span>apiculture and moriculture</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sericulture (rearing silkworms) and moriculture (growing their mulberry food) are the two silk-related terms.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">A silkworm protects itself before becoming a pupa by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>burying itself in soil</span></li>
+        <li class="correct"><span class="lab">B</span><span>spinning a cocoon of silk around its body</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>hiding under a leaf</span></li>
+        <li class=""><span class="lab">D</span><span>growing a hard shell of cellulose</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Before turning into a pupa, the silkworm spins a silk cocoon around its body for protection.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">The silk thread of a single cocoon is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a few centimetres of broken bits</span></li>
+        <li class="correct"><span class="lab">B</span><span>a single continuous thread up to about 1 km long</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>made of many short fibres glued together</span></li>
+        <li class=""><span class="lab">D</span><span>hollow like a straw</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A single cocoon yields one continuous silk thread that can be up to about a kilometre long.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">Reeling is the process of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>feeding silkworms mulberry leaves</span></li>
+        <li class="correct"><span class="lab">B</span><span>unwinding the silk thread from a softened cocoon onto a reel</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>dyeing silk cloth</span></li>
+        <li class=""><span class="lab">D</span><span>shearing wool from sheep</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Reeling is unwinding the silk thread from a softened cocoon onto a reel.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">Before reeling, cocoons are usually placed in boiling water or steam in order to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>feed the pupa</span></li>
+        <li class="correct"><span class="lab">B</span><span>loosen the gum and kill the pupa so the thread can be unwound</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>dye the silk</span></li>
+        <li class=""><span class="lab">D</span><span>hatch the eggs faster</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cocoons are boiled or steamed to loosen the gum (sericin) and kill the pupa so the long thread can be unwound unbroken.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">Tasar silk is obtained from a silkworm that feeds on:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>mulberry leaves</span></li>
+        <li class="correct"><span class="lab">B</span><span>arjun leaves</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>rose petals</span></li>
+        <li class=""><span class="lab">D</span><span>wheat grains</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Tasar silk comes from a silkworm that feeds on arjun leaves, not mulberry.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">India's reputation in silk rests largely on it being one of the world's biggest:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>wool exporters</span></li>
+        <li class="correct"><span class="lab">B</span><span>silk producers</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>nylon makers</span></li>
+        <li class=""><span class="lab">D</span><span>cotton seed sellers</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>India is one of the world's largest silk producers.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">Compared with synthetic fibres, natural fibres like cotton and wool are generally:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>non-biodegradable</span></li>
+        <li class="correct"><span class="lab">B</span><span>breathable and biodegradable</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>made from petroleum</span></li>
+        <li class=""><span class="lab">D</span><span>unable to absorb sweat</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Natural fibres are breathable and biodegradable, unlike petroleum-based synthetics.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">Polyester, nylon and acrylic are examples of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>plant fibres</span></li>
+        <li class=""><span class="lab">B</span><span>animal fibres</span></li>
+        <li class="correct"><span class="lab">C</span><span>synthetic (man-made) fibres</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>mineral fibres</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Polyester, nylon and acrylic are man-made synthetic fibres.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">The raw material from which most synthetic fibres are made is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>mulberry sap</span></li>
+        <li class="correct"><span class="lab">B</span><span>petroleum (petrochemicals)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>sheep grease</span></li>
+        <li class=""><span class="lab">D</span><span>cotton seed oil</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Most synthetic fibres are made from petroleum-based chemicals (petrochemicals).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">A key environmental problem with synthetic fibres is that they:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>rot within a few months</span></li>
+        <li class="correct"><span class="lab">B</span><span>are non-biodegradable and persist for over 200 years</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>need large herds of animals</span></li>
+        <li class=""><span class="lab">D</span><span>dissolve in rain</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Synthetic fibres are non-biodegradable and can persist in the environment for more than 200 years.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">Tiny plastic fragments shed by synthetic clothes during every wash are called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>burrs</span></li>
+        <li class="correct"><span class="lab">B</span><span>microplastics</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>slivers</span></li>
+        <li class=""><span class="lab">D</span><span>cocoons</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Synthetic clothes shed microplastics — tiny plastic fragments under 5 mm — in every wash.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">A reason a cotton shirt feels cooler in summer than a polyester one is that cotton is more:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>waterproof</span></li>
+        <li class="correct"><span class="lab">B</span><span>breathable and absorbs sweat</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>elastic</span></li>
+        <li class=""><span class="lab">D</span><span>shiny</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cotton is breathable and absorbs sweat, so a cotton shirt feels cooler than a polyester one.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">Why does a woollen sweater keep you warm in winter? Because wool fibres:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>generate heat chemically</span></li>
+        <li class="correct"><span class="lab">B</span><span>trap a layer of air that is a poor conductor of heat</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>are good conductors of heat</span></li>
+        <li class=""><span class="lab">D</span><span>reflect all body heat back instantly</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Wool fibres trap a layer of still air, and trapped air is a poor conductor of heat, keeping body warmth in.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">If a fibre burns leaving a smell like burning hair and a brittle bead, it is most likely:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>cotton (cellulose)</span></li>
+        <li class="correct"><span class="lab">B</span><span>wool or silk (protein)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>nylon</span></li>
+        <li class=""><span class="lab">D</span><span>jute</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Protein fibres (wool, silk) burn with a "burning hair" smell and leave a brittle bead; cellulose fibres do not.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">Cotton fibre comes from the part of the cotton plant called the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>root</span></li>
+        <li class=""><span class="lab">B</span><span>stem</span></li>
+        <li class="correct"><span class="lab">C</span><span>seed pod (boll)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>flower nectar</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cotton fibre grows in the seed pods (bolls) of the cotton plant.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">Jute and flax are obtained mainly from the plant's:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>seeds</span></li>
+        <li class="correct"><span class="lab">B</span><span>stems</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>fruits</span></li>
+        <li class=""><span class="lab">D</span><span>roots</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Jute and flax fibres are obtained from the stems of their plants.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">Linen fabric is woven from the fibre of the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>flax plant</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>cotton plant</span></li>
+        <li class=""><span class="lab">C</span><span>silk moth</span></li>
+        <li class=""><span class="lab">D</span><span>Angora goat</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Linen is woven from the fibre of the flax plant.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">Which statement about animal versus plant fibres is correct?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Both are made of cellulose</span></li>
+        <li class=""><span class="lab">B</span><span>Both are made of protein</span></li>
+        <li class="correct"><span class="lab">C</span><span>Animal fibres are protein; plant fibres are cellulose</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Plant fibres are protein; animal fibres are cellulose</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Animal fibres are made of protein (keratin/fibroin); plant fibres are made of cellulose.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">Angora wool is obtained from the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Angora rabbit (and Angora goat)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Merino sheep</span></li>
+        <li class=""><span class="lab">C</span><span>silk moth</span></li>
+        <li class=""><span class="lab">D</span><span>llama only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Angora wool comes from the Angora rabbit (and Angora goat).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">Of the following, the animal that lives in cold, high regions and is a major wool source in Tibet and Ladakh is the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>yak</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>crocodile</span></li>
+        <li class=""><span class="lab">C</span><span>silkworm</span></li>
+        <li class=""><span class="lab">D</span><span>housefly</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The yak provides wool in the cold high regions of Tibet and Ladakh.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">The grease naturally present in raw sheared wool is removed during:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>shearing</span></li>
+        <li class="correct"><span class="lab">B</span><span>scouring</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>reeling</span></li>
+        <li class=""><span class="lab">D</span><span>dyeing</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The natural grease in raw wool is washed out during scouring.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">Spinning converts loose fibres into yarn by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>washing them</span></li>
+        <li class="correct"><span class="lab">B</span><span>twisting them together so they hold as a thread</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>boiling them</span></li>
+        <li class=""><span class="lab">D</span><span>bleaching them</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Spinning twists loose fibres together so they hold firmly as a single thread (yarn).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">The chief reason silk reeling must be done carefully is that:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the thread is a single long filament that breaks if handled roughly</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>silk is poisonous</span></li>
+        <li class=""><span class="lab">C</span><span>the cocoon is made of metal</span></li>
+        <li class=""><span class="lab">D</span><span>the pupa is still alive and bites</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Silk reeling must be gentle because the thread is one long continuous filament that snaps if handled roughly.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">Which sequence correctly lists the **six** main steps of getting wool fabric?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>shearing → scouring → sorting → removing burrs → dyeing → spinning</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>scouring → shearing → dyeing → sorting → spinning → reeling</span></li>
+        <li class=""><span class="lab">C</span><span>sorting → shearing → scouring → reeling → dyeing → spinning</span></li>
+        <li class=""><span class="lab">D</span><span>dyeing → spinning → shearing → scouring → sorting → reeling</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The six steps are shearing → scouring → sorting → removing burrs → dyeing → spinning.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">A child claims "silk comes from a plant." The best correction is that silk:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>is correct, silk is a plant fibre</span></li>
+        <li class="correct"><span class="lab">B</span><span>is an animal fibre spun by the silkworm caterpillar</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>is a synthetic fibre made from oil</span></li>
+        <li class=""><span class="lab">D</span><span>is a mineral dug from the ground</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Silk is an animal fibre spun by the silkworm caterpillar, not a plant fibre.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">Selective breeding of sheep aims mainly to produce sheep with:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>thicker bones</span></li>
+        <li class="correct"><span class="lab">B</span><span>soft, fine and long wool fibres</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>more milk only</span></li>
+        <li class=""><span class="lab">D</span><span>faster running speed</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sheep are selectively bred to grow soft, fine and long wool fibres.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">Which property best explains why synthetic shirts dry faster than cotton shirts after washing?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>synthetics absorb a lot of water</span></li>
+        <li class="correct"><span class="lab">B</span><span>synthetics are hydrophobic and hold very little water</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>cotton repels water</span></li>
+        <li class=""><span class="lab">D</span><span>synthetics are heated internally</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Synthetic fibres are hydrophobic (water-repelling), hold little water, and so dry quickly.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">The reason wool sorters wore masks (in modern factories) is to avoid:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the smell of dye</span></li>
+        <li class="correct"><span class="lab">B</span><span>inhaling anthrax spores and fibre dust</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>silk allergies</span></li>
+        <li class=""><span class="lab">D</span><span>cold air</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Masks protect sorters from inhaling anthrax spores and fibre dust in raw wool.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">Which is the **best** single difference between a natural and a synthetic fibre?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>colour</span></li>
+        <li class="correct"><span class="lab">B</span><span>source — natural comes from plants/animals, synthetic is man-made from chemicals</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>price only</span></li>
+        <li class=""><span class="lab">D</span><span>weight only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The defining difference is the source: natural fibres come from plants or animals, while synthetic fibres are man-made from chemicals.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">Reara­nge: "Egg → silkworm → cocoon → ____ → moth." The blank is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>larva again</span></li>
+        <li class="correct"><span class="lab">B</span><span>pupa</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>fleece</span></li>
+        <li class=""><span class="lab">D</span><span>sliver</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>After the cocoon stage the silkworm becomes a pupa, which then develops into the adult moth.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">A blend such as "polyester-cotton" is made to combine:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the warmth of wool with the shine of silk</span></li>
+        <li class="correct"><span class="lab">B</span><span>the strength/easy-care of polyester with the comfort/breathability of cotton</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>two synthetic fibres only</span></li>
+        <li class=""><span class="lab">D</span><span>two animal fibres only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A polyester-cotton blend combines polyester's strength and easy care with cotton's comfort and breathability.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">The fibre most likely to cause long-lasting microplastic pollution in rivers is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>cotton</span></li>
+        <li class=""><span class="lab">B</span><span>jute</span></li>
+        <li class="correct"><span class="lab">C</span><span>polyester</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>wool</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Polyester is a synthetic fibre that sheds non-biodegradable microplastics, so it is the worst river polluter of the four.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">Overall, the chapter's central idea "fibre to fabric" is the journey from:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>raw fibre source → cleaned/processed fibre → spun yarn → woven fabric</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>fabric → yarn → fibre → animal</span></li>
+        <li class=""><span class="lab">C</span><span>dye → cloth → fibre → plant</span></li>
+        <li class=""><span class="lab">D</span><span>cocoon → sheep → cotton → silk</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Fibre to fabric" traces the journey: raw fibre source → cleaned/processed fibre → spun yarn → woven fabric.</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

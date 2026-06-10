@@ -305,6 +305,21 @@ extension OlympiadPaperRegistry {
             suggestedTimeMinutes: 90,
             solvedGuideHTML: "SocialScience_Ssch01_GeographicalDiversityOfIndia_Advanced_SolvedGuide.html",
             tier: .advanced
+        ),
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch02_advanced",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 2,
+            chapterTitle: "Understanding the Weather",
+            displayTitle: "Understanding the Weather — Paper 2 (Advanced)",
+            questionPaperMD: "SocialScience_Ssch02_UnderstandingTheWeather_Advanced_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch02_UnderstandingTheWeather_Advanced_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch02_UnderstandingTheWeather.html",
+            questionPaperPDF: "SocialScience_Ssch02_UnderstandingTheWeather.pdf",
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "SocialScience_Ssch02_UnderstandingTheWeather_Advanced_SolvedGuide.html",
+            tier: .advanced
         )
     ]
 }
