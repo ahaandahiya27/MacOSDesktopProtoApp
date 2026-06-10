@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dvipeshu Ramyah Dvipoandamanah (Advanced) — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Dvipeshu Ramyah Dvipoandamanah (Advanced)<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">द्वीप splits as द्वि + अप्; the अप् element means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'house'</span></li>
+        <li class=""><span class="lab">B</span><span>'black'</span></li>
+        <li class="correct"><span class="lab">C</span><span>'water'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>'cell'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In द्वीप = द्वि + अप्, the अप् element means **'water'** (द्वि = 'two').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">So द्वीप literally means 'two-watered', describing:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>land surrounded by water (an island)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>two rivers</span></li>
+        <li class=""><span class="lab">C</span><span>a prison at sea</span></li>
+        <li class=""><span class="lab">D</span><span>a black river</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>So द्वीप ('two-watered') describes **land surrounded by water — an island**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">द्वीपेषु (as in द्वीपेषु रम्यः) is the locative plural meaning:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'of the islands'</span></li>
+        <li class=""><span class="lab">B</span><span>'to the island'</span></li>
+        <li class=""><span class="lab">C</span><span>'by the islands'</span></li>
+        <li class="correct"><span class="lab">D</span><span>'among the islands'</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>द्वीपेषु is the locative plural, **'among the islands'**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">कारागार splits as कारा + गार, literally:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'two' + 'water'</span></li>
+        <li class="correct"><span class="lab">B</span><span>'cell' + 'house' = a prison</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>'black' + 'water'</span></li>
+        <li class=""><span class="lab">D</span><span>'island' + 'reef'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>कारागार = कारा ('cell') + गार ('house') = **a prison**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">कारागार (prison) must not be confused with the Hindi कारखाना, which means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a prison</span></li>
+        <li class="correct"><span class="lab">B</span><span>a factory</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>an island</span></li>
+        <li class=""><span class="lab">D</span><span>a temple</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>कारागार (prison) must not be confused with the Hindi कारखाना, which means a **factory**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">त्रितलात्मक (describing the Cellular Jail) means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>single-storied</span></li>
+        <li class=""><span class="lab">B</span><span>made of coral</span></li>
+        <li class=""><span class="lab">C</span><span>under the sea</span></li>
+        <li class="correct"><span class="lab">D</span><span>three-storied</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>त्रितलात्मक means **three-storied** (the Cellular Jail's structure).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">त्रितल breaks into त्रि + तल, i.e.:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>'three' + 'floor/storey'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>'three' + 'water'</span></li>
+        <li class=""><span class="lab">C</span><span>'island' + 'floor'</span></li>
+        <li class=""><span class="lab">D</span><span>'black' + 'storey'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>त्रितल = त्रि ('three') + तल ('floor/storey').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">प्रवालप्रस्तर (प्रवाल + प्रस्तर) refers to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>coconut palms</span></li>
+        <li class=""><span class="lab">B</span><span>prison cells</span></li>
+        <li class="correct"><span class="lab">C</span><span>coral rock / reefs</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>sand dunes</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>प्रवालप्रस्तर = प्रवाल ('coral') + प्रस्तर ('rock') = **coral rock / reefs**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">The past active participle सोढवान् ('he bore/endured') is formed from the root:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>सह् ('to bear/endure')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>गम् ('to go')</span></li>
+        <li class=""><span class="lab">C</span><span>कृ ('to do')</span></li>
+        <li class=""><span class="lab">D</span><span>श्रु ('to hear')</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>सोढवान् ('he bore/endured') comes from the root **सह् ('to bear/endure')**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">सोढवान् is grammatically a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>future-tense verb</span></li>
+        <li class=""><span class="lab">B</span><span>infinitive</span></li>
+        <li class="correct"><span class="lab">C</span><span>past active participle ('having borne / who bore')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>ordinal number</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>सोढवान् is a **past active participle** ('having borne / who bore'), not a finite verb.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">The past active participle of कृ ('do'), 'he did / having done', is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>करोति</span></li>
+        <li class=""><span class="lab">B</span><span>कर्तुम्</span></li>
+        <li class=""><span class="lab">C</span><span>अकरोत्</span></li>
+        <li class="correct"><span class="lab">D</span><span>कृतवान्</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The past active participle of कृ is **कृतवान्** ('he did / having done').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">The past active participle of गम् ('go'), 'he went / having gone', is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>गच्छति</span></li>
+        <li class="correct"><span class="lab">B</span><span>गतवान्</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>गन्तुम्</span></li>
+        <li class=""><span class="lab">D</span><span>गमिष्यति</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The past active participle of गम् is **गतवान्** ('he went / having gone').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">The past active participle of श्रु ('hear'), 'he heard', is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>शृणोति</span></li>
+        <li class=""><span class="lab">B</span><span>श्रोतुम्</span></li>
+        <li class=""><span class="lab">C</span><span>श्रोष्यति</span></li>
+        <li class="correct"><span class="lab">D</span><span>श्रुतवान्</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The past active participle of श्रु is **श्रुतवान्** ('he heard').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">The past active participle of दृश् ('see'), 'he saw', is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>पश्यति</span></li>
+        <li class="correct"><span class="lab">B</span><span>दृष्टवान्</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>द्रष्टुम्</span></li>
+        <li class=""><span class="lab">D</span><span>द्रक्ष्यति</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The past active participle of दृश् is **दृष्टवान्** ('he saw').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">All of सोढवान्, कृतवान्, गतवान्, श्रुतवान् share the participle suffix:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>-तुम्</span></li>
+        <li class=""><span class="lab">B</span><span>-ति</span></li>
+        <li class="correct"><span class="lab">C</span><span>-वान् (the क्तवतु suffix)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>-स्य</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>सोढवान्, कृतवान्, गतवान्, श्रुतवान् all carry the participle suffix **-वान् (the क्तवतु suffix)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">सोढवान् दश वर्षाणि कष्टम् means Savarkar:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>bore the suffering for ten years</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>will bear suffering</span></li>
+        <li class=""><span class="lab">C</span><span>sang for ten years</span></li>
+        <li class=""><span class="lab">D</span><span>counted ten years</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>सोढवान् दश वर्षाणि कष्टम् means Savarkar **bore the suffering for ten years**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">Unlike the finite past अमारयत् ('he killed'), the participle सोढवान् can also work as a/an:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>number</span></li>
+        <li class=""><span class="lab">B</span><span>preposition</span></li>
+        <li class="correct"><span class="lab">C</span><span>adjective describing the doer ('the one who bore')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>plural noun</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Unlike a finite past verb, the participle सोढवान् can also act as an **adjective describing the doer** ('the one who bore').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">दश वर्षाणि means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>ten years</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>ten days</span></li>
+        <li class=""><span class="lab">C</span><span>one hundred years</span></li>
+        <li class=""><span class="lab">D</span><span>ten months</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>दश वर्षाणि means **ten years**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">वर्षाणि is the plural of वर्ष ('year'); the -आणि ending here marks a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>singular</span></li>
+        <li class="correct"><span class="lab">B</span><span>neuter plural (accusative of duration)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>dual</span></li>
+        <li class=""><span class="lab">D</span><span>vocative</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>वर्षाणि is a **neuter plural** (here the accusative of duration — 'for ten years').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">कल्पनातीत (कल्पना + अतीत) means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>within imagination</span></li>
+        <li class=""><span class="lab">B</span><span>a kind of coral</span></li>
+        <li class=""><span class="lab">C</span><span>a tribe</span></li>
+        <li class="correct"><span class="lab">D</span><span>beyond imagination</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>कल्पनातीत = कल्पना ('imagination') + अतीत ('gone beyond') = **beyond imagination**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">कल्पनातीतं घोरं कष्टम् describes Savarkar's suffering as:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>terrible and beyond imagination</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>mild and brief</span></li>
+        <li class=""><span class="lab">C</span><span>a reward</span></li>
+        <li class=""><span class="lab">D</span><span>a short holiday</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>कल्पनातीतं घोरं कष्टम् describes the suffering as **terrible and beyond imagination**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">स्वातन्त्र्यवीर (स्वातन्त्र्य + वीर) means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a wealthy merchant</span></li>
+        <li class=""><span class="lab">B</span><span>a coral diver</span></li>
+        <li class=""><span class="lab">C</span><span>a foreign ruler</span></li>
+        <li class="correct"><span class="lab">D</span><span>a freedom-hero</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>स्वातन्त्र्यवीर = स्वातन्त्र्य ('freedom') + वीर ('hero') = **a freedom-hero**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">Savarkar endured the Cellular Jail for the sake of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>personal wealth</span></li>
+        <li class="correct"><span class="lab">B</span><span>the Motherland's freedom</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a high post</span></li>
+        <li class=""><span class="lab">D</span><span>a university degree</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Savarkar endured the jail for the sake of **the Motherland's freedom**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">The Andamans lie in the ____, to the south-east of the Indian mainland.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Arabian Sea</span></li>
+        <li class=""><span class="lab">B</span><span>Indian Ocean near Africa</span></li>
+        <li class="correct"><span class="lab">C</span><span>Bay of Bengal</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Himalayas</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Andamans lie in the **Bay of Bengal**, south-east of the mainland.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">The islands grouped with the Andamans are the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Maldives</span></li>
+        <li class="correct"><span class="lab">B</span><span>Nicobar Islands</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Lakshadweep</span></li>
+        <li class=""><span class="lab">D</span><span>Sri Lankan islands</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The islands grouped with the Andamans are the **Nicobar Islands**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">कालापानी, as used in the chapter, NAMES:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a literal black river</span></li>
+        <li class=""><span class="lab">B</span><span>a coral reef</span></li>
+        <li class="correct"><span class="lab">C</span><span>the Cellular Jail and the exile-across-the-seas it symbolised</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a coconut drink</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>कालापानी NAMES **the Cellular Jail and the exile-across-the-seas it symbolised**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">Translating कालापानी word-for-word as 'black water' misses that it stands for:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the dreaded prison and banishment</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a real sea</span></li>
+        <li class=""><span class="lab">C</span><span>a tribe</span></li>
+        <li class=""><span class="lab">D</span><span>a school</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Read literally as 'black water', कालापानी misses that it stands for **the dreaded prison and banishment**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">The English loanword 'Cellular' is kept in the Sanskrit text because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Sanskrit cannot borrow words</span></li>
+        <li class=""><span class="lab">B</span><span>'Cellular' means island</span></li>
+        <li class=""><span class="lab">C</span><span>the jail is Indian-built</span></li>
+        <li class="correct"><span class="lab">D</span><span>there is no native synonym for the cell-by-cell design</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The English 'Cellular' is kept because **Sanskrit has no native synonym for the cell-by-cell design**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">The 'Cellular' design isolated each prisoner in a separate cell so as to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>give them more freedom</span></li>
+        <li class=""><span class="lab">B</span><span>make the jail beautiful</span></li>
+        <li class=""><span class="lab">C</span><span>protect coral reefs</span></li>
+        <li class="correct"><span class="lab">D</span><span>prevent prisoners from communicating</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The cell-by-cell design isolated each prisoner to **prevent prisoners from communicating**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">The Cellular Jail was built by the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>British</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Mughals</span></li>
+        <li class=""><span class="lab">C</span><span>Cholas</span></li>
+        <li class=""><span class="lab">D</span><span>Guptas</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Cellular Jail was built by the **British**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">जनजाति means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the common people in general</span></li>
+        <li class=""><span class="lab">B</span><span>a prison</span></li>
+        <li class="correct"><span class="lab">C</span><span>an indigenous tribal community</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a coral reef</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>जनजाति means **an indigenous tribal community**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">जनजाति differs from सामान्यजन ('common people') because जनजाति is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>any crowd</span></li>
+        <li class="correct"><span class="lab">B</span><span>an officially recognised indigenous group (a Scheduled Tribe)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>prisoners</span></li>
+        <li class=""><span class="lab">D</span><span>tourists</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>जनजाति differs from सामान्यजन because it is **an officially recognised indigenous group (a Scheduled Tribe)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">The four tribes named are the Andamanese, Onge, Jarawa and:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Nicobarese</span></li>
+        <li class=""><span class="lab">B</span><span>Cholas</span></li>
+        <li class="correct"><span class="lab">C</span><span>Sentinelese</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Mughals</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The four tribes named are the Andamanese, Onge, Jarawa and **Sentinelese**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">The Sentinelese are notable as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>British settlers</span></li>
+        <li class="correct"><span class="lab">B</span><span>one of the world's last uncontacted peoples, protected by law</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a coral species</span></li>
+        <li class=""><span class="lab">D</span><span>a modern city tribe</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Sentinelese are notable as **one of the world's last uncontacted peoples, protected by law**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">That the Sentinelese are protected by law shows India's concern for:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>building more prisons</span></li>
+        <li class=""><span class="lab">B</span><span>clearing forests</span></li>
+        <li class=""><span class="lab">C</span><span>ending all tribes</span></li>
+        <li class="correct"><span class="lab">D</span><span>indigenous peoples and their way of life</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Protecting the Sentinelese shows India's concern for **indigenous peoples and their way of life**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">The Andamans appear on the ____ list, recognising their significance.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>UNESCO (natural/cultural heritage)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>busiest ports</span></li>
+        <li class=""><span class="lab">C</span><span>tallest mountains</span></li>
+        <li class=""><span class="lab">D</span><span>endangered languages</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Andamans appear on the **UNESCO (natural/cultural heritage)** list.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">The chapter's beauty-imagery of the islands includes white sand, coconut palms and:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>coral reefs</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>glaciers</span></li>
+        <li class=""><span class="lab">C</span><span>deserts</span></li>
+        <li class=""><span class="lab">D</span><span>factories</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The beauty-imagery includes white sand, coconut palms and **coral reefs**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">रम्यः (as in रम्यः द्वीपः) means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>terrible</span></li>
+        <li class="correct"><span class="lab">B</span><span>beautiful / delightful</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>distant</span></li>
+        <li class=""><span class="lab">D</span><span>black</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>रम्यः means **beautiful / delightful**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">The participle in 'Savarkar, who bore (सोढवान्) ten years', agrees with Savarkar in being:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>feminine plural</span></li>
+        <li class=""><span class="lab">B</span><span>neuter dual</span></li>
+        <li class=""><span class="lab">C</span><span>a verb with no agreement</span></li>
+        <li class="correct"><span class="lab">D</span><span>masculine singular</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The participle in 'Savarkar, who bore ...' agrees with Savarkar as **masculine singular**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">The past active participle of पठ् ('read'), 'he read / having read', is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>पठति</span></li>
+        <li class=""><span class="lab">B</span><span>पठितुम्</span></li>
+        <li class="correct"><span class="lab">C</span><span>पठितवान्</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>पठतु</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The past active participle of पठ् is **पठितवान्** ('he read').</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">The past active participle of दा ('give'), 'he gave', is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ददाति</span></li>
+        <li class=""><span class="lab">B</span><span>दातुम्</span></li>
+        <li class=""><span class="lab">C</span><span>अददात्</span></li>
+        <li class="correct"><span class="lab">D</span><span>दत्तवान्</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The past active participle of दा is **दत्तवान्** ('he gave').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">A person described as सोढवान् is one who:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>counted</span></li>
+        <li class=""><span class="lab">B</span><span>sang</span></li>
+        <li class="correct"><span class="lab">C</span><span>endured / bore hardship</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>drowned</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A person described as सोढवान् is one who **endured / bore hardship**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">द्वीप and the English 'peninsula' ('almost-island') share the idea of:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>land related to surrounding water</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a mountain peak</span></li>
+        <li class=""><span class="lab">C</span><span>a desert</span></li>
+        <li class=""><span class="lab">D</span><span>a prison</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>द्वीप and 'peninsula' ('almost-island') share the idea of **land related to surrounding water**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">The chapter weaves together geography, freedom-struggle history and:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only mathematics</span></li>
+        <li class="correct"><span class="lab">B</span><span>Sanskrit vocabulary (द्वीप, कारागार, सोढवान्, जनजाति)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>only the dative case</span></li>
+        <li class=""><span class="lab">D</span><span>the names of the Sun</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The chapter weaves geography, history and **Sanskrit vocabulary (द्वीप, कारागार, सोढवान्, जनजाति)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">कारागार in the chapter's context (Savarkar's ten years) clearly means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a school</span></li>
+        <li class="correct"><span class="lab">B</span><span>a prison</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a factory</span></li>
+        <li class=""><span class="lab">D</span><span>a temple</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In context (Savarkar's ten years), कारागार clearly means a **prison**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">The contrast between कारागार (prison) and the islands' रम्यता (beauty) shows the Andamans as a place of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only suffering</span></li>
+        <li class=""><span class="lab">B</span><span>only beauty</span></li>
+        <li class=""><span class="lab">C</span><span>factories</span></li>
+        <li class="correct"><span class="lab">D</span><span>both natural beauty and solemn history</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The कारागार-vs-रम्यता contrast shows the Andamans as a place of **both natural beauty and solemn history**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">अण्डमानद्वीपः and निकोबारद्वीपः are both:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>prisons</span></li>
+        <li class=""><span class="lab">B</span><span>tribes</span></li>
+        <li class="correct"><span class="lab">C</span><span>island groups in the Bay of Bengal</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>coral species</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>अण्डमानद्वीपः and निकोबारद्वीपः are both **island groups in the Bay of Bengal**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">Which word-meaning pair is CORRECT?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>कारागार = prison</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>द्वीप = prison</span></li>
+        <li class=""><span class="lab">C</span><span>सोढवान् = he sang</span></li>
+        <li class=""><span class="lab">D</span><span>जनजाति = common people</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct pair is **कारागार = prison**. द्वीप is an island, सोढवान् is 'he bore', जनजाति is an indigenous tribe.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">Which etymology pair is CORRECT?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>द्वीप = द्वि + अप् ('island'); कारागार = कारा + गार ('prison')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>द्वीप = 'black water'</span></li>
+        <li class=""><span class="lab">C</span><span>कारागार = 'island'</span></li>
+        <li class=""><span class="lab">D</span><span>कालापानी = a river</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct etymologies: **द्वीप = द्वि + अप् ('island'); कारागार = कारा + गार ('prison')**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">Which grammar pair is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>सोढवान् = future tense</span></li>
+        <li class=""><span class="lab">B</span><span>सोढवान् = an infinitive</span></li>
+        <li class=""><span class="lab">C</span><span>कृतवान् = 'he will do'</span></li>
+        <li class="correct"><span class="lab">D</span><span>सोढवान् = past active participle ('he bore'); कृतवान् = 'he did'</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct grammar: **सोढवान् = past active participle ('he bore'); कृतवान् = 'he did'**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">Which name pair is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>कालापानी = a school</span></li>
+        <li class=""><span class="lab">B</span><span>अण्डमान = the Himalaya</span></li>
+        <li class="correct"><span class="lab">C</span><span>Cellular Jail = कालापानी</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Cellular Jail = a coral reef</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct name pair: **Cellular Jail = कालापानी**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">Which historical detail is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the Cellular Jail was built by the Cholas</span></li>
+        <li class="correct"><span class="lab">B</span><span>the Cellular Jail was built by the British</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Savarkar bore one year there</span></li>
+        <li class=""><span class="lab">D</span><span>the Andamans lie in the Arabian Sea</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct detail: **the Cellular Jail was built by the British**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">'सः ग्रन्थम् पठितवान्' means 'he ____ the book'.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>will read</span></li>
+        <li class=""><span class="lab">B</span><span>is reading</span></li>
+        <li class="correct"><span class="lab">C</span><span>read (past)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>let him read</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>सः ग्रन्थम् पठितवान् means 'he **read** the book' (past active participle).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">The neuter-plural दश वर्षाणि for 'ten years' is in the accusative because it expresses:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the place</span></li>
+        <li class=""><span class="lab">B</span><span>the means</span></li>
+        <li class=""><span class="lab">C</span><span>the possessor</span></li>
+        <li class="correct"><span class="lab">D</span><span>the duration of the action (how long he bore it)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>दश वर्षाणि is accusative because it expresses **the duration of the action** ('for ten years').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">कल्पनातीत (beyond imagination) uses अतीत ('gone beyond'); a synonym sense is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'easily imagined'</span></li>
+        <li class="correct"><span class="lab">B</span><span>'unimaginable'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>'very small'</span></li>
+        <li class=""><span class="lab">D</span><span>'nearby'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>कल्पनातीत ('gone beyond imagination') means **'unimaginable'**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">Why does Sanskrit keep जनजाति rather than सामान्यजन for the islanders?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>जनजाति precisely names an indigenous, legally recognised tribe</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>they are tourists</span></li>
+        <li class=""><span class="lab">C</span><span>सामान्यजन means prisoners</span></li>
+        <li class=""><span class="lab">D</span><span>the words are identical</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sanskrit keeps जनजाति because it **precisely names an indigenous, legally recognised tribe**, not just 'people'.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">The respect the chapter shows the islands' जनजातयः reflects a concern for:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>contempt</span></li>
+        <li class="correct"><span class="lab">B</span><span>their cultural and legal protection</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>indifference</span></li>
+        <li class=""><span class="lab">D</span><span>clearing them away</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The respect shown to the जनजातयः reflects concern for **their cultural and legal protection**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">Putting it together, the Cellular Jail (कालापानी) is remembered as:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the British prison where Savarkar bore ten years for India's freedom</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a beautiful coral reef</span></li>
+        <li class=""><span class="lab">C</span><span>a tribal village</span></li>
+        <li class=""><span class="lab">D</span><span>a shopping centre</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Cellular Jail (कालापानी) is remembered as **the British prison where Savarkar bore ten years for India's freedom**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">The central theme of this chapter is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a fox and grapes</span></li>
+        <li class=""><span class="lab">B</span><span>banking and finance</span></li>
+        <li class="correct"><span class="lab">C</span><span>the beauty and freedom-struggle history of the Andaman Islands</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the cycle of food</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The central theme is **the beauty and freedom-struggle history of the Andaman Islands**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">A student claims: 'कालापानी is a literal black river, and सोढवान् is future tense.' The best correction is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the student is fully correct</span></li>
+        <li class=""><span class="lab">B</span><span>कालापानी is the jail, but सोढवान् is future tense</span></li>
+        <li class=""><span class="lab">C</span><span>कालापानी is a river, and सोढवान् is a participle</span></li>
+        <li class="correct"><span class="lab">D</span><span>कालापानी names the Cellular Jail (exile across the seas), and सोढवान् is a past active participle ('he bore')</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>कालापानी names the Cellular Jail (the exile across the seas), and सोढवान् is a **past active participle ('he bore')**, not future tense. --- *End of solutions. Maximum marks: 240.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>
