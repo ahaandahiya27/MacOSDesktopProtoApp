@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Acids Bases And Salts_Advanced — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Acids Bases And Salts_Advanced<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">Acids generally taste:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>bitter</span></li>
+        <li class=""><span class="lab">B</span><span>salty</span></li>
+        <li class="correct"><span class="lab">C</span><span>sour</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>sweet</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Acids taste sour (like lemon or vinegar).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">Bases generally taste:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>bitter</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>sour</span></li>
+        <li class=""><span class="lab">C</span><span>sweet</span></li>
+        <li class=""><span class="lab">D</span><span>salty</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bases taste bitter and feel soapy.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">Lemon juice is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>basic</span></li>
+        <li class=""><span class="lab">B</span><span>neutral</span></li>
+        <li class=""><span class="lab">C</span><span>salty</span></li>
+        <li class="correct"><span class="lab">D</span><span>acidic</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Lemon juice contains citric acid, so it is acidic.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">A soap solution is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>acidic</span></li>
+        <li class="correct"><span class="lab">B</span><span>basic</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>neutral</span></li>
+        <li class=""><span class="lab">D</span><span>sour</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Soap solution is basic.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">A substance that is neither acidic nor basic is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sour</span></li>
+        <li class=""><span class="lab">B</span><span>bitter</span></li>
+        <li class="correct"><span class="lab">C</span><span>neutral</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>soapy</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A substance that is neither acidic nor basic is neutral.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">Curd tastes sour because it contains:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>an acid (lactic acid)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a base</span></li>
+        <li class=""><span class="lab">C</span><span>salt only</span></li>
+        <li class=""><span class="lab">D</span><span>sugar</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Curd is sour because it contains lactic acid.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">A solution of baking soda is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>acidic</span></li>
+        <li class=""><span class="lab">B</span><span>neutral</span></li>
+        <li class=""><span class="lab">C</span><span>sour</span></li>
+        <li class="correct"><span class="lab">D</span><span>basic</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Baking soda solution is basic.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">Vinegar contains:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>lactic acid</span></li>
+        <li class="correct"><span class="lab">B</span><span>acetic acid</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a base</span></li>
+        <li class=""><span class="lab">D</span><span>common salt</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Vinegar contains acetic acid.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">A solution of common salt (NaCl) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>acidic</span></li>
+        <li class=""><span class="lab">B</span><span>basic</span></li>
+        <li class="correct"><span class="lab">C</span><span>neutral</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>sour</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Common salt solution is neutral.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">Bases generally feel:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>soapy/slippery</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>gritty</span></li>
+        <li class=""><span class="lab">C</span><span>sticky</span></li>
+        <li class=""><span class="lab">D</span><span>dry</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bases feel soapy or slippery to the touch.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">Blue litmus paper turns red in:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a base</span></li>
+        <li class=""><span class="lab">B</span><span>a neutral solution</span></li>
+        <li class=""><span class="lab">C</span><span>water</span></li>
+        <li class="correct"><span class="lab">D</span><span>an acid</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Blue litmus turns red in an acid.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">Red litmus paper turns blue in:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>an acid</span></li>
+        <li class="correct"><span class="lab">B</span><span>a base</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a neutral solution</span></li>
+        <li class=""><span class="lab">D</span><span>salt water</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Red litmus turns blue in a base.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">Litmus does NOT change colour in:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>an acid</span></li>
+        <li class=""><span class="lab">B</span><span>a strong base</span></li>
+        <li class="correct"><span class="lab">C</span><span>a neutral solution</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>lemon juice</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Litmus stays unchanged in a neutral solution.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">Litmus is obtained from:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>lichens</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>roses</span></li>
+        <li class=""><span class="lab">C</span><span>turmeric</span></li>
+        <li class=""><span class="lab">D</span><span>onions</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Litmus is extracted from lichens.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">Turmeric turns red in:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>an acid</span></li>
+        <li class=""><span class="lab">B</span><span>a neutral solution</span></li>
+        <li class=""><span class="lab">C</span><span>water</span></li>
+        <li class="correct"><span class="lab">D</span><span>a base</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Turmeric turns red in a base.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">China rose indicator turns acids:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>green</span></li>
+        <li class="correct"><span class="lab">B</span><span>dark pink (magenta)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>blue</span></li>
+        <li class=""><span class="lab">D</span><span>yellow</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>China rose turns acids dark pink (magenta).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">China rose indicator turns bases:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>magenta</span></li>
+        <li class=""><span class="lab">B</span><span>red</span></li>
+        <li class="correct"><span class="lab">C</span><span>green</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>colourless</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>China rose turns bases green.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">An acid turns blue litmus:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>red</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>blue</span></li>
+        <li class=""><span class="lab">C</span><span>green</span></li>
+        <li class=""><span class="lab">D</span><span>colourless</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An acid reddens blue litmus.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">A base turns red litmus:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>red</span></li>
+        <li class=""><span class="lab">B</span><span>green</span></li>
+        <li class=""><span class="lab">C</span><span>yellow</span></li>
+        <li class="correct"><span class="lab">D</span><span>blue</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A base turns red litmus blue.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">A neutral solution leaves blue litmus:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>red</span></li>
+        <li class="correct"><span class="lab">B</span><span>blue (unchanged)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>green</span></li>
+        <li class=""><span class="lab">D</span><span>colourless</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In a neutral solution blue litmus stays blue.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">Phenolphthalein is colourless in acid and turns ____ in a base:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>red</span></li>
+        <li class=""><span class="lab">B</span><span>yellow</span></li>
+        <li class="correct"><span class="lab">C</span><span>pink</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>blue</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Phenolphthalein is colourless in acid and pink in a base.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">Examples of natural indicators are:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>litmus, turmeric and china rose</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>salt and sugar</span></li>
+        <li class=""><span class="lab">C</span><span>sand and water</span></li>
+        <li class=""><span class="lab">D</span><span>iron and copper</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Litmus, turmeric and china rose are natural indicators.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">To test whether a solution is acidic, you dip:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>red litmus, which turns blue</span></li>
+        <li class=""><span class="lab">B</span><span>turmeric, which turns red</span></li>
+        <li class=""><span class="lab">C</span><span>nothing is needed</span></li>
+        <li class="correct"><span class="lab">D</span><span>blue litmus, which turns red</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Dipping blue litmus, which turns red, confirms an acid.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">A turmeric stain on cloth turns red where soap is rubbed, because soap is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>acidic</span></li>
+        <li class="correct"><span class="lab">B</span><span>basic</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>neutral</span></li>
+        <li class=""><span class="lab">D</span><span>sour</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The turmeric stain turns red because soap is basic.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">If a solution leaves both red and blue litmus unchanged, it is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>strongly acidic</span></li>
+        <li class=""><span class="lab">B</span><span>strongly basic</span></li>
+        <li class="correct"><span class="lab">C</span><span>neutral</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>sour</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Unchanged red and blue litmus means the solution is neutral.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">The reaction "acid + base → salt + water" is called:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>neutralisation</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>evaporation</span></li>
+        <li class=""><span class="lab">C</span><span>condensation</span></li>
+        <li class=""><span class="lab">D</span><span>filtration</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Acid reacting with base is neutralisation.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">The products of a neutralisation reaction are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>acid and base</span></li>
+        <li class=""><span class="lab">B</span><span>only a gas</span></li>
+        <li class=""><span class="lab">C</span><span>only heat</span></li>
+        <li class="correct"><span class="lab">D</span><span>salt and water</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Neutralisation produces a salt and water.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">A neutralisation reaction usually releases:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>light</span></li>
+        <li class="correct"><span class="lab">B</span><span>heat</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>sound</span></li>
+        <li class=""><span class="lab">D</span><span>electricity</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Neutralisation is exothermic — it releases heat.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">An antacid relieves acidity in the stomach because it is a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>strong acid</span></li>
+        <li class=""><span class="lab">B</span><span>salt only</span></li>
+        <li class="correct"><span class="lab">C</span><span>base that neutralises the acid</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>neutral powder</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An antacid is a base that neutralises excess stomach acid.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">An ant's sting (formic acid) is soothed by rubbing on it some:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>baking soda (a mild base)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>vinegar</span></li>
+        <li class=""><span class="lab">C</span><span>lemon juice</span></li>
+        <li class=""><span class="lab">D</span><span>more acid</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Baking soda (a mild base) neutralises the formic acid of an ant sting.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">To treat soil that is too acidic, farmers add:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>more acid</span></li>
+        <li class=""><span class="lab">B</span><span>sugar</span></li>
+        <li class=""><span class="lab">C</span><span>salt</span></li>
+        <li class="correct"><span class="lab">D</span><span>lime (a base)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Acidic soil is treated by adding lime (a base).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">To treat soil that is too basic (alkaline), one adds:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>lime</span></li>
+        <li class="correct"><span class="lab">B</span><span>organic (acidic) matter</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>baking soda</span></li>
+        <li class=""><span class="lab">D</span><span>soap</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Basic soil is treated by adding organic (acidic) matter.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">When an acid is completely neutralised by a base, the solution becomes:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>more acidic</span></li>
+        <li class=""><span class="lab">B</span><span>more basic</span></li>
+        <li class="correct"><span class="lab">C</span><span>neutral</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>sour</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Complete neutralisation leaves a neutral solution.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">The acid present in our stomach is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>hydrochloric acid</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>acetic acid</span></li>
+        <li class=""><span class="lab">C</span><span>citric acid</span></li>
+        <li class=""><span class="lab">D</span><span>lactic acid</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The stomach contains hydrochloric acid.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">Toothpaste is basic so that it can neutralise the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sugar</span></li>
+        <li class=""><span class="lab">B</span><span>salt</span></li>
+        <li class=""><span class="lab">C</span><span>water</span></li>
+        <li class="correct"><span class="lab">D</span><span>acids made by mouth bacteria</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Basic toothpaste neutralises the acids made by mouth bacteria.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">A honeybee sting injects an acid, so it is treated with a mild:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>acid</span></li>
+        <li class="correct"><span class="lab">B</span><span>base</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>salt</span></li>
+        <li class=""><span class="lab">D</span><span>oil</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A bee sting is acidic, so a mild base soothes it.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">A wasp sting is basic, so it is treated with a mild:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>base</span></li>
+        <li class=""><span class="lab">B</span><span>salt</span></li>
+        <li class="correct"><span class="lab">C</span><span>acid such as vinegar</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>soap</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A wasp sting is basic, so a mild acid such as vinegar soothes it.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">Factory waste containing acids is treated with bases before release to:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>neutralise it and protect aquatic life</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>make it sour</span></li>
+        <li class=""><span class="lab">C</span><span>colour it</span></li>
+        <li class=""><span class="lab">D</span><span>heat it</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Acidic factory waste is neutralised with bases to protect aquatic life.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">Hydrochloric acid is naturally found in the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>eyes</span></li>
+        <li class=""><span class="lab">B</span><span>skin</span></li>
+        <li class="correct"><span class="lab">C</span><span>stomach</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>hair</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Hydrochloric acid is found in the stomach.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">Lime water (calcium hydroxide) is a:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>base</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>acid</span></li>
+        <li class=""><span class="lab">C</span><span>neutral salt</span></li>
+        <li class=""><span class="lab">D</span><span>sugar</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Lime water (calcium hydroxide) is a base.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">Tamarind, lemon and orange all contain:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>bases</span></li>
+        <li class=""><span class="lab">B</span><span>salts only</span></li>
+        <li class=""><span class="lab">C</span><span>soap</span></li>
+        <li class="correct"><span class="lab">D</span><span>acids</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Tamarind, lemon and orange all contain acids.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">Washing soda is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>acidic</span></li>
+        <li class="correct"><span class="lab">B</span><span>basic</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>neutral</span></li>
+        <li class=""><span class="lab">D</span><span>sour</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Washing soda is basic.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">Tomato is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>basic</span></li>
+        <li class=""><span class="lab">B</span><span>neutral</span></li>
+        <li class="correct"><span class="lab">C</span><span>acidic</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>soapy</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Tomato is acidic.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">Milk of magnesia, used for acidity, is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>basic</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>acidic</span></li>
+        <li class=""><span class="lab">C</span><span>neutral</span></li>
+        <li class=""><span class="lab">D</span><span>sour</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Milk of magnesia is basic (it is an antacid).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">Sodium hydroxide is a strong:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>acid</span></li>
+        <li class=""><span class="lab">B</span><span>neutral salt</span></li>
+        <li class=""><span class="lab">C</span><span>sugar</span></li>
+        <li class="correct"><span class="lab">D</span><span>base</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sodium hydroxide is a strong base.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">The acid present in an ant's sting and a bee's sting is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>acetic acid</span></li>
+        <li class="correct"><span class="lab">B</span><span>formic acid</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>citric acid</span></li>
+        <li class=""><span class="lab">D</span><span>sulphuric acid</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Ant and bee stings contain formic acid.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">The acid present in vinegar is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>formic acid</span></li>
+        <li class=""><span class="lab">B</span><span>citric acid</span></li>
+        <li class="correct"><span class="lab">C</span><span>acetic acid</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>lactic acid</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Vinegar contains acetic acid.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">The acid present in curd and yogurt is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>lactic acid</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>acetic acid</span></li>
+        <li class=""><span class="lab">C</span><span>citric acid</span></li>
+        <li class=""><span class="lab">D</span><span>formic acid</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Curd and yogurt contain lactic acid.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">Blue litmus stays blue in a base because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the base turns it red</span></li>
+        <li class=""><span class="lab">B</span><span>the base bleaches it</span></li>
+        <li class=""><span class="lab">C</span><span>bases destroy litmus</span></li>
+        <li class="correct"><span class="lab">D</span><span>only acids redden blue litmus</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Only acids redden blue litmus, so in a base it stays blue.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">Mixing equal amounts of an acid and a base of equal strength gives a solution that is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>strongly acidic</span></li>
+        <li class="correct"><span class="lab">B</span><span>neutral</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>strongly basic</span></li>
+        <li class=""><span class="lab">D</span><span>sour</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Equal acid and base of equal strength cancel out, giving a neutral solution.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">Indigestion (acidity) is caused by too much:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>base in the stomach</span></li>
+        <li class=""><span class="lab">B</span><span>water</span></li>
+        <li class="correct"><span class="lab">C</span><span>acid in the stomach</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>salt</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Acidity/indigestion comes from too much acid in the stomach.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">In acid, the china rose indicator turns:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>dark pink (magenta)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>green</span></li>
+        <li class=""><span class="lab">C</span><span>blue</span></li>
+        <li class=""><span class="lab">D</span><span>colourless</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>China rose turns dark pink (magenta) in acid.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">Soap solution feels slippery because it is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>acidic</span></li>
+        <li class=""><span class="lab">B</span><span>neutral</span></li>
+        <li class=""><span class="lab">C</span><span>salty</span></li>
+        <li class="correct"><span class="lab">D</span><span>basic</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Soap solution is slippery because it is basic.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">Adding quicklime to soil that is too acidic makes the soil:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>more acidic</span></li>
+        <li class="correct"><span class="lab">B</span><span>closer to neutral</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>sour</span></li>
+        <li class=""><span class="lab">D</span><span>salty</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Adding quicklime to acidic soil moves it closer to neutral.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">Eating sweets and not brushing makes the mouth:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>basic</span></li>
+        <li class=""><span class="lab">B</span><span>neutral</span></li>
+        <li class="correct"><span class="lab">C</span><span>acidic, leading to decay</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>soapy</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Unbrushed sugar makes the mouth acidic, which causes decay.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">A suitable natural indicator for a quick school test is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>litmus (or turmeric / china rose)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>common salt</span></li>
+        <li class=""><span class="lab">C</span><span>sand</span></li>
+        <li class=""><span class="lab">D</span><span>plain water</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A natural indicator such as litmus, turmeric or china rose is suitable for a quick test.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">Of two solutions, one reddens blue litmus and the other blues red litmus. The second one is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>acidic</span></li>
+        <li class=""><span class="lab">B</span><span>neutral</span></li>
+        <li class=""><span class="lab">C</span><span>sour</span></li>
+        <li class="correct"><span class="lab">D</span><span>basic</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The solution that turns red litmus blue is basic.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">A solution that turns turmeric paper red is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>acidic</span></li>
+        <li class="correct"><span class="lab">B</span><span>basic</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>neutral</span></li>
+        <li class=""><span class="lab">D</span><span>sour</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Turmeric turning red indicates a basic solution.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">Mixing lemon juice with baking soda (which fizzes) gives a mixture that moves toward being:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>more acidic</span></li>
+        <li class=""><span class="lab">B</span><span>more basic</span></li>
+        <li class="correct"><span class="lab">C</span><span>neutral</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>sour</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The acid (lemon) and base (baking soda) neutralise toward a neutral mixture.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">The neutralisation of an acid by a base produces a salt and:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a gas only</span></li>
+        <li class=""><span class="lab">B</span><span>light</span></li>
+        <li class=""><span class="lab">C</span><span>sugar</span></li>
+        <li class="correct"><span class="lab">D</span><span>water</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Neutralisation yields a salt and water. --- *End of solutions. Maximum marks: 240.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>
