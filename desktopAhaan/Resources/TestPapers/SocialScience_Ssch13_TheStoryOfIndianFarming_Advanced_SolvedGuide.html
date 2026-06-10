@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Story Of Indian Farming (Advanced) — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>The Story Of Indian Farming (Advanced)<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">Agriculture, or farming, is best described as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a recent invention</span></li>
+        <li class=""><span class="lab">B</span><span>unimportant to India</span></li>
+        <li class="correct"><span class="lab">C</span><span>one of humankind's oldest occupations and the backbone of the Indian economy</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>only a hobby</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Agriculture is **one of humankind's oldest occupations and the backbone of the Indian economy**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">Crops sown with the monsoon (around June–July) and harvested in autumn are called:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Kharif crops</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Rabi crops</span></li>
+        <li class=""><span class="lab">C</span><span>Zaid crops</span></li>
+        <li class=""><span class="lab">D</span><span>winter crops</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Monsoon-sown, autumn-harvested crops are **Kharif crops**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">Crops sown in winter (around October–November) and harvested in spring are called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Kharif crops</span></li>
+        <li class=""><span class="lab">B</span><span>Zaid crops</span></li>
+        <li class=""><span class="lab">C</span><span>monsoon crops</span></li>
+        <li class="correct"><span class="lab">D</span><span>Rabi crops</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Winter-sown, spring-harvested crops are **Rabi crops**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">The short-season crops grown in summer between Rabi and Kharif are called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Kharif crops</span></li>
+        <li class="correct"><span class="lab">B</span><span>Zaid crops</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Rabi crops</span></li>
+        <li class=""><span class="lab">D</span><span>winter crops</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Short summer crops between Rabi and Kharif are **Zaid crops**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">A typical Kharif crop is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>wheat</span></li>
+        <li class="correct"><span class="lab">B</span><span>rice</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>gram</span></li>
+        <li class=""><span class="lab">D</span><span>mustard</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A typical Kharif crop is **rice**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">A typical Rabi crop is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>rice</span></li>
+        <li class=""><span class="lab">B</span><span>cotton</span></li>
+        <li class=""><span class="lab">C</span><span>maize</span></li>
+        <li class="correct"><span class="lab">D</span><span>wheat</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A typical Rabi crop is **wheat**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">The monsoon is so important to Indian farming because it:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>brings the rains that most crops depend on</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>cools the soil only</span></li>
+        <li class=""><span class="lab">C</span><span>has no effect on crops</span></li>
+        <li class=""><span class="lab">D</span><span>destroys all crops</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The monsoon matters because it **brings the rains that most crops depend on**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">The most widespread and fertile soil of the northern plains, deposited by rivers, is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>desert soil</span></li>
+        <li class=""><span class="lab">B</span><span>mountain soil</span></li>
+        <li class="correct"><span class="lab">C</span><span>alluvial soil</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>laterite soil</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The fertile river-deposited soil of the northern plains is **alluvial soil**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">The dark soil ideal for cotton, found in the Deccan, is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>black (regur) soil</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>red soil</span></li>
+        <li class=""><span class="lab">C</span><span>sandy desert soil</span></li>
+        <li class=""><span class="lab">D</span><span>mountain soil</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The dark cotton soil of the Deccan is **black (regur) soil**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">The dark, nutrient-rich part of soil formed from decomposed matter is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>gravel</span></li>
+        <li class=""><span class="lab">B</span><span>sand</span></li>
+        <li class="correct"><span class="lab">C</span><span>humus</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>clay only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Decomposed organic matter in soil forms **humus**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">"Rain-fed" farming depends on:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>tubewells only</span></li>
+        <li class=""><span class="lab">B</span><span>canals only</span></li>
+        <li class=""><span class="lab">C</span><span>sea water</span></li>
+        <li class="correct"><span class="lab">D</span><span>rainfall, with no artificial watering</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rain-fed farming depends on **rainfall, with no artificial watering**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">"Irrigated" farming uses:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only rainfall</span></li>
+        <li class="correct"><span class="lab">B</span><span>artificial water supply such as canals, wells or tubewells</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>no water at all</span></li>
+        <li class=""><span class="lab">D</span><span>sea water only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Irrigated farming uses **artificial water supply such as canals, wells or tubewells**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">Growing different crops on the same field in successive seasons to keep soil healthy is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>deforestation</span></li>
+        <li class=""><span class="lab">B</span><span>overgrazing</span></li>
+        <li class=""><span class="lab">C</span><span>monoculture forever</span></li>
+        <li class="correct"><span class="lab">D</span><span>crop rotation</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Growing different crops in succession to keep soil healthy is **crop rotation**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">Cutting steps into hill slopes to farm them and reduce erosion is called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>flood farming</span></li>
+        <li class="correct"><span class="lab">B</span><span>terrace farming</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>desert farming</span></li>
+        <li class=""><span class="lab">D</span><span>sea farming</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cutting steps into hill slopes to farm and reduce erosion is **terrace farming**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">Farming mainly to feed one's own family, with little left to sell, is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>commercial farming</span></li>
+        <li class=""><span class="lab">B</span><span>horticulture</span></li>
+        <li class="correct"><span class="lab">C</span><span>subsistence farming</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>plantation farming</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Farming mainly to feed one's own family is **subsistence farming**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">The Green Revolution refers to the period when Indian farming greatly raised output through:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>high-yield seeds, fertilisers and irrigation</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>abandoning all technology</span></li>
+        <li class=""><span class="lab">C</span><span>banning crops</span></li>
+        <li class=""><span class="lab">D</span><span>reducing farmland</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Green Revolution raised output through **high-yield seeds, fertilisers and irrigation**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">A "cost" or downside of the Green Revolution was:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>too little food</span></li>
+        <li class=""><span class="lab">B</span><span>no change at all</span></li>
+        <li class="correct"><span class="lab">C</span><span>overuse of water and chemicals harming soil and groundwater</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>more forests</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A downside of the Green Revolution was **overuse of water and chemicals harming soil and groundwater**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">"Organic farming" avoids:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>synthetic chemical fertilisers and pesticides</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>all crops</span></li>
+        <li class=""><span class="lab">C</span><span>soil</span></li>
+        <li class=""><span class="lab">D</span><span>water</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Organic farming avoids **synthetic chemical fertilisers and pesticides**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">The growing of fruits, vegetables and flowers is called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>mining</span></li>
+        <li class="correct"><span class="lab">B</span><span>horticulture</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>fishing</span></li>
+        <li class=""><span class="lab">D</span><span>forestry</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Growing fruits, vegetables and flowers is **horticulture**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">Evidence of very early farming in India includes rice in the Ganga plain and barley at:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the Himalayas only</span></li>
+        <li class=""><span class="lab">B</span><span>the sea</span></li>
+        <li class=""><span class="lab">C</span><span>modern Mumbai</span></li>
+        <li class="correct"><span class="lab">D</span><span>Mehrgarh</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Early farming evidence includes rice in the Ganga plain and barley at **Mehrgarh**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">Ancient Indian texts on agriculture and statecraft include the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Arthashastra and Krishi-Parashara</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>only modern manuals</span></li>
+        <li class=""><span class="lab">C</span><span>the Aryabhatiya only</span></li>
+        <li class=""><span class="lab">D</span><span>no texts at all</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Ancient texts on agriculture and statecraft include the **Arthashastra and Krishi-Parashara**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">The reason India's diverse climates allow many crops is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the whole country has one climate</span></li>
+        <li class=""><span class="lab">B</span><span>nothing grows anywhere</span></li>
+        <li class=""><span class="lab">C</span><span>only one crop can grow</span></li>
+        <li class="correct"><span class="lab">D</span><span>different regions suit different crops and seasons</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>India's diverse climates allow many crops because **different regions suit different crops and seasons**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">Cotton grows best in:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sandy desert soil</span></li>
+        <li class="correct"><span class="lab">B</span><span>black (regur) soil</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>mountain snow</span></li>
+        <li class=""><span class="lab">D</span><span>sea water</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cotton grows best in **black (regur) soil**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">A correct reason crop rotation keeps soil fertile is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>it removes all nutrients</span></li>
+        <li class=""><span class="lab">B</span><span>it dries the soil out</span></li>
+        <li class="correct"><span class="lab">C</span><span>different crops use and restore different nutrients</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>it has no effect</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Crop rotation keeps soil fertile because **different crops use and restore different nutrients**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">"Sustainable farming" aims to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>use up all resources quickly</span></li>
+        <li class="correct"><span class="lab">B</span><span>produce food while protecting soil, water and the environment for the future</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>abandon farming</span></li>
+        <li class=""><span class="lab">D</span><span>farm only once</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sustainable farming aims to **produce food while protecting soil, water and the environment for the future**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">A "fertiliser" is a substance that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>kills all plants</span></li>
+        <li class=""><span class="lab">B</span><span>removes soil</span></li>
+        <li class="correct"><span class="lab">C</span><span>adds nutrients to the soil to help crops grow</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>dries up rivers</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A fertiliser **adds nutrients to the soil to help crops grow**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">The reason farmers traditionally saved and exchanged seeds was to:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>preserve good varieties and pass them on</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>waste them</span></li>
+        <li class=""><span class="lab">C</span><span>avoid planting</span></li>
+        <li class=""><span class="lab">D</span><span>sell soil</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Farmers saved and exchanged seeds to **preserve good varieties and pass them on**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">Most Indian farmers depend on the monsoon, which means a weak monsoon can lead to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>bumper crops always</span></li>
+        <li class=""><span class="lab">B</span><span>no effect</span></li>
+        <li class=""><span class="lab">C</span><span>more rainfall</span></li>
+        <li class="correct"><span class="lab">D</span><span>poor harvests and hardship</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A weak monsoon can lead to **poor harvests and hardship**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">The fact that a large share of Indians still depend on farming shows agriculture is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>unimportant</span></li>
+        <li class=""><span class="lab">B</span><span>a minor activity</span></li>
+        <li class=""><span class="lab">C</span><span>dying out completely</span></li>
+        <li class="correct"><span class="lab">D</span><span>central to India's economy and livelihoods</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Many Indians depending on farming shows agriculture is **central to India's economy and livelihoods**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">Laterite soil, found in high-rainfall hilly areas, is suited to crops like:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>tea, coffee and cashew</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>wheat only</span></li>
+        <li class=""><span class="lab">C</span><span>nothing at all</span></li>
+        <li class=""><span class="lab">D</span><span>only cotton</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Laterite soil suits crops like **tea, coffee and cashew**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">The chief advantage of irrigation over pure rain-fed farming is that it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>needs no water source</span></li>
+        <li class=""><span class="lab">B</span><span>destroys crops</span></li>
+        <li class="correct"><span class="lab">C</span><span>lets farmers water crops even when rains are scarce</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>only works in deserts</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Irrigation's advantage is that it **lets farmers water crops even when rains are scarce**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">Mixed or rotated cropping, rather than the same crop every year, helps because it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ruins the soil</span></li>
+        <li class="correct"><span class="lab">B</span><span>maintains soil fertility and reduces pests</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>needs no planning</span></li>
+        <li class=""><span class="lab">D</span><span>lowers yields always</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rotated cropping helps because it **maintains soil fertility and reduces pests**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">The Green Revolution increased India's food security by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>reducing all crops</span></li>
+        <li class=""><span class="lab">B</span><span>banning farming</span></li>
+        <li class="correct"><span class="lab">C</span><span>sharply raising yields of wheat and rice</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>importing all food</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Green Revolution improved food security by **sharply raising yields of wheat and rice**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">A reason some farmers are returning to organic methods is concern about:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>too much food</span></li>
+        <li class="correct"><span class="lab">B</span><span>chemical overuse harming health, soil and water</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>too little chemical use</span></li>
+        <li class=""><span class="lab">D</span><span>more forests</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Farmers return to organic methods over concern about **chemical overuse harming health, soil and water**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">The "backbone of the Indian economy" phrase highlights that agriculture:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>is a small side activity</span></li>
+        <li class=""><span class="lab">B</span><span>employs no one</span></li>
+        <li class=""><span class="lab">C</span><span>produces no food</span></li>
+        <li class="correct"><span class="lab">D</span><span>supports a huge share of people and feeds the nation</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Backbone of the economy" means agriculture **supports a huge share of people and feeds the nation**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">Terrace farming is especially useful in:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>hilly and mountainous regions</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>flat deserts only</span></li>
+        <li class=""><span class="lab">C</span><span>the open sea</span></li>
+        <li class=""><span class="lab">D</span><span>cities only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Terrace farming is especially useful in **hilly and mountainous regions**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">The reason alluvial soil is so fertile is that it is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>renewed by river-deposited minerals</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>made of pure sand</span></li>
+        <li class=""><span class="lab">C</span><span>frozen</span></li>
+        <li class=""><span class="lab">D</span><span>lifeless rock</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Alluvial soil is fertile because it is **renewed by river-deposited minerals**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">"Kharif" and "Rabi" seasons exist because India's farming is shaped by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>eclipses</span></li>
+        <li class="correct"><span class="lab">B</span><span>the monsoon and the winter growing periods</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>tides</span></li>
+        <li class=""><span class="lab">D</span><span>the Pole Star</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Kharif and Rabi exist because farming is shaped by **the monsoon and the winter growing periods**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">A correct statement about subsistence vs commercial farming is that commercial farming:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>feeds only the farmer's family</span></li>
+        <li class=""><span class="lab">B</span><span>produces nothing</span></li>
+        <li class=""><span class="lab">C</span><span>avoids markets</span></li>
+        <li class="correct"><span class="lab">D</span><span>grows crops mainly to sell in the market for profit</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Commercial farming **grows crops mainly to sell in the market for profit**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">The reason soil conservation matters is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>soil is unlimited</span></li>
+        <li class=""><span class="lab">B</span><span>crops need no soil</span></li>
+        <li class="correct"><span class="lab">C</span><span>fertile topsoil is hard to replace once eroded or exhausted</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>erosion helps farming</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Soil conservation matters because **fertile topsoil is hard to replace once eroded or exhausted**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">The deep history of farming in India (from the 7th–8th millennium BCE) shows that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>farming is brand new</span></li>
+        <li class=""><span class="lab">B</span><span>Indians never farmed</span></li>
+        <li class=""><span class="lab">C</span><span>only modern India farms</span></li>
+        <li class="correct"><span class="lab">D</span><span>agriculture has shaped Indian civilisation for thousands of years</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Farming's deep history shows **agriculture has shaped Indian civilisation for thousands of years**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">A monsoon that arrives late or fails most directly affects:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only winter crops</span></li>
+        <li class=""><span class="lab">B</span><span>no crops</span></li>
+        <li class="correct"><span class="lab">C</span><span>the Kharif (monsoon) crops that depend on it</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the Pole Star</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A failed monsoon most directly affects **the Kharif (monsoon) crops that depend on it**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">Choosing crops suited to the local soil and climate is wise because it:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>gives better yields with less waste</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>always fails</span></li>
+        <li class=""><span class="lab">C</span><span>ignores nature</span></li>
+        <li class=""><span class="lab">D</span><span>needs no thought</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Choosing crops suited to local soil and climate **gives better yields with less waste**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">The reason fertilisers must be used carefully is that overuse can:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>improve everything endlessly</span></li>
+        <li class="correct"><span class="lab">B</span><span>damage soil and pollute water</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>have no effect</span></li>
+        <li class=""><span class="lab">D</span><span>create more soil</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Fertilisers need care because overuse can **damage soil and pollute water**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">Horticulture (fruits, vegetables, flowers) differs from grain farming in that it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>grows only wheat</span></li>
+        <li class="correct"><span class="lab">B</span><span>focuses on garden crops, often higher-value</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>avoids all plants</span></li>
+        <li class=""><span class="lab">D</span><span>is not farming</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Horticulture **focuses on garden crops, often higher-value**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">The two main monsoons that shape Indian cropping are the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>eastern and the Atlantic</span></li>
+        <li class=""><span class="lab">B</span><span>polar and tropical only</span></li>
+        <li class=""><span class="lab">C</span><span>there is only one monsoon</span></li>
+        <li class="correct"><span class="lab">D</span><span>southwest (summer) and the retreating/northeast monsoon</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The two shaping monsoons are the **southwest (summer) and the retreating/northeast monsoon**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">A reason traditional seed-saving is valued today is that it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>wastes seeds</span></li>
+        <li class=""><span class="lab">B</span><span>reduces choice</span></li>
+        <li class="correct"><span class="lab">C</span><span>preserves crop diversity and locally adapted varieties</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>harms soil</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Traditional seed-saving **preserves crop diversity and locally adapted varieties**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">The clearest link between climate and crops in India is that:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the timing and amount of rain decide which crops can grow where and when</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>climate has no effect on crops</span></li>
+        <li class=""><span class="lab">C</span><span>all crops grow everywhere equally</span></li>
+        <li class=""><span class="lab">D</span><span>only temperature matters, never rain</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Climate links to crops in that **the timing and amount of rain decide which crops can grow where and when**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">The Green Revolution's lesson is that raising output also requires:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>caring for soil and water so gains can last</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>ignoring the environment</span></li>
+        <li class=""><span class="lab">C</span><span>abandoning technology</span></li>
+        <li class=""><span class="lab">D</span><span>reducing food</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Green Revolution's lesson is that raising output also requires **caring for soil and water so gains can last**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">A farmer in a dry region with little rain would benefit most from:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>flooding the desert</span></li>
+        <li class=""><span class="lab">B</span><span>waiting only for rare rain with no storage</span></li>
+        <li class=""><span class="lab">C</span><span>growing only water-hungry crops</span></li>
+        <li class="correct"><span class="lab">D</span><span>irrigation and water-saving methods</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A dry-region farmer benefits most from **irrigation and water-saving methods**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">The reason a single crop grown year after year can harm soil is that it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>restores all nutrients</span></li>
+        <li class=""><span class="lab">B</span><span>has no effect</span></li>
+        <li class="correct"><span class="lab">C</span><span>drains the same nutrients and invites pests</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>builds humus quickly</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>One crop year after year harms soil because it **drains the same nutrients and invites pests**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">India's many soil types matter to farming because each:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>grows the same crop</span></li>
+        <li class="correct"><span class="lab">B</span><span>suits particular crops, guiding what farmers plant</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>cannot grow anything</span></li>
+        <li class=""><span class="lab">D</span><span>is identical everywhere</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>India's many soils matter because each **suits particular crops, guiding what farmers plant**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">The best summary of why farming is "the story" of India is that it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>began only recently</span></li>
+        <li class=""><span class="lab">B</span><span>matters to no one</span></li>
+        <li class="correct"><span class="lab">C</span><span>has fed and shaped the land and its people from ancient times to today</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>is unrelated to India</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Farming is "the story" of India because it **has fed and shaped the land and its people from ancient times to today**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">A sustainable farmer choosing organic manure over heavy chemicals is trying to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ruin the soil quickly</span></li>
+        <li class=""><span class="lab">B</span><span>avoid growing food</span></li>
+        <li class=""><span class="lab">C</span><span>pollute water</span></li>
+        <li class="correct"><span class="lab">D</span><span>protect long-term soil health and the environment</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Choosing organic manure aims to **protect long-term soil health and the environment**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">The reason rain-fed farmers are more vulnerable than irrigated farmers is that they:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>have guaranteed water</span></li>
+        <li class="correct"><span class="lab">B</span><span>depend entirely on uncertain rainfall</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>need no water</span></li>
+        <li class=""><span class="lab">D</span><span>farm only in winter</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rain-fed farmers are more vulnerable because they **depend entirely on uncertain rainfall**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">A correct cause-and-effect chain for a failed monsoon is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>weak monsoon → poor Kharif harvest → less food and income → hardship</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>weak monsoon → more crops → surplus</span></li>
+        <li class=""><span class="lab">C</span><span>strong monsoon → drought</span></li>
+        <li class=""><span class="lab">D</span><span>no monsoon → better farming</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A failed-monsoon chain runs **weak monsoon → poor Kharif harvest → less food and income → hardship**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">The reason modern farming still values traditional wisdom is that practices like crop rotation and terracing:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>are useless</span></li>
+        <li class="correct"><span class="lab">B</span><span>protect soil and water sustainably</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>harm the land</span></li>
+        <li class=""><span class="lab">D</span><span>reduce all yields</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Modern farming values traditional wisdom because practices like rotation and terracing **protect soil and water sustainably**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">The deepest reason agriculture remains vital to India is that it:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>provides food security and livelihoods for a huge population</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>is a minor hobby</span></li>
+        <li class=""><span class="lab">C</span><span>employs no one</span></li>
+        <li class=""><span class="lab">D</span><span>produces nothing of value</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Agriculture remains vital because it **provides food security and livelihoods for a huge population**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">Comparing ancient rice cultivation with today's farming shows that Indian agriculture has:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>never changed</span></li>
+        <li class=""><span class="lab">B</span><span>just begun</span></li>
+        <li class="correct"><span class="lab">C</span><span>a continuous history while adopting new methods over time</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>disappeared</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Ancient vs modern farming shows Indian agriculture has **a continuous history while adopting new methods over time**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">Pulling the chapter together, Indian farming is best understood as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a recent and unimportant activity</span></li>
+        <li class=""><span class="lab">B</span><span>unrelated to climate or soil</span></li>
+        <li class=""><span class="lab">C</span><span>the same everywhere with no variety</span></li>
+        <li class="correct"><span class="lab">D</span><span>an ancient, climate-shaped activity, central to the economy, now balancing tradition and modern innovation</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Indian farming is best understood as **an ancient, climate-shaped activity, central to the economy, now balancing tradition and modern innovation**.</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

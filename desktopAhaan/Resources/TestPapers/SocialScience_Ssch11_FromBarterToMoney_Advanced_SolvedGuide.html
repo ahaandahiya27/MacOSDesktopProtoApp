@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>From Barter To Money (Advanced) — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>From Barter To Money (Advanced)<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">The "barter system" means exchanging:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>money for goods only</span></li>
+        <li class=""><span class="lab">B</span><span>coins for paper notes</span></li>
+        <li class="correct"><span class="lab">C</span><span>goods or services directly for other goods or services, without money</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>nothing at all</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The barter system means exchanging **goods or services directly for other goods or services, without money**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">Before coins, communities around the world used various **commodities** as money, such as:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>cowrie shells, salt, cattle and cloth</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>plastic cards only</span></li>
+        <li class=""><span class="lab">C</span><span>modern banknotes</span></li>
+        <li class=""><span class="lab">D</span><span>mobile phones</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Early commodity money included **cowrie shells, salt, cattle and cloth**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">The "double coincidence of wants" problem of barter means that exchange works only if:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>both people want money</span></li>
+        <li class=""><span class="lab">B</span><span>one person has a bank</span></li>
+        <li class=""><span class="lab">C</span><span>goods are free</span></li>
+        <li class="correct"><span class="lab">D</span><span>each person has exactly what the other wants and wants what the other has</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The double coincidence of wants means exchange works only if **each person has exactly what the other wants and wants what the other has**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">A second major problem of barter is that there is no:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sunlight</span></li>
+        <li class="correct"><span class="lab">B</span><span>common standard measure of value</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>river</span></li>
+        <li class=""><span class="lab">D</span><span>king</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A second problem of barter is that there is no **common standard measure of value**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">Money is best defined as something that is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>useful only to collectors</span></li>
+        <li class="correct"><span class="lab">B</span><span>widely accepted as a medium of exchange</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>never accepted by anyone</span></li>
+        <li class=""><span class="lab">D</span><span>a kind of food</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Money is something **widely accepted as a medium of exchange**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">A key function of money is to serve as a "medium of exchange," which means it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>can only be looked at</span></li>
+        <li class=""><span class="lab">B</span><span>is the same as barter</span></li>
+        <li class=""><span class="lab">C</span><span>measures the weather</span></li>
+        <li class="correct"><span class="lab">D</span><span>is used to buy and sell goods and services</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>As a medium of exchange, money **is used to buy and sell goods and services**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">Money also acts as a "store of value," meaning it:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>can be saved now and used later</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>must be spent the same day</span></li>
+        <li class=""><span class="lab">C</span><span>loses all value instantly</span></li>
+        <li class=""><span class="lab">D</span><span>cannot be saved</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>As a store of value, money **can be saved now and used later**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">Money as a "common measure of value" lets people:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>avoid trade</span></li>
+        <li class=""><span class="lab">B</span><span>ignore prices</span></li>
+        <li class="correct"><span class="lab">C</span><span>compare the worth of different goods using one yardstick</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>barter only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>As a common measure of value, money lets people **compare the worth of different goods using one yardstick**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">A problem of barter that money solves directly is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the need for a double coincidence of wants</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the rotation of the Earth</span></li>
+        <li class=""><span class="lab">C</span><span>the weather</span></li>
+        <li class=""><span class="lab">D</span><span>the tides</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Money directly solves **the need for a double coincidence of wants**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">Early metal coins in ancient India were called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>rupees only</span></li>
+        <li class=""><span class="lab">B</span><span>credit cards</span></li>
+        <li class="correct"><span class="lab">C</span><span>kārṣhāpaṇas</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>cowries</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Early Indian metal coins were called **kārṣhāpaṇas**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">The marks or symbols stamped on early Indian coins, called "rūpa," show that coins were:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>blank and plain</span></li>
+        <li class=""><span class="lab">B</span><span>made of paper</span></li>
+        <li class=""><span class="lab">C</span><span>purely decorative with no meaning</span></li>
+        <li class="correct"><span class="lab">D</span><span>marked to indicate authority or value</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The "rūpa" marks show coins were **marked to indicate authority or value**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">The "obverse" and "reverse" of a coin are its:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>weight and colour</span></li>
+        <li class="correct"><span class="lab">B</span><span>front and back faces</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>buyer and seller</span></li>
+        <li class=""><span class="lab">D</span><span>profit and loss</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A coin's obverse and reverse are its **front and back faces**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">"Minting" refers to the process of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>printing books</span></li>
+        <li class=""><span class="lab">B</span><span>growing crops</span></li>
+        <li class=""><span class="lab">C</span><span>building roads</span></li>
+        <li class="correct"><span class="lab">D</span><span>manufacturing coins</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Minting refers to **manufacturing coins**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">An "alloy" used in coins is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a single pure metal only</span></li>
+        <li class="correct"><span class="lab">B</span><span>a mixture of two or more metals</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a kind of paper</span></li>
+        <li class=""><span class="lab">D</span><span>a plastic</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An alloy is **a mixture of two or more metals**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">For something to work well as money, useful properties include divisibility, portability and:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>being perishable</span></li>
+        <li class=""><span class="lab">B</span><span>being extremely heavy</span></li>
+        <li class="correct"><span class="lab">C</span><span>durability</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>being impossible to carry</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Useful money properties include divisibility, portability and **durability**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">Paper money was a major advance over heavy coins because it is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>lighter and easier to carry in large amounts</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>heavier</span></li>
+        <li class=""><span class="lab">C</span><span>impossible to print</span></li>
+        <li class=""><span class="lab">D</span><span>less accepted than barter</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Paper money improved on coins by being **lighter and easier to carry in large amounts**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">"Fiat money" is money that has value because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>it is made of gold only</span></li>
+        <li class=""><span class="lab">B</span><span>it can be eaten</span></li>
+        <li class="correct"><span class="lab">C</span><span>the government declares it legal tender and people trust it</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>it is a commodity like salt</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Fiat money has value because **the government declares it legal tender and people trust it**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">Modern "digital money" includes:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>debit and credit cards, net banking and UPI</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>cowrie shells</span></li>
+        <li class=""><span class="lab">C</span><span>cattle</span></li>
+        <li class=""><span class="lab">D</span><span>stone discs</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Digital money includes **debit and credit cards, net banking and UPI**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">A "QR code" used in payments lets a person:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>grow crops</span></li>
+        <li class="correct"><span class="lab">B</span><span>scan and pay quickly using a phone</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>mint coins</span></li>
+        <li class=""><span class="lab">D</span><span>barter goods</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A QR code lets a person **scan and pay quickly using a phone**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">The study of coins and currency is called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>astronomy</span></li>
+        <li class=""><span class="lab">B</span><span>geography</span></li>
+        <li class=""><span class="lab">C</span><span>agriculture</span></li>
+        <li class="correct"><span class="lab">D</span><span>numismatics</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The study of coins and currency is **numismatics**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">The reason barter became difficult as trade grew is that:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>finding a matching partner for every exchange got harder and harder</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>money was banned</span></li>
+        <li class=""><span class="lab">C</span><span>goods became free</span></li>
+        <li class=""><span class="lab">D</span><span>people stopped trading entirely</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Barter grew difficult because **finding a matching partner for every exchange got harder and harder**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">If a farmer with wheat wants shoes but the shoemaker does not want wheat, barter fails due to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>too much money</span></li>
+        <li class=""><span class="lab">B</span><span>a flood</span></li>
+        <li class=""><span class="lab">C</span><span>a tax</span></li>
+        <li class="correct"><span class="lab">D</span><span>the lack of a double coincidence of wants</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A wheat-for-shoes mismatch fails due to **the lack of a double coincidence of wants**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">Money makes saving possible mainly because it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>rots quickly</span></li>
+        <li class="correct"><span class="lab">B</span><span>holds its value over time better than perishable goods</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>cannot be stored</span></li>
+        <li class=""><span class="lab">D</span><span>must be spent at once</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Money makes saving possible because it **holds its value over time better than perishable goods**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">The Indian currency unit today is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>cowrie</span></li>
+        <li class=""><span class="lab">B</span><span>dollar</span></li>
+        <li class="correct"><span class="lab">C</span><span>rupee</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>stone disc</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>India's currency unit is the **rupee**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">Compared with cattle as money, coins were better because coins are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>alive</span></li>
+        <li class="correct"><span class="lab">B</span><span>easily divisible and portable</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>perishable</span></li>
+        <li class=""><span class="lab">D</span><span>impossible to carry</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Coins beat cattle as money because coins are **easily divisible and portable**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">"Denomination" of money refers to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the colour only</span></li>
+        <li class=""><span class="lab">B</span><span>the bank's name</span></li>
+        <li class="correct"><span class="lab">C</span><span>the face value printed on a note or coin (e.g. ₹10, ₹100)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the date of printing only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Denomination" is **the face value printed on a note or coin (e.g. ₹10, ₹100)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">The biggest advantage of digital money over cash is that it:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>can be transferred instantly without handling physical notes</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>is heavier to carry</span></li>
+        <li class=""><span class="lab">C</span><span>cannot be tracked at all</span></li>
+        <li class=""><span class="lab">D</span><span>works only by barter</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Digital money's big advantage is that it **can be transferred instantly without handling physical notes**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">The phrase "from barter to money" describes a movement from:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>money back to barter</span></li>
+        <li class=""><span class="lab">B</span><span>coins to cattle</span></li>
+        <li class=""><span class="lab">C</span><span>trade to no trade</span></li>
+        <li class="correct"><span class="lab">D</span><span>direct swapping toward a universally accepted medium of exchange</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"From barter to money" is a movement from **direct swapping toward a universally accepted medium of exchange**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">Salt and cloth served as early money because they were:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>useless to everyone</span></li>
+        <li class=""><span class="lab">B</span><span>impossible to divide</span></li>
+        <li class=""><span class="lab">C</span><span>never traded</span></li>
+        <li class="correct"><span class="lab">D</span><span>commonly needed and accepted by many people</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Salt and cloth served as money because they were **commonly needed and accepted by many people**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">A "transaction" is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>an exchange of goods, services or money between parties</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a kind of coin</span></li>
+        <li class=""><span class="lab">C</span><span>a tax form</span></li>
+        <li class=""><span class="lab">D</span><span>a festival</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A transaction is **an exchange of goods, services or money between parties**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">The reason giant stone discs (like Rai stones) could serve as money in some societies is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>they were light and portable</span></li>
+        <li class=""><span class="lab">B</span><span>they could be eaten</span></li>
+        <li class="correct"><span class="lab">C</span><span>the community agreed to accept them as valuable</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>they grew on trees</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Giant stone discs could be money because **the community agreed to accept them as valuable**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">Money as a "standard of deferred payment" means it can be used to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only pay today</span></li>
+        <li class="correct"><span class="lab">B</span><span>settle debts to be paid in the future</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>avoid all payment</span></li>
+        <li class=""><span class="lab">D</span><span>measure temperature</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>As a standard of deferred payment, money can **settle debts to be paid in the future**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">The main reason coins replaced random commodity money was that coins offered:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>more weight to carry</span></li>
+        <li class=""><span class="lab">B</span><span>faster spoilage</span></li>
+        <li class="correct"><span class="lab">C</span><span>a standard, trusted, divisible and durable form of money</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>fewer uses</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Coins replaced commodity money by offering **a standard, trusted, divisible and durable form of money**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">UPI and net banking are examples of how technology has made money:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>heavier</span></li>
+        <li class="correct"><span class="lab">B</span><span>intangible and instantly transferable</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>impossible to use</span></li>
+        <li class=""><span class="lab">D</span><span>the same as barter</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>UPI and net banking made money **intangible and instantly transferable**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">The earliest coins were often made of metals like:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>plastic</span></li>
+        <li class=""><span class="lab">B</span><span>paper</span></li>
+        <li class=""><span class="lab">C</span><span>wood</span></li>
+        <li class="correct"><span class="lab">D</span><span>silver, copper and gold</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Earliest coins were made of metals like **silver, copper and gold**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">The reason perishable goods make poor money is that they:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>cannot store value over time</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>are too valuable</span></li>
+        <li class=""><span class="lab">C</span><span>are easy to divide</span></li>
+        <li class=""><span class="lab">D</span><span>last forever</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Perishable goods make poor money because they **cannot store value over time**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">A society using a single accepted currency benefits because it:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>can price and trade everything against one common measure</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>must barter for everything</span></li>
+        <li class=""><span class="lab">C</span><span>cannot save</span></li>
+        <li class=""><span class="lab">D</span><span>has no trade</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A single currency lets a society **price and trade everything against one common measure**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">"Portability" as a property of money means it is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>impossible to move</span></li>
+        <li class="correct"><span class="lab">B</span><span>easy to carry from place to place</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>only usable at home</span></li>
+        <li class=""><span class="lab">D</span><span>extremely heavy</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Portability" means money is **easy to carry from place to place**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">The shift to paper money required, above all, that people:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>eat the notes</span></li>
+        <li class=""><span class="lab">B</span><span>weigh each note in gold</span></li>
+        <li class=""><span class="lab">C</span><span>reject all paper</span></li>
+        <li class="correct"><span class="lab">D</span><span>trust the issuing authority to honour the note's value</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Paper money required that people **trust the issuing authority to honour the note's value**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">The deepest reason money exists is to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>make trade impossible</span></li>
+        <li class=""><span class="lab">B</span><span>replace farming</span></li>
+        <li class="correct"><span class="lab">C</span><span>overcome the problems of barter and make exchange easy</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>store food</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Money exists to **overcome the problems of barter and make exchange easy**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">A coin's value being guaranteed by a ruler or state shows that money relies on:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the weather</span></li>
+        <li class=""><span class="lab">B</span><span>the size of the coin only</span></li>
+        <li class=""><span class="lab">C</span><span>luck</span></li>
+        <li class="correct"><span class="lab">D</span><span>trust and authority</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A coin guaranteed by a ruler shows money relies on **trust and authority**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">If prices could not be compared because there was no common money, trade would be:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>faster than ever</span></li>
+        <li class=""><span class="lab">B</span><span>unaffected</span></li>
+        <li class="correct"><span class="lab">C</span><span>slow and confusing, as in barter</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>impossible to imagine in barter — yet barter did exactly this</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>With no common money, trade would be **slow and confusing, as in barter**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">Digital payments spreading in India (UPI, QR codes) show that money continues to:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>evolve with technology</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>return to cowrie shells</span></li>
+        <li class=""><span class="lab">C</span><span>become heavier</span></li>
+        <li class=""><span class="lab">D</span><span>disappear</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>UPI and QR codes show money continues to **evolve with technology**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">A correct ordering of money's evolution is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>digital money → coins → barter</span></li>
+        <li class="correct"><span class="lab">B</span><span>barter → commodity money → metal coins → paper money → digital money</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>coins → barter → digital money</span></li>
+        <li class=""><span class="lab">D</span><span>paper money → cattle → barter</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Money's evolution runs **barter → commodity money → metal coins → paper money → digital money**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">The reason "double coincidence of wants" is rare is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>everyone wants the same thing</span></li>
+        <li class="correct"><span class="lab">B</span><span>two people seldom each have exactly what the other wants at the same time</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>goods are unlimited</span></li>
+        <li class=""><span class="lab">D</span><span>money is everywhere in barter</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Double coincidence is rare because **two people seldom each have exactly what the other wants at the same time**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">Money's role as a unit of account (measure of value) helps a shopkeeper to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>avoid pricing</span></li>
+        <li class=""><span class="lab">B</span><span>trade only by swapping</span></li>
+        <li class=""><span class="lab">C</span><span>ignore costs</span></li>
+        <li class="correct"><span class="lab">D</span><span>put a clear price on every item using one currency</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>As a unit of account, money lets a shopkeeper **put a clear price on every item using one currency**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">The difference between commodity money (like salt) and fiat money (like a banknote) is that fiat money:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>is always made of salt</span></li>
+        <li class=""><span class="lab">B</span><span>cannot be used to buy things</span></li>
+        <li class="correct"><span class="lab">C</span><span>has value mainly because the state backs it and people accept it, not from the material itself</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>is heavier than salt</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Fiat money differs from commodity money because it **has value mainly because the state backs it and people accept it, not from the material itself**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">A reason cattle were once used as money despite their drawbacks is that they were:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>valuable and widely desired in farming societies</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>easy to divide into small change</span></li>
+        <li class=""><span class="lab">C</span><span>light to carry in a purse</span></li>
+        <li class=""><span class="lab">D</span><span>imperishable</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cattle were used as money because they were **valuable and widely desired in farming societies**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">The most accurate statement about why money is "accepted" is that:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>people accept it because they trust others will accept it too</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>it is forced on no one and used by none</span></li>
+        <li class=""><span class="lab">C</span><span>it has no agreed value</span></li>
+        <li class=""><span class="lab">D</span><span>it works only in barter</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Money is "accepted" because **people accept it because they trust others will accept it too**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">Comparing a ₹10 coin and a ₹2000 note shows that money comes in different:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>colours only, with the same value</span></li>
+        <li class=""><span class="lab">B</span><span>weights that set their value</span></li>
+        <li class=""><span class="lab">C</span><span>shapes that have no meaning</span></li>
+        <li class="correct"><span class="lab">D</span><span>denominations to suit different transactions</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A ₹10 coin and a ₹2000 note show money comes in different **denominations to suit different transactions**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">The advantage of money being divisible is that it lets people:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only buy whole expensive items</span></li>
+        <li class=""><span class="lab">B</span><span>avoid small purchases</span></li>
+        <li class="correct"><span class="lab">C</span><span>pay exact amounts and make change</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>trade only large goods</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Divisible money lets people **pay exact amounts and make change**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">The reason numismatics (the study of coins) helps historians is that old coins reveal:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>nothing useful</span></li>
+        <li class="correct"><span class="lab">B</span><span>rulers, dates, economy and trade of the past</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>only modern prices</span></li>
+        <li class=""><span class="lab">D</span><span>the weather long ago</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Numismatics helps historians because old coins reveal **rulers, dates, economy and trade of the past**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">A village fair where people swap grain for pots, with no money, is an example of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>digital payment</span></li>
+        <li class=""><span class="lab">B</span><span>fiat money</span></li>
+        <li class="correct"><span class="lab">C</span><span>the barter system</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>minting</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Swapping grain for pots with no money is **the barter system**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">The clearest sign that money is better than barter for a complex economy is that money:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>makes trade slower</span></li>
+        <li class=""><span class="lab">B</span><span>prevents saving</span></li>
+        <li class=""><span class="lab">C</span><span>requires swapping goods directly</span></li>
+        <li class="correct"><span class="lab">D</span><span>removes the need for a double coincidence of wants</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Money beats barter for a complex economy because it **removes the need for a double coincidence of wants**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">As economies grew, the move to standardised coins mattered because it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>made every coin a different weight</span></li>
+        <li class="correct"><span class="lab">B</span><span>made value reliable and trade efficient across regions</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>ended all trade</span></li>
+        <li class=""><span class="lab">D</span><span>brought back barter</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Standardised coins mattered because they **made value reliable and trade efficient across regions**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">The reason digital money can be risky as well as convenient is that it:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>depends on technology and security, and needs trust in the system</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>is heavier than cash</span></li>
+        <li class=""><span class="lab">C</span><span>cannot be transferred</span></li>
+        <li class=""><span class="lab">D</span><span>is the same as cattle</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Digital money is convenient yet risky because it **depends on technology and security, and needs trust in the system**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">Money functioning as a store of value fails badly when:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>money is saved safely</span></li>
+        <li class="correct"><span class="lab">B</span><span>prices rise fast (inflation) and money buys less over time</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>trade is easy</span></li>
+        <li class=""><span class="lab">D</span><span>coins are divisible</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Money fails as a store of value when **prices rise fast (inflation) and money buys less over time**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">The single best summary of the chapter's argument is that money:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>arose to solve barter's problems and has kept evolving in form</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>is the same as barter</span></li>
+        <li class=""><span class="lab">C</span><span>has never changed</span></li>
+        <li class=""><span class="lab">D</span><span>makes trade impossible</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The chapter's summary: money **arose to solve barter's problems and has kept evolving in form**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">The reason a common currency strengthens a country's economy is that it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>forces everyone to barter</span></li>
+        <li class=""><span class="lab">B</span><span>prevents any saving</span></li>
+        <li class="correct"><span class="lab">C</span><span>lets people across regions trade, price and save with one trusted medium</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>makes prices impossible to compare</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A common currency strengthens an economy because it **lets people across regions trade, price and save with one trusted medium**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">Pulling the chapter together, the journey "from barter to money" shows that money is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a natural object found in fields</span></li>
+        <li class=""><span class="lab">B</span><span>less useful than barter</span></li>
+        <li class=""><span class="lab">C</span><span>unchanging across history</span></li>
+        <li class="correct"><span class="lab">D</span><span>a human invention that makes exchange easier and keeps adapting to new technology</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"From barter to money" shows money is **a human invention that makes exchange easier and keeps adapting to new technology**.</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

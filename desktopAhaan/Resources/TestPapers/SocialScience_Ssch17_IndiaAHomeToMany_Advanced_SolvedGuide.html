@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>India AHome To Many (Advanced) — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>India AHome To Many (Advanced)<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">For thousands of years India has been a home to many communities who came either:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only to conquer</span></li>
+        <li class=""><span class="lab">B</span><span>by accident with no reason</span></li>
+        <li class="correct"><span class="lab">C</span><span>seeking refuge from persecution or seeking opportunity through trade</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>only as tourists</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Communities came **seeking refuge from persecution or seeking opportunity through trade**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">The Sanskrit phrase "vasudhaiva kutumbakam" means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the world is one family</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>trade is everything</span></li>
+        <li class=""><span class="lab">C</span><span>war is necessary</span></li>
+        <li class=""><span class="lab">D</span><span>only my family matters</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Vasudhaiva kutumbakam" means **the world is one family**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">The value "atithi devo bhava" means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>guests are unwelcome</span></li>
+        <li class=""><span class="lab">B</span><span>trade with no one</span></li>
+        <li class=""><span class="lab">C</span><span>close all borders</span></li>
+        <li class="correct"><span class="lab">D</span><span>the guest is like god (treat guests with reverence)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Atithi devo bhava" means **the guest is like god (treat guests with reverence)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">Two communities who came to India fleeing religious persecution were the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only traders</span></li>
+        <li class="correct"><span class="lab">B</span><span>Syriac Christians and the Parsis</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>only soldiers</span></li>
+        <li class=""><span class="lab">D</span><span>no one</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Two communities fleeing persecution were the **Syriac Christians and the Parsis**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">The Parsis follow which ancient religion, brought when they fled Persia?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Buddhism</span></li>
+        <li class="correct"><span class="lab">B</span><span>Zoroastrianism</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Jainism</span></li>
+        <li class=""><span class="lab">D</span><span>Shinto</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Parsis follow **Zoroastrianism**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">The Syriac (Syrian) Christians settled mainly in:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Kashmir</span></li>
+        <li class=""><span class="lab">B</span><span>the Thar Desert</span></li>
+        <li class=""><span class="lab">C</span><span>the Himalayas</span></li>
+        <li class="correct"><span class="lab">D</span><span>Kerala</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Syriac Christians settled mainly in **Kerala**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">A "synagogue" is a place of worship for:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Jews</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Buddhists</span></li>
+        <li class=""><span class="lab">C</span><span>Hindus</span></li>
+        <li class=""><span class="lab">D</span><span>Parsis</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A synagogue is a place of worship for **Jews**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">The Jewish communities long settled in India include the Bene Israel and the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Mappilas</span></li>
+        <li class=""><span class="lab">B</span><span>Siddis</span></li>
+        <li class="correct"><span class="lab">C</span><span>Cochin Jews</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Parsis</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Besides the Bene Israel, the other Jewish community is the **Cochin Jews**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">"Persecution" means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>ill-treatment or oppression, often for one's beliefs</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a warm welcome</span></li>
+        <li class=""><span class="lab">C</span><span>free trade</span></li>
+        <li class=""><span class="lab">D</span><span>a festival</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Persecution" means **ill-treatment or oppression, often for one's beliefs**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">Arab merchants who came peacefully from the 7th century and settled on the Kerala coast formed the community known as the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Parsis</span></li>
+        <li class=""><span class="lab">B</span><span>Bene Israel</span></li>
+        <li class="correct"><span class="lab">C</span><span>Mappilas</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Siddis</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Arab merchants on the Kerala coast formed the **Mappilas**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">The Siddis of India trace their origins to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Persia only</span></li>
+        <li class=""><span class="lab">B</span><span>China</span></li>
+        <li class=""><span class="lab">C</span><span>Europe</span></li>
+        <li class="correct"><span class="lab">D</span><span>Africa</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Siddis trace their origins to **Africa**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">The Tibetan system of traditional medicine, brought by Tibetan refugees, is called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Ayurveda</span></li>
+        <li class="correct"><span class="lab">B</span><span>Sowa Rigpa</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Unani</span></li>
+        <li class=""><span class="lab">D</span><span>Homeopathy</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Tibetan system of medicine is **Sowa Rigpa**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">The Baha'is, who found refuge in India, were persecuted in the 19th century in:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Kerala</span></li>
+        <li class=""><span class="lab">B</span><span>Tibet</span></li>
+        <li class=""><span class="lab">C</span><span>Africa</span></li>
+        <li class="correct"><span class="lab">D</span><span>Persia</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Baha'is were persecuted in the 19th century in **Persia**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">"Refuge" or "asylum" means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a tax</span></li>
+        <li class="correct"><span class="lab">B</span><span>safety or shelter given to those fleeing danger</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a trade good</span></li>
+        <li class=""><span class="lab">D</span><span>a kind of coin</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Refuge" or "asylum" means **safety or shelter given to those fleeing danger**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">"Pluralism" describes a society that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>allows only one group</span></li>
+        <li class=""><span class="lab">B</span><span>bans all religion</span></li>
+        <li class="correct"><span class="lab">C</span><span>includes and respects many communities and faiths</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>excludes outsiders</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Pluralism describes a society that **includes and respects many communities and faiths**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">A "cosmopolitan" place is one that:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>is home to people of many cultures and origins</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>has only one culture</span></li>
+        <li class=""><span class="lab">C</span><span>excludes foreigners</span></li>
+        <li class=""><span class="lab">D</span><span>is uninhabited</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A cosmopolitan place is **home to people of many cultures and origins**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">"Migration" refers to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>staying in one place forever</span></li>
+        <li class=""><span class="lab">B</span><span>a kind of trade</span></li>
+        <li class="correct"><span class="lab">C</span><span>the movement of people from one place to settle in another</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a festival</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Migration is **the movement of people from one place to settle in another**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">The reason many communities kept their traditions while becoming part of India shows India's culture of:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>tolerance and accommodation</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>forced uniformity</span></li>
+        <li class=""><span class="lab">C</span><span>exclusion</span></li>
+        <li class=""><span class="lab">D</span><span>isolation</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Keeping traditions while joining India shows a culture of **tolerance and accommodation**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">The Parsis are today concentrated around western India, especially near:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Kashmir</span></li>
+        <li class="correct"><span class="lab">B</span><span>Mumbai and Gujarat (Udvada)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the Northeast</span></li>
+        <li class=""><span class="lab">D</span><span>the Thar Desert</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Parsis are concentrated around **Mumbai and Gujarat (Udvada)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">The clearest reason India became "a home to many" is that it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>closed its borders</span></li>
+        <li class=""><span class="lab">B</span><span>expelled all outsiders</span></li>
+        <li class=""><span class="lab">C</span><span>had no contact with others</span></li>
+        <li class="correct"><span class="lab">D</span><span>welcomed both refugees and traders over centuries</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>India became "a home to many" because it **welcomed both refugees and traders over centuries**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">The Syriac Christian tradition in Kerala is often linked to the early arrival of:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>St Thomas the Apostle</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a Mughal emperor</span></li>
+        <li class=""><span class="lab">C</span><span>a Greek general</span></li>
+        <li class=""><span class="lab">D</span><span>a Chinese pilgrim</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Kerala Syriac Christian tradition is linked to **St Thomas the Apostle**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">The Mappila community shows that some groups came to India primarily for:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>conquest</span></li>
+        <li class=""><span class="lab">B</span><span>persecution of others</span></li>
+        <li class=""><span class="lab">C</span><span>no reason</span></li>
+        <li class="correct"><span class="lab">D</span><span>trade</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Mappilas show some groups came primarily for **trade**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">The reason "vasudhaiva kutumbakam" suits this chapter is that it expresses:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>hostility to outsiders</span></li>
+        <li class="correct"><span class="lab">B</span><span>the idea of welcoming all people as one human family</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>closing borders</span></li>
+        <li class=""><span class="lab">D</span><span>trade bans</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Vasudhaiva kutumbakam" suits the chapter by expressing **the idea of welcoming all people as one human family**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">A "scheduled tribe" in India refers to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>foreign traders</span></li>
+        <li class=""><span class="lab">B</span><span>a kind of coin</span></li>
+        <li class="correct"><span class="lab">C</span><span>communities listed in the Constitution for special protection</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a festival</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A scheduled tribe refers to **communities listed in the Constitution for special protection**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">The persistence of synagogues, churches, fire temples and mosques across India shows:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only one religion</span></li>
+        <li class="correct"><span class="lab">B</span><span>the coexistence of many faiths</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>no religion</span></li>
+        <li class=""><span class="lab">D</span><span>foreign rule</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Synagogues, churches, fire temples and mosques together show **the coexistence of many faiths**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">The Zoroastrians' sacred fire temples reflect that the Parsis:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>gave up their religion</span></li>
+        <li class=""><span class="lab">B</span><span>had no religion</span></li>
+        <li class="correct"><span class="lab">C</span><span>preserved their faith after settling in India</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>were Hindus</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Fire temples reflect that the Parsis **preserved their faith after settling in India**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">A reason communities fleeing persecution chose India was that India:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>offered them freedom to practise their faith</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>forced them to convert</span></li>
+        <li class=""><span class="lab">C</span><span>refused all refugees</span></li>
+        <li class=""><span class="lab">D</span><span>had no people</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Persecuted groups chose India because it **offered them freedom to practise their faith**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">"Ethos" of a society means its:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>army</span></li>
+        <li class=""><span class="lab">B</span><span>currency</span></li>
+        <li class=""><span class="lab">C</span><span>coastline</span></li>
+        <li class="correct"><span class="lab">D</span><span>characteristic spirit or guiding values</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A society's "ethos" is its **characteristic spirit or guiding values**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">The Cochin Jews and Bene Israel both show that Jewish communities in India:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>never existed</span></li>
+        <li class=""><span class="lab">B</span><span>were recent arrivals only</span></li>
+        <li class=""><span class="lab">C</span><span>were expelled at once</span></li>
+        <li class="correct"><span class="lab">D</span><span>lived peacefully for centuries</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Cochin Jews and Bene Israel show Jewish communities **lived peacefully for centuries**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">The reason the chapter stresses "unity of humankind" is to highlight India's:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>tradition of treating all peoples as part of one family</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>hostility to others</span></li>
+        <li class=""><span class="lab">C</span><span>closed society</span></li>
+        <li class=""><span class="lab">D</span><span>single uniform culture</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Unity of humankind" highlights India's **tradition of treating all peoples as part of one family**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">The Siddis becoming part of Indian society illustrates:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>that India has one origin only</span></li>
+        <li class=""><span class="lab">B</span><span>that no one migrated</span></li>
+        <li class="correct"><span class="lab">C</span><span>how diverse the origins of Indian communities are</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>foreign rule</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Siddis illustrate **how diverse the origins of Indian communities are**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">A community keeping its language and customs while joining Indian life is an example of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>forced assimilation</span></li>
+        <li class="correct"><span class="lab">B</span><span>cultural pluralism</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>exclusion</span></li>
+        <li class=""><span class="lab">D</span><span>isolation</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Keeping language and customs while joining Indian life is **cultural pluralism**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">The reason traders like the Arabs settled peacefully on the coast is that they:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>came to conquer</span></li>
+        <li class=""><span class="lab">B</span><span>were refused entry</span></li>
+        <li class="correct"><span class="lab">C</span><span>came for commerce and were welcomed</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>brought no goods</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Arab traders settled peacefully because they **came for commerce and were welcomed**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">India giving refuge to Tibetans in modern times shows its tradition of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>turning away refugees</span></li>
+        <li class="correct"><span class="lab">B</span><span>sheltering those fleeing hardship</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>closing borders</span></li>
+        <li class=""><span class="lab">D</span><span>ignoring neighbours</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sheltering Tibetans shows India's tradition of **sheltering those fleeing hardship**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">The reason "tolerance" is central to this chapter is that India:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>permitted only one faith</span></li>
+        <li class=""><span class="lab">B</span><span>banned all worship</span></li>
+        <li class=""><span class="lab">C</span><span>expelled all migrants</span></li>
+        <li class="correct"><span class="lab">D</span><span>allowed many faiths and peoples to live together</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Tolerance is central because India **allowed many faiths and peoples to live together**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">A "heretic," a word from religious history, refers to someone:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>holding beliefs against an established religion (and sometimes persecuted for them)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a trader</span></li>
+        <li class=""><span class="lab">C</span><span>a king</span></li>
+        <li class=""><span class="lab">D</span><span>a coin</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A "heretic" is someone **holding beliefs against an established religion (and sometimes persecuted for them)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">The variety of communities in India today is best explained by:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>centuries of migration for refuge and trade</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>no migration at all</span></li>
+        <li class=""><span class="lab">C</span><span>a single origin</span></li>
+        <li class=""><span class="lab">D</span><span>recent tourism only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>India's variety is explained by **centuries of migration for refuge and trade**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">The reason a synagogue, a fire temple and a church can all be found in India is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only one faith was allowed</span></li>
+        <li class="correct"><span class="lab">B</span><span>India welcomed communities of many faiths</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>no worship was permitted</span></li>
+        <li class=""><span class="lab">D</span><span>all were imported recently</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Many houses of worship exist because **India welcomed communities of many faiths**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">The deeper message of "India, a home to many" is that Indian identity is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>based on excluding others</span></li>
+        <li class=""><span class="lab">B</span><span>a single unchanging group</span></li>
+        <li class=""><span class="lab">C</span><span>foreign</span></li>
+        <li class="correct"><span class="lab">D</span><span>enriched by many communities living together</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Indian identity is **enriched by many communities living together**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">The Parsis' contribution to India (in business, science and public life) shows that welcomed communities:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>remained outsiders forever</span></li>
+        <li class=""><span class="lab">B</span><span>contributed nothing</span></li>
+        <li class="correct"><span class="lab">C</span><span>became valued contributors to the nation</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>were expelled</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Parsis' contributions show welcomed communities **became valued contributors to the nation**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">The reason persecuted groups trusted India is that it had a reputation for:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>forced conversion</span></li>
+        <li class=""><span class="lab">B</span><span>closed borders</span></li>
+        <li class=""><span class="lab">C</span><span>hostility</span></li>
+        <li class="correct"><span class="lab">D</span><span>granting refuge and religious freedom</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Persecuted groups trusted India for its reputation of **granting refuge and religious freedom**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">The phrase "atithi devo bhava" connects to the welcome of communities because it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>discourages guests</span></li>
+        <li class=""><span class="lab">B</span><span>is about trade tax</span></li>
+        <li class="correct"><span class="lab">C</span><span>makes hospitality to guests a sacred value</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>closes the home</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Atithi devo bhava" connects to welcome because it **makes hospitality to guests a sacred value**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">A correct statement about India's communities is that they came:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>from many lands and faiths, over a long span of history</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>all from one country</span></li>
+        <li class=""><span class="lab">C</span><span>all at the same moment</span></li>
+        <li class=""><span class="lab">D</span><span>never at all</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>India's communities came **from many lands and faiths, over a long span of history**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">The reason India is called pluralistic rather than uniform is that it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>has only one culture</span></li>
+        <li class="correct"><span class="lab">B</span><span>contains many coexisting cultures and religions</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>bans diversity</span></li>
+        <li class=""><span class="lab">D</span><span>excludes all faiths</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>India is pluralistic because it **contains many coexisting cultures and religions**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">The survival of small ancient communities (like the Cochin Jews) in India shows:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>immediate expulsion</span></li>
+        <li class="correct"><span class="lab">B</span><span>long-term acceptance and coexistence</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>that they never came</span></li>
+        <li class=""><span class="lab">D</span><span>forced uniformity</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The survival of the Cochin Jews shows **long-term acceptance and coexistence**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">The reason migration features so strongly in India's story is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>no one ever moved</span></li>
+        <li class=""><span class="lab">B</span><span>India had no contact with others</span></li>
+        <li class=""><span class="lab">C</span><span>migration is a modern idea only</span></li>
+        <li class="correct"><span class="lab">D</span><span>people moved to and settled in India across the ages</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Migration features strongly because **people moved to and settled in India across the ages**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">A community fleeing persecution and finding safety in India is an example of India offering:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a trade tax</span></li>
+        <li class=""><span class="lab">B</span><span>conquest</span></li>
+        <li class="correct"><span class="lab">C</span><span>refuge / asylum</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>exile</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A persecuted group finding safety is India offering **refuge / asylum**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">The reason values like "vasudhaiva kutumbakam" matter today is that they:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>encourage acceptance and harmony among diverse people</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>promote conflict</span></li>
+        <li class=""><span class="lab">C</span><span>close society</span></li>
+        <li class=""><span class="lab">D</span><span>end trade</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Values like "vasudhaiva kutumbakam" matter today because they **encourage acceptance and harmony among diverse people**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">The clearest evidence that India welcomed traders is the rise of communities like the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Mappilas of the Kerala coast</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Baha'is fleeing Persia</span></li>
+        <li class=""><span class="lab">C</span><span>Tibetans seeking refuge</span></li>
+        <li class=""><span class="lab">D</span><span>Parsis fleeing Persia</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Evidence India welcomed traders is the **Mappilas of the Kerala coast**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">The clearest evidence that India welcomed refugees is the arrival of the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Arab traders only</span></li>
+        <li class=""><span class="lab">B</span><span>no one</span></li>
+        <li class=""><span class="lab">C</span><span>only tourists</span></li>
+        <li class="correct"><span class="lab">D</span><span>Parsis and later the Tibetans and Baha'is</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Evidence India welcomed refugees is the arrival of the **Parsis and later the Tibetans and Baha'is**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">The reason a diverse society can be a strength is that different communities:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>weaken the nation always</span></li>
+        <li class=""><span class="lab">B</span><span>add nothing</span></li>
+        <li class="correct"><span class="lab">C</span><span>bring varied skills, ideas and traditions</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>must be expelled</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Diversity is a strength because different communities **bring varied skills, ideas and traditions**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">The chapter's view of Indian identity is that it is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>narrow and single</span></li>
+        <li class="correct"><span class="lab">B</span><span>inclusive, woven from many threads</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>foreign</span></li>
+        <li class=""><span class="lab">D</span><span>empty</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Indian identity is **inclusive, woven from many threads**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">A correct reason these communities "kept their traditions while becoming part of Indian society" is that India:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>forced them to abandon their ways</span></li>
+        <li class=""><span class="lab">B</span><span>expelled them</span></li>
+        <li class="correct"><span class="lab">C</span><span>allowed them to belong without giving up who they were</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>ignored them</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Communities kept their traditions because India **allowed them to belong without giving up who they were**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">The reason understanding this chapter matters for citizens is that it teaches:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>hostility to others</span></li>
+        <li class=""><span class="lab">B</span><span>that diversity is bad</span></li>
+        <li class=""><span class="lab">C</span><span>that India has one culture</span></li>
+        <li class="correct"><span class="lab">D</span><span>respect for India's diversity and the value of welcome</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The chapter teaches **respect for India's diversity and the value of welcome**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">The arrival of Africans (Siddis), Persians (Parsis), Arabs (Mappilas) and others shows India's links with:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>no other region</span></li>
+        <li class="correct"><span class="lab">B</span><span>many regions of the world</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>only Europe</span></li>
+        <li class=""><span class="lab">D</span><span>only its own villages</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Siddis, Parsis, Mappilas and others show India's links with **many regions of the world**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">The deepest reason "India, a home to many" is a fitting title is that India:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>has long given a home to people of many origins and faiths</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>has only ever had one people</span></li>
+        <li class=""><span class="lab">C</span><span>turned everyone away</span></li>
+        <li class=""><span class="lab">D</span><span>is a recent nation with no history of migration</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The title fits because India **has long given a home to people of many origins and faiths**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">A society guided by tolerance and pluralism is more likely to be:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>divided and poor in culture</span></li>
+        <li class="correct"><span class="lab">B</span><span>peaceful and culturally rich</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>closed and hostile</span></li>
+        <li class=""><span class="lab">D</span><span>empty</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A tolerant, pluralistic society is more likely to be **peaceful and culturally rich**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">The reason both "refuge-seekers" and "opportunity-seekers" are discussed is to show that people came to India for:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>more than one reason — safety and trade alike</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>only one reason</span></li>
+        <li class=""><span class="lab">C</span><span>no reason</span></li>
+        <li class=""><span class="lab">D</span><span>tourism only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Both refuge- and opportunity-seekers are discussed to show people came for **more than one reason — safety and trade alike**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">The lasting lesson of the chapter is that India's strength lies partly in its:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>rejection of outsiders</span></li>
+        <li class=""><span class="lab">B</span><span>single culture</span></li>
+        <li class="correct"><span class="lab">C</span><span>acceptance of diversity</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>closed borders</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The lasting lesson is that India's strength lies partly in its **acceptance of diversity**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">Pulling the chapter together, "India, a home to many" shows that, across centuries, India:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>excluded all outsiders</span></li>
+        <li class=""><span class="lab">B</span><span>had one unchanging people</span></li>
+        <li class=""><span class="lab">C</span><span>never had contact with the world</span></li>
+        <li class="correct"><span class="lab">D</span><span>welcomed diverse communities seeking refuge or trade, who enriched its shared culture</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"India, a home to many" shows India **welcomed diverse communities seeking refuge or trade, who enriched its shared culture**.</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

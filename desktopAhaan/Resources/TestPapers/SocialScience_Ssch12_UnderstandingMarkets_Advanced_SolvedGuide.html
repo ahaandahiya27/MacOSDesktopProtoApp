@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Understanding Markets (Advanced) — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Understanding Markets (Advanced)<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">A market is best described as a place — physical or online — where:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only the government works</span></li>
+        <li class=""><span class="lab">B</span><span>nothing is exchanged</span></li>
+        <li class="correct"><span class="lab">C</span><span>people buy and sell goods and services</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>only farming happens</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A market is a place — physical or online — where **people buy and sell goods and services**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">Every market, however big or small, needs at least:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>buyers, sellers and an agreed price</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>only a building</span></li>
+        <li class=""><span class="lab">C</span><span>only a government office</span></li>
+        <li class=""><span class="lab">D</span><span>only one person</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Every market needs **buyers, sellers and an agreed price**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">The price in a traditional bazaar is often settled by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the weather</span></li>
+        <li class=""><span class="lab">B</span><span>a coin toss</span></li>
+        <li class=""><span class="lab">C</span><span>the king alone</span></li>
+        <li class="correct"><span class="lab">D</span><span>bargaining between buyer and seller</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In a traditional bazaar the price is often settled by **bargaining between buyer and seller**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">If a seller sets the price far too high, the most likely result is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>everyone rushes to buy</span></li>
+        <li class="correct"><span class="lab">B</span><span>few or no buyers will purchase the good</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the price is ignored</span></li>
+        <li class=""><span class="lab">D</span><span>the government buys it all</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>If the price is set far too high, **few or no buyers will purchase the good**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">If a seller sets the price too low, the likely result is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>no one buys</span></li>
+        <li class="correct"><span class="lab">B</span><span>the good sells out fast but the seller earns little</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the price rises by itself</span></li>
+        <li class=""><span class="lab">D</span><span>the good is destroyed</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>If the price is set too low, **the good sells out fast but the seller earns little**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">"Demand" for a good refers to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>how much sellers produce</span></li>
+        <li class=""><span class="lab">B</span><span>the weather</span></li>
+        <li class=""><span class="lab">C</span><span>the tax on it</span></li>
+        <li class="correct"><span class="lab">D</span><span>how much buyers are willing and able to buy at a price</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Demand is **how much buyers are willing and able to buy at a price**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">"Supply" of a good refers to:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>how much sellers are willing to offer at a price</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>how much buyers want</span></li>
+        <li class=""><span class="lab">C</span><span>the colour of the good</span></li>
+        <li class=""><span class="lab">D</span><span>the government's budget</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Supply is **how much sellers are willing to offer at a price**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">When many buyers want a good that is scarce, its price tends to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>fall to zero</span></li>
+        <li class=""><span class="lab">B</span><span>stay frozen forever</span></li>
+        <li class="correct"><span class="lab">C</span><span>rise</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>disappear</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>When many buyers want a scarce good, its price tends to **rise**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">A "wholesaler" is a trader who:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>buys in large quantities and sells to retailers</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>sells single items to final consumers only</span></li>
+        <li class=""><span class="lab">C</span><span>grows the crops</span></li>
+        <li class=""><span class="lab">D</span><span>makes the laws</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A wholesaler **buys in large quantities and sells to retailers**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">A "retailer" is a seller who:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>buys only in bulk for factories</span></li>
+        <li class=""><span class="lab">B</span><span>makes the goods in a factory</span></li>
+        <li class="correct"><span class="lab">C</span><span>sells goods in small quantities directly to consumers</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>collects taxes</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A retailer **sells goods in small quantities directly to consumers**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">The usual chain by which goods reach you in a physical market is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>consumer → producer → retailer</span></li>
+        <li class=""><span class="lab">B</span><span>retailer → producer → wholesaler</span></li>
+        <li class=""><span class="lab">C</span><span>government → consumer → producer</span></li>
+        <li class="correct"><span class="lab">D</span><span>producer → wholesaler → retailer → consumer</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Goods usually reach you via **producer → wholesaler → retailer → consumer**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">An "aggregator" (like a ride or food app) is a business that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only grows food</span></li>
+        <li class="correct"><span class="lab">B</span><span>connects many sellers/providers with many customers on one platform</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>prints money</span></li>
+        <li class=""><span class="lab">D</span><span>makes laws</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An aggregator **connects many sellers/providers with many customers on one platform**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">The 16th-century Hampi Bazaar is used in the chapter as an example of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a modern shopping app</span></li>
+        <li class=""><span class="lab">B</span><span>a government office</span></li>
+        <li class=""><span class="lab">C</span><span>a farm</span></li>
+        <li class="correct"><span class="lab">D</span><span>a grand historical marketplace</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Hampi Bazaar is an example of **a grand historical marketplace**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">An "online market" differs from a physical market mainly in that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>it has no buyers or sellers</span></li>
+        <li class="correct"><span class="lab">B</span><span>buying and selling happen over the internet rather than face to face</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>it uses no money</span></li>
+        <li class=""><span class="lab">D</span><span>it has no prices</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An online market differs in that **buying and selling happen over the internet rather than face to face**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">A weekly village market in India is often called a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>mall</span></li>
+        <li class=""><span class="lab">B</span><span>port</span></li>
+        <li class="correct"><span class="lab">C</span><span>haat</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>bank</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A weekly village market is called a **haat**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">An "export" is a good that a country:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>sells to another country</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>buys from another country</span></li>
+        <li class=""><span class="lab">C</span><span>destroys</span></li>
+        <li class=""><span class="lab">D</span><span>gives away to its own citizens only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An export is a good a country **sells to another country**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">An "import" is a good that a country:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sells abroad</span></li>
+        <li class=""><span class="lab">B</span><span>makes only at home</span></li>
+        <li class="correct"><span class="lab">C</span><span>buys from another country</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>bans</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An import is a good a country **buys from another country**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">One important role of the government in markets is to:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>ensure fair prices, quality and consumer safety</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>buy everything itself</span></li>
+        <li class=""><span class="lab">C</span><span>ban all trade</span></li>
+        <li class=""><span class="lab">D</span><span>set no rules at all</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A government role in markets is to **ensure fair prices, quality and consumer safety**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">A "subsidy" from the government is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a tax increase</span></li>
+        <li class="correct"><span class="lab">B</span><span>financial support that lowers the cost of a good or service</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a ban on selling</span></li>
+        <li class=""><span class="lab">D</span><span>a kind of coin</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A subsidy is **financial support that lowers the cost of a good or service**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">"Public goods" provided for everyone (like roads and street lighting) are usually:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sold only to the rich</span></li>
+        <li class=""><span class="lab">B</span><span>never provided</span></li>
+        <li class=""><span class="lab">C</span><span>imported only</span></li>
+        <li class="correct"><span class="lab">D</span><span>provided by the government for the benefit of all</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Public goods like roads and street lighting are **provided by the government for the benefit of all**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">"Consumer" means the person who:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>finally uses or buys the good or service</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>only makes the good</span></li>
+        <li class=""><span class="lab">C</span><span>only transports the good</span></li>
+        <li class=""><span class="lab">D</span><span>sets the law</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A consumer is the person who **finally uses or buys the good or service**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">Bargaining settles a price when:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the government fixes every price</span></li>
+        <li class=""><span class="lab">B</span><span>the price never changes</span></li>
+        <li class=""><span class="lab">C</span><span>no one talks</span></li>
+        <li class="correct"><span class="lab">D</span><span>buyer and seller negotiate until both agree</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bargaining settles a price when **buyer and seller negotiate until both agree**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">The interaction of demand and supply tends to push a market toward:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>zero price always</span></li>
+        <li class="correct"><span class="lab">B</span><span>a price where the quantity buyers want roughly matches what sellers offer</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>an ever-rising price forever</span></li>
+        <li class=""><span class="lab">D</span><span>no price at all</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Demand and supply push a market toward **a price where the quantity buyers want roughly matches what sellers offer**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">A "distributor" in the supply chain typically:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only consumes goods</span></li>
+        <li class=""><span class="lab">B</span><span>makes the laws</span></li>
+        <li class="correct"><span class="lab">C</span><span>moves goods from producers toward retailers across regions</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>grows the crops</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A distributor **moves goods from producers toward retailers across regions**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">A shopping mall is an example of a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>farm</span></li>
+        <li class="correct"><span class="lab">B</span><span>large physical market housing many shops</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>bank only</span></li>
+        <li class=""><span class="lab">D</span><span>government office</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A shopping mall is **a large physical market housing many shops**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">Markets connect people, traditions and ideas because they:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>keep everyone apart</span></li>
+        <li class=""><span class="lab">B</span><span>ban all exchange</span></li>
+        <li class="correct"><span class="lab">C</span><span>bring together buyers and sellers from many places</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>serve only one family</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Markets connect people and ideas because they **bring together buyers and sellers from many places**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">The government may control the price of an essential good to:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>keep it affordable for ordinary people</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>make it unaffordable</span></li>
+        <li class=""><span class="lab">C</span><span>stop its sale</span></li>
+        <li class=""><span class="lab">D</span><span>waste it</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The government may control an essential good's price to **keep it affordable for ordinary people**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">Consumer protection laws exist mainly to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>help sellers cheat</span></li>
+        <li class=""><span class="lab">B</span><span>raise prices</span></li>
+        <li class=""><span class="lab">C</span><span>ban markets</span></li>
+        <li class="correct"><span class="lab">D</span><span>safeguard buyers against cheating, unsafe or poor-quality goods</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Consumer protection laws **safeguard buyers against cheating, unsafe or poor-quality goods**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">"Commerce" broadly means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only farming</span></li>
+        <li class=""><span class="lab">B</span><span>only government work</span></li>
+        <li class=""><span class="lab">C</span><span>only banking</span></li>
+        <li class="correct"><span class="lab">D</span><span>the buying and selling of goods and services on a large scale</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Commerce is **the buying and selling of goods and services on a large scale**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">An online shopping app is a market because it still has:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>buyers, sellers and prices, just over the internet</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>no sellers</span></li>
+        <li class=""><span class="lab">C</span><span>no prices</span></li>
+        <li class=""><span class="lab">D</span><span>no buyers</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A shopping app is a market because it still has **buyers, sellers and prices, just over the internet**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">If demand for umbrellas rises suddenly in the monsoon, sellers may:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>give them away free</span></li>
+        <li class=""><span class="lab">B</span><span>destroy their stock</span></li>
+        <li class="correct"><span class="lab">C</span><span>raise the price as more people want them</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>stop selling forever</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>When monsoon demand for umbrellas rises, sellers may **raise the price as more people want them**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">A "negotiation" over price benefits the buyer when it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>raises the price unfairly</span></li>
+        <li class="correct"><span class="lab">B</span><span>lowers the price to one the buyer accepts</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>ends the sale</span></li>
+        <li class=""><span class="lab">D</span><span>changes the product</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Negotiation benefits the buyer when it **lowers the price to one the buyer accepts**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">The reason a single seller charging far above others usually fails is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>buyers must buy from that seller</span></li>
+        <li class=""><span class="lab">B</span><span>the price is fixed by law</span></li>
+        <li class="correct"><span class="lab">C</span><span>buyers can choose cheaper sellers</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>there are no other sellers ever</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A seller charging far above others usually fails because **buyers can choose cheaper sellers**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">An "international market" is one in which:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>trade stays within one village</span></li>
+        <li class="correct"><span class="lab">B</span><span>goods are traded between countries</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>no money is used</span></li>
+        <li class=""><span class="lab">D</span><span>only the government buys</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An international market is one in which **goods are traded between countries**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">The chain "producer → wholesaler → retailer → consumer" shows that goods usually pass through:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only one person</span></li>
+        <li class=""><span class="lab">B</span><span>no one</span></li>
+        <li class=""><span class="lab">C</span><span>the government alone</span></li>
+        <li class="correct"><span class="lab">D</span><span>several hands before reaching the buyer</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The producer-to-consumer chain shows goods usually pass through **several hands before reaching the buyer**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">A government building roads, which markets rely on, is providing:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>public goods and infrastructure that help commerce</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a private shop</span></li>
+        <li class=""><span class="lab">C</span><span>a tax only</span></li>
+        <li class=""><span class="lab">D</span><span>nothing useful</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A government building roads provides **public goods and infrastructure that help commerce**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">The most accurate statement about price in a free market is that it:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>emerges from the interaction of demand and supply</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>is fixed forever by one person</span></li>
+        <li class=""><span class="lab">C</span><span>never changes</span></li>
+        <li class=""><span class="lab">D</span><span>is set by the weather</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In a free market, price **emerges from the interaction of demand and supply**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">A "haat" and a modern "mall" are alike in that both are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>banks</span></li>
+        <li class="correct"><span class="lab">B</span><span>marketplaces where buyers and sellers meet</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>farms</span></li>
+        <li class=""><span class="lab">D</span><span>government offices</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A haat and a mall are alike as **marketplaces where buyers and sellers meet**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">When supply of a good greatly exceeds demand, its price tends to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>rise sharply</span></li>
+        <li class=""><span class="lab">B</span><span>stay fixed</span></li>
+        <li class=""><span class="lab">C</span><span>double</span></li>
+        <li class="correct"><span class="lab">D</span><span>fall</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>When supply greatly exceeds demand, price tends to **fall**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">The benefit of markets to society "beyond money" includes:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>isolating communities</span></li>
+        <li class=""><span class="lab">B</span><span>ending all trade</span></li>
+        <li class="correct"><span class="lab">C</span><span>connecting people, spreading ideas and meeting needs</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>serving only sellers</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Markets benefit society "beyond money" by **connecting people, spreading ideas and meeting needs**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">A consumer comparing prices on a shopping app before buying is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>breaking the law</span></li>
+        <li class=""><span class="lab">B</span><span>avoiding the market</span></li>
+        <li class=""><span class="lab">C</span><span>bartering</span></li>
+        <li class="correct"><span class="lab">D</span><span>using the market's information to make a better choice</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Comparing prices on an app means **using the market's information to make a better choice**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">The government ensuring food packets show correct weight and date is an example of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>raising prices</span></li>
+        <li class=""><span class="lab">B</span><span>banning food</span></li>
+        <li class="correct"><span class="lab">C</span><span>ensuring quality and protecting consumers</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>importing food</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Ensuring food packets show correct weight and date is **ensuring quality and protecting consumers**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">The reason most goods cost more at a small retailer than at a wholesaler is that the retailer:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>sells in small quantities and adds a margin for service</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>makes the goods</span></li>
+        <li class=""><span class="lab">C</span><span>pays no costs</span></li>
+        <li class=""><span class="lab">D</span><span>is the producer</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Goods cost more at a small retailer because the retailer **sells in small quantities and adds a margin for service**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">A correct statement about exports and imports is that a country:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>eats both</span></li>
+        <li class="correct"><span class="lab">B</span><span>sells exports abroad and buys imports from abroad</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>bans both</span></li>
+        <li class=""><span class="lab">D</span><span>makes no use of either</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A country **sells exports abroad and buys imports from abroad**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">An "aggregator" app benefits small sellers because it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>hides them from customers</span></li>
+        <li class="correct"><span class="lab">B</span><span>gives them access to many customers they could not reach alone</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>bans their goods</span></li>
+        <li class=""><span class="lab">D</span><span>raises their costs to zero</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An aggregator app helps small sellers by **giving them access to many customers they could not reach alone**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">The clearest sign that a place is a "market" is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only one person is present</span></li>
+        <li class=""><span class="lab">B</span><span>nothing is traded</span></li>
+        <li class=""><span class="lab">C</span><span>the government runs everything</span></li>
+        <li class="correct"><span class="lab">D</span><span>buyers and sellers come together to exchange at agreed prices</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A place is a market when **buyers and sellers come together to exchange at agreed prices**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">A subsidy on cooking gas helps consumers by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>raising the price</span></li>
+        <li class=""><span class="lab">B</span><span>banning its sale</span></li>
+        <li class="correct"><span class="lab">C</span><span>lowering the price they pay</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>wasting it</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A subsidy on cooking gas helps consumers by **lowering the price they pay**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">The reason markets need rules and a referee (government) is to:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>keep trade fair, safe and honest</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>stop all selling</span></li>
+        <li class=""><span class="lab">C</span><span>help cheats</span></li>
+        <li class=""><span class="lab">D</span><span>raise every price</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Markets need a referee (government) to **keep trade fair, safe and honest**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">When you buy vegetables from a vendor, you are the ____ and the vendor is the ____.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>consumer; seller</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>seller; consumer</span></li>
+        <li class=""><span class="lab">C</span><span>producer; wholesaler</span></li>
+        <li class=""><span class="lab">D</span><span>government; retailer</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Buying vegetables, you are the **consumer; seller** is the vendor.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">A market with many sellers of the same good usually benefits buyers because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>prices always rise</span></li>
+        <li class=""><span class="lab">B</span><span>buyers have no choice</span></li>
+        <li class=""><span class="lab">C</span><span>quality always falls</span></li>
+        <li class="correct"><span class="lab">D</span><span>competition tends to keep prices reasonable and quality up</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Many sellers of the same good benefit buyers because **competition tends to keep prices reasonable and quality up**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">The reason online markets have grown rapidly is that they:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>use no money</span></li>
+        <li class=""><span class="lab">B</span><span>have no sellers</span></li>
+        <li class="correct"><span class="lab">C</span><span>let people buy and sell from anywhere, conveniently</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>are slower than shops</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Online markets grew fast because they **let people buy and sell from anywhere, conveniently**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">A wholesaler buying 1000 shirts and a customer buying one shirt shows the difference between:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>export and import</span></li>
+        <li class="correct"><span class="lab">B</span><span>bulk (wholesale) and retail trade</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>demand and weather</span></li>
+        <li class=""><span class="lab">D</span><span>tax and subsidy</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Buying 1000 shirts vs one shirt shows the difference between **bulk (wholesale) and retail trade**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">The government stepping in when a few sellers unfairly fix high prices is meant to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>help the sellers cheat</span></li>
+        <li class=""><span class="lab">B</span><span>ban the good</span></li>
+        <li class="correct"><span class="lab">C</span><span>protect consumers and keep markets competitive</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>raise prices further</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The government acting against unfair price-fixing is meant to **protect consumers and keep markets competitive**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">The best description of how a fair price is reached in a competitive market is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>by one seller's command</span></li>
+        <li class=""><span class="lab">B</span><span>by the weather</span></li>
+        <li class=""><span class="lab">C</span><span>by banning trade</span></li>
+        <li class="correct"><span class="lab">D</span><span>through the balance of what buyers will pay and sellers will accept</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A fair price in a competitive market is reached **through the balance of what buyers will pay and sellers will accept**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">A "domestic market" refers to trade that takes place:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only between countries</span></li>
+        <li class="correct"><span class="lab">B</span><span>within a country</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>only online</span></li>
+        <li class=""><span class="lab">D</span><span>only in one shop</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A domestic market is trade that takes place **within a country**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">The producer-to-consumer chain matters because each link:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>adds a service (storing, transporting, selling) and a cost</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>does nothing</span></li>
+        <li class=""><span class="lab">C</span><span>lowers quality only</span></li>
+        <li class=""><span class="lab">D</span><span>removes the good</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Each link in the producer-to-consumer chain **adds a service (storing, transporting, selling) and a cost**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">A consumer who is cheated by a faulty product can seek help because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>buyers have no rights</span></li>
+        <li class="correct"><span class="lab">B</span><span>consumer protection rules give buyers rights</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>only sellers have rights</span></li>
+        <li class=""><span class="lab">D</span><span>the market has no rules</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A cheated consumer can seek help because **consumer protection rules give buyers rights**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">The deepest reason markets are central to an economy is that they:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>coordinate what is produced and how it reaches those who need it</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>prevent all trade</span></li>
+        <li class=""><span class="lab">C</span><span>serve only the government</span></li>
+        <li class=""><span class="lab">D</span><span>ignore prices</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Markets are central because they **coordinate what is produced and how it reaches those who need it**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">Comparing the Hampi Bazaar with a modern shopping app shows that markets:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>are a brand-new idea</span></li>
+        <li class=""><span class="lab">B</span><span>never change</span></li>
+        <li class="correct"><span class="lab">C</span><span>have existed for centuries and keep taking new forms</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>have disappeared</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Hampi Bazaar vs a shopping app shows markets **have existed for centuries and keep taking new forms**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">Pulling the chapter together, a market works because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the government does everything alone</span></li>
+        <li class=""><span class="lab">B</span><span>no prices are needed</span></li>
+        <li class=""><span class="lab">C</span><span>goods never move</span></li>
+        <li class="correct"><span class="lab">D</span><span>buyers and sellers meet, prices are agreed, and goods flow from producers to consumers under fair rules</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A market works because **buyers and sellers meet, prices are agreed, and goods flow from producers to consumers under fair rules**.</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

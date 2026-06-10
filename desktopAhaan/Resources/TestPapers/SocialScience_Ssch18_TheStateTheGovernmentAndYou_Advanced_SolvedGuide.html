@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The State The Government And You (Advanced) — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>The State The Government And You (Advanced)<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">A state (or nation) is best described as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a single building</span></li>
+        <li class=""><span class="lab">B</span><span>a private company</span></li>
+        <li class="correct"><span class="lab">C</span><span>a political organisation that governs a defined territory and people</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a marketplace</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A state is **a political organisation that governs a defined territory and people**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">The four elements of a state are population, territory, government and:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>sovereignty</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a flag only</span></li>
+        <li class=""><span class="lab">C</span><span>a king only</span></li>
+        <li class=""><span class="lab">D</span><span>money</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The fourth element, with population, territory and government, is **sovereignty**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">"Sovereignty" means a state has:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>no power</span></li>
+        <li class=""><span class="lab">B</span><span>a foreign ruler</span></li>
+        <li class=""><span class="lab">C</span><span>only a coastline</span></li>
+        <li class="correct"><span class="lab">D</span><span>supreme authority to govern itself without outside control</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sovereignty means **supreme authority to govern itself without outside control**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">The government is best understood as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the same thing as the whole state</span></li>
+        <li class="correct"><span class="lab">B</span><span>one of the four elements of the state — the body that runs it</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a private business</span></li>
+        <li class=""><span class="lab">D</span><span>the population only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The government is **one of the four elements of the state — the body that runs it**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">A key difference between the state and the government is that the state:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>changes every day</span></li>
+        <li class="correct"><span class="lab">B</span><span>continues even when governments change at elections</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>is a single person</span></li>
+        <li class=""><span class="lab">D</span><span>has no territory</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The state differs from the government in that the state **continues even when governments change at elections**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">India is described as a democratic republic, meaning:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a king rules by birth</span></li>
+        <li class=""><span class="lab">B</span><span>priests rule</span></li>
+        <li class=""><span class="lab">C</span><span>the army rules</span></li>
+        <li class="correct"><span class="lab">D</span><span>the people choose their government and the head of state is not hereditary</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A democratic republic means **the people choose their government and the head of state is not hereditary**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">"Rule of law" means that:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>everyone, including the government, is subject to the law</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the ruler is above the law</span></li>
+        <li class=""><span class="lab">C</span><span>there are no laws</span></li>
+        <li class=""><span class="lab">D</span><span>only citizens follow laws</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rule of law means **everyone, including the government, is subject to the law**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">The ancient idea "matsya nyaya" (law of the fishes) describes:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a fair government</span></li>
+        <li class=""><span class="lab">B</span><span>a trade rule</span></li>
+        <li class="correct"><span class="lab">C</span><span>a state of anarchy where the strong devour the weak</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a festival</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Matsya nyaya" describes **a state of anarchy where the strong devour the weak**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">The legislature is the organ of government that:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>makes laws and represents the people</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>only judges cases</span></li>
+        <li class=""><span class="lab">C</span><span>runs the army only</span></li>
+        <li class=""><span class="lab">D</span><span>collects temple offerings</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The legislature **makes laws and represents the people**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">The executive is the organ that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only makes laws</span></li>
+        <li class=""><span class="lab">B</span><span>only interprets laws</span></li>
+        <li class="correct"><span class="lab">C</span><span>implements and administers the laws</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>holds elections only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The executive **implements and administers the laws**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">The judiciary is the organ that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>makes all laws</span></li>
+        <li class=""><span class="lab">B</span><span>runs public services</span></li>
+        <li class=""><span class="lab">C</span><span>collects taxes</span></li>
+        <li class="correct"><span class="lab">D</span><span>interprets laws and settles disputes</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The judiciary **interprets laws and settles disputes**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">As a "protector," the government provides:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only entertainment</span></li>
+        <li class="correct"><span class="lab">B</span><span>law, order and defence</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>nothing</span></li>
+        <li class=""><span class="lab">D</span><span>private profit</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>As protector, the government provides **law, order and defence**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">As a "provider," the government supplies:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only weapons</span></li>
+        <li class=""><span class="lab">B</span><span>nothing useful</span></li>
+        <li class=""><span class="lab">C</span><span>private goods for sale</span></li>
+        <li class="correct"><span class="lab">D</span><span>welfare and infrastructure like roads, schools and hospitals</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>As provider, it supplies **welfare and infrastructure like roads, schools and hospitals**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">The permanent body of officials who carry out the government's work is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>army only</span></li>
+        <li class="correct"><span class="lab">B</span><span>bureaucracy</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>judiciary only</span></li>
+        <li class=""><span class="lab">D</span><span>electorate</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The permanent body of officials is the **bureaucracy**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">"Judicial review" is the power of courts to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>make new laws</span></li>
+        <li class=""><span class="lab">B</span><span>collect taxes</span></li>
+        <li class="correct"><span class="lab">C</span><span>check whether laws and actions follow the Constitution</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>run elections</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Judicial review is the courts' power to **check whether laws and actions follow the Constitution**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">The "Right to Information (RTI)" allows citizens to:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>seek information from the government about its working</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>avoid all taxes</span></li>
+        <li class=""><span class="lab">C</span><span>ignore the law</span></li>
+        <li class=""><span class="lab">D</span><span>vote twice</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>RTI lets citizens **seek information from the government about its working**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">"Decentralisation" means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>keeping all power at the centre</span></li>
+        <li class=""><span class="lab">B</span><span>ending government</span></li>
+        <li class="correct"><span class="lab">C</span><span>sharing power with local levels of government</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>foreign rule</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Decentralisation means **sharing power with local levels of government**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">India's system, dividing powers between the centre and the states, is called:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>federalism</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>monarchy</span></li>
+        <li class=""><span class="lab">C</span><span>theocracy</span></li>
+        <li class=""><span class="lab">D</span><span>anarchy</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Dividing powers between centre and states is **federalism**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">A "regulator" is a body that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sells goods</span></li>
+        <li class="correct"><span class="lab">B</span><span>makes and enforces rules for a particular sector</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>grows crops</span></li>
+        <li class=""><span class="lab">D</span><span>writes poems</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A regulator **makes and enforces rules for a particular sector**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">The reason a state persists across elections is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the state is elected daily</span></li>
+        <li class=""><span class="lab">B</span><span>the state is one person</span></li>
+        <li class=""><span class="lab">C</span><span>the state has no people</span></li>
+        <li class="correct"><span class="lab">D</span><span>the state is permanent while governments come and go</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The state persists across elections because **the state is permanent while governments come and go**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">The phrase "the government and you" stresses that government:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>affects citizens' daily lives in many ways</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>has nothing to do with citizens</span></li>
+        <li class=""><span class="lab">C</span><span>only concerns kings</span></li>
+        <li class=""><span class="lab">D</span><span>is irrelevant</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"The government and you" stresses that government **affects citizens' daily lives in many ways**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">The "rule of law" protects ordinary people because it means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only the weak follow the law</span></li>
+        <li class=""><span class="lab">B</span><span>laws can be ignored</span></li>
+        <li class=""><span class="lab">C</span><span>the ruler makes any rule freely</span></li>
+        <li class="correct"><span class="lab">D</span><span>the powerful are also bound by the law</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The rule of law protects people because **the powerful are also bound by the law**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">The three organs being separate yet linked is meant to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>give one organ all power</span></li>
+        <li class="correct"><span class="lab">B</span><span>balance power and prevent misuse</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>abolish government</span></li>
+        <li class=""><span class="lab">D</span><span>hand power to the army</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Separate-yet-linked organs **balance power and prevent misuse**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">The government acting as a "partner" in development means it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>opposes all citizens</span></li>
+        <li class=""><span class="lab">B</span><span>does nothing</span></li>
+        <li class="correct"><span class="lab">C</span><span>works with citizens and businesses for progress</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>only taxes</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>As a partner, the government **works with citizens and businesses for progress**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">A correct statement about sovereignty is that a sovereign state:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>takes orders from another country</span></li>
+        <li class="correct"><span class="lab">B</span><span>makes its own laws and decisions internally and externally</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>has no government</span></li>
+        <li class=""><span class="lab">D</span><span>has no territory</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A sovereign state **makes its own laws and decisions internally and externally**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">"Matsya nyaya" is contrasted with good governance to show why people need:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>no rules at all</span></li>
+        <li class=""><span class="lab">B</span><span>constant conflict</span></li>
+        <li class="correct"><span class="lab">C</span><span>a state and laws to keep order and justice</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>foreign rule</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Matsya nyaya" shows why people need **a state and laws to keep order and justice**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">Citizens using the RTI to ask how public money was spent are exercising:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>their right to hold government accountable</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a way to break the law</span></li>
+        <li class=""><span class="lab">C</span><span>a tax</span></li>
+        <li class=""><span class="lab">D</span><span>a private favour</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Using RTI on public spending exercises **their right to hold government accountable**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">The bureaucracy (civil servants) is important because it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>makes all the laws alone</span></li>
+        <li class=""><span class="lab">B</span><span>judges all cases</span></li>
+        <li class=""><span class="lab">C</span><span>wins elections</span></li>
+        <li class="correct"><span class="lab">D</span><span>carries out government policies and keeps services running</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The bureaucracy **carries out government policies and keeps services running**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">Federalism benefits a large, diverse country because it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>gives all power to one city</span></li>
+        <li class=""><span class="lab">B</span><span>ends all government</span></li>
+        <li class=""><span class="lab">C</span><span>bans local decisions</span></li>
+        <li class="correct"><span class="lab">D</span><span>lets regions govern local matters while the centre handles national ones</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Federalism helps a diverse country by letting **regions govern local matters while the centre handles national ones**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">Judicial review safeguards the Constitution because courts can:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>strike down laws that violate it</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>write new laws freely</span></li>
+        <li class=""><span class="lab">C</span><span>collect taxes</span></li>
+        <li class=""><span class="lab">D</span><span>appoint the legislature</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Judicial review safeguards the Constitution because courts can **strike down laws that violate it**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">The reason the government is "only one of the four elements" of the state is that the state also needs:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>nothing else</span></li>
+        <li class=""><span class="lab">B</span><span>only a flag</span></li>
+        <li class="correct"><span class="lab">C</span><span>population, territory and sovereignty</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>only money</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Government is "only one element" because the state also needs **population, territory and sovereignty**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">A government providing clean water, roads and schools is acting mainly as a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>protector only</span></li>
+        <li class="correct"><span class="lab">B</span><span>provider</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>regulator only</span></li>
+        <li class=""><span class="lab">D</span><span>trader</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Providing water, roads and schools is acting as a **provider**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">A government maintaining the army and police is acting mainly as a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>provider only</span></li>
+        <li class=""><span class="lab">B</span><span>regulator only</span></li>
+        <li class="correct"><span class="lab">C</span><span>protector</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>partner only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Maintaining army and police is acting as a **protector**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">The reason the rule of law is essential to democracy is that without it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>elections would be fairer</span></li>
+        <li class="correct"><span class="lab">B</span><span>the powerful could act unchecked and rights would be unsafe</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>courts would be stronger</span></li>
+        <li class=""><span class="lab">D</span><span>citizens would be freer</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Without the rule of law **the powerful could act unchecked and rights would be unsafe**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">Decentralisation (e.g. panchayats and municipalities) helps because it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>removes the people's voice</span></li>
+        <li class=""><span class="lab">B</span><span>centralises all power</span></li>
+        <li class=""><span class="lab">C</span><span>ends local services</span></li>
+        <li class="correct"><span class="lab">D</span><span>brings government closer to the people</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Decentralisation helps because it **brings government closer to the people**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">A "regulator" for telecom or banking exists to:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>set rules so the sector serves people fairly</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>sell phones</span></li>
+        <li class=""><span class="lab">C</span><span>run a bank for profit</span></li>
+        <li class=""><span class="lab">D</span><span>write laws in parliament</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A telecom or banking regulator exists to **set rules so the sector serves people fairly**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">The clearest reason a state needs sovereignty is so it can:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>govern itself and not be controlled by another state</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>have a coastline</span></li>
+        <li class=""><span class="lab">C</span><span>collect stamps</span></li>
+        <li class=""><span class="lab">D</span><span>hold festivals</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A state needs sovereignty so it can **govern itself and not be controlled by another state**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">The relationship between citizen and government in a democracy is that the government:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>owns the citizens</span></li>
+        <li class="correct"><span class="lab">B</span><span>derives its authority from, and serves, the citizens</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>ignores the citizens</span></li>
+        <li class=""><span class="lab">D</span><span>is owned by a foreign power</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In a democracy the government **derives its authority from, and serves, the citizens**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">The reason the three organs must not all be controlled by one person is to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>speed up dictatorship</span></li>
+        <li class=""><span class="lab">B</span><span>abolish the courts</span></li>
+        <li class=""><span class="lab">C</span><span>end elections</span></li>
+        <li class="correct"><span class="lab">D</span><span>prevent tyranny through checks and balances</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>One person must not control all three organs, to **prevent tyranny through checks and balances**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">The government enforcing food-safety or pollution standards is acting as a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>trader</span></li>
+        <li class=""><span class="lab">B</span><span>farmer</span></li>
+        <li class="correct"><span class="lab">C</span><span>regulator protecting the public</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>tourist</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Enforcing food-safety or pollution standards is acting as a **regulator protecting the public**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">A correct statement about the state and the government is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>they are identical and temporary</span></li>
+        <li class=""><span class="lab">B</span><span>the state changes each election</span></li>
+        <li class=""><span class="lab">C</span><span>the government is permanent and the state temporary</span></li>
+        <li class="correct"><span class="lab">D</span><span>the government is the working arm; the state is the larger, lasting whole</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Correctly, **the government is the working arm; the state is the larger, lasting whole**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">The RTI strengthens democracy mainly by promoting:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>secrecy</span></li>
+        <li class=""><span class="lab">B</span><span>corruption</span></li>
+        <li class="correct"><span class="lab">C</span><span>transparency and accountability</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>one-party rule</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>RTI strengthens democracy by promoting **transparency and accountability**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">The reason "you" are part of the chapter's title is that citizens:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>both shape the government (by voting) and are served by it</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>have no role</span></li>
+        <li class=""><span class="lab">C</span><span>only pay taxes</span></li>
+        <li class=""><span class="lab">D</span><span>are ignored</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"You" are in the title because citizens **both shape the government (by voting) and are served by it**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">The deepest purpose of dividing government into three organs is to ensure:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>one organ controls all</span></li>
+        <li class="correct"><span class="lab">B</span><span>no single organ holds unchecked power</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the army governs</span></li>
+        <li class=""><span class="lab">D</span><span>the courts make laws</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Dividing government into three organs ensures **no single organ holds unchecked power**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">A sovereign, democratic state with the rule of law best protects:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only the rulers</span></li>
+        <li class="correct"><span class="lab">B</span><span>the rights and freedoms of its citizens</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>foreign powers</span></li>
+        <li class=""><span class="lab">D</span><span>no one</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A sovereign, democratic, rule-of-law state best protects **the rights and freedoms of its citizens**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">The reason a government needs a bureaucracy is that elected leaders:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>can run everything alone</span></li>
+        <li class=""><span class="lab">B</span><span>should not govern</span></li>
+        <li class=""><span class="lab">C</span><span>make all laws by themselves</span></li>
+        <li class="correct"><span class="lab">D</span><span>need a trained, permanent staff to deliver services</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A bureaucracy is needed because elected leaders **need a trained, permanent staff to deliver services**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">Federalism and decentralisation both reflect the principle of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>total central control</span></li>
+        <li class=""><span class="lab">B</span><span>no government</span></li>
+        <li class="correct"><span class="lab">C</span><span>sharing power across levels rather than concentrating it</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>foreign rule</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Federalism and decentralisation reflect **sharing power across levels rather than concentrating it**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">A government that can be questioned through courts, RTI and elections is one that is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>accountable to the people</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>above all checks</span></li>
+        <li class=""><span class="lab">C</span><span>hereditary</span></li>
+        <li class=""><span class="lab">D</span><span>unelected</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A government open to courts, RTI and elections is **accountable to the people**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">The reason "matsya nyaya" is used as a warning is to show that, without a state:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>order breaks down and the strong oppress the weak</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>society improves</span></li>
+        <li class=""><span class="lab">C</span><span>trade flourishes</span></li>
+        <li class=""><span class="lab">D</span><span>democracy appears</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Matsya nyaya" warns that, without a state, **order breaks down and the strong oppress the weak**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">The clearest example of the government as "provider" in your life is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a private shop</span></li>
+        <li class=""><span class="lab">B</span><span>a foreign embassy</span></li>
+        <li class=""><span class="lab">C</span><span>a temple fair</span></li>
+        <li class="correct"><span class="lab">D</span><span>public schools, hospitals and roads</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Government as "provider" appears in **public schools, hospitals and roads**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">The clearest example of the government as "protector" in your life is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a shopping mall</span></li>
+        <li class=""><span class="lab">B</span><span>a private company</span></li>
+        <li class="correct"><span class="lab">C</span><span>police and the courts that keep you safe and uphold rights</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a festival</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Government as "protector" appears in **police and the courts that keep you safe and uphold rights**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">The reason judicial independence supports the rule of law is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>judges obey the ruler</span></li>
+        <li class="correct"><span class="lab">B</span><span>courts can judge fairly even against the powerful</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>courts make laws</span></li>
+        <li class=""><span class="lab">D</span><span>judges run elections</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Judicial independence supports the rule of law because **courts can judge fairly even against the powerful**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">A state's territory matters because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>territory is irrelevant</span></li>
+        <li class=""><span class="lab">B</span><span>a state needs no land</span></li>
+        <li class="correct"><span class="lab">C</span><span>a state must govern a defined area of land (and waters)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>territory is only a map</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Territory matters because **a state must govern a defined area of land (and waters)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">The reason population is an element of the state is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>people are unimportant</span></li>
+        <li class=""><span class="lab">B</span><span>a state has no people</span></li>
+        <li class=""><span class="lab">C</span><span>only land matters</span></li>
+        <li class="correct"><span class="lab">D</span><span>a state exists to govern its people</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Population is an element because **a state exists to govern its people**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">A balanced statement about government's roles is that it acts as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only a tax collector</span></li>
+        <li class="correct"><span class="lab">B</span><span>protector, provider and partner together</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>only an army</span></li>
+        <li class=""><span class="lab">D</span><span>only a court</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The government acts as **protector, provider and partner together**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">The deepest reason citizens should understand the state and government is that:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>informed citizens can participate and hold power accountable</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>it does not concern them</span></li>
+        <li class=""><span class="lab">C</span><span>only officials need to know</span></li>
+        <li class=""><span class="lab">D</span><span>government is irrelevant</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Citizens should understand the state because **informed citizens can participate and hold power accountable**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">The reason the rule of law is called a "pillar" of a just state is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>it frees rulers from the law</span></li>
+        <li class="correct"><span class="lab">B</span><span>it ensures fairness by binding everyone equally</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>it ends courts</span></li>
+        <li class=""><span class="lab">D</span><span>it bans voting</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The rule of law is a "pillar" because **it ensures fairness by binding everyone equally**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">A government regulating, providing and protecting at once shows that its job is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>wide-ranging and central to citizens' lives</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>narrow and unimportant</span></li>
+        <li class=""><span class="lab">C</span><span>only military</span></li>
+        <li class=""><span class="lab">D</span><span>only ceremonial</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Regulating, providing and protecting shows government's job is **wide-ranging and central to citizens' lives**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">The relationship "the state, the government, and you" is best summarised as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>three unrelated things</span></li>
+        <li class=""><span class="lab">B</span><span>one person ruling alone</span></li>
+        <li class="correct"><span class="lab">C</span><span>the lasting state, run by a changeable government, serving and answerable to you</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a foreign power over India</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The relationship is **the lasting state, run by a changeable government, serving and answerable to you**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">Pulling the chapter together, the state and government matter to you because they:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>have nothing to do with daily life</span></li>
+        <li class=""><span class="lab">B</span><span>serve only rulers</span></li>
+        <li class=""><span class="lab">C</span><span>are purely ceremonial</span></li>
+        <li class="correct"><span class="lab">D</span><span>organise society, uphold the rule of law, and provide the services and protection citizens depend on</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The state and government matter because they **organise society, uphold the rule of law, and provide the services and protection citizens depend on**.</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>
