@@ -506,6 +506,66 @@ extension OlympiadPaperRegistry {
             suggestedTimeMinutes: 90,
             solvedGuideHTML: "Science_Ch12_ReproductionInPlants_Advanced_SolvedGuide.html",
             tier: .advanced
+        ),
+        OlympiadPaper(
+            id: "olympiad_science_ch16_advanced",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 16,
+            chapterTitle: "Water: A Precious Resource",
+            displayTitle: "Water: A Precious Resource — Paper 2 (Advanced)",
+            questionPaperMD: "Science_Ch16_WaterAPreciousResource_Advanced_QuestionPaper.md",
+            solutionsMD: "Science_Ch16_WaterAPreciousResource_Advanced_Solutions.md",
+            questionPaperHTML: "Science_Ch16_WaterAPreciousResource.html",
+            questionPaperPDF: "Science_Ch16_WaterAPreciousResource.pdf",
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Science_Ch16_WaterAPreciousResource_Advanced_SolvedGuide.html",
+            tier: .advanced
+        ),
+        OlympiadPaper(
+            id: "olympiad_science_ch17_advanced",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 17,
+            chapterTitle: "Forest: Our Lifeline",
+            displayTitle: "Forest: Our Lifeline — Paper 2 (Advanced)",
+            questionPaperMD: "Science_Ch17_ForestOurLifeline_Advanced_QuestionPaper.md",
+            solutionsMD: "Science_Ch17_ForestOurLifeline_Advanced_Solutions.md",
+            questionPaperHTML: "Science_Ch17_ForestOurLifeline.html",
+            questionPaperPDF: "Science_Ch17_ForestOurLifeline.pdf",
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Science_Ch17_ForestOurLifeline_Advanced_SolvedGuide.html",
+            tier: .advanced
+        ),
+        OlympiadPaper(
+            id: "olympiad_science_ch18_advanced",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 18,
+            chapterTitle: "Wastewater Story",
+            displayTitle: "Wastewater Story — Paper 2 (Advanced)",
+            questionPaperMD: "Science_Ch18_WastewaterStory_Advanced_QuestionPaper.md",
+            solutionsMD: "Science_Ch18_WastewaterStory_Advanced_Solutions.md",
+            questionPaperHTML: "Science_Ch18_WastewaterStory.html",
+            questionPaperPDF: "Science_Ch18_WastewaterStory.pdf",
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Science_Ch18_WastewaterStory_Advanced_SolvedGuide.html",
+            tier: .advanced
+        ),
+        OlympiadPaper(
+            id: "olympiad_science_ch19_advanced",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 19,
+            chapterTitle: "Earth, Moon and the Sun",
+            displayTitle: "Earth, Moon and the Sun — Paper 2 (Advanced)",
+            questionPaperMD: "Science_Ch19_EarthMoonAndTheSun_Advanced_QuestionPaper.md",
+            solutionsMD: "Science_Ch19_EarthMoonAndTheSun_Advanced_Solutions.md",
+            questionPaperHTML: "Science_Ch19_EarthMoonAndTheSun.html",
+            questionPaperPDF: "Science_Ch19_EarthMoonAndTheSun.pdf",
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Science_Ch19_EarthMoonAndTheSun_Advanced_SolvedGuide.html",
+            tier: .advanced
         )
     ]
 }

@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Water APrecious Resource (Advanced) — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Water APrecious Resource (Advanced)<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">Although about three-quarters of Earth's surface is covered by water, the fraction that is fresh water available for human use is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>more than half</span></li>
+        <li class=""><span class="lab">B</span><span>about one-quarter</span></li>
+        <li class="correct"><span class="lab">C</span><span>a very tiny fraction</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>exactly zero</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Earth looks blue, but usable fresh water is only **a very tiny fraction** of all its water — most is salty ocean or locked in ice.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">Most of Earth's water is found in the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>oceans, as salt water</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>rivers and lakes</span></li>
+        <li class=""><span class="lab">C</span><span>atmosphere as vapour</span></li>
+        <li class=""><span class="lab">D</span><span>bodies of living things</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The greatest share of Earth's water sits in the **oceans as salt water**, which we cannot drink or use for most crops without treatment.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">The largest store of Earth's **fresh** water is locked up in:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>rivers</span></li>
+        <li class=""><span class="lab">B</span><span>clouds</span></li>
+        <li class=""><span class="lab">C</span><span>ponds</span></li>
+        <li class="correct"><span class="lab">D</span><span>ice caps and glaciers</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Of the fresh water, the largest part is frozen in **ice caps and glaciers**, far from where most people live.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">The continuous movement of water between the ground, water bodies, the atmosphere and back is called the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>nitrogen cycle</span></li>
+        <li class="correct"><span class="lab">B</span><span>water cycle</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>carbon cycle</span></li>
+        <li class=""><span class="lab">D</span><span>rock cycle</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The endless journey of water from ground to sky and back is the **water cycle**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">The change of liquid water into water vapour is called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>condensation</span></li>
+        <li class="correct"><span class="lab">B</span><span>evaporation</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>precipitation</span></li>
+        <li class=""><span class="lab">D</span><span>infiltration</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Liquid water turning into water vapour is **evaporation**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">Clouds form when water vapour in the air cools and turns back into tiny droplets. This change is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>evaporation</span></li>
+        <li class=""><span class="lab">B</span><span>melting</span></li>
+        <li class=""><span class="lab">C</span><span>freezing</span></li>
+        <li class="correct"><span class="lab">D</span><span>condensation</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Vapour cooling back into tiny droplets to form clouds is **condensation**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">The Sun is essential to the water cycle mainly because it provides the energy for:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>evaporation of surface water</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>condensation of clouds</span></li>
+        <li class=""><span class="lab">C</span><span>the freezing of glaciers</span></li>
+        <li class=""><span class="lab">D</span><span>the digging of wells</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Sun powers the water cycle chiefly by driving the **evaporation of surface water** into vapour.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">Plants return water vapour to the air through their leaves in a process called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>respiration</span></li>
+        <li class=""><span class="lab">B</span><span>germination</span></li>
+        <li class="correct"><span class="lab">C</span><span>transpiration</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>pollination</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Plants release water vapour from their leaves by **transpiration**, adding moisture to the air.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">The upper level of the underground zone that is fully saturated with water is the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>water table</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>sea level</span></li>
+        <li class=""><span class="lab">C</span><span>canopy</span></li>
+        <li class=""><span class="lab">D</span><span>tree line</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The top of the saturated underground zone is the **water table**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">An underground layer of rock or sand that holds and lets water move through it is an:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>atmosphere</span></li>
+        <li class=""><span class="lab">B</span><span>estuary</span></li>
+        <li class="correct"><span class="lab">C</span><span>aquifer</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>iceberg</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A water-holding, water-transmitting layer of rock or sand is an **aquifer**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">Water present underground in the soil and in aquifers, reached by wells and tubewells, is called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>rainwater</span></li>
+        <li class=""><span class="lab">B</span><span>sea water</span></li>
+        <li class=""><span class="lab">C</span><span>distilled water</span></li>
+        <li class="correct"><span class="lab">D</span><span>groundwater</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Underground water in soil and aquifers, tapped by wells and tubewells, is **groundwater**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">The seeping of rainwater down through the soil to refill the groundwater is called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>run-off</span></li>
+        <li class="correct"><span class="lab">B</span><span>recharge (infiltration)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>evaporation</span></li>
+        <li class=""><span class="lab">D</span><span>transpiration</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rainwater seeping down to refill the aquifer is **recharge (infiltration)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">If a town pumps out groundwater faster than rain can recharge it, over the years the water table will:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>rise steadily</span></li>
+        <li class=""><span class="lab">B</span><span>stay exactly the same</span></li>
+        <li class=""><span class="lab">C</span><span>turn into salt water</span></li>
+        <li class="correct"><span class="lab">D</span><span>fall lower and lower</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Pumping faster than rain can recharge means the water table will **fall lower and lower** over the years.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">A village finds its hand-pump runs dry in summer but works in the monsoon. The best explanation is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the pump breaks every summer</span></li>
+        <li class="correct"><span class="lab">B</span><span>the water table drops in the dry season and rises after the rains recharge it</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>rain water is too heavy to pump</span></li>
+        <li class=""><span class="lab">D</span><span>the groundwater evaporates from underground</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The dry-season failure shows the **water table drops in the dry season and rises after the rains recharge it** — the pump only reaches water when the table is high enough.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">Which change would most help **raise** a falling water table in a region?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>paving every open field with concrete</span></li>
+        <li class=""><span class="lab">B</span><span>cutting down the surrounding forest</span></li>
+        <li class="correct"><span class="lab">C</span><span>building rainwater-harvesting structures that let water soak in</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>drilling many more deep tubewells</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Letting rain soak in through **rainwater-harvesting structures** is the way to help a falling table recover.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">Covering large areas of ground with concrete and tar lowers the water table because it:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>blocks rainwater from soaking in to recharge the aquifer</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>heats the groundwater</span></li>
+        <li class=""><span class="lab">C</span><span>makes plants transpire more</span></li>
+        <li class=""><span class="lab">D</span><span>increases evaporation from the soil</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Concrete and tar **block rainwater from soaking in to recharge the aquifer**, so the table falls.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">The slow delivery of water drop-by-drop directly to plant roots through narrow pipes is called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>flood irrigation</span></li>
+        <li class=""><span class="lab">B</span><span>sprinkler irrigation</span></li>
+        <li class="correct"><span class="lab">C</span><span>drip irrigation</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>furrow irrigation</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Delivering water drop-by-drop to the roots through narrow pipes is **drip irrigation**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">For a dry region where every litre counts, the **most water-efficient** irrigation method is usually:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>drip irrigation</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>flooding the whole field</span></li>
+        <li class=""><span class="lab">C</span><span>leaving channels open all day</span></li>
+        <li class=""><span class="lab">D</span><span>spraying at noon in strong sun</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Where every litre counts, **drip irrigation** wastes the least, putting water right at the roots.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">Flood irrigation wastes a lot of water mainly because much of it is lost to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the plant roots</span></li>
+        <li class="correct"><span class="lab">B</span><span>evaporation and run-off / deep seepage away from roots</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>condensation in the clouds</span></li>
+        <li class=""><span class="lab">D</span><span>the bar screen</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Flood irrigation loses much water to **evaporation and run-off / deep seepage away from the roots**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">Watering crops in the early morning or evening rather than at midday saves water because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>plants do not drink at midday</span></li>
+        <li class=""><span class="lab">B</span><span>the Sun freezes the water at midday</span></li>
+        <li class=""><span class="lab">C</span><span>pipes only work when it is cool</span></li>
+        <li class="correct"><span class="lab">D</span><span>less water evaporates when it is cooler</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Watering when it is cool means **less water evaporates** before the plants can use it.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">Collecting and storing rainwater for later use, or letting it soak in to refill groundwater, is called:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>rainwater harvesting</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>desalination</span></li>
+        <li class=""><span class="lab">C</span><span>chlorination</span></li>
+        <li class=""><span class="lab">D</span><span>sedimentation</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Capturing and storing rain, or soaking it into the ground, is **rainwater harvesting**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">A common method of rooftop rainwater harvesting directs roof water through pipes to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the kitchen tap directly</span></li>
+        <li class=""><span class="lab">B</span><span>the sewer for treatment</span></li>
+        <li class=""><span class="lab">C</span><span>the ocean</span></li>
+        <li class="correct"><span class="lab">D</span><span>a storage tank or a recharge pit/well that feeds the groundwater</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rooftop systems pipe roof water to **a storage tank or a recharge pit/well that feeds the groundwater**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">The ancient stepped Indian water structures with steps descending to reach water at any level are called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>tankas</span></li>
+        <li class="correct"><span class="lab">B</span><span>bawris (baolis / stepwells)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>aqueducts</span></li>
+        <li class=""><span class="lab">D</span><span>clarifiers</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The stepped wells that descend to reach water at any level are **bawris (baolis / stepwells)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">The underground rainwater storage tanks traditionally used in the dry areas of Rajasthan and Gujarat are called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>canopy</span></li>
+        <li class=""><span class="lab">B</span><span>aquifer</span></li>
+        <li class="correct"><span class="lab">C</span><span>tanka / kund</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>glacier</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The underground rain-storage tanks of dry Rajasthan and Gujarat are **tankas / kunds**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">The day set aside each year to focus the world's attention on fresh water — World Water Day — falls on:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5 June</span></li>
+        <li class="correct"><span class="lab">B</span><span>22 March</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>1 January</span></li>
+        <li class=""><span class="lab">D</span><span>2 October</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>World Water Day is observed on **22 March** each year.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">A key reason fresh water is described as a "precious resource" is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>it is found everywhere in unlimited amounts</span></li>
+        <li class=""><span class="lab">B</span><span>it can be made cheaply from sea water anywhere</span></li>
+        <li class="correct"><span class="lab">C</span><span>usable fresh water is scarce, unevenly spread, and easily polluted</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>it never runs out no matter how much we use</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Fresh water is precious because **usable fresh water is scarce, unevenly spread and easily polluted**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">Which set of activities has **increased** the demand on groundwater in many parts of India?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a growing population, more industries and more irrigation</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>shrinking population and less farming</span></li>
+        <li class=""><span class="lab">C</span><span>less construction and more forests</span></li>
+        <li class=""><span class="lab">D</span><span>banning all tubewells</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Demand on groundwater has risen with **a growing population, more industries and more irrigation**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">A region is said to face **water scarcity** when:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>it has more water than it can ever use</span></li>
+        <li class=""><span class="lab">B</span><span>it only rains in the monsoon</span></li>
+        <li class=""><span class="lab">C</span><span>the water is too cold to drink</span></li>
+        <li class="correct"><span class="lab">D</span><span>the available water is far less than the water people and crops need</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Water scarcity means **the available water is far less than people and crops need**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">Deforestation can reduce groundwater recharge because, without tree roots and leaf litter:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>rain falls less often</span></li>
+        <li class=""><span class="lab">B</span><span>the Sun stops evaporating water</span></li>
+        <li class=""><span class="lab">C</span><span>the water table rises too high</span></li>
+        <li class="correct"><span class="lab">D</span><span>rainwater runs off faster and soaks in less</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Without tree roots and leaf litter, **rainwater runs off faster and soaks in less**, so recharge drops.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">The energy that drives the entire water cycle ultimately comes from:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the Sun</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the Moon</span></li>
+        <li class=""><span class="lab">C</span><span>underground heat only</span></li>
+        <li class=""><span class="lab">D</span><span>ocean currents alone</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The whole water cycle is ultimately powered by **the Sun**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">Water falling from clouds as rain, snow, sleet or hail is together called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>evaporation</span></li>
+        <li class=""><span class="lab">B</span><span>condensation</span></li>
+        <li class="correct"><span class="lab">C</span><span>precipitation</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>transpiration</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rain, snow, sleet and hail falling from clouds are together called **precipitation**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">Two neighbouring farmers grow the same crop. One uses drip irrigation, the other floods his field. Compared with the flood farmer, the drip farmer will most likely use:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>much more water for the same crop</span></li>
+        <li class="correct"><span class="lab">B</span><span>much less water for the same crop</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>exactly the same amount of water</span></li>
+        <li class=""><span class="lab">D</span><span>no water at all</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>For the same crop, the drip farmer uses **much less water** than the one who floods his field.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">A city that paves its parks, builds on its ponds and drills deeper wells every year is on a path toward:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a rising water table</span></li>
+        <li class=""><span class="lab">B</span><span>permanent flooding</span></li>
+        <li class="correct"><span class="lab">C</span><span>a falling water table and worsening scarcity</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>unlimited fresh water</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Paving parks, building on ponds and drilling deeper every year leads to **a falling water table and worsening scarcity**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">Salt water cannot be used directly for drinking or for most crops because it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>is too cold</span></li>
+        <li class="correct"><span class="lab">B</span><span>contains too much dissolved salt</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>has no oxygen</span></li>
+        <li class=""><span class="lab">D</span><span>is always frozen</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Salt water is unusable for drinking and most crops because it **contains too much dissolved salt**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">Which is the best example of **recharging** groundwater on purpose?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>letting rainwater run straight into a covered drain to the sea</span></li>
+        <li class=""><span class="lab">B</span><span>spraying water into the air on a hot day</span></li>
+        <li class=""><span class="lab">C</span><span>storing water in a sealed plastic bottle</span></li>
+        <li class="correct"><span class="lab">D</span><span>sending roof rainwater into a soak pit so it seeps underground</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sending roof rainwater into **a soak pit so it seeps underground** is deliberate groundwater recharge.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">During the water cycle, water that soaks into the ground and is held in the aquifer can later reappear at the surface as:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>springs, wells and the base flow of rivers</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>lightning</span></li>
+        <li class=""><span class="lab">C</span><span>clouds only</span></li>
+        <li class=""><span class="lab">D</span><span>snow on mountain tops only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Water held in an aquifer can re-emerge as **springs, wells and the base flow of rivers**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">A household can save water at the tap most simply by:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>fixing leaks and turning taps off when not in use</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>leaving taps running while brushing</span></li>
+        <li class=""><span class="lab">C</span><span>washing the car with a running hose daily</span></li>
+        <li class=""><span class="lab">D</span><span>using more water than needed to "be safe"</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The simplest tap-side saving is to **fix leaks and turn taps off when not in use**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">The percentage of Earth's water that is salty ocean water is closest to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>3%</span></li>
+        <li class="correct"><span class="lab">B</span><span>97%</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>25%</span></li>
+        <li class=""><span class="lab">D</span><span>50%</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>About **97%** of Earth's water is salty ocean water.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">Why is much of Earth's fresh water still **not easily available** for use?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>it is all in the taps already</span></li>
+        <li class=""><span class="lab">B</span><span>it has all evaporated</span></li>
+        <li class=""><span class="lab">C</span><span>it is hidden inside living things</span></li>
+        <li class="correct"><span class="lab">D</span><span>most of it is frozen in ice caps and glaciers or deep underground</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Much fresh water is hard to use because **most of it is frozen in ice caps and glaciers or lies deep underground**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">A "tubewell" reaches water by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>collecting rain on a roof</span></li>
+        <li class=""><span class="lab">B</span><span>trapping clouds</span></li>
+        <li class="correct"><span class="lab">C</span><span>boring deep down to the saturated aquifer below the water table</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>melting glaciers</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A tubewell reaches water by **boring deep down to the saturated aquifer below the water table**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">Sprinkler irrigation is especially useful on uneven or sandy land because it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>floods the lowest spots only</span></li>
+        <li class=""><span class="lab">B</span><span>needs no water at all</span></li>
+        <li class=""><span class="lab">C</span><span>only waters the channels</span></li>
+        <li class="correct"><span class="lab">D</span><span>sprays water like rain, spreading it evenly without needing level fields</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sprinkler irrigation **sprays water like rain, spreading it evenly without needing level fields**, ideal for sandy or uneven land.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">If everyone in a dry city harvested rooftop rainwater during the monsoon, the most likely benefit would be:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>less recharge of groundwater</span></li>
+        <li class=""><span class="lab">B</span><span>permanent loss of all rain</span></li>
+        <li class="correct"><span class="lab">C</span><span>more stored water and better-recharged aquifers for the dry months</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a higher water bill with no water saved</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>City-wide rooftop harvesting gives **more stored water and better-recharged aquifers for the dry months**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">The main reason flood irrigation is still common despite its waste is that it is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>simple and cheap to set up, needing no special equipment</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the most water-saving method</span></li>
+        <li class=""><span class="lab">C</span><span>impossible to do</span></li>
+        <li class=""><span class="lab">D</span><span>only used in deserts</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Flood irrigation persists because it is **simple and cheap to set up, needing no special equipment**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">A factory dumping waste into a river affects the water cycle's usefulness by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>increasing the amount of fresh water</span></li>
+        <li class="correct"><span class="lab">B</span><span>polluting water that would otherwise be usable downstream</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>speeding up evaporation</span></li>
+        <li class=""><span class="lab">D</span><span>raising the water table</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Dumping waste into a river **pollutes water that would otherwise be usable downstream**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">The correct order of events in the water cycle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>condensation → evaporation → precipitation</span></li>
+        <li class="correct"><span class="lab">B</span><span>evaporation → condensation → precipitation</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>precipitation → evaporation → condensation</span></li>
+        <li class=""><span class="lab">D</span><span>evaporation → precipitation → condensation</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The cycle runs **evaporation → condensation → precipitation**: water rises as vapour, cools to clouds, then falls.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">Which statement about the water table is **correct**?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>it is fixed and never moves</span></li>
+        <li class=""><span class="lab">B</span><span>it is the level of clouds in the sky</span></li>
+        <li class=""><span class="lab">C</span><span>it only exists under the sea</span></li>
+        <li class="correct"><span class="lab">D</span><span>it rises with good recharge and falls with heavy pumping or poor recharge</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The water table **rises with good recharge and falls with heavy pumping or poor recharge** — it is not fixed.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">A farmer switching from flood to drip irrigation will most directly help conserve:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sunlight</span></li>
+        <li class=""><span class="lab">B</span><span>air</span></li>
+        <li class="correct"><span class="lab">C</span><span>groundwater and surface water</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>soil minerals only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Switching to drip irrigation most directly conserves **groundwater and surface water**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">The phrase "every drop counts" is a reminder that fresh water:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>is limited and shared, so saving even small amounts adds up</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>is unlimited so waste does not matter</span></li>
+        <li class=""><span class="lab">C</span><span>cannot be stored</span></li>
+        <li class=""><span class="lab">D</span><span>is only needed by farmers</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Every drop counts" reminds us fresh water is **limited and shared, so saving even small amounts adds up**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">Building a check-dam across a small seasonal stream helps groundwater because it:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>holds water back so more of it soaks in to recharge the aquifer</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>drains the stream faster to the sea</span></li>
+        <li class=""><span class="lab">C</span><span>heats the water</span></li>
+        <li class=""><span class="lab">D</span><span>stops it from ever raining</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A check-dam **holds water back so more of it soaks in to recharge the aquifer**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">A region with plenty of annual rainfall can still face water scarcity if:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the rain is stored and shared well</span></li>
+        <li class=""><span class="lab">B</span><span>it has many forests</span></li>
+        <li class=""><span class="lab">C</span><span>it uses drip irrigation everywhere</span></li>
+        <li class="correct"><span class="lab">D</span><span>most rain runs off quickly and little is harvested or recharged</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A rainy region can still be scarce if **most rain runs off quickly and little is harvested or recharged**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">Compared with surface water in open tanks, groundwater is often cleaner because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>it is exposed to more sunlight</span></li>
+        <li class=""><span class="lab">B</span><span>factories add chemicals to it</span></li>
+        <li class="correct"><span class="lab">C</span><span>the soil and rock filter it as it seeps down</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>it never moves</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Groundwater is often cleaner because **the soil and rock filter it as it seeps down**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">A school wants to cut its water use during a drought. The most effective single step is to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>water the lawn twice a day</span></li>
+        <li class="correct"><span class="lab">B</span><span>repair leaking taps and pipes and reuse water where safe</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>leave the taps on to keep them clean</span></li>
+        <li class=""><span class="lab">D</span><span>hose down the playground daily</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In a drought the most effective single step is to **repair leaking taps and pipes and reuse water where safe**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">The tanka/kund and bawri systems show that water conservation in India is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a brand-new idea from this century</span></li>
+        <li class=""><span class="lab">B</span><span>impossible in dry regions</span></li>
+        <li class="correct"><span class="lab">C</span><span>an old and time-tested tradition adapted to dry climates</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>only useful near the sea</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Tankas, kunds and bawris show water conservation in India is **an old and time-tested tradition adapted to dry climates**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">If groundwater is over-extracted near a coast, sea water can seep in and make wells salty. This problem is called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>condensation</span></li>
+        <li class=""><span class="lab">B</span><span>precipitation</span></li>
+        <li class=""><span class="lab">C</span><span>transpiration</span></li>
+        <li class="correct"><span class="lab">D</span><span>saltwater intrusion</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sea water seeping into over-pumped coastal wells is **saltwater intrusion**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">The single biggest reason water demand keeps rising in India is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>falling population</span></li>
+        <li class="correct"><span class="lab">B</span><span>growing population together with farming and industry</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>shrinking cities</span></li>
+        <li class=""><span class="lab">D</span><span>decline of agriculture</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Demand keeps rising mainly due to **the growing population together with farming and industry**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">Choosing crops that need less water in a dry region is a form of:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>water conservation through wise planning</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>wasting water</span></li>
+        <li class=""><span class="lab">C</span><span>flood irrigation</span></li>
+        <li class=""><span class="lab">D</span><span>deforestation</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Choosing low-water crops in a dry region is **water conservation through wise planning**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">A correct cause-and-effect chain for a falling water table is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>more recharge → table rises → scarcity</span></li>
+        <li class="correct"><span class="lab">B</span><span>heavy pumping + poor recharge → table falls → wells dry up → scarcity</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>less pumping → table falls → more water</span></li>
+        <li class=""><span class="lab">D</span><span>more forests → table falls → flooding</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The chain is **heavy pumping + poor recharge → table falls → wells dry up → scarcity**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">The least wasteful time and method to water a kitchen garden is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>drip or careful watering in the cool early morning</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>flooding it at midday</span></li>
+        <li class=""><span class="lab">C</span><span>spraying it in the strong afternoon Sun</span></li>
+        <li class=""><span class="lab">D</span><span>leaving a hose running overnight</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A kitchen garden is watered least wastefully by **drip or careful watering in the cool early morning**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">Rooftop rainwater harvesting and recharge pits mainly improve a city's water security by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>increasing run-off to the sea</span></li>
+        <li class=""><span class="lab">B</span><span>raising the salt content of wells</span></li>
+        <li class="correct"><span class="lab">C</span><span>capturing monsoon rain and topping up the aquifer for later</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>reducing the total rainfall</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rooftop harvesting and recharge pits boost water security by **capturing monsoon rain and topping up the aquifer for later**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">The overall message of the chapter is best summed up as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>water is unlimited, so use freely</span></li>
+        <li class=""><span class="lab">B</span><span>only the government can save water</span></li>
+        <li class=""><span class="lab">C</span><span>groundwater never runs out</span></li>
+        <li class="correct"><span class="lab">D</span><span>fresh water is scarce and precious — conserve it, harvest rain, and recharge the ground</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The chapter's message: **fresh water is scarce and precious — conserve it, harvest rain, and recharge the ground**.</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

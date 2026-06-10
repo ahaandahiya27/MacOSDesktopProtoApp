@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Earth Moon And The Sun (Advanced) — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Earth Moon And The Sun (Advanced)<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">The spinning of the Earth on its own axis is called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>revolution</span></li>
+        <li class=""><span class="lab">B</span><span>eclipse</span></li>
+        <li class="correct"><span class="lab">C</span><span>rotation</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>tide</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The spinning of the Earth on its own axis is **rotation**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">The Earth completes one rotation on its axis in about:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>24 hours</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>27.3 days</span></li>
+        <li class=""><span class="lab">C</span><span>365.25 days</span></li>
+        <li class=""><span class="lab">D</span><span>one month</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Earth completes one rotation in about **24 hours**, giving one day-night cycle.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">Day and night are caused mainly by Earth's:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>revolution around the Sun</span></li>
+        <li class=""><span class="lab">B</span><span>tilt alone</span></li>
+        <li class=""><span class="lab">C</span><span>distance from the Moon</span></li>
+        <li class="correct"><span class="lab">D</span><span>rotation on its axis</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Day and night arise mainly from Earth's **rotation on its axis** — the lit half faces the Sun.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">The movement of the Earth around the Sun is called its:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>rotation</span></li>
+        <li class="correct"><span class="lab">B</span><span>revolution</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>phase</span></li>
+        <li class=""><span class="lab">D</span><span>eclipse</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Earth's journey around the Sun is its **revolution**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">The Earth takes about ____ to complete one revolution around the Sun.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>24 hours</span></li>
+        <li class="correct"><span class="lab">B</span><span>365.25 days</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>27.3 days</span></li>
+        <li class=""><span class="lab">D</span><span>12 hours</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>One revolution around the Sun takes about **365.25 days** — one year.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">The extra quarter-day (0.25) in each year's revolution is the reason we add an extra day every four years in a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>lunar month</span></li>
+        <li class=""><span class="lab">B</span><span>solar eclipse</span></li>
+        <li class=""><span class="lab">C</span><span>new moon</span></li>
+        <li class="correct"><span class="lab">D</span><span>leap year</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The leftover quarter-day each year is collected into an extra day every four years in a **leap year**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">Earth's axis is not upright but tilted at about:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>23.5°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>0°</span></li>
+        <li class=""><span class="lab">C</span><span>45°</span></li>
+        <li class=""><span class="lab">D</span><span>90°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Earth's axis is tilted at about **23.5°** from the upright.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">The main cause of the seasons is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Earth moving closer to and farther from the Sun</span></li>
+        <li class=""><span class="lab">B</span><span>the Moon blocking the Sun</span></li>
+        <li class="correct"><span class="lab">C</span><span>the tilt of Earth's axis as it revolves around the Sun</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>changes in Earth's rotation speed</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The seasons are caused by **the tilt of Earth's axis as it revolves around the Sun**, not by changing distance.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">It is summer in the part of Earth that is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>tilted toward the Sun, receiving more direct sunlight</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>tilted away from the Sun</span></li>
+        <li class=""><span class="lab">C</span><span>farthest from the Moon</span></li>
+        <li class=""><span class="lab">D</span><span>in shadow</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>It is summer where the hemisphere is **tilted toward the Sun, receiving more direct sunlight**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">When the Northern Hemisphere has summer, the Southern Hemisphere has:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>summer too</span></li>
+        <li class=""><span class="lab">B</span><span>no season</span></li>
+        <li class="correct"><span class="lab">C</span><span>winter</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>an eclipse</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>When the Northern Hemisphere has summer, the Southern Hemisphere has **winter** — they are opposite.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">The Moon is best described as Earth's:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>nearest star</span></li>
+        <li class=""><span class="lab">B</span><span>a planet</span></li>
+        <li class=""><span class="lab">C</span><span>artificial satellite</span></li>
+        <li class="correct"><span class="lab">D</span><span>only natural satellite</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Moon is Earth's **only natural satellite**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">The Moon takes about 27.3 days to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>rotate once on its own axis only</span></li>
+        <li class="correct"><span class="lab">B</span><span>orbit once around the Earth</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>orbit the Sun</span></li>
+        <li class=""><span class="lab">D</span><span>cause one tide</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Moon takes about 27.3 days to **orbit once around the Earth**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">The Moon shines in the night sky because it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>produces its own light like the Sun</span></li>
+        <li class=""><span class="lab">B</span><span>is on fire</span></li>
+        <li class=""><span class="lab">C</span><span>glows from Earth's light</span></li>
+        <li class="correct"><span class="lab">D</span><span>reflects sunlight</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Moon is not a light source; it shines because it **reflects sunlight**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">The changing shapes of the lit Moon we see through the month are called its:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>eclipses</span></li>
+        <li class="correct"><span class="lab">B</span><span>phases</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>tides</span></li>
+        <li class=""><span class="lab">D</span><span>seasons</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The changing shapes of the lit Moon through the month are its **phases**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">The phase when the Moon's lit side faces fully toward Earth, appearing as a complete disc, is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>new moon</span></li>
+        <li class=""><span class="lab">B</span><span>first quarter</span></li>
+        <li class="correct"><span class="lab">C</span><span>full moon</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>crescent</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>When the Moon's lit side fully faces Earth as a complete disc, it is the **full moon**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">The phase when the side of the Moon facing Earth is unlit, so the Moon is nearly invisible, is the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>new moon</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>full moon</span></li>
+        <li class=""><span class="lab">C</span><span>gibbous</span></li>
+        <li class=""><span class="lab">D</span><span>half moon</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>When the Earth-facing side is unlit and the Moon is nearly invisible, it is the **new moon**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">A solar eclipse happens when:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the Earth comes between the Sun and the Moon</span></li>
+        <li class=""><span class="lab">B</span><span>the Sun comes between the Earth and the Moon</span></li>
+        <li class="correct"><span class="lab">C</span><span>the Moon comes between the Sun and the Earth, casting its shadow on Earth</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the Earth stops rotating</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A solar eclipse occurs when **the Moon comes between the Sun and the Earth, casting its shadow on Earth**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">A solar eclipse can occur only at the time of a:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>new moon</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>full moon</span></li>
+        <li class=""><span class="lab">C</span><span>first quarter</span></li>
+        <li class=""><span class="lab">D</span><span>crescent</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Because the Moon must sit between Sun and Earth, a solar eclipse happens only at a **new moon**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">A lunar eclipse happens when:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the Moon comes between the Sun and Earth</span></li>
+        <li class="correct"><span class="lab">B</span><span>the Earth comes between the Sun and the Moon, casting its shadow on the Moon</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the Sun blocks the Earth</span></li>
+        <li class=""><span class="lab">D</span><span>the Moon stops orbiting</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A lunar eclipse occurs when **the Earth comes between the Sun and the Moon, casting its shadow on the Moon**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">A lunar eclipse can occur only at the time of a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>new moon</span></li>
+        <li class=""><span class="lab">B</span><span>crescent</span></li>
+        <li class=""><span class="lab">C</span><span>first quarter</span></li>
+        <li class="correct"><span class="lab">D</span><span>full moon</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Because Earth must sit between Sun and Moon, a lunar eclipse happens only at a **full moon**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">The regular rise and fall of sea level is called a:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>tide</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>phase</span></li>
+        <li class=""><span class="lab">C</span><span>season</span></li>
+        <li class=""><span class="lab">D</span><span>rotation</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The regular rise and fall of sea level is a **tide**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">Tides are caused mainly by the gravitational pull of the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Sun only</span></li>
+        <li class=""><span class="lab">B</span><span>other planets</span></li>
+        <li class=""><span class="lab">C</span><span>stars</span></li>
+        <li class="correct"><span class="lab">D</span><span>Moon (with a smaller effect from the Sun)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Tides are caused mainly by the gravitational pull of the **Moon (with a smaller effect from the Sun)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">The Sun is best described as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a planet</span></li>
+        <li class="correct"><span class="lab">B</span><span>a star — a huge ball of gas releasing energy by nuclear fusion</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a moon</span></li>
+        <li class=""><span class="lab">D</span><span>a comet</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Sun is **a star — a huge ball of gas releasing energy by nuclear fusion**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">A recognisable pattern of stars in the night sky is called a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>galaxy</span></li>
+        <li class=""><span class="lab">B</span><span>planet</span></li>
+        <li class="correct"><span class="lab">C</span><span>constellation</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>satellite</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A recognisable star pattern is a **constellation**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">The Saptarishi (the seven sages), part of the Great Bear (Ursa Major), is an example of a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>planet</span></li>
+        <li class="correct"><span class="lab">B</span><span>constellation</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>comet</span></li>
+        <li class=""><span class="lab">D</span><span>satellite</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Saptarishi, part of the Great Bear, is a **constellation**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">The Sun and all the bodies — planets, moons, asteroids and comets — that orbit it together form the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>galaxy</span></li>
+        <li class=""><span class="lab">B</span><span>constellation</span></li>
+        <li class="correct"><span class="lab">C</span><span>Solar System</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Milky Way only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Sun plus all the bodies orbiting it form the **Solar System**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">Rocky bodies smaller than planets, most of which orbit in a belt between Mars and Jupiter, are called:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>asteroids</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>comets</span></li>
+        <li class=""><span class="lab">C</span><span>stars</span></li>
+        <li class=""><span class="lab">D</span><span>moons</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rocky bodies smaller than planets, mostly orbiting between Mars and Jupiter, are **asteroids**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">A small piece of space rock that burns up on entering Earth's atmosphere, leaving a bright streak, is a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>planet</span></li>
+        <li class=""><span class="lab">B</span><span>constellation</span></li>
+        <li class=""><span class="lab">C</span><span>galaxy</span></li>
+        <li class="correct"><span class="lab">D</span><span>meteor (shooting star)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A space rock burning up in the atmosphere as a bright streak is a **meteor (shooting star)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">Stars appear to twinkle while planets usually shine steadily mainly because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>planets are bigger than stars</span></li>
+        <li class=""><span class="lab">B</span><span>planets produce their own light</span></li>
+        <li class=""><span class="lab">C</span><span>stars are closer than planets</span></li>
+        <li class="correct"><span class="lab">D</span><span>starlight, coming from far points, is bent more by Earth's moving air</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Stars twinkle while planets shine steadily because **starlight, coming from far points, is bent more by Earth's moving air**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">We always see the **same face** of the Moon from Earth because the Moon:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>takes the same time to rotate once as it takes to orbit Earth once</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>does not move at all</span></li>
+        <li class=""><span class="lab">C</span><span>has no far side</span></li>
+        <li class=""><span class="lab">D</span><span>is fixed in the sky</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>We see the same face of the Moon because it **takes the same time to rotate once as it takes to orbit Earth once**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">If Earth did not rotate, the most direct consequence would be:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>no seasons</span></li>
+        <li class=""><span class="lab">B</span><span>no Moon</span></li>
+        <li class="correct"><span class="lab">C</span><span>one side facing the Sun would have permanent day, the other permanent night</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>no tides</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>With no rotation, **one side facing the Sun would have permanent day, the other permanent night**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">The reason a place gets more daylight hours in summer than in winter is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the Sun gets bigger in summer</span></li>
+        <li class="correct"><span class="lab">B</span><span>the hemisphere tilted toward the Sun spends longer in sunlight as Earth rotates</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Earth spins faster in summer</span></li>
+        <li class=""><span class="lab">D</span><span>the Moon blocks the Sun in winter</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Summer days are longer because **the hemisphere tilted toward the Sun spends longer in sunlight as Earth rotates**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">During a total solar eclipse, daytime briefly darkens because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the Sun switches off</span></li>
+        <li class=""><span class="lab">B</span><span>Earth stops rotating</span></li>
+        <li class="correct"><span class="lab">C</span><span>the Moon's shadow falls on a part of the Earth, blocking the Sun there</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>clouds cover the Sun</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Daytime darkens in a total solar eclipse because **the Moon's shadow falls on a part of the Earth, blocking the Sun there**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">Between a new moon and the next new moon is about:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>one day</span></li>
+        <li class="correct"><span class="lab">B</span><span>one month (about 29–30 days)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>one year</span></li>
+        <li class=""><span class="lab">D</span><span>24 hours</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>From one new moon to the next is about **one month (about 29–30 days)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">As the Moon moves from new moon toward full moon, the lit portion we see is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>shrinking (waning)</span></li>
+        <li class=""><span class="lab">B</span><span>staying the same</span></li>
+        <li class=""><span class="lab">C</span><span>always full</span></li>
+        <li class="correct"><span class="lab">D</span><span>growing (waxing)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Moving from new moon toward full moon, the lit portion is **growing (waxing)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">The Pole Star (Dhruva Tara) appears almost fixed in the night sky because it lies nearly above:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Earth's north axis (the North Pole)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the equator</span></li>
+        <li class=""><span class="lab">C</span><span>the Moon</span></li>
+        <li class=""><span class="lab">D</span><span>the Sun</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Pole Star seems fixed because it lies nearly above **Earth's north axis (the North Pole)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">Sailors and travellers of old used the Pole Star to:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>find the direction north at night</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>tell the time of day</span></li>
+        <li class=""><span class="lab">C</span><span>predict eclipses</span></li>
+        <li class=""><span class="lab">D</span><span>measure the tide</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Travellers used the Pole Star to **find the direction north at night**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">Which correctly orders these by what they are?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the Sun is a planet, the Earth is a star, the Moon is a comet</span></li>
+        <li class="correct"><span class="lab">B</span><span>the Sun is a star, the Earth is a planet, the Moon is a satellite</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the Sun is a moon, the Earth is a comet, the Moon is a star</span></li>
+        <li class=""><span class="lab">D</span><span>all three are stars</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Correctly: **the Sun is a star, the Earth is a planet, the Moon is a satellite**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">The reason the Sun looks far larger and brighter than other stars is that it is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the biggest star in the universe</span></li>
+        <li class=""><span class="lab">B</span><span>the only star with light</span></li>
+        <li class=""><span class="lab">C</span><span>a planet that reflects light</span></li>
+        <li class="correct"><span class="lab">D</span><span>by far the closest star to Earth</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Sun looks largest and brightest because it is **by far the closest star to Earth**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">A "natural satellite" differs from an "artificial satellite" in that the natural one:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>is launched by humans</span></li>
+        <li class=""><span class="lab">B</span><span>is always larger</span></li>
+        <li class="correct"><span class="lab">C</span><span>formed in space and orbits naturally, like the Moon</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>carries cameras</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A natural satellite **formed in space and orbits naturally, like the Moon**, unlike a human-launched one.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">The seasons would essentially disappear if Earth's axis were:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>tilted more steeply</span></li>
+        <li class=""><span class="lab">B</span><span>pointed at the Moon</span></li>
+        <li class=""><span class="lab">C</span><span>spinning faster</span></li>
+        <li class="correct"><span class="lab">D</span><span>not tilted at all (upright)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The seasons would disappear if Earth's axis were **not tilted at all (upright)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">High tides tend to occur on the side of Earth facing the Moon because there the Moon's gravitational pull on the water is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>weakest</span></li>
+        <li class=""><span class="lab">B</span><span>zero</span></li>
+        <li class="correct"><span class="lab">C</span><span>strongest, lifting the water into a bulge</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>reversed</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>High tide faces the Moon because there the Moon's pull on the water is **strongest, lifting the water into a bulge**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">The Solar System has eight recognised:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>planets</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>stars</span></li>
+        <li class=""><span class="lab">C</span><span>moons only</span></li>
+        <li class=""><span class="lab">D</span><span>galaxies</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Solar System has eight recognised **planets**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">A comet is best described as a body of ice and dust that, near the Sun, grows a glowing:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ring of rock</span></li>
+        <li class="correct"><span class="lab">B</span><span>tail pointing away from the Sun</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>pair of moons</span></li>
+        <li class=""><span class="lab">D</span><span>solid shell</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A comet of ice and dust grows, near the Sun, a glowing **tail pointing away from the Sun**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">From Earth we never see the Moon's far side directly; this hidden side is often loosely called the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>bright side</span></li>
+        <li class="correct"><span class="lab">B</span><span>"dark side" (far side) of the Moon</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>north pole</span></li>
+        <li class=""><span class="lab">D</span><span>equator</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The hidden side we never see directly is loosely called the **"dark side" (far side) of the Moon**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">If the Moon's orbit lay exactly in Earth's orbital plane, eclipses would happen:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>never</span></li>
+        <li class=""><span class="lab">B</span><span>only once a year</span></li>
+        <li class=""><span class="lab">C</span><span>only in summer</span></li>
+        <li class="correct"><span class="lab">D</span><span>at every new moon and full moon</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>If the Moon's orbit lay exactly in Earth's orbital plane, eclipses would happen **at every new moon and full moon**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">The correct cause-and-effect statement is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>rotation causes seasons; revolution causes day and night</span></li>
+        <li class=""><span class="lab">B</span><span>the Moon causes day and night</span></li>
+        <li class="correct"><span class="lab">C</span><span>rotation causes day and night; revolution (with tilt) causes the seasons</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the tilt causes day and night</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Correctly: **rotation causes day and night; revolution (with tilt) causes the seasons**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">During a lunar eclipse the Moon can take on a dim reddish colour because:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>some sunlight bends through Earth's atmosphere onto the shadowed Moon</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the Moon is on fire</span></li>
+        <li class=""><span class="lab">C</span><span>the Sun turns red</span></li>
+        <li class=""><span class="lab">D</span><span>the Moon makes red light</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The eclipsed Moon glows dim red because **some sunlight bends through Earth's atmosphere onto the shadowed Moon**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">A new astronaut on the Moon would weigh much less than on Earth because the Moon has:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>weaker gravity than Earth</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>no gravity at all</span></li>
+        <li class=""><span class="lab">C</span><span>stronger gravity than Earth</span></li>
+        <li class=""><span class="lab">D</span><span>the same gravity as Earth</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An astronaut weighs less on the Moon because the Moon has **weaker gravity than Earth**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">The phase order from new moon onward is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>full → gibbous → quarter → crescent → new</span></li>
+        <li class=""><span class="lab">B</span><span>new → full → quarter → crescent</span></li>
+        <li class=""><span class="lab">C</span><span>quarter → new → full → gibbous</span></li>
+        <li class="correct"><span class="lab">D</span><span>new → crescent → first quarter → gibbous → full</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The phase order is **new → crescent → first quarter → gibbous → full**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">The most accurate reason summers are hotter than winters in a hemisphere is that in summer the Sun's rays:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>come from a much closer Sun</span></li>
+        <li class=""><span class="lab">B</span><span>are blocked less by the Moon</span></li>
+        <li class="correct"><span class="lab">C</span><span>strike that hemisphere more directly and for longer hours</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>are produced in greater number</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Summers are hotter because the Sun's rays **strike that hemisphere more directly and for longer hours**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">A "shooting star" is not really a star; it is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a distant sun</span></li>
+        <li class="correct"><span class="lab">B</span><span>a small meteor burning up in the atmosphere</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a planet moving fast</span></li>
+        <li class=""><span class="lab">D</span><span>the Moon</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A shooting star is really **a small meteor burning up in the atmosphere**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">The band of countless stars we see stretching across a very dark night sky is part of our galaxy, the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Solar System</span></li>
+        <li class=""><span class="lab">B</span><span>asteroid belt</span></li>
+        <li class="correct"><span class="lab">C</span><span>Milky Way</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Saptarishi</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The band of countless stars across a dark sky is part of our galaxy, the **Milky Way**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">Why does the Moon show phases at all?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Earth's shadow always covers part of it</span></li>
+        <li class=""><span class="lab">B</span><span>it changes its own brightness</span></li>
+        <li class=""><span class="lab">C</span><span>clouds hide part of it</span></li>
+        <li class="correct"><span class="lab">D</span><span>as it orbits Earth, we see differing amounts of its sunlit half</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Moon shows phases because **as it orbits Earth, we see differing amounts of its sunlit half**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">The reason a solar eclipse is visible only from a narrow strip of Earth, while a lunar eclipse is seen from a whole hemisphere, is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the Sun is smaller than the Moon</span></li>
+        <li class="correct"><span class="lab">B</span><span>the Moon's small shadow touches only a narrow path, but Earth's large shadow covers the whole Moon for everyone facing it</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>lunar eclipses are brighter</span></li>
+        <li class=""><span class="lab">D</span><span>the Earth stops spinning during a lunar eclipse</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A solar eclipse is seen from only a narrow strip because **the Moon's small shadow touches only a narrow path, but Earth's large shadow covers the whole Moon for everyone facing it**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">Put these in order of increasing size: Moon, Earth, Sun.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Moon &lt; Earth &lt; Sun</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Sun &lt; Earth &lt; Moon</span></li>
+        <li class=""><span class="lab">C</span><span>Earth &lt; Moon &lt; Sun</span></li>
+        <li class=""><span class="lab">D</span><span>Moon &lt; Sun &lt; Earth</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In increasing size: **Moon &lt; Earth &lt; Sun**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">The chief practical use of understanding tides is for:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>predicting eclipses</span></li>
+        <li class="correct"><span class="lab">B</span><span>navigation, fishing and coastal activities that depend on sea level</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>measuring the year</span></li>
+        <li class=""><span class="lab">D</span><span>finding the Pole Star</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Understanding tides matters chiefly for **navigation, fishing and coastal activities that depend on sea level**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">The single statement that best links the three bodies of this chapter is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the Earth orbits the Sun while the Moon orbits the Earth</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the Moon orbits the Sun while the Earth orbits the Moon</span></li>
+        <li class=""><span class="lab">C</span><span>the Sun orbits the Earth while the Moon stays still</span></li>
+        <li class=""><span class="lab">D</span><span>all three orbit the Pole Star</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The bodies link up as **the Earth orbits the Sun while the Moon orbits the Earth**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">A correct reason eclipses do not happen every month is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the Sun moves out of the way</span></li>
+        <li class=""><span class="lab">B</span><span>the Earth speeds up</span></li>
+        <li class="correct"><span class="lab">C</span><span>the Moon's orbit is slightly tilted, so its shadow usually misses Earth (and vice versa)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the Moon disappears each month</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Eclipses do not happen monthly because **the Moon's orbit is slightly tilted, so its shadow usually misses Earth (and vice versa)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">Tying the chapter together, day and night, the seasons, the Moon's phases and the tides all arise from:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the Sun changing its brightness</span></li>
+        <li class=""><span class="lab">B</span><span>the stars moving across the sky</span></li>
+        <li class=""><span class="lab">C</span><span>clouds and weather</span></li>
+        <li class="correct"><span class="lab">D</span><span>the motions of the Earth and Moon and the pull of gravity</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Day and night, the seasons, the Moon's phases and the tides all arise from **the motions of the Earth and Moon and the pull of gravity**.</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

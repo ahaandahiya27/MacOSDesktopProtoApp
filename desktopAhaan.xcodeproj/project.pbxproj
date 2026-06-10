@@ -1864,21 +1864,33 @@
 		88BAD5AD3D62B66E75754415 /* Science_Ch15_Light_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 4FA0BD69428FFF4DE2A87C78 /* Science_Ch15_Light_SolvedGuide.html */; };
 		DDE4C07E5A34CA5FA203E9EC /* Science_Ch16_WaterAPreciousResource.html in Resources */ = {isa = PBXBuildFile; fileRef = EF9844508ADB86D2DB0763DC /* Science_Ch16_WaterAPreciousResource.html */; };
 		C6A7E06F254F03A107640E41 /* Science_Ch16_WaterAPreciousResource.pdf in Resources */ = {isa = PBXBuildFile; fileRef = B46FD0036162DE6683C36E63 /* Science_Ch16_WaterAPreciousResource.pdf */; };
+		A87A117B54AB3E4CD53BEF1F /* Science_Ch16_WaterAPreciousResource_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 897E66FE9E131B52ACC626AB /* Science_Ch16_WaterAPreciousResource_Advanced_QuestionPaper.md */; };
+		5291A65505FBCC65E180C008 /* Science_Ch16_WaterAPreciousResource_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = FCD6B439B5974FC0B7B9D96C /* Science_Ch16_WaterAPreciousResource_Advanced_Solutions.md */; };
+		BB83348B35C65D7D342EDECE /* Science_Ch16_WaterAPreciousResource_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 9E5CA885CE2CBFD28CD3EEB2 /* Science_Ch16_WaterAPreciousResource_Advanced_SolvedGuide.html */; };
 		222701643E4E6CCAF9394FF5 /* Science_Ch16_WaterAPreciousResource_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 32B54590AE19E19180644370 /* Science_Ch16_WaterAPreciousResource_QuestionPaper.md */; };
 		22C6E702EA0D4CB0FF4DC8D4 /* Science_Ch16_WaterAPreciousResource_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = CCC46BE8888AC142C2183CD9 /* Science_Ch16_WaterAPreciousResource_Solutions.md */; };
 		3463A309092940D6F3069BD4 /* Science_Ch16_WaterAPreciousResource_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 3A46BF6B03BE3D03D25C8A43 /* Science_Ch16_WaterAPreciousResource_SolvedGuide.html */; };
 		9A75BA801CF709BE6A7F187C /* Science_Ch17_ForestOurLifeline.html in Resources */ = {isa = PBXBuildFile; fileRef = 59BC6EB1B168F7ADFD3AFE5C /* Science_Ch17_ForestOurLifeline.html */; };
 		D9C53F7026D37AD14005F37E /* Science_Ch17_ForestOurLifeline.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2C2E68D64747968FBDB824F1 /* Science_Ch17_ForestOurLifeline.pdf */; };
+		51185A2E93F708A172EA013F /* Science_Ch17_ForestOurLifeline_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 8F1E23C655E78CAF335097BC /* Science_Ch17_ForestOurLifeline_Advanced_QuestionPaper.md */; };
+		FEA56F41A7344FE37EC10611 /* Science_Ch17_ForestOurLifeline_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 21F9163479B3EA5C3FD423F4 /* Science_Ch17_ForestOurLifeline_Advanced_Solutions.md */; };
+		4ACFBCAD19265A658815A6BB /* Science_Ch17_ForestOurLifeline_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = ABA8094179863DA4184893E4 /* Science_Ch17_ForestOurLifeline_Advanced_SolvedGuide.html */; };
 		2282C70B3B904FD41A22C2A5 /* Science_Ch17_ForestOurLifeline_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = AA772E8D8B740D2B6FEE03D6 /* Science_Ch17_ForestOurLifeline_QuestionPaper.md */; };
 		1A9DB0322D0A252B056A9BAA /* Science_Ch17_ForestOurLifeline_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 7B975B306469D7D6FD6A0777 /* Science_Ch17_ForestOurLifeline_Solutions.md */; };
 		6919D2B5CB8DF286BABD4CC7 /* Science_Ch17_ForestOurLifeline_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 2F60C5F4F9BF3C0E19B75866 /* Science_Ch17_ForestOurLifeline_SolvedGuide.html */; };
 		A65BC6A5EB3B3145A5E86A35 /* Science_Ch18_WastewaterStory.html in Resources */ = {isa = PBXBuildFile; fileRef = C58DF2C81BE4A4573BF141A4 /* Science_Ch18_WastewaterStory.html */; };
 		693B8928FD44CE5958CDF874 /* Science_Ch18_WastewaterStory.pdf in Resources */ = {isa = PBXBuildFile; fileRef = BFA10E23521F47855A2B5D08 /* Science_Ch18_WastewaterStory.pdf */; };
+		EDD727FE1C6E18CE9EDEA5C9 /* Science_Ch18_WastewaterStory_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = BBC62995733DFFDD0BDACD64 /* Science_Ch18_WastewaterStory_Advanced_QuestionPaper.md */; };
+		A2D9188B3ECC7F23F0D94031 /* Science_Ch18_WastewaterStory_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = BE596887A75B86039FB6ADC7 /* Science_Ch18_WastewaterStory_Advanced_Solutions.md */; };
+		B4A5872BD16FB77CF5FF3055 /* Science_Ch18_WastewaterStory_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 8B51FF1B384EE39869F06DF0 /* Science_Ch18_WastewaterStory_Advanced_SolvedGuide.html */; };
 		A13465B46F784B2E80CE38B4 /* Science_Ch18_WastewaterStory_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = B7C26FBC03BE8BBD4E624DEF /* Science_Ch18_WastewaterStory_QuestionPaper.md */; };
 		D10AF7F80EADCBBF26A40F90 /* Science_Ch18_WastewaterStory_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = D5539EF294A6FCA2A0BADABE /* Science_Ch18_WastewaterStory_Solutions.md */; };
 		D8B736D216CF64C0B25846D1 /* Science_Ch18_WastewaterStory_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = FDE3C8CE90E53D92ABC5848A /* Science_Ch18_WastewaterStory_SolvedGuide.html */; };
 		494CE3A84C04782AE6234C7B /* Science_Ch19_EarthMoonAndTheSun.html in Resources */ = {isa = PBXBuildFile; fileRef = 407C85CD50FF58AD9E0469A8 /* Science_Ch19_EarthMoonAndTheSun.html */; };
 		31AB12BE62D0C2E33E55B300 /* Science_Ch19_EarthMoonAndTheSun.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 50CE14C21E4E3342394BD601 /* Science_Ch19_EarthMoonAndTheSun.pdf */; };
+		336CCEE9254B9383F0FA1F3C /* Science_Ch19_EarthMoonAndTheSun_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 33649237717EBC007CB440E5 /* Science_Ch19_EarthMoonAndTheSun_Advanced_QuestionPaper.md */; };
+		3342233FBECBD4E7BB9330B2 /* Science_Ch19_EarthMoonAndTheSun_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 5BED9FA580E65E2239E9472D /* Science_Ch19_EarthMoonAndTheSun_Advanced_Solutions.md */; };
+		B922FA28D66649D41669E130 /* Science_Ch19_EarthMoonAndTheSun_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 40FCFB9D86DAEC91827F1F8C /* Science_Ch19_EarthMoonAndTheSun_Advanced_SolvedGuide.html */; };
 		4F984EF27169760B2E17D2C1 /* Science_Ch19_EarthMoonAndTheSun_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = D8431CA1381964065D9D148F /* Science_Ch19_EarthMoonAndTheSun_QuestionPaper.md */; };
 		E30D60856D0B119A132D2B3E /* Science_Ch19_EarthMoonAndTheSun_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = FFC0A74EC30204D8F39CB9A1 /* Science_Ch19_EarthMoonAndTheSun_Solutions.md */; };
 		870600451E67AC280BC382CD /* Science_Ch19_EarthMoonAndTheSun_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = EE3C046FAE5F20E35A4DC9D8 /* Science_Ch19_EarthMoonAndTheSun_SolvedGuide.html */; };
@@ -3506,21 +3518,33 @@
 		4FA0BD69428FFF4DE2A87C78 /* Science_Ch15_Light_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch15_Light_SolvedGuide.html"; sourceTree = "<group>"; };
 		EF9844508ADB86D2DB0763DC /* Science_Ch16_WaterAPreciousResource.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch16_WaterAPreciousResource.html"; sourceTree = "<group>"; };
 		B46FD0036162DE6683C36E63 /* Science_Ch16_WaterAPreciousResource.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Science_Ch16_WaterAPreciousResource.pdf"; sourceTree = "<group>"; };
+		897E66FE9E131B52ACC626AB /* Science_Ch16_WaterAPreciousResource_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch16_WaterAPreciousResource_Advanced_QuestionPaper.md"; sourceTree = "<group>"; };
+		FCD6B439B5974FC0B7B9D96C /* Science_Ch16_WaterAPreciousResource_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch16_WaterAPreciousResource_Advanced_Solutions.md"; sourceTree = "<group>"; };
+		9E5CA885CE2CBFD28CD3EEB2 /* Science_Ch16_WaterAPreciousResource_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch16_WaterAPreciousResource_Advanced_SolvedGuide.html"; sourceTree = "<group>"; };
 		32B54590AE19E19180644370 /* Science_Ch16_WaterAPreciousResource_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch16_WaterAPreciousResource_QuestionPaper.md"; sourceTree = "<group>"; };
 		CCC46BE8888AC142C2183CD9 /* Science_Ch16_WaterAPreciousResource_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch16_WaterAPreciousResource_Solutions.md"; sourceTree = "<group>"; };
 		3A46BF6B03BE3D03D25C8A43 /* Science_Ch16_WaterAPreciousResource_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch16_WaterAPreciousResource_SolvedGuide.html"; sourceTree = "<group>"; };
 		59BC6EB1B168F7ADFD3AFE5C /* Science_Ch17_ForestOurLifeline.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch17_ForestOurLifeline.html"; sourceTree = "<group>"; };
 		2C2E68D64747968FBDB824F1 /* Science_Ch17_ForestOurLifeline.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Science_Ch17_ForestOurLifeline.pdf"; sourceTree = "<group>"; };
+		8F1E23C655E78CAF335097BC /* Science_Ch17_ForestOurLifeline_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch17_ForestOurLifeline_Advanced_QuestionPaper.md"; sourceTree = "<group>"; };
+		21F9163479B3EA5C3FD423F4 /* Science_Ch17_ForestOurLifeline_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch17_ForestOurLifeline_Advanced_Solutions.md"; sourceTree = "<group>"; };
+		ABA8094179863DA4184893E4 /* Science_Ch17_ForestOurLifeline_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch17_ForestOurLifeline_Advanced_SolvedGuide.html"; sourceTree = "<group>"; };
 		AA772E8D8B740D2B6FEE03D6 /* Science_Ch17_ForestOurLifeline_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch17_ForestOurLifeline_QuestionPaper.md"; sourceTree = "<group>"; };
 		7B975B306469D7D6FD6A0777 /* Science_Ch17_ForestOurLifeline_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch17_ForestOurLifeline_Solutions.md"; sourceTree = "<group>"; };
 		2F60C5F4F9BF3C0E19B75866 /* Science_Ch17_ForestOurLifeline_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch17_ForestOurLifeline_SolvedGuide.html"; sourceTree = "<group>"; };
 		C58DF2C81BE4A4573BF141A4 /* Science_Ch18_WastewaterStory.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch18_WastewaterStory.html"; sourceTree = "<group>"; };
 		BFA10E23521F47855A2B5D08 /* Science_Ch18_WastewaterStory.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Science_Ch18_WastewaterStory.pdf"; sourceTree = "<group>"; };
+		BBC62995733DFFDD0BDACD64 /* Science_Ch18_WastewaterStory_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch18_WastewaterStory_Advanced_QuestionPaper.md"; sourceTree = "<group>"; };
+		BE596887A75B86039FB6ADC7 /* Science_Ch18_WastewaterStory_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch18_WastewaterStory_Advanced_Solutions.md"; sourceTree = "<group>"; };
+		8B51FF1B384EE39869F06DF0 /* Science_Ch18_WastewaterStory_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch18_WastewaterStory_Advanced_SolvedGuide.html"; sourceTree = "<group>"; };
 		B7C26FBC03BE8BBD4E624DEF /* Science_Ch18_WastewaterStory_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch18_WastewaterStory_QuestionPaper.md"; sourceTree = "<group>"; };
 		D5539EF294A6FCA2A0BADABE /* Science_Ch18_WastewaterStory_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch18_WastewaterStory_Solutions.md"; sourceTree = "<group>"; };
 		FDE3C8CE90E53D92ABC5848A /* Science_Ch18_WastewaterStory_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch18_WastewaterStory_SolvedGuide.html"; sourceTree = "<group>"; };
 		407C85CD50FF58AD9E0469A8 /* Science_Ch19_EarthMoonAndTheSun.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch19_EarthMoonAndTheSun.html"; sourceTree = "<group>"; };
 		50CE14C21E4E3342394BD601 /* Science_Ch19_EarthMoonAndTheSun.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Science_Ch19_EarthMoonAndTheSun.pdf"; sourceTree = "<group>"; };
+		33649237717EBC007CB440E5 /* Science_Ch19_EarthMoonAndTheSun_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch19_EarthMoonAndTheSun_Advanced_QuestionPaper.md"; sourceTree = "<group>"; };
+		5BED9FA580E65E2239E9472D /* Science_Ch19_EarthMoonAndTheSun_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch19_EarthMoonAndTheSun_Advanced_Solutions.md"; sourceTree = "<group>"; };
+		40FCFB9D86DAEC91827F1F8C /* Science_Ch19_EarthMoonAndTheSun_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch19_EarthMoonAndTheSun_Advanced_SolvedGuide.html"; sourceTree = "<group>"; };
 		D8431CA1381964065D9D148F /* Science_Ch19_EarthMoonAndTheSun_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch19_EarthMoonAndTheSun_QuestionPaper.md"; sourceTree = "<group>"; };
 		FFC0A74EC30204D8F39CB9A1 /* Science_Ch19_EarthMoonAndTheSun_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch19_EarthMoonAndTheSun_Solutions.md"; sourceTree = "<group>"; };
 		EE3C046FAE5F20E35A4DC9D8 /* Science_Ch19_EarthMoonAndTheSun_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch19_EarthMoonAndTheSun_SolvedGuide.html"; sourceTree = "<group>"; };
@@ -6318,21 +6342,33 @@
 				4FA0BD69428FFF4DE2A87C78,
 				EF9844508ADB86D2DB0763DC,
 				B46FD0036162DE6683C36E63,
+				897E66FE9E131B52ACC626AB,
+				FCD6B439B5974FC0B7B9D96C,
+				9E5CA885CE2CBFD28CD3EEB2,
 				32B54590AE19E19180644370,
 				CCC46BE8888AC142C2183CD9,
 				3A46BF6B03BE3D03D25C8A43,
 				59BC6EB1B168F7ADFD3AFE5C,
 				2C2E68D64747968FBDB824F1,
+				8F1E23C655E78CAF335097BC,
+				21F9163479B3EA5C3FD423F4,
+				ABA8094179863DA4184893E4,
 				AA772E8D8B740D2B6FEE03D6,
 				7B975B306469D7D6FD6A0777,
 				2F60C5F4F9BF3C0E19B75866,
 				C58DF2C81BE4A4573BF141A4,
 				BFA10E23521F47855A2B5D08,
+				BBC62995733DFFDD0BDACD64,
+				BE596887A75B86039FB6ADC7,
+				8B51FF1B384EE39869F06DF0,
 				B7C26FBC03BE8BBD4E624DEF,
 				D5539EF294A6FCA2A0BADABE,
 				FDE3C8CE90E53D92ABC5848A,
 				407C85CD50FF58AD9E0469A8,
 				50CE14C21E4E3342394BD601,
+				33649237717EBC007CB440E5,
+				5BED9FA580E65E2239E9472D,
+				40FCFB9D86DAEC91827F1F8C,
 				D8431CA1381964065D9D148F,
 				FFC0A74EC30204D8F39CB9A1,
 				EE3C046FAE5F20E35A4DC9D8,
@@ -9264,21 +9300,33 @@
 				88BAD5AD3D62B66E75754415 /* Science_Ch15_Light_SolvedGuide.html in Resources */,
 				DDE4C07E5A34CA5FA203E9EC /* Science_Ch16_WaterAPreciousResource.html in Resources */,
 				C6A7E06F254F03A107640E41 /* Science_Ch16_WaterAPreciousResource.pdf in Resources */,
+				A87A117B54AB3E4CD53BEF1F /* Science_Ch16_WaterAPreciousResource_Advanced_QuestionPaper.md in Resources */,
+				5291A65505FBCC65E180C008 /* Science_Ch16_WaterAPreciousResource_Advanced_Solutions.md in Resources */,
+				BB83348B35C65D7D342EDECE /* Science_Ch16_WaterAPreciousResource_Advanced_SolvedGuide.html in Resources */,
 				222701643E4E6CCAF9394FF5 /* Science_Ch16_WaterAPreciousResource_QuestionPaper.md in Resources */,
 				22C6E702EA0D4CB0FF4DC8D4 /* Science_Ch16_WaterAPreciousResource_Solutions.md in Resources */,
 				3463A309092940D6F3069BD4 /* Science_Ch16_WaterAPreciousResource_SolvedGuide.html in Resources */,
 				9A75BA801CF709BE6A7F187C /* Science_Ch17_ForestOurLifeline.html in Resources */,
 				D9C53F7026D37AD14005F37E /* Science_Ch17_ForestOurLifeline.pdf in Resources */,
+				51185A2E93F708A172EA013F /* Science_Ch17_ForestOurLifeline_Advanced_QuestionPaper.md in Resources */,
+				FEA56F41A7344FE37EC10611 /* Science_Ch17_ForestOurLifeline_Advanced_Solutions.md in Resources */,
+				4ACFBCAD19265A658815A6BB /* Science_Ch17_ForestOurLifeline_Advanced_SolvedGuide.html in Resources */,
 				2282C70B3B904FD41A22C2A5 /* Science_Ch17_ForestOurLifeline_QuestionPaper.md in Resources */,
 				1A9DB0322D0A252B056A9BAA /* Science_Ch17_ForestOurLifeline_Solutions.md in Resources */,
 				6919D2B5CB8DF286BABD4CC7 /* Science_Ch17_ForestOurLifeline_SolvedGuide.html in Resources */,
 				A65BC6A5EB3B3145A5E86A35 /* Science_Ch18_WastewaterStory.html in Resources */,
 				693B8928FD44CE5958CDF874 /* Science_Ch18_WastewaterStory.pdf in Resources */,
+				EDD727FE1C6E18CE9EDEA5C9 /* Science_Ch18_WastewaterStory_Advanced_QuestionPaper.md in Resources */,
+				A2D9188B3ECC7F23F0D94031 /* Science_Ch18_WastewaterStory_Advanced_Solutions.md in Resources */,
+				B4A5872BD16FB77CF5FF3055 /* Science_Ch18_WastewaterStory_Advanced_SolvedGuide.html in Resources */,
 				A13465B46F784B2E80CE38B4 /* Science_Ch18_WastewaterStory_QuestionPaper.md in Resources */,
 				D10AF7F80EADCBBF26A40F90 /* Science_Ch18_WastewaterStory_Solutions.md in Resources */,
 				D8B736D216CF64C0B25846D1 /* Science_Ch18_WastewaterStory_SolvedGuide.html in Resources */,
 				494CE3A84C04782AE6234C7B /* Science_Ch19_EarthMoonAndTheSun.html in Resources */,
 				31AB12BE62D0C2E33E55B300 /* Science_Ch19_EarthMoonAndTheSun.pdf in Resources */,
+				336CCEE9254B9383F0FA1F3C /* Science_Ch19_EarthMoonAndTheSun_Advanced_QuestionPaper.md in Resources */,
+				3342233FBECBD4E7BB9330B2 /* Science_Ch19_EarthMoonAndTheSun_Advanced_Solutions.md in Resources */,
+				B922FA28D66649D41669E130 /* Science_Ch19_EarthMoonAndTheSun_Advanced_SolvedGuide.html in Resources */,
 				4F984EF27169760B2E17D2C1 /* Science_Ch19_EarthMoonAndTheSun_QuestionPaper.md in Resources */,
 				E30D60856D0B119A132D2B3E /* Science_Ch19_EarthMoonAndTheSun_Solutions.md in Resources */,
 				870600451E67AC280BC382CD /* Science_Ch19_EarthMoonAndTheSun_SolvedGuide.html in Resources */,
