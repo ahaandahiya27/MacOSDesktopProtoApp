@@ -216,6 +216,55 @@ extension OlympiadPaperRegistry {
             questionPaperPDF: "Sanskrit_Sch15_DhaturupaniVerbConjugations.pdf",
             suggestedTimeMinutes: 90,
             solvedGuideHTML: "Sanskrit_Sch15_DhaturupaniVerbConjugations_SolvedGuide.html"
+        ),
+        // ── Advanced (Paper 2) entries wired in the v8 rollout. Each reuses
+        //    Paper 1's printable HTML + PDF; tier=.advanced makes the row
+        //    distinct, and solvedGuideHTML points at the Advanced guide
+        //    rendered by scripts/make_solved_guide.py.
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch13_advanced",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 13,
+            chapterTitle: "वर्णमात्रा-परिचयः (Varna-Matra: Vowel Quantity)",
+            displayTitle: "वर्णमात्रा-परिचयः (Varna-Matra: Vowel Quantity) — Paper 2 (Advanced)",
+            questionPaperMD: "Sanskrit_Sch13_VarnaMatraParichayah_Advanced_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch13_VarnaMatraParichayah_Advanced_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch13_VarnaMatraParichayah.html",
+            questionPaperPDF: "Sanskrit_Sch13_VarnaMatraParichayah.pdf",
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Sanskrit_Sch13_VarnaMatraParichayah_Advanced_SolvedGuide.html",
+            tier: .advanced
+        ),
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch14_advanced",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 14,
+            chapterTitle: "शब्दरूपाणि (Shabda-Rupani: Noun Declensions)",
+            displayTitle: "शब्दरूपाणि (Shabda-Rupani: Noun Declensions) — Paper 2 (Advanced)",
+            questionPaperMD: "Sanskrit_Sch14_ShabdaRupani_Advanced_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch14_ShabdaRupani_Advanced_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch14_ShabdaRupani.html",
+            questionPaperPDF: "Sanskrit_Sch14_ShabdaRupani.pdf",
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Sanskrit_Sch14_ShabdaRupani_Advanced_SolvedGuide.html",
+            tier: .advanced
+        ),
+        OlympiadPaper(
+            id: "olympiad_sanskrit_sch15_advanced",
+            subjectId: "sanskrit_class7",
+            subjectName: "Sanskrit",
+            chapterNumber: 15,
+            chapterTitle: "धातुरूपाणि (Dhatu-Rupani: Verb Conjugations)",
+            displayTitle: "धातुरूपाणि (Dhatu-Rupani: Verb Conjugations) — Paper 2 (Advanced)",
+            questionPaperMD: "Sanskrit_Sch15_DhaturupaniVerbConjugations_Advanced_QuestionPaper.md",
+            solutionsMD: "Sanskrit_Sch15_DhaturupaniVerbConjugations_Advanced_Solutions.md",
+            questionPaperHTML: "Sanskrit_Sch15_DhaturupaniVerbConjugations.html",
+            questionPaperPDF: "Sanskrit_Sch15_DhaturupaniVerbConjugations.pdf",
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Sanskrit_Sch15_DhaturupaniVerbConjugations_Advanced_SolvedGuide.html",
+            tier: .advanced
         )
     ]
 }

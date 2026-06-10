@@ -236,9 +236,12 @@ final class OlympiadExamHallTests: XCTestCase {
         // Ch04/Ch05/Ch06/Ch07/Ch08/Ch09/Ch10/Ch13/Ch14/Ch15 (13), Social
         // Science Ssch01/Ssch02/Ssch03/Ssch04 (4) = 32 advanced → 101 total (69 + 32).
         // 2026-06-11 (Wave 9): + Science Ch11 (Transportation) = 33 advanced → 102 total.
+        // 2026-06-11 (Wave 10): + Social Science Ssch05 (The Rise of Empires) and
+        // Sanskrit Sch13/Sch14/Sch15 (Varna-Matra, Shabda-Rupani, Dhatu-Rupani —
+        // the first Sanskrit Advanced papers) = 37 advanced → 106 total.
         let papers = OlympiadPaperRegistry.allPapers
-        XCTAssertEqual(papers.count, 102,
-                       "Expected 102 papers total. Got \(papers.count). Update this assertion when Paper 2 lands for a new chapter.")
+        XCTAssertEqual(papers.count, 106,
+                       "Expected 106 papers total. Got \(papers.count). Update this assertion when Paper 2 lands for a new chapter.")
     }
 
     func testFoundationTierIsTheDefault() {
@@ -258,10 +261,10 @@ final class OlympiadExamHallTests: XCTestCase {
         // rollout (2026-06-10) wired every on-disk Advanced triplet:
         // Maths Ch01–Ch15 (15), Science Ch01/Ch02/Ch03/Ch04/Ch05/Ch06/
         // Ch07/Ch08/Ch09/Ch10/Ch11/Ch13/Ch14/Ch15 (14), Social Science Ssch01/
-        // Ssch02/Ssch03/Ssch04 (4) = 33.
+        // Ssch02/Ssch03/Ssch04/Ssch05 (5), Sanskrit Sch13/Sch14/Sch15 (3) = 37.
         let advanced = OlympiadPaperRegistry.allPapers.filter { $0.tier == .advanced }
-        XCTAssertEqual(advanced.count, 33,
-                       "Expected 33 advanced-tier papers, got \(advanced.count)")
+        XCTAssertEqual(advanced.count, 37,
+                       "Expected 37 advanced-tier papers, got \(advanced.count)")
         let ids = Set(advanced.map { $0.id })
         XCTAssertEqual(ids, ["olympiad_science_ch01_advanced",
                              "olympiad_science_ch02_advanced",
@@ -295,7 +298,11 @@ final class OlympiadExamHallTests: XCTestCase {
                              "olympiad_socialscience_ssch01_advanced",
                              "olympiad_socialscience_ssch02_advanced",
                              "olympiad_socialscience_ssch03_advanced",
-                             "olympiad_socialscience_ssch04_advanced"])
+                             "olympiad_socialscience_ssch04_advanced",
+                             "olympiad_socialscience_ssch05_advanced",
+                             "olympiad_sanskrit_sch13_advanced",
+                             "olympiad_sanskrit_sch14_advanced",
+                             "olympiad_sanskrit_sch15_advanced"])
     }
 
     func testAdvancedPaperHasUniqueIdPerChapter() {

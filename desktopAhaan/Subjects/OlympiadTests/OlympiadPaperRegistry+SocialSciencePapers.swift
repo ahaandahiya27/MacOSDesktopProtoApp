@@ -350,6 +350,21 @@ extension OlympiadPaperRegistry {
             suggestedTimeMinutes: 90,
             solvedGuideHTML: "SocialScience_Ssch04_NewBeginningsCitiesAndStates_Advanced_SolvedGuide.html",
             tier: .advanced
+        ),
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch05_advanced",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 5,
+            chapterTitle: "The Rise of Empires",
+            displayTitle: "The Rise of Empires — Paper 2 (Advanced)",
+            questionPaperMD: "SocialScience_Ssch05_TheRiseOfEmpires_Advanced_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch05_TheRiseOfEmpires_Advanced_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch05_TheRiseOfEmpires.html",
+            questionPaperPDF: "SocialScience_Ssch05_TheRiseOfEmpires.pdf",
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "SocialScience_Ssch05_TheRiseOfEmpires_Advanced_SolvedGuide.html",
+            tier: .advanced
         )
     ]
 }

@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Rise Of Empires (Advanced) — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>The Rise Of Empires (Advanced)<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">An *empire* is best defined as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a single small village</span></li>
+        <li class=""><span class="lab">B</span><span>a trade guild</span></li>
+        <li class="correct"><span class="lab">C</span><span>a collection of smaller kingdoms or territories under one ruler's supreme power</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a republic with no ruler</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An empire is a collection of smaller kingdoms or territories brought under one ruler's supreme power. Trap: a single village or a trade guild is far too small, and a republic has no single supreme ruler — the defining feature of an empire.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">The word "empire" comes from the Latin *imperium*, meaning:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>supreme power</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>small farm</span></li>
+        <li class=""><span class="lab">C</span><span>river crossing</span></li>
+        <li class=""><span class="lab">D</span><span>market</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Empire" descends from the Latin *imperium*, "supreme power" or "command." The root makes the meaning concrete: an empire is the reach of one supreme authority over many lands — not a farm, a river crossing or a market.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">The chief difference between a kingdom and an empire is that an empire:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>is always smaller</span></li>
+        <li class=""><span class="lab">B</span><span>has no army</span></li>
+        <li class=""><span class="lab">C</span><span>never collects taxes</span></li>
+        <li class="correct"><span class="lab">D</span><span>is larger and brings many kingdoms under one supreme ruler</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A kingdom is one realm; an empire is larger and binds *many* kingdoms under one supreme ruler. An empire need not be smaller, and both kingdoms and empires keep armies and collect taxes, so the "no army" and "never taxes" choices are false.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">Which of these is one of the six features that hold an empire together?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the absence of any laws</span></li>
+        <li class="correct"><span class="lab">B</span><span>a strong army and an organised administration</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>banning all trade</span></li>
+        <li class=""><span class="lab">D</span><span>having no currency</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A strong army plus an organised administration is one of the six binding features. The other choices describe the *absence* of binding features — no laws, no trade, no currency — which would pull an empire apart, not hold it together.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">A *tributary* (or vassal) was a ruler who:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ruled with no overlord at all</span></li>
+        <li class="correct"><span class="lab">B</span><span>had submitted to an emperor and paid tribute to keep his throne</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>was a travelling merchant</span></li>
+        <li class=""><span class="lab">D</span><span>wrote the edicts</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A tributary (vassal) had submitted to an emperor and paid tribute to keep his own throne — local rule under an overlord. That is the opposite of ruling with no overlord; a travelling merchant or an edict-writer is a different role entirely.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">A *śhreni* in this period was a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>royal crown</span></li>
+        <li class=""><span class="lab">B</span><span>type of coin</span></li>
+        <li class=""><span class="lab">C</span><span>war elephant</span></li>
+        <li class="correct"><span class="lab">D</span><span>powerful association/guild of traders, craftsmen or farmers</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A *śhreni* was a powerful association or guild of traders, craftsmen or farmers — an economic body, not a crown, a coin or a war elephant. Guilds strengthened Magadha's economy and so its rise.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">The empire of Magadha rose to dominance out of the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>sixteen mahājanapadas</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Harappan cities</span></li>
+        <li class=""><span class="lab">C</span><span>Mughal provinces</span></li>
+        <li class=""><span class="lab">D</span><span>Gupta kingdoms</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Magadha rose to dominance out of the sixteen *mahājanapadas*, the large states of the period. The Harappan cities long predate this era; the Mughals and Guptas come much later.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">Magadha's rise was helped by a powerful combination of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only its distance from rivers</span></li>
+        <li class=""><span class="lab">B</span><span>the absence of any army</span></li>
+        <li class="correct"><span class="lab">C</span><span>rich farmland, iron, trade routes and guilds</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>having no farmland</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Magadha's edge was a *combination*: rich farmland, iron ore, control of trade routes, and active guilds. Distance from rivers, no army or no farmland would each be a *weakness*, so they cannot explain its rise.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">The dynasty founded by Mahāpadma Nanda just before the Mauryas was the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Nanda dynasty</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Gupta dynasty</span></li>
+        <li class=""><span class="lab">C</span><span>Chola dynasty</span></li>
+        <li class=""><span class="lab">D</span><span>Maurya dynasty</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Mahāpadma Nanda founded the Nanda dynasty, which ruled Magadha just before the Mauryas overthrew it. The Guptas, Cholas and Mauryas are different dynasties on different timelines.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">Alexander of Macedonia reached the north-west of India around:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1500 CE</span></li>
+        <li class=""><span class="lab">B</span><span>268 BCE</span></li>
+        <li class="correct"><span class="lab">C</span><span>326 BCE</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>1000 BCE</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Alexander of Macedonia reached the north-west of the subcontinent around 326 BCE. The CE dates and the later BCE dates are off by centuries — anchor him to the late 4th century BCE.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">In the north-west, Alexander fought a famous battle against the Indian king:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Ashoka</span></li>
+        <li class=""><span class="lab">B</span><span>Chandragupta</span></li>
+        <li class=""><span class="lab">C</span><span>Bindusara</span></li>
+        <li class="correct"><span class="lab">D</span><span>Porus</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In the north-west Alexander fought the hard-won battle of the Hydaspes against King Porus. Ashoka, Chandragupta and Bindusara are all Mauryan rulers who come *after* Alexander's incursion.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">A *satrap* was a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>kind of coin</span></li>
+        <li class="correct"><span class="lab">B</span><span>governor of a province in the Persian and Greek empires</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Buddhist monk</span></li>
+        <li class=""><span class="lab">D</span><span>trade route</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A *satrap* was the governor of a province in the Persian and later Greek administrative systems — a high official, not a coin, a monk or a road. Chandragupta later cleared these satraps from the north-west.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">Chandragupta Maurya strengthened his new empire partly by defeating the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Harappan cities</span></li>
+        <li class=""><span class="lab">B</span><span>Mughal armies</span></li>
+        <li class=""><span class="lab">C</span><span>British traders</span></li>
+        <li class="correct"><span class="lab">D</span><span>Greek satraps left behind in the north-west</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Chandragupta strengthened his new empire partly by defeating the Greek satraps left behind after Alexander. The Harappan cities were long gone; the Mughals and the British are centuries away.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">Chandragupta Maurya is remembered as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a Greek general</span></li>
+        <li class="correct"><span class="lab">B</span><span>the first emperor to unite most of the subcontinent</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the author of the Vedas</span></li>
+        <li class=""><span class="lab">D</span><span>a Harappan king</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Chandragupta Maurya is remembered as the first emperor to unite most of the subcontinent. He was an Indian ruler, not a Greek general, a Vedic author or a Harappan king.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">Chandragupta's brilliant mentor and chief adviser was:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Ashoka</span></li>
+        <li class=""><span class="lab">B</span><span>Alexander</span></li>
+        <li class="correct"><span class="lab">C</span><span>Kauṭilya (Chāṇakya)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Porus</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>His mentor and chief adviser was Kauṭilya, also called Chāṇakya. Ashoka was Chandragupta's grandson; Alexander and Porus were adversaries, not advisers.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">The *Arthaśhāstra*, written by Kauṭilya, is literally a treatise on:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the science of governance and economics</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>cooking</span></li>
+        <li class=""><span class="lab">C</span><span>astronomy</span></li>
+        <li class=""><span class="lab">D</span><span>poetry only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The *Arthaśhāstra* is literally a treatise on the science of governance and economics (*artha* = wealth/statecraft). It is not about cooking, astronomy or poetry.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">Kauṭilya's *saptānga* theory describes a state as made up of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>two kingdoms</span></li>
+        <li class=""><span class="lab">B</span><span>four castes only</span></li>
+        <li class="correct"><span class="lab">C</span><span>seven essential parts or "limbs"</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>sixteen guilds</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Kauṭilya's *saptānga* ("seven limbs") theory describes a state as made of seven essential parts — not two kingdoms, the four varnas or sixteen guilds. The number to remember is *seven*.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">Which set best matches the saptānga "limbs" of a state?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>king, ministers, territory &amp; people, forts, treasury, army &amp; justice, allies</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>rain, rivers, hills, forests, deserts, coasts, plains</span></li>
+        <li class=""><span class="lab">C</span><span>gold, silver, copper, iron, bronze, tin, lead</span></li>
+        <li class=""><span class="lab">D</span><span>sowing, weeding, watering, harvesting, storing, selling, eating</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The seven limbs are the king, the ministers, the territory &amp; people, the forts, the treasury, the army &amp; justice, and the allies. The other lists describe landforms, metals or farm steps — distractors built to look like a "seven-item" set.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">The saptānga idea warns that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only the king matters; the rest can be ignored</span></li>
+        <li class="correct"><span class="lab">B</span><span>a weakness in any one of the seven limbs harms the whole state</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a state needs no treasury</span></li>
+        <li class=""><span class="lab">D</span><span>allies are useless</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The saptānga warns that a weakness in *any one* of the seven limbs harms the whole state — like a body losing a limb. So it is false that only the king matters, that a treasury is dispensable or that allies are useless.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">The emperor Ashoka ruled roughly during:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1526–1530 CE</span></li>
+        <li class=""><span class="lab">B</span><span>326–300 CE</span></li>
+        <li class=""><span class="lab">C</span><span>600–550 BCE</span></li>
+        <li class="correct"><span class="lab">D</span><span>268–232 BCE</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Ashoka ruled roughly 268–232 BCE. The CE option and the wrong-century BCE options miss him; place him in the mid-3rd century BCE, after Chandragupta and Bindusara.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">The event that filled Ashoka with horror and turned him toward *dhamma* was the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Kalinga war</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>battle against Porus</span></li>
+        <li class=""><span class="lab">C</span><span>fall of Harappa</span></li>
+        <li class=""><span class="lab">D</span><span>Greek invasion of Magadha</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Kalinga war — with its appalling death toll — filled Ashoka with horror and turned him toward *dhamma*. The other choices are battles or events he was not part of, or belong to other periods.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">*Annexation* means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>giving land away freely</span></li>
+        <li class=""><span class="lab">B</span><span>abandoning a city</span></li>
+        <li class=""><span class="lab">C</span><span>minting coins</span></li>
+        <li class="correct"><span class="lab">D</span><span>adding a conquered territory directly into one's own empire</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>*Annexation* is adding a conquered territory directly into one's own empire. It is the opposite of giving land away or abandoning a city; minting coins is unrelated.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">Ashoka's annexation of Kalinga is remembered above all for its:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>peaceful, bloodless nature</span></li>
+        <li class="correct"><span class="lab">B</span><span>terrible cost in human lives, which he came to regret</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>failure to capture the region</span></li>
+        <li class=""><span class="lab">D</span><span>lack of any record</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Kalinga is remembered above all for its terrible cost in human lives, which Ashoka came to regret — the turning point of his reign. So it was neither bloodless nor a failed nor an unrecorded campaign.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">An *edict* is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a kind of war elephant</span></li>
+        <li class=""><span class="lab">B</span><span>a coin</span></li>
+        <li class="correct"><span class="lab">C</span><span>an official declaration issued by an authority such as a king</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a guild meeting</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An *edict* is an official declaration issued by an authority such as a king. It is not a war elephant, a coin or a guild meeting.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">Ashoka had his edicts engraved on:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>paper scrolls only</span></li>
+        <li class="correct"><span class="lab">B</span><span>rocks and pillars across his empire</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>cloth banners</span></li>
+        <li class=""><span class="lab">D</span><span>clay tablets buried underground</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Ashoka had his edicts engraved on rocks and pillars across the empire so they would last and be seen widely — not on perishable paper or cloth, nor hidden underground.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">Ashoka's edicts were composed mostly in:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Latin</span></li>
+        <li class=""><span class="lab">B</span><span>English</span></li>
+        <li class="correct"><span class="lab">C</span><span>Prakrit, the everyday language</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>only refined Sanskrit</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The edicts were composed mostly in Prakrit, the everyday spoken language. Latin and English are foreign; refined Sanskrit alone would have shut out ordinary readers — exactly what Ashoka wanted to avoid.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">Ashoka chose Prakrit rather than Sanskrit chiefly so that:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>ordinary people could understand his messages</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>only priests could read them</span></li>
+        <li class=""><span class="lab">C</span><span>foreigners alone could read them</span></li>
+        <li class=""><span class="lab">D</span><span>the words would rhyme</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Ashoka chose Prakrit precisely so that ordinary people could understand his messages. The point was the *opposite* of restricting them to priests or foreigners; rhyme was never the goal.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">The script in which Ashoka's edicts were carved, and the ancestor of most modern Indian scripts, is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Roman</span></li>
+        <li class=""><span class="lab">B</span><span>Arabic</span></li>
+        <li class=""><span class="lab">C</span><span>Chinese</span></li>
+        <li class="correct"><span class="lab">D</span><span>Brahmi</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The script was Brahmi, the ancestor of most modern Indian scripts. Roman, Arabic and Chinese scripts are unrelated to the Mauryan edicts.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">*Dhamma* (dharma), which Ashoka promoted, broadly means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a tax on traders</span></li>
+        <li class=""><span class="lab">B</span><span>a kind of fort</span></li>
+        <li class=""><span class="lab">C</span><span>a war strategy</span></li>
+        <li class="correct"><span class="lab">D</span><span>moral law and one's ethical duties</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>*Dhamma* (dharma) broadly means moral law and one's ethical duties — compassion, honesty, respect. It is not a tax, a fort or a war strategy.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">The *dharmachakra*, the "wheel of dharma," appears today at the centre of:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the Indian national flag</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>every rupee coin's edge</span></li>
+        <li class=""><span class="lab">C</span><span>the Constitution's cover only</span></li>
+        <li class=""><span class="lab">D</span><span>the Red Fort gate</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The *dharmachakra*, the wheel of dharma, sits at the centre of the Indian national flag — a direct link to the Mauryan heritage. It is not on the rupee's edge, the Constitution's cover alone or the Red Fort gate.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">India's national emblem is taken from the lion capital that Ashoka set up at:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Kalinga</span></li>
+        <li class=""><span class="lab">B</span><span>Taxila</span></li>
+        <li class="correct"><span class="lab">C</span><span>Sarnath</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Ujjain</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>India's national emblem is the lion capital Ashoka set up at Sarnath. Kalinga, Taxila and Ujjain are important places, but the lion capital is from Sarnath.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">The "capital" of a pillar (from Latin *caput*) means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the country's main city</span></li>
+        <li class="correct"><span class="lab">B</span><span>the carved top or "head" of the column</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>money invested in trade</span></li>
+        <li class=""><span class="lab">D</span><span>the base of the column</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The "capital" of a pillar (Latin *caput*, "head") is the carved top of the column. Don't confuse it with a country's main city or money invested in trade; it is certainly not the base.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">The four lions of the Ashokan capital are familiar today because they appear on:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>cricket bats</span></li>
+        <li class=""><span class="lab">B</span><span>postage from Greece</span></li>
+        <li class="correct"><span class="lab">C</span><span>Indian currency notes and official seals</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Mughal coins only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The four lions of the Ashokan capital appear today on Indian currency notes and official seals — not on cricket bats, Greek postage or Mughal coins.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">The great Mauryan city of Pāṭaliputra stands at the site of the modern city of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Delhi</span></li>
+        <li class="correct"><span class="lab">B</span><span>Patna</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Mumbai</span></li>
+        <li class=""><span class="lab">D</span><span>Chennai</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Mauryan Pāṭaliputra stands where modern Patna is today. Delhi, Mumbai and Chennai are unrelated to the Mauryan capital.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">The word *emperor* comes from the Latin *imperator*, meaning:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>farmer</span></li>
+        <li class=""><span class="lab">B</span><span>merchant</span></li>
+        <li class=""><span class="lab">C</span><span>priest</span></li>
+        <li class="correct"><span class="lab">D</span><span>commander</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>*Emperor* comes from the Latin *imperator*, "commander" — fitting for the supreme military and political authority over an empire. Not a farmer, a merchant or a priest.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">A *dynasty* is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a line of rulers from the same family passing power down</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a single coin</span></li>
+        <li class=""><span class="lab">C</span><span>a kind of guild</span></li>
+        <li class=""><span class="lab">D</span><span>a province</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A *dynasty* is a line of rulers from the same family passing power down the generations. It is not a coin, a guild or a province.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">The Nanda dynasty was overthrown and replaced by the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Mauryan dynasty</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Gupta dynasty</span></li>
+        <li class=""><span class="lab">C</span><span>Greek satraps</span></li>
+        <li class=""><span class="lab">D</span><span>Chola dynasty</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Nanda dynasty was overthrown and replaced by the Mauryan dynasty (Chandragupta, guided by Kauṭilya). Not the Guptas, the Greek satraps or the Cholas.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">A *bureaucracy* (from *bureau* + *-kratia*) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the royal family alone</span></li>
+        <li class="correct"><span class="lab">B</span><span>the body of appointed officials who run an empire's day-to-day administration</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the army's cavalry</span></li>
+        <li class=""><span class="lab">D</span><span>a group of poets</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A *bureaucracy* is the body of appointed officials who run an empire's day-to-day administration. It is broader than the royal family alone, and it is not the cavalry or a group of poets.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">A common currency across an empire mattered because it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>stopped all trade</span></li>
+        <li class=""><span class="lab">B</span><span>was used only for decoration</span></li>
+        <li class=""><span class="lab">C</span><span>replaced the army</span></li>
+        <li class="correct"><span class="lab">D</span><span>made trade and tax collection smoother over a vast area</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A common currency made trade and tax collection smoother across a vast area — a genuine binding feature. It did not stop trade, serve as decoration or replace the army.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">A strong army was a binding feature of empires because it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>was only for parades</span></li>
+        <li class=""><span class="lab">B</span><span>collected the edicts</span></li>
+        <li class="correct"><span class="lab">C</span><span>could defend the borders and hold conquered territory together</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>wrote the Arthaśhāstra</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A strong army could defend the borders and hold conquered territory together — its real political purpose, not mere parades, carrying edicts or authorship.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">Good communication networks (roads, messengers) mattered to an empire because they:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>were used only by traders, never the state</span></li>
+        <li class=""><span class="lab">B</span><span>replaced the treasury</span></li>
+        <li class=""><span class="lab">C</span><span>made coins unnecessary</span></li>
+        <li class="correct"><span class="lab">D</span><span>let the centre govern and supply distant provinces</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Good roads and messengers let the centre govern and supply distant provinces — essential for holding an empire together. They were used by the state too, not only traders; they did not replace the treasury or make coins unnecessary.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">Why did emperors support art and learning?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>it weakened the state</span></li>
+        <li class=""><span class="lab">B</span><span>it was forbidden by the Arthaśhāstra</span></li>
+        <li class="correct"><span class="lab">C</span><span>it added to the empire's prestige and helped bind its culture together</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>it had no effect at all</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Emperors supported art and learning because it added to the empire's prestige and helped bind its culture together. It did not weaken the state, and the Arthaśhāstra encouraged rather than forbade such support.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">"Control over resources" as an imperial feature meant command of things like:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>iron, fertile farmland and the taxes they yielded</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>only seashells</span></li>
+        <li class=""><span class="lab">C</span><span>nothing of value</span></li>
+        <li class=""><span class="lab">D</span><span>foreign languages</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Control over resources" meant command of things like iron, fertile farmland and the taxes they yielded — real economic power. Seashells, nothing of value and foreign languages miss the point.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">The *Arthaśhāstra* can be described as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a collection of folk songs</span></li>
+        <li class="correct"><span class="lab">B</span><span>an ancient handbook for running a state — defence, administration, justice, welfare</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a map of trade routes only</span></li>
+        <li class=""><span class="lab">D</span><span>a book of Ashoka's edicts</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The *Arthaśhāstra* is best described as an ancient handbook for running a state — defence, administration, justice and welfare. It is not a collection of folk songs, a trade-route map or a record of Ashoka's edicts.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">Ashoka's edicts were historically remarkable because, perhaps for the first time, a king:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>refused to speak to anyone</span></li>
+        <li class="correct"><span class="lab">B</span><span>spoke directly to his people, explaining his ideals</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>wrote only in a secret code</span></li>
+        <li class=""><span class="lab">D</span><span>banned all writing</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Ashoka's edicts were remarkable because, perhaps for the first time, a king spoke directly to his people, explaining his ideals. The opposite choices — silence, secret code, banning writing — describe the reverse.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">Place these in correct historical order: (i) the Mauryan empire under Chandragupta; (ii) the sixteen mahājanapadas; (iii) the Nanda dynasty.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>(i) → (ii) → (iii)</span></li>
+        <li class=""><span class="lab">B</span><span>(iii) → (ii) → (i)</span></li>
+        <li class=""><span class="lab">C</span><span>(ii) → (i) → (iii)</span></li>
+        <li class="correct"><span class="lab">D</span><span>(ii) → (iii) → (i)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Correct order: the sixteen mahājanapadas first, then the Nanda dynasty that ruled Magadha, and last the Mauryan empire under Chandragupta that overthrew the Nandas. That is sequence (ii) → (iii) → (i).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">The *Arthaśhāstra* and the *saptānga* theory are both credited to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Ashoka</span></li>
+        <li class=""><span class="lab">B</span><span>Alexander</span></li>
+        <li class="correct"><span class="lab">C</span><span>Kauṭilya (Chāṇakya)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Mahāpadma Nanda</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Both the *Arthaśhāstra* and the *saptānga* theory are credited to Kauṭilya (Chāṇakya). Ashoka, Alexander and Mahāpadma Nanda wrote neither.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">Tributary kings typically paid the emperor in the form of:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>gold, grain or elephants</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>nothing at all</span></li>
+        <li class=""><span class="lab">C</span><span>only seashells</span></li>
+        <li class=""><span class="lab">D</span><span>edicts</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Tributary kings typically paid the emperor in gold, grain or elephants — real wealth and military assets. "Nothing at all," seashells and edicts are distractors.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">Modern trade and industry associations are often compared to ancient:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>guilds (śhrenis)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>satraps</span></li>
+        <li class=""><span class="lab">C</span><span>edicts</span></li>
+        <li class=""><span class="lab">D</span><span>pillars</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Modern trade and industry associations are often compared to the ancient guilds (*śhrenis*). They are nothing like satraps (governors), edicts (declarations) or pillars.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">Why do even the greatest empires eventually decline?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>they are forbidden by law to last</span></li>
+        <li class=""><span class="lab">B</span><span>emperors choose to dissolve them for fun</span></li>
+        <li class=""><span class="lab">C</span><span>they never actually decline</span></li>
+        <li class="correct"><span class="lab">D</span><span>they are fragile — over-stretch, weak successors, revolts and money troubles all strain the binding features</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Even great empires decline because they are fragile: over-stretch, weak successors, revolts and money troubles all strain the binding features. There is no law against lasting, emperors do not dissolve them for fun, and they certainly do decline.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">The capital city from which Magadha and then the Mauryas ruled was:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Taxila</span></li>
+        <li class=""><span class="lab">B</span><span>Kalinga</span></li>
+        <li class="correct"><span class="lab">C</span><span>Pāṭaliputra</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Sarnath</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Magadha and then the Mauryas ruled from the capital city of Pāṭaliputra. Taxila, Kalinga and Sarnath are important sites, but not the Mauryan capital.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">In *saptānga*, the element "anga" refers to a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>coin</span></li>
+        <li class="correct"><span class="lab">B</span><span>limb or part</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>river</span></li>
+        <li class=""><span class="lab">D</span><span>king only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In *saptānga*, "anga" means a limb or part — hence "seven limbs" of the state. Not a coin, a river or the king alone.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">After the Kalinga war, Ashoka's *dhamma* policy emphasised:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>endless further conquest</span></li>
+        <li class=""><span class="lab">B</span><span>abolishing all officials</span></li>
+        <li class="correct"><span class="lab">C</span><span>compassion, non-violence and the moral welfare of his people</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>banning trade</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>After Kalinga, Ashoka's *dhamma* policy emphasised compassion, non-violence and the moral welfare of his people — a deliberate turn away from further conquest. He did not abolish officials or ban trade.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">Historians can read Ashoka's messages today because scholars in the 1830s:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>found a printed translation</span></li>
+        <li class=""><span class="lab">B</span><span>asked the Mauryas directly</span></li>
+        <li class=""><span class="lab">C</span><span>guessed at random</span></li>
+        <li class="correct"><span class="lab">D</span><span>deciphered the Brahmi script</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>We can read Ashoka's messages today because scholars in the 1830s deciphered the Brahmi script. There was no printed translation; one cannot ask the Mauryas directly; and decipherment was scholarship, not random guessing.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">An *emperor* differs from an ordinary *king* in that the emperor:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>is always weaker</span></li>
+        <li class="correct"><span class="lab">B</span><span>stands above other kings, ruling an empire of many territories</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>has no army</span></li>
+        <li class=""><span class="lab">D</span><span>rules only one village</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An emperor stands above other kings, ruling an empire of many territories. That is greater authority, not weakness; emperors command armies and rule far more than a single village.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">*Annexation* comes from the Latin *annectere*, meaning:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>to bind to</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>to give away</span></li>
+        <li class=""><span class="lab">C</span><span>to destroy</span></li>
+        <li class=""><span class="lab">D</span><span>to forget</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>*Annexation* comes from the Latin *annectere*, "to bind to" — fitting, since annexation binds a new territory into the empire. Not "to give away," "to destroy" or "to forget."</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">Magadha's iron and fertile farmland gave it an edge because they:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>were useless without the sea</span></li>
+        <li class="correct"><span class="lab">B</span><span>supplied better weapons and tools plus the food surplus to feed a large army and bureaucracy</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>prevented it from trading</span></li>
+        <li class=""><span class="lab">D</span><span>made it abandon farming</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Magadha's iron and fertile farmland supplied better weapons and tools plus the food surplus to feed a large army and bureaucracy — a double advantage. They were valuable on their own, aided trade rather than preventing it, and did not make Magadha abandon farming.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">Match the ruler to his role — **Chandragupta Maurya** and **Ashoka** were respectively:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>founder who united the subcontinent, and the emperor transformed by the Kalinga war</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a Greek satrap, and a Nanda king</span></li>
+        <li class=""><span class="lab">C</span><span>the author of the Vedas, and a Harappan ruler</span></li>
+        <li class=""><span class="lab">D</span><span>two names for the same person</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Chandragupta Maurya was the founder who united the subcontinent; Ashoka was the emperor transformed by the Kalinga war. The other pairings are simply false.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">The blue *dharmachakra* on the Indian flag links modern India directly to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the Mughal court</span></li>
+        <li class=""><span class="lab">B</span><span>the British Raj</span></li>
+        <li class="correct"><span class="lab">C</span><span>Ashoka and the Mauryan heritage</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the Harappan cities</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The blue *dharmachakra* on the flag links modern India directly to Ashoka and the Mauryan heritage — not the Mughal court, the British Raj or the Harappan cities.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">The single best summary of what makes an empire is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>simply having a king</span></li>
+        <li class=""><span class="lab">B</span><span>the absence of any government</span></li>
+        <li class=""><span class="lab">C</span><span>owning a single fort</span></li>
+        <li class="correct"><span class="lab">D</span><span>great size plus the six binding features — army, administration, law &amp; currency, resources, art &amp; learning, and communication</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The best summary: great size plus the six binding features — army, administration, law &amp; currency, resources, art &amp; learning, and communication. Merely having a king, having no government or owning a single fort does not make an empire.</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

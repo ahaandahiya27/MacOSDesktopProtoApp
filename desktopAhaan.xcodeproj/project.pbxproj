@@ -1674,26 +1674,41 @@
 		6C95F34211DB09E1E5DE7039 /* Sanskrit_Sch10_DashamahKah_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = E5F7C49F880FEA0846B81306 /* Sanskrit_Sch10_DashamahKah_SolvedGuide.html */; };
 		27437B654517658E4138AA6F /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah.html in Resources */ = {isa = PBXBuildFile; fileRef = 968F5EF97FBEFDD20A594D95 /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah.html */; };
 		56A176B9A2FD54A3D276B73F /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 590A626827958893F01D46A6 /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah.pdf */; };
+		FE27A0135F92E030074A68B0 /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 79542542300C254DD4B9310D /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_Advanced_QuestionPaper.md */; };
+		2484CD7B435032B2E1DDADF2 /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = B5DB1E5312EB772416EEC152 /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_Advanced_Solutions.md */; };
+		5C26D94D2E27A57DE5843906 /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 5C00BDEACEB3D04D1E1FE88B /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_Advanced_SolvedGuide.html */; };
 		7437FF328CB1A855A44925D0 /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = C5ED0178B92828FEE1BE57F3 /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_QuestionPaper.md */; };
 		40CF7D0CA6E6F4D510882B70 /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = CF0D8776547E0E0C4012F94A /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_Solutions.md */; };
 		4651A09186F01A87DA134E5F /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 6FCAFF6D4E31E1A508CFB304 /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_SolvedGuide.html */; };
 		D6DC342EE1AFF37809D85FC7 /* Sanskrit_Sch12_ViranganaPannadhaya.html in Resources */ = {isa = PBXBuildFile; fileRef = 218346C3B15E9ECE5BA92ECB /* Sanskrit_Sch12_ViranganaPannadhaya.html */; };
 		7D3B09032912BD886005A57A /* Sanskrit_Sch12_ViranganaPannadhaya.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A829F6BD01B44BCEEF2802FD /* Sanskrit_Sch12_ViranganaPannadhaya.pdf */; };
+		2A1D6969ECF55FB950CD037F /* Sanskrit_Sch12_ViranganaPannadhaya_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 4EB89190E912762C139674A6 /* Sanskrit_Sch12_ViranganaPannadhaya_Advanced_QuestionPaper.md */; };
+		51BD09AAE72B9225633F93FA /* Sanskrit_Sch12_ViranganaPannadhaya_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = EC08637346F422730E4E4CE4 /* Sanskrit_Sch12_ViranganaPannadhaya_Advanced_Solutions.md */; };
+		781CD18D0CFAF4EEA4F70E8E /* Sanskrit_Sch12_ViranganaPannadhaya_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 88A8ECA255AB33CDD2ECFC55 /* Sanskrit_Sch12_ViranganaPannadhaya_Advanced_SolvedGuide.html */; };
 		4DEF325ECCE2B750FAAF52E5 /* Sanskrit_Sch12_ViranganaPannadhaya_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = F49500912AC3DD8E73C2AD07 /* Sanskrit_Sch12_ViranganaPannadhaya_QuestionPaper.md */; };
 		6F87D426178ADB823B3102D0 /* Sanskrit_Sch12_ViranganaPannadhaya_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 9EDD2F1058BB3CEADAD3B789 /* Sanskrit_Sch12_ViranganaPannadhaya_Solutions.md */; };
 		7237239EA50AE2B701D7A9A4 /* Sanskrit_Sch12_ViranganaPannadhaya_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 01DDE5909E30E8B2D3F0BF43 /* Sanskrit_Sch12_ViranganaPannadhaya_SolvedGuide.html */; };
 		B5B9A5CFB563C21D67388637 /* Sanskrit_Sch13_VarnaMatraParichayah.html in Resources */ = {isa = PBXBuildFile; fileRef = E7C133FA52AB643486AE8081 /* Sanskrit_Sch13_VarnaMatraParichayah.html */; };
 		E12A92D53DF8E338FCA4E135 /* Sanskrit_Sch13_VarnaMatraParichayah.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7471E0729FDF494CC3FB6EFC /* Sanskrit_Sch13_VarnaMatraParichayah.pdf */; };
+		4A8955E6D6DD4EA411F564A8 /* Sanskrit_Sch13_VarnaMatraParichayah_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = D1A710D085D86B8226DB27F0 /* Sanskrit_Sch13_VarnaMatraParichayah_Advanced_QuestionPaper.md */; };
+		66E946E38E40CC0E3F3D30C8 /* Sanskrit_Sch13_VarnaMatraParichayah_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = C66162D26DCC67C718F492F7 /* Sanskrit_Sch13_VarnaMatraParichayah_Advanced_Solutions.md */; };
+		F7FD4DD12CEDF05BA6910435 /* Sanskrit_Sch13_VarnaMatraParichayah_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 8513FDDD40430EF519BE29DE /* Sanskrit_Sch13_VarnaMatraParichayah_Advanced_SolvedGuide.html */; };
 		EFAE09979F3562FE660332EC /* Sanskrit_Sch13_VarnaMatraParichayah_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 6EA2FA7C39B5F0602C24BAE2 /* Sanskrit_Sch13_VarnaMatraParichayah_QuestionPaper.md */; };
 		CA0B6A9EABAEC2AECDB8368C /* Sanskrit_Sch13_VarnaMatraParichayah_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 5C047697B66CDB21B7D318E7 /* Sanskrit_Sch13_VarnaMatraParichayah_Solutions.md */; };
 		D797BE2C1ECB903212715F61 /* Sanskrit_Sch13_VarnaMatraParichayah_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 6BF53171D63477E95497CCCB /* Sanskrit_Sch13_VarnaMatraParichayah_SolvedGuide.html */; };
 		F717C6ECBE819127B4EA7C33 /* Sanskrit_Sch14_ShabdaRupani.html in Resources */ = {isa = PBXBuildFile; fileRef = FAF9B17FDFDA5CD088A28E8B /* Sanskrit_Sch14_ShabdaRupani.html */; };
 		1F1003115D0E5F4C6C5609B0 /* Sanskrit_Sch14_ShabdaRupani.pdf in Resources */ = {isa = PBXBuildFile; fileRef = BADE27E4D48C38FE330AFF2E /* Sanskrit_Sch14_ShabdaRupani.pdf */; };
+		D8B7BC955B9175F475039EE0 /* Sanskrit_Sch14_ShabdaRupani_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 358F453D5BD49B89585EF11C /* Sanskrit_Sch14_ShabdaRupani_Advanced_QuestionPaper.md */; };
+		AFD67412564086590FB87686 /* Sanskrit_Sch14_ShabdaRupani_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 2E254837BD9FA6F2EEF83A02 /* Sanskrit_Sch14_ShabdaRupani_Advanced_Solutions.md */; };
+		5D9B252E7A2AD85A8E158A92 /* Sanskrit_Sch14_ShabdaRupani_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 730729A5A9F0366A5DF5921C /* Sanskrit_Sch14_ShabdaRupani_Advanced_SolvedGuide.html */; };
 		17497F03D0202AD4317C1CB7 /* Sanskrit_Sch14_ShabdaRupani_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = CF1BEF2F6A700B7AEA8B35BA /* Sanskrit_Sch14_ShabdaRupani_QuestionPaper.md */; };
 		F080C60534DAB7CBEBA5674F /* Sanskrit_Sch14_ShabdaRupani_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 0AC70135F26937B07E053F49 /* Sanskrit_Sch14_ShabdaRupani_Solutions.md */; };
 		A385FB009C9E809D80F914FD /* Sanskrit_Sch14_ShabdaRupani_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 82673F08E646F7D69E17AB8A /* Sanskrit_Sch14_ShabdaRupani_SolvedGuide.html */; };
 		77DFCFAF61B01F272F7C802B /* Sanskrit_Sch15_DhaturupaniVerbConjugations.html in Resources */ = {isa = PBXBuildFile; fileRef = F1083CEDD51933180A2B0DA0 /* Sanskrit_Sch15_DhaturupaniVerbConjugations.html */; };
 		1FDE3C0C0468693C8D190EDC /* Sanskrit_Sch15_DhaturupaniVerbConjugations.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 626B805523CBA8002BA72744 /* Sanskrit_Sch15_DhaturupaniVerbConjugations.pdf */; };
+		9313B926F25E8AECF16E899E /* Sanskrit_Sch15_DhaturupaniVerbConjugations_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 29EC7E4EA2CD1687C5DEAEAE /* Sanskrit_Sch15_DhaturupaniVerbConjugations_Advanced_QuestionPaper.md */; };
+		14BD5CE1DC5270DC4BAE66F4 /* Sanskrit_Sch15_DhaturupaniVerbConjugations_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 667003A14AB38484D341C440 /* Sanskrit_Sch15_DhaturupaniVerbConjugations_Advanced_Solutions.md */; };
+		3F3F45D5899A84272256792A /* Sanskrit_Sch15_DhaturupaniVerbConjugations_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 207A76AE577C328BF72117C3 /* Sanskrit_Sch15_DhaturupaniVerbConjugations_Advanced_SolvedGuide.html */; };
 		BD45FA2F5EEB58FBD55F9311 /* Sanskrit_Sch15_DhaturupaniVerbConjugations_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 4EB3FF11FEE3388C5D7F14D7 /* Sanskrit_Sch15_DhaturupaniVerbConjugations_QuestionPaper.md */; };
 		EBE393DF7994D8E5CA8EAFAC /* Sanskrit_Sch15_DhaturupaniVerbConjugations_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 698EDBAB80059ED972D58A17 /* Sanskrit_Sch15_DhaturupaniVerbConjugations_Solutions.md */; };
 		9EC8471848A222D8F09A62FC /* Sanskrit_Sch15_DhaturupaniVerbConjugations_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = E70612553506E3428EBA6525 /* Sanskrit_Sch15_DhaturupaniVerbConjugations_SolvedGuide.html */; };
@@ -1868,6 +1883,9 @@
 		133087C1ADF12A2778CFDBFE /* SocialScience_Ssch04_NewBeginningsCitiesAndStates_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 8987F486620DF2F8EEF9446B /* SocialScience_Ssch04_NewBeginningsCitiesAndStates_SolvedGuide.html */; };
 		1CB3FD8B71A3D60F02EF4E18 /* SocialScience_Ssch05_TheRiseOfEmpires.html in Resources */ = {isa = PBXBuildFile; fileRef = 24C8225E863049FE8DD9717E /* SocialScience_Ssch05_TheRiseOfEmpires.html */; };
 		3D2A99423C3790C4173F7306 /* SocialScience_Ssch05_TheRiseOfEmpires.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E0EDFD4B7E430B83B272505F /* SocialScience_Ssch05_TheRiseOfEmpires.pdf */; };
+		3D3D40417FD17838D01E9706 /* SocialScience_Ssch05_TheRiseOfEmpires_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 6A9CC7C8B6B23B928E71C8B0 /* SocialScience_Ssch05_TheRiseOfEmpires_Advanced_QuestionPaper.md */; };
+		BEC72630F7CE67E8A775D0FD /* SocialScience_Ssch05_TheRiseOfEmpires_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 057ACBF72A394137606E596E /* SocialScience_Ssch05_TheRiseOfEmpires_Advanced_Solutions.md */; };
+		4FEDFE9761EB86E614FA3A8E /* SocialScience_Ssch05_TheRiseOfEmpires_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = CD0FE7248BD775EC11A48245 /* SocialScience_Ssch05_TheRiseOfEmpires_Advanced_SolvedGuide.html */; };
 		F1F4969FA57E18E1CB182AAC /* SocialScience_Ssch05_TheRiseOfEmpires_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 1A971A3AE184E1A02D8F55EE /* SocialScience_Ssch05_TheRiseOfEmpires_QuestionPaper.md */; };
 		6CBC5DAF1CAF510FFE05601E /* SocialScience_Ssch05_TheRiseOfEmpires_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = A07B0D9378A40469D4BC9269 /* SocialScience_Ssch05_TheRiseOfEmpires_Solutions.md */; };
 		3854DE2E8ED55CE80B934526 /* SocialScience_Ssch05_TheRiseOfEmpires_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 74B61CE151E822ECC8C93C7A /* SocialScience_Ssch05_TheRiseOfEmpires_SolvedGuide.html */; };
@@ -3262,26 +3280,41 @@
 		E5F7C49F880FEA0846B81306 /* Sanskrit_Sch10_DashamahKah_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Sanskrit_Sch10_DashamahKah_SolvedGuide.html"; sourceTree = "<group>"; };
 		968F5EF97FBEFDD20A594D95 /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah.html"; sourceTree = "<group>"; };
 		590A626827958893F01D46A6 /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah.pdf"; sourceTree = "<group>"; };
+		79542542300C254DD4B9310D /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_Advanced_QuestionPaper.md"; sourceTree = "<group>"; };
+		B5DB1E5312EB772416EEC152 /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_Advanced_Solutions.md"; sourceTree = "<group>"; };
+		5C00BDEACEB3D04D1E1FE88B /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_Advanced_SolvedGuide.html"; sourceTree = "<group>"; };
 		C5ED0178B92828FEE1BE57F3 /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_QuestionPaper.md"; sourceTree = "<group>"; };
 		CF0D8776547E0E0C4012F94A /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_Solutions.md"; sourceTree = "<group>"; };
 		6FCAFF6D4E31E1A508CFB304 /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_SolvedGuide.html"; sourceTree = "<group>"; };
 		218346C3B15E9ECE5BA92ECB /* Sanskrit_Sch12_ViranganaPannadhaya.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Sanskrit_Sch12_ViranganaPannadhaya.html"; sourceTree = "<group>"; };
 		A829F6BD01B44BCEEF2802FD /* Sanskrit_Sch12_ViranganaPannadhaya.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Sanskrit_Sch12_ViranganaPannadhaya.pdf"; sourceTree = "<group>"; };
+		4EB89190E912762C139674A6 /* Sanskrit_Sch12_ViranganaPannadhaya_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Sanskrit_Sch12_ViranganaPannadhaya_Advanced_QuestionPaper.md"; sourceTree = "<group>"; };
+		EC08637346F422730E4E4CE4 /* Sanskrit_Sch12_ViranganaPannadhaya_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Sanskrit_Sch12_ViranganaPannadhaya_Advanced_Solutions.md"; sourceTree = "<group>"; };
+		88A8ECA255AB33CDD2ECFC55 /* Sanskrit_Sch12_ViranganaPannadhaya_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Sanskrit_Sch12_ViranganaPannadhaya_Advanced_SolvedGuide.html"; sourceTree = "<group>"; };
 		F49500912AC3DD8E73C2AD07 /* Sanskrit_Sch12_ViranganaPannadhaya_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Sanskrit_Sch12_ViranganaPannadhaya_QuestionPaper.md"; sourceTree = "<group>"; };
 		9EDD2F1058BB3CEADAD3B789 /* Sanskrit_Sch12_ViranganaPannadhaya_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Sanskrit_Sch12_ViranganaPannadhaya_Solutions.md"; sourceTree = "<group>"; };
 		01DDE5909E30E8B2D3F0BF43 /* Sanskrit_Sch12_ViranganaPannadhaya_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Sanskrit_Sch12_ViranganaPannadhaya_SolvedGuide.html"; sourceTree = "<group>"; };
 		E7C133FA52AB643486AE8081 /* Sanskrit_Sch13_VarnaMatraParichayah.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Sanskrit_Sch13_VarnaMatraParichayah.html"; sourceTree = "<group>"; };
 		7471E0729FDF494CC3FB6EFC /* Sanskrit_Sch13_VarnaMatraParichayah.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Sanskrit_Sch13_VarnaMatraParichayah.pdf"; sourceTree = "<group>"; };
+		D1A710D085D86B8226DB27F0 /* Sanskrit_Sch13_VarnaMatraParichayah_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Sanskrit_Sch13_VarnaMatraParichayah_Advanced_QuestionPaper.md"; sourceTree = "<group>"; };
+		C66162D26DCC67C718F492F7 /* Sanskrit_Sch13_VarnaMatraParichayah_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Sanskrit_Sch13_VarnaMatraParichayah_Advanced_Solutions.md"; sourceTree = "<group>"; };
+		8513FDDD40430EF519BE29DE /* Sanskrit_Sch13_VarnaMatraParichayah_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Sanskrit_Sch13_VarnaMatraParichayah_Advanced_SolvedGuide.html"; sourceTree = "<group>"; };
 		6EA2FA7C39B5F0602C24BAE2 /* Sanskrit_Sch13_VarnaMatraParichayah_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Sanskrit_Sch13_VarnaMatraParichayah_QuestionPaper.md"; sourceTree = "<group>"; };
 		5C047697B66CDB21B7D318E7 /* Sanskrit_Sch13_VarnaMatraParichayah_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Sanskrit_Sch13_VarnaMatraParichayah_Solutions.md"; sourceTree = "<group>"; };
 		6BF53171D63477E95497CCCB /* Sanskrit_Sch13_VarnaMatraParichayah_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Sanskrit_Sch13_VarnaMatraParichayah_SolvedGuide.html"; sourceTree = "<group>"; };
 		FAF9B17FDFDA5CD088A28E8B /* Sanskrit_Sch14_ShabdaRupani.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Sanskrit_Sch14_ShabdaRupani.html"; sourceTree = "<group>"; };
 		BADE27E4D48C38FE330AFF2E /* Sanskrit_Sch14_ShabdaRupani.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Sanskrit_Sch14_ShabdaRupani.pdf"; sourceTree = "<group>"; };
+		358F453D5BD49B89585EF11C /* Sanskrit_Sch14_ShabdaRupani_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Sanskrit_Sch14_ShabdaRupani_Advanced_QuestionPaper.md"; sourceTree = "<group>"; };
+		2E254837BD9FA6F2EEF83A02 /* Sanskrit_Sch14_ShabdaRupani_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Sanskrit_Sch14_ShabdaRupani_Advanced_Solutions.md"; sourceTree = "<group>"; };
+		730729A5A9F0366A5DF5921C /* Sanskrit_Sch14_ShabdaRupani_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Sanskrit_Sch14_ShabdaRupani_Advanced_SolvedGuide.html"; sourceTree = "<group>"; };
 		CF1BEF2F6A700B7AEA8B35BA /* Sanskrit_Sch14_ShabdaRupani_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Sanskrit_Sch14_ShabdaRupani_QuestionPaper.md"; sourceTree = "<group>"; };
 		0AC70135F26937B07E053F49 /* Sanskrit_Sch14_ShabdaRupani_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Sanskrit_Sch14_ShabdaRupani_Solutions.md"; sourceTree = "<group>"; };
 		82673F08E646F7D69E17AB8A /* Sanskrit_Sch14_ShabdaRupani_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Sanskrit_Sch14_ShabdaRupani_SolvedGuide.html"; sourceTree = "<group>"; };
 		F1083CEDD51933180A2B0DA0 /* Sanskrit_Sch15_DhaturupaniVerbConjugations.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Sanskrit_Sch15_DhaturupaniVerbConjugations.html"; sourceTree = "<group>"; };
 		626B805523CBA8002BA72744 /* Sanskrit_Sch15_DhaturupaniVerbConjugations.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Sanskrit_Sch15_DhaturupaniVerbConjugations.pdf"; sourceTree = "<group>"; };
+		29EC7E4EA2CD1687C5DEAEAE /* Sanskrit_Sch15_DhaturupaniVerbConjugations_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Sanskrit_Sch15_DhaturupaniVerbConjugations_Advanced_QuestionPaper.md"; sourceTree = "<group>"; };
+		667003A14AB38484D341C440 /* Sanskrit_Sch15_DhaturupaniVerbConjugations_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Sanskrit_Sch15_DhaturupaniVerbConjugations_Advanced_Solutions.md"; sourceTree = "<group>"; };
+		207A76AE577C328BF72117C3 /* Sanskrit_Sch15_DhaturupaniVerbConjugations_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Sanskrit_Sch15_DhaturupaniVerbConjugations_Advanced_SolvedGuide.html"; sourceTree = "<group>"; };
 		4EB3FF11FEE3388C5D7F14D7 /* Sanskrit_Sch15_DhaturupaniVerbConjugations_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Sanskrit_Sch15_DhaturupaniVerbConjugations_QuestionPaper.md"; sourceTree = "<group>"; };
 		698EDBAB80059ED972D58A17 /* Sanskrit_Sch15_DhaturupaniVerbConjugations_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Sanskrit_Sch15_DhaturupaniVerbConjugations_Solutions.md"; sourceTree = "<group>"; };
 		E70612553506E3428EBA6525 /* Sanskrit_Sch15_DhaturupaniVerbConjugations_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Sanskrit_Sch15_DhaturupaniVerbConjugations_SolvedGuide.html"; sourceTree = "<group>"; };
@@ -3456,6 +3489,9 @@
 		8987F486620DF2F8EEF9446B /* SocialScience_Ssch04_NewBeginningsCitiesAndStates_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "SocialScience_Ssch04_NewBeginningsCitiesAndStates_SolvedGuide.html"; sourceTree = "<group>"; };
 		24C8225E863049FE8DD9717E /* SocialScience_Ssch05_TheRiseOfEmpires.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "SocialScience_Ssch05_TheRiseOfEmpires.html"; sourceTree = "<group>"; };
 		E0EDFD4B7E430B83B272505F /* SocialScience_Ssch05_TheRiseOfEmpires.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "SocialScience_Ssch05_TheRiseOfEmpires.pdf"; sourceTree = "<group>"; };
+		6A9CC7C8B6B23B928E71C8B0 /* SocialScience_Ssch05_TheRiseOfEmpires_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SocialScience_Ssch05_TheRiseOfEmpires_Advanced_QuestionPaper.md"; sourceTree = "<group>"; };
+		057ACBF72A394137606E596E /* SocialScience_Ssch05_TheRiseOfEmpires_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SocialScience_Ssch05_TheRiseOfEmpires_Advanced_Solutions.md"; sourceTree = "<group>"; };
+		CD0FE7248BD775EC11A48245 /* SocialScience_Ssch05_TheRiseOfEmpires_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "SocialScience_Ssch05_TheRiseOfEmpires_Advanced_SolvedGuide.html"; sourceTree = "<group>"; };
 		1A971A3AE184E1A02D8F55EE /* SocialScience_Ssch05_TheRiseOfEmpires_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SocialScience_Ssch05_TheRiseOfEmpires_QuestionPaper.md"; sourceTree = "<group>"; };
 		A07B0D9378A40469D4BC9269 /* SocialScience_Ssch05_TheRiseOfEmpires_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SocialScience_Ssch05_TheRiseOfEmpires_Solutions.md"; sourceTree = "<group>"; };
 		74B61CE151E822ECC8C93C7A /* SocialScience_Ssch05_TheRiseOfEmpires_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "SocialScience_Ssch05_TheRiseOfEmpires_SolvedGuide.html"; sourceTree = "<group>"; };
@@ -6020,26 +6056,41 @@
 				E5F7C49F880FEA0846B81306,
 				968F5EF97FBEFDD20A594D95,
 				590A626827958893F01D46A6,
+				79542542300C254DD4B9310D,
+				B5DB1E5312EB772416EEC152,
+				5C00BDEACEB3D04D1E1FE88B,
 				C5ED0178B92828FEE1BE57F3,
 				CF0D8776547E0E0C4012F94A,
 				6FCAFF6D4E31E1A508CFB304,
 				218346C3B15E9ECE5BA92ECB,
 				A829F6BD01B44BCEEF2802FD,
+				4EB89190E912762C139674A6,
+				EC08637346F422730E4E4CE4,
+				88A8ECA255AB33CDD2ECFC55,
 				F49500912AC3DD8E73C2AD07,
 				9EDD2F1058BB3CEADAD3B789,
 				01DDE5909E30E8B2D3F0BF43,
 				E7C133FA52AB643486AE8081,
 				7471E0729FDF494CC3FB6EFC,
+				D1A710D085D86B8226DB27F0,
+				C66162D26DCC67C718F492F7,
+				8513FDDD40430EF519BE29DE,
 				6EA2FA7C39B5F0602C24BAE2,
 				5C047697B66CDB21B7D318E7,
 				6BF53171D63477E95497CCCB,
 				FAF9B17FDFDA5CD088A28E8B,
 				BADE27E4D48C38FE330AFF2E,
+				358F453D5BD49B89585EF11C,
+				2E254837BD9FA6F2EEF83A02,
+				730729A5A9F0366A5DF5921C,
 				CF1BEF2F6A700B7AEA8B35BA,
 				0AC70135F26937B07E053F49,
 				82673F08E646F7D69E17AB8A,
 				F1083CEDD51933180A2B0DA0,
 				626B805523CBA8002BA72744,
+				29EC7E4EA2CD1687C5DEAEAE,
+				667003A14AB38484D341C440,
+				207A76AE577C328BF72117C3,
 				4EB3FF11FEE3388C5D7F14D7,
 				698EDBAB80059ED972D58A17,
 				E70612553506E3428EBA6525,
@@ -6214,6 +6265,9 @@
 				8987F486620DF2F8EEF9446B,
 				24C8225E863049FE8DD9717E,
 				E0EDFD4B7E430B83B272505F,
+				6A9CC7C8B6B23B928E71C8B0,
+				057ACBF72A394137606E596E,
+				CD0FE7248BD775EC11A48245,
 				1A971A3AE184E1A02D8F55EE,
 				A07B0D9378A40469D4BC9269,
 				74B61CE151E822ECC8C93C7A,
@@ -8912,26 +8966,41 @@
 				6C95F34211DB09E1E5DE7039 /* Sanskrit_Sch10_DashamahKah_SolvedGuide.html in Resources */,
 				27437B654517658E4138AA6F /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah.html in Resources */,
 				56A176B9A2FD54A3D276B73F /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah.pdf in Resources */,
+				FE27A0135F92E030074A68B0 /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_Advanced_QuestionPaper.md in Resources */,
+				2484CD7B435032B2E1DDADF2 /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_Advanced_Solutions.md in Resources */,
+				5C26D94D2E27A57DE5843906 /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_Advanced_SolvedGuide.html in Resources */,
 				7437FF328CB1A855A44925D0 /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_QuestionPaper.md in Resources */,
 				40CF7D0CA6E6F4D510882B70 /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_Solutions.md in Resources */,
 				4651A09186F01A87DA134E5F /* Sanskrit_Sch11_DvipeshuRamyahDvipoandamanah_SolvedGuide.html in Resources */,
 				D6DC342EE1AFF37809D85FC7 /* Sanskrit_Sch12_ViranganaPannadhaya.html in Resources */,
 				7D3B09032912BD886005A57A /* Sanskrit_Sch12_ViranganaPannadhaya.pdf in Resources */,
+				2A1D6969ECF55FB950CD037F /* Sanskrit_Sch12_ViranganaPannadhaya_Advanced_QuestionPaper.md in Resources */,
+				51BD09AAE72B9225633F93FA /* Sanskrit_Sch12_ViranganaPannadhaya_Advanced_Solutions.md in Resources */,
+				781CD18D0CFAF4EEA4F70E8E /* Sanskrit_Sch12_ViranganaPannadhaya_Advanced_SolvedGuide.html in Resources */,
 				4DEF325ECCE2B750FAAF52E5 /* Sanskrit_Sch12_ViranganaPannadhaya_QuestionPaper.md in Resources */,
 				6F87D426178ADB823B3102D0 /* Sanskrit_Sch12_ViranganaPannadhaya_Solutions.md in Resources */,
 				7237239EA50AE2B701D7A9A4 /* Sanskrit_Sch12_ViranganaPannadhaya_SolvedGuide.html in Resources */,
 				B5B9A5CFB563C21D67388637 /* Sanskrit_Sch13_VarnaMatraParichayah.html in Resources */,
 				E12A92D53DF8E338FCA4E135 /* Sanskrit_Sch13_VarnaMatraParichayah.pdf in Resources */,
+				4A8955E6D6DD4EA411F564A8 /* Sanskrit_Sch13_VarnaMatraParichayah_Advanced_QuestionPaper.md in Resources */,
+				66E946E38E40CC0E3F3D30C8 /* Sanskrit_Sch13_VarnaMatraParichayah_Advanced_Solutions.md in Resources */,
+				F7FD4DD12CEDF05BA6910435 /* Sanskrit_Sch13_VarnaMatraParichayah_Advanced_SolvedGuide.html in Resources */,
 				EFAE09979F3562FE660332EC /* Sanskrit_Sch13_VarnaMatraParichayah_QuestionPaper.md in Resources */,
 				CA0B6A9EABAEC2AECDB8368C /* Sanskrit_Sch13_VarnaMatraParichayah_Solutions.md in Resources */,
 				D797BE2C1ECB903212715F61 /* Sanskrit_Sch13_VarnaMatraParichayah_SolvedGuide.html in Resources */,
 				F717C6ECBE819127B4EA7C33 /* Sanskrit_Sch14_ShabdaRupani.html in Resources */,
 				1F1003115D0E5F4C6C5609B0 /* Sanskrit_Sch14_ShabdaRupani.pdf in Resources */,
+				D8B7BC955B9175F475039EE0 /* Sanskrit_Sch14_ShabdaRupani_Advanced_QuestionPaper.md in Resources */,
+				AFD67412564086590FB87686 /* Sanskrit_Sch14_ShabdaRupani_Advanced_Solutions.md in Resources */,
+				5D9B252E7A2AD85A8E158A92 /* Sanskrit_Sch14_ShabdaRupani_Advanced_SolvedGuide.html in Resources */,
 				17497F03D0202AD4317C1CB7 /* Sanskrit_Sch14_ShabdaRupani_QuestionPaper.md in Resources */,
 				F080C60534DAB7CBEBA5674F /* Sanskrit_Sch14_ShabdaRupani_Solutions.md in Resources */,
 				A385FB009C9E809D80F914FD /* Sanskrit_Sch14_ShabdaRupani_SolvedGuide.html in Resources */,
 				77DFCFAF61B01F272F7C802B /* Sanskrit_Sch15_DhaturupaniVerbConjugations.html in Resources */,
 				1FDE3C0C0468693C8D190EDC /* Sanskrit_Sch15_DhaturupaniVerbConjugations.pdf in Resources */,
+				9313B926F25E8AECF16E899E /* Sanskrit_Sch15_DhaturupaniVerbConjugations_Advanced_QuestionPaper.md in Resources */,
+				14BD5CE1DC5270DC4BAE66F4 /* Sanskrit_Sch15_DhaturupaniVerbConjugations_Advanced_Solutions.md in Resources */,
+				3F3F45D5899A84272256792A /* Sanskrit_Sch15_DhaturupaniVerbConjugations_Advanced_SolvedGuide.html in Resources */,
 				BD45FA2F5EEB58FBD55F9311 /* Sanskrit_Sch15_DhaturupaniVerbConjugations_QuestionPaper.md in Resources */,
 				EBE393DF7994D8E5CA8EAFAC /* Sanskrit_Sch15_DhaturupaniVerbConjugations_Solutions.md in Resources */,
 				9EC8471848A222D8F09A62FC /* Sanskrit_Sch15_DhaturupaniVerbConjugations_SolvedGuide.html in Resources */,
@@ -9106,6 +9175,9 @@
 				133087C1ADF12A2778CFDBFE /* SocialScience_Ssch04_NewBeginningsCitiesAndStates_SolvedGuide.html in Resources */,
 				1CB3FD8B71A3D60F02EF4E18 /* SocialScience_Ssch05_TheRiseOfEmpires.html in Resources */,
 				3D2A99423C3790C4173F7306 /* SocialScience_Ssch05_TheRiseOfEmpires.pdf in Resources */,
+				3D3D40417FD17838D01E9706 /* SocialScience_Ssch05_TheRiseOfEmpires_Advanced_QuestionPaper.md in Resources */,
+				BEC72630F7CE67E8A775D0FD /* SocialScience_Ssch05_TheRiseOfEmpires_Advanced_Solutions.md in Resources */,
+				4FEDFE9761EB86E614FA3A8E /* SocialScience_Ssch05_TheRiseOfEmpires_Advanced_SolvedGuide.html in Resources */,
 				F1F4969FA57E18E1CB182AAC /* SocialScience_Ssch05_TheRiseOfEmpires_QuestionPaper.md in Resources */,
 				6CBC5DAF1CAF510FFE05601E /* SocialScience_Ssch05_TheRiseOfEmpires_Solutions.md in Resources */,
 				3854DE2E8ED55CE80B934526 /* SocialScience_Ssch05_TheRiseOfEmpires_SolvedGuide.html in Resources */,
