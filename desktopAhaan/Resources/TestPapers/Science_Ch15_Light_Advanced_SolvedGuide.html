@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Light_Advanced — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Light_Advanced<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">Light travels in:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>curved paths</span></li>
+        <li class=""><span class="lab">B</span><span>zig-zag paths</span></li>
+        <li class="correct"><span class="lab">C</span><span>straight lines</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>circles</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Light travels in straight lines (rectilinear propagation).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">A shadow forms mainly because light:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>cannot pass through an opaque object</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>bends around objects</span></li>
+        <li class=""><span class="lab">C</span><span>is absorbed by air</span></li>
+        <li class=""><span class="lab">D</span><span>changes colour</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A shadow appears because light cannot pass through an opaque object and travels straight, leaving a dark region behind it.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">The image formed by a pinhole camera is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>erect and large</span></li>
+        <li class=""><span class="lab">B</span><span>erect and small</span></li>
+        <li class=""><span class="lab">C</span><span>virtual</span></li>
+        <li class="correct"><span class="lab">D</span><span>inverted</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A pinhole camera forms an inverted image (the rays cross at the hole).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">An object that lets no light pass through it is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>transparent</span></li>
+        <li class="correct"><span class="lab">B</span><span>opaque</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>translucent</span></li>
+        <li class=""><span class="lab">D</span><span>luminous</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An opaque object lets no light through.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">An object through which light passes only partially (giving a blurred view) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>transparent</span></li>
+        <li class=""><span class="lab">B</span><span>opaque</span></li>
+        <li class="correct"><span class="lab">C</span><span>translucent</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>shiny</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A translucent object lets light pass only partly, giving a blurred view.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">An object through which we can see clearly is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>transparent</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>opaque</span></li>
+        <li class=""><span class="lab">C</span><span>translucent</span></li>
+        <li class=""><span class="lab">D</span><span>dark</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A transparent object lets light through clearly.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">The colour of a shadow shows:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the object's colour</span></li>
+        <li class=""><span class="lab">B</span><span>the light's colour</span></li>
+        <li class=""><span class="lab">C</span><span>a mix of colours</span></li>
+        <li class="correct"><span class="lab">D</span><span>only the object's shape, as a dark patch</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A shadow shows only the outline (shape) of the object as a dark patch, not its colour.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">A pinhole camera's image is inverted because light:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>bends at the hole</span></li>
+        <li class="correct"><span class="lab">B</span><span>travels in straight lines that cross at the hole</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>changes speed</span></li>
+        <li class=""><span class="lab">D</span><span>is reflected twice</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Straight-line rays from the top and bottom of the object cross at the pinhole, so the image is inverted.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">A shadow is cast on the side of an object that is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>facing the light</span></li>
+        <li class=""><span class="lab">B</span><span>brightest</span></li>
+        <li class="correct"><span class="lab">C</span><span>away from the light source</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>coloured</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The shadow falls on the side away from the light source.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">During a solar eclipse, a shadow is cast when the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Moon comes between the Sun and the Earth</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Earth comes between the Sun and the Moon</span></li>
+        <li class=""><span class="lab">C</span><span>Sun is switched off</span></li>
+        <li class=""><span class="lab">D</span><span>sky is cloudy</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In a solar eclipse the Moon comes between the Sun and the Earth, casting its shadow on the Earth.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">The bouncing back of light from a surface is called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>refraction</span></li>
+        <li class=""><span class="lab">B</span><span>dispersion</span></li>
+        <li class=""><span class="lab">C</span><span>absorption</span></li>
+        <li class="correct"><span class="lab">D</span><span>reflection</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Light bouncing back from a surface is reflection.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">In reflection, the angle of incidence is always equal to the angle of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the mirror</span></li>
+        <li class="correct"><span class="lab">B</span><span>reflection</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>refraction</span></li>
+        <li class=""><span class="lab">D</span><span>the normal alone</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The law of reflection: angle of incidence = angle of reflection.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">The image in a plane mirror is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>real and inverted</span></li>
+        <li class=""><span class="lab">B</span><span>real and smaller</span></li>
+        <li class="correct"><span class="lab">C</span><span>virtual, erect and the same size</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>virtual and magnified</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A plane mirror gives a virtual, erect image of the same size as the object.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">The image in a plane mirror is laterally inverted, meaning:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>left and right appear swapped</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>it is upside down</span></li>
+        <li class=""><span class="lab">C</span><span>it is smaller</span></li>
+        <li class=""><span class="lab">D</span><span>it is coloured</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Lateral inversion means left and right appear interchanged.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">For a plane mirror, the image distance behind the mirror compared with the object distance in front is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>twice as much</span></li>
+        <li class=""><span class="lab">B</span><span>half as much</span></li>
+        <li class=""><span class="lab">C</span><span>zero</span></li>
+        <li class="correct"><span class="lab">D</span><span>equal</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The image is as far behind the mirror as the object is in front — equal distances.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">"AMBULANCE" is painted reversed on the front of the vehicle so it reads correctly in a driver's:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>windscreen</span></li>
+        <li class="correct"><span class="lab">B</span><span>rear-view mirror</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>headlamp</span></li>
+        <li class=""><span class="lab">D</span><span>side window</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Reversed lettering reads the right way round in the rear-view mirror of the vehicle ahead.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">A plane-mirror image cannot be caught on a screen because it is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>too bright</span></li>
+        <li class=""><span class="lab">B</span><span>too small</span></li>
+        <li class="correct"><span class="lab">C</span><span>virtual</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>coloured</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A plane-mirror image is virtual, so it can't be caught on a screen.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">Standing 2 m in front of a plane mirror, the distance between you and your image is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>4 m</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>2 m</span></li>
+        <li class=""><span class="lab">C</span><span>1 m</span></li>
+        <li class=""><span class="lab">D</span><span>0 m</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Image is 2 m behind the mirror, you are 2 m in front, so the separation is 2 + 2 = 4 m.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">When you raise your right hand before a plane mirror, the image appears to raise its:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>right hand</span></li>
+        <li class=""><span class="lab">B</span><span>head</span></li>
+        <li class=""><span class="lab">C</span><span>both hands</span></li>
+        <li class="correct"><span class="lab">D</span><span>left hand</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Because of lateral inversion, the raised right hand appears as the image's left hand.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">The size of the image in a plane mirror compared with the object is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>larger</span></li>
+        <li class="correct"><span class="lab">B</span><span>the same</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>smaller</span></li>
+        <li class=""><span class="lab">D</span><span>zero</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A plane mirror gives an image the same size as the object.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">Reflection from a smooth, polished surface is called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>diffuse reflection</span></li>
+        <li class=""><span class="lab">B</span><span>scattering</span></li>
+        <li class="correct"><span class="lab">C</span><span>regular reflection</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>dispersion</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A smooth surface gives regular (specular) reflection.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">Reflection from a rough surface, which scatters light in many directions, is called:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>diffuse (irregular) reflection</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>regular reflection</span></li>
+        <li class=""><span class="lab">C</span><span>refraction</span></li>
+        <li class=""><span class="lab">D</span><span>absorption</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A rough surface scatters light — diffuse (irregular) reflection.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">A ray strikes a mirror making 30° with the mirror surface. Its angle of incidence (measured from the normal) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>30°</span></li>
+        <li class=""><span class="lab">B</span><span>90°</span></li>
+        <li class=""><span class="lab">C</span><span>15°</span></li>
+        <li class="correct"><span class="lab">D</span><span>60°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The normal is perpendicular to the mirror, so a ray 30° from the surface is 90° − 30° = 60° from the normal.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">If the angle of incidence is 40°, the angle of reflection is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>50°</span></li>
+        <li class="correct"><span class="lab">B</span><span>40°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>80°</span></li>
+        <li class=""><span class="lab">D</span><span>20°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Angle of reflection equals the angle of incidence: 40°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">A ray that hits a mirror exactly along the normal reflects:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>at 90°</span></li>
+        <li class=""><span class="lab">B</span><span>sideways</span></li>
+        <li class="correct"><span class="lab">C</span><span>straight back along the same path</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>at 45°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A ray along the normal reflects straight back along the same path.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">A mirror that curves inward (like the inside of a spoon) is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>concave</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>plane</span></li>
+        <li class=""><span class="lab">C</span><span>convex</span></li>
+        <li class=""><span class="lab">D</span><span>flat</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An inward-curving mirror is concave.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">A mirror that bulges outward is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>plane</span></li>
+        <li class=""><span class="lab">B</span><span>concave</span></li>
+        <li class=""><span class="lab">C</span><span>flat</span></li>
+        <li class="correct"><span class="lab">D</span><span>convex</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An outward-bulging mirror is convex.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">A concave mirror can form an image that is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>always virtual and small</span></li>
+        <li class="correct"><span class="lab">B</span><span>real (and even magnified, depending on distance)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>never real</span></li>
+        <li class=""><span class="lab">D</span><span>always the same size</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A concave mirror can form a real image, which may be magnified depending on the object's distance.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">A convex mirror always forms an image that is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>real and large</span></li>
+        <li class=""><span class="lab">B</span><span>real and inverted</span></li>
+        <li class="correct"><span class="lab">C</span><span>virtual, erect and smaller</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the same size</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A convex mirror always gives a virtual, erect, diminished image.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">The rear-view mirror of a car is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>convex</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>concave</span></li>
+        <li class=""><span class="lab">C</span><span>plane</span></li>
+        <li class=""><span class="lab">D</span><span>coloured</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A car's rear-view mirror is convex (wide field of view).</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">A concave mirror is used as a shaving or dentist's mirror because it can:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>shrink the image</span></li>
+        <li class=""><span class="lab">B</span><span>reflect colours</span></li>
+        <li class=""><span class="lab">C</span><span>bend light</span></li>
+        <li class="correct"><span class="lab">D</span><span>magnify a close object</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A concave mirror magnifies a nearby object, which is why it is used for shaving and by dentists.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">The image in a convex mirror is always:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>larger than the object</span></li>
+        <li class="correct"><span class="lab">B</span><span>smaller than the object</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the same size</span></li>
+        <li class=""><span class="lab">D</span><span>inverted</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A convex-mirror image is always smaller than the object.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">The mirror used behind the bulb of a torch or headlight to make a parallel beam is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>plane</span></li>
+        <li class=""><span class="lab">B</span><span>convex</span></li>
+        <li class="correct"><span class="lab">C</span><span>concave</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>coloured</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A concave mirror behind the bulb produces a parallel beam in torches and headlights.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">A real image is one that can be:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>caught on a screen</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>seen only in the mirror</span></li>
+        <li class=""><span class="lab">C</span><span>never formed</span></li>
+        <li class=""><span class="lab">D</span><span>only virtual</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A real image can be caught on a screen.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">A virtual image:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>is always inverted</span></li>
+        <li class=""><span class="lab">B</span><span>is always real</span></li>
+        <li class=""><span class="lab">C</span><span>can be projected</span></li>
+        <li class="correct"><span class="lab">D</span><span>cannot be caught on a screen</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A virtual image cannot be projected onto a screen.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">A concave mirror gives a magnified, erect image when the object is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>very far away</span></li>
+        <li class="correct"><span class="lab">B</span><span>very close (within the focus)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>at infinity</span></li>
+        <li class=""><span class="lab">D</span><span>behind the mirror</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A concave mirror gives a magnified erect image when the object is very close (within the focus).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">Because it gives a wider field of view, a convex mirror is used as a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>shaving mirror</span></li>
+        <li class=""><span class="lab">B</span><span>dentist's mirror</span></li>
+        <li class="correct"><span class="lab">C</span><span>rear-view / security mirror</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>headlight reflector</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Its wide field of view makes the convex mirror ideal as a rear-view or security mirror.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">A convex mirror forms the image of a distant object as:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>small, behind the mirror</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>large, in front</span></li>
+        <li class=""><span class="lab">C</span><span>real and inverted</span></li>
+        <li class=""><span class="lab">D</span><span>the same size</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A convex mirror forms a small image of a distant object behind the mirror.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">A lens that is thicker in the middle than at the edges is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>concave</span></li>
+        <li class=""><span class="lab">B</span><span>plane</span></li>
+        <li class=""><span class="lab">C</span><span>flat</span></li>
+        <li class="correct"><span class="lab">D</span><span>convex</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A lens thicker in the middle is convex (converging).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">A lens that is thinner in the middle than at the edges is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>convex</span></li>
+        <li class="correct"><span class="lab">B</span><span>concave</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>flat</span></li>
+        <li class=""><span class="lab">D</span><span>magnifying</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A lens thinner in the middle is concave (diverging).</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">A convex lens brings parallel light rays together at its:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>edge</span></li>
+        <li class=""><span class="lab">B</span><span>surface</span></li>
+        <li class="correct"><span class="lab">C</span><span>focus</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>centre of curvature only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A convex lens converges parallel rays to its focus.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">A magnifying glass is a:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>convex lens</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>concave lens</span></li>
+        <li class=""><span class="lab">C</span><span>plane mirror</span></li>
+        <li class=""><span class="lab">D</span><span>convex mirror</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A magnifying glass is a convex lens.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">A convex lens can form an image that is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>always virtual</span></li>
+        <li class=""><span class="lab">B</span><span>always erect</span></li>
+        <li class=""><span class="lab">C</span><span>never real</span></li>
+        <li class="correct"><span class="lab">D</span><span>real and inverted</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A convex lens can form a real, inverted image (for suitably distant objects).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">A concave lens always forms an image that is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>real and large</span></li>
+        <li class="correct"><span class="lab">B</span><span>virtual, erect and diminished</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>inverted</span></li>
+        <li class=""><span class="lab">D</span><span>on a screen</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A concave lens always gives a virtual, erect, diminished image.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">The splitting of white light into its colours by a prism is called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>reflection</span></li>
+        <li class=""><span class="lab">B</span><span>refraction only</span></li>
+        <li class="correct"><span class="lab">C</span><span>dispersion</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>absorption</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Splitting white light into its colours is dispersion.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">The number of colours seen in the spectrum of white light is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>seven</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>five</span></li>
+        <li class=""><span class="lab">C</span><span>three</span></li>
+        <li class=""><span class="lab">D</span><span>ten</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>White light's spectrum has seven colours.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">The correct order of colours in the spectrum (top to bottom) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>red, green, blue only</span></li>
+        <li class=""><span class="lab">B</span><span>red, orange, yellow, green, blue, indigo, violet from the top</span></li>
+        <li class=""><span class="lab">C</span><span>black to white</span></li>
+        <li class="correct"><span class="lab">D</span><span>violet, indigo, blue, green, yellow, orange, red</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The spectrum order is violet, indigo, blue, green, yellow, orange, red (VIBGYOR).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">A rainbow is produced by the dispersion of sunlight by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>mirrors</span></li>
+        <li class="correct"><span class="lab">B</span><span>tiny water droplets in the air</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>clouds blocking light</span></li>
+        <li class=""><span class="lab">D</span><span>the Moon</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rainbows form when sunlight disperses through tiny water droplets in the air.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">The colour of light that bends the most when passing through a prism is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>red</span></li>
+        <li class=""><span class="lab">B</span><span>yellow</span></li>
+        <li class="correct"><span class="lab">C</span><span>violet</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>green</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Violet light bends (refracts) the most through a prism.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">The colour of light that bends the least through a prism is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>red</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>violet</span></li>
+        <li class=""><span class="lab">C</span><span>blue</span></li>
+        <li class=""><span class="lab">D</span><span>indigo</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Red light bends the least.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">A plane-mirror image cannot be shown on a screen because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>it is too dim</span></li>
+        <li class=""><span class="lab">B</span><span>the mirror is flat</span></li>
+        <li class=""><span class="lab">C</span><span>light is absorbed</span></li>
+        <li class="correct"><span class="lab">D</span><span>the light only appears to come from behind the mirror (it is virtual)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The image is virtual — light only appears to come from behind the mirror, so nothing real lands on a screen.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">The shortest plane mirror in which a person 1.7 m tall can see their whole image has a height of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1.7 m</span></li>
+        <li class="correct"><span class="lab">B</span><span>0.85 m</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>3.4 m</span></li>
+        <li class=""><span class="lab">D</span><span>1.0 m</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A plane mirror needs to be only half the person's height: 1.7 ÷ 2 = 0.85 m.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">As you walk toward a plane mirror at 1 m/s, your image approaches you at:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0.5 m/s</span></li>
+        <li class=""><span class="lab">B</span><span>1 m/s</span></li>
+        <li class="correct"><span class="lab">C</span><span>2 m/s</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>it stays still</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The image moves toward the mirror as fast as you do, so relative to you it approaches at 1 + 1 = 2 m/s.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">Two plane mirrors placed at 90° to each other form, of a single object:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>3 images</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>1 image</span></li>
+        <li class=""><span class="lab">C</span><span>infinite images</span></li>
+        <li class=""><span class="lab">D</span><span>2 images</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Two mirrors at 90° give 360°/90° − 1 = 3 images.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">Held close to the eye, the inner (concave) side of a shiny spoon shows your face:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>upside down</span></li>
+        <li class=""><span class="lab">B</span><span>tiny</span></li>
+        <li class=""><span class="lab">C</span><span>the same size</span></li>
+        <li class="correct"><span class="lab">D</span><span>magnified and erect</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Held close, the concave (inner) side of a spoon shows a magnified, erect face.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">The outer (convex) side of the same spoon always shows your face:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>magnified</span></li>
+        <li class="correct"><span class="lab">B</span><span>small and erect</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>inverted</span></li>
+        <li class=""><span class="lab">D</span><span>the same size</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The convex (outer) side always shows a small, erect image.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">A periscope uses two plane mirrors fixed at:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>90° each facing forward</span></li>
+        <li class=""><span class="lab">B</span><span>0°</span></li>
+        <li class="correct"><span class="lab">C</span><span>45°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>30°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A periscope uses two plane mirrors set at 45°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">A kaleidoscope uses mirrors to create:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>many symmetric, repeating images</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a single image</span></li>
+        <li class=""><span class="lab">C</span><span>a shadow</span></li>
+        <li class=""><span class="lab">D</span><span>a rainbow only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A kaleidoscope's mirrors create many symmetric, repeating images.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">We are able to see non-luminous objects because they:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>produce their own light</span></li>
+        <li class=""><span class="lab">B</span><span>absorb all light</span></li>
+        <li class=""><span class="lab">C</span><span>are transparent</span></li>
+        <li class="correct"><span class="lab">D</span><span>reflect light into our eyes</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Non-luminous objects are seen because they reflect light into our eyes.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">The Moon appears bright because it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>is a star</span></li>
+        <li class=""><span class="lab">B</span><span>burns gases</span></li>
+        <li class=""><span class="lab">C</span><span>is on fire</span></li>
+        <li class="correct"><span class="lab">D</span><span>reflects sunlight</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Moon is non-luminous; it shines by reflecting sunlight. --- *End of solutions. Maximum marks: 240.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>
