@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shabda Rupani (Advanced) — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Shabda Rupani (Advanced)<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">The instrumental PLURAL of देव ('by the gods') is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>देवेन</span></li>
+        <li class=""><span class="lab">B</span><span>देवेभ्यः</span></li>
+        <li class="correct"><span class="lab">C</span><span>देवैः</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>देवानाम्</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The instrumental plural of देव ('by the gods') is **देवैः** (-ऐः). देवेन is the instrumental *singular*; देवेभ्यः is dative/ablative plural; देवानाम् is genitive plural.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">देवान् is the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>accusative plural ('the gods', as object)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>nominative plural</span></li>
+        <li class=""><span class="lab">C</span><span>genitive plural</span></li>
+        <li class=""><span class="lab">D</span><span>accusative singular</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>देवान् is the **accusative plural** — the gods as the object of the verb. The nominative plural is देवाः.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">The dative and ablative PLURAL of देव share the form:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>देवैः</span></li>
+        <li class=""><span class="lab">B</span><span>देवानाम्</span></li>
+        <li class=""><span class="lab">C</span><span>देवेषु</span></li>
+        <li class="correct"><span class="lab">D</span><span>देवेभ्यः</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The dative and ablative plural of देव coincide in **देवेभ्यः** ('to the gods' / 'from the gods').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">The genitive plural of देव ('of the gods') is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>देवेषु</span></li>
+        <li class="correct"><span class="lab">B</span><span>देवानाम्</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>देवेभ्यः</span></li>
+        <li class=""><span class="lab">D</span><span>देवैः</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The genitive plural of देव ('of the gods') is **देवानाम्**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">The locative plural of देव ('in/among the gods') is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>देवानाम्</span></li>
+        <li class="correct"><span class="lab">B</span><span>देवेषु</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>देवैः</span></li>
+        <li class=""><span class="lab">D</span><span>देवेभ्यः</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The locative plural of देव ('in/among the gods') is **देवेषु**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">The instrumental, dative and ablative DUAL of देव all share one form:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>देवयोः</span></li>
+        <li class=""><span class="lab">B</span><span>देवौ</span></li>
+        <li class=""><span class="lab">C</span><span>देवेभ्यः</span></li>
+        <li class="correct"><span class="lab">D</span><span>देवाभ्याम्</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The instrumental, dative and ablative dual all fall together in **देवाभ्याम्** — one form does three jobs in the dual.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">The genitive and locative DUAL of देव share the form:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>देवयोः</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>देवाभ्याम्</span></li>
+        <li class=""><span class="lab">C</span><span>देवानाम्</span></li>
+        <li class=""><span class="lab">D</span><span>देवेषु</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The genitive and locative dual of देव share the single form **देवयोः**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">देवौ can be either the nominative dual or the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>genitive dual</span></li>
+        <li class=""><span class="lab">B</span><span>instrumental dual</span></li>
+        <li class="correct"><span class="lab">C</span><span>accusative dual ('the two gods', as object)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>locative dual</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>देवौ is the nominative dual AND the **accusative dual** ('the two gods', as object) — the two are identical in the dual.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">In रामः देवम् नमति ('Rama bows to the god'), देवम् is in the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>accusative (object)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>nominative (subject)</span></li>
+        <li class=""><span class="lab">C</span><span>instrumental</span></li>
+        <li class=""><span class="lab">D</span><span>genitive</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In रामः देवम् नमति, देवम् is the **accusative (object)** — what the bowing is directed at; रामः is the nominative subject.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">To say 'by means of the god' (singular, 'by the god') use:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>देवाय</span></li>
+        <li class=""><span class="lab">B</span><span>देवात्</span></li>
+        <li class="correct"><span class="lab">C</span><span>देवेन</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>देवस्य</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>'By means of the god' (instrumental singular) is **देवेन**. देवाय is 'to/for', देवात् is 'from', देवस्य is 'of'.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">'For the god / to the god' (dative singular) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>देवस्य</span></li>
+        <li class=""><span class="lab">B</span><span>देवेन</span></li>
+        <li class=""><span class="lab">C</span><span>देवे</span></li>
+        <li class="correct"><span class="lab">D</span><span>देवाय</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The dative singular 'to/for the god' is **देवाय**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">'From the god' (ablative singular) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>देवाय</span></li>
+        <li class="correct"><span class="lab">B</span><span>देवात्</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>देवस्य</span></li>
+        <li class=""><span class="lab">D</span><span>देवे</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The ablative singular 'from the god' is **देवात्**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">'In the god / on the god' (locative singular) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>देवस्य</span></li>
+        <li class=""><span class="lab">B</span><span>देवम्</span></li>
+        <li class=""><span class="lab">C</span><span>देवात्</span></li>
+        <li class="correct"><span class="lab">D</span><span>देवे</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The locative singular 'in/on the god' is **देवे**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">The genitive singular देवस्य answers the question:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'by whom?'</span></li>
+        <li class="correct"><span class="lab">B</span><span>'whose? / of what?'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>'from where?'</span></li>
+        <li class=""><span class="lab">D</span><span>'to whom?'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The genitive देवस्य answers **'whose? / of what?'** — it marks possession.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">देवेभ्यः (without context) is the dative OR the ____ plural.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>genitive</span></li>
+        <li class=""><span class="lab">B</span><span>locative</span></li>
+        <li class="correct"><span class="lab">C</span><span>ablative</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>instrumental</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>देवेभ्यः, out of context, is the dative OR the **ablative** plural — both share this form.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">कवि ('poet') is इकारान्त. Its accusative plural ('the poets', object) is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>कवीन्</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>कवयः</span></li>
+        <li class=""><span class="lab">C</span><span>कविभिः</span></li>
+        <li class=""><span class="lab">D</span><span>कवीनाम्</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>कवि is इकारान्त; its accusative plural ('the poets', object) is **कवीन्** (long ई + -न्). कवयः is the nominative plural.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">The instrumental singular of कवि ('by the poet') is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>कवये</span></li>
+        <li class=""><span class="lab">B</span><span>कवेः</span></li>
+        <li class="correct"><span class="lab">C</span><span>कविना</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>कविभिः</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The instrumental singular of कवि ('by the poet') is **कविना**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">The dative singular of कवि ('to/for the poet') is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>कवये</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>कविना</span></li>
+        <li class=""><span class="lab">C</span><span>कवेः</span></li>
+        <li class=""><span class="lab">D</span><span>कवौ</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The dative singular of कवि ('to/for the poet') is **कवये**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">The genitive singular of कवि ('of the poet') is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>कविना</span></li>
+        <li class="correct"><span class="lab">B</span><span>कवेः</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>कवये</span></li>
+        <li class=""><span class="lab">D</span><span>कवौ</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The genitive singular of कवि ('of the poet') is **कवेः** (also the ablative singular).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">The locative singular of कवि ('in the poet') is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>कवेः</span></li>
+        <li class=""><span class="lab">B</span><span>कविना</span></li>
+        <li class=""><span class="lab">C</span><span>कविषु</span></li>
+        <li class="correct"><span class="lab">D</span><span>कवौ</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The locative singular of कवि ('in the poet') is **कवौ**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">The genitive plural of कवि ('of the poets') is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>कवीनाम्</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>कविभ्यः</span></li>
+        <li class=""><span class="lab">C</span><span>कविषु</span></li>
+        <li class=""><span class="lab">D</span><span>कवयः</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The genitive plural of कवि ('of the poets') is **कवीनाम्**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">The locative plural of कवि ('in/among the poets') is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>कवीनाम्</span></li>
+        <li class=""><span class="lab">B</span><span>कविभिः</span></li>
+        <li class=""><span class="lab">C</span><span>कविभ्यः</span></li>
+        <li class="correct"><span class="lab">D</span><span>कविषु</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The locative plural of कवि ('in/among the poets') is **कविषु**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">The instrumental plural of कवि ('by the poets') is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>कविभ्यः</span></li>
+        <li class="correct"><span class="lab">B</span><span>कविभिः</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>कवीनाम्</span></li>
+        <li class=""><span class="lab">D</span><span>कविषु</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The instrumental plural of कवि ('by the poets') is **कविभिः**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">The nominative DUAL of कवि ('the two poets') is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>कवयः</span></li>
+        <li class=""><span class="lab">B</span><span>कविम्</span></li>
+        <li class="correct"><span class="lab">C</span><span>कवी</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>कविना</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The nominative dual of कवि ('the two poets') is **कवी** — NOT कवयः, which is the plural.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">गुरु ('teacher') is उकारान्त. Its nominative plural ('the teachers') is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>गुरून्</span></li>
+        <li class="correct"><span class="lab">B</span><span>गुरवः</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>गुरुभिः</span></li>
+        <li class=""><span class="lab">D</span><span>गुरूणाम्</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>गुरु is उकारान्त; its nominative plural ('the teachers') is **गुरवः**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">The accusative plural of गुरु ('the teachers', object) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>गुरवः</span></li>
+        <li class=""><span class="lab">B</span><span>गुरुभ्यः</span></li>
+        <li class="correct"><span class="lab">C</span><span>गुरून्</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>गुरुषु</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The accusative plural of गुरु ('the teachers', object) is **गुरून्**. गुरवः is the nominative plural.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">The instrumental singular of गुरु ('by the teacher') is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>गुरुणा</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>गुरवे</span></li>
+        <li class=""><span class="lab">C</span><span>गुरोः</span></li>
+        <li class=""><span class="lab">D</span><span>गुरौ</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The instrumental singular of गुरु ('by the teacher') is **गुरुणा** (-णा after the र).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">The dative singular of गुरु ('to/for the teacher') is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>गुरुणा</span></li>
+        <li class=""><span class="lab">B</span><span>गुरोः</span></li>
+        <li class=""><span class="lab">C</span><span>गुरौ</span></li>
+        <li class="correct"><span class="lab">D</span><span>गुरवे</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The dative singular of गुरु ('to/for the teacher') is **गुरवे**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">The genitive AND ablative singular of गुरु share the form:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>गुरवे</span></li>
+        <li class=""><span class="lab">B</span><span>गुरुणा</span></li>
+        <li class=""><span class="lab">C</span><span>गुरौ</span></li>
+        <li class="correct"><span class="lab">D</span><span>गुरोः</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The genitive and ablative singular of गुरु share the form **गुरोः**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">The locative singular of गुरु ('in the teacher') is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>गुरौ</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>गुरोः</span></li>
+        <li class=""><span class="lab">C</span><span>गुरुणा</span></li>
+        <li class=""><span class="lab">D</span><span>गुरुषु</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The locative singular of गुरु ('in the teacher') is **गुरौ**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">The genitive plural of गुरु ('of the teachers') is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>गुरुभ्यः</span></li>
+        <li class=""><span class="lab">B</span><span>गुरुषु</span></li>
+        <li class="correct"><span class="lab">C</span><span>गुरूणाम्</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>गुरवः</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The genitive plural of गुरु ('of the teachers') is **गुरूणाम्** (long ऊ + -णाम्).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">The locative plural of गुरु ('in/among the teachers') is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>गुरूणाम्</span></li>
+        <li class="correct"><span class="lab">B</span><span>गुरुषु</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>गुरुभिः</span></li>
+        <li class=""><span class="lab">D</span><span>गुरुभ्यः</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The locative plural of गुरु ('in/among the teachers') is **गुरुषु**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">The dative/ablative plural of गुरु is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>गुरुभिः</span></li>
+        <li class=""><span class="lab">B</span><span>गुरूणाम्</span></li>
+        <li class="correct"><span class="lab">C</span><span>गुरुभ्यः</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>गुरुषु</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The dative/ablative plural of गुरु is **गुरुभ्यः**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">देवैः, कविभिः and गुरुभिः are all the ____ plural of their words.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>genitive ('of')</span></li>
+        <li class="correct"><span class="lab">B</span><span>instrumental ('by')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>locative ('in')</span></li>
+        <li class=""><span class="lab">D</span><span>dative ('to')</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>देवैः, कविभिः and गुरुभिः are all the **instrumental** plural ('by ...') — the -ऐः/-भिः family of endings.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">देवेषु, कविषु and गुरुषु are all the ____ plural.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>instrumental</span></li>
+        <li class=""><span class="lab">B</span><span>genitive</span></li>
+        <li class=""><span class="lab">C</span><span>ablative</span></li>
+        <li class="correct"><span class="lab">D</span><span>locative ('in/among')</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>देवेषु, कविषु and गुरुषु are all the **locative** plural ('in/among ...') — the -सु family.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">देवानाम्, कवीनाम् and गुरूणाम् are all the ____ plural.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>genitive ('of')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>locative</span></li>
+        <li class=""><span class="lab">C</span><span>dative</span></li>
+        <li class=""><span class="lab">D</span><span>accusative</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>देवानाम्, कवीनाम् and गुरूणाम् are all the **genitive** plural ('of ...') — the -नाम् ending.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">In गुरवे नमः ('salutation to the teacher'), गुरवे is in the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>dative (the 'to' of नमः)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>nominative</span></li>
+        <li class=""><span class="lab">C</span><span>instrumental</span></li>
+        <li class=""><span class="lab">D</span><span>genitive</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>गुरवे नमः: नमः ('salutation') governs the **dative**, so गुरवे is the dative ('to the teacher').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">बालकः हस्तेन लिखति ('the boy writes with the hand'). हस्तेन (from हस्त, like देव) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>dative singular</span></li>
+        <li class="correct"><span class="lab">B</span><span>instrumental singular ('with the hand')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>accusative singular</span></li>
+        <li class=""><span class="lab">D</span><span>locative singular</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>हस्त declines like देव; हस्तेन ('with the hand') is the **instrumental singular** — the means of writing.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">ग्रामात् आगच्छति ('he comes from the village'). ग्रामात् (like देवात्) is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>genitive singular</span></li>
+        <li class=""><span class="lab">B</span><span>dative singular</span></li>
+        <li class=""><span class="lab">C</span><span>instrumental singular</span></li>
+        <li class="correct"><span class="lab">D</span><span>ablative singular ('from')</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>ग्रामात् (like देवात्) is the **ablative singular** ('from the village').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">वने सिंहः वसति ('a lion lives in the forest'). वने (like देवे) is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>nominative</span></li>
+        <li class=""><span class="lab">B</span><span>accusative</span></li>
+        <li class="correct"><span class="lab">C</span><span>locative singular ('in')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>instrumental</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>वने (like देवे) is the **locative singular** ('in the forest').</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">नृपस्य पुत्रः ('the king's son'). नृपस्य (like देवस्य) is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>dative singular</span></li>
+        <li class=""><span class="lab">B</span><span>ablative singular</span></li>
+        <li class=""><span class="lab">C</span><span>locative singular</span></li>
+        <li class="correct"><span class="lab">D</span><span>genitive singular ('of / 's')</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>नृपस्य (like देवस्य) is the **genitive singular** ('of the king / the king's').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">To address two teachers ('O you two teachers!') use the vocative dual:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>हे गुरो!</span></li>
+        <li class=""><span class="lab">B</span><span>हे गुरवः!</span></li>
+        <li class="correct"><span class="lab">C</span><span>हे गुरू!</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>हे गुरुम्!</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The vocative dual of गुरु ('O you two teachers!') is **हे गुरू!** (same as the nominative dual). हे गुरो! is the vocative singular.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">The vocative PLURAL of देव ('O gods!') is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>हे देवाः!</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>हे देव!</span></li>
+        <li class=""><span class="lab">C</span><span>हे देवौ!</span></li>
+        <li class=""><span class="lab">D</span><span>हे देवान्!</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The vocative plural of देव ('O gods!') is **हे देवाः!** (same shape as the nominative plural).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">The vocative singular हे कवे! comes from कवि by changing the ending -इः to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>-ओ</span></li>
+        <li class="correct"><span class="lab">B</span><span>-ए</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>-आय</span></li>
+        <li class=""><span class="lab">D</span><span>-एन</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>हे कवे! is formed from कवि by changing the ending -इः to **-ए**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">A form ending in -भ्याम् (देवाभ्याम्, कविभ्याम्, गुरुभ्याम्) is always:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a singular</span></li>
+        <li class="correct"><span class="lab">B</span><span>a dual (instrumental/dative/ablative)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a plural</span></li>
+        <li class=""><span class="lab">D</span><span>a vocative</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A -भ्याम् form (देवाभ्याम्, कविभ्याम्, गुरुभ्याम्) is always a **dual** — the shared instrumental/dative/ablative dual.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">A form ending in -योः (देवयोः, कव्योः, गुर्वोः) is always the ____ dual.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>instrumental</span></li>
+        <li class=""><span class="lab">B</span><span>accusative</span></li>
+        <li class=""><span class="lab">C</span><span>nominative</span></li>
+        <li class="correct"><span class="lab">D</span><span>genitive/locative</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A -योः form (देवयोः, कव्योः, गुर्वोः) is always the **genitive/locative dual**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">Which is the accusative singular of गुरु ('the teacher', as object)?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>गुरुः</span></li>
+        <li class=""><span class="lab">B</span><span>गुरुणा</span></li>
+        <li class="correct"><span class="lab">C</span><span>गुरुम्</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>गुरौ</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The accusative singular of गुरु ('the teacher', object) is **गुरुम्**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">Which list is the correct singular declension of देव (प्रथमा→सप्तमी)?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>देवः, देवम्, देवेन, देवाय, देवात्, देवस्य, देवे</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>देवः, देवेन, देवम्, देवाय, देवे, देवस्य, देवात्</span></li>
+        <li class=""><span class="lab">C</span><span>देवम्, देवः, देवाय, देवेन, देवस्य, देवात्, देवे</span></li>
+        <li class=""><span class="lab">D</span><span>देवः, देवम्, देवाय, देवेन, देवात्, देवे, देवस्य</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The singular declension of देव (प्रथमा→सप्तमी) is **देवः, देवम्, देवेन, देवाय, देवात्, देवस्य, देवे** — nominative, accusative, instrumental, dative, ablative, genitive, locative.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">Which is WRONG? A pairing of form → case:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>देवाय → genitive</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>देवेन → instrumental</span></li>
+        <li class=""><span class="lab">C</span><span>देवात् → ablative</span></li>
+        <li class=""><span class="lab">D</span><span>देवे → locative</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The wrong pairing is **देवाय → genitive**: देवाय is the *dative* ('to/for'); the genitive is देवस्य. The others are correct.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">कवीन् and गुरून् share the role of being the ____ plural of their words.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>nominative</span></li>
+        <li class=""><span class="lab">B</span><span>genitive</span></li>
+        <li class=""><span class="lab">C</span><span>instrumental</span></li>
+        <li class="correct"><span class="lab">D</span><span>accusative</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>कवीन् and गुरून् are both the **accusative** plural of their words (the poets / the teachers, as object).</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">A student writes देवः for the object of a verb. The correct accusative is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>देवेन</span></li>
+        <li class=""><span class="lab">B</span><span>देवाय</span></li>
+        <li class="correct"><span class="lab">C</span><span>देवम्</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>देवस्य</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The object of a verb takes the accusative, so देवः (nominative) must become **देवम्**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">The dual देवौ stands for exactly two; for three or more gods as the subject use:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>देवौ</span></li>
+        <li class="correct"><span class="lab">B</span><span>देवाः</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>देवम्</span></li>
+        <li class=""><span class="lab">D</span><span>देवेन</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>देवौ is exactly two; for three or more gods as the subject use the nominative plural **देवाः**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">नमः सर्वेभ्यः देवेभ्यः ('salutations to all the gods') — देवेभ्यः here is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>genitive plural</span></li>
+        <li class=""><span class="lab">B</span><span>instrumental plural</span></li>
+        <li class="correct"><span class="lab">C</span><span>dative plural ('to')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>accusative plural</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>नमः governs the dative, so देवेभ्यः here is the **dative plural** ('to all the gods').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">The form गुरुणा tells you, by its -णा ending, that it is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>dative singular</span></li>
+        <li class=""><span class="lab">B</span><span>genitive singular</span></li>
+        <li class=""><span class="lab">C</span><span>locative singular</span></li>
+        <li class="correct"><span class="lab">D</span><span>instrumental singular ('by the teacher')</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The -णा ending marks गुरुणा as the **instrumental singular** ('by the teacher').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">Which set is the correct nominative singular/dual/plural of कवि?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>कविः, कवयः, कवी</span></li>
+        <li class="correct"><span class="lab">B</span><span>कविः, कवी, कवयः</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>कवी, कविः, कवयः</span></li>
+        <li class=""><span class="lab">D</span><span>कविः, कविम्, कवीन्</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The nominative singular/dual/plural of कवि is **कविः, कवी, कवयः**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">हरि and मुनि decline exactly like कवि because all three are:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>इकारान्त (i-ending) masculine</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>उकारान्त (u-ending) masculine</span></li>
+        <li class=""><span class="lab">C</span><span>अकारान्त (a-ending) masculine</span></li>
+        <li class=""><span class="lab">D</span><span>feminine</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>हरि, मुनि and कवि all decline alike because all three are **इकारान्त (i-ending) masculine** nouns.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">साधु and विष्णु decline like गुरु because all three are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>इकारान्त masculine</span></li>
+        <li class="correct"><span class="lab">B</span><span>उकारान्त (u-ending) masculine</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>अकारान्त masculine</span></li>
+        <li class=""><span class="lab">D</span><span>neuter</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>साधु, विष्णु and गुरु decline alike because all three are **उकारान्त (u-ending) masculine** nouns.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">The single Sanskrit phrase देवानाम् replaces the English:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>'of the gods' (genitive plural)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>'to the god'</span></li>
+        <li class=""><span class="lab">C</span><span>'by the gods'</span></li>
+        <li class=""><span class="lab">D</span><span>'in the gods'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>देवानाम् is a single word that does the work of the English **'of the gods' (genitive plural)** — Sanskrit needs no separate 'of'.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">Which is the correct genitive-plural triple for देव / कवि / गुरु?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>देवैः, कविभिः, गुरुभिः</span></li>
+        <li class=""><span class="lab">B</span><span>देवेषु, कविषु, गुरुषु</span></li>
+        <li class="correct"><span class="lab">C</span><span>देवानाम्, कवीनाम्, गुरूणाम्</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>देवान्, कवीन्, गुरून्</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The genitive-plural triple is **देवानाम्, कवीनाम्, गुरूणाम्** (all -नाम्). The -ऐः/-भिः set is instrumental, -सु is locative, -न् is accusative.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">A student claims 'देवाय means *from* the god, and देवात् means *to* the god.' The best correction is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the student is correct</span></li>
+        <li class=""><span class="lab">B</span><span>both मean 'of the god'</span></li>
+        <li class=""><span class="lab">C</span><span>देवाय means 'by', देवात् means 'in'</span></li>
+        <li class="correct"><span class="lab">D</span><span>देवाय is the dative ('to/for'), and देवात् is the ablative ('from') — the student has them swapped</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>देवाय is the **dative ('to/for')** and देवात् is the **ablative ('from')** — the student has them swapped. --- *End of solutions. Maximum marks: 240.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>
