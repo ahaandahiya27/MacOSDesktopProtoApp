@@ -91,6 +91,7 @@ def file_type(path):
         ".entitlements": "com.apple.xcode.xml.entitlements-property-list",
         ".py": "text.script.python",
         ".md": "net.daringfireball.markdown",
+        ".pdf": "image.pdf",
         ".xcassets": "folder.assetcatalog",
     }.get(ext, "text")
 
@@ -98,8 +99,14 @@ def is_source(path):
     return path.endswith(".swift")
 
 def is_resource(path):
+    # NOTE: .md and .pdf MUST be bundled — OlympiadPaperParser loads the
+    # *_QuestionPaper.md / *_Solutions.md from Bundle.main and the print
+    # surface opens the per-chapter .pdf. Omitting them (the bug fixed
+    # 2026-06-10) silently strips ~211 TestPapers resources from the app
+    # bundle: the build still succeeds, but every Olympiad paper fails to
+    # load at runtime on the iMac. Keep .md/.pdf here.
     ext = os.path.splitext(path)[1].lower()
-    return ext in (".html", ".css", ".json")
+    return ext in (".html", ".css", ".json", ".md", ".pdf")
 
 def is_asset_catalog(path):
     return path.endswith(".xcassets")
