@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vande Bharatamataram (Advanced) — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Vande Bharatamataram (Advanced)<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">वन्दे governs its object in the accusative; so 'I salute the Mother' is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>वन्दे माता</span></li>
+        <li class=""><span class="lab">B</span><span>वन्दे मातरः</span></li>
+        <li class="correct"><span class="lab">C</span><span>वन्दे मातरम्</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>वन्दे मातुः</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>वन्दे governs the accusative, so 'I salute the Mother' is **वन्दे मातरम्**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">The accusative singular of the kinship stem मातृ is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>मातरम्</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>माता</span></li>
+        <li class=""><span class="lab">C</span><span>मातुः</span></li>
+        <li class=""><span class="lab">D</span><span>मातरि</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The accusative singular of मातृ is **मातरम्**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">The nominative singular of मातृ (the subject form, 'the mother') is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>मातरम्</span></li>
+        <li class=""><span class="lab">B</span><span>मात्रा</span></li>
+        <li class=""><span class="lab">C</span><span>मातॄः</span></li>
+        <li class="correct"><span class="lab">D</span><span>माता</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The nominative singular of मातृ is **माता**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">मातरः is the nominative ____ ('mothers'), so it is wrong as the object of वन्दे.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>singular</span></li>
+        <li class="correct"><span class="lab">B</span><span>plural</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>dual</span></li>
+        <li class=""><span class="lab">D</span><span>accusative</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>मातरः is the nominative **plural** ('mothers'), so it is wrong as the object of वन्दे.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">The genitive singular of मातृ ('of the mother / the mother's') is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>माता</span></li>
+        <li class="correct"><span class="lab">B</span><span>मातुः</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>मातरम्</span></li>
+        <li class=""><span class="lab">D</span><span>मात्रे</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The genitive singular of मातृ is **मातुः**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">So भारतमातुः चरणौ ('the Motherland's feet') uses भारतमातुः in the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>accusative</span></li>
+        <li class=""><span class="lab">B</span><span>nominative</span></li>
+        <li class=""><span class="lab">C</span><span>instrumental</span></li>
+        <li class="correct"><span class="lab">D</span><span>genitive ('of the Motherland')</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>भारतमातुः चरणौ uses भारतमातुः in the **genitive** ('of the Motherland').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">पितृ ('father') and भ्रातृ ('brother') decline like मातृ; the accusative of पितृ is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>पितरम्</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>पिता</span></li>
+        <li class=""><span class="lab">C</span><span>पितुः</span></li>
+        <li class=""><span class="lab">D</span><span>पितरि</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The accusative of पितृ ('father') is **पितरम्** (declining like मातृ).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">The nominative singular of भ्रातृ is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>भ्रातरम्</span></li>
+        <li class=""><span class="lab">B</span><span>भ्रातुः</span></li>
+        <li class="correct"><span class="lab">C</span><span>भ्राता</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>भ्रातरि</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The nominative singular of भ्रातृ is **भ्राता**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">वन्दे takes the accusative (वन्दे मातरम्), but the word नमः takes the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>dative (मात्रे नमः)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>accusative (नमः मातरम्)</span></li>
+        <li class=""><span class="lab">C</span><span>nominative</span></li>
+        <li class=""><span class="lab">D</span><span>ablative</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>वन्दे takes the accusative, but नमः takes the **dative (मात्रे नमः)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">So 'salutation to the Mother' with नमः is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>मातरम् नमः</span></li>
+        <li class=""><span class="lab">B</span><span>माता नमः</span></li>
+        <li class="correct"><span class="lab">C</span><span>मात्रे नमः</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>मातुः नमः</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>'Salutation to the Mother' with नमः is **मात्रे नमः** (dative).</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">The contrast is: वन्दे + ____ , but नमः + ____ .</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>dative ... accusative</span></li>
+        <li class=""><span class="lab">B</span><span>nominative ... accusative</span></li>
+        <li class=""><span class="lab">C</span><span>genitive ... dative</span></li>
+        <li class="correct"><span class="lab">D</span><span>accusative ... dative</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The contrast: वन्दे + **accusative**, but नमः + **dative**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">वन्दे most precisely means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'I love (romantically)'</span></li>
+        <li class="correct"><span class="lab">B</span><span>'I salute / I bow / I praise'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>'I see'</span></li>
+        <li class=""><span class="lab">D</span><span>'I give'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>वन्दे means **'I salute / I bow / I praise'**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">Translating वन्दे as 'I love' is wrong because Sanskrit uses a different verb for love, such as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>पश्यामि ('I see')</span></li>
+        <li class=""><span class="lab">B</span><span>ददामि ('I give')</span></li>
+        <li class=""><span class="lab">C</span><span>गच्छामि ('I go')</span></li>
+        <li class="correct"><span class="lab">D</span><span>कामये ('I desire/love')</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sanskrit uses a different verb for love, such as **कामये ('I desire/love')** — so वन्दे ≠ 'I love'.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">पर्वतराजः splits as पर्वत + राजः, meaning:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'a river-king'</span></li>
+        <li class="correct"><span class="lab">B</span><span>'king of mountains' (the Himalaya)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>'mountain and ocean'</span></li>
+        <li class=""><span class="lab">D</span><span>'king of curiosity'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>पर्वतराजः = पर्वत + राजः = **'king of mountains' (the Himalaya)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">The compound पर्वतराजः is a तत्पुरुष expressing a hidden ____ relation ('king OF mountains').</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>accusative</span></li>
+        <li class=""><span class="lab">B</span><span>instrumental</span></li>
+        <li class="correct"><span class="lab">C</span><span>genitive</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>vocative</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>पर्वतराजः is a तत्पुरुष expressing a hidden **genitive** relation ('king OF mountains').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">The poem places the पर्वतराजः (Himalaya) at Bharat's ____, like a crown (मुकुटरूपेण).</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>head / top (north)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>feet (south)</span></li>
+        <li class=""><span class="lab">C</span><span>left hand</span></li>
+        <li class=""><span class="lab">D</span><span>back</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Himalaya is placed at Bharat's **head / top (north)**, like a crown.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">रत्नाकरः splits as रत्न + आकर, literally:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'mountain-king'</span></li>
+        <li class=""><span class="lab">B</span><span>'country-devotee'</span></li>
+        <li class="correct"><span class="lab">C</span><span>'jewel-mine' (a name for the ocean)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>'curiosity'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>रत्नाकरः = रत्न + आकर = **'jewel-mine' (a name for the ocean)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">The रत्नाकरः (ocean) is imagined ____ Bharat's feet.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>washing (प्रक्षालयति)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>crowning</span></li>
+        <li class=""><span class="lab">C</span><span>burning</span></li>
+        <li class=""><span class="lab">D</span><span>hiding</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The ocean is imagined **washing (प्रक्षालयति)** Bharat's feet.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">चरणौ ('feet') is a ____ form (exactly two feet).</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>singular</span></li>
+        <li class="correct"><span class="lab">B</span><span>dual</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>plural</span></li>
+        <li class=""><span class="lab">D</span><span>vocative</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>चरणौ ('feet') is a **dual** form (exactly two feet).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">So the geography is personified: Himalaya = crown at the head, ocean = washer of the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>hands</span></li>
+        <li class=""><span class="lab">B</span><span>eyes</span></li>
+        <li class=""><span class="lab">C</span><span>crown</span></li>
+        <li class="correct"><span class="lab">D</span><span>feet (चरणौ)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Himalaya = crown at the head; ocean = washer of the **feet (चरणौ)**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">मुकुटरूपेण ('in the form of a crown') is in the instrumental; -एण/-एन here means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>'in the form of / as' (manner)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>'to the crown'</span></li>
+        <li class=""><span class="lab">C</span><span>'from the crown'</span></li>
+        <li class=""><span class="lab">D</span><span>'of the crown'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>मुकुटरूपेण (instrumental) means **'in the form of / as' (manner)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">देशभक्तः splits as देश + भक्त, meaning:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'a religious devotee' only</span></li>
+        <li class=""><span class="lab">B</span><span>'a mountain'</span></li>
+        <li class=""><span class="lab">C</span><span>'the ocean'</span></li>
+        <li class="correct"><span class="lab">D</span><span>'country-devotee' (a patriot)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>देशभक्तः = देश + भक्त = **'country-devotee' (a patriot)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">देशभक्तः and धर्मभक्तः differ only in their first member:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the verb</span></li>
+        <li class="correct"><span class="lab">B</span><span>देश 'country' vs धर्म 'duty/religion'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the tense</span></li>
+        <li class=""><span class="lab">D</span><span>the number</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>देशभक्तः and धर्मभक्तः differ in their first member: **देश 'country' vs धर्म 'duty/religion'**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">The whole poem treats भारत (India) as a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>marketplace</span></li>
+        <li class=""><span class="lab">B</span><span>battlefield</span></li>
+        <li class="correct"><span class="lab">C</span><span>Mother (माता) to be revered</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>prison</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The poem treats भारत as a **Mother (माता) to be revered**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">भारतमाता is itself a compound: भारत + माता, i.e.:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'the father of India'</span></li>
+        <li class="correct"><span class="lab">B</span><span>'Mother India / India-as-Mother'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>'the ocean of India'</span></li>
+        <li class=""><span class="lab">D</span><span>'the king of India'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>भारतमाता = भारत + माता = **'Mother India / India-as-Mother'**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">वन्दे मातरम् appears in the novel:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>रघुवंशम्</span></li>
+        <li class=""><span class="lab">B</span><span>मेघदूतम्</span></li>
+        <li class="correct"><span class="lab">C</span><span>आनन्दमठः (Anandamath)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>गीतगोविन्दम्</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>वन्दे मातरम् appears in the novel **आनन्दमठः (Anandamath)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">The author of वन्दे मातरम् is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Bankim Chandra Chattopadhyay</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Rabindranath Tagore</span></li>
+        <li class=""><span class="lab">C</span><span>Kalidasa</span></li>
+        <li class=""><span class="lab">D</span><span>Premchand</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The author is **Bankim Chandra Chattopadhyay**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">आनन्दमठः is dated in the chapter to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1947</span></li>
+        <li class=""><span class="lab">B</span><span>1950</span></li>
+        <li class=""><span class="lab">C</span><span>the 12th century</span></li>
+        <li class="correct"><span class="lab">D</span><span>1882</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>आनन्दमठः is dated to **1882**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">An उपन्यासः is a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>song</span></li>
+        <li class=""><span class="lab">B</span><span>mountain</span></li>
+        <li class=""><span class="lab">C</span><span>ocean</span></li>
+        <li class="correct"><span class="lab">D</span><span>novel</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An उपन्यासः is a **novel**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">In the lesson, the children's जिज्ञासा prompts the explanation; जिज्ञासा means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>curiosity / desire to know</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>salutation</span></li>
+        <li class=""><span class="lab">C</span><span>a novel</span></li>
+        <li class=""><span class="lab">D</span><span>sweat</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>जिज्ञासा means **curiosity / desire to know**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">जिज्ञासा (desire to know) is built on the root ज्ञा ('know'), like पिपासा is built on:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>गम् ('go')</span></li>
+        <li class=""><span class="lab">B</span><span>कृ ('do')</span></li>
+        <li class="correct"><span class="lab">C</span><span>पा ('drink')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>वन्द् ('salute')</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>जिज्ञासा (from ज्ञा) is parallel to पिपासा, built on **पा ('drink')**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">Vowel length changes meaning: आनन्द (with दीर्घ आ) means 'joy', while अनन्द would mean:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'great joy'</span></li>
+        <li class="correct"><span class="lab">B</span><span>'no-joy / joylessness'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>'a mountain'</span></li>
+        <li class=""><span class="lab">D</span><span>'the ocean'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>आनन्द (दीर्घ आ) means 'joy'; अनन्द would mean **'no-joy / joylessness'**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">The pair आनन्द / अनन्द shows that swapping a दीर्घ for a ह्रस्व vowel can:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>never matter</span></li>
+        <li class=""><span class="lab">B</span><span>only change the spelling, not the sense</span></li>
+        <li class="correct"><span class="lab">C</span><span>reverse or change a word's meaning</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>make a verb</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The pair आनन्द / अनन्द shows that swapping a दीर्घ for a ह्रस्व vowel can **reverse or change a word's meaning**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">The accusative मातरम् (object of वन्दे) answers the question:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'to whom?'</span></li>
+        <li class="correct"><span class="lab">B</span><span>'whom do I salute?'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>'by whom?'</span></li>
+        <li class=""><span class="lab">D</span><span>'whose?'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The accusative मातरम् answers **'whom do I salute?'**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">If नमः were used with the Mother, the correct case would switch to the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>accusative (मातरम्)</span></li>
+        <li class=""><span class="lab">B</span><span>nominative (माता)</span></li>
+        <li class=""><span class="lab">C</span><span>genitive (मातुः)</span></li>
+        <li class="correct"><span class="lab">D</span><span>dative (मात्रे)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>With नमः the case would switch to the **dative (मात्रे)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">The dative singular of मातृ ('to/for the mother') is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>मात्रे</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>मातरम्</span></li>
+        <li class=""><span class="lab">C</span><span>मातुः</span></li>
+        <li class=""><span class="lab">D</span><span>माता</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The dative singular of मातृ is **मात्रे**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">पर्वतराजः and रत्नाकरः are both ____ used as poetic names.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>compounds (समास)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>verbs</span></li>
+        <li class=""><span class="lab">C</span><span>ordinals</span></li>
+        <li class=""><span class="lab">D</span><span>pronouns</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>पर्वतराजः and रत्नाकरः are both **compounds (समास)** used as poetic names.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">रत्नाकरः ('mine of jewels') names the ocean because the sea:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>is a mountain</span></li>
+        <li class="correct"><span class="lab">B</span><span>holds pearls, corals and gems</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>is a crown</span></li>
+        <li class=""><span class="lab">D</span><span>is dry</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>रत्नाकरः names the ocean because the sea **holds pearls, corals and gems**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">The poem's logic 'Himalaya crowns the head, ocean washes the feet' depicts Bharat as a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>flat map only</span></li>
+        <li class=""><span class="lab">B</span><span>a single mountain</span></li>
+        <li class=""><span class="lab">C</span><span>a market</span></li>
+        <li class="correct"><span class="lab">D</span><span>living body / person (the Mother)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>'Himalaya crowns the head, ocean washes the feet' depicts Bharat as a **living body / person (the Mother)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">वन्दे is a first-person singular ('I salute'); 'we salute' would be:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>वन्दते</span></li>
+        <li class=""><span class="lab">B</span><span>अवन्दत</span></li>
+        <li class="correct"><span class="lab">C</span><span>वन्दामहे</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>वन्दितुम्</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>'We salute' (वन्द्, atmanepada) is **वन्दामहे**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">Which form is CORRECT for 'I salute the Mother'?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>वन्दे माता (nominative)</span></li>
+        <li class=""><span class="lab">B</span><span>वन्दे मातरः (nominative plural)</span></li>
+        <li class=""><span class="lab">C</span><span>वन्दे मातुः (genitive)</span></li>
+        <li class="correct"><span class="lab">D</span><span>वन्दे मातरम् (accusative)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct form is **वन्दे मातरम् (accusative)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">Which case-rule pair is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>वन्दे → dative; नमः → accusative</span></li>
+        <li class=""><span class="lab">B</span><span>both → nominative</span></li>
+        <li class="correct"><span class="lab">C</span><span>वन्दे → accusative; नमः → dative</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>both → accusative</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct rule: **वन्दे → accusative; नमः → dative**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">Which declension of मातृ is CORRECT (nom / acc / gen singular)?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>माता / मातरम् / मातुः</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>मातरम् / माता / मातुः</span></li>
+        <li class=""><span class="lab">C</span><span>मातुः / मातरम् / माता</span></li>
+        <li class=""><span class="lab">D</span><span>माता / मातुः / मातरम्</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct declension (nom/acc/gen sg) is **माता / मातरम् / मातुः**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">Which compound-split is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>रत्नाकरः = a mountain</span></li>
+        <li class="correct"><span class="lab">B</span><span>पर्वतराजः = mountain (पर्वत) + king (राजः)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>देशभक्तः = the ocean</span></li>
+        <li class=""><span class="lab">D</span><span>भारतमाता = the king of India</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct split: **पर्वतराजः = mountain (पर्वत) + king (राजः)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">Which word-meaning pair is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>वन्दे = 'I love'</span></li>
+        <li class="correct"><span class="lab">B</span><span>वन्दे = 'I salute'; रत्नाकरः = the ocean</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>पर्वतराजः = the ocean</span></li>
+        <li class=""><span class="lab">D</span><span>चरणौ = the hands</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct pair: **वन्दे = 'I salute'; रत्नाकरः = the ocean**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">Which vowel-length pair is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>आनन्द = joylessness; अनन्द = joy</span></li>
+        <li class=""><span class="lab">B</span><span>both mean the same</span></li>
+        <li class=""><span class="lab">C</span><span>neither is a word</span></li>
+        <li class="correct"><span class="lab">D</span><span>आनन्द = joy; अनन्द = joylessness</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct pair: **आनन्द = joy; अनन्द = joylessness**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">Which author/work pair is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Tagore / आनन्दमठः</span></li>
+        <li class=""><span class="lab">B</span><span>Kalidasa / आनन्दमठः</span></li>
+        <li class="correct"><span class="lab">C</span><span>Bankim Chandra Chattopadhyay / आनन्दमठः</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>Premchand / रघुवंशम्</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct author/work: **Bankim Chandra Chattopadhyay / आनन्दमठः**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">चरणौ being a dual tells us Bharat-as-Mother has exactly:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>two feet</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>one foot</span></li>
+        <li class=""><span class="lab">C</span><span>many feet</span></li>
+        <li class=""><span class="lab">D</span><span>no feet</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>चरणौ being a dual tells us Bharat-as-Mother has exactly **two feet**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">The personification of a country as a revered mother is intended to inspire:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>देशभक्तिः (patriotism / love of country)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>anger</span></li>
+        <li class=""><span class="lab">C</span><span>fear</span></li>
+        <li class=""><span class="lab">D</span><span>greed</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Personifying the country as a revered mother inspires **देशभक्तिः (patriotism / love of country)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">पितृ, मातृ and भ्रातृ are grouped together because they are all:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>verbs</span></li>
+        <li class=""><span class="lab">B</span><span>a-stem nouns</span></li>
+        <li class=""><span class="lab">C</span><span>ordinals</span></li>
+        <li class="correct"><span class="lab">D</span><span>kinship र-stem (ऋकारान्त) nouns that decline alike</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>पितृ, मातृ and भ्रातृ are all **kinship र-stem (ऋकारान्त) nouns that decline alike**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">The accusative मातरम् and the genitive मातुः show that मातृ:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>never changes</span></li>
+        <li class=""><span class="lab">B</span><span>is a verb</span></li>
+        <li class="correct"><span class="lab">C</span><span>changes its form by case (it is declined)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>is indeclinable</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The accusative मातरम् and genitive मातुः show that मातृ **changes its form by case (it is declined)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">'I salute the father' (पितृ, accusative) would be:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>वन्दे पिता</span></li>
+        <li class="correct"><span class="lab">B</span><span>वन्दे पितरम्</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>वन्दे पितुः</span></li>
+        <li class=""><span class="lab">D</span><span>वन्दे पितरि</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>'I salute the father' (पितृ, accusative) is **वन्दे पितरम्**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">The poem's पर्वतराजः and रत्नाकरः are chosen to glorify Bharat's:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>markets</span></li>
+        <li class=""><span class="lab">B</span><span>prisons</span></li>
+        <li class="correct"><span class="lab">C</span><span>grand natural features (the Himalaya and the seas)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>factories</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>पर्वतराजः and रत्नाकरः glorify Bharat's **grand natural features (the Himalaya and the seas)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">मुकुटरूपेण ('as a crown') uses the instrumental of manner; a parallel is सिंहवत् ('like a lion') which expresses:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>possession</span></li>
+        <li class=""><span class="lab">B</span><span>the past tense</span></li>
+        <li class=""><span class="lab">C</span><span>the dative</span></li>
+        <li class="correct"><span class="lab">D</span><span>comparison / manner ('in the manner of')</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>मुकुटरूपेण ('as a crown') and सिंहवत् ('like a lion') both express **comparison / manner ('in the manner of')**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">The single best gloss of वन्दे भारतमातरम् is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'India loves me'</span></li>
+        <li class="correct"><span class="lab">B</span><span>'I bow to Mother Bharat (India)'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>'mothers of India'</span></li>
+        <li class=""><span class="lab">D</span><span>'O India, come!'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The best gloss: **'I bow to Mother Bharat (India)'**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">वन्दे मातरम् vs मात्रे नमः both express homage, but differ in:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the case the salutation-word governs (accusative vs dative)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>meaning</span></li>
+        <li class=""><span class="lab">C</span><span>tense</span></li>
+        <li class=""><span class="lab">D</span><span>the number of mothers</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>वन्दे मातरम् vs मात्रे नमः differ in **the case the salutation-word governs (accusative vs dative)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">The chapter pairs the song with grammar lessons on:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only the locative</span></li>
+        <li class="correct"><span class="lab">B</span><span>the मातृ declension, the case of वन्दे vs नमः, compounds, and vowel length</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the six tastes</span></li>
+        <li class=""><span class="lab">D</span><span>ordinals only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The chapter pairs the song with lessons on **the मातृ declension, the case of वन्दे vs नमः, compounds, and vowel length**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">The deeper theme of the chapter is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>reverence and love for the Motherland (देशभक्तिः)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>banking</span></li>
+        <li class=""><span class="lab">C</span><span>a fox and grapes</span></li>
+        <li class=""><span class="lab">D</span><span>vowel quantity only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The deeper theme is **reverence and love for the Motherland (देशभक्तिः)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">The central content of this chapter is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the rise of empires</span></li>
+        <li class=""><span class="lab">B</span><span>the cycle of food</span></li>
+        <li class="correct"><span class="lab">C</span><span>the song वन्दे मातरम्, its origin, and the Motherland imagery</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>verb conjugations</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The central content is **the song वन्दे मातरम्, its origin, and the Motherland imagery**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">A student claims: 'वन्दे means "I love" and takes the dative (वन्दे मात्रे).' The best correction is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the student is fully correct</span></li>
+        <li class=""><span class="lab">B</span><span>वन्दे means 'I salute' but takes the dative</span></li>
+        <li class=""><span class="lab">C</span><span>वन्दे means 'I love' and takes the accusative</span></li>
+        <li class="correct"><span class="lab">D</span><span>वन्दे means 'I salute/bow' and takes the accusative (वन्दे मातरम्); it is नमः that takes the dative</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>वन्दे means 'I salute/bow' and takes the accusative (वन्दे मातरम्); it is नमः that takes the dative — the student is wrong on both. --- *End of solutions. Maximum marks: 240.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>
