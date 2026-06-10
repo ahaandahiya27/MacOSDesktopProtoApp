@@ -81,7 +81,7 @@ Legend: ✅ Advanced triplet complete · ❌ missing · 🟡 in progress
 |----|-------|:--------:|
 | Ssch01 | Geographical Diversity of India | ✅ |
 | Ssch02 | Understanding the Weather | ✅ |
-| Ssch03 | Climates of India | ❌ |
+| Ssch03 | Climates of India | ✅ |
 | Ssch04 | New Beginnings: Cities and States | ❌ |
 | Ssch05 | The Rise of Empires | ❌ |
 | Ssch06 | The Age of Reorganisation | ❌ |
@@ -148,5 +148,13 @@ Legend: ✅ Advanced triplet complete · ❌ missing · 🟡 in progress
   regenerated, `OlympiadExamHallTests` → 98 papers / 69 foundation + 29
   advanced). Build + full XCTest GREEN. Coverage: Maths 15/15, Science 12/19,
   Social Science 2/20, Sanskrit 0/15.
+- **2026-06-11 (Wave 7):** **30 / 69** chapters — added Social Science Ssch03
+  (Climates of India, authored this session: 60 beyond-grade MCQs on weather/
+  season/climate, the five climate factors, windward/leeward & rain-shadow, the
+  southwest/northeast monsoon, climate types, disasters and climate change, with
+  a balanced 15/15/15/15 answer key). Authored + integrated (registry
+  `tier: .advanced`, pbxproj regenerated, `OlympiadExamHallTests` → 99 papers /
+  69 foundation + 30 advanced). Build + full XCTest GREEN. Coverage: Maths 15/15,
+  Science 12/19, Social Science 3/20, Sanskrit 0/15.
 - Flip each cell to ✅ as its commit lands; update the headline count here and in
   `V8_NEXT10H_LEDGER.md`.

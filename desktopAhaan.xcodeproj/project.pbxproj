@@ -1846,6 +1846,9 @@
 		88250F7B85B6414DCF843061 /* SocialScience_Ssch02_UnderstandingTheWeather_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 3BDBFB8B9991553F851BC79F /* SocialScience_Ssch02_UnderstandingTheWeather_SolvedGuide.html */; };
 		665E9E578DA9FBD59297D16E /* SocialScience_Ssch03_ClimatesOfIndia.html in Resources */ = {isa = PBXBuildFile; fileRef = C348039C580E543BAD5BEF22 /* SocialScience_Ssch03_ClimatesOfIndia.html */; };
 		2F08413F41D3D18D4CFC36C2 /* SocialScience_Ssch03_ClimatesOfIndia.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FFC8519C0F2B8F73A136BBB5 /* SocialScience_Ssch03_ClimatesOfIndia.pdf */; };
+		C538B3B7C25DD00F76183EA0 /* SocialScience_Ssch03_ClimatesOfIndia_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 3512FD9319A4296FCFB515D4 /* SocialScience_Ssch03_ClimatesOfIndia_Advanced_QuestionPaper.md */; };
+		BA6C07631D595E2B394241C0 /* SocialScience_Ssch03_ClimatesOfIndia_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 7741C2E36BDEA7E364884E2A /* SocialScience_Ssch03_ClimatesOfIndia_Advanced_Solutions.md */; };
+		59077E7512048D70EA7E2AF6 /* SocialScience_Ssch03_ClimatesOfIndia_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 9C0C2E16A9FA9FA447E6EEEF /* SocialScience_Ssch03_ClimatesOfIndia_Advanced_SolvedGuide.html */; };
 		095D218952A746946F3127F0 /* SocialScience_Ssch03_ClimatesOfIndia_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 7793DF69657DDDB08ABBC7D8 /* SocialScience_Ssch03_ClimatesOfIndia_QuestionPaper.md */; };
 		A8DC78AA8B5F8FAE1CDC6193 /* SocialScience_Ssch03_ClimatesOfIndia_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 72C395F78A2C31F41CEF80A1 /* SocialScience_Ssch03_ClimatesOfIndia_Solutions.md */; };
 		DBFF3F1ACECAA386EADC7FDD /* SocialScience_Ssch03_ClimatesOfIndia_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = D66B9F3356A82B306324FF13 /* SocialScience_Ssch03_ClimatesOfIndia_SolvedGuide.html */; };
@@ -3422,6 +3425,9 @@
 		3BDBFB8B9991553F851BC79F /* SocialScience_Ssch02_UnderstandingTheWeather_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "SocialScience_Ssch02_UnderstandingTheWeather_SolvedGuide.html"; sourceTree = "<group>"; };
 		C348039C580E543BAD5BEF22 /* SocialScience_Ssch03_ClimatesOfIndia.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "SocialScience_Ssch03_ClimatesOfIndia.html"; sourceTree = "<group>"; };
 		FFC8519C0F2B8F73A136BBB5 /* SocialScience_Ssch03_ClimatesOfIndia.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "SocialScience_Ssch03_ClimatesOfIndia.pdf"; sourceTree = "<group>"; };
+		3512FD9319A4296FCFB515D4 /* SocialScience_Ssch03_ClimatesOfIndia_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SocialScience_Ssch03_ClimatesOfIndia_Advanced_QuestionPaper.md"; sourceTree = "<group>"; };
+		7741C2E36BDEA7E364884E2A /* SocialScience_Ssch03_ClimatesOfIndia_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SocialScience_Ssch03_ClimatesOfIndia_Advanced_Solutions.md"; sourceTree = "<group>"; };
+		9C0C2E16A9FA9FA447E6EEEF /* SocialScience_Ssch03_ClimatesOfIndia_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "SocialScience_Ssch03_ClimatesOfIndia_Advanced_SolvedGuide.html"; sourceTree = "<group>"; };
 		7793DF69657DDDB08ABBC7D8 /* SocialScience_Ssch03_ClimatesOfIndia_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SocialScience_Ssch03_ClimatesOfIndia_QuestionPaper.md"; sourceTree = "<group>"; };
 		72C395F78A2C31F41CEF80A1 /* SocialScience_Ssch03_ClimatesOfIndia_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SocialScience_Ssch03_ClimatesOfIndia_Solutions.md"; sourceTree = "<group>"; };
 		D66B9F3356A82B306324FF13 /* SocialScience_Ssch03_ClimatesOfIndia_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "SocialScience_Ssch03_ClimatesOfIndia_SolvedGuide.html"; sourceTree = "<group>"; };
@@ -6168,6 +6174,9 @@
 				3BDBFB8B9991553F851BC79F,
 				C348039C580E543BAD5BEF22,
 				FFC8519C0F2B8F73A136BBB5,
+				3512FD9319A4296FCFB515D4,
+				7741C2E36BDEA7E364884E2A,
+				9C0C2E16A9FA9FA447E6EEEF,
 				7793DF69657DDDB08ABBC7D8,
 				72C395F78A2C31F41CEF80A1,
 				D66B9F3356A82B306324FF13,
@@ -9048,6 +9057,9 @@
 				88250F7B85B6414DCF843061 /* SocialScience_Ssch02_UnderstandingTheWeather_SolvedGuide.html in Resources */,
 				665E9E578DA9FBD59297D16E /* SocialScience_Ssch03_ClimatesOfIndia.html in Resources */,
 				2F08413F41D3D18D4CFC36C2 /* SocialScience_Ssch03_ClimatesOfIndia.pdf in Resources */,
+				C538B3B7C25DD00F76183EA0 /* SocialScience_Ssch03_ClimatesOfIndia_Advanced_QuestionPaper.md in Resources */,
+				BA6C07631D595E2B394241C0 /* SocialScience_Ssch03_ClimatesOfIndia_Advanced_Solutions.md in Resources */,
+				59077E7512048D70EA7E2AF6 /* SocialScience_Ssch03_ClimatesOfIndia_Advanced_SolvedGuide.html in Resources */,
 				095D218952A746946F3127F0 /* SocialScience_Ssch03_ClimatesOfIndia_QuestionPaper.md in Resources */,
 				A8DC78AA8B5F8FAE1CDC6193 /* SocialScience_Ssch03_ClimatesOfIndia_Solutions.md in Resources */,
 				DBFF3F1ACECAA386EADC7FDD /* SocialScience_Ssch03_ClimatesOfIndia_SolvedGuide.html in Resources */,

@@ -320,6 +320,21 @@ extension OlympiadPaperRegistry {
             suggestedTimeMinutes: 90,
             solvedGuideHTML: "SocialScience_Ssch02_UnderstandingTheWeather_Advanced_SolvedGuide.html",
             tier: .advanced
+        ),
+        OlympiadPaper(
+            id: "olympiad_socialscience_ssch03_advanced",
+            subjectId: "socialscience_class7",
+            subjectName: "Social Science",
+            chapterNumber: 3,
+            chapterTitle: "Climates of India",
+            displayTitle: "Climates of India — Paper 2 (Advanced)",
+            questionPaperMD: "SocialScience_Ssch03_ClimatesOfIndia_Advanced_QuestionPaper.md",
+            solutionsMD: "SocialScience_Ssch03_ClimatesOfIndia_Advanced_Solutions.md",
+            questionPaperHTML: "SocialScience_Ssch03_ClimatesOfIndia.html",
+            questionPaperPDF: "SocialScience_Ssch03_ClimatesOfIndia.pdf",
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "SocialScience_Ssch03_ClimatesOfIndia_Advanced_SolvedGuide.html",
+            tier: .advanced
         )
     ]
 }
