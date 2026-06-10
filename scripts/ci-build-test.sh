@@ -229,6 +229,18 @@ if [ -f "scripts/test_lints.py" ]; then
     fi
 fi
 
+# Test-paper triplet completeness (v8 phase 1). Every *_QuestionPaper.md must
+# travel with a non-empty *_Solutions.md (both streams) and, in the bundled
+# Resources stream, a non-empty *_SolvedGuide.html. Catches half-shipped
+# Advanced-tier papers and SolvedGuide.html files left stale by a rename.
+if [ -f "scripts/check_testpaper_triplet.py" ]; then
+    echo "==> test-paper triplet lint (v8)"
+    if ! python3 scripts/check_testpaper_triplet.py; then
+        echo "ci-build-test: check_testpaper_triplet failed — an incomplete test-paper triplet would ship. See findings above." >&2
+        exit 1
+    fi
+fi
+
 # Big Sur / Swift 5.5 COMPILE-CLASS compat lints. These also run in the
 # pre-commit hook, but wiring them HERE enforces them on every push (pre-push
 # calls this script) and in CI — closing the gap where a `git commit
