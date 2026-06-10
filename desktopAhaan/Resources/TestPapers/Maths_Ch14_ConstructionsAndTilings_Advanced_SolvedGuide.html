@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Constructions And Tilings_Advanced — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Constructions And Tilings_Advanced<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">The standard tools for a perpendicular-bisector construction are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a protractor and ruler</span></li>
+        <li class=""><span class="lab">B</span><span>a set square only</span></li>
+        <li class="correct"><span class="lab">C</span><span>a compass and a straightedge</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a calculator</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Classical constructions use only a compass and a straightedge.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">A perpendicular bisector of a segment always passes through its:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>midpoint</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>endpoint</span></li>
+        <li class=""><span class="lab">C</span><span>longest part</span></li>
+        <li class=""><span class="lab">D</span><span>reflection</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The perpendicular bisector cuts the segment exactly at its midpoint.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">Any point on the perpendicular bisector of AB is equidistant from:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the midpoint only</span></li>
+        <li class=""><span class="lab">B</span><span>neither A nor B</span></li>
+        <li class=""><span class="lab">C</span><span>the line itself</span></li>
+        <li class="correct"><span class="lab">D</span><span>A and B</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Every point on the perpendicular bisector of AB is the same distance from A and from B.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">To bisect a given angle you use:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a protractor's scale</span></li>
+        <li class="correct"><span class="lab">B</span><span>a compass and a straightedge</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a ruler only</span></li>
+        <li class=""><span class="lab">D</span><span>two protractors</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An angle is bisected with a compass and a straightedge (equal arcs).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">Constructing a 60° angle relies on the fact that an equilateral triangle has angles of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>90°</span></li>
+        <li class=""><span class="lab">B</span><span>45°</span></li>
+        <li class="correct"><span class="lab">C</span><span>60°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>30°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The 60° construction copies an angle of an equilateral triangle.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">To construct a 30° angle, first construct 60° and then:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>bisect it</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>double it</span></li>
+        <li class=""><span class="lab">C</span><span>add 30°</span></li>
+        <li class=""><span class="lab">D</span><span>reflect it</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bisecting the 60° angle gives 30°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">A 90° angle equals exactly half of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>45°</span></li>
+        <li class=""><span class="lab">B</span><span>360°</span></li>
+        <li class=""><span class="lab">C</span><span>60°</span></li>
+        <li class="correct"><span class="lab">D</span><span>180°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>90° is half of a straight angle, 180°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">A 45° angle is obtained by bisecting an angle of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>30°</span></li>
+        <li class="correct"><span class="lab">B</span><span>90°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>60°</span></li>
+        <li class=""><span class="lab">D</span><span>22.5°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bisecting 90° gives 45°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">A 120° angle may be built by placing two 60° angles together, because 60° + 60° equals:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>90°</span></li>
+        <li class=""><span class="lab">B</span><span>180°</span></li>
+        <li class="correct"><span class="lab">C</span><span>120°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>240°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>60° + 60° = 120°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">A 15° angle is obtained by bisecting an angle of:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>30°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>60°</span></li>
+        <li class=""><span class="lab">C</span><span>7.5°</span></li>
+        <li class=""><span class="lab">D</span><span>45°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bisecting 30° gives 15°.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">A triangle can be constructed from three given side lengths exactly when they satisfy:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the angle sum</span></li>
+        <li class=""><span class="lab">B</span><span>the exterior-angle rule</span></li>
+        <li class=""><span class="lab">C</span><span>Pythagoras' theorem</span></li>
+        <li class="correct"><span class="lab">D</span><span>the triangle inequality</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Three lengths form a triangle exactly when each pair sums to more than the third — the triangle inequality.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">Can a triangle be drawn with sides 3, 4 and 8?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>yes</span></li>
+        <li class="correct"><span class="lab">B</span><span>no, since 3 + 4 &lt; 8</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>only if right-angled</span></li>
+        <li class=""><span class="lab">D</span><span>only if isosceles</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>3 + 4 = 7 &lt; 8, so no such triangle exists.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">The SAS construction of a triangle needs two sides and the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>largest angle</span></li>
+        <li class=""><span class="lab">B</span><span>opposite angle</span></li>
+        <li class="correct"><span class="lab">C</span><span>included angle</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>hypotenuse</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>SAS fixes the triangle using two sides and the angle between them.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">The ASA construction needs two angles and the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>included side</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>longest side</span></li>
+        <li class=""><span class="lab">C</span><span>hypotenuse</span></li>
+        <li class=""><span class="lab">D</span><span>opposite side</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>ASA uses two angles and the side between them.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">If two angles to be constructed are 70° and 80°, the third angle of the triangle is fixed at:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>150°</span></li>
+        <li class=""><span class="lab">B</span><span>110°</span></li>
+        <li class=""><span class="lab">C</span><span>90°</span></li>
+        <li class="correct"><span class="lab">D</span><span>30°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The third angle is 180° − 70° − 80° = 30°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">Can 100° and 90° be two of the angles of a triangle?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>yes</span></li>
+        <li class="correct"><span class="lab">B</span><span>no, their sum already exceeds 180°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>only if the third is 0°</span></li>
+        <li class=""><span class="lab">D</span><span>only in a right triangle</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>100° + 90° = 190° already exceeds 180°, so they can't both be angles of one triangle.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">For a unique ASA construction the two given angles must add to less than:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>90°</span></li>
+        <li class=""><span class="lab">B</span><span>360°</span></li>
+        <li class="correct"><span class="lab">C</span><span>180°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>270°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The two angles must leave room for a positive third angle, so their sum is below 180°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">Constructing a right triangle from its hypotenuse and one leg uses the rule:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>RHS</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>AAA</span></li>
+        <li class=""><span class="lab">C</span><span>SSA</span></li>
+        <li class=""><span class="lab">D</span><span>ASA</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Hypotenuse-and-leg is the RHS case.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">The least number of independent measurements needed to fix a triangle's shape and size is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1</span></li>
+        <li class=""><span class="lab">B</span><span>2</span></li>
+        <li class=""><span class="lab">C</span><span>5</span></li>
+        <li class="correct"><span class="lab">D</span><span>3</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Three independent measurements (e.g. SSS, SAS or ASA) fix a triangle.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">A triangle constructed with sides 5, 5 and 5 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>scalene</span></li>
+        <li class="correct"><span class="lab">B</span><span>equilateral</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>right-angled</span></li>
+        <li class=""><span class="lab">D</span><span>obtuse</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Three equal sides give an equilateral triangle.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">Which regular polygon CANNOT tile the plane on its own?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>equilateral triangle</span></li>
+        <li class=""><span class="lab">B</span><span>square</span></li>
+        <li class="correct"><span class="lab">C</span><span>regular pentagon</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>regular hexagon</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A regular pentagon's 108° interior angle does not divide 360°, so it cannot tile alone.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">The number of equilateral triangles that meet at a single vertex in a regular tiling is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>6</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>4</span></li>
+        <li class=""><span class="lab">C</span><span>3</span></li>
+        <li class=""><span class="lab">D</span><span>8</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>360° ÷ 60° = 6 equilateral triangles meet at a vertex.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">The number of squares meeting at a vertex in a square tiling is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>6</span></li>
+        <li class=""><span class="lab">B</span><span>3</span></li>
+        <li class=""><span class="lab">C</span><span>8</span></li>
+        <li class="correct"><span class="lab">D</span><span>4</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>360° ÷ 90° = 4 squares.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">The number of regular hexagons meeting at a vertex in a hexagonal tiling is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>6</span></li>
+        <li class="correct"><span class="lab">B</span><span>3</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>4</span></li>
+        <li class=""><span class="lab">D</span><span>2</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>360° ÷ 120° = 3 hexagons.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">Regular pentagons cannot tile the plane because their interior angle (108°):</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>is too small</span></li>
+        <li class=""><span class="lab">B</span><span>is more than 180°</span></li>
+        <li class="correct"><span class="lab">C</span><span>does not divide 360° exactly</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>equals 90°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>108° does not divide 360° exactly, so pentagons leave gaps.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">The interior angle of a regular hexagon is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>120°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>60°</span></li>
+        <li class=""><span class="lab">C</span><span>90°</span></li>
+        <li class=""><span class="lab">D</span><span>108°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(6 − 2) × 180° ÷ 6 = 720° ÷ 6 = 120°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">The interior angle of a regular octagon is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>45°</span></li>
+        <li class=""><span class="lab">B</span><span>120°</span></li>
+        <li class=""><span class="lab">C</span><span>108°</span></li>
+        <li class="correct"><span class="lab">D</span><span>135°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(8 − 2) × 180° ÷ 8 = 1080° ÷ 8 = 135°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">The number of distinct regular polygons that tile the plane by themselves is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1</span></li>
+        <li class="correct"><span class="lab">B</span><span>3</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>5</span></li>
+        <li class=""><span class="lab">D</span><span>4</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Exactly three regular polygons tile alone: the triangle, square and hexagon.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">A semi-regular tiling is one that uses:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only triangles</span></li>
+        <li class=""><span class="lab">B</span><span>curved tiles</span></li>
+        <li class="correct"><span class="lab">C</span><span>more than one type of regular polygon</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>no polygons</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A semi-regular tiling mixes more than one kind of regular polygon.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">At any vertex of a tiling, the angles meet to total:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>360°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>180°</span></li>
+        <li class=""><span class="lab">C</span><span>90°</span></li>
+        <li class=""><span class="lab">D</span><span>270°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The angles around any tiling vertex add up to a full turn, 360°.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">The interior angle of a regular pentagon is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>90°</span></li>
+        <li class=""><span class="lab">B</span><span>120°</span></li>
+        <li class=""><span class="lab">C</span><span>100°</span></li>
+        <li class="correct"><span class="lab">D</span><span>108°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(5 − 2) × 180° ÷ 5 = 540° ÷ 5 = 108°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">Six equilateral triangles around a point work because 6 × 60° equals:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>180°</span></li>
+        <li class="correct"><span class="lab">B</span><span>360°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>300°</span></li>
+        <li class=""><span class="lab">D</span><span>240°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>6 × 60° = 360°, a full turn, so six triangles fit exactly.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">Regular octagons together with squares can tile the plane because at a vertex 135° + 135° + 90° equals:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>270°</span></li>
+        <li class=""><span class="lab">B</span><span>300°</span></li>
+        <li class="correct"><span class="lab">C</span><span>360°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>405°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>135° + 135° + 90° = 360°, so octagons and squares tile together.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">The interior angle of a regular 12-sided polygon (dodecagon) is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>150°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>120°</span></li>
+        <li class=""><span class="lab">C</span><span>144°</span></li>
+        <li class=""><span class="lab">D</span><span>160°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(12 − 2) × 180° ÷ 12 = 1800° ÷ 12 = 150°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">A regular dodecagon (interior angle 150°) cannot tile the plane alone because 150° does NOT:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>exceed 90°</span></li>
+        <li class=""><span class="lab">B</span><span>equal an exterior angle</span></li>
+        <li class=""><span class="lab">C</span><span>measure a reflex angle</span></li>
+        <li class="correct"><span class="lab">D</span><span>divide 360° exactly</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>150° does not divide 360° exactly (360 ÷ 150 is not whole), so dodecagons can't tile alone.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">The exterior angle of a regular hexagon is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>120°</span></li>
+        <li class="correct"><span class="lab">B</span><span>60°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>90°</span></li>
+        <li class=""><span class="lab">D</span><span>45°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Exterior angle = 360° ÷ 6 = 60°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">The sum of the exterior angles of any polygon is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>180°</span></li>
+        <li class=""><span class="lab">B</span><span>540°</span></li>
+        <li class="correct"><span class="lab">C</span><span>360°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>depends on the number of sides</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The exterior angles of any polygon always total 360°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">The sum of the interior angles of a pentagon is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>540°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>360°</span></li>
+        <li class=""><span class="lab">C</span><span>720°</span></li>
+        <li class=""><span class="lab">D</span><span>450°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(5 − 2) × 180° = 540°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">The sum of the interior angles of a hexagon is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>540°</span></li>
+        <li class=""><span class="lab">B</span><span>900°</span></li>
+        <li class=""><span class="lab">C</span><span>1080°</span></li>
+        <li class="correct"><span class="lab">D</span><span>720°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(6 − 2) × 180° = 720°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">A regular polygon whose exterior angle is 40° has each interior angle equal to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>40°</span></li>
+        <li class="correct"><span class="lab">B</span><span>140°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>320°</span></li>
+        <li class=""><span class="lab">D</span><span>160°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Interior = 180° − exterior = 180° − 40° = 140°.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">A regular polygon with each interior angle 144° has how many sides?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>8</span></li>
+        <li class=""><span class="lab">B</span><span>12</span></li>
+        <li class="correct"><span class="lab">C</span><span>10</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>9</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Exterior = 180° − 144° = 36°; n = 360° ÷ 36° = 10 sides.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">A regular polygon whose each exterior angle is 30° has how many sides?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>12</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>6</span></li>
+        <li class=""><span class="lab">C</span><span>30</span></li>
+        <li class=""><span class="lab">D</span><span>10</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>n = 360° ÷ 30° = 12 sides.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">The sum of the interior angles of an octagon is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>720°</span></li>
+        <li class=""><span class="lab">B</span><span>900°</span></li>
+        <li class=""><span class="lab">C</span><span>360°</span></li>
+        <li class="correct"><span class="lab">D</span><span>1080°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(8 − 2) × 180° = 1080°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">A polygon whose interior angles sum to 900° has how many sides?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5</span></li>
+        <li class="correct"><span class="lab">B</span><span>7</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>9</span></li>
+        <li class=""><span class="lab">D</span><span>6</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Number of sides = (900° ÷ 180°) + 2 = 5 + 2 = 7.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">Each interior angle of a regular pentagon measures:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>540°</span></li>
+        <li class=""><span class="lab">B</span><span>90°</span></li>
+        <li class="correct"><span class="lab">C</span><span>108°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>120°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>540° ÷ 5 = 108°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">The set of points equidistant from two fixed points is the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>perpendicular bisector of the segment joining them</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>angle bisector</span></li>
+        <li class=""><span class="lab">C</span><span>midpoint only</span></li>
+        <li class=""><span class="lab">D</span><span>circle through both</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Points equidistant from two points lie on the perpendicular bisector of the joining segment.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">The set of points equidistant from two intersecting lines is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>perpendicular bisector</span></li>
+        <li class=""><span class="lab">B</span><span>midpoint</span></li>
+        <li class=""><span class="lab">C</span><span>parallel line</span></li>
+        <li class="correct"><span class="lab">D</span><span>pair of angle bisectors</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Points equidistant from two intersecting lines lie on the pair of angle bisectors.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">To copy a given angle accurately, you use a compass to transfer:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the length of one ray only</span></li>
+        <li class="correct"><span class="lab">B</span><span>equal arc widths</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the protractor reading</span></li>
+        <li class=""><span class="lab">D</span><span>the colour</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Copying an angle transfers equal arc widths with the compass.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">The three perpendicular bisectors of a triangle's sides meet at the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>centroid</span></li>
+        <li class=""><span class="lab">B</span><span>orthocentre</span></li>
+        <li class="correct"><span class="lab">C</span><span>circumcentre</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>midpoint of the base</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The perpendicular bisectors meet at the circumcentre (equidistant from the vertices).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">The three angle bisectors of a triangle meet at the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>incentre</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>circumcentre</span></li>
+        <li class=""><span class="lab">C</span><span>centroid</span></li>
+        <li class=""><span class="lab">D</span><span>orthocentre</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The angle bisectors meet at the incentre (equidistant from the sides).</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">A 75° angle can be constructed by combining:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>45° + 45°</span></li>
+        <li class=""><span class="lab">B</span><span>90° − 30°</span></li>
+        <li class=""><span class="lab">C</span><span>60° + 30°</span></li>
+        <li class="correct"><span class="lab">D</span><span>60° + 15°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>75° = 60° + 15° (and 15° comes from bisecting 30°).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">The perpendicular dropped from a point to a line measures the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>longest distance</span></li>
+        <li class="correct"><span class="lab">B</span><span>shortest distance from the point to the line</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>area</span></li>
+        <li class=""><span class="lab">D</span><span>midpoint distance</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The perpendicular from a point to a line is the shortest distance to it.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">Two arcs of equal radius drawn from the endpoints of a segment intersect on its:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>midpoint only</span></li>
+        <li class=""><span class="lab">B</span><span>endpoint</span></li>
+        <li class="correct"><span class="lab">C</span><span>perpendicular bisector</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>extension</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Equal-radius arcs from the two endpoints cross on the perpendicular bisector.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">An angle of 105° can be constructed by combining:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>90° + 15°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>60° + 60°</span></li>
+        <li class=""><span class="lab">C</span><span>45° + 45°</span></li>
+        <li class=""><span class="lab">D</span><span>120° − 30°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>105° = 90° + 15°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">A regular polygon can tile the plane on its own only when its interior angle:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>is acute</span></li>
+        <li class=""><span class="lab">B</span><span>equals 90°</span></li>
+        <li class=""><span class="lab">C</span><span>is obtuse</span></li>
+        <li class="correct"><span class="lab">D</span><span>divides 360° exactly</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A regular polygon tiles alone only when its interior angle divides 360° exactly.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">The three regular polygons that tile the plane by themselves are the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>pentagon, hexagon and octagon</span></li>
+        <li class="correct"><span class="lab">B</span><span>equilateral triangle, square and regular hexagon</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>square, pentagon and hexagon</span></li>
+        <li class=""><span class="lab">D</span><span>triangle, square and octagon</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The three are the equilateral triangle, the square and the regular hexagon.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">A covering of the plane that leaves no gaps and has no overlaps is called a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>construction</span></li>
+        <li class=""><span class="lab">B</span><span>bisection</span></li>
+        <li class="correct"><span class="lab">C</span><span>tessellation</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>reflection</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A gap-free, overlap-free covering of the plane is a tessellation.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">As the number of sides of a regular polygon increases, each interior angle:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>increases</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>decreases</span></li>
+        <li class=""><span class="lab">C</span><span>stays the same</span></li>
+        <li class=""><span class="lab">D</span><span>becomes negative</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>As n grows the interior angle (n − 2) × 180° ÷ n increases (toward 180°).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">To construct a triangle congruent to a given one, you may copy:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only one side</span></li>
+        <li class=""><span class="lab">B</span><span>only the angles</span></li>
+        <li class=""><span class="lab">C</span><span>any two sides</span></li>
+        <li class="correct"><span class="lab">D</span><span>all three sides (SSS) or an SAS / ASA set of parts</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A congruent copy is built from all three sides (SSS) or a matching SAS / ASA set of parts.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">An angle of 22.5° is obtained by bisecting an angle of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>11.25°</span></li>
+        <li class="correct"><span class="lab">B</span><span>45°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>30°</span></li>
+        <li class=""><span class="lab">D</span><span>60°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bisecting 45° gives 22.5°. --- *End of solutions. Maximum marks: 240.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>
