@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Arithmetic Expressions_Advanced — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Arithmetic Expressions_Advanced<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">Evaluate 12 + 6 ÷ 2 × 3.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>36</span></li>
+        <li class="correct"><span class="lab">B</span><span>21</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>27</span></li>
+        <li class=""><span class="lab">D</span><span>12</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>× and ÷ before +, left to right: 6 ÷ 2 = 3, then 3 × 3 = 9. So 12 + 9 = 21. (Strict left-to-right wrongly gives 27.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">Evaluate 20 − [8 − (3 + 2)].</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>7</span></li>
+        <li class=""><span class="lab">B</span><span>22</span></li>
+        <li class=""><span class="lab">C</span><span>12</span></li>
+        <li class="correct"><span class="lab">D</span><span>17</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Innermost first: 3 + 2 = 5; then 8 − 5 = 3; then 20 − 3 = 17.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">Evaluate (15 − 3) ÷ (2 + 2).</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>3</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>12</span></li>
+        <li class=""><span class="lab">C</span><span>6</span></li>
+        <li class=""><span class="lab">D</span><span>9</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Each bracket first: 15 − 3 = 12 and 2 + 2 = 4; then 12 ÷ 4 = 3.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">Evaluate 5 + 2 × [9 − (4 + 1)].</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>28</span></li>
+        <li class=""><span class="lab">B</span><span>33</span></li>
+        <li class="correct"><span class="lab">C</span><span>13</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>18</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Innermost 4 + 1 = 5; then 9 − 5 = 4; then 2 × 4 = 8; finally 5 + 8 = 13.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">Evaluate 100 ÷ [2 × (10 − 5)].</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>250</span></li>
+        <li class="correct"><span class="lab">B</span><span>10</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>5</span></li>
+        <li class=""><span class="lab">D</span><span>50</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Inner 10 − 5 = 5; then 2 × 5 = 10; then 100 ÷ 10 = 10.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">Evaluate 7 × 4 − 6 ÷ 2 + 1.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>12</span></li>
+        <li class=""><span class="lab">B</span><span>11</span></li>
+        <li class=""><span class="lab">C</span><span>14</span></li>
+        <li class="correct"><span class="lab">D</span><span>26</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>× and ÷ first: 7 × 4 = 28 and 6 ÷ 2 = 3. Then 28 − 3 + 1 = 26.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">Evaluate {[(6 + 4) × 2] − 5}.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>15</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>25</span></li>
+        <li class=""><span class="lab">C</span><span>13</span></li>
+        <li class=""><span class="lab">D</span><span>35</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Inner 6 + 4 = 10; × 2 = 20; − 5 = 15.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">Evaluate 3 + 4 × 5 − 2.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>33</span></li>
+        <li class=""><span class="lab">B</span><span>35</span></li>
+        <li class="correct"><span class="lab">C</span><span>21</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>9</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>4 × 5 = 20 first; then 3 + 20 − 2 = 21.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">Evaluate 48 ÷ 6 ÷ 2.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>16</span></li>
+        <li class=""><span class="lab">B</span><span>144</span></li>
+        <li class=""><span class="lab">C</span><span>12</span></li>
+        <li class="correct"><span class="lab">D</span><span>4</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Division left to right: 48 ÷ 6 = 8; then 8 ÷ 2 = 4. (Not 48 ÷ 3.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">Evaluate 2 × [3 + 4 × (5 − 3)].</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>14</span></li>
+        <li class="correct"><span class="lab">B</span><span>22</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>28</span></li>
+        <li class=""><span class="lab">D</span><span>20</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Innermost 5 − 3 = 2; then 4 × 2 = 8; then 3 + 8 = 11; then 2 × 11 = 22.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">Evaluate 18 − (5 + 3 − 2).</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>12</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>8</span></li>
+        <li class=""><span class="lab">C</span><span>18</span></li>
+        <li class=""><span class="lab">D</span><span>22</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bracket 5 + 3 − 2 = 6; then 18 − 6 = 12.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">Evaluate 25 − (10 − 4).</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>11</span></li>
+        <li class=""><span class="lab">B</span><span>31</span></li>
+        <li class="correct"><span class="lab">C</span><span>19</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>21</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bracket 10 − 4 = 6; then 25 − 6 = 19.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">Evaluate 40 − [12 − (6 − 2)].</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>22</span></li>
+        <li class=""><span class="lab">B</span><span>50</span></li>
+        <li class=""><span class="lab">C</span><span>26</span></li>
+        <li class="correct"><span class="lab">D</span><span>32</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Innermost 6 − 2 = 4; then 12 − 4 = 8; then 40 − 8 = 32.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">Evaluate −(3 − 8).</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>−11</span></li>
+        <li class="correct"><span class="lab">B</span><span>5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>−5</span></li>
+        <li class=""><span class="lab">D</span><span>11</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The minus flips the bracket: −(3 − 8) = −(−5) = 5.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">Evaluate 50 − 2 × (5 − 8).</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>56</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>44</span></li>
+        <li class=""><span class="lab">C</span><span>144</span></li>
+        <li class=""><span class="lab">D</span><span>−6</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bracket 5 − 8 = −3; then 2 × (−3) = −6; then 50 − (−6) = 56.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">Evaluate 30 − [5 − (10 − 3)].</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>28</span></li>
+        <li class=""><span class="lab">B</span><span>22</span></li>
+        <li class="correct"><span class="lab">C</span><span>32</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>−2</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Innermost 10 − 3 = 7; then 5 − 7 = −2; then 30 − (−2) = 32.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">Evaluate 100 − {20 − [10 − (4 + 1)]}.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>95</span></li>
+        <li class=""><span class="lab">B</span><span>75</span></li>
+        <li class=""><span class="lab">C</span><span>65</span></li>
+        <li class="correct"><span class="lab">D</span><span>85</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Innermost 4 + 1 = 5; 10 − 5 = 5; 20 − 5 = 15; 100 − 15 = 85.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">Evaluate 12 − 3 − 4 − 2.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>11</span></li>
+        <li class="correct"><span class="lab">B</span><span>3</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>7</span></li>
+        <li class=""><span class="lab">D</span><span>1</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Subtraction left to right: 12 − 3 = 9, 9 − 4 = 5, 5 − 2 = 3.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">Evaluate 7 − (2 − 9).</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>14</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>0</span></li>
+        <li class=""><span class="lab">C</span><span>−14</span></li>
+        <li class=""><span class="lab">D</span><span>4</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The minus flips the bracket: 7 − (2 − 9) = 7 − (−7) = 14.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">Evaluate −(−(−6)).</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>6</span></li>
+        <li class=""><span class="lab">B</span><span>18</span></li>
+        <li class="correct"><span class="lab">C</span><span>−6</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>0</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Work outward: −(−6) = 6 inside, then the outer minus gives −(6) = −6.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">Use 98 = 100 − 2 to find 7 × 98.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>656</span></li>
+        <li class=""><span class="lab">B</span><span>700</span></li>
+        <li class=""><span class="lab">C</span><span>716</span></li>
+        <li class="correct"><span class="lab">D</span><span>686</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>7 × (100 − 2) = 700 − 14 = 686 (distributive shortcut).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">Evaluate 25 × 16 + 25 × 4.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>116</span></li>
+        <li class="correct"><span class="lab">B</span><span>500</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>400</span></li>
+        <li class=""><span class="lab">D</span><span>80</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Factor out 25: 25 × (16 + 4) = 25 × 20 = 500.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">Evaluate 99 × 47 + 47.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>4700</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>4747</span></li>
+        <li class=""><span class="lab">C</span><span>4653</span></li>
+        <li class=""><span class="lab">D</span><span>470</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Factor out 47: 47 × (99 + 1) = 47 × 100 = 4700.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">Evaluate 6 × 53 by splitting 53 = 50 + 3.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>318</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>33</span></li>
+        <li class=""><span class="lab">C</span><span>159</span></li>
+        <li class=""><span class="lab">D</span><span>300</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>6 × (50 + 3) = 300 + 18 = 318.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">The statement 4 × (5 + 6) = 4 × 5 + 4 × 6 shows the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>distributive property</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>commutative property</span></li>
+        <li class=""><span class="lab">C</span><span>associative property</span></li>
+        <li class=""><span class="lab">D</span><span>closure property</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Multiplying a sum term-by-term, a × (b + c) = a×b + a×c, is the distributive property.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">The statement (3 + 7) + 2 = 3 + (7 + 2) shows the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>distributive property</span></li>
+        <li class="correct"><span class="lab">B</span><span>associative property</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>commutative property</span></li>
+        <li class=""><span class="lab">D</span><span>identity property</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Regrouping the *same* numbers without reordering them is the associative property of addition.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">Reordering for ease, 8 × 25 × 4 equals:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>200</span></li>
+        <li class=""><span class="lab">B</span><span>100</span></li>
+        <li class=""><span class="lab">C</span><span>32</span></li>
+        <li class="correct"><span class="lab">D</span><span>800</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Reorder as (25 × 4) × 8 = 100 × 8 = 800.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">Pairing into tens, 17 + 38 + 23 + 12 equals:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>80</span></li>
+        <li class=""><span class="lab">B</span><span>100</span></li>
+        <li class="correct"><span class="lab">C</span><span>90</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>70</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Pair to tens: (17 + 23) + (38 + 12) = 40 + 50 = 90.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">Which of these is NOT equal to 12 − 7?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>7 − 12</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>5</span></li>
+        <li class=""><span class="lab">C</span><span>12 + (−7)</span></li>
+        <li class=""><span class="lab">D</span><span>−(7 − 12)</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>12 − 7 = 5. Subtraction is not commutative, so 7 − 12 = −5 ≠ 5. The other three all equal 5.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">Evaluate 35 × 101.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>3500</span></li>
+        <li class=""><span class="lab">B</span><span>350</span></li>
+        <li class=""><span class="lab">C</span><span>36</span></li>
+        <li class="correct"><span class="lab">D</span><span>3535</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>35 × 101 = 35 × 100 + 35 = 3500 + 35 = 3535.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">"Five less than thrice 8" equals:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>9</span></li>
+        <li class="correct"><span class="lab">B</span><span>19</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>29</span></li>
+        <li class=""><span class="lab">D</span><span>15</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Thrice 8 is 24; five less is 24 − 5 = 19.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">"The product of 6 and the sum of 4 and 9" equals:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>31</span></li>
+        <li class=""><span class="lab">B</span><span>54</span></li>
+        <li class=""><span class="lab">C</span><span>19</span></li>
+        <li class="correct"><span class="lab">D</span><span>78</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>6 × (4 + 9) = 6 × 13 = 78. (Do the bracket first, then multiply.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">"Double the difference of 15 and 7" equals:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>16</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>22</span></li>
+        <li class=""><span class="lab">C</span><span>8</span></li>
+        <li class=""><span class="lab">D</span><span>44</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Difference 15 − 7 = 8; double it: 2 × 8 = 16.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">A shop sells 4 pens at ₹12 each and 3 notebooks at ₹25 each. The total bill is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>₹37</span></li>
+        <li class=""><span class="lab">B</span><span>₹111</span></li>
+        <li class="correct"><span class="lab">C</span><span>₹123</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>₹84</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>4 × 12 + 3 × 25 = 48 + 75 = ₹123.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">The quotient when (20 − 6) is divided by (3 + 4) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5</span></li>
+        <li class="correct"><span class="lab">B</span><span>2</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>14</span></li>
+        <li class=""><span class="lab">D</span><span>7</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(20 − 6) ÷ (3 + 4) = 14 ÷ 7 = 2.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">Ravi has ₹100 and buys 3 items at ₹18 each. The money left with him is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>₹54</span></li>
+        <li class=""><span class="lab">B</span><span>₹82</span></li>
+        <li class=""><span class="lab">C</span><span>₹64</span></li>
+        <li class="correct"><span class="lab">D</span><span>₹46</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>100 − 3 × 18 = 100 − 54 = ₹46.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">"Seven more than the product of 5 and 4" equals:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>27</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>47</span></li>
+        <li class=""><span class="lab">C</span><span>16</span></li>
+        <li class=""><span class="lab">D</span><span>35</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Product 5 × 4 = 20; seven more: 20 + 7 = 27.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">The cost of 5 tickets at ₹45 each, after a ₹25 discount on the total, is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>₹250</span></li>
+        <li class=""><span class="lab">B</span><span>₹100</span></li>
+        <li class="correct"><span class="lab">C</span><span>₹200</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>₹225</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>5 × 45 − 25 = 225 − 25 = ₹200.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">"Half of the sum of 18 and 26" equals:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>44</span></li>
+        <li class="correct"><span class="lab">B</span><span>22</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>9</span></li>
+        <li class=""><span class="lab">D</span><span>33</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sum 18 + 26 = 44; half of it: 44 ÷ 2 = 22.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">A class of 36 is split into 4 equal teams; then 2 students leave each team. Each team now has:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>9</span></li>
+        <li class=""><span class="lab">B</span><span>11</span></li>
+        <li class=""><span class="lab">C</span><span>5</span></li>
+        <li class="correct"><span class="lab">D</span><span>7</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>36 ÷ 4 = 9 per team; 9 − 2 = 7 after two leave.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">Which of these has the greatest value?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2 + 3 × 4</span></li>
+        <li class=""><span class="lab">B</span><span>2 × 3 + 4</span></li>
+        <li class="correct"><span class="lab">C</span><span>2 × 3 × 4</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>(2 + 3) × 4</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Values: 2 + 3×4 = 14; 2×3 + 4 = 10; 2×3×4 = 24; (2+3)×4 = 20. Greatest is 24.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">Which operation in the box makes 8 ▢ 4 ÷ 2 = 10 true?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>+</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>−</span></li>
+        <li class=""><span class="lab">C</span><span>×</span></li>
+        <li class=""><span class="lab">D</span><span>÷</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Try +: 8 + (4 ÷ 2) = 8 + 2 = 10. ✓ (× gives 16, − gives 6, ÷ gives 4.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">Evaluate 6 × 6 + 6 ÷ 6 − 6.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1</span></li>
+        <li class="correct"><span class="lab">B</span><span>31</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>36</span></li>
+        <li class=""><span class="lab">D</span><span>6</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>× and ÷ first: 6 × 6 = 36 and 6 ÷ 6 = 1. Then 36 + 1 − 6 = 31.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">Using 99 = 100 − 1, the value of 48 × 99 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4848</span></li>
+        <li class=""><span class="lab">B</span><span>4800</span></li>
+        <li class=""><span class="lab">C</span><span>4704</span></li>
+        <li class="correct"><span class="lab">D</span><span>4752</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>48 × (100 − 1) = 4800 − 48 = 4752.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">Evaluate (12 + 8) ÷ (12 − 8).</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1</span></li>
+        <li class=""><span class="lab">B</span><span>20</span></li>
+        <li class="correct"><span class="lab">C</span><span>5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>4</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(12 + 8) ÷ (12 − 8) = 20 ÷ 4 = 5.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">Evaluate 3 × (4 + 5) − 2 × (6 − 1).</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>17</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>27</span></li>
+        <li class=""><span class="lab">C</span><span>37</span></li>
+        <li class=""><span class="lab">D</span><span>10</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Brackets: 4 + 5 = 9 and 6 − 1 = 5. Then 3 × 9 − 2 × 5 = 27 − 10 = 17.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">Evaluate 10 − 2[3 + (4 − 1)].</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>18</span></li>
+        <li class="correct"><span class="lab">B</span><span>−2</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>8</span></li>
+        <li class=""><span class="lab">D</span><span>2</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Inner 4 − 1 = 3; then 3 + 3 = 6; then 2 × 6 = 12; then 10 − 12 = −2.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">Evaluate 9 + 9 ÷ 9 + 9 × 9 − 9.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>9</span></li>
+        <li class=""><span class="lab">B</span><span>73</span></li>
+        <li class=""><span class="lab">C</span><span>90</span></li>
+        <li class="correct"><span class="lab">D</span><span>82</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>÷ and × first: 9 ÷ 9 = 1 and 9 × 9 = 81. Then 9 + 1 + 81 − 9 = 82.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">The expression 4 × (10 − 3) is the same as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4 × 10 − 3</span></li>
+        <li class="correct"><span class="lab">B</span><span>4 × 10 − 4 × 3</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>4 + 10 − 3</span></li>
+        <li class=""><span class="lab">D</span><span>40 − 3</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Distributing: 4 × (10 − 3) = 4 × 10 − 4 × 3. (Both terms get the ×4 — the classic trap is to multiply only the first.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">Evaluate 100 ÷ 4 ÷ 5.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>125</span></li>
+        <li class=""><span class="lab">B</span><span>80</span></li>
+        <li class="correct"><span class="lab">C</span><span>5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>20</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Left to right: 100 ÷ 4 = 25; then 25 ÷ 5 = 5.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">Evaluate {50 − [20 − (10 − 5)]} ÷ 5.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>7</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>13</span></li>
+        <li class=""><span class="lab">C</span><span>3</span></li>
+        <li class=""><span class="lab">D</span><span>9</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Innermost 10 − 5 = 5; then 20 − 5 = 15; then 50 − 15 = 35; finally 35 ÷ 5 = 7.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">Evaluate 2 + 2 × 2 − 2 ÷ 2.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>3</span></li>
+        <li class=""><span class="lab">B</span><span>7</span></li>
+        <li class="correct"><span class="lab">C</span><span>5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>1</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>× and ÷ first: 2 × 2 = 4 and 2 ÷ 2 = 1. Then 2 + 4 − 1 = 5.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">Evaluate (7 + 3) × (7 − 3).</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>8</span></li>
+        <li class=""><span class="lab">B</span><span>58</span></li>
+        <li class=""><span class="lab">C</span><span>16</span></li>
+        <li class="correct"><span class="lab">D</span><span>40</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Brackets: 7 + 3 = 10 and 7 − 3 = 4; then 10 × 4 = 40.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">Evaluate 144 ÷ 12 + 12 × 0.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0</span></li>
+        <li class="correct"><span class="lab">B</span><span>12</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>144</span></li>
+        <li class=""><span class="lab">D</span><span>24</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>144 ÷ 12 = 12 and 12 × 0 = 0; then 12 + 0 = 12.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">Evaluate 5 × [(8 − 3) + (2 × 3)].</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>55</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>50</span></li>
+        <li class=""><span class="lab">C</span><span>25</span></li>
+        <li class=""><span class="lab">D</span><span>11</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Brackets: 8 − 3 = 5 and 2 × 3 = 6; then 5 + 6 = 11; then 5 × 11 = 55.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">Evaluate 1000 − [100 + 10 × (5 + 4)].</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>990</span></li>
+        <li class=""><span class="lab">B</span><span>8100</span></li>
+        <li class="correct"><span class="lab">C</span><span>810</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>891</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Inner 5 + 4 = 9; then 10 × 9 = 90; then 100 + 90 = 190; then 1000 − 190 = 810.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">Evaluate 3 × 4² − 10.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>134</span></li>
+        <li class=""><span class="lab">B</span><span>26</span></li>
+        <li class=""><span class="lab">C</span><span>86</span></li>
+        <li class="correct"><span class="lab">D</span><span>38</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Powers before ×: 4² = 16; then 3 × 16 = 48; then 48 − 10 = 38.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">Evaluate (2³ + 2²) × 2.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>16</span></li>
+        <li class="correct"><span class="lab">B</span><span>24</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>20</span></li>
+        <li class=""><span class="lab">D</span><span>12</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Powers first: 2³ = 8 and 2² = 4; then (8 + 4) × 2 = 12 × 2 = 24.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">Evaluate 6 + [24 ÷ (8 − 2)] × 5.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>26</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>50</span></li>
+        <li class=""><span class="lab">C</span><span>30</span></li>
+        <li class=""><span class="lab">D</span><span>36</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Inner 8 − 2 = 6; then 24 ÷ 6 = 4; then 4 × 5 = 20; then 6 + 20 = 26.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">Evaluate 2 × 3 + 4 × 5 − 6 × 7.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>80</span></li>
+        <li class=""><span class="lab">B</span><span>16</span></li>
+        <li class="correct"><span class="lab">C</span><span>−16</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>64</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Products first: 2×3 = 6, 4×5 = 20, 6×7 = 42. Then 6 + 20 − 42 = −16. --- *End of solutions. Maximum marks: 240.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>
