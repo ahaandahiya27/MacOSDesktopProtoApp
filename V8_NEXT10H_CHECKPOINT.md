@@ -79,6 +79,39 @@ BODMAS), number theory (HCF/LCM, number-play/parity/cryptarithms), algebra
 triangles, congruence, constructions/tilings) — all stated in words so the
 text-only SolvedGuide renders faithfully.
 
+## Phase 3 (cont.) — Waves 9–11 (2026-06-11, this agent)
+
+A continuation pass that both **authored** new Advanced papers and acted as the
+**integrator + quality gate** for the fleet's output. The run executed alongside
+**two other identical v8 agents** in one working tree; `ps` confirmed three
+`claude --dangerously-skip-permissions` processes. The siblings authored Sanskrit
+content *content-only* (no registry wiring); this agent owned the
+`OlympiadPaperRegistry` + `OlympiadExamHallTests` hotspot alone, used
+explicit-pathspec commits, and rebalanced every paper's answer key before wiring.
+
+- **New tool — `scripts/rebalance_answer_key.py`.** A systemic quality fix.
+  Several fleet-authored papers shipped with a positional-giveaway key (one
+  chapter had 50/60 answers in slot B; the Sanskrit papers were *block-ordered*,
+  Q1–15 = A, Q16–30 = B, …). The tool deterministically reorders the four option
+  lines so the correct option lands on a fixed-permutation target — an exact
+  15/15/15/15 A/B/C/D spread over 60 questions — and rewrites the `**N. (X)**`
+  solution heading in lockstep. Worked prose references option *content*, never
+  letters, so the reorder is content-preserving; no RNG, fully reproducible.
+- **Wave 9 — Science Ch11 (Transportation in Animals and Plants).** Rebalanced
+  (50/60→15/15/15/15), guide regenerated, wired, `OlympiadExamHallTests`
+  → 102/33. GREEN, pushed.
+- **Wave 10 — Social Science Ssch05 (The Rise of Empires) authored + first three
+  Sanskrit Advanced papers (Sch13/14/15) integrated.** All four scattered to
+  15/15/15/15, wired → 106/37. GREEN, pushed (`baeebca`).
+- **Wave 11 — Social Science Ssch06 (The Age of Reorganisation) authored + six
+  Sanskrit Advanced papers (Sch07–Sch12) integrated.** Ssch06: 60 beyond-grade
+  MCQs (Shungas, Satavahanas, Indo-Greeks, Shakas, Kushanas, Gandhara-vs-Mathura
+  art, Sangam/Roman trade). Wired → 113/44. Exam-hall suite GREEN.
+
+**Advanced-tier coverage after Wave 11: 44 / 69** (Maths 15/15, Science 15/19,
+Social Science 6/20, Sanskrit 9/15). See `ADVANCED_TIER_LEDGER.md` for the live
+grid.
+
 ## Phases 4–5 — Swift Discover depth + visual library ⏸️ not in this contribution
 
 This run focused on the **content-safe** layer (Phase 0–3) per the deliberate

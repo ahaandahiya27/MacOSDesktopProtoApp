@@ -84,7 +84,7 @@ Legend: ✅ Advanced triplet complete · ❌ missing · 🟡 in progress
 | Ssch03 | Climates of India | ✅ |
 | Ssch04 | New Beginnings: Cities and States | ✅ |
 | Ssch05 | The Rise of Empires | ✅ |
-| Ssch06 | The Age of Reorganisation | ❌ |
+| Ssch06 | The Age of Reorganisation | ✅ |
 | Ssch07 | The Gupta Era | ❌ |
 | Ssch08 | How the Land Becomes Sacred | ❌ |
 | Ssch09 | Types of Governments | ❌ |
@@ -109,12 +109,12 @@ Legend: ✅ Advanced triplet complete · ❌ missing · 🟡 in progress
 | Sch04 | The Fox and the Grapes | ❌ |
 | Sch05 | Sevā Hi Paramo Dharmaḥ | ❌ |
 | Sch06 | Krīḍāma Vayam (Shlokāntyākṣarī) | ❌ |
-| Sch07 | Īśāvāsyam Idaṁ Sarvam | ❌ |
-| Sch08 | Hitaṁ Manohāri Cha Durlabhaṁ Vachaḥ | ❌ |
-| Sch09 | Annād Bhavanti Bhūtāni | ❌ |
-| Sch10 | Daśamaḥ Kaḥ | ❌ |
-| Sch11 | Dvīpeṣu Ramyaḥ Dvīpo'ndamānaḥ | ❌ |
-| Sch12 | Vīrāṅganā Pannādhāyā | ❌ |
+| Sch07 | Īśāvāsyam Idaṁ Sarvam | ✅ |
+| Sch08 | Hitaṁ Manohāri Cha Durlabhaṁ Vachaḥ | ✅ |
+| Sch09 | Annād Bhavanti Bhūtāni | ✅ |
+| Sch10 | Daśamaḥ Kaḥ | ✅ |
+| Sch11 | Dvīpeṣu Ramyaḥ Dvīpo'ndamānaḥ | ✅ |
+| Sch12 | Vīrāṅganā Pannādhāyā | ✅ |
 | Sch13 | Varṇa-Mātrā Parichayaḥ | ✅ |
 | Sch14 | Śabda-Rūpāṇi | ✅ |
 | Sch15 | Dhātu-Rūpāṇi (Verb Conjugations) | ✅ |
@@ -193,5 +193,17 @@ Legend: ✅ Advanced triplet complete · ❌ missing · 🟡 in progress
   Science 15/19, Social Science 5/20, Sanskrit 3/15. (Sanskrit Sch11/Sch12
   content is committed by concurrent agents but not yet wired — a later
   integrator pass.)
+- **2026-06-11 (Wave 11):** **44 / 69** chapters — added Social Science Ssch06
+  (The Age of Reorganisation, authored this session: 60 beyond-grade MCQs on the
+  Shungas, Satavahanas, Indo-Greeks, Shakas and Kushanas, the Gandhara-vs-Mathura
+  schools, the Silk Route and the southern Sangam/Roman trade) **and** integrated
+  the six concurrent-authored **Sanskrit** Advanced papers Sch07–Sch12
+  (Īśāvāsyam, Hitaṁ Manohāri, Annād Bhavanti, Daśamaḥ Kaḥ, the Andaman Islands,
+  Pannā Dhāī). All seven carry a balanced 15/15/15/15 key (Ssch06 rebalanced this
+  session; Sch07–12 already scattered by the shared rebalance tool). Wired
+  (registry `tier: .advanced`, pbxproj regenerated objectVersion 55,
+  `OlympiadExamHallTests` → 113 papers / 69 foundation + 44 advanced); exam-hall
+  suite GREEN. Coverage: Maths 15/15, Science 15/19, Social Science 6/20,
+  Sanskrit 9/15.
 - Flip each cell to ✅ as its commit lands; update the headline count here and in
   `V8_NEXT10H_LEDGER.md`.
