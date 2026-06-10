@@ -56,20 +56,20 @@ Legend: ✅ Advanced triplet complete · ❌ missing · 🟡 in progress
 ### Science (19 chapters)
 | Ch | Title | Advanced |
 |----|-------|:--------:|
-| Ch01 | Nutrition in Plants | ❌ |
-| Ch02 | Nutrition in Animals | ❌ |
+| Ch01 | Nutrition in Plants | ✅ |
+| Ch02 | Nutrition in Animals | ✅ |
 | Ch03 | Fibre to Fabric | ❌ |
 | Ch04 | Heat | ✅ |
-| Ch05 | Acids, Bases and Salts | ❌ |
-| Ch06 | Physical and Chemical Changes | ❌ |
+| Ch05 | Acids, Bases and Salts | ✅ |
+| Ch06 | Physical and Chemical Changes | ✅ |
 | Ch07 | Weather, Climate & Animal Adaptations | ❌ |
-| Ch08 | Winds, Storms and Cyclones | ❌ |
+| Ch08 | Winds, Storms and Cyclones | ✅ |
 | Ch09 | Soil | ❌ |
-| Ch10 | Respiration in Organisms | ❌ |
+| Ch10 | Respiration in Organisms | ✅ |
 | Ch11 | Transportation in Animals and Plants | ❌ |
 | Ch12 | Reproduction in Plants | ❌ |
 | Ch13 | Motion and Time | ✅ (prototype) |
-| Ch14 | Electric Current and Its Effects | ❌ |
+| Ch14 | Electric Current and Its Effects | ✅ |
 | Ch15 | Light | ✅ |
 | Ch16 | Water: A Precious Resource | ❌ |
 | Ch17 | Forests: Our Lifeline | ❌ |
@@ -123,11 +123,13 @@ Legend: ✅ Advanced triplet complete · ❌ missing · 🟡 in progress
 
 ## Running total
 - **Run start:** 2 / 69 chapters (Maths Ch15, Science Ch13 — prototypes).
-- **2026-06-10:** **19 / 69** chapters — Maths Ch01–Ch15 (all 15), Science
-  Ch04/Ch13/Ch15 (3), Social Science Ssch01 (1). All 19 are now both **authored**
-  (complete triplet on disk, triplet lint clean) **and integrated** (wired into
-  `OlympiadPaperRegistry` with `tier: .advanced`, bundled via the regenerated
-  pbxproj, and pinned by `OlympiadExamHallTests` → 88 papers / 69 foundation +
-  19 advanced). Build + full XCTest GREEN.
+- **2026-06-10 (Wave 3):** **19 / 69** chapters — Maths Ch01–Ch15, Science
+  Ch04/Ch13/Ch15, Social Science Ssch01.
+- **2026-06-10 (Wave 4):** **26 / 69** chapters — added Science Ch01/Ch02/Ch05/
+  Ch06/Ch08/Ch10/Ch14 (authored by concurrent content agents, integrated here).
+  All 26 are both **authored** (complete triplet on disk, triplet lint clean)
+  **and integrated** (wired into `OlympiadPaperRegistry` with `tier: .advanced`,
+  bundled via the regenerated pbxproj, pinned by `OlympiadExamHallTests` → 95
+  papers / 69 foundation + 26 advanced). Build + full XCTest GREEN.
 - Flip each cell to ✅ as its commit lands; update the headline count here and in
   `V8_NEXT10H_LEDGER.md`.
