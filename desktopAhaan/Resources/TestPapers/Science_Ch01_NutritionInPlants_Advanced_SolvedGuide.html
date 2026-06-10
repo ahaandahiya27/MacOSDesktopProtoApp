@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nutrition In Plants_Advanced — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Nutrition In Plants_Advanced<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">Organisms that make their own food are called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>parasites</span></li>
+        <li class=""><span class="lab">B</span><span>saprotrophs</span></li>
+        <li class="correct"><span class="lab">C</span><span>autotrophs</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>heterotrophs</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Organisms that make their own food are autotrophs.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">Organisms that depend on others for their food are called:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>heterotrophs</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>autotrophs</span></li>
+        <li class=""><span class="lab">C</span><span>producers</span></li>
+        <li class=""><span class="lab">D</span><span>green plants</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Organisms that rely on others for food are heterotrophs.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">Green plants are best described as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>parasites</span></li>
+        <li class=""><span class="lab">B</span><span>saprotrophs</span></li>
+        <li class=""><span class="lab">C</span><span>consumers</span></li>
+        <li class="correct"><span class="lab">D</span><span>autotrophs</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Green plants make their own food, so they are autotrophs.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">The mode of nutrition in green plants is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>parasitic</span></li>
+        <li class="correct"><span class="lab">B</span><span>autotrophic</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>saprotrophic</span></li>
+        <li class=""><span class="lab">D</span><span>holozoic</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Green plants show autotrophic nutrition.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">The process by which plants make their food is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>digestion</span></li>
+        <li class=""><span class="lab">B</span><span>respiration</span></li>
+        <li class="correct"><span class="lab">C</span><span>photosynthesis</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>transpiration</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Plants make food by photosynthesis.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">The green pigment present in leaves is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>chlorophyll</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>haemoglobin</span></li>
+        <li class=""><span class="lab">C</span><span>melanin</span></li>
+        <li class=""><span class="lab">D</span><span>starch</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The green pigment in leaves is chlorophyll.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">Chlorophyll's main role is to trap:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>water</span></li>
+        <li class=""><span class="lab">B</span><span>soil</span></li>
+        <li class=""><span class="lab">C</span><span>oxygen</span></li>
+        <li class="correct"><span class="lab">D</span><span>sunlight (solar energy)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Chlorophyll traps sunlight (solar energy) for photosynthesis.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">The raw materials needed for photosynthesis are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>oxygen and glucose</span></li>
+        <li class="correct"><span class="lab">B</span><span>carbon dioxide and water</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>nitrogen and salt</span></li>
+        <li class=""><span class="lab">D</span><span>starch and sunlight</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The raw materials are carbon dioxide and water.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">Photosynthesis produces food in the form of glucose and releases:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>carbon dioxide</span></li>
+        <li class=""><span class="lab">B</span><span>nitrogen</span></li>
+        <li class="correct"><span class="lab">C</span><span>oxygen</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>water vapour only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Photosynthesis makes glucose and releases oxygen.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">The gas released into the air during photosynthesis is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>oxygen</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>carbon dioxide</span></li>
+        <li class=""><span class="lab">C</span><span>nitrogen</span></li>
+        <li class=""><span class="lab">D</span><span>hydrogen</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Oxygen is released during photosynthesis.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">The gas taken in by leaves for photosynthesis is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>oxygen</span></li>
+        <li class=""><span class="lab">B</span><span>nitrogen</span></li>
+        <li class=""><span class="lab">C</span><span>hydrogen</span></li>
+        <li class="correct"><span class="lab">D</span><span>carbon dioxide</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Carbon dioxide is taken in for photosynthesis.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">The food made by a plant is stored mainly as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>protein</span></li>
+        <li class="correct"><span class="lab">B</span><span>starch</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>fat</span></li>
+        <li class=""><span class="lab">D</span><span>salt</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Food is stored mainly as starch.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">The tiny pores on a leaf's surface used for gas exchange are the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>veins</span></li>
+        <li class=""><span class="lab">B</span><span>roots</span></li>
+        <li class="correct"><span class="lab">C</span><span>stomata</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>petals</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The leaf's gas-exchange pores are the stomata.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">Gases enter and leave a leaf through the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>stomata</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>roots</span></li>
+        <li class=""><span class="lab">C</span><span>bark</span></li>
+        <li class=""><span class="lab">D</span><span>flowers</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Gases pass in and out through the stomata.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">Water is absorbed from the soil mainly by the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>leaves</span></li>
+        <li class=""><span class="lab">B</span><span>flowers</span></li>
+        <li class=""><span class="lab">C</span><span>fruits</span></li>
+        <li class="correct"><span class="lab">D</span><span>roots</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Roots absorb water from the soil.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">Water rises from the roots to the leaves through:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the stomata</span></li>
+        <li class="correct"><span class="lab">B</span><span>vessels in the stem</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the petals</span></li>
+        <li class=""><span class="lab">D</span><span>the air</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Water travels up to the leaves through vessels in the stem.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">Because it makes the plant's food, the leaf is called the food:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>store</span></li>
+        <li class=""><span class="lab">B</span><span>drain</span></li>
+        <li class="correct"><span class="lab">C</span><span>factory</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>pipe</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The leaf is called the food factory of the plant.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">Photosynthesis takes place mainly in the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>leaves</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>roots</span></li>
+        <li class=""><span class="lab">C</span><span>flowers</span></li>
+        <li class=""><span class="lab">D</span><span>seeds</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Photosynthesis occurs mainly in the leaves.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">The pair of cells that open and close each stoma are the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>root hairs</span></li>
+        <li class=""><span class="lab">B</span><span>sieve cells</span></li>
+        <li class=""><span class="lab">C</span><span>blood cells</span></li>
+        <li class="correct"><span class="lab">D</span><span>guard cells</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Each stoma is bordered by two guard cells.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">Sunlight, chlorophyll, carbon dioxide and water are all required for:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>digestion</span></li>
+        <li class="correct"><span class="lab">B</span><span>photosynthesis</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>breathing</span></li>
+        <li class=""><span class="lab">D</span><span>germination</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sunlight, chlorophyll, CO₂ and water are all needed for photosynthesis.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">Apart from leaves, photosynthesis can also occur in:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>dry roots</span></li>
+        <li class=""><span class="lab">B</span><span>ripe fruit only</span></li>
+        <li class="correct"><span class="lab">C</span><span>green (young) stems</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>dead wood</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Young green stems can also photosynthesise.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">The presence of starch in a leaf is shown using:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>iodine solution (turning blue-black)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>lime water</span></li>
+        <li class=""><span class="lab">C</span><span>common salt</span></li>
+        <li class=""><span class="lab">D</span><span>vinegar</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Iodine solution turns blue-black with starch, revealing it.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">A plant that takes its food from another living plant is a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>saprotroph</span></li>
+        <li class=""><span class="lab">B</span><span>autotroph</span></li>
+        <li class=""><span class="lab">C</span><span>producer</span></li>
+        <li class="correct"><span class="lab">D</span><span>parasite</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A plant taking food from another living plant is a parasite.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">Cuscuta (Amarbel) is an example of a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>saprotroph</span></li>
+        <li class="correct"><span class="lab">B</span><span>parasite</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>green autotroph</span></li>
+        <li class=""><span class="lab">D</span><span>insectivorous plant</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cuscuta (Amarbel) is a parasite.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">A pitcher plant traps and digests:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>water drops</span></li>
+        <li class=""><span class="lab">B</span><span>sunlight</span></li>
+        <li class="correct"><span class="lab">C</span><span>insects</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>minerals only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A pitcher plant traps and digests insects.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">Insectivorous plants trap insects mainly to obtain:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>nitrogen (nutrients)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>oxygen</span></li>
+        <li class=""><span class="lab">C</span><span>water</span></li>
+        <li class=""><span class="lab">D</span><span>sunlight</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Insectivorous plants trap insects for nitrogen-rich nutrients.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">Organisms that feed on dead and decaying matter are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>parasites</span></li>
+        <li class=""><span class="lab">B</span><span>autotrophs</span></li>
+        <li class=""><span class="lab">C</span><span>producers</span></li>
+        <li class="correct"><span class="lab">D</span><span>saprotrophs</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Feeders on dead/decaying matter are saprotrophs.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">Fungi growing on bread or pickles feed as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>parasites</span></li>
+        <li class="correct"><span class="lab">B</span><span>saprotrophs</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>autotrophs</span></li>
+        <li class=""><span class="lab">D</span><span>insectivores</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bread/pickle fungi feed as saprotrophs.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">The mode of nutrition in fungi is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>autotrophic</span></li>
+        <li class=""><span class="lab">B</span><span>parasitic only</span></li>
+        <li class="correct"><span class="lab">C</span><span>saprotrophic</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>holozoic</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Fungi show saprotrophic nutrition.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">A relationship in which both partners benefit is called:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>symbiosis</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>parasitism</span></li>
+        <li class=""><span class="lab">C</span><span>competition</span></li>
+        <li class=""><span class="lab">D</span><span>predation</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A relationship benefiting both partners is symbiosis.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">A lichen is a symbiotic partnership of an alga with a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>moss</span></li>
+        <li class=""><span class="lab">B</span><span>bacterium only</span></li>
+        <li class=""><span class="lab">C</span><span>virus</span></li>
+        <li class="correct"><span class="lab">D</span><span>fungus</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A lichen pairs an alga with a fungus.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">Rhizobium bacteria in the root nodules of legumes fix:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>oxygen</span></li>
+        <li class="correct"><span class="lab">B</span><span>nitrogen</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>carbon</span></li>
+        <li class=""><span class="lab">D</span><span>water</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rhizobium in root nodules fixes nitrogen.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">Rhizobium and the leguminous plant live in a relationship that is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>parasitic</span></li>
+        <li class=""><span class="lab">B</span><span>harmful</span></li>
+        <li class="correct"><span class="lab">C</span><span>symbiotic</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>one-sided</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rhizobium and the legume share a symbiotic relationship.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">Insectivorous plants usually grow in soil that is poor in:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>nitrogen</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>water</span></li>
+        <li class=""><span class="lab">C</span><span>sunlight</span></li>
+        <li class=""><span class="lab">D</span><span>air</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Insectivorous plants grow in nitrogen-poor soil.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">The "pitcher" of a pitcher plant is a modified:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>root</span></li>
+        <li class=""><span class="lab">B</span><span>flower</span></li>
+        <li class=""><span class="lab">C</span><span>stem</span></li>
+        <li class="correct"><span class="lab">D</span><span>leaf</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The pitcher is a modified leaf.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">Mushrooms obtain their food by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>photosynthesis</span></li>
+        <li class="correct"><span class="lab">B</span><span>saprotrophic nutrition</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>trapping insects</span></li>
+        <li class=""><span class="lab">D</span><span>parasitism on animals</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Mushrooms feed by saprotrophic nutrition.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">Cuscuta climbs on a host plant and is therefore a kind of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>autotroph</span></li>
+        <li class=""><span class="lab">B</span><span>saprotroph</span></li>
+        <li class="correct"><span class="lab">C</span><span>parasite</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>producer</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cuscuta lives on a host, so it is a parasite.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">The plant on which Cuscuta grows and feeds is called the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>host</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>guest</span></li>
+        <li class=""><span class="lab">C</span><span>producer</span></li>
+        <li class=""><span class="lab">D</span><span>decomposer</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The plant Cuscuta feeds on is its host.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">Farmers add fertilisers and manure to the soil to replenish its:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>water</span></li>
+        <li class=""><span class="lab">B</span><span>air</span></li>
+        <li class=""><span class="lab">C</span><span>sunlight</span></li>
+        <li class="correct"><span class="lab">D</span><span>nutrients (minerals)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Fertilisers and manure replenish soil nutrients (minerals).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">The nutrient most often added to soil by farmers is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>oxygen</span></li>
+        <li class="correct"><span class="lab">B</span><span>nitrogen</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>carbon dioxide</span></li>
+        <li class=""><span class="lab">D</span><span>sunlight</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Nitrogen is the nutrient farmers most often add.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">Leguminous plants (pulses) naturally enrich the soil with:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>carbon</span></li>
+        <li class=""><span class="lab">B</span><span>salt</span></li>
+        <li class="correct"><span class="lab">C</span><span>nitrogen</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>oxygen</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Legumes enrich the soil with nitrogen.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">Growing legumes in rotation helps to restore soil:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>nitrogen</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>sand</span></li>
+        <li class=""><span class="lab">C</span><span>stones</span></li>
+        <li class=""><span class="lab">D</span><span>heat</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rotating with legumes restores soil nitrogen.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">Plants need nitrogen mainly to build:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>starch</span></li>
+        <li class=""><span class="lab">B</span><span>sugar</span></li>
+        <li class=""><span class="lab">C</span><span>water</span></li>
+        <li class="correct"><span class="lab">D</span><span>proteins</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Plants need nitrogen to build proteins.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">The minerals that plants need are taken up from the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>air</span></li>
+        <li class="correct"><span class="lab">B</span><span>soil (along with water)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>sunlight</span></li>
+        <li class=""><span class="lab">D</span><span>leaves</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Minerals are taken from the soil along with water.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">Plants cannot use nitrogen gas directly; it must first be fixed by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sunlight</span></li>
+        <li class=""><span class="lab">B</span><span>rain</span></li>
+        <li class="correct"><span class="lab">C</span><span>bacteria (such as Rhizobium)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>wind</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Nitrogen gas must be fixed by bacteria such as Rhizobium before plants can use it.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">Adding manure improves the soil's:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>fertility</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>colour only</span></li>
+        <li class=""><span class="lab">C</span><span>temperature</span></li>
+        <li class=""><span class="lab">D</span><span>weight only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Manure improves soil fertility.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">Besides nitrogen, plants also need minerals such as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>iron filings</span></li>
+        <li class=""><span class="lab">B</span><span>plastic</span></li>
+        <li class=""><span class="lab">C</span><span>sand grains</span></li>
+        <li class="correct"><span class="lab">D</span><span>phosphorus and potassium</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Plants also need minerals such as phosphorus and potassium.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">The ultimate source of energy for almost every food chain is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>soil</span></li>
+        <li class="correct"><span class="lab">B</span><span>Sun</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>wind</span></li>
+        <li class=""><span class="lab">D</span><span>ocean</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Sun is the ultimate energy source for nearly all food chains.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">Leaves appear green because they contain:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>starch</span></li>
+        <li class=""><span class="lab">B</span><span>water</span></li>
+        <li class="correct"><span class="lab">C</span><span>chlorophyll</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>air</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Leaves are green because they contain chlorophyll.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">A plant kept in the dark cannot make food because it lacks:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>sunlight for photosynthesis</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>water</span></li>
+        <li class=""><span class="lab">C</span><span>soil</span></li>
+        <li class=""><span class="lab">D</span><span>air</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Without sunlight a plant cannot photosynthesise, so it makes no food in the dark.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">In a variegated leaf (part green, part white), starch is made only in the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>white parts</span></li>
+        <li class=""><span class="lab">B</span><span>veins</span></li>
+        <li class=""><span class="lab">C</span><span>edges</span></li>
+        <li class="correct"><span class="lab">D</span><span>green parts</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Only the green parts of a variegated leaf make starch.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">Animals depend on plants because plants are the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>consumers</span></li>
+        <li class="correct"><span class="lab">B</span><span>producers (food makers)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>decomposers</span></li>
+        <li class=""><span class="lab">D</span><span>predators</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Plants are producers, so animals depend on them.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">Photosynthesis is best summarised as carbon dioxide + water, using sunlight and chlorophyll, giving:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>carbon dioxide + water</span></li>
+        <li class=""><span class="lab">B</span><span>only oxygen</span></li>
+        <li class="correct"><span class="lab">C</span><span>glucose + oxygen</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>starch + nitrogen</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Photosynthesis gives glucose (food) + oxygen.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">Insectivorous plants still carry out photosynthesis; they trap insects only for extra:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>nitrogen</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>oxygen</span></li>
+        <li class=""><span class="lab">C</span><span>sunlight</span></li>
+        <li class=""><span class="lab">D</span><span>water</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Insectivorous plants trap insects only for extra nitrogen; they still photosynthesise.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">If photosynthesis stopped everywhere, the oxygen in the air would:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>increase</span></li>
+        <li class=""><span class="lab">B</span><span>stay the same</span></li>
+        <li class=""><span class="lab">C</span><span>turn into nitrogen</span></li>
+        <li class="correct"><span class="lab">D</span><span>gradually run out</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>With no photosynthesis, atmospheric oxygen would gradually run out.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">A food chain always begins with:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a large animal</span></li>
+        <li class="correct"><span class="lab">B</span><span>green plants (producers)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a decomposer</span></li>
+        <li class=""><span class="lab">D</span><span>the Sun eating plants</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A food chain begins with green plants (producers).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">Cuscuta has no chlorophyll, so it depends on its host for:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>water only</span></li>
+        <li class=""><span class="lab">B</span><span>sunlight</span></li>
+        <li class="correct"><span class="lab">C</span><span>food</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>air</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Lacking chlorophyll, Cuscuta depends on its host for food.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">A fungus spreading over a rotting log is showing:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>saprotrophic nutrition</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>photosynthesis</span></li>
+        <li class=""><span class="lab">C</span><span>parasitism on a living host</span></li>
+        <li class=""><span class="lab">D</span><span>symbiosis</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A fungus on a rotting log shows saprotrophic nutrition.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">Farmers grow legumes between main crops in order to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>use more water</span></li>
+        <li class=""><span class="lab">B</span><span>attract insects</span></li>
+        <li class=""><span class="lab">C</span><span>shade the field</span></li>
+        <li class="correct"><span class="lab">D</span><span>restore nitrogen to the soil</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Legumes are grown between crops to restore soil nitrogen.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">Plants are called producers because they:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>eat other organisms</span></li>
+        <li class=""><span class="lab">B</span><span>decay dead matter</span></li>
+        <li class="correct"><span class="lab">C</span><span>produce their own food (and food for others)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>move around to feed</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Plants are producers because they produce their own food (and food for others). --- *End of solutions. Maximum marks: 240.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>
