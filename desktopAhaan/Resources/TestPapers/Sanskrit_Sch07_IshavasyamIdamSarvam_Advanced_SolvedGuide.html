@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ishavasyam Idam Sarvam (Advanced) — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Ishavasyam Idam Sarvam (Advanced)<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">दास्यन्ति ('they shall give') is in the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>present tense</span></li>
+        <li class=""><span class="lab">B</span><span>past tense</span></li>
+        <li class="correct"><span class="lab">C</span><span>future tense (लृट्)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>imperative</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>दास्यन्ति ('they shall give') is in the **future tense (लृट्)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">The marker that signals the future in दास्यन्ति is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>-स्य-</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the augment अ-</span></li>
+        <li class=""><span class="lab">C</span><span>-तुम्</span></li>
+        <li class=""><span class="lab">D</span><span>-त्वा</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The future is signalled by the marker **-स्य-** (here दा + स्य + अन्ति).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">The future 'he will go' (from गम्) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>गच्छति</span></li>
+        <li class=""><span class="lab">B</span><span>अगच्छत्</span></li>
+        <li class=""><span class="lab">C</span><span>गन्तुम्</span></li>
+        <li class="correct"><span class="lab">D</span><span>गमिष्यति</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The future of गम् ('go') is **गमिष्यति** ('he will go').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">The future 'he will do' (from कृ) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>करोति</span></li>
+        <li class="correct"><span class="lab">B</span><span>करिष्यति</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>अकरोत्</span></li>
+        <li class=""><span class="lab">D</span><span>कर्तुम्</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The future of कृ ('do') is **करिष्यति** ('he will do').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">The future 'it will be' (from भू) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>भवति</span></li>
+        <li class="correct"><span class="lab">B</span><span>भविष्यति</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>अभवत्</span></li>
+        <li class=""><span class="lab">D</span><span>भवतु</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The future of भू ('be') is **भविष्यति** ('it will be').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">The future 'he will remember' (from स्मृ) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>स्मरति</span></li>
+        <li class=""><span class="lab">B</span><span>अस्मरत्</span></li>
+        <li class=""><span class="lab">C</span><span>स्मरतु</span></li>
+        <li class="correct"><span class="lab">D</span><span>स्मरिष्यति</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The future of स्मृ ('remember') is **स्मरिष्यति** ('he will remember').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">दास्यति (singular) vs दास्यन्ति (plural) differ in:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>number ('he will give' vs 'they will give')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>tense</span></li>
+        <li class=""><span class="lab">C</span><span>person</span></li>
+        <li class=""><span class="lab">D</span><span>voice</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>दास्यति vs दास्यन्ति differ in **number** ('he will give' vs 'they will give').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">The semi-divine beings are said to grant boons; 'they shall give' a boon uses:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ददति (present)</span></li>
+        <li class=""><span class="lab">B</span><span>अदुः (past)</span></li>
+        <li class="correct"><span class="lab">C</span><span>दास्यन्ति (future)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>दत्तवन्तः</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>'They shall give a boon' uses the future **दास्यन्ति**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">ध्यानेन means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>'by / through meditation' (the means)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>'meditation' (subject)</span></li>
+        <li class=""><span class="lab">C</span><span>'to meditation'</span></li>
+        <li class=""><span class="lab">D</span><span>'of meditation'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>ध्यानेन means **'by / through meditation'** (the means).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">The -एन ending of ध्यानेन / नामकीर्तनेन marks the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>dative ('to')</span></li>
+        <li class=""><span class="lab">B</span><span>ablative ('from')</span></li>
+        <li class="correct"><span class="lab">C</span><span>instrumental ('by/through')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>genitive ('of')</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The -एन ending marks the **instrumental** ('by/through').</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">बुद्धिमन्तः जनाः ध्यानेन नामकीर्तनेन च ईश्वरं स्मरन्ति — here ध्यानेन and नामकीर्तनेन tell us:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>who remembers</span></li>
+        <li class=""><span class="lab">B</span><span>where God is</span></li>
+        <li class=""><span class="lab">C</span><span>whose God it is</span></li>
+        <li class="correct"><span class="lab">D</span><span>the means by which the wise remember God</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>ध्यानेन and नामकीर्तनेन tell us **the means by which the wise remember God**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">'He writes with the hand' (हस्त) would put हस्त in the instrumental as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>हस्तम्</span></li>
+        <li class="correct"><span class="lab">B</span><span>हस्तेन</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>हस्ताय</span></li>
+        <li class=""><span class="lab">D</span><span>हस्तात्</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>'He writes with the hand' puts हस्त in the instrumental: **हस्तेन**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">ईशावास्यम् (ईशा + आवास्यम् / गloss ईश्वरेण व्याप्तम्) means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'made of gold'</span></li>
+        <li class=""><span class="lab">B</span><span>'ruled by a king'</span></li>
+        <li class=""><span class="lab">C</span><span>'without God'</span></li>
+        <li class="correct"><span class="lab">D</span><span>'pervaded by the Lord'</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>ईशावास्यम् (गloss ईश्वरेण व्याप्तम्) means **'pervaded by the Lord'**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">ईश and ईश्वर both come from the root ईश्, which means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'to eat'</span></li>
+        <li class="correct"><span class="lab">B</span><span>'to rule / to own'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>'to sleep'</span></li>
+        <li class=""><span class="lab">D</span><span>'to cross'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>ईश and ईश्वर both come from the root ईश्, meaning **'to rule / to own'**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">Therefore ईश means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the English suffix '-ish'</span></li>
+        <li class=""><span class="lab">B</span><span>a fox</span></li>
+        <li class="correct"><span class="lab">C</span><span>the Lord / ruler</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a flower</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Therefore ईश means **the Lord / ruler** — nothing to do with the English '-ish'.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">ईश्वरेण (in the gloss ईश्वरेण व्याप्तम्) is the instrumental, meaning:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>'by the Lord'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>'to the Lord'</span></li>
+        <li class=""><span class="lab">C</span><span>'of the Lord'</span></li>
+        <li class=""><span class="lab">D</span><span>'from the Lord'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>ईश्वरेण is the instrumental, **'by the Lord'**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">व्याप्तम् ('pervaded') tells us the Lord is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>confined to one temple</span></li>
+        <li class=""><span class="lab">B</span><span>absent</span></li>
+        <li class="correct"><span class="lab">C</span><span>present throughout everything</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>only in the sky</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>व्याप्तम् ('pervaded') tells us the Lord is **present throughout everything**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">सर्वशक्तिमान् = सर्व + शक्ति + -मत्/-मान्, meaning:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>'possessing all power' (omnipotent)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>'having no power'</span></li>
+        <li class=""><span class="lab">C</span><span>'one power only'</span></li>
+        <li class=""><span class="lab">D</span><span>'all knowledge'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>सर्वशक्तिमान् = सर्व + शक्ति + -मान् = **'possessing all power' (omnipotent)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">The suffix -मत्/-वत् (as -मान्) means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'lacking'</span></li>
+        <li class="correct"><span class="lab">B</span><span>'possessing / having'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>'to / for'</span></li>
+        <li class=""><span class="lab">D</span><span>'like'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The suffix -मत्/-वत् (-मान्) means **'possessing / having'**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">By the same suffix, 'all-knowing' (सर्व + ज्ञ) is rendered as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>सर्वशक्तिमान्</span></li>
+        <li class=""><span class="lab">B</span><span>सर्वहीनः</span></li>
+        <li class=""><span class="lab">C</span><span>सर्वतः</span></li>
+        <li class="correct"><span class="lab">D</span><span>सर्वज्ञः (the -ज्ञ form)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>'All-knowing' is rendered **सर्वज्ञः** (the -ज्ञ form).</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">सर्वशक्तिमान्, बुद्धिमान् and बलवान् all share the suffix meaning:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>'possessing (the quality)'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>'lacking'</span></li>
+        <li class=""><span class="lab">C</span><span>'by units of'</span></li>
+        <li class=""><span class="lab">D</span><span>'and'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>सर्वशक्तिमान्, बुद्धिमान् and बलवान् all mean **'possessing (the quality)'**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">आराधनम् means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a stain</span></li>
+        <li class=""><span class="lab">B</span><span>a family</span></li>
+        <li class=""><span class="lab">C</span><span>wealth</span></li>
+        <li class="correct"><span class="lab">D</span><span>worship</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>आराधनम् means **worship**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">ध्यानम् means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>worship by offerings</span></li>
+        <li class="correct"><span class="lab">B</span><span>meditation</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Name-chanting</span></li>
+        <li class=""><span class="lab">D</span><span>a boon</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>ध्यानम् means **meditation**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">नामकीर्तनम् (नाम + कीर्तनम्) means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'family' + 'stain'</span></li>
+        <li class=""><span class="lab">B</span><span>silent sleep</span></li>
+        <li class="correct"><span class="lab">C</span><span>chanting / singing the Name in praise</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>all-power</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>नामकीर्तनम् (नाम + कीर्तनम्) means **chanting / singing the Name in praise**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">The wise respond to the all-pervading Lord with:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>greed and pride</span></li>
+        <li class="correct"><span class="lab">B</span><span>worship, meditation and Name-chanting</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>fear and anger</span></li>
+        <li class=""><span class="lab">D</span><span>laziness</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The wise respond with **worship, meditation and Name-chanting**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">यक्षाः, गन्धर्वाः and किन्नराः are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>full / supreme gods</span></li>
+        <li class=""><span class="lab">B</span><span>ordinary humans</span></li>
+        <li class="correct"><span class="lab">C</span><span>semi-divine beings (attendants of the gods)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>demons (asuras)</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>यक्ष/गन्धर्व/किन्नर are **semi-divine beings (attendants of the gods)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">Calling यक्ष/गन्धर्व/किन्नर 'full gods' is wrong because they rank:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>below the gods (semi-divine)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>above the gods</span></li>
+        <li class=""><span class="lab">C</span><span>as humans</span></li>
+        <li class=""><span class="lab">D</span><span>as demons</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>They rank **below the gods** (semi-divine), not as full gods.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">गन्धर्वाः are especially associated with:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>farming</span></li>
+        <li class=""><span class="lab">B</span><span>war against gods</span></li>
+        <li class=""><span class="lab">C</span><span>trade</span></li>
+        <li class="correct"><span class="lab">D</span><span>celestial music and song</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>गन्धर्वाः are associated with **celestial music and song**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">The verse ईशावास्यमिदं सर्वम् opens which text?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the Ramayana</span></li>
+        <li class=""><span class="lab">B</span><span>the Arthashastra</span></li>
+        <li class=""><span class="lab">C</span><span>a fox fable</span></li>
+        <li class="correct"><span class="lab">D</span><span>the Isha Upanishad (Ishopanishad)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>ईशावास्यमिदं सर्वम् opens the **Isha Upanishad (Ishopanishad)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">Because 'all this is pervaded by the Lord', the verse counsels treating the world with:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>reverence and care</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>contempt</span></li>
+        <li class=""><span class="lab">C</span><span>greed</span></li>
+        <li class=""><span class="lab">D</span><span>indifference</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Since all is pervaded by the Lord, the verse counsels **reverence and care**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">The Upanishad's further counsel (तेन त्यक्तेन भुञ्जीथाः) is to enjoy the world through:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>hoarding</span></li>
+        <li class=""><span class="lab">B</span><span>force</span></li>
+        <li class="correct"><span class="lab">C</span><span>renunciation / non-attachment</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>deceit</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>तेन त्यक्तेन भुञ्जीथाः counsels enjoying the world through **renunciation / non-attachment**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">मा गृधः ('do not covet') warns against:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>meditation</span></li>
+        <li class="correct"><span class="lab">B</span><span>greed for others' wealth</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>singing</span></li>
+        <li class=""><span class="lab">D</span><span>worship</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>मा गृधः ('do not covet') warns against **greed for others' wealth**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">इदम् सर्वम् ('all this') refers to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>one temple only</span></li>
+        <li class=""><span class="lab">B</span><span>nothing</span></li>
+        <li class="correct"><span class="lab">C</span><span>the whole world / everything</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>only the sky</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>इदम् सर्वम् refers to **the whole world / everything**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">The present 'they remember' (स्मरन्ति) differs from the future 'they will remember' which is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>अस्मरन्</span></li>
+        <li class="correct"><span class="lab">B</span><span>स्मरिष्यन्ति</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>स्मरन्तु</span></li>
+        <li class=""><span class="lab">D</span><span>स्मृतवन्तः</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The future of स्मृ ('they will remember') is **स्मरिष्यन्ति**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">The present दीयते/ददाति ('gives') becomes, in the future, 'will give':</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>अदात्</span></li>
+        <li class=""><span class="lab">B</span><span>देयम्</span></li>
+        <li class=""><span class="lab">C</span><span>दत्तम्</span></li>
+        <li class="correct"><span class="lab">D</span><span>दास्यति</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The future 'will give' (from दा) is **दास्यति**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">The future tense answers the question:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>'what will happen?'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>'what happened?'</span></li>
+        <li class=""><span class="lab">C</span><span>'what is happening now?'</span></li>
+        <li class=""><span class="lab">D</span><span>'who?'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The future tense answers **'what will happen?'**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">ईश्वरेण व्याप्तम् uses the instrumental ईश्वरेण to show the Lord as the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>one BY whom all is pervaded (the agent)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>place where all is</span></li>
+        <li class=""><span class="lab">C</span><span>goal of an action</span></li>
+        <li class=""><span class="lab">D</span><span>possessor</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>ईश्वरेण (instrumental) shows the Lord as **the one BY whom all is pervaded (the agent)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">बुद्धिमन्तः जनाः ('wise people') uses बुद्धिमत् in the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>accusative singular</span></li>
+        <li class="correct"><span class="lab">B</span><span>nominative plural ('the wise', as subject)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>instrumental</span></li>
+        <li class=""><span class="lab">D</span><span>vocative</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>बुद्धिमन्तः जनाः is the **nominative plural** ('the wise', as subject).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">The chapter pairs the verse with grammar lessons on:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only the dative</span></li>
+        <li class=""><span class="lab">B</span><span>the six tastes</span></li>
+        <li class=""><span class="lab">C</span><span>ordinals only</span></li>
+        <li class="correct"><span class="lab">D</span><span>the future tense, the instrumental, and the possessive suffix</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The chapter pairs the verse with lessons on **the future tense, the instrumental, and the possessive suffix**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">ब्रह्म (neuter) in this chapter names:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a priest</span></li>
+        <li class=""><span class="lab">B</span><span>the creator-god</span></li>
+        <li class="correct"><span class="lab">C</span><span>the all-pervading impersonal Absolute</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a fox</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>ब्रह्म (neuter) names **the all-pervading impersonal Absolute**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">ब्रह्म (Absolute) differs from ब्रह्मन् and ब्रह्मा by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>colour</span></li>
+        <li class=""><span class="lab">B</span><span>price</span></li>
+        <li class=""><span class="lab">C</span><span>the time of day</span></li>
+        <li class="correct"><span class="lab">D</span><span>gender (and meaning)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>ब्रह्म differs from ब्रह्मन् and ब्रह्मा by **gender (and meaning)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">'By worship' (आराधनेन) and 'by meditation' (ध्यानेन) are both:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>datives</span></li>
+        <li class=""><span class="lab">B</span><span>ablatives</span></li>
+        <li class="correct"><span class="lab">C</span><span>instrumentals of means</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>genitives</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>आराधनेन and ध्यानेन are both **instrumentals of means**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">The future-tense सेविष्यन्ते / सेविष्यन्ति ('they will serve') again shows the marker:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>-इष्य-/-स्य-</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the augment अ-</span></li>
+        <li class=""><span class="lab">C</span><span>-त्वा</span></li>
+        <li class=""><span class="lab">D</span><span>-तुम्</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The future सेविष्यन्ति again shows the marker **-इष्य-/-स्य-**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">'God pervades all' is best matched by the Sanskrit:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>मा गृधः</span></li>
+        <li class="correct"><span class="lab">B</span><span>ईशावास्यमिदं सर्वम्</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>दास्यन्ति</span></li>
+        <li class=""><span class="lab">D</span><span>सर्वशक्तिमान्</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>'God pervades all' matches **ईशावास्यमिदं सर्वम्**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">Which is a FUTURE-tense verb?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>करोति ('he does')</span></li>
+        <li class="correct"><span class="lab">B</span><span>करिष्यति ('he will do')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>अकरोत् ('he did')</span></li>
+        <li class=""><span class="lab">D</span><span>कुरु ('do!')</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>**करिष्यति ('he will do')** is the future-tense verb; करोति is present, अकरोत् past, कुरु imperative.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">Which word-meaning pair is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ईश = the English '-ish'</span></li>
+        <li class=""><span class="lab">B</span><span>नामकीर्तनम् = a stain</span></li>
+        <li class=""><span class="lab">C</span><span>सर्वशक्तिमान् = powerless</span></li>
+        <li class="correct"><span class="lab">D</span><span>ईश = the Lord (root ईश्)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct pair is **ईश = the Lord (root ईश्)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">Which grammar pair is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>दास्यन्ति = present; ध्यानेन = nominative</span></li>
+        <li class=""><span class="lab">B</span><span>दास्यन्ति = past</span></li>
+        <li class="correct"><span class="lab">C</span><span>दास्यन्ति = future ('they shall give'); ध्यानेन = instrumental ('by meditation')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>ध्यानेन = accusative</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct grammar: **दास्यन्ति = future ('they shall give'); ध्यानेन = instrumental ('by meditation')**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">Which suffix-meaning pair is CORRECT?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>-मत्/-वत् = 'possessing'; सर्वशक्तिमान् = all-powerful</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>-मत् = 'lacking'</span></li>
+        <li class=""><span class="lab">C</span><span>सर्वशक्तिमान् = 'powerless'</span></li>
+        <li class=""><span class="lab">D</span><span>-मत् = 'to/for'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct suffix: **-मत्/-वत् = 'possessing'; सर्वशक्तिमान् = all-powerful**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">Which ranking is CORRECT?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>यक्ष/गन्धर्व/किन्नर = semi-divine (below the gods)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>यक्ष/गन्धर्व/किन्नर = supreme gods</span></li>
+        <li class=""><span class="lab">C</span><span>they are demons</span></li>
+        <li class=""><span class="lab">D</span><span>they are ordinary humans</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct ranking: **यक्ष/गन्धर्व/किन्नर = semi-divine (below the gods)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">Which gender–meaning pair is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ब्रह्म = a priest</span></li>
+        <li class=""><span class="lab">B</span><span>ब्रह्मा = the Absolute</span></li>
+        <li class=""><span class="lab">C</span><span>ब्रह्मन् = the creator-god</span></li>
+        <li class="correct"><span class="lab">D</span><span>ब्रह्म (neuter) = the Absolute; ब्रह्मा (masc) = creator-god</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct pair: **ब्रह्म (neuter) = the Absolute; ब्रह्मा (masc) = creator-god**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">The instrumental case is the natural choice for naming:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the object</span></li>
+        <li class=""><span class="lab">B</span><span>the possessor</span></li>
+        <li class="correct"><span class="lab">C</span><span>the means / instrument of an action ('by/with')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the place</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The instrumental names **the means / instrument of an action ('by/with')**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">'The wise remember God BY meditation' — the 'by meditation' part is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ध्यानम् (accusative)</span></li>
+        <li class="correct"><span class="lab">B</span><span>ध्यानेन (instrumental)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>ध्यानाय (dative)</span></li>
+        <li class=""><span class="lab">D</span><span>ध्यानस्य (genitive)</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>'By meditation' is **ध्यानेन (instrumental)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">The future tense of स्मृ in 'they will remember the Lord' is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>स्मरन्ति</span></li>
+        <li class=""><span class="lab">B</span><span>अस्मरन्</span></li>
+        <li class="correct"><span class="lab">C</span><span>स्मरिष्यन्ति</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>स्मरन्तु</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The future 'they will remember' is **स्मरिष्यन्ति**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">The deeper message 'all is pervaded by the Lord' should make a person:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>proud and greedy</span></li>
+        <li class=""><span class="lab">B</span><span>fearful and cruel</span></li>
+        <li class=""><span class="lab">C</span><span>lazy</span></li>
+        <li class="correct"><span class="lab">D</span><span>reverent and non-greedy</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>'All is pervaded by the Lord' should make a person **reverent and non-greedy**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">ईश्वर is to ईश as a fuller form is to its:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>opposite</span></li>
+        <li class="correct"><span class="lab">B</span><span>root-word (both from ईश् 'to rule')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>plural</span></li>
+        <li class=""><span class="lab">D</span><span>past tense</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>ईश्वर is a fuller form built on the same **root-word** (both from ईश् 'to rule').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">सर्वज्ञः ('all-knowing') and सर्वशक्तिमान् ('all-powerful') together describe God as:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>omniscient and omnipotent</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>weak and ignorant</span></li>
+        <li class=""><span class="lab">C</span><span>absent</span></li>
+        <li class=""><span class="lab">D</span><span>human</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>सर्वज्ञः and सर्वशक्तिमान् describe God as **omniscient and omnipotent**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">The central theme of this chapter is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a fox and grapes</span></li>
+        <li class="correct"><span class="lab">B</span><span>the all-pervading presence of the Divine and the reverence it calls for</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>banking</span></li>
+        <li class=""><span class="lab">D</span><span>the rise of empires</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The central theme is **the all-pervading presence of the Divine and the reverence it calls for**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">Putting it together, ईशावास्यम् इदं सर्वम् means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>all this (the whole world) is pervaded by the Lord</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the Lord lives only in temples</span></li>
+        <li class=""><span class="lab">C</span><span>nothing is divine</span></li>
+        <li class=""><span class="lab">D</span><span>the world has no creator</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>ईशावास्यम् इदं सर्वम् means **'all this (the whole world) is pervaded by the Lord'**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">The future दास्यन्ति in 'the gods shall give a boon' tells us the giving is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>already finished</span></li>
+        <li class=""><span class="lab">B</span><span>happening right now</span></li>
+        <li class="correct"><span class="lab">C</span><span>yet to come (future)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a command</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>दास्यन्ति tells us the giving of the boon is **yet to come (future)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">A student claims: 'दास्यन्ति is present tense, and ध्यानेन means "to meditation".' The best correction is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the student is fully correct</span></li>
+        <li class=""><span class="lab">B</span><span>दास्यन्ति is future, but ध्यानेन means 'to meditation'</span></li>
+        <li class=""><span class="lab">C</span><span>दास्यन्ति is present, and ध्यानेन is instrumental</span></li>
+        <li class="correct"><span class="lab">D</span><span>दास्यन्ति is future ('they shall give'), and ध्यानेन is instrumental ('by meditation')</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>दास्यन्ति is future ('they shall give'), and ध्यानेन is instrumental ('by meditation') — the student is wrong on both. --- *End of solutions. Maximum marks: 240.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>
