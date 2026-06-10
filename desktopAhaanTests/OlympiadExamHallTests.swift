@@ -235,9 +235,10 @@ final class OlympiadExamHallTests: XCTestCase {
         // triplets wired — Maths Ch01–Ch15 (15), Science Ch01/Ch02/Ch03/
         // Ch04/Ch05/Ch06/Ch07/Ch08/Ch09/Ch10/Ch13/Ch14/Ch15 (13), Social
         // Science Ssch01/Ssch02/Ssch03/Ssch04 (4) = 32 advanced → 101 total (69 + 32).
+        // 2026-06-11 (Wave 9): + Science Ch11 (Transportation) = 33 advanced → 102 total.
         let papers = OlympiadPaperRegistry.allPapers
-        XCTAssertEqual(papers.count, 101,
-                       "Expected 101 papers total. Got \(papers.count). Update this assertion when Paper 2 lands for a new chapter.")
+        XCTAssertEqual(papers.count, 102,
+                       "Expected 102 papers total. Got \(papers.count). Update this assertion when Paper 2 lands for a new chapter.")
     }
 
     func testFoundationTierIsTheDefault() {
@@ -256,11 +257,11 @@ final class OlympiadExamHallTests: XCTestCase {
         // explicit opt-in). Anchors: Science Ch13 + Maths Ch15. The v8
         // rollout (2026-06-10) wired every on-disk Advanced triplet:
         // Maths Ch01–Ch15 (15), Science Ch01/Ch02/Ch03/Ch04/Ch05/Ch06/
-        // Ch07/Ch08/Ch09/Ch10/Ch13/Ch14/Ch15 (13), Social Science Ssch01/
-        // Ssch02/Ssch03/Ssch04 (4) = 32.
+        // Ch07/Ch08/Ch09/Ch10/Ch11/Ch13/Ch14/Ch15 (14), Social Science Ssch01/
+        // Ssch02/Ssch03/Ssch04 (4) = 33.
         let advanced = OlympiadPaperRegistry.allPapers.filter { $0.tier == .advanced }
-        XCTAssertEqual(advanced.count, 32,
-                       "Expected 32 advanced-tier papers, got \(advanced.count)")
+        XCTAssertEqual(advanced.count, 33,
+                       "Expected 33 advanced-tier papers, got \(advanced.count)")
         let ids = Set(advanced.map { $0.id })
         XCTAssertEqual(ids, ["olympiad_science_ch01_advanced",
                              "olympiad_science_ch02_advanced",
@@ -272,6 +273,7 @@ final class OlympiadExamHallTests: XCTestCase {
                              "olympiad_science_ch08_advanced",
                              "olympiad_science_ch09_advanced",
                              "olympiad_science_ch10_advanced",
+                             "olympiad_science_ch11_advanced",
                              "olympiad_science_ch13_advanced",
                              "olympiad_science_ch14_advanced",
                              "olympiad_science_ch15_advanced",

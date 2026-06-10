@@ -356,7 +356,13 @@ STYLE_BLOCK_BODY = """<link rel="preconnect" href="https://fonts.googleapis.com"
 def derive_title_from_filename(stem: str) -> str:
     """Turn 'Science_Ch01_NutritionInPlants' into 'Nutrition in Plants'.
     Splits on _, drops the subject + chapter prefix, then inserts a
-    space before each interior capital letter. Used by --bulk."""
+    space before each interior capital letter. Used by --bulk.
+
+    A trailing '_Advanced' tier token is rendered as a parenthetical
+    ' (Advanced)' suffix rather than left fused to the last word — so
+    'Science_Ch11_TransportationInAnimalsAndPlants_Advanced' becomes
+    'Transportation in Animals and Plants (Advanced)' instead of the
+    earlier '…Plants_Advanced' artifact that leaked into <title>/<h1>."""
     # Strip "_QuestionPaper" suffix if present (callers may pass either
     # the bare stem or the QuestionPaper-suffixed version).
     if stem.endswith("_QuestionPaper"):
@@ -364,14 +370,19 @@ def derive_title_from_filename(stem: str) -> str:
     parts = stem.split("_")
     if len(parts) < 3:
         return stem
-    # parts: [subject, "ChNN" or "SchNN", camelTitle, …]
-    camel = "_".join(parts[2:])
+    # parts: [subject, "ChNN" or "SchNN", camelTitle, …, maybe "Advanced"]
+    title_parts = parts[2:]
+    suffix = ""
+    if title_parts and title_parts[-1] == "Advanced":
+        title_parts = title_parts[:-1]
+        suffix = " (Advanced)"
+    camel = "_".join(title_parts)
     out = []
     for i, ch in enumerate(camel):
         if i > 0 and ch.isupper() and camel[i - 1].islower():
             out.append(" ")
         out.append(ch)
-    return "".join(out)
+    return "".join(out) + suffix
 
 
 def run_bulk(papers_dir: Path) -> int:

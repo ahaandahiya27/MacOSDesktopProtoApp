@@ -476,6 +476,21 @@ extension OlympiadPaperRegistry {
             suggestedTimeMinutes: 90,
             solvedGuideHTML: "Science_Ch14_ElectricCurrentAndItsEffect_Advanced_SolvedGuide.html",
             tier: .advanced
+        ),
+        OlympiadPaper(
+            id: "olympiad_science_ch11_advanced",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 11,
+            chapterTitle: "Transportation in Animals and Plants",
+            displayTitle: "Transportation in Animals and Plants — Paper 2 (Advanced)",
+            questionPaperMD: "Science_Ch11_TransportationInAnimalsAndPlants_Advanced_QuestionPaper.md",
+            solutionsMD: "Science_Ch11_TransportationInAnimalsAndPlants_Advanced_Solutions.md",
+            questionPaperHTML: "Science_Ch11_TransportationInAnimalsAndPlants.html",
+            questionPaperPDF: "Science_Ch11_TransportationInAnimalsAndPlants.pdf",
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Science_Ch11_TransportationInAnimalsAndPlants_Advanced_SolvedGuide.html",
+            tier: .advanced
         )
     ]
 }

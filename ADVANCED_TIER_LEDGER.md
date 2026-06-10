@@ -66,7 +66,7 @@ Legend: ✅ Advanced triplet complete · ❌ missing · 🟡 in progress
 | Ch08 | Winds, Storms and Cyclones | ✅ |
 | Ch09 | Soil | ✅ |
 | Ch10 | Respiration in Organisms | ✅ |
-| Ch11 | Transportation in Animals and Plants | ❌ |
+| Ch11 | Transportation in Animals and Plants | ✅ |
 | Ch12 | Reproduction in Plants | ❌ |
 | Ch13 | Motion and Time | ✅ (prototype) |
 | Ch14 | Electric Current and Its Effects | ✅ |
@@ -165,5 +165,17 @@ Legend: ✅ Advanced triplet complete · ❌ missing · 🟡 in progress
   `tier: .advanced`, pbxproj regenerated, `OlympiadExamHallTests` → 101 papers /
   69 foundation + 32 advanced). Build + full XCTest GREEN. Coverage: Maths 15/15,
   Science 14/19, Social Science 4/20, Sanskrit 0/15.
+- **2026-06-11 (Wave 9):** **33 / 69** chapters — added Science Ch11
+  (Transportation in Animals and Plants: 60 beyond-grade MCQs on the
+  four-chambered heart and double circulation, the three blood-vessel types,
+  blood components, kidneys/nephrons/excretion, and xylem–phloem transport
+  driven by transpiration). The on-disk triplet had a positional-giveaway
+  answer key (50/60 in slot B); rebalanced to an exact 15/15/15/15 spread with
+  the new deterministic `scripts/rebalance_answer_key.py` (content-preserving
+  option reordering + lockstep solution-key rewrite), then the SolvedGuide was
+  regenerated. Authored + integrated (registry `tier: .advanced`, pbxproj
+  regenerated, `OlympiadExamHallTests` → 102 papers / 69 foundation + 33
+  advanced). Build + full XCTest GREEN. Coverage: Maths 15/15, Science 15/19,
+  Social Science 4/20, Sanskrit 0/15.
 - Flip each cell to ✅ as its commit lands; update the headline count here and in
   `V8_NEXT10H_LEDGER.md`.
