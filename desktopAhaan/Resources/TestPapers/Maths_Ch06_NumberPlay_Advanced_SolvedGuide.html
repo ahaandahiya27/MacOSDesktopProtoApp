@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Number Play_Advanced — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Number Play_Advanced<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">The sum of any seven consecutive odd numbers is always:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>even</span></li>
+        <li class="correct"><span class="lab">B</span><span>odd</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a multiple of 7 only if the first is odd</span></li>
+        <li class=""><span class="lab">D</span><span>divisible by 14</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Seven is an odd count of odd numbers, and an odd count of odds always sums to an odd number.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">The sum of any ten consecutive whole numbers is always:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>odd</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a multiple of 10</span></li>
+        <li class=""><span class="lab">C</span><span>a multiple of 5 only</span></li>
+        <li class=""><span class="lab">D</span><span>even</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The sum of ten consecutive whole numbers starting at n is 10n + (0 + 1 + … + 9) = 10n + 45. Since 10n is even and 45 is odd, the total is always odd.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">The value of (odd × odd) + (odd × odd) is always:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>even</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>odd</span></li>
+        <li class=""><span class="lab">C</span><span>prime</span></li>
+        <li class=""><span class="lab">D</span><span>a multiple of 4</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>odd × odd = odd, and odd + odd = even. So the whole expression is even.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">If a + b is odd, then a and b:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>are both odd</span></li>
+        <li class=""><span class="lab">B</span><span>are both even</span></li>
+        <li class="correct"><span class="lab">C</span><span>have different parity (one odd, one even)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>are equal</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A sum is odd only when one addend is odd and the other even — they must have different parity.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">The product of any three consecutive integers is always:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>odd</span></li>
+        <li class="correct"><span class="lab">B</span><span>even</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>prime</span></li>
+        <li class=""><span class="lab">D</span><span>a multiple of 9</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Among any three consecutive integers at least one is even, so the product is even.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">If n² is even, then n is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>odd</span></li>
+        <li class=""><span class="lab">B</span><span>prime</span></li>
+        <li class=""><span class="lab">C</span><span>zero only</span></li>
+        <li class="correct"><span class="lab">D</span><span>even</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>n² has the same parity as n, so if n² is even then n is even.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">The sum 1 + 2 + 3 + … + 100 equals 5050, which is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>even</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>odd</span></li>
+        <li class=""><span class="lab">C</span><span>prime</span></li>
+        <li class=""><span class="lab">D</span><span>a multiple of 100</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>5050 = 2 × 2525, an even number.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">The sum of the odd numbers 1 + 3 + 5 + … + 49 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>600</span></li>
+        <li class=""><span class="lab">B</span><span>1225</span></li>
+        <li class="correct"><span class="lab">C</span><span>625</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>624</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The sum of the first k odd numbers is k². Here there are 25 odd numbers (1…49), so the sum is 25² = 625.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">Can the sum of five odd numbers equal 20?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Yes, for example 4 + 4 + 4 + 4 + 4</span></li>
+        <li class="correct"><span class="lab">B</span><span>No — the sum of five odd numbers is always odd</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>Yes, always</span></li>
+        <li class=""><span class="lab">D</span><span>Only if one of them is zero</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Five is an odd count of odd numbers, so their sum is always odd; 20 is even, so it is impossible.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">The expression 4n + 3 (for a whole number n) is always:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>even</span></li>
+        <li class=""><span class="lab">B</span><span>a multiple of 3</span></li>
+        <li class=""><span class="lab">C</span><span>prime</span></li>
+        <li class="correct"><span class="lab">D</span><span>odd</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>4n is even, and even + 3 (odd) is odd. So 4n + 3 is always odd.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">The Virahāṅka–Fibonacci sequence runs 1, 2, 3, 5, 8, 13, 21, 34, … . The term after 34 is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>55</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>45</span></li>
+        <li class=""><span class="lab">C</span><span>68</span></li>
+        <li class=""><span class="lab">D</span><span>47</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Add the two previous terms: 21 + 34 = 55.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">The 10th term of 1, 2, 3, 5, 8, 13, 21, … is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>55</span></li>
+        <li class=""><span class="lab">B</span><span>144</span></li>
+        <li class="correct"><span class="lab">C</span><span>89</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>110</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Continue adding pairs: …21, 34, 55, 89. Counting 1,2,3,5,8,13,21,34,55,89, the 10th term is 89.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">The sum of the first six terms 1 + 2 + 3 + 5 + 8 + 13 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>30</span></li>
+        <li class="correct"><span class="lab">B</span><span>32</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>34</span></li>
+        <li class=""><span class="lab">D</span><span>29</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>1 + 2 + 3 + 5 + 8 + 13 = 32.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">A sequence has each term = (previous × 2) + 1, starting at 1: 1, 3, 7, 15, … . The 5th term is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>15</span></li>
+        <li class=""><span class="lab">B</span><span>23</span></li>
+        <li class=""><span class="lab">C</span><span>63</span></li>
+        <li class="correct"><span class="lab">D</span><span>31</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>1 → 3 → 7 → 15 → 31 (each step doubles and adds 1). The 5th term is 31.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">The triangular numbers run 1, 3, 6, 10, 15, … . The 7th triangular number is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>28</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>21</span></li>
+        <li class=""><span class="lab">C</span><span>36</span></li>
+        <li class=""><span class="lab">D</span><span>24</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The nth triangular number is n(n+1)/2; for n = 7 that is 7 × 8 / 2 = 28.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">For the square numbers 1, 4, 9, 16, 25, …, the difference between the 6th and the 5th is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>9</span></li>
+        <li class=""><span class="lab">B</span><span>13</span></li>
+        <li class="correct"><span class="lab">C</span><span>11</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>36</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Consecutive square differences are the odd numbers: 6² − 5² = 36 − 25 = 11.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">In the sequence 2, 5, 10, 17, 26, … (the gaps grow 3, 5, 7, 9, …), the next term is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>35</span></li>
+        <li class="correct"><span class="lab">B</span><span>37</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>36</span></li>
+        <li class=""><span class="lab">D</span><span>38</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The gaps are 3, 5, 7, 9, 11, …; after 26 add 11 to get 37.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">In the square-number sequence 1, 4, 9, 16, …, the number 144 is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>11th term</span></li>
+        <li class=""><span class="lab">B</span><span>14th term</span></li>
+        <li class=""><span class="lab">C</span><span>13th term</span></li>
+        <li class="correct"><span class="lab">D</span><span>12th term</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>144 = 12², so it is the 12th square number.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">In the sequence 3, 6, 12, 24, … (each term doubles), the 6th term is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>96</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>48</span></li>
+        <li class=""><span class="lab">C</span><span>192</span></li>
+        <li class=""><span class="lab">D</span><span>144</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Doubling: 3, 6, 12, 24, 48, 96. The 6th term is 96.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">The sum of the first five triangular numbers 1 + 3 + 6 + 10 + 15 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>30</span></li>
+        <li class=""><span class="lab">B</span><span>40</span></li>
+        <li class="correct"><span class="lab">C</span><span>35</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>45</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>1 + 3 + 6 + 10 + 15 = 35 (this equals the 5th tetrahedral number).</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">A two-digit number equals 6 times the sum of its digits. The number is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>48</span></li>
+        <li class="correct"><span class="lab">B</span><span>54</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>63</span></li>
+        <li class=""><span class="lab">D</span><span>36</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Let the number be 10a + b = 6(a + b) → 4a = 5b → a = 5, b = 4. The number is 54 (and 5 + 4 = 9, 6 × 9 = 54). ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">If a two-digit number AB and its reverse BA add up to 121, then A + B equals:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>12</span></li>
+        <li class=""><span class="lab">B</span><span>10</span></li>
+        <li class=""><span class="lab">C</span><span>22</span></li>
+        <li class="correct"><span class="lab">D</span><span>11</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>AB + BA = (10a + b) + (10b + a) = 11(a + b) = 121, so a + b = 11.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">The smallest three-digit palindrome whose digits add up to 10 is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>181</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>191</span></li>
+        <li class=""><span class="lab">C</span><span>280</span></li>
+        <li class=""><span class="lab">D</span><span>226</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A palindrome aba has digit sum 2a + b = 10; the smallest three-digit value takes the smallest a = 1, giving b = 8 → 181.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">In the cryptarithm T + T + T = "UT" (a two-digit number whose units digit is T), the digit T is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0</span></li>
+        <li class=""><span class="lab">B</span><span>9</span></li>
+        <li class="correct"><span class="lab">C</span><span>5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>3</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>3T must end in T, so 2T is a multiple of 10 → T = 0 or 5. T = 5 works: 5 + 5 + 5 = 15, whose units digit is 5. So T = 5.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">The largest three-digit number with all different digits is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>999</span></li>
+        <li class="correct"><span class="lab">B</span><span>987</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>978</span></li>
+        <li class=""><span class="lab">D</span><span>989</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Use the largest distinct digits in order: 9, 8, 7 → 987.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">The smallest four-digit number using each of the digits 0, 1, 2, 3 exactly once is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1230</span></li>
+        <li class=""><span class="lab">B</span><span>1032</span></li>
+        <li class=""><span class="lab">C</span><span>1203</span></li>
+        <li class="correct"><span class="lab">D</span><span>1023</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The leading digit can't be 0; smallest non-zero is 1, then ascending 0, 2, 3 → 1023.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">A two-digit number exceeds its reverse by 36. The difference of its two digits is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>4</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>3</span></li>
+        <li class=""><span class="lab">C</span><span>6</span></li>
+        <li class=""><span class="lab">D</span><span>2</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(10a + b) − (10b + a) = 9(a − b) = 36, so a − b = 4.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">The number of two-digit palindromes (numbers equal to their reverse) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>10</span></li>
+        <li class=""><span class="lab">B</span><span>8</span></li>
+        <li class="correct"><span class="lab">C</span><span>9</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>11</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Two-digit palindromes are 11, 22, …, 99 — exactly 9 of them.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">The sum of any two-digit number and the number formed by reversing its digits is always divisible by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>9</span></li>
+        <li class="correct"><span class="lab">B</span><span>11</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>10</span></li>
+        <li class=""><span class="lab">D</span><span>5</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A number plus its reverse is 11(a + b), always divisible by 11.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">The difference between any three-digit number and its reverse is always divisible by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>11</span></li>
+        <li class=""><span class="lab">B</span><span>90</span></li>
+        <li class=""><span class="lab">C</span><span>100</span></li>
+        <li class="correct"><span class="lab">D</span><span>99</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A three-digit number minus its reverse is 99(a − c), always divisible by 99.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">Which of these numbers is divisible by 3?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>5412</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>5413</span></li>
+        <li class=""><span class="lab">C</span><span>5414</span></li>
+        <li class=""><span class="lab">D</span><span>5411</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Digit sum of 5412 is 5 + 4 + 1 + 2 = 12, which is divisible by 3, so 5412 is.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">Which of these numbers is divisible by 9?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>730</span></li>
+        <li class=""><span class="lab">B</span><span>731</span></li>
+        <li class="correct"><span class="lab">C</span><span>729</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>728</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Digit sum of 729 is 18, divisible by 9, so 729 is divisible by 9.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">A number divisible by both 2 and 3 must be divisible by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5</span></li>
+        <li class="correct"><span class="lab">B</span><span>6</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>12</span></li>
+        <li class=""><span class="lab">D</span><span>8</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A multiple of both 2 and 3 is a multiple of their LCM, 6.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">The smallest number that must be added to 1234 to make it divisible by 9 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5</span></li>
+        <li class=""><span class="lab">B</span><span>2</span></li>
+        <li class=""><span class="lab">C</span><span>1</span></li>
+        <li class="correct"><span class="lab">D</span><span>8</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>1234 has digit sum 10, so 1234 ≡ 1 (mod 9); adding 8 makes the digit sum 18 (1242 = 9 × 138).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">Which of these is divisible by 5?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>255</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>132</span></li>
+        <li class=""><span class="lab">C</span><span>244</span></li>
+        <li class=""><span class="lab">D</span><span>318</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A multiple of 5 ends in 0 or 5; only 255 qualifies.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">Which of these is divisible by 4?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1314</span></li>
+        <li class=""><span class="lab">B</span><span>1315</span></li>
+        <li class="correct"><span class="lab">C</span><span>1316</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>1318</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Divisible by 4 means the last two digits form a multiple of 4; 16 (in 1316) is, the others aren't.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">The largest two-digit multiple of 7 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>91</span></li>
+        <li class="correct"><span class="lab">B</span><span>98</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>84</span></li>
+        <li class=""><span class="lab">D</span><span>95</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>7 × 14 = 98 is the largest two-digit multiple of 7 (next is 105).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">The smallest three-digit number divisible by 11 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>121</span></li>
+        <li class=""><span class="lab">B</span><span>99</span></li>
+        <li class=""><span class="lab">C</span><span>100</span></li>
+        <li class="correct"><span class="lab">D</span><span>110</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>11 × 10 = 110 is the smallest three-digit multiple of 11.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">How many numbers from 1 to 100 are divisible by 3?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>33</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>30</span></li>
+        <li class=""><span class="lab">C</span><span>34</span></li>
+        <li class=""><span class="lab">D</span><span>25</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>⌊100 ÷ 3⌋ = 33 (the multiples 3, 6, …, 99).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">A number divisible by 10 must end in:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5</span></li>
+        <li class=""><span class="lab">B</span><span>1</span></li>
+        <li class="correct"><span class="lab">C</span><span>0</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>2</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A multiple of 10 always ends in 0.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">In a 3×3 magic square that uses the numbers 1 to 9, the centre cell is always:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1</span></li>
+        <li class="correct"><span class="lab">B</span><span>5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>9</span></li>
+        <li class=""><span class="lab">D</span><span>7</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In a 1–9 magic square the centre equals the magic sum ÷ 3 = 15 ÷ 3 = 5.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">In that same 3×3 magic square, each row, column and diagonal sums to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>45</span></li>
+        <li class=""><span class="lab">B</span><span>9</span></li>
+        <li class=""><span class="lab">C</span><span>27</span></li>
+        <li class="correct"><span class="lab">D</span><span>15</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The numbers 1–9 total 45; spread equally over 3 rows gives 45 ÷ 3 = 15 per line.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">Apply "even → halve, odd → triple-and-add-one" starting at 6 until you reach 1 (6, 3, 10, 5, 16, 8, 4, 2, 1). The number of steps taken is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>8</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>6</span></li>
+        <li class=""><span class="lab">C</span><span>7</span></li>
+        <li class=""><span class="lab">D</span><span>9</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>6 → 3 → 10 → 5 → 16 → 8 → 4 → 2 → 1 is 8 arrows, i.e. 8 steps.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">The number of factors of 36 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>6</span></li>
+        <li class=""><span class="lab">B</span><span>12</span></li>
+        <li class="correct"><span class="lab">C</span><span>9</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>8</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>36 = 2² × 3², so it has (2 + 1)(2 + 1) = 9 factors.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">The number of factors of 100 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>6</span></li>
+        <li class="correct"><span class="lab">B</span><span>9</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>12</span></li>
+        <li class=""><span class="lab">D</span><span>10</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>100 = 2² × 5², giving (2 + 1)(2 + 1) = 9 factors.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">A perfect number equals the sum of its proper factors. Which of these is perfect?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4</span></li>
+        <li class=""><span class="lab">B</span><span>8</span></li>
+        <li class=""><span class="lab">C</span><span>10</span></li>
+        <li class="correct"><span class="lab">D</span><span>6</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>6's proper factors 1 + 2 + 3 = 6, so 6 is a perfect number.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">The next palindrome after 191 is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>202</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>200</span></li>
+        <li class=""><span class="lab">C</span><span>212</span></li>
+        <li class=""><span class="lab">D</span><span>199</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The next palindrome after 191 is 202 (jump past 199, 200, 201).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">The sum of the first 12 odd numbers (1 + 3 + 5 + … + 23) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>132</span></li>
+        <li class=""><span class="lab">B</span><span>169</span></li>
+        <li class="correct"><span class="lab">C</span><span>144</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>121</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The sum of the first 12 odd numbers is 12² = 144.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">The product 1 × 2 × 3 × 4 × 5 equals:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>15</span></li>
+        <li class="correct"><span class="lab">B</span><span>120</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>60</span></li>
+        <li class=""><span class="lab">D</span><span>240</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>1 × 2 × 3 × 4 × 5 = 120 (this is 5!).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">Which of these is a prime number?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>51</span></li>
+        <li class=""><span class="lab">B</span><span>57</span></li>
+        <li class=""><span class="lab">C</span><span>91</span></li>
+        <li class="correct"><span class="lab">D</span><span>53</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>51 = 3 × 17, 57 = 3 × 19, 91 = 7 × 13, but 53 has no factors other than 1 and itself — 53 is prime.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">The number of zeros at the end of 1 × 2 × 3 × … × 10 is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>2</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>1</span></li>
+        <li class=""><span class="lab">C</span><span>3</span></li>
+        <li class=""><span class="lab">D</span><span>0</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Trailing zeros count the factors of 5 in 1×…×10: from 5 and 10, that's two. So 10! ends in 2 zeros.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">A two-digit number has its tens digit twice the units digit, and the digits add to 9. The number is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>36</span></li>
+        <li class=""><span class="lab">B</span><span>81</span></li>
+        <li class="correct"><span class="lab">C</span><span>63</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>18</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Tens = 2 × units and 2u + u = 9 → u = 3, tens = 6 → 63.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">The smallest number divisible by each of 2, 3, 4, 5 and 6 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>120</span></li>
+        <li class="correct"><span class="lab">B</span><span>60</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>30</span></li>
+        <li class=""><span class="lab">D</span><span>360</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>LCM(2, 3, 4, 5, 6) = 60.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">The sum of the digits of 2¹⁰ (= 1024) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>10</span></li>
+        <li class=""><span class="lab">B</span><span>8</span></li>
+        <li class=""><span class="lab">C</span><span>16</span></li>
+        <li class="correct"><span class="lab">D</span><span>7</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>1024 → 1 + 0 + 2 + 4 = 7.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">How many times does the digit 1 appear when you write the numbers from 1 to 20?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>12</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>10</span></li>
+        <li class=""><span class="lab">C</span><span>11</span></li>
+        <li class=""><span class="lab">D</span><span>13</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Count the digit 1 in 1–20: units give 1, 11, 21(out) → 1, 11 (two); tens give 10–19 (ten). Total = 2 + 10 = 12.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">The largest prime number less than 50 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>49</span></li>
+        <li class=""><span class="lab">B</span><span>43</span></li>
+        <li class="correct"><span class="lab">C</span><span>47</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>45</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>47 is prime; 49 = 7², 45 and (48) are composite. The largest prime below 50 is 47.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">The number of common factors of 24 and 36 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4</span></li>
+        <li class="correct"><span class="lab">B</span><span>6</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>12</span></li>
+        <li class=""><span class="lab">D</span><span>8</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Common factors of 24 and 36 are the factors of HCF = 12, and 12 has 6 factors (1,2,3,4,6,12).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">The digit sum of the number 11111 (five ones) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>11</span></li>
+        <li class=""><span class="lab">B</span><span>1</span></li>
+        <li class=""><span class="lab">C</span><span>55</span></li>
+        <li class="correct"><span class="lab">D</span><span>5</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>1 + 1 + 1 + 1 + 1 = 5.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">The 100th even number is 200 and the 100th odd number is 199. Their difference is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>1</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>100</span></li>
+        <li class=""><span class="lab">C</span><span>99</span></li>
+        <li class=""><span class="lab">D</span><span>2</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>200 − 199 = 1.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">The three-digit palindrome between 100 and 200 whose digits add up to 4 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>202</span></li>
+        <li class=""><span class="lab">B</span><span>111</span></li>
+        <li class="correct"><span class="lab">C</span><span>121</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>131</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A palindrome 1b1 has digit sum 2 + b = 4 → b = 2, giving 121. --- *End of solutions. Maximum marks: 240.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>
