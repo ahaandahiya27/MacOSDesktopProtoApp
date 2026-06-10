@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Geometric Twins_Advanced — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Geometric Twins_Advanced<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">Two figures are congruent when they have the same shape and the same:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>colour</span></li>
+        <li class=""><span class="lab">B</span><span>position</span></li>
+        <li class="correct"><span class="lab">C</span><span>size</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>name</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Congruent figures match in both shape and size.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">Which of these is NOT a valid triangle congruence criterion?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>AAA</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>SSS</span></li>
+        <li class=""><span class="lab">C</span><span>SAS</span></li>
+        <li class=""><span class="lab">D</span><span>ASA</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>AAA fixes only the shape (similarity), not the size, so it is not a congruence rule.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">The SAS criterion requires the angle to be:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>any angle</span></li>
+        <li class=""><span class="lab">B</span><span>a right angle</span></li>
+        <li class=""><span class="lab">C</span><span>the largest angle</span></li>
+        <li class="correct"><span class="lab">D</span><span>the included angle (between the two sides)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>SAS works only when the known angle lies between the two known sides — the included angle.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">The RHS criterion applies to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>all triangles</span></li>
+        <li class="correct"><span class="lab">B</span><span>right-angled triangles</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>equilateral triangles</span></li>
+        <li class=""><span class="lab">D</span><span>obtuse triangles</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>RHS (right angle–hypotenuse–side) is for right-angled triangles.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">The ASA criterion matches two angles and the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>longest side</span></li>
+        <li class=""><span class="lab">B</span><span>any side</span></li>
+        <li class="correct"><span class="lab">C</span><span>included side</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>hypotenuse</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>ASA uses two angles and the side lying between them — the included side.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">The SSS criterion matches:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>all three sides</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>two sides and an angle</span></li>
+        <li class=""><span class="lab">C</span><span>three angles</span></li>
+        <li class=""><span class="lab">D</span><span>two angles and a side</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>SSS matches all three pairs of sides.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">Two triangles with equal angles but different sizes are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>congruent</span></li>
+        <li class=""><span class="lab">B</span><span>equal</span></li>
+        <li class=""><span class="lab">C</span><span>identical</span></li>
+        <li class="correct"><span class="lab">D</span><span>similar but not congruent</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Equal angles but different sizes make the triangles similar, not congruent.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">The symbol used for "is congruent to" is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>=</span></li>
+        <li class="correct"><span class="lab">B</span><span>≅</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>~</span></li>
+        <li class=""><span class="lab">D</span><span>≈</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The congruence symbol is ≅.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">If △ABC ≅ △DEF, then side AB corresponds to side:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>EF</span></li>
+        <li class=""><span class="lab">B</span><span>DF</span></li>
+        <li class="correct"><span class="lab">C</span><span>DE</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>FE</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In △ABC ≅ △DEF the order of letters pairs A↔D, B↔E, so AB ↔ DE.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">CPCT tells us that corresponding parts of congruent triangles are:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>equal</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>similar only</span></li>
+        <li class=""><span class="lab">C</span><span>proportional</span></li>
+        <li class=""><span class="lab">D</span><span>supplementary</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>CPCT: corresponding parts of congruent triangles are equal.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">Is SSA a valid congruence criterion in general?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>yes, always</span></li>
+        <li class=""><span class="lab">B</span><span>yes, for acute triangles</span></li>
+        <li class=""><span class="lab">C</span><span>yes, for isosceles triangles</span></li>
+        <li class="correct"><span class="lab">D</span><span>no</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>SSA is not a general congruence rule (the angle isn't between the two sides).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">Two line segments are congruent when they have:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the same midpoint</span></li>
+        <li class="correct"><span class="lab">B</span><span>equal length</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the same colour</span></li>
+        <li class=""><span class="lab">D</span><span>the same direction</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Segments are congruent exactly when their lengths are equal.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">Triangles with sides (5, 6, 7) and (5, 6, 7) are congruent by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ASA</span></li>
+        <li class=""><span class="lab">B</span><span>RHS</span></li>
+        <li class="correct"><span class="lab">C</span><span>SSS</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>AAA</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>All three sides match, so the triangles are congruent by SSS.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">Two triangles each have sides 4 and 5 with a 60° angle between them. They are congruent by:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>SAS</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>SSS</span></li>
+        <li class=""><span class="lab">C</span><span>ASA</span></li>
+        <li class=""><span class="lab">D</span><span>AAA</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Two sides and the angle between them match — SAS.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">If △ABC ≅ △PQR and ∠A = 50°, then ∠P is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>40°</span></li>
+        <li class=""><span class="lab">B</span><span>130°</span></li>
+        <li class=""><span class="lab">C</span><span>90°</span></li>
+        <li class="correct"><span class="lab">D</span><span>50°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Corresponding angles are equal, so ∠P = ∠A = 50°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">If △ABC ≅ △DEF and BC = 8, then EF is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4</span></li>
+        <li class="correct"><span class="lab">B</span><span>8</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>16</span></li>
+        <li class=""><span class="lab">D</span><span>cannot tell</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Corresponding sides are equal: EF = BC = 8.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">Two right triangles have equal hypotenuses and one equal leg. They are congruent by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>SSS</span></li>
+        <li class=""><span class="lab">B</span><span>SAS</span></li>
+        <li class="correct"><span class="lab">C</span><span>RHS</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>AAA</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Equal hypotenuse and one equal leg in right triangles is the RHS case.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">Two triangles each have angles 40° and 60° with the 5-unit side between them. They are congruent by:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>ASA</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>SAS</span></li>
+        <li class=""><span class="lab">C</span><span>SSS</span></li>
+        <li class=""><span class="lab">D</span><span>RHS</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Two angles with the side between them match — ASA.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">Two circles are congruent when they have equal:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>areas only</span></li>
+        <li class=""><span class="lab">B</span><span>centres</span></li>
+        <li class=""><span class="lab">C</span><span>circumferences only</span></li>
+        <li class="correct"><span class="lab">D</span><span>radii</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Circles are congruent when their radii are equal.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">Two squares are congruent when they have equal:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>colours</span></li>
+        <li class="correct"><span class="lab">B</span><span>sides</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>diagonals only</span></li>
+        <li class=""><span class="lab">D</span><span>positions</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Squares are congruent when their side lengths are equal.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">If △ABC ≅ △XYZ, then ∠C corresponds to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>∠X</span></li>
+        <li class=""><span class="lab">B</span><span>∠Y</span></li>
+        <li class="correct"><span class="lab">C</span><span>∠Z</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>∠A</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A↔X, B↔Y, C↔Z, so ∠C corresponds to ∠Z.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">Two triangles each with sides 3, 4 and 5 are:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>congruent (SSS)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>only similar</span></li>
+        <li class=""><span class="lab">C</span><span>not comparable</span></li>
+        <li class=""><span class="lab">D</span><span>congruent only if drawn the same way up</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Identical side triples 3, 4, 5 give congruence by SSS.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">Triangles having all three angles equal (AAA) are always:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>congruent</span></li>
+        <li class=""><span class="lab">B</span><span>right-angled</span></li>
+        <li class=""><span class="lab">C</span><span>the same triangle</span></li>
+        <li class="correct"><span class="lab">D</span><span>similar, but not necessarily congruent</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>AAA guarantees only the same shape — similar, not necessarily congruent.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">If △ABC ≅ △DEF and the perimeter of △ABC is 24, the perimeter of △DEF is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>12</span></li>
+        <li class="correct"><span class="lab">B</span><span>24</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>48</span></li>
+        <li class=""><span class="lab">D</span><span>cannot tell</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Congruent triangles have equal corresponding sides, hence equal perimeters: 24.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">The RHS congruence rule applies only to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>scalene triangles</span></li>
+        <li class=""><span class="lab">B</span><span>isosceles triangles</span></li>
+        <li class="correct"><span class="lab">C</span><span>right-angled triangles</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>equilateral triangles</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>RHS is a congruence test reserved for right-angled triangles.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">In an isosceles triangle ABC with AB = AC, the two equal angles are:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>∠B and ∠C</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>∠A and ∠B</span></li>
+        <li class=""><span class="lab">C</span><span>∠A and ∠C</span></li>
+        <li class=""><span class="lab">D</span><span>all three</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Angles opposite the equal sides AB and AC are ∠C and ∠B respectively, so ∠B = ∠C.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">In a triangle with AB = AC and ∠B = 70°, the vertex angle ∠A is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>70°</span></li>
+        <li class=""><span class="lab">B</span><span>110°</span></li>
+        <li class=""><span class="lab">C</span><span>55°</span></li>
+        <li class="correct"><span class="lab">D</span><span>40°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Base angles are 70° each, so ∠A = 180° − 70° − 70° = 40°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">The median drawn to the base of an isosceles triangle is also its:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>longest side</span></li>
+        <li class="correct"><span class="lab">B</span><span>altitude</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>hypotenuse</span></li>
+        <li class=""><span class="lab">D</span><span>exterior angle</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In an isosceles triangle the median to the base is also the altitude (and bisector).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">In an equilateral triangle, the three medians are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>perpendicular only</span></li>
+        <li class=""><span class="lab">B</span><span>parallel</span></li>
+        <li class="correct"><span class="lab">C</span><span>equal in length</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>unequal</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>By symmetry the three medians of an equilateral triangle are equal.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">If two angles of a triangle are equal, the sides opposite them are:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>equal</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>perpendicular</span></li>
+        <li class=""><span class="lab">C</span><span>supplementary</span></li>
+        <li class=""><span class="lab">D</span><span>in ratio 2 : 1</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The side-angle converse: equal angles force the opposite sides to be equal.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">An isosceles triangle has a line of symmetry along the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>base</span></li>
+        <li class=""><span class="lab">B</span><span>longest side</span></li>
+        <li class=""><span class="lab">C</span><span>median to a leg</span></li>
+        <li class="correct"><span class="lab">D</span><span>altitude from the apex</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The axis of symmetry runs along the altitude from the apex to the base.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">The base angles of an isosceles triangle whose vertex angle is 80° are each:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>80°</span></li>
+        <li class="correct"><span class="lab">B</span><span>50°</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>100°</span></li>
+        <li class=""><span class="lab">D</span><span>40°</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Base angles share 180° − 80° = 100°, so each is 50°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">In △ABC with AB = AC, the altitude from A bisects:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>∠B</span></li>
+        <li class=""><span class="lab">B</span><span>side AB</span></li>
+        <li class="correct"><span class="lab">C</span><span>side BC</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>side AC</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The altitude from the apex of an isosceles triangle bisects the base BC.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">Two congruent triangles always have equal:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>areas</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>positions</span></li>
+        <li class=""><span class="lab">C</span><span>colours</span></li>
+        <li class=""><span class="lab">D</span><span>orientations</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Congruent triangles are identical in size, hence equal in area.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">If △ABC ≅ △DEF and the area of △ABC is 12, the area of △DEF is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>6</span></li>
+        <li class=""><span class="lab">B</span><span>24</span></li>
+        <li class=""><span class="lab">C</span><span>144</span></li>
+        <li class="correct"><span class="lab">D</span><span>12</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Equal triangles have equal areas: 12.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">An equilateral triangle has how many lines of symmetry?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1</span></li>
+        <li class="correct"><span class="lab">B</span><span>3</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>0</span></li>
+        <li class=""><span class="lab">D</span><span>2</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An equilateral triangle has 3 lines of symmetry.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">The number of equal parts you must match to prove congruence by SSS is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1</span></li>
+        <li class=""><span class="lab">B</span><span>2</span></li>
+        <li class="correct"><span class="lab">C</span><span>3</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>6</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>SSS needs the three pairs of sides matched.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">If △PQR ≅ △STU, then side QR equals side:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>TU</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>ST</span></li>
+        <li class=""><span class="lab">C</span><span>SU</span></li>
+        <li class=""><span class="lab">D</span><span>US</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Q↔T, R↔U, so QR corresponds to TU.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">Congruent figures are always:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the same colour</span></li>
+        <li class=""><span class="lab">B</span><span>larger than each other</span></li>
+        <li class=""><span class="lab">C</span><span>in the same place</span></li>
+        <li class="correct"><span class="lab">D</span><span>similar</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Congruent figures have the same shape, so they are necessarily similar.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">Similar figures are always congruent. This statement is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>true</span></li>
+        <li class="correct"><span class="lab">B</span><span>false</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>true only for triangles</span></li>
+        <li class=""><span class="lab">D</span><span>true only for circles</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Similar figures can differ in size, so they need not be congruent — the statement is false.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">Two angles are congruent when they have equal:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>arms</span></li>
+        <li class=""><span class="lab">B</span><span>vertices</span></li>
+        <li class="correct"><span class="lab">C</span><span>measure</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>names</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Angles are congruent when their measures are equal.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">All radii of the same circle are:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>congruent</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>unequal</span></li>
+        <li class=""><span class="lab">C</span><span>perpendicular</span></li>
+        <li class=""><span class="lab">D</span><span>parallel</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>All radii of one circle have the same length, so they are congruent.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">The number of standard congruence criteria for triangles (SSS, SAS, ASA, RHS) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2</span></li>
+        <li class=""><span class="lab">B</span><span>3</span></li>
+        <li class=""><span class="lab">C</span><span>5</span></li>
+        <li class="correct"><span class="lab">D</span><span>4</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>There are four standard rules: SSS, SAS, ASA and RHS.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">"Any two equilateral triangles are congruent." This statement is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>always true</span></li>
+        <li class="correct"><span class="lab">B</span><span>false (only if their sides are equal)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>true only for small ones</span></li>
+        <li class=""><span class="lab">D</span><span>true only for large ones</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Equilateral triangles share a shape but can differ in size, so the claim is false unless their sides are equal.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">Two equilateral triangles with the same side length are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only similar</span></li>
+        <li class=""><span class="lab">B</span><span>unequal</span></li>
+        <li class="correct"><span class="lab">C</span><span>congruent</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>impossible</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Same side length plus equilateral shape gives congruence (by SSS).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">A diagonal of a rectangle divides it into two:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>congruent triangles</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>similar but unequal triangles</span></li>
+        <li class=""><span class="lab">C</span><span>equilateral triangles</span></li>
+        <li class=""><span class="lab">D</span><span>right isosceles triangles</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A rectangle's diagonal splits it into two congruent triangles.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">A diagonal of a square divides it into two congruent:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>equilateral triangles</span></li>
+        <li class=""><span class="lab">B</span><span>scalene triangles</span></li>
+        <li class=""><span class="lab">C</span><span>obtuse triangles</span></li>
+        <li class="correct"><span class="lab">D</span><span>right isosceles triangles</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A square's diagonal makes two congruent right isosceles triangles (legs equal, with a right angle).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">Two triangles congruent by ASA have all three:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sides only equal</span></li>
+        <li class="correct"><span class="lab">B</span><span>corresponding sides and angles equal</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>angles equal but sides unknown</span></li>
+        <li class=""><span class="lab">D</span><span>areas different</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>ASA congruence guarantees all corresponding sides and angles are equal.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">If △ABC ≅ △ACB (the same triangle, relabeled), then AB = AC, so the triangle is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>right-angled</span></li>
+        <li class=""><span class="lab">B</span><span>scalene</span></li>
+        <li class="correct"><span class="lab">C</span><span>isosceles</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>obtuse</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correspondence forces AB = AC, so the triangle is isosceles.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">A figure produced by reflecting a triangle in a mirror line is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>congruent to the original</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>larger than the original</span></li>
+        <li class=""><span class="lab">C</span><span>smaller than the original</span></li>
+        <li class=""><span class="lab">D</span><span>similar but not congruent</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A mirror reflection keeps shape and size, so the image is congruent to the original.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">△ABC ≅ △DEF with AB = DE = 5, BC = EF = 7 and ∠B = ∠E = 60°. The criterion is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ASA</span></li>
+        <li class=""><span class="lab">B</span><span>SSS</span></li>
+        <li class=""><span class="lab">C</span><span>RHS</span></li>
+        <li class="correct"><span class="lab">D</span><span>SAS</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Two sides and the included angle (∠B between AB and BC) match — SAS.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">△ABC ≅ △DEF with ∠A = ∠D = 40°, ∠B = ∠E = 60° and AB = DE = 6. The criterion is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>SAS</span></li>
+        <li class="correct"><span class="lab">B</span><span>ASA</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>SSS</span></li>
+        <li class=""><span class="lab">D</span><span>AAA</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Two angles and the included side AB match — ASA.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">△ABC ≅ △DEF with all corresponding sides 4, 5, 6 equal. The criterion is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ASA</span></li>
+        <li class=""><span class="lab">B</span><span>RHS</span></li>
+        <li class="correct"><span class="lab">C</span><span>SSS</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>SAS</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>All three pairs of sides match — SSS.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">Two right triangles each have hypotenuse 13 and one leg 5. The other leg is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>12</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>8</span></li>
+        <li class=""><span class="lab">C</span><span>18</span></li>
+        <li class=""><span class="lab">D</span><span>144</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>By Pythagoras the other leg is √(13² − 5²) = √(169 − 25) = √144 = 12.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">△ABC ≅ △DEF with ∠A = ∠D = 90° and ∠B = ∠E = 30°. Then ∠C = ∠F is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>30°</span></li>
+        <li class=""><span class="lab">B</span><span>90°</span></li>
+        <li class=""><span class="lab">C</span><span>120°</span></li>
+        <li class="correct"><span class="lab">D</span><span>60°</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>∠C = 180° − 90° − 30° = 60°.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">Two triangles with sides 6, 6, 6 and 6, 6, 6 are congruent, and each is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>scalene</span></li>
+        <li class="correct"><span class="lab">B</span><span>equilateral</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>right-angled</span></li>
+        <li class=""><span class="lab">D</span><span>obtuse</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Three equal sides make each triangle equilateral.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">△ABC ≅ △PQR with AB = 2x and PQ = 10. Then x is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>20</span></li>
+        <li class=""><span class="lab">B</span><span>10</span></li>
+        <li class="correct"><span class="lab">C</span><span>5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>2</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Corresponding sides equal: 2x = 10 → x = 5.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">△ABC ≅ △DEF with ∠A = 3y and ∠D = 60°. Then y is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>20</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>60</span></li>
+        <li class=""><span class="lab">C</span><span>180</span></li>
+        <li class=""><span class="lab">D</span><span>30</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Corresponding angles equal: 3y = 60° → y = 20.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">Congruent copies of one triangle always share the same:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>position</span></li>
+        <li class=""><span class="lab">B</span><span>colour</span></li>
+        <li class=""><span class="lab">C</span><span>orientation</span></li>
+        <li class="correct"><span class="lab">D</span><span>shape and size</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Congruent copies share the same shape and size (position and orientation may differ).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">CPCT may be used to conclude parts are equal only AFTER the two triangles are proved:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>similar</span></li>
+        <li class="correct"><span class="lab">B</span><span>congruent</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>isosceles</span></li>
+        <li class=""><span class="lab">D</span><span>right-angled</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>CPCT applies only once the triangles have been proved congruent. --- *End of solutions. Maximum marks: 240.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>
