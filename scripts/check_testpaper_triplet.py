@@ -24,14 +24,20 @@ because an empty Solutions.md passes a bare `os.path.exists` check while
 still dead-ending the kid.
 
 Usage:
-    python3 scripts/check_testpaper_triplet.py            # audit the repo
+    python3 scripts/check_testpaper_triplet.py             # audit the whole repo
+    python3 scripts/check_testpaper_triplet.py FILE [...]  # audit only these files
     python3 scripts/check_testpaper_triplet.py --selftest  # fixture self-test
 
 Exit 0 = clean, 1 = violation.
 
-Wired into scripts/ci-build-test.sh (always) and the pre-commit hook (only
-when a TestPapers file is staged). See ADVANCED_TIER_LEDGER.md for the
-per-chapter coverage table this lint sources.
+Wired into scripts/ci-build-test.sh (whole-repo scan — the push/CI gate) and the
+pre-commit hook (scoped to the staged TestPapers files only). The scoped mode
+matters under concurrent authoring: a pre-commit hook should validate the triplet
+of what *this* commit touches, not fail because some unrelated paper is mid-flight
+in the working tree (e.g. another author has just dropped a QuestionPaper.md and
+hasn't written its Solutions.md yet). The full-tree scan in ci-build-test.sh still
+catches any genuine orphan before it reaches origin. See ADVANCED_TIER_LEDGER.md
+for the per-chapter coverage table this lint sources.
 """
 from __future__ import annotations
 
@@ -86,6 +92,56 @@ def audit_stream(root_abs: str, root_label: str, requires_guide: bool) -> list[s
                 errors.append(
                     f"{root_label}/{qp}: missing or empty {stem}_SolvedGuide.html"
                 )
+    return errors
+
+
+def _stream_for(path_abs: str) -> tuple[str, str, bool] | None:
+    """Map an absolute file path to its (root_abs, root_label, requires_guide)
+    stream, or None if it isn't under a known TestPapers stream."""
+    norm = os.path.normpath(path_abs)
+    for rel, requires_guide in STREAMS:
+        root_abs = os.path.normpath(os.path.join(REPO, rel))
+        if norm == root_abs or norm.startswith(root_abs + os.sep):
+            return (root_abs, rel, requires_guide)
+    return None
+
+
+def audit_paths(paths: list[str]) -> list[str]:
+    """Scoped audit: validate only the triplets implicated by `paths`.
+
+    Each path is reduced to its triplet stem (stripping the _QuestionPaper.md /
+    _Solutions.md / _SolvedGuide.html suffix), de-duplicated, and checked. Paths
+    outside a TestPapers stream are ignored. Used by the pre-commit hook so a
+    commit is judged on its own files, not on unrelated mid-flight papers.
+    """
+    suffixes = ("_QuestionPaper.md", "_Solutions.md", "_SolvedGuide.html")
+    # stem-key -> (root_abs, root_label, requires_guide, stem)
+    stems: dict[str, tuple[str, str, bool, str]] = {}
+    for p in paths:
+        p_abs = p if os.path.isabs(p) else os.path.join(REPO, p)
+        stream = _stream_for(p_abs)
+        if stream is None:
+            continue
+        root_abs, root_label, requires_guide = stream
+        base = os.path.basename(p_abs)
+        stem = base
+        for suf in suffixes:
+            if base.endswith(suf):
+                stem = base[: -len(suf)]
+                break
+        else:
+            continue  # not a triplet member (e.g. a .pdf or rendered .html)
+        stems[os.path.join(root_label, stem)] = (root_abs, root_label, requires_guide, stem)
+
+    errors: list[str] = []
+    for root_abs, root_label, requires_guide, stem in stems.values():
+        sol = os.path.join(root_abs, f"{stem}_Solutions.md")
+        if not _nonempty(sol):
+            errors.append(f"{root_label}/{stem}_QuestionPaper.md: missing or empty {stem}_Solutions.md")
+        if requires_guide:
+            guide = os.path.join(root_abs, f"{stem}_SolvedGuide.html")
+            if not _nonempty(guide):
+                errors.append(f"{root_label}/{stem}_QuestionPaper.md: missing or empty {stem}_SolvedGuide.html")
     return errors
 
 
@@ -177,6 +233,27 @@ def selftest() -> int:
             expect(any("Resources" in e for e in errs2),
                    "missing Resources stream not flagged")
 
+        # Scoped mode: audit_paths uses the REAL repo streams (it resolves
+        # against REPO), so exercise it against the live tree. A complete
+        # triplet (the prototype) must pass; a fabricated incomplete stem
+        # must fail — and crucially, an unrelated mid-flight orphan elsewhere
+        # in the tree must NOT make a complete staged triplet fail.
+        proto = os.path.join(
+            REPO, "desktopAhaan", "Resources", "TestPapers",
+            "Maths_Ch15_FindingTheUnknown_Advanced_QuestionPaper.md",
+        )
+        if os.path.exists(proto):
+            expect(not audit_paths([proto]),
+                   "scoped mode flagged the complete prototype triplet")
+        ghost = os.path.join(
+            REPO, "desktopAhaan", "Resources", "TestPapers",
+            "ZZ_NoSuchChapter_Advanced_QuestionPaper.md",
+        )
+        expect(bool(audit_paths([ghost])),
+               "scoped mode failed to flag a stem with no Solutions/Guide")
+        expect(not audit_paths(["README.md", "scripts/foo.py"]),
+               "scoped mode wrongly flagged non-TestPaper paths")
+
     print("SELFTEST PASS" if ok else "SELFTEST FAILED")
     return 0 if ok else 1
 
@@ -184,6 +261,22 @@ def selftest() -> int:
 def main() -> int:
     if "--selftest" in sys.argv:
         return selftest()
+
+    # Scoped mode: any non-flag args are treated as file paths to validate.
+    file_args = [a for a in sys.argv[1:] if not a.startswith("-")]
+    if file_args:
+        errors = audit_paths(file_args)
+        if errors:
+            print("check_testpaper_triplet: FAIL (scoped to staged files)")
+            for e in errors[:50]:
+                print("  " + e)
+            print(f"\n  {len(errors)} incomplete triplet(s) among the files checked.")
+            print("  Fix: author the missing _Solutions.md / _SolvedGuide.html, or")
+            print("  run scripts/make_solved_guide.py to (re)generate the guide.")
+            return 1
+        print(f"check_testpaper_triplet: clean — staged triplet(s) complete "
+              f"({len(file_args)} path(s) checked).")
+        return 0
 
     errors, total = audit(REPO)
     if errors:

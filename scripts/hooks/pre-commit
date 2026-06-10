@@ -436,7 +436,10 @@ TESTPAPER_TOUCHED=$(git diff --cached --name-only --diff-filter=ACMD \
     | grep -E '^(TestPapers/|desktopAhaan/Resources/TestPapers/).+\.(md|html)$' \
     || true)
 if [ -n "$TESTPAPER_TOUCHED" ] && [ -f "scripts/check_testpaper_triplet.py" ]; then
-    if ! python3 scripts/check_testpaper_triplet.py; then
+    # Scope the check to the staged TestPapers files. The full-tree scan lives
+    # in ci-build-test.sh (the push/CI gate); scoping here keeps the commit from
+    # failing on an unrelated paper that's mid-flight in the working tree.
+    if ! python3 scripts/check_testpaper_triplet.py $TESTPAPER_TOUCHED; then
         echo
         echo "pre-commit: check_testpaper_triplet failed — an incomplete test-paper"
         echo "triplet would land. Every *_QuestionPaper.md needs a non-empty"
