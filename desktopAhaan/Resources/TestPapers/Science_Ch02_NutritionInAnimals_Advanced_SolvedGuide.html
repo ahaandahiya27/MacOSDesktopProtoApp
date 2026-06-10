@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nutrition In Animals_Advanced — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Nutrition In Animals_Advanced<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">Taking food into the body is called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>digestion</span></li>
+        <li class=""><span class="lab">B</span><span>absorption</span></li>
+        <li class="correct"><span class="lab">C</span><span>ingestion</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>egestion</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Taking food into the body is ingestion.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">Breaking food down into simpler, soluble substances is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>digestion</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>ingestion</span></li>
+        <li class=""><span class="lab">C</span><span>assimilation</span></li>
+        <li class=""><span class="lab">D</span><span>egestion</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Breaking food into simpler soluble substances is digestion.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">The passing of digested food into the blood is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ingestion</span></li>
+        <li class=""><span class="lab">B</span><span>digestion</span></li>
+        <li class=""><span class="lab">C</span><span>egestion</span></li>
+        <li class="correct"><span class="lab">D</span><span>absorption</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Passing digested food into the blood is absorption.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">The use of absorbed food by body cells for energy and growth is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ingestion</span></li>
+        <li class="correct"><span class="lab">B</span><span>assimilation</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>absorption</span></li>
+        <li class=""><span class="lab">D</span><span>egestion</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Using absorbed food in the cells is assimilation.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">Removing undigested waste from the body is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ingestion</span></li>
+        <li class=""><span class="lab">B</span><span>digestion</span></li>
+        <li class="correct"><span class="lab">C</span><span>egestion</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>absorption</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Removing undigested waste is egestion.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">The correct order of the steps of nutrition is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>ingestion → digestion → absorption → assimilation → egestion</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>digestion → ingestion → egestion → absorption → assimilation</span></li>
+        <li class=""><span class="lab">C</span><span>absorption → ingestion → digestion → egestion → assimilation</span></li>
+        <li class=""><span class="lab">D</span><span>egestion → assimilation → absorption → digestion → ingestion</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The order is ingestion → digestion → absorption → assimilation → egestion.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">Digestion changes complex food into:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>larger pieces</span></li>
+        <li class=""><span class="lab">B</span><span>bone</span></li>
+        <li class=""><span class="lab">C</span><span>hair</span></li>
+        <li class="correct"><span class="lab">D</span><span>simpler, soluble substances</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Digestion turns complex food into simpler, soluble substances.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">The body system that carries out digestion is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>nervous system</span></li>
+        <li class="correct"><span class="lab">B</span><span>digestive system</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>skeletal system</span></li>
+        <li class=""><span class="lab">D</span><span>muscular system</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The digestive system carries out digestion.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">Undigested food finally leaves the body through the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>mouth</span></li>
+        <li class=""><span class="lab">B</span><span>nose</span></li>
+        <li class="correct"><span class="lab">C</span><span>anus</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>skin</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Undigested food leaves through the anus.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">The very first step of nutrition is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>ingestion</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>digestion</span></li>
+        <li class=""><span class="lab">C</span><span>absorption</span></li>
+        <li class=""><span class="lab">D</span><span>egestion</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Nutrition begins with ingestion.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">The digestion of food begins in the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>stomach</span></li>
+        <li class=""><span class="lab">B</span><span>small intestine</span></li>
+        <li class=""><span class="lab">C</span><span>liver</span></li>
+        <li class="correct"><span class="lab">D</span><span>mouth</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Digestion starts in the mouth.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">Saliva is produced by the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>liver</span></li>
+        <li class="correct"><span class="lab">B</span><span>salivary glands</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>pancreas</span></li>
+        <li class=""><span class="lab">D</span><span>stomach</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Saliva comes from the salivary glands.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">In the mouth, saliva begins the digestion of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>fats</span></li>
+        <li class=""><span class="lab">B</span><span>proteins</span></li>
+        <li class="correct"><span class="lab">C</span><span>starch (carbohydrates)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>water</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Saliva starts digesting starch (a carbohydrate).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">The enzyme in saliva that acts on starch is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>salivary amylase</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>bile</span></li>
+        <li class=""><span class="lab">C</span><span>pepsin</span></li>
+        <li class=""><span class="lab">D</span><span>insulin</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Salivary amylase acts on starch.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">The teeth used for biting and cutting are the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>molars</span></li>
+        <li class=""><span class="lab">B</span><span>canines</span></li>
+        <li class=""><span class="lab">C</span><span>premolars</span></li>
+        <li class="correct"><span class="lab">D</span><span>incisors</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Incisors bite and cut.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">The pointed teeth used for tearing food are the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>incisors</span></li>
+        <li class="correct"><span class="lab">B</span><span>canines</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>molars</span></li>
+        <li class=""><span class="lab">D</span><span>premolars</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Canines tear food.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">The broad teeth used for chewing and grinding are the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>incisors</span></li>
+        <li class=""><span class="lab">B</span><span>canines</span></li>
+        <li class="correct"><span class="lab">C</span><span>molars</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>front teeth</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Molars (and premolars) chew and grind.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">The first set of teeth that appear in early childhood are called:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>milk teeth</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>permanent teeth</span></li>
+        <li class=""><span class="lab">C</span><span>wisdom teeth</span></li>
+        <li class=""><span class="lab">D</span><span>molars only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The first set are the milk teeth.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">The teeth that grow in to replace the first set are the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>milk teeth</span></li>
+        <li class=""><span class="lab">B</span><span>baby teeth</span></li>
+        <li class=""><span class="lab">C</span><span>temporary teeth</span></li>
+        <li class="correct"><span class="lab">D</span><span>permanent teeth</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The replacements are the permanent teeth.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">The hard, white outer covering of a tooth is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>gum</span></li>
+        <li class="correct"><span class="lab">B</span><span>enamel</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>root</span></li>
+        <li class=""><span class="lab">D</span><span>pulp</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The hard white covering is enamel.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">Tooth decay is caused by acids produced by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>saliva</span></li>
+        <li class=""><span class="lab">B</span><span>the tongue</span></li>
+        <li class="correct"><span class="lab">C</span><span>bacteria acting on food sugars</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>water</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Decay comes from acids made by bacteria acting on food sugars.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">The tongue helps in:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>tasting and mixing food (and swallowing)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>breathing only</span></li>
+        <li class=""><span class="lab">C</span><span>making blood</span></li>
+        <li class=""><span class="lab">D</span><span>absorbing water</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The tongue tastes and mixes food (and helps swallowing).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">Food passes from the mouth to the stomach through the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>windpipe</span></li>
+        <li class=""><span class="lab">B</span><span>small intestine</span></li>
+        <li class=""><span class="lab">C</span><span>liver</span></li>
+        <li class="correct"><span class="lab">D</span><span>oesophagus (food pipe)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Food travels to the stomach through the oesophagus.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">The wave-like muscular movement that pushes food along the gut is called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>digestion</span></li>
+        <li class="correct"><span class="lab">B</span><span>peristalsis</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>absorption</span></li>
+        <li class=""><span class="lab">D</span><span>breathing</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The wave-like movement is peristalsis.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">The acid released by the stomach is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>acetic acid</span></li>
+        <li class=""><span class="lab">B</span><span>citric acid</span></li>
+        <li class="correct"><span class="lab">C</span><span>hydrochloric acid</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>lactic acid</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The stomach releases hydrochloric acid.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">The stomach's acid also helps by:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>killing germs in the food</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>cooling the food</span></li>
+        <li class=""><span class="lab">C</span><span>freezing the food</span></li>
+        <li class=""><span class="lab">D</span><span>colouring the food</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The acid kills germs in the food.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">Most digestion is completed and most absorption occurs in the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>mouth</span></li>
+        <li class=""><span class="lab">B</span><span>stomach</span></li>
+        <li class=""><span class="lab">C</span><span>large intestine</span></li>
+        <li class="correct"><span class="lab">D</span><span>small intestine</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Most digestion and absorption happen in the small intestine.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">The inner wall of the small intestine has many finger-like:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>teeth</span></li>
+        <li class="correct"><span class="lab">B</span><span>villi</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>bones</span></li>
+        <li class=""><span class="lab">D</span><span>hairs on the outside</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Its inner wall bears finger-like villi.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">The villi greatly increase the surface area for:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>breathing</span></li>
+        <li class=""><span class="lab">B</span><span>chewing</span></li>
+        <li class="correct"><span class="lab">C</span><span>absorption of digested food</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>egestion</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Villi increase the surface area for absorption.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">Digested food is absorbed into the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>blood</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>bones</span></li>
+        <li class=""><span class="lab">C</span><span>lungs</span></li>
+        <li class=""><span class="lab">D</span><span>skin</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Digested food is absorbed into the blood.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">The main job of the large intestine is to absorb:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>proteins</span></li>
+        <li class=""><span class="lab">B</span><span>fats</span></li>
+        <li class=""><span class="lab">C</span><span>sugars</span></li>
+        <li class="correct"><span class="lab">D</span><span>water</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The large intestine absorbs mainly water.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">The liver secretes a juice called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>saliva</span></li>
+        <li class="correct"><span class="lab">B</span><span>bile</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>gastric acid</span></li>
+        <li class=""><span class="lab">D</span><span>insulin</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The liver secretes bile.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">Bile mainly helps in the digestion of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>starch</span></li>
+        <li class=""><span class="lab">B</span><span>proteins</span></li>
+        <li class="correct"><span class="lab">C</span><span>fats</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>water</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bile helps digest fats.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">The largest gland in the human body is the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>liver</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>pancreas</span></li>
+        <li class=""><span class="lab">C</span><span>salivary gland</span></li>
+        <li class=""><span class="lab">D</span><span>stomach</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The liver is the largest gland in the body.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">In the small intestine the food is acted upon by juices from the pancreas and the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>lungs</span></li>
+        <li class=""><span class="lab">B</span><span>heart</span></li>
+        <li class=""><span class="lab">C</span><span>kidneys</span></li>
+        <li class="correct"><span class="lab">D</span><span>liver (bile)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In the small intestine, pancreatic juice and bile (from the liver) act on the food.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">Water from the leftover undigested food is absorbed in the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>mouth</span></li>
+        <li class="correct"><span class="lab">B</span><span>large intestine</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>stomach</span></li>
+        <li class=""><span class="lab">D</span><span>oesophagus</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Water is absorbed in the large intestine.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">Faeces leave the body through the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>mouth</span></li>
+        <li class=""><span class="lab">B</span><span>nose</span></li>
+        <li class="correct"><span class="lab">C</span><span>anus</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>skin</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Faeces leave through the anus.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">The muscular bag that churns food and mixes it with acid is the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>stomach</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>liver</span></li>
+        <li class=""><span class="lab">C</span><span>pancreas</span></li>
+        <li class=""><span class="lab">D</span><span>gall bladder</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The stomach churns food with acid.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">The food pipe joining the mouth to the stomach is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>windpipe</span></li>
+        <li class=""><span class="lab">B</span><span>artery</span></li>
+        <li class=""><span class="lab">C</span><span>vein</span></li>
+        <li class="correct"><span class="lab">D</span><span>oesophagus</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The oesophagus joins the mouth to the stomach.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">The longest part of the alimentary canal is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>mouth</span></li>
+        <li class="correct"><span class="lab">B</span><span>small intestine</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>stomach</span></li>
+        <li class=""><span class="lab">D</span><span>oesophagus</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The small intestine is the longest part of the canal.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">Grass-eating animals such as cows are called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>carnivores</span></li>
+        <li class=""><span class="lab">B</span><span>omnivores</span></li>
+        <li class="correct"><span class="lab">C</span><span>ruminants</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>saprotrophs</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Grass-eaters like cows are ruminants.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">A cow first swallows grass quickly, stores it, and later chews it again as:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>cud</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>bile</span></li>
+        <li class=""><span class="lab">C</span><span>saliva</span></li>
+        <li class=""><span class="lab">D</span><span>bone</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The stored grass chewed again later is the cud.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">Ruminants are able to digest grass (cellulose) with the help of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>their teeth alone</span></li>
+        <li class=""><span class="lab">B</span><span>sunlight</span></li>
+        <li class=""><span class="lab">C</span><span>stomach acid only</span></li>
+        <li class="correct"><span class="lab">D</span><span>bacteria in the rumen</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bacteria in the rumen let ruminants digest cellulose.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">The part of a ruminant's stomach where swallowed grass is first stored is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>liver</span></li>
+        <li class="correct"><span class="lab">B</span><span>rumen</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>gall bladder</span></li>
+        <li class=""><span class="lab">D</span><span>pancreas</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Swallowed grass is first stored in the rumen.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">Amoeba captures its food using finger-like extensions called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>cilia</span></li>
+        <li class=""><span class="lab">B</span><span>tentacles only</span></li>
+        <li class="correct"><span class="lab">C</span><span>pseudopodia</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>flagella</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Amoeba captures food with pseudopodia.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">Amoeba digests its captured food inside a:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>food vacuole</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>lung</span></li>
+        <li class=""><span class="lab">C</span><span>liver</span></li>
+        <li class=""><span class="lab">D</span><span>stomach</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Amoeba digests food in a food vacuole.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">Amoeba surrounds and engulfs its food by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>chewing</span></li>
+        <li class=""><span class="lab">B</span><span>sucking through a mouth</span></li>
+        <li class=""><span class="lab">C</span><span>swallowing whole prey</span></li>
+        <li class="correct"><span class="lab">D</span><span>wrapping pseudopodia around it</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Amoeba wraps its pseudopodia around the food to engulf it.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">Amoeba is a single-celled organism that carries out all its life processes within:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>many organs</span></li>
+        <li class="correct"><span class="lab">B</span><span>one cell</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a stomach</span></li>
+        <li class=""><span class="lab">D</span><span>a special gut</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Amoeba carries out all life processes within one cell.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">The carbohydrate in grass that humans cannot digest is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>starch</span></li>
+        <li class=""><span class="lab">B</span><span>sugar</span></li>
+        <li class="correct"><span class="lab">C</span><span>cellulose</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>glucose</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The grass carbohydrate humans can't digest is cellulose.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">A cow's habit of "chewing the cud" is called:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>rumination</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>ingestion</span></li>
+        <li class=""><span class="lab">C</span><span>absorption</span></li>
+        <li class=""><span class="lab">D</span><span>egestion</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A cow chewing the cud is rumination.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">We are advised to chew our food well so that it is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>coloured</span></li>
+        <li class=""><span class="lab">B</span><span>cooled</span></li>
+        <li class=""><span class="lab">C</span><span>frozen</span></li>
+        <li class="correct"><span class="lab">D</span><span>broken small and mixed with saliva for easier digestion</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Chewing well breaks food small and mixes it with saliva for easier digestion.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">The small intestine is long and lined with villi mainly to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>store food for years</span></li>
+        <li class="correct"><span class="lab">B</span><span>maximise the absorption of nutrients</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>make blood</span></li>
+        <li class=""><span class="lab">D</span><span>produce saliva</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The long, villi-lined small intestine maximises nutrient absorption.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">If the stomach produced no acid, food germs would:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>multiply faster</span></li>
+        <li class=""><span class="lab">B</span><span>be cooled</span></li>
+        <li class="correct"><span class="lab">C</span><span>not be killed, raising infection risk</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>turn to bile</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Without stomach acid, food germs would not be killed, raising infection risk.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">Bile contains no enzyme but aids digestion by breaking fat into:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>proteins</span></li>
+        <li class=""><span class="lab">B</span><span>starch</span></li>
+        <li class="correct"><span class="lab">C</span><span>tiny droplets (emulsification)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>sugar</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bile breaks fat into tiny droplets (emulsification) so enzymes can act.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">Cows can digest grass but humans cannot because cows have:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sharper teeth</span></li>
+        <li class=""><span class="lab">B</span><span>a longer tongue</span></li>
+        <li class=""><span class="lab">C</span><span>more saliva</span></li>
+        <li class="correct"><span class="lab">D</span><span>bacteria and a rumen to break down cellulose</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cows have bacteria and a rumen to break down cellulose, which humans lack.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">Dietary fibre (roughage) helps by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>adding fat</span></li>
+        <li class="correct"><span class="lab">B</span><span>keeping food moving and aiding egestion</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>making acid</span></li>
+        <li class=""><span class="lab">D</span><span>absorbing oxygen</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Roughage keeps food moving and aids egestion (prevents constipation).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">The villi are richly supplied with blood vessels in order to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>make the gut red</span></li>
+        <li class=""><span class="lab">B</span><span>cool the body</span></li>
+        <li class="correct"><span class="lab">C</span><span>carry away the absorbed nutrients</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>produce bile</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The villi's blood vessels carry away the absorbed nutrients.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">Water is reabsorbed from the waste so that the faeces become:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>semi-solid</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>liquid</span></li>
+        <li class=""><span class="lab">C</span><span>gaseous</span></li>
+        <li class=""><span class="lab">D</span><span>crystal clear</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Reabsorbing water makes the faeces semi-solid.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">Saliva makes the food:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>hard and dry</span></li>
+        <li class=""><span class="lab">B</span><span>acidic and hot</span></li>
+        <li class=""><span class="lab">C</span><span>bitter</span></li>
+        <li class="correct"><span class="lab">D</span><span>soft, moist and partly digested (starch)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Saliva makes the food soft, moist and partly digested (starch).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">The energy stored in the food we eat was originally captured by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the soil</span></li>
+        <li class="correct"><span class="lab">B</span><span>green plants (from the Sun)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the wind</span></li>
+        <li class=""><span class="lab">D</span><span>rocks</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The energy in our food was first captured by green plants from the Sun. --- *End of solutions. Maximum marks: 240.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>
