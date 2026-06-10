@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Respiration In Organisms_Advanced — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Respiration In Organisms_Advanced<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">The process that releases energy from food is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>digestion</span></li>
+        <li class=""><span class="lab">B</span><span>photosynthesis</span></li>
+        <li class="correct"><span class="lab">C</span><span>respiration</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>transpiration</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Respiration is the process that releases energy from food.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">The food substance broken down during respiration is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>glucose</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>protein</span></li>
+        <li class=""><span class="lab">C</span><span>fat</span></li>
+        <li class=""><span class="lab">D</span><span>water</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Glucose is the food broken down during respiration.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">The main purpose of respiration is to release:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>water</span></li>
+        <li class=""><span class="lab">B</span><span>carbon dioxide only</span></li>
+        <li class=""><span class="lab">C</span><span>light</span></li>
+        <li class="correct"><span class="lab">D</span><span>energy</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The purpose of respiration is to release energy.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">Breathing is the act of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>making food</span></li>
+        <li class="correct"><span class="lab">B</span><span>taking in oxygen and giving out carbon dioxide</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>absorbing water</span></li>
+        <li class=""><span class="lab">D</span><span>digesting food</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Breathing is taking in oxygen and giving out carbon dioxide.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">Respiration that uses oxygen is called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>anaerobic</span></li>
+        <li class=""><span class="lab">B</span><span>breathing</span></li>
+        <li class="correct"><span class="lab">C</span><span>aerobic</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>fermentation</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Respiration using oxygen is aerobic.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">Respiration that takes place without oxygen is called:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>anaerobic</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>aerobic</span></li>
+        <li class=""><span class="lab">C</span><span>breathing</span></li>
+        <li class=""><span class="lab">D</span><span>photosynthesis</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Respiration without oxygen is anaerobic.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">Aerobic respiration produces carbon dioxide, water and:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>glucose</span></li>
+        <li class=""><span class="lab">B</span><span>oxygen</span></li>
+        <li class=""><span class="lab">C</span><span>alcohol</span></li>
+        <li class="correct"><span class="lab">D</span><span>energy</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Aerobic respiration gives carbon dioxide, water and energy.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">The gas we take in while breathing is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>carbon dioxide</span></li>
+        <li class="correct"><span class="lab">B</span><span>oxygen</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>nitrogen</span></li>
+        <li class=""><span class="lab">D</span><span>hydrogen</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>We take in oxygen while breathing.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">The gas we breathe out is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>oxygen</span></li>
+        <li class=""><span class="lab">B</span><span>nitrogen</span></li>
+        <li class="correct"><span class="lab">C</span><span>carbon dioxide</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>hydrogen</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>We breathe out carbon dioxide.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">Energy is actually released from food inside the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>living cells</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>nose</span></li>
+        <li class=""><span class="lab">C</span><span>windpipe</span></li>
+        <li class=""><span class="lab">D</span><span>blood only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Energy is released from food inside the living cells.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">Anaerobic respiration in yeast produces alcohol and:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>oxygen</span></li>
+        <li class=""><span class="lab">B</span><span>water</span></li>
+        <li class=""><span class="lab">C</span><span>glucose</span></li>
+        <li class="correct"><span class="lab">D</span><span>carbon dioxide</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Yeast's anaerobic respiration gives alcohol and carbon dioxide.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">Anaerobic respiration in our muscles produces:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>alcohol</span></li>
+        <li class="correct"><span class="lab">B</span><span>lactic acid</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>oxygen</span></li>
+        <li class=""><span class="lab">D</span><span>glucose</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Muscles respiring without enough oxygen form lactic acid.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">Taking air into the body is called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>exhalation</span></li>
+        <li class=""><span class="lab">B</span><span>digestion</span></li>
+        <li class="correct"><span class="lab">C</span><span>inhalation</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>egestion</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Taking air in is inhalation.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">Giving out air from the body is called:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>exhalation</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>inhalation</span></li>
+        <li class=""><span class="lab">C</span><span>absorption</span></li>
+        <li class=""><span class="lab">D</span><span>ingestion</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Giving air out is exhalation.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">The muscular sheet below the lungs that helps in breathing is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>rib</span></li>
+        <li class=""><span class="lab">B</span><span>stomach</span></li>
+        <li class=""><span class="lab">C</span><span>heart</span></li>
+        <li class="correct"><span class="lab">D</span><span>diaphragm</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The muscular sheet below the lungs is the diaphragm.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">During inhalation, the diaphragm:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>disappears</span></li>
+        <li class="correct"><span class="lab">B</span><span>moves down and flattens</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>moves up</span></li>
+        <li class=""><span class="lab">D</span><span>stays still</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>On inhaling, the diaphragm moves down and flattens.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">Air drawn in through the nose passes down the windpipe into the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>stomach</span></li>
+        <li class=""><span class="lab">B</span><span>heart</span></li>
+        <li class="correct"><span class="lab">C</span><span>lungs</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>liver</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Air passes down the windpipe into the lungs.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">The number of times a person breathes in a minute is the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>breathing rate</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>pulse</span></li>
+        <li class=""><span class="lab">C</span><span>heart rate</span></li>
+        <li class=""><span class="lab">D</span><span>blood count</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Breaths per minute is the breathing rate.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">The normal breathing rate of an adult at rest is about:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2–3 per minute</span></li>
+        <li class=""><span class="lab">B</span><span>100 per minute</span></li>
+        <li class=""><span class="lab">C</span><span>50 per minute</span></li>
+        <li class="correct"><span class="lab">D</span><span>15–18 per minute</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A resting adult breathes about 15–18 times per minute.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">We breathe faster after exercise because the body needs more:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>food</span></li>
+        <li class="correct"><span class="lab">B</span><span>oxygen (to release more energy)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>water only</span></li>
+        <li class=""><span class="lab">D</span><span>sleep</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Exercise increases the need for oxygen, so we breathe faster.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">Compared with inhaled air, exhaled air contains more:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>oxygen</span></li>
+        <li class=""><span class="lab">B</span><span>nitrogen</span></li>
+        <li class="correct"><span class="lab">C</span><span>carbon dioxide</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>dust</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Exhaled air has more carbon dioxide than inhaled air.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">The windpipe carries air down to the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>lungs</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>stomach</span></li>
+        <li class=""><span class="lab">C</span><span>liver</span></li>
+        <li class=""><span class="lab">D</span><span>kidneys</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The windpipe carries air to the lungs.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">The tiny air sacs in the lungs where gases are exchanged are the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ribs</span></li>
+        <li class=""><span class="lab">B</span><span>bronchi only</span></li>
+        <li class=""><span class="lab">C</span><span>villi</span></li>
+        <li class="correct"><span class="lab">D</span><span>alveoli</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Gas exchange occurs in the alveoli (air sacs).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">Inhaled (fresh) air is rich in:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>carbon dioxide</span></li>
+        <li class="correct"><span class="lab">B</span><span>oxygen</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>water vapour</span></li>
+        <li class=""><span class="lab">D</span><span>smoke</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Fresh inhaled air is rich in oxygen.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">The chest cavity is enclosed by the ribs and, below, by the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>heart</span></li>
+        <li class=""><span class="lab">B</span><span>stomach</span></li>
+        <li class="correct"><span class="lab">C</span><span>diaphragm</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>backbone only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The chest cavity is bounded by the ribs and the diaphragm below.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">Fish breathe by means of:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>gills</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>lungs</span></li>
+        <li class=""><span class="lab">C</span><span>skin</span></li>
+        <li class=""><span class="lab">D</span><span>spiracles</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Fish breathe using gills.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">Insects take in air through tiny holes called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>gills</span></li>
+        <li class=""><span class="lab">B</span><span>alveoli</span></li>
+        <li class=""><span class="lab">C</span><span>lenticels</span></li>
+        <li class="correct"><span class="lab">D</span><span>spiracles</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Insects take in air through spiracles.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">Inside an insect, air is carried by a network of tubes called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>veins</span></li>
+        <li class="correct"><span class="lab">B</span><span>tracheae</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>gills</span></li>
+        <li class=""><span class="lab">D</span><span>alveoli</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Air travels inside insects through tracheae.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">An earthworm breathes through its:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>lungs</span></li>
+        <li class=""><span class="lab">B</span><span>gills</span></li>
+        <li class="correct"><span class="lab">C</span><span>moist skin</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>spiracles</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Earthworms breathe through their moist skin.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">A frog can breathe through its skin as well as its:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>lungs</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>gills</span></li>
+        <li class=""><span class="lab">C</span><span>spiracles</span></li>
+        <li class=""><span class="lab">D</span><span>tracheae</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Frogs breathe through the skin and through lungs.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">Plants take in oxygen and give out carbon dioxide during:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>photosynthesis</span></li>
+        <li class=""><span class="lab">B</span><span>digestion</span></li>
+        <li class=""><span class="lab">C</span><span>transpiration</span></li>
+        <li class="correct"><span class="lab">D</span><span>respiration</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Plants take in oxygen and release carbon dioxide during respiration.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">Leaves of a plant exchange gases mainly through their:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>roots</span></li>
+        <li class="correct"><span class="lab">B</span><span>stomata</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>bark</span></li>
+        <li class=""><span class="lab">D</span><span>flowers</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Leaves exchange gases through their stomata.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">Woody stems and branches exchange gases through small openings called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>stomata</span></li>
+        <li class=""><span class="lab">B</span><span>spiracles</span></li>
+        <li class="correct"><span class="lab">C</span><span>lenticels</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>gills</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Woody stems use lenticels for gas exchange.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">Roots obtain the air they need from:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the air present in the soil</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the leaves</span></li>
+        <li class=""><span class="lab">C</span><span>rainwater only</span></li>
+        <li class=""><span class="lab">D</span><span>sunlight</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Roots use the air present in the soil.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">Do green plants respire only at night?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>yes, only at night</span></li>
+        <li class=""><span class="lab">B</span><span>only at noon</span></li>
+        <li class=""><span class="lab">C</span><span>never</span></li>
+        <li class="correct"><span class="lab">D</span><span>no — they respire all the time, day and night</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Plants respire all the time, both day and night.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">A fish's gills are richly supplied with blood to absorb oxygen dissolved in:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>air</span></li>
+        <li class="correct"><span class="lab">B</span><span>water</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>soil</span></li>
+        <li class=""><span class="lab">D</span><span>food</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Gills absorb oxygen dissolved in water.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">A cockroach breathes through spiracles, not lungs. This statement is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>false</span></li>
+        <li class=""><span class="lab">B</span><span>true only in water</span></li>
+        <li class="correct"><span class="lab">C</span><span>true</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>true only at night</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>True — a cockroach breathes through spiracles, not lungs.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">An earthworm's skin must remain ____ for gas exchange:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>moist</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>dry</span></li>
+        <li class=""><span class="lab">C</span><span>hot</span></li>
+        <li class=""><span class="lab">D</span><span>salty</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An earthworm's skin must stay moist for gas exchange.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">A fish dies when taken out of water because its gills:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>freeze</span></li>
+        <li class=""><span class="lab">B</span><span>grow bigger</span></li>
+        <li class=""><span class="lab">C</span><span>turn to lungs</span></li>
+        <li class="correct"><span class="lab">D</span><span>dry up and cannot take in oxygen</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Out of water the gills dry up and cannot take in oxygen, so the fish dies.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">The oxygen a plant's roots use comes from:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the leaves</span></li>
+        <li class="correct"><span class="lab">B</span><span>air in the soil</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>sunlight</span></li>
+        <li class=""><span class="lab">D</span><span>the stem only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Root oxygen comes from air in the soil.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">The word equation for aerobic respiration is glucose + oxygen →:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>glucose + light</span></li>
+        <li class=""><span class="lab">B</span><span>alcohol + carbon dioxide</span></li>
+        <li class="correct"><span class="lab">C</span><span>carbon dioxide + water + energy</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>oxygen + water</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Glucose + oxygen → carbon dioxide + water + energy.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">The energy released by respiration is used by the body for:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>all its life processes (movement, growth, etc.)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>making soil</span></li>
+        <li class=""><span class="lab">C</span><span>cooling only</span></li>
+        <li class=""><span class="lab">D</span><span>nothing</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The released energy powers all life processes.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">During heavy exercise, muscles may respire anaerobically and form:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>alcohol</span></li>
+        <li class=""><span class="lab">B</span><span>oxygen</span></li>
+        <li class=""><span class="lab">C</span><span>glucose</span></li>
+        <li class="correct"><span class="lab">D</span><span>lactic acid</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Hard-working muscles respire anaerobically and form lactic acid.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">A build-up of lactic acid in the muscles causes:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>more energy</span></li>
+        <li class="correct"><span class="lab">B</span><span>muscle cramps</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>faster growth</span></li>
+        <li class=""><span class="lab">D</span><span>better eyesight</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Lactic acid build-up causes muscle cramps.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">Muscle cramps are relieved by rest and:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>more running</span></li>
+        <li class=""><span class="lab">B</span><span>eating sugar only</span></li>
+        <li class="correct"><span class="lab">C</span><span>deep breathing / a hot-water bath</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>holding the breath</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cramps ease with rest and deep breathing (or a hot-water bath).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">Yeast is used in baking and brewing because its anaerobic respiration gives carbon dioxide and:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>alcohol</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>oxygen</span></li>
+        <li class=""><span class="lab">C</span><span>water only</span></li>
+        <li class=""><span class="lab">D</span><span>glucose</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Yeast's anaerobic respiration gives carbon dioxide and alcohol.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">In bread-making, the carbon dioxide from yeast makes the dough:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>hard</span></li>
+        <li class=""><span class="lab">B</span><span>sour</span></li>
+        <li class=""><span class="lab">C</span><span>flat</span></li>
+        <li class="correct"><span class="lab">D</span><span>rise</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The carbon dioxide from yeast makes the dough rise.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">Respiration takes place in:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only the lungs</span></li>
+        <li class="correct"><span class="lab">B</span><span>all living cells</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>only plants</span></li>
+        <li class=""><span class="lab">D</span><span>only animals</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Respiration occurs in all living cells.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">Compared with breathing, respiration is a process that happens at the level of the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>whole body only</span></li>
+        <li class=""><span class="lab">B</span><span>lungs only</span></li>
+        <li class="correct"><span class="lab">C</span><span>cells</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>blood only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Respiration is a cell-level process, unlike whole-body breathing.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">Even while resting, the body keeps respiring in order to get:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>energy</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>food</span></li>
+        <li class=""><span class="lab">C</span><span>sleep</span></li>
+        <li class=""><span class="lab">D</span><span>water</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Even at rest the body respires to obtain energy.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">We tend to take deep breaths when tired in order to take in more:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>food</span></li>
+        <li class=""><span class="lab">B</span><span>water</span></li>
+        <li class=""><span class="lab">C</span><span>carbon dioxide</span></li>
+        <li class="correct"><span class="lab">D</span><span>oxygen</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Deep breaths when tired bring in more oxygen.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">Exhaled air is warm and moist because, in the lungs, it picks up:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>dust</span></li>
+        <li class="correct"><span class="lab">B</span><span>heat and water vapour</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>sugar</span></li>
+        <li class=""><span class="lab">D</span><span>salt</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Exhaled air is warm and moist because it gains heat and water vapour in the lungs.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">We are advised to breathe through the nose because the nose:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>makes air colder</span></li>
+        <li class=""><span class="lab">B</span><span>adds carbon dioxide</span></li>
+        <li class="correct"><span class="lab">C</span><span>filters and warms the air</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>removes oxygen</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The nose filters and warms the incoming air.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">Smoking is harmful mainly because it damages the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>lungs</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>bones</span></li>
+        <li class=""><span class="lab">C</span><span>hair</span></li>
+        <li class=""><span class="lab">D</span><span>nails</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Smoking mainly damages the lungs.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">In the lungs, the exchange of gases takes place between the alveoli and the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ribs</span></li>
+        <li class=""><span class="lab">B</span><span>windpipe</span></li>
+        <li class=""><span class="lab">C</span><span>diaphragm</span></li>
+        <li class="correct"><span class="lab">D</span><span>blood</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In the lungs, gases are exchanged between the alveoli and the blood.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">After running, the breathing rate stays high to repay the body's need for:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>food</span></li>
+        <li class="correct"><span class="lab">B</span><span>oxygen</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>sleep</span></li>
+        <li class=""><span class="lab">D</span><span>salt</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Breathing stays fast after running to supply the extra oxygen needed.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">A burning candle and a breathing animal both consume:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>nitrogen</span></li>
+        <li class=""><span class="lab">B</span><span>carbon dioxide</span></li>
+        <li class="correct"><span class="lab">C</span><span>oxygen</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>water</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Both a burning candle and a breathing animal consume oxygen.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">Compared with aerobic respiration, anaerobic respiration releases:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>less energy</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>more energy</span></li>
+        <li class=""><span class="lab">C</span><span>the same energy</span></li>
+        <li class=""><span class="lab">D</span><span>no carbon compounds</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Anaerobic respiration releases less energy than aerobic respiration.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">Farmers loosen (plough) the soil mainly to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>make it look neat</span></li>
+        <li class=""><span class="lab">B</span><span>remove all water</span></li>
+        <li class=""><span class="lab">C</span><span>cool the field</span></li>
+        <li class="correct"><span class="lab">D</span><span>let air reach the roots for respiration</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Ploughing lets air reach the roots so they can respire.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">The structure inside a cell where respiration mainly occurs is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>nucleus</span></li>
+        <li class="correct"><span class="lab">B</span><span>mitochondria</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>cell wall</span></li>
+        <li class=""><span class="lab">D</span><span>vacuole</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Respiration in a cell mainly occurs in the mitochondria. --- *End of solutions. Maximum marks: 240.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>
