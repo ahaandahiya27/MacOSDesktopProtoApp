@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Large Numbers Around Us_Advanced — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Large Numbers Around Us_Advanced<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">One billion equals how many crores?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>10</span></li>
+        <li class=""><span class="lab">B</span><span>1,000</span></li>
+        <li class="correct"><span class="lab">C</span><span>100</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>10,000</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>One crore is 10⁷ and one billion is 10⁹. So 1 billion ÷ 1 crore = 10⁹ ÷ 10⁷ = 10² = 100. One billion = 100 crore. The trap is to confuse a billion with an arab (which is also 100 crore) — here they agree, but always count zeros: 1,00,00,00,000 has 9 zeros after the 1.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">The place value of 7 in 4,73,16,028 exceeds its face value by:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>69,99,993</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>70,00,000</span></li>
+        <li class=""><span class="lab">C</span><span>7,99,993</span></li>
+        <li class=""><span class="lab">D</span><span>7,00,00,000</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In 4,73,16,028 the 7 sits in the ten-lakhs place, so its place value is 70,00,000; its face value is just 7. Difference = 70,00,000 − 7 = 69,99,993. Place value minus face value is always (place value − the single digit).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">A factory makes 2,500 bolts an hour and runs 16 hours a day for all of April. The total number of bolts made is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>10,00,000</span></li>
+        <li class=""><span class="lab">B</span><span>12,50,000</span></li>
+        <li class=""><span class="lab">C</span><span>9,60,000</span></li>
+        <li class="correct"><span class="lab">D</span><span>12,00,000</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Per day: 2,500 × 16 = 40,000 bolts. April has 30 days, so 40,000 × 30 = 12,00,000. The "12,50,000" trap assumes 31 days; April has 30.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">Rounded to the nearest lakh, the number 36,49,712 becomes:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>37,00,000</span></li>
+        <li class="correct"><span class="lab">B</span><span>36,00,000</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>36,50,000</span></li>
+        <li class=""><span class="lab">D</span><span>36,49,700</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rounding to the nearest lakh means looking at the part below one lakh: 36,49,712 has 49,712 beyond 36,00,000, and 49,712 &lt; 50,000, so round DOWN to 36,00,000.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">How many whole numbers lie strictly between the largest 6-digit number and the smallest 8-digit number?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>90,00,000</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>90,00,001</span></li>
+        <li class=""><span class="lab">C</span><span>89,99,999</span></li>
+        <li class=""><span class="lab">D</span><span>90,00,002</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Largest 6-digit number = 9,99,999; smallest 8-digit number = 1,00,00,000. Whole numbers strictly between two numbers a and b number b − a − 1 = 1,00,00,000 − 9,99,999 − 1 = 90,00,000.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">The sum of the place values of the two 5s in 35,52,189 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>50,50,000</span></li>
+        <li class=""><span class="lab">B</span><span>5,05,000</span></li>
+        <li class="correct"><span class="lab">C</span><span>5,50,000</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>55,000</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In 35,52,189 one 5 is in the lakhs place (place value 5,00,000) and the other is in the ten-thousands place (place value 50,000). Sum = 5,00,000 + 50,000 = 5,50,000.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">Reading 4,00,30,005 in words (Indian system) gives:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Four crore three thousand five</span></li>
+        <li class=""><span class="lab">B</span><span>Forty lakh thirty thousand five</span></li>
+        <li class=""><span class="lab">C</span><span>Four crore thirty-five</span></li>
+        <li class="correct"><span class="lab">D</span><span>Four crore thirty thousand five</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Group 4,00,30,005 as 4 crore | 00 lakh | 30 thousand | 005. That reads "four crore thirty thousand five." The "three thousand" option misreads 30 as 3.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">In the International system, 7,50,00,000 (Indian) is written as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>7,500,000</span></li>
+        <li class="correct"><span class="lab">B</span><span>75,000,000</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>750,000,000</span></li>
+        <li class=""><span class="lab">D</span><span>7,50,00,000</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>7,50,00,000 Indian = 7 crore 50 lakh = 7,50,00,000 = 75 × 10⁶ = 75 million. In the International 3-3-3 grouping that is 75,000,000.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">A number rounds to 8,00,000 when rounded to the nearest lakh. The largest whole number it could be is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>8,49,999</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>8,50,000</span></li>
+        <li class=""><span class="lab">C</span><span>8,49,000</span></li>
+        <li class=""><span class="lab">D</span><span>8,99,999</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A number rounds to 8,00,000 at the nearest lakh when it lies in [7,50,000, 8,49,999]. The largest whole number in that band is 8,49,999 — one more (8,50,000) would round up to 9,00,000.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">Using each of the digits 3, 0, 7, 5, 1 exactly once, the largest 5-digit number that can be formed is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>75,301</span></li>
+        <li class=""><span class="lab">B</span><span>73,510</span></li>
+        <li class="correct"><span class="lab">C</span><span>75,310</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>70,531</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>For the largest number, place digits in descending order: 7, 5, 3, 1, 0 → 75,310.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">Using each of the digits 3, 0, 7, 5, 1 exactly once, the smallest 5-digit number (no leading zero) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>03,157</span></li>
+        <li class=""><span class="lab">B</span><span>13,057</span></li>
+        <li class=""><span class="lab">C</span><span>10,375</span></li>
+        <li class="correct"><span class="lab">D</span><span>10,357</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>For the smallest with no leading zero, put the smallest non-zero digit (1) first, then the rest ascending (0, 3, 5, 7): 10,357.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">The difference between the largest and smallest 5-digit numbers formed from 3, 0, 7, 5, 1 (each once, no leading zero) is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>64,953</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>65,043</span></li>
+        <li class=""><span class="lab">C</span><span>64,935</span></li>
+        <li class=""><span class="lab">D</span><span>75,310</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Largest 75,310 − smallest 10,357 = 64,953. (Line up the columns and subtract carefully.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">12 lakh + 12 million equals (answer in the Indian system):</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>24,00,000</span></li>
+        <li class="correct"><span class="lab">B</span><span>1,32,00,000</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>1,20,12,000</span></li>
+        <li class=""><span class="lab">D</span><span>13,20,000</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>12 lakh = 12,00,000 and 12 million = 1,20,00,000 (since 1 million = 10 lakh). Sum = 12,00,000 + 1,20,00,000 = 1,32,00,000. The classic lakh-vs-million trap is to treat 12 million as 1,20,000.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">A water tank holds 2,40,000 litres. A town uses 18,00,000 litres a day. How many full tanks are emptied each day?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>8</span></li>
+        <li class=""><span class="lab">B</span><span>75</span></li>
+        <li class="correct"><span class="lab">C</span><span>7</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>6</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>18,00,000 ÷ 2,40,000 = 7.5. "Full tanks" counts only whole tanks emptied, so 7 (the 0.5 is a half-full tank still in use).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">Estimate 4,98,765 × 9 by first rounding the larger number to the nearest lakh. The estimate is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>45,00,000</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>50,00,000</span></li>
+        <li class=""><span class="lab">C</span><span>49,00,000</span></li>
+        <li class=""><span class="lab">D</span><span>44,00,000</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Round 4,98,765 to the nearest lakh = 5,00,000. Then 5,00,000 × 9 = 45,00,000.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">Which list is in correct ascending order? 9,09,090 · 90,909 · 9,90,099 · 99,099</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>99,099 · 90,909 · 9,09,090 · 9,90,099</span></li>
+        <li class="correct"><span class="lab">B</span><span>90,909 · 99,099 · 9,09,090 · 9,90,099</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>90,909 · 99,099 · 9,90,099 · 9,09,090</span></li>
+        <li class=""><span class="lab">D</span><span>9,09,090 · 9,90,099 · 90,909 · 99,099</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Compare by size: 90,909 &lt; 99,099 &lt; 9,09,090 &lt; 9,90,099 (the first two are 5-digit, the last two are 6-digit). Only option (B) lists them in that order.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">The expanded form 8 × 10,00,000 + 4 × 10,000 + 6 × 100 + 9 represents:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>80,04,609</span></li>
+        <li class=""><span class="lab">B</span><span>8,04,609</span></li>
+        <li class=""><span class="lab">C</span><span>80,40,069</span></li>
+        <li class="correct"><span class="lab">D</span><span>80,40,609</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>8 × 10,00,000 = 80,00,000; 4 × 10,000 = 40,000; 6 × 100 = 600; plus 9. Total = 80,40,609. Watch the empty lakhs and thousands-hundreds columns when you assemble it.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">A printing press prints 1,20,000 newspapers each night. How many does it print in a non-leap year?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4,32,00,000</span></li>
+        <li class=""><span class="lab">B</span><span>4,40,00,000</span></li>
+        <li class="correct"><span class="lab">C</span><span>4,38,00,000</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>3,65,00,000</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>1,20,000 × 365 (a non-leap year) = 4,38,00,000. (1,20,000 × 365 = 1,20,000 × 300 + 1,20,000 × 65 = 3,60,00,000 + 78,00,000 = 4,38,00,000.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">The smallest number that must be added to 5,67,892 to make it a multiple of 1,00,000 is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>32,108</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>42,108</span></li>
+        <li class=""><span class="lab">C</span><span>32,118</span></li>
+        <li class=""><span class="lab">D</span><span>33,108</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The next multiple of 1,00,000 above 5,67,892 is 6,00,000. So add 6,00,000 − 5,67,892 = 32,108.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">How many times larger is 1 crore than 1 thousand?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>100</span></li>
+        <li class="correct"><span class="lab">B</span><span>10,000</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>1,000</span></li>
+        <li class=""><span class="lab">D</span><span>1,00,000</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>1 crore = 10⁷, 1 thousand = 10³. Ratio = 10⁷ ÷ 10³ = 10⁴ = 10,000.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">The smallest 7-digit number whose digits are all different is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>12,34,567</span></li>
+        <li class=""><span class="lab">B</span><span>10,23,465</span></li>
+        <li class=""><span class="lab">C</span><span>10,32,456</span></li>
+        <li class="correct"><span class="lab">D</span><span>10,23,456</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Smallest non-zero digit first (1), then the remaining smallest distinct digits ascending: 1, 0, 2, 3, 4, 5, 6 → 10,23,456. Starting 1,0,3,2,… is not minimal, and 12,34,567 wastes the available 0.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">Rounded to the nearest thousand, 6,74,500 becomes:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>6,74,000</span></li>
+        <li class=""><span class="lab">B</span><span>6,70,000</span></li>
+        <li class="correct"><span class="lab">C</span><span>6,75,000</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>6,80,000</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>To round to the nearest thousand, look at the hundreds digit: 6,74,500 has 500 in the hundreds-and-below part, which rounds up. So 6,74,500 → 6,75,000.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">The number 9,99,999 is increased by 1. The digit sum of the result is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>1</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>54</span></li>
+        <li class=""><span class="lab">C</span><span>9</span></li>
+        <li class=""><span class="lab">D</span><span>10</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>9,99,999 + 1 = 10,00,000. Its digit sum is 1 + 0 + 0 + 0 + 0 + 0 + 0 = 1.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">A crore rupees is shared equally among 250 people. Each person receives:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>₹4,000</span></li>
+        <li class="correct"><span class="lab">B</span><span>₹40,000</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>₹4,00,000</span></li>
+        <li class=""><span class="lab">D</span><span>₹2,50,000</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>1 crore = 1,00,00,000. Divide by 250: 1,00,00,000 ÷ 250 = 40,000. (1,00,00,000 ÷ 250 = 1,00,00,000 ÷ 1000 × 4 = 10,000 × 4 = 40,000.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">Reading the International number 305,040,007 in words gives:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>Thirty crore fifty lakh four hundred seven</span></li>
+        <li class=""><span class="lab">B</span><span>Three hundred five million four hundred thousand seven</span></li>
+        <li class=""><span class="lab">C</span><span>Three billion fifty million forty seven</span></li>
+        <li class="correct"><span class="lab">D</span><span>Three hundred five million forty thousand seven</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Group 305,040,007 as 305 million | 040 thousand | 007 → "three hundred five million forty thousand seven."</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">Which of these is exactly fifty lakh?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>5 million</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>50 million</span></li>
+        <li class=""><span class="lab">C</span><span>0.5 million</span></li>
+        <li class=""><span class="lab">D</span><span>500 thousand</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Fifty lakh = 50,00,000 = 5,000,000 = 5 million. (Ten lakh make one million, so 50 lakh = 5 million.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">A satellite travels 7,680 km in one hour. Estimating by rounding the speed to the nearest thousand, the distance in 5 hours is about:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>35,000 km</span></li>
+        <li class=""><span class="lab">B</span><span>45,000 km</span></li>
+        <li class="correct"><span class="lab">C</span><span>40,000 km</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>38,000 km</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Round the speed 7,680 to the nearest thousand = 8,000 km/h. Then 8,000 × 5 = 40,000 km. (The exact distance is 38,400 km; the estimate rounds the speed first.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">The greatest 7-digit number with all different digits is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>99,99,999</span></li>
+        <li class="correct"><span class="lab">B</span><span>98,76,543</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>99,87,654</span></li>
+        <li class=""><span class="lab">D</span><span>90,12,345</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>For the greatest 7-digit number with all-different digits, use the largest digits in descending order: 9, 8, 7, 6, 5, 4, 3 → 98,76,543. "99,99,999" repeats 9s, so it's disallowed.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">In 5,28,67,134 the digits in the crores place and the thousands place are interchanged. The new number is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5,28,67,134</span></li>
+        <li class=""><span class="lab">B</span><span>7,28,67,134</span></li>
+        <li class=""><span class="lab">C</span><span>5,28,65,134</span></li>
+        <li class="correct"><span class="lab">D</span><span>7,28,65,134</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In 5,28,67,134 the crores digit is 5 and the thousands digit is 7. Swap them: 5 ↔ 7 gives 7,28,65,134. Only those two digits move.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">Estimate the product 612 × 489 by rounding each factor to the nearest hundred. The estimate is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>3,00,000</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>3,06,000</span></li>
+        <li class=""><span class="lab">C</span><span>2,94,000</span></li>
+        <li class=""><span class="lab">D</span><span>3,60,000</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Round each factor to the nearest hundred: 612 → 600, 489 → 500. Estimate = 600 × 500 = 3,00,000.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">A book has 3,20,000 words spread evenly over 800 pages. The number of words per page is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>40</span></li>
+        <li class=""><span class="lab">B</span><span>4,000</span></li>
+        <li class="correct"><span class="lab">C</span><span>400</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>250</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>3,20,000 ÷ 800 = 400 words per page. (3,20,000 ÷ 800 = 3,200 ÷ 8 = 400.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">The Roman numeral for 1949 is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>MCMXLIX</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>MCMIL</span></li>
+        <li class=""><span class="lab">C</span><span>MDCDIL</span></li>
+        <li class=""><span class="lab">D</span><span>MIM</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>1949 = 1000 + 900 + 40 + 9 = M + CM + XL + IX = MCMXLIX. Roman numerals never use four of the same symbol or "shortcuts" like MIM.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">The number 47,80,000 is how much less than 5 crore?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4,42,20,000</span></li>
+        <li class="correct"><span class="lab">B</span><span>4,52,20,000</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>45,22,000</span></li>
+        <li class=""><span class="lab">D</span><span>4,52,02,000</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>5 crore = 5,00,00,000. Subtract: 5,00,00,000 − 47,80,000 = 4,52,20,000.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">A district has 26 villages, each with about 9,850 people. Rounding each village to the nearest thousand to estimate quickly, the district's population is about:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2,56,000</span></li>
+        <li class=""><span class="lab">B</span><span>2,50,000</span></li>
+        <li class=""><span class="lab">C</span><span>3,00,000</span></li>
+        <li class="correct"><span class="lab">D</span><span>2,60,000</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Round each village to 10,000 people, then 26 × 10,000 = 2,60,000. (The exact figure 2,56,100 is close, but the quick estimate rounds the village size first.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">The standard form of "six crore four lakh twenty" is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>6,40,00,020</span></li>
+        <li class=""><span class="lab">B</span><span>6,04,20,000</span></li>
+        <li class="correct"><span class="lab">C</span><span>6,04,00,020</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>6,00,40,020</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Six crore four lakh twenty" = 6,00,00,000 + 4,00,000 + 20 = 6,04,00,020. Note the zero lakhs-tens and the empty thousands group.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">How many lakhs make one arab?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>10,000</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>1,000</span></li>
+        <li class=""><span class="lab">C</span><span>100</span></li>
+        <li class=""><span class="lab">D</span><span>1,00,000</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>1 arab = 100 crore = 10⁹; 1 lakh = 10⁵. So arab ÷ lakh = 10⁹ ÷ 10⁵ = 10⁴ = 10,000 lakhs make one arab.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">A relay of 8 trucks each carries 12,500 kg. The total load carried by the relay is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>10,000 kg</span></li>
+        <li class="correct"><span class="lab">B</span><span>1,00,000 kg</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>80,000 kg</span></li>
+        <li class=""><span class="lab">D</span><span>1,25,000 kg</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>8 × 12,500 = 1,00,000 kg. (12,500 × 8 = 12,500 × 8 = 1,00,000.) The load is exactly one lakh kilograms.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">The difference 1,00,00,000 − 1 has how many digits, all of which are 9?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>8</span></li>
+        <li class=""><span class="lab">B</span><span>6</span></li>
+        <li class=""><span class="lab">C</span><span>9</span></li>
+        <li class="correct"><span class="lab">D</span><span>7</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>1,00,00,000 (which is 10⁷, an 8-digit number) minus 1 = 99,99,999, which is seven 9s. Subtracting 1 from a 1-followed-by-n-zeros gives n nines.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">Which number, when rounded to the nearest ten-thousand, gives a different answer from the others? 7,84,500 · 7,82,499 · 7,86,000 · 7,84,999</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>7,84,500</span></li>
+        <li class=""><span class="lab">B</span><span>7,82,499</span></li>
+        <li class="correct"><span class="lab">C</span><span>7,86,000</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>7,84,999</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Round each to the nearest ten-thousand: 7,84,500 → 7,80,000; 7,82,499 → 7,80,000; 7,84,999 → 7,80,000; but 7,86,000 → 7,90,000 (the 6,000 beyond 7,80,000 rounds up). So 7,86,000 is the odd one out.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">A philanthropist donates ₹2,50,00,000 in equal monthly instalments over 2 years. Each instalment is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>₹10,41,666 (approx, with a remainder)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>₹1,04,166</span></li>
+        <li class=""><span class="lab">C</span><span>₹12,50,000</span></li>
+        <li class=""><span class="lab">D</span><span>₹20,83,333</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>2 years = 24 months. ₹2,50,00,000 ÷ 24 = ₹10,41,666 with a remainder of 16 (24 × 10,41,666 = 2,49,99,984). So each instalment is about ₹10,41,666.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">The product of the smallest 4-digit number and the smallest 3-digit number is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>10,000</span></li>
+        <li class="correct"><span class="lab">B</span><span>1,00,000</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>1,000</span></li>
+        <li class=""><span class="lab">D</span><span>1,00,00,000</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Smallest 4-digit = 1,000; smallest 3-digit = 100. Product = 1,000 × 100 = 1,00,000.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">In which number does the digit 6 have the greatest place value? 6,03,452 · 60,345 · 4,60,032 · 36,452</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>60,345</span></li>
+        <li class=""><span class="lab">B</span><span>4,60,032</span></li>
+        <li class=""><span class="lab">C</span><span>36,452</span></li>
+        <li class="correct"><span class="lab">D</span><span>6,03,452</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The digit 6 sits in: lakhs place in 6,03,452 (6,00,000); ten-thousands in 60,345 (60,000) and in 4,60,032 (60,000); thousands in 36,452 (6,000). Greatest place value is 6,00,000, in 6,03,452.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">A counter clicks once per second without stopping. About how many days does it take to reach one million clicks?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>about 1.16 days</span></li>
+        <li class=""><span class="lab">B</span><span>about 116 days</span></li>
+        <li class="correct"><span class="lab">C</span><span>about 11.6 days</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>about 7 days</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>One million seconds ÷ 86,400 seconds-per-day = 10,00,000 ÷ 86,400 ≈ 11.57 ≈ 11.6 days. (Not ~116 days — that's a power-of-ten slip.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">The number named "nine hundred million" written in the Indian system is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>90,00,00,000</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>9,00,00,000</span></li>
+        <li class=""><span class="lab">C</span><span>9,000,000</span></li>
+        <li class=""><span class="lab">D</span><span>90,00,000</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Nine hundred million" = 900 × 10⁶ = 90,00,00,000 (ninety crore in the Indian system). Watch the lakh-vs-million scaling: 900 million = 90 crore.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">Estimating 81,492 ÷ 18 by rounding the dividend to 80,000 and the divisor to 20 gives about:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4,500</span></li>
+        <li class="correct"><span class="lab">B</span><span>4,000</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>400</span></li>
+        <li class=""><span class="lab">D</span><span>5,000</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Round the dividend to 80,000 and the divisor to 20: 80,000 ÷ 20 = 4,000.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">The largest 6-digit palindrome (a number that reads the same forwards and backwards) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>9,98,899</span></li>
+        <li class=""><span class="lab">B</span><span>9,89,989</span></li>
+        <li class=""><span class="lab">C</span><span>9,99,099</span></li>
+        <li class="correct"><span class="lab">D</span><span>9,99,999</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The largest 6-digit number is 9,99,999, which already reads the same forwards and backwards, so it is the largest 6-digit palindrome.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">The total weight of 1,00,000 identical coins is 4,00,000 g. One coin weighs:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>40 g</span></li>
+        <li class=""><span class="lab">B</span><span>0.4 g</span></li>
+        <li class="correct"><span class="lab">C</span><span>4 g</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>400 g</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>4,00,000 g ÷ 1,00,000 coins = 4 g per coin. (Cancel the matching 1,00,000: 4,00,000 ÷ 1,00,000 = 4.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">Counting in steps of 5,000 starting from 7,000, the 10th number spoken is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>52,000</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>50,000</span></li>
+        <li class=""><span class="lab">C</span><span>57,000</span></li>
+        <li class=""><span class="lab">D</span><span>47,000</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Counting 7,000, 12,000, 17,000, … the nth number is 7,000 + (n − 1) × 5,000. The 10th = 7,000 + 9 × 5,000 = 7,000 + 45,000 = 52,000.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">The sum 9,99,998 + 9,99,998 + 9,99,998 is closest to and best estimated as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>27,00,000</span></li>
+        <li class="correct"><span class="lab">B</span><span>30,00,000</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>29,00,000</span></li>
+        <li class=""><span class="lab">D</span><span>33,00,000</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Each 9,99,998 ≈ 10,00,000, so the sum of three ≈ 30,00,000. (Exactly 29,99,994 — the best round estimate is 30 lakh.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">A number rounded to the nearest hundred is 6,800 and rounded to the nearest thousand is 7,000. The number could be:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>6,720</span></li>
+        <li class=""><span class="lab">B</span><span>6,650</span></li>
+        <li class=""><span class="lab">C</span><span>6,480</span></li>
+        <li class="correct"><span class="lab">D</span><span>6,780</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rounding to the nearest hundred = 6,800 means the number is in [6,750, 6,849]. Of the choices, only 6,780 lies in that band; and 6,780 rounds to 7,000 at the nearest thousand. The others (6,720, 6,650) round to 6,700 at the nearest hundred, and 6,480 rounds to 6,500.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">The difference between the largest and smallest numbers in {5,40,302 ; 54,032 ; 5,04,320 ; 5,43,020} is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4,86,270</span></li>
+        <li class=""><span class="lab">B</span><span>5,40,302</span></li>
+        <li class="correct"><span class="lab">C</span><span>4,88,988</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>4,99,988</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Largest = 5,43,020; smallest = 54,032. Difference = 5,43,020 − 54,032 = 4,88,988. The trap is treating 54,032 (a 5-digit number) as the largest because of its leading 5.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">Written in standard form, the number "three hundred crore" has how many zeros?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>9</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>7</span></li>
+        <li class=""><span class="lab">C</span><span>8</span></li>
+        <li class=""><span class="lab">D</span><span>10</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Three hundred crore = 300 × 1,00,00,000 = 3,00,00,00,000 = 3 followed by 9 zeros. So it has 9 zeros.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">A theatre seats 1,250 people and runs 4 shows a day. In 30 days, the number of seats available is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>15,00,000</span></li>
+        <li class="correct"><span class="lab">B</span><span>1,50,000</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>1,00,000</span></li>
+        <li class=""><span class="lab">D</span><span>5,000</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>1,250 seats × 4 shows × 30 days = 1,250 × 120 = 1,50,000 seat-slots.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">If 1 crore seconds were converted to days (using 86,400 s/day), the result is closest to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>11 days</span></li>
+        <li class=""><span class="lab">B</span><span>1,160 days</span></li>
+        <li class=""><span class="lab">C</span><span>50 days</span></li>
+        <li class="correct"><span class="lab">D</span><span>116 days</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>1 crore = 1,00,00,000 seconds. ÷ 86,400 ≈ 115.7, which is closest to 116 days.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">The least number of digits that must be changed to turn 4,56,789 into a number that rounds to 5,00,000 at the nearest lakh is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1</span></li>
+        <li class=""><span class="lab">B</span><span>2</span></li>
+        <li class="correct"><span class="lab">C</span><span>0</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>3</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rounding 4,56,789 to the nearest lakh: the part below one lakh is 56,789, which is ≥ 50,000, so it ALREADY rounds up to 5,00,000. Zero digits need changing — the trap is assuming it rounds to 4,00,000.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">A train carries 1,800 passengers per trip and makes 24 trips a day. The daily passenger count is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>43,200</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>4,320</span></li>
+        <li class=""><span class="lab">C</span><span>42,300</span></li>
+        <li class=""><span class="lab">D</span><span>48,000</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>1,800 × 24 = 43,200 passengers a day. (1,800 × 24 = 1,800 × 25 − 1,800 = 45,000 − 1,800 = 43,200.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">Which expanded form is correct for 30,07,005?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>3 × 1,00,000 + 7 × 100 + 5</span></li>
+        <li class="correct"><span class="lab">B</span><span>3 × 10,00,000 + 7 × 1,000 + 5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>3 × 10,00,000 + 7 × 100 + 5</span></li>
+        <li class=""><span class="lab">D</span><span>30 × 1,00,000 + 7 × 100 + 5 × 10</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>30,07,005 = 3 × 10,00,000 + 0 × 1,00,000 + 0 × 10,000 + 7 × 1,000 + 0 × 100 + 0 × 10 + 5 = 3 × 10,00,000 + 7 × 1,000 + 5. The 7 sits in the thousands place, not the hundreds.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">Rounding 2,47,963 to the nearest thousand, then to the nearest ten-thousand, then to the nearest lakh, gives in order:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2,48,000 · 2,48,000 · 3,00,000</span></li>
+        <li class=""><span class="lab">B</span><span>2,47,000 · 2,50,000 · 2,00,000</span></li>
+        <li class=""><span class="lab">C</span><span>2,48,000 · 2,40,000 · 2,00,000</span></li>
+        <li class="correct"><span class="lab">D</span><span>2,48,000 · 2,50,000 · 2,00,000</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>2,47,963 → nearest thousand: 963 rounds up → 2,48,000. → nearest ten-thousand: 7,963 beyond 2,40,000 rounds up → 2,50,000. → nearest lakh: 47,963 &lt; 50,000 rounds down → 2,00,000. Order: 2,48,000 · 2,50,000 · 2,00,000.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">A company's profit grew from ₹38,50,000 to ₹1,02,50,000 in a year. The increase is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>₹74,00,000</span></li>
+        <li class=""><span class="lab">B</span><span>₹63,00,000</span></li>
+        <li class="correct"><span class="lab">C</span><span>₹64,00,000</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>₹1,41,00,000</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Increase = 1,02,50,000 − 38,50,000 = 64,00,000. (The 50,000s cancel: 1,02,00,000 − 38,00,000 = 64,00,000.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">The number of distinct 3-digit numbers that can be formed using the digits 4, 0, 9 (each used exactly once, no leading zero) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>6</span></li>
+        <li class="correct"><span class="lab">B</span><span>4</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>9</span></li>
+        <li class=""><span class="lab">D</span><span>3</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Using all three digits 4, 0, 9 with no repeat and no leading zero: total arrangements 3! = 6, minus those starting with 0 (2! = 2) = 4. They are 409, 490, 904, 940. --- *Answer key: 1-C, 2-A, 3-D, 4-B, 5-A, 6-C, 7-D, 8-B, 9-A, 10-C, 11-D, 12-A, 13-B, 14-C, 15-A, 16-B, 17-D, 18-C, 19-A, 20-B, 21-D, 22-C, 23-A, 24-B, 25-D, 26-A, 27-C, 28-B, 29-D, 30-A, 31-C, 32-A, 33-B, 34-D, 35-C, 36-A, 37-B, 38-D, 39-C, 40-A, 41-B, 42-D, 43-C, 44-A, 45-B, 46-D, 47-C, 48-A, 49-B, 50-D, 51-C, 52-A, 53-B, 54-D, 55-C, 56-A, 57-B, 58-D, 59-C, 60-B.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>
