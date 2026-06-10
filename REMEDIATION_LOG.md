@@ -6592,3 +6592,41 @@ regressions; zero STOP_AND_ASK. Big-Sur compilation/frame-rate of the new views
 still needs an iMac rebuild to confirm directly (dev-Mac + static-lint proxy only).
 
 V8_INSIGHTS_COMPLETE_SENTINEL_v1
+
+---
+
+## 2026-06-11 — v8 "next 10h" Advanced-tier, Waves 9–10 (this agent)
+
+Continuation of the v8 Advanced (Paper 2) rollout, executed as one of three
+concurrent agents sharing the working tree (documented parallel shared-tree
+hazard). This agent's contributions:
+
+- **New tool `scripts/rebalance_answer_key.py`** — deterministic, content-
+  preserving rebalancer for MCQ answer keys. Several fleet-authored Advanced
+  papers shipped with a positional giveaway (a chapter with 50/60 answers in
+  slot B; the Sanskrit trio block-ordered Q1–15=A, Q16–30=B, …). The tool
+  reorders the four option lines so the correct option lands on a balanced,
+  fixed-permutation target (exactly 15 A / 15 B / 15 C / 15 D over 60 Qs) and
+  rewrites the `**N. (X)**` solution heading in lockstep. Worked prose references
+  option *content*, never letters, so the reorder is safe. No RNG → reproducible.
+
+- **Wave 9 — Science Ch11 (Transportation in Animals and Plants).** Rebalanced
+  (50/60→15/15/15/15), guide regenerated, wired into `OlympiadPaperRegistry`
+  (`tier: .advanced`), pbxproj regenerated (objectVersion 55),
+  `OlympiadExamHallTests` → 102 papers / 33 advanced. ci-build-test GREEN; pushed.
+
+- **Wave 10 — Social Science Ssch05 (The Rise of Empires) authored + first three
+  Sanskrit Advanced papers (Sch13/14/15) integrated.** Ssch05: 60 beyond-grade
+  MCQs (six binding features, *saptānga*, Magadha, Chandragupta/Kauṭilya,
+  Ashoka/Kalinga/*dhamma*) with letter-free worked solutions and an auto-
+  generated guide. All four rebalanced to 15/15/15/15, wired,
+  `OlympiadExamHallTests` → 106 papers / 37 advanced. ci-build-test GREEN; pushed
+  (`baeebca`). Coverage: Maths 15/15, Science 15/19, Social Science 5/20,
+  Sanskrit 3/15.
+
+Discipline under the shared tree: explicit-pathspec commits (never `git add -A`);
+the registry/test hotspot edited by this agent alone (siblings author content-
+only) so the count assertions stay consistent; pushes retried across the flapping
+full-tree triplet pre-push gate (which trips on a sibling's mid-flight orphan QP).
+Zero STOP_AND_ASK. Big-Sur build of the Swift wiring still needs an iMac rebuild
+to confirm (dev-Mac + static-lint proxy only).

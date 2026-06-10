@@ -114,6 +114,31 @@ Integration waves (registry + tests + pbxproj):
   55), `OlympiadExamHallTests` count + id-set assertions bumped, `check_testpaper
   _triplet` clean (364 papers, 0 orphans), `bash scripts/ci-build-test.sh` GREEN.
   Maths is now 15/15 Advanced; Science 3/19; Social Science 1/20; Sanskrit 0/15.
+- **Waves 4–8 (2026-06-10/11):** Science Ch01/02/03/05/06/07/08/09/10 + Social
+  Science Ssch02/03/04 authored/integrated across the fleet → **32 advanced**
+  (see `ADVANCED_TIER_LEDGER.md` for the per-wave detail).
+- **Wave 9 (2026-06-11):** **Science Ch11** (Transportation in Animals and
+  Plants). The on-disk triplet had a positional-giveaway key (50/60 in slot B);
+  fixed with the new **`scripts/rebalance_answer_key.py`** (deterministic,
+  content-preserving option reorder + lockstep key rewrite → 15/15/15/15), guide
+  regenerated, wired (`OlympiadExamHallTests` → 102 / 33 advanced). GREEN; pushed.
+- **Wave 10 (2026-06-11):** **Social Science Ssch05** (The Rise of Empires,
+  authored this session) **+ integrated the first three Sanskrit Advanced
+  papers** (Sch13/14/15, authored by concurrent agents; their block-ordered keys
+  were scattered with the rebalance tool). Wired all four →
+  **106 papers / 69 foundation + 37 advanced**. GREEN; pushed (`baeebca`).
+  Coverage: Maths 15/15, Science 15/19, Social Science 5/20, Sanskrit 3/15.
+
+> **Fleet note (2026-06-11):** this run executes alongside **two other identical
+> v8 agents** in the same working tree (the documented parallel shared-tree
+> hazard — `ps` confirms 3 `claude --dangerously-skip-permissions` procs). The
+> siblings author Sanskrit/Science content **content-only** (no registry wiring),
+> committing via `git add -A` sweeps; the `OlympiadPaperRegistry` + `Olympiad
+> ExamHallTests` hotspot is edited by **this agent alone**, so the registry/count
+> stays consistent. This agent uses **pathspec commits** and **rebalances every
+> paper's answer key** before wiring. The full-tree triplet pre-push gate flaps
+> whenever a sibling has a mid-flight orphan QP — pushes succeed in clean
+> windows; retry on a transient triplet failure.
 
 ## Notes / decisions
 

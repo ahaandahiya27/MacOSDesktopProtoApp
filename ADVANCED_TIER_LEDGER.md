@@ -83,7 +83,7 @@ Legend: ✅ Advanced triplet complete · ❌ missing · 🟡 in progress
 | Ssch02 | Understanding the Weather | ✅ |
 | Ssch03 | Climates of India | ✅ |
 | Ssch04 | New Beginnings: Cities and States | ✅ |
-| Ssch05 | The Rise of Empires | ❌ |
+| Ssch05 | The Rise of Empires | ✅ |
 | Ssch06 | The Age of Reorganisation | ❌ |
 | Ssch07 | The Gupta Era | ❌ |
 | Ssch08 | How the Land Becomes Sacred | ❌ |
@@ -115,9 +115,9 @@ Legend: ✅ Advanced triplet complete · ❌ missing · 🟡 in progress
 | Sch10 | Daśamaḥ Kaḥ | ❌ |
 | Sch11 | Dvīpeṣu Ramyaḥ Dvīpo'ndamānaḥ | ❌ |
 | Sch12 | Vīrāṅganā Pannādhāyā | ❌ |
-| Sch13 | Varṇa-Mātrā Parichayaḥ | ❌ |
-| Sch14 | Śabda-Rūpāṇi | ❌ |
-| Sch15 | Dhātu-Rūpāṇi (Verb Conjugations) | ❌ |
+| Sch13 | Varṇa-Mātrā Parichayaḥ | ✅ |
+| Sch14 | Śabda-Rūpāṇi | ✅ |
+| Sch15 | Dhātu-Rūpāṇi (Verb Conjugations) | ✅ |
 
 ---
 
@@ -177,5 +177,21 @@ Legend: ✅ Advanced triplet complete · ❌ missing · 🟡 in progress
   regenerated, `OlympiadExamHallTests` → 102 papers / 69 foundation + 33
   advanced). Build + full XCTest GREEN. Coverage: Maths 15/15, Science 15/19,
   Social Science 4/20, Sanskrit 0/15.
+- **2026-06-11 (Wave 10):** **37 / 69** chapters — added Social Science Ssch05
+  (The Rise of Empires, authored this session: 60 beyond-grade MCQs on the
+  six binding features of an empire, the *saptānga* theory, Magadha's rise,
+  Chandragupta/Kauṭilya and Ashoka/Kalinga/*dhamma*, letter-free worked
+  solutions) **and** integrated the first three **Sanskrit** Advanced papers
+  (Sch13 Varṇa-Mātrā, Sch14 Śabda-Rūpāṇi, Sch15 Dhātu-Rūpāṇi — authored by
+  concurrent content agents). Quality pass: every one of the four shipped with
+  a positional-giveaway key (the Sanskrit trio were *block-ordered* — Q1–15 all
+  A, Q16–30 all B …) and was scattered to an exact 15/15/15/15 spread via
+  `scripts/rebalance_answer_key.py`; guides regenerated. All four authored +
+  integrated (registry `tier: .advanced`, pbxproj regenerated objectVersion 55,
+  `OlympiadExamHallTests` → 106 papers / 69 foundation + 37 advanced). Build +
+  full XCTest GREEN; pushed (`77564ba..baeebca`). Coverage: Maths 15/15,
+  Science 15/19, Social Science 5/20, Sanskrit 3/15. (Sanskrit Sch11/Sch12
+  content is committed by concurrent agents but not yet wired — a later
+  integrator pass.)
 - Flip each cell to ✅ as its commit lands; update the headline count here and in
   `V8_NEXT10H_LEDGER.md`.
