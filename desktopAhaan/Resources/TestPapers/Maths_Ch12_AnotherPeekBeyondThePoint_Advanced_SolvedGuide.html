@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Another Peek Beyond The Point_Advanced — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Another Peek Beyond The Point_Advanced<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">Evaluate 0.6 × 0.05.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0.3</span></li>
+        <li class="correct"><span class="lab">B</span><span>0.03</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>0.003</span></li>
+        <li class=""><span class="lab">D</span><span>3</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>6 × 5 = 30; the factors have 1 + 2 = 3 decimal places, so 0.6 × 0.05 = 0.030 = 0.03.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">Evaluate 1.2 × 0.25.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0.03</span></li>
+        <li class=""><span class="lab">B</span><span>3</span></li>
+        <li class=""><span class="lab">C</span><span>30</span></li>
+        <li class="correct"><span class="lab">D</span><span>0.3</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>12 × 25 = 300; 1 + 2 = 3 decimal places → 0.300 → 1.2 × 0.25 = 0.3. (Equivalently a quarter of 1.2.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">Evaluate 3.5 × 0.4.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>1.4</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>14</span></li>
+        <li class=""><span class="lab">C</span><span>0.14</span></li>
+        <li class=""><span class="lab">D</span><span>1.04</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>35 × 4 = 140; 1 + 1 = 2 places → 1.40 = 1.4.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">Evaluate 0.008 × 0.5.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0.04</span></li>
+        <li class=""><span class="lab">B</span><span>0.4</span></li>
+        <li class="correct"><span class="lab">C</span><span>0.004</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>0.0004</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>8 × 5 = 40; 3 + 1 = 4 places → 0.0040 = 0.004.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">Evaluate 12.5 × 0.08.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>10</span></li>
+        <li class=""><span class="lab">B</span><span>0.1</span></li>
+        <li class=""><span class="lab">C</span><span>100</span></li>
+        <li class="correct"><span class="lab">D</span><span>1</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>125 × 8 = 1000; 1 + 2 = 3 places → 1.000 = 1.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">Evaluate 2.4 × 1.5.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0.36</span></li>
+        <li class="correct"><span class="lab">B</span><span>3.6</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>36</span></li>
+        <li class=""><span class="lab">D</span><span>3.9</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>24 × 15 = 360; 1 + 1 = 2 places → 3.60 = 3.6.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">Evaluate 0.125 × 0.8.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1</span></li>
+        <li class=""><span class="lab">B</span><span>0.01</span></li>
+        <li class="correct"><span class="lab">C</span><span>0.1</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>0.001</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>125 × 8 = 1000; 3 + 1 = 4 places → 0.1000 = 0.1.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">Evaluate (0.3)².</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>0.09</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>0.9</span></li>
+        <li class=""><span class="lab">C</span><span>0.6</span></li>
+        <li class=""><span class="lab">D</span><span>0.009</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(0.3)² = 0.3 × 0.3; 3 × 3 = 9 with 2 places → 0.09.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">Evaluate 1.06 × 0.5.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5.3</span></li>
+        <li class=""><span class="lab">B</span><span>0.053</span></li>
+        <li class="correct"><span class="lab">C</span><span>0.53</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>0.503</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>106 × 5 = 530; 2 + 1 = 3 places → 0.530 = 0.53 (half of 1.06).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">Evaluate 0.04 × 0.04.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>0.0016</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>0.016</span></li>
+        <li class=""><span class="lab">C</span><span>0.16</span></li>
+        <li class=""><span class="lab">D</span><span>0.00016</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>4 × 4 = 16; 2 + 2 = 4 places → 0.0016.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">Evaluate 4.8 ÷ 0.6.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0.8</span></li>
+        <li class=""><span class="lab">B</span><span>80</span></li>
+        <li class=""><span class="lab">C</span><span>0.08</span></li>
+        <li class="correct"><span class="lab">D</span><span>8</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Scale both by 10: 48 ÷ 6 = 8. Estimate check: 4.8 is eight sixths of 0.6's... 0.6 × 8 = 4.8. ✓</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">Evaluate 0.144 ÷ 0.12.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>12</span></li>
+        <li class="correct"><span class="lab">B</span><span>1.2</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>0.12</span></li>
+        <li class=""><span class="lab">D</span><span>120</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Scale by 100: 14.4 ÷ 12 = 1.2 (or 144 ÷ 120 = 1.2).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">Evaluate 2.5 ÷ 0.05.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>50</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>5</span></li>
+        <li class=""><span class="lab">C</span><span>500</span></li>
+        <li class=""><span class="lab">D</span><span>0.5</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Scale by 100: 250 ÷ 5 = 50. (0.05 goes into 2.5 fifty times.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">Evaluate 0.36 ÷ 0.009.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4</span></li>
+        <li class=""><span class="lab">B</span><span>400</span></li>
+        <li class="correct"><span class="lab">C</span><span>40</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>0.4</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Scale by 1000: 360 ÷ 9 = 40.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">Evaluate 9 ÷ 0.45.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2</span></li>
+        <li class="correct"><span class="lab">B</span><span>20</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>200</span></li>
+        <li class=""><span class="lab">D</span><span>0.2</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Scale by 100: 900 ÷ 45 = 20.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">Evaluate 0.625 ÷ 0.25.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0.25</span></li>
+        <li class=""><span class="lab">B</span><span>25</span></li>
+        <li class=""><span class="lab">C</span><span>0.025</span></li>
+        <li class="correct"><span class="lab">D</span><span>2.5</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Scale by 1000: 625 ÷ 250 = 2.5.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">Evaluate 7.2 ÷ 0.008.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>9</span></li>
+        <li class=""><span class="lab">B</span><span>90</span></li>
+        <li class="correct"><span class="lab">C</span><span>900</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>9000</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Scale by 1000: 7200 ÷ 8 = 900.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">Evaluate 0.084 ÷ 0.7.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>0.12</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>1.2</span></li>
+        <li class=""><span class="lab">C</span><span>12</span></li>
+        <li class=""><span class="lab">D</span><span>0.012</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Scale by 1000: 84 ÷ 700 = 0.12 (or 0.84 ÷ 7 = 0.12).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">Evaluate 15 ÷ 1.25.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1.2</span></li>
+        <li class=""><span class="lab">B</span><span>120</span></li>
+        <li class=""><span class="lab">C</span><span>1.25</span></li>
+        <li class="correct"><span class="lab">D</span><span>12</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Scale by 100: 1500 ÷ 125 = 12.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">Evaluate 0.001 ÷ 0.04.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0.25</span></li>
+        <li class="correct"><span class="lab">B</span><span>0.025</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>2.5</span></li>
+        <li class=""><span class="lab">D</span><span>0.0025</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Scale by 1000: 1 ÷ 40 = 0.025.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">Evaluate 4.567 × 100.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>456.7</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>45.67</span></li>
+        <li class=""><span class="lab">C</span><span>4567</span></li>
+        <li class=""><span class="lab">D</span><span>0.4567</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Multiplying by 100 shifts the point two places right: 4.567 → 456.7.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">Evaluate 23.4 ÷ 1000.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0.234</span></li>
+        <li class=""><span class="lab">B</span><span>2.34</span></li>
+        <li class="correct"><span class="lab">C</span><span>0.0234</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>0.00234</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Dividing by 1000 shifts the point three places left: 23.4 → 0.0234.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">Evaluate 0.0506 × 10000.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>5.06</span></li>
+        <li class=""><span class="lab">B</span><span>50.6</span></li>
+        <li class=""><span class="lab">C</span><span>5060</span></li>
+        <li class="correct"><span class="lab">D</span><span>506</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Multiplying by 10000 shifts the point four places right: 0.0506 → 506.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">The product 0.07 × 0.07 has how many decimal places?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2</span></li>
+        <li class="correct"><span class="lab">B</span><span>4</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>3</span></li>
+        <li class=""><span class="lab">D</span><span>1</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Each factor has 2 decimal places, so the product has 2 + 2 = 4 (0.07 × 0.07 = 0.0049).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">Evaluate 5.6 ÷ 100.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>0.056</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>0.56</span></li>
+        <li class=""><span class="lab">C</span><span>0.0056</span></li>
+        <li class=""><span class="lab">D</span><span>560</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Dividing by 100 shifts the point two places left: 5.6 → 0.056.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">Evaluate 0.9 × 1000.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>9</span></li>
+        <li class=""><span class="lab">B</span><span>90</span></li>
+        <li class="correct"><span class="lab">C</span><span>900</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>9000</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Multiplying by 1000 shifts three places right: 0.9 → 900.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">Which of these is the largest?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0.45</span></li>
+        <li class="correct"><span class="lab">B</span><span>0.5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>0.405</span></li>
+        <li class=""><span class="lab">D</span><span>0.0509</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Line up place values: 0.500, 0.450, 0.405, 0.0509. The largest is 0.5.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">Evaluate 3.2 × 0.001.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0.32</span></li>
+        <li class=""><span class="lab">B</span><span>0.032</span></li>
+        <li class=""><span class="lab">C</span><span>32</span></li>
+        <li class="correct"><span class="lab">D</span><span>0.0032</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Multiplying by 0.001 shifts the point three places left: 3.2 → 0.0032.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">Evaluate 0.25 × 0.4 × 10.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>1</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>0.1</span></li>
+        <li class=""><span class="lab">C</span><span>10</span></li>
+        <li class=""><span class="lab">D</span><span>0.01</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>0.25 × 0.4 = 0.1, then × 10 = 1.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">Evaluate (0.2)³.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0.6</span></li>
+        <li class=""><span class="lab">B</span><span>0.08</span></li>
+        <li class="correct"><span class="lab">C</span><span>0.008</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>0.0008</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>(0.2)³ = 0.2 × 0.2 × 0.2; 2×2×2 = 8 with 1+1+1 = 3 places → 0.008.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">One kilogram of apples costs ₹84.50. The cost of 2.5 kg is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>₹169</span></li>
+        <li class=""><span class="lab">B</span><span>₹21.125</span></li>
+        <li class=""><span class="lab">C</span><span>₹2112.50</span></li>
+        <li class="correct"><span class="lab">D</span><span>₹211.25</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>84.50 × 2.5: 8450 × 25 = 211250, with 2 + 1 = 3 places → ₹211.25.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">A car travels 14.5 km on one litre of fuel. On 6.4 litres it covers:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>₹92.8</span></li>
+        <li class="correct"><span class="lab">B</span><span>92.8 km</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>9.28 km</span></li>
+        <li class=""><span class="lab">D</span><span>928 km</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Distance = 14.5 × 6.4 = 92.8 km (145 × 64 = 9280, two places → 92.80).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">A 9.6 m ribbon is cut into 0.8 m pieces. The number of pieces is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>12</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>120</span></li>
+        <li class=""><span class="lab">C</span><span>1.2</span></li>
+        <li class=""><span class="lab">D</span><span>8</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Number of pieces = 9.6 ÷ 0.8 = 96 ÷ 8 = 12.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">One metre of cloth costs ₹125.60. The cost of 0.75 m is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>₹9.42</span></li>
+        <li class=""><span class="lab">B</span><span>₹167.47</span></li>
+        <li class="correct"><span class="lab">C</span><span>₹94.20</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>₹942</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>125.60 × 0.75 = ₹94.20 (12560 × 75 = 942000, four places → 94.2000).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">A 250 L tank fills at 12.5 L per minute. The time to fill it is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2 min</span></li>
+        <li class=""><span class="lab">B</span><span>200 min</span></li>
+        <li class=""><span class="lab">C</span><span>25 min</span></li>
+        <li class="correct"><span class="lab">D</span><span>20 min</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Time = 250 ÷ 12.5 = 2500 ÷ 125 = 20 minutes.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">The cost of 3.5 kg of sugar at ₹46 per kg is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>₹49.50</span></li>
+        <li class="correct"><span class="lab">B</span><span>₹161</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>₹16.10</span></li>
+        <li class=""><span class="lab">D</span><span>₹138</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>3.5 × 46 = ₹161 (35 × 46 = 1610, one place → 161.0).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">A wire 4.5 m long is cut into 0.15 m pieces. The number of pieces is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>3</span></li>
+        <li class=""><span class="lab">B</span><span>300</span></li>
+        <li class="correct"><span class="lab">C</span><span>30</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>45</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>4.5 ÷ 0.15 = 450 ÷ 15 = 30 pieces.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">A bottle holds 0.75 L. The number of such bottles that fill a 9 L can is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>12</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>1.2</span></li>
+        <li class=""><span class="lab">C</span><span>120</span></li>
+        <li class=""><span class="lab">D</span><span>6.75</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>9 ÷ 0.75 = 900 ÷ 75 = 12 bottles.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">One litre of petrol costs ₹102.40. The cost of 12.5 litres is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>₹128</span></li>
+        <li class=""><span class="lab">B</span><span>₹12800</span></li>
+        <li class=""><span class="lab">C</span><span>₹1024</span></li>
+        <li class="correct"><span class="lab">D</span><span>₹1280</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>102.40 × 12.5 = ₹1280 (10240 × 125 = 1280000, three places → 1280.000).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">A rod weighs 2.4 kg per metre. The weight of a 0.35 m piece is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>₹0.84</span></li>
+        <li class="correct"><span class="lab">B</span><span>0.84 kg</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>8.4 kg</span></li>
+        <li class=""><span class="lab">D</span><span>0.084 kg</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>2.4 × 0.35 = 0.84 kg (24 × 35 = 840, three places → 0.840).</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">Without computing exactly, 0.49 × 0.51 is closest to:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>0.25</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>2.5</span></li>
+        <li class=""><span class="lab">C</span><span>0.025</span></li>
+        <li class=""><span class="lab">D</span><span>1</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Both factors are near 0.5, so the product is near 0.5 × 0.5 = 0.25 (exactly 0.2499).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">Comparing 0.6 × 0.6 with 0.6 + 0.6, the smaller value is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1.2</span></li>
+        <li class=""><span class="lab">B</span><span>0.12</span></li>
+        <li class="correct"><span class="lab">C</span><span>0.36</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>they are equal</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>0.6 × 0.6 = 0.36 while 0.6 + 0.6 = 1.2. The smaller is 0.36. (Multiplying by a number below 1 shrinks.)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">Given that 24 × 17 = 408, the value of 2.4 × 0.17 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4.08</span></li>
+        <li class="correct"><span class="lab">B</span><span>0.408</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>40.8</span></li>
+        <li class=""><span class="lab">D</span><span>0.0408</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>2.4 × 0.17 uses the digits 24 × 17 = 408, with 1 + 2 = 3 decimal places → 0.408.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">Given that 36 ÷ 4 = 9, the value of 0.36 ÷ 0.04 is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0.9</span></li>
+        <li class=""><span class="lab">B</span><span>90</span></li>
+        <li class=""><span class="lab">C</span><span>0.09</span></li>
+        <li class="correct"><span class="lab">D</span><span>9</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Scaling top and bottom by 100 leaves the quotient unchanged: 0.36 ÷ 0.04 = 36 ÷ 4 = 9.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">Evaluate 0.2 × 0.3 + 0.4.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>0.46</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>4.6</span></li>
+        <li class=""><span class="lab">C</span><span>0.6</span></li>
+        <li class=""><span class="lab">D</span><span>0.064</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Multiply first: 0.2 × 0.3 = 0.06; then 0.06 + 0.4 = 0.46.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">Evaluate (1.5 + 0.5) × 0.25.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0.05</span></li>
+        <li class=""><span class="lab">B</span><span>5</span></li>
+        <li class="correct"><span class="lab">C</span><span>0.5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>2.5</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bracket first: 1.5 + 0.5 = 2; then 2 × 0.25 = 0.5.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">Evaluate 5 − 0.5 × 0.5.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>2.25</span></li>
+        <li class="correct"><span class="lab">B</span><span>4.75</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>4.5</span></li>
+        <li class=""><span class="lab">D</span><span>0.475</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Multiply first: 0.5 × 0.5 = 0.25; then 5 − 0.25 = 4.75.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">Evaluate 0.8 ÷ 0.2 + 0.1.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0.41</span></li>
+        <li class=""><span class="lab">B</span><span>41</span></li>
+        <li class=""><span class="lab">C</span><span>0.5</span></li>
+        <li class="correct"><span class="lab">D</span><span>4.1</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Divide first: 0.8 ÷ 0.2 = 4; then 4 + 0.1 = 4.1.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">The reciprocal of 0.25 is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>4</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>0.4</span></li>
+        <li class=""><span class="lab">C</span><span>2.5</span></li>
+        <li class=""><span class="lab">D</span><span>40</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The reciprocal of 0.25 is 1 ÷ 0.25 = 4 (since 0.25 × 4 = 1).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">Written as a decimal multiplication, 12.5% of 80 equals 0.125 × 80, which is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1</span></li>
+        <li class=""><span class="lab">B</span><span>100</span></li>
+        <li class="correct"><span class="lab">C</span><span>10</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>0.1</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>0.125 × 80 = 10 (an eighth of 80).</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">A vendor sells 3.5 kg at ₹48 per kg and 2.5 kg at ₹60 per kg. The total amount is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>₹108</span></li>
+        <li class=""><span class="lab">B</span><span>₹648</span></li>
+        <li class=""><span class="lab">C</span><span>₹31.80</span></li>
+        <li class="correct"><span class="lab">D</span><span>₹318</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>3.5 × 48 = 168 and 2.5 × 60 = 150; total = 168 + 150 = ₹318.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">Evaluate (0.125 × 8) ÷ 0.5.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0.5</span></li>
+        <li class="correct"><span class="lab">B</span><span>2</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>1</span></li>
+        <li class=""><span class="lab">D</span><span>0.2</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bracket first: 0.125 × 8 = 1; then 1 ÷ 0.5 = 2.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">Evaluate 0.04 × 2.5 × 100.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>10</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>1</span></li>
+        <li class=""><span class="lab">C</span><span>100</span></li>
+        <li class=""><span class="lab">D</span><span>0.1</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>0.04 × 2.5 = 0.1; then 0.1 × 100 = 10.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">A square has side 1.2 m. Its area is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>4.8 m²</span></li>
+        <li class=""><span class="lab">B</span><span>14.4 m²</span></li>
+        <li class="correct"><span class="lab">C</span><span>1.44 m²</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>2.4 m²</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Area = side² = 1.2 × 1.2 = 1.44 m².</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">A rectangle measures 2.5 m by 0.8 m. Its area is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>6.6 m²</span></li>
+        <li class="correct"><span class="lab">B</span><span>2 m²</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>20 m²</span></li>
+        <li class=""><span class="lab">D</span><span>0.2 m²</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Area = 2.5 × 0.8 = 2.0 = 2 m² (25 × 8 = 200, two places → 2.00).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">The perimeter of a square of side 0.45 m is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0.18 m</span></li>
+        <li class=""><span class="lab">B</span><span>18 m</span></li>
+        <li class=""><span class="lab">C</span><span>0.2025 m</span></li>
+        <li class="correct"><span class="lab">D</span><span>1.8 m</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Perimeter = 4 × 0.45 = 1.8 m. (Trap (C) is the area, 0.45².)</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">Evaluate 6.25 ÷ 0.25 ÷ 0.5.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>50</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>12.5</span></li>
+        <li class=""><span class="lab">C</span><span>5</span></li>
+        <li class=""><span class="lab">D</span><span>25</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Left to right: 6.25 ÷ 0.25 = 25; then 25 ÷ 0.5 = 50.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">Evaluate (0.3 + 0.7) ÷ (0.5 × 0.4).</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>0.5</span></li>
+        <li class=""><span class="lab">B</span><span>50</span></li>
+        <li class="correct"><span class="lab">C</span><span>5</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>2</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Numerator 0.3 + 0.7 = 1; denominator 0.5 × 0.4 = 0.2; then 1 ÷ 0.2 = 5.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">A drum holds 56.7 L of juice, poured equally into 9 jugs. Each jug holds:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>63 L</span></li>
+        <li class=""><span class="lab">B</span><span>0.63 L</span></li>
+        <li class=""><span class="lab">C</span><span>510.3 L</span></li>
+        <li class="correct"><span class="lab">D</span><span>6.3 L</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>56.7 ÷ 9 = 6.3 L per jug (567 ÷ 9 = 63, one place → 6.3).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">Evaluate 0.6 × 0.6 × 0.6.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1.8</span></li>
+        <li class="correct"><span class="lab">B</span><span>0.216</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>0.36</span></li>
+        <li class=""><span class="lab">D</span><span>0.018</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>0.6 × 0.6 × 0.6: 6×6×6 = 216 with 1+1+1 = 3 places → 0.216. --- *End of solutions. Maximum marks: 240.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>
