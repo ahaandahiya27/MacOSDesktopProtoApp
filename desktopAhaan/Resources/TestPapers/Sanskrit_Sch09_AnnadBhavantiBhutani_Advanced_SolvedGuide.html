@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Annad Bhavanti Bhutani (Advanced) — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Annad Bhavanti Bhutani (Advanced)<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">The full creation-wheel, in order, runs: ब्रह्म → कर्म → यज्ञ → ____ → अन्न → भूतानि.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>भूत (beings)</span></li>
+        <li class=""><span class="lab">B</span><span>रसायन (chemistry)</span></li>
+        <li class="correct"><span class="lab">C</span><span>पर्जन्य (rain)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>ओषधि (herbs)</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The wheel runs ब्रह्म → कर्म → यज्ञ → **पर्जन्य (rain)** → अन्न → भूतानि.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">Reversed, the chain reads: भूतानि come from अन्न, अन्न from पर्जन्य, पर्जन्य from यज्ञ, यज्ञ from ____.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>कर्म (action)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>भूत (beings)</span></li>
+        <li class=""><span class="lab">C</span><span>अन्न (food)</span></li>
+        <li class=""><span class="lab">D</span><span>रसायन</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Reversed, the chain ends with यज्ञ arising from **कर्म (action)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">In the Gita's teaching, कर्म (action) itself is said to arise from:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>पर्जन्य (rain)</span></li>
+        <li class=""><span class="lab">B</span><span>अन्न (food)</span></li>
+        <li class=""><span class="lab">C</span><span>भूत (beings)</span></li>
+        <li class="correct"><span class="lab">D</span><span>ब्रह्म (the Absolute)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>कर्म itself is said to arise from **ब्रह्म (the Absolute)** — कर्म ब्रह्मोद्भवम्.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">यज्ञ (sacrifice) produces पर्जन्य (rain); पर्जन्य then produces:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>कर्म</span></li>
+        <li class="correct"><span class="lab">B</span><span>अन्न (food)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>ब्रह्म</span></li>
+        <li class=""><span class="lab">D</span><span>यज्ञ</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>पर्जन्य (rain) produces **अन्न (food)** next in the chain.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">अन्नात् is the ablative of अन्न; the -आत् ending means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'to food'</span></li>
+        <li class="correct"><span class="lab">B</span><span>'from food' (the source)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>'of food'</span></li>
+        <li class=""><span class="lab">D</span><span>'in food'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>अन्नात् is the ablative; -आत् means **'from food'** (the source).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">The ablative tells us food is the ____ of beings, not their maker.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>builder</span></li>
+        <li class=""><span class="lab">B</span><span>enemy</span></li>
+        <li class=""><span class="lab">C</span><span>ruler</span></li>
+        <li class="correct"><span class="lab">D</span><span>source (they arise from it)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The ablative marks food as the **source** of beings — they arise from it — not their maker.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">'The fruit falls from the tree' would put 'tree' in the ablative as:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>वृक्षात्</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>वृक्षः</span></li>
+        <li class=""><span class="lab">C</span><span>वृक्षम्</span></li>
+        <li class=""><span class="lab">D</span><span>वृक्षे</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>'The fruit falls from the tree' puts वृक्ष in the ablative: **वृक्षात्**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">'He comes from the village' puts 'village' (ग्राम) in the ablative as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ग्रामम्</span></li>
+        <li class=""><span class="lab">B</span><span>ग्रामे</span></li>
+        <li class="correct"><span class="lab">C</span><span>ग्रामात्</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>ग्रामस्य</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>'He comes from the village' puts ग्राम in the ablative: **ग्रामात्**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">In अन्नाद्भवन्ति, the final -द् of अन्नाद् comes from:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>sandhi (अन्नात् + भवन्ति: त् → द् before भ्)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a plural ending</span></li>
+        <li class=""><span class="lab">C</span><span>the verb root</span></li>
+        <li class=""><span class="lab">D</span><span>the past tense</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The -द् of अन्नाद् comes from **sandhi** (अन्नात् + भवन्ति: त् → द् before भ्).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">The sandhi त् → द् happens because the following sound (भ्) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>voiceless</span></li>
+        <li class=""><span class="lab">B</span><span>a vowel</span></li>
+        <li class="correct"><span class="lab">C</span><span>voiced</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>nasal</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The त् → द् change happens because the following sound भ् is **voiced**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">By the same rule, सत् + भावना becomes:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>सत्भावना</span></li>
+        <li class=""><span class="lab">B</span><span>सम्भावना</span></li>
+        <li class=""><span class="lab">C</span><span>सच्भावना</span></li>
+        <li class="correct"><span class="lab">D</span><span>सद्भावना</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>सत् + भावना → **सद्भावना** (त् → द् before the voiced भ्).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">By the same rule, जगत् + ईशः becomes:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>जगत्ईशः</span></li>
+        <li class="correct"><span class="lab">B</span><span>जगदीशः</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>जगच्ईशः</span></li>
+        <li class=""><span class="lab">D</span><span>जगणीशः</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>जगत् + ईशः → **जगदीशः** (त् → द् before the voiced vowel ई).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">After recognising the sandhi, अन्नाद् is still the ____ case.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>nominative</span></li>
+        <li class=""><span class="lab">B</span><span>accusative</span></li>
+        <li class=""><span class="lab">C</span><span>genitive</span></li>
+        <li class="correct"><span class="lab">D</span><span>ablative ('from food')</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>After the sandhi, अन्नाद् is still the **ablative** ('from food').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">भूतानि comes from the root भू ('to be'); it therefore means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ghosts</span></li>
+        <li class="correct"><span class="lab">B</span><span>beings / things that have come to be</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>foods</span></li>
+        <li class=""><span class="lab">D</span><span>sacrifices</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>भूतानि (root भू 'to be') means **beings / things that have come to be**, not ghosts.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">The present 'they come to be' (from भू) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>अभवन्</span></li>
+        <li class=""><span class="lab">B</span><span>भविष्यन्ति</span></li>
+        <li class="correct"><span class="lab">C</span><span>भवन्ति</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>भूतानि</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The present 'they come to be' (from भू) is **भवन्ति**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">The past active participle भूत ('having become / a being') and the verb भवति share the root:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>भू</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>ज्ञा</span></li>
+        <li class=""><span class="lab">C</span><span>कृ</span></li>
+        <li class=""><span class="lab">D</span><span>गम्</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>भूत and भवति both come from the root **भू**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">The future 'it will be' (from भू) is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>भवति</span></li>
+        <li class=""><span class="lab">B</span><span>अभवत्</span></li>
+        <li class="correct"><span class="lab">C</span><span>भविष्यति</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>भवतु</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The future 'it will be' (from भू) is **भविष्यति**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">जानीयात् ('one should know') is in the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>optative (विधिलिङ्)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>present tense</span></li>
+        <li class=""><span class="lab">C</span><span>past tense</span></li>
+        <li class=""><span class="lab">D</span><span>imperative</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>जानीयात् ('one should know') is in the **optative (विधिलिङ्)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">The optative (विधिलिङ्) expresses:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a finished past action</span></li>
+        <li class="correct"><span class="lab">B</span><span>'should / ought to / may' (advice or rule)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a plain present fact</span></li>
+        <li class=""><span class="lab">D</span><span>a question</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The optative expresses **'should / ought to / may'** — advice or a rule.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">कुर्यात् is the optative of कृ, meaning:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'he does'</span></li>
+        <li class=""><span class="lab">B</span><span>'he did'</span></li>
+        <li class=""><span class="lab">C</span><span>'he will do'</span></li>
+        <li class="correct"><span class="lab">D</span><span>'one should do'</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>कुर्यात् is the optative of कृ, meaning **'one should do'**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">एवं प्रवर्तितं चक्रं ('the wheel thus set in motion') refers to:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the cycle of action–rain–food–beings</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a potter's wheel</span></li>
+        <li class=""><span class="lab">C</span><span>a chariot wheel</span></li>
+        <li class=""><span class="lab">D</span><span>the zodiac</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>एवं प्रवर्तितं चक्रम् ('the wheel thus set in motion') refers to **the cycle of action–rain–food–beings**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">The teaching is that one who does not keep the wheel turning (by doing one's duty) lives:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>richly</span></li>
+        <li class=""><span class="lab">B</span><span>forever</span></li>
+        <li class=""><span class="lab">C</span><span>happily</span></li>
+        <li class="correct"><span class="lab">D</span><span>in vain (अघायुः — a wasteful life)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>One who does not keep the wheel turning lives **in vain (a wasteful life)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">ब्रह्म (neuter) in this chapter means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a priest</span></li>
+        <li class="correct"><span class="lab">B</span><span>the all-pervading impersonal Absolute (सर्वव्याप्तः परमेश्वरः)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the creator-god</span></li>
+        <li class=""><span class="lab">D</span><span>a fox</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>ब्रह्म (neuter) means **the all-pervading impersonal Absolute (सर्वव्याप्तः परमेश्वरः)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">ब्रह्म (the Absolute) is grammatically:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>masculine</span></li>
+        <li class=""><span class="lab">B</span><span>feminine</span></li>
+        <li class="correct"><span class="lab">C</span><span>neuter</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>dual</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>ब्रह्म (the Absolute) is grammatically **neuter**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">ब्रह्मा (with long ā, masculine) means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the impersonal Absolute</span></li>
+        <li class="correct"><span class="lab">B</span><span>the creator-god (one of the trimurti)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a priest</span></li>
+        <li class=""><span class="lab">D</span><span>a herb</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>ब्रह्मा (long ā, masculine) means **the creator-god** (of the trimurti).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">ब्रह्मन् (masculine) in the sense relevant here means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the impersonal Absolute</span></li>
+        <li class=""><span class="lab">B</span><span>the creator-god</span></li>
+        <li class="correct"><span class="lab">C</span><span>a priest / brahmin</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a sacrifice</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>ब्रह्मन् (masculine) here means **a priest / brahmin**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">The three words ब्रह्म, ब्रह्मा, ब्रह्मन् are told apart by their ____ and meaning.</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>gender</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>tense</span></li>
+        <li class=""><span class="lab">C</span><span>number</span></li>
+        <li class=""><span class="lab">D</span><span>case only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>ब्रह्म, ब्रह्मा and ब्रह्मन् are told apart by their **gender** and meaning.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">In 'कर्म ब्रह्मोद्भवम्' the कर्म is said to spring from ब्रह्म — here ब्रह्म is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>priest</span></li>
+        <li class=""><span class="lab">B</span><span>creator-god</span></li>
+        <li class=""><span class="lab">C</span><span>a herb</span></li>
+        <li class="correct"><span class="lab">D</span><span>neuter Absolute (the ultimate source)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In कर्म ब्रह्मोद्भवम्, ब्रह्म is the **neuter Absolute** — the ultimate source.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">यज्ञ in the cycle is best understood as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a meal</span></li>
+        <li class=""><span class="lab">B</span><span>a war</span></li>
+        <li class=""><span class="lab">C</span><span>a market</span></li>
+        <li class="correct"><span class="lab">D</span><span>selfless, cooperative action / sacrifice that sustains the world</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>यज्ञ here is best understood as **selfless, cooperative action / sacrifice that sustains the world**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">पर्जन्य means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>rain / rain-cloud</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>food</span></li>
+        <li class=""><span class="lab">C</span><span>a being</span></li>
+        <li class=""><span class="lab">D</span><span>action</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>पर्जन्य means **rain / rain-cloud**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">ओषधि means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a sacrifice</span></li>
+        <li class=""><span class="lab">B</span><span>rain</span></li>
+        <li class="correct"><span class="lab">C</span><span>a herb / plant (that yields food)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a ghost</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>ओषधि means **a herb / plant** (that yields food).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">The cycle's main lesson is the world's:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>complete independence</span></li>
+        <li class="correct"><span class="lab">B</span><span>interdependence — each link sustains the next</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>random chaos</span></li>
+        <li class=""><span class="lab">D</span><span>destruction</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The cycle's lesson is the world's **interdependence — each link sustains the next**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">The modern subject रसायनशास्त्रम् means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>astronomy</span></li>
+        <li class=""><span class="lab">B</span><span>grammar</span></li>
+        <li class="correct"><span class="lab">C</span><span>chemistry</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>history</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>रसायनशास्त्रम् means **chemistry**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">शास्त्रम् in रसायनशास्त्रम् means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a herb</span></li>
+        <li class="correct"><span class="lab">B</span><span>a science / treatise</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a ghost</span></li>
+        <li class=""><span class="lab">D</span><span>a sacrifice</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>शास्त्रम् means **a science / treatise**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">Using the old word रसायन (Ayurvedic tonics) for modern chemistry shows Sanskrit's ability to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>borrow only from English</span></li>
+        <li class=""><span class="lab">B</span><span>refuse all new meaning</span></li>
+        <li class=""><span class="lab">C</span><span>lose its old words</span></li>
+        <li class="correct"><span class="lab">D</span><span>coin terms for new subjects from its own roots</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Reusing रसायन for chemistry shows Sanskrit's ability to **coin terms for new subjects from its own roots**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">The ecological reading of the cycle connects ancient यज्ञ to modern:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>sustainability / care for nature</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>warfare</span></li>
+        <li class=""><span class="lab">C</span><span>banking</span></li>
+        <li class=""><span class="lab">D</span><span>astrology</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The ecological reading links यज्ञ to modern **sustainability / care for nature**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">'अन्नात् भूतानि भवन्ति' and 'अन्नाद् भवन्ति भूतानि' differ only in:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>word order and the sandhi at the join</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>meaning</span></li>
+        <li class=""><span class="lab">C</span><span>tense</span></li>
+        <li class=""><span class="lab">D</span><span>the number of beings</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The two phrasings differ only in **word order and the sandhi at the join** — the meaning is the same.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">The verb भवन्ति agrees with भूतानि (plural), so it is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>first-person singular</span></li>
+        <li class="correct"><span class="lab">B</span><span>third-person plural ('they come to be')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>second-person dual</span></li>
+        <li class=""><span class="lab">D</span><span>a past tense</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>भवन्ति agrees with the plural भूतानि, so it is **third-person plural** ('they come to be').</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">'पर्जन्यात् अन्नम्' would mean:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'rain from food'</span></li>
+        <li class=""><span class="lab">B</span><span>'food to rain'</span></li>
+        <li class=""><span class="lab">C</span><span>'rain in food'</span></li>
+        <li class="correct"><span class="lab">D</span><span>'food from rain'</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>पर्जन्यात् अन्नम् means **'food from rain'** (ablative पर्जन्यात्).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">The ablative chain अन्नात्, पर्जन्यात्, यज्ञात् all carry the meaning:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'to / for'</span></li>
+        <li class=""><span class="lab">B</span><span>'of / belonging to'</span></li>
+        <li class="correct"><span class="lab">C</span><span>'from / arising out of'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>'in / on'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>अन्नात्, पर्जन्यात्, यज्ञात् all mean **'from / arising out of'** (ablative).</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">'सर्वव्याप्त' (used to gloss ब्रह्म) means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>very small</span></li>
+        <li class=""><span class="lab">B</span><span>far away</span></li>
+        <li class=""><span class="lab">C</span><span>invisible only</span></li>
+        <li class="correct"><span class="lab">D</span><span>all-pervading</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>सर्वव्याप्त means **all-pervading**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">The chapter treats the food-cycle as an expression of the omnipresent:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ghost</span></li>
+        <li class=""><span class="lab">B</span><span>fox</span></li>
+        <li class="correct"><span class="lab">C</span><span>ब्रह्म (Cosmic Power)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>king</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The food-cycle is treated as an expression of the omnipresent **ब्रह्म (Cosmic Power)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">By the त् → द् rule, तत् + रूपम् becomes:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>तद्रूपम्</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>तत्रूपम्</span></li>
+        <li class=""><span class="lab">C</span><span>तच्रूपम्</span></li>
+        <li class=""><span class="lab">D</span><span>तन्रूपम्</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>तत् + रूपम् → **तद्रूपम्** (त् → द् before the voiced र).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">'सः धर्मं जानीयात्' means 'he ____ dharma'.</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>knew</span></li>
+        <li class="correct"><span class="lab">B</span><span>should know</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>is knowing</span></li>
+        <li class=""><span class="lab">D</span><span>will not know</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>सः धर्मं जानीयात् means 'he **should know** dharma' (optative).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">The optative is the right mood for stating a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>finished event</span></li>
+        <li class="correct"><span class="lab">B</span><span>rule or moral 'ought' (one should ...)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>simple present fact</span></li>
+        <li class=""><span class="lab">D</span><span>future certainty</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The optative is right for stating a **rule or moral 'ought' (one should ...)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">Which word-meaning pair is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>भूतानि = ghosts</span></li>
+        <li class=""><span class="lab">B</span><span>पर्जन्य = food</span></li>
+        <li class=""><span class="lab">C</span><span>यज्ञ = a market</span></li>
+        <li class="correct"><span class="lab">D</span><span>अन्नात् = from food</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct pair is **अन्नात् = from food**. भूतानि = beings, पर्जन्य = rain, यज्ञ = sacrifice.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">Which grammar pair is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>अन्नात् = nominative; जानीयात् = past</span></li>
+        <li class=""><span class="lab">B</span><span>अन्नात् = accusative</span></li>
+        <li class="correct"><span class="lab">C</span><span>अन्नात् = ablative ('from'); जानीयात् = optative ('should know')</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>जानीयात् = present tense</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct grammar: **अन्नात् = ablative ('from'); जानीयात् = optative ('should know')**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">Which sandhi result is CORRECT?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>अन्नात् + भवन्ति = अन्नाद्भवन्ति</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>अन्नात् + भवन्ति = अन्नाभवन्ति</span></li>
+        <li class=""><span class="lab">C</span><span>सत् + भावना = सत्भावना</span></li>
+        <li class=""><span class="lab">D</span><span>जगत् + ईश = जगत्ईश</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct sandhi: **अन्नात् + भवन्ति = अन्नाद्भवन्ति**. सत्+भावना = सद्भावना, जगत्+ईश = जगदीश.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">Which gender–meaning pair is CORRECT?</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>ब्रह्म (neuter) = the impersonal Absolute</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>ब्रह्म = the creator-god</span></li>
+        <li class=""><span class="lab">C</span><span>ब्रह्मा = a priest</span></li>
+        <li class=""><span class="lab">D</span><span>ब्रह्मन् = the impersonal Absolute</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct pair: **ब्रह्म (neuter) = the impersonal Absolute**. ब्रह्मा = creator-god, ब्रह्मन् = priest.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">Which cycle-link is CORRECT?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>beings → food (beings make food)</span></li>
+        <li class=""><span class="lab">B</span><span>rain → yajna (rain makes sacrifice)</span></li>
+        <li class=""><span class="lab">C</span><span>food → rain</span></li>
+        <li class="correct"><span class="lab">D</span><span>food → beings (beings arise from food)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The correct link is **food → beings** (beings arise from food); beings do not make food.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">The whole verse uses the ablative repeatedly to teach a relation of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>creation by a single builder</span></li>
+        <li class=""><span class="lab">B</span><span>destruction</span></li>
+        <li class="correct"><span class="lab">C</span><span>mutual dependence (each thing arising from another)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>ownership</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The repeated ablative teaches a relation of **mutual dependence** — each thing arising from another.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">भूत meaning 'a being' (not 'ghost') is settled by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the colour of the word</span></li>
+        <li class="correct"><span class="lab">B</span><span>the Vedanta/Gita context</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the time of day</span></li>
+        <li class=""><span class="lab">D</span><span>the verb's tense</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>भूत as 'a being' (not 'ghost') is settled by **the Vedanta/Gita context**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">'कर्म ब्रह्मोद्भवम्' shows action springing from ब्रह्म; udbhava (उद्भव) means:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>'destruction'</span></li>
+        <li class=""><span class="lab">B</span><span>'ruler'</span></li>
+        <li class="correct"><span class="lab">C</span><span>'origin / arising'</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>'food'</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>उद्भव (in ब्रह्मोद्भवम्) means **'origin / arising'**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">The reason यज्ञ (selfless action) matters in the cycle is that it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>stops the rain</span></li>
+        <li class=""><span class="lab">B</span><span>destroys food</span></li>
+        <li class=""><span class="lab">C</span><span>is useless</span></li>
+        <li class="correct"><span class="lab">D</span><span>keeps the life-supporting wheel turning</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>यज्ञ matters because it **keeps the life-supporting wheel turning**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">A student who 'keeps the wheel turning' does so by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>avoiding all work</span></li>
+        <li class="correct"><span class="lab">B</span><span>performing his duty / selfless action (कर्म/यज्ञ)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>hoarding food</span></li>
+        <li class=""><span class="lab">D</span><span>ignoring nature</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>One keeps the wheel turning by **performing one's duty / selfless action (कर्म/यज्ञ)**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">Applying the same त् → द् sandhi, पर्जन्यात् + भवति becomes:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>पर्जन्याद्भवति</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>पर्जन्यात्भवति</span></li>
+        <li class=""><span class="lab">C</span><span>पर्जन्याभवति</span></li>
+        <li class=""><span class="lab">D</span><span>पर्जन्यान्भवति</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>पर्जन्यात् + भवति → **पर्जन्याद्भवति** (त् → द् before the voiced भ्).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">The central theme of this chapter is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a fox and grapes</span></li>
+        <li class="correct"><span class="lab">B</span><span>the Gita's cycle of creation and the interdependence of all life</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>banking</span></li>
+        <li class=""><span class="lab">D</span><span>the rise of empires</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The central theme is **the Gita's cycle of creation and the interdependence of all life**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">Putting it together, अन्नाद् भवन्ति भूतानि means:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>from food, all living beings come to be</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>ghosts arise from food</span></li>
+        <li class=""><span class="lab">C</span><span>beings create food</span></li>
+        <li class=""><span class="lab">D</span><span>food destroys beings</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>अन्नाद् भवन्ति भूतानि means **'from food, all living beings come to be'**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">The chapter links the verse with grammar lessons on:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only the dative case</span></li>
+        <li class=""><span class="lab">B</span><span>the six tastes</span></li>
+        <li class="correct"><span class="lab">C</span><span>the ablative, consonant sandhi, the optative, and the root भू</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>ordinals only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The chapter links the verse with lessons on **the ablative, consonant sandhi, the optative, and the root भू**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">A student claims: 'भूतानि means ghosts, and जानीयात् is past tense.' The best correction is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the student is fully correct</span></li>
+        <li class=""><span class="lab">B</span><span>भूतानि means beings, but जानीयात् is past</span></li>
+        <li class=""><span class="lab">C</span><span>भूतानि means ghosts, and जानीयात् is optative</span></li>
+        <li class="correct"><span class="lab">D</span><span>भूतानि means 'beings' (root भू), and जानीयात् is the optative ('one should know')</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>भूतानि means 'beings' (root भू), and जानीयात् is the **optative ('one should know')** — the student is wrong on both. --- *End of solutions. Maximum marks: 240.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>
