@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>How The Land Becomes Sacred (Advanced) — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>How The Land Becomes Sacred (Advanced)<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">"Sacredness" most nearly means the quality of being:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ordinary and everyday</span></li>
+        <li class=""><span class="lab">B</span><span>newly built</span></li>
+        <li class="correct"><span class="lab">C</span><span>regarded as holy and worthy of reverence</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>for sale</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sacredness is the quality of being **regarded as holy and worthy of reverence**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">A "tīrtha" in the Indian tradition is best understood as:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a sacred place of pilgrimage, often a "crossing"</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a marketplace</span></li>
+        <li class=""><span class="lab">C</span><span>a tax office</span></li>
+        <li class=""><span class="lab">D</span><span>a fort</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A tīrtha is **a sacred place of pilgrimage, often a "crossing"**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">A pilgrimage is a journey undertaken:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only for trade</span></li>
+        <li class=""><span class="lab">B</span><span>to conquer territory</span></li>
+        <li class=""><span class="lab">C</span><span>for a holiday at the beach</span></li>
+        <li class="correct"><span class="lab">D</span><span>to a sacred place, often for devotion or merit</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A pilgrimage is a journey **to a sacred place, often for devotion or merit**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">A small sacred structure housing an object of worship is a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>bazaar</span></li>
+        <li class="correct"><span class="lab">B</span><span>shrine</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>granary</span></li>
+        <li class=""><span class="lab">D</span><span>barracks</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A small sacred structure housing an object of worship is a **shrine**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">A "relic" venerated at a sacred site is usually:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a new coin</span></li>
+        <li class="correct"><span class="lab">B</span><span>a remnant associated with a holy person, such as a bodily remain or possession</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a trade good</span></li>
+        <li class=""><span class="lab">D</span><span>a weapon of war</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A relic is **a remnant associated with a holy person, such as a bodily remain or possession**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">The chapter shows that in India sacredness often spreads beyond a single shrine to embrace:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only one temple</span></li>
+        <li class=""><span class="lab">B</span><span>nothing outside the building</span></li>
+        <li class=""><span class="lab">C</span><span>only foreign countries</span></li>
+        <li class="correct"><span class="lab">D</span><span>the very land itself</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In India sacredness often spreads to embrace **the very land itself**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">The network of four sacred abodes spread across the four directions of India is the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>Chār Dhām</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>Kumbh Mela</span></li>
+        <li class=""><span class="lab">C</span><span>Sangam</span></li>
+        <li class=""><span class="lab">D</span><span>bazaar circuit</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The four sacred abodes across the four directions form the **Chār Dhām**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">The twelve sacred sites dedicated to a "pillar of light" form of Shiva are called the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>shakti pīṭhas</span></li>
+        <li class=""><span class="lab">B</span><span>sacred groves</span></li>
+        <li class="correct"><span class="lab">C</span><span>jyotirlingas</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>viharas</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The twelve "pillar of light" sites of Shiva are the **jyotirlingas**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">The sacred sites associated with the goddess (Shakti), spread across the land, are the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>shakti pīṭhas</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>jyotirlingas</span></li>
+        <li class=""><span class="lab">C</span><span>char dham</span></li>
+        <li class=""><span class="lab">D</span><span>tirthankaras</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The sacred sites of the goddess are the **shakti pīṭhas**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">The deliberate spreading of sacred sites across the whole country creates what the chapter calls a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>trade route only</span></li>
+        <li class=""><span class="lab">B</span><span>defence line</span></li>
+        <li class="correct"><span class="lab">C</span><span>sacred geography</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>postal network</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Spreading sacred sites across the country creates a **sacred geography**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">A "sangam" in the sacred ecology of India is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a mountain peak only</span></li>
+        <li class=""><span class="lab">B</span><span>a desert</span></li>
+        <li class=""><span class="lab">C</span><span>a coin</span></li>
+        <li class="correct"><span class="lab">D</span><span>a confluence where rivers meet</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A sangam is **a confluence where rivers meet**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">The great gathering held at sacred river sites, drawing millions of pilgrims, is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>bazaar</span></li>
+        <li class="correct"><span class="lab">B</span><span>Kumbh Mela</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>haat</span></li>
+        <li class=""><span class="lab">D</span><span>sabha</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The great river gathering of millions is the **Kumbh Mela**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">Rivers in the Indian tradition have been worshipped as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>mere channels of water with no meaning</span></li>
+        <li class=""><span class="lab">B</span><span>only trade highways</span></li>
+        <li class=""><span class="lab">C</span><span>sources of tax only</span></li>
+        <li class="correct"><span class="lab">D</span><span>sacred, often as goddesses, since Vedic times</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rivers have been worshipped as **sacred, often as goddesses, since Vedic times**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">The peepul (or peepal) tree is considered sacred; another commonly revered sacred tree is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>cactus</span></li>
+        <li class="correct"><span class="lab">B</span><span>banyan</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>pine</span></li>
+        <li class=""><span class="lab">D</span><span>rubber tree</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Besides the peepul, a commonly revered sacred tree is the **banyan**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">A "sacred grove" is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a market square</span></li>
+        <li class=""><span class="lab">B</span><span>a royal palace garden only</span></li>
+        <li class="correct"><span class="lab">C</span><span>a patch of forest protected by a community for religious reasons</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a cleared field</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A sacred grove is **a patch of forest protected by a community for religious reasons**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">Sacred groves are important to ecology because they:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>protect patches of natural forest and their wildlife</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>destroy biodiversity</span></li>
+        <li class=""><span class="lab">C</span><span>are always cut down</span></li>
+        <li class=""><span class="lab">D</span><span>have no plants</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sacred groves matter ecologically because they **protect patches of natural forest and their wildlife**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">A "puṇyakṣhetra" refers to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a battlefield</span></li>
+        <li class=""><span class="lab">B</span><span>a tax zone</span></li>
+        <li class="correct"><span class="lab">C</span><span>a field of merit — a holy region</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>a trading port</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A puṇyakṣhetra is **a field of merit — a holy region**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">In Jain tradition, a "tīrthankara" is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a spiritual teacher who shows the way across the "ocean" of worldly life</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a river</span></li>
+        <li class=""><span class="lab">C</span><span>a coin</span></li>
+        <li class=""><span class="lab">D</span><span>a king's title</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A tīrthankara is **a spiritual teacher who shows the way across the "ocean" of worldly life**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">The "Bodhi tree" is sacred especially in which tradition?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only in trade guilds</span></li>
+        <li class="correct"><span class="lab">B</span><span>it is sacred in Buddhism, under which the Buddha attained enlightenment</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>only to soldiers</span></li>
+        <li class=""><span class="lab">D</span><span>it is not sacred to anyone</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Bodhi tree is sacred in Buddhism, **under which the Buddha attained enlightenment**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">That India is home to communities of many faiths — including ones that began outside it — shows the land's:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>rejection of all religions</span></li>
+        <li class=""><span class="lab">B</span><span>single uniform religion</span></li>
+        <li class=""><span class="lab">C</span><span>lack of any sacred sites</span></li>
+        <li class="correct"><span class="lab">D</span><span>long tradition of welcoming and blending many traditions</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>India's many faith communities show its **long tradition of welcoming and blending many traditions**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">The difficult hilltop journeys of many pilgrimages are often seen as mirroring:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>an inner spiritual journey or effort</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>a shopping trip</span></li>
+        <li class=""><span class="lab">C</span><span>a military march</span></li>
+        <li class=""><span class="lab">D</span><span>a tax collection round</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Hilltop pilgrim journeys are seen as mirroring **an inner spiritual journey or effort**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">The worship of river confluences (where rivers meet) reflects the idea that such meeting points are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>dangerous and avoided</span></li>
+        <li class=""><span class="lab">B</span><span>only good for fishing</span></li>
+        <li class=""><span class="lab">C</span><span>used for war</span></li>
+        <li class="correct"><span class="lab">D</span><span>especially sacred and powerful</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>River confluences are worshipped as **especially sacred and powerful**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">The phrase "sacred ecology" links holiness with:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>machines and factories</span></li>
+        <li class="correct"><span class="lab">B</span><span>nature — rivers, mountains, trees and groves</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>money and markets</span></li>
+        <li class=""><span class="lab">D</span><span>warfare</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Sacred ecology" links holiness with **nature — rivers, mountains, trees and groves**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">Pilgrimage networks spread across India had the effect of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>dividing the land into unconnected pieces</span></li>
+        <li class=""><span class="lab">B</span><span>stopping all travel</span></li>
+        <li class="correct"><span class="lab">C</span><span>connecting distant regions through shared sacred journeys</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>isolating each village</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Pilgrimage networks **connected distant regions through shared sacred journeys**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">The continuity of the pilgrimage tradition over thousands of years shows it is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a recent invention</span></li>
+        <li class="correct"><span class="lab">B</span><span>an ancient and living practice</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>practised only abroad</span></li>
+        <li class=""><span class="lab">D</span><span>banned in India</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The pilgrimage tradition is **an ancient and living practice**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">A pilgrim who travels from the south to a Himalayan tīrtha is, in effect:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>leaving India</span></li>
+        <li class=""><span class="lab">B</span><span>only sightseeing with no meaning</span></li>
+        <li class="correct"><span class="lab">C</span><span>experiencing the unity of a vast sacred geography</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>collecting taxes</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A south-to-Himalaya pilgrim is **experiencing the unity of a vast sacred geography**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">The Kumbh Mela is held by rotation at sacred sites associated with:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>holy rivers and their confluences</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>deserts</span></li>
+        <li class=""><span class="lab">C</span><span>sea ports</span></li>
+        <li class=""><span class="lab">D</span><span>mountain mines</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Kumbh Mela rotates among sites associated with **holy rivers and their confluences**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">The idea that "the land itself is sacred" helps explain why Indians have long:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ignored their geography</span></li>
+        <li class=""><span class="lab">B</span><span>avoided travel</span></li>
+        <li class=""><span class="lab">C</span><span>worshipped only inside one building</span></li>
+        <li class="correct"><span class="lab">D</span><span>revered specific rivers, mountains and regions as holy</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"The land itself is sacred" explains why Indians have long **revered specific rivers, mountains and regions as holy**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">Sacred groves are often dedicated to a local deity, and cutting their trees is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>encouraged for profit</span></li>
+        <li class=""><span class="lab">B</span><span>required by law</span></li>
+        <li class=""><span class="lab">C</span><span>of no concern</span></li>
+        <li class="correct"><span class="lab">D</span><span>traditionally forbidden out of reverence</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cutting a sacred grove's trees is **traditionally forbidden out of reverence**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">A "synagogue," "church" or "mosque" appearing in India's sacred landscape shows that sacred geography here includes:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>places sacred to many religions</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>only one religion</span></li>
+        <li class=""><span class="lab">C</span><span>no buildings</span></li>
+        <li class=""><span class="lab">D</span><span>only ancient ruins</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Synagogues, churches and mosques show sacred geography here includes **places sacred to many religions**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">The concept that holy journeys mirror an inner journey suggests pilgrimage is valued for:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>its physical hardship alone</span></li>
+        <li class=""><span class="lab">B</span><span>shopping opportunities</span></li>
+        <li class="correct"><span class="lab">C</span><span>both the outward travel and the inward transformation</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>military training</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Pilgrimage is valued for **both the outward travel and the inward transformation**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">The peepul tree's sacred status, mentioned alongside epics that scatter shrines across the land, illustrates how:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>trees have no cultural meaning</span></li>
+        <li class="correct"><span class="lab">B</span><span>nature and story together make the landscape sacred</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>only buildings can be sacred</span></li>
+        <li class=""><span class="lab">D</span><span>epics ignore geography</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The peepul and shrine-scattering epics show how **nature and story together make the landscape sacred**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">The reason river confluences like Prayag draw great gatherings is that they are seen as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ordinary water meetings</span></li>
+        <li class=""><span class="lab">B</span><span>good only for bathing in summer</span></li>
+        <li class="correct"><span class="lab">C</span><span>especially auspicious and purifying</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>dangerous floods</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Confluences like Prayag draw crowds because they are seen as **especially auspicious and purifying**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">The presence of sacred sites in all four directions (Chār Dhām) symbolically:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>shrinks India to one corner</span></li>
+        <li class="correct"><span class="lab">B</span><span>binds the whole subcontinent into one sacred whole</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>divides India from itself</span></li>
+        <li class=""><span class="lab">D</span><span>has no symbolic meaning</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sacred sites in all four directions symbolically **bind the whole subcontinent into one sacred whole**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">A community that protects a sacred grove is, perhaps without naming it so, practising:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>deforestation</span></li>
+        <li class=""><span class="lab">B</span><span>industrial farming</span></li>
+        <li class=""><span class="lab">C</span><span>mining</span></li>
+        <li class="correct"><span class="lab">D</span><span>conservation of nature</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Protecting a sacred grove is, in effect, **conservation of nature**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">The idea of "vasudhaiva kutumbakam" (the world is one family), echoed in this theme, supports India's tradition of:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>welcoming many peoples and faiths</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>excluding outsiders</span></li>
+        <li class=""><span class="lab">C</span><span>isolation</span></li>
+        <li class=""><span class="lab">D</span><span>conquest</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Vasudhaiva kutumbakam" supports India's tradition of **welcoming many peoples and faiths**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">A tīrtha is sometimes called a "crossing" because it is seen as a place to:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>cross from the ordinary world toward the sacred</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>cross a river only for trade</span></li>
+        <li class=""><span class="lab">C</span><span>cross a border to leave India</span></li>
+        <li class=""><span class="lab">D</span><span>cross a market</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A tīrtha is a "crossing" — a place to **cross from the ordinary world toward the sacred**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">That pilgrimage sites are linked in networks rather than standing alone tells us the tradition values:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>isolation of each shrine</span></li>
+        <li class="correct"><span class="lab">B</span><span>connection and a shared sacred map</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>destroying old sites</span></li>
+        <li class=""><span class="lab">D</span><span>building only new temples</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Linked pilgrimage sites show the tradition values **connection and a shared sacred map**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">Worshipping mountains as sacred (like certain Himalayan peaks) reflects the belief that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>mountains are mere rock with no meaning</span></li>
+        <li class=""><span class="lab">B</span><span>mountains should be mined</span></li>
+        <li class=""><span class="lab">C</span><span>mountains block pilgrimage</span></li>
+        <li class="correct"><span class="lab">D</span><span>high, awe-inspiring places can be dwellings of the divine</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Mountain worship reflects that **high, awe-inspiring places can be dwellings of the divine**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">The chapter's central argument is best summed up as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only one shrine in India is holy</span></li>
+        <li class=""><span class="lab">B</span><span>sacredness does not exist in India</span></li>
+        <li class="correct"><span class="lab">C</span><span>across India, places, journeys and even the land come to be regarded as sacred</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>sacred sites are all foreign</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The central argument: **across India, places, journeys and even the land come to be regarded as sacred**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">A "shrine" differs from a vast "tīrtha network" in that the shrine is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>larger than the whole country</span></li>
+        <li class=""><span class="lab">B</span><span>never visited</span></li>
+        <li class=""><span class="lab">C</span><span>a market</span></li>
+        <li class="correct"><span class="lab">D</span><span>a single sacred spot, while the network links many across the land</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A shrine is **a single sacred spot, while the network links many across the land**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">Sacred groves can be seen as early examples of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>factories</span></li>
+        <li class=""><span class="lab">B</span><span>trade fairs</span></li>
+        <li class="correct"><span class="lab">C</span><span>community-based environmental protection</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>battlefields</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sacred groves are early examples of **community-based environmental protection**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">The long survival of pilgrimage routes suggests that, across centuries, Indians have:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>kept alive a shared culture through movement to sacred places</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>abandoned travel</span></li>
+        <li class=""><span class="lab">C</span><span>stopped all religion</span></li>
+        <li class=""><span class="lab">D</span><span>built no roads</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Surviving pilgrim routes show Indians **kept alive a shared culture through movement to sacred places**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">The reverence for rivers as goddesses since Vedic times shows that India's sacred ecology is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a modern idea only</span></li>
+        <li class="correct"><span class="lab">B</span><span>rooted deep in ancient tradition</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>borrowed entirely from abroad</span></li>
+        <li class=""><span class="lab">D</span><span>about machines</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>River-as-goddess worship since Vedic times shows the sacred ecology is **rooted deep in ancient tradition**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">The idea of sacred geography "beyond India," mentioned in the chapter, hints that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sacred landscapes are unique only to India</span></li>
+        <li class="correct"><span class="lab">B</span><span>other lands too have their own sacred geographies</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>no other country has sacred places</span></li>
+        <li class=""><span class="lab">D</span><span>geography cannot be sacred</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Sacred geography beyond India" hints that **other lands too have their own sacred geographies**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">A pilgrim undertaking a hard journey to a remote shrine demonstrates that the value lies partly in:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>avoiding all effort</span></li>
+        <li class=""><span class="lab">B</span><span>the comfort of the trip</span></li>
+        <li class=""><span class="lab">C</span><span>the trade goods carried</span></li>
+        <li class="correct"><span class="lab">D</span><span>the devotion and effort the journey demands</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A hard pilgrim journey shows the value lies partly in **the devotion and effort the journey demands**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">The spreading of jyotirlingas and shakti pīṭhas across many regions had the cultural effect of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>keeping each region totally separate</span></li>
+        <li class=""><span class="lab">B</span><span>ending all pilgrimage</span></li>
+        <li class="correct"><span class="lab">C</span><span>weaving distant regions into one devotional map</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>creating trade barriers</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Spreading jyotirlingas and shakti pīṭhas had the effect of **weaving distant regions into one devotional map**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">The most accurate reason a peepul or banyan tree might stand untouched for generations near a village is that it is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>considered sacred and so protected</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>useless and ignored</span></li>
+        <li class=""><span class="lab">C</span><span>owned by a factory</span></li>
+        <li class=""><span class="lab">D</span><span>about to be sold</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A peepul or banyan stands untouched because it is **considered sacred and so protected**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">"Relics" and "shrines" matter to a sacred site because they:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>give devotees a focus for reverence and memory</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>are used for trade only</span></li>
+        <li class=""><span class="lab">C</span><span>have no role</span></li>
+        <li class=""><span class="lab">D</span><span>replace the land's sacredness</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Relics and shrines **give devotees a focus for reverence and memory**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">The Kumbh Mela drawing millions across the country is powerful evidence that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>pilgrimage is a minor, fading practice</span></li>
+        <li class=""><span class="lab">B</span><span>rivers are not sacred</span></li>
+        <li class=""><span class="lab">C</span><span>travel is banned</span></li>
+        <li class="correct"><span class="lab">D</span><span>sacred gatherings still unite vast numbers of people</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The Kumbh Mela shows that **sacred gatherings still unite vast numbers of people**.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">The deepest meaning of "how the land becomes sacred" is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only governments declare places holy</span></li>
+        <li class=""><span class="lab">B</span><span>sacredness can only exist in one place</span></li>
+        <li class="correct"><span class="lab">C</span><span>over time, devotion, story and nature together make a whole landscape sacred</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the land was never sacred</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"How the land becomes sacred" means **over time, devotion, story and nature together make a whole landscape sacred**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">Sacred groves protecting rare plants and animals show a link between:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>warfare and trade</span></li>
+        <li class="correct"><span class="lab">B</span><span>faith and ecology / conservation</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>taxes and travel</span></li>
+        <li class=""><span class="lab">D</span><span>coins and markets</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sacred groves protecting rare species link **faith and ecology / conservation**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">A reason confluences, mountains and rivers feature so strongly is that the tradition sees the divine in:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>only human-made objects</span></li>
+        <li class=""><span class="lab">B</span><span>money</span></li>
+        <li class="correct"><span class="lab">C</span><span>the natural world itself</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>machines</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Confluences, mountains and rivers feature because the tradition sees the divine in **the natural world itself**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">The presence of pilgrimage sites of many faiths across India best supports the idea of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>religious uniformity</span></li>
+        <li class=""><span class="lab">B</span><span>the absence of religion</span></li>
+        <li class=""><span class="lab">C</span><span>foreign control</span></li>
+        <li class="correct"><span class="lab">D</span><span>pluralism — many faiths sharing the sacred land</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Pilgrimage sites of many faiths support **pluralism — many faiths sharing the sacred land**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">The continuity from Vedic river-worship to today's Kumbh Mela illustrates:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a complete break with the past</span></li>
+        <li class="correct"><span class="lab">B</span><span>an unbroken thread of sacred tradition</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>a foreign import</span></li>
+        <li class=""><span class="lab">D</span><span>the end of pilgrimage</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>From Vedic river-worship to today's Kumbh Mela is **an unbroken thread of sacred tradition**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">To call a journey to a tīrtha both outer and inner is to say it is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a movement across land that also works a change within the pilgrim</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>only a physical walk</span></li>
+        <li class=""><span class="lab">C</span><span>merely a shopping trip</span></li>
+        <li class=""><span class="lab">D</span><span>a military campaign</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An outer-and-inner journey is **a movement across land that also works a change within the pilgrim**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">The chapter would classify the protection of a community's sacred grove as an act that is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>purely commercial</span></li>
+        <li class="correct"><span class="lab">B</span><span>both religious and ecological</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>only political</span></li>
+        <li class=""><span class="lab">D</span><span>meaningless</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Protecting a sacred grove is **both religious and ecological**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">The reason a single faith does not "own" India's sacred geography is that:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the land carries sacred sites of many traditions</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>only one religion exists in India</span></li>
+        <li class=""><span class="lab">C</span><span>no places are sacred</span></li>
+        <li class=""><span class="lab">D</span><span>sacredness is illegal</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>No single faith "owns" India's sacred geography because **the land carries sacred sites of many traditions**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">The best one-line summary of "sacred ecology" is that:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ecology has nothing to do with religion</span></li>
+        <li class=""><span class="lab">B</span><span>only buildings can be holy</span></li>
+        <li class="correct"><span class="lab">C</span><span>nature and the sacred are woven together in the Indian landscape</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>rivers are just for trade</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Sacred ecology" means **nature and the sacred are woven together in the Indian landscape**.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">Taken as a whole, the chapter argues that India's land is sacred because:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>of a single shrine in one city</span></li>
+        <li class=""><span class="lab">B</span><span>the government built temples recently</span></li>
+        <li class=""><span class="lab">C</span><span>foreign visitors said so</span></li>
+        <li class="correct"><span class="lab">D</span><span>generations of devotion, pilgrimage, story and reverence for nature have made the whole land holy</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>As a whole, the land is sacred because **generations of devotion, pilgrimage, story and reverence for nature have made the whole land holy**.</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>

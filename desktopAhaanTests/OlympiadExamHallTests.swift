@@ -248,9 +248,13 @@ final class OlympiadExamHallTests: XCTestCase {
         // 51 advanced → 120 total. Science now 15/19.
         // 2026-06-11 (Wave 14): + Science Ch16/Ch17/Ch18/Ch19 (Water, Forest,
         // Wastewater, Earth-Moon-Sun) = 55 advanced → 124 total. Science now 19/19.
+        // 2026-06-11 (Wave 15): + Social Science Ssch07/Ssch08/Ssch09/Ssch10 (Gupta
+        // Era, How the Land Becomes Sacred, Types of Governments, Constitution of
+        // India) and Ssch20 (Banks and the Magic of Finance) = 60 advanced → 129
+        // total. Social Science now 11/20.
         let papers = OlympiadPaperRegistry.allPapers
-        XCTAssertEqual(papers.count, 124,
-                       "Expected 124 papers total. Got \(papers.count). Update this assertion when Paper 2 lands for a new chapter.")
+        XCTAssertEqual(papers.count, 129,
+                       "Expected 129 papers total. Got \(papers.count). Update this assertion when Paper 2 lands for a new chapter.")
     }
 
     func testFoundationTierIsTheDefault() {
@@ -273,10 +277,12 @@ final class OlympiadExamHallTests: XCTestCase {
         // Ssch06 (6), Sanskrit Sch07–Sch15 (9) = 44. Wave 12 (2026-06-11) wired
         // the remaining Sanskrit Sch01–Sch06 (6) → Sanskrit Sch01–Sch15 (15) = 50.
         // Wave 13 (2026-06-11) wired Science Ch12 (Reproduction in Plants) →
-        // Science Ch01–Ch15 minus none gives 15, total 51.
+        // Science Ch01–Ch15 minus none gives 15, total 51. Wave 14 wired Science
+        // Ch16–Ch19 → 55. Wave 15 wired Social Science Ssch07/Ssch08/Ssch09/Ssch10/
+        // Ssch20 → Social Science 11/20, total 60.
         let advanced = OlympiadPaperRegistry.allPapers.filter { $0.tier == .advanced }
-        XCTAssertEqual(advanced.count, 55,
-                       "Expected 55 advanced-tier papers, got \(advanced.count)")
+        XCTAssertEqual(advanced.count, 60,
+                       "Expected 60 advanced-tier papers, got \(advanced.count)")
         let ids = Set(advanced.map { $0.id })
         XCTAssertEqual(ids, ["olympiad_science_ch01_advanced",
                              "olympiad_science_ch02_advanced",
@@ -318,6 +324,11 @@ final class OlympiadExamHallTests: XCTestCase {
                              "olympiad_socialscience_ssch04_advanced",
                              "olympiad_socialscience_ssch05_advanced",
                              "olympiad_socialscience_ssch06_advanced",
+                             "olympiad_socialscience_ssch07_advanced",
+                             "olympiad_socialscience_ssch08_advanced",
+                             "olympiad_socialscience_ssch09_advanced",
+                             "olympiad_socialscience_ssch10_advanced",
+                             "olympiad_socialscience_ssch20_advanced",
                              "olympiad_sanskrit_sch01_advanced",
                              "olympiad_sanskrit_sch02_advanced",
                              "olympiad_sanskrit_sch03_advanced",
