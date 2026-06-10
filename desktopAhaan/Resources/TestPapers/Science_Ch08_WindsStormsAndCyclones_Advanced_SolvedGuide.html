@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Winds Storms And Cyclones_Advanced — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Winds Storms And Cyclones_Advanced<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">Moving air is called:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>heat</span></li>
+        <li class=""><span class="lab">B</span><span>pressure</span></li>
+        <li class="correct"><span class="lab">C</span><span>wind</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>steam</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Moving air is wind.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">Air around us exerts:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>pressure</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>no force</span></li>
+        <li class=""><span class="lab">C</span><span>light</span></li>
+        <li class=""><span class="lab">D</span><span>sound only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Air all around us exerts pressure.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">Warm air rises because, compared with cold air, it is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>heavier</span></li>
+        <li class=""><span class="lab">B</span><span>denser</span></li>
+        <li class=""><span class="lab">C</span><span>wetter</span></li>
+        <li class="correct"><span class="lab">D</span><span>lighter (less dense)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Warm air is lighter (less dense), so it rises.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">Wind blows from a region of high pressure toward a region of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>high pressure</span></li>
+        <li class="correct"><span class="lab">B</span><span>low pressure</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>no pressure</span></li>
+        <li class=""><span class="lab">D</span><span>equal pressure</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Wind always blows from high pressure toward low pressure.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">When air is heated, it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sinks</span></li>
+        <li class=""><span class="lab">B</span><span>becomes denser</span></li>
+        <li class="correct"><span class="lab">C</span><span>expands and rises</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>stops moving</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Heated air expands, becomes lighter and rises.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">When wind speed increases, the air pressure it exerts:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>decreases</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>increases</span></li>
+        <li class=""><span class="lab">C</span><span>stays the same</span></li>
+        <li class=""><span class="lab">D</span><span>becomes zero</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Faster-moving air exerts lower pressure, so increasing wind speed lowers the pressure.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">The instrument used to measure wind speed is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>barometer</span></li>
+        <li class=""><span class="lab">B</span><span>thermometer</span></li>
+        <li class=""><span class="lab">C</span><span>hygrometer</span></li>
+        <li class="correct"><span class="lab">D</span><span>anemometer</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Wind speed is measured with an anemometer.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">As air becomes warmer, its density:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>increases</span></li>
+        <li class="correct"><span class="lab">B</span><span>decreases</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>stays the same</span></li>
+        <li class=""><span class="lab">D</span><span>becomes infinite</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Warming air makes it expand, so its density decreases.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">A sealed tin can is crushed when the air inside is cooled, showing that air outside exerts:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>heat</span></li>
+        <li class=""><span class="lab">B</span><span>light</span></li>
+        <li class="correct"><span class="lab">C</span><span>pressure</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>sound</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The can is crushed by the greater air pressure outside — air exerts pressure.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">Air occupies space and also has:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>weight (mass)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>no mass</span></li>
+        <li class=""><span class="lab">C</span><span>colour</span></li>
+        <li class=""><span class="lab">D</span><span>taste</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Air occupies space and has weight (mass).</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">The faster air moves over a surface, the ____ the pressure it presses with:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>higher</span></li>
+        <li class=""><span class="lab">B</span><span>unchanged</span></li>
+        <li class=""><span class="lab">C</span><span>doubled</span></li>
+        <li class="correct"><span class="lab">D</span><span>lower</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The faster the air moves, the lower its pressure.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">A hot-air balloon rises because the air inside it is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>colder</span></li>
+        <li class="correct"><span class="lab">B</span><span>less dense</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>heavier</span></li>
+        <li class=""><span class="lab">D</span><span>still</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Hot air inside is less dense, so the balloon rises.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">Winds are caused by the uneven:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>colour</span></li>
+        <li class=""><span class="lab">B</span><span>weight</span></li>
+        <li class="correct"><span class="lab">C</span><span>heating of the Earth</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>rainfall</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Winds arise from the uneven heating of the Earth.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">At the equator, air is strongly heated and therefore:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>rises</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>sinks</span></li>
+        <li class=""><span class="lab">C</span><span>freezes</span></li>
+        <li class=""><span class="lab">D</span><span>stops</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Strongly heated equatorial air rises.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">A sea breeze blows by day from the sea to the land because the land heats up:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>slower</span></li>
+        <li class=""><span class="lab">B</span><span>not at all</span></li>
+        <li class=""><span class="lab">C</span><span>the same as the sea</span></li>
+        <li class="correct"><span class="lab">D</span><span>faster than the sea</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>By day the land heats faster than the sea, so the sea breeze flows from sea to land.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">The monsoon winds are important to India because they bring:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>snow</span></li>
+        <li class="correct"><span class="lab">B</span><span>rain</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>dust storms</span></li>
+        <li class=""><span class="lab">D</span><span>cold only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The monsoon winds bring rain to India.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">In summer the winds blow from the sea to the land carrying moisture, bringing the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>winter cold</span></li>
+        <li class=""><span class="lab">B</span><span>dry season</span></li>
+        <li class="correct"><span class="lab">C</span><span>monsoon rains</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>dust</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Summer winds from the sea carry moisture and bring the monsoon rains.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">The word "monsoon" refers to the seasonal reversal of:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>winds</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>rivers</span></li>
+        <li class=""><span class="lab">C</span><span>tides</span></li>
+        <li class=""><span class="lab">D</span><span>temperature only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>"Monsoon" comes from the seasonal reversal of winds.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">Uneven heating between the equator and the poles sets up large:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>rivers</span></li>
+        <li class=""><span class="lab">B</span><span>mountains</span></li>
+        <li class=""><span class="lab">C</span><span>deserts</span></li>
+        <li class="correct"><span class="lab">D</span><span>wind systems</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Equator-to-pole heating differences create large wind systems.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">At night the land cools faster than the sea, so the breeze blows from:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sea to land</span></li>
+        <li class="correct"><span class="lab">B</span><span>land to sea</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>sky to ground</span></li>
+        <li class=""><span class="lab">D</span><span>valley to hill</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>At night the land cools faster, so the breeze reverses to land → sea.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">The monsoon winds change their direction with the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>time of day only</span></li>
+        <li class=""><span class="lab">B</span><span>phase of the Moon</span></li>
+        <li class="correct"><span class="lab">C</span><span>seasons</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>tides</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The monsoon winds change direction with the seasons.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">Coastal areas experience sea and land breezes because of the different heating of land and:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>water</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>rock only</span></li>
+        <li class=""><span class="lab">C</span><span>air colour</span></li>
+        <li class=""><span class="lab">D</span><span>clouds</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Sea and land breezes come from the different heating of land and water.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">A thunderstorm develops in hot, humid weather along with strong:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>cold dry winds</span></li>
+        <li class=""><span class="lab">B</span><span>ocean currents</span></li>
+        <li class=""><span class="lab">C</span><span>earthquakes</span></li>
+        <li class="correct"><span class="lab">D</span><span>rising air currents</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Thunderstorms form in hot, humid air with strong rising air currents.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">The eye of a cyclone is a region that is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>the stormiest</span></li>
+        <li class="correct"><span class="lab">B</span><span>calm</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>the coldest</span></li>
+        <li class=""><span class="lab">D</span><span>full of lightning</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The eye of a cyclone is a calm region.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">A cyclone forms over warm:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>deserts</span></li>
+        <li class=""><span class="lab">B</span><span>mountains</span></li>
+        <li class="correct"><span class="lab">C</span><span>seas/oceans</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>forests</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cyclones form over warm seas/oceans.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">The centre of a cyclone has very:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>low pressure</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>high pressure</span></li>
+        <li class=""><span class="lab">C</span><span>cold ice</span></li>
+        <li class=""><span class="lab">D</span><span>dry air only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A cyclone's centre has very low pressure.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">A violent whirling wind system formed over the sea is a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>breeze</span></li>
+        <li class=""><span class="lab">B</span><span>monsoon</span></li>
+        <li class=""><span class="lab">C</span><span>thunderclap</span></li>
+        <li class="correct"><span class="lab">D</span><span>cyclone</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A whirling wind system over the sea is a cyclone.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">Very high-speed winds combined with very low pressure produce a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>gentle breeze</span></li>
+        <li class="correct"><span class="lab">B</span><span>cyclone</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>rainbow</span></li>
+        <li class=""><span class="lab">D</span><span>clear sky</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>High-speed winds plus very low pressure make a cyclone.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">A tornado is a dark, funnel-shaped cloud that stretches from the sky down to the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sea floor</span></li>
+        <li class=""><span class="lab">B</span><span>clouds above</span></li>
+        <li class="correct"><span class="lab">C</span><span>ground</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>horizon</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A tornado's funnel reaches down from the sky to the ground.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">In other parts of the world, cyclones are also called hurricanes or:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>typhoons</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>breezes</span></li>
+        <li class=""><span class="lab">C</span><span>monsoons</span></li>
+        <li class=""><span class="lab">D</span><span>tides</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cyclones are also called hurricanes or typhoons elsewhere.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">The calm region at the centre of a cyclone is called the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>wall</span></li>
+        <li class=""><span class="lab">B</span><span>tail</span></li>
+        <li class=""><span class="lab">C</span><span>skirt</span></li>
+        <li class="correct"><span class="lab">D</span><span>eye</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The calm centre of a cyclone is the eye.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">Around the eye of a cyclone, the wind speeds are very:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>low</span></li>
+        <li class="correct"><span class="lab">B</span><span>high</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>zero</span></li>
+        <li class=""><span class="lab">D</span><span>steady and gentle</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Around the eye, wind speeds are very high.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">Rising air and falling water droplets in a storm cloud produce lightning and:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>snow</span></li>
+        <li class=""><span class="lab">B</span><span>hail only</span></li>
+        <li class="correct"><span class="lab">C</span><span>thunder</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>calm</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Lightning is accompanied by thunder in a storm cloud.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">Cyclones striking the coast can cause:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>drought only</span></li>
+        <li class=""><span class="lab">B</span><span>cooling breezes</span></li>
+        <li class="correct"><span class="lab">C</span><span>flooding and destruction</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>clear skies</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cyclones striking the coast cause flooding and destruction.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">The calm eye of a cyclone is roughly:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>1 m wide</span></li>
+        <li class=""><span class="lab">B</span><span>1000 km wide</span></li>
+        <li class=""><span class="lab">C</span><span>the whole ocean</span></li>
+        <li class="correct"><span class="lab">D</span><span>10–30 km across</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The eye is roughly 10–30 km across.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">A cyclone is accompanied by heavy rain and a rise in sea level called a storm:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>cloud</span></li>
+        <li class="correct"><span class="lab">B</span><span>surge</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>breeze</span></li>
+        <li class=""><span class="lab">D</span><span>tide table</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The rise in sea level with a cyclone is a storm surge.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">Advance warning of an approaching cyclone is issued by the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>post office</span></li>
+        <li class=""><span class="lab">B</span><span>fire brigade</span></li>
+        <li class="correct"><span class="lab">C</span><span>meteorological (weather) department using satellites</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>railway</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The meteorological department warns of cyclones using satellites.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">A tornado's funnel tends to suck up:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>only rain</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>sea salt only</span></li>
+        <li class=""><span class="lab">C</span><span>sunlight</span></li>
+        <li class=""><span class="lab">D</span><span>dust and objects</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A tornado sucks up dust and objects.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">Just before a cyclone reaches the coast, the sea level usually:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>drops to zero</span></li>
+        <li class=""><span class="lab">B</span><span>freezes</span></li>
+        <li class=""><span class="lab">C</span><span>stays exactly the same</span></li>
+        <li class="correct"><span class="lab">D</span><span>rises (storm surge)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A storm surge raises the sea level just before landfall.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">Timely cyclone alerts allow people to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>ignore the danger</span></li>
+        <li class="correct"><span class="lab">B</span><span>evacuate to safety</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>go fishing</span></li>
+        <li class=""><span class="lab">D</span><span>open all windows</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Timely alerts let people evacuate to safety.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">On receiving a cyclone warning, the right action is to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>stay outdoors to watch</span></li>
+        <li class=""><span class="lab">B</span><span>swim in the sea</span></li>
+        <li class="correct"><span class="lab">C</span><span>move to a safe shelter</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>climb a tall tree</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>On a warning, move to a safe shelter.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">During a cyclone you should NOT:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>go out or touch wet electrical wires</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>stay indoors</span></li>
+        <li class=""><span class="lab">C</span><span>listen to the radio</span></li>
+        <li class=""><span class="lab">D</span><span>keep calm</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>During a cyclone, do not go out or touch wet electrical wires.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">Cyclone shelters in coastal villages are built mainly to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>store grain only</span></li>
+        <li class=""><span class="lab">B</span><span>attract tourists</span></li>
+        <li class=""><span class="lab">C</span><span>hold festivals</span></li>
+        <li class="correct"><span class="lab">D</span><span>protect people during a storm</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cyclone shelters protect people during a storm.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">Satellites and radars help us by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>producing rain</span></li>
+        <li class="correct"><span class="lab">B</span><span>tracking and forecasting cyclones</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>stopping the wind</span></li>
+        <li class=""><span class="lab">D</span><span>heating the sea</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Satellites and radars track and forecast cyclones.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">After flooding from a cyclone, drinking water may be:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>perfectly safe always</span></li>
+        <li class=""><span class="lab">B</span><span>frozen</span></li>
+        <li class="correct"><span class="lab">C</span><span>contaminated, so it should be boiled</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>turned into ice</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Flood water may be contaminated, so boil drinking water.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">Following a cyclone, communities should offer help to the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>people in need (the affected)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>tourists only</span></li>
+        <li class=""><span class="lab">C</span><span>wealthy only</span></li>
+        <li class=""><span class="lab">D</span><span>no one</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>After a cyclone, help the people in need.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">Rows of trees and embankments along a coast act as:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>heat sources</span></li>
+        <li class=""><span class="lab">B</span><span>rain makers</span></li>
+        <li class=""><span class="lab">C</span><span>light reflectors</span></li>
+        <li class="correct"><span class="lab">D</span><span>wind barriers / protection</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Coastal trees and embankments act as wind barriers.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">Before a cyclone arrives, it is wise to store:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>wet clothes</span></li>
+        <li class="correct"><span class="lab">B</span><span>dry food and emergency supplies</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>glass items outside</span></li>
+        <li class=""><span class="lab">D</span><span>loose roofing</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Store dry food and emergency supplies before a cyclone.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">Listening to weather warnings on radio or TV helps people take:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>no action</span></li>
+        <li class=""><span class="lab">B</span><span>a holiday</span></li>
+        <li class="correct"><span class="lab">C</span><span>timely safety action</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>photographs only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Weather warnings let people take timely safety action.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">The best response to a cyclone alert is to:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>take it seriously and follow precautions</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>ignore it</span></li>
+        <li class=""><span class="lab">C</span><span>go to the beach</span></li>
+        <li class=""><span class="lab">D</span><span>open the doors wide</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Take a cyclone alert seriously and follow precautions.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">A paper snake held above a burning candle spins because the hot air:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sinks</span></li>
+        <li class=""><span class="lab">B</span><span>cools instantly</span></li>
+        <li class=""><span class="lab">C</span><span>stops</span></li>
+        <li class="correct"><span class="lab">D</span><span>rises (convection)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The paper snake spins because hot air rises (a convection current).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">Blowing air in the gap between two suspended balloons makes them:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>burst</span></li>
+        <li class="correct"><span class="lab">B</span><span>move toward each other</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>move apart</span></li>
+        <li class=""><span class="lab">D</span><span>stay still</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Fast air between the balloons lowers the pressure there, so they move toward each other.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">A tin with a little water, heated and sealed, then cooled, gets crushed because the air outside has:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>less pressure</span></li>
+        <li class=""><span class="lab">B</span><span>no pressure</span></li>
+        <li class="correct"><span class="lab">C</span><span>greater pressure than inside</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>the same pressure</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The greater outside air pressure crushes the cooled, sealed tin.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">In a strong storm, roofs are sometimes lifted off because the fast wind above creates:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>lower pressure outside that lifts them</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>higher pressure outside</span></li>
+        <li class=""><span class="lab">C</span><span>extra weight</span></li>
+        <li class=""><span class="lab">D</span><span>cold air only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Fast wind above a roof lowers the pressure there; the higher pressure inside lifts the roof.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">Blowing across the top of a paper strip held to your lips makes the strip:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>fall</span></li>
+        <li class=""><span class="lab">B</span><span>tear</span></li>
+        <li class=""><span class="lab">C</span><span>stay flat</span></li>
+        <li class="correct"><span class="lab">D</span><span>rise (faster air = lower pressure above)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Blowing over the top lowers the pressure above, so the strip rises.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">Warm, moist air that rises and cools forms:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>deserts</span></li>
+        <li class="correct"><span class="lab">B</span><span>clouds (and rain)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>ice sheets</span></li>
+        <li class=""><span class="lab">D</span><span>winds only</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Rising, cooling moist air forms clouds (and rain).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">The underlying cause of all winds is a difference in air:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>colour</span></li>
+        <li class=""><span class="lab">B</span><span>taste</span></li>
+        <li class="correct"><span class="lab">C</span><span>pressure</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>weight of dust</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>All winds are driven by differences in air pressure.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">A cyclone weakens after it moves over:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>land</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>warm sea</span></li>
+        <li class=""><span class="lab">C</span><span>the open ocean</span></li>
+        <li class=""><span class="lab">D</span><span>the equator</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A cyclone weakens once it moves over land (no warm sea to feed it).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">The coast of India most often struck by cyclones is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>northern plains</span></li>
+        <li class=""><span class="lab">B</span><span>western desert</span></li>
+        <li class=""><span class="lab">C</span><span>central plateau</span></li>
+        <li class="correct"><span class="lab">D</span><span>eastern coast (Bay of Bengal)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>India's eastern coast (Bay of Bengal) is struck most often by cyclones.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">The safest action on seeing a cyclone or tornado approach is to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>record a video outside</span></li>
+        <li class="correct"><span class="lab">B</span><span>take shelter immediately</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>drive toward it</span></li>
+        <li class=""><span class="lab">D</span><span>stand near windows</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>On seeing a cyclone or tornado approach, take shelter immediately. --- *End of solutions. Maximum marks: 240.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>
