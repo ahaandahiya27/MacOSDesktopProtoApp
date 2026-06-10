@@ -62,7 +62,7 @@ Legend: ✅ Advanced triplet complete · ❌ missing · 🟡 in progress
 | Ch04 | Heat | ✅ |
 | Ch05 | Acids, Bases and Salts | ✅ |
 | Ch06 | Physical and Chemical Changes | ✅ |
-| Ch07 | Weather, Climate & Animal Adaptations | ❌ |
+| Ch07 | Weather, Climate & Animal Adaptations | ✅ |
 | Ch08 | Winds, Storms and Cyclones | ✅ |
 | Ch09 | Soil | ❌ |
 | Ch10 | Respiration in Organisms | ✅ |
@@ -140,5 +140,13 @@ Legend: ✅ Advanced triplet complete · ❌ missing · 🟡 in progress
   `OlympiadExamHallTests` → 97 papers / 69 foundation + 28 advanced). Build +
   full XCTest GREEN. Coverage now: Maths 15/15, Science 11/19, Social Science
   2/20, Sanskrit 0/15.
+- **2026-06-11 (Wave 6):** **29 / 69** chapters — added Science Ch07 (Weather,
+  Climate and Adaptations of Animals to Climate, authored this session: 60
+  beyond-grade MCQs on weather-vs-climate, climate factors, weather
+  instruments, polar/tropical/migratory adaptations, and climate change /
+  coral bleaching). Authored + integrated (registry `tier: .advanced`, pbxproj
+  regenerated, `OlympiadExamHallTests` → 98 papers / 69 foundation + 29
+  advanced). Build + full XCTest GREEN. Coverage: Maths 15/15, Science 12/19,
+  Social Science 2/20, Sanskrit 0/15.
 - Flip each cell to ✅ as its commit lands; update the headline count here and in
   `V8_NEXT10H_LEDGER.md`.

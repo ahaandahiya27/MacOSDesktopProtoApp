@@ -328,6 +328,21 @@ extension OlympiadPaperRegistry {
             tier: .advanced
         ),
         OlympiadPaper(
+            id: "olympiad_science_ch07_advanced",
+            subjectId: "science_class7",
+            subjectName: "Science",
+            chapterNumber: 7,
+            chapterTitle: "Weather, Climate and Adaptations of Animals to Climate",
+            displayTitle: "Weather, Climate and Adaptations of Animals to Climate — Paper 2 (Advanced)",
+            questionPaperMD: "Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_Advanced_QuestionPaper.md",
+            solutionsMD: "Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_Advanced_Solutions.md",
+            questionPaperHTML: "Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate.html",
+            questionPaperPDF: "Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate.pdf",
+            suggestedTimeMinutes: 90,
+            solvedGuideHTML: "Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_Advanced_SolvedGuide.html",
+            tier: .advanced
+        ),
+        OlympiadPaper(
             id: "olympiad_science_ch15_advanced",
             subjectId: "science_class7",
             subjectName: "Science",

@@ -1747,6 +1747,9 @@
 		037EA5B21FBA699644A99674 /* Science_Ch06_PhysicalAndChemicalChanges_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 45CBAA509C6DCCE475DD7259 /* Science_Ch06_PhysicalAndChemicalChanges_SolvedGuide.html */; };
 		B919F50D956B53983CFF5AFC /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate.html in Resources */ = {isa = PBXBuildFile; fileRef = 461A2BD4CFD2E33960AD3CAE /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate.html */; };
 		42AE0A0C04A7D3D812B2B611 /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EE4B65DBCADCA9671C73F0F6 /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate.pdf */; };
+		3EE0D3E986FF601002B0109A /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_Advanced_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = A82BF8ADFA0FF447179D3B9A /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_Advanced_QuestionPaper.md */; };
+		D2E00A5685793162E984C5F4 /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_Advanced_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 859C56408208BDAAB1217D22 /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_Advanced_Solutions.md */; };
+		7F3CC7DA176775411BE7948A /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_Advanced_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 95E4B0D38F332DA1793A21BA /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_Advanced_SolvedGuide.html */; };
 		00EEAFAFF66E80D6A70142F6 /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = F5460DB82823E8BDA3261EEA /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_QuestionPaper.md */; };
 		4AEC5796DD9D8F84BF5B7421 /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = B805BC69C32AEF32AE55BDFC /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_Solutions.md */; };
 		590F4135143EE3CB0841B984 /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = EDAE812D187E2A4AD419B770 /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_SolvedGuide.html */; };
@@ -3320,6 +3323,9 @@
 		45CBAA509C6DCCE475DD7259 /* Science_Ch06_PhysicalAndChemicalChanges_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch06_PhysicalAndChemicalChanges_SolvedGuide.html"; sourceTree = "<group>"; };
 		461A2BD4CFD2E33960AD3CAE /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate.html"; sourceTree = "<group>"; };
 		EE4B65DBCADCA9671C73F0F6 /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate.pdf"; sourceTree = "<group>"; };
+		A82BF8ADFA0FF447179D3B9A /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_Advanced_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_Advanced_QuestionPaper.md"; sourceTree = "<group>"; };
+		859C56408208BDAAB1217D22 /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_Advanced_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_Advanced_Solutions.md"; sourceTree = "<group>"; };
+		95E4B0D38F332DA1793A21BA /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_Advanced_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_Advanced_SolvedGuide.html"; sourceTree = "<group>"; };
 		F5460DB82823E8BDA3261EEA /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_QuestionPaper.md"; sourceTree = "<group>"; };
 		B805BC69C32AEF32AE55BDFC /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_Solutions.md"; sourceTree = "<group>"; };
 		EDAE812D187E2A4AD419B770 /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_SolvedGuide.html"; sourceTree = "<group>"; };
@@ -6063,6 +6069,9 @@
 				45CBAA509C6DCCE475DD7259,
 				461A2BD4CFD2E33960AD3CAE,
 				EE4B65DBCADCA9671C73F0F6,
+				A82BF8ADFA0FF447179D3B9A,
+				859C56408208BDAAB1217D22,
+				95E4B0D38F332DA1793A21BA,
 				F5460DB82823E8BDA3261EEA,
 				B805BC69C32AEF32AE55BDFC,
 				EDAE812D187E2A4AD419B770,
@@ -8940,6 +8949,9 @@
 				037EA5B21FBA699644A99674 /* Science_Ch06_PhysicalAndChemicalChanges_SolvedGuide.html in Resources */,
 				B919F50D956B53983CFF5AFC /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate.html in Resources */,
 				42AE0A0C04A7D3D812B2B611 /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate.pdf in Resources */,
+				3EE0D3E986FF601002B0109A /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_Advanced_QuestionPaper.md in Resources */,
+				D2E00A5685793162E984C5F4 /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_Advanced_Solutions.md in Resources */,
+				7F3CC7DA176775411BE7948A /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_Advanced_SolvedGuide.html in Resources */,
 				00EEAFAFF66E80D6A70142F6 /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_QuestionPaper.md in Resources */,
 				4AEC5796DD9D8F84BF5B7421 /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_Solutions.md in Resources */,
 				590F4135143EE3CB0841B984 /* Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_SolvedGuide.html in Resources */,
