@@ -1,0 +1,1068 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electric Current And Its Effect_Advanced — Complete Solved Guide (All 60)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Lexend:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#fbf7ee;--paper:#fff;--ink:#23302f;--soft-ink:#55635f;
+    --teal:#0f8a7e;--teal-deep:#0a5f57;--teal-wash:#e4f3f0;
+    --coral:#e2603f;--coral-wash:#fceae3;--gold:#e0a528;--gold-wash:#fbf2d9;
+    --green:#3a9d5d;--green-wash:#e6f4ea;--line:#e7e0d2;
+    --shadow:0 14px 40px -18px rgba(15,90,82,.35);
+  }
+  *{box-sizing:border-box;}
+  body{margin:0;background:radial-gradient(circle at 12% 4%,#fdf3e0 0,transparent 40%),radial-gradient(circle at 88% 2%,#e8f4f1 0,transparent 35%),var(--cream);color:var(--ink);font-family:'Lexend',sans-serif;line-height:1.65;-webkit-font-smoothing:antialiased;}
+  .wrap{max-width:840px;margin:0 auto;padding:32px 20px 80px;}
+  .hero{background:linear-gradient(135deg,var(--teal) 0%,var(--teal-deep) 100%);color:#fff;border-radius:26px;padding:38px 34px;position:relative;overflow:hidden;box-shadow:var(--shadow);}
+  .hero::after{content:"";position:absolute;right:-40px;top:-40px;width:200px;height:200px;background:radial-gradient(circle,rgba(255,255,255,.16),transparent 70%);}
+  .hero .eyebrow{font-size:.8rem;letter-spacing:.18em;text-transform:uppercase;opacity:.8;font-weight:600;}
+  .hero h1{font-family:'Fraunces',serif;font-weight:600;font-size:2.3rem;line-height:1.1;margin:.35em 0 .2em;}
+  .hero p{margin:.4em 0 0;font-weight:300;font-size:1.05rem;max-width:50ch;opacity:.95;}
+  .scoreband{display:flex;gap:12px;margin-top:24px;flex-wrap:wrap;}
+  .pill{background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:9px 15px;}
+  .pill b{font-family:'Fraunces',serif;font-size:1.4rem;display:block;line-height:1;}
+  .pill span{font-size:.74rem;opacity:.85;}
+  .toc{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:22px 26px;margin:26px 0 8px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .toc h3{font-family:'Fraunces',serif;margin:0 0 10px;color:var(--teal-deep);font-size:1.2rem;}
+  .toc ol{margin:0;padding-left:20px;columns:2;column-gap:30px;}
+  .toc li{margin:5px 0;font-size:.95rem;}
+  .toc a{color:var(--teal);text-decoration:none;font-weight:500;}
+  .toc a:hover{text-decoration:underline;}
+  .cluster{margin-top:46px;scroll-margin-top:16px;}
+  .cluster-head{display:flex;align-items:center;gap:14px;margin-bottom:4px;}
+  .cluster-num{font-family:'Fraunces',serif;font-size:2.4rem;font-weight:700;color:var(--teal);line-height:1;opacity:.35;}
+  .cluster-head h2{font-family:'Fraunces',serif;font-size:1.55rem;margin:0;color:var(--teal-deep);}
+  .cluster-rule{background:var(--teal-wash);border-left:5px solid var(--teal);border-radius:0 14px 14px 0;padding:14px 20px;margin:14px 0 26px;font-size:1rem;}
+  .cluster-rule b{color:var(--teal-deep);}
+  .q{background:var(--paper);border:1px solid var(--line);border-radius:20px;padding:24px 26px;margin-bottom:22px;box-shadow:0 8px 26px -20px rgba(0,0,0,.4);}
+  .qhead{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:12px;}
+  .qtag{display:inline-block;background:var(--ink);color:#fff;font-size:.72rem;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:8px;}
+  .qtext{font-size:1.05rem;font-weight:500;margin:0 0 14px;}
+  .opts{list-style:none;padding:0;margin:0 0 16px;display:grid;gap:7px;}
+  .opts li{padding:8px 13px;border-radius:11px;border:1.5px solid var(--line);font-size:.95rem;display:flex;align-items:center;gap:10px;}
+  .opts li .lab{font-weight:700;width:1.4em;}
+  .opts li.correct{background:var(--green-wash);border-color:#a9dab9;color:#1f6d3a;font-weight:600;}
+  .opts li .mk{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--green);}
+  .solve{background:#f8faf9;border-radius:14px;padding:4px 18px 10px;margin-bottom:12px;}
+  .solve h4{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1rem;margin:14px 0 6px;}
+  .step{display:flex;gap:11px;align-items:flex-start;margin:8px 0;}
+  .step .n{flex:0 0 24px;height:24px;background:var(--teal);color:#fff;border-radius:50%;display:grid;place-items:center;font-size:.78rem;font-weight:700;margin-top:1px;}
+  .step p{margin:0;font-size:.95rem;}
+  .cheat{background:var(--teal-deep);color:#fff;border-radius:24px;padding:32px;margin-top:50px;box-shadow:var(--shadow);}
+  .cheat h2{font-family:'Fraunces',serif;font-size:1.6rem;margin:0 0 6px;}
+  .cheat p.sub{opacity:.8;margin:0 0 20px;font-weight:300;}
+  .rules{display:grid;gap:12px;}
+  .rule{display:flex;gap:13px;align-items:flex-start;background:rgba(255,255,255,.08);border-radius:14px;padding:13px 17px;}
+  .rule .star{flex:0 0 auto;font-size:1.05rem;}
+  .rule b{font-family:'Fraunces',serif;}
+  .rule span{display:block;opacity:.9;font-size:.9rem;font-weight:300;}
+  .closer{text-align:center;margin-top:40px;padding:0 10px;}
+  .closer h2{font-family:'Fraunces',serif;color:var(--teal-deep);font-size:1.4rem;margin-bottom:.3em;}
+  .closer p{color:var(--soft-ink);max-width:54ch;margin:.5em auto;}
+  @media (max-width:560px){.hero h1{font-size:1.8rem;}.wrap{padding:20px 14px 60px;}.q{padding:18px 16px;}.toc ol{columns:1;}}
+</style>
+</head>
+<body><div class="wrap">
+  <header class="hero">
+    <div class="eyebrow">Class 7 · Olympiad · All 60 Solved</div>
+    <h1>Electric Current And Its Effect_Advanced<br>All 60, fully solved</h1>
+    <p>Every question worked out step by step. Correct answer is highlighted; the explanation walks the solve.</p>
+    <div class="scoreband">
+      <div class="pill"><b>60</b><span>Questions</span></div>
+      <div class="pill"><b>240</b><span>Max marks (+4/−1/0)</span></div>
+      <div class="pill"><b>90 min</b><span>Suggested time</span></div>
+    </div>
+  </header>
+  <nav class="toc"><h3>What's inside</h3><ol>
+    <li><a href="#cluster-1">Set 1 · Q1–Q10 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-2">Set 2 · Q11–Q20 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-3">Set 3 · Q21–Q30 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-4">Set 4 · Q31–Q40 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-5">Set 5 · Q41–Q50 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+    <li><a href="#cluster-6">Set 6 · Q51–Q60 <span style="opacity:.6;font-size:.85em;">· 10 Q</span></a></li>
+  </ol></nav>
+  <section class="cluster" id="cluster-1">
+    <div class="cluster-head"><div class="cluster-num">1</div><h2>Set 1 · Q1–Q10</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q1</span>
+      </div>
+      <p class="qtext">A bulb in a circuit glows only when the circuit is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>open</span></li>
+        <li class=""><span class="lab">B</span><span>broken</span></li>
+        <li class="correct"><span class="lab">C</span><span>complete (closed)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>short</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A bulb lights only when the circuit is a complete (closed) loop so current can flow.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q2</span>
+      </div>
+      <p class="qtext">In the symbol for a single cell, the longer thin line stands for the:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>positive terminal</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>negative terminal</span></li>
+        <li class=""><span class="lab">C</span><span>switch</span></li>
+        <li class=""><span class="lab">D</span><span>bulb</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In a cell's symbol the longer thin line is the positive terminal.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q3</span>
+      </div>
+      <p class="qtext">A battery is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a single wire</span></li>
+        <li class=""><span class="lab">B</span><span>one bulb</span></li>
+        <li class=""><span class="lab">C</span><span>a type of switch</span></li>
+        <li class="correct"><span class="lab">D</span><span>two or more cells joined together</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A battery is two or more cells joined together.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q4</span>
+      </div>
+      <p class="qtext">When a switch in a circuit is open, the bulb:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>glows brighter</span></li>
+        <li class="correct"><span class="lab">B</span><span>does not glow</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>glows dimly</span></li>
+        <li class=""><span class="lab">D</span><span>flickers</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An open switch breaks the loop, so no current flows and the bulb does not glow.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q5</span>
+      </div>
+      <p class="qtext">The component used to complete or break a circuit at will is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>cell</span></li>
+        <li class=""><span class="lab">B</span><span>bulb</span></li>
+        <li class="correct"><span class="lab">C</span><span>switch</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>wire</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A switch is the component that completes or breaks the circuit.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q6</span>
+      </div>
+      <p class="qtext">The shorter, thicker line in a cell's symbol marks the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>positive terminal</span></li>
+        <li class=""><span class="lab">B</span><span>bulb</span></li>
+        <li class=""><span class="lab">C</span><span>wire</span></li>
+        <li class="correct"><span class="lab">D</span><span>negative terminal</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The shorter, thicker line marks the negative terminal of the cell.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q7</span>
+      </div>
+      <p class="qtext">Current flows through a circuit only when the path forms a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>straight line</span></li>
+        <li class=""><span class="lab">B</span><span>single wire</span></li>
+        <li class=""><span class="lab">C</span><span>dead end</span></li>
+        <li class="correct"><span class="lab">D</span><span>closed loop</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Current flows only when the path is a closed loop.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q8</span>
+      </div>
+      <p class="qtext">If the filament of a bulb breaks, the bulb:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>glows brighter</span></li>
+        <li class="correct"><span class="lab">B</span><span>does not glow (the circuit is open)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>changes colour</span></li>
+        <li class=""><span class="lab">D</span><span>heats the wire</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A broken filament opens the circuit, so the bulb does not glow.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q9</span>
+      </div>
+      <p class="qtext">Two or more cells joined together to give more energy make a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>switch</span></li>
+        <li class=""><span class="lab">B</span><span>fuse</span></li>
+        <li class="correct"><span class="lab">C</span><span>battery</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>resistor</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cells joined together form a battery.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q10</span>
+      </div>
+      <p class="qtext">The symbol of an electric bulb is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>a circle with a cross inside</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>two parallel lines</span></li>
+        <li class=""><span class="lab">C</span><span>a zig-zag line</span></li>
+        <li class=""><span class="lab">D</span><span>an arrow</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The bulb symbol is a circle with a cross inside.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-2">
+    <div class="cluster-head"><div class="cluster-num">2</div><h2>Set 2 · Q11–Q20</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q11</span>
+      </div>
+      <p class="qtext">To make a torch bulb glow more brightly you can use:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a thinner wire</span></li>
+        <li class=""><span class="lab">B</span><span>an open switch</span></li>
+        <li class=""><span class="lab">C</span><span>less current</span></li>
+        <li class="correct"><span class="lab">D</span><span>more cells (a battery)</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Using more cells (a battery) drives more current and a brighter glow.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q12</span>
+      </div>
+      <p class="qtext">When the switch is turned on (closed), the circuit becomes:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>broken</span></li>
+        <li class="correct"><span class="lab">B</span><span>complete</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>shorter</span></li>
+        <li class=""><span class="lab">D</span><span>dead</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Closing the switch completes the circuit.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q13</span>
+      </div>
+      <p class="qtext">Materials that let electric current pass through them are:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>insulators</span></li>
+        <li class=""><span class="lab">B</span><span>magnets</span></li>
+        <li class="correct"><span class="lab">C</span><span>conductors</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>fuses</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Conductors allow electric current to pass.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q14</span>
+      </div>
+      <p class="qtext">Materials that do not let current pass through them are:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>insulators</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>conductors</span></li>
+        <li class=""><span class="lab">C</span><span>metals</span></li>
+        <li class=""><span class="lab">D</span><span>cells</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Insulators do not allow current to pass.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q15</span>
+      </div>
+      <p class="qtext">Which of these conducts electricity?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>rubber</span></li>
+        <li class=""><span class="lab">B</span><span>plastic</span></li>
+        <li class=""><span class="lab">C</span><span>wood</span></li>
+        <li class="correct"><span class="lab">D</span><span>copper</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Copper is a metal and a conductor; rubber, plastic and wood are insulators.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q16</span>
+      </div>
+      <p class="qtext">Which of these is an electrical insulator?</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>iron</span></li>
+        <li class="correct"><span class="lab">B</span><span>plastic</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>silver</span></li>
+        <li class=""><span class="lab">D</span><span>aluminium</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Plastic is an electrical insulator.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q17</span>
+      </div>
+      <p class="qtext">In a plug, the pins are conductors while the body is made from an:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>extra metal</span></li>
+        <li class=""><span class="lab">B</span><span>magnet</span></li>
+        <li class="correct"><span class="lab">C</span><span>insulator</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>open wire</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The plug pins conduct, while the body is made of an insulator.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q18</span>
+      </div>
+      <p class="qtext">Electric wires are coated with plastic because plastic is an:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>insulator that keeps us safe</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>excellent conductor</span></li>
+        <li class=""><span class="lab">C</span><span>magnet</span></li>
+        <li class=""><span class="lab">D</span><span>source of current</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The plastic coating is an insulator that protects us from shocks.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q19</span>
+      </div>
+      <p class="qtext">Regarding electricity, the human body is a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>perfect insulator</span></li>
+        <li class=""><span class="lab">B</span><span>magnet</span></li>
+        <li class=""><span class="lab">C</span><span>fuse</span></li>
+        <li class="correct"><span class="lab">D</span><span>conductor, which is why shocks are dangerous</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The human body conducts electricity, which is why shocks are dangerous.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q20</span>
+      </div>
+      <p class="qtext">Pure water conducts poorly, but water containing dissolved salts:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>becomes an insulator</span></li>
+        <li class="correct"><span class="lab">B</span><span>conducts electricity</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>stops all current</span></li>
+        <li class=""><span class="lab">D</span><span>turns into a magnet</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Dissolved salts make water conduct electricity.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-3">
+    <div class="cluster-head"><div class="cluster-num">3</div><h2>Set 3 · Q21–Q30</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q21</span>
+      </div>
+      <p class="qtext">When current flows through a wire, the wire tends to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>get colder</span></li>
+        <li class=""><span class="lab">B</span><span>become a magnet only</span></li>
+        <li class="correct"><span class="lab">C</span><span>get hot</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>disappear</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Current passing through a wire heats it — the heating effect.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q22</span>
+      </div>
+      <p class="qtext">The heating effect of electric current is used in an:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>electric heater</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>electric bell</span></li>
+        <li class=""><span class="lab">C</span><span>compass</span></li>
+        <li class=""><span class="lab">D</span><span>loudspeaker</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An electric heater uses the heating effect of current.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q23</span>
+      </div>
+      <p class="qtext">The coil of an electric heater is made of a wire chosen for its:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>low melting point</span></li>
+        <li class=""><span class="lab">B</span><span>shiny colour</span></li>
+        <li class=""><span class="lab">C</span><span>light weight</span></li>
+        <li class="correct"><span class="lab">D</span><span>high resistance and high melting point</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Heater coils use a wire (like nichrome) with high resistance and a high melting point.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q24</span>
+      </div>
+      <p class="qtext">An electric bulb gives light because its filament becomes:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>cold</span></li>
+        <li class="correct"><span class="lab">B</span><span>white-hot</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>magnetic</span></li>
+        <li class=""><span class="lab">D</span><span>liquid</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The filament glows because it becomes white-hot.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q25</span>
+      </div>
+      <p class="qtext">The filament of an electric bulb is made of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>copper</span></li>
+        <li class=""><span class="lab">B</span><span>iron</span></li>
+        <li class="correct"><span class="lab">C</span><span>tungsten</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>plastic</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Bulb filaments are made of tungsten (very high melting point).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q26</span>
+      </div>
+      <p class="qtext">A fuse melts and breaks the circuit when the current is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>too high</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>too low</span></li>
+        <li class=""><span class="lab">C</span><span>zero</span></li>
+        <li class=""><span class="lab">D</span><span>reversed</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A fuse melts when the current becomes too high.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q27</span>
+      </div>
+      <p class="qtext">The main job of a fuse is to protect appliances from:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>dust</span></li>
+        <li class=""><span class="lab">B</span><span>cold</span></li>
+        <li class=""><span class="lab">C</span><span>light</span></li>
+        <li class="correct"><span class="lab">D</span><span>damage caused by excessive current</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A fuse protects appliances from damage caused by excessive current.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q28</span>
+      </div>
+      <p class="qtext">The wire used in a fuse has a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>very high melting point</span></li>
+        <li class="correct"><span class="lab">B</span><span>low melting point</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>magnetic core</span></li>
+        <li class=""><span class="lab">D</span><span>glass coating</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Fuse wire is chosen to have a low melting point so it melts first.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q29</span>
+      </div>
+      <p class="qtext">A larger current through a wire produces:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>less light</span></li>
+        <li class=""><span class="lab">B</span><span>a stronger insulator</span></li>
+        <li class="correct"><span class="lab">C</span><span>more heat</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>no change</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A larger current produces more heat in a wire.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q30</span>
+      </div>
+      <p class="qtext">A fuse acts as a safety device against:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>short circuits and overloads</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>low voltage only</span></li>
+        <li class=""><span class="lab">C</span><span>darkness</span></li>
+        <li class=""><span class="lab">D</span><span>magnets</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A fuse guards against short circuits and overloads.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-4">
+    <div class="cluster-head"><div class="cluster-num">4</div><h2>Set 4 · Q31–Q40</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q31</span>
+      </div>
+      <p class="qtext">An electric iron works using the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>magnetic effect</span></li>
+        <li class=""><span class="lab">B</span><span>chemical effect</span></li>
+        <li class=""><span class="lab">C</span><span>lighting effect only</span></li>
+        <li class="correct"><span class="lab">D</span><span>heating effect of current</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An electric iron uses the heating effect of current.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q32</span>
+      </div>
+      <p class="qtext">A heater coil glows red because it has become:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>magnetic</span></li>
+        <li class="correct"><span class="lab">B</span><span>very hot</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>cold</span></li>
+        <li class=""><span class="lab">D</span><span>an insulator</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The coil glows red because it has become very hot.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q33</span>
+      </div>
+      <p class="qtext">A wire carrying electric current produces around it a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>sound wave</span></li>
+        <li class=""><span class="lab">B</span><span>cold zone</span></li>
+        <li class="correct"><span class="lab">C</span><span>magnetic field</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>shadow</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A current-carrying wire sets up a magnetic field around it.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q34</span>
+      </div>
+      <p class="qtext">The magnetic effect of current can be shown because a nearby:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>compass needle deflects</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>bulb glows</span></li>
+        <li class=""><span class="lab">C</span><span>wire melts</span></li>
+        <li class=""><span class="lab">D</span><span>cell drains</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The magnetic effect shows up as a nearby compass needle deflecting.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q35</span>
+      </div>
+      <p class="qtext">A coil of wire carrying a current behaves like a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>battery</span></li>
+        <li class=""><span class="lab">B</span><span>switch</span></li>
+        <li class=""><span class="lab">C</span><span>fuse</span></li>
+        <li class="correct"><span class="lab">D</span><span>magnet</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A current-carrying coil behaves like a magnet.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q36</span>
+      </div>
+      <p class="qtext">An electromagnet is made by winding a current-carrying coil around a core of:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>plastic</span></li>
+        <li class="correct"><span class="lab">B</span><span>soft iron</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>rubber</span></li>
+        <li class=""><span class="lab">D</span><span>glass</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An electromagnet is a coil wound on a soft-iron core.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q37</span>
+      </div>
+      <p class="qtext">An electromagnet can be switched off by:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>painting it</span></li>
+        <li class=""><span class="lab">B</span><span>heating it</span></li>
+        <li class="correct"><span class="lab">C</span><span>cutting off the current</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>adding plastic</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cutting off the current switches the electromagnet off.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q38</span>
+      </div>
+      <p class="qtext">The strength of an electromagnet increases when you:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>increase the number of turns or the current</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>remove the core</span></li>
+        <li class=""><span class="lab">C</span><span>use thinner insulation</span></li>
+        <li class=""><span class="lab">D</span><span>cool it down</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>More turns or more current makes the electromagnet stronger.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q39</span>
+      </div>
+      <p class="qtext">An electric bell works using the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>heating effect</span></li>
+        <li class=""><span class="lab">B</span><span>chemical effect</span></li>
+        <li class=""><span class="lab">C</span><span>lighting effect</span></li>
+        <li class="correct"><span class="lab">D</span><span>magnetic effect of current</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An electric bell uses the magnetic effect of current.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q40</span>
+      </div>
+      <p class="qtext">A device that relies on the magnetic effect of current is the:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>electric heater</span></li>
+        <li class="correct"><span class="lab">B</span><span>electromagnet</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>electric bulb</span></li>
+        <li class=""><span class="lab">D</span><span>toaster</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The electromagnet is a device based on the magnetic effect.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-5">
+    <div class="cluster-head"><div class="cluster-num">5</div><h2>Set 5 · Q41–Q50</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q41</span>
+      </div>
+      <p class="qtext">When current passes through a wire, a nearby compass needle:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>melts</span></li>
+        <li class=""><span class="lab">B</span><span>glows</span></li>
+        <li class="correct"><span class="lab">C</span><span>deflects</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>stays exactly still</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A nearby compass needle deflects when current flows.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q42</span>
+      </div>
+      <p class="qtext">Cranes in scrapyards lift heavy iron objects using:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>electromagnets</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>bar magnets only</span></li>
+        <li class=""><span class="lab">C</span><span>fuses</span></li>
+        <li class=""><span class="lab">D</span><span>bulbs</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Scrapyard cranes lift iron using electromagnets.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q43</span>
+      </div>
+      <p class="qtext">An electromagnet loses its magnetism when:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>it is painted</span></li>
+        <li class=""><span class="lab">B</span><span>more turns are added</span></li>
+        <li class="correct"><span class="lab">C</span><span>the current is switched off</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>it is cooled</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An electromagnet loses its magnetism once the current is switched off.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q44</span>
+      </div>
+      <p class="qtext">A soft-iron core is used in an electromagnet because it:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>is a good insulator</span></li>
+        <li class="correct"><span class="lab">B</span><span>is a strong magnet only while current flows</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>never becomes magnetic</span></li>
+        <li class=""><span class="lab">D</span><span>stores current</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Soft iron is a strong magnet only while current flows, which suits an electromagnet.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q45</span>
+      </div>
+      <p class="qtext">In an electric bell, the hammer strikes the gong repeatedly because the circuit is:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>repeatedly made and broken by the electromagnet</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>always open</span></li>
+        <li class=""><span class="lab">C</span><span>always closed</span></li>
+        <li class=""><span class="lab">D</span><span>made of plastic</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The bell's circuit is repeatedly made and broken by the electromagnet, so the hammer strikes again and again.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q46</span>
+      </div>
+      <p class="qtext">You should never handle electrical switches or appliances with:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>wet hands</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>dry hands</span></li>
+        <li class=""><span class="lab">C</span><span>a wooden stick</span></li>
+        <li class=""><span class="lab">D</span><span>rubber gloves</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Never touch electrical things with wet hands — water conducts and increases shock risk.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q47</span>
+      </div>
+      <p class="qtext">A fuse is placed in a circuit so that excessive current will:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>charge the cell</span></li>
+        <li class=""><span class="lab">B</span><span>light the bulb</span></li>
+        <li class=""><span class="lab">C</span><span>cool the wire</span></li>
+        <li class="correct"><span class="lab">D</span><span>melt the fuse and break the circuit</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A fuse is placed so that excess current melts it and breaks the circuit.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q48</span>
+      </div>
+      <p class="qtext">The earth (earthing) wire in a household connection is provided for:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>extra brightness</span></li>
+        <li class="correct"><span class="lab">B</span><span>safety, carrying leakage current to the ground</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>saving electricity</span></li>
+        <li class=""><span class="lab">D</span><span>cooling appliances</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The earth wire safely carries any leakage current to the ground.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q49</span>
+      </div>
+      <p class="qtext">Switch covers and plug bodies are made of plastic because plastic is an:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>conductor</span></li>
+        <li class=""><span class="lab">B</span><span>magnet</span></li>
+        <li class="correct"><span class="lab">C</span><span>insulator</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>heater</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Switch covers and plug bodies use plastic because it is an insulator.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q50</span>
+      </div>
+      <p class="qtext">A short circuit produces a:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>sudden very large current</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>tiny current</span></li>
+        <li class=""><span class="lab">C</span><span>magnetic field only</span></li>
+        <li class=""><span class="lab">D</span><span>cooling effect</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A short circuit produces a sudden, very large current.</p></div>
+      </div>
+    </div>
+  </section>
+  <section class="cluster" id="cluster-6">
+    <div class="cluster-head"><div class="cluster-num">6</div><h2>Set 6 · Q51–Q60</h2></div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q51</span>
+      </div>
+      <p class="qtext">We use a fuse instead of an ordinary thick wire because the fuse:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>is cheaper to look at</span></li>
+        <li class=""><span class="lab">B</span><span>glows brightly</span></li>
+        <li class=""><span class="lab">C</span><span>conducts better</span></li>
+        <li class="correct"><span class="lab">D</span><span>melts to break the circuit during an overload</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A fuse is used because it melts to break the circuit during an overload (an ordinary wire would not).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q52</span>
+      </div>
+      <p class="qtext">The brightest glow from a torch bulb comes from using:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>a broken filament</span></li>
+        <li class="correct"><span class="lab">B</span><span>more cells in the battery</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>an open switch</span></li>
+        <li class=""><span class="lab">D</span><span>a plastic wire</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>More cells in the battery give the brightest glow.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q53</span>
+      </div>
+      <p class="qtext">In a single-loop (series) circuit, if one bulb fuses, the other bulbs:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>glow brighter</span></li>
+        <li class=""><span class="lab">B</span><span>stay the same</span></li>
+        <li class="correct"><span class="lab">C</span><span>also go off</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>change colour</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>In a single loop, one fused bulb opens the circuit, so the others also go off.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q54</span>
+      </div>
+      <p class="qtext">A bird can sit safely on a single bare power line because:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>there is no complete circuit through its body</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>birds do not conduct</span></li>
+        <li class=""><span class="lab">C</span><span>the wire is an insulator</span></li>
+        <li class=""><span class="lab">D</span><span>the current is off</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>A bird on one wire is safe because there is no complete circuit through its body.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q55</span>
+      </div>
+      <p class="qtext">The heating element of a toaster is nichrome because it has high resistance and a high melting point. This statement is:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>false</span></li>
+        <li class=""><span class="lab">B</span><span>true only for copper</span></li>
+        <li class=""><span class="lab">C</span><span>true only at night</span></li>
+        <li class="correct"><span class="lab">D</span><span>true</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>True — nichrome's high resistance and high melting point make it ideal for heating elements.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q56</span>
+      </div>
+      <p class="qtext">Two identical cells joined in series (+ to −) give a combined voltage equal to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>one cell's voltage</span></li>
+        <li class="correct"><span class="lab">B</span><span>the sum of the two cells' voltages</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>zero</span></li>
+        <li class=""><span class="lab">D</span><span>half a cell's voltage</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Cells in series add their voltages.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q57</span>
+      </div>
+      <p class="qtext">An electromagnet can be made stronger than a similar bar magnet mainly because you can:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>paint it black</span></li>
+        <li class=""><span class="lab">B</span><span>cool it down</span></li>
+        <li class="correct"><span class="lab">C</span><span>increase the current or the number of turns</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">D</span><span>remove the iron core</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>Increasing the current or the number of turns can make an electromagnet stronger than a similar bar magnet.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q58</span>
+      </div>
+      <p class="qtext">A bulb does not glow when the switch is open because:</p>
+      <ul class="opts">
+        <li class="correct"><span class="lab">A</span><span>the circuit is incomplete, so no current flows</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">B</span><span>the bulb is too bright</span></li>
+        <li class=""><span class="lab">C</span><span>the cell is a magnet</span></li>
+        <li class=""><span class="lab">D</span><span>plastic melts</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>With the switch open the circuit is incomplete, so no current flows and the bulb stays off.</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q59</span>
+      </div>
+      <p class="qtext">A bulb's filament sits in a glass bulb filled with inert gas in order to:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>make it heavier</span></li>
+        <li class=""><span class="lab">B</span><span>cool the room</span></li>
+        <li class=""><span class="lab">C</span><span>add colour</span></li>
+        <li class="correct"><span class="lab">D</span><span>stop the hot filament from burning away</span><span class="mk">✓</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>The inert gas stops the white-hot filament from burning away (oxidising).</p></div>
+      </div>
+    </div>
+    <div class="q">
+      <div class="qhead">
+        <span class="qtag">Q60</span>
+      </div>
+      <p class="qtext">A miniature circuit breaker (MCB) does the same protective job as a:</p>
+      <ul class="opts">
+        <li class=""><span class="lab">A</span><span>battery</span></li>
+        <li class="correct"><span class="lab">B</span><span>fuse (but it can be reset)</span><span class="mk">✓</span></li>
+        <li class=""><span class="lab">C</span><span>bulb</span></li>
+        <li class=""><span class="lab">D</span><span>magnet</span></li>
+      </ul>
+      <div class="solve">
+        <h4>Working</h4>
+        <div class="step"><div class="n">✓</div><p>An MCB does a fuse's protective job but can be reset instead of replaced. --- *End of solutions. Maximum marks: 240.*</p></div>
+      </div>
+    </div>
+  </section>
+  <div class="closer"><h2>You've seen every one.</h2><p>Take the quiz again next week. Speed comes from confidence, and confidence comes from familiar moves.</p></div>
+</div></body></html>
