@@ -63,9 +63,15 @@ One chapter = one commit.
 | Subject | Advanced triplets complete | Notes |
 |---|---|---|
 | **Mathematics** | **15 / 15 ✅** | Ch01–Ch15 all have Paper 2 (Ch01 + Ch15 prototype + Ch02–Ch14 this run). |
-| Science | 3 / 19 | Ch04 Heat, Ch13 Motion (prototype), Ch15 Light. |
+| **Science** | **10 / 19** | Ch01 Nutrition-Plants, Ch02 Nutrition-Animals, Ch04 Heat, Ch05 Acids/Bases, Ch06 Physical/Chemical, Ch08 Winds/Cyclones, Ch10 Respiration, Ch13 Motion (prototype), Ch14 Electric Current, Ch15 Light. |
 | Social Science | 1 / 20 | Ssch01 Geographical Diversity. |
 | Sanskrit | 0 / 15 | not yet started. |
+
+**Total Advanced triplets: 26 / 69** (up from 2 / 69 at run start). The bulk
+of this run authored the complete Maths tier (13 new chapters) and 9 new
+Science chapters — 1,320 verified beyond-grade MCQs with worked solutions and
+auto-generated solved guides, every paper passing the triplet lint and the
+internal answer-key verification.
 
 Maths spans arithmetic (integers, fractions, decimals ×/÷ and place-value,
 BODMAS), number theory (HCF/LCM, number-play/parity/cryptarithms), algebra
