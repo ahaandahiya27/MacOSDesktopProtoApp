@@ -361,11 +361,11 @@ private struct NodeChip: View {
             .padding(.vertical, 5)
             .frame(maxWidth: 130)
             .background(
-                RoundedRectangle(cornerRadius: 10)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                     .fill(backgroundFill)
             )
             .overlay(
-                RoundedRectangle(cornerRadius: 10)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                     .strokeBorder(
                         borderColor,
                         style: StrokeStyle(

@@ -109,8 +109,8 @@ struct SSChronologyChallenge: View {
                         }
                         .padding(.horizontal, 14).padding(.vertical, 10)
                         .frame(maxWidth: .infinity)
-                        .background(RoundedRectangle(cornerRadius: 8).fill(chipFill(idx)))
-                        .overlay(RoundedRectangle(cornerRadius: 8)
+                        .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm).fill(chipFill(idx)))
+                        .overlay(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                             .strokeBorder(Color.compatIndigo.opacity(0.25), lineWidth: 1))
                     }
                     .buttonStyle(.plain)
@@ -148,7 +148,7 @@ struct SSChronologyChallenge: View {
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(10)
-                .background(RoundedRectangle(cornerRadius: 8).fill(Color.green.opacity(0.12)))
+                .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm).fill(Color.green.opacity(0.12)))
             }
         }
     }
@@ -171,7 +171,7 @@ struct SSChronologyChallenge: View {
             .pointingCursor()
         }
         .padding(10)
-        .background(RoundedRectangle(cornerRadius: 8).fill(Color.green.opacity(0.14)))
+        .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm).fill(Color.green.opacity(0.14)))
         .accessibilityElement(children: .combine)
     }
 

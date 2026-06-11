@@ -239,7 +239,7 @@ struct ConceptDetailView: View {
             .padding(10)
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(
-                RoundedRectangle(cornerRadius: 10)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                     .fill(Color.compatIndigo.opacity(0.06))
             )
             .accessibilityElement(children: .combine)
@@ -404,7 +404,7 @@ struct ConceptDetailView: View {
             .padding(DesignTokens.Spacing.lg)
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(
-                RoundedRectangle(cornerRadius: 14)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                     .fill(Color.gray.opacity(0.07))
             )
         } else {
@@ -419,7 +419,7 @@ struct ConceptDetailView: View {
             .padding(DesignTokens.Spacing.lg)
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(
-                RoundedRectangle(cornerRadius: 14)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                     .fill(Color.gray.opacity(0.1))
             )
         }
@@ -494,7 +494,7 @@ struct ConceptDetailView: View {
             }
             .padding(DesignTokens.Spacing.lg)
             .frame(maxWidth: .infinity)
-            .background(RoundedRectangle(cornerRadius: 14).fill(Color.purple.opacity(0.10)))
+            .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.card).fill(Color.purple.opacity(0.10)))
             .contentShape(Rectangle())
         }
         .buttonStyle(.plain)
@@ -554,7 +554,7 @@ struct ConceptDetailView: View {
             }
             .padding(DesignTokens.Spacing.lg)
             .background(
-                RoundedRectangle(cornerRadius: 14)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                     .fill(Color.gray.opacity(0.1))
             )
         }

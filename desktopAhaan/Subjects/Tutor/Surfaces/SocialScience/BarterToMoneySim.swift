@@ -140,8 +140,8 @@ struct BarterToMoneySim: View {
                     }
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.horizontal, 14).padding(.vertical, 10)
-                    .background(RoundedRectangle(cornerRadius: 8).fill(Color.compatIndigo.opacity(0.06)))
-                    .overlay(RoundedRectangle(cornerRadius: 8)
+                    .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm).fill(Color.compatIndigo.opacity(0.06)))
+                    .overlay(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                         .strokeBorder(Color.compatIndigo.opacity(0.22), lineWidth: 1))
                 }
                 .buttonStyle(.plain)
@@ -163,7 +163,7 @@ struct BarterToMoneySim: View {
             Spacer(minLength: 0)
         }
         .padding(10)
-        .background(RoundedRectangle(cornerRadius: 8)
+        .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
             .fill((lastSuccess ? Color.green : Color.red).opacity(0.12)))
         .accessibilityElement(children: .combine)
     }

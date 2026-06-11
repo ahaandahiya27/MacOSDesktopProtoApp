@@ -154,11 +154,11 @@ struct IndiaPhysiographicExplorer: View {
             .frame(height: bandHeight(region.elevation))
             .frame(maxWidth: .infinity)
             .background(
-                RoundedRectangle(cornerRadius: 8)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                     .fill(bandGradient(region.elevation))
             )
             .overlay(
-                RoundedRectangle(cornerRadius: 8)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                     .strokeBorder(Color.white.opacity(isSelected ? 0.9 : 0.0), lineWidth: 2)
             )
         }
@@ -220,7 +220,7 @@ struct IndiaPhysiographicExplorer: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(14)
         .background(
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                 .fill(Color.compatIndigo.opacity(0.06))
         )
         .accessibilityElement(children: .combine)

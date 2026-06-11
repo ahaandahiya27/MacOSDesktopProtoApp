@@ -102,11 +102,11 @@ private struct TimelineStepCard: View {
         .frame(width: 180, alignment: .leading)
         .padding(10)
         .background(
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                 .fill(Color(NSColor.controlBackgroundColor))
         )
         .overlay(
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                 .strokeBorder(Color.compatCyan.opacity(0.3), lineWidth: 1)
         )
         .accessibilityElement(children: .combine)

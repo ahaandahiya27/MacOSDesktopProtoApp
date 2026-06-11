@@ -193,7 +193,7 @@ private struct StretchTopicRow: View {
         .padding(.vertical, DesignTokens.Spacing.sm)
         .padding(.horizontal, 10)
         .background(
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                 .fill(isHovered ? Color.gray.opacity(0.15) : Color.gray.opacity(0.07))
         )
         .contentShape(Rectangle())

@@ -205,7 +205,7 @@ private struct GlossaryTermRow: View {
             .padding(DesignTokens.Spacing.md)
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(
-                RoundedRectangle(cornerRadius: 10)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                     .fill(isExpanded ? Color.compatIndigo.opacity(0.08) : Color.gray.opacity(0.08))
             )
             .contentShape(Rectangle())

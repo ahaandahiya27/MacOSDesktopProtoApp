@@ -166,7 +166,7 @@ struct IndiaNeighboursExplorer: View {
         }
         .padding(DesignTokens.Spacing.md)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(RoundedRectangle(cornerRadius: 8).fill(leafGreen.opacity(0.12)))
+        .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm).fill(leafGreen.opacity(0.12)))
         .accessibilityElement(children: .combine)
         .accessibilityLabel("India and \(current.name). \(current.where_) \(current.link)")
     }

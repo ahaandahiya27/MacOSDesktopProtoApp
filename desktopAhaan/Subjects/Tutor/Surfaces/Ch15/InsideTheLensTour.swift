@@ -264,7 +264,7 @@ private struct LensSilhouette: Shape {
 private struct LensSourceView: View {
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(Color.compatPurple.opacity(0.10))
             HStack {
                 // Distant source — a tiny sun
@@ -299,7 +299,7 @@ private struct LensSourceView: View {
 private struct LensSurfaceView: View {
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(Color.compatPurple.opacity(0.10))
             HStack(spacing: 0) {
                 // Parallel rays approaching
@@ -353,7 +353,7 @@ private struct ConvergingRaysView: View {
 private struct LensFocalPointView: View {
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(Color.compatPurple.opacity(0.10))
             HStack(spacing: 0) {
                 Spacer().frame(width: 80)
@@ -392,7 +392,7 @@ private struct LensImageFormationView: View {
         let objectOffsetX: CGFloat = -120 + CGFloat(distance) * -40
         return VStack(alignment: .leading, spacing: 10) {
             ZStack {
-                RoundedRectangle(cornerRadius: 14)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                     .fill(Color.compatPurple.opacity(0.10))
                 // Principal axis
                 Rectangle()
@@ -440,7 +440,7 @@ private struct LensImageFormationView: View {
 private struct LensMagnifierView: View {
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(Color.compatPurple.opacity(0.10))
             HStack(spacing: 0) {
                 // Tiny real object close to the lens

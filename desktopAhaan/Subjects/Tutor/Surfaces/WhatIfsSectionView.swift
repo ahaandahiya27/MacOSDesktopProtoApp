@@ -72,7 +72,7 @@ private struct WhatIfCard: View {
         .padding(DesignTokens.Spacing.md)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                 .stroke(Color.secondary.opacity(0.25), lineWidth: 1)
         )
         .accessibilityElement(children: .contain)

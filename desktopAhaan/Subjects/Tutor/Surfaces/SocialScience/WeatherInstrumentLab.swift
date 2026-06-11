@@ -172,7 +172,7 @@ struct WeatherInstrumentLab: View {
         }
         .padding(DesignTokens.Spacing.md)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(RoundedRectangle(cornerRadius: 8).fill(skyBlue.opacity(0.12)))
+        .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm).fill(skyBlue.opacity(0.12)))
         .accessibilityElement(children: .combine)
         .accessibilityLabel("\(current.name) is measured by the \(current.instrument) in \(current.unit). \(current.reading) \(current.how)")
     }

@@ -182,7 +182,7 @@ private struct QuizBankContent: View {
             }
             .padding(6)
             .background(
-                RoundedRectangle(cornerRadius: 8)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                     .fill(Color.gray.opacity(0.1))
             )
             .frame(minWidth: 140)

@@ -102,7 +102,7 @@ struct FeatureExplainerSheet: View {
         .padding(DesignTokens.Spacing.md)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                 .fill(tint.opacity(0.08))
         )
         .padding(.top, 6)

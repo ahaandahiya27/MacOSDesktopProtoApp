@@ -168,7 +168,7 @@ struct CompoundingGrowth: View {
             Spacer(minLength: 0)
         }
         .padding(10)
-        .background(RoundedRectangle(cornerRadius: 8).fill(moneyGreen.opacity(0.12)))
+        .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm).fill(moneyGreen.opacity(0.12)))
         .accessibilityElement(children: .combine)
     }
 }

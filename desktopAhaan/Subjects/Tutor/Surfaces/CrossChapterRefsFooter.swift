@@ -47,7 +47,7 @@ struct CrossChapterRefsFooter: View {
             }
             .padding(DesignTokens.Spacing.lg)
             .background(
-                RoundedRectangle(cornerRadius: 14)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                     .fill(Color.compatTeal.opacity(0.06))
             )
         }
@@ -86,7 +86,7 @@ private struct CrossChapterRefRow: View {
             .padding(10)
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(
-                RoundedRectangle(cornerRadius: 10)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                     .fill(Color.gray.opacity(0.08))
             )
             .contentShape(Rectangle())

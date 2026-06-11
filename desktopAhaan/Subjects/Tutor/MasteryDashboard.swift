@@ -149,7 +149,7 @@ private struct MasteryDashboardContent: View {
         }
         .padding(DesignTokens.Spacing.lg)
         .background(
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(Color.compatIndigo.opacity(0.08))
         )
     }
@@ -401,7 +401,7 @@ private struct MasteryDashboardContent: View {
         }
         .padding(10)
         .background(
-            RoundedRectangle(cornerRadius: 8)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                 .fill(Color.gray.opacity(0.06))
         )
         .accessibilityLabel("Topic \(topic.topicTitle): \(topic.totalReviewed) tracked")
@@ -475,7 +475,7 @@ private struct MasteryDashboardContent: View {
         }
         .padding(DesignTokens.Spacing.md)
         .background(
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                 .fill(Color.gray.opacity(0.05))
         )
         .padding(.top, DesignTokens.Spacing.sm)

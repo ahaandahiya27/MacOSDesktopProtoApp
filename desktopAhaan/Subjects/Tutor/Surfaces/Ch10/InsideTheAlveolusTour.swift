@@ -239,7 +239,7 @@ enum AlveolusTourStop: Int, CaseIterable, Identifiable {
 private struct AlveolusNostrilView: View {
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(Color.compatTeal.opacity(0.10))
             HStack(spacing: 18) {
                 Image(systemName: SFSymbolCompat.name("nose.fill"))
@@ -270,7 +270,7 @@ private struct AlveolusNostrilView: View {
 private struct AlveolusTracheaView: View {
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(Color.compatTeal.opacity(0.10))
             VStack(spacing: 6) {
                 ForEach(0..<7, id: \.self) { _ in
@@ -289,7 +289,7 @@ private struct AlveolusTracheaView: View {
 private struct AlveolusBronchiView: View {
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(Color.compatTeal.opacity(0.10))
             // Schematic bronchi tree (stacked Vs widening downward)
             VStack(spacing: DesignTokens.Spacing.sm) {
@@ -329,7 +329,7 @@ private struct AlveolusBronchiView: View {
 private struct AlveolusSacView: View {
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(Color.compatTeal.opacity(0.10))
             ZStack {
                 // The grape cluster of alveoli
@@ -361,7 +361,7 @@ private struct AlveolusSacView: View {
 private struct AlveolusRedCellView: View {
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(Color.red.opacity(0.10))
             HStack(spacing: DesignTokens.Spacing.xl) {
                 // A red blood cell (biconcave disc)

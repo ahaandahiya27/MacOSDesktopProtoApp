@@ -239,7 +239,7 @@ enum DigestiveTourStop: Int, CaseIterable, Identifiable {
 private struct DigestiveMouthView: View {
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(DesignTokens.BrandColor.tryAtHome.opacity(0.10))
             HStack(spacing: 14) {
                 Image(systemName: SFSymbolCompat.name("mouth.fill"))
@@ -271,7 +271,7 @@ private struct DigestiveMouthView: View {
 private struct DigestiveStomachView: View {
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(Color.red.opacity(0.10))
             // J-shape made of two arcs
             Path { p in
@@ -290,7 +290,7 @@ private struct DigestiveStomachView: View {
             }
             .padding(DesignTokens.Spacing.sm)
             .background(
-                RoundedRectangle(cornerRadius: 8)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                     .fill(Color.black.opacity(0.40))
             )
         }
@@ -303,7 +303,7 @@ private struct DigestiveStomachView: View {
 private struct DigestiveSmallIntestineView: View {
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(DesignTokens.BrandColor.tryAtHome.opacity(0.10))
             VStack(spacing: 6) {
                 // Long coiled tube — represented as alternating segments
@@ -327,7 +327,7 @@ private struct DigestiveSmallIntestineView: View {
 private struct DigestiveLiverPancreasView: View {
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(DesignTokens.BrandColor.mnemonic.opacity(0.10))
             HStack(spacing: 18) {
                 VStack(spacing: DesignTokens.Spacing.xs) {
@@ -355,7 +355,7 @@ private struct DigestiveLiverPancreasView: View {
 private struct DigestiveLargeIntestineView: View {
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(Color.compatBrown.opacity(0.18))
             // Inverted-U shape representing the colon
             Path { p in

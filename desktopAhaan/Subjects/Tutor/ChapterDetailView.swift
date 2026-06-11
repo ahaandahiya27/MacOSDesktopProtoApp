@@ -508,7 +508,7 @@ private struct TopicCard: View {
         .padding(DesignTokens.Spacing.lg)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(isHovered ? Color.gray.opacity(0.18) : Color.gray.opacity(0.1))
         )
         .onHover { hovering in isHovered = hovering }

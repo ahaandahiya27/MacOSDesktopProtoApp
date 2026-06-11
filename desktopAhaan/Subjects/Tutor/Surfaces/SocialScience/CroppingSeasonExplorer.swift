@@ -171,7 +171,7 @@ struct CroppingSeasonExplorer: View {
         }
         .padding(DesignTokens.Spacing.md)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(RoundedRectangle(cornerRadius: 8).fill(current.tint.opacity(0.12)))
+        .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm).fill(current.tint.opacity(0.12)))
         .accessibilityElement(children: .combine)
     }
 

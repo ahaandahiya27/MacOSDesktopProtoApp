@@ -124,7 +124,7 @@ struct ThreeOrgansSorter: View {
             .fixedSize(horizontal: false, vertical: true)
             .frame(maxWidth: .infinity, alignment: .leading)
             .padding(DesignTokens.Spacing.lg)
-            .background(RoundedRectangle(cornerRadius: 10).fill(Color.compatPurple.opacity(0.08)))
+            .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.md).fill(Color.compatPurple.opacity(0.08)))
             .accessibilityLabel("Government job: \(current.text)")
     }
 
@@ -151,7 +151,7 @@ struct ThreeOrgansSorter: View {
             .foregroundColor(answered ? (showAsAnswer || isPick ? .white : DesignTokens.BrandColor.canvasText) : .white)
             .frame(maxWidth: .infinity)
             .padding(.vertical, DesignTokens.Spacing.md).padding(.horizontal, 6)
-            .background(RoundedRectangle(cornerRadius: 10)
+            .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                 .fill(answered ? tint.opacity(showAsAnswer || isPick ? 0.9 : 0.12) : Color.compatPurple))
         }
         .buttonStyle(.plain)
@@ -178,7 +178,7 @@ struct ThreeOrgansSorter: View {
             Spacer(minLength: 0)
         }
         .padding(10)
-        .background(RoundedRectangle(cornerRadius: 8)
+        .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
             .fill((wasCorrect ? Color.green : Color.red).opacity(0.12)))
         .accessibilityElement(children: .combine)
     }

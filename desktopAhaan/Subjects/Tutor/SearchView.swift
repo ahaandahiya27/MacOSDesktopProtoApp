@@ -45,7 +45,7 @@ private struct SearchContent: View {
             }
             .padding(DesignTokens.Spacing.md)
             .background(
-                RoundedRectangle(cornerRadius: 10)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                     .fill(Color.gray.opacity(0.1))
             )
             .padding(.horizontal, DesignTokens.Spacing.lg)

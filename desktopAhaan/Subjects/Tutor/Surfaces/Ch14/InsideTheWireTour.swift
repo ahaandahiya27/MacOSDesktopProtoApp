@@ -251,12 +251,12 @@ enum WireTourStop: Int, CaseIterable, Identifiable {
 private struct WireBatteryView: View {
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(Color.yellow.opacity(0.10))
             HStack(spacing: 30) {
                 // Battery body
                 ZStack {
-                    RoundedRectangle(cornerRadius: 8)
+                    RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                         .fill(Color.gray.opacity(0.20))
                         .frame(width: 120, height: 180)
                     VStack(spacing: DesignTokens.Spacing.sm) {
@@ -290,7 +290,7 @@ private struct WireBatteryView: View {
 private struct WireLatticeView: View {
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(Color.yellow.opacity(0.10))
             VStack(spacing: 10) {
                 ForEach(0..<5, id: \.self) { row in
@@ -324,7 +324,7 @@ private struct WireElectronDriftView: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 10) {
             ZStack {
-                RoundedRectangle(cornerRadius: 14)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                     .fill(Color.yellow.opacity(0.10))
                 // The wire (long horizontal channel)
                 Capsule()
@@ -366,7 +366,7 @@ private struct WireElectronDriftView: View {
 private struct WireResistorView: View {
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(Color.red.opacity(0.10))
             HStack(spacing: DesignTokens.Spacing.xs) {
                 // Wide entrance
@@ -401,7 +401,7 @@ private struct WireResistorView: View {
 private struct WireBulbView: View {
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(Color.yellow.opacity(0.18))
             VStack(spacing: 10) {
                 // Bulb glass + filament

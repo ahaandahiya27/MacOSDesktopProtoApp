@@ -464,11 +464,11 @@ struct QuestionDetailView: View {
             }
             .padding(.vertical, 9)
             .background(
-                RoundedRectangle(cornerRadius: 10)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                     .fill(color.opacity(isSuggested ? 0.22 : 0.15))
             )
             .overlay(
-                RoundedRectangle(cornerRadius: 10)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                     .strokeBorder(color.opacity(isSuggested ? 0.85 : 0.45),
                                   lineWidth: isSuggested ? 2 : 1)
             )
@@ -494,7 +494,7 @@ struct QuestionDetailView: View {
         }
         .padding(DesignTokens.Spacing.md)
         .background(
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                 .fill(Color.green.opacity(0.08))
         )
         .accessibilityElement(children: .combine)
@@ -556,7 +556,7 @@ struct QuestionDetailView: View {
             .padding(DesignTokens.Spacing.lg)
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(
-                RoundedRectangle(cornerRadius: 14)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                     .fill(Color.gray.opacity(0.1))
             )
     }
@@ -583,7 +583,7 @@ struct QuestionDetailView: View {
                     // read-only row so we don't break older question shapes.
                     optionRow(idx: idx, opt: opt)
                         .background(
-                            RoundedRectangle(cornerRadius: 10)
+                            RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                                 .fill(Color.gray.opacity(0.1))
                         )
                 }
@@ -637,11 +637,11 @@ struct QuestionDetailView: View {
                 }
             }
             .background(
-                RoundedRectangle(cornerRadius: 10)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                     .fill(mcqRowBackground(idx: idx, correctIdx: correctIdx))
             )
             .overlay(
-                RoundedRectangle(cornerRadius: 10)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                     .strokeBorder(mcqRowBorder(idx: idx, correctIdx: correctIdx), lineWidth: 1.5)
             )
         }
@@ -751,11 +751,11 @@ struct QuestionDetailView: View {
                 .padding(.horizontal, 10)
                 .padding(.vertical, 6)
                 .background(
-                    RoundedRectangle(cornerRadius: 8)
+                    RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                         .fill(matchRowBackground(state: rowState))
                 )
                 .overlay(
-                    RoundedRectangle(cornerRadius: 8)
+                    RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                         .strokeBorder(matchRowBorder(state: rowState), lineWidth: 1)
                 )
             }
@@ -898,10 +898,10 @@ struct QuestionDetailView: View {
         }
         .padding(DesignTokens.Spacing.md)
         .background(
-            RoundedRectangle(cornerRadius: 10).fill(Color.compatIndigo.opacity(0.08))
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md).fill(Color.compatIndigo.opacity(0.08))
         )
         .overlay(
-            RoundedRectangle(cornerRadius: 10).strokeBorder(Color.compatIndigo.opacity(0.25), lineWidth: 1)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md).strokeBorder(Color.compatIndigo.opacity(0.25), lineWidth: 1)
         )
     }
 
@@ -911,7 +911,7 @@ struct QuestionDetailView: View {
                 .font(.body.bold())
                 .padding(10)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .background(RoundedRectangle(cornerRadius: 8).fill(Color.green.opacity(0.12)))
+                .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm).fill(Color.green.opacity(0.12)))
             ForEach(question.solutionSteps.indices, id: \.self) { idx in let step = question.solutionSteps[idx];
                 HStack(alignment: .top, spacing: 10) {
                     Text("\(idx + 1).")
@@ -949,7 +949,7 @@ struct QuestionDetailView: View {
                 }
             }
             .padding(DesignTokens.Spacing.lg)
-            .background(RoundedRectangle(cornerRadius: 14).fill(Color.red.opacity(0.08)))
+            .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.card).fill(Color.red.opacity(0.08)))
         }
     }
 
@@ -987,9 +987,9 @@ struct QuestionDetailView: View {
                 Spacer()
             }
             .padding(DesignTokens.Spacing.md)
-            .background(RoundedRectangle(cornerRadius: 10).fill(Color.green.opacity(0.12)))
+            .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.md).fill(Color.green.opacity(0.12)))
             .overlay(
-                RoundedRectangle(cornerRadius: 10)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                     .strokeBorder(Color.green.opacity(0.4), lineWidth: 1)
             )
         case .incorrect(let userInput):
@@ -1011,9 +1011,9 @@ struct QuestionDetailView: View {
                 Spacer()
             }
             .padding(DesignTokens.Spacing.md)
-            .background(RoundedRectangle(cornerRadius: 10).fill(Color.red.opacity(0.10)))
+            .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.md).fill(Color.red.opacity(0.10)))
             .overlay(
-                RoundedRectangle(cornerRadius: 10)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                     .strokeBorder(Color.red.opacity(0.4), lineWidth: 1)
             )
         }

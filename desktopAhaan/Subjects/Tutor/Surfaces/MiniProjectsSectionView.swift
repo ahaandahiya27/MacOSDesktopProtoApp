@@ -79,7 +79,7 @@ private struct MiniProjectCard: View {
             .padding(DesignTokens.Spacing.md)
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(
-                RoundedRectangle(cornerRadius: 10)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                     .fill(Color.gray.opacity(0.08))
             )
             .contentShape(Rectangle())
@@ -207,7 +207,7 @@ private struct MiniProjectDetailSheet: View {
         .padding(DesignTokens.Spacing.md)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                 .fill(Color.compatTeal.opacity(0.08))
         )
     }

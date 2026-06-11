@@ -241,7 +241,7 @@ enum XylemTourStop: Int, CaseIterable, Identifiable {
 private struct XylemRootHairView: View {
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(Color.compatBrown.opacity(0.18))
             // Soil — brown rectangles
             ForEach(0..<8, id: \.self) { i in
@@ -275,7 +275,7 @@ private struct XylemRootHairView: View {
 private struct XylemEntryView: View {
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(Color.compatTeal.opacity(0.10))
             // Stack of xylem tubes (hollow vertical capsules)
             HStack(spacing: DesignTokens.Spacing.md) {
@@ -303,7 +303,7 @@ private struct XylemEntryView: View {
 private struct XylemStemView: View {
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(Color.compatTeal.opacity(0.10))
             // Stem trunk (vertical brown rectangle)
             Rectangle()
@@ -332,7 +332,7 @@ private struct XylemStemView: View {
 private struct XylemLeafVeinView: View {
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(Color.compatTeal.opacity(0.15))
             // Leaf silhouette
             Ellipse()
@@ -362,7 +362,7 @@ private struct XylemLeafVeinView: View {
 private struct XylemStomaView: View {
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(Color.compatTeal.opacity(0.15))
             // Two guard cells (ellipses)
             HStack(spacing: 30) {

@@ -166,7 +166,7 @@ struct SacredGeographyExplorer: View {
         }
         .padding(DesignTokens.Spacing.md)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(RoundedRectangle(cornerRadius: 8).fill(ochre.opacity(0.12)))
+        .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm).fill(ochre.opacity(0.12)))
         .accessibilityElement(children: .combine)
         .accessibilityLabel("\(current.name)\(current.count.isEmpty ? "" : ", \(current.count)"). \(current.what) \(current.why)")
     }

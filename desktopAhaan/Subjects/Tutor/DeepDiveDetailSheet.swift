@@ -138,7 +138,7 @@ struct DeepDiveDetailSheet: View {
             .padding(DesignTokens.Spacing.md)
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(
-                RoundedRectangle(cornerRadius: 10)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                     .fill(Color.compatIndigo.opacity(0.08))
             )
             .padding(.top, DesignTokens.Spacing.xs)
@@ -185,7 +185,7 @@ private struct BonusQuestionCard: View {
         .padding(DesignTokens.Spacing.md)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                 .stroke(Color.secondary.opacity(0.25), lineWidth: 1)
         )
     }

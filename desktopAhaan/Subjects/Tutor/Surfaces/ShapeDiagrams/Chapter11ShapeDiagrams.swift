@@ -52,8 +52,8 @@ struct HeartChambersDiagram: View {
     }
 
     private func chamber(_ name: String, _ c: Color, x: CGFloat, y: CGFloat, dw: CGFloat, dh: CGFloat) -> some View {
-        RoundedRectangle(cornerRadius: 8).fill(c.opacity(0.28))
-            .overlay(RoundedRectangle(cornerRadius: 8).strokeBorder(c.opacity(0.6), lineWidth: 1.5))
+        RoundedRectangle(cornerRadius: DesignTokens.Radius.sm).fill(c.opacity(0.28))
+            .overlay(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm).strokeBorder(c.opacity(0.6), lineWidth: 1.5))
             .overlay(SDLabel(text: name, color: c))
             .frame(width: dw, height: dh)
             .position(x: x, y: y)

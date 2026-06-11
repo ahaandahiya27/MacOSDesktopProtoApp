@@ -41,7 +41,7 @@ struct ScientistsSectionView: View {
             }
             .padding(DesignTokens.Spacing.lg)
             .background(
-                RoundedRectangle(cornerRadius: 14)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                     .fill(Color.compatPurple.opacity(0.06))
             )
             .sheet(item: $presentedScientist) { profile in
@@ -89,7 +89,7 @@ private struct ScientistCard: View {
             .padding(10)
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(
-                RoundedRectangle(cornerRadius: 10)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                     .fill(Color(NSColor.controlBackgroundColor))
             )
             .contentShape(Rectangle())

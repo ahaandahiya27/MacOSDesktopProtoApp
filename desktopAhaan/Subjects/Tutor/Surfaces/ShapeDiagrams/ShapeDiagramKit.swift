@@ -28,7 +28,7 @@ struct SDFigure<Content: View>: View {
         content
             .padding(10)
             .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(RoundedRectangle(cornerRadius: 10).fill(tint.opacity(0.06)))
+            .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.md).fill(tint.opacity(0.06)))
     }
 }
 

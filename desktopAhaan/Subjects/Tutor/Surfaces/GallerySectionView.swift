@@ -55,7 +55,7 @@ private struct GalleryItemCard: View {
             assetView
                 .frame(width: 56, height: 56)
                 .background(
-                    RoundedRectangle(cornerRadius: 10)
+                    RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                         .fill(Color.compatMint.opacity(0.12))
                 )
             VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
@@ -74,7 +74,7 @@ private struct GalleryItemCard: View {
         .padding(DesignTokens.Spacing.md)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                 .stroke(Color.secondary.opacity(0.25), lineWidth: 1)
         )
         .accessibilityElement(children: .combine)

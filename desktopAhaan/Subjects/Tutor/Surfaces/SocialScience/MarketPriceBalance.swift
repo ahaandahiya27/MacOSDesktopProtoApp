@@ -178,7 +178,7 @@ struct MarketPriceBalance: View {
             Spacer(minLength: 0)
         }
         .padding(10)
-        .background(RoundedRectangle(cornerRadius: 8).fill(statusTint.opacity(0.12)))
+        .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm).fill(statusTint.opacity(0.12)))
         .accessibilityElement(children: .combine)
     }
 

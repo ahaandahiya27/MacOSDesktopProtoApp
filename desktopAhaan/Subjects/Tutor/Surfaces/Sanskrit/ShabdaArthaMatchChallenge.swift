@@ -120,8 +120,8 @@ struct ShabdaArthaMatchChallenge: View {
                     }
                     .padding(.horizontal, DesignTokens.Spacing.md).padding(.vertical, 11)
                     .frame(maxWidth: .infinity)
-                    .background(RoundedRectangle(cornerRadius: 8).fill(wordFill(i)))
-                    .overlay(RoundedRectangle(cornerRadius: 8)
+                    .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm).fill(wordFill(i)))
+                    .overlay(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                         .strokeBorder(selectedTerm == i ? Color.compatIndigo : Color.compatIndigo.opacity(0.22),
                                       lineWidth: selectedTerm == i ? 2 : 1))
                 }
@@ -151,8 +151,8 @@ struct ShabdaArthaMatchChallenge: View {
                             .fixedSize(horizontal: false, vertical: true)
                             .frame(maxWidth: .infinity, alignment: .leading)
                             .padding(.horizontal, DesignTokens.Spacing.md).padding(.vertical, 9)
-                            .background(RoundedRectangle(cornerRadius: 8).fill(meaningFill(termIdx)))
-                            .overlay(RoundedRectangle(cornerRadius: 8)
+                            .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm).fill(meaningFill(termIdx)))
+                            .overlay(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                                 .strokeBorder(Color.compatIndigo.opacity(0.18), lineWidth: 1))
                     }
                     .buttonStyle(.plain).pointingCursor()
@@ -183,7 +183,7 @@ struct ShabdaArthaMatchChallenge: View {
             .buttonStyle(.plain).pointingCursor()
         }
         .padding(10)
-        .background(RoundedRectangle(cornerRadius: 8).fill(Color.green.opacity(0.14)))
+        .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm).fill(Color.green.opacity(0.14)))
         .accessibilityElement(children: .combine)
     }
 

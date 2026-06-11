@@ -288,7 +288,7 @@ private struct StomaView: View {
         let guardCellSpacing: CGFloat = max(4, openness * 60)
         return VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             ZStack {
-                RoundedRectangle(cornerRadius: 14)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                     .fill(Color.compatTeal.opacity(0.12))
                 // Two guard cells: ellipses that bow toward / away from
                 // each other as openness changes.
@@ -324,7 +324,7 @@ private struct StomaView: View {
 private struct MesophyllView: View {
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(Color.compatTeal.opacity(0.10))
             // A grid of "cells" — circles with little dots inside.
             VStack(spacing: 6) {
@@ -370,7 +370,7 @@ private struct MesophyllCell: View {
 private struct ChloroplastView: View {
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(Color.compatTeal.opacity(0.12))
             // Outer + inner membrane.
             Ellipse()
@@ -405,7 +405,7 @@ private struct ChloroplastView: View {
 private struct ThylakoidView: View {
     var body: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(Color.compatTeal.opacity(0.12))
             // The disc surface.
             Capsule()

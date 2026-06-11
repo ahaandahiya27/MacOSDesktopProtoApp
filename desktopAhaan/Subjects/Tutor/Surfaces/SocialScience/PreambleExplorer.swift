@@ -124,7 +124,7 @@ struct PreambleExplorer: View {
             .fixedSize(horizontal: false, vertical: true)
             .padding(14)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .background(RoundedRectangle(cornerRadius: 10).fill(Color.compatBlue.opacity(0.06)))
+            .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.md).fill(Color.compatBlue.opacity(0.06)))
             .accessibilityLabel("The Preamble of India: \(preambleText)")
     }
 
@@ -231,7 +231,7 @@ struct PreambleExplorer: View {
         }
         .padding(DesignTokens.Spacing.md)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(RoundedRectangle(cornerRadius: 8).fill(Color.compatBlue.opacity(0.12)))
+        .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm).fill(Color.compatBlue.opacity(0.12)))
         .accessibilityElement(children: .combine)
     }
 
