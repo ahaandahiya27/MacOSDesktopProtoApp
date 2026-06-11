@@ -92,7 +92,7 @@ struct BuildAPlantSandbox: View {
         }
         .padding(DesignTokens.Spacing.lg)
         .background(
-            RoundedRectangle(cornerRadius: 14, style: .continuous)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card, style: .continuous)
                 .fill(Color.compatTeal.opacity(0.10))
         )
         .respectReduceMotion(animation: .easeInOut(duration: 0.22))

@@ -41,11 +41,11 @@ struct StreakBadge: View {
             .padding(.vertical, DesignTokens.Spacing.sm)
             .padding(.horizontal, DesignTokens.Spacing.md)
             .background(
-                RoundedRectangle(cornerRadius: 10, style: .continuous)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.md, style: .continuous)
                     .fill(Color.orange.opacity(0.10))
             )
             .overlay(
-                RoundedRectangle(cornerRadius: 10, style: .continuous)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.md, style: .continuous)
                     .strokeBorder(Color.orange.opacity(0.30), lineWidth: 1)
             )
             .accessibilityElement(children: .combine)

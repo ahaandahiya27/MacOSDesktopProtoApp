@@ -48,7 +48,7 @@ struct Scene4_NeutralisationInAction: View {
 
                         // Central mixing beaker
                         ZStack(alignment: .bottom) {
-                            RoundedRectangle(cornerRadius: 8, style: .continuous)
+                            RoundedRectangle(cornerRadius: DesignTokens.Radius.sm, style: .continuous)
                                 .fill(Color.white.opacity(0.95))
                                 .frame(width: 120, height: 160)
 
@@ -57,7 +57,7 @@ struct Scene4_NeutralisationInAction: View {
                                 .frame(width: 112, height: mixedFillH)
                                 .animation(reduceMotion ? .none : .easeInOut(duration: 1.5))
 
-                            RoundedRectangle(cornerRadius: 8, style: .continuous)
+                            RoundedRectangle(cornerRadius: DesignTokens.Radius.sm, style: .continuous)
                                 .strokeBorder(.gray.opacity(0.4), lineWidth: 2)
                                 .frame(width: 120, height: 160)
                         }

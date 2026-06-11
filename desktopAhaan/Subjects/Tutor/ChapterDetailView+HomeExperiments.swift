@@ -382,7 +382,7 @@ struct HomeExperimentCard: View {
                     .padding(10)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .background(
-                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                        RoundedRectangle(cornerRadius: DesignTokens.Radius.md, style: .continuous)
                             .fill(Color.compatIndigo.opacity(0.10))
                     )
                 }
@@ -391,11 +391,11 @@ struct HomeExperimentCard: View {
             }
         }
         .background(
-            RoundedRectangle(cornerRadius: 14, style: .continuous)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card, style: .continuous)
                 .fill(Color.white)
         )
         .overlay(
-            RoundedRectangle(cornerRadius: 14, style: .continuous)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card, style: .continuous)
                 .strokeBorder(Color.gray.opacity(0.15), lineWidth: 1)
         )
     }

@@ -277,7 +277,7 @@ private struct MasteryDashboardContent: View {
                     .font(.caption)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
             }
-            Spacer(minLength: 8)
+            Spacer(minLength: DesignTokens.Spacing.sm)
             Button("Start Daily Practice") {
                 appState.sidebarSelection = .tool(.dailyPractice)
             }

@@ -76,7 +76,7 @@ struct Scene4_ColorTheChlorophyll: View {
                 }
             }
             .frame(maxWidth: 560)
-            .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+            .clipShape(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm, style: .continuous))
             .shadow(color: .black.opacity(0.15), radius: 8, x: 0, y: 4)
 
             // Animated beam

@@ -207,7 +207,7 @@ struct Scene2_BuildYourThermometer: View {
         }
         .padding(DesignTokens.Spacing.xl)
         .background(
-            RoundedRectangle(cornerRadius: 16, style: .continuous)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.lg, style: .continuous)
                 .fill(Color.white)
                 .shadow(color: .black.opacity(0.1), radius: 10)
         )

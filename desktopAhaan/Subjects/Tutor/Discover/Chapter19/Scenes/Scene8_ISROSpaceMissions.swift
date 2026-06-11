@@ -163,11 +163,11 @@ struct Scene8_ISROSpaceMissions: View {
                                 }
                                 .frame(width: 115, height: 110)
                                 .background(
-                                    RoundedRectangle(cornerRadius: 14, style: .continuous)
+                                    RoundedRectangle(cornerRadius: DesignTokens.Radius.card, style: .continuous)
                                         .fill(isSelected ? mission.color : Color.white)
                                 )
                                 .overlay(
-                                    RoundedRectangle(cornerRadius: 14, style: .continuous)
+                                    RoundedRectangle(cornerRadius: DesignTokens.Radius.card, style: .continuous)
                                         .strokeBorder(isExplored ? .green.opacity(0.4) : .gray.opacity(0.2), lineWidth: 1.5)
                                 )
                             }

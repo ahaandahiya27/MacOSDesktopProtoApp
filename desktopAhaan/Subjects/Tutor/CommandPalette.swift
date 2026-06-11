@@ -207,7 +207,7 @@ struct CommandPalette: View {
                         .lineLimit(1)
                 }
             }
-            Spacer(minLength: 8)
+            Spacer(minLength: DesignTokens.Spacing.sm)
             Text(entry.pack.coverEmoji)
                 .accessibilityHidden(true)
         }

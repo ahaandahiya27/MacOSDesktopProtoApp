@@ -178,11 +178,11 @@ struct Scene3_ThreeHighwaysOfHeat: View {
             .frame(maxWidth: .infinity)
             .frame(height: height)
             .background(
-                RoundedRectangle(cornerRadius: 16, style: .continuous)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.lg, style: .continuous)
                     .fill(isTapped ? d.color.opacity(0.1) : Color.white)
             )
             .overlay(
-                RoundedRectangle(cornerRadius: 16, style: .continuous)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.lg, style: .continuous)
                     .strokeBorder(activeLane == index ? d.color : .gray.opacity(0.2), lineWidth: 2)
             )
         }

@@ -4,7 +4,7 @@ import SwiftUI
 /// Discover Mode so cards have one consistent look.
 struct SoftShadowCard<Content: View>: View {
     var padding: CGFloat = 20
-    var cornerRadius: CGFloat = DesignTokens.cornerRadiusLarge
+    var cornerRadius: CGFloat = DesignTokens.Radius.lg
     @ViewBuilder var content: () -> Content
 
     var body: some View {

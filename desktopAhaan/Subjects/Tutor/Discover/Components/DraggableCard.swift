@@ -31,7 +31,7 @@ struct DraggableCard: View {
         }
         .frame(width: 110, height: 96)
         .background(
-            RoundedRectangle(cornerRadius: 14, style: .continuous)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card, style: .continuous)
                 .fill(Color.white)
                 .shadow(
                     color: .black.opacity(settled ? 0.0 : (isDragging ? 0.25 : 0.12)),
@@ -39,7 +39,7 @@ struct DraggableCard: View {
                 )
         )
         .overlay(
-            RoundedRectangle(cornerRadius: 14, style: .continuous)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card, style: .continuous)
                 .strokeBorder(
                     settled ? Color.green.opacity(0.5) : Color.gray.opacity(0.2),
                     lineWidth: settled ? 2 : 1

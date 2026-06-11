@@ -36,11 +36,11 @@ struct MCQOptionRow: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             .frame(minHeight: 44)
             .background(
-                RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusMedium)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                     .fill(fill)
             )
             .overlay(
-                RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusMedium)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                     .stroke(stroke, lineWidth: 1.5)
             )
         }
@@ -113,7 +113,7 @@ struct MCQFeedbackBlock: View {
         .frame(maxWidth: .infinity, alignment: .leading)
         .padding(DesignTokens.Spacing.md)
         .background(
-            RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusMedium)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                 .fill((wasCorrect ? DesignTokens.BrandColor.success : DesignTokens.BrandColor.danger).opacity(0.08))
         )
         .accessibilityElement(children: .combine)

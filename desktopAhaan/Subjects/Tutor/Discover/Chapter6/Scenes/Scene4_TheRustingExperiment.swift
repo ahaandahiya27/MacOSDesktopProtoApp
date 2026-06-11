@@ -153,11 +153,11 @@ struct Scene4_TheRustingExperiment: View {
             // The test tube
             ZStack(alignment: .bottom) {
                 // Tube outline
-                RoundedRectangle(cornerRadius: 10, style: .continuous)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.md, style: .continuous)
                     .fill(Color.white.opacity(0.95))
                     .frame(width: 80, height: height)
                     .overlay(
-                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                        RoundedRectangle(cornerRadius: DesignTokens.Radius.md, style: .continuous)
                             .strokeBorder(.gray.opacity(0.3), lineWidth: 1.5)
                     )
 

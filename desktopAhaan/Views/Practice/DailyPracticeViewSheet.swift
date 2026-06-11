@@ -207,7 +207,7 @@ private struct DailyPracticeContent: View {
                     .font(.caption)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
             }
-            Spacer(minLength: 8)
+            Spacer(minLength: DesignTokens.Spacing.sm)
             Button("Start Review") {
                 reviewSessionVisible = true
             }
@@ -302,7 +302,7 @@ private struct DailyPracticeContent: View {
                             .lineLimit(1)
                     }
                 }
-                Spacer(minLength: 8)
+                Spacer(minLength: DesignTokens.Spacing.sm)
                 Button {
                     dataStore.toggleToughQuestion(entry.question.id)
                 } label: {
@@ -411,10 +411,10 @@ private struct ReviewSessionSheet: View {
                 Text(entry.question.answer)
                     .font(.body)
                     .fixedSize(horizontal: false, vertical: true)
-                Spacer(minLength: 8)
+                Spacer(minLength: DesignTokens.Spacing.sm)
                 qualityButtons(for: entry)
             } else {
-                Spacer(minLength: 8)
+                Spacer(minLength: DesignTokens.Spacing.sm)
                 Button("Show answer") { answerRevealed = true }
                     .keyboardShortcut(.space, modifiers: [])
                     .controlSize(.large)

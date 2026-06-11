@@ -225,11 +225,11 @@ private struct IngredientTile: View {
         }
         .frame(width: 78, height: 70)
         .background(
-            RoundedRectangle(cornerRadius: 10, style: .continuous)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md, style: .continuous)
                 .fill(filled ? color.opacity(0.18) : Color.white.opacity(0.95))
         )
         .overlay(
-            RoundedRectangle(cornerRadius: 10, style: .continuous)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md, style: .continuous)
                 .strokeBorder(filled ? color.opacity(0.5) : Color.gray.opacity(0.25),
                               lineWidth: 1.2)
         )

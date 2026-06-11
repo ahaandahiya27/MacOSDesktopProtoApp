@@ -191,7 +191,7 @@ private struct HouseholdAcidBaseSorterScene: View {
         HStack(spacing: 10) {
             Text(it.name).font(.callout.weight(.semibold))
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
-            Spacer(minLength: 8)
+            Spacer(minLength: DesignTokens.Spacing.sm)
             ForEach(Bucket.allCases, id: \.self) { b in
                 let isPicked = pick == b
                 let tint: Color = pick == nil

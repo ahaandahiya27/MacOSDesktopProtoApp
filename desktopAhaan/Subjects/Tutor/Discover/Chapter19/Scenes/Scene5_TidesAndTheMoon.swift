@@ -78,11 +78,11 @@ struct Scene5_TidesAndTheMoon: View {
                                 .padding(.horizontal, DesignTokens.Spacing.md)
                                 .padding(.vertical, DesignTokens.Spacing.sm)
                                 .background(
-                                    RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                    RoundedRectangle(cornerRadius: DesignTokens.Radius.md, style: .continuous)
                                         .fill(isSelected ? card.color.opacity(0.12) : Color.white)
                                 )
                                 .overlay(
-                                    RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                    RoundedRectangle(cornerRadius: DesignTokens.Radius.md, style: .continuous)
                                         .strokeBorder(isSelected ? card.color : .gray.opacity(0.25), lineWidth: 1.5)
                                 )
                             }

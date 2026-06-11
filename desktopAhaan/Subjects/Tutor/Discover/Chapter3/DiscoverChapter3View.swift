@@ -558,7 +558,7 @@ private struct NaturalVsSyntheticSorterScene: View {
         HStack(spacing: 10) {
             Text(f.name).font(.callout.weight(.semibold))
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
-            Spacer(minLength: 8)
+            Spacer(minLength: DesignTokens.Spacing.sm)
             ForEach([true, false], id: \.self) { val in
                 let isPicked = pick == val
                 let tint: Color = pick == nil

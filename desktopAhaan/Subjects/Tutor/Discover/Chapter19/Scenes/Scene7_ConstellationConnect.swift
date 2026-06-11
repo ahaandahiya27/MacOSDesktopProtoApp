@@ -154,11 +154,11 @@ struct Scene7_ConstellationConnect: View {
                                 .frame(maxWidth: .infinity)
                                 .frame(height: 100)
                                 .background(
-                                    RoundedRectangle(cornerRadius: 14, style: .continuous)
+                                    RoundedRectangle(cornerRadius: DesignTokens.Radius.card, style: .continuous)
                                         .fill(isSelected ? constellation.color : Color.white)
                                 )
                                 .overlay(
-                                    RoundedRectangle(cornerRadius: 14, style: .continuous)
+                                    RoundedRectangle(cornerRadius: DesignTokens.Radius.card, style: .continuous)
                                         .strokeBorder(isExplored ? .green.opacity(0.4) : .gray.opacity(0.2), lineWidth: 1.5)
                                 )
                             }

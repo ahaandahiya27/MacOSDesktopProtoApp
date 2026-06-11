@@ -212,11 +212,11 @@ struct Scene1_WeatherVsClimate: View {
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .padding(20)
             .background(
-                RoundedRectangle(cornerRadius: 16, style: .continuous)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.lg, style: .continuous)
                     .fill(selectedSide == side ? color.opacity(0.12) : Color.white)
             )
             .overlay(
-                RoundedRectangle(cornerRadius: 16, style: .continuous)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.lg, style: .continuous)
                     .strokeBorder(selectedSide == side ? color : .gray.opacity(0.25), lineWidth: 2)
             )
         }

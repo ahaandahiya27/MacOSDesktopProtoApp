@@ -169,7 +169,7 @@ struct InsightsView: View {
             Text(subjectName(point.packId))
                 .font(.callout.weight(.medium))
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
-            Spacer(minLength: 8)
+            Spacer(minLength: DesignTokens.Spacing.sm)
             Text("\(pct(point.masteryFraction)) mastery · \(pct(point.coverageFraction)) covered")
                 .font(.caption.monospacedDigit())
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)

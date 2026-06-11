@@ -168,11 +168,11 @@ struct Scene3_MoonPhasesWheel: View {
             .padding(.vertical, DesignTokens.Spacing.md)
             .padding(.horizontal, 6)
             .background(
-                RoundedRectangle(cornerRadius: 14, style: .continuous)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.card, style: .continuous)
                     .fill(isSelected ? Color.compatIndigo.opacity(0.1) : Color.white)
             )
             .overlay(
-                RoundedRectangle(cornerRadius: 14, style: .continuous)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.card, style: .continuous)
                     .strokeBorder(
                         isSelected ? Color.compatIndigo : (isExplored ? .green.opacity(0.5) : .gray.opacity(0.25)),
                         lineWidth: 2

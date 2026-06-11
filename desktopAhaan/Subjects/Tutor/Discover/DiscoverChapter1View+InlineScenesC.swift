@@ -395,11 +395,11 @@ struct VanHelmontWillowScene: View {
                                     .padding(.vertical, 10)
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                     .background(
-                                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                        RoundedRectangle(cornerRadius: DesignTokens.Radius.md, style: .continuous)
                                             .fill(Color.white)
                                     )
                                     .overlay(
-                                        RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                        RoundedRectangle(cornerRadius: DesignTokens.Radius.md, style: .continuous)
                                             .strokeBorder(Color.gray.opacity(0.25), lineWidth: 1.2)
                                     )
                                 }

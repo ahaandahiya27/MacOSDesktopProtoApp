@@ -140,7 +140,7 @@ struct SymbiosisPartnershipsLabScene: View {
                     .font(.title3.weight(.bold))
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 partnerChip(emoji: p.rightEmoji, name: p.rightName)
-                Spacer(minLength: 8)
+                Spacer(minLength: DesignTokens.Spacing.sm)
                 Text(p.title)
                     .font(.headline)
                     .foregroundColor(DesignTokens.BrandColor.canvasText)

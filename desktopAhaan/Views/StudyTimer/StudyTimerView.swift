@@ -188,7 +188,7 @@ struct PracticeSettingsView: View {
                 .onChange(of: worksheetCount) { WorksheetStorage.setDefaultCount($0) }
             }
 
-            Spacer(minLength: 4)
+            Spacer(minLength: DesignTokens.Spacing.xs)
             HStack {
                 Spacer()
                 Button("Done") { onClose?() }

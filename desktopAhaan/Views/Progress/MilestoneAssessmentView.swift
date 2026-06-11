@@ -173,7 +173,7 @@ struct MilestoneAssessmentView: View {
         }
         .padding(DesignTokens.Spacing.lg)
         .background(
-            RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusCard)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(DesignTokens.BrandColor.primaryAction.opacity(0.07))
         )
     }
@@ -205,7 +205,7 @@ struct MilestoneAssessmentView: View {
                 }
                 .padding(DesignTokens.Spacing.lg)
                 .background(
-                    RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusCard)
+                    RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                         .fill(DesignTokens.BrandColor.primaryAction.opacity(0.05))
                 )
             } else {
@@ -307,7 +307,7 @@ struct MilestoneAssessmentView: View {
         }
         .padding(DesignTokens.Spacing.lg)
         .background(
-            RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusCard)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(DesignTokens.BrandColor.primaryAction.opacity(0.08))
         )
         .accessibilityElement(children: .combine)
@@ -343,7 +343,7 @@ struct MilestoneAssessmentView: View {
         .padding(.horizontal, 14)
         .padding(.vertical, 10)
         .background(
-            RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusMedium)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                 .fill(Color.gray.opacity(0.05))
         )
         .accessibilityElement(children: .combine)

@@ -65,9 +65,9 @@ struct MarketPriceBalance: View {
         }
         .padding(18)
         .background(
-            RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusLarge)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.lg)
                 .fill(Color.white.opacity(0.92))
-                .overlay(RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusLarge)
+                .overlay(RoundedRectangle(cornerRadius: DesignTokens.Radius.lg)
                     .strokeBorder(Color.compatTeal.opacity(0.30), lineWidth: 1))
         )
         .shadow(color: .black.opacity(0.06), radius: 6, x: 0, y: 2)

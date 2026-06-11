@@ -230,7 +230,7 @@ struct DailyPlanRow: View {
                     .accessibilityHidden(true)
             }
             textColumn
-            Spacer(minLength: 8)
+            Spacer(minLength: DesignTokens.Spacing.sm)
             controls
         }
         .padding(DesignTokens.Spacing.md)

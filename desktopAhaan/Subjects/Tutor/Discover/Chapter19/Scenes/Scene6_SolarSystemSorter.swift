@@ -84,11 +84,11 @@ struct Scene6_SolarSystemSorter: View {
                                         .padding(.horizontal, DesignTokens.Spacing.md)
                                         .padding(.vertical, DesignTokens.Spacing.sm)
                                         .background(
-                                            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                            RoundedRectangle(cornerRadius: DesignTokens.Radius.md, style: .continuous)
                                                 .fill(isSelected ? color.opacity(0.2) : Color.white)
                                         )
                                         .overlay(
-                                            RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                            RoundedRectangle(cornerRadius: DesignTokens.Radius.md, style: .continuous)
                                                 .strokeBorder(isSelected ? color : .gray.opacity(0.25), lineWidth: isSelected ? 2 : 1)
                                         )
                                 }
@@ -117,7 +117,7 @@ struct Scene6_SolarSystemSorter: View {
                                 .padding(.horizontal, 20)
                                 .padding(.vertical, 10)
                                 .background(
-                                    RoundedRectangle(cornerRadius: 10, style: .continuous)
+                                    RoundedRectangle(cornerRadius: DesignTokens.Radius.md, style: .continuous)
                                         .fill(Color.accentColor)
                                 )
                                 .foregroundColor(.white)
@@ -216,11 +216,11 @@ struct Scene6_SolarSystemSorter: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
                 ZStack {
-                    RoundedRectangle(cornerRadius: 10, style: .continuous)
+                    RoundedRectangle(cornerRadius: DesignTokens.Radius.md, style: .continuous)
                         .fill(planet != nil ? color.opacity(0.15) : Color.white)
                         .frame(width: 72, height: 52)
 
-                    RoundedRectangle(cornerRadius: 10, style: .continuous)
+                    RoundedRectangle(cornerRadius: DesignTokens.Radius.md, style: .continuous)
                         .strokeBorder(
                             isCorrect == true ? .green :
                             isCorrect == false ? .red :

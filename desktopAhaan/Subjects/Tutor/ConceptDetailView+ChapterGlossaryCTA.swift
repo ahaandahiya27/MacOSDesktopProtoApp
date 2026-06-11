@@ -79,11 +79,11 @@ struct ChapterGlossaryCTA: View {
                 .padding(.vertical, 10)
                 .padding(.horizontal, DesignTokens.Spacing.md)
                 .background(
-                    RoundedRectangle(cornerRadius: 10, style: .continuous)
+                    RoundedRectangle(cornerRadius: DesignTokens.Radius.md, style: .continuous)
                         .fill(Color(NSColor.controlBackgroundColor))
                 )
                 .overlay(
-                    RoundedRectangle(cornerRadius: 10, style: .continuous)
+                    RoundedRectangle(cornerRadius: DesignTokens.Radius.md, style: .continuous)
                         .strokeBorder(Color.compatIndigo.opacity(0.25), lineWidth: 1)
                 )
             }

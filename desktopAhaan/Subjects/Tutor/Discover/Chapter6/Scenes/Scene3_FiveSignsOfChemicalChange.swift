@@ -199,11 +199,11 @@ struct Scene3_FiveSignsOfChemicalChange: View {
             .frame(maxWidth: .infinity)
             .frame(height: height)
             .background(
-                RoundedRectangle(cornerRadius: 14, style: .continuous)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.card, style: .continuous)
                     .fill(isTapped ? sign.color.opacity(0.1) : Color.white)
             )
             .overlay(
-                RoundedRectangle(cornerRadius: 14, style: .continuous)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.card, style: .continuous)
                     .strokeBorder(isActive ? sign.color : .gray.opacity(0.2), lineWidth: 2)
             )
         }

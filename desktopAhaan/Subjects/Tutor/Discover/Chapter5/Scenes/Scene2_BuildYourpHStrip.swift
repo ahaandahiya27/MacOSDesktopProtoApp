@@ -139,7 +139,7 @@ struct Scene2_BuildYourpHStrip: View {
                     startPoint: .leading,
                     endPoint: .trailing
                 )
-                .clipShape(RoundedRectangle(cornerRadius: 8, style: .continuous))
+                .clipShape(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm, style: .continuous))
 
                 // pH labels along the bar
                 ForEach([0, 7, 14], id: \.self) { val in
@@ -182,11 +182,11 @@ struct Scene2_BuildYourpHStrip: View {
                 }
                 .frame(width: 82, height: 64)
                 .background(
-                    RoundedRectangle(cornerRadius: 8, style: .continuous)
+                    RoundedRectangle(cornerRadius: DesignTokens.Radius.sm, style: .continuous)
                         .fill(isNear ? colorForPH(sub.pH).opacity(0.15) : Color.white)
                 )
                 .overlay(
-                    RoundedRectangle(cornerRadius: 8, style: .continuous)
+                    RoundedRectangle(cornerRadius: DesignTokens.Radius.sm, style: .continuous)
                         .strokeBorder(isNear ? colorForPH(sub.pH) : .clear, lineWidth: 2)
                 )
                 .scaleEffect(isNear ? 1.08 : 1.0)

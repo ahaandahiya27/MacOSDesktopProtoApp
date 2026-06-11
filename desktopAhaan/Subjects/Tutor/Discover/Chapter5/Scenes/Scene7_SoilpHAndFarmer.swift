@@ -76,11 +76,11 @@ struct Scene7_SoilpHAndFarmer: View {
                         .frame(width: 160)
                         .padding(DesignTokens.Spacing.lg)
                         .background(
-                            RoundedRectangle(cornerRadius: 14, style: .continuous)
+                            RoundedRectangle(cornerRadius: DesignTokens.Radius.card, style: .continuous)
                                 .fill(Color.white)
                         )
                         .overlay(
-                            RoundedRectangle(cornerRadius: 14, style: .continuous)
+                            RoundedRectangle(cornerRadius: DesignTokens.Radius.card, style: .continuous)
                                 .strokeBorder(.gray.opacity(0.25), lineWidth: 1.5)
                         )
                     }

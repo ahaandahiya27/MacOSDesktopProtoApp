@@ -20,14 +20,14 @@ struct UseCaseCard: View {
                 .foregroundColor(.primary)
                 .fixedSize(horizontal: false, vertical: true)
         }
-        .padding(DesignTokens.cornerRadiusCard)
+        .padding(DesignTokens.Radius.card)
         .frame(width: 280, alignment: .leading)
         .background(
-            RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusCard)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(Color.gray.opacity(0.1))
         )
         .overlay(
-            RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusCard)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .strokeBorder(Color.compatIndigo.opacity(0.25), lineWidth: 1)
         )
     }

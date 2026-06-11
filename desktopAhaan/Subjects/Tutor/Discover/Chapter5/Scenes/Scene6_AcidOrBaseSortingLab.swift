@@ -165,11 +165,11 @@ struct Scene6_AcidOrBaseSortingLab: View {
         }
         .frame(width: 100, height: 64)
         .background(
-            RoundedRectangle(cornerRadius: 10, style: .continuous)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md, style: .continuous)
                 .fill(Color.white)
         )
         .overlay(
-            RoundedRectangle(cornerRadius: 10, style: .continuous)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md, style: .continuous)
                 .strokeBorder(.gray.opacity(0.25), lineWidth: 1)
         )
         .shadow(color: .black.opacity(offset != .zero ? 0.25 : 0), radius: 12, x: 0, y: 6)
@@ -214,11 +214,11 @@ struct Scene6_AcidOrBaseSortingLab: View {
         .frame(maxWidth: .infinity, minHeight: 120)
         .padding(10)
         .background(
-            RoundedRectangle(cornerRadius: 14, style: .continuous)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card, style: .continuous)
                 .fill(color.opacity(0.06))
         )
         .overlay(
-            RoundedRectangle(cornerRadius: 14, style: .continuous)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card, style: .continuous)
                 .strokeBorder(color.opacity(0.3), style: StrokeStyle(lineWidth: 2, dash: [6, 4]))
         )
         .background(

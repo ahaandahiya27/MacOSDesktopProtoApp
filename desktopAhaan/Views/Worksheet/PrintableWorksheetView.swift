@@ -56,7 +56,7 @@ struct PrintableWorksheetView: View {
             }
 
             availabilityNote
-            Spacer(minLength: 4)
+            Spacer(minLength: DesignTokens.Spacing.xs)
             footer
         }
         .padding(DesignTokens.Spacing.xl)

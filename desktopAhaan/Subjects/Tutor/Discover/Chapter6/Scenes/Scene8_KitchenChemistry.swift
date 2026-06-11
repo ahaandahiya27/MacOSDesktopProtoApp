@@ -118,7 +118,7 @@ struct Scene8_KitchenChemistry: View {
                 .padding()
                 .frame(maxWidth: 500)
                 .background(
-                    RoundedRectangle(cornerRadius: 14, style: .continuous)
+                    RoundedRectangle(cornerRadius: DesignTokens.Radius.card, style: .continuous)
                         .fill(Color.white)
                         .shadow(color: .black.opacity(0.08), radius: 8, y: 4)
                 )
@@ -188,11 +188,11 @@ struct Scene8_KitchenChemistry: View {
             }
             .frame(width: 130, height: 110)
             .background(
-                RoundedRectangle(cornerRadius: 14, style: .continuous)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.card, style: .continuous)
                     .fill(isSelected ? Color.orange.opacity(0.12) : Color.white)
             )
             .overlay(
-                RoundedRectangle(cornerRadius: 14, style: .continuous)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.card, style: .continuous)
                     .strokeBorder(isSelected ? .orange : .gray.opacity(0.2), lineWidth: isSelected ? 2 : 1)
             )
         }

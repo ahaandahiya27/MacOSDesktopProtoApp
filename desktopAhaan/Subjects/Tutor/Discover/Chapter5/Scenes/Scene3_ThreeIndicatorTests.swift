@@ -168,7 +168,7 @@ struct Scene3_ThreeIndicatorTests: View {
                     .fill(Color.white.opacity(0.95))
                     .frame(width: 60, height: height * 0.6)
 
-                RoundedRectangle(cornerRadius: 10, style: .continuous)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.md, style: .continuous)
                     .fill(currentColor.opacity(0.6))
                     .frame(width: 52, height: height * 0.4)
                     .animation(reduceMotion ? .none : .easeInOut(duration: 0.5))
@@ -212,11 +212,11 @@ struct Scene3_ThreeIndicatorTests: View {
         .frame(maxWidth: .infinity)
         .padding(DesignTokens.Spacing.md)
         .background(
-            RoundedRectangle(cornerRadius: 16, style: .continuous)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.lg, style: .continuous)
                 .fill(Color.white)
         )
         .overlay(
-            RoundedRectangle(cornerRadius: 16, style: .continuous)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.lg, style: .continuous)
                 .strokeBorder(activeIndicator == index ? Color.compatIndigo : .gray.opacity(0.2), lineWidth: 2)
         )
         .accessibilityLabel("\(indicator.name) test tube")

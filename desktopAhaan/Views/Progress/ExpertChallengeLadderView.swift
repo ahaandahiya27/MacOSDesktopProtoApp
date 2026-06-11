@@ -119,7 +119,7 @@ struct ExpertChallengeLadderView: View {
         }
         .padding(14)
         .background(
-            RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusCard)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(DesignTokens.BrandColor.primaryAction.opacity(0.05))
         )
     }
@@ -145,7 +145,7 @@ struct ExpertChallengeLadderView: View {
         .padding(.horizontal, DesignTokens.Spacing.md)
         .padding(.vertical, 10)
         .background(
-            RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusMedium)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                 .fill(set.isUnlocked ? DesignTokens.BrandColor.success.opacity(0.06)
                                      : Color.gray.opacity(0.05))
         )
@@ -269,7 +269,7 @@ struct ExpertChallengeLadderView: View {
             }
             .padding(DesignTokens.Spacing.lg)
             .background(
-                RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusCard)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                     .fill(DesignTokens.BrandColor.primaryAction.opacity(0.05))
             )
         } else {
@@ -303,7 +303,7 @@ struct ExpertChallengeLadderView: View {
             }
             .padding(DesignTokens.Spacing.lg)
             .background(
-                RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusCard)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                     .fill(DesignTokens.BrandColor.primaryAction.opacity(0.08))
             )
             .accessibilityElement(children: .combine)

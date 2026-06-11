@@ -453,7 +453,7 @@ private struct DiscoverEntryBanner: View {
         .padding(18)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(
-            RoundedRectangle(cornerRadius: 16, style: .continuous)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.lg, style: .continuous)
                 .fill(
                     LinearGradient(
                         colors: [

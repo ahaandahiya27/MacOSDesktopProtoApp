@@ -63,11 +63,11 @@ struct Scene1_IceToWaterToSteam: View {
 
                     // Phase display
                     ZStack {
-                        RoundedRectangle(cornerRadius: 16, style: .continuous)
+                        RoundedRectangle(cornerRadius: DesignTokens.Radius.lg, style: .continuous)
                             .fill(phase.color.opacity(0.1))
                             .frame(width: 280, height: 220)
                             .overlay(
-                                RoundedRectangle(cornerRadius: 16, style: .continuous)
+                                RoundedRectangle(cornerRadius: DesignTokens.Radius.lg, style: .continuous)
                                     .strokeBorder(phase.color.opacity(0.3), lineWidth: 2)
                             )
 

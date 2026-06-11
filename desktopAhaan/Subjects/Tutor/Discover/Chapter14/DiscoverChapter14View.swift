@@ -234,7 +234,7 @@ private struct ConductorInsulatorSorterScene: View {
         HStack(spacing: 10) {
             Text(i.name).font(.callout.weight(.semibold))
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
-            Spacer(minLength: 8)
+            Spacer(minLength: DesignTokens.Spacing.sm)
             ForEach([true, false], id: \.self) { v in
                 ans(v ? "Conductor" : "Insulator", v: v, pick: pick, correct: i.conducts, id: i.id)
             }

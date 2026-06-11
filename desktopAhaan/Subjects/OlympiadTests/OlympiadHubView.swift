@@ -295,11 +295,11 @@ struct OlympiadHubView: View {
         }
         .padding(18)
         .background(
-            RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusCard)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(Color.white.opacity(0.65))
         )
         .overlay(
-            RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusCard)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .strokeBorder(DesignTokens.BrandColor.primaryAction.opacity(0.18), lineWidth: 1)
         )
     }

@@ -206,7 +206,7 @@ struct OlympiadQuizResultView: View {
         }
         .padding(18)
         .background(
-            RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusCard)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(DesignTokens.BrandColor.primaryAction.opacity(0.08))
         )
     }

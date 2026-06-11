@@ -269,7 +269,7 @@ private struct SpeechBubble: View {
             .padding(.vertical, 10)
             .background(
                 ZStack(alignment: .bottomLeading) {
-                    RoundedRectangle(cornerRadius: 14, style: .continuous)
+                    RoundedRectangle(cornerRadius: DesignTokens.Radius.card, style: .continuous)
                         .fill(Color(NSColor.controlBackgroundColor))
                     Path { p in
                         p.move(to: CGPoint(x: 18, y: 20))

@@ -114,7 +114,7 @@ struct MasteryMapView: View {
         }
         .padding(DesignTokens.Spacing.lg)
         .background(
-            RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusCard)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(DesignTokens.BrandColor.primaryAction.opacity(0.07))
         )
         .accessibilityElement(children: .combine)
@@ -149,7 +149,7 @@ struct MasteryMapView: View {
         }
         .padding(14)
         .background(
-            RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusCard)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(DesignTokens.BrandColor.tryAtHome.opacity(0.08))
         )
         .accessibilityElement(children: .combine)
@@ -195,7 +195,7 @@ struct MasteryMapView: View {
         }
         .padding(14)
         .background(
-            RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusCard)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(subject.hasStarted
                       ? DesignTokens.BrandColor.success.opacity(0.06)
                       : Color.gray.opacity(0.05))

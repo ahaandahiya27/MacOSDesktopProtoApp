@@ -38,7 +38,7 @@ struct ExpandableCard<Content: View>: View {
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .contentShape(Rectangle())
                 .background(
-                    RoundedRectangle(cornerRadius: 14, style: .continuous)
+                    RoundedRectangle(cornerRadius: DesignTokens.Radius.card, style: .continuous)
                         .fill(isHovered ? background.opacity(1.4) : background)
                 )
             }

@@ -97,10 +97,10 @@ struct IndiaPhysiographicExplorer: View {
         }
         .padding(18)
         .background(
-            RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusLarge)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.lg)
                 .fill(Color.white.opacity(0.92))
                 .overlay(
-                    RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusLarge)
+                    RoundedRectangle(cornerRadius: DesignTokens.Radius.lg)
                         .strokeBorder(Color.compatIndigo.opacity(0.25), lineWidth: 1)
                 )
         )
