@@ -103,7 +103,7 @@ struct FirstLaunchTourView: View {
             primaryButton
         }
         .padding(.horizontal, 22)
-        .padding(.vertical, 12)
+        .padding(.vertical, DesignTokens.Spacing.md)
     }
 
     /// On the last page this is the CTA (e.g. "Open Science Ch.1"); on every
@@ -183,7 +183,7 @@ private struct OnboardingPageView: View {
             }
             .padding(.horizontal, 30)
             .padding(.top, 26)
-            .padding(.bottom, 24)
+            .padding(.bottom, DesignTokens.Spacing.xl)
             .frame(maxWidth: .infinity, alignment: .leading)
         }
     }
@@ -201,19 +201,19 @@ private struct OnboardingPageView: View {
                 .accessibilityHidden(true)
             Spacer()
         }
-        .padding(.bottom, 2)
+        .padding(.bottom, DesignTokens.Spacing.xxs)
     }
 
     /// Subject rows — only present on page 2. Renders nothing otherwise.
     @ViewBuilder
     private var subjectsList: some View {
         if !step.subjects.isEmpty {
-            VStack(alignment: .leading, spacing: 12) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.md) {
                 ForEach(step.subjects) { subject in
                     SubjectRowView(subject: subject)
                 }
             }
-            .padding(.top, 2)
+            .padding(.top, DesignTokens.Spacing.xxs)
         }
     }
 }
@@ -224,12 +224,12 @@ private struct SubjectRowView: View {
     let subject: OnboardingStep.SubjectBlurb
 
     var body: some View {
-        HStack(alignment: .top, spacing: 12) {
+        HStack(alignment: .top, spacing: DesignTokens.Spacing.md) {
             Text(subject.emoji)
                 .font(.system(size: 26))
                 .frame(width: 36)
                 .accessibilityHidden(true)
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                 Text(subject.name)
                     .font(.headline)
                 Text(subject.blurb)

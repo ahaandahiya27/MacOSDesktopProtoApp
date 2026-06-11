@@ -175,7 +175,7 @@ struct PracticeSettingsView: View {
             .toggleStyle(.switch)
             .onChange(of: timerChime) { PomodoroStorage.setSoundEnabled($0) }
 
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                 settingLabel("Default worksheet length",
                              "How many questions a new printable worksheet starts with.")
                 Picker("Default worksheet length", selection: $worksheetCount) {
@@ -195,12 +195,12 @@ struct PracticeSettingsView: View {
                     .keyboardShortcut(.defaultAction)
             }
         }
-        .padding(24)
+        .padding(DesignTokens.Spacing.xl)
         .frame(minWidth: 420, minHeight: 320)
     }
 
     private func settingLabel(_ title: String, _ detail: String) -> some View {
-        VStack(alignment: .leading, spacing: 2) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
             Text(title)
                 .font(.headline)
                 .foregroundColor(DesignTokens.BrandColor.canvasText)

@@ -25,7 +25,7 @@ struct AchievementBadgeView: View {
     }()
 
     var body: some View {
-        VStack(spacing: 8) {
+        VStack(spacing: DesignTokens.Spacing.sm) {
             emblem
             Text(achievement.title)
                 .font(.subheadline.weight(.semibold))
@@ -37,7 +37,7 @@ struct AchievementBadgeView: View {
                 .frame(maxWidth: .infinity)
             caption
         }
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .frame(maxWidth: .infinity, minHeight: 150)
         .background(
             RoundedRectangle(cornerRadius: 14)
@@ -70,7 +70,7 @@ struct AchievementBadgeView: View {
                 Image(systemName: SFSymbolCompat.name("lock.fill"))
                     .font(.system(size: 14, weight: .bold))
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                    .padding(4)
+                    .padding(DesignTokens.Spacing.xs)
                     .background(Circle().fill(Color(NSColor.controlBackgroundColor)))
                     .offset(x: 20, y: 20)
                     .accessibilityHidden(true)
@@ -87,7 +87,7 @@ struct AchievementBadgeView: View {
                 .foregroundColor(achievement.tier.tint)
                 .lineLimit(1)
         } else {
-            VStack(spacing: 4) {
+            VStack(spacing: DesignTokens.Spacing.xs) {
                 ProgressView(value: progress.fraction)
                     .frame(maxWidth: 90)
                 Text("\(progress.current) / \(progress.target)")

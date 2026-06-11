@@ -67,7 +67,7 @@ struct OCRTranslationScreen: View {
     }
 
     private var imageSelectionArea: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: DesignTokens.Spacing.md) {
             if let image = selectedImage {
                 Image(nsImage: image)
                     .resizable()
@@ -82,7 +82,7 @@ struct OCRTranslationScreen: View {
                 .foregroundColor(.secondary)
                 .pointingCursor()
             } else {
-                VStack(spacing: 16) {
+                VStack(spacing: DesignTokens.Spacing.lg) {
                     Image(systemName: SFSymbolCompat.name("doc.text.viewfinder"))
                         .font(.system(size: 48))
                         .foregroundColor(.purple)
@@ -119,8 +119,8 @@ struct OCRTranslationScreen: View {
     }
 
     private var extractedTextEditor: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            HStack(spacing: 12) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
+            HStack(spacing: DesignTokens.Spacing.md) {
                 Text("Extracted Text (editable)")
                     .font(.caption)
                     .foregroundColor(.secondary)
@@ -153,7 +153,7 @@ struct OCRTranslationScreen: View {
             TextEditor(text: $editedText)
                 .frame(minHeight: 80, maxHeight: 150)
                 .font(.body)
-                .padding(8)
+                .padding(DesignTokens.Spacing.sm)
                 .background(Color.gray.opacity(0.15))
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 // Soft cap matched to a typical textbook page after OCR;
@@ -179,7 +179,7 @@ struct OCRTranslationScreen: View {
             if !editedText.isEmpty {
                 let confidence = ocrService.confidence
                 let quality = OCRTranslationScreen.scanQuality(for: confidence)
-                VStack(alignment: .leading, spacing: 4) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                     HStack(spacing: 6) {
                         Image(systemName: SFSymbolCompat.name(quality.symbol))
                         Text("\(quality.label) scan quality")
@@ -188,8 +188,8 @@ struct OCRTranslationScreen: View {
                     }
                     .font(.caption2.weight(.semibold))
                     .foregroundColor(quality.color)
-                    .padding(.horizontal, 8)
-                    .padding(.vertical, 4)
+                    .padding(.horizontal, DesignTokens.Spacing.sm)
+                    .padding(.vertical, DesignTokens.Spacing.xs)
                     .background(quality.color.opacity(0.12))
                     .clipShape(Capsule())
 
@@ -229,7 +229,7 @@ struct OCRTranslationScreen: View {
     }
 
     private var translationControls: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: DesignTokens.Spacing.md) {
             LanguageSelectorBar(
                 source: $vm.sourceLanguage,
                 target: $vm.targetLanguage,

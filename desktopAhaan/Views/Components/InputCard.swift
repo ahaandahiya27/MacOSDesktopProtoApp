@@ -9,7 +9,7 @@ struct InputCard: View {
     private let maxCharacters = 500
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             HStack {
                 Text("Type in \(sourceLanguage.displayName)")
                     .font(.caption)
@@ -23,7 +23,7 @@ struct InputCard: View {
             TextEditor(text: $text)
                 .frame(minHeight: 100, maxHeight: 200)
                 .font(.body)
-                .padding(8)
+                .padding(DesignTokens.Spacing.sm)
                 .background(Color.gray.opacity(0.12))
                 .clipShape(RoundedRectangle(cornerRadius: 10))
                 .onChange(of: text) { newValue in
@@ -43,8 +43,8 @@ struct InputCard: View {
                             .font(.caption)
                     }
                     .foregroundColor(isListening ? .red : Color.compatIndigo)
-                    .padding(.horizontal, 12)
-                    .padding(.vertical, 8)
+                    .padding(.horizontal, DesignTokens.Spacing.md)
+                    .padding(.vertical, DesignTokens.Spacing.sm)
                     .background(isListening ? Color.red.opacity(0.1) : Color.compatIndigo.opacity(0.1))
                     .clipShape(Capsule())
                 }

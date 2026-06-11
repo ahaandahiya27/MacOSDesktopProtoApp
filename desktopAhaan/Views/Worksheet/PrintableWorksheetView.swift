@@ -59,7 +59,7 @@ struct PrintableWorksheetView: View {
             Spacer(minLength: 4)
             footer
         }
-        .padding(24)
+        .padding(DesignTokens.Spacing.xl)
         .frame(minWidth: 460, minHeight: 420)
         .onAppear { primeSelection() }
     }
@@ -67,7 +67,7 @@ struct PrintableWorksheetView: View {
     // MARK: - Controls
 
     private var subjectPicker: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
             Text("Subject").font(.headline)
             Picker("Subject", selection: $selectedPackId) {
                 ForEach(packs) { pack in
@@ -83,7 +83,7 @@ struct PrintableWorksheetView: View {
     }
 
     private var chapterPicker: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
             Text("Chapter").font(.headline)
             Picker("Chapter", selection: $selectedChapterId) {
                 ForEach(chapters) { chapter in
@@ -95,7 +95,7 @@ struct PrintableWorksheetView: View {
     }
 
     private var countControl: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
             Text("Number of questions: \(count)").font(.headline)
             Picker("Number of questions", selection: $count) {
                 ForEach(WorksheetSampler.countChoices, id: \.self) { n in

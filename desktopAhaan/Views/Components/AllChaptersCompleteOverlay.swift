@@ -88,7 +88,7 @@ struct AllChaptersCompleteOverlay: View {
                 Text("Boss Quiz total: \(score) / \(maxScore)")
                     .font(.title3.monospacedDigit().bold())
                     .foregroundColor(.white)
-                    .padding(.top, 4)
+                    .padding(.top, DesignTokens.Spacing.xs)
             }
 
             Text("From plants and digestion to light and the Moon — you've explored every chapter of Class 7 Science. Class 8 has more waiting.")
@@ -96,13 +96,13 @@ struct AllChaptersCompleteOverlay: View {
                 .foregroundColor(.white.opacity(0.85))
                 .multilineTextAlignment(.center)
                 .lineSpacing(3)
-                .padding(.horizontal, 24)
-                .padding(.top, 4)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
+                .padding(.top, DesignTokens.Spacing.xs)
 
             Button(action: dismiss) {
                 Text("Continue")
                     .font(.body.weight(.semibold))
-                    .padding(.horizontal, 32)
+                    .padding(.horizontal, DesignTokens.Spacing.xxl)
                     .padding(.vertical, 10)
                     .background(Capsule().fill(Color.white))
                     .foregroundColor(.black)
@@ -111,7 +111,7 @@ struct AllChaptersCompleteOverlay: View {
             // Esc and Return both dismiss — this is a hand-rolled overlay
             // (not a .sheet), so without these a keyboard-only user is stuck.
             .keyboardShortcut(.cancelAction)
-            .padding(.top, 12)
+            .padding(.top, DesignTokens.Spacing.md)
             .accessibilityLabel("Dismiss celebration")
         }
     }

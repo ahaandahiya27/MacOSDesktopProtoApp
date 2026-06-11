@@ -19,15 +19,15 @@ struct FavoritesScreen: View {
                             selectedRecordId = nil
                         }
                     } label: {
-                        HStack(spacing: 4) {
+                        HStack(spacing: DesignTokens.Spacing.xs) {
                             Image(systemName: "chevron.left")
                             Text("Back")
                         }
                     }
                     Spacer()
                 }
-                .padding(.horizontal, 16)
-                .padding(.vertical, 8)
+                .padding(.horizontal, DesignTokens.Spacing.lg)
+                .padding(.vertical, DesignTokens.Spacing.sm)
                 .background(Color(NSColor.controlBackgroundColor))
                 Divider()
             }
@@ -138,6 +138,6 @@ struct FavoriteRowView: View {
                     .italic()
             }
         }
-        .padding(.vertical, 4)
+        .padding(.vertical, DesignTokens.Spacing.xs)
     }
 }

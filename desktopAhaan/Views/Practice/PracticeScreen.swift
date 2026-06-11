@@ -33,7 +33,7 @@ struct PracticeScreen: View {
                             vm.mode = .categories
                         }
                     } label: {
-                        HStack(spacing: 4) {
+                        HStack(spacing: DesignTokens.Spacing.xs) {
                             Image(systemName: "chevron.left")
                             Text("Topics")
                         }
@@ -106,7 +106,7 @@ struct CategoriesGrid: View {
     ]
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 12) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.md) {
             Text("Choose a Topic")
                 .font(.headline)
                 .padding(.horizontal)
@@ -123,7 +123,7 @@ struct CategoriesGrid: View {
             }
             .padding(.horizontal)
 
-            VStack(alignment: .leading, spacing: 8) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                 Text("Test Yourself")
                     .font(.headline)
                     .padding(.horizontal)
@@ -137,8 +137,8 @@ struct CategoriesGrid: View {
                             } label: {
                                 Label(category.rawValue, systemImage: "questionmark.circle")
                                     .font(.caption.weight(.medium))
-                                    .padding(.horizontal, 12)
-                                    .padding(.vertical, 8)
+                                    .padding(.horizontal, DesignTokens.Spacing.md)
+                                    .padding(.vertical, DesignTokens.Spacing.sm)
                                     .background(Color.compatIndigo.opacity(0.1))
                                     .foregroundColor(Color.compatIndigo)
                                     .clipShape(Capsule())
@@ -179,7 +179,7 @@ struct FlashcardView: View {
     @ObservedObject var vm: PracticeViewModel
 
     var body: some View {
-        VStack(spacing: 16) {
+        VStack(spacing: DesignTokens.Spacing.lg) {
             if let category = vm.selectedCategory {
                 Text(category.rawValue)
                     .font(.headline)
@@ -189,7 +189,7 @@ struct FlashcardView: View {
                 let safeIndex = min(vm.flashcardIndex, vm.currentItems.count - 1)
                 let item = vm.currentItems[safeIndex]
 
-                VStack(spacing: 16) {
+                VStack(spacing: DesignTokens.Spacing.lg) {
                     Text(item.english)
                         .font(.title3)
                         .multilineTextAlignment(.center)
@@ -214,7 +214,7 @@ struct FlashcardView: View {
                             Text(note)
                                 .font(.caption)
                                 .foregroundColor(.secondary)
-                                .padding(.top, 4)
+                                .padding(.top, DesignTokens.Spacing.xs)
                         }
 
                         Button {
@@ -225,7 +225,7 @@ struct FlashcardView: View {
                         }
                     }
                 }
-                .padding(24)
+                .padding(DesignTokens.Spacing.xl)
                 .frame(maxWidth: .infinity)
                 .background(Color(NSColor.controlBackgroundColor))
                 .clipShape(RoundedRectangle(cornerRadius: 20))
@@ -329,7 +329,7 @@ struct QuizView: View {
                         .padding()
 
                     case .incorrect(let correct):
-                        VStack(spacing: 8) {
+                        VStack(spacing: DesignTokens.Spacing.sm) {
                             HStack {
                                 Image(systemName: "xmark.circle.fill")
                                     .foregroundColor(.red)

@@ -16,7 +16,7 @@ struct AchievementToastView: View {
     @State private var opacity: Double = 0
 
     var body: some View {
-        HStack(spacing: 12) {
+        HStack(spacing: DesignTokens.Spacing.md) {
             ZStack {
                 Circle()
                     .fill(achievement.tier.tint.opacity(0.18))
@@ -25,7 +25,7 @@ struct AchievementToastView: View {
                     .font(.system(size: 26))
                     .accessibilityHidden(true)
             }
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                 Text("Badge unlocked!")
                     .font(.caption.weight(.semibold))
                     .foregroundColor(achievement.tier.tint)
@@ -39,7 +39,7 @@ struct AchievementToastView: View {
             }
             Spacer(minLength: 0)
         }
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .frame(width: 300, alignment: .leading)
         .background(
             RoundedRectangle(cornerRadius: 14)

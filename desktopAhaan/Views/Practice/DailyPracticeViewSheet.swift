@@ -89,7 +89,7 @@ private struct DailyPracticeContent: View {
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 16) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.lg) {
                 header
                 if !dueEntries.isEmpty {
                     reviewQueueCard
@@ -103,7 +103,7 @@ private struct DailyPracticeContent: View {
                     if !recentlyMissedEntries.isEmpty {
                         Text("Recently missed")
                             .font(.headline)
-                            .padding(.top, 8)
+                            .padding(.top, DesignTokens.Spacing.sm)
                         ForEach(recentlyMissedEntries, id: \.question.id) { entry in
                             row(for: entry)
                         }
@@ -111,7 +111,7 @@ private struct DailyPracticeContent: View {
                     if !toughEntries.isEmpty {
                         Text("Flagged tough")
                             .font(.headline)
-                            .padding(.top, 8)
+                            .padding(.top, DesignTokens.Spacing.sm)
                         ForEach(toughEntries, id: \.question.id) { entry in
                             row(for: entry)
                         }
@@ -133,7 +133,7 @@ private struct DailyPracticeContent: View {
     }
 
     private var header: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             HStack(alignment: .firstTextBaseline, spacing: 10) {
                 Image(systemName: "flame.fill")
                     .foregroundColor(.orange)
@@ -151,7 +151,7 @@ private struct DailyPracticeContent: View {
                 }
             }
         }
-        .padding(16)
+        .padding(DesignTokens.Spacing.lg)
         .background(
             RoundedRectangle(cornerRadius: 14)
                 .fill(Color.orange.opacity(0.08))
@@ -170,7 +170,7 @@ private struct DailyPracticeContent: View {
                 .font(.callout.monospacedDigit().weight(.semibold))
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
         }
-        .padding(.horizontal, 12)
+        .padding(.horizontal, DesignTokens.Spacing.md)
         .padding(.vertical, 6)
         .background(
             Capsule().fill(Color.white)
@@ -199,7 +199,7 @@ private struct DailyPracticeContent: View {
             Image(systemName: "rectangle.stack.fill")
                 .font(.title2)
                 .foregroundColor(.compatIndigo)
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                 Text("\(dueEntries.count) question\(dueEntries.count == 1 ? "" : "s") due now")
                     .font(.title3.weight(.semibold))
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -258,7 +258,7 @@ private struct DailyPracticeContent: View {
     }
 
     private func statBlock(value: String, label: String, color: Color) -> some View {
-        VStack(alignment: .leading, spacing: 2) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
             Text(value)
                 .font(.title3.weight(.bold).monospacedDigit())
                 .foregroundColor(color)
@@ -289,7 +289,7 @@ private struct DailyPracticeContent: View {
                     .font(.title3)
                     .foregroundColor(.orange)
                     .accessibilityHidden(true)
-                VStack(alignment: .leading, spacing: 4) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                     Text(entry.question.prompt)
                         .font(.body)
                         .lineLimit(2)
@@ -433,7 +433,7 @@ private struct ReviewSessionSheet: View {
                     .accessibilityLabel("Skip this card without scoring (press S)")
             }
         }
-        .padding(24)
+        .padding(DesignTokens.Spacing.xl)
         .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
     }
 
@@ -462,7 +462,7 @@ private struct ReviewSessionSheet: View {
             dataStore.recordReview(questionId: q, quality: quality)
             advance()
         } label: {
-            VStack(spacing: 2) {
+            VStack(spacing: DesignTokens.Spacing.xxs) {
                 Text(label)
                     .font(.body.weight(.semibold))
                 Text("⌘\(String(shortcut.character))")
@@ -470,7 +470,7 @@ private struct ReviewSessionSheet: View {
                     .foregroundColor(color.opacity(0.7))
             }
             .frame(maxWidth: .infinity)
-            .padding(.vertical, 8)
+            .padding(.vertical, DesignTokens.Spacing.sm)
             .background(
                 RoundedRectangle(cornerRadius: 10)
                     .fill(color.opacity(0.15))
@@ -503,7 +503,7 @@ private struct ReviewSessionSheet: View {
                 .foregroundColor(.secondary)
             Button("Close") { isPresented = false }
                 .keyboardShortcut(.defaultAction)
-                .padding(.top, 8)
+                .padding(.top, DesignTokens.Spacing.sm)
         }
         .padding(40)
         .frame(maxWidth: .infinity, maxHeight: .infinity)

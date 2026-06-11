@@ -111,7 +111,7 @@ struct MCQFeedbackBlock: View {
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .background(
             RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusMedium)
                 .fill((wasCorrect ? DesignTokens.BrandColor.success : DesignTokens.BrandColor.danger).opacity(0.08))

@@ -13,7 +13,7 @@ struct CrashLogSummaryView: View {
     @State private var copied = false
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.lg) {
             header
             Divider()
             content
@@ -28,11 +28,11 @@ struct CrashLogSummaryView: View {
     // MARK: Header
 
     private var header: some View {
-        HStack(spacing: 12) {
+        HStack(spacing: DesignTokens.Spacing.md) {
             Image(systemName: "stethoscope")
                 .font(.system(size: 28))
                 .foregroundColor(.accentColor)
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                 Text("Recent Crash Reports")
                     .font(.title2).bold()
                 Text("Did the app ever crash? Here's the plain-English answer.")
@@ -92,14 +92,14 @@ struct CrashLogSummaryView: View {
                     CrashRow(entry: entry)
                 }
             }
-            .padding(.vertical, 2)
+            .padding(.vertical, DesignTokens.Spacing.xxs)
         }
     }
 
     // MARK: Footer actions
 
     private var footer: some View {
-        HStack(spacing: 12) {
+        HStack(spacing: DesignTokens.Spacing.md) {
             Button {
                 reader.revealReportsInFinder()
             } label: {
@@ -164,8 +164,8 @@ private struct CrashRow: View {
     let entry: CrashLogEntry
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 4) {
-            HStack(alignment: .top, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
+            HStack(alignment: .top, spacing: DesignTokens.Spacing.sm) {
                 Image(systemName: "exclamationmark.triangle.fill")
                     .foregroundColor(.orange)
                 Text(entry.summary)

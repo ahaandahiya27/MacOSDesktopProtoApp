@@ -18,7 +18,7 @@ struct SettingsScreen: View {
                 PINEntryView(pinInput: $pinInput, pinError: $pinError, onSubmit: validatePIN)
             } else {
                 ScrollView {
-                    VStack(alignment: .leading, spacing: 16) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.lg) {
                         infoBanner
                         howItWorks
                         settingsForm
@@ -58,7 +58,7 @@ struct SettingsScreen: View {
                     Image(systemName: "checkmark.shield.fill")
                         .foregroundColor(.green)
                         .font(.title3)
-                    VStack(alignment: .leading, spacing: 2) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                         Text("No API Key Needed").font(.subheadline.weight(.semibold))
                         Text("Free to use. No accounts, no keys, no subscriptions.")
                             .font(.caption)
@@ -71,8 +71,8 @@ struct SettingsScreen: View {
                 Label("How It Works", systemImage: SFSymbolCompat.name("gearshape.2"))
                     .font(.caption.weight(.semibold))
 
-                VStack(alignment: .leading, spacing: 8) {
-                    HStack(alignment: .top, spacing: 8) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
+                    HStack(alignment: .top, spacing: DesignTokens.Spacing.sm) {
                         Image(systemName: SFSymbolCompat.name("internaldrive"))
                             .font(.caption)
                             .foregroundColor(Color.compatIndigo)
@@ -81,7 +81,7 @@ struct SettingsScreen: View {
                           + Text(" — words and sentences from the Class 7 NCERT syllabus. Works offline, always free, always available.").font(.caption))
                             .fixedSize(horizontal: false, vertical: true)
                     }
-                    HStack(alignment: .top, spacing: 8) {
+                    HStack(alignment: .top, spacing: DesignTokens.Spacing.sm) {
                         Image(systemName: "globe")
                             .font(.caption)
                             .foregroundColor(.blue)
@@ -93,7 +93,7 @@ struct SettingsScreen: View {
                 }
                 .foregroundColor(.secondary)
             }
-            .padding(4)
+            .padding(DesignTokens.Spacing.xs)
         }
     }
 
@@ -156,7 +156,7 @@ struct SettingsScreen: View {
                     HStack {
                         Text("Set PIN (4–6 digits)")
                         Spacer()
-                        HStack(spacing: 8) {
+                        HStack(spacing: DesignTokens.Spacing.sm) {
                             SecureField("PIN", text: $newPIN)
                                 .frame(maxWidth: 120)
                                 .accessibilityLabel("Parent PIN, 4 to 6 digits")
@@ -363,7 +363,7 @@ struct PINEntryView: View {
     let onSubmit: () -> Void
 
     var body: some View {
-        VStack(spacing: 24) {
+        VStack(spacing: DesignTokens.Spacing.xl) {
             Image(systemName: "lock.fill")
                 .font(.system(size: 48))
                 .foregroundColor(Color.compatIndigo)

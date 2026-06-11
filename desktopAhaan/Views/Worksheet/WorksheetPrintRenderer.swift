@@ -213,7 +213,7 @@ private struct WorksheetPrintableView: View {
     }
 
     private func questionBlock(number: Int, question: Question) -> some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             Text("\(number). \(question.prompt)")
                 .font(.system(size: 14, weight: .semibold))
                 .fixedSize(horizontal: false, vertical: true)
@@ -228,7 +228,7 @@ private struct WorksheetPrintableView: View {
     }
 
     private var answerKeySection: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             // Push the key toward its own page so it doesn't sit under the
             // last question (a true forced break is printer-dependent).
             Spacer(minLength: 80)

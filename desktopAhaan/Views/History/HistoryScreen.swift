@@ -27,15 +27,15 @@ struct HistoryScreen: View {
                             selectedRecordId = nil
                         }
                     } label: {
-                        HStack(spacing: 4) {
+                        HStack(spacing: DesignTokens.Spacing.xs) {
                             Image(systemName: "chevron.left")
                             Text("Back")
                         }
                     }
                     Spacer()
                 }
-                .padding(.horizontal, 16)
-                .padding(.vertical, 8)
+                .padding(.horizontal, DesignTokens.Spacing.lg)
+                .padding(.vertical, DesignTokens.Spacing.sm)
                 .background(Color(NSColor.controlBackgroundColor))
                 Divider()
             }
@@ -74,7 +74,7 @@ struct HistoryScreen: View {
                         .textFieldStyle(.roundedBorder)
                 }
                 .padding(.horizontal)
-                .padding(.vertical, 8)
+                .padding(.vertical, DesignTokens.Spacing.sm)
 
                 List {
                     ForEach(filteredRecords) { record in
@@ -154,7 +154,7 @@ struct HistoryRowView: View {
                 .foregroundColor(Color.compatIndigo)
                 .lineLimit(2)
         }
-        .padding(.vertical, 4)
+        .padding(.vertical, DesignTokens.Spacing.xs)
     }
 }
 

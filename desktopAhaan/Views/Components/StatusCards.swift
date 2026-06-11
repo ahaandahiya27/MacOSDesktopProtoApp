@@ -2,7 +2,7 @@ import SwiftUI
 
 struct OfflineBanner: View {
     var body: some View {
-        HStack(spacing: 8) {
+        HStack(spacing: DesignTokens.Spacing.sm) {
             Image(systemName: "wifi.slash")
             Text("You're offline. Some features need internet.")
                 .font(.caption)
@@ -108,7 +108,7 @@ struct EmptyStateView: View {
     let subtitle: String
 
     var body: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: DesignTokens.Spacing.md) {
             Image(systemName: icon)
                 .font(.system(size: 48))
                 .foregroundColor(.secondary)

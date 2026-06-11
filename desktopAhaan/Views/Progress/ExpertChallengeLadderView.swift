@@ -103,7 +103,7 @@ struct ExpertChallengeLadderView: View {
 
     private func subjectCard(_ subject: SubjectChallengeLadder) -> some View {
         VStack(alignment: .leading, spacing: 10) {
-            HStack(spacing: 8) {
+            HStack(spacing: DesignTokens.Spacing.sm) {
                 Text(emoji(for: subject.packId)).font(.system(size: 22)).accessibilityHidden(true)
                 Text(subject.subjectTitle)
                     .font(.headline)
@@ -127,7 +127,7 @@ struct ExpertChallengeLadderView: View {
     private func tierRow(_ set: ExpertTierSet, subjectTitle: String) -> some View {
         HStack(alignment: .top, spacing: 10) {
             Text(set.isUnlocked ? "⭐️" : "🔒").font(.system(size: 18)).accessibilityHidden(true)
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                 Text("\(set.tier.title) · \(set.count) question\(set.count == 1 ? "" : "s")")
                     .font(.subheadline.weight(.semibold))
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -142,7 +142,7 @@ struct ExpertChallengeLadderView: View {
                 startButton(set, subjectTitle: subjectTitle)
             }
         }
-        .padding(.horizontal, 12)
+        .padding(.horizontal, DesignTokens.Spacing.md)
         .padding(.vertical, 10)
         .background(
             RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusMedium)
@@ -165,8 +165,8 @@ struct ExpertChallengeLadderView: View {
             Text("Start")
                 .font(.subheadline.weight(.semibold))
                 .foregroundColor(.white)
-                .padding(.horizontal, 16)
-                .padding(.vertical, 8)
+                .padding(.horizontal, DesignTokens.Spacing.lg)
+                .padding(.vertical, DesignTokens.Spacing.sm)
                 .frame(minHeight: 44)
                 .background(Capsule().fill(DesignTokens.BrandColor.primaryAction))
         }
@@ -219,7 +219,7 @@ struct ExpertChallengeLadderView: View {
     private func playingSection() -> some View {
         if let q = currentQuestion {
             VStack(alignment: .leading, spacing: 14) {
-                HStack(spacing: 8) {
+                HStack(spacing: DesignTokens.Spacing.sm) {
                     Text(activeTitle)
                         .font(.caption.weight(.semibold))
                         .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
@@ -267,7 +267,7 @@ struct ExpertChallengeLadderView: View {
                     }
                 }
             }
-            .padding(16)
+            .padding(DesignTokens.Spacing.lg)
             .background(
                 RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusCard)
                     .fill(DesignTokens.BrandColor.primaryAction.opacity(0.05))
@@ -282,11 +282,11 @@ struct ExpertChallengeLadderView: View {
     private func resultSection() -> some View {
         let total = activeQuestions.count
         let fraction = total > 0 ? Double(score) / Double(total) : 0
-        return VStack(alignment: .leading, spacing: 16) {
-            VStack(alignment: .leading, spacing: 12) {
-                HStack(spacing: 12) {
+        return VStack(alignment: .leading, spacing: DesignTokens.Spacing.lg) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.md) {
+                HStack(spacing: DesignTokens.Spacing.md) {
                     Text(resultEmoji(fraction)).font(.system(size: 34)).accessibilityHidden(true)
-                    VStack(alignment: .leading, spacing: 2) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                         Text("You got \(score) of \(total)")
                             .font(.title2.weight(.bold))
                             .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -301,7 +301,7 @@ struct ExpertChallengeLadderView: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .fixedSize(horizontal: false, vertical: true)
             }
-            .padding(16)
+            .padding(DesignTokens.Spacing.lg)
             .background(
                 RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusCard)
                     .fill(DesignTokens.BrandColor.primaryAction.opacity(0.08))
@@ -309,7 +309,7 @@ struct ExpertChallengeLadderView: View {
             .accessibilityElement(children: .combine)
             .accessibilityLabel("You got \(score) of \(total) on \(activeTitle). \(resultMessage(fraction))")
 
-            HStack(spacing: 12) {
+            HStack(spacing: DesignTokens.Spacing.md) {
                 pillButton("Try again", filled: true) { retry() }
                 pillButton("Back to challenges", filled: false) { backToLadder() }
                 Spacer(minLength: 0)
@@ -320,7 +320,7 @@ struct ExpertChallengeLadderView: View {
     // MARK: - Empty state
 
     private var emptyState: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: DesignTokens.Spacing.md) {
             Text("🧗").font(.system(size: 48)).accessibilityHidden(true)
             Text("Challenges are warming up")
                 .font(.title2.weight(.bold))

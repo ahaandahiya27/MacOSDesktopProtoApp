@@ -366,7 +366,7 @@ struct WeeklyProgressView: View {
                     Text("Export Report Card (PDF)")
                 }
                 .padding(.horizontal, 14)
-                .padding(.vertical, 8)
+                .padding(.vertical, DesignTokens.Spacing.sm)
                 .frame(minHeight: 44)
             }
             .accessibilityLabel("Export a PDF report card — this week's progress plus mastery by subject and the latest checkpoint — to save or share.")

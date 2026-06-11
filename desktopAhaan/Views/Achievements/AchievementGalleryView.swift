@@ -25,7 +25,7 @@ struct AchievementGalleryView: View {
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 24) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xl) {
                 header
                 ForEach(AchievementFamily.allCases) { family in
                     familySection(family)
@@ -36,7 +36,7 @@ struct AchievementGalleryView: View {
                     AchievementGalleryEmptyStateView(snapshot: snapshot)
                 }
             }
-            .padding(24)
+            .padding(DesignTokens.Spacing.xl)
         }
         .frame(minWidth: 560, minHeight: 480)
         .sheet(item: $selected) { badge in
@@ -68,7 +68,7 @@ struct AchievementGalleryView: View {
     private func familySection(_ family: AchievementFamily) -> some View {
         let badges = visibleBadges.filter { $0.family == family }
         if !badges.isEmpty {
-            VStack(alignment: .leading, spacing: 12) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.md) {
                 Text(family.displayName)
                     .font(.title3.weight(.semibold))
                     .foregroundColor(DesignTokens.BrandColor.canvasText)

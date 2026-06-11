@@ -45,7 +45,7 @@ struct DailyPlanView: View {
                 Divider()
                 reminderFooter
             }
-            .padding(24)
+            .padding(DesignTokens.Spacing.xl)
         }
         .frame(minWidth: 520, minHeight: 460)
         .onAppear { reload() }
@@ -61,7 +61,7 @@ struct DailyPlanView: View {
     // MARK: - Header
 
     private var header: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             Text("Today's Plan")
                 .font(.largeTitle.weight(.bold))
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -126,7 +126,7 @@ struct DailyPlanView: View {
                 .frame(maxWidth: 380)
         }
         .frame(maxWidth: .infinity)
-        .padding(.vertical, 32)
+        .padding(.vertical, DesignTokens.Spacing.xxl)
     }
 
     // MARK: - Reminder footer
@@ -139,7 +139,7 @@ struct DailyPlanView: View {
                 DailyPlanNotifications.shared.setReminderEnabled(
                     newValue, itemCount: plan.remainingCount)
             })) {
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                 Text("Daily practice reminder")
                     .font(.subheadline.weight(.medium))
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -233,7 +233,7 @@ struct DailyPlanRow: View {
             Spacer(minLength: 8)
             controls
         }
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .background(
             RoundedRectangle(cornerRadius: 12)
                 .fill(Color(NSColor.controlBackgroundColor).opacity(0.6))
@@ -274,7 +274,7 @@ struct DailyPlanRow: View {
                 .font(.caption.weight(.medium))
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
         } else {
-            HStack(spacing: 8) {
+            HStack(spacing: DesignTokens.Spacing.sm) {
                 Button("Skip", action: onSkip)
                     .buttonStyle(.borderless)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)

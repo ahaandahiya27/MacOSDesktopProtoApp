@@ -7,7 +7,7 @@ struct LanguageSelectorBar: View {
     var onSourceChanged: () -> Void
 
     var body: some View {
-        HStack(spacing: 12) {
+        HStack(spacing: DesignTokens.Spacing.md) {
             // Source picker
             Menu {
                 ForEach(SupportedLanguage.allCases) { lang in
@@ -53,7 +53,7 @@ struct LanguagePill: View {
     let label: String
 
     var body: some View {
-        VStack(spacing: 4) {
+        VStack(spacing: DesignTokens.Spacing.xs) {
             Text(label)
                 .font(.caption2)
                 .foregroundColor(.secondary)
@@ -61,7 +61,7 @@ struct LanguagePill: View {
                 .font(.subheadline.weight(.semibold))
                 .foregroundColor(.primary)
         }
-        .padding(.horizontal, 16)
+        .padding(.horizontal, DesignTokens.Spacing.lg)
         .padding(.vertical, 10)
         .background(Color.gray.opacity(0.15))
         .clipShape(RoundedRectangle(cornerRadius: 12))

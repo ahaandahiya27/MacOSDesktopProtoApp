@@ -258,7 +258,7 @@ struct MasteryMapView: View {
                 .accessibilityLabel("\(level.displayName): \(level.caption)")
             }
         }
-        .padding(.top, 4)
+        .padding(.top, DesignTokens.Spacing.xs)
     }
 
     // MARK: - Empty state

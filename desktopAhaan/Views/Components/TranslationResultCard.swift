@@ -12,12 +12,12 @@ struct TranslationResultCard: View {
     @State private var showCopied = false
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
-            VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.lg) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                 HStack {
                     DifficultyBadge(level: response.difficulty)
                     Spacer()
-                    HStack(spacing: 12) {
+                    HStack(spacing: DesignTokens.Spacing.md) {
                         Button(action: onSpeak) {
                             Image(systemName: SFSymbolCompat.name(isSpeaking ? "speaker.wave.3.fill" : "speaker.wave.2"))
                                 .foregroundColor(Color.compatIndigo)
@@ -181,8 +181,8 @@ struct DifficultyBadge: View {
             Image(systemName: SFSymbolCompat.name(iconName))
                 .font(.system(size: 6))
         }
-        .padding(.horizontal, 8)
-        .padding(.vertical, 4)
+        .padding(.horizontal, DesignTokens.Spacing.sm)
+        .padding(.vertical, DesignTokens.Spacing.xs)
         .background(backgroundColor)
         .foregroundColor(foregroundColor)
         .clipShape(Capsule())
