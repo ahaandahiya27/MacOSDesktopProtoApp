@@ -23,7 +23,7 @@ struct RhizobiumNitrogenScene: View {
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 rootDiagram.frame(width: 220, height: 200)
                 Button {
                     withAnimationRespectingReduceMotion(.easeInOut(duration: 0.25)) { noduleOpen.toggle() }
@@ -37,10 +37,10 @@ struct RhizobiumNitrogenScene: View {
                 }
                 .buttonStyle(.plain).pointingCursor()
                 if noduleOpen { magnifiedCard }
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
@@ -58,7 +58,7 @@ struct RhizobiumNitrogenScene: View {
     }
 
     private var magnifiedCard: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             Text("Inside the nodule").font(.headline)
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
             Text("Rhizobium bacteria take N₂ gas from the air pockets in soil and turn it into NH₃ (ammonia) — a form roots can absorb. The plant gives them shelter + sugar in exchange. This is why farmers rotate beans into a wheat field: the bacteria leave behind 'free' nitrogen the next crop can use.")
@@ -70,7 +70,7 @@ struct RhizobiumNitrogenScene: View {
         .frame(maxWidth: DesignTokens.contentMaxWidth)
         .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
         .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.2), lineWidth: 1))
-        .padding(.horizontal, 24)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
     }
 }
 
@@ -103,13 +103,13 @@ struct FoodChainBuilderScene: View {
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 chainView
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 availableView
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 if !feedback.isEmpty {
                     Text(feedback).font(.callout.weight(.semibold))
                         .foregroundColor(feedback.hasPrefix("Perfect")
@@ -120,10 +120,10 @@ struct FoodChainBuilderScene: View {
                     Button("Reset") { reset() }
                     GotItButton(action: onComplete)
                 }
-                .padding(.bottom, 12)
+                .padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
             .onAppear { reset() }
         }
     }
@@ -162,12 +162,12 @@ struct FoodChainBuilderScene: View {
     }
 
     private func orgCard(_ o: Org, filled: Bool) -> some View {
-        VStack(spacing: 2) {
+        VStack(spacing: DesignTokens.Spacing.xxs) {
             Text(o.emoji).font(.title3)
             Text(o.name).font(.caption2)
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
         }
-        .padding(8)
+        .padding(DesignTokens.Spacing.sm)
         .background(RoundedRectangle(cornerRadius: 8)
                     .fill(filled
                           ? DesignTokens.BrandColor.primaryAction.opacity(0.15)
@@ -234,24 +234,24 @@ struct CompostTimelineScene: View {
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 Text(stageEmoji).font(.system(size: 80))
                 Text("Day \(Int(day))")
                     .font(.headline.monospacedDigit())
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                 Slider(value: $day, in: 0...30)
                     .frame(maxWidth: 340)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 Text(stageLabel)
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }
@@ -322,7 +322,7 @@ struct VanHelmontWillowScene: View {
 
     var body: some View {
         ScrollView {
-            LazyVStack(spacing: 16) {
+            LazyVStack(spacing: DesignTokens.Spacing.lg) {
                 Text("Van Helmont's Willow")
                     .font(.largeTitle.bold())
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -360,10 +360,10 @@ struct VanHelmontWillowScene: View {
                     .frame(width: 160)
                 }
                 .frame(maxWidth: 600)
-                .padding(.vertical, 8)
+                .padding(.vertical, DesignTokens.Spacing.sm)
 
                 SoftShadowCard(padding: 14) {
-                    VStack(spacing: 8) {
+                    VStack(spacing: DesignTokens.Spacing.sm) {
                         Text("Time: \(Int(years.rounded())) year\(Int(years.rounded()) == 1 ? "" : "s")")
                             .font(.subheadline)
                             .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
@@ -379,7 +379,7 @@ struct VanHelmontWillowScene: View {
                             .font(.title3.bold())
                             .foregroundColor(DesignTokens.BrandColor.canvasText)
                             .multilineTextAlignment(.center)
-                        VStack(spacing: 8) {
+                        VStack(spacing: DesignTokens.Spacing.sm) {
                             ForEach(options) { opt in
                                 Button {
                                     pickedOption = opt.id
@@ -408,7 +408,7 @@ struct VanHelmontWillowScene: View {
                         }
                         .frame(maxWidth: 520)
                     }
-                    .padding(.top, 8)
+                    .padding(.top, DesignTokens.Spacing.sm)
                 }
 
                 if guessRevealed, let picked = pickedOption,
@@ -417,7 +417,7 @@ struct VanHelmontWillowScene: View {
                         HStack(alignment: .top, spacing: 10) {
                             Image(systemName: chosen.isCorrect ? "checkmark.circle.fill" : "info.circle.fill")
                                 .foregroundColor(chosen.isCorrect ? .green : Color.compatIndigo)
-                            VStack(alignment: .leading, spacing: 4) {
+                            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                                 Text(chosen.isCorrect ? "Right!" : "Good guess, but not quite.")
                                     .font(.headline)
                                     .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -429,7 +429,7 @@ struct VanHelmontWillowScene: View {
                                     Text("The real answer: " + (options.first(where: { $0.isCorrect })?.explanation ?? ""))
                                         .font(.callout)
                                         .foregroundColor(DesignTokens.BrandColor.canvasText)
-                                        .padding(.top, 4)
+                                        .padding(.top, DesignTokens.Spacing.xs)
                                 }
                             }
                         }
@@ -437,11 +437,11 @@ struct VanHelmontWillowScene: View {
                     .frame(maxWidth: 600)
 
                     GotItButton { onComplete() }
-                        .padding(.bottom, 12)
+                        .padding(.bottom, DesignTokens.Spacing.md)
                 }
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

@@ -45,12 +45,12 @@ struct Scene2_WWTPStageBuilder: View {
                 }
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Text(pick.rawValue).font(.title3.bold())
                         Text(pick.role).font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 ProcessTimeline(
                     title: "How a sewage-treatment plant works — start to finish",
@@ -71,26 +71,26 @@ struct Scene2_WWTPStageBuilder: View {
                     accent: Color.compatTeal
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 12 Bio → NEET",
                     detail: "Class 12 Biology 'Environmental Issues' covers these same stages. It adds BOD (Biological Oxygen Demand) and COD (Chemical Oxygen Demand), two number measures of water pollution that NEET tests every year. The aeration tank is where the microbes you saw do the hard work."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Bottle filter",
                     detail: "Cut a 1-litre bottle in half. Invert the top into the bottom. Layer the top with cotton, then sand, then fine gravel, then coarse gravel. Pour muddy water from the top. Clear (but not safe to drink) water drips out. That's a primary-treatment filter."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 

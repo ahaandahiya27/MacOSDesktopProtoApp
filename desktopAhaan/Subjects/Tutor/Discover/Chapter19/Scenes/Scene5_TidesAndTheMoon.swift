@@ -50,10 +50,10 @@ struct Scene5_TidesAndTheMoon: View {
                     // Tide diagram
                     tideDiagram
                         .frame(maxWidth: 400, maxHeight: 220)
-                        .padding(.top, 4)
+                        .padding(.top, DesignTokens.Spacing.xs)
 
                     // Info card buttons
-                    HStack(spacing: 12) {
+                    HStack(spacing: DesignTokens.Spacing.md) {
                         ForEach(cards) { card in
                             let isSelected = selectedCard == card.id
                             let isExplored = explored.contains(card.id)
@@ -75,8 +75,8 @@ struct Scene5_TidesAndTheMoon: View {
                                             .foregroundColor(.green)
                                     }
                                 }
-                                .padding(.horizontal, 12)
-                                .padding(.vertical, 8)
+                                .padding(.horizontal, DesignTokens.Spacing.md)
+                                .padding(.vertical, DesignTokens.Spacing.sm)
                                 .background(
                                     RoundedRectangle(cornerRadius: 10, style: .continuous)
                                         .fill(isSelected ? card.color.opacity(0.12) : Color.white)
@@ -93,11 +93,11 @@ struct Scene5_TidesAndTheMoon: View {
                     Spacer()
                 }
                 .frame(maxWidth: .infinity)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 Group {
                     SoftShadowCard(padding: 18) {
-                        VStack(alignment: .leading, spacing: 8) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                             if let id = selectedCard, let card = cards.first(where: { $0.id == id }) {
                                 Label(card.title, systemImage: SFSymbolCompat.name(card.icon))
                                     .font(.title2.bold())
@@ -130,15 +130,15 @@ struct Scene5_TidesAndTheMoon: View {
 
                     if allExplored {
                         GotItButton { onComplete() }
-                            .padding(.bottom, 12)
+                            .padding(.bottom, DesignTokens.Spacing.md)
                     }
                 
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
         .onAppear {
             guard !reduceMotion else { return }

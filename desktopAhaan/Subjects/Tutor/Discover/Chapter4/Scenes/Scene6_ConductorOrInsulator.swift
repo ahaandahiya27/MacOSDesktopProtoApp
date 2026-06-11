@@ -54,15 +54,15 @@ struct Scene6_ConductorOrInsulator: View {
                 GeometryReader { geo in
 
                     ZStack {
-                VStack(spacing: 12) {
+                VStack(spacing: DesignTokens.Spacing.md) {
                     // Score
                     HStack {
                         Spacer()
                         Text("Score: \(score) / 12")
                             .font(.headline.monospacedDigit())
                             .foregroundColor(Color.compatIndigo)
-                            .padding(.trailing, 24)
-                            .padding(.top, 8)
+                            .padding(.trailing, DesignTokens.Spacing.xl)
+                            .padding(.top, DesignTokens.Spacing.sm)
                     }
 
                     // Materials to drag
@@ -72,7 +72,7 @@ struct Scene6_ConductorOrInsulator: View {
                                 materialChip(mat)
                             }
                         }
-                        .padding(.horizontal, 24)
+                        .padding(.horizontal, DesignTokens.Spacing.xl)
                         .frame(maxHeight: 160)
                     } else {
                         Text("All sorted!")
@@ -86,7 +86,7 @@ struct Scene6_ConductorOrInsulator: View {
                         dropZone(title: "Good Conductor", color: .orange, items: conductorBin, isConductor: true)
                         dropZone(title: "Bad Conductor", color: .blue, items: insulatorBin, isConductor: false)
                     }
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                     .frame(maxHeight: 200)
 
                     Spacer()
@@ -103,7 +103,7 @@ struct Scene6_ConductorOrInsulator: View {
                 Group {
                     if isDone {
                         SoftShadowCard(padding: 18) {
-                            VStack(alignment: .leading, spacing: 8) {
+                            VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                                 Label("Great sorting!", systemImage: "star.fill")
                                     .font(.title2.bold())
                                     .foregroundColor(.orange)
@@ -127,10 +127,10 @@ struct Scene6_ConductorOrInsulator: View {
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
 
                         GotItButton { onComplete(score) }
-                            .padding(.bottom, 12)
+                            .padding(.bottom, DesignTokens.Spacing.md)
                     } else {
                         SoftShadowCard(padding: 18) {
-                            VStack(alignment: .leading, spacing: 8) {
+                            VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                                 Label("Conductor or Insulator?", systemImage: "arrow.left.arrow.right")
                                     .font(.title2.bold())
                                 Text("Drag each material into the correct bin. Good conductors let heat flow easily; bad conductors (insulators) block heat.")
@@ -139,13 +139,13 @@ struct Scene6_ConductorOrInsulator: View {
                             }
                         }
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
-                        .padding(.bottom, 12)
+                        .padding(.bottom, DesignTokens.Spacing.md)
                     }
                 
 
                 }
 
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 if showConfetti {
                     ParticleEmitter(isActive: true, particleCount: min(40, HardwareTier.particleBudget), duration: 1.5)
@@ -158,7 +158,7 @@ struct Scene6_ConductorOrInsulator: View {
 
             .frame(maxWidth: .infinity)
 
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
 
         }
     }
@@ -169,7 +169,7 @@ struct Scene6_ConductorOrInsulator: View {
         let offset = dragOffsets[mat.id] ?? .zero
         let isShaking = shakeId == mat.id
 
-        return VStack(spacing: 2) {
+        return VStack(spacing: DesignTokens.Spacing.xxs) {
             Text(mat.emoji)
                 .font(.title2)
             Text(mat.name)
@@ -216,7 +216,7 @@ struct Scene6_ConductorOrInsulator: View {
                 ForEach(items) { m in
                     Text("\(m.emoji) \(m.name)")
                         .font(.caption2)
-                        .padding(4)
+                        .padding(DesignTokens.Spacing.xs)
                         .background(color.opacity(0.1))
                         .cornerRadius(6)
                 }

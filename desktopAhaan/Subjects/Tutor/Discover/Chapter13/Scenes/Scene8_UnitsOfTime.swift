@@ -42,31 +42,31 @@ struct Scene8_UnitsOfTime: View {
                 Text(device.emoji).font(.system(size: 96))
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Text(device.rawValue).font(.title3.bold())
                         Text(device.era).font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 11 Physics → JEE",
                     detail: "Class 11 'Units and Measurements' covers the SI base units: metre, kilogram, second, ampere, kelvin, mole, candela. The second is now defined using the caesium-133 atomic clock (exact). JEE asks unit-system conversion problems."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Inventory of clocks",
                     detail: "List every timekeeping device in your home: phone (atomic-clock-synced), wall clock (quartz), wristwatch, microwave timer, oven timer, kitchen stopwatch, computer system clock. Note which is fastest to read at a glance — that's why each one is shaped the way it is."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

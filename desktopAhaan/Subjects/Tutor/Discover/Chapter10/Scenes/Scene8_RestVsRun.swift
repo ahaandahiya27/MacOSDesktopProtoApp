@@ -38,22 +38,22 @@ struct Scene8_RestVsRun: View {
                     }
                 }
 
-                Slider(value: $activity, in: 0...4, step: 1).frame(maxWidth: 460).padding(.horizontal, 24)
+                Slider(value: $activity, in: 0...4, step: 1).frame(maxWidth: 460).padding(.horizontal, DesignTokens.Spacing.xl)
                 HStack {
                     Text("💤").font(.title3); Spacer(); Text("🪑").font(.title3); Spacer()
                     Text("🚶").font(.title3); Spacer(); Text("🏃").font(.title3); Spacer(); Text("⚡").font(.title3)
                 }
-                .frame(maxWidth: 460).padding(.horizontal, 24)
+                .frame(maxWidth: 460).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("More activity, more oxygen", systemImage: SFSymbolCompat.name("figure.run"))
                             .font(.title2.bold())
                         Text("Running muscles burn glucose faster, so they demand more oxygen. Your brain tells the lungs to pump quicker and deeper. After exercise, deep breaths repay the oxygen debt that built up.")
                             .font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 // Grouped to stay within Swift 5.5's 10-child ViewBuilder limit.
                 Group {
@@ -62,14 +62,14 @@ struct Scene8_RestVsRun: View {
                         detail: "Class 11 'Breathing' covers rate of breathing (12-16/min rest, up to 60/min exercise), tidal volume, vital capacity, residual volume. NEET asks lung-volume capacity questions every year. Class 12 adds asthma, emphysema, oxygen debt physiology."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     TryAtHomeCallout(
                         title: "Rest vs stair run",
                         detail: "Count breaths/min sitting still. Then run up and down a flight of stairs 3 times. Count again immediately. The rate doubles or triples — your muscles demanded more oxygen."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 }
 
                 DiscoveryWidget(
@@ -82,12 +82,12 @@ struct Scene8_RestVsRun: View {
                     output: runningHeartRateExplanation
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 

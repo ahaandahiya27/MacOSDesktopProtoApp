@@ -89,7 +89,7 @@ struct HotspotDiagram: View {
     }
 
     private var header: some View {
-        HStack(spacing: 8) {
+        HStack(spacing: DesignTokens.Spacing.sm) {
             Image(systemName: SFSymbolCompat.name("hand.tap.fill"))
                 .font(.title3)
                 .foregroundColor(baseColor)
@@ -153,7 +153,7 @@ struct HotspotDiagram: View {
     }
 
     private func detailCard(for spot: Hotspot) -> some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
             Text(spot.label)
                 .font(.subheadline.weight(.bold))
                 .foregroundColor(baseColor)

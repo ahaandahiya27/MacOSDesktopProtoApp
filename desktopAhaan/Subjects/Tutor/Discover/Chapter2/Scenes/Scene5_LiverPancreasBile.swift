@@ -39,16 +39,16 @@ struct Scene5_LiverPancreasBile: View {
 
                 ZStack {
                     // Liver
-                    VStack(spacing: 12) {
+                    VStack(spacing: DesignTokens.Spacing.md) {
                         Button(action: { tapLiver() }) {
-                            VStack(spacing: 4) {
+                            VStack(spacing: DesignTokens.Spacing.xs) {
                                 Image(systemName: "hexagon.fill")
                                     .font(.system(size: 32))
                                     .foregroundColor(.green)
                                 Text("Liver")
                                     .font(.caption.weight(.semibold))
                             }
-                            .padding(12)
+                            .padding(DesignTokens.Spacing.md)
                             .background(Color.green.opacity(liverTapped ? 0.3 : 0.1))
                             .cornerRadius(8)
                         }
@@ -56,7 +56,7 @@ struct Scene5_LiverPancreasBile: View {
                         .accessibilityLabel("Liver — produces bile")
 
                         if bileFlowing {
-                            VStack(spacing: 2) {
+                            VStack(spacing: DesignTokens.Spacing.xxs) {
                                 ForEach(0..<3, id: \.self) { _ in
                                     Circle()
                                         .fill(Color.green)
@@ -68,16 +68,16 @@ struct Scene5_LiverPancreasBile: View {
                     .position(x: 100, y: 100)
 
                     // Pancreas
-                    VStack(spacing: 12) {
+                    VStack(spacing: DesignTokens.Spacing.md) {
                         Button(action: { tapPancreas() }) {
-                            VStack(spacing: 4) {
+                            VStack(spacing: DesignTokens.Spacing.xs) {
                                 Image(systemName: "waveform.circle.fill")
                                     .font(.system(size: 32))
                                     .foregroundColor(.orange)
                                 Text("Pancreas")
                                     .font(.caption.weight(.semibold))
                             }
-                            .padding(12)
+                            .padding(DesignTokens.Spacing.md)
                             .background(Color.orange.opacity(pancreasTapped ? 0.3 : 0.1))
                             .cornerRadius(8)
                         }
@@ -85,7 +85,7 @@ struct Scene5_LiverPancreasBile: View {
                         .accessibilityLabel("Pancreas — makes enzymes")
 
                         if juiceFlowing {
-                            VStack(spacing: 2) {
+                            VStack(spacing: DesignTokens.Spacing.xxs) {
                                 ForEach(0..<3, id: \.self) { _ in
                                     Circle()
                                         .fill(Color.orange)
@@ -124,7 +124,7 @@ struct Scene5_LiverPancreasBile: View {
                         .position(x: 200, y: 250)
                 }
                 .frame(height: 280)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 HStack {
                     Text("Tap each organ to see its juice flow")
@@ -135,10 +135,10 @@ struct Scene5_LiverPancreasBile: View {
                             .foregroundColor(.green)
                     }
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Liver, Pancreas & Bile", systemImage: "drop.fill")
                             .font(.title2.bold())
                             .foregroundColor(.green)
@@ -155,24 +155,24 @@ struct Scene5_LiverPancreasBile: View {
                     detail: "Bile from liver, pancreatic juice from pancreas — they meet in the duodenum and finish the job stomach acid started. NEET asks 'list 5 enzymes secreted by the pancreas' (trypsin / chymotrypsin / lipase / amylase / nucleases) and 'why does jaundice colour eyes yellow?' (bilirubin from broken-down RBCs can't drain into bile, builds up in blood)."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "See bile emulsify oil",
                     detail: "Mix a tablespoon of cooking oil into a glass of water. Watch the oil sit on top in big globs. Now add a few drops of dish-soap (a surfactant — same job as bile). Stir. The oil breaks into tiny droplets that mix into the water. That's exactly what bile does to dietary fat: breaks it into droplets so the water-loving enzyme lipase can attack."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 if allTapped {
                     GotItButton { onComplete() }
-                        .padding(.bottom, 12)
+                        .padding(.bottom, DesignTokens.Spacing.md)
                         .transition(.opacity)  // Big Sur: combined transitions can render-loop
                 } else {
                     Text("Complete all organs first!")
                         .font(.caption)
                         .foregroundColor(DesignTokens.BrandColor.tryAtHome)
-                        .padding(.bottom, 12)
+                        .padding(.bottom, DesignTokens.Spacing.md)
                 }
             
 
@@ -180,7 +180,7 @@ struct Scene5_LiverPancreasBile: View {
 
             .frame(maxWidth: .infinity)
 
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
 
         }
     }

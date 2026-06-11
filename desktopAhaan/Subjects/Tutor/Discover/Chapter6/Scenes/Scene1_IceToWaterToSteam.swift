@@ -51,7 +51,7 @@ struct Scene1_IceToWaterToSteam: View {
         // has a real bounded canvas via its fixed-size frame.
         ScrollView {
             LazyVStack(alignment: .center, spacing: 14) {
-                VStack(spacing: 16) {
+                VStack(spacing: DesignTokens.Spacing.lg) {
                     Text("Ice to Water to Steam")
                         .font(.largeTitle.bold())
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -72,7 +72,7 @@ struct Scene1_IceToWaterToSteam: View {
                             )
 
                         if reduceMotion {
-                            VStack(spacing: 8) {
+                            VStack(spacing: DesignTokens.Spacing.sm) {
                                 Text(phase.emoji)
                                     .font(.system(size: 72))
                                 Text(phase.rawValue)
@@ -97,7 +97,7 @@ struct Scene1_IceToWaterToSteam: View {
                         .foregroundColor(phase.color)
 
                     // Slider
-                    VStack(spacing: 4) {
+                    VStack(spacing: DesignTokens.Spacing.xs) {
                         Slider(value: $temperature, in: -10...120, step: 1)
                             .frame(maxWidth: 460)
                             .accessibilityLabel("Temperature slider")
@@ -112,13 +112,13 @@ struct Scene1_IceToWaterToSteam: View {
                         }
                         .frame(maxWidth: 460)
                     }
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 }
                 .frame(maxWidth: .infinity)
 
                 Group {
                     SoftShadowCard(padding: 18) {
-                        VStack(alignment: .leading, spacing: 8) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                             Label("Same substance, different forms", systemImage: "drop.triangle.fill")
                                 .font(.title2.bold())
                             Text("Ice, water, and steam are all H₂O. Changing between them is a physical change — no new substance is formed. You can always reverse it: freeze water back to ice, or condense steam back to water.")
@@ -159,19 +159,19 @@ struct Scene1_IceToWaterToSteam: View {
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
                     GotItButton { onComplete() }
-                        .padding(.bottom, 12)
+                        .padding(.bottom, DesignTokens.Spacing.md)
                 
 
                 }
 
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             
 
             }
 
             .frame(maxWidth: .infinity)
 
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
 
         }
         .timedScene(idealFPS: 30, tick: $tick)

@@ -118,22 +118,22 @@ struct Scene3_InsideALeaf: View {
                 detail: "Each leaf part you clicked becomes a whole NEET topic. Mesophyll cells split into palisade (light capture) and spongy (gas exchange). Guard cells open and close the stomata. Vascular bundles carry water up in the xylem and sugar down in the phloem. Learn the parts now, and in Class 11 you study how they work — not just their names."
             )
             .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+            .padding(.horizontal, DesignTokens.Spacing.xl)
 
             TryAtHomeCallout(
                 title: "See stomata yourself",
                 detail: "Peel the thin underside skin off a fresh leaf (Rheo or money-plant works best — it lifts off in big sheets). Lay it on a glass slide. Even a 10× pocket magnifier will show the mouth-like stomata. Each one is two guard cells curved around an opening, breathing for the plant."
             )
             .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+            .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 GotItButton(action: onComplete)
-                    .padding(.bottom, 12)
+                    .padding(.bottom, DesignTokens.Spacing.md)
                     .disabled(selectedPart == nil)
                     .opacity(selectedPart == nil ? 0.55 : 1)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 

@@ -37,11 +37,11 @@ struct Scene4_TheWoolPipeline: View {
                             .foregroundColor(.green)
                     }
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
                 .padding(.top, 20)
 
                 // Pipeline visualization
-                VStack(spacing: 24) {
+                VStack(spacing: DesignTokens.Spacing.xl) {
                     // Row 1
                     HStack(spacing: 20) {
                         ForEach(0..<3, id: \.self) { i in
@@ -52,7 +52,7 @@ struct Scene4_TheWoolPipeline: View {
                     // Arrows down
                     HStack(spacing: 20) {
                         ForEach(0..<3, id: \.self) { _ in
-                            VStack(spacing: 4) {
+                            VStack(spacing: DesignTokens.Spacing.xs) {
                                 Image(systemName: "arrow.down")
                                     .font(.body.weight(.semibold))
                                     .foregroundColor(.gray.opacity(0.5))
@@ -68,15 +68,15 @@ struct Scene4_TheWoolPipeline: View {
                         }
                     }
                 }
-                .padding(24)
+                .padding(DesignTokens.Spacing.xl)
                 .background(Color(NSColor.controlBackgroundColor).opacity(0.5))
                 .cornerRadius(12)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 // Description panel
                 if let selected = selectedStep {
                     SoftShadowCard(padding: 16) {
-                        VStack(alignment: .leading, spacing: 8) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                             HStack {
                                 Text(steps[selected].emoji)
                                     .font(.system(size: 32))
@@ -96,7 +96,7 @@ struct Scene4_TheWoolPipeline: View {
                         }
                     }
                     .frame(maxWidth: 600)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                     .transition(.opacity)  // Big Sur: combined transitions can render-loop
                 }
 
@@ -105,22 +105,22 @@ struct Scene4_TheWoolPipeline: View {
                     detail: "The wool pipeline you just walked is one example of unit operations — scouring, sorting, dyeing, spinning, weaving. JEE Chem teaches the same operations for industrial fibres: PET bottles ground → polymer chips → extruded as polyester thread → woven into fabric. Different chemistry, same pipeline shape."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Trace a t-shirt's journey",
                     detail: "Pick any cotton t-shirt. Read the label: cotton from (country), made in (country), sold in (your city). That's 3-4 stops of the same pipeline. A typical t-shirt has travelled 15,000+ km from seed to your dresser. Map it on Google Earth for one shirt — it's a lesson in global supply chains."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 GotItButton {
                     onComplete()
                 }
-                .padding(.bottom, 12)
+                .padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
@@ -134,7 +134,7 @@ struct Scene4_TheWoolPipeline: View {
                     selectedStep = index
                 }
             } label: {
-                VStack(spacing: 8) {
+                VStack(spacing: DesignTokens.Spacing.sm) {
                     Text(step.emoji)
                         .font(.system(size: 40))
                     Text(step.label)
@@ -142,7 +142,7 @@ struct Scene4_TheWoolPipeline: View {
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
                 }
                 .frame(maxWidth: .infinity)
-                .padding(16)
+                .padding(DesignTokens.Spacing.lg)
                 .background(isTapped ? Color.compatIndigo.opacity(0.15) : Color.white.opacity(0.95))
                 .cornerRadius(12)
                 .overlay(

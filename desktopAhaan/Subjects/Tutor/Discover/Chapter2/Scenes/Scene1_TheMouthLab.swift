@@ -40,28 +40,28 @@ struct Scene1_TheMouthLab: View {
                     Toggle("Show animal teeth (Lion)", isOn: $showAnimalTeeth)
                         .font(.body)
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 if showAnimalTeeth {
                     LionJawDiagram()
                         .frame(height: 200)
-                        .padding(.horizontal, 24)
+                        .padding(.horizontal, DesignTokens.Spacing.xl)
                     Text("A lion's teeth are sharp for tearing meat!")
                         .font(.caption)
                         .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 } else {
                     HumanJawDiagram(selectedTooth: $selectedTooth)
                         .frame(height: 200)
-                        .padding(.horizontal, 24)
+                        .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     if let index = selectedTooth {
                         ToothCallout(tooth: teethByType(from: index))
-                            .padding(.horizontal, 24)
+                            .padding(.horizontal, DesignTokens.Spacing.xl)
                     }
                 }
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("The Mouth Lab", systemImage: SFSymbolCompat.name("mouth.fill"))
                             .font(.title2.bold())
                             .foregroundColor(.orange)
@@ -78,20 +78,20 @@ struct Scene1_TheMouthLab: View {
                     detail: "The four tooth shapes you just clicked become a heteodont dental formula in Class 11 — 2-1-2-3 (per quadrant: incisors-canines-premolars-molars). NEET asks 'compare the formula of a herbivore vs a carnivore' — the difference is in the canines. And salivary amylase from this scene is the first digestive enzyme in a chain of 20+ you'll meet."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Chew a cracker for 60 seconds",
                     detail: "Take a plain cracker (no salt, no sugar). Chew slowly without swallowing for a full minute. After 30 seconds the bland taste turns slightly sweet. That's salivary amylase breaking starch (tasteless) into maltose (sweet). Your tongue is testing the enzyme reaction in real-time."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 GotItButton { onComplete() }
-                    .padding(.bottom, 12)
+                    .padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
@@ -191,7 +191,7 @@ struct ToothCallout: View {
 
     var body: some View {
         SoftShadowCard(padding: 14) {
-            HStack(spacing: 12) {
+            HStack(spacing: DesignTokens.Spacing.md) {
                 Image(systemName: "arrowshape.left.fill")
                     .font(.title2)
                     .foregroundColor(.orange)

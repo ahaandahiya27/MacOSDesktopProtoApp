@@ -61,18 +61,18 @@ struct Scene7_MigrationSuperhero: View {
                         )
 
                     // Bird fact buttons
-                    HStack(spacing: 12) {
+                    HStack(spacing: DesignTokens.Spacing.md) {
                         ForEach(facts) { fact in
                             factButton(fact: fact)
                         }
                     }
                 }
                 .frame(maxWidth: .infinity)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 Group {
                     SoftShadowCard(padding: 18) {
-                        VStack(alignment: .leading, spacing: 8) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                             if let idx = selectedFact, let fact = facts.first(where: { $0.id == idx }) {
                                 Label("\(fact.bird)", systemImage: SFSymbolCompat.name("bird.fill"))
                                     .font(.title2.bold())
@@ -111,20 +111,20 @@ struct Scene7_MigrationSuperhero: View {
 
                     if allExplored {
                         GotItButton { onComplete() }
-                            .padding(.bottom, 12)
+                            .padding(.bottom, DesignTokens.Spacing.md)
                     }
                 
 
                 }
 
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             
 
             }
 
             .frame(maxWidth: .infinity)
 
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
 
         }
         .timedScene(idealFPS: 30, tick: $tick)
@@ -141,7 +141,7 @@ struct Scene7_MigrationSuperhero: View {
                 exploredFacts.insert(fact.id)
             }
         } label: {
-            VStack(spacing: 4) {
+            VStack(spacing: DesignTokens.Spacing.xs) {
                 Image(systemName: SFSymbolCompat.name("bird.fill"))
                     .font(.title3)
                     .foregroundColor(isSelected ? .white : Color.compatIndigo)

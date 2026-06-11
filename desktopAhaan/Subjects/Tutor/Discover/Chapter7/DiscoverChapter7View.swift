@@ -115,12 +115,12 @@ private struct RainfallHumiditySliderScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("\(Int(rainfall)) cm / year").font(.title2.monospacedDigit())
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
-            Slider(value: $rainfall, in: 0...300).frame(maxWidth: 340).padding(.horizontal, 24)
+            Slider(value: $rainfall, in: 0...300).frame(maxWidth: 340).padding(.horizontal, DesignTokens.Spacing.xl)
             Text(label).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -140,15 +140,15 @@ private struct HibernationMigrationScene: View {
                  ? "Hibernate: bears, marmots, hedgehogs eat heavily in autumn, then sleep deeply in dens. Body temperature, heart rate, breathing all drop to save energy. Wake up in spring."
                  : "Migrate: birds (Arctic tern, Siberian crane), butterflies (monarch), wildebeest. Travel thousands of km to warmer feeding grounds. Return home next season.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
     private func pickChip(label: String, picked: Bool, tap: @escaping () -> Void) -> some View {
         Button(action: tap) {
             Text(label).font(.body.weight(picked ? .bold : .regular))
-                .padding(.horizontal, 14).padding(.vertical, 8)
+                .padding(.horizontal, 14).padding(.vertical, DesignTokens.Spacing.sm)
                 .background(Capsule().fill(picked ? Color.compatIndigo.opacity(0.18) : Color.gray.opacity(0.08)))
                 .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                 .foregroundColor(Color.compatIndigo)
@@ -173,7 +173,7 @@ private struct CamelDesertScene: View {
             Text("🐪").font(.system(size: 100))
             ForEach(traits) { t in
                 Button { tapped.insert(t.id) } label: {
-                    VStack(alignment: .leading, spacing: 4) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                         Text(t.title).font(.headline).foregroundColor(DesignTokens.BrandColor.canvasText)
                         if tapped.contains(t.id) {
                             Text(t.detail).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -182,13 +182,13 @@ private struct CamelDesertScene: View {
                             Text("Tap to reveal").font(.caption.italic())
                                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         }
-                    }.padding(12).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
+                    }.padding(DesignTokens.Spacing.md).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
                     .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
                     .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, 24)
+                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, DesignTokens.Spacing.xl)
             }
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -209,7 +209,7 @@ private struct PenguinPolarScene: View {
             Text("🐧").font(.system(size: 100))
             ForEach(traits) { t in
                 Button { tapped.insert(t.id) } label: {
-                    VStack(alignment: .leading, spacing: 4) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                         Text(t.title).font(.headline).foregroundColor(DesignTokens.BrandColor.canvasText)
                         if tapped.contains(t.id) {
                             Text(t.detail).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -218,13 +218,13 @@ private struct PenguinPolarScene: View {
                             Text("Tap to reveal").font(.caption.italic())
                                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         }
-                    }.padding(12).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
+                    }.padding(DesignTokens.Spacing.md).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
                     .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
                     .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, 24)
+                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, DesignTokens.Spacing.xl)
             }
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -243,7 +243,7 @@ private struct MountainGoatToolkitScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text(stages[stage].0).font(.system(size: 100))
             Text(stages[stage].1).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
             Button { withAnimation { stage = (stage + 1) % stages.count } } label: {
                 Text("Next").font(.body.weight(.semibold))
@@ -252,8 +252,8 @@ private struct MountainGoatToolkitScene: View {
                     .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                     .foregroundColor(Color.compatIndigo)
             }.buttonStyle(.plain).pointingCursor()
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -272,7 +272,7 @@ private struct MonsoonMapScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text(phases[phase].0).font(.system(size: 100))
             Text(phases[phase].1).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
             Button { withAnimation { phase = (phase + 1) % phases.count } } label: {
                 Text("Next month").font(.body.weight(.semibold))
@@ -281,8 +281,8 @@ private struct MonsoonMapScene: View {
                     .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                     .foregroundColor(Color.compatIndigo)
             }.buttonStyle(.plain).pointingCursor()
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -302,7 +302,7 @@ private struct ClimateChangeStoryScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text(steps[step].0).font(.system(size: 100))
             Text(steps[step].1).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
             Button { withAnimation { step = (step + 1) % steps.count } } label: {
                 Text("Next").font(.body.weight(.semibold))
@@ -311,8 +311,8 @@ private struct ClimateChangeStoryScene: View {
                     .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                     .foregroundColor(Color.compatIndigo)
             }.buttonStyle(.plain).pointingCursor()
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -338,19 +338,19 @@ private struct IndianClimateZonesScene: View {
                         Text(z.name).font(.headline).foregroundColor(DesignTokens.BrandColor.canvasText)
                         Spacer()
                     }
-                    .padding(12).frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(DesignTokens.Spacing.md).frame(maxWidth: DesignTokens.contentMaxWidth)
                     .background(RoundedRectangle(cornerRadius: 12)
                         .fill(selected == z.id ? Color.compatIndigo.opacity(0.12) : Color.white.opacity(0.85)))
                     .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, 24)
+                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, DesignTokens.Spacing.xl)
             }
             if let s = selected, let z = zones.first(where: { $0.id == s }) {
                 Text(z.detail).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                    .multilineTextAlignment(.center).padding(.horizontal, 24)
+                    .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
             }
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -374,7 +374,7 @@ private struct AnimalHabitatMatcherScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Tap an animal, then tap its habitat.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-            HStack(spacing: 8) {
+            HStack(spacing: DesignTokens.Spacing.sm) {
                 ForEach(animals) { a in chipAnimal(a) }
             }
             HStack(spacing: 6) {
@@ -387,8 +387,8 @@ private struct AnimalHabitatMatcherScene: View {
                                      ? DesignTokens.BrandColor.primaryAction
                                      : DesignTokens.BrandColor.canvasText)
             }
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
     private func chipAnimal(_ a: A) -> some View {
         let assigned = pick[a.id]
@@ -399,7 +399,7 @@ private struct AnimalHabitatMatcherScene: View {
         return Button { if pick[a.id] == nil { selectedId = a.id } } label: {
             VStack { Text(a.emoji).font(.title3); Text(a.name).font(.caption2) }
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
-                .padding(8)
+                .padding(DesignTokens.Spacing.sm)
                 .background(RoundedRectangle(cornerRadius: 8).fill(tint.opacity(isSelected ? 0.18 : 0.06)))
                 .overlay(RoundedRectangle(cornerRadius: 8).strokeBorder(tint.opacity(0.4), lineWidth: 1))
         }.buttonStyle(.plain).pointingCursor()
@@ -433,7 +433,7 @@ private struct WeatherForecastToolsScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             ForEach(tools) { t in
                 Button { tapped.insert(t.id) } label: {
-                    VStack(alignment: .leading, spacing: 4) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                         HStack { Text(t.emoji).font(.title2)
                             Text(t.name).font(.headline).foregroundColor(DesignTokens.BrandColor.canvasText) }
                         if tapped.contains(t.id) {
@@ -443,12 +443,12 @@ private struct WeatherForecastToolsScene: View {
                             Text("Tap to reveal").font(.caption.italic())
                                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         }
-                    }.padding(12).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
+                    }.padding(DesignTokens.Spacing.md).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
                     .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
                     .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, 24)
+                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, DesignTokens.Spacing.xl)
             }
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }

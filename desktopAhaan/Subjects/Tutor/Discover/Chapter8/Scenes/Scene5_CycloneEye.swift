@@ -58,10 +58,10 @@ struct Scene5_CycloneEye: View {
 
                 Slider(value: $speed, in: 30...220, step: 1)
                     .frame(maxWidth: 460)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Calm centre, violent ring", systemImage: "hurricane")
                             .font(.title2.bold())
                         Text("A cyclone is a low-pressure storm where air spirals inwards. The eye in the middle is strangely still — but the wall of clouds around it carries the fastest, most destructive winds.")
@@ -69,7 +69,7 @@ struct Scene5_CycloneEye: View {
                     }
                 }
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 // Grouped so the outer VStack stays within Swift 5.5's
                 // 10-child ViewBuilder limit (Xcode 13.2.1 / Big Sur target).
@@ -92,27 +92,27 @@ struct Scene5_CycloneEye: View {
                         ]
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     LookingAheadCallout(
                         title: "Class 11 Physics → JEE",
                         detail: "In Class 11 Physics you meet the Coriolis force. It is a spinning-frame effect that sets which way a cyclone turns: counter-clockwise in the north, clockwise in the south. JEE rarely asks about cyclones directly. But Coriolis problems on rotating frames are standard."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     TryAtHomeCallout(
                         title: "Glass-of-water cyclone",
                         detail: "Stir a tall glass of water vigorously with a spoon, then pull the spoon out. A miniature 'eye' forms in the middle — the same low-pressure column that exists inside a real cyclone, just made of water instead of air."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                    GotItButton { onComplete() }.padding(.bottom, 12)
+                    GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
                 }
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }

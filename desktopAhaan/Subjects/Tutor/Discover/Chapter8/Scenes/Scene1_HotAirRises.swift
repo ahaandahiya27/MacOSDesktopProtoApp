@@ -53,7 +53,7 @@ struct Scene1_HotAirRises: View {
                 .accentColor(Color.compatIndigo)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Less dense = floats up", systemImage: "flame.fill")
                             .font(.title2.bold())
                         Text("Heating makes air molecules spread out. Warmer air is lighter than the cool air around it, so it rises. Cooler air rushes in to take its place — that movement is wind.")
@@ -61,7 +61,7 @@ struct Scene1_HotAirRises: View {
                     }
                 }
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 // Grouped to stay within Swift 5.5's 10-child ViewBuilder limit
                 // (Big Sur / Xcode 13.2.1 target).
@@ -71,21 +71,21 @@ struct Scene1_HotAirRises: View {
                         detail: "Class 11 covers density (ρ = m/V) and Archimedes' principle — the same physics that lifts a hot-air balloon also makes ships float. JEE Physics asks buoyancy and pressure problems using ρgh on fluids every year."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     TryAtHomeCallout(
                         title: "Hold paper above a candle",
                         detail: "Cut a paper spiral, balance it on a pencil tip, and hold it well ABOVE a candle flame (not in it). The rising hot air spins the spiral. Do this with an adult present."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     RelatedConceptsCallout(
                         title: "Related: Ch 4 (Heat), Ch 6 (Phys/Chem Changes)",
                         detail: "The reason hot air rises — thermal expansion — is part of the bigger heat-transfer story in Ch 4 (conduction, convection, radiation). And Ch 6 covers how heat drives state changes (ice → water → steam) using the same physics."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 }
 
                 DiscoveryWidget(
@@ -98,12 +98,12 @@ struct Scene1_HotAirRises: View {
                     output: balloonLiftExplanation
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }

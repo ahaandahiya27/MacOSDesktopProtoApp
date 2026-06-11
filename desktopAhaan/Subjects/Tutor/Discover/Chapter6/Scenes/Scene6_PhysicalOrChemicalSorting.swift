@@ -53,7 +53,7 @@ struct Scene6_PhysicalOrChemicalSorting: View {
         // frame for hit testing.
         ScrollView {
             LazyVStack(alignment: .center, spacing: 14) {
-                VStack(spacing: 12) {
+                VStack(spacing: DesignTokens.Spacing.md) {
                     // Score
                     HStack {
                         Text("Physical or Chemical?")
@@ -62,11 +62,11 @@ struct Scene6_PhysicalOrChemicalSorting: View {
                         Text("Score: \(score) / 12")
                             .font(.headline.monospacedDigit())
                             .foregroundColor(Color.compatIndigo)
-                            .padding(.trailing, 24)
-                            .padding(.top, 8)
+                            .padding(.trailing, DesignTokens.Spacing.xl)
+                            .padding(.top, DesignTokens.Spacing.sm)
                     }
-                    .padding(.horizontal, 24)
-                    .padding(.top, 12)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
+                    .padding(.top, DesignTokens.Spacing.md)
 
                     // Items to drag
                     if !isDone {
@@ -75,7 +75,7 @@ struct Scene6_PhysicalOrChemicalSorting: View {
                                 itemChip(item)
                             }
                         }
-                        .padding(.horizontal, 24)
+                        .padding(.horizontal, DesignTokens.Spacing.xl)
                         .frame(maxHeight: 180)
                     } else {
                         Text("All sorted!")
@@ -89,14 +89,14 @@ struct Scene6_PhysicalOrChemicalSorting: View {
                         dropZone(title: "Physical Change", color: .blue, items: physicalBin, isChemical: false)
                         dropZone(title: "Chemical Change", color: .orange, items: chemicalBin, isChemical: true)
                     }
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                     .frame(maxHeight: 200)
                 }
 
                 Group {
                     if isDone {
                         SoftShadowCard(padding: 18) {
-                            VStack(alignment: .leading, spacing: 8) {
+                            VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                                 Label("Great sorting!", systemImage: "star.fill")
                                     .font(.title2.bold())
                                     .foregroundColor(.orange)
@@ -120,10 +120,10 @@ struct Scene6_PhysicalOrChemicalSorting: View {
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
 
                         GotItButton { onComplete(score) }
-                            .padding(.bottom, 12)
+                            .padding(.bottom, DesignTokens.Spacing.md)
                     } else {
                         SoftShadowCard(padding: 18) {
-                            VStack(alignment: .leading, spacing: 8) {
+                            VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                                 Label("Drag each card", systemImage: SFSymbolCompat.name("hand.draw.fill"))
                                     .font(.title2.bold())
                                 Text("Drag each change into the correct bin: Physical Change or Chemical Change.")
@@ -132,20 +132,20 @@ struct Scene6_PhysicalOrChemicalSorting: View {
                             }
                         }
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
-                        .padding(.bottom, 12)
+                        .padding(.bottom, DesignTokens.Spacing.md)
                     }
                 
 
                 }
 
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
 
             }
 
             .frame(maxWidth: .infinity)
 
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
 
         }
         .overlay(
@@ -165,7 +165,7 @@ struct Scene6_PhysicalOrChemicalSorting: View {
         let offset = dragOffsets[item.id] ?? .zero
         let isShaking = shakeId == item.id
 
-        return VStack(spacing: 2) {
+        return VStack(spacing: DesignTokens.Spacing.xxs) {
             Text(item.emoji)
                 .font(.title2)
             Text(item.label)
@@ -218,7 +218,7 @@ struct Scene6_PhysicalOrChemicalSorting: View {
                 ForEach(items) { m in
                     Text("\(m.emoji) \(m.label)")
                         .font(.caption2)
-                        .padding(4)
+                        .padding(DesignTokens.Spacing.xs)
                         .background(color.opacity(0.1))
                         .cornerRadius(6)
                 }

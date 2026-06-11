@@ -37,7 +37,7 @@ struct CowGoatCamelScene: View {
                 ForEach(animals) { a in
                     HStack(spacing: 14) {
                         Text(a.emoji).font(.system(size: 50))
-                        VStack(alignment: .leading, spacing: 4) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                             Text(a.name).font(.headline)
                                 .foregroundColor(DesignTokens.BrandColor.canvasText)
                             Text(a.strategy).font(.callout)
@@ -45,16 +45,16 @@ struct CowGoatCamelScene: View {
                                 .fixedSize(horizontal: false, vertical: true)
                         }
                     }
-                    .padding(12)
+                    .padding(DesignTokens.Spacing.md)
                     .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
                     .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
                     .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 }
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }
@@ -83,7 +83,7 @@ struct FoodVacuoleFormationScene: View {
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 24).frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(.horizontal, DesignTokens.Spacing.xl).frame(maxWidth: DesignTokens.contentMaxWidth)
                 Button {
                     withAnimationRespectingReduceMotion(.easeInOut(duration: 0.25)) {
                         stage = (stage + 1) % stages.count
@@ -97,10 +97,10 @@ struct FoodVacuoleFormationScene: View {
                         .foregroundColor(Color.compatIndigo)
                 }
                 .buttonStyle(.plain).pointingCursor()
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
@@ -149,13 +149,13 @@ struct PseudopodCatchScene: View {
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 catchVisual.frame(width: 280, height: 140)
                 HStack(spacing: 14) {
                     Button { startRound() } label: {
                         Text(round >= totalRounds ? "Replay" : "Release food")
                             .font(.body.weight(.semibold))
-                            .padding(.horizontal, 16).padding(.vertical, 9)
+                            .padding(.horizontal, DesignTokens.Spacing.lg).padding(.vertical, 9)
                             .background(Capsule().fill(Color.compatIndigo.opacity(0.15)))
                             .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                             .foregroundColor(Color.compatIndigo)
@@ -164,7 +164,7 @@ struct PseudopodCatchScene: View {
                     Button { grab() } label: {
                         Text("Grab!")
                             .font(.body.weight(.bold))
-                            .padding(.horizontal, 16).padding(.vertical, 9)
+                            .padding(.horizontal, DesignTokens.Spacing.lg).padding(.vertical, 9)
                             .background(Capsule().fill(DesignTokens.BrandColor.primaryAction.opacity(0.18)))
                             .overlay(Capsule().strokeBorder(DesignTokens.BrandColor.primaryAction.opacity(0.5), lineWidth: 1))
                             .foregroundColor(DesignTokens.BrandColor.primaryAction)
@@ -174,10 +174,10 @@ struct PseudopodCatchScene: View {
                 Text("Caught: \(caught) / \(totalRounds) · Round: \(min(round + 1, totalRounds))")
                     .font(.callout.monospacedDigit())
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
-                GotItButton(action: { onComplete(caught) }).padding(.bottom, 12)
+                GotItButton(action: { onComplete(caught) }).padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
@@ -294,7 +294,7 @@ struct WindowInTheStomachScene: View {
 
                 if allRevealed {
                     SoftShadowCard(padding: 14) {
-                        VStack(alignment: .leading, spacing: 8) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                             Text("What the world owes one tiny hole")
                                 .font(.headline)
                                 .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -307,11 +307,11 @@ struct WindowInTheStomachScene: View {
                     .frame(maxWidth: 600)
 
                     GotItButton { onComplete() }
-                        .padding(.bottom, 12)
+                        .padding(.bottom, DesignTokens.Spacing.md)
                 }
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }
@@ -326,9 +326,9 @@ struct WindowFoodCard: View {
 
     var body: some View {
         Button(action: action) {
-            HStack(spacing: 12) {
+            HStack(spacing: DesignTokens.Spacing.md) {
                 Text(emoji).font(.system(size: 28))
-                VStack(alignment: .leading, spacing: 2) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                     Text(name)
                         .font(.headline)
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -351,7 +351,7 @@ struct WindowFoodCard: View {
                     .font(.title3)
                     .foregroundColor(revealed ? .green : DesignTokens.BrandColor.canvasTextSecondary)
             }
-            .padding(12)
+            .padding(DesignTokens.Spacing.md)
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(
                 RoundedRectangle(cornerRadius: 12, style: .continuous)

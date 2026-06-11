@@ -71,12 +71,12 @@ struct Scene4_TheRustingExperiment: View {
                     }
                 }
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 Group {
                     if allDone {
                         SoftShadowCard(padding: 18) {
-                            VStack(alignment: .leading, spacing: 8) {
+                            VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                                 Label("Conclusion", systemImage: "checkmark.seal.fill")
                                     .font(.title2.bold())
                                     .foregroundColor(Color.compatIndigo)
@@ -88,7 +88,7 @@ struct Scene4_TheRustingExperiment: View {
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
                     } else {
                         SoftShadowCard(padding: 18) {
-                            VStack(alignment: .leading, spacing: 8) {
+                            VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                                 Label("What does iron need to rust?", systemImage: SFSymbolCompat.name("flask.fill"))
                                     .font(.title2.bold())
                                 Text("Tap each test tube to fast-forward 2 weeks and see what happens to the nail.")
@@ -124,15 +124,15 @@ struct Scene4_TheRustingExperiment: View {
 
                     if allDone {
                         GotItButton { onComplete() }
-                            .padding(.bottom, 12)
+                            .padding(.bottom, DesignTokens.Spacing.md)
                     } else {
                         Spacer().frame(height: 12)
                     }
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
         .timedScene(idealFPS: 15, tick: $tick)
     }
@@ -146,7 +146,7 @@ struct Scene4_TheRustingExperiment: View {
         let nailStemH: CGFloat = height * 0.35
         let nailBottomPad: CGFloat = height * 0.15
 
-        VStack(spacing: 8) {
+        VStack(spacing: DesignTokens.Spacing.sm) {
             Text(tube.title)
                 .font(.headline)
 
@@ -166,7 +166,7 @@ struct Scene4_TheRustingExperiment: View {
                     RoundedRectangle(cornerRadius: 8)
                         .fill(Color.compatCyan.opacity(0.2))
                         .frame(width: 70, height: waterH)
-                        .padding(.bottom, 4)
+                        .padding(.bottom, DesignTokens.Spacing.xs)
                 }
 
                 // Nail
@@ -199,7 +199,7 @@ struct Scene4_TheRustingExperiment: View {
                     Text("CaCl₂")
                         .font(.system(size: 9, weight: .bold))
                         .foregroundColor(DesignTokens.BrandColor.tryAtHome)
-                        .padding(.bottom, 8)
+                        .padding(.bottom, DesignTokens.Spacing.sm)
                 }
             }
             .frame(width: 80, height: height)

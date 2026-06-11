@@ -35,7 +35,7 @@ struct Scene4_NeutralisationInAction: View {
         let mixedFillH: CGFloat = 80 + pourProgress * 50
         return ScrollView {
             LazyVStack(alignment: .center, spacing: 14) {
-                VStack(spacing: 16) {
+                VStack(spacing: DesignTokens.Spacing.lg) {
                     Text("Neutralisation in Action")
                         .font(.title2.bold())
                         .padding(.top, 18)
@@ -89,7 +89,7 @@ struct Scene4_NeutralisationInAction: View {
                     // Equation
                     if showEquation {
                         SoftShadowCard(padding: 14) {
-                            VStack(spacing: 8) {
+                            VStack(spacing: DesignTokens.Spacing.sm) {
                                 Text("Acid + Base \u{2192} Salt + Water")
                                     .font(.system(.title3, design: .monospaced).bold())
                                     .foregroundColor(Color.compatIndigo)
@@ -106,7 +106,7 @@ struct Scene4_NeutralisationInAction: View {
 
                 Group {
                     SoftShadowCard(padding: 18) {
-                        VStack(alignment: .leading, spacing: 8) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                             Label("Neutralisation", systemImage: SFSymbolCompat.name("flask.fill"))
                                 .font(.title2.bold())
                             Text("When an acid and a base react, they neutralise each other to form a salt and water. The H\u{207A} ions from the acid combine with OH\u{207B} ions from the base.")
@@ -133,37 +133,37 @@ struct Scene4_NeutralisationInAction: View {
                 detail: "Neutralisation is one of Chapter 6's classic chemical changes (new substance formed). Farmers use it on acidic soil (Ch 9 — add lime). Treatment plants use it on acidic industrial effluent (Ch 18 — neutralise before release)."
             )
             .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+            .padding(.horizontal, DesignTokens.Spacing.xl)
 
             LookingAheadCallout(
                 title: "Class 11 / 12 Chemistry → JEE (Thermochemistry)",
                 detail: "Neutralisation releases heat: ΔH = -57.1 kJ/mol for any strong-acid + strong-base in water — surprisingly constant. JEE asks why: because the underlying reaction is always H⁺(aq) + OH⁻(aq) → H₂O(l), regardless of what salt ions hang around. The constant heat of neutralisation is itself proof of the ionic theory."
             )
             .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+            .padding(.horizontal, DesignTokens.Spacing.xl)
 
             TryAtHomeCallout(
                 title: "Feel neutralisation warming",
                 detail: "Pour 50 ml of vinegar in a glass. Touch the outside — room temperature. Add a teaspoon of baking soda. Fizzing starts (CO₂). Touch again after 30 seconds — slightly warmer. That tiny temperature rise is the heat of neutralisation, demonstrable with a kitchen thermometer to ±1°C accuracy."
             )
             .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+            .padding(.horizontal, DesignTokens.Spacing.xl)
 
                         GotItButton { onComplete() }
-                            .padding(.bottom, 12)
+                            .padding(.bottom, DesignTokens.Spacing.md)
                     }
                 
 
                 }
 
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             
 
             }
 
             .frame(maxWidth: .infinity)
 
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
 
         }
     }
@@ -197,7 +197,7 @@ struct Scene4_NeutralisationInAction: View {
     private var ionAnimationView: some View {
         Group {
             if reduceMotion {
-                HStack(spacing: 16) {
+                HStack(spacing: DesignTokens.Spacing.lg) {
                     Text("H\u{207A}")
                         .font(.title2.bold())
                         .foregroundColor(.red)

@@ -15,12 +15,12 @@ struct TryAtHomeCallout: View {
     let detail: String
 
     var body: some View {
-        HStack(alignment: .top, spacing: 12) {
+        HStack(alignment: .top, spacing: DesignTokens.Spacing.md) {
             Image(systemName: "hand.raised.fill")
                 .font(.title3)
                 .foregroundColor(.orange)
                 .accessibilityHidden(true)
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                 Text(title)
                     .font(.subheadline.weight(.semibold))
                     .foregroundColor(DesignTokens.BrandColor.tryAtHome)
@@ -35,7 +35,7 @@ struct TryAtHomeCallout: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             Spacer(minLength: 0)
         }
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .background(
             RoundedRectangle(cornerRadius: 10)
                 .fill(Color.orange.opacity(0.14))

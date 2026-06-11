@@ -71,7 +71,7 @@ struct DiscoveryWidget: View {
                 .font(.callout.weight(.medium))
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .lineSpacing(2)
-                .padding(.top, 2)
+                .padding(.top, DesignTokens.Spacing.xxs)
                 .fixedSize(horizontal: false, vertical: true)
                 .accessibilityLabel("Result: \(output(value))")
         }

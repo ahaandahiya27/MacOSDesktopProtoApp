@@ -32,7 +32,7 @@ struct Scene3_AquiferCrossSection: View {
                 Text("Aquifer Cross-Section").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Tap a layer to learn what's underground.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-                VStack(spacing: 2) {
+                VStack(spacing: DesignTokens.Spacing.xxs) {
                     ForEach(Layer.allCases) { l in
                         Button { pick = l } label: {
                             HStack { Text(l.rawValue).foregroundColor(.white); Spacer() }
@@ -52,26 +52,26 @@ struct Scene3_AquiferCrossSection: View {
                         Text(pick.blurb).font(.body)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 11 Geography",
                     detail: "Class 11 Geography covers the kinds of aquifer. These are confined, unconfined and perched. It also covers recharge zones. Big aquifers include the Ganga-Brahmaputra and the Ogallala. This links to Class 12 environmental science."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Layered jar aquifer",
                     detail: "Fill a clear jar with alternating layers: pebbles, sand, soil, more pebbles. Slowly pour water on top. Watch it travel down through each layer at different speeds — you've just modeled how groundwater seeps through an aquifer."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

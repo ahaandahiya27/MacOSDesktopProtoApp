@@ -69,7 +69,7 @@ struct Scene6_SolarSystemSorter: View {
 
                     // Planet chips (available)
                     if !isSubmitted {
-                        HStack(spacing: 8) {
+                        HStack(spacing: DesignTokens.Spacing.sm) {
                             ForEach(availablePlanets, id: \.self) { planet in
                                 let isSelected = selectedPlanet == planet
                                 let color = Self.planetColors[planet] ?? .gray
@@ -81,8 +81,8 @@ struct Scene6_SolarSystemSorter: View {
                                 } label: {
                                     Text(planet)
                                         .font(.body.weight(.medium))
-                                        .padding(.horizontal, 12)
-                                        .padding(.vertical, 8)
+                                        .padding(.horizontal, DesignTokens.Spacing.md)
+                                        .padding(.vertical, DesignTokens.Spacing.sm)
                                         .background(
                                             RoundedRectangle(cornerRadius: 10, style: .continuous)
                                                 .fill(isSelected ? color.opacity(0.2) : Color.white)
@@ -96,16 +96,16 @@ struct Scene6_SolarSystemSorter: View {
                                 .accessibilityLabel("\(planet). \(isSelected ? "Selected" : "Tap to select")")
                             }
                         }
-                        .padding(.horizontal, 8)
+                        .padding(.horizontal, DesignTokens.Spacing.sm)
                     }
 
                     // Numbered slots
-                    HStack(spacing: 8) {
+                    HStack(spacing: DesignTokens.Spacing.sm) {
                         ForEach(0..<8, id: \.self) { index in
                             slotView(index: index)
                         }
                     }
-                    .padding(.horizontal, 12)
+                    .padding(.horizontal, DesignTokens.Spacing.md)
 
                     // Submit button
                     if allPlaced && !isSubmitted {
@@ -123,17 +123,17 @@ struct Scene6_SolarSystemSorter: View {
                                 .foregroundColor(.white)
                         }
                         .buttonStyle(.plain)
-                        .padding(.top, 4)
+                        .padding(.top, DesignTokens.Spacing.xs)
                     }
 
                     Spacer()
                 }
                 .frame(maxWidth: .infinity)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 Group {
                     SoftShadowCard(padding: 18) {
-                        VStack(alignment: .leading, spacing: 8) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                             if isSubmitted {
                                 Label("Results: \(score) / 16", systemImage: "star.fill")
                                     .font(.title2.bold())
@@ -146,7 +146,7 @@ struct Scene6_SolarSystemSorter: View {
                                 Text("Mnemonic: \"My Very Educated Mother Just Showed Us Neptune\"")
                                     .font(.callout.italic())
                                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                                    .padding(.top, 2)
+                                    .padding(.top, DesignTokens.Spacing.xxs)
                             } else {
                                 Label("Order the Planets", systemImage: SFSymbolCompat.name("globe.americas.fill"))
                                     .font(.title2.bold())
@@ -172,15 +172,15 @@ struct Scene6_SolarSystemSorter: View {
 
                     if isSubmitted {
                         GotItButton { onComplete(score) }
-                            .padding(.bottom, 12)
+                            .padding(.bottom, DesignTokens.Spacing.md)
                     }
                 
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
@@ -210,7 +210,7 @@ struct Scene6_SolarSystemSorter: View {
                 }
             }
         } label: {
-            VStack(spacing: 4) {
+            VStack(spacing: DesignTokens.Spacing.xs) {
                 Text("\(index + 1)")
                     .font(.caption2.weight(.bold))
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)

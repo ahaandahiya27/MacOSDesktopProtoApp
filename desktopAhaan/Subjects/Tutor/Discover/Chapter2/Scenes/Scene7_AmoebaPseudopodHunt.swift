@@ -68,7 +68,7 @@ struct Scene7_AmoebaPseudopodHunt: View {
                     }
                 }
                 .frame(height: 240)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 HStack {
                     Button(action: { hunt() }) {
@@ -81,10 +81,10 @@ struct Scene7_AmoebaPseudopodHunt: View {
                     .disabled(animating)
 
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Amoeba Pseudopod Hunt", systemImage: "bubble.left.fill")
                             .font(.title2.bold())
                             .foregroundColor(Color.compatCyan)
@@ -101,24 +101,24 @@ struct Scene7_AmoebaPseudopodHunt: View {
                     detail: "Amoeba shows you the SIMPLEST eukaryotic life — one cell that does everything humans do with 37 trillion. NEET asks 'how does Amoeba excrete?' (contractile vacuole pumps water out — osmoregulation) and 'how does it reproduce?' (binary fission). Engulfing food by pseudopods is called *phagocytosis* — the same mechanism your white blood cells use to swallow bacteria. One organism, one trick, two scales."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Watch Amoeba on YouTube — slow it down",
                     detail: "Search 'Amoeba feeding microscope' — pick a 4K video and slow playback to 0.25×. Watch the cytoplasm flow into a pseudopod, surround the food, then pinch off into a food vacuole. The Amoeba has no brain, no nerves, no muscles — yet it hunts. It's chemistry organising itself into behaviour."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 GotItButton { onComplete() }
-                    .padding(.bottom, 12)
+                    .padding(.bottom, DesignTokens.Spacing.md)
             
 
             }
 
             .frame(maxWidth: .infinity)
 
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
 
         }
     }

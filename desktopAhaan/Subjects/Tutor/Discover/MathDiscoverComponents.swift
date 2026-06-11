@@ -18,12 +18,12 @@ struct MathDiscoverQuickCheck: View {
     @State private var selected: Int? = nil
 
     var body: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: DesignTokens.Spacing.md) {
             Text(prompt)
                 .font(.title3.weight(.semibold))
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .multilineTextAlignment(.center)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             ForEach(options.indices, id: \.self) { i in
                 Button {
                     if selected == nil { selected = i }
@@ -41,7 +41,7 @@ struct MathDiscoverQuickCheck: View {
                                 .foregroundColor(.red)
                         }
                     }
-                    .padding(.horizontal, 16).padding(.vertical, 12)
+                    .padding(.horizontal, DesignTokens.Spacing.lg).padding(.vertical, DesignTokens.Spacing.md)
                     .frame(maxWidth: 320)
                     .background(RoundedRectangle(cornerRadius: 10).fill(optionFill(i)))
                     .overlay(RoundedRectangle(cornerRadius: 10).strokeBorder(Color.compatIndigo.opacity(0.3), lineWidth: 1))
@@ -80,19 +80,19 @@ struct MathDiscoverInfoScene: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .multilineTextAlignment(.center)
                     .padding(.top, 18)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 ForEach(paragraphs.indices, id: \.self) { i in
                     Text(paragraphs[i])
                         .font(.callout)
                         .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         .multilineTextAlignment(.center)
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
-                        .padding(.horizontal, 24)
+                        .padding(.horizontal, DesignTokens.Spacing.xl)
                 }
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }
@@ -115,21 +115,21 @@ struct MathDiscoverQuickScene: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .multilineTextAlignment(.center)
                     .padding(.top, 18)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 Text(intro)
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .multilineTextAlignment(.center)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 MathDiscoverQuickCheck(
                     prompt: prompt, options: options,
                     correctIndex: correctIndex, onComplete: onComplete
                 )
-                .padding(.top, 8)
+                .padding(.top, DesignTokens.Spacing.sm)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }
@@ -169,17 +169,17 @@ struct MathDiscoverBossQuizScene: View {
                 }
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
     private func questionCard(_ q: MathDiscoverBossQA) -> some View {
-        VStack(spacing: 12) {
+        VStack(spacing: DesignTokens.Spacing.md) {
             Text(q.prompt)
                 .font(.title3.weight(.semibold))
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .multilineTextAlignment(.center)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             ForEach(q.options.indices, id: \.self) { i in
                 Button {
                     guard selected == nil else { return }
@@ -189,7 +189,7 @@ struct MathDiscoverBossQuizScene: View {
                     Text(q.options[i])
                         .font(.body.weight(.medium))
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
-                        .padding(.horizontal, 16).padding(.vertical, 12)
+                        .padding(.horizontal, DesignTokens.Spacing.lg).padding(.vertical, DesignTokens.Spacing.md)
                         .frame(maxWidth: 300)
                         .background(RoundedRectangle(cornerRadius: 10).fill(optionFill(i, q)))
                         .overlay(RoundedRectangle(cornerRadius: 10).strokeBorder(Color.compatIndigo.opacity(0.3), lineWidth: 1))
@@ -217,7 +217,7 @@ struct MathDiscoverBossQuizScene: View {
     }
 
     private var finishCard: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: DesignTokens.Spacing.md) {
             Text("You scored \(score) / \(questions.count)")
                 .font(.title2.bold())
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -225,7 +225,7 @@ struct MathDiscoverBossQuizScene: View {
                 .font(.callout)
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 .multilineTextAlignment(.center)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             GotItButton(action: { onComplete(score) }).padding(.top, 6)
         }
     }

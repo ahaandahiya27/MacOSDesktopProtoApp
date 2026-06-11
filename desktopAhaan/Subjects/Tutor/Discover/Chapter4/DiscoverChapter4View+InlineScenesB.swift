@@ -33,14 +33,14 @@ struct StatesOfMatterHeatLadderScene: View {
                 Text(emoji).font(.system(size: 100))
                 Text("\(Int(temp)) °C").font(.title2.monospacedDigit())
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
-                Slider(value: $temp, in: -20...130).frame(maxWidth: 340).padding(.horizontal, 24)
+                Slider(value: $temp, in: -20...130).frame(maxWidth: 340).padding(.horizontal, DesignTokens.Spacing.xl)
                 Text(state).font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
-                    .multilineTextAlignment(.center).padding(.horizontal, 24)
+                    .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
-            .frame(maxWidth: .infinity).padding(.bottom, 12)
+            .frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }
@@ -60,7 +60,7 @@ struct SpecificHeatRaceScene: View {
                 Text("Heat the same mass of water and sand with the same flame. Watch them race.")
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                    .multilineTextAlignment(.center).padding(.horizontal, 24)
+                    .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 HStack(spacing: 30) {
                     barReadout(label: "Water", temp: waterTemp, color: DesignTokens.BrandColor.relatedConcepts)
                     barReadout(label: "Sand", temp: sandTemp, color: DesignTokens.BrandColor.mnemonicAccent)
@@ -76,11 +76,11 @@ struct SpecificHeatRaceScene: View {
                 Text("Sand heats up about 5× faster than water for the same energy. That's why beach sand is scorching while the sea stays cool.")
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
-                    .multilineTextAlignment(.center).padding(.horizontal, 24)
+                    .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
-            .frame(maxWidth: .infinity).padding(.bottom, 12)
+            .frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 

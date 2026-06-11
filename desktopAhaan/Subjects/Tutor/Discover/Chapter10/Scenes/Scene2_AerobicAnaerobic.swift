@@ -22,7 +22,7 @@ struct Scene2_AerobicAnaerobic: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-            LazyVStack(alignment: .center, spacing: 12) {
+            LazyVStack(alignment: .center, spacing: DesignTokens.Spacing.md) {
                 Text("Aerobic vs Anaerobic").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Tap whether each happens WITH or WITHOUT oxygen.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
@@ -41,7 +41,7 @@ struct Scene2_AerobicAnaerobic: View {
                         .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                     }
                 }
-                .frame(maxWidth: 640).padding(.horizontal, 24)
+                .frame(maxWidth: 640).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 if done {
                     Text("Score: \(score) / \(items.count)").font(.title3.bold()).foregroundColor(Color.compatIndigo)
@@ -51,7 +51,7 @@ struct Scene2_AerobicAnaerobic: View {
                     Text("Aerobic respiration uses oxygen to fully release energy from glucose (CO₂ + water + lots of ATP). Anaerobic skips oxygen and produces less energy plus lactic acid (in muscles) or alcohol & CO₂ (in yeast).")
                         .font(.callout).lineSpacing(4)
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 ProcessTimeline(
                     title: "Aerobic respiration in your cells — step by step",
@@ -72,26 +72,26 @@ struct Scene2_AerobicAnaerobic: View {
                     accent: .green
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Yogurt = bacterial respiration",
                     detail: "Mix a spoon of fresh dahi (curd) into warm milk in a covered bowl. Leave it overnight in a warm spot. The Lactobacillus bacteria respire anaerobically on milk sugars, producing lactic acid that curdles the milk — that's yogurt."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 11 Bio → NEET",
                     detail: "In Class 11 Biology you'll meet glycolysis, the Krebs (citric acid) cycle, and the electron transport chain — the actual chemical steps that produce ATP from glucose. NEET asks aerobic vs anaerobic energy yields (38 ATP vs 2 ATP per glucose) every year."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
+                if done { GotItButton { onComplete(score) }.padding(.bottom, DesignTokens.Spacing.md) }
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

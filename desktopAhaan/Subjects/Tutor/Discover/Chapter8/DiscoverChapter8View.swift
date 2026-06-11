@@ -116,12 +116,12 @@ private struct BeaufortScaleSliderScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("\(Int(speed)) km/h").font(.title2.monospacedDigit())
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
-            Slider(value: $speed, in: 0...130).frame(maxWidth: 340).padding(.horizontal, 24)
+            Slider(value: $speed, in: 0...130).frame(maxWidth: 340).padding(.horizontal, DesignTokens.Spacing.xl)
             Text(label).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -135,7 +135,7 @@ private struct TornadoTubeLabScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Two bottles, one with water, connected by a cap. Swirl the top bottle — water funnels down in a tornado shape. Same physics as a real tornado.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
             ZStack {
                 if spinning {
                     Image(systemName: "tornado").font(.system(size: 110))
@@ -154,8 +154,8 @@ private struct TornadoTubeLabScene: View {
                     .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                     .foregroundColor(Color.compatIndigo)
             }.buttonStyle(.plain).pointingCursor()
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
     private func spin() {
         if spinning {
@@ -176,8 +176,8 @@ private struct LightningDistanceScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Light arrives instantly. Sound takes time. Count seconds between flash and thunder — divide by ~3 → distance in km.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
-            HStack(spacing: 24) {
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
+            HStack(spacing: DesignTokens.Spacing.xl) {
                 VStack { Image(systemName: "bolt.fill").font(.system(size: 60))
                     .foregroundColor(DesignTokens.BrandColor.mnemonicAccent)
                     Text("Flash").font(.caption) }
@@ -186,7 +186,7 @@ private struct LightningDistanceScene: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     Text("\(Int(seconds))s delay").font(.caption) }
             }
-            Slider(value: $seconds, in: 1...30).frame(maxWidth: 340).padding(.horizontal, 24)
+            Slider(value: $seconds, in: 1...30).frame(maxWidth: 340).padding(.horizontal, DesignTokens.Spacing.xl)
             Text(seconds < 10
                  ? "Less than 3 km away — DANGER. Stay indoors."
                  : "Far enough — keep watching the sky.")
@@ -194,8 +194,8 @@ private struct LightningDistanceScene: View {
                 .foregroundColor(seconds < 10
                                  ? DesignTokens.BrandColor.danger
                                  : DesignTokens.BrandColor.primaryAction)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -214,7 +214,7 @@ private struct StormSurgeScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text(stages[stage].0).font(.system(size: 100))
             Text(stages[stage].1).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
             Button { withAnimation { stage = (stage + 1) % stages.count } } label: {
                 Text("Next").font(.body.weight(.semibold))
@@ -223,8 +223,8 @@ private struct StormSurgeScene: View {
                     .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                     .foregroundColor(Color.compatIndigo)
             }.buttonStyle(.plain).pointingCursor()
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -244,10 +244,10 @@ private struct CycloneNamesAtlasScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Indian Ocean cyclones are named by IMD + 12 neighbour countries. Tap each.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
             ForEach(cyclones) { c in
                 Button { tapped.insert(c.id) } label: {
-                    VStack(alignment: .leading, spacing: 4) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                         HStack { Text(c.name).font(.headline).foregroundColor(DesignTokens.BrandColor.canvasText)
                             Spacer(); Text(c.year).font(.caption.monospacedDigit()).foregroundColor(.secondary) }
                         if tapped.contains(c.id) {
@@ -257,13 +257,13 @@ private struct CycloneNamesAtlasScene: View {
                             Text("Tap to reveal").font(.caption.italic())
                                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         }
-                    }.padding(12).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
+                    }.padding(DesignTokens.Spacing.md).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
                     .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
                     .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, 24)
+                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, DesignTokens.Spacing.xl)
             }
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -282,7 +282,7 @@ private struct WindCompassScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("A wind named 'south wind' blows FROM the south. Forecasts use compass directions for clarity.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
             ZStack {
                 Circle().stroke(Color.gray.opacity(0.4), lineWidth: 2).frame(width: 200, height: 200)
                 Text("N").offset(y: -88).font(.headline).foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -295,9 +295,9 @@ private struct WindCompassScene: View {
             }
             Text("Wind from: \(dir)").font(.title3.weight(.semibold))
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
-            Slider(value: $angle, in: 0...360).frame(maxWidth: 340).padding(.horizontal, 24)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            Slider(value: $angle, in: 0...360).frame(maxWidth: 340).padding(.horizontal, DesignTokens.Spacing.xl)
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -314,9 +314,9 @@ private struct PressureBeltScene: View {
         ScrollView { LazyVStack(spacing: 14) {
             Text("Pressure Belts of Earth").font(.largeTitle.bold())
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            VStack(spacing: 4) {
+            VStack(spacing: DesignTokens.Spacing.xs) {
                 ForEach(0..<steps.count, id: \.self) { i in
-                    HStack(alignment: .top, spacing: 8) {
+                    HStack(alignment: .top, spacing: DesignTokens.Spacing.sm) {
                         Text("\(i + 1).").font(.body.bold())
                             .foregroundColor(i == step
                                              ? DesignTokens.BrandColor.danger
@@ -324,11 +324,11 @@ private struct PressureBeltScene: View {
                         Text(steps[i]).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
                             .fixedSize(horizontal: false, vertical: true)
                     }
-                    .padding(8)
+                    .padding(DesignTokens.Spacing.sm)
                     .background(RoundedRectangle(cornerRadius: 8)
                         .fill(i == step ? Color.compatIndigo.opacity(0.10) : .clear))
                 }
-            }.padding(.horizontal, 24).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
+            }.padding(.horizontal, DesignTokens.Spacing.xl).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
             Button { withAnimation { step = (step + 1) % steps.count } } label: {
                 Text("Next belt").font(.body.weight(.semibold))
                     .padding(.horizontal, 18).padding(.vertical, 9)
@@ -336,8 +336,8 @@ private struct PressureBeltScene: View {
                     .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                     .foregroundColor(Color.compatIndigo)
             }.buttonStyle(.plain).pointingCursor()
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -351,14 +351,14 @@ private struct TradeWindsMapScene: View {
             Text("🌍").font(.system(size: 120))
             Text("Trade winds blow from the subtropical high (30°N or S) toward the equator. Steady, predictable — once helped sailing ships cross the Atlantic and reach India.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
             Text("Westerlies blow from 30° → 60°. Polar easterlies from 90° → 60°.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -381,14 +381,14 @@ private struct TropicalVsTemperateScene: View {
                 .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
                 .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
                 .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                .padding(.horizontal, 24)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+                .padding(.horizontal, DesignTokens.Spacing.xl)
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
     private func pickChip(_ label: String, on: Bool, tap: @escaping () -> Void) -> some View {
         Button(action: tap) {
             Text(label).font(.body.weight(on ? .bold : .regular))
-                .padding(.horizontal, 14).padding(.vertical, 8)
+                .padding(.horizontal, 14).padding(.vertical, DesignTokens.Spacing.sm)
                 .background(Capsule().fill(on ? Color.compatIndigo.opacity(0.18) : Color.gray.opacity(0.08)))
                 .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                 .foregroundColor(Color.compatIndigo)
@@ -425,10 +425,10 @@ private struct DopplerRadarScene: View {
             }
             Text("IMD has 30+ Doppler radars across India. Each one tracks rainfall up to 250 km away in real time.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            Slider(value: $scan, in: 0...(2 * .pi)).frame(maxWidth: 340).padding(.horizontal, 24)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            Slider(value: $scan, in: 0...(2 * .pi)).frame(maxWidth: 340).padding(.horizontal, DesignTokens.Spacing.xl)
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }

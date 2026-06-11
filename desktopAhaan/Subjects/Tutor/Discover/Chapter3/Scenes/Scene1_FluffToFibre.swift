@@ -65,7 +65,7 @@ struct Scene1_FluffToFibre: View {
                 // Caption + button
                 Group {
                     SoftShadowCard(padding: 18) {
-                        VStack(alignment: .leading, spacing: 8) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                             Label("From Fluff to Fibre", systemImage: "sparkles")
                                 .font(.title2.bold())
                                 .foregroundColor(Color.compatIndigo)
@@ -93,26 +93,26 @@ struct Scene1_FluffToFibre: View {
                         detail: "Cotton, jute, silk, wool — all polymers. Cotton + jute are cellulose (β-1,4 glucose chain, plant-made). Silk + wool are proteins (amino-acid chains, animal-made). JEE Organic Chem asks 'why does silk burn smelling of hair?' — because silk fibroin and your hair are both protein. Polymer chemistry is the through-line from this fluff to industrial synthesis."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     TryAtHomeCallout(
                         title: "Burn-test cotton vs polyester",
                         detail: "Snip one thread of cotton and one of polyester (read garment labels first). Hold each with tweezers and touch a candle flame (with adult). Cotton burns fast, smells like burning paper, leaves grey ash. Polyester melts into a shrinking ball, smells chemical, leaves a hard bead. Same test forensic scientists use on fibre evidence."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     GotItButton {
                         onComplete()
                     }
-                    .padding(.bottom, 12)
+                    .padding(.bottom, DesignTokens.Spacing.md)
                 
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
         .timedScene(idealFPS: 30, tick: $tick)
     }
@@ -138,7 +138,7 @@ struct Scene1_FluffToFibre: View {
             }
             .frame(width: 180, height: 150)
         }
-        .padding(16)
+        .padding(DesignTokens.Spacing.lg)
         .background(Color(NSColor.controlBackgroundColor))
         .cornerRadius(12)
         .shadow(color: Color.black.opacity(0.1), radius: 8, x: 0, y: 4)

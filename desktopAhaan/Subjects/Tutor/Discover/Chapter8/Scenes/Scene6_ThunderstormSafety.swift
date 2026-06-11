@@ -29,12 +29,12 @@ struct Scene6_ThunderstormSafety: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-            LazyVStack(alignment: .center, spacing: 12) {
+            LazyVStack(alignment: .center, spacing: DesignTokens.Spacing.md) {
                 Text("Thunderstorm Safety").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Tap Safe or Unsafe for each action.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-                VStack(spacing: 8) {
+                VStack(spacing: DesignTokens.Spacing.sm) {
                     ForEach(items) { item in
                         HStack {
                             Text(item.text).frame(maxWidth: .infinity, alignment: .leading)
@@ -54,7 +54,7 @@ struct Scene6_ThunderstormSafety: View {
                     }
                 }
                 .frame(maxWidth: 620)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 if done {
                     Text("Score: \(score) / \(items.count)")
@@ -67,7 +67,7 @@ struct Scene6_ThunderstormSafety: View {
                         .font(.callout).lineSpacing(4)
                 }
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 if done {
                 LookingAheadCallout(
@@ -75,20 +75,20 @@ struct Scene6_ThunderstormSafety: View {
                     detail: "Lightning is a giant electrostatic discharge. Class 12 'Electrostatics' covers the physics of charge build-up, dielectric breakdown of air (~3 MV/m), and how a lightning rod works (sharp tip = high electric field that ionises air before damage occurs). JEE asks problems on capacitance and breakdown voltage every year."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Count the lightning",
                     detail: "Next thunderstorm (from inside a building, not in the open!): count seconds between lightning flash and thunder. Divide by 3 — that's the distance to the storm in kilometres (sound travels 343 m/s)."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                    GotItButton { onComplete(score) }.padding(.bottom, 12)
+                    GotItButton { onComplete(score) }.padding(.bottom, DesignTokens.Spacing.md)
                 }
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }

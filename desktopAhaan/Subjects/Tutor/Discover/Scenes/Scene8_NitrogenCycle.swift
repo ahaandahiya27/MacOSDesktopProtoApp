@@ -100,7 +100,7 @@ struct Scene8_NitrogenCycle: View {
                         Text(sel.label).font(.title3.bold()).foregroundColor(Color.compatIndigo)
                         Spacer(minLength: 0)
                     }
-                    Text(sel.explanation).font(.callout).padding(.top, 4)
+                    Text(sel.explanation).font(.callout).padding(.top, DesignTokens.Spacing.xs)
                 } else {
                     Label("Tap any arrow on the diagram.", systemImage: SFSymbolCompat.name("hand.tap.fill"))
                         .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
@@ -115,11 +115,11 @@ struct Scene8_NitrogenCycle: View {
                             .font(.headline).foregroundColor(.green)
                         Text(question).font(.body)
                         if answerRevealed {
-                            Divider().padding(.vertical, 4)
+                            Divider().padding(.vertical, DesignTokens.Spacing.xs)
                             Text(answer)
                                 .font(.callout)
                                 .foregroundColor(DesignTokens.BrandColor.canvasText)
-                                .padding(.top, 2)
+                                .padding(.top, DesignTokens.Spacing.xxs)
                         }
                         HStack {
                             Button(answerRevealed ? "Hide answer" : "Show answer") {
@@ -138,14 +138,14 @@ struct Scene8_NitrogenCycle: View {
                 detail: "The natural N-cycle you just walked through is one half. The other half humans built: the Haber-Bosch process — combining N₂ from the air with H₂ at 400°C and 200 atmospheres to make ammonia. JEE Chemistry asks the thermodynamics. NEET Biology asks how the resulting fertiliser, applied to soil, can over-feed algae in rivers downstream (eutrophication) and choke the water of oxygen."
             )
             .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+            .padding(.horizontal, DesignTokens.Spacing.xl)
 
             TryAtHomeCallout(
                 title: "Read a fertiliser bag",
                 detail: "Any kitchen-garden fertiliser bag has three numbers, e.g. 10-26-26. Those are %N, %P₂O₅, %K₂O — the NPK ratio. High first number = leafy growth (nitrogen). High second = root + flower (phosphorus). High third = fruit + sturdiness (potassium). Match the numbers to what your plant needs and you're farming chemistry."
             )
             .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+            .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 VStack(spacing: DesignTokens.Spacing.xs) {
                     GotItButton(action: onComplete)
@@ -157,10 +157,10 @@ struct Scene8_NitrogenCycle: View {
                             .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     }
                 }
-                .padding(.bottom, 12)
+                .padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
@@ -195,8 +195,8 @@ struct Scene8_NitrogenCycle: View {
             } label: {
                 Text(kind.label)
                     .font(.caption.weight(.semibold))
-                    .padding(.horizontal, 8)
-                    .padding(.vertical, 4)
+                    .padding(.horizontal, DesignTokens.Spacing.sm)
+                    .padding(.vertical, DesignTokens.Spacing.xs)
                     .background(
                         Capsule()
                             .fill(visited ? Color.green.opacity(0.18) : Color.compatIndigo.opacity(0.12))

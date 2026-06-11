@@ -40,7 +40,7 @@ struct Scene2_PulseCounter: View {
                     .font(.headline.monospacedDigit())
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-                HStack(spacing: 16) {
+                HStack(spacing: DesignTokens.Spacing.lg) {
                     Button(counting ? "Counting…" : "Start 15s") {
                         counting = true
                         taps = 0
@@ -66,19 +66,19 @@ struct Scene2_PulseCounter: View {
                     Text("Resting pulse for kids is usually 70–100 BPM. After exercise it climbs above 120. Athletes can dip below 60 because their hearts pump more blood per beat.")
                         .font(.callout).lineSpacing(4)
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Find your real pulse",
                     detail: "Press two fingers (not the thumb) on the inside of your wrist, below the base of the thumb. Count the beats for 15 seconds. Multiply by 4 to get your beats-per-minute."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
 
         .frame(maxWidth: .infinity, maxHeight: .infinity)

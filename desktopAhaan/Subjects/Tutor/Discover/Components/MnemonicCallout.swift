@@ -43,12 +43,12 @@ struct MnemonicCallout: View {
     }
 
     var body: some View {
-        HStack(alignment: .top, spacing: 12) {
+        HStack(alignment: .top, spacing: DesignTokens.Spacing.md) {
             Image(systemName: "lightbulb.fill")
                 .font(.title3)
                 .foregroundColor(DesignTokens.BrandColor.mnemonic)
                 .accessibilityHidden(true)
-            VStack(alignment: .leading, spacing: 8) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                 Text("Memory hook")
                     .font(.caption.weight(.semibold))
                     .foregroundColor(DesignTokens.BrandColor.mnemonicAccent)
@@ -73,7 +73,7 @@ struct MnemonicCallout: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             Spacer(minLength: 0)
         }
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .background(
             RoundedRectangle(cornerRadius: 10)
                 .fill(Color.yellow.opacity(0.18))
@@ -87,9 +87,9 @@ struct MnemonicCallout: View {
     }
 
     private var expansionList: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
             ForEach(expansion, id: \.letter) { row in
-                HStack(alignment: .firstTextBaseline, spacing: 8) {
+                HStack(alignment: .firstTextBaseline, spacing: DesignTokens.Spacing.sm) {
                     Text(row.letter)
                         .font(.system(.callout, design: .monospaced).weight(.bold))
                         .foregroundColor(DesignTokens.BrandColor.mnemonicAccent)
@@ -100,7 +100,7 @@ struct MnemonicCallout: View {
                 }
             }
         }
-        .padding(.top, 2)
+        .padding(.top, DesignTokens.Spacing.xxs)
     }
 
     private var accessibilityText: String {

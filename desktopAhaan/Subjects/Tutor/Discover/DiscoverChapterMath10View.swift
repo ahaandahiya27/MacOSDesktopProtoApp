@@ -82,7 +82,7 @@ private struct MathNumberLineScene: View {
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 numberLine
                     .padding(.vertical, 18)
                 Text("The further right a number sits, the bigger it is — so −2 is greater than −5, even though 5 looks bigger than 2.")
@@ -90,11 +90,11 @@ private struct MathNumberLineScene: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .multilineTextAlignment(.center)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
@@ -108,7 +108,7 @@ private struct MathNumberLineScene: View {
             HStack(spacing: 0) {
                 ForEach(marks.indices, id: \.self) { i in
                     let n = marks[i]
-                    VStack(spacing: 4) {
+                    VStack(spacing: DesignTokens.Spacing.xs) {
                         Circle()
                             .fill(n == 0 ? Color.compatIndigo : DesignTokens.BrandColor.canvasTextSecondary.opacity(0.6))
                             .frame(width: n == 0 ? 12 : 8, height: n == 0 ? 12 : 8)
@@ -135,12 +135,12 @@ private struct MathQuickCheck: View {
     @State private var selected: Int? = nil
 
     var body: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: DesignTokens.Spacing.md) {
             Text(prompt)
                 .font(.title3.weight(.semibold))
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .multilineTextAlignment(.center)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             ForEach(options.indices, id: \.self) { i in
                 Button {
                     if selected == nil { selected = i }
@@ -158,7 +158,7 @@ private struct MathQuickCheck: View {
                                 .foregroundColor(.red)
                         }
                     }
-                    .padding(.horizontal, 16).padding(.vertical, 12)
+                    .padding(.horizontal, DesignTokens.Spacing.lg).padding(.vertical, DesignTokens.Spacing.md)
                     .frame(maxWidth: 320)
                     .background(RoundedRectangle(cornerRadius: 10).fill(optionFill(i)))
                     .overlay(RoundedRectangle(cornerRadius: 10).strokeBorder(Color.compatIndigo.opacity(0.3), lineWidth: 1))
@@ -199,17 +199,17 @@ private struct MathAddIntegersScene: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .multilineTextAlignment(.center)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 MathQuickCheck(
                     prompt: "What is (−5) + 3?",
                     options: ["−2", "2", "−8", "8"],
                     correctIndex: 0,
                     onComplete: onComplete
                 )
-                .padding(.top, 8)
+                .padding(.top, DesignTokens.Spacing.sm)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }
@@ -233,7 +233,7 @@ private struct MathSignRulesScene: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .multilineTextAlignment(.center)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 rulesGrid.padding(.vertical, 10)
                 MathQuickCheck(
                     prompt: "What is (−4) × (−2)?",
@@ -241,15 +241,15 @@ private struct MathSignRulesScene: View {
                     correctIndex: 1,
                     onComplete: onComplete
                 )
-                .padding(.top, 4)
+                .padding(.top, DesignTokens.Spacing.xs)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
     private var rulesGrid: some View {
-        VStack(spacing: 8) {
+        VStack(spacing: DesignTokens.Spacing.sm) {
             ForEach(rules.indices, id: \.self) { i in
                 HStack(spacing: 14) {
                     Text(rules[i].0)
@@ -261,7 +261,7 @@ private struct MathSignRulesScene: View {
                         .font(.body.weight(.medium))
                         .foregroundColor(rules[i].1 == "+" ? .green : .red)
                 }
-                .padding(.horizontal, 18).padding(.vertical, 8)
+                .padding(.horizontal, 18).padding(.vertical, DesignTokens.Spacing.sm)
                 .frame(maxWidth: 300)
                 .background(RoundedRectangle(cornerRadius: 10).fill(Color.compatIndigo.opacity(0.06)))
             }
@@ -303,16 +303,16 @@ private struct MathIntegerBossQuizScene: View {
                 }
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
     private func questionCard(_ q: QA) -> some View {
-        VStack(spacing: 12) {
+        VStack(spacing: DesignTokens.Spacing.md) {
             Text(q.prompt)
                 .font(.title3.weight(.semibold))
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             ForEach(q.options.indices, id: \.self) { i in
                 Button {
                     guard selected == nil else { return }
@@ -322,7 +322,7 @@ private struct MathIntegerBossQuizScene: View {
                     Text(q.options[i])
                         .font(.body.weight(.medium))
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
-                        .padding(.horizontal, 16).padding(.vertical, 12)
+                        .padding(.horizontal, DesignTokens.Spacing.lg).padding(.vertical, DesignTokens.Spacing.md)
                         .frame(maxWidth: 300)
                         .background(RoundedRectangle(cornerRadius: 10).fill(optionFill(i, q)))
                         .overlay(RoundedRectangle(cornerRadius: 10).strokeBorder(Color.compatIndigo.opacity(0.3), lineWidth: 1))
@@ -350,7 +350,7 @@ private struct MathIntegerBossQuizScene: View {
     }
 
     private var finishCard: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: DesignTokens.Spacing.md) {
             Text("You scored \(score) / \(questions.count)")
                 .font(.title2.bold())
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -358,7 +358,7 @@ private struct MathIntegerBossQuizScene: View {
                 .font(.callout)
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 .multilineTextAlignment(.center)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             GotItButton(action: { onComplete(score) }).padding(.top, 6)
         }
     }

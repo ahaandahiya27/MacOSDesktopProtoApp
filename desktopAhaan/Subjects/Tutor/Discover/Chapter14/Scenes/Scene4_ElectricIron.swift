@@ -39,29 +39,29 @@ struct Scene4_ElectricIron: View {
 
                 Picker("", selection: $pick) {
                     ForEach(Part.allCases) { Text($0.rawValue).tag($0) }
-                }.pickerStyle(.segmented).discoverControlChrome().frame(maxWidth: 520).padding(.horizontal, 16)
+                }.pickerStyle(.segmented).discoverControlChrome().frame(maxWidth: 520).padding(.horizontal, DesignTokens.Spacing.lg)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Text(pick.rawValue).font(.title3.bold())
                         Text(pick.role).font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 10 → JEE",
                     detail: "Class 10 covers thermostat (bimetallic strip) physics in 'Heating Effects of Electric Current'. Class 12 / JEE adds the temperature coefficient of resistance α — why nichrome is used (low α) for stable heating elements."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Cool vs hot iron base",
                     detail: "Touch an unplugged iron's bottom plate — cool. After turning it on for 1 minute, hold a hand 10 cm above it (NEVER touch). The heat shimmer is visible — that's the heating element's I²R energy radiating."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 DiscoveryWidget(
                     title: "Discovery — Joule's law in your hand",
@@ -73,13 +73,13 @@ struct Scene4_ElectricIron: View {
                     output: ironPowerExplanation
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
                 Spacer(minLength: 0)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
 
         .frame(maxWidth: .infinity, maxHeight: .infinity)

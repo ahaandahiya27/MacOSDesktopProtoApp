@@ -22,7 +22,7 @@ struct Scene4_OpenDrainHazards: View {
                 Text("Open Drain Hazards").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Tap Next to uncover each hazard of open drains.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-                VStack(spacing: 8) {
+                VStack(spacing: DesignTokens.Spacing.sm) {
                     ForEach(0..<hazards.count, id: \.self) { i in
                         HStack {
                             Text(i < revealed ? hazards[i] : "?? ??").font(.headline)
@@ -44,26 +44,26 @@ struct Scene4_OpenDrainHazards: View {
                     Text("Closed sewer systems, sealed manholes and good drainage keep neighborhoods healthy. Most monsoon-illness outbreaks in India start at open drains.")
                         .font(.callout).lineSpacing(4)
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 12 Bio → NEET",
                     detail: "Class 12 'Human Health and Disease' covers water-borne diseases. Cholera comes from Vibrio cholerae. Typhoid comes from Salmonella typhi. Dysentery comes from Entamoeba histolytica. Hepatitis A is another. NEET asks how they spread and how to prevent them."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Open-drain audit",
                     detail: "Walk around your colony or street with an adult. Count: open drains, closed drains, broken manholes, areas with stagnant water near drains. Note which days the corporation cleans them. This is your immediate sanitation environment."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

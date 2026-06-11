@@ -81,7 +81,7 @@ struct Scene9_BossQuiz_Ch3: View {
                         }
                         .frame(height: 120)
 
-                        VStack(spacing: 8) {
+                        VStack(spacing: DesignTokens.Spacing.sm) {
                             Text("Quiz Complete!")
                                 .font(.headline)
                                 .foregroundColor(.green)
@@ -115,10 +115,10 @@ struct Scene9_BossQuiz_Ch3: View {
                         }
                     }
                 }
-                .padding(.bottom, 12)
+                .padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 

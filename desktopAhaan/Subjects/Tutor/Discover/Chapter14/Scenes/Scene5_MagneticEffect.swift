@@ -41,14 +41,14 @@ struct Scene5_MagneticEffect: View {
                     .foregroundColor(currentOn ? .green : .secondary)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Hans Christian Ørsted, 1820", systemImage: "scope")
                             .font(.title2.bold())
                         Text("Ørsted discovered that an electric current creates a magnetic field around the wire. Every electromagnet, electric motor, doorbell, and MRI machine is built on this single observation.")
                             .font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 // Grouped so the outer VStack stays within Swift 5.5's
                 // 10-child ViewBuilder limit (Xcode 13.2.1 / Big Sur target).
@@ -58,28 +58,28 @@ struct Scene5_MagneticEffect: View {
                         detail: "Place a compass on a flat table. Run a wire from a 1.5 V cell across the compass, switching the cell ON for a couple of seconds. The needle deflects — exactly Ørsted's 1820 observation. Reverse the cell polarity; the needle deflects the OTHER way. This single demonstration changed physics."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     LookingAheadCallout(
                         title: "Class 10 / 12 → JEE",
                         detail: "Class 10 covers the magnetic field of a straight wire (right-hand thumb rule). Class 12 'Magnetic Effects of Current' adds the Biot-Savart law (B = μ₀I / 2πr for a straight wire), Ampère's law, and the force F = BIL on a current-carrying conductor. This whole chain is a JEE Physics gold mine."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     RelatedConceptsCallout(
                         title: "Related: Ch 15 (Light)",
                         detail: "Electric current creates a magnetic field (Ørsted 1820). The reverse is also true — a changing magnetic field creates a current (Faraday). In Class 12 you'll learn light itself is an oscillating combination of these two — that's why Light (Ch 15) and Electricity (Ch 14) eventually merge."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 }
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
                 Spacer(minLength: 0)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
 
         .frame(maxWidth: .infinity, maxHeight: .infinity)

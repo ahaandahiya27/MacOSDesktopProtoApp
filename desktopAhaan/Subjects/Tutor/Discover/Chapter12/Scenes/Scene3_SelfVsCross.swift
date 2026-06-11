@@ -40,7 +40,7 @@ struct Scene3_SelfVsCross: View {
                 }
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label(mode == .selfP ? "Self-pollination" : "Cross-pollination",
                               systemImage: "leaf.fill")
                             .font(.title2.bold())
@@ -50,27 +50,27 @@ struct Scene3_SelfVsCross: View {
                             .font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 12 Bio → NEET",
                     detail: "Class 12 covers what this does to the genes. Self-pollination lowers variety; Mendel used it to breed pure-line pea plants. Cross-pollination keeps variety. This trade-off is a long-time NEET favourite."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Bag a flower bud",
                     detail: "Choose an unopened flower bud on a plant. Tie a paper bag over it before it opens. Open the bag a week later — if it has formed seeds without any pollinator visit, it self-pollinated."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
                 Spacer(minLength: 0)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
 
         .frame(maxWidth: .infinity, maxHeight: .infinity)

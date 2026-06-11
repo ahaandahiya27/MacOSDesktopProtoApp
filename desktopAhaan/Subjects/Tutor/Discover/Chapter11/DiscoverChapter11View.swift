@@ -121,19 +121,19 @@ private struct FourChamberHeartScene: View {
                         Text(c.name).font(.headline).foregroundColor(DesignTokens.BrandColor.canvasText)
                         Spacer()
                     }
-                    .padding(12).frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(DesignTokens.Spacing.md).frame(maxWidth: DesignTokens.contentMaxWidth)
                     .background(RoundedRectangle(cornerRadius: 12)
                         .fill(pick == c.id ? Color.compatIndigo.opacity(0.12) : Color.white.opacity(0.85)))
                     .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, 24)
+                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, DesignTokens.Spacing.xl)
             }
             if let s = pick, let c = chambers.first(where: { $0.id == s }) {
                 Text(c.detail).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                    .multilineTextAlignment(.center).padding(.horizontal, 24)
+                    .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
             }
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -165,7 +165,7 @@ private struct BloodTypesABOScene: View {
                 ForEach(types, id: \.self) { t in
                     Button { type = t } label: {
                         Text(t).font(.title3.weight(.bold))
-                            .padding(.horizontal, 16).padding(.vertical, 8)
+                            .padding(.horizontal, DesignTokens.Spacing.lg).padding(.vertical, DesignTokens.Spacing.sm)
                             .background(Circle().fill(type == t ? Color.compatIndigo.opacity(0.2) : Color.gray.opacity(0.1)))
                             .foregroundColor(DesignTokens.BrandColor.canvasText)
                     }.buttonStyle(.plain).pointingCursor()
@@ -181,9 +181,9 @@ private struct BloodTypesABOScene: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
             .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
             .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-            .padding(.horizontal, 24)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            .padding(.horizontal, DesignTokens.Spacing.xl)
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -206,10 +206,10 @@ private struct SweatSkinExcretionScene: View {
                  ? "Sweat = water + salts + urea. Evaporation cools the skin AND removes wastes. A second 'kidney' for waste."
                  : "Resting: 2-3 million sweat glands waiting. Sweat is your built-in air conditioner.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -229,15 +229,15 @@ private struct DialysisVsKidneyScene: View {
                  ? "Two bean-shaped kidneys filter ~180 L of blood every day. Keeps the salt, water, and nutrient balance perfect. Discards waste as urine."
                  : "If kidneys fail: machine pumps blood through a filter outside the body. Takes 4 hours, 3× a week. Life-saving, but no substitute for the real thing.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
     private func pickChip(_ label: String, on: Bool, tap: @escaping () -> Void) -> some View {
         Button(action: tap) {
             Text(label).font(.body.weight(on ? .bold : .regular))
-                .padding(.horizontal, 14).padding(.vertical, 8)
+                .padding(.horizontal, 14).padding(.vertical, DesignTokens.Spacing.sm)
                 .background(Capsule().fill(on ? Color.compatIndigo.opacity(0.18) : Color.gray.opacity(0.08)))
                 .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                 .foregroundColor(Color.compatIndigo)
@@ -254,10 +254,10 @@ private struct LymphHighwayScene: View {
             Text("🩺").font(.system(size: 100))
             Text("Besides blood, your body has a SECOND fluid network — lymph. Drains excess tissue fluid, returns it to blood, and carries lymphocytes (immune cells) that fight infection. Lymph nodes (the swollen lumps when you're sick) are immune outposts.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -274,7 +274,7 @@ private struct BloodPressureCuffScene: View {
         ScrollView { LazyVStack(spacing: 14) {
             Text("Blood Pressure Cuff").font(.largeTitle.bold())
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            HStack(spacing: 8) {
+            HStack(spacing: DesignTokens.Spacing.sm) {
                 Text("\(Int(systolic))").font(.system(size: 56, weight: .bold).monospacedDigit())
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                 Text("/").font(.title.bold()).foregroundColor(.secondary)
@@ -283,13 +283,13 @@ private struct BloodPressureCuffScene: View {
                 Text("mmHg").font(.caption).foregroundColor(.secondary)
             }
             Text("Systolic (heart pumps)").font(.caption).foregroundColor(.secondary)
-            Slider(value: $systolic, in: 80...180).frame(maxWidth: 340).padding(.horizontal, 24)
+            Slider(value: $systolic, in: 80...180).frame(maxWidth: 340).padding(.horizontal, DesignTokens.Spacing.xl)
             Text("Diastolic (heart rests)").font(.caption).foregroundColor(.secondary)
-            Slider(value: $diastolic, in: 50...120).frame(maxWidth: 340).padding(.horizontal, 24)
+            Slider(value: $diastolic, in: 50...120).frame(maxWidth: 340).padding(.horizontal, DesignTokens.Spacing.xl)
             Text(status).font(.callout.weight(.semibold))
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -309,7 +309,7 @@ private struct CardioHabitsScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             ForEach(habits) { h in
                 Button { tapped.insert(h.id) } label: {
-                    VStack(alignment: .leading, spacing: 4) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                         Text(h.title).font(.headline).foregroundColor(DesignTokens.BrandColor.canvasText)
                         if tapped.contains(h.id) {
                             Text(h.detail).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -318,13 +318,13 @@ private struct CardioHabitsScene: View {
                             Text("Tap to reveal").font(.caption.italic())
                                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         }
-                    }.padding(12).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
+                    }.padding(DesignTokens.Spacing.md).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
                     .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
                     .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, 24)
+                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, DesignTokens.Spacing.xl)
             }
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -337,7 +337,7 @@ private struct RootHairSurfaceAreaScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             ZStack {
                 if zoomedIn {
-                    HStack(spacing: 2) {
+                    HStack(spacing: DesignTokens.Spacing.xxs) {
                         ForEach(0..<30, id: \.self) { _ in
                             Capsule().fill(Color.compatBrown.opacity(0.7))
                                 .frame(width: 4, height: 80)
@@ -360,10 +360,10 @@ private struct RootHairSurfaceAreaScene: View {
                  ? "A single root has thousands of tiny finger-like root hairs. Each one absorbs water + minerals. Together — surface area of a football field."
                  : "From a distance, the root looks like one tube. Zoom in to see the secret to absorption.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -383,15 +383,15 @@ private struct GuttationVsTranspirationScene: View {
                  ? "Guttation: tiny WATER DROPS at leaf edges, especially early morning. Pressure from roots pushes liquid water out through hydathodes. Happens in cool humid nights."
                  : "Transpiration: water VAPOUR escapes from stomata during the day. Drives the upward suction that pulls water from roots to leaves.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
     private func pickChip(_ label: String, on: Bool, tap: @escaping () -> Void) -> some View {
         Button(action: tap) {
             Text(label).font(.body.weight(on ? .bold : .regular))
-                .padding(.horizontal, 14).padding(.vertical, 8)
+                .padding(.horizontal, 14).padding(.vertical, DesignTokens.Spacing.sm)
                 .background(Capsule().fill(on ? Color.compatIndigo.opacity(0.18) : Color.gray.opacity(0.08)))
                 .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                 .foregroundColor(Color.compatIndigo)
@@ -408,10 +408,10 @@ private struct InsectOpenCirculationScene: View {
             Text("🐝").font(.system(size: 100))
             Text("Insects don't have arteries or veins. Their 'blood' (hemolymph) sloshes freely inside the body cavity, washing over organs. A simple tube-heart pumps it from rear to front. Works because insects are small and use tracheae (not blood) to deliver O₂.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 

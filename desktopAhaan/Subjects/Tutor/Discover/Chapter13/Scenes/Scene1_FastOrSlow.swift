@@ -28,12 +28,12 @@ struct Scene1_FastOrSlow: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-            LazyVStack(alignment: .center, spacing: 12) {
+            LazyVStack(alignment: .center, spacing: DesignTokens.Spacing.md) {
                 Text("Fast or Slow?").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Drag/tap to order these from slowest → fastest.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-                VStack(spacing: 8) {
+                VStack(spacing: DesignTokens.Spacing.sm) {
                     // .indices + subscript over Array(enumerated()) — Big Sur
                     // SwiftUI mis-diffs tuple identity during swap animations.
                     ForEach(current.indices, id: \.self) { i in
@@ -51,7 +51,7 @@ struct Scene1_FastOrSlow: View {
                 }
                 .frame(maxWidth: 480)
 
-                HStack(spacing: 16) {
+                HStack(spacing: DesignTokens.Spacing.lg) {
                     Button("Check") { done = true }.accentColor(Color.compatIndigo)
                     Button("Shuffle") { current.shuffle(); done = false }
                 }
@@ -64,7 +64,7 @@ struct Scene1_FastOrSlow: View {
                     Text("Speed = distance ÷ time. A cycle ≈ 15 km/h, a car ≈ 80, a train ≈ 160, a plane ≈ 900. Bigger speed = covers more ground per minute.")
                         .font(.callout).lineSpacing(4)
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 // Grouped to stay within Swift 5.5's 10-child ViewBuilder limit.
                 Group {
@@ -73,14 +73,14 @@ struct Scene1_FastOrSlow: View {
                         detail: "Class 11 'Motion in a Straight Line' formalises speed (scalar) vs velocity (vector — direction matters). Average speed ≠ |average velocity| in general. JEE Kinematics tests this distinction in multi-segment journey problems every year."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     TryAtHomeCallout(
                         title: "Time a household member",
                         detail: "Use a stopwatch and a measured 10-metre stretch. Time everyone in your family walking it. Compute their speeds in m/s. Repeat after they jog. Plot a tiny bar chart of resting vs jogging speeds."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 }
 
                 DiscoveryWidget(
@@ -93,12 +93,12 @@ struct Scene1_FastOrSlow: View {
                     output: travelTimeExplanation
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
+                if done { GotItButton { onComplete(score) }.padding(.bottom, DesignTokens.Spacing.md) }
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
         .onAppear { if current.isEmpty { current = correctOrder.shuffled() } }
     }

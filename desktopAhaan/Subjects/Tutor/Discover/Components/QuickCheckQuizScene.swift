@@ -60,10 +60,10 @@ struct QuickCheckQuizScene: View {
                         .font(.headline)
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
                 }
-                GotItButton(action: { onComplete(score) }).padding(.bottom, 12)
+                GotItButton(action: { onComplete(score) }).padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
@@ -72,7 +72,7 @@ struct QuickCheckQuizScene: View {
         let pick = picks[q.id]
         let opts = q.options ?? []
         let correctIndex = opts.firstIndex(of: q.answer)
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             Text(q.prompt)
                 .font(.callout)
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -110,10 +110,10 @@ struct QuickCheckQuizScene: View {
                 .disabled(pick != nil)
             }
         }
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
         .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
         .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-        .padding(.horizontal, 24)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
     }
 }

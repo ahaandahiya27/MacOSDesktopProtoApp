@@ -14,7 +14,7 @@ struct Scene3_FoodWebBuilder: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-            LazyVStack(alignment: .center, spacing: 12) {
+            LazyVStack(alignment: .center, spacing: DesignTokens.Spacing.md) {
                 Text("Food Web Builder").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Tap each link to add it to the web. Energy flows from plants up.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary).multilineTextAlignment(.center)
@@ -28,7 +28,7 @@ struct Scene3_FoodWebBuilder: View {
                         Text("🐰").font(.system(size: 40)).opacity(arrows.contains("🌱→🐰") ? 1.0 : 0.25)
                         Text("🦌").font(.system(size: 40)).opacity(arrows.contains("🌱→🦌") ? 1.0 : 0.25)
                     }
-                    VStack(spacing: 12) {
+                    VStack(spacing: DesignTokens.Spacing.md) {
                         Text("🦊").font(.system(size: 38)).opacity(arrows.contains("🐰→🦊") ? 1.0 : 0.25)
                         Text("🐅").font(.system(size: 38)).opacity(arrows.contains("🦌→🐅") ? 1.0 : 0.25)
                         Text("🦅").font(.system(size: 38)).opacity(arrows.contains("🦊→🦅") ? 1.0 : 0.25)
@@ -49,26 +49,26 @@ struct Scene3_FoodWebBuilder: View {
                     Text("A food web is a tangled set of food chains. If a top predator is removed, prey populations explode, plants get over-grazed, and the whole forest changes.")
                         .font(.callout).lineSpacing(4)
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 12 Bio → NEET",
                     detail: "Class 12 'Ecosystem' covers food chains, food webs, and the 10% rule of energy transfer (only ~10% of energy at each trophic level reaches the next). NEET asks energy-pyramid calculations and the difference between detritus and grazing food chains."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Garden food web",
                     detail: "Sit in a park or garden for 10 minutes with paper. List everything alive you spot: grass, ants, beetles, sparrows, crows, dog. Draw arrows showing 'eats': grass → ant → spider → sparrow. You've drawn a food chain. Combine three of them and you get a food web."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

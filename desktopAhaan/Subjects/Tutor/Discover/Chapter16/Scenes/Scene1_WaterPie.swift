@@ -35,40 +35,40 @@ struct Scene1_WaterPie: View {
                 .frame(maxWidth: 460)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Less than 1% is drinkable", systemImage: "drop.fill")
                             .font(.title2.bold())
                         Text("Most of Earth's water is in the salty oceans. About 2% is frozen in glaciers and polar ice. Only the tiny green sliver — lakes, rivers, groundwater — is fresh liquid water we can drink, grow crops with, or use in industry.")
                             .font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 9 Geography → CBSE",
                     detail: "Class 9 Geography, 'Water Resources', goes deeper into India's water stress. Groundwater is falling in Punjab, Haryana and western UP. States argue over rivers like the Cauvery and Yamuna. The National Water Policy sets the rules. CBSE Class 10 Civics also covers SDG 6: Clean Water and Sanitation."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Earth's water in a litre",
                     detail: "Measure 1 litre of water in a jug — that represents all of Earth's water. Pour out 30 mL — that's all freshwater. Now isolate just 0.6 mL — that's the freshwater we can actually USE. The rest is frozen or trapped underground. Tiny."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 RelatedConceptsCallout(
                     title: "Related: Ch 7 (Weather), Ch 8 (Winds), Ch 18 (Wastewater)",
                     detail: "The water cycle is the engine: evaporation → clouds (Ch 7) → wind carries them (Ch 8) → rain falls back. After we use it, Ch 18 shows how it returns to the same cycle through treatment plants."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

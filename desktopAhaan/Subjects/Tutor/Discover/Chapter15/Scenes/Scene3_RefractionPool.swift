@@ -42,21 +42,21 @@ struct Scene3_RefractionPool: View {
                     .accentColor(Color.compatIndigo)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Light bends when it changes medium", systemImage: "drop.fill")
                             .font(.title2.bold())
                         Text("When light goes from air into water, it slows down and changes direction. Your eye thinks the pencil is where the light SEEMS to come from — so it looks broken. This bending is called refraction.")
                             .font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "The reappearing coin",
                     detail: "Drop a coin into an opaque bowl. Step back until the rim hides the coin. Without moving, ask someone to slowly pour water into the bowl. The coin appears — refraction bends the light around the rim."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 DiscoveryWidget(
                     title: "Discovery — apparent vs real pool depth",
@@ -68,12 +68,12 @@ struct Scene3_RefractionPool: View {
                     output: apparentDepthExplanation
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
 
         .frame(maxWidth: .infinity, maxHeight: .infinity)

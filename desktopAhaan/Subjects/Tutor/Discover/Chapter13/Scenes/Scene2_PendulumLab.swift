@@ -49,17 +49,17 @@ struct Scene2_PendulumLab: View {
                         .accessibilityLabel("Period grows with the square root of length")
                 }
 
-                Slider(value: $length, in: 0.2...2.0, step: 0.05).frame(maxWidth: 460).padding(.horizontal, 24)
+                Slider(value: $length, in: 0.2...2.0, step: 0.05).frame(maxWidth: 460).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Longer string → slower swing", systemImage: SFSymbolCompat.name("metronome"))
                             .font(.title2.bold())
                         Text("The time for one swing depends only on the string length, not on the mass or how far you pull it back. Galileo discovered this. It's why pendulums were used for accurate clocks for 300 years.")
                             .font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 // Grouped to stay within Swift 5.5's 10-child ViewBuilder limit.
                 Group {
@@ -68,14 +68,14 @@ struct Scene2_PendulumLab: View {
                         detail: "The √L relationship you just discovered is the formula T = 2π√(L/g). In Class 11 you'll meet it again under Simple Harmonic Motion, then in JEE under Oscillations and Waves — every year, multiple questions."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     TryAtHomeCallout(
                         title: "DIY pendulum",
                         detail: "Tie a small weight (a key, a metal washer) to one end of a 50-cm string. Hold the other end against a doorframe. Set it swinging. Time 20 swings, divide by 20 — that's the period. Now halve the string and repeat. The new period is shorter (T scales with √L)."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 }
 
                 DiscoveryStepper(
@@ -91,17 +91,17 @@ struct Scene2_PendulumLab: View {
                     ]
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
                 .onChange(of: famousPendulum) { newIndex in
                     let presets: [Double] = [0.10, 0.25, 1.0, 4.0]
                     let target = presets[max(0, min(newIndex, presets.count - 1))]
                     length = min(2.0, max(0.2, target))
                 }
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 

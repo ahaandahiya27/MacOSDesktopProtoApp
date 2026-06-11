@@ -42,7 +42,7 @@ struct Scene3_ThreeHighwaysOfHeat: View {
         // cards as siblings below in natural stacking order.
         ScrollView {
             LazyVStack(alignment: .center, spacing: 14) {
-                HStack(spacing: 16) {
+                HStack(spacing: DesignTokens.Spacing.lg) {
                     ForEach(0..<3, id: \.self) { i in
                         laneView(index: i, height: 240)
                     }
@@ -52,7 +52,7 @@ struct Scene3_ThreeHighwaysOfHeat: View {
                 Group {
                     if let lane = activeLane {
                         SoftShadowCard(padding: 18) {
-                            VStack(alignment: .leading, spacing: 8) {
+                            VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                                 Label(laneData[lane].title, systemImage: laneData[lane].icon)
                                     .font(.title2.bold())
                                     .foregroundColor(laneData[lane].color)
@@ -65,7 +65,7 @@ struct Scene3_ThreeHighwaysOfHeat: View {
                         .transition(.opacity)
                     } else {
                         SoftShadowCard(padding: 18) {
-                            VStack(alignment: .leading, spacing: 8) {
+                            VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                                 Label("Three Highways of Heat", systemImage: SFSymbolCompat.name("arrow.triangle.branch"))
                                     .font(.title2.bold())
                                 Text("Heat can travel in three ways: conduction, convection, and radiation. Tap each lane to learn how!")
@@ -112,18 +112,18 @@ struct Scene3_ThreeHighwaysOfHeat: View {
 
                     if allTapped {
                         GotItButton { onComplete() }
-                            .padding(.bottom, 12)
+                            .padding(.bottom, DesignTokens.Spacing.md)
                     } else {
                         Text("Tap all 3 lanes to continue")
                             .font(.caption)
                             .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                            .padding(.bottom, 12)
+                            .padding(.bottom, DesignTokens.Spacing.md)
                     }
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
         .timedScene(idealFPS: 20, tick: $tick)
     }
@@ -159,7 +159,7 @@ struct Scene3_ThreeHighwaysOfHeat: View {
                 activeLane = index
             }
         } label: {
-            VStack(spacing: 12) {
+            VStack(spacing: DesignTokens.Spacing.md) {
                 Image(systemName: d.icon)
                     .font(.system(size: 36))
                     .foregroundColor(d.color)

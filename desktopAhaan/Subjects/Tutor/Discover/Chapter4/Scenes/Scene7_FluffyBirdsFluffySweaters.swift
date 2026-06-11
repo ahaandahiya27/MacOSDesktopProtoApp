@@ -88,7 +88,7 @@ struct Scene7_FluffyBirdsFluffySweaters: View {
                                 .frame(width: 120, height: 140)
 
                             // Sweater pattern lines
-                            VStack(spacing: 12) {
+                            VStack(spacing: DesignTokens.Spacing.md) {
                                 ForEach(0..<5, id: \.self) { _ in
                                     RoundedRectangle(cornerRadius: 2)
                                         .fill(Color.red.opacity(0.3))
@@ -130,9 +130,9 @@ struct Scene7_FluffyBirdsFluffySweaters: View {
                     }
                     
                     .accentColor(isCold ? .orange : Color.compatCyan)
-                    .padding(.top, 16)
+                    .padding(.top, DesignTokens.Spacing.lg)
                     SoftShadowCard(padding: 18) {
-                        VStack(alignment: .leading, spacing: 8) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                             Label("Fluffy Birds, Fluffy Sweaters", systemImage: SFSymbolCompat.name("bird.fill"))
                                 .font(.title2.bold())
                             Text("When it is cold, birds fluff their feathers to trap air between them. Air is a very poor conductor — it is one of the best insulators! Woollen sweaters work the same way: tiny air pockets between the fibres keep you warm.")
@@ -155,14 +155,14 @@ struct Scene7_FluffyBirdsFluffySweaters: View {
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
                     GotItButton { onComplete() }
-                        .padding(.bottom, 12)
+                        .padding(.bottom, DesignTokens.Spacing.md)
                 
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 

@@ -52,7 +52,7 @@ struct Scene6_FourStomachsOfACow: View {
                             .position(x: foodX, y: 100)
                     }
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 HStack {
                     if currentChamber > 0 {
@@ -76,14 +76,14 @@ struct Scene6_FourStomachsOfACow: View {
                         .accentColor(Color.compatBrown)
                     }
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 if currentChamber < 4 {
                     ChamberCallout(text: chamberDescriptions[currentChamber])
-                        .padding(.horizontal, 24)
+                        .padding(.horizontal, DesignTokens.Spacing.xl)
                 } else {
                     SoftShadowCard(padding: 14) {
-                        VStack(alignment: .leading, spacing: 8) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                             Text("🤔 Why don't humans have four stomachs?")
                                 .font(.body.weight(.semibold))
                                 .foregroundColor(Color.compatBrown)
@@ -93,11 +93,11 @@ struct Scene6_FourStomachsOfACow: View {
                                 .lineSpacing(3)
                         }
                     }
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 }
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("The Four-Stomach Cow Tour", systemImage: SFSymbolCompat.name("hare.fill"))
                             .font(.title2.bold())
                             .foregroundColor(Color.compatBrown)
@@ -114,24 +114,24 @@ struct Scene6_FourStomachsOfACow: View {
                     detail: "Humans can't digest cellulose (no enzyme). Cows can't either — but the bacteria + protozoa in the rumen CAN, and they live there for free. The cow eats grass; microbes eat the cellulose; cow eats the microbes (kind of). NEET tests this as 'mutualism with rumen microbiota' and pairs it with termite-gut symbionts and Rhizobium-root nodules from Ch 1."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Spot the cud",
                     detail: "Next time you see a cow lying down peacefully, watch its jaw. It'll be moving in circles even when no food is in sight. That's it ruminating — pulling food back up from the rumen for a second chew. Time the chews — 50-70 per minute is typical. You're watching four-stomach digestion live."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 GotItButton { onComplete() }
-                    .padding(.bottom, 12)
+                    .padding(.bottom, DesignTokens.Spacing.md)
             
 
             }
 
             .frame(maxWidth: .infinity)
 
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
 
         }
     }

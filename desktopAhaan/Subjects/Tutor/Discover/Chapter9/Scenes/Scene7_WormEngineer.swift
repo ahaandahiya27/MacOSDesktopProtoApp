@@ -48,7 +48,7 @@ struct Scene7_WormEngineer: View {
                 Text("Tunnels: \(tunnels)").font(.headline).foregroundColor(Color.compatIndigo)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Tiny workers, huge impact", systemImage: "ant.fill")
                             .font(.title2.bold())
                         Text("Earthworms eat soil and release castings rich in nutrients. Their tunnels let air and water reach deeper roots. Charles Darwin called them \"nature's plough\" — the unsung heroes of fertile farmland.")
@@ -56,7 +56,7 @@ struct Scene7_WormEngineer: View {
                     }
                 }
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 // Grouped so the outer VStack stays within Swift 5.5's
                 // 10-child ViewBuilder limit (Xcode 13.2.1 / Big Sur target).
@@ -66,28 +66,28 @@ struct Scene7_WormEngineer: View {
                         detail: "Class 11 'Structural Organisation in Animals' studies the earthworm closely. It looks at its anatomy, blood vessels and excretion. NEET asks about earthworm body structure every cycle. Class 12 covers vermicompost, where earthworms enrich the soil."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     TryAtHomeCallout(
                         title: "Worm hunt after rain",
                         detail: "Just after a rain shower, walk through a garden. You'll spot earthworms on the surface — they came up because their tunnels flooded. Note how moist soil feels different from dry soil."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     RelatedConceptsCallout(
                         title: "Related: Ch 17 (Forests), Ch 18 (Wastewater)",
                         detail: "Earthworms decompose leaf litter into humus — Ch 17 shows the same animals at work in forest floors. Modern composting (Ch 18) uses the same biology to recycle home kitchen waste."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 }
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
                 Spacer(minLength: 0)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
 
         .frame(maxWidth: .infinity, maxHeight: .infinity)

@@ -86,7 +86,7 @@ struct Scene8_AcidRainStory: View {
                     }
 
                     // Navigation buttons
-                    HStack(spacing: 16) {
+                    HStack(spacing: DesignTokens.Spacing.lg) {
                         Button {
                             goPanel(-1)
                         } label: {
@@ -119,7 +119,7 @@ struct Scene8_AcidRainStory: View {
                 Group {
                     if allViewed {
                         SoftShadowCard(padding: 18) {
-                            VStack(alignment: .leading, spacing: 8) {
+                            VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                                 Label("Acid Rain", systemImage: "cloud.rain.fill")
                                     .font(.title2.bold())
                                 Text("Acid rain is caused by pollution. We can reduce it by using cleaner fuels, reducing emissions, and using catalytic converters in vehicles.")
@@ -142,20 +142,20 @@ struct Scene8_AcidRainStory: View {
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
 
                         GotItButton { onComplete() }
-                            .padding(.bottom, 12)
+                            .padding(.bottom, DesignTokens.Spacing.md)
                     }
                 
 
                 }
 
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             
 
             }
 
             .frame(maxWidth: .infinity)
 
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
 
         }
     }
@@ -165,7 +165,7 @@ struct Scene8_AcidRainStory: View {
     private var rainView: some View {
         Group {
             if reduceMotion {
-                HStack(spacing: 8) {
+                HStack(spacing: DesignTokens.Spacing.sm) {
                     ForEach(0..<6, id: \.self) { _ in
                         Image(systemName: "drop.fill")
                             .foregroundColor(Color.blue.opacity(0.5))

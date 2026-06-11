@@ -33,14 +33,14 @@ struct Scene3_TheStomachBath: View {
                     .font(.title.bold())
                     .foregroundColor(.red)
 
-                HStack(spacing: 12) {
+                HStack(spacing: DesignTokens.Spacing.md) {
                     ForEach([("Protein", "🥩"), ("Starch", "🍚"), ("Milk", "🥛")], id: \.0) { name, emoji in
                         Button(action: { dropFood(name: name, emoji: emoji) }) {
-                            VStack(spacing: 4) {
+                            VStack(spacing: DesignTokens.Spacing.xs) {
                                 Text(emoji).font(.system(size: 24))
                                 Text(name).font(.caption2)
                             }
-                            .padding(8)
+                            .padding(DesignTokens.Spacing.sm)
                             .background(Color.gray.opacity(0.15))
                             .cornerRadius(6)
                         }
@@ -48,7 +48,7 @@ struct Scene3_TheStomachBath: View {
                     }
                     Spacer()
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 ZStack {
                     ZStack {
@@ -80,10 +80,10 @@ struct Scene3_TheStomachBath: View {
                     }
                 }
                 .frame(height: 240)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("The Stomach Bath", systemImage: "drop.triangle.fill")
                             .font(.title2.bold())
                             .foregroundColor(.red)
@@ -100,20 +100,20 @@ struct Scene3_TheStomachBath: View {
                     detail: "Stomach HCl has pH ~1.5 — a million times more acidic than blood. JEE Chem asks 'how does the stomach not digest itself?' Answer: a bicarbonate-rich mucus layer with pH ~7 lines the inside, neutralising HCl that touches the wall. The enzyme pepsin you saw works ONLY at acidic pH, then snaps off when food enters the alkaline intestine — pH-gated activity."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "pH-test antacid neutralisation",
                     detail: "Crush half an antacid tablet (Eno / Digene) into a glass of vinegar. Watch the fizzing. The base in the antacid neutralises the acid like it does inside the stomach during heartburn. Test with red litmus (turns blue when base wins) or pH paper if you have any."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 GotItButton { onComplete() }
-                    .padding(.bottom, 12)
+                    .padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
         .onAppear {
             sceneActive = true

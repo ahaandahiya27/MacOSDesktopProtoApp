@@ -51,26 +51,26 @@ struct Scene6_InsectsWorms: View {
                 SoftShadowCard(padding: 18) {
                     Text(pick.organ).font(.body).lineSpacing(4)
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 11 Bio → NEET",
                     detail: "Class 11 'Structural Organisation in Animals' compares how animals breathe. Arachnids use book-lungs. Insects use tracheal tubes. Fish use gills. Amphibians, reptiles and mammals use lungs. Compare-the-breathing questions are a NEET staple."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Ant-trail observation",
                     detail: "Find an ant trail near your kitchen or garden. Ants don't have lungs — they breathe through tracheal tubes opening at spiracles along their bodies. The little hairy bumps on their sides are those openings."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

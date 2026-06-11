@@ -18,12 +18,12 @@ struct RelatedConceptsCallout: View {
     let detail: String
 
     var body: some View {
-        HStack(alignment: .top, spacing: 12) {
+        HStack(alignment: .top, spacing: DesignTokens.Spacing.md) {
             Image(systemName: "link.circle.fill")
                 .font(.title3)
                 .foregroundColor(Color.compatTeal)
                 .accessibilityHidden(true)
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                 Text(title)
                     .font(.subheadline.weight(.semibold))
                     .foregroundColor(Color.compatTeal)
@@ -38,7 +38,7 @@ struct RelatedConceptsCallout: View {
             .frame(maxWidth: .infinity, alignment: .leading)
             Spacer(minLength: 0)
         }
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .background(
             RoundedRectangle(cornerRadius: 10)
                 .fill(Color.compatTeal.opacity(0.14))

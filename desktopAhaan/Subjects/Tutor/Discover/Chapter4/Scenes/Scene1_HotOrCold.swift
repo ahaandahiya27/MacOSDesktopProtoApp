@@ -83,7 +83,7 @@ struct Scene1_HotOrCold: View {
                     .frame(maxWidth: 400)
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .padding(.horizontal, 32)
+                .padding(.horizontal, DesignTokens.Spacing.xxl)
 
                 // Caption + button
                 
@@ -96,7 +96,7 @@ struct Scene1_HotOrCold: View {
 
                 Group {
                     SoftShadowCard(padding: 18) {
-                        VStack(alignment: .leading, spacing: 8) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                             Label("Hot or Cold?", systemImage: SFSymbolCompat.name("hand.raised.fingers.spread"))
                                 .font(.title2.bold())
                             Text("Different objects feel hot or cold because they are at different temperatures. Tap each object to see its temperature on the thermometer!")
@@ -119,19 +119,19 @@ struct Scene1_HotOrCold: View {
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
                     GotItButton { onComplete() }
-                        .padding(.bottom, 12)
+                        .padding(.bottom, DesignTokens.Spacing.md)
                 
 
                 }
 
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             
 
             }
 
             .frame(maxWidth: .infinity)
 
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
 
         }
     }

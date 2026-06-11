@@ -39,16 +39,16 @@ struct FabricCareSymbolsQuizScene: View {
                         .font(.headline)
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
                 }
-                GotItButton(action: { onComplete(score) }).padding(.bottom, 12)
+                GotItButton(action: { onComplete(score) }).padding(.bottom, DesignTokens.Spacing.md)
             }
-            .frame(maxWidth: .infinity).padding(.bottom, 12)
+            .frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
     @ViewBuilder
     private func qCard(_ q: Q) -> some View {
         let pick = picks[q.id]
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             HStack { Text(q.symbol).font(.title); Text(q.prompt).font(.callout)
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .fixedSize(horizontal: false, vertical: true) }
@@ -62,7 +62,7 @@ struct FabricCareSymbolsQuizScene: View {
                         if picks[q.id] == nil { picks[q.id] = i }
                     } label: {
                         Text(q.opts[i]).font(.caption.weight(.semibold))
-                            .padding(.horizontal, 8).padding(.vertical, 5)
+                            .padding(.horizontal, DesignTokens.Spacing.sm).padding(.vertical, 5)
                             .background(Capsule().fill(tint.opacity(isPicked ? 0.22 : 0.10)))
                             .overlay(Capsule().strokeBorder(tint.opacity(0.5), lineWidth: 1))
                             .foregroundColor(tint)
@@ -71,11 +71,11 @@ struct FabricCareSymbolsQuizScene: View {
                 }
             }
         }
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
         .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
         .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-        .padding(.horizontal, 24)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
     }
 }
 
@@ -105,10 +105,10 @@ struct IndianTextileMapScene: View {
                 Text("India's textile traditions are region-specific. Tap each to learn what they're famous for.")
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                    .multilineTextAlignment(.center).padding(.horizontal, 24)
+                    .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 ForEach(regions) { r in
                     Button { tapped.insert(r.id) } label: {
-                        VStack(alignment: .leading, spacing: 4) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                             HStack {
                                 Text(r.emoji).font(.title3)
                                 Text(r.name).font(.headline)
@@ -123,17 +123,17 @@ struct IndianTextileMapScene: View {
                                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                             }
                         }
-                        .padding(12)
+                        .padding(DesignTokens.Spacing.md)
                         .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
                         .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
                         .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
                     }
                     .buttonStyle(.plain).pointingCursor()
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 }
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
-            .frame(maxWidth: .infinity).padding(.bottom, 12)
+            .frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

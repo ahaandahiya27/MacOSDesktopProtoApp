@@ -147,23 +147,23 @@ struct Scene4_ColorTheChlorophyll: View {
                     detail: "Chlorophyll a + b are the headliners but plants carry four more accessory pigments (carotenoids, xanthophylls) that funnel light to chlorophyll. NEET tests chromatography — strip leaf pigments apart on paper and you see all four bands. The colour of autumn leaves is what's left when chlorophyll breaks down in the cold."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Paper chromatography in 20 minutes",
                     detail: "Grind a handful of spinach with a little rubbing alcohol. Strain. Dip the bottom edge of a paper coffee filter strip in the green liquid. Hang it so the level just touches the liquid. As alcohol creeps up the paper, different pigments climb different distances — and you see three or four coloured bands separate out. Real chemistry from your kitchen."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             }
 
                 GotItButton(action: onComplete)
-                    .padding(.bottom, 12)
+                    .padding(.bottom, DesignTokens.Spacing.md)
                     .disabled(selectedBand == nil)
                     .opacity(selectedBand == nil ? 0.55 : 1)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 

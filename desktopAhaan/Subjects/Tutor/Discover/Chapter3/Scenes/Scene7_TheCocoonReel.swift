@@ -28,7 +28,7 @@ struct Scene7_TheCocoonReel: View {
                         .font(.largeTitle.bold())
                         .foregroundColor(Color.compatIndigo)
                     Spacer()
-                    VStack(alignment: .trailing, spacing: 2) {
+                    VStack(alignment: .trailing, spacing: DesignTokens.Spacing.xxs) {
                         Text("Progress")
                             .font(.caption.weight(.semibold))
                             .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
@@ -36,7 +36,7 @@ struct Scene7_TheCocoonReel: View {
                             .frame(width: 120)
                     }
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
                 .padding(.top, 20)
 
                 // Visualization
@@ -74,12 +74,12 @@ struct Scene7_TheCocoonReel: View {
                         }
                         .frame(maxWidth: .infinity)
                     }
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 }
                 .frame(height: 180)
 
                 // Counter
-                VStack(spacing: 4) {
+                VStack(spacing: DesignTokens.Spacing.xs) {
                     Text("Filament Unwound")
                         .font(.caption.weight(.semibold))
                         .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
@@ -99,7 +99,7 @@ struct Scene7_TheCocoonReel: View {
                     .buttonStyle(.bordered)
                     .accentColor(Color.compatIndigo)
                     .disabled(metersUnwound >= maxMeters)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     ExpandableCard(
                         isExpanded: $showEthicsDisclosure,
@@ -108,7 +108,7 @@ struct Scene7_TheCocoonReel: View {
                         tint: .orange,
                         background: Color.white.opacity(0.95)
                     ) {
-                        VStack(alignment: .leading, spacing: 8) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                             Text("Traditional silk production kills the pupa inside the cocoon before reeling so the cocoon remains whole and the fibre unbroken.")
                                 .font(.caption)
                                 .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -118,30 +118,30 @@ struct Scene7_TheCocoonReel: View {
                                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         }
                     }
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     LookingAheadCallout(
                         title: "Class 12 Materials Science → JEE",
                         detail: "Silk fibroin has a tensile strength close to steel by weight — JEE Materials questions love this comparison. Silk's secret: a β-pleated sheet structure where amino acids stack via hydrogen bonds. Modern bioengineering grows artificial spider silk in goats (transgenic, milked from milk) — same protein, factory scale."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     TryAtHomeCallout(
                         title: "Pull test silk vs cotton",
                         detail: "Find a single thread of silk (a silk saree's frayed edge works) and a single cotton thread. Hold each between thumbs and pull steadily. Silk stretches noticeably then snaps. Cotton snaps almost immediately. You just measured tensile elongation — the same property structural engineers chart for steel and concrete."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     GotItButton {
                         onComplete()
                     }
-                    .padding(.bottom, 12)
+                    .padding(.bottom, DesignTokens.Spacing.md)
                 }
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 

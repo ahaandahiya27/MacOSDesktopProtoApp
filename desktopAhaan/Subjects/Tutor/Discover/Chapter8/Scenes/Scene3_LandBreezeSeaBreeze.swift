@@ -50,13 +50,13 @@ struct Scene3_LandBreezeSeaBreeze: View {
 
                     Text(time == .day ? "→ Sea Breeze" : "← Land Breeze")
                         .font(.title2.bold())
-                        .padding(8)
+                        .padding(DesignTokens.Spacing.sm)
                         .background(Capsule().fill(Color.white.opacity(0.85)))
                         .offset(y: -90)
                 }
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Land heats and cools faster than water", systemImage: "thermometer.sun")
                             .font(.title2.bold())
                         Text("By day, land is warmer → air over land rises → cool sea air rushes in (sea breeze). By night, land cools faster → air over the sea is warmer → air flows from land to sea (land breeze).")
@@ -64,26 +64,26 @@ struct Scene3_LandBreezeSeaBreeze: View {
                     }
                 }
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 9 Geography",
                     detail: "Class 9 Geography expands this into the Indian monsoon — a continent-scale land-sea breeze driven by the same uneven heating but operating over 6 months instead of 12 hours. NCERT covers the monsoon's role in agriculture and the SW vs NE monsoon mechanism."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Hand-on-window test",
                     detail: "On a hot afternoon, place one hand on a closed window facing the sun, another on the floor under it. The window glass is warmer than the floor. At night the reverse is true. Same uneven-heating mechanism, just smaller scale."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }

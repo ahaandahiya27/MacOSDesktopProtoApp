@@ -39,38 +39,38 @@ struct Scene7_PhloemSugarPipeline: View {
                      ? "Summer: leaves make sugar → ships it down to roots & fruit"
                      : "Spring: stored sugar in roots → moves up to grow new leaves & flowers")
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                     .font(.headline)
                     .foregroundColor(Color.compatIndigo)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Two-way sugar highway", systemImage: "arrow.up.arrow.down")
                             .font(.title2.bold())
                         Text("Unlike xylem (water only, always up), phloem can move sugar in any direction. Wherever the plant is growing or storing — that's where the sugars flow.")
                             .font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 11 Bio → NEET",
                     detail: "Class 11 'Transport in Plants' covers the source-sink hypothesis (Münch's pressure-flow theory) — how sugar moves from leaf (source) to root/fruit (sink) by osmotic pressure. NEET asks Münch hypothesis questions every cycle."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Sweet potato vs raw potato",
                     detail: "Taste a raw sweet potato and a regular raw potato. Both store sugar moved down via the phloem, but sweet-potato cells haven't converted it to starch yet — that's why it tastes sweet."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
 
         .frame(maxWidth: .infinity, maxHeight: .infinity)

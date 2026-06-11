@@ -24,7 +24,7 @@ struct Scene6_BuildElectromagnet: View {
                         .frame(width: 320, height: 220)
                     VStack(spacing: 6) {
                         Text("🔩").font(.system(size: 60))
-                        HStack(spacing: 2) {
+                        HStack(spacing: DesignTokens.Spacing.xxs) {
                             ForEach(0..<clipsHeld, id: \.self) { _ in
                                 Text("📎").font(.system(size: 24))
                             }
@@ -36,30 +36,30 @@ struct Scene6_BuildElectromagnet: View {
                     .font(.headline)
                     .foregroundColor(Color.compatIndigo)
 
-                Slider(value: $turns, in: 5...80, step: 1).frame(maxWidth: 460).padding(.horizontal, 24)
+                Slider(value: $turns, in: 5...80, step: 1).frame(maxWidth: 460).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Switchable magnet", systemImage: SFSymbolCompat.name("powerplug"))
                             .font(.title2.bold())
                         Text("Wrap insulated wire around an iron nail and connect a battery. The nail becomes a magnet — but only while the current flows. More turns, stronger field. Used in cranes to pick up cars.")
                             .font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Iron-nail electromagnet",
                     detail: "Wrap about 30 turns of insulated wire around a long iron nail. Connect the two ends to a 1.5 V cell. Hold the nail near steel paper clips — it picks them up. Disconnect the cell and the magnet switches off."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
                 Spacer(minLength: 0)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
 
         .frame(maxWidth: .infinity, maxHeight: .infinity)

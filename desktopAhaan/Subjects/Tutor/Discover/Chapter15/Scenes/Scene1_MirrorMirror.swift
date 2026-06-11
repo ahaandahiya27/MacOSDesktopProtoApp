@@ -33,17 +33,17 @@ struct Scene1_MirrorMirror: View {
                     .font(.title3.weight(.semibold))
                     .foregroundColor(Color.compatIndigo)
 
-                Slider(value: $angle, in: 5...75, step: 1).frame(maxWidth: 460).padding(.horizontal, 24)
+                Slider(value: $angle, in: 5...75, step: 1).frame(maxWidth: 460).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Law of Reflection", systemImage: "arrow.turn.up.right")
                             .font(.title2.bold())
                         Text("Light bounces off a mirror at the same angle it hit. Both angles are measured from the normal (an imaginary line at 90° to the mirror). This single rule explains everything you see in a mirror.")
                             .font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 // Grouped so the outer VStack stays within Swift 5.5's
                 // 10-child ViewBuilder limit (Xcode 13.2.1 / Big Sur target).
@@ -53,27 +53,27 @@ struct Scene1_MirrorMirror: View {
                         detail: "In Class 10 the same law of reflection extends to the mirror formula 1/v + 1/u = 1/f and the magnification rule m = -v/u. JEE Physics adds total internal reflection and combined mirror-lens systems."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     TryAtHomeCallout(
                         title: "Mirror + torch on paper",
                         detail: "On a sheet of A4, tape a small mirror at one edge. Shine a torch at the mirror at a slant. Mark the incoming and outgoing rays with pencil. Use a protractor to measure both angles from the perpendicular — they will be exactly equal."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     RelatedConceptsCallout(
                         title: "Related: Ch 8 (Winds, Storms)",
                         detail: "The law of reflection (angle in = angle out) applies to sound just as it applies to light — that's why we hear echoes. Class 8's chapter on sound goes deeper. The same maths governs both."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 }
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
 
         .frame(maxWidth: .infinity, maxHeight: .infinity)

@@ -73,14 +73,14 @@ struct Scene8_KitchenChemistry: View {
                     experimentCard(exp)
                 }
             }
-            .padding(.horizontal, 24)
+            .padding(.horizontal, DesignTokens.Spacing.xl)
 
             if let sel = selectedExperiment, let exp = experiments.first(where: { $0.id == sel }) {
-                VStack(spacing: 8) {
+                VStack(spacing: DesignTokens.Spacing.sm) {
                     HStack {
                         Text(exp.emoji)
                             .font(.system(size: 44))
-                        VStack(alignment: .leading, spacing: 4) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                             Text(exp.title)
                                 .font(.title3.bold())
                             Text(exp.ingredients)
@@ -125,7 +125,7 @@ struct Scene8_KitchenChemistry: View {
             }
 
             SoftShadowCard(padding: 18) {
-                VStack(alignment: .leading, spacing: 8) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                     Label("Chemistry in your kitchen", systemImage: SFSymbolCompat.name("frying.pan.fill"))
                         .font(.title2.bold())
                     if let sel = selectedExperiment, let exp = experiments.first(where: { $0.id == sel }), reacted.contains(exp.id) {
@@ -140,27 +140,27 @@ struct Scene8_KitchenChemistry: View {
                 }
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+            .padding(.horizontal, DesignTokens.Spacing.xl)
 
             LookingAheadCallout(
                 title: "Class 11 Chemistry → JEE / NEET",
                 detail: "Baking-soda + vinegar: NaHCO₃ + CH₃COOH → CH₃COONa + H₂O + CO₂↑. That's an acid-base neutralisation AND a gas evolution AND a salt formation in one step — three of the 5 signs of chemical change you've already learned. JEE asks the stoichiometry: 1 mol of each makes 1 mol CO₂, so 84 g baking soda + 60 g vinegar (acetic acid) → 22.4 L of CO₂ at STP."
             )
             .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+            .padding(.horizontal, DesignTokens.Spacing.xl)
 
             TryAtHomeCallout(
                 title: "Pop a balloon with chemistry (no needle)",
                 detail: "Pour 2 tablespoons vinegar into an empty plastic bottle. Spoon 2 teaspoons baking soda into a balloon. Stretch the balloon over the bottle mouth WITHOUT spilling. Lift the balloon — the soda falls into the vinegar. Fizz starts, balloon inflates from the CO₂. You just turned a chemical reaction's gas product into mechanical work — the principle behind every airbag in a car."
             )
             .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+            .padding(.horizontal, DesignTokens.Spacing.xl)
 
             GotItButton { onComplete() }
-                .padding(.bottom, 12)
+                .padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
@@ -173,7 +173,7 @@ struct Scene8_KitchenChemistry: View {
                 selectedExperiment = exp.id
             }
         } label: {
-            VStack(spacing: 8) {
+            VStack(spacing: DesignTokens.Spacing.sm) {
                 Text(exp.emoji)
                     .font(.system(size: 36))
                 Text(exp.title)

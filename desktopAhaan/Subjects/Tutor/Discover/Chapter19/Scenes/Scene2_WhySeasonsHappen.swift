@@ -52,7 +52,7 @@ struct Scene2_WhySeasonsHappen: View {
         // explanation cards don't cover the interactive content.
         ScrollView {
             LazyVStack(alignment: .center, spacing: 14) {
-                VStack(spacing: 12) {
+                VStack(spacing: DesignTokens.Spacing.md) {
                     Text("Why Seasons Happen")
                         .font(.largeTitle.bold())
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -72,7 +72,7 @@ struct Scene2_WhySeasonsHappen: View {
                             .frame(width: 380, height: 280)
 
                         // Central Sun
-                        VStack(spacing: 4) {
+                        VStack(spacing: DesignTokens.Spacing.xs) {
                             Image(systemName: "sun.max.fill")
                                 .font(.system(size: 40))
                                 .foregroundColor(.yellow)
@@ -101,7 +101,7 @@ struct Scene2_WhySeasonsHappen: View {
 
                 Group {
                     SoftShadowCard(padding: 18) {
-                        VStack(alignment: .leading, spacing: 8) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                             if let idx = selectedPosition, let pos = positions.first(where: { $0.id == idx }) {
                                 Label("\(pos.label) -- \(pos.northSeason) (North)", systemImage: SFSymbolCompat.name("globe.europe.africa.fill"))
                                     .font(.title2.bold())
@@ -144,15 +144,15 @@ struct Scene2_WhySeasonsHappen: View {
 
                     if allDone {
                         GotItButton { onComplete() }
-                            .padding(.bottom, 12)
+                            .padding(.bottom, DesignTokens.Spacing.md)
                     }
                 
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
@@ -168,7 +168,7 @@ struct Scene2_WhySeasonsHappen: View {
                 exploredPositions.insert(pos.id)
             }
         } label: {
-            VStack(spacing: 4) {
+            VStack(spacing: DesignTokens.Spacing.xs) {
                 ZStack {
                     // Earth circle
                     Circle()

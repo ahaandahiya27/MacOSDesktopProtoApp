@@ -22,7 +22,7 @@ struct Scene6_BawdiStepwell: View {
                 ZStack(alignment: .top) {
                     RoundedRectangle(cornerRadius: 16).fill(Color.compatBrown.opacity(0.4))
                         .frame(width: 220, height: 260)
-                    VStack(spacing: 8) {
+                    VStack(spacing: DesignTokens.Spacing.sm) {
                         Text("☀️").font(.system(size: 24))
                         ForEach(0..<6, id: \.self) { _ in
                             Rectangle().fill(Color.compatBrown).frame(width: 160, height: 10)
@@ -33,36 +33,36 @@ struct Scene6_BawdiStepwell: View {
                 }
 
                 Text("Depth: \(Int(depth * 30)) m").font(.headline).foregroundColor(Color.compatIndigo)
-                Slider(value: $depth, in: 0...1).frame(maxWidth: 460).padding(.horizontal, 24)
+                Slider(value: $depth, in: 0...1).frame(maxWidth: 460).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Genius of dry-region India", systemImage: "building.columns")
                             .font(.title2.bold())
                         Text("Bawdis (stepwells) like Chand Baori and Rani Ki Vav let villagers walk down to the water table even in the driest months. Some are 9 storeys deep — magnificent works of architecture that also stored monsoon runoff.")
                             .font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 9 History + Geography",
                     detail: "Class 9 History covers the Indus Valley's drains. Class 10 Geography covers old Indian water stores. These include bawdis, johads and tankas. UNESCO lists Rani-ki-Vav in Gujarat as a World Heritage Site."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Stepwell trip",
                     detail: "Stepwells exist all over India — Chand Baori (Rajasthan), Rani-ki-Vav (Gujarat), Agrasen ki Baoli (Delhi). Plan a visit on your next vacation, or search YouTube for a virtual walkthrough. Notice the symmetry, the descending steps, the cool air."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

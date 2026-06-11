@@ -37,37 +37,37 @@ struct Scene2_SeriesVsParallel: View {
                         Toggle("Bulb 2 OK", isOn: $bulb2On)
                     }
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Two ways to wire bulbs", systemImage: "bolt.horizontal")
                             .font(.title2.bold())
                         Text("In a series circuit, the current passes through every device. One break and everything stops — like old Christmas lights. In parallel, each device has its own loop, so they're independent. House wiring is parallel.")
                             .font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 10 → JEE",
                     detail: "Class 10 introduces R_series = ΣR and 1/R_parallel = Σ1/R. JEE / Class 12 'Current Electricity' adds combination problems with cells in series/parallel, terminal voltage V = EMF − Ir, and the Wheatstone bridge condition."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Two-bulb brightness test",
                     detail: "Take two identical small bulbs and a battery. Wire them in series and switch on — both dim. Re-wire the same two in parallel — both bright. Same battery, very different brightness."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
                 Spacer(minLength: 0)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
 
         .frame(maxWidth: .infinity, maxHeight: .infinity)

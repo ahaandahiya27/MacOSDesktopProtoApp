@@ -60,7 +60,7 @@ struct Scene3_MoonPhasesWheel: View {
         // explanation cards don't cover the interactive content.
         ScrollView {
             LazyVStack(alignment: .center, spacing: 14) {
-                VStack(spacing: 12) {
+                VStack(spacing: DesignTokens.Spacing.md) {
                     Text("Moon Phases")
                         .font(.largeTitle.bold())
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -77,12 +77,12 @@ struct Scene3_MoonPhasesWheel: View {
                         }
                     }
                     .frame(maxWidth: 560)
-                    .padding(.top, 8)
+                    .padding(.top, DesignTokens.Spacing.sm)
 
                     Text("\(exploredPhases.count) / \(phases.count) phases explored")
                         .font(.caption.weight(.medium))
                         .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                        .padding(.top, 4)
+                        .padding(.top, DesignTokens.Spacing.xs)
 
                     Spacer()
                 }
@@ -90,7 +90,7 @@ struct Scene3_MoonPhasesWheel: View {
 
                 Group {
                     SoftShadowCard(padding: 18) {
-                        VStack(alignment: .leading, spacing: 8) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                             if let idx = selectedPhase, let phase = phases.first(where: { $0.id == idx }) {
                                 Label(phase.name, systemImage: "moon.fill")
                                     .font(.title2.bold())
@@ -122,15 +122,15 @@ struct Scene3_MoonPhasesWheel: View {
 
                     if allDone {
                         GotItButton { onComplete() }
-                            .padding(.bottom, 12)
+                            .padding(.bottom, DesignTokens.Spacing.md)
                     }
                 
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
@@ -146,7 +146,7 @@ struct Scene3_MoonPhasesWheel: View {
                 exploredPhases.insert(phase.id)
             }
         } label: {
-            VStack(spacing: 8) {
+            VStack(spacing: DesignTokens.Spacing.sm) {
                 // Shape-drawn moon (macOS 11 compatible — was Canvas before)
                 ZStack {
                     Circle().fill(Color.gray.opacity(0.2))
@@ -165,7 +165,7 @@ struct Scene3_MoonPhasesWheel: View {
                     .foregroundColor(isSelected ? Color.compatIndigo : .primary)
             }
             .frame(maxWidth: .infinity)
-            .padding(.vertical, 12)
+            .padding(.vertical, DesignTokens.Spacing.md)
             .padding(.horizontal, 6)
             .background(
                 RoundedRectangle(cornerRadius: 14, style: .continuous)

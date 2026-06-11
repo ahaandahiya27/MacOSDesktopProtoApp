@@ -32,14 +32,14 @@ struct Scene3_DistanceTimeGraph: View {
                     .accessibilityLabel("Distance vs time graph for \(motion.rawValue)")
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Shape tells the story", systemImage: SFSymbolCompat.name("chart.line.uptrend.xyaxis"))
                             .font(.title2.bold())
                         Text("Flat line = standing still. Straight slanted line = uniform speed. Curve that gets steeper = speeding up. You can read distance, speed and motion type just from the shape.")
                             .font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 Group {
                     MnemonicCallout(
@@ -52,27 +52,27 @@ struct Scene3_DistanceTimeGraph: View {
                         ]
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     LookingAheadCallout(
                         title: "Class 11 Physics → JEE",
                         detail: "The slope of a distance-time graph is velocity. The slope of a velocity-time graph is acceleration. These reading-the-graph skills become the heart of Class 11 Kinematics and reappear in JEE Mechanics."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     TryAtHomeCallout(
                         title: "Walk-a-graph game",
                         detail: "On a long corridor, mark every metre with chalk. Walk slowly for 5 seconds, then stop for 5, then run for 5. Have a friend write down where you are each second. Plot the points on graph paper. You just made a distance-time graph of your own motion."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                    GotItButton { onComplete() }.padding(.bottom, 12)
+                    GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
                 }
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

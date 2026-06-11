@@ -115,7 +115,7 @@ private struct SewageHistoryScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text(steps[step].0).font(.system(size: 100))
             Text(steps[step].1).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
             Button { withAnimation { step = (step + 1) % steps.count } } label: {
                 Text("Next era").font(.body.weight(.semibold))
@@ -124,8 +124,8 @@ private struct SewageHistoryScene: View {
                     .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                     .foregroundColor(Color.compatIndigo)
             }.buttonStyle(.plain).pointingCursor()
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -138,10 +138,10 @@ private struct AnaerobicDigesterScene: View {
             Text("🛢").font(.system(size: 100))
             Text("Sealed tank, no oxygen. Bacteria break down organic sludge slowly over 20-30 days. Outputs: biogas (60% methane fuel + CO₂) and a dry residue used as fertiliser. Cities run these to power their treatment plants from the sewage they treat — closed loop!")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -160,15 +160,15 @@ private struct BODScoreScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("BOD (Biological Oxygen Demand) = how much O₂ microbes need to break down the organic muck in water. Higher BOD = more pollution.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
             Text("BOD: \(String(format: "%.1f", bod)) mg/L")
                 .font(.title.monospacedDigit()).foregroundColor(DesignTokens.BrandColor.canvasText)
-            Slider(value: $bod, in: 0...30).frame(maxWidth: 340).padding(.horizontal, 24)
+            Slider(value: $bod, in: 0...30).frame(maxWidth: 340).padding(.horizontal, DesignTokens.Spacing.xl)
             Text(rating).font(.callout.weight(.semibold))
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .multilineTextAlignment(.center)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -187,7 +187,7 @@ private struct SludgeToBiogasScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text(stages[stage].0).font(.system(size: 100))
             Text(stages[stage].1).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
             Button { withAnimation { stage = (stage + 1) % stages.count } } label: {
                 Text("Next").font(.body.weight(.semibold))
@@ -196,8 +196,8 @@ private struct SludgeToBiogasScene: View {
                     .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                     .foregroundColor(Color.compatIndigo)
             }.buttonStyle(.plain).pointingCursor()
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -216,7 +216,7 @@ private struct PollutantLifecycleScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text(stages[stage].0).font(.system(size: 100))
             Text(stages[stage].1).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
             Button { withAnimation { stage = (stage + 1) % stages.count } } label: {
                 Text("Next").font(.body.weight(.semibold))
@@ -225,8 +225,8 @@ private struct PollutantLifecycleScene: View {
                     .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                     .foregroundColor(Color.compatIndigo)
             }.buttonStyle(.plain).pointingCursor()
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -239,10 +239,10 @@ private struct SwachhBharatScene: View {
             Text("🧹🇮🇳").font(.system(size: 100))
             Text("Launched 2 Oct 2014 — Gandhi's birthday. Goal: clean India, 100 million toilets built. By 2019, India declared open-defecation-free. Behaviour change campaigns reached 600 million Indians. One of the world's largest sanitation drives in history.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -270,19 +270,19 @@ private struct ToiletDesignAtlasScene: View {
                         Text(t.name).font(.headline).foregroundColor(DesignTokens.BrandColor.canvasText)
                         Spacer()
                     }
-                    .padding(12).frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(DesignTokens.Spacing.md).frame(maxWidth: DesignTokens.contentMaxWidth)
                     .background(RoundedRectangle(cornerRadius: 12)
                         .fill(sel == t.id ? Color.compatIndigo.opacity(0.12) : Color.white.opacity(0.85)))
                     .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, 24)
+                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, DesignTokens.Spacing.xl)
             }
             if let s = sel, let t = toilets.first(where: { $0.id == s }) {
                 Text(t.detail).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                    .multilineTextAlignment(.center).padding(.horizontal, 24)
+                    .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
             }
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -302,10 +302,10 @@ private struct GreywaterBlackwaterScene: View {
                  ? "Greywater: from sinks, showers, washing machines. Has soap + dirt but no faecal matter. Can be reused for gardens after simple filtering."
                  : "Blackwater: from toilets. Has faeces + urine. Needs full treatment before reuse or release. Carries bacteria, viruses, hormones.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
     private func pickChip(_ label: String, on: Bool, tap: @escaping () -> Void) -> some View {
         Button(action: tap) {
@@ -334,7 +334,7 @@ private struct IndustrialEffluentScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             ForEach(effs) { e in
                 Button { tapped.insert(e.id) } label: {
-                    VStack(alignment: .leading, spacing: 4) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                         Text(e.title).font(.headline).foregroundColor(DesignTokens.BrandColor.canvasText)
                         if tapped.contains(e.id) {
                             Text(e.detail).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -343,13 +343,13 @@ private struct IndustrialEffluentScene: View {
                             Text("Tap to reveal").font(.caption.italic())
                                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         }
-                    }.padding(12).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
+                    }.padding(DesignTokens.Spacing.md).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
                     .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
                     .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, 24)
+                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, DesignTokens.Spacing.xl)
             }
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -362,10 +362,10 @@ private struct SanitationWorkerScene: View {
             Text("🦺🧹").font(.system(size: 100))
             Text("Sanitation workers (safai karamcharis) clean streets, drains, sewers. Many work without protective gear, exposed to toxic gases and waste. Manual scavenging is banned by law (1993, 2013), but enforcement is patchy. Every 16 May, India observes Safai Karmachari Diwas to honour their work.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 

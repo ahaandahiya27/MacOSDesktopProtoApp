@@ -29,7 +29,7 @@ struct Scene1_BuildACircuit: View {
                     VStack(spacing: 20) {
                         HStack {
                             // Cell on the left
-                            VStack(spacing: 2) {
+                            VStack(spacing: DesignTokens.Spacing.xxs) {
                                 Text(hasCell ? "🔋" : "🪫")
                                     .font(.system(size: 44))
                                     .opacity(hasCell ? 1 : 0.35)
@@ -37,7 +37,7 @@ struct Scene1_BuildACircuit: View {
                             }
                             Spacer()
                             // Bulb on the right
-                            VStack(spacing: 2) {
+                            VStack(spacing: DesignTokens.Spacing.xxs) {
                                 Text("💡")
                                     .font(.system(size: 50))
                                     .opacity(glowing ? 1 : 0.25)
@@ -48,7 +48,7 @@ struct Scene1_BuildACircuit: View {
                         .padding(.horizontal, 50)
 
                         // Switch at the bottom
-                        VStack(spacing: 2) {
+                        VStack(spacing: DesignTokens.Spacing.xxs) {
                             Text(switchOn ? "🔘" : "⚪")
                                 .font(.system(size: 32))
                             Text("Switch").font(.caption2)
@@ -57,7 +57,7 @@ struct Scene1_BuildACircuit: View {
                     .frame(width: 360, height: 220)
                 }
 
-                HStack(spacing: 24) {
+                HStack(spacing: DesignTokens.Spacing.xl) {
                     Toggle("Cell connected",   isOn: $hasCell)
                     Toggle("Switch ON",        isOn: $switchOn)
                 }
@@ -68,14 +68,14 @@ struct Scene1_BuildACircuit: View {
                     .foregroundColor(glowing ? .green : .secondary)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Closed loop = current", systemImage: "bolt.fill")
                             .font(.title2.bold())
                         Text("Electric current flows only when there's an unbroken path from one terminal of a cell, through a conductor, and back to the other terminal. Open the switch anywhere and the loop breaks.")
                             .font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 // Grouped so the outer VStack stays within Swift 5.5's
                 // 10-child ViewBuilder limit.
@@ -97,28 +97,28 @@ struct Scene1_BuildACircuit: View {
                         accent: .yellow
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     LookingAheadCallout(
                         title: "Class 10 / 12 Physics → JEE",
                         detail: "The closed-loop idea you just toggled is what Class 10 calls Ohm's Law (V = IR) and what Class 12 turns into Kirchhoff's Voltage and Current Laws (KVL/KCL). JEE/NEET both expect fluent circuit analysis."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     TryAtHomeCallout(
                         title: "Smallest possible circuit",
                         detail: "Find a fresh AA cell, a small bulb (the kind in physics kits with two wires already attached), and a piece of insulated copper wire. Touch the bulb wires to the cell terminals via the copper. The bulb glows — that's a closed loop you built with your own hands."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                    GotItButton { onComplete() }.padding(.bottom, 12)
+                    GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
                     Spacer(minLength: 0)
                 }
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
 
         .frame(maxWidth: .infinity, maxHeight: .infinity)

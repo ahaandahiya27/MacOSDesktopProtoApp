@@ -51,19 +51,19 @@ struct SanskritWordMatchScene: View {
 
     var body: some View {
         ScrollView {
-            LazyVStack(spacing: 16) {
+            LazyVStack(spacing: DesignTokens.Spacing.lg) {
                 Text(title)
                     .font(.largeTitle.bold())
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .multilineTextAlignment(.center)
                     .padding(.top, 18)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 Text(intro)
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .multilineTextAlignment(.center)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 progressCounter
                 matchGrid
                 if solved {
@@ -71,7 +71,7 @@ struct SanskritWordMatchScene: View {
                 }
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 16)
+            .padding(.bottom, DesignTokens.Spacing.lg)
         }
         .onAppear {
             if shuffledMeanings.isEmpty { shuffledMeanings = pairs.shuffled() }
@@ -85,7 +85,7 @@ struct SanskritWordMatchScene: View {
             .font(.monoDigitCaption)
             .foregroundColor(DesignTokens.BrandColor.canvasText)
             .padding(.horizontal, 10)
-            .padding(.vertical, 4)
+            .padding(.vertical, DesignTokens.Spacing.xs)
             .background(
                 Capsule()
                     .fill(Color.white.opacity(0.85))
@@ -115,7 +115,7 @@ struct SanskritWordMatchScene: View {
             }
         }
         .frame(maxWidth: 560)
-        .padding(.horizontal, 16)
+        .padding(.horizontal, DesignTokens.Spacing.lg)
     }
 
     private func columnHeader(_ text: String) -> some View {
@@ -145,7 +145,7 @@ struct SanskritWordMatchScene: View {
                         .foregroundColor(.green)
                 }
             }
-            .padding(.horizontal, 12).padding(.vertical, 10)
+            .padding(.horizontal, DesignTokens.Spacing.md).padding(.vertical, 10)
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(RoundedRectangle(cornerRadius: 10).fill(termFill(isMatched: isMatched, isSelected: isSelected)))
             .overlay(
@@ -172,7 +172,7 @@ struct SanskritWordMatchScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .multilineTextAlignment(.leading)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.horizontal, 12).padding(.vertical, 10)
+                .padding(.horizontal, DesignTokens.Spacing.md).padding(.vertical, 10)
                 .background(RoundedRectangle(cornerRadius: 10).fill(meaningFill(isMatched: isMatched, isWrong: isWrong)))
                 .overlay(
                     RoundedRectangle(cornerRadius: 10)
@@ -187,7 +187,7 @@ struct SanskritWordMatchScene: View {
     }
 
     private var completionBlock: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: DesignTokens.Spacing.md) {
             Image(systemName: SFSymbolCompat.name("checkmark.seal.fill"))
                 .font(.system(size: 44))
                 .foregroundColor(.green)
@@ -198,7 +198,7 @@ struct SanskritWordMatchScene: View {
                 .multilineTextAlignment(.center)
             GotItButton(label: "Continue", action: onComplete)
         }
-        .padding(.top, 8)
+        .padding(.top, DesignTokens.Spacing.sm)
     }
 
     // MARK: - Logic

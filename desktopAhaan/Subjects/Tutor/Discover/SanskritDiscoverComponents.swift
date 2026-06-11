@@ -36,19 +36,19 @@ struct SanskritDiscoverInfoScene: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .multilineTextAlignment(.center)
                     .padding(.top, 18)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 ForEach(paragraphs.indices, id: \.self) { i in
                     Text(paragraphs[i])
                         .font(.callout)
                         .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         .multilineTextAlignment(.center)
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
-                        .padding(.horizontal, 24)
+                        .padding(.horizontal, DesignTokens.Spacing.xl)
                 }
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }
@@ -80,12 +80,12 @@ struct SanskritDiscoverQuickCheckScene: View {
                     .multilineTextAlignment(.center)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
                     .padding(.top, 18)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 Text(question.prompt)
                     .font(.title3.weight(.semibold))
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 optionList
                 if selected != nil {
                     GotItButton(action: { onComplete(selected == question.answer ? 1 : 0) })
@@ -93,7 +93,7 @@ struct SanskritDiscoverQuickCheckScene: View {
                 }
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
@@ -119,7 +119,7 @@ struct SanskritDiscoverQuickCheckScene: View {
                                 .foregroundColor(.red)
                         }
                     }
-                    .padding(.horizontal, 16).padding(.vertical, 12)
+                    .padding(.horizontal, DesignTokens.Spacing.lg).padding(.vertical, DesignTokens.Spacing.md)
                     .frame(maxWidth: 360)
                     .background(RoundedRectangle(cornerRadius: 10).fill(optionFill(opt)))
                     .overlay(RoundedRectangle(cornerRadius: 10).strokeBorder(Color.orange.opacity(0.3), lineWidth: 1))
@@ -176,7 +176,7 @@ struct SanskritDiscoverBossQuizScene: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .multilineTextAlignment(.center)
                     .padding(.top, 18)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 if index < questions.count {
                     Text("Question \(index + 1) of \(questions.count) · Score \(score)")
                         .font(.caption.weight(.semibold))
@@ -187,7 +187,7 @@ struct SanskritDiscoverBossQuizScene: View {
                 }
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
         .onAppear { if shuffled.isEmpty, index < questions.count { shuffled = (questions[index].options ?? []).shuffled() } }
         .onChange(of: index) { newIndex in
@@ -196,12 +196,12 @@ struct SanskritDiscoverBossQuizScene: View {
     }
 
     private func questionCard(_ q: Question) -> some View {
-        VStack(spacing: 12) {
+        VStack(spacing: DesignTokens.Spacing.md) {
             Text(q.prompt)
                 .font(.title3.weight(.semibold))
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .multilineTextAlignment(.center)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             optionList(q)
             if revealed {
                 explanationAndNext(q)
@@ -238,7 +238,7 @@ struct SanskritDiscoverBossQuizScene: View {
                                 .foregroundColor(.red)
                         }
                     }
-                    .padding(.horizontal, 16).padding(.vertical, 12)
+                    .padding(.horizontal, DesignTokens.Spacing.lg).padding(.vertical, DesignTokens.Spacing.md)
                     .frame(maxWidth: 360)
                     .background(RoundedRectangle(cornerRadius: 10).fill(optionFill(opt, q)))
                     .overlay(RoundedRectangle(cornerRadius: 10).strokeBorder(Color.orange.opacity(0.3), lineWidth: 1))
@@ -271,12 +271,12 @@ struct SanskritDiscoverBossQuizScene: View {
             }
             .buttonStyle(.plain)
             .pointingCursor()
-            .padding(.top, 4)
+            .padding(.top, DesignTokens.Spacing.xs)
         }
     }
 
     private var finishCard: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: DesignTokens.Spacing.md) {
             if score >= max(1, (questions.count * 4) / 5) {
                 Image(systemName: SFSymbolCompat.name("checkmark.seal.fill"))
                     .font(.system(size: 52))
@@ -290,7 +290,7 @@ struct SanskritDiscoverBossQuizScene: View {
                 .font(.callout)
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 .multilineTextAlignment(.center)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             GotItButton(label: "Finish chapter", action: { onComplete(score) }).padding(.top, 6)
         }
     }

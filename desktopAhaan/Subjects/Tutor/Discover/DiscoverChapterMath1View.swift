@@ -92,18 +92,18 @@ private struct MathLakhPlaceValueScene: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .multilineTextAlignment(.center)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
-                placeValueGrid.padding(.vertical, 16)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
+                placeValueGrid.padding(.vertical, DesignTokens.Spacing.lg)
                 Text("The largest 5-digit number is 99,999. Add just 1 and every column rolls over — you land on 1,00,000, the smallest 6-digit number and exactly one lakh.")
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .multilineTextAlignment(.center)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
@@ -142,12 +142,12 @@ private struct MathQuickCheck: View {
     @State private var selected: Int? = nil
 
     var body: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: DesignTokens.Spacing.md) {
             Text(prompt)
                 .font(.title3.weight(.semibold))
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .multilineTextAlignment(.center)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             ForEach(options.indices, id: \.self) { i in
                 Button {
                     if selected == nil { selected = i }
@@ -165,7 +165,7 @@ private struct MathQuickCheck: View {
                                 .foregroundColor(.red)
                         }
                     }
-                    .padding(.horizontal, 16).padding(.vertical, 12)
+                    .padding(.horizontal, DesignTokens.Spacing.lg).padding(.vertical, DesignTokens.Spacing.md)
                     .frame(maxWidth: 320)
                     .background(RoundedRectangle(cornerRadius: 10).fill(optionFill(i)))
                     .overlay(RoundedRectangle(cornerRadius: 10).strokeBorder(Color.compatIndigo.opacity(0.3), lineWidth: 1))
@@ -206,17 +206,17 @@ private struct MathIndianCommasScene: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .multilineTextAlignment(.center)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 MathQuickCheck(
                     prompt: "How is 4567890 written with Indian commas?",
                     options: ["45,67,890", "4,567,890", "456,7890", "4,56,7890"],
                     correctIndex: 0,
                     onComplete: onComplete
                 )
-                .padding(.top, 8)
+                .padding(.top, DesignTokens.Spacing.sm)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }
@@ -238,17 +238,17 @@ private struct MathRoundingScene: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .multilineTextAlignment(.center)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 MathQuickCheck(
                     prompt: "Round 47,832 to the nearest thousand.",
                     options: ["47,000", "48,000", "47,800", "50,000"],
                     correctIndex: 1,
                     onComplete: onComplete
                 )
-                .padding(.top, 8)
+                .padding(.top, DesignTokens.Spacing.sm)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }
@@ -270,17 +270,17 @@ private struct MathProductDigitsScene: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .multilineTextAlignment(.center)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 MathQuickCheck(
                     prompt: "A 3-digit number times a 2-digit number gives a product with how many digits?",
                     options: ["exactly 5", "4 or 5", "exactly 4", "always 6"],
                     correctIndex: 1,
                     onComplete: onComplete
                 )
-                .padding(.top, 8)
+                .padding(.top, DesignTokens.Spacing.sm)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }
@@ -320,17 +320,17 @@ private struct MathLargeNumbersBossQuizScene: View {
                 }
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
     private func questionCard(_ q: QA) -> some View {
-        VStack(spacing: 12) {
+        VStack(spacing: DesignTokens.Spacing.md) {
             Text(q.prompt)
                 .font(.title3.weight(.semibold))
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .multilineTextAlignment(.center)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             ForEach(q.options.indices, id: \.self) { i in
                 Button {
                     guard selected == nil else { return }
@@ -340,7 +340,7 @@ private struct MathLargeNumbersBossQuizScene: View {
                     Text(q.options[i])
                         .font(.body.weight(.medium))
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
-                        .padding(.horizontal, 16).padding(.vertical, 12)
+                        .padding(.horizontal, DesignTokens.Spacing.lg).padding(.vertical, DesignTokens.Spacing.md)
                         .frame(maxWidth: 300)
                         .background(RoundedRectangle(cornerRadius: 10).fill(optionFill(i, q)))
                         .overlay(RoundedRectangle(cornerRadius: 10).strokeBorder(Color.compatIndigo.opacity(0.3), lineWidth: 1))
@@ -368,7 +368,7 @@ private struct MathLargeNumbersBossQuizScene: View {
     }
 
     private var finishCard: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: DesignTokens.Spacing.md) {
             Text("You scored \(score) / \(questions.count)")
                 .font(.title2.bold())
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -376,7 +376,7 @@ private struct MathLargeNumbersBossQuizScene: View {
                 .font(.callout)
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 .multilineTextAlignment(.center)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             GotItButton(action: { onComplete(score) }).padding(.top, 6)
         }
     }

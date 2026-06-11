@@ -56,12 +56,12 @@ struct Scene9_BossQuiz_Ch5: View {
                     quizBody
                 } else {
                     completionView
-                        .padding(.bottom, 12)
+                        .padding(.bottom, DesignTokens.Spacing.md)
                 }
             }
             .frame(maxWidth: .infinity)
-            .padding(.horizontal, 24)
-            .padding(.bottom, 12)
+            .padding(.horizontal, DesignTokens.Spacing.xl)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
         .overlay(
             Group {
@@ -104,7 +104,7 @@ struct Scene9_BossQuiz_Ch5: View {
 
         if revealed[currentQ] {
             SoftShadowCard(padding: 12) {
-                HStack(alignment: .top, spacing: 8) {
+                HStack(alignment: .top, spacing: DesignTokens.Spacing.sm) {
                     Image(systemName: "lightbulb.fill")
                         .foregroundColor(.yellow)
                     Text(item.bossExplanation)
@@ -180,10 +180,10 @@ struct Scene9_BossQuiz_Ch5: View {
                 .font(.title2)
                 .foregroundColor(Color.compatIndigo)
                 .padding(.horizontal, 18)
-                .padding(.vertical, 8)
+                .padding(.vertical, DesignTokens.Spacing.sm)
                 .background(Capsule().fill(Color.compatIndigo.opacity(0.12)))
 
-            HStack(spacing: 12) {
+            HStack(spacing: DesignTokens.Spacing.md) {
                 Button {
                     saveCertificate()
                 } label: {
@@ -254,8 +254,8 @@ private struct Ch5AnswerButton: View {
                     Image(systemName: "xmark.circle.fill").foregroundColor(.red)
                 }
             }
-            .padding(.horizontal, 16)
-            .padding(.vertical, 12)
+            .padding(.horizontal, DesignTokens.Spacing.lg)
+            .padding(.vertical, DesignTokens.Spacing.md)
             .frame(maxWidth: .infinity, alignment: .leading)
         }
         .buttonStyle(.plain)
@@ -302,14 +302,14 @@ private struct CertificateView: View {
             Text("Awarded to a curious learner")
                 .font(.body)
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .padding(.top, 8)
+                .padding(.top, DesignTokens.Spacing.sm)
             Text("Final score: \(score) / \(total)")
                 .font(.title2.bold())
-                .padding(.top, 12)
+                .padding(.top, DesignTokens.Spacing.md)
             Text(formattedCurrentDate())
                 .font(.caption)
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .padding(.top, 16)
+                .padding(.top, DesignTokens.Spacing.lg)
         }
         .padding(40)
         .frame(width: 600, height: 420)
@@ -319,7 +319,7 @@ private struct CertificateView: View {
                 .overlay(
                     RoundedRectangle(cornerRadius: 18)
                         .strokeBorder(Color.compatIndigo, lineWidth: 4)
-                        .padding(8)
+                        .padding(DesignTokens.Spacing.sm)
                 )
         )
     }

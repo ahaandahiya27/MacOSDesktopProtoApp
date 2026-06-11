@@ -134,10 +134,10 @@ private struct LightStraightLinesScene: View {
                  ? "Light can't bend around — it's stopped. That's how shadows form."
                  : "Light from source reaches eye unobstructed.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -156,7 +156,7 @@ private struct PinholeCameraScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text(steps[step].0).font(.system(size: 100))
             Text(steps[step].1).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
             Button { withAnimation { step = (step + 1) % steps.count } } label: {
                 Text("Next").font(.body.weight(.semibold))
@@ -165,8 +165,8 @@ private struct PinholeCameraScene: View {
                     .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                     .foregroundColor(Color.compatIndigo)
             }.buttonStyle(.plain).pointingCursor()
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -193,19 +193,19 @@ private struct EyeAnatomyScene: View {
                         Text(p.name).font(.headline).foregroundColor(DesignTokens.BrandColor.canvasText)
                         Spacer()
                     }
-                    .padding(12).frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(DesignTokens.Spacing.md).frame(maxWidth: DesignTokens.contentMaxWidth)
                     .background(RoundedRectangle(cornerRadius: 12)
                         .fill(part == p.id ? Color.compatIndigo.opacity(0.12) : Color.white.opacity(0.85)))
                     .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, 24)
+                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, DesignTokens.Spacing.xl)
             }
             if let s = part, let p = parts.first(where: { $0.id == s }) {
                 Text(p.detail).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                    .multilineTextAlignment(.center).padding(.horizontal, 24)
+                    .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
             }
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -222,17 +222,17 @@ private struct ColourWheelMixScene: View {
                 .frame(width: 140, height: 140)
                 .overlay(Circle().strokeBorder(Color.gray, lineWidth: 1))
             Text("Red").font(.caption).foregroundColor(.secondary)
-            Slider(value: $red, in: 0...1).frame(maxWidth: 340).padding(.horizontal, 24)
+            Slider(value: $red, in: 0...1).frame(maxWidth: 340).padding(.horizontal, DesignTokens.Spacing.xl)
             Text("Green").font(.caption).foregroundColor(.secondary)
-            Slider(value: $green, in: 0...1).frame(maxWidth: 340).padding(.horizontal, 24)
+            Slider(value: $green, in: 0...1).frame(maxWidth: 340).padding(.horizontal, DesignTokens.Spacing.xl)
             Text("Blue").font(.caption).foregroundColor(.secondary)
-            Slider(value: $blue, in: 0...1).frame(maxWidth: 340).padding(.horizontal, 24)
+            Slider(value: $blue, in: 0...1).frame(maxWidth: 340).padding(.horizontal, DesignTokens.Spacing.xl)
             Text("Red + Green + Blue = White light. Your screen makes every colour by mixing just these three.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -247,13 +247,13 @@ private struct WhySkyBlueScene: View {
                 .frame(width: 220, height: 140).cornerRadius(14)
             Text("Sunlight is white = all colours mixed. When it hits Earth's atmosphere, blue light scatters in all directions more than red does (because blue's shorter wavelength). Whichever direction you look, blue light is bouncing toward you.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
             Text("At sunrise/sunset, the path through air is longer — blue scatters away, red+orange make it through. That's why sunsets glow orange.")
                 .font(.caption.italic()).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .padding(.horizontal, 24).multilineTextAlignment(.center)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+                .padding(.horizontal, DesignTokens.Spacing.xl).multilineTextAlignment(.center)
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -273,10 +273,10 @@ private struct EclipseScene: View {
                  ? "Solar eclipse: Moon comes between Sun and Earth. Moon's shadow falls on Earth. Daytime sky goes dark. Happens at new moon."
                  : "Lunar eclipse: Earth comes between Sun and Moon. Earth's shadow falls on the Moon. Moon turns dim red. Happens at full moon.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
     private func pickChip(_ label: String, on: Bool, tap: @escaping () -> Void) -> some View {
         Button(action: tap) {
@@ -312,13 +312,13 @@ private struct ReflectionAngleScene: View {
             .frame(height: 180)
             Text("\(Int(angle))°").font(.title2.monospacedDigit())
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
-            Slider(value: $angle, in: 10...80).frame(maxWidth: 340).padding(.horizontal, 24)
+            Slider(value: $angle, in: 10...80).frame(maxWidth: 340).padding(.horizontal, DesignTokens.Spacing.xl)
             Text("Whatever angle the light comes in at (yellow), it bounces off at the same angle on the other side (red). Law of reflection.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -337,10 +337,10 @@ private struct MirrorSymmetryScene: View {
             .foregroundColor(DesignTokens.BrandColor.canvasText)
             Text("The word AMBULANCE on the front of ambulances is mirror-written so when drivers see it in their rear-view mirror, they read it correctly and pull over.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -353,10 +353,10 @@ private struct FibreOpticScene: View {
             Text("💡→🌐").font(.system(size: 100))
             Text("Thin glass strands carry light by total internal reflection. The light bounces along the inside walls without escaping. Used for internet cables — your YouTube videos travel as flashes of light through ocean-floor fibres.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -381,9 +381,9 @@ private struct CameraVsEyeScene: View {
             .padding(14).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
             .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
             .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-            .padding(.horizontal, 24)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            .padding(.horizontal, DesignTokens.Spacing.xl)
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 

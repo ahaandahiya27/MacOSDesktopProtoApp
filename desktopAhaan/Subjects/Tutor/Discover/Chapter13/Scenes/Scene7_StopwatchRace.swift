@@ -28,7 +28,7 @@ struct Scene7_StopwatchRace: View {
                     .font(.system(size: 56, weight: .bold, design: .monospaced))
                     .foregroundColor(running ? Color.compatIndigo : .secondary)
 
-                HStack(spacing: 16) {
+                HStack(spacing: DesignTokens.Spacing.lg) {
                     Button(running ? "Stop" : "Start") {
                         if running {
                             running = false
@@ -68,26 +68,26 @@ struct Scene7_StopwatchRace: View {
                     Text("A stopwatch measures very short time intervals — useful for races, science experiments, and reaction-time tests. Digital stopwatches today resolve milliseconds.")
                         .font(.callout).lineSpacing(4)
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 11 Physics → JEE",
                     detail: "Class 11 'Units and Measurements' introduces precision and significant figures. JEE Physics expects careful sig-figs in numerical answers. Class 12 Modern Physics defines one second by the atomic clock — 9,192,631,770 cycles of Cs-133."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Reaction-time game",
                     detail: "Have a friend hold a ruler vertically with the 0-mark down. Place your fingers just below the 0 mark, ready to catch. They drop the ruler without warning. Note where you catch it. Use t = √(2d/g) → d in cm gives reaction time in seconds (≈ 0.1-0.2 s)."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

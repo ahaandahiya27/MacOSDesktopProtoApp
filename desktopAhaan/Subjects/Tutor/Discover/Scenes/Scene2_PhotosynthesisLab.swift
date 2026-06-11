@@ -61,7 +61,7 @@ struct Scene2_PhotosynthesisLab: View {
                 Text("+").font(.title.bold()).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 IngredientTile(emoji: "💨", label: "6 O₂", filled: produced, color: Color.compatTeal)
             }
-            .padding(.horizontal, 12)
+            .padding(.horizontal, DesignTokens.Spacing.md)
 
             // The reactor: the leaf in the middle
             ZStack {
@@ -95,8 +95,8 @@ struct Scene2_PhotosynthesisLab: View {
                 Label(cooking ? "Cooking…" : (produced ? "Made it!" : "Cook!"),
                       systemImage: produced ? "sparkles" : "flame.fill")
                     .font(.title3.bold())
-                    .padding(.horizontal, 24)
-                    .padding(.vertical, 12)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
+                    .padding(.vertical, DesignTokens.Spacing.md)
             }
             
             .accentColor(canCook ? .green : .gray)
@@ -124,14 +124,14 @@ struct Scene2_PhotosynthesisLab: View {
                     detail: "You'll meet TWO photosynthesis pathways in NEET: C3 plants (rice, wheat) and C4 plants (sugarcane, maize, the speed champions). The reactant ratio you just balanced is the same; the trick C4 plants pull is concentrating CO₂ near the chlorophyll so the enzyme RuBisCO doesn't waste energy on photorespiration. Tropical heat = C4 advantage."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Count the bubbles",
                     detail: "Take a small sprig of pondweed (Hydrilla / Elodea — pet shops sell it). Drop it into a glass of water with a pinch of baking soda dissolved (CO₂ source). Cover the sprig with a funnel; balance a test tube on top. Shine a desk lamp on it. Count bubbles of O₂ escaping for 1 minute. Move the lamp closer — count again. You just measured the rate of photosynthesis."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 HStack(spacing: DesignTokens.Spacing.md) {
                     Button("🔁 Try again") { resetEverything() }
@@ -148,11 +148,11 @@ struct Scene2_PhotosynthesisLab: View {
                         }
                     }
                 }
-                .padding(.bottom, 12)
+                .padding(.bottom, DesignTokens.Spacing.md)
             }
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 

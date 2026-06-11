@@ -69,13 +69,13 @@ struct Scene1_WeatherVsClimate: View {
                         pulse: $climatePulse
                     )
                 }
-                .padding(.horizontal, 32)
+                .padding(.horizontal, DesignTokens.Spacing.xxl)
                 .padding(.top, 20)
                 .frame(height: 280)
 
                 Group {
                     SoftShadowCard(padding: 18) {
-                        VStack(alignment: .leading, spacing: 8) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                             Label("Weather vs Climate", systemImage: "cloud.sun.fill")
                                 .font(.title2.bold())
                             Text(explanationText)
@@ -122,12 +122,12 @@ struct Scene1_WeatherVsClimate: View {
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
                     GotItButton { onComplete() }
-                        .padding(.bottom, 12)
+                        .padding(.bottom, DesignTokens.Spacing.md)
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
@@ -194,9 +194,9 @@ struct Scene1_WeatherVsClimate: View {
                     .font(.subheadline)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-                HStack(spacing: 16) {
+                HStack(spacing: DesignTokens.Spacing.lg) {
                     ForEach(icons) { icon in
-                        VStack(spacing: 4) {
+                        VStack(spacing: DesignTokens.Spacing.xs) {
                             Image(systemName: icon.symbol)
                                 .font(.title2)
                                 .foregroundColor(color)
@@ -207,7 +207,7 @@ struct Scene1_WeatherVsClimate: View {
                         }
                     }
                 }
-                .padding(.top, 8)
+                .padding(.top, DesignTokens.Spacing.sm)
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .padding(20)

@@ -95,10 +95,10 @@ struct Scene9_BossQuiz_Ch2: View {
                             .font(.title.bold())
                             .foregroundColor(.green)
 
-                        HStack(spacing: 16) {
+                        HStack(spacing: DesignTokens.Spacing.lg) {
                             Text("Score: \(score)/\(quiz.count)")
                                 .font(.title2.bold())
-                                .padding(12)
+                                .padding(DesignTokens.Spacing.md)
                                 .background(Color.yellow.opacity(0.2))
                                 .cornerRadius(8)
 
@@ -108,7 +108,7 @@ struct Scene9_BossQuiz_Ch2: View {
 
                         Button(action: { downloadCertificate() }) {
                             Label("🎓 Print my certificate", systemImage: "doc.text.fill")
-                                .padding(.vertical, 12)
+                                .padding(.vertical, DesignTokens.Spacing.md)
                                 .padding(.horizontal, 20)
                         }
                         .accentColor(.blue)
@@ -120,12 +120,12 @@ struct Scene9_BossQuiz_Ch2: View {
                         }
                     }
                     .frame(maxWidth: 600)
-                    .padding(.bottom, 12)
+                    .padding(.bottom, DesignTokens.Spacing.md)
                 }
             }
             .frame(maxWidth: .infinity)
-            .padding(.horizontal, 24)
-            .padding(.bottom, 12)
+            .padding(.horizontal, DesignTokens.Spacing.xl)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
         .overlay(
             Group {
@@ -291,7 +291,7 @@ struct AnswerButton: View {
             Text(label)
                 .font(.body)
                 .frame(maxWidth: .infinity)
-                .padding(.vertical, 12)
+                .padding(.vertical, DesignTokens.Spacing.md)
         }
         
         .foregroundColor(color(for: state))

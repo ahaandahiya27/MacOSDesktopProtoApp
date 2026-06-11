@@ -54,14 +54,14 @@ struct Scene3_ClimateZonesMap: View {
         // interactive content; cards now sit as siblings below it.
         ScrollView {
             LazyVStack(alignment: .center, spacing: 14) {
-                VStack(spacing: 12) {
+                VStack(spacing: DesignTokens.Spacing.md) {
                     Text("Climate Zones of the World")
                         .font(.title2.bold())
                         .padding(.top, 14)
 
-                    HStack(spacing: 8) {
+                    HStack(spacing: DesignTokens.Spacing.sm) {
                         ForEach(zones) { zone in
-                            HStack(spacing: 4) {
+                            HStack(spacing: DesignTokens.Spacing.xs) {
                                 Circle()
                                     .fill(zone.color)
                                     .frame(width: 10, height: 10)
@@ -124,11 +124,11 @@ struct Scene3_ClimateZonesMap: View {
                         .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 }
                 .frame(maxWidth: .infinity)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 Group {
                     SoftShadowCard(padding: 18) {
-                        VStack(alignment: .leading, spacing: 8) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                             if let idx = selectedZone, let zone = zones.first(where: { $0.id == idx }) {
                                 Label(zone.name, systemImage: SFSymbolCompat.name("globe.americas.fill"))
                                     .font(.title2.bold())
@@ -164,20 +164,20 @@ struct Scene3_ClimateZonesMap: View {
 
                     if allExplored {
                         GotItButton { onComplete() }
-                            .padding(.bottom, 12)
+                            .padding(.bottom, DesignTokens.Spacing.md)
                     }
                 
 
                 }
 
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             
 
             }
 
             .frame(maxWidth: .infinity)
 
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
 
         }
     }

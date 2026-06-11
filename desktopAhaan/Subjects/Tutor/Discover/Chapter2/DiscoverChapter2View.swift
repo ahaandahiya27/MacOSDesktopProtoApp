@@ -139,7 +139,7 @@ private struct ThreeJawsComparedScene: View {
                                 Text(j.name).font(.caption.weight(.semibold))
                                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                             }
-                            .padding(12)
+                            .padding(DesignTokens.Spacing.md)
                             .background(RoundedRectangle(cornerRadius: 12)
                                 .fill(selected == j.id
                                       ? Color.compatIndigo.opacity(0.15)
@@ -153,7 +153,7 @@ private struct ThreeJawsComparedScene: View {
                     }
                 }
                 if let sel = selected, let j = jaws.first(where: { $0.id == sel }) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Text("Teeth: \(j.teeth)").font(.callout)
                             .foregroundColor(DesignTokens.BrandColor.canvasText)
                         Text("Diet: \(j.diet)").font(.callout)
@@ -163,12 +163,12 @@ private struct ThreeJawsComparedScene: View {
                     .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
                     .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
                     .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 }
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }
@@ -211,17 +211,17 @@ private struct TeethTypesSorterScene: View {
                         .font(.headline)
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
                 }
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
     @ViewBuilder
     private func jobRow(_ j: Job) -> some View {
         let picked = assignment[j.id]
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             Text(j.label).font(.body)
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
             HStack(spacing: 6) {
@@ -246,11 +246,11 @@ private struct TeethTypesSorterScene: View {
                 }
             }
         }
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
         .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
         .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-        .padding(.horizontal, 24)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
     }
 }
 
@@ -273,17 +273,17 @@ private struct SalivaLabScene: View {
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 breadVisual.frame(width: 220, height: 100)
                 Slider(value: $time, in: 0...30)
-                    .frame(maxWidth: 340).padding(.horizontal, 24)
+                    .frame(maxWidth: 340).padding(.horizontal, DesignTokens.Spacing.xl)
                 Text("Chewed for \(Int(time))s — \(Int(sugar * 100))% sugar")
                     .font(.callout.monospacedDigit())
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
@@ -320,7 +320,7 @@ private struct CardiacSphincterScene: View {
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 gateVisual.frame(width: 220, height: 200)
                 Button {
                     withAnimationRespectingReduceMotion(.easeInOut(duration: 0.25)) { open.toggle() }
@@ -339,12 +339,12 @@ private struct CardiacSphincterScene: View {
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
@@ -390,20 +390,20 @@ private struct StomachPHSliderScene: View {
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 phMeter.frame(width: 260, height: 60)
                 Slider(value: $ph, in: 0...14)
-                    .frame(maxWidth: 340).padding(.horizontal, 24)
+                    .frame(maxWidth: 340).padding(.horizontal, DesignTokens.Spacing.xl)
                 Text("pH \(String(format: "%.1f", ph))").font(.title3.monospacedDigit())
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                 Text(phLabel).font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 24).frame(maxWidth: DesignTokens.contentMaxWidth)
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                    .padding(.horizontal, DesignTokens.Spacing.xl).frame(maxWidth: DesignTokens.contentMaxWidth)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
@@ -444,7 +444,7 @@ private struct BileEmulsifiesFatScene: View {
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 emulsionVisual.frame(width: 260, height: 200)
                 Button {
                     let a = reduceMotion ? Animation.linear(duration: 0.0) : .easeInOut(duration: 0.5)
@@ -458,10 +458,10 @@ private struct BileEmulsifiesFatScene: View {
                         .foregroundColor(DesignTokens.BrandColor.mnemonicAccent)
                 }
                 .buttonStyle(.plain).pointingCursor()
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 

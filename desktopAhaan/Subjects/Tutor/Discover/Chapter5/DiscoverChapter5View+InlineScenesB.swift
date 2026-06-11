@@ -46,10 +46,10 @@ struct StrongVsWeakAcidScene: View {
                     .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
                     .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
                     .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                    .padding(.horizontal, 24)
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
-            .frame(maxWidth: .infinity).padding(.bottom, 12)
+            .frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

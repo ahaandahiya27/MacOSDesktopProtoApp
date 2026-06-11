@@ -21,7 +21,7 @@ struct DraggableCard: View {
     var isDragging: Bool = false
 
     var body: some View {
-        VStack(spacing: 4) {
+        VStack(spacing: DesignTokens.Spacing.xs) {
             Text(token.emoji)
                 .font(.system(size: 36))
                 .accessibilityHidden(true)

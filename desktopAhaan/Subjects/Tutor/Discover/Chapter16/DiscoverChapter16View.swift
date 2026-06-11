@@ -116,7 +116,7 @@ private struct WaterCycleWheelScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text(steps[step].0).font(.system(size: 100))
             Text(steps[step].1).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
             Button { withAnimation { step = (step + 1) % steps.count } } label: {
                 Text("Next stage").font(.body.weight(.semibold))
@@ -125,8 +125,8 @@ private struct WaterCycleWheelScene: View {
                     .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                     .foregroundColor(Color.compatIndigo)
             }.buttonStyle(.plain).pointingCursor()
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -146,10 +146,10 @@ private struct DroughtVsFloodScene: View {
                  ? "Drought: long period of little or no rain. Crops fail, wells dry. Marathwada (Maharashtra) and Bundelkhand often hit. Causes water scarcity, farmer distress."
                  : "Flood: too much water at once. Rivers overflow, fields submerge. Assam, Bihar, Mumbai face floods every monsoon. Causes property loss, water-borne disease.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
     private func pickChip(_ label: String, on: Bool, tap: @escaping () -> Void) -> some View {
         Button(action: tap) {
@@ -177,7 +177,7 @@ private struct DistillationLabScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text(steps[step].0).font(.system(size: 100))
             Text(steps[step].1).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
             Button { withAnimation { step = (step + 1) % steps.count } } label: {
                 Text("Next").font(.body.weight(.semibold))
@@ -186,8 +186,8 @@ private struct DistillationLabScene: View {
                     .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                     .foregroundColor(Color.compatIndigo)
             }.buttonStyle(.plain).pointingCursor()
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -207,7 +207,7 @@ private struct FilterMuddyWaterScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text(steps[step].0).font(.system(size: 100))
             Text(steps[step].1).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
             Button { withAnimation { step = (step + 1) % steps.count } } label: {
                 Text("Next").font(.body.weight(.semibold))
@@ -216,8 +216,8 @@ private struct FilterMuddyWaterScene: View {
                     .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                     .foregroundColor(Color.compatIndigo)
             }.buttonStyle(.plain).pointingCursor()
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -238,12 +238,12 @@ private struct ROPurifierScene: View {
             .padding(14).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
             .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
             .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-            .padding(.horizontal, 24)
+            .padding(.horizontal, DesignTokens.Spacing.xl)
             Text("Note: RO wastes 3 L of water for every 1 L of pure water. Use the reject water for plants or floor cleaning.")
                 .font(.caption.italic()).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .padding(.horizontal, 24).multilineTextAlignment(.center)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+                .padding(.horizontal, DesignTokens.Spacing.xl).multilineTextAlignment(.center)
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -268,19 +268,19 @@ private struct IndianRiverAtlasScene: View {
                         Text(r.name).font(.headline).foregroundColor(DesignTokens.BrandColor.canvasText)
                         Spacer()
                     }
-                    .padding(12).frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(DesignTokens.Spacing.md).frame(maxWidth: DesignTokens.contentMaxWidth)
                     .background(RoundedRectangle(cornerRadius: 12)
                         .fill(sel == r.id ? Color.compatIndigo.opacity(0.12) : Color.white.opacity(0.85)))
                     .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, 24)
+                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, DesignTokens.Spacing.xl)
             }
             if let s = sel, let r = rivers.first(where: { $0.id == s }) {
                 Text(r.detail).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                    .multilineTextAlignment(.center).padding(.horizontal, 24)
+                    .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
             }
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -297,13 +297,13 @@ private struct GlacierMeltdownScene: View {
                 .frame(width: glacierWidth, height: 120)
             Text("Year: \(Int(year))").font(.title2.monospacedDigit())
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
-            Slider(value: $year, in: 1950...2100).frame(maxWidth: 340).padding(.horizontal, 24)
+            Slider(value: $year, in: 1950...2100).frame(maxWidth: 340).padding(.horizontal, DesignTokens.Spacing.xl)
             Text("Himalayan glaciers — source of Ganga, Yamuna, Brahmaputra — have lost 30% of ice since 1950. If trend continues, Asia's rivers face severe summer shortages by 2100.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -323,7 +323,7 @@ private struct WaterBorneDiseasesScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             ForEach(dis) { d in
                 Button { tapped.insert(d.id) } label: {
-                    VStack(alignment: .leading, spacing: 4) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                         Text(d.name).font(.headline).foregroundColor(DesignTokens.BrandColor.canvasText)
                         if tapped.contains(d.id) {
                             Text(d.detail).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -332,13 +332,13 @@ private struct WaterBorneDiseasesScene: View {
                             Text("Tap to reveal").font(.caption.italic())
                                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         }
-                    }.padding(12).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
+                    }.padding(DesignTokens.Spacing.md).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
                     .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
                     .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, 24)
+                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, DesignTokens.Spacing.xl)
             }
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -353,16 +353,16 @@ private struct TapDripCounterScene: View {
             Text("💧").font(.system(size: 100))
             Text("\(Int(dripsPerMin)) drips / min").font(.callout.monospacedDigit())
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
-            Slider(value: $dripsPerMin, in: 1...100).frame(maxWidth: 340).padding(.horizontal, 24)
+            Slider(value: $dripsPerMin, in: 1...100).frame(maxWidth: 340).padding(.horizontal, DesignTokens.Spacing.xl)
             Text("\(String(format: "%.1f", litresPerDay)) L wasted / day")
                 .font(.title.weight(.bold).monospacedDigit())
                 .foregroundColor(DesignTokens.BrandColor.danger)
             Text("That's \(Int(litresPerDay * 365)) L/year — enough for a family's drinking water for weeks. Fix that leaky tap!")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -382,7 +382,7 @@ private struct ClimateChangeWaterScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             ForEach(effects) { e in
                 Button { tapped.insert(e.id) } label: {
-                    VStack(alignment: .leading, spacing: 4) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                         Text(e.title).font(.headline).foregroundColor(DesignTokens.BrandColor.canvasText)
                         if tapped.contains(e.id) {
                             Text(e.detail).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -391,13 +391,13 @@ private struct ClimateChangeWaterScene: View {
                             Text("Tap to reveal").font(.caption.italic())
                                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         }
-                    }.padding(12).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
+                    }.padding(DesignTokens.Spacing.md).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
                     .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
                     .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, 24)
+                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, DesignTokens.Spacing.xl)
             }
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 

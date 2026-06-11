@@ -133,14 +133,14 @@ private struct PHLadderSliderScene: View {
                 .frame(width: 260)
                 Text("pH \(String(format: "%.1f", ph))").font(.title2.monospacedDigit())
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
-                Slider(value: $ph, in: 0...14).frame(maxWidth: 340).padding(.horizontal, 24)
+                Slider(value: $ph, in: 0...14).frame(maxWidth: 340).padding(.horizontal, DesignTokens.Spacing.xl)
                 Text(label).font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
-                    .multilineTextAlignment(.center).padding(.horizontal, 24)
+                    .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
-            .frame(maxWidth: .infinity).padding(.bottom, 12)
+            .frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }
@@ -179,9 +179,9 @@ private struct HouseholdAcidBaseSorterScene: View {
                     Text("Score: \(correct) / \(items.count)").font(.headline)
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
                 }
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
-            .frame(maxWidth: .infinity).padding(.bottom, 12)
+            .frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
@@ -201,7 +201,7 @@ private struct HouseholdAcidBaseSorterScene: View {
                     if assignment[it.id] == nil { assignment[it.id] = b }
                 } label: {
                     Text(b.rawValue).font(.caption.weight(.semibold))
-                        .padding(.horizontal, 8).padding(.vertical, 5)
+                        .padding(.horizontal, DesignTokens.Spacing.sm).padding(.vertical, 5)
                         .background(Capsule().fill(tint.opacity(isPicked ? 0.22 : 0.10)))
                         .overlay(Capsule().strokeBorder(tint.opacity(0.5), lineWidth: 1))
                         .foregroundColor(tint)
@@ -209,11 +209,11 @@ private struct HouseholdAcidBaseSorterScene: View {
                 .buttonStyle(.plain).pointingCursor().disabled(pick != nil)
             }
         }
-        .padding(.horizontal, 14).padding(.vertical, 8)
+        .padding(.horizontal, 14).padding(.vertical, DesignTokens.Spacing.sm)
         .frame(maxWidth: DesignTokens.contentMaxWidth)
         .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.85)))
         .overlay(RoundedRectangle(cornerRadius: 10).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-        .padding(.horizontal, 24)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
     }
 }
 
@@ -231,14 +231,14 @@ private struct LitmusPaperTestScene: View {
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .multilineTextAlignment(.center)
-                HStack(spacing: 24) {
+                HStack(spacing: DesignTokens.Spacing.xl) {
                     paperVisual(initial: .blue, in: "acid", current: dipped)
                     paperVisual(initial: .red, in: "base", current: dipped)
                 }
                 HStack(spacing: 14) {
                     Button { dipped = "acid" } label: {
                         Text("Dip in acid").font(.body.weight(.semibold))
-                            .padding(.horizontal, 16).padding(.vertical, 8)
+                            .padding(.horizontal, DesignTokens.Spacing.lg).padding(.vertical, DesignTokens.Spacing.sm)
                             .background(Capsule().fill(DesignTokens.BrandColor.danger.opacity(0.15)))
                             .overlay(Capsule().strokeBorder(DesignTokens.BrandColor.danger.opacity(0.5), lineWidth: 1))
                             .foregroundColor(DesignTokens.BrandColor.danger)
@@ -246,7 +246,7 @@ private struct LitmusPaperTestScene: View {
                     .buttonStyle(.plain).pointingCursor()
                     Button { dipped = "base" } label: {
                         Text("Dip in base").font(.body.weight(.semibold))
-                            .padding(.horizontal, 16).padding(.vertical, 8)
+                            .padding(.horizontal, DesignTokens.Spacing.lg).padding(.vertical, DesignTokens.Spacing.sm)
                             .background(Capsule().fill(Color.compatIndigo.opacity(0.15)))
                             .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                             .foregroundColor(Color.compatIndigo)
@@ -261,12 +261,12 @@ private struct LitmusPaperTestScene: View {
                          : "Red → Blue, Blue unchanged. So the liquid is basic.")
                         .font(.callout.weight(.semibold))
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
-                        .multilineTextAlignment(.center).padding(.horizontal, 24)
+                        .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
                 }
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
-            .frame(maxWidth: .infinity).padding(.bottom, 12)
+            .frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
@@ -307,15 +307,15 @@ private struct UniversalIndicatorScene: View {
                 Text("Universal indicator mixes several dyes. The colour you get maps to an exact pH on the chart.")
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                    .multilineTextAlignment(.center).padding(.horizontal, 24)
+                    .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 RoundedRectangle(cornerRadius: 12).fill(bandColor)
                     .frame(width: 160, height: 100)
                 Text("pH ≈ \(String(format: "%.1f", ph))").font(.title3.monospacedDigit())
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
-                Slider(value: $ph, in: 0...14).frame(maxWidth: 340).padding(.horizontal, 24)
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                Slider(value: $ph, in: 0...14).frame(maxWidth: 340).padding(.horizontal, DesignTokens.Spacing.xl)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
-            .frame(maxWidth: .infinity).padding(.bottom, 12)
+            .frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }
@@ -350,7 +350,7 @@ private struct CabbageJuiceMagicScene: View {
                 }
                 Text(captions[stage]).font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
-                    .multilineTextAlignment(.center).padding(.horizontal, 24)
+                    .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
                 Button { withAnimation { stage = (stage + 1) % captions.count } } label: {
                     Text("Next").font(.body.weight(.semibold))
@@ -360,9 +360,9 @@ private struct CabbageJuiceMagicScene: View {
                         .foregroundColor(Color.compatIndigo)
                 }
                 .buttonStyle(.plain).pointingCursor()
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
-            .frame(maxWidth: .infinity).padding(.bottom, 12)
+            .frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }
@@ -388,7 +388,7 @@ private struct SaltFormationStepsScene: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                 Text(steps[step].1).font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
-                    .multilineTextAlignment(.center).padding(.horizontal, 24)
+                    .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
                 Button { withAnimation { step = (step + 1) % steps.count } } label: {
                     Text("Next step").font(.body.weight(.semibold))
@@ -398,9 +398,9 @@ private struct SaltFormationStepsScene: View {
                         .foregroundColor(Color.compatIndigo)
                 }
                 .buttonStyle(.plain).pointingCursor()
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
-            .frame(maxWidth: .infinity).padding(.bottom, 12)
+            .frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }
@@ -424,7 +424,7 @@ private struct CommonSaltStoryScene: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 ForEach(facts) { f in
                     Button { tapped.insert(f.id) } label: {
-                        VStack(alignment: .leading, spacing: 4) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                             Text(f.title).font(.headline)
                                 .foregroundColor(DesignTokens.BrandColor.canvasText)
                             if tapped.contains(f.id) {
@@ -436,16 +436,16 @@ private struct CommonSaltStoryScene: View {
                                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                             }
                         }
-                        .padding(12)
+                        .padding(DesignTokens.Spacing.md)
                         .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
                         .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
                         .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
                     }
-                    .buttonStyle(.plain).pointingCursor().padding(.horizontal, 24)
+                    .buttonStyle(.plain).pointingCursor().padding(.horizontal, DesignTokens.Spacing.xl)
                 }
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
-            .frame(maxWidth: .infinity).padding(.bottom, 12)
+            .frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }
@@ -463,7 +463,7 @@ private struct AntacidStomachScene: View {
                 Text("Acidity = too much HCl in the stomach. Antacids contain bases (Mg(OH)₂ in Milk of Magnesia, or NaHCO₃ in some tablets) that neutralise the excess acid.")
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                    .multilineTextAlignment(.center).padding(.horizontal, 24)
+                    .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 ZStack {
                     RoundedRectangle(cornerRadius: 32).fill(taken
                                                             ? DesignTokens.BrandColor.primaryAction.opacity(0.25)
@@ -479,9 +479,9 @@ private struct AntacidStomachScene: View {
                         .foregroundColor(DesignTokens.BrandColor.primaryAction)
                 }
                 .buttonStyle(.plain).pointingCursor()
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
-            .frame(maxWidth: .infinity).padding(.bottom, 12)
+            .frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }
@@ -505,7 +505,7 @@ private struct ToothDecayScene: View {
                 Text(steps[step].0).font(.system(size: 100))
                 Text(steps[step].1).font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
-                    .multilineTextAlignment(.center).padding(.horizontal, 24)
+                    .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
                 Button { withAnimation { step = (step + 1) % steps.count } } label: {
                     Text("Next").font(.body.weight(.semibold))
@@ -515,9 +515,9 @@ private struct ToothDecayScene: View {
                         .foregroundColor(Color.compatIndigo)
                 }
                 .buttonStyle(.plain).pointingCursor()
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
-            .frame(maxWidth: .infinity).padding(.bottom, 12)
+            .frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

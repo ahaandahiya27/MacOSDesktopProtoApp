@@ -31,40 +31,40 @@ struct Scene6_SanitationMap: View {
 
                 Picker("", selection: $pick) {
                     ForEach(Toilet.allCases) { Text($0.rawValue).tag($0) }
-                }.pickerStyle(.segmented).discoverControlChrome().frame(maxWidth: 520).padding(.horizontal, 16)
+                }.pickerStyle(.segmented).discoverControlChrome().frame(maxWidth: 520).padding(.horizontal, DesignTokens.Spacing.lg)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Text(pick.rawValue).font(.title3.bold())
                         Text(pick.notes).font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 SoftShadowCard(padding: 14) {
                     Text("India's Swachh Bharat Mission has built 100M+ toilets since 2014 — drastically cutting open defecation and water-borne disease.")
                         .font(.callout).lineSpacing(4)
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Civics / Public Health",
                     detail: "Class 9 Civics 'Constitutional Design' covers fundamental rights and the Right to Sanitation as derived from Article 21 (Right to Life). India's Swachh Bharat Mission (2014-2019) built 100M+ toilets. Class 10 Civics tests programme evaluation."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Map school toilets",
                     detail: "Walk through your school and note toilet types: flush-with-sewer (modern), septic tank (most schools), or pit latrines (some rural). Count the number of toilets vs students. WHO recommendation is 1 per 30."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

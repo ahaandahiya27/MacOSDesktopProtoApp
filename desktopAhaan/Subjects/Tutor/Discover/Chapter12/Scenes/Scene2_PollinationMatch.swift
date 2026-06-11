@@ -24,7 +24,7 @@ struct Scene2_PollinationMatch: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-            LazyVStack(alignment: .center, spacing: 12) {
+            LazyVStack(alignment: .center, spacing: DesignTokens.Spacing.md) {
                 Text("Pollination Match").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Who carries the pollen for each flower?").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
@@ -47,7 +47,7 @@ struct Scene2_PollinationMatch: View {
                         .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                     }
                 }
-                .frame(maxWidth: 640).padding(.horizontal, 24)
+                .frame(maxWidth: 640).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 if done {
                     Text("Score: \(score) / \(pairs.count)").font(.title3.bold()).foregroundColor(Color.compatIndigo)
@@ -57,21 +57,21 @@ struct Scene2_PollinationMatch: View {
                     Text("Plants can't walk to find a mate, so they hire carriers. Wind & water are free but wasteful. Insects & birds are precise but need a reward — that's what nectar and bright petals are for.")
                         .font(.callout).lineSpacing(4)
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 12 Bio → NEET",
                     detail: "Class 12 covers the types of pollination. These are autogamy, geitonogamy and xenogamy. It also covers floral tricks. These are cleistogamy, dichogamy and herkogamy. NEET asks you to tell them apart."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Bee-watching",
                     detail: "On a sunny morning, sit near a flowering plant for 10 minutes. Count the visiting insects — bees, butterflies, sometimes hover-flies. Each one is unknowingly carrying pollen between flowers."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 DiscoveryWidget(
                     title: "Discovery — wind-pollination range",
@@ -83,13 +83,13 @@ struct Scene2_PollinationMatch: View {
                     output: windPollenExplanation
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
+                if done { GotItButton { onComplete(score) }.padding(.bottom, DesignTokens.Spacing.md) }
                 Spacer(minLength: 0)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
 
         .frame(maxWidth: .infinity, maxHeight: .infinity)

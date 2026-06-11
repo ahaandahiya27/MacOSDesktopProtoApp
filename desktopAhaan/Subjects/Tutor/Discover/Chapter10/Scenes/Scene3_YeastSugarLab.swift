@@ -22,39 +22,39 @@ struct Scene3_YeastSugarLab: View {
                     RoundedRectangle(cornerRadius: 18).fill(Color.yellow.opacity(0.10))
                         .frame(width: 320, height: 320)
 
-                    VStack(spacing: 4) {
+                    VStack(spacing: DesignTokens.Spacing.xs) {
                         Text("🎈").font(.system(size: added ? 96 : 40))
                             .animation(reduceMotion ? .none : .easeInOut(duration: 1.6))
                             .accessibilityLabel(added ? "Balloon inflated by yeast CO2" : "Empty balloon")
                         Text("🧪").font(.system(size: 64))
                     }
-                    .padding(.top, 16)
+                    .padding(.top, DesignTokens.Spacing.lg)
                 }
 
                 Button(added ? "Reset" : "Add yeast 🧫") { added.toggle() }
                     .accentColor(Color.compatIndigo)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Anaerobic respiration in action", systemImage: "wand.and.stars")
                             .font(.title2.bold())
                         Text("Yeast cells eat sugar without oxygen, producing alcohol and carbon dioxide. The CO₂ inflates the balloon. This is how bread rises and how wine is made.")
                             .font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Make a yeast balloon",
                     detail: "In an empty plastic bottle: 1 tsp dry yeast + 1 tsp sugar + warm (not hot) water. Stretch a balloon over the neck. In 15 to 30 minutes the balloon inflates as yeast produces CO₂."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

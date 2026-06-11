@@ -36,13 +36,13 @@ struct Scene7_SoakPitDesign: View {
                     Toggle("Layer with gravel & sand", isOn: $gravel)
                     HStack { Text("Distance from well: \(Int(distance)) m"); Spacer(); Slider(value: $distance, in: 5...30, step: 1).frame(width: 200) }
                 }
-                .frame(maxWidth: 460).padding(.horizontal, 24)
+                .frame(maxWidth: 460).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 SoftShadowCard(padding: 14) {
                     Text("A soak-pit lets greywater (bath/wash water) seep through gravel and sand into the ground, where soil filters it. Keep it at least 15 m from drinking wells to avoid contamination.")
                         .font(.callout).lineSpacing(4)
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 // Grouped to stay within Swift 5.5's 10-child ViewBuilder limit
                 // (scene already has 2 sliders + 1 toggle inside the design block).
@@ -52,14 +52,14 @@ struct Scene7_SoakPitDesign: View {
                         detail: "Class 12 'Microbes in Human Welfare' covers how a soak-pit filters with life. The soil's own microbes digest the organic matter before it reaches the groundwater. Polytechnic and ITI civil-engineering courses go into the design details."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     TryAtHomeCallout(
                         title: "Bottle soak-pit",
                         detail: "Fill a clear 1-litre bottle with layers: 10 cm coarse gravel at bottom, 5 cm fine sand on top, 5 cm garden soil on the very top. Pour grey water (used dishwashing water) into the top. It seeps out the bottom much cleaner than it went in."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 }
 
                 DiscoveryWidget(
@@ -72,12 +72,12 @@ struct Scene7_SoakPitDesign: View {
                     output: clogIntervalExplanation
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 

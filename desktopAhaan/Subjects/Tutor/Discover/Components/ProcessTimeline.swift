@@ -66,7 +66,7 @@ struct ProcessTimeline: View {
     }
 
     private var header: some View {
-        HStack(spacing: 8) {
+        HStack(spacing: DesignTokens.Spacing.sm) {
             Image(systemName: "arrow.down.circle.fill")
                 .font(.title3)
                 .foregroundColor(accent)
@@ -89,7 +89,7 @@ struct ProcessTimeline: View {
                 )
             }
         }
-        .padding(.leading, 2)
+        .padding(.leading, DesignTokens.Spacing.xxs)
     }
 }
 
@@ -103,7 +103,7 @@ private struct StepRow: View {
     let accent: Color
 
     var body: some View {
-        HStack(alignment: .top, spacing: 12) {
+        HStack(alignment: .top, spacing: DesignTokens.Spacing.md) {
             bubbleColumn
             VStack(alignment: .leading, spacing: 3) {
                 Text(step.title)
@@ -139,7 +139,7 @@ private struct StepRow: View {
                     .fill(accent.opacity(0.30))
                     .frame(width: 2)
                     .frame(maxHeight: .infinity)
-                    .padding(.vertical, 2)
+                    .padding(.vertical, DesignTokens.Spacing.xxs)
             }
         }
         .frame(width: 22)

@@ -32,7 +32,7 @@ struct Scene8_Fragmentation: View {
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
                 // Fragment width scales down with count and leaves visible gaps.
-                HStack(spacing: 8) {
+                HStack(spacing: DesignTokens.Spacing.sm) {
                     ForEach(0..<Int(fragments), id: \.self) { _ in
                         Capsule().fill(Color.green.opacity(0.8))
                             .frame(width: fragmentWidth(count: fragments), height: 16)
@@ -41,38 +41,38 @@ struct Scene8_Fragmentation: View {
                 .frame(width: 300, alignment: .leading)
                 .padding(.vertical, 20)
 
-                Slider(value: $fragments, in: 1...6, step: 1).frame(maxWidth: 460).padding(.horizontal, 24)
+                Slider(value: $fragments, in: 1...6, step: 1).frame(maxWidth: 460).padding(.horizontal, DesignTokens.Spacing.xl)
                 Text("Fragments: \(Int(fragments))").font(.headline).foregroundColor(Color.compatIndigo)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Break, then grow", systemImage: "scissors")
                             .font(.title2.bold())
                         Text("Spirogyra is a green algae that lives in ponds. Its long filament can break into pieces — accidentally or in storms — and each fragment grows into a brand-new filament. Simple, fast, and asexual.")
                             .font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 12 Bio → NEET",
                     detail: "Class 12 'Reproduction in Organisms' calls fragmentation an asexual mode. The parent breaks into two or more pieces, and each piece grows into a full organism. It is common in Spirogyra, Planaria and sea anemones. NEET asks how fragmentation differs from regeneration."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Pond-water peek",
                     detail: "A spoonful of pond water under a magnifying glass usually contains green threads of Spirogyra. Each thread can break into pieces and each piece grows into a new thread — fragmentation in action."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
                 Spacer(minLength: 0)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
 
         .frame(maxWidth: .infinity, maxHeight: .infinity)

@@ -171,11 +171,11 @@ struct Scene7_ConstellationConnect: View {
                     Spacer()
                 }
                 .frame(maxWidth: .infinity)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 Group {
                     SoftShadowCard(padding: 18) {
-                        VStack(alignment: .leading, spacing: 8) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                             if let idx = selectedConstellation,
                                let constellation = constellations.first(where: { $0.id == idx }) {
                                 Label("\(constellation.name) (\(constellation.indianName))", systemImage: SFSymbolCompat.name(constellation.symbol))
@@ -200,7 +200,7 @@ struct Scene7_ConstellationConnect: View {
                                 }
 
                                 if allExplored {
-                                    Divider().padding(.vertical, 4)
+                                    Divider().padding(.vertical, DesignTokens.Spacing.xs)
                                     HStack(alignment: .top, spacing: 6) {
                                         Image(systemName: "lightbulb.fill")
                                             .foregroundColor(.yellow)
@@ -235,15 +235,15 @@ struct Scene7_ConstellationConnect: View {
 
                     if allExplored {
                         GotItButton { onComplete() }
-                            .padding(.bottom, 12)
+                            .padding(.bottom, DesignTokens.Spacing.md)
                     }
                 
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

@@ -25,7 +25,7 @@ struct Scene5_CompostPitBuilder: View {
                 ZStack {
                     RoundedRectangle(cornerRadius: 16).fill(Color.compatBrown.opacity(0.3))
                         .frame(width: 240, height: 180)
-                    VStack(spacing: 4) {
+                    VStack(spacing: DesignTokens.Spacing.xs) {
                         if greens   { Text("🥬").font(.system(size: 30)) }
                         if browns   { Text("🍂").font(.system(size: 30)) }
                         if moisture { Text("💧").font(.system(size: 30)) }
@@ -33,38 +33,38 @@ struct Scene5_CompostPitBuilder: View {
                     }
                 }
 
-                VStack(spacing: 8) {
+                VStack(spacing: DesignTokens.Spacing.sm) {
                     Toggle("Add kitchen greens", isOn: $greens)
                     Toggle("Add dry browns (leaves)", isOn: $browns)
                     Toggle("Add a sprinkle of water", isOn: $moisture)
                     HStack { Text("Time: \(Int(weeks)) weeks"); Spacer(); Slider(value: $weeks, in: 0...12, step: 1).frame(width: 200) }
                 }
-                .frame(maxWidth: 460).padding(.horizontal, 24)
+                .frame(maxWidth: 460).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 SoftShadowCard(padding: 14) {
                     Text("Half of household waste is organic. Composting at home (or in a community pit) turns kitchen scraps into rich, dark soil — no truck or treatment plant needed.")
                         .font(.callout).lineSpacing(4)
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 12 Bio → NEET",
                     detail: "Class 12 'Microbes in Human Welfare' covers many uses. Vermicompost uses the earthworm Eisenia foetida. Biogas plants use methanogen bacteria. Sewage is cleaned by BOD-reducing microbes. NEET asks how microbes are put to use."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Apartment composter",
                     detail: "Get a clean small bucket with a lid. Layer: 5 cm dry brown leaves, 5 cm fresh kitchen peels, sprinkle of garden soil. Repeat. Stir weekly. In 6-8 weeks the smell goes away and you have dark, crumbly compost — free fertiliser for plants."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

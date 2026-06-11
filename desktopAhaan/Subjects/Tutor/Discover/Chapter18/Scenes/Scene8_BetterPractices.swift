@@ -23,7 +23,7 @@ struct Scene8_BetterPractices: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-            LazyVStack(alignment: .center, spacing: 12) {
+            LazyVStack(alignment: .center, spacing: DesignTokens.Spacing.md) {
                 Text("Better Practices").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Pick Good or Bad for each habit.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
@@ -42,7 +42,7 @@ struct Scene8_BetterPractices: View {
                         .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                     }
                 }
-                .frame(maxWidth: 680).padding(.horizontal, 24)
+                .frame(maxWidth: 680).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 if done {
                     Text("Score: \(score) / \(items.count)").font(.title3.bold()).foregroundColor(Color.compatIndigo)
@@ -53,19 +53,19 @@ struct Scene8_BetterPractices: View {
                     detail: "Class 12 'Environmental Issues' covers how people and policy respond to pollution. Class 10 Civics covers India's environmental law. This includes the Polluter Pays principle. It also covers the EPA 1986 and the National Green Tribunal."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "One-week waste diary",
                     detail: "Track everything that goes down your drains and into your trash for one week. List patterns. Pick ONE thing to change next week — usually cooking oil, sanitary waste, or single-use plastic. Small habits compound."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
+                if done { GotItButton { onComplete(score) }.padding(.bottom, DesignTokens.Spacing.md) }
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

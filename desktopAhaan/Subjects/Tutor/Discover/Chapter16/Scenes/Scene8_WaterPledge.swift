@@ -26,14 +26,14 @@ struct Scene8_WaterPledge: View {
                 Text("World Water Day Pledge").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Pick the pledges you'll keep this month.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-                VStack(spacing: 8) {
+                VStack(spacing: DesignTokens.Spacing.sm) {
                     ForEach(0..<pledges.count, id: \.self) { i in
                         Toggle(texts[i], isOn: $pledges[i])
                             .padding(10)
                             .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                     }
                 }
-                .frame(maxWidth: 560).padding(.horizontal, 24)
+                .frame(maxWidth: 560).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 Text("Pledges taken: \(count) / 6")
                     .font(.headline)
@@ -43,26 +43,26 @@ struct Scene8_WaterPledge: View {
                     Text("World Water Day is celebrated on 22 March each year. Small habits, multiplied by billions of people, save billions of litres.")
                         .font(.callout).lineSpacing(4)
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Civics / SDG framework",
                     detail: "UN Sustainable Development Goal 6 (Clean Water and Sanitation) is in the CBSE Class 10 syllabus. Its targets: safe water and sanitation for all by 2030, half as much untreated wastewater, and protected water ecosystems."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "30-day habit challenge",
                     detail: "Pick three water-saving habits from this scene. Track them for 30 days using a chart on your room wall: 'Closed tap while brushing — ✓, Bucket bath instead of shower — ✓'. After 30 days, the habits stick on their own."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

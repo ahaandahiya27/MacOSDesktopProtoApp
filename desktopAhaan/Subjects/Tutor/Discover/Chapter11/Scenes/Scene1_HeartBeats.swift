@@ -39,21 +39,21 @@ struct Scene1_HeartBeats: View {
                     .font(.system(size: 36, weight: .bold, design: .monospaced))
                     .foregroundColor(Color.compatIndigo)
 
-                Slider(value: $bpm, in: 50...180, step: 1).frame(maxWidth: 460).padding(.horizontal, 24)
+                Slider(value: $bpm, in: 50...180, step: 1).frame(maxWidth: 460).padding(.horizontal, DesignTokens.Spacing.xl)
                 HStack {
                     Text("Rest").font(.caption).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary); Spacer()
                     Text("Exercising").font(.caption).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                }.frame(maxWidth: 460).padding(.horizontal, 24)
+                }.frame(maxWidth: 460).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Two pumps in one organ", systemImage: "heart.fill")
                             .font(.title2.bold())
                         Text("Your heart has 4 chambers — two on top (atria) and two below (ventricles). The right side sends blood to the lungs to grab oxygen. The left side pumps that oxygen-rich blood to the whole body. Around 100,000 beats a day.")
                             .font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 // Grouped so the outer VStack stays within Swift 5.5's
                 // 10-child ViewBuilder limit (Xcode 13.2.1 / Big Sur target).
@@ -78,34 +78,34 @@ struct Scene1_HeartBeats: View {
                         ]
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     LookingAheadCallout(
                         title: "Class 11 Biology → NEET",
                         detail: "In Class 11 \"Body Fluids and Circulation\", the same heart you played with here becomes the focus: SAN/AVN pacemaker cells, cardiac cycle, ECG reading, double circulation. A perennial NEET high-yield topic."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     TryAtHomeCallout(
                         title: "Heartbeat through a tube",
                         detail: "Roll up a sheet of paper into a long tube. Press one end to a friend's chest (over the heart, below the left collarbone) and the other to your ear. Listen — you'll hear lub-DUB...lub-DUB."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     RelatedConceptsCallout(
                         title: "Related: Ch 10 (Respiration), Ch 1 (Nutrition in Plants)",
                         detail: "The heart's right side pumps blood TO the lungs (Ch 10) to pick up oxygen; the left side pumps it to every cell that respires (Ch 10 again). The same oxygen was made by plants doing photosynthesis (Ch 1)."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 }
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
 
         .frame(maxWidth: .infinity, maxHeight: .infinity)

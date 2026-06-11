@@ -61,7 +61,7 @@ struct Scene2_BuildAWeatherStation: View {
                                     selectedInstrument = inst.id
                                 }
                             } label: {
-                                VStack(spacing: 8) {
+                                VStack(spacing: DesignTokens.Spacing.sm) {
                                     Image(systemName: SFSymbolCompat.name(inst.symbol))
                                         .font(.title)
                                         .foregroundColor(isRevealed ? Color.compatIndigo : .gray.opacity(0.3))
@@ -122,7 +122,7 @@ struct Scene2_BuildAWeatherStation: View {
 
                 Group {
                     SoftShadowCard(padding: 18) {
-                        VStack(alignment: .leading, spacing: 8) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                             if let idx = selectedInstrument, idx < instruments.count {
                                 let inst = instruments[idx]
                                 Label(inst.name, systemImage: SFSymbolCompat.name(inst.symbol))
@@ -155,13 +155,13 @@ struct Scene2_BuildAWeatherStation: View {
 
                     if stationComplete {
                         GotItButton { onComplete() }
-                            .padding(.bottom, 12)
+                            .padding(.bottom, DesignTokens.Spacing.md)
                     }
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
         .overlay(
             stationComplete

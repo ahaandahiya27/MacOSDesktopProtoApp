@@ -23,7 +23,7 @@ struct Scene6_AnimalNicheMatch: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-            LazyVStack(alignment: .center, spacing: 12) {
+            LazyVStack(alignment: .center, spacing: DesignTokens.Spacing.md) {
                 Text("Animal Niche Match").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Each animal calls a particular layer home.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
@@ -49,7 +49,7 @@ struct Scene6_AnimalNicheMatch: View {
                         .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                     }
                 }
-                .frame(maxWidth: 540).padding(.horizontal, 24)
+                .frame(maxWidth: 540).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 if done {
                     Text("Score: \(score) / \(pairs.count)").font(.title3.bold()).foregroundColor(Color.compatIndigo)
@@ -60,19 +60,19 @@ struct Scene6_AnimalNicheMatch: View {
                     detail: "Class 12 'Organisms and Populations' defines a niche as the role and range an organism takes. Two species cannot share the same niche for long — that is Gause's competitive exclusion principle. NEET asks how a niche differs from a habitat every cycle."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Sparrow vs crow",
                     detail: "Notice how sparrows hop on the ground hunting seeds while crows eat fruits and garbage from above. They share the same neighborhood but never compete — different niches. Try spotting 3 species and figure out each one's niche."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
+                if done { GotItButton { onComplete(score) }.padding(.bottom, DesignTokens.Spacing.md) }
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

@@ -45,11 +45,11 @@ struct VilliSurfaceAreaScene: View {
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 24).frame(maxWidth: DesignTokens.contentMaxWidth)
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                    .padding(.horizontal, DesignTokens.Spacing.xl).frame(maxWidth: DesignTokens.contentMaxWidth)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
@@ -106,7 +106,7 @@ struct RuminationCycleScene: View {
                 Text(stages[stage].1).font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 24).frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(.horizontal, DesignTokens.Spacing.xl).frame(maxWidth: DesignTokens.contentMaxWidth)
                 Button {
                     withAnimationRespectingReduceMotion(.easeInOut(duration: 0.25)) {
                         stage = (stage + 1) % stages.count
@@ -120,10 +120,10 @@ struct RuminationCycleScene: View {
                         .foregroundColor(Color.compatIndigo)
                 }
                 .buttonStyle(.plain).pointingCursor()
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

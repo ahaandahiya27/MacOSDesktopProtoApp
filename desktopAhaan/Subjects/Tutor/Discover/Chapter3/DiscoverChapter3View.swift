@@ -122,7 +122,7 @@ private struct SheepBreedsAtlasScene: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 ForEach(breeds) { b in
                     Button { selected = b.id } label: {
-                        HStack(spacing: 12) {
+                        HStack(spacing: DesignTokens.Spacing.md) {
                             Text(b.emoji).font(.title)
                             Text(b.name).font(.headline)
                                 .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -130,7 +130,7 @@ private struct SheepBreedsAtlasScene: View {
                             Text(b.region).font(.caption)
                                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         }
-                        .padding(12)
+                        .padding(DesignTokens.Spacing.md)
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
                         .background(RoundedRectangle(cornerRadius: 12)
                             .fill(selected == b.id ? Color.compatIndigo.opacity(0.12) : Color.white.opacity(0.85)))
@@ -138,17 +138,17 @@ private struct SheepBreedsAtlasScene: View {
                             .strokeBorder(selected == b.id ? Color.compatIndigo.opacity(0.45) : Color.gray.opacity(0.18), lineWidth: 1))
                     }
                     .buttonStyle(.plain).pointingCursor()
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 }
                 if let sel = selected, let b = breeds.first(where: { $0.id == sel }) {
                     Text(b.known).font(.callout)
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
                         .multilineTextAlignment(.center)
-                        .padding(.horizontal, 24)
+                        .padding(.horizontal, DesignTokens.Spacing.xl)
                 }
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
-            .frame(maxWidth: .infinity).padding(.bottom, 12)
+            .frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }
@@ -175,11 +175,11 @@ private struct WoolQualityGraderScene: View {
                 Text("Wool isn't one thing — fineness ranges from baby-soft Merino to scratchy carpet wool.")
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                    .multilineTextAlignment(.center).padding(.horizontal, 24)
+                    .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 ZStack {
                     RoundedRectangle(cornerRadius: 16).fill(Color.compatBrown.opacity(0.15))
                         .frame(width: 220, height: 80)
-                    HStack(spacing: 4) {
+                    HStack(spacing: DesignTokens.Spacing.xs) {
                         let strandW: CGFloat = CGFloat(2 + coarseness * 6)
                         ForEach(0..<20, id: \.self) { _ in
                             Capsule().fill(Color.compatBrown.opacity(0.6))
@@ -189,14 +189,14 @@ private struct WoolQualityGraderScene: View {
                 }
                 Text("Coarseness").font(.caption.weight(.semibold))
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                Slider(value: $coarseness, in: 0...1).frame(maxWidth: 340).padding(.horizontal, 24)
+                Slider(value: $coarseness, in: 0...1).frame(maxWidth: 340).padding(.horizontal, DesignTokens.Spacing.xl)
                 Text(grade).font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 24).frame(maxWidth: DesignTokens.contentMaxWidth)
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                    .padding(.horizontal, DesignTokens.Spacing.xl).frame(maxWidth: DesignTokens.contentMaxWidth)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
-            .frame(maxWidth: .infinity).padding(.bottom, 12)
+            .frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }
@@ -223,7 +223,7 @@ private struct CardingSpinningLabScene: View {
                 Text(stages[stage].1).font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 24).frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(.horizontal, DesignTokens.Spacing.xl).frame(maxWidth: DesignTokens.contentMaxWidth)
                 Button {
                     withAnimationRespectingReduceMotion(.easeInOut(duration: 0.25)) {
                         stage = (stage + 1) % stages.count
@@ -236,9 +236,9 @@ private struct CardingSpinningLabScene: View {
                         .foregroundColor(Color.compatIndigo)
                 }
                 .buttonStyle(.plain).pointingCursor()
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
-            .frame(maxWidth: .infinity).padding(.bottom, 12)
+            .frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }
@@ -265,7 +265,7 @@ private struct DyeVatMixScene: View {
                 Text("Indian textiles use natural dyes from madder root, turmeric, and indigo plant. Tap to dip white yarn in each vat.")
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                    .multilineTextAlignment(.center).padding(.horizontal, 24)
+                    .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 HStack(spacing: 14) {
                     ForEach(0..<colors.count, id: \.self) { i in
                         Button { withAnimation { color = i; dyed = true } } label: {
@@ -283,9 +283,9 @@ private struct DyeVatMixScene: View {
                     Text(names[color]).font(.callout.weight(.semibold))
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
                 }
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
-            .frame(maxWidth: .infinity).padding(.bottom, 12)
+            .frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
@@ -328,7 +328,7 @@ private struct LoomsThroughTimeScene: View {
                 ForEach(looms) { l in
                     HStack(spacing: 14) {
                         Text(l.emoji).font(.system(size: 48))
-                        VStack(alignment: .leading, spacing: 4) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                             Text(l.era).font(.headline)
                                 .foregroundColor(DesignTokens.BrandColor.canvasText)
                             Text(l.detail).font(.callout)
@@ -336,15 +336,15 @@ private struct LoomsThroughTimeScene: View {
                                 .fixedSize(horizontal: false, vertical: true)
                         }
                     }
-                    .padding(12)
+                    .padding(DesignTokens.Spacing.md)
                     .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
                     .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
                     .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 }
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
-            .frame(maxWidth: .infinity).padding(.bottom, 12)
+            .frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }
@@ -376,14 +376,14 @@ private struct SericultureCalendarScene: View {
                 Text(emoji).font(.system(size: 100))
                 Text("Week \(Int(week))").font(.headline.monospacedDigit())
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
-                Slider(value: $week, in: 0...8).frame(maxWidth: 340).padding(.horizontal, 24)
+                Slider(value: $week, in: 0...8).frame(maxWidth: 340).padding(.horizontal, DesignTokens.Spacing.xl)
                 Text(phase).font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 24).frame(maxWidth: DesignTokens.contentMaxWidth)
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                    .padding(.horizontal, DesignTokens.Spacing.xl).frame(maxWidth: DesignTokens.contentMaxWidth)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
-            .frame(maxWidth: .infinity).padding(.bottom, 12)
+            .frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }
@@ -425,10 +425,10 @@ private struct MulberryVsTasarScene: View {
                     .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
                     .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
                     .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                    .padding(.horizontal, 24)
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
-            .frame(maxWidth: .infinity).padding(.bottom, 12)
+            .frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }
@@ -462,32 +462,32 @@ private struct CottonVsJuteTugScene: View {
                     Text("Score: \(score) / \(questions.count)")
                         .font(.headline)
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
-                    GotItButton(action: { onComplete(score) }).padding(.bottom, 12)
+                    GotItButton(action: { onComplete(score) }).padding(.bottom, DesignTokens.Spacing.md)
                 } else {
-                    GotItButton(action: { onComplete(0) }).padding(.bottom, 12)
+                    GotItButton(action: { onComplete(0) }).padding(.bottom, DesignTokens.Spacing.md)
                 }
             }
-            .frame(maxWidth: .infinity).padding(.bottom, 12)
+            .frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
     @ViewBuilder
     private func qRow(_ q: Q) -> some View {
         let picked = answers[q.id]
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             Text(q.prompt).font(.callout)
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .fixedSize(horizontal: false, vertical: true)
-            HStack(spacing: 8) {
+            HStack(spacing: DesignTokens.Spacing.sm) {
                 ansButton(label: "Cotton", value: true, picked: picked, correct: q.correctCotton, id: q.id)
                 ansButton(label: "Jute", value: false, picked: picked, correct: q.correctCotton, id: q.id)
             }
         }
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
         .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
         .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-        .padding(.horizontal, 24)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
     }
 
     private func ansButton(label: String, value: Bool, picked: Bool?, correct: Bool, id: String) -> some View {
@@ -499,7 +499,7 @@ private struct CottonVsJuteTugScene: View {
             if answers[id] == nil { answers[id] = value }
         } label: {
             Text(label).font(.caption.weight(.semibold))
-                .padding(.horizontal, 12).padding(.vertical, 6)
+                .padding(.horizontal, DesignTokens.Spacing.md).padding(.vertical, 6)
                 .background(Capsule().fill(tint.opacity(isPicked ? 0.22 : 0.10)))
                 .overlay(Capsule().strokeBorder(tint.opacity(0.5), lineWidth: 1))
                 .foregroundColor(tint)
@@ -536,7 +536,7 @@ private struct NaturalVsSyntheticSorterScene: View {
                 Text("Tap each chip — Natural (from plants/animals) or Synthetic (made in factories).")
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                    .multilineTextAlignment(.center).padding(.horizontal, 24)
+                    .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 ForEach(fibres) { f in row(f) }
                 if assignment.count == fibres.count {
                     let correct = fibres.reduce(0) { $0 + ((assignment[$1.id] == $1.isNatural) ? 1 : 0) }
@@ -546,9 +546,9 @@ private struct NaturalVsSyntheticSorterScene: View {
                                          ? DesignTokens.BrandColor.primaryAction
                                          : DesignTokens.BrandColor.canvasText)
                 }
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
-            .frame(maxWidth: .infinity).padding(.bottom, 12)
+            .frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
@@ -577,11 +577,11 @@ private struct NaturalVsSyntheticSorterScene: View {
                 .buttonStyle(.plain).pointingCursor().disabled(pick != nil)
             }
         }
-        .padding(.horizontal, 14).padding(.vertical, 8)
+        .padding(.horizontal, 14).padding(.vertical, DesignTokens.Spacing.sm)
         .frame(maxWidth: DesignTokens.contentMaxWidth)
         .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.85)))
         .overlay(RoundedRectangle(cornerRadius: 10).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-        .padding(.horizontal, 24)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
     }
 }
 

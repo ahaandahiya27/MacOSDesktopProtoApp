@@ -124,19 +124,19 @@ private struct StamenPistilSorterScene: View {
                         Text(p.isStamen ? "Stamen" : "Pistil").font(.caption)
                             .foregroundColor(p.isStamen ? DesignTokens.BrandColor.lookingAhead : DesignTokens.BrandColor.relatedConcepts)
                     }
-                    .padding(12).frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(DesignTokens.Spacing.md).frame(maxWidth: DesignTokens.contentMaxWidth)
                     .background(RoundedRectangle(cornerRadius: 12)
                         .fill(pick == p.id ? Color.compatIndigo.opacity(0.12) : Color.white.opacity(0.85)))
                     .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, 24)
+                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, DesignTokens.Spacing.xl)
             }
             if let s = pick, let p = parts.first(where: { $0.id == s }) {
                 Text(p.detail).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                    .multilineTextAlignment(.center).padding(.horizontal, 24)
+                    .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
             }
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -156,15 +156,15 @@ private struct WindInsectPollinationScene: View {
                  ? "Wind-pollinated: small dull flowers, no nectar, huge amounts of light dry pollen. Grass, wheat, rice. Hay fever season is when they release pollen!"
                  : "Insect-pollinated: bright showy flowers, scent, nectar, sticky heavy pollen. Bees, butterflies, beetles do the work. Most fruits + flowering plants.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
     private func pickChip(_ label: String, on: Bool, tap: @escaping () -> Void) -> some View {
         Button(action: tap) {
             Text(label).font(.body.weight(on ? .bold : .regular))
-                .padding(.horizontal, 14).padding(.vertical, 8)
+                .padding(.horizontal, 14).padding(.vertical, DesignTokens.Spacing.sm)
                 .background(Capsule().fill(on ? Color.compatIndigo.opacity(0.18) : Color.gray.opacity(0.08)))
                 .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                 .foregroundColor(Color.compatIndigo)
@@ -187,7 +187,7 @@ private struct SporeFormationScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text(steps[step].0).font(.system(size: 100))
             Text(steps[step].1).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
             Button { withAnimation { step = (step + 1) % steps.count } } label: {
                 Text("Next").font(.body.weight(.semibold))
@@ -196,8 +196,8 @@ private struct SporeFormationScene: View {
                     .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                     .foregroundColor(Color.compatIndigo)
             }.buttonStyle(.plain).pointingCursor()
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -219,11 +219,11 @@ private struct MangoEmbryoScene: View {
             if cut {
                 Text("Inside the hard seed coat: a tiny embryo (the baby plant) + cotyledons (food reserve to feed it until photosynthesis takes over). Plant the seed — given water and warmth, the baby grows into a sapling.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                    .multilineTextAlignment(.center).padding(.horizontal, 24)
+                    .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
             }
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -246,10 +246,10 @@ private struct CoconutWaterDispersalScene: View {
             }.buttonStyle(.plain).pointingCursor()
             Text("Coconut shells have a tough waterproof husk, an air pocket inside. Falls into the sea, drifts thousands of km, washes up on a faraway beach, sprouts a new tree. That's how coconuts colonised tropical islands worldwide.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -262,10 +262,10 @@ private struct BurrHooksScene: View {
             Text("🪝").font(.system(size: 100))
             Text("Some seeds (Xanthium, Aerva, Cocklebur) wear tiny hooks. Stick to fur, socks, hair as animals or humans walk past. Hours later they fall off km away. A Swiss engineer noticed how burrs stuck to his dog's fur in 1941 — and invented Velcro.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -288,10 +288,10 @@ private struct BeeWaggleDanceScene: View {
             }.buttonStyle(.plain).pointingCursor()
             Text("Back at the hive, a forager bee dances a figure-8. The angle of the waggle = direction of the flower relative to the sun. Length of the waggle = how far. Bees follow + find the flower kilometres away.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
     private func startDance() {
         if dance {
@@ -309,7 +309,7 @@ private struct CuttingsLayeringScene: View {
         ScrollView { LazyVStack(spacing: 14) {
             Text("Three Ways to Clone a Plant").font(.largeTitle.bold())
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            HStack(spacing: 8) {
+            HStack(spacing: DesignTokens.Spacing.sm) {
                 pickChip("Cutting", val: "cutting", on: pick) { pick = "cutting" }
                 pickChip("Layering", val: "layering", on: pick) { pick = "layering" }
                 pickChip("Grafting", val: "grafting", on: pick) { pick = "grafting" }
@@ -322,15 +322,15 @@ private struct CuttingsLayeringScene: View {
                 }
             }()
             Text(body).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
     private func pickChip(_ label: String, val: String, on: String, tap: @escaping () -> Void) -> some View {
         Button(action: tap) {
             Text(label).font(.body.weight(on == val ? .bold : .regular))
-                .padding(.horizontal, 12).padding(.vertical, 8)
+                .padding(.horizontal, DesignTokens.Spacing.md).padding(.vertical, DesignTokens.Spacing.sm)
                 .background(Capsule().fill(on == val ? Color.compatIndigo.opacity(0.18) : Color.gray.opacity(0.08)))
                 .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                 .foregroundColor(Color.compatIndigo)
@@ -354,7 +354,7 @@ private struct TubersBulbsRunnersScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             ForEach(orgs) { o in
                 Button { tapped.insert(o.id) } label: {
-                    VStack(alignment: .leading, spacing: 4) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                         HStack { Text(o.emoji).font(.title2)
                             Text(o.name).font(.headline).foregroundColor(DesignTokens.BrandColor.canvasText) }
                         if tapped.contains(o.id) {
@@ -364,13 +364,13 @@ private struct TubersBulbsRunnersScene: View {
                             Text("Tap to reveal").font(.caption.italic())
                                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         }
-                    }.padding(12).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
+                    }.padding(DesignTokens.Spacing.md).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
                     .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
                     .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, 24)
+                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, DesignTokens.Spacing.xl)
             }
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -383,13 +383,13 @@ private struct HibiscusBisexualScene: View {
             Text("🌺").font(.system(size: 110))
             Text("Hibiscus, rose, mustard, tulip — these flowers have BOTH male (stamen) and female (pistil) parts in the same flower. They can self-pollinate or cross-pollinate.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
             Text("Contrast: papaya, cucumber, maize have separate male + female flowers — sometimes on the same plant, sometimes on different plants.")
                 .font(.caption.italic()).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 

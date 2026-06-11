@@ -38,28 +38,28 @@ struct Scene4_ForestAsSponge: View {
                 }
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Living water tank", systemImage: SFSymbolCompat.name("drop.degreesign"))
                             .font(.title2.bold())
                         Text("Tree canopies break the force of raindrops. Roots hold the soil and let water seep down slowly. Cleared land lets rain run off fast — flooding rivers and stripping topsoil.")
                             .font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 11 Geography",
                     detail: "Class 11 Geography, 'The Atmosphere and Hydrosphere', covers the water cycle in detail. Evapotranspiration from forests is a major driver of it. Forests act as 'biotic pumps' that keep regional rainfall steady."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Bare patch vs grass patch",
                     detail: "Find two small patches of ground in a park — one bare soil, one covered in grass. Sprinkle 1 litre of water on each. Time how long until water vanishes (gets absorbed). Grass-patch beats bare-soil every time."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 DiscoveryWidget(
                     title: "Discovery — adjust the forest cover",
@@ -71,12 +71,12 @@ struct Scene4_ForestAsSponge: View {
                     output: forestCoverExplanation
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 

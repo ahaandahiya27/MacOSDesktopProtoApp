@@ -116,7 +116,7 @@ private struct SoilFormationStepperScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text(steps[step].0).font(.system(size: 100))
             Text(steps[step].1).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
             Button { withAnimation { step = (step + 1) % steps.count } } label: {
                 Text("Next").font(.body.weight(.semibold))
@@ -125,8 +125,8 @@ private struct SoilFormationStepperScene: View {
                     .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                     .foregroundColor(Color.compatIndigo)
             }.buttonStyle(.plain).pointingCursor()
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -157,19 +157,19 @@ private struct IndianSoilTypesAtlasScene: View {
                         Spacer()
                         Text(s.region).font(.caption).foregroundColor(.secondary).lineLimit(1)
                     }
-                    .padding(12).frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(DesignTokens.Spacing.md).frame(maxWidth: DesignTokens.contentMaxWidth)
                     .background(RoundedRectangle(cornerRadius: 12)
                         .fill(selected == s.id ? Color.compatIndigo.opacity(0.12) : Color.white.opacity(0.85)))
                     .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, 24)
+                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, DesignTokens.Spacing.xl)
             }
             if let s = selected, let item = soils.first(where: { $0.id == s }) {
                 Text(item.detail).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                    .multilineTextAlignment(.center).padding(.horizontal, 24)
+                    .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
             }
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -189,12 +189,12 @@ private struct SoilPHForCropsScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("pH \(String(format: "%.1f", ph))").font(.title2.monospacedDigit())
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
-            Slider(value: $ph, in: 3...10).frame(maxWidth: 340).padding(.horizontal, 24)
+            Slider(value: $ph, in: 3...10).frame(maxWidth: 340).padding(.horizontal, DesignTokens.Spacing.xl)
             Text(crop).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -211,18 +211,18 @@ private struct CompostPitRecipeScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Add all four ingredients in the right balance. Microbes do the rest in 4-6 weeks.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
-            VStack(spacing: 8) {
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
+            VStack(spacing: DesignTokens.Spacing.sm) {
                 ingredientToggle("Greens (vegetable peels)", on: $greens)
                 ingredientToggle("Browns (dry leaves)", on: $browns)
                 ingredientToggle("Moisture (water)", on: $moisture)
                 ingredientToggle("Air (turn weekly)", on: $air)
-            }.padding(.horizontal, 24)
+            }.padding(.horizontal, DesignTokens.Spacing.xl)
             Text(ready ? "🌱 Compost is brewing!" : "⏳ Add what's missing.")
                 .font(.headline)
                 .foregroundColor(ready ? DesignTokens.BrandColor.primaryAction : DesignTokens.BrandColor.canvasTextSecondary)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
     private func ingredientToggle(_ label: String, on: Binding<Bool>) -> some View {
         Button { on.wrappedValue.toggle() } label: {
@@ -255,7 +255,7 @@ private struct VermicompostLabScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text(stages[stage].0).font(.system(size: 100))
             Text(stages[stage].1).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
             Button { withAnimation { stage = (stage + 1) % stages.count } } label: {
                 Text("Next").font(.body.weight(.semibold))
@@ -264,8 +264,8 @@ private struct VermicompostLabScene: View {
                     .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                     .foregroundColor(Color.compatIndigo)
             }.buttonStyle(.plain).pointingCursor()
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -285,11 +285,11 @@ private struct CropRotationWheelScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Same field, different crop each season. Prevents soil exhaustion and breaks pest cycles.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
             Text(crops[season]).font(.title2.weight(.semibold))
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
             Text(benefits[season]).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
             Button { withAnimation { season = (season + 1) % crops.count } } label: {
                 Text("Next season").font(.body.weight(.semibold))
@@ -298,8 +298,8 @@ private struct CropRotationWheelScene: View {
                     .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                     .foregroundColor(Color.compatIndigo)
             }.buttonStyle(.plain).pointingCursor()
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -312,7 +312,7 @@ private struct TerraceFarmingScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Sloped land + heavy rain = soil washes away. Solution: cut flat steps into the hillside.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
             ZStack {
                 Rectangle().fill(DesignTokens.BrandColor.primaryAction.opacity(0.45))
                     .frame(width: 240, height: 30).offset(y: -75)
@@ -335,10 +335,10 @@ private struct TerraceFarmingScene: View {
                  ? "Terraced: rainwater pools in each step, soaks in slowly. Rice fields in Sikkim, Nagaland, Philippines."
                  : "Plain slope: rain runs off, taking topsoil with it. Field becomes barren in 5-10 years.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -360,7 +360,7 @@ private struct SoilTexturePyramidScene: View {
         return ScrollView { LazyVStack(spacing: 14) {
             Text("Soil Texture Pyramid").font(.largeTitle.bold())
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            VStack(spacing: 4) {
+            VStack(spacing: DesignTokens.Spacing.xs) {
                 HStack(spacing: 0) {
                     Rectangle().fill(DesignTokens.BrandColor.mnemonicAccent.opacity(0.7)).frame(width: sandW)
                     Rectangle().fill(Color.compatTeal.opacity(0.7)).frame(width: siltW)
@@ -371,15 +371,15 @@ private struct SoilTexturePyramidScene: View {
                     .font(.caption.monospacedDigit()).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
             }
             Text("Sand %").font(.caption).foregroundColor(.secondary)
-            Slider(value: $sand, in: 0...0.95).frame(maxWidth: 340).padding(.horizontal, 24)
+            Slider(value: $sand, in: 0...0.95).frame(maxWidth: 340).padding(.horizontal, DesignTokens.Spacing.xl)
             Text("Silt %").font(.caption).foregroundColor(.secondary)
             let siltMax: Double = max(0, 0.95 - sand)
-            Slider(value: $silt, in: 0...siltMax).frame(maxWidth: 340).padding(.horizontal, 24)
+            Slider(value: $silt, in: 0...siltMax).frame(maxWidth: 340).padding(.horizontal, DesignTokens.Spacing.xl)
             Text(soilType).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -399,10 +399,10 @@ private struct MicrobesInSoilScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("One teaspoon of healthy soil has more microbes than people on Earth. Tap each.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
             ForEach(microbes) { m in
                 Button { tapped.insert(m.id) } label: {
-                    VStack(alignment: .leading, spacing: 4) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                         HStack { Text(m.emoji).font(.title2)
                             Text(m.name).font(.headline).foregroundColor(DesignTokens.BrandColor.canvasText) }
                         if tapped.contains(m.id) {
@@ -412,13 +412,13 @@ private struct MicrobesInSoilScene: View {
                             Text("Tap to reveal").font(.caption.italic())
                                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         }
-                    }.padding(12).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
+                    }.padding(DesignTokens.Spacing.md).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
                     .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
                     .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, 24)
+                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, DesignTokens.Spacing.xl)
             }
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -432,7 +432,7 @@ private struct WaterHoldingCapacityScene: View {
         ScrollView { LazyVStack(spacing: 14) {
             Text("Which Soil Holds Water?").font(.largeTitle.bold())
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            HStack(spacing: 24) {
+            HStack(spacing: DesignTokens.Spacing.xl) {
                 bar("Sand", level: sandWater, color: DesignTokens.BrandColor.mnemonicAccent)
                 bar("Loam", level: loamWater, color: DesignTokens.BrandColor.primaryAction)
                 bar("Clay", level: clayWater, color: Color.compatBrown)
@@ -446,10 +446,10 @@ private struct WaterHoldingCapacityScene: View {
             }.buttonStyle(.plain).pointingCursor().disabled(running)
             Text("Sand drains in seconds. Clay holds water for days. Loam — best of both.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
     private func bar(_ label: String, level: CGFloat, color: Color) -> some View {
         let fillH: CGFloat = 140 * level

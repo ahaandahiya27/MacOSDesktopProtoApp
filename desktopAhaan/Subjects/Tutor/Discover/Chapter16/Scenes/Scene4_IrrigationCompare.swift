@@ -22,7 +22,7 @@ struct Scene4_IrrigationCompare: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-            LazyVStack(alignment: .center, spacing: 12) {
+            LazyVStack(alignment: .center, spacing: DesignTokens.Spacing.md) {
                 Text("Drip, Sprinkler or Flood?").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Rank these irrigation methods by water efficiency.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
@@ -46,7 +46,7 @@ struct Scene4_IrrigationCompare: View {
                         .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                     }
                 }
-                .frame(maxWidth: 620).padding(.horizontal, 24)
+                .frame(maxWidth: 620).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 if done {
                     Text("Score: \(score) / \(methods.count)").font(.title3.bold()).foregroundColor(Color.compatIndigo)
@@ -56,26 +56,26 @@ struct Scene4_IrrigationCompare: View {
                     Text("Drip puts water exactly at the root, evaporates almost nothing. Sprinklers spray over a wider area but lose ~30% to evaporation. Flood irrigation soaks the whole field — easiest, but wastes the most.")
                         .font(.callout).lineSpacing(4)
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 10 Geography",
                     detail: "Class 10 'Agriculture' covers irrigation in India. Big canals include the Indira Gandhi and Bhakra-Nangal systems. Tamil Nadu uses tank irrigation. Dry Rajasthan and Gujarat now use drip irrigation. CBSE board exams ask about it."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Drip-irrigation bottle",
                     detail: "Take a 1-litre plastic bottle. Punch one tiny pin-hole at the bottom and fill with water. Place it next to a pot plant with the hole touching the soil. Water drips slowly — a drip-irrigation system that uses 50% less water than pouring from a watering can."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
+                if done { GotItButton { onComplete(score) }.padding(.bottom, DesignTokens.Spacing.md) }
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

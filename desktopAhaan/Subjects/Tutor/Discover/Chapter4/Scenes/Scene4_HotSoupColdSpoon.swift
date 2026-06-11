@@ -23,7 +23,7 @@ struct Scene4_HotSoupColdSpoon: View {
                     Spacer()
 
                     // Toggle spoon type
-                    HStack(spacing: 12) {
+                    HStack(spacing: DesignTokens.Spacing.md) {
                         Text("Metal spoon")
                             .fontWeight(isWooden ? .regular : .bold)
                             .foregroundColor(isWooden ? .secondary : .primary)
@@ -123,7 +123,7 @@ struct Scene4_HotSoupColdSpoon: View {
 
                 Group {
                     SoftShadowCard(padding: 18) {
-                        VStack(alignment: .leading, spacing: 8) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                             Label("Hot Soup, Cold Spoon", systemImage: SFSymbolCompat.name("frying.pan.fill"))
                                 .font(.title2.bold())
                             Text(isWooden
@@ -148,14 +148,14 @@ struct Scene4_HotSoupColdSpoon: View {
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
                     GotItButton { onComplete() }
-                        .padding(.bottom, 12)
+                        .padding(.bottom, DesignTokens.Spacing.md)
                 
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 

@@ -130,12 +130,12 @@ struct Scene1_PlantKitchen: View {
                     GotItButton {
                         onComplete()
                     }
-                    .padding(.bottom, 12)
+                    .padding(.bottom, DesignTokens.Spacing.md)
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
         .timedScene(idealFPS: 30, tick: $tick)
     }
@@ -265,7 +265,7 @@ private struct SpeechBubble: View {
         Text(text)
             .font(.title3.weight(.semibold))
             .foregroundColor(DesignTokens.BrandColor.canvasText)
-            .padding(.horizontal, 16)
+            .padding(.horizontal, DesignTokens.Spacing.lg)
             .padding(.vertical, 10)
             .background(
                 ZStack(alignment: .bottomLeading) {

@@ -23,7 +23,7 @@ struct Scene3_BloodSort: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-            LazyVStack(alignment: .center, spacing: 12) {
+            LazyVStack(alignment: .center, spacing: DesignTokens.Spacing.md) {
                 Text("Blood Components").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Each component has a different job. Match them up.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
@@ -62,26 +62,26 @@ struct Scene3_BloodSort: View {
                     Text("Blood is part cells (RBC, WBC, platelets) and part fluid (plasma). Together they deliver oxygen and nutrients, fight infection, plug wounds and carry waste away.")
                         .font(.callout).lineSpacing(4)
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 12 Bio → NEET",
                     detail: "Class 12 'Body Fluids and Circulation' (plus Class 12 Health & Disease) covers ABO + Rh blood groups, blood typing for transfusions, haemophilia genetics, and the immune role of WBCs (B-cells, T-cells, antibodies). Blood-group genetics problems appear in nearly every NEET paper."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Microscope a blood smear",
                     detail: "Most school science labs have prepared blood-smear slides. Under a microscope you'll see tiny red dots (RBCs), an occasional larger irregular blob (WBC), and the smaller speckles (platelets) floating in plasma."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
+                if done { GotItButton { onComplete(score) }.padding(.bottom, DesignTokens.Spacing.md) }
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
 
         .frame(maxWidth: .infinity, maxHeight: .infinity)

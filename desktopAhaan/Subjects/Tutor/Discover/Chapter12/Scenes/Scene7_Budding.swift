@@ -33,34 +33,34 @@ struct Scene7_Budding: View {
                     .accentColor(Color.compatIndigo)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("A bump that breaks free", systemImage: "circle.grid.3x3")
                             .font(.title2.bold())
                         Text("Yeast and hydra reproduce by budding. A small outgrowth forms on the parent, grows bigger, then detaches as a complete new organism — a clone of the parent.")
                             .font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 12 Bio → NEET",
                     detail: "Class 12 'Reproduction in Organisms' covers asexual modes. Amoeba uses binary fission. Plasmodium uses multiple fission. Hydra and yeast use budding. Spirogyra uses fragmentation. Rhizopus makes spores. NEET tests these every year."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Watch bread rise",
                     detail: "Mix yeast + warm water + sugar + flour. Cover and wait 1 hour. The dough doubles in size because of CO₂ from yeast cells budding their way through it. Same chemistry as Scene 3 of this chapter — just baked."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
                 Spacer(minLength: 0)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
 
         .frame(maxWidth: .infinity, maxHeight: .infinity)

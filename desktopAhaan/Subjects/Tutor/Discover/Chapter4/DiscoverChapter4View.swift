@@ -120,8 +120,8 @@ private struct CelsiusFahrenheitSliderScene: View {
                 Text("India and most of the world use °C. The US uses °F. Both measure the same heat — just different scales.")
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                    .multilineTextAlignment(.center).padding(.horizontal, 24)
-                HStack(spacing: 24) {
+                    .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
+                HStack(spacing: DesignTokens.Spacing.xl) {
                     VStack { Text("\(Int(celsius))").font(.system(size: 56, weight: .bold).monospacedDigit())
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
                         Text("°C").font(.caption).foregroundColor(.secondary) }
@@ -130,14 +130,14 @@ private struct CelsiusFahrenheitSliderScene: View {
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
                         Text("°F").font(.caption).foregroundColor(.secondary) }
                 }
-                Slider(value: $celsius, in: -10...50).frame(maxWidth: 340).padding(.horizontal, 24)
+                Slider(value: $celsius, in: -10...50).frame(maxWidth: 340).padding(.horizontal, DesignTokens.Spacing.xl)
                 Text(label).font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
-                    .multilineTextAlignment(.center).padding(.horizontal, 24)
+                    .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
-            .frame(maxWidth: .infinity).padding(.bottom, 12)
+            .frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }
@@ -167,10 +167,10 @@ private struct ClinicalVsLabThermometerScene: View {
                     .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
                     .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
                     .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                    .padding(.horizontal, 24)
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
-            .frame(maxWidth: .infinity).padding(.bottom, 12)
+            .frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
@@ -200,7 +200,7 @@ private struct ExpansionContractionLabScene: View {
                 Text("Heat a metal ring and it expands — a marble that fit before now slides through too easily. Cool it and it contracts back. Same for railway tracks, power lines, mercury in a tube.")
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                    .multilineTextAlignment(.center).padding(.horizontal, 24)
+                    .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 Circle().strokeBorder(DesignTokens.BrandColor.danger, lineWidth: 6)
                     .frame(width: heated ? 180 : 120, height: heated ? 180 : 120)
                 Button {
@@ -214,9 +214,9 @@ private struct ExpansionContractionLabScene: View {
                         .foregroundColor(DesignTokens.BrandColor.danger)
                 }
                 .buttonStyle(.plain).pointingCursor()
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
-            .frame(maxWidth: .infinity).padding(.bottom, 12)
+            .frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }
@@ -236,7 +236,7 @@ private struct BimetallicStripScene: View {
                 Text("Two metals fused together. Brass expands more than steel, so heating makes the strip curl. Used in thermostats and electric iron auto-cutoffs.")
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                    .multilineTextAlignment(.center).padding(.horizontal, 24)
+                    .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 let topY: CGFloat = -CGFloat(bend)
                 let botY: CGFloat = 8 - CGFloat(bend)
                 ZStack {
@@ -250,12 +250,12 @@ private struct BimetallicStripScene: View {
                         .rotationEffect(.degrees(bend))
                 }
                 .frame(height: 80)
-                Slider(value: $temp, in: -10...80).frame(maxWidth: 340).padding(.horizontal, 24)
+                Slider(value: $temp, in: -10...80).frame(maxWidth: 340).padding(.horizontal, DesignTokens.Spacing.xl)
                 Text("Temperature: \(Int(temp)) °C").font(.callout.monospacedDigit())
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
-            .frame(maxWidth: .infinity).padding(.bottom, 12)
+            .frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }
@@ -297,7 +297,7 @@ private struct ConvectionCurrentBowlScene: View {
                 }
                 Text(captions[stage]).font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
-                    .multilineTextAlignment(.center).padding(.horizontal, 24)
+                    .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
                 Button { withAnimation { stage = (stage + 1) % captions.count } } label: {
                     Text("Next stage").font(.body.weight(.semibold))
@@ -307,9 +307,9 @@ private struct ConvectionCurrentBowlScene: View {
                         .foregroundColor(Color.compatIndigo)
                 }
                 .buttonStyle(.plain).pointingCursor()
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
-            .frame(maxWidth: .infinity).padding(.bottom, 12)
+            .frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }
@@ -334,7 +334,7 @@ private struct RadiationDarkLightClothScene: View {
                             .overlay(Circle().strokeBorder(!darkSelected ? Color.compatIndigo : Color.gray, lineWidth: 3))
                     }.buttonStyle(.plain).pointingCursor()
                 }
-                HStack(spacing: 8) {
+                HStack(spacing: DesignTokens.Spacing.sm) {
                     Text(darkSelected ? "Dark cloth" : "Light cloth").font(.headline)
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
                     Image(systemName: darkSelected ? "thermometer.sun" : "thermometer.snowflake")
@@ -345,11 +345,11 @@ private struct RadiationDarkLightClothScene: View {
                      : "Light colours reflect most of the sunlight back. Body stays cooler. That's why white kurta is summer wear in India.")
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
-                    .multilineTextAlignment(.center).padding(.horizontal, 24)
+                    .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
-            .frame(maxWidth: .infinity).padding(.bottom, 12)
+            .frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }
@@ -396,11 +396,11 @@ private struct VacuumFlaskScene: View {
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
                         .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
                         .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                        .padding(.horizontal, 24)
+                        .padding(.horizontal, DesignTokens.Spacing.xl)
                 }
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
-            .frame(maxWidth: .infinity).padding(.bottom, 12)
+            .frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }
@@ -427,7 +427,7 @@ private struct HeatWaveSurvivalScene: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 ForEach(tips) { tip in
                     Button { tapped.insert(tip.id) } label: {
-                        VStack(alignment: .leading, spacing: 4) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                             Text(tip.title).font(.headline)
                                 .foregroundColor(DesignTokens.BrandColor.canvasText)
                             if tapped.contains(tip.id) {
@@ -439,16 +439,16 @@ private struct HeatWaveSurvivalScene: View {
                                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                             }
                         }
-                        .padding(12)
+                        .padding(DesignTokens.Spacing.md)
                         .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
                         .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
                         .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
                     }
-                    .buttonStyle(.plain).pointingCursor().padding(.horizontal, 24)
+                    .buttonStyle(.plain).pointingCursor().padding(.horizontal, DesignTokens.Spacing.xl)
                 }
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
-            .frame(maxWidth: .infinity).padding(.bottom, 12)
+            .frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

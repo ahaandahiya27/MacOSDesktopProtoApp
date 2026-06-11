@@ -49,13 +49,13 @@ struct Scene5_TropicalRainforestLife: View {
                 bottomOverlay
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
     @ViewBuilder
     private var mainColumn: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: DesignTokens.Spacing.md) {
             Text("Tropical Rainforest Life")
                 .font(.title2.bold())
                 .padding(.top, 14)
@@ -67,7 +67,7 @@ struct Scene5_TropicalRainforestLife: View {
             layersStack
         }
         .frame(maxWidth: .infinity)
-        .padding(.horizontal, 24)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
     }
 
     @ViewBuilder
@@ -108,16 +108,16 @@ struct Scene5_TropicalRainforestLife: View {
             Rectangle()
                 .fill(isSelected ? layer.color.opacity(0.9) : layer.color.opacity(0.5))
 
-            VStack(spacing: 4) {
+            VStack(spacing: DesignTokens.Spacing.xs) {
                 Text(layer.name)
                     .font(.headline.bold())
                     .foregroundColor(.white)
 
-                HStack(spacing: 12) {
+                HStack(spacing: DesignTokens.Spacing.md) {
                     ForEach(layer.animals, id: \.name) { animal in
                         Text(animal.name)
                             .font(.caption)
-                            .padding(.horizontal, 8)
+                            .padding(.horizontal, DesignTokens.Spacing.sm)
                             .padding(.vertical, 3)
                             .background(Capsule().fill(.white.opacity(0.3)))
                             .foregroundColor(.white)
@@ -159,23 +159,23 @@ struct Scene5_TropicalRainforestLife: View {
 
             if allExplored {
                 GotItButton { onComplete() }
-                    .padding(.bottom, 12)
+                    .padding(.bottom, DesignTokens.Spacing.md)
             }
         }
-        .padding(.horizontal, 24)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
     }
 
     @ViewBuilder
     private var detailCard: some View {
         SoftShadowCard(padding: 18) {
-            VStack(alignment: .leading, spacing: 8) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                 if let idx = selectedLayer, let layer = layers.first(where: { $0.id == idx }) {
                     Label(layer.name, systemImage: "leaf.fill")
                         .font(.title2.bold())
                         .foregroundColor(layer.color)
 
                     ForEach(layer.animals, id: \.name) { animal in
-                        VStack(alignment: .leading, spacing: 2) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                             Text(animal.name)
                                 .font(.body.bold())
                             Text(animal.adaptation)
@@ -183,7 +183,7 @@ struct Scene5_TropicalRainforestLife: View {
                                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                                 .lineSpacing(3)
                         }
-                        .padding(.top, 4)
+                        .padding(.top, DesignTokens.Spacing.xs)
                     }
                 } else {
                     Label("Rainforest Layers", systemImage: SFSymbolCompat.name("tree.fill"))

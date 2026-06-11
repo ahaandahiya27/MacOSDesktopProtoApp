@@ -90,25 +90,25 @@ private struct MathFractionTimesWholeScene: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .multilineTextAlignment(.center)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
-                fifthsGrid.padding(.vertical, 16)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
+                fifthsGrid.padding(.vertical, DesignTokens.Spacing.lg)
                 Text("Shortcut: multiply the whole number by the top, keep the bottom — 3 × 2/5 = (3 × 2)/5 = 6/5.")
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .multilineTextAlignment(.center)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
     private var fifthsGrid: some View {
         VStack(spacing: 6) {
             ForEach(0..<2, id: \.self) { row in
-                HStack(spacing: 4) {
+                HStack(spacing: DesignTokens.Spacing.xs) {
                     ForEach(0..<5, id: \.self) { col in
                         let idx = row * 5 + col
                         RoundedRectangle(cornerRadius: 4)
@@ -140,12 +140,12 @@ private struct MathQuickCheck: View {
     @State private var selected: Int? = nil
 
     var body: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: DesignTokens.Spacing.md) {
             Text(prompt)
                 .font(.title3.weight(.semibold))
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .multilineTextAlignment(.center)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             ForEach(options.indices, id: \.self) { i in
                 Button {
                     if selected == nil { selected = i }
@@ -163,7 +163,7 @@ private struct MathQuickCheck: View {
                                 .foregroundColor(.red)
                         }
                     }
-                    .padding(.horizontal, 16).padding(.vertical, 12)
+                    .padding(.horizontal, DesignTokens.Spacing.lg).padding(.vertical, DesignTokens.Spacing.md)
                     .frame(maxWidth: 320)
                     .background(RoundedRectangle(cornerRadius: 10).fill(optionFill(i)))
                     .overlay(RoundedRectangle(cornerRadius: 10).strokeBorder(Color.compatIndigo.opacity(0.3), lineWidth: 1))
@@ -204,17 +204,17 @@ private struct MathFractionTimesFractionScene: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .multilineTextAlignment(.center)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 MathQuickCheck(
                     prompt: "What is 2/3 × 3/4 (simplified)?",
                     options: ["1/2", "6/7", "5/7", "6/12"],
                     correctIndex: 0,
                     onComplete: onComplete
                 )
-                .padding(.top, 8)
+                .padding(.top, DesignTokens.Spacing.sm)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }
@@ -236,17 +236,17 @@ private struct MathFractionOfScene: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .multilineTextAlignment(.center)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 MathQuickCheck(
                     prompt: "What is 1/3 of 12?",
                     options: ["4", "36", "9", "3"],
                     correctIndex: 0,
                     onComplete: onComplete
                 )
-                .padding(.top, 8)
+                .padding(.top, DesignTokens.Spacing.sm)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }
@@ -268,17 +268,17 @@ private struct MathFractionDivideScene: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .multilineTextAlignment(.center)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 MathQuickCheck(
                     prompt: "What is 3/4 ÷ 1/2?",
                     options: ["3/2", "3/8", "2/3", "6"],
                     correctIndex: 0,
                     onComplete: onComplete
                 )
-                .padding(.top, 8)
+                .padding(.top, DesignTokens.Spacing.sm)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }
@@ -318,17 +318,17 @@ private struct MathFractionsBossQuizScene: View {
                 }
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
     private func questionCard(_ q: QA) -> some View {
-        VStack(spacing: 12) {
+        VStack(spacing: DesignTokens.Spacing.md) {
             Text(q.prompt)
                 .font(.title3.weight(.semibold))
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .multilineTextAlignment(.center)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             ForEach(q.options.indices, id: \.self) { i in
                 Button {
                     guard selected == nil else { return }
@@ -338,7 +338,7 @@ private struct MathFractionsBossQuizScene: View {
                     Text(q.options[i])
                         .font(.body.weight(.medium))
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
-                        .padding(.horizontal, 16).padding(.vertical, 12)
+                        .padding(.horizontal, DesignTokens.Spacing.lg).padding(.vertical, DesignTokens.Spacing.md)
                         .frame(maxWidth: 300)
                         .background(RoundedRectangle(cornerRadius: 10).fill(optionFill(i, q)))
                         .overlay(RoundedRectangle(cornerRadius: 10).strokeBorder(Color.compatIndigo.opacity(0.3), lineWidth: 1))
@@ -366,7 +366,7 @@ private struct MathFractionsBossQuizScene: View {
     }
 
     private var finishCard: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: DesignTokens.Spacing.md) {
             Text("You scored \(score) / \(questions.count)")
                 .font(.title2.bold())
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -374,7 +374,7 @@ private struct MathFractionsBossQuizScene: View {
                 .font(.callout)
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 .multilineTextAlignment(.center)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             GotItButton(action: { onComplete(score) }).padding(.top, 6)
         }
     }

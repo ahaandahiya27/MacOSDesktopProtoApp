@@ -52,26 +52,26 @@ struct Scene7_DeforestationDomino: View {
                     Text("Forest loss doesn't stop at the chainsaw. The damage cascades through climate, water, soil and wildlife — often hurting communities thousands of km away.")
                         .font(.callout).lineSpacing(4)
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 12 Bio → NEET",
                     detail: "Class 12 'Biodiversity & Conservation' covers the effects of deforestation in India and worldwide. Case studies include the Chipko movement, Silent Valley and Project Tiger. NEET asks for the causes of biodiversity loss every year. The four are habitat loss, over-exploitation, invasive species and co-extinction."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "News-search exercise",
                     detail: "Search 'deforestation India 2024' on a news site. Pick one story. Identify which dominoes from this scene applied to that case: was there flooding? topsoil loss? wildlife displacement? climate impact?"
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

@@ -55,8 +55,8 @@ struct Scene6_AdaptationMatchGame: View {
                         Text("Score: \(score) / 12")
                             .font(.headline.monospacedDigit())
                             .foregroundColor(Color.compatIndigo)
-                            .padding(.trailing, 24)
-                            .padding(.top, 8)
+                            .padding(.trailing, DesignTokens.Spacing.xl)
+                            .padding(.top, DesignTokens.Spacing.sm)
                     }
 
                     if !isDone {
@@ -97,11 +97,11 @@ struct Scene6_AdaptationMatchGame: View {
                     }
                 }
                 .frame(maxWidth: .infinity)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 Group {
                     SoftShadowCard(padding: 18) {
-                        VStack(alignment: .leading, spacing: 8) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                             Label(isDone ? "Great matching!" : "Match Animals to Adaptations",
                                   systemImage: isDone ? "star.fill" : "arrow.left.arrow.right")
                                 .font(.title2.bold())
@@ -129,13 +129,13 @@ struct Scene6_AdaptationMatchGame: View {
 
                     if isDone {
                         GotItButton { onComplete(score) }
-                            .padding(.bottom, 12)
+                            .padding(.bottom, DesignTokens.Spacing.md)
                     }
                 
 
                 }
 
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 if showConfetti {
                     ParticleEmitter(isActive: true, particleCount: min(40, HardwareTier.particleBudget), duration: 1.5)
@@ -148,7 +148,7 @@ struct Scene6_AdaptationMatchGame: View {
 
             .frame(maxWidth: .infinity)
 
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
 
         }
     }

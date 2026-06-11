@@ -25,7 +25,7 @@ struct Scene8_TemperatureVsHeat: View {
                     // Both glasses and thermometers
                     HStack(spacing: 60) {
                         // Glass A — small
-                        VStack(spacing: 8) {
+                        VStack(spacing: DesignTokens.Spacing.sm) {
                             Text("Glass A").font(.headline)
                             Text("50 ml  ·  80°C").font(.caption.weight(.medium)).foregroundColor(DesignTokens.BrandColor.tryAtHome)
 
@@ -54,7 +54,7 @@ struct Scene8_TemperatureVsHeat: View {
                             .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
                         // Glass B — large
-                        VStack(spacing: 8) {
+                        VStack(spacing: DesignTokens.Spacing.sm) {
                             Text("Glass B").font(.headline)
                             Text("500 ml  ·  80°C").font(.caption.weight(.medium)).foregroundColor(DesignTokens.BrandColor.tryAtHome)
 
@@ -104,7 +104,7 @@ struct Scene8_TemperatureVsHeat: View {
 
                 Group {
                     SoftShadowCard(padding: 18) {
-                        VStack(alignment: .leading, spacing: 8) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                             Label("Temperature vs Heat", systemImage: "flame.fill")
                                 .font(.title2.bold())
                             Text(poured
@@ -130,15 +130,15 @@ struct Scene8_TemperatureVsHeat: View {
 
                     if poured {
                         GotItButton { onComplete() }
-                            .padding(.bottom, 12)
+                            .padding(.bottom, DesignTokens.Spacing.md)
                     }
                 
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 

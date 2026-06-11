@@ -43,10 +43,10 @@ struct Scene8_ConservationHero: View {
                     Toggle("〰️ Contour ploughing — across the slope, not down", isOn: $contour)
                 }
                 .frame(maxWidth: 460)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Three pillars of soil conservation", systemImage: "shield.fill")
                             .font(.title2.bold())
                         Text("Terracing slows runoff on slopes. Cover crops shield bare soil from rain. Contour ploughing forms tiny ridges that trap water. Combine all three and even a steep hillside stays fertile for generations.")
@@ -54,27 +54,27 @@ struct Scene8_ConservationHero: View {
                     }
                 }
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 10 Geography",
                     detail: "Class 10 'Resources and Development' treats soil conservation as a national issue. It covers the National Mission for Sustainable Agriculture. It covers watershed development. It also covers how NGOs help restore dryland."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Sloped vs flat patch",
                     detail: "Find a slope in your school playground. Water erosion has probably already worn a small gully. Compare to a flat grassy patch nearby — much less erosion. That's why hilly fields use terraces."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
                 Spacer(minLength: 0)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
 
         .frame(maxWidth: .infinity, maxHeight: .infinity)

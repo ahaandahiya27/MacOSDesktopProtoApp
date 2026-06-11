@@ -76,7 +76,7 @@ private struct DiscoverProgressContent: View {
 
     private var closestCard: some View {
         VStack(alignment: .leading, spacing: 10) {
-            HStack(spacing: 8) {
+            HStack(spacing: DesignTokens.Spacing.sm) {
                 Image(systemName: SFSymbolCompat.name("flag.checkered"))
                     .foregroundColor(.orange)
                 Text("Almost there")
@@ -123,7 +123,7 @@ private struct DiscoverProgressContent: View {
             HStack(alignment: .firstTextBaseline) {
                 Text("\u{2728}")
                     .font(.system(size: 36))
-                VStack(alignment: .leading, spacing: 2) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                     Text("Discover Mode")
                         .font(.largeTitle.bold())
                     Text("\(totalCompleted) of \(totalScenes) scenes completed across \(chapters.count) chapters")
@@ -136,7 +136,7 @@ private struct DiscoverProgressContent: View {
                 .accessibilityLabel("Overall Discover progress")
                 .accessibilityValue("\(Int(overallPercent * 100)) percent")
         }
-        .padding(16)
+        .padding(DesignTokens.Spacing.lg)
         .background(
             RoundedRectangle(cornerRadius: 14)
                 .fill(Color.compatIndigo.opacity(0.08))
@@ -175,11 +175,11 @@ private struct DiscoverProgressContent: View {
                     }
                 }
 
-                VStack(alignment: .leading, spacing: 4) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                     Text("Ch. \(chapter.number) \u{2014} \(chapter.title)")
                         .font(.headline)
                         .multilineTextAlignment(.leading)
-                    HStack(spacing: 8) {
+                    HStack(spacing: DesignTokens.Spacing.sm) {
                         Text(isComplete ? "All scenes completed" : "\(total - done) scene\(total - done == 1 ? "" : "s") left")
                             .font(.caption)
                             .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
@@ -189,7 +189,7 @@ private struct DiscoverProgressContent: View {
                             // inside the chapter itself. Helps identify weak
                             // topics from the sidebar at a glance.
                             let perfect = bq.score == bq.max
-                            HStack(spacing: 4) {
+                            HStack(spacing: DesignTokens.Spacing.xs) {
                                 Image(systemName: perfect ? "checkmark.seal.fill" : "trophy.fill")
                                     .font(.caption2)
                                 Text("\(bq.score)/\(bq.max)")

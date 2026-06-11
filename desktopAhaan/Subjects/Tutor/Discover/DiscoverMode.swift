@@ -189,7 +189,7 @@ private struct ComingSoonView: View {
     var body: some View {
         ZStack {
             DiscoverBackground()
-            VStack(spacing: 16) {
+            VStack(spacing: DesignTokens.Spacing.lg) {
                 Text("✨")
                     .font(.system(size: 64))
                 Text("Discover Mode is coming soon for")
@@ -201,7 +201,7 @@ private struct ComingSoonView: View {
                 Text("Until then, the regular chapter view has all the content.")
                     .font(.body)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                    .padding(.top, 8)
+                    .padding(.top, DesignTokens.Spacing.sm)
             }
             .padding(40)
         }
@@ -332,8 +332,8 @@ struct DiscoverShell<SceneBody: View>: View {
         // Each call did `dataStore.discoverRows(for:).filter { ... }.map`
         // → Set, which is a linear scan over all DiscoverProgress entries.
         let completedIds = completedSceneIds
-        return VStack(spacing: 8) {
-            HStack(alignment: .firstTextBaseline, spacing: 12) {
+        return VStack(spacing: DesignTokens.Spacing.sm) {
+            HStack(alignment: .firstTextBaseline, spacing: DesignTokens.Spacing.md) {
                 // Scene title — use canvasText (dark slate) instead of the
                 // raw chapter accent. Some chapter accents (e.g. Ch.14
                 // yellow, Ch.13 green) sit too close to the pale Discover
@@ -355,7 +355,7 @@ struct DiscoverShell<SceneBody: View>: View {
                     .font(.monoDigitCaption)
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .padding(.horizontal, 10)
-                    .padding(.vertical, 4)
+                    .padding(.vertical, DesignTokens.Spacing.xs)
                     .background(
                         Capsule()
                             .fill(Color.white.opacity(0.85))
@@ -381,7 +381,7 @@ struct DiscoverShell<SceneBody: View>: View {
                         counterPopRelaxTask = nil
                     }
             }
-            HStack(spacing: 8) {
+            HStack(spacing: DesignTokens.Spacing.sm) {
                 ForEach(0..<totalScenes, id: \.self) { i in
                     let id = "scene\(i + 1)"
                     let done = completedIds.contains(id)
@@ -425,8 +425,8 @@ struct DiscoverShell<SceneBody: View>: View {
             .accessibilityLabel("Scene progress")
             .accessibilityValue("Scene \(currentScene + 1) of \(totalScenes)")
         }
-        .padding(.horizontal, 24)
-        .padding(.vertical, 12)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
+        .padding(.vertical, DesignTokens.Spacing.md)
     }
 
     // Footer: pure navigation. Scene title now lives in the header (DM4) so
@@ -452,8 +452,8 @@ struct DiscoverShell<SceneBody: View>: View {
                 disabled: currentScene == totalScenes - 1
             )
         }
-        .padding(.horizontal, 24)
-        .padding(.vertical, 12)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
+        .padding(.vertical, DesignTokens.Spacing.md)
     }
 
     @ViewBuilder
@@ -465,8 +465,8 @@ struct DiscoverShell<SceneBody: View>: View {
             Label(title, systemImage: systemImage)
                 .font(.callout.weight(.semibold))
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
-                .padding(.horizontal, 16)
-                .padding(.vertical, 8)
+                .padding(.horizontal, DesignTokens.Spacing.lg)
+                .padding(.vertical, DesignTokens.Spacing.sm)
                 .background(
                     Capsule()
                         .fill(Color.white)

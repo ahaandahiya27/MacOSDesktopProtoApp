@@ -42,7 +42,7 @@ struct Scene5_AntStingFirstAid: View {
         // explanation cards don't cover the interactive content.
         ScrollView {
             LazyVStack(alignment: .center, spacing: 14) {
-                VStack(spacing: 16) {
+                VStack(spacing: DesignTokens.Spacing.lg) {
                     // Story header
                     Text("Ant Sting First Aid")
                         .font(.title2.bold())
@@ -50,7 +50,7 @@ struct Scene5_AntStingFirstAid: View {
 
                     // Story illustration
                     SoftShadowCard(padding: 20) {
-                        VStack(spacing: 12) {
+                        VStack(spacing: DesignTokens.Spacing.md) {
                             Text("\u{1F41C}")
                                 .font(.system(size: 56))
                             Text("Ouch! An ant just stung your hand!")
@@ -72,15 +72,15 @@ struct Scene5_AntStingFirstAid: View {
                                 Button {
                                     chooseRemedy(remedy)
                                 } label: {
-                                    HStack(spacing: 12) {
+                                    HStack(spacing: DesignTokens.Spacing.md) {
                                         Text(remedy.emoji)
                                             .font(.title2)
                                         Text(remedy.name)
                                             .font(.body.weight(.medium))
                                         Spacer()
                                     }
-                                    .padding(.horizontal, 16)
-                                    .padding(.vertical, 12)
+                                    .padding(.horizontal, DesignTokens.Spacing.lg)
+                                    .padding(.vertical, DesignTokens.Spacing.md)
                                     .frame(maxWidth: .infinity, alignment: .leading)
                                 }
                                 .buttonStyle(.plain)
@@ -106,7 +106,7 @@ struct Scene5_AntStingFirstAid: View {
                 Group {
                     if showResult, let remedy = chosenRemedy {
                         SoftShadowCard(padding: 18) {
-                            VStack(alignment: .leading, spacing: 8) {
+                            VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                                 Label(
                                     remedy.isCorrect ? "Correct!" : "Not quite!",
                                     systemImage: remedy.isCorrect ? "checkmark.circle.fill" : "xmark.circle.fill"
@@ -122,7 +122,7 @@ struct Scene5_AntStingFirstAid: View {
                                     Text("The correct answer is baking soda paste \u{2014} a base that neutralises formic acid.")
                                         .font(.callout)
                                         .foregroundColor(Color.compatIndigo)
-                                        .padding(.top, 4)
+                                        .padding(.top, DesignTokens.Spacing.xs)
                                 }
                             }
                         }
@@ -141,15 +141,15 @@ struct Scene5_AntStingFirstAid: View {
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
 
                         GotItButton { onComplete() }
-                            .padding(.bottom, 12)
+                            .padding(.bottom, DesignTokens.Spacing.md)
                     }
                 
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 

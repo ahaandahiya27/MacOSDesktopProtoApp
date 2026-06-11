@@ -26,7 +26,7 @@ struct Scene4_EclipseBuilder: View {
         // explanation cards don't cover the interactive content.
         ScrollView {
             LazyVStack(alignment: .center, spacing: 14) {
-                VStack(spacing: 16) {
+                VStack(spacing: DesignTokens.Spacing.lg) {
                     Text("Eclipse Builder")
                         .font(.title2.bold())
                         .padding(.top, 14)
@@ -36,7 +36,7 @@ struct Scene4_EclipseBuilder: View {
                         .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
                     // Tab picker
-                    HStack(spacing: 12) {
+                    HStack(spacing: DesignTokens.Spacing.md) {
                         ForEach(EclipseType.allCases) { type in
                             let isSelected = selectedType == type
                             let isExplored = explored.contains(type.id)
@@ -56,7 +56,7 @@ struct Scene4_EclipseBuilder: View {
                                             .foregroundColor(.green)
                                     }
                                 }
-                                .padding(.horizontal, 16)
+                                .padding(.horizontal, DesignTokens.Spacing.lg)
                                 .padding(.vertical, 10)
                                 .background(
                                     RoundedRectangle(cornerRadius: 10, style: .continuous)
@@ -74,16 +74,16 @@ struct Scene4_EclipseBuilder: View {
                     // Diagram
                     eclipseDiagram(for: selectedType)
                         .frame(maxWidth: 500, maxHeight: 180)
-                        .padding(.top, 8)
+                        .padding(.top, DesignTokens.Spacing.sm)
 
                     Spacer()
                 }
                 .frame(maxWidth: .infinity)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 Group {
                     SoftShadowCard(padding: 18) {
-                        VStack(alignment: .leading, spacing: 8) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                             Label(selectedType.rawValue, systemImage: selectedType == .solar ? "sun.max.fill" : "moon.fill")
                                 .font(.title2.bold())
                                 .foregroundColor(selectedType == .solar ? .orange : Color.compatIndigo)
@@ -96,7 +96,7 @@ struct Scene4_EclipseBuilder: View {
                                 .font(.callout)
                                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                                 .lineSpacing(3)
-                                .padding(.top, 4)
+                                .padding(.top, DesignTokens.Spacing.xs)
                         }
                     }
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
@@ -115,15 +115,15 @@ struct Scene4_EclipseBuilder: View {
 
                     if allExplored {
                         GotItButton { onComplete() }
-                            .padding(.bottom, 12)
+                            .padding(.bottom, DesignTokens.Spacing.md)
                     }
                 
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
@@ -159,7 +159,7 @@ struct Scene4_EclipseBuilder: View {
                     celestialBody("Moon", color: .red.opacity(0.6), size: 32)
                 }
             }
-            .padding(.horizontal, 24)
+            .padding(.horizontal, DesignTokens.Spacing.xl)
 
             Text(type == .solar
                  ? "Sun  >>>  Moon  >>>  Earth"
@@ -170,7 +170,7 @@ struct Scene4_EclipseBuilder: View {
     }
 
     private func celestialBody(_ name: String, color: Color, size: CGFloat) -> some View {
-        VStack(spacing: 4) {
+        VStack(spacing: DesignTokens.Spacing.xs) {
             Circle()
                 .fill(color)
                 .frame(width: size, height: size)

@@ -24,7 +24,7 @@ struct Scene3_SortContaminants: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-            LazyVStack(alignment: .center, spacing: 12) {
+            LazyVStack(alignment: .center, spacing: DesignTokens.Spacing.md) {
                 Text("Sort the Contaminants").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Classify each pollutant.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
@@ -47,7 +47,7 @@ struct Scene3_SortContaminants: View {
                         .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                     }
                 }
-                .frame(maxWidth: 720).padding(.horizontal, 24)
+                .frame(maxWidth: 720).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 if done {
                     Text("Score: \(score) / \(items.count)").font(.title3.bold()).foregroundColor(Color.compatIndigo)
@@ -57,26 +57,26 @@ struct Scene3_SortContaminants: View {
                     Text("Organic = once living (food, hair, paper). Inorganic = chemicals, metals, detergents. Pathogens = disease-causing microbes. Each needs a different treatment step.")
                         .font(.callout).lineSpacing(4)
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 12 Bio + Chemistry",
                     detail: "Class 12 Bio 'Environmental Issues' lists the sources of water pollution: sewage, factory effluent, farm runoff and heat. Class 12 Chemistry 'Environmental Chemistry' adds eutrophication, biomagnification (DDT, mercury in tuna) and acid rain. NEET asks these often."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Sink-strainer check",
                     detail: "Remove your kitchen sink's strainer. Examine what's caught: vegetable peels, hair, oil droplets, soap scum. Sort what you see into organic (peels, hair) and inorganic (soap, plastic bits). Both went down the drain — both are pollutants."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
+                if done { GotItButton { onComplete(score) }.padding(.bottom, DesignTokens.Spacing.md) }
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

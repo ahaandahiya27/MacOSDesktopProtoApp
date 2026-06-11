@@ -113,7 +113,7 @@ private struct SpeedFormulaLabScene: View {
         ScrollView { LazyVStack(spacing: 14) {
             Text("Speed = Distance ÷ Time").font(.largeTitle.bold())
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            VStack(spacing: 4) {
+            VStack(spacing: DesignTokens.Spacing.xs) {
                 Text("\(Int(distance)) m").font(.title.monospacedDigit())
                 Text("÷").font(.title2).foregroundColor(.secondary)
                 Text("\(Int(time)) s").font(.title.monospacedDigit())
@@ -123,11 +123,11 @@ private struct SpeedFormulaLabScene: View {
             }
             .foregroundColor(DesignTokens.BrandColor.canvasText)
             Text("Distance (m)").font(.caption).foregroundColor(.secondary)
-            Slider(value: $distance, in: 10...1000).frame(maxWidth: 340).padding(.horizontal, 24)
+            Slider(value: $distance, in: 10...1000).frame(maxWidth: 340).padding(.horizontal, DesignTokens.Spacing.xl)
             Text("Time (s)").font(.caption).foregroundColor(.secondary)
-            Slider(value: $time, in: 1...60).frame(maxWidth: 340).padding(.horizontal, 24)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            Slider(value: $time, in: 1...60).frame(maxWidth: 340).padding(.horizontal, DesignTokens.Spacing.xl)
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -147,7 +147,7 @@ private struct WorldRecordsAtlasScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             ForEach(records) { r in
                 Button { tapped.insert(r.id) } label: {
-                    VStack(alignment: .leading, spacing: 4) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                         HStack { Text(r.emoji).font(.title2)
                             Text(r.title).font(.headline).foregroundColor(DesignTokens.BrandColor.canvasText) }
                         if tapped.contains(r.id) {
@@ -157,13 +157,13 @@ private struct WorldRecordsAtlasScene: View {
                             Text("Tap to reveal").font(.caption.italic())
                                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         }
-                    }.padding(12).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
+                    }.padding(DesignTokens.Spacing.md).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
                     .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
                     .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, 24)
+                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, DesignTokens.Spacing.xl)
             }
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -182,7 +182,7 @@ private struct AtomicClockStoryScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text(steps[step].0).font(.system(size: 100))
             Text(steps[step].1).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
             Button { withAnimation { step = (step + 1) % steps.count } } label: {
                 Text("Next").font(.body.weight(.semibold))
@@ -191,8 +191,8 @@ private struct AtomicClockStoryScene: View {
                     .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                     .foregroundColor(Color.compatIndigo)
             }.buttonStyle(.plain).pointingCursor()
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -209,18 +209,18 @@ private struct TimeZonesWheelScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Earth rotates 360° in 24 hours = 15° per hour. Each 15° band is one hour different.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
             Text(time).font(.system(size: 80, weight: .bold).monospacedDigit())
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
             Text("\(offset >= 0 ? "+" : "")\(Int(offset)) hours from noon UTC")
                 .font(.caption.monospacedDigit()).foregroundColor(.secondary)
-            Slider(value: $offset, in: -12...12, step: 1).frame(maxWidth: 340).padding(.horizontal, 24)
+            Slider(value: $offset, in: -12...12, step: 1).frame(maxWidth: 340).padding(.horizontal, DesignTokens.Spacing.xl)
             Text("India is +5:30 from UTC. China is +8. New York is -5. All decided by international agreement in 1884.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -239,7 +239,7 @@ private struct GalileoPendulumScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text(steps[step].0).font(.system(size: 100))
             Text(steps[step].1).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
             Button { withAnimation { step = (step + 1) % steps.count } } label: {
                 Text("Next").font(.body.weight(.semibold))
@@ -248,8 +248,8 @@ private struct GalileoPendulumScene: View {
                     .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                     .foregroundColor(Color.compatIndigo)
             }.buttonStyle(.plain).pointingCursor()
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -260,7 +260,7 @@ private struct QuartzWatchScene: View {
             Text("How a Quartz Watch Works").font(.largeTitle.bold())
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("⌚").font(.system(size: 100))
-            VStack(alignment: .leading, spacing: 8) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                 Text("1. Tiny battery sends electric current through a quartz crystal.").font(.callout)
                 Text("2. Quartz crystal vibrates exactly 32,768 times per second.").font(.callout)
                 Text("3. Electronic counter divides this down to 1 tick per second.").font(.callout)
@@ -271,9 +271,9 @@ private struct QuartzWatchScene: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
             .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
             .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-            .padding(.horizontal, 24)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            .padding(.horizontal, DesignTokens.Spacing.xl)
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -313,8 +313,8 @@ private struct LapTimerScene: View {
                 Text("Lap \(idx + 1): \(String(format: "%.1f", lap)) s")
                     .font(.caption.monospacedDigit()).foregroundColor(.secondary)
             }
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
         .onDisappear { running = false; generation += 1 }
     }
     private func start() {
@@ -349,18 +349,18 @@ private struct RelativeMotionTrainScene: View {
                  ? "From inside the train: the seat next to you is stationary. The pole outside is racing backwards."
                  : "From the station platform: the train is moving forward at 80 km/h. The pole next to you is stationary.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
             Text("Motion is RELATIVE — there's no absolute 'still' frame. Einstein built relativity on this idea.")
                 .font(.caption.italic()).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .padding(.horizontal, 24).multilineTextAlignment(.center)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+                .padding(.horizontal, DesignTokens.Spacing.xl).multilineTextAlignment(.center)
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
     private func pickChip(_ label: String, on: Bool, tap: @escaping () -> Void) -> some View {
         Button(action: tap) {
             Text(label).font(.body.weight(on ? .bold : .regular))
-                .padding(.horizontal, 14).padding(.vertical, 8)
+                .padding(.horizontal, 14).padding(.vertical, DesignTokens.Spacing.sm)
                 .background(Capsule().fill(on ? Color.compatIndigo.opacity(0.18) : Color.gray.opacity(0.08)))
                 .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                 .foregroundColor(Color.compatIndigo)
@@ -388,14 +388,14 @@ private struct AvgVsInstantSpeedScene: View {
                 .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
                 .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
                 .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                .padding(.horizontal, 24)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+                .padding(.horizontal, DesignTokens.Spacing.xl)
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
     private func pickChip(_ label: String, on: Bool, tap: @escaping () -> Void) -> some View {
         Button(action: tap) {
             Text(label).font(.body.weight(on ? .bold : .regular))
-                .padding(.horizontal, 14).padding(.vertical, 8)
+                .padding(.horizontal, 14).padding(.vertical, DesignTokens.Spacing.sm)
                 .background(Capsule().fill(on ? Color.compatIndigo.opacity(0.18) : Color.gray.opacity(0.08)))
                 .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                 .foregroundColor(Color.compatIndigo)

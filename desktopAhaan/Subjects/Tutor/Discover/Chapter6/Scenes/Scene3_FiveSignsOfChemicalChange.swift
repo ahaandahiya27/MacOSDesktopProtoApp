@@ -73,7 +73,7 @@ struct Scene3_FiveSignsOfChemicalChange: View {
         // out at their natural height inside the scrollable column.
         ScrollView {
             LazyVStack(alignment: .center, spacing: 14) {
-                VStack(spacing: 16) {
+                VStack(spacing: DesignTokens.Spacing.lg) {
                     Text("Five Signs of Chemical Change")
                         .font(.largeTitle.bold())
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -84,13 +84,13 @@ struct Scene3_FiveSignsOfChemicalChange: View {
                         .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
                     // Five cards in a row
-                    HStack(spacing: 12) {
+                    HStack(spacing: DesignTokens.Spacing.md) {
                         ForEach(0..<5, id: \.self) { i in
                             signCard(index: i, height: 180)
                         }
                     }
                     .frame(maxWidth: 720)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 }
                 .frame(maxWidth: .infinity)
 
@@ -98,8 +98,8 @@ struct Scene3_FiveSignsOfChemicalChange: View {
                     if let idx = activeSign {
                         let sign = signs[idx]
                         SoftShadowCard(padding: 18) {
-                            VStack(alignment: .leading, spacing: 8) {
-                                HStack(spacing: 8) {
+                            VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
+                                HStack(spacing: DesignTokens.Spacing.sm) {
                                     Text(sign.emoji)
                                         .font(.title)
                                     Label(sign.title, systemImage: sign.icon)
@@ -118,7 +118,7 @@ struct Scene3_FiveSignsOfChemicalChange: View {
                         .transition(.opacity)
                     } else {
                         SoftShadowCard(padding: 18) {
-                            VStack(alignment: .leading, spacing: 8) {
+                            VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                                 Label("Five clues to spot a chemical change", systemImage: "magnifyingglass")
                                     .font(.title2.bold())
                                 Text("Scientists look for these five signs to tell whether a chemical change occurred. Tap each card above to see an example!")
@@ -143,25 +143,25 @@ struct Scene3_FiveSignsOfChemicalChange: View {
 
                     if allTapped {
                         GotItButton { onComplete() }
-                            .padding(.bottom, 12)
+                            .padding(.bottom, DesignTokens.Spacing.md)
                     } else {
                         Text("Tap all 5 cards to continue")
                             .font(.caption)
                             .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                            .padding(.bottom, 12)
+                            .padding(.bottom, DesignTokens.Spacing.md)
                     }
                 
 
                 }
 
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             
 
             }
 
             .frame(maxWidth: .infinity)
 
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
 
         }
     }

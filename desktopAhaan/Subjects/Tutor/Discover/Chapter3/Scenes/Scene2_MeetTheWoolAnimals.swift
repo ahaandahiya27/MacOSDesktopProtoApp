@@ -59,16 +59,16 @@ struct Scene2_MeetTheWoolAnimals: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
                 ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 16) {
+                    HStack(spacing: DesignTokens.Spacing.lg) {
                         ForEach(animals, id: \.name) { animal in
                             FlipCard(
                                 frontEmoji: animal.emoji,
                                 frontTitle: animal.name,
                                 frontSubtitle: "Wool Source",
                                 back: {
-                                    VStack(alignment: .leading, spacing: 8) {
+                                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                                         ForEach(animal.facts, id: \.self) { fact in
-                                            HStack(spacing: 8) {
+                                            HStack(spacing: DesignTokens.Spacing.sm) {
                                                 Circle()
                                                     .fill(Color.compatIndigo)
                                                     .frame(width: 6, height: 6)
@@ -78,7 +78,7 @@ struct Scene2_MeetTheWoolAnimals: View {
                                             }
                                         }
                                     }
-                                    .padding(12)
+                                    .padding(DesignTokens.Spacing.md)
                                     .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
                                     .background(LinearGradient(
                                         colors: [.yellow.opacity(0.15), .orange.opacity(0.15)],
@@ -93,7 +93,7 @@ struct Scene2_MeetTheWoolAnimals: View {
                             // doc-comment.
                         }
                     }
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 }
 
                 Group {
@@ -103,30 +103,30 @@ struct Scene2_MeetTheWoolAnimals: View {
                             .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     }
                     .frame(maxWidth: 600)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     LookingAheadCallout(
                         title: "Class 11 Biology → NEET",
                         detail: "Different climates grow different wool. Sheep high in the mountains grow thicker undercoats. NEET calls this adaptive radiation in Class 11 Evolution: one ancestor, many niches, many body forms. The Pashmina goat (Chyangra) of Ladakh has the finest wool. Cold, thin air needs the densest insulation."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     TryAtHomeCallout(
                         title: "Feel the difference",
                         detail: "Find a Pashmina shawl, a Merino sweater, and a generic acrylic sweater (or compare labels at a clothing store). Pashmina feels almost weightless and warm; Merino feels soft and slightly springy; acrylic feels plasticky and conducts cold faster. Same job (insulation), three engineering grades — your fingers can tell the polymer apart."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     GotItButton {
                         onComplete()
                     }
-                    .padding(.bottom, 12)
+                    .padding(.bottom, DesignTokens.Spacing.md)
                 }
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

@@ -50,35 +50,35 @@ struct ParasitePartnerPredatorScene: View {
                 ForEach(questions) { q in
                     questionCard(q)
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
-                        .padding(.horizontal, 24)
+                        .padding(.horizontal, DesignTokens.Spacing.xl)
                 }
                 if allAnswered {
                     Text("Score: \(score) / \(questions.count)")
                         .font(.headline)
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
-                        .padding(.top, 8)
+                        .padding(.top, DesignTokens.Spacing.sm)
                 }
-                GotItButton(action: { onComplete(score) }).padding(.bottom, 12)
+                GotItButton(action: { onComplete(score) }).padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
     @ViewBuilder
     private func questionCard(_ q: Q) -> some View {
         let answer = answers[q.id]
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             HStack(spacing: 10) {
                 Text(q.emoji).font(.title)
-                VStack(alignment: .leading, spacing: 2) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                     Text(q.name).font(.headline)
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
                     Text(q.detail).font(.caption)
                         .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 }
             }
-            HStack(spacing: 8) {
+            HStack(spacing: DesignTokens.Spacing.sm) {
                 ForEach(Kind.allCases, id: \.self) { k in
                     answerButton(q: q, kind: k, picked: answer)
                 }
@@ -91,7 +91,7 @@ struct ParasitePartnerPredatorScene: View {
                                      : DesignTokens.BrandColor.danger)
             }
         }
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
         .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
     }
@@ -148,7 +148,7 @@ struct VenusFlytrapReflexScene: View {
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 trapVisual
                     .frame(width: 240, height: 160)
                 controlRow
@@ -159,13 +159,13 @@ struct VenusFlytrapReflexScene: View {
                     Text("Done! The real plant catches 1-3 bugs in its life — most rounds are practice.")
                         .font(.caption)
                         .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                        .padding(.horizontal, 24)
+                        .padding(.horizontal, DesignTokens.Spacing.xl)
                         .multilineTextAlignment(.center)
                 }
-                GotItButton(action: { onComplete(caught) }).padding(.bottom, 12)
+                GotItButton(action: { onComplete(caught) }).padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
@@ -195,7 +195,7 @@ struct VenusFlytrapReflexScene: View {
             Button { startRound() } label: {
                 Text(round >= totalRounds ? "Replay" : "Release a bug")
                     .font(.body.weight(.semibold))
-                    .padding(.horizontal, 16).padding(.vertical, 9)
+                    .padding(.horizontal, DesignTokens.Spacing.lg).padding(.vertical, 9)
                     .background(Capsule().fill(Color.compatIndigo.opacity(0.15)))
                     .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                     .foregroundColor(Color.compatIndigo)
@@ -206,7 +206,7 @@ struct VenusFlytrapReflexScene: View {
             Button { snap() } label: {
                 Text("Snap!")
                     .font(.body.weight(.bold))
-                    .padding(.horizontal, 16).padding(.vertical, 9)
+                    .padding(.horizontal, DesignTokens.Spacing.lg).padding(.vertical, 9)
                     .background(Capsule().fill(DesignTokens.BrandColor.danger.opacity(0.18)))
                     .overlay(Capsule().strokeBorder(DesignTokens.BrandColor.danger.opacity(0.5), lineWidth: 1))
                     .foregroundColor(DesignTokens.BrandColor.danger)
@@ -291,13 +291,13 @@ struct SortTheFeedersScene: View {
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 organismRow
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 bucketRow
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 if allSorted {
                     Text("Sorted \(correctCount) / \(organisms.count) correctly.")
                         .font(.headline)
@@ -310,15 +310,15 @@ struct SortTheFeedersScene: View {
                         .disabled(assignment.isEmpty)
                     GotItButton(action: onComplete)
                 }
-                .padding(.bottom, 12)
+                .padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
     private var organismRow: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             Text("Organisms").font(.caption.weight(.semibold))
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
             HStack(spacing: 6) {
@@ -330,7 +330,7 @@ struct SortTheFeedersScene: View {
     }
 
     private var bucketRow: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             Text("Buckets — tap to file the selected organism")
                 .font(.caption.weight(.semibold))
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
@@ -350,12 +350,12 @@ struct SortTheFeedersScene: View {
             ? (isSelected ? Color.compatIndigo : Color.gray)
             : (assigned == o.correct ? DesignTokens.BrandColor.primaryAction : DesignTokens.BrandColor.danger)
         return Button { if assignment[o.id] == nil { selectedOrg = o.id } } label: {
-            VStack(spacing: 2) {
+            VStack(spacing: DesignTokens.Spacing.xxs) {
                 Text(o.emoji).font(.title3)
                 Text(o.name).font(.caption2)
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
             }
-            .padding(8)
+            .padding(DesignTokens.Spacing.sm)
             .background(RoundedRectangle(cornerRadius: 8).fill(tint.opacity(isSelected ? 0.2 : 0.08)))
             .overlay(RoundedRectangle(cornerRadius: 8).strokeBorder(tint.opacity(0.45), lineWidth: 1))
         }
@@ -416,23 +416,23 @@ struct SoilLayersLabScene: View {
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 VStack(spacing: 0) {
                     ForEach(layers) { layer in
                         layerBand(layer)
                     }
                 }
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
                 if tapped.count == layers.count {
                     Text("Whole profile explored.")
                         .font(.headline)
                         .foregroundColor(DesignTokens.BrandColor.primaryAction)
                 }
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 

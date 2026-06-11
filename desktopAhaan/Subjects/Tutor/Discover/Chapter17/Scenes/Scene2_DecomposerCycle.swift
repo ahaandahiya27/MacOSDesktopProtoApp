@@ -35,23 +35,23 @@ struct Scene2_DecomposerCycle: View {
                     }
                 }
 
-                Slider(value: $stage, in: 0...3, step: 1).frame(maxWidth: 460).padding(.horizontal, 24)
+                Slider(value: $stage, in: 0...3, step: 1).frame(maxWidth: 460).padding(.horizontal, DesignTokens.Spacing.xl)
                 HStack {
                     Text("Day 1").font(.caption); Spacer()
                     Text("Month 1").font(.caption); Spacer()
                     Text("Month 6").font(.caption); Spacer()
                     Text("Year 1").font(.caption)
-                }.frame(maxWidth: 460).padding(.horizontal, 24)
+                }.frame(maxWidth: 460).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Nothing is wasted", systemImage: "arrow.triangle.2.circlepath")
                             .font(.title2.bold())
                         Text("Fungi, bacteria, worms and termites break down dead leaves into humus — a dark, spongy material rich in nutrients. The nutrients return to the soil and feed the next generation of plants.")
                             .font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 ProcessTimeline(
                     title: "Forest decomposer chain — leaf to humus",
@@ -72,26 +72,26 @@ struct Scene2_DecomposerCycle: View {
                     accent: Color(red: 0.40, green: 0.55, blue: 0.25)
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 12 Bio → NEET",
                     detail: "Class 12 'Ecosystem' formalises this as nutrient cycling — the carbon, nitrogen, phosphorus, sulphur cycles. Decomposers (bacteria, fungi) drive all of them. NEET asks ecological cycle questions every year."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Compost-jar diary",
                     detail: "Put fruit and vegetable peels in a glass jar, cover loosely, add a teaspoon of garden soil. Leave on a balcony. Note over 2 weeks: peels darken, lose volume, smell musty. After 4 weeks you'll see crumbly humus forming. That's decomposition you can watch."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

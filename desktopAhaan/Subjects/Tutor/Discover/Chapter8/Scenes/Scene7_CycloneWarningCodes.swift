@@ -29,7 +29,7 @@ struct Scene7_CycloneWarningCodes: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-            LazyVStack(alignment: .center, spacing: 12) {
+            LazyVStack(alignment: .center, spacing: DesignTokens.Spacing.md) {
                 Text("Cyclone Warning Codes").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Match each IMD warning stage to what it means.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
@@ -55,12 +55,12 @@ struct Scene7_CycloneWarningCodes: View {
                                     .foregroundColor(p == item.meaning ? .green : .red)
                             }
                         }
-                        .padding(8)
+                        .padding(DesignTokens.Spacing.sm)
                         .background(RoundedRectangle(cornerRadius: 8).fill(Color.white.opacity(0.95)))
                     }
                 }
                 .frame(maxWidth: 620)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
                 .onAppear { shuffled = codes.map { $0.meaning }.shuffled() }
 
                 if done {
@@ -74,7 +74,7 @@ struct Scene7_CycloneWarningCodes: View {
                         .font(.callout).lineSpacing(4)
                 }
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 if done {
                 LookingAheadCallout(
@@ -82,20 +82,20 @@ struct Scene7_CycloneWarningCodes: View {
                     detail: "Class 10 Geography covers disaster preparedness. It covers cyclone shelters. It covers the IMD warning chain. It covers early-warning satellites like INSAT. This lines up with the NCERT Disaster Management syllabus."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "IMD app or website",
                     detail: "Search 'IMD' or download the Mausam app (free). Live cyclone warnings, satellite images, and the same colour-coded warning levels shown here. Try it before the next monsoon."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                    GotItButton { onComplete(score) }.padding(.bottom, 12)
+                    GotItButton { onComplete(score) }.padding(.bottom, DesignTokens.Spacing.md)
                 }
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }

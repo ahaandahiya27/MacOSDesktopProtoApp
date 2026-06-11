@@ -31,11 +31,11 @@ struct Scene2_SandClayLoam: View {
                 Text("Sand, Clay or Loam?").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Read each clue, then label the soil type.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-                VStack(spacing: 12) {
+                VStack(spacing: DesignTokens.Spacing.md) {
                     ForEach(samples) { s in
                         VStack(alignment: .leading, spacing: 6) {
                             Text(s.clue).font(.body)
-                            HStack(spacing: 8) {
+                            HStack(spacing: DesignTokens.Spacing.sm) {
                                 ForEach(options, id: \.self) { opt in
                                     Button(opt) { picks[s.id] = opt }
                                         .accentColor(picks[s.id] == opt ? Color.compatIndigo : .gray)
@@ -46,12 +46,12 @@ struct Scene2_SandClayLoam: View {
                                 }
                             }
                         }
-                        .padding(12)
+                        .padding(DesignTokens.Spacing.md)
                         .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                     }
                 }
                 .frame(maxWidth: 620)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 if done {
                     Text("Score: \(score) / \(samples.count)").font(.title3.bold()).foregroundColor(Color.compatIndigo)
@@ -62,20 +62,20 @@ struct Scene2_SandClayLoam: View {
                         .font(.callout).lineSpacing(4)
                 }
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Squeeze test",
                     detail: "Take a fist-sized handful of moist soil. Sandy soil falls apart immediately. Clayey soil holds its shape and feels sticky. Loamy soil holds a loose ball that crumbles when poked. Try this with three different garden samples to feel the difference."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
+                if done { GotItButton { onComplete(score) }.padding(.bottom, DesignTokens.Spacing.md) }
                 Spacer(minLength: 0)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
 
         .frame(maxWidth: .infinity, maxHeight: .infinity)

@@ -32,7 +32,7 @@ struct Scene2_WaterTableSlider: View {
                     Text(dryWell ? "⚠️ Dry well!" : "Water table")
                         .font(.caption.bold())
                         .foregroundColor(dryWell ? .white : .black)
-                        .padding(4)
+                        .padding(DesignTokens.Spacing.xs)
                         .background(Capsule().fill(dryWell ? Color.red.opacity(0.85) : Color.white.opacity(0.9)))
                         .offset(y: labelOffsetY)
                 }
@@ -43,36 +43,36 @@ struct Scene2_WaterTableSlider: View {
                     HStack { Text("🚰 Extraction (pumps)"); Spacer(); Text(String(format: "%.0f", extract)) }.frame(maxWidth: 460)
                     Slider(value: $extract, in: 0...10, step: 1).frame(maxWidth: 460)
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Use it slower than it refills", systemImage: "arrow.down.to.line")
                             .font(.title2.bold())
                         Text("The water table is the level of water hidden under the ground. Rain seeps down and tops it up; pumps suck it out. If we extract faster than rain replenishes, wells go dry and the table drops.")
                             .font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 10 Geography",
                     detail: "Class 10 'Resources and Development' covers falling groundwater across India, worst in Punjab, Haryana and Tamil Nadu. NCERT Geography asks about CGWB (Central Ground Water Board) monitoring data."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Water table in a clear jar",
                     detail: "Fill a clear jar half-way with sand. Slowly pour water in. Watch the water rise from the bottom — the boundary between dry and wet sand IS the water table. Pour more water and it rises; tilt the jar and one side's table drops."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

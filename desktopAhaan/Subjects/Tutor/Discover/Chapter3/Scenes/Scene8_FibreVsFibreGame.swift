@@ -39,13 +39,13 @@ struct Scene8_FibreVsFibreGame: View {
                     Spacer()
                     ScoreBadge(value: correctCount, total: 6)
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
                 .padding(.top, 18)
 
                 Text("Drag each fibre to the correct category.")
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 // Floating cards
                 ZStack {
@@ -73,17 +73,17 @@ struct Scene8_FibreVsFibreGame: View {
                 }
                 .frame(height: 200)
                 .frame(maxWidth: .infinity)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
                 .background(Color.white.opacity(0.95))
                 .cornerRadius(8)
 
                 // Drop zones
-                HStack(spacing: 16) {
+                HStack(spacing: DesignTokens.Spacing.lg) {
                     dropZone("🌱 Plant", zone: "plant")
                     dropZone("🐑 Animal", zone: "animal")
                     dropZone("🛢 Synthetic", zone: "synthetic")
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(height: 120)
 
                 LookingAheadCallout(
@@ -91,22 +91,22 @@ struct Scene8_FibreVsFibreGame: View {
                     detail: "The sorting you just did — cotton vs polyester vs silk — becomes natural vs synthetic polymers in Class 11 (cellulose vs PET, nylon, Kevlar). JEE Organic Chemistry asks two classics. What is the monomer of nylon-6? Caprolactam. Why is Kevlar bullet-proof? Rigid aromatic rings and hydrogen-bonded sheets — the same idea as silk, built for industry."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Build your own classification chart",
                     detail: "Pick 10 items of clothing or fabric at home. Read each label. Classify into: (1) plant fibre (cotton / linen / jute / hemp), (2) animal fibre (wool / silk / cashmere), (3) synthetic (polyester / nylon / acrylic / rayon — actually semi-synthetic). You'll discover most modern clothes are blends — engineering trade-offs between softness, strength, and cost."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 GotItButton(label: "Got It!") {
                     onComplete(correctCount)
                 }
-                .padding(.bottom, 12)
+                .padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
         .coordinateSpace(name: "fibreGame")
         .onAppear {
@@ -130,7 +130,7 @@ struct Scene8_FibreVsFibreGame: View {
     @ViewBuilder
     private func fiberCard(_ fibre: FibreCard) -> some View {
         if placed[fibre.id] != true {
-            VStack(spacing: 4) {
+            VStack(spacing: DesignTokens.Spacing.xs) {
                 Text(fibre.emoji)
                     .font(.system(size: 28))
                 Text(fibre.label)
@@ -148,7 +148,7 @@ struct Scene8_FibreVsFibreGame: View {
 
     @ViewBuilder
     private func dropZone(_ label: String, zone: String) -> some View {
-        VStack(spacing: 8) {
+        VStack(spacing: DesignTokens.Spacing.sm) {
             Text(label)
                 .font(.caption.weight(.semibold))
                 .foregroundColor(Color.compatIndigo)

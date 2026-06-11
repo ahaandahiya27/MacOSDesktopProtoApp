@@ -38,36 +38,36 @@ struct Scene6_Sundial: View {
                 }
 
                 Text("Time: \(Int(hour)):00").font(.title3.bold()).foregroundColor(Color.compatIndigo)
-                Slider(value: $hour, in: 6...18, step: 1).frame(maxWidth: 460).padding(.horizontal, 24)
+                Slider(value: $hour, in: 6...18, step: 1).frame(maxWidth: 460).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Earth's spin is the clock", systemImage: "sun.max.fill")
                             .font(.title2.bold())
                         Text("As Earth rotates, the Sun appears to move across the sky. A stick (the gnomon) casts a shadow that sweeps in a circle. Mark hours on the circle and you have a clock. Used for over 4,000 years.")
                             .font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 11 Physics + Astronomy",
                     detail: "Class 11 covers Earth's rotation and the equation of time. It explains why a sundial's hour marks need a seasonal correction (the analemma). JEE rarely asks astronomy directly. But Earth-Sun geometry shows up in Ray Optics and in time-zone problems."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Stick-shadow sundial",
                     detail: "On a sunny day, push a 30 cm straight stick vertically into a flat patch of ground. Mark the shadow's tip with a stone every hour from 9 am to 5 pm. The marks form a fan — your home-made sundial."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

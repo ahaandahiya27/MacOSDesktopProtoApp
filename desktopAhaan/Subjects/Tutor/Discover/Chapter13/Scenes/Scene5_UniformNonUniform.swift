@@ -22,7 +22,7 @@ struct Scene5_UniformNonUniform: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-            LazyVStack(alignment: .center, spacing: 12) {
+            LazyVStack(alignment: .center, spacing: DesignTokens.Spacing.md) {
                 Text("Uniform vs Non-Uniform").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Same speed throughout, or changing speed?")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
@@ -42,7 +42,7 @@ struct Scene5_UniformNonUniform: View {
                         .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                     }
                 }
-                .frame(maxWidth: 680).padding(.horizontal, 24)
+                .frame(maxWidth: 680).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 if done {
                     Text("Score: \(score) / \(items.count)").font(.title3.bold()).foregroundColor(Color.compatIndigo)
@@ -52,26 +52,26 @@ struct Scene5_UniformNonUniform: View {
                     Text("Uniform motion = constant speed in a straight line. Non-uniform = speed changes (acceleration). A falling apple speeds up because gravity keeps pulling it.")
                         .font(.callout).lineSpacing(4)
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 11 Physics → JEE",
                     detail: "Class 11 Kinematics introduces ACCELERATION (a = dv/dt) as the rate of change of velocity. Three equations of motion: v = u + at, s = ut + ½at², v² = u² + 2as. The d-t and v-t graph slopes are heavily JEE-tested, including motion-under-gravity (g = 9.8 m/s²) and projectile problems."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Marble race",
                     detail: "Roll a marble on a smooth flat floor — almost uniform speed (it slows only slightly from friction). Now roll the same marble down a slope — clearly non-uniform, it speeds up. You've felt the difference between zero acceleration and gravity-driven acceleration."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
+                if done { GotItButton { onComplete(score) }.padding(.bottom, DesignTokens.Spacing.md) }
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

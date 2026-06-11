@@ -57,14 +57,14 @@ struct Scene4_PrismRainbow: View {
                     .accentColor(Color.compatIndigo)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("White light is many colours", systemImage: SFSymbolCompat.name("rainbow"))
                             .font(.title2.bold())
                         Text("White light is a mix of seven colours: VIBGYOR. Each colour bends a different amount in glass, so a prism fans them out. The same thing happens in raindrops — that's a rainbow.")
                             .font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 // Grouped so the outer LazyVStack stays within Swift 5.5's
                 // 10-child ViewBuilder limit (Xcode 13.2.1 / Big Sur target).
@@ -83,27 +83,27 @@ struct Scene4_PrismRainbow: View {
                         ]
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     TryAtHomeCallout(
                         title: "CD as a prism",
                         detail: "Hold an old CD or DVD up to a sunny window so light bounces off the rainbow side. You'll see VIBGYOR — not because of dispersion, but because of diffraction off the tiny tracks. The same seven colours, fanned out by a different physical mechanism. (For real dispersion, put a triangular glass paperweight in the sunlight.)"
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     LookingAheadCallout(
                         title: "Class 12 → JEE",
                         detail: "Class 12 'Ray Optics' gives you the prism deviation formula δ = (μ − 1)A for small angles, and angular dispersion (μ_v − μ_r)A. JEE Physics asks deviation problems on equilateral prisms every year. Class 12 'Wave Optics' explains the CD rainbow too — diffraction-grating physics."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 }
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
 
         .frame(maxWidth: .infinity, maxHeight: .infinity)

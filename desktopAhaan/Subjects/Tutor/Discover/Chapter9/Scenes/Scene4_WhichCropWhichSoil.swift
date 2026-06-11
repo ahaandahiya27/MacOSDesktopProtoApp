@@ -23,7 +23,7 @@ struct Scene4_WhichCropWhichSoil: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-            LazyVStack(alignment: .center, spacing: 12) {
+            LazyVStack(alignment: .center, spacing: DesignTokens.Spacing.md) {
                 Text("Which Crop, Which Soil?").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Pick the best soil for each crop.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
@@ -59,27 +59,27 @@ struct Scene4_WhichCropWhichSoil: View {
                         .font(.callout).lineSpacing(4)
                 }
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 9 Geography → NCERT",
                     detail: "Class 9 Geography covers India's major crops and the soil types that suit them — paddy on alluvial, wheat on loamy black, cotton on Deccan black, sugarcane on alluvial. CBSE Class 10 Economics tests cropping patterns and irrigation needs."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Three-pot seed race",
                     detail: "Plant the same seed (mustard, moong, methi) in three pots: one with sand, one with garden soil, one with potter's clay. Water all three equally and watch over 2 weeks. The garden soil (loamy) wins."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
+                if done { GotItButton { onComplete(score) }.padding(.bottom, DesignTokens.Spacing.md) }
                 Spacer(minLength: 0)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
 
         .frame(maxWidth: .infinity, maxHeight: .infinity)

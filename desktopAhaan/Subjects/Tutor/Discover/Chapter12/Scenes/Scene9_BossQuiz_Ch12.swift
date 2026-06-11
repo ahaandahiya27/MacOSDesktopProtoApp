@@ -62,7 +62,7 @@ struct Scene9_BossQuiz_Ch12: View {
                                         Image(systemName: "xmark.circle.fill").foregroundColor(.red)
                                     }
                                 }
-                                .padding(12)
+                                .padding(DesignTokens.Spacing.md)
                                 .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                             }
                             .buttonStyle(.plain)
@@ -82,7 +82,7 @@ struct Scene9_BossQuiz_Ch12: View {
                         .accentColor(Color.compatIndigo)
                     }
                 } else {
-                    VStack(spacing: 12) {
+                    VStack(spacing: DesignTokens.Spacing.md) {
                         if score >= 4 {
                             Image(systemName: "checkmark.seal.fill")
                                 .font(.system(size: 56))
@@ -93,12 +93,12 @@ struct Scene9_BossQuiz_Ch12: View {
                         Text("Score: \(score) / \(quiz.count)").font(.system(size: 36, weight: .bold))
                         GotItButton(label: "Finish chapter") { onComplete(score) }
                     }
-                    .padding(.top, 8)
+                    .padding(.top, DesignTokens.Spacing.sm)
                 }
                 Spacer(minLength: 0)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
         .overlay(
             Group {

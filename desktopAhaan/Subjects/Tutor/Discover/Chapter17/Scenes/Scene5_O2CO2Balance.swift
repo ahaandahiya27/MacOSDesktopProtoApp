@@ -20,7 +20,7 @@ struct Scene5_O2CO2Balance: View {
                 Text("Forest cover ↔ atmospheric oxygen. Slide to see the effect.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary).multilineTextAlignment(.center)
 
-                HStack(spacing: 24) {
+                HStack(spacing: DesignTokens.Spacing.xl) {
                     VStack {
                         Text("O₂").font(.headline).foregroundColor(.green)
                         ProgressView(value: Double(o2) / 100)
@@ -40,17 +40,17 @@ struct Scene5_O2CO2Balance: View {
                 Text("Forest cover: \(Int(coverage * 100))%")
                     .font(.headline)
                     .foregroundColor(Color.compatIndigo)
-                Slider(value: $coverage, in: 0...1).frame(maxWidth: 460).padding(.horizontal, 24)
+                Slider(value: $coverage, in: 0...1).frame(maxWidth: 460).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Trees are Earth's lungs", systemImage: "leaf.fill")
                             .font(.title2.bold())
                         Text("Forests absorb CO₂ during photosynthesis and release O₂. They also remove airborne dust and pollutants. Cutting forests adds CO₂ to the air — and removes the system that cleans it up.")
                             .font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 // Grouped so the outer VStack stays within Swift 5.5's
                 // 10-child ViewBuilder limit (Xcode 13.2.1 / Big Sur target).
@@ -60,27 +60,27 @@ struct Scene5_O2CO2Balance: View {
                         detail: "Class 12 'Ecosystem' turns this into the carbon cycle, with real flux numbers. NEET asks about energy and carbon flow each year — the 10% rule, gross vs net primary productivity, and the role of decomposers. Climate change comes up in 'Environmental Issues'."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     TryAtHomeCallout(
                         title: "Limewater + leafy plant test",
                         detail: "Tape a small leafy houseplant inside a sealed clear container with a small glass of limewater (chunna + water, settled). Leave it in sunlight for 4 hours. The limewater stays clear (plant absorbed CO₂). Now repeat in DARKNESS — limewater turns milky (plant respired CO₂)."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     RelatedConceptsCallout(
                         title: "Related: Ch 1, Ch 10, Ch 11",
                         detail: "Forests do photosynthesis (Ch 1) and respiration (Ch 10) on a planetary scale. The oxygen they release ends up in your lungs (Ch 10), then your blood (Ch 11), and finally back as CO₂ that plants reuse. The same atoms cycle indefinitely."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 }
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

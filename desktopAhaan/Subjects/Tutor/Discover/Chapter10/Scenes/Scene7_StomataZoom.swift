@@ -36,42 +36,42 @@ struct Scene7_StomataZoom: View {
                     let emojiSize: CGFloat = 100 + CGFloat(zoom * 50)
                     RoundedRectangle(cornerRadius: 18).fill(Color.green.opacity(0.18))
                         .frame(width: 320, height: 280)
-                    VStack(spacing: 8) {
+                    VStack(spacing: DesignTokens.Spacing.sm) {
                         Text(emoji).font(.system(size: emojiSize))
                         Text(stage).font(.headline).foregroundColor(Color.compatIndigo)
                     }
                 }
 
-                Slider(value: $zoom, in: 0...1).frame(maxWidth: 460).padding(.horizontal, 24)
+                Slider(value: $zoom, in: 0...1).frame(maxWidth: 460).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Stomata: tiny breathing pores", systemImage: "leaf.fill")
                             .font(.title2.bold())
                         Text("The underside of a leaf has thousands of stomata. Each is a kidney-shaped opening guarded by two cells. CO₂ enters, O₂ and water vapour leave. Plants close them when they need to save water.")
                             .font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Peel and peek",
                     detail: "Carefully peel a thin transparent layer from the lower side of a tulsi or money-plant leaf. Press it onto sticky tape on a glass slide. Hold it against a bright sky. With a magnifying glass you can see tiny ovals — stomata. The two guard cells around each one open and close to let air in and out."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 11 Bio → NEET",
                     detail: "Class 11 'Transpiration' covers the guard-cell mechanism (K⁺ ion movement → swelling → stomata open), CAM and C4 photosynthesis variants, and the role of abscisic acid in stomatal closure. Asked every NEET — and JEE Bio (PCB stream) tests the same."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

@@ -55,7 +55,7 @@ struct Scene2_BuildYourpHStrip: View {
                         .padding(.top, 18)
 
                     // Current pH display
-                    VStack(spacing: 4) {
+                    VStack(spacing: DesignTokens.Spacing.xs) {
                         Text("pH \(pH, specifier: "%.1f")")
                             .font(.system(size: 48, weight: .bold, design: .rounded).monospacedDigit())
                             .foregroundColor(colorForPH(pH))
@@ -67,25 +67,25 @@ struct Scene2_BuildYourpHStrip: View {
                     // Color strip
                     pHStrip
                         .frame(maxWidth: 640, maxHeight: 60)
-                        .padding(.horizontal, 24)
+                        .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     // Slider
                     Slider(value: $pH, in: 0...14, step: 0.5)
                         .accentColor(colorForPH(pH))
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
-                        .padding(.horizontal, 24)
+                        .padding(.horizontal, DesignTokens.Spacing.xl)
                         .accessibilityLabel("pH slider, current value \(pH, specifier: "%.1f")")
 
                     // Substance pins
                     substancePinView
                         .frame(maxWidth: 700)
-                        .padding(.horizontal, 24)
+                        .padding(.horizontal, DesignTokens.Spacing.xl)
                 }
                 .frame(maxWidth: .infinity)
 
                 Group {
                     SoftShadowCard(padding: 18) {
-                        VStack(alignment: .leading, spacing: 8) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                             Label("The pH Scale", systemImage: "chart.bar.fill")
                                 .font(.title2.bold())
                             Text("pH measures how acidic or basic a substance is. pH 0\u{2013}6 is acidic, pH 7 is neutral, and pH 8\u{2013}14 is basic. Drag the slider to explore!")
@@ -108,19 +108,19 @@ struct Scene2_BuildYourpHStrip: View {
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
                     GotItButton { onComplete() }
-                        .padding(.bottom, 12)
+                        .padding(.bottom, DesignTokens.Spacing.md)
                 
 
                 }
 
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             
 
             }
 
             .frame(maxWidth: .infinity)
 
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
 
         }
     }
@@ -170,7 +170,7 @@ struct Scene2_BuildYourpHStrip: View {
         LazyVGrid(columns: [GridItem(.adaptive(minimum: 80), spacing: 6)], spacing: 8) {
             ForEach(substances) { sub in
                 let isNear = abs(sub.pH - pH) < 1.0
-                VStack(spacing: 2) {
+                VStack(spacing: DesignTokens.Spacing.xxs) {
                     Text(sub.emoji)
                         .font(.title3)
                     Text(sub.name)

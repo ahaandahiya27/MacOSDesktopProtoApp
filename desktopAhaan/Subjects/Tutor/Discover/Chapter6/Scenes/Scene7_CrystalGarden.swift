@@ -99,7 +99,7 @@ struct Scene7_CrystalGarden: View {
                 if stage == .heating {
                     VStack {
                         Spacer()
-                        HStack(spacing: 4) {
+                        HStack(spacing: DesignTokens.Spacing.xs) {
                             Text("\u{1F525}")
                             Text("\u{1F525}")
                             Text("\u{1F525}")
@@ -113,7 +113,7 @@ struct Scene7_CrystalGarden: View {
             .accessibilityLabel(stageDescription)
 
             // Stage buttons
-            HStack(spacing: 12) {
+            HStack(spacing: DesignTokens.Spacing.md) {
                 ForEach(CrystalStage.allCases, id: \.rawValue) { s in
                     Button(stageLabel(s)) {
                         withAnimation(reduceMotion ? .none : .easeInOut(duration: 0.5)) {
@@ -134,7 +134,7 @@ struct Scene7_CrystalGarden: View {
                 .padding(.horizontal)
 
             SoftShadowCard(padding: 18) {
-                VStack(alignment: .leading, spacing: 8) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                     Label("Crystallisation", systemImage: SFSymbolCompat.name("diamond.fill"))
                         .font(.title2.bold())
                     Text("When a hot, saturated solution cools slowly, dissolved particles arrange themselves into a regular pattern \u{2014} a crystal. A tiny seed crystal gives molecules a template to latch onto, and the crystal grows layer by layer. This is a physical change because no new substance is formed.")
@@ -143,7 +143,7 @@ struct Scene7_CrystalGarden: View {
                 }
             }
             .frame(maxWidth: DesignTokens.contentMaxWidth)
-            .padding(.horizontal, 24)
+            .padding(.horizontal, DesignTokens.Spacing.xl)
 
             // Group { } collapses the 2 pedagogical callouts to a single
             // ViewBuilder child so the outer VStack stays under Swift 5.5's
@@ -155,21 +155,21 @@ struct Scene7_CrystalGarden: View {
                     detail: "Crystals = atoms arranged in regular repeating 3D patterns. JEE Solid State chapter covers 7 crystal systems (cubic, tetragonal, orthorhombic, hexagonal, …) and 4 Bravais centerings. NaCl, sucrose, copper sulphate — all classifiable. Same chemistry idea that lets a kid grow crystal candy lets industrial chemists design transistors and gemstones."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Grow your own crystal in 3 days",
                     detail: "Dissolve a heaped half-cup of sugar in a half-cup of hot water until it stops dissolving. Pour into a clean jar. Hang a wooden stick (skewer) from a pencil across the rim so it dangles in the syrup. Place somewhere undisturbed. By day 3 you'll see geometric crystals on the stick — rock candy. The 'unit cell' is repeating itself thousands of times to make your snack."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             }
 
             GotItButton { onComplete() }
-                .padding(.bottom, 12)
+                .padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 

@@ -18,7 +18,7 @@ struct Scene1_WhereDrainWaterGoes: View {
                 Text("Tap Next to follow the journey from your tap to the river.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-                VStack(spacing: 8) {
+                VStack(spacing: DesignTokens.Spacing.sm) {
                     ForEach(0..<path.count, id: \.self) { i in
                         HStack {
                             Text(path[i]).font(.headline)
@@ -44,26 +44,26 @@ struct Scene1_WhereDrainWaterGoes: View {
                     Text("Wastewater (or sewage) is the dirty water from kitchens, bathrooms and industries. It travels through underground sewer pipes to a treatment plant before being returned to rivers or the sea.")
                         .font(.callout).lineSpacing(4)
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 12 Bio → NEET",
                     detail: "Class 12 'Environmental Issues' covers sewage treatment. The primary stage is physical. The secondary stage is biological. The tertiary stage is chemical. BOD and COD measure pollution. NEET tests BOD-curve questions every year."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Trace your kitchen sink",
                     detail: "Open the cabinet under your kitchen sink. Follow the pipe out of the wall as far as you can see. It goes through the floor, the wall, joins the main sewer line on your street — and from there, kilometres to a treatment plant."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

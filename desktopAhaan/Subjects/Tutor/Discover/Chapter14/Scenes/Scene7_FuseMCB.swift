@@ -32,37 +32,37 @@ struct Scene7_FuseMCB: View {
                     .font(.title3.bold())
                     .foregroundColor(blown ? .red : Color.compatIndigo)
 
-                Slider(value: $current, in: 0...25, step: 0.1).frame(maxWidth: 460).padding(.horizontal, 24)
+                Slider(value: $current, in: 0...25, step: 0.1).frame(maxWidth: 460).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Safety first", systemImage: SFSymbolCompat.name("shield.lefthalf.filled"))
                             .font(.title2.bold())
                         Text("A fuse contains a thin wire that melts if too much current flows — breaking the circuit before things catch fire. A miniature circuit breaker (MCB) does the same job but you can reset it instead of replacing a wire.")
                             .font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 10 / 12 → JEE",
                     detail: "Class 10 covers electric power P = VI = I²R = V²/R, and household wiring with fuses and MCBs. Class 12 'Current Electricity' adds the design of fuse wires from the Joule heating formula H = I²Rt. JEE asks power-rating problems on series vs parallel appliances."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Find your MCB box",
                     detail: "Locate the main switchboard or MCB box at home. Each MCB controls one circuit (bathroom, kitchen, living room). Try switching one off and see which lights/sockets stop. Now you know which fuse handles what."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
                 Spacer(minLength: 0)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
 
         .frame(maxWidth: .infinity, maxHeight: .infinity)

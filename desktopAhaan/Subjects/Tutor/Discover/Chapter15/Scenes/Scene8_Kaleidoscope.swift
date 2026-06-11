@@ -31,33 +31,33 @@ struct Scene8_Kaleidoscope: View {
                     .accentColor(Color.compatIndigo)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Symmetry from mirrors", systemImage: "sparkles")
                             .font(.title2.bold())
                         Text("Inside a kaleidoscope, 2 or 3 mirrors are arranged at angles. A few coloured beads at the bottom reflect across all the mirrors — creating a stunning symmetric pattern that changes with every twist.")
                             .font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 9/10 Maths + JEE",
                     detail: "Class 9 and 10 Maths call this 'Symmetry' — order of rotation, lines of symmetry, reflection groups. Class 12 and JEE Chemistry use the same maths for molecular symmetry (point groups C₂, C₃, σ planes). It is the very idea that makes a kaleidoscope work."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Pringles-tube kaleidoscope",
                     detail: "Three strips of mirror foil + an empty Pringles tube. Tape them inside in a triangular prism shape, mirror-side inward. At one end, put a transparent disc; sprinkle a few colourful beads or sequins; cover loosely with a frosted paper. Look through the other end and twist."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
 
         .frame(maxWidth: .infinity, maxHeight: .infinity)

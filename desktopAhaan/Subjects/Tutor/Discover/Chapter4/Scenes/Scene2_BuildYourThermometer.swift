@@ -60,7 +60,7 @@ struct Scene2_BuildYourThermometer: View {
                         .accentColor(Color.compatCyan)
                         .accessibilityLabel("Cool the thermometer")
 
-                        HStack(spacing: 24) {
+                        HStack(spacing: DesignTokens.Spacing.xl) {
                             VStack {
                                 Text(String(format: "%.0f", tempC))
                                     .font(.largeTitle.bold().monospacedDigit())
@@ -91,7 +91,7 @@ struct Scene2_BuildYourThermometer: View {
 
                 Group {
                     SoftShadowCard(padding: 18) {
-                        VStack(alignment: .leading, spacing: 8) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                             Label("Build Your Thermometer", systemImage: SFSymbolCompat.name("thermometer.medium"))
                                 .font(.title2.bold())
                             Text("A thermometer measures temperature. The liquid inside expands when heated and shrinks when cooled. Drag the mercury or use the buttons!")
@@ -114,19 +114,19 @@ struct Scene2_BuildYourThermometer: View {
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
                     GotItButton { onComplete() }
-                        .padding(.bottom, 12)
+                        .padding(.bottom, DesignTokens.Spacing.md)
                 
 
                 }
 
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             
 
             }
 
             .frame(maxWidth: .infinity)
 
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
 
         }
     }
@@ -154,7 +154,7 @@ struct Scene2_BuildYourThermometer: View {
                     VStack(spacing: 0) {
                         ForEach(0..<7, id: \.self) { i in
                             if i > 0 { Spacer() }
-                            HStack(spacing: 4) {
+                            HStack(spacing: DesignTokens.Spacing.xs) {
                                 Text("\(110 - i * 20)°")
                                     .font(.caption2.monospacedDigit())
                                     .frame(width: 36, alignment: .trailing)
@@ -198,14 +198,14 @@ struct Scene2_BuildYourThermometer: View {
     // MARK: - Digital
 
     private var digitalThermometer: some View {
-        VStack(spacing: 8) {
+        VStack(spacing: DesignTokens.Spacing.sm) {
             Image(systemName: SFSymbolCompat.name("thermometer.medium"))
                 .font(.system(size: 60))
                 .foregroundColor(.red)
             Text(String(format: "%.1f °C", tempC))
                 .font(.system(size: 36, weight: .bold, design: .monospaced))
         }
-        .padding(24)
+        .padding(DesignTokens.Spacing.xl)
         .background(
             RoundedRectangle(cornerRadius: 16, style: .continuous)
                 .fill(Color.white)

@@ -127,19 +127,19 @@ private struct IndianForestTypesScene: View {
                         Spacer()
                         Text(f.region).font(.caption).foregroundColor(.secondary).lineLimit(1)
                     }
-                    .padding(12).frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(DesignTokens.Spacing.md).frame(maxWidth: DesignTokens.contentMaxWidth)
                     .background(RoundedRectangle(cornerRadius: 12)
                         .fill(sel == f.id ? Color.compatIndigo.opacity(0.12) : Color.white.opacity(0.85)))
                     .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, 24)
+                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, DesignTokens.Spacing.xl)
             }
             if let s = sel, let f = forests.first(where: { $0.id == s }) {
                 Text(f.detail).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                    .multilineTextAlignment(.center).padding(.horizontal, 24)
+                    .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
             }
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -152,13 +152,13 @@ private struct BanyanTreeScene: View {
             Text("🌳").font(.system(size: 110))
             Text("India's national tree. Aerial roots drop from branches → touch ground → thicken into new trunks. A single banyan can spread over 2 hectares and live 500+ years.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
             Text("The Great Banyan in Kolkata's botanical garden has ~3600 aerial roots and looks like a whole forest from one seed.")
                 .font(.caption.italic()).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .padding(.horizontal, 24).multilineTextAlignment(.center)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+                .padding(.horizontal, DesignTokens.Spacing.xl).multilineTextAlignment(.center)
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -179,7 +179,7 @@ private struct WildlifeSanctuaryAtlasScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             ForEach(sancs) { s in
                 Button { tapped.insert(s.id) } label: {
-                    VStack(alignment: .leading, spacing: 4) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                         Text(s.name).font(.headline).foregroundColor(DesignTokens.BrandColor.canvasText)
                         if tapped.contains(s.id) {
                             Text(s.detail).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -188,13 +188,13 @@ private struct WildlifeSanctuaryAtlasScene: View {
                             Text("Tap to reveal").font(.caption.italic())
                                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         }
-                    }.padding(12).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
+                    }.padding(DesignTokens.Spacing.md).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
                     .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
                     .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, 24)
+                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, DesignTokens.Spacing.xl)
             }
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -205,7 +205,7 @@ private struct ProducerConsumerDecomposerScene: View {
         ScrollView { LazyVStack(spacing: 14) {
             Text("Producer · Consumer · Decomposer").font(.largeTitle.bold())
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            HStack(spacing: 8) {
+            HStack(spacing: DesignTokens.Spacing.sm) {
                 pickChip("Producer", v: "producer", on: role) { role = "producer" }
                 pickChip("Consumer", v: "consumer", on: role) { role = "consumer" }
                 pickChip("Decomposer", v: "decomposer", on: role) { role = "decomposer" }
@@ -219,15 +219,15 @@ private struct ProducerConsumerDecomposerScene: View {
                 }
             }()
             Text(body).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
     private func pickChip(_ label: String, v: String, on: String, tap: @escaping () -> Void) -> some View {
         Button(action: tap) {
             Text(label).font(.body.weight(on == v ? .bold : .regular))
-                .padding(.horizontal, 12).padding(.vertical, 8)
+                .padding(.horizontal, DesignTokens.Spacing.md).padding(.vertical, DesignTokens.Spacing.sm)
                 .background(Capsule().fill(on == v ? Color.compatIndigo.opacity(0.18) : Color.gray.opacity(0.08)))
                 .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                 .foregroundColor(Color.compatIndigo)
@@ -245,18 +245,18 @@ private struct CarbonStorageSliderScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Each tree absorbs ~22 kg of CO₂ per year. A whole forest is a giant air-cleaner.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
             Text("\(Int(trees)) trees").font(.title2.monospacedDigit())
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
-            Slider(value: $trees, in: 10...1000).frame(maxWidth: 340).padding(.horizontal, 24)
+            Slider(value: $trees, in: 10...1000).frame(maxWidth: 340).padding(.horizontal, DesignTokens.Spacing.xl)
             Text("= \(Int(co2Stored)) kg CO₂ stored / year")
                 .font(.title.weight(.bold).monospacedDigit())
                 .foregroundColor(DesignTokens.BrandColor.primaryAction)
             Text("Equivalent to taking ~\(Int(co2Stored / 4600)) cars off the road for a year. Plant trees!")
                 .font(.caption.italic()).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .padding(.horizontal, 24).multilineTextAlignment(.center)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+                .padding(.horizontal, DesignTokens.Spacing.xl).multilineTextAlignment(.center)
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -269,13 +269,13 @@ private struct TribalCommunitiesScene: View {
             Text("🏘🌳").font(.system(size: 90))
             Text("India has ~700 tribal groups, ~104 million people. Many live in or near forests — Gonds (central India), Santhals (eastern), Bhils (western), Nagas (NE). They depend on forests for food, medicine, fuel, building materials.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
             Text("Forest Rights Act (2006) recognises tribal communities' right to live in + use forest land.")
                 .font(.caption.italic()).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .padding(.horizontal, 24).multilineTextAlignment(.center)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+                .padding(.horizontal, DesignTokens.Spacing.xl).multilineTextAlignment(.center)
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -294,7 +294,7 @@ private struct ProjectTigerScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text(steps[step].0).font(.system(size: 100))
             Text(steps[step].1).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
             Button { withAnimation { step = (step + 1) % steps.count } } label: {
                 Text("Next").font(.body.weight(.semibold))
@@ -303,8 +303,8 @@ private struct ProjectTigerScene: View {
                     .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                     .foregroundColor(Color.compatIndigo)
             }.buttonStyle(.plain).pointingCursor()
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -320,9 +320,9 @@ private struct ForestFireTriangleScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Forest fires need: dry vegetation, a spark, and wind to spread. Remove any one and the fire can't catch.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
             Text(burns ? "🔥🌲" : "🌲").font(.system(size: 100))
-            HStack(spacing: 12) {
+            HStack(spacing: DesignTokens.Spacing.md) {
                 toggleChip("Dry", on: $dry)
                 toggleChip("Spark", on: $spark)
                 toggleChip("Wind", on: $wind)
@@ -330,13 +330,13 @@ private struct ForestFireTriangleScene: View {
             Text(burns ? "🚨 Forest fire raging." : "🌲 Safe.")
                 .font(.headline)
                 .foregroundColor(burns ? DesignTokens.BrandColor.danger : DesignTokens.BrandColor.primaryAction)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
     private func toggleChip(_ label: String, on: Binding<Bool>) -> some View {
         Button { on.wrappedValue.toggle() } label: {
             Text(label).font(.body.weight(.semibold))
-                .padding(.horizontal, 14).padding(.vertical, 8)
+                .padding(.horizontal, 14).padding(.vertical, DesignTokens.Spacing.sm)
                 .background(Capsule().fill(on.wrappedValue ? DesignTokens.BrandColor.danger.opacity(0.2) : Color.gray.opacity(0.1)))
                 .overlay(Capsule().strokeBorder(DesignTokens.BrandColor.danger.opacity(0.5), lineWidth: 1))
                 .foregroundColor(DesignTokens.BrandColor.danger)
@@ -360,15 +360,15 @@ private struct SustainableLoggingScene: View {
                  ? "Sustainable: cut only mature trees, replant saplings, leave forest structure intact. Forest regenerates."
                  : "Clearcut: every tree removed. Soil erodes, biodiversity collapses, can take 50+ years to recover (if ever). Banned in many countries.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
     private func pickChip(_ label: String, on: Bool, tap: @escaping () -> Void) -> some View {
         Button(action: tap) {
             Text(label).font(.body.weight(on ? .bold : .regular))
-                .padding(.horizontal, 14).padding(.vertical, 8)
+                .padding(.horizontal, 14).padding(.vertical, DesignTokens.Spacing.sm)
                 .background(Capsule().fill(on ? Color.compatIndigo.opacity(0.18) : Color.gray.opacity(0.08)))
                 .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                 .foregroundColor(Color.compatIndigo)
@@ -385,13 +385,13 @@ private struct ChipkoMovementScene: View {
             Text("🤗🌳").font(.system(size: 100))
             Text("1973, Reni village, Uttarakhand. Contractors arrived to cut trees. Women led by Gaura Devi hugged the trees ('chipko' = to stick). Loggers couldn't cut without hurting them. The movement spread, India banned tree-felling in much of the Himalaya for 15 years.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
             Text("Sundarlal Bahuguna and Chandi Prasad Bhatt became its faces. A turning point in Indian environmental history.")
                 .font(.caption.italic()).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .padding(.horizontal, 24).multilineTextAlignment(.center)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+                .padding(.horizontal, DesignTokens.Spacing.xl).multilineTextAlignment(.center)
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 

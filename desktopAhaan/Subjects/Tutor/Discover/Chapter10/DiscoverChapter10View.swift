@@ -118,7 +118,7 @@ private struct BreathingRateByActivityScene: View {
             Text("\(activities[activity].1)").font(.system(size: 64, weight: .bold).monospacedDigit())
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
             Text("breaths / min").font(.caption).foregroundColor(.secondary)
-            HStack(spacing: 8) {
+            HStack(spacing: DesignTokens.Spacing.sm) {
                 ForEach(0..<activities.count, id: \.self) { i in
                     Button { withAnimation { activity = i } } label: {
                         Text(activities[i].0.prefix(3)).font(.title3)
@@ -129,9 +129,9 @@ private struct BreathingRateByActivityScene: View {
             }
             Text("Cells need more oxygen during exercise → lungs work harder.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -155,19 +155,19 @@ private struct LungAnatomyMapScene: View {
                         Text(p.name).font(.headline).foregroundColor(DesignTokens.BrandColor.canvasText)
                         Spacer()
                     }
-                    .padding(12).frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(DesignTokens.Spacing.md).frame(maxWidth: DesignTokens.contentMaxWidth)
                     .background(RoundedRectangle(cornerRadius: 12)
                         .fill(part == p.id ? Color.compatIndigo.opacity(0.12) : Color.white.opacity(0.85)))
                     .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, 24)
+                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, DesignTokens.Spacing.xl)
             }
             if let s = part, let p = parts.first(where: { $0.id == s }) {
                 Text(p.detail).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                    .multilineTextAlignment(.center).padding(.horizontal, 24)
+                    .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
             }
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -199,10 +199,10 @@ private struct DiaphragmPumpScene: View {
                  ? "Inhale: diaphragm flattens, chest expands, air rushes IN to fill the bigger volume."
                  : "Exhale: diaphragm relaxes upward, chest shrinks, air pushed OUT.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -212,7 +212,7 @@ private struct CellularRespirationEquationScene: View {
         ScrollView { LazyVStack(spacing: 14) {
             Text("Cellular Respiration — The Reverse").font(.largeTitle.bold())
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            VStack(spacing: 8) {
+            VStack(spacing: DesignTokens.Spacing.sm) {
                 Text("C₆H₁₂O₆ + 6 O₂").font(.title2.weight(.bold)).foregroundColor(DesignTokens.BrandColor.canvasText)
                 Image(systemName: "arrow.down").foregroundColor(DesignTokens.BrandColor.primaryAction)
                     .font(.title2)
@@ -224,13 +224,13 @@ private struct CellularRespirationEquationScene: View {
             .padding(20).frame(maxWidth: DesignTokens.contentMaxWidth)
             .background(RoundedRectangle(cornerRadius: 14).fill(Color.white.opacity(0.85)))
             .overlay(RoundedRectangle(cornerRadius: 14).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-            .padding(.horizontal, 24)
+            .padding(.horizontal, DesignTokens.Spacing.xl)
             Text("EXACT reverse of photosynthesis. Sugar + oxygen → CO₂ + water + ENERGY for the cell. Powers every heartbeat, every neuron.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -250,7 +250,7 @@ private struct HoldYourBreathTimerScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Tap Start, hold your breath, tap Stop when you have to breathe.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
             Text("\(seconds) s").font(.system(size: 80, weight: .bold).monospacedDigit())
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
             HStack(spacing: 14) {
@@ -275,9 +275,9 @@ private struct HoldYourBreathTimerScene: View {
             }
             Text("Average for a healthy kid: 30-60s. Free divers can hold for 8+ minutes after years of training!")
                 .font(.caption).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .padding(.horizontal, 24).multilineTextAlignment(.center)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+                .padding(.horizontal, DesignTokens.Spacing.xl).multilineTextAlignment(.center)
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
         .onDisappear { running = false; generation += 1 }
     }
     private func start() {
@@ -318,10 +318,10 @@ private struct SmokingLungsScene: View {
                  ? "Tobacco smoke paralyses cilia (the hair-like cleaners), coats alveoli with tar, and brings in toxic gases. Cancer risk multiplies. Quitting reverses some damage."
                  : "Healthy lungs are pink, cilia sweep dust away, alveoli are clean. Breathing feels easy.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -346,15 +346,15 @@ private struct HiccupsSneezesScene: View {
                 }
             }()
             Text(body).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
     private func pickChip(_ label: String, val: String, on: String, tap: @escaping () -> Void) -> some View {
         Button(action: tap) {
             Text(label).font(.body.weight(on == val ? .bold : .regular))
-                .padding(.horizontal, 14).padding(.vertical, 8)
+                .padding(.horizontal, 14).padding(.vertical, DesignTokens.Spacing.sm)
                 .background(Capsule().fill(on == val ? Color.compatIndigo.opacity(0.18) : Color.gray.opacity(0.08)))
                 .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                 .foregroundColor(Color.compatIndigo)
@@ -379,7 +379,7 @@ private struct AnimalRespirationAtlasScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             ForEach(animals) { a in
                 Button { tapped.insert(a.id) } label: {
-                    VStack(alignment: .leading, spacing: 4) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                         HStack { Text(a.emoji).font(.title2)
                             Text(a.name).font(.headline).foregroundColor(DesignTokens.BrandColor.canvasText) }
                         if tapped.contains(a.id) {
@@ -389,13 +389,13 @@ private struct AnimalRespirationAtlasScene: View {
                             Text("Tap to reveal").font(.caption.italic())
                                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         }
-                    }.padding(12).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
+                    }.padding(DesignTokens.Spacing.md).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
                     .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
                     .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, 24)
+                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, DesignTokens.Spacing.xl)
             }
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -415,15 +415,15 @@ private struct MountainSicknessScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Altitude: \(Int(altitude)) m").font(.title2.monospacedDigit())
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
-            Slider(value: $altitude, in: 0...8848).frame(maxWidth: 340).padding(.horizontal, 24)
+            Slider(value: $altitude, in: 0...8848).frame(maxWidth: 340).padding(.horizontal, DesignTokens.Spacing.xl)
             Text(status).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
             Text("Everest summit (8848 m) has 1/3 the oxygen of sea level. Sherpas have evolved larger lungs + more red blood cells.")
                 .font(.caption).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .padding(.horizontal, 24).multilineTextAlignment(.center)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+                .padding(.horizontal, DesignTokens.Spacing.xl).multilineTextAlignment(.center)
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -443,7 +443,7 @@ private struct CPRLifesaverScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text(steps[step].0).font(.system(size: 100))
             Text(steps[step].1).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
             Button { withAnimation { step = (step + 1) % steps.count } } label: {
                 Text("Next step").font(.body.weight(.semibold))
@@ -454,9 +454,9 @@ private struct CPRLifesaverScene: View {
             }.buttonStyle(.plain).pointingCursor()
             Text("Real CPR needs hands-on training. Many schools + societies offer free classes — worth taking when you're older.")
                 .font(.caption.italic()).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .padding(.horizontal, 24).multilineTextAlignment(.center)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+                .padding(.horizontal, DesignTokens.Spacing.xl).multilineTextAlignment(.center)
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 

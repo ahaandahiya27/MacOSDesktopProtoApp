@@ -24,12 +24,12 @@ struct Scene7_WaterAudit: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-            LazyVStack(alignment: .center, spacing: 12) {
+            LazyVStack(alignment: .center, spacing: DesignTokens.Spacing.md) {
                 Text("Daily Water Audit").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Tap each activity you did today. See your total.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-                VStack(spacing: 8) {
+                VStack(spacing: DesignTokens.Spacing.sm) {
                     ForEach(items) { item in
                         HStack {
                             Image(systemName: checked.contains(item.id) ? "checkmark.square.fill" : "square")
@@ -56,21 +56,21 @@ struct Scene7_WaterAudit: View {
                     Text("An average Indian uses around 135 L per day; in cities it can climb past 200 L. Closing the tap, switching to a bucket bath, and fixing leaky taps each save dozens of litres daily.")
                         .font(.callout).lineSpacing(4)
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Civics / EVS",
                     detail: "Class 9 Civics, 'Working of Institutions', covers India's water policy: the Jal Shakti Ministry (2019), court cases on water as a basic right, and the Atal Bhujal Yojana. Class 10 EVS asks how your own choices affect the environment."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "One-day water log",
                     detail: "Tomorrow, count every tap-use: brushing teeth (12 L), bath (40-80 L), flushing (10 L each), cooking (5 L), drinking (3 L). Add it up. Total daily water = how many 20-L bottles? Now imagine carrying that from a well 1 km away (the reality for millions)."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 DiscoveryWidget(
                     title: "Discovery — scale to family size",
@@ -82,12 +82,12 @@ struct Scene7_WaterAudit: View {
                     output: { v in self.familyTotalExplanation(v) }
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 

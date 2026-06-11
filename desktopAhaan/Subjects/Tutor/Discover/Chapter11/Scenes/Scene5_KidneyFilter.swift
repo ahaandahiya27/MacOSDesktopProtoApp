@@ -18,7 +18,7 @@ struct Scene5_KidneyFilter: View {
                 Text("Kidney Filter").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Tap the button to push blood through the kidney.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-                HStack(spacing: 24) {
+                HStack(spacing: DesignTokens.Spacing.xl) {
                     VStack {
                         Text(filtered ? "❤️" : "🟤").font(.system(size: 56))
                         Text(filtered ? "Clean blood" : "Dirty blood").font(.caption)
@@ -37,14 +37,14 @@ struct Scene5_KidneyFilter: View {
                     .accentColor(Color.compatIndigo)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Two bean-shaped life-savers", systemImage: "drop.fill")
                             .font(.title2.bold())
                         Text("Your kidneys filter about 180 litres of blood every day. They remove urea (a waste from protein breakdown) and extra water, sending them to the bladder as urine. Useful nutrients are kept and returned to the blood.")
                             .font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 // Grouped to stay within Swift 5.5's 10-child ViewBuilder limit
                 // (Big Sur / Xcode 13.2.1 target).
@@ -54,14 +54,14 @@ struct Scene5_KidneyFilter: View {
                         detail: "Class 11 'Excretory Products and their Elimination' covers the nephron in detail. It includes the filtration rate (~125 mL/min), the loop of Henle's counter-current trick, the hormones ADH and aldosterone, and dialysis. The nephron diagram is one of the most-tested NEET visuals, year after year."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     TryAtHomeCallout(
                         title: "Water in, water out",
                         detail: "Drink 500 mL of water all at once. Note the time. Within 30-60 minutes you'll feel the need to urinate — that's your kidneys filtering the extra water out of your blood."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 }
 
                 DiscoveryWidget(
@@ -74,12 +74,12 @@ struct Scene5_KidneyFilter: View {
                     output: kidneyResponseExplanation
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
 
         .frame(maxWidth: .infinity, maxHeight: .infinity)

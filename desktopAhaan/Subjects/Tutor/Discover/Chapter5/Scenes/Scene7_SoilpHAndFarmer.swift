@@ -38,7 +38,7 @@ struct Scene7_SoilpHAndFarmer: View {
         // explanation cards don't cover the interactive content.
         ScrollView {
             LazyVStack(alignment: .center, spacing: 14) {
-                VStack(spacing: 16) {
+                VStack(spacing: DesignTokens.Spacing.lg) {
                     Text("Soil pH and the Farmer")
                         .font(.title2.bold())
                         .padding(.top, 18)
@@ -46,7 +46,7 @@ struct Scene7_SoilpHAndFarmer: View {
                     // pH meter display
                     HStack(spacing: 20) {
                         // Soil visual
-                        VStack(spacing: 8) {
+                        VStack(spacing: DesignTokens.Spacing.sm) {
                             Text(plantHealth)
                                 .font(.system(size: 56))
 
@@ -74,7 +74,7 @@ struct Scene7_SoilpHAndFarmer: View {
                                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         }
                         .frame(width: 160)
-                        .padding(16)
+                        .padding(DesignTokens.Spacing.lg)
                         .background(
                             RoundedRectangle(cornerRadius: 14, style: .continuous)
                                 .fill(Color.white)
@@ -87,7 +87,7 @@ struct Scene7_SoilpHAndFarmer: View {
 
                     // Action buttons
                     if scenario == 0 {
-                        VStack(spacing: 8) {
+                        VStack(spacing: DesignTokens.Spacing.sm) {
                             Text("The soil is too acidic! Add lime to raise the pH.")
                                 .font(.body)
                                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
@@ -102,7 +102,7 @@ struct Scene7_SoilpHAndFarmer: View {
                             .disabled(soilPH >= 6.8)
                         }
                     } else if scenario == 1 {
-                        VStack(spacing: 8) {
+                        VStack(spacing: DesignTokens.Spacing.sm) {
                             Text("Now the soil is too basic! Add organic matter to lower the pH.")
                                 .font(.body)
                                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
@@ -124,7 +124,7 @@ struct Scene7_SoilpHAndFarmer: View {
 
                 Group {
                     SoftShadowCard(padding: 18) {
-                        VStack(alignment: .leading, spacing: 8) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                             Label("Why Farmers Test Soil", systemImage: SFSymbolCompat.name("leaf.arrow.circlepath"))
                                 .font(.title2.bold())
                             if scenario == 2 {
@@ -154,15 +154,15 @@ struct Scene7_SoilpHAndFarmer: View {
 
                     if scenario == 2 {
                         GotItButton { onComplete() }
-                            .padding(.bottom, 12)
+                            .padding(.bottom, DesignTokens.Spacing.md)
                     }
                 
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 

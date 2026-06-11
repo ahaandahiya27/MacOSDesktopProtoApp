@@ -115,9 +115,9 @@ private struct ReversibleIrreversibleScene: View {
                 .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
                 .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
                 .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                .padding(.horizontal, 24)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+                .padding(.horizontal, DesignTokens.Spacing.xl)
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
     private func pickChip(label: String, picked: Bool, tap: @escaping () -> Void) -> some View {
         Button(action: tap) {
@@ -142,9 +142,9 @@ private struct CombustionTriangleScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Burning needs ALL three: a fuel, oxygen, and a spark of heat. Remove any one → fire goes out.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
             Text(burns ? "🔥" : "💨").font(.system(size: 120))
-            HStack(spacing: 12) {
+            HStack(spacing: DesignTokens.Spacing.md) {
                 toggleChip("Fuel", on: $fuel)
                 toggleChip("O₂", on: $oxygen)
                 toggleChip("Heat", on: $heat)
@@ -152,13 +152,13 @@ private struct CombustionTriangleScene: View {
             Text(burns ? "All three present — fire ignites." : "Missing one — no combustion.")
                 .font(.callout.weight(.semibold))
                 .foregroundColor(burns ? DesignTokens.BrandColor.danger : DesignTokens.BrandColor.canvasText)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
     private func toggleChip(_ label: String, on: Binding<Bool>) -> some View {
         Button { on.wrappedValue.toggle() } label: {
             Text(label).font(.body.weight(.semibold))
-                .padding(.horizontal, 16).padding(.vertical, 8)
+                .padding(.horizontal, DesignTokens.Spacing.lg).padding(.vertical, DesignTokens.Spacing.sm)
                 .background(Capsule().fill(on.wrappedValue ? DesignTokens.BrandColor.danger.opacity(0.2) : Color.gray.opacity(0.1)))
                 .overlay(Capsule().strokeBorder(DesignTokens.BrandColor.danger.opacity(0.5), lineWidth: 1))
                 .foregroundColor(DesignTokens.BrandColor.danger)
@@ -172,7 +172,7 @@ private struct PhotosynthesisChemicalScene: View {
         ScrollView { LazyVStack(spacing: 14) {
             Text("Photosynthesis is a Chemical Change").font(.largeTitle.bold())
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            VStack(spacing: 8) {
+            VStack(spacing: DesignTokens.Spacing.sm) {
                 Text("6 CO₂ + 6 H₂O").font(.title2.weight(.bold)).foregroundColor(DesignTokens.BrandColor.canvasText)
                 Image(systemName: "arrow.down").foregroundColor(DesignTokens.BrandColor.primaryAction)
                     .font(.title2)
@@ -185,13 +185,13 @@ private struct PhotosynthesisChemicalScene: View {
             .padding(20).frame(maxWidth: DesignTokens.contentMaxWidth)
             .background(RoundedRectangle(cornerRadius: 14).fill(Color.white.opacity(0.85)))
             .overlay(RoundedRectangle(cornerRadius: 14).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-            .padding(.horizontal, 24)
+            .padding(.horizontal, DesignTokens.Spacing.xl)
             Text("Water + carbon dioxide become sugar + oxygen. Completely new substances → chemical change. Reverses in respiration, where sugar + O₂ → CO₂ + water + energy.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -210,7 +210,7 @@ private struct CurdlingMilkScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text(steps[step].0).font(.system(size: 100))
             Text(steps[step].1).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
             Button { withAnimation { step = (step + 1) % steps.count } } label: {
                 Text("Next").font(.body.weight(.semibold))
@@ -219,8 +219,8 @@ private struct CurdlingMilkScene: View {
                     .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                     .foregroundColor(Color.compatIndigo)
             }.buttonStyle(.plain).pointingCursor()
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -233,7 +233,7 @@ private struct BurningMagnesiumScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("A textbook chemical change. Silvery ribbon + oxygen → blinding white light + white powder (magnesium oxide).")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
             ZStack {
                 if burning {
                     Circle().fill(Color.white).frame(width: 140, height: 140)
@@ -253,9 +253,9 @@ private struct BurningMagnesiumScene: View {
             }.buttonStyle(.plain).pointingCursor()
             Text("2 Mg + O₂ → 2 MgO. Don't look directly — the light has UV!")
                 .font(.callout.italic()).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .padding(.horizontal, 24).multilineTextAlignment(.center)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+                .padding(.horizontal, DesignTokens.Spacing.xl).multilineTextAlignment(.center)
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -268,7 +268,7 @@ private struct MassConservationLabScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Sealed beaker on a balance: vinegar + baking soda → CO₂ bubbles. If the lid is on, the mass stays exactly the same. Atoms just rearranged.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
             HStack(spacing: 30) {
                 VStack {
                     Text("100 g").font(.title.monospacedDigit()).foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -287,8 +287,8 @@ private struct MassConservationLabScene: View {
                     .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                     .foregroundColor(Color.compatIndigo)
             }.buttonStyle(.plain).pointingCursor()
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -308,15 +308,15 @@ private struct CrystallisationVsEvaporationScene: View {
                  ? "Slow cooling of a hot saturated solution → pure regular-shaped crystals form. Better than evaporation because impurities stay in solution."
                  : "Heating drives off water → leaves all the solid behind, including impurities. Cheaper but less pure.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
     private func pickChip(label: String, picked: Bool, tap: @escaping () -> Void) -> some View {
         Button(action: tap) {
             Text(label).font(.body.weight(picked ? .bold : .regular))
-                .padding(.horizontal, 14).padding(.vertical, 8)
+                .padding(.horizontal, 14).padding(.vertical, DesignTokens.Spacing.sm)
                 .background(Capsule().fill(picked ? Color.compatIndigo.opacity(0.18) : Color.gray.opacity(0.08)))
                 .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                 .foregroundColor(Color.compatIndigo)
@@ -343,15 +343,15 @@ private struct MixingWithoutReactingScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             Text("Mixing alone = physical change. A reaction = chemical change with new substances.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
             ForEach(items) { i in row(i) }
             if picks.count == items.count {
                 let correct = items.reduce(0) { $0 + ((picks[$1.id] == $1.reaction) ? 1 : 0) }
                 Text("Score: \(correct) / \(items.count)").font(.headline)
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
             }
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
     @ViewBuilder
     private func row(_ it: Item) -> some View {
@@ -360,16 +360,16 @@ private struct MixingWithoutReactingScene: View {
             Text(it.prompt).font(.callout)
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .fixedSize(horizontal: false, vertical: true)
-            HStack(spacing: 8) {
+            HStack(spacing: DesignTokens.Spacing.sm) {
                 ans("Mix only", false, pick, it.reaction, it.id)
                 ans("Reaction", true, pick, it.reaction, it.id)
             }
         }
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
         .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
         .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-        .padding(.horizontal, 24)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
     }
     private func ans(_ label: String, _ v: Bool, _ pick: Bool?, _ correct: Bool, _ id: String) -> some View {
         let isPicked = pick == v
@@ -411,12 +411,12 @@ private struct ReactionSpeedSliderScene: View {
             }
             Text("Temperature: \(Int(temp)) °C").font(.callout.monospacedDigit())
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
-            Slider(value: $temp, in: 0...100).frame(maxWidth: 340).padding(.horizontal, 24)
+            Slider(value: $temp, in: 0...100).frame(maxWidth: 340).padding(.horizontal, DesignTokens.Spacing.xl)
             Text(label).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -436,15 +436,15 @@ private struct EnergyOfChangeScene: View {
                  ? "Exothermic — releases heat. Examples: burning fuel, neutralising acid + base, cement setting."
                  : "Endothermic — absorbs heat (cools the surroundings). Examples: dissolving ammonium nitrate, melting ice, photosynthesis (uses sunlight).")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
     private func pickChip(label: String, picked: Bool, tap: @escaping () -> Void) -> some View {
         Button(action: tap) {
             Text(label).font(.body.weight(picked ? .bold : .regular))
-                .padding(.horizontal, 14).padding(.vertical, 8)
+                .padding(.horizontal, 14).padding(.vertical, DesignTokens.Spacing.sm)
                 .background(Capsule().fill(picked ? Color.compatIndigo.opacity(0.18) : Color.gray.opacity(0.08)))
                 .overlay(Capsule().strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1))
                 .foregroundColor(Color.compatIndigo)
@@ -468,7 +468,7 @@ private struct ChemicalChangeAtlasScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             ForEach(places) { p in
                 Button { tapped.insert(p.id) } label: {
-                    VStack(alignment: .leading, spacing: 4) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                         HStack {
                             Text(p.emoji).font(.title2)
                             Text(p.name).font(.headline).foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -482,13 +482,13 @@ private struct ChemicalChangeAtlasScene: View {
                                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         }
                     }
-                    .padding(12)
+                    .padding(DesignTokens.Spacing.md)
                     .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
                     .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
                     .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, 24)
+                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, DesignTokens.Spacing.xl)
             }
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }

@@ -33,7 +33,7 @@ struct Scene5_SortersDiseaseLab: View {
                         .foregroundColor(Color.compatIndigo)
                     Spacer()
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
                 .padding(.top, 20)
 
                 ZStack {
@@ -67,7 +67,7 @@ struct Scene5_SortersDiseaseLab: View {
 
                     // Worker icon with PPE
                     if showPPE {
-                        VStack(spacing: 2) {
+                        VStack(spacing: DesignTokens.Spacing.xxs) {
                             Text("😷👤")
                                 .font(.system(size: 48))
                         }
@@ -77,12 +77,12 @@ struct Scene5_SortersDiseaseLab: View {
                 .frame(height: 280)
 
                 // Slides
-                HStack(spacing: 16) {
+                HStack(spacing: DesignTokens.Spacing.lg) {
                     ForEach(slides, id: \.1) { slideLabel, slideIdx in
                         slideButton(slideLabel, index: slideIdx)
                     }
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 Group {
                     SoftShadowCard(padding: 14) {
@@ -96,30 +96,30 @@ struct Scene5_SortersDiseaseLab: View {
                         }
                     }
                     .frame(maxWidth: 600)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     LookingAheadCallout(
                         title: "Class 12 Biology → NEET (Microbiology)",
                         detail: "Sorter's disease is anthrax — caused by *Bacillus anthracis*, the same organism Robert Koch used in 1876 to prove a microbe could cause a disease. NEET asks the four steps of Koch's Postulates and 'why is anthrax such a stable spore?' (the spore coat is one of the toughest natural structures — survives years in soil)."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     TryAtHomeCallout(
                         title: "Safety-first reading",
                         detail: "Read about Sorter's disease / Woolsorter's pneumonia online (any verified source — WHO, CDC, NCBI). Don't search images. The point isn't gore — it's that simple workplace safety (face masks, dust extraction) eliminated this disease in modern wool mills. Public health = engineering against biology."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     GotItButton {
                         onComplete()
                     }
-                    .padding(.bottom, 12)
+                    .padding(.bottom, DesignTokens.Spacing.md)
                 }
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
@@ -132,7 +132,7 @@ struct Scene5_SortersDiseaseLab: View {
                 showPPE = (index == 1)
             }
         } label: {
-            VStack(spacing: 8) {
+            VStack(spacing: DesignTokens.Spacing.sm) {
                 RoundedRectangle(cornerRadius: 8)
                     .fill(slideColor(index))
                     .frame(height: 60)

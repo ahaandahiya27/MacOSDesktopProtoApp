@@ -24,7 +24,7 @@ struct Scene2_TearingVsBurningPaper: View {
         // explanation cards don't cover the interactive content.
         ScrollView {
             LazyVStack(alignment: .center, spacing: 14) {
-                VStack(spacing: 16) {
+                VStack(spacing: DesignTokens.Spacing.lg) {
                     Text("Tearing vs Burning Paper")
                         .font(.largeTitle.bold())
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -34,9 +34,9 @@ struct Scene2_TearingVsBurningPaper: View {
                         .font(.callout)
                         .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-                    HStack(spacing: 24) {
+                    HStack(spacing: DesignTokens.Spacing.xl) {
                         // Left: Tearing
-                        VStack(spacing: 12) {
+                        VStack(spacing: DesignTokens.Spacing.md) {
                             Text("Tearing Paper")
                                 .font(.headline)
                                 .foregroundColor(.green)
@@ -81,7 +81,7 @@ struct Scene2_TearingVsBurningPaper: View {
                         Divider().frame(height: 300)
 
                         // Right: Burning
-                        VStack(spacing: 12) {
+                        VStack(spacing: DesignTokens.Spacing.md) {
                             Text("Burning Paper")
                                 .font(.headline)
                                 .foregroundColor(DesignTokens.BrandColor.tryAtHome)
@@ -143,14 +143,14 @@ struct Scene2_TearingVsBurningPaper: View {
                         }
                         .frame(maxWidth: 240)
                     }
-                    .padding(.top, 8)
+                    .padding(.top, DesignTokens.Spacing.sm)
                 }
                 .frame(maxWidth: .infinity)
 
                 Group {
                     if bothDone {
                         SoftShadowCard(padding: 18) {
-                            VStack(alignment: .leading, spacing: 8) {
+                            VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                                 Label("Key difference", systemImage: "arrow.left.arrow.right")
                                     .font(.title2.bold())
                                 Text("Tearing changes only the size and shape — the substance stays the same (physical change). Burning produces entirely new substances — ash, carbon dioxide, and water vapour (chemical change). You can tape torn paper back, but you can never un-burn ash.")
@@ -186,20 +186,20 @@ struct Scene2_TearingVsBurningPaper: View {
 
                     if bothDone {
                         GotItButton { onComplete() }
-                            .padding(.bottom, 12)
+                            .padding(.bottom, DesignTokens.Spacing.md)
                     } else {
                         Text("Try both sides to continue")
                             .font(.caption)
                             .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                            .padding(.bottom, 12)
+                            .padding(.bottom, DesignTokens.Spacing.md)
                     }
                 
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 

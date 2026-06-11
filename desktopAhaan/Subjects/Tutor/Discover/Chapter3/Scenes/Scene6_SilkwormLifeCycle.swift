@@ -30,7 +30,7 @@ struct Scene6_SilkwormLifeCycle: View {
                         .foregroundColor(Color.compatIndigo)
                     Spacer()
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
                 .padding(.top, 20)
 
                 // Circular cycle
@@ -49,14 +49,14 @@ struct Scene6_SilkwormLifeCycle: View {
                     }
                 }
                 .frame(height: 320)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 // Detail panel
-                VStack(spacing: 12) {
-                    HStack(spacing: 12) {
+                VStack(spacing: DesignTokens.Spacing.md) {
+                    HStack(spacing: DesignTokens.Spacing.md) {
                         Text(stages[currentStage].emoji)
                             .font(.system(size: 48))
-                        VStack(alignment: .leading, spacing: 4) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                             Text(stages[currentStage].name)
                                 .font(.headline)
                                 .foregroundColor(Color.compatIndigo)
@@ -71,12 +71,12 @@ struct Scene6_SilkwormLifeCycle: View {
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
-                .padding(16)
+                .padding(DesignTokens.Spacing.lg)
                 .background(Color(NSColor.controlBackgroundColor).opacity(0.5))
                 .cornerRadius(12)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                HStack(spacing: 12) {
+                HStack(spacing: DesignTokens.Spacing.md) {
                     Button {
                         advanceStage()
                     } label: {
@@ -94,29 +94,29 @@ struct Scene6_SilkwormLifeCycle: View {
 
                     }
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 11 Biology → NEET (Holometabola)",
                     detail: "Complete metamorphosis (egg → larva → pupa → adult) is called *holometaboly*. NEET asks 'why do butterflies and beetles develop this way?' — because larva and adult eat different food sources (caterpillar eats leaves, butterfly drinks nectar), so they don't compete. Same trick: silkworm caterpillar eats mulberry; the moth doesn't eat at all — it lives just to mate."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Find a real silkworm",
                     detail: "If you're in southern India or West Bengal, sericulture farms (Karnataka in particular) sell raw silkworm cocoons. Or visit a Khadi shop — they often display caterpillars, cocoons, and reeled silk side-by-side. Watching one cocoon unwind into 1,000+ metres of single continuous thread is a wow moment."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 GotItButton {
                     onComplete()
                 }
-                .padding(.bottom, 12)
+                .padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 

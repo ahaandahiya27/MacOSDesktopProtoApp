@@ -27,7 +27,7 @@ struct Scene5_SoilErosionStory: View {
                 ZStack {
                     RoundedRectangle(cornerRadius: 18).fill(Color.green.opacity(0.15))
                         .frame(width: 420, height: 260)
-                    VStack(spacing: 12) {
+                    VStack(spacing: DesignTokens.Spacing.md) {
                         Text(deforested ? "☁️🌧" : "☁️🌧🌳🌳🌳").font(.system(size: 36))
                         Spacer()
                         HStack {
@@ -37,7 +37,7 @@ struct Scene5_SoilErosionStory: View {
                         }
                     }
                     .frame(width: 420, height: 260)
-                    .padding(12)
+                    .padding(DesignTokens.Spacing.md)
                 }
 
                 Text(deforested ? "Heavy erosion — topsoil lost!" : "Roots hold soil — minimal erosion")
@@ -45,7 +45,7 @@ struct Scene5_SoilErosionStory: View {
                     .foregroundColor(deforested ? .red : .green)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Roots are nature's net", systemImage: "leaf.fill")
                             .font(.title2.bold())
                         Text("Tree roots hold soil in place. When forests are cut, rain washes away the fertile topsoil — this is soil erosion. It can take centuries to form even an inch of new soil.")
@@ -53,27 +53,27 @@ struct Scene5_SoilErosionStory: View {
                     }
                 }
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 9 Geography",
                     detail: "Class 9 'Natural Vegetation and Wildlife' treats soil erosion as a result of deforestation. The forms are gully erosion, sheet erosion and ravines (the Chambal badlands). Class 10 'Resources and Development' covers the cures. These are terraces, contour ploughing and shelter-belts."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Tilt-plate rainstorm",
                     detail: "Get two plates, fill one with bare soil and the other with the same soil covered in grass clippings. Tilt both at the same angle and sprinkle water from a height. Watch which one washes away."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
                 Spacer(minLength: 0)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
 
         .frame(maxWidth: .infinity, maxHeight: .infinity)

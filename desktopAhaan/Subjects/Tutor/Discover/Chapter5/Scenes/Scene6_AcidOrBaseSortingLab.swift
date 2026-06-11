@@ -50,15 +50,15 @@ struct Scene6_AcidOrBaseSortingLab: View {
         // (used for global frame tracking) has a real bounded canvas.
         ScrollView {
             LazyVStack(alignment: .center, spacing: 14) {
-                VStack(spacing: 12) {
+                VStack(spacing: DesignTokens.Spacing.md) {
                     // Score
                     HStack {
                         Spacer()
                         Text("Score: \(score) / 12")
                             .font(.headline.monospacedDigit())
                             .foregroundColor(Color.compatIndigo)
-                            .padding(.trailing, 24)
-                            .padding(.top, 8)
+                            .padding(.trailing, DesignTokens.Spacing.xl)
+                            .padding(.top, DesignTokens.Spacing.sm)
                     }
 
                     // Items to drag
@@ -68,7 +68,7 @@ struct Scene6_AcidOrBaseSortingLab: View {
                                 substanceChip(sub)
                             }
                         }
-                        .padding(.horizontal, 24)
+                        .padding(.horizontal, DesignTokens.Spacing.xl)
                         .frame(maxHeight: 180)
                     } else {
                         Text("All sorted!")
@@ -82,7 +82,7 @@ struct Scene6_AcidOrBaseSortingLab: View {
                         dropZone(title: "Acid", color: .red, items: acidBin, isAcidZone: true)
                         dropZone(title: "Base", color: .blue, items: baseBin, isAcidZone: false)
                     }
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                     .frame(maxHeight: 200)
                 }
                 .frame(maxWidth: .infinity)
@@ -90,7 +90,7 @@ struct Scene6_AcidOrBaseSortingLab: View {
                 Group {
                     if isDone {
                         SoftShadowCard(padding: 18) {
-                            VStack(alignment: .leading, spacing: 8) {
+                            VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                                 Label("Great sorting!", systemImage: "star.fill")
                                     .font(.title2.bold())
                                     .foregroundColor(.orange)
@@ -114,10 +114,10 @@ struct Scene6_AcidOrBaseSortingLab: View {
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
 
                         GotItButton { onComplete(score) }
-                            .padding(.bottom, 12)
+                            .padding(.bottom, DesignTokens.Spacing.md)
                     } else {
                         SoftShadowCard(padding: 18) {
-                            VStack(alignment: .leading, spacing: 8) {
+                            VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                                 Label("Acid or Base?", systemImage: "arrow.left.arrow.right")
                                     .font(.title2.bold())
                                 Text("Drag each substance into the correct zone \u{2014} Acid or Base.")
@@ -126,13 +126,13 @@ struct Scene6_AcidOrBaseSortingLab: View {
                             }
                         }
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
-                        .padding(.bottom, 12)
+                        .padding(.bottom, DesignTokens.Spacing.md)
                     }
                 
 
                 }
 
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 if showConfetti {
                     ParticleEmitter(isActive: true, particleCount: min(40, HardwareTier.particleBudget), duration: 1.5)
@@ -145,7 +145,7 @@ struct Scene6_AcidOrBaseSortingLab: View {
 
             .frame(maxWidth: .infinity)
 
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
 
         }
     }
@@ -156,7 +156,7 @@ struct Scene6_AcidOrBaseSortingLab: View {
         let offset = dragOffsets[sub.id] ?? .zero
         let isShaking = shakeId == sub.id
 
-        return VStack(spacing: 2) {
+        return VStack(spacing: DesignTokens.Spacing.xxs) {
             Text(sub.emoji)
                 .font(.title2)
             Text(sub.name)
@@ -204,7 +204,7 @@ struct Scene6_AcidOrBaseSortingLab: View {
                 ForEach(items) { s in
                     Text("\(s.emoji) \(s.name)")
                         .font(.caption2)
-                        .padding(4)
+                        .padding(DesignTokens.Spacing.xs)
                         .background(color.opacity(0.1))
                         .cornerRadius(6)
                 }

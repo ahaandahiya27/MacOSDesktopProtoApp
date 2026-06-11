@@ -40,33 +40,33 @@ struct Scene6_VegetativePropagation: View {
                 Text(plant.emoji).font(.system(size: 96))
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Text(plant.rawValue).font(.title3.bold())
                         Text(plant.partUsed).font(.body).lineSpacing(4)
                         Text("Offspring are genetic clones of the parent — fast and reliable, but no variety.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 12 Bio",
                     detail: "Class 12 Bio covers the commercial uses: micropropagation in tissue culture (cloning orchids and bananas at scale), grafting in fruit trees, runners in strawberries and suckers in bananas. NEET asks these in Plant Biotechnology."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Money-plant cutting",
                     detail: "Cut a stem from a money-plant (or pothos) so it includes 2 nodes. Place the cut end in a glass of water on a windowsill. Roots will sprout in 7-14 days. No seed needed — you've cloned the parent."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
                 Spacer(minLength: 0)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
 
         .frame(maxWidth: .infinity, maxHeight: .infinity)

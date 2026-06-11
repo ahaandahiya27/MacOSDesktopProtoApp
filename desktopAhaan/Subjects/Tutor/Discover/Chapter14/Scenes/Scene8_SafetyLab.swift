@@ -23,7 +23,7 @@ struct Scene8_SafetyLab: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-            LazyVStack(alignment: .center, spacing: 12) {
+            LazyVStack(alignment: .center, spacing: DesignTokens.Spacing.md) {
                 Text("Safety Lab").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Tap Safe or Unsafe for each action.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
@@ -43,7 +43,7 @@ struct Scene8_SafetyLab: View {
                         .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                     }
                 }
-                .frame(maxWidth: 680).padding(.horizontal, 24)
+                .frame(maxWidth: 680).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 if done {
                     Text("Score: \(score) / \(items.count)").font(.title3.bold()).foregroundColor(Color.compatIndigo)
@@ -54,20 +54,20 @@ struct Scene8_SafetyLab: View {
                     detail: "Class 10 covers home wiring — live (red), neutral (black), earth (green/yellow); 3-pin plugs; MCBs and ELCBs. Industrial Training (ITI / polytechnic) takes this further into wiring codes and load calculation. JEE rarely asks safety directly but tests power-supply problems."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Three-pin plug inspection",
                     detail: "Examine an unplugged 3-pin Indian plug. The two thinner pins are LIVE (right) and NEUTRAL (left). The thicker top pin is EARTH — it's longer so it connects first. The plastic body is insulator. Total safety in one design."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
+                if done { GotItButton { onComplete(score) }.padding(.bottom, DesignTokens.Spacing.md) }
                 Spacer(minLength: 0)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
 
         .frame(maxWidth: .infinity, maxHeight: .infinity)

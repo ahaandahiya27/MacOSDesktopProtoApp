@@ -46,10 +46,10 @@ struct Scene8_AnemometerReader: View {
 
                 Slider(value: $rpm, in: 0...200, step: 1)
                     .frame(maxWidth: 460)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Cups catch the wind", systemImage: SFSymbolCompat.name("gauge.medium"))
                             .font(.title2.bold())
                         Text("An anemometer measures wind speed. Three or four cups catch the breeze and rotate. The rotation rate is converted to km/h. Weather stations report this every few minutes.")
@@ -57,26 +57,26 @@ struct Scene8_AnemometerReader: View {
                     }
                 }
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 11 Physics → JEE",
                     detail: "Class 11 Physics covers angular speed, ω = v/r, and how rpm links to SI units. JEE sets rotational problems on spinning bodies — centripetal force and angular momentum — using just this kind of cup-and-radius setup."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Paper-cup anemometer",
                     detail: "Tape 4 small paper cups onto cross-shaped sticks pinned at the centre to a pencil. Mark one cup red. Hold it outside on a windy day and count rotations of the red cup in 30 seconds. That's your wind speed in 'cups per half-minute'."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }

@@ -33,7 +33,7 @@ struct Scene4_SpeedometerOdometer: View {
                     VStack {
                         Text(String(format: "%07.0f", odometer))
                             .font(.system(size: 32, weight: .bold, design: .monospaced))
-                            .padding(8)
+                            .padding(DesignTokens.Spacing.sm)
                             .background(RoundedRectangle(cornerRadius: 8).fill(Color.black))
                             .foregroundColor(.green)
                         Text("km").font(.caption)
@@ -45,36 +45,36 @@ struct Scene4_SpeedometerOdometer: View {
                 }
                 .timedScene(idealFPS: 30, tick: $tick)
 
-                Slider(value: $speed, in: 0...160, step: 1).frame(maxWidth: 460).padding(.horizontal, 24)
+                Slider(value: $speed, in: 0...160, step: 1).frame(maxWidth: 460).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Two instruments, two stories", systemImage: "speedometer")
                             .font(.title2.bold())
                         Text("The speedometer tells you how fast you're going right now. The odometer is a counter that adds up every km you've ever driven. Same gearbox, different jobs.")
                             .font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Read a real odometer",
                     detail: "Next car ride, look at the odometer before you start and again when you reach your destination. Subtract → that's the distance covered. Divide by the time taken → that's your average speed. The needle on the speedometer was showing instantaneous speed."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 11 Physics → JEE",
                     detail: "In Class 11 'Motion in a Straight Line' you sharpen average vs instantaneous speed. The speedometer reads instantaneous speed; the odometer divided by time gives the average. JEE Kinematics adds calculus: instantaneous speed = ds/dt."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

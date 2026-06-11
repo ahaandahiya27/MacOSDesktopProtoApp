@@ -86,7 +86,7 @@ struct Scene8_DesertSurvivalTricks: View {
                     )
 
                     // Animal cards
-                    HStack(spacing: 16) {
+                    HStack(spacing: DesignTokens.Spacing.lg) {
                         ForEach(animals) { animal in
                             let isSelected = selectedAnimal == animal.id
                             let isExplored = exploredAnimals.contains(animal.id)
@@ -97,7 +97,7 @@ struct Scene8_DesertSurvivalTricks: View {
                                     exploredAnimals.insert(animal.id)
                                 }
                             } label: {
-                                VStack(spacing: 8) {
+                                VStack(spacing: DesignTokens.Spacing.sm) {
                                     Image(systemName: animal.symbol)
                                         .font(.title)
                                         .foregroundColor(isSelected ? .white : animal.color)
@@ -128,18 +128,18 @@ struct Scene8_DesertSurvivalTricks: View {
                     Spacer()
                 }
                 .frame(maxWidth: .infinity)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 Group {
                     SoftShadowCard(padding: 18) {
-                        VStack(alignment: .leading, spacing: 8) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                             if let idx = selectedAnimal, let animal = animals.first(where: { $0.id == idx }) {
                                 Label(animal.name, systemImage: animal.symbol)
                                     .font(.title2.bold())
                                     .foregroundColor(animal.color)
 
                                 ForEach(animal.adaptations, id: \.title) { adapt in
-                                    VStack(alignment: .leading, spacing: 2) {
+                                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                                         Text(adapt.title)
                                             .font(.body.bold())
                                         Text(adapt.detail)
@@ -147,7 +147,7 @@ struct Scene8_DesertSurvivalTricks: View {
                                             .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                                             .lineSpacing(3)
                                     }
-                                    .padding(.top, 2)
+                                    .padding(.top, DesignTokens.Spacing.xxs)
                                 }
                             } else {
                                 Label("Desert Survival", systemImage: "sun.max.fill")
@@ -175,15 +175,15 @@ struct Scene8_DesertSurvivalTricks: View {
 
                     if allExplored {
                         GotItButton { onComplete() }
-                            .padding(.bottom, 12)
+                            .padding(.bottom, DesignTokens.Spacing.md)
                     }
                 
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

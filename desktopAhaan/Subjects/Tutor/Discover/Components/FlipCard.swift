@@ -64,7 +64,7 @@ struct FlipCard<Front: View, Back: View>: View {
     }
 
     private var frontFace: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: DesignTokens.Spacing.md) {
             Text(frontEmoji)
                 .font(.system(size: 88))
                 .accessibilityHidden(true)
@@ -74,12 +74,12 @@ struct FlipCard<Front: View, Back: View>: View {
                 .font(.subheadline)
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 .multilineTextAlignment(.center)
-                .padding(.horizontal, 12)
+                .padding(.horizontal, DesignTokens.Spacing.md)
             Spacer(minLength: 0)
             Label("Tap to flip", systemImage: SFSymbolCompat.name("hand.tap"))
                 .font(.caption)
                 .foregroundColor(Color.compatIndigo)
-                .padding(.bottom, 12)
+                .padding(.bottom, DesignTokens.Spacing.md)
         }
         .padding(20)
         .frame(maxWidth: .infinity, maxHeight: .infinity)

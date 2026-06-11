@@ -48,7 +48,7 @@ struct Scene2_TheSwallowWave: View {
                     }
                 }
 
-                HStack(spacing: 16) {
+                HStack(spacing: DesignTokens.Spacing.lg) {
                     Button(action: { swallow() }) {
                         Label("Swallow!", systemImage: SFSymbolCompat.name("arrowshape.down.fill"))
                             .padding(.vertical, 10)
@@ -58,7 +58,7 @@ struct Scene2_TheSwallowWave: View {
                     .accentColor(.green)
                     .disabled(isBolus)
 
-                    VStack(alignment: .leading, spacing: 4) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                         HStack {
                             Text("Speed: \(String(format: "%.1f", speed))×")
                                 .font(.caption)
@@ -68,10 +68,10 @@ struct Scene2_TheSwallowWave: View {
                     }
                     .frame(maxWidth: 150)
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("The Swallow Wave", systemImage: "arrow.down.circle.fill")
                             .font(.title2.bold())
                             .foregroundColor(.green)
@@ -88,24 +88,24 @@ struct Scene2_TheSwallowWave: View {
                     detail: "Peristalsis is smooth-muscle physiology. The circular and longitudinal muscle layers of the oesophagus tighten and relax in turn to push food along. NEET loves one question: why can astronauts swallow upside-down in zero gravity? Because peristalsis does not need gravity. It pushes food along mechanically, whichever way you face."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Swallow while hanging upside down",
                     detail: "(With supervision!) Hang your head off the edge of a bed so it's lower than your feet. Take a small sip of water and swallow. It still reaches your stomach — peristalsis works against gravity. Same trick gives giraffes their absurd neck and astronauts their lunch in space."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 GotItButton { onComplete() }
-                    .padding(.bottom, 12)
+                    .padding(.bottom, DesignTokens.Spacing.md)
             
 
             }
 
             .frame(maxWidth: .infinity)
 
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
 
         }
     }

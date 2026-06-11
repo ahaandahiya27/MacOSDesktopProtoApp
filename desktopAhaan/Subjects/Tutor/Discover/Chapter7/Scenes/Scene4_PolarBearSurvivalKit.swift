@@ -55,13 +55,13 @@ struct Scene4_PolarBearSurvivalKit: View {
                 bottomOverlay
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
     @ViewBuilder
     private var mainColumn: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: DesignTokens.Spacing.md) {
             Text("Polar Bear Survival Kit")
                 .font(.title2.bold())
                 .padding(.top, 14)
@@ -73,7 +73,7 @@ struct Scene4_PolarBearSurvivalKit: View {
             bearDiagram
         }
         .frame(maxWidth: .infinity)
-        .padding(.horizontal, 24)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
     }
 
     @ViewBuilder
@@ -177,14 +177,14 @@ struct Scene4_PolarBearSurvivalKit: View {
                 tappedAdaptations.insert(adapt.id)
             }
         } label: {
-            HStack(spacing: 4) {
+            HStack(spacing: DesignTokens.Spacing.xs) {
                 Image(systemName: SFSymbolCompat.name(adapt.symbol))
                     .font(.caption)
                 Text(adapt.name)
                     .font(.caption2.weight(.semibold))
             }
-            .padding(.horizontal, 8)
-            .padding(.vertical, 4)
+            .padding(.horizontal, DesignTokens.Spacing.sm)
+            .padding(.vertical, DesignTokens.Spacing.xs)
             .background(Capsule().fill(bgColor))
             .foregroundColor(.white)
         }
@@ -213,16 +213,16 @@ struct Scene4_PolarBearSurvivalKit: View {
 
             if allTapped {
                 GotItButton { onComplete() }
-                    .padding(.bottom, 12)
+                    .padding(.bottom, DesignTokens.Spacing.md)
             }
         }
-        .padding(.horizontal, 24)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
     }
 
     @ViewBuilder
     private var detailCard: some View {
         SoftShadowCard(padding: 18) {
-            VStack(alignment: .leading, spacing: 8) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                 if let idx = selectedAdaptation, let adapt = adaptations.first(where: { $0.id == idx }) {
                     Label(adapt.name, systemImage: SFSymbolCompat.name(adapt.symbol))
                         .font(.title2.bold())

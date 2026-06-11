@@ -89,30 +89,30 @@ struct SymbiosisPartnershipsLabScene: View {
                 ForEach(partnerships) { p in
                     partnershipRow(p)
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
-                        .padding(.horizontal, 24)
+                        .padding(.horizontal, DesignTokens.Spacing.xl)
                 }
                 if allRevealed {
                     bothWinBadge
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
-                        .padding(.horizontal, 24)
+                        .padding(.horizontal, DesignTokens.Spacing.xl)
                 }
                 LookingAheadCallout(
                     title: "Class 11 / NEET — Mutualism",
                     detail: "These three partnerships are the most-tested examples of mutualism. Mycorrhiza powers ~80% of all land plants in the wild. Rhizobium is why farmers rotate beans into a wheat field — the bacteria leave behind 'free' nitrogen in the soil for the next crop."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
                 TryAtHomeCallout(
                     title: "Spot a partnership outside",
                     detail: "Find any wall or tree bark and look for the crusty grey-green or yellow lichen — alga + fungus. If you grow beans or peas in a pot, gently scrape the soil around the root after a few weeks: you'll see tiny pink-white bumps. Those are the Rhizobium nodules in action."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
                 GotItButton(action: onComplete)
-                    .padding(.bottom, 12)
+                    .padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
@@ -126,7 +126,7 @@ struct SymbiosisPartnershipsLabScene: View {
                 .font(.callout)
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 .multilineTextAlignment(.center)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
         }
     }
 
@@ -134,7 +134,7 @@ struct SymbiosisPartnershipsLabScene: View {
     private func partnershipRow(_ p: Partnership) -> some View {
         let isRevealed = revealed.contains(p.id)
         VStack(alignment: .leading, spacing: 10) {
-            HStack(alignment: .center, spacing: 12) {
+            HStack(alignment: .center, spacing: DesignTokens.Spacing.md) {
                 partnerChip(emoji: p.leftEmoji, name: p.leftName)
                 Text("+")
                     .font(.title3.weight(.bold))
@@ -202,7 +202,7 @@ struct SymbiosisPartnershipsLabScene: View {
 
     private func tradeArrows(_ p: Partnership) -> some View {
         VStack(alignment: .leading, spacing: 6) {
-            HStack(alignment: .top, spacing: 8) {
+            HStack(alignment: .top, spacing: DesignTokens.Spacing.sm) {
                 Image(systemName: "arrow.right")
                     .foregroundColor(DesignTokens.BrandColor.mnemonicAccent)
                 Text("\(p.leftName) gives: ")
@@ -212,7 +212,7 @@ struct SymbiosisPartnershipsLabScene: View {
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
             }
-            HStack(alignment: .top, spacing: 8) {
+            HStack(alignment: .top, spacing: DesignTokens.Spacing.sm) {
                 Image(systemName: "arrow.left")
                     .foregroundColor(DesignTokens.BrandColor.lookingAhead)
                 Text("\(p.rightName) gives: ")
@@ -223,7 +223,7 @@ struct SymbiosisPartnershipsLabScene: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
             }
         }
-        .padding(.top, 4)
+        .padding(.top, DesignTokens.Spacing.xs)
     }
 
     private var bothWinBadge: some View {
@@ -231,7 +231,7 @@ struct SymbiosisPartnershipsLabScene: View {
             Image(systemName: "checkmark.seal.fill")
                 .foregroundColor(DesignTokens.BrandColor.primaryAction)
                 .font(.title3)
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                 Text("Both partners win.")
                     .font(.headline)
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -277,7 +277,7 @@ struct StomataOpenCloseScene: View {
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 stomaDiagram
                     .frame(width: 320, height: 220)
                 Button {
@@ -295,11 +295,11 @@ struct StomataOpenCloseScene: View {
                 .pointingCursor()
                 stomaCaption
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
@@ -341,7 +341,7 @@ struct StomataOpenCloseScene: View {
             .font(.callout)
             .foregroundColor(DesignTokens.BrandColor.canvasText)
             .multilineTextAlignment(.leading)
-            .padding(12)
+            .padding(DesignTokens.Spacing.md)
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
             .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
@@ -368,23 +368,23 @@ struct LightAndRateScene: View {
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 rateBar
                     .frame(width: 220, height: 180)
-                HStack(spacing: 8) {
+                HStack(spacing: DesignTokens.Spacing.sm) {
                     Image(systemName: "sun.min.fill").foregroundColor(.gray)
                     Slider(value: $lightLevel, in: 0...1)
                     Image(systemName: "sun.max.fill").foregroundColor(DesignTokens.BrandColor.mnemonic)
                 }
                 .frame(maxWidth: 340)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
                 rateCaption
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
@@ -414,7 +414,7 @@ struct LightAndRateScene: View {
             .font(.callout)
             .foregroundColor(DesignTokens.BrandColor.canvasText)
             .multilineTextAlignment(.leading)
-            .padding(12)
+            .padding(DesignTokens.Spacing.md)
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
             .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
@@ -464,12 +464,12 @@ struct WaterJourneyScene: View {
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .multilineTextAlignment(.center)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                GotItButton(action: onComplete).padding(.bottom, 12)
+                GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 

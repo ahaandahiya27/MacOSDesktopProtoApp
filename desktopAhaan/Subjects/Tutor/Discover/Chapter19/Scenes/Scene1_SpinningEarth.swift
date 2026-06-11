@@ -22,7 +22,7 @@ struct Scene1_SpinningEarth: View {
         // explanation cards don't cover the interactive content.
         ScrollView {
             LazyVStack(alignment: .center, spacing: 14) {
-                VStack(spacing: 16) {
+                VStack(spacing: DesignTokens.Spacing.lg) {
                     Text("Spinning Earth")
                         .font(.largeTitle.bold())
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -90,14 +90,14 @@ struct Scene1_SpinningEarth: View {
                     }
 
                     // Spin button + counter
-                    VStack(spacing: 8) {
+                    VStack(spacing: DesignTokens.Spacing.sm) {
                         Button {
                             guard !isSpinning else { return }
                             performSpin()
                         } label: {
                             Label("Spin", systemImage: "arrow.triangle.2.circlepath")
                                 .font(.title3.weight(.semibold))
-                                .padding(.horizontal, 24)
+                                .padding(.horizontal, DesignTokens.Spacing.xl)
                                 .padding(.vertical, 10)
                         }
                         
@@ -108,7 +108,7 @@ struct Scene1_SpinningEarth: View {
                             .font(.caption.weight(.medium))
                             .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     }
-                    .padding(.top, 8)
+                    .padding(.top, DesignTokens.Spacing.sm)
 
                     Spacer()
                     Spacer()
@@ -117,7 +117,7 @@ struct Scene1_SpinningEarth: View {
 
                 Group {
                     SoftShadowCard(padding: 18) {
-                        VStack(alignment: .leading, spacing: 8) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                             Label("Day & Night", systemImage: SFSymbolCompat.name("globe.americas.fill"))
                                 .font(.title2.bold())
                             Text(explanationText)
@@ -141,15 +141,15 @@ struct Scene1_SpinningEarth: View {
 
                     if allDone {
                         GotItButton { onComplete() }
-                            .padding(.bottom, 12)
+                            .padding(.bottom, DesignTokens.Spacing.md)
                     }
                 
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 

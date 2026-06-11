@@ -43,10 +43,10 @@ struct Scene2_ConcaveConvex: View {
 
                 Text("Object distance: \(Int(distance)) cm")
                     .font(.headline).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                Slider(value: $distance, in: 5...60, step: 1).frame(maxWidth: 460).padding(.horizontal, 24)
+                Slider(value: $distance, in: 5...60, step: 1).frame(maxWidth: 460).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Text(m.rawValue + " mirror").font(.title3.bold())
                         Text("Image: \(imageDescription)").font(.body)
                         Text(m == .convex
@@ -57,7 +57,7 @@ struct Scene2_ConcaveConvex: View {
                             .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary).lineSpacing(3)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 // Grouped so the outer VStack stays within Swift 5.5's
                 // 10-child ViewBuilder limit (Xcode 13.2.1 / Big Sur target).
@@ -67,20 +67,20 @@ struct Scene2_ConcaveConvex: View {
                         detail: "Look at your face in the inside (concave) of a polished steel spoon held close — you look magnified, upright. Now slowly move it away — your reflection shrinks, blurs, then flips upside down. You just crossed the focal point. Flip the spoon: the back (convex) always shows you smaller and upright, no matter the distance."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     LookingAheadCallout(
                         title: "Class 10 / JEE Optics",
                         detail: "Class 10 formalises this with the mirror formula 1/v + 1/u = 1/f (sign convention matters!) and magnification m = -v/u. JEE adds image construction with 3 principal rays, sign-convention problems on combined mirror-lens systems, and ray-tracing in spherical concave mirrors used inside telescopes."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 }
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
 
         .frame(maxWidth: .infinity, maxHeight: .infinity)

@@ -25,7 +25,7 @@ struct Scene3_TheShearingDay: View {
                         .font(.largeTitle.bold())
                         .foregroundColor(Color.compatIndigo)
                     Spacer()
-                    VStack(alignment: .trailing, spacing: 4) {
+                    VStack(alignment: .trailing, spacing: DesignTokens.Spacing.xs) {
                         Text("Harvested")
                             .font(.caption.weight(.semibold))
                             .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
@@ -34,7 +34,7 @@ struct Scene3_TheShearingDay: View {
                             .foregroundColor(.green)
                     }
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
                 .padding(.top, 20)
 
                 shearingDiagram
@@ -52,30 +52,30 @@ struct Scene3_TheShearingDay: View {
                         }
                     }
                     .frame(maxWidth: 600)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     LookingAheadCallout(
                         title: "Class 12 Economics + NEET ethics",
                         detail: "Shearing season + 'sustainable wool' raise NEET / Class-12 ethics-style questions: cruelty-free certification (RWS standard), carbon cost (sheep methane vs synthetic-fibre fossil CO₂), and animal-welfare law. Whether wool is 'ethical' isn't a yes/no — it's a chain of choices from pasture to label."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     TryAtHomeCallout(
                         title: "Read a wool label",
                         detail: "Find a wool product (shawl, sweater, blanket). Look for these tags: 'RWS' (Responsible Wool Standard — cruelty-free), 'Merino' (breed name = fine wool), 'Pashmina / Cashmere' (goat undercoat from Ladakh / Mongolia). The label is a supply-chain map — country, breed, ethics certification, microns of fineness."
                     )
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     GotItButton {
                         onComplete()
                     }
-                    .padding(.bottom, 12)
+                    .padding(.bottom, DesignTokens.Spacing.md)
                 }
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
@@ -136,12 +136,12 @@ struct Scene3_TheShearingDay: View {
                 }
         }
         .frame(height: 280)
-        .padding(.horizontal, 24)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
     }
 
     @ViewBuilder
     private var shearingControls: some View {
-        HStack(spacing: 12) {
+        HStack(spacing: DesignTokens.Spacing.md) {
             Button {
                 performShearing()
             } label: {
@@ -159,7 +159,7 @@ struct Scene3_TheShearingDay: View {
 
             }
         }
-        .padding(.horizontal, 24)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
     }
 
     private func performShearing() {

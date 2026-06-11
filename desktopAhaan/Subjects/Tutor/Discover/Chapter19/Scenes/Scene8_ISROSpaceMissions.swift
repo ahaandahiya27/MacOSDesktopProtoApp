@@ -179,18 +179,18 @@ struct Scene8_ISROSpaceMissions: View {
                     Spacer()
                 }
                 .frame(maxWidth: .infinity)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 Group {
                     SoftShadowCard(padding: 18) {
-                        VStack(alignment: .leading, spacing: 8) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                             if let idx = selectedMission,
                                let mission = missions.first(where: { $0.id == idx }) {
-                                HStack(spacing: 8) {
+                                HStack(spacing: DesignTokens.Spacing.sm) {
                                     Image(systemName: SFSymbolCompat.name(mission.symbol))
                                         .font(.title2)
                                         .foregroundColor(mission.color)
-                                    VStack(alignment: .leading, spacing: 2) {
+                                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                                         Text(mission.name)
                                             .font(.title2.bold())
                                         Text("\(mission.tagline) (\(mission.year))")
@@ -237,15 +237,15 @@ struct Scene8_ISROSpaceMissions: View {
 
                     if allExplored {
                         GotItButton { onComplete() }
-                            .padding(.bottom, 12)
+                            .padding(.bottom, DesignTokens.Spacing.md)
                     }
                 
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

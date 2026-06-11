@@ -35,33 +35,33 @@ struct Scene5_FishGillFlow: View {
                 }
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Gills: underwater oxygen filters", systemImage: "drop.fill")
                             .font(.title2.bold())
                         Text("Fish gulp water through the mouth and force it out over feathery gills. Dissolved oxygen passes from the water into the blood inside the gills. CO₂ moves the other way and floats off into the water.")
                             .font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 11 Bio → NEET",
                     detail: "Class 11 'Breathing and Exchange of Gases' contrasts the counter-current flow in fish gills (which extracts ~80% of dissolved O₂) with the parallel-flow alveoli of mammals (~25% extraction). Counter-current efficiency is a perennial NEET question."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Aquarium watch",
                     detail: "If you have an aquarium at home (or pass one at a pet shop), watch a fish closely. Its mouth opens and closes; its gill covers flap. Every cycle pulls one mouthful of water across the gills."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

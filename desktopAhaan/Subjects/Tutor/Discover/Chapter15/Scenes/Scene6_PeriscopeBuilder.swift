@@ -39,33 +39,33 @@ struct Scene6_PeriscopeBuilder: View {
                     .accentColor(Color.compatIndigo)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("See around corners", systemImage: "binoculars")
                             .font(.title2.bold())
                         Text("Light from below the wall hits the bottom mirror at 45°, reflects upward, hits the top mirror, reflects out to your eye. Submarines use this trick to see above the water without surfacing.")
                             .font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 12 → JEE Optics",
                     detail: "Class 12 'Ray Optics' covers Total Internal Reflection (TIR) — the principle behind modern fibre-optic submarine periscopes and the internet's optical fibres. Critical angle θ_c = sin⁻¹(1/μ). JEE asks TIR problems every year."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Paper-towel-tube periscope",
                     detail: "Take a long cardboard tube (paper-towel inner). Cut a small window near each end on OPPOSITE sides. Tape one small mirror inside at the top window at 45°, another inside at the bottom window at 45°. Hold it up over a wall — you can see what's on the other side."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
 
         .frame(maxWidth: .infinity, maxHeight: .infinity)

@@ -42,7 +42,7 @@ struct Scene1_SourOrBitter: View {
         // explanation cards don't cover the interactive content.
         ScrollView {
             LazyVStack(alignment: .center, spacing: 14) {
-                VStack(spacing: 16) {
+                VStack(spacing: DesignTokens.Spacing.lg) {
                     Text("Classify each item")
                         .font(.title2.bold())
                         .padding(.top, 18)
@@ -59,7 +59,7 @@ struct Scene1_SourOrBitter: View {
                     if let item = currentItem {
                         // Current item card
                         SoftShadowCard(padding: 24) {
-                            VStack(spacing: 12) {
+                            VStack(spacing: DesignTokens.Spacing.md) {
                                 Text(item.emoji)
                                     .font(.system(size: 64))
                                 Text(item.name)
@@ -89,7 +89,7 @@ struct Scene1_SourOrBitter: View {
                 Group {
                     if allDone {
                         SoftShadowCard(padding: 18) {
-                            VStack(alignment: .leading, spacing: 8) {
+                            VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                                 Label("Well done!", systemImage: "star.fill")
                                     .font(.title2.bold())
                                     .foregroundColor(.orange)
@@ -113,10 +113,10 @@ struct Scene1_SourOrBitter: View {
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
 
                         GotItButton { onComplete() }
-                            .padding(.bottom, 12)
+                            .padding(.bottom, DesignTokens.Spacing.md)
                     } else {
                         SoftShadowCard(padding: 18) {
-                            VStack(alignment: .leading, spacing: 8) {
+                            VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                                 Label("Sour or Bitter?", systemImage: SFSymbolCompat.name("mouth.fill"))
                                     .font(.title2.bold())
                                 Text("Acids taste sour, bases taste bitter. Tap the correct category for each item!")
@@ -125,15 +125,15 @@ struct Scene1_SourOrBitter: View {
                             }
                         }
                         .frame(maxWidth: DesignTokens.contentMaxWidth)
-                        .padding(.bottom, 12)
+                        .padding(.bottom, DesignTokens.Spacing.md)
                     }
                 
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 

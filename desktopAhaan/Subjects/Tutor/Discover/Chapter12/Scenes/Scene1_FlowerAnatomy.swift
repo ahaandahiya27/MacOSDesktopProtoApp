@@ -45,7 +45,7 @@ struct Scene1_FlowerAnatomy: View {
                                 Text(p.emoji).font(.system(size: 28))
                                 Text(p.rawValue).font(.caption)
                             }
-                            .padding(8)
+                            .padding(DesignTokens.Spacing.sm)
                             .background(RoundedRectangle(cornerRadius: 8).fill(pick == p ? Color.compatIndigo.opacity(0.15) : Color.white.opacity(0.95)))
                         }
                         .buttonStyle(.plain)
@@ -53,12 +53,12 @@ struct Scene1_FlowerAnatomy: View {
                 }
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Text(pick.rawValue).font(.title3.bold())
                         Text(pick.role).font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 HotspotDiagram(
                     title: "Parts of a flower — tap each number",
@@ -80,27 +80,27 @@ struct Scene1_FlowerAnatomy: View {
                     ]
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 12 Bio → NEET",
                     detail: "Class 12 'Sexual Reproduction in Flowering Plants' goes deeper. It covers microsporogenesis (pollen forms in the anther), megasporogenesis (the egg forms in the ovule), and the embryo sac (8 nuclei in 7 cells)."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Dissect a hibiscus",
                     detail: "Pluck one fresh hibiscus flower from a garden or roadside. Gently pull it apart on a plate — count 5 petals, 5 fused sepals, many stamens (the yellow-orange male parts), and one pistil with a sticky stigma. India's national-list flower for biology practicals."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
                 Spacer(minLength: 0)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
 
         .frame(maxWidth: .infinity, maxHeight: .infinity)

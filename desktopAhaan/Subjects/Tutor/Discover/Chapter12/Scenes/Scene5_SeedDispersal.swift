@@ -23,7 +23,7 @@ struct Scene5_SeedDispersal: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-            LazyVStack(alignment: .center, spacing: 12) {
+            LazyVStack(alignment: .center, spacing: DesignTokens.Spacing.md) {
                 Text("Seed Dispersal").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("How does each seed travel away from its parent?").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
@@ -46,7 +46,7 @@ struct Scene5_SeedDispersal: View {
                         .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                     }
                 }
-                .frame(maxWidth: 640).padding(.horizontal, 24)
+                .frame(maxWidth: 640).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 if done {
                     Text("Score: \(score) / \(pairs.count)").font(.title3.bold()).foregroundColor(Color.compatIndigo)
@@ -56,34 +56,34 @@ struct Scene5_SeedDispersal: View {
                     Text("If seeds fell straight down they'd compete with the parent. Dispersal spreads them out — the shape of the seed gives away the method.")
                         .font(.callout).lineSpacing(4)
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 12 Bio → NEET",
                     detail: "Class 12 'Reproduction in Organisms' treats seed dispersal as an evolved adaptation. The types are anemochory (wind), hydrochory (water), zoochory (animals) and autochory (self or explosive). It links to Class 12 Ecology. There, limits on dispersal help explain where species live."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Seed sort",
                     detail: "Collect 10 different seeds from a 5-minute walk — dry pods on the ground, fluffy parachutes, fruit-eaten droppings, sticky burrs on socks. Sort them by dispersal method: wind / water / animal / explosion."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 RelatedConceptsCallout(
                     title: "Related: Ch 17 (Forests), Ch 8 (Winds)",
                     detail: "Seed dispersal is how forests regrow (Ch 17). Wind-dispersed seeds (dandelion, pine) ride the same air currents that drive cyclones and breezes (Ch 8). The atmosphere is part of how life spreads."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
+                if done { GotItButton { onComplete(score) }.padding(.bottom, DesignTokens.Spacing.md) }
                 Spacer(minLength: 0)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
 
         .frame(maxWidth: .infinity, maxHeight: .infinity)

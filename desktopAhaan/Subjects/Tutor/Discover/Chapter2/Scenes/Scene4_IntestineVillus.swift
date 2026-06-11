@@ -44,9 +44,9 @@ struct Scene4_IntestineVillus: View {
                     }
                 }
                 .frame(height: 240)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                HStack(spacing: 12) {
+                HStack(spacing: DesignTokens.Spacing.md) {
                     if zoomLevel > 0 {
                         Button(action: { zoomOut() }) {
                             Label("Zoom Out", systemImage: "magnifyingglass.circle.fill")
@@ -64,10 +64,10 @@ struct Scene4_IntestineVillus: View {
 
                     Spacer()
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("The Intestine Villus Tour", systemImage: "smallcircle.filled.circle.fill")
                             .font(.title2.bold())
                             .foregroundColor(.blue)
@@ -95,20 +95,20 @@ struct Scene4_IntestineVillus: View {
                     detail: "Villi raise the gut's surface area about 30×, and micro-villi add another 600×. The total is roughly 250 m² — a tennis court folded into your belly. NEET pairs this with Fick's law of diffusion: rate ∝ area × concentration gradient ÷ thickness. The villus and its capillary handle every term in that law."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Folding for area — the towel trick",
                     detail: "Take a hand towel. Spread it flat — that's how much surface a smooth gut would have. Now scrunch it into hundreds of tiny folds (villi). Spread it back — way more surface fit inside the same outer length! Now imagine each fold has tinier folds on it (micro-villi). That's how 7 metres of intestine fits a tennis-court of absorbing area inside your tummy."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 GotItButton { onComplete() }
-                    .padding(.bottom, 12)
+                    .padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
         .onAppear {
             sceneActive = true

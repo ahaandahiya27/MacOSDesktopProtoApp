@@ -22,7 +22,7 @@ struct Scene4_ArteryVeinCapillary: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-            LazyVStack(alignment: .center, spacing: 12) {
+            LazyVStack(alignment: .center, spacing: DesignTokens.Spacing.md) {
                 Text("Artery / Vein / Capillary").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Three kinds of blood vessels — pick the right one.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
@@ -31,7 +31,7 @@ struct Scene4_ArteryVeinCapillary: View {
                     ForEach(items) { item in
                         VStack(alignment: .leading, spacing: 6) {
                             Text(item.text).font(.body)
-                            HStack(spacing: 8) {
+                            HStack(spacing: DesignTokens.Spacing.sm) {
                                 ForEach(options, id: \.self) { opt in
                                     Button(opt) { picks[item.id] = opt }
                                         .accentColor(picks[item.id] == opt ? Color.compatIndigo : .gray)
@@ -46,7 +46,7 @@ struct Scene4_ArteryVeinCapillary: View {
                         .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
                     }
                 }
-                .frame(maxWidth: 640).padding(.horizontal, 24)
+                .frame(maxWidth: 640).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 if done {
                     Text("Score: \(score) / \(items.count)").font(.title3.bold()).foregroundColor(Color.compatIndigo)
@@ -56,26 +56,26 @@ struct Scene4_ArteryVeinCapillary: View {
                     Text("Arteries push blood out under high pressure, so their walls are thick & elastic. Veins return it at low pressure, with valves to stop backflow. Capillaries are the tiny exchange networks.")
                         .font(.callout).lineSpacing(4)
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Find pulse points",
                     detail: "Try feeling your pulse at four spots: inside the wrist (radial), side of the neck (carotid), back of the knee (popliteal), top of the foot (dorsalis pedis). All of them carry blood from the heart — that's why they pulse with each beat."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 11 Bio → NEET",
                     detail: "Class 11 'Body Fluids and Circulation' studies the three vessel types up close: the tunica intima, media and externa, how valves work, and how blood pressure is measured (systolic and diastolic). These are near-guaranteed NEET questions every cycle."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                if done { GotItButton { onComplete(score) }.padding(.bottom, 12) }
+                if done { GotItButton { onComplete(score) }.padding(.bottom, DesignTokens.Spacing.md) }
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
 
         .frame(maxWidth: .infinity, maxHeight: .infinity)

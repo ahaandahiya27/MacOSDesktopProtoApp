@@ -33,32 +33,32 @@ struct Scene8_TasteAndFlavour: View {
 
                 TongueView()
                     .frame(height: 140)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 HStack {
                     Toggle("Pinch Nose", isOn: $nosePressed)
                         .font(.body)
-                        .padding(.horizontal, 24)
+                        .padding(.horizontal, DesignTokens.Spacing.xl)
 
                     if nosePressed {
                         Text("Smell blocked!")
                             .font(.caption)
                             .foregroundColor(DesignTokens.BrandColor.tryAtHome)
-                            .padding(.horizontal, 24)
+                            .padding(.horizontal, DesignTokens.Spacing.xl)
                     }
                 }
 
                 // Food cards
-                HStack(spacing: 12) {
+                HStack(spacing: DesignTokens.Spacing.md) {
                     FoodCard(food: "apple", flavour: nosePressed ? "Sweet + Watery" : "Apple")
                     FoodCard(food: "onion", flavour: nosePressed ? "Sweet + Watery" : "Onion")
                     FoodCard(food: "strawberry", flavour: nosePressed ? "Sweet + Watery" : "Strawberry")
                     FoodCard(food: "mango", flavour: nosePressed ? "Sweet + Watery" : "Mango")
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Taste & Flavour", systemImage: SFSymbolCompat.name("nose.fill"))
                             .font(.title2.bold())
                             .foregroundColor(.red)
@@ -75,24 +75,24 @@ struct Scene8_TasteAndFlavour: View {
                     detail: "Five taste types — sweet, sour, salty, bitter, umami — map to five distinct receptor families. NEET asks 'how does the brain locate the source of a flavour?' Answer: it doesn't — flavour is taste (tongue) PLUS smell (olfactory bulb). Pinch your nose, eat a slice of onion — it tastes like nothing. Take in a smell-free dose first, then THINK 'apple' — your brain fills in flavour."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Onion-apple swap test",
                     detail: "Cut a thin sliver each of apple and raw onion. Close your eyes, pinch your nose tightly. Have someone hand you a sliver. Chew. You CAN'T tell apple from onion without smell. Now release your nose mid-chew — the apple identity floods in instantly. ~80% of 'taste' is actually smell. (This is also why food is bland when you have a cold.)"
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 GotItButton { onComplete() }
-                    .padding(.bottom, 12)
+                    .padding(.bottom, DesignTokens.Spacing.md)
             
 
             }
 
             .frame(maxWidth: .infinity)
 
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
 
         }
     }
@@ -167,7 +167,7 @@ struct FoodCard: View {
     let flavour: String
 
     var body: some View {
-        VStack(spacing: 8) {
+        VStack(spacing: DesignTokens.Spacing.sm) {
             Text(foodEmoji(food))
                 .font(.system(size: 28))
 

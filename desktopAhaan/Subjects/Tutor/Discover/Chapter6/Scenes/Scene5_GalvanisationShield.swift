@@ -105,7 +105,7 @@ struct Scene5_GalvanisationShield: View {
                     .accessibilityLabel(stepDescription)
 
                     // Step controls
-                    HStack(spacing: 16) {
+                    HStack(spacing: DesignTokens.Spacing.lg) {
                         Button("Expose to rain") {
                             step = .exposed
                             rainActive = true
@@ -142,7 +142,7 @@ struct Scene5_GalvanisationShield: View {
 
                 Group {
                     SoftShadowCard(padding: 18) {
-                        VStack(alignment: .leading, spacing: 8) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                             Label("Preventing rust", systemImage: SFSymbolCompat.name("shield.lefthalf.filled"))
                                 .font(.title2.bold())
                             Text("Galvanisation coats iron with a layer of zinc. Even if scratched, zinc reacts first, protecting the iron underneath. Other methods include:")
@@ -170,12 +170,12 @@ struct Scene5_GalvanisationShield: View {
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
                     GotItButton { onComplete() }
-                        .padding(.bottom, 12)
+                        .padding(.bottom, DesignTokens.Spacing.md)
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
         .timedScene(idealFPS: 20, tick: $tick)
     }
@@ -209,7 +209,7 @@ struct Scene5_GalvanisationShield: View {
     }
 
     private func methodBadge(icon: String, label: String, color: Color) -> some View {
-        VStack(spacing: 4) {
+        VStack(spacing: DesignTokens.Spacing.xs) {
             Image(systemName: icon)
                 .font(.title3)
                 .foregroundColor(color)

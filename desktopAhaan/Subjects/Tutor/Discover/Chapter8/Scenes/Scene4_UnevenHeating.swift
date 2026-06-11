@@ -44,10 +44,10 @@ struct Scene4_UnevenHeating: View {
 
                 Slider(value: $gap, in: 5...60, step: 1)
                     .frame(maxWidth: 460)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Wind = Earth balancing temperature", systemImage: "globe")
                             .font(.title2.bold())
                         Text("Warm air at the equator rises and moves towards the poles. Cold polar air sinks and moves towards the equator. These huge air movements are what create monsoons, trade winds and storms.")
@@ -55,26 +55,26 @@ struct Scene4_UnevenHeating: View {
                     }
                 }
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 11 Physics → JEE",
                     detail: "Class 11 Thermal Physics introduces heat transfer in three modes — conduction, convection, radiation. Wind is large-scale convection. JEE asks the Stefan-Boltzmann law (radiation: E = σT⁴) and Newton's law of cooling regularly."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Sun vs shade thermometer",
                     detail: "Place a kitchen thermometer first in direct sunlight on the ground, then under a shaded leaf canopy. After 5 minutes you'll see a 10-15°C difference. That gap is what drives wind."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }

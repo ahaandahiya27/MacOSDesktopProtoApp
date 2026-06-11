@@ -55,25 +55,25 @@ struct SSDiscoverWordMatchScene: View {
 
     var body: some View {
         ScrollView {
-            LazyVStack(spacing: 16) {
+            LazyVStack(spacing: DesignTokens.Spacing.lg) {
                 Text(title)
                     .font(.largeTitle.bold())
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .multilineTextAlignment(.center)
                     .padding(.top, 18)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 Text(intro)
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .multilineTextAlignment(.center)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 progressCounter
                 matchGrid
                 if solved { completionBlock }
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 16)
+            .padding(.bottom, DesignTokens.Spacing.lg)
         }
         .onAppear {
             if shuffledMeanings.isEmpty { shuffledMeanings = pairs.shuffled() }
@@ -85,7 +85,7 @@ struct SSDiscoverWordMatchScene: View {
             .font(.monoDigitCaption)
             .foregroundColor(DesignTokens.BrandColor.canvasText)
             .padding(.horizontal, 10)
-            .padding(.vertical, 4)
+            .padding(.vertical, DesignTokens.Spacing.xs)
             .background(
                 Capsule()
                     .fill(Color.white.opacity(0.85))
@@ -108,7 +108,7 @@ struct SSDiscoverWordMatchScene: View {
             }
         }
         .frame(maxWidth: 560)
-        .padding(.horizontal, 16)
+        .padding(.horizontal, DesignTokens.Spacing.lg)
     }
 
     private func columnHeader(_ text: String) -> some View {
@@ -138,7 +138,7 @@ struct SSDiscoverWordMatchScene: View {
                         .foregroundColor(.green)
                 }
             }
-            .padding(.horizontal, 12).padding(.vertical, 10)
+            .padding(.horizontal, DesignTokens.Spacing.md).padding(.vertical, 10)
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(RoundedRectangle(cornerRadius: 10).fill(termFill(isMatched: isMatched, isSelected: isSelected)))
             .overlay(
@@ -165,7 +165,7 @@ struct SSDiscoverWordMatchScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .multilineTextAlignment(.leading)
                 .frame(maxWidth: .infinity, alignment: .leading)
-                .padding(.horizontal, 12).padding(.vertical, 10)
+                .padding(.horizontal, DesignTokens.Spacing.md).padding(.vertical, 10)
                 .background(RoundedRectangle(cornerRadius: 10).fill(meaningFill(isMatched: isMatched, isWrong: isWrong)))
                 .overlay(
                     RoundedRectangle(cornerRadius: 10)
@@ -180,7 +180,7 @@ struct SSDiscoverWordMatchScene: View {
     }
 
     private var completionBlock: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: DesignTokens.Spacing.md) {
             Image(systemName: SFSymbolCompat.name("checkmark.seal.fill"))
                 .font(.system(size: 44))
                 .foregroundColor(.green)
@@ -191,7 +191,7 @@ struct SSDiscoverWordMatchScene: View {
                 .multilineTextAlignment(.center)
             GotItButton(label: "Continue", action: onComplete)
         }
-        .padding(.top, 8)
+        .padding(.top, DesignTokens.Spacing.sm)
     }
 
     private func tapMeaning(_ pair: SSDiscoverMatchPair) {
@@ -259,26 +259,26 @@ struct SSDiscoverChronologyScene: View {
 
     var body: some View {
         ScrollView {
-            LazyVStack(spacing: 16) {
+            LazyVStack(spacing: DesignTokens.Spacing.lg) {
                 Text(title)
                     .font(.largeTitle.bold())
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
                     .multilineTextAlignment(.center)
                     .padding(.top, 18)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 Text(intro)
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .multilineTextAlignment(.center)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 progressCounter
                 placedColumn
                 poolColumn
                 if solved { completionBlock }
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 16)
+            .padding(.bottom, DesignTokens.Spacing.lg)
         }
         .onAppear {
             if scrambled.isEmpty { scrambled = Self.scramble(count: steps.count) }
@@ -290,7 +290,7 @@ struct SSDiscoverChronologyScene: View {
             .font(.monoDigitCaption)
             .foregroundColor(DesignTokens.BrandColor.canvasText)
             .padding(.horizontal, 10)
-            .padding(.vertical, 4)
+            .padding(.vertical, DesignTokens.Spacing.xs)
             .background(
                 Capsule()
                     .fill(Color.white.opacity(0.85))
@@ -302,7 +302,7 @@ struct SSDiscoverChronologyScene: View {
     /// The ordered timeline the learner has built so far.
     private var placedColumn: some View {
         SoftShadowCard(padding: 14) {
-            VStack(alignment: .leading, spacing: 8) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                 Text("Your timeline")
                     .font(.caption.weight(.bold))
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
@@ -319,17 +319,17 @@ struct SSDiscoverChronologyScene: View {
             .frame(maxWidth: .infinity, alignment: .leading)
         }
         .frame(maxWidth: 560)
-        .padding(.horizontal, 16)
+        .padding(.horizontal, DesignTokens.Spacing.lg)
     }
 
     private func placedRow(slot: Int, step: TimelineStep) -> some View {
-        HStack(alignment: .top, spacing: 8) {
+        HStack(alignment: .top, spacing: DesignTokens.Spacing.sm) {
             Text("\(slot + 1)")
                 .font(.monoDigitCaption.weight(.bold))
                 .foregroundColor(.white)
                 .frame(width: 22, height: 22)
                 .background(Circle().fill(ssAccent))
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                 Text(step.label)
                     .font(.subheadline.weight(.semibold))
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -339,7 +339,7 @@ struct SSDiscoverChronologyScene: View {
             }
             Spacer(minLength: 0)
         }
-        .padding(.horizontal, 10).padding(.vertical, 8)
+        .padding(.horizontal, 10).padding(.vertical, DesignTokens.Spacing.sm)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(RoundedRectangle(cornerRadius: 10).fill(Color.green.opacity(0.12)))
         .accessibilityElement(children: .combine)
@@ -361,7 +361,7 @@ struct SSDiscoverChronologyScene: View {
             .frame(maxWidth: .infinity, alignment: .leading)
         }
         .frame(maxWidth: 560)
-        .padding(.horizontal, 16)
+        .padding(.horizontal, DesignTokens.Spacing.lg)
     }
 
     private func poolButton(_ idx: Int) -> some View {
@@ -370,12 +370,12 @@ struct SSDiscoverChronologyScene: View {
         return Button {
             tapEvent(idx)
         } label: {
-            HStack(alignment: .top, spacing: 8) {
+            HStack(alignment: .top, spacing: DesignTokens.Spacing.sm) {
                 Image(systemName: SFSymbolCompat.name("hand.tap.fill"))
                     .font(.caption)
                     .foregroundColor(ssAccent)
                     .accessibilityHidden(true)
-                VStack(alignment: .leading, spacing: 2) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                     Text(step.label)
                         .font(.subheadline.weight(.semibold))
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -402,7 +402,7 @@ struct SSDiscoverChronologyScene: View {
     }
 
     private var completionBlock: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: DesignTokens.Spacing.md) {
             Image(systemName: SFSymbolCompat.name("checkmark.seal.fill"))
                 .font(.system(size: 44))
                 .foregroundColor(.green)
@@ -413,7 +413,7 @@ struct SSDiscoverChronologyScene: View {
                 .multilineTextAlignment(.center)
             GotItButton(label: "Continue", action: onComplete)
         }
-        .padding(.top, 8)
+        .padding(.top, DesignTokens.Spacing.sm)
     }
 
     private func tapEvent(_ idx: Int) {

@@ -80,7 +80,7 @@ struct Scene3_ThreeIndicatorTests: View {
                     if let ai = activeIndicator, let sol = activeSolution {
                         let ind = indicators[ai]
                         SoftShadowCard(padding: 18) {
-                            VStack(alignment: .leading, spacing: 8) {
+                            VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                                 Label(ind.name, systemImage: ind.icon)
                                     .font(.title2.bold())
                                     .foregroundColor(sol == .acid ? ind.acidColor : ind.baseColor)
@@ -93,7 +93,7 @@ struct Scene3_ThreeIndicatorTests: View {
                         .transition(.opacity)
                     } else {
                         SoftShadowCard(padding: 18) {
-                            VStack(alignment: .leading, spacing: 8) {
+                            VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                                 Label("Three Indicator Tests", systemImage: SFSymbolCompat.name("testtube.2"))
                                     .font(.title2.bold())
                                 Text("Indicators change colour in acids and bases. Tap the acid or base button on each test tube to see what happens!")
@@ -132,18 +132,18 @@ struct Scene3_ThreeIndicatorTests: View {
 
                     if allTested {
                         GotItButton { onComplete() }
-                            .padding(.bottom, 12)
+                            .padding(.bottom, DesignTokens.Spacing.md)
                     } else {
                         Text("Test all 3 indicators with both acid and base")
                             .font(.caption)
                             .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                            .padding(.bottom, 12)
+                            .padding(.bottom, DesignTokens.Spacing.md)
                     }
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 
@@ -179,7 +179,7 @@ struct Scene3_ThreeIndicatorTests: View {
             }
 
             // Buttons
-            HStack(spacing: 8) {
+            HStack(spacing: DesignTokens.Spacing.sm) {
                 Button("+ Acid") {
                     addSolution(.acid, to: index)
                 }
@@ -196,7 +196,7 @@ struct Scene3_ThreeIndicatorTests: View {
             }
 
             // Checkmarks
-            HStack(spacing: 4) {
+            HStack(spacing: DesignTokens.Spacing.xs) {
                 if testedSolutions.contains(.acid) {
                     Image(systemName: "checkmark.circle.fill")
                         .foregroundColor(.red)
@@ -210,7 +210,7 @@ struct Scene3_ThreeIndicatorTests: View {
             }
         }
         .frame(maxWidth: .infinity)
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .background(
             RoundedRectangle(cornerRadius: 16, style: .continuous)
                 .fill(Color.white)

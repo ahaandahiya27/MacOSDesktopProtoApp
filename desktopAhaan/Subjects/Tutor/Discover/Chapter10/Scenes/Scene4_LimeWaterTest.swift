@@ -36,26 +36,26 @@ struct Scene4_LimeWaterTest: View {
                     .foregroundColor(milky ? .green : .secondary)
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("How we test for CO₂", systemImage: SFSymbolCompat.name("testtube.2"))
                             .font(.title2.bold())
                         Text("Calcium hydroxide (limewater) reacts with CO₂ to form solid calcium carbonate (chalk), turning the liquid milky. Your exhaled breath contains around 4% CO₂ — enough to do this in seconds.")
                             .font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Brew your own limewater",
                     detail: "Mix slaked lime (chunna, from a paan shop) with water in a jar, let it settle overnight. Pour off the clear top into a glass. Blow through a straw — the liquid turns milky."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 }

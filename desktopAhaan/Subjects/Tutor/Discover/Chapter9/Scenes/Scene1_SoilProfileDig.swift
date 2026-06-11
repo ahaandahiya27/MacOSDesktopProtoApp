@@ -32,11 +32,11 @@ struct Scene1_SoilProfileDig: View {
         // Wrapped in ScrollView so the scene scrolls on
         // shorter windows and overflowing content remains accessible.
         ScrollView {
-            LazyVStack(alignment: .center, spacing: 12) {
+            LazyVStack(alignment: .center, spacing: DesignTokens.Spacing.md) {
                 Text("Soil Profile Dig").font(.largeTitle.bold()).foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 Text("Tap a layer to learn what lives there.").font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-                HStack(alignment: .top, spacing: 24) {
+                HStack(alignment: .top, spacing: DesignTokens.Spacing.xl) {
                     VStack(spacing: 0) {
                         ForEach(horizons) { h in
                             Button { selected = h.id } label: {
@@ -45,7 +45,7 @@ struct Scene1_SoilProfileDig: View {
                                     Text(h.name).font(.headline)
                                     Spacer()
                                 }
-                                .padding(.horizontal, 12)
+                                .padding(.horizontal, DesignTokens.Spacing.md)
                                 .frame(height: 56)
                                 .background(h.color.opacity(0.85))
                                 .foregroundColor(.white)
@@ -59,7 +59,7 @@ struct Scene1_SoilProfileDig: View {
 
                     if let s = horizons.first(where: { $0.id == selected }) {
                         SoftShadowCard(padding: 16) {
-                            VStack(alignment: .leading, spacing: 8) {
+                            VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                                 Text("\(s.code) — \(s.name)").font(.title3.bold())
                                 Text(s.blurb).font(.body).lineSpacing(4)
                             }
@@ -87,27 +87,27 @@ struct Scene1_SoilProfileDig: View {
                     accent: Color(red: 0.45, green: 0.30, blue: 0.15)
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 9 Geography",
                     detail: "Class 9 Geography studies India's soil types. They include alluvial (Indo-Gangetic plain), black (Deccan plateau, great for cotton), red (Tamil Nadu, Karnataka), laterite (Western Ghats) and arid (Rajasthan). Each one is the end product of a different mix. Parent rock, climate and living things work on it over thousands of years."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Dig a shoebox-deep pit",
                     detail: "With permission, dig a foot-deep hole in a garden. Notice the colours change with depth — dark on top, lighter below, then small stones. You've just seen O → A → B horizons."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.top, 8).padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.top, DesignTokens.Spacing.sm).padding(.bottom, DesignTokens.Spacing.md)
                 Spacer(minLength: 0)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
 
         .frame(maxWidth: .infinity, maxHeight: .infinity)

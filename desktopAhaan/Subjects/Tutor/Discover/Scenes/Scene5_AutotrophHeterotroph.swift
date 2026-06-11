@@ -73,7 +73,7 @@ struct Scene5_AutotrophHeterotroph: View {
                 actionsRow
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
         .overlay(celebrationOverlay)
         .onAppear {
@@ -93,7 +93,7 @@ struct Scene5_AutotrophHeterotroph: View {
             )
         }
         .frame(maxWidth: DesignTokens.contentMaxWidth)
-        .padding(.horizontal, 24)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
     }
 
     @ViewBuilder
@@ -105,7 +105,7 @@ struct Scene5_AutotrophHeterotroph: View {
             Spacer()
             ScoreBadge(value: correctCount, total: 12)
         }
-        .padding(.horizontal, 24)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
         .padding(.top, 18)
     }
 
@@ -153,7 +153,7 @@ struct Scene5_AutotrophHeterotroph: View {
             }
         }
         .frame(maxWidth: 560)
-        .padding(.horizontal, 24)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
     }
 
     @ViewBuilder
@@ -174,7 +174,7 @@ struct Scene5_AutotrophHeterotroph: View {
             .background(heterotrophZoneTracker)
         }
         .frame(maxWidth: 600)
-        .padding(.horizontal, 24)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
     }
 
     @ViewBuilder
@@ -201,7 +201,7 @@ struct Scene5_AutotrophHeterotroph: View {
             Text(fb)
                 .font(.callout.weight(.medium))
                 .foregroundColor(Color.compatIndigo)
-                .padding(.top, 4)
+                .padding(.top, DesignTokens.Spacing.xs)
                 .transition(.opacity)
         }
     }
@@ -224,7 +224,7 @@ struct Scene5_AutotrophHeterotroph: View {
                 }
             }
         }
-        .padding(.bottom, 12)
+        .padding(.bottom, DesignTokens.Spacing.md)
     }
 
     @ViewBuilder

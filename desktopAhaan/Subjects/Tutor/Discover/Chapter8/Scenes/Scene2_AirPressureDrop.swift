@@ -44,7 +44,7 @@ struct Scene2_AirPressureDrop: View {
                 )
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Fast-moving air has lower pressure", systemImage: "wind")
                             .font(.title2.bold())
                         Text("Blowing between the strips makes the air there move quickly. Quick-moving air pushes less sideways, so the slower air outside pushes the strips together. Cyclones, hurricanes, even airplane wings use this idea.")
@@ -52,19 +52,19 @@ struct Scene2_AirPressureDrop: View {
                     }
                 }
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Bernoulli at the table",
                     detail: "Hold two strips of paper a finger-width apart. Blow hard between them. They swing TOGETHER, not apart — fast air has lower pressure."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
     }

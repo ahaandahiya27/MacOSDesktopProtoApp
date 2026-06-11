@@ -24,11 +24,11 @@ struct Scene5_SeaBreezeLandBreeze: View {
                 GeometryReader { geo in
 
                     ZStack {
-                VStack(spacing: 16) {
+                VStack(spacing: DesignTokens.Spacing.lg) {
                     Spacer()
 
                     // Day / Night toggle
-                    HStack(spacing: 12) {
+                    HStack(spacing: DesignTokens.Spacing.md) {
                         Image(systemName: "sun.max.fill")
                             .foregroundColor(.yellow)
                             .opacity(isDay ? 1 : 0.3)
@@ -136,7 +136,7 @@ struct Scene5_SeaBreezeLandBreeze: View {
 
                 Group {
                     SoftShadowCard(padding: 18) {
-                        VStack(alignment: .leading, spacing: 8) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                             Label("Sea Breeze & Land Breeze", systemImage: "wind")
                                 .font(.title2.bold())
                             Text(isDay
@@ -161,19 +161,19 @@ struct Scene5_SeaBreezeLandBreeze: View {
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
 
                     GotItButton { onComplete() }
-                        .padding(.bottom, 12)
+                        .padding(.bottom, DesignTokens.Spacing.md)
                 
 
                 }
 
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
             
 
             }
 
             .frame(maxWidth: .infinity)
 
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
 
         }
     }

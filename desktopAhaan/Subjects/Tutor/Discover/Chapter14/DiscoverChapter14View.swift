@@ -127,13 +127,13 @@ private struct SymbolsComponentsScene: View {
                             Text("Tap").font(.caption.italic())
                                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         }
-                    }.padding(12).frame(maxWidth: DesignTokens.contentMaxWidth)
+                    }.padding(DesignTokens.Spacing.md).frame(maxWidth: DesignTokens.contentMaxWidth)
                     .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
                     .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, 24)
+                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, DesignTokens.Spacing.xl)
             }
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -157,13 +157,13 @@ private struct VoltageSliderScene: View {
             }
             Text("\(String(format: "%.1f", v)) V").font(.title2.monospacedDigit())
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
-            Slider(value: $v, in: 0...6).frame(maxWidth: 340).padding(.horizontal, 24)
+            Slider(value: $v, in: 0...6).frame(maxWidth: 340).padding(.horizontal, DesignTokens.Spacing.xl)
             Text("Voltage is the 'push' that drives electrons. More volts → brighter bulb. Above the bulb's rating it burns out.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -183,7 +183,7 @@ private struct BatteryTypesAtlasScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             ForEach(bats) { b in
                 Button { tapped.insert(b.id) } label: {
-                    VStack(alignment: .leading, spacing: 4) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                         HStack { Text(b.emoji).font(.title2)
                             Text(b.name).font(.headline).foregroundColor(DesignTokens.BrandColor.canvasText) }
                         if tapped.contains(b.id) {
@@ -193,13 +193,13 @@ private struct BatteryTypesAtlasScene: View {
                             Text("Tap to reveal").font(.caption.italic())
                                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         }
-                    }.padding(12).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
+                    }.padding(DesignTokens.Spacing.md).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
                     .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
                     .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, 24)
+                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, DesignTokens.Spacing.xl)
             }
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -225,8 +225,8 @@ private struct ConductorInsulatorSorterScene: View {
                 Text("Score: \(correct) / \(items.count)").font(.headline)
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
             }
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
     @ViewBuilder
     private func row(_ i: M) -> some View {
@@ -239,11 +239,11 @@ private struct ConductorInsulatorSorterScene: View {
                 ans(v ? "Conductor" : "Insulator", v: v, pick: pick, correct: i.conducts, id: i.id)
             }
         }
-        .padding(.horizontal, 14).padding(.vertical, 8)
+        .padding(.horizontal, 14).padding(.vertical, DesignTokens.Spacing.sm)
         .frame(maxWidth: DesignTokens.contentMaxWidth)
         .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.85)))
         .overlay(RoundedRectangle(cornerRadius: 10).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-        .padding(.horizontal, 24)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
     }
     private func ans(_ label: String, v: Bool, pick: Bool?, correct: Bool, id: String) -> some View {
         let isPicked = pick == v
@@ -254,7 +254,7 @@ private struct ConductorInsulatorSorterScene: View {
             if picks[id] == nil { picks[id] = v }
         } label: {
             Text(label).font(.caption.weight(.semibold))
-                .padding(.horizontal, 8).padding(.vertical, 5)
+                .padding(.horizontal, DesignTokens.Spacing.sm).padding(.vertical, 5)
                 .background(Capsule().fill(tint.opacity(isPicked ? 0.22 : 0.10)))
                 .overlay(Capsule().strokeBorder(tint.opacity(0.5), lineWidth: 1))
                 .foregroundColor(tint)
@@ -271,10 +271,10 @@ private struct MaglevTrainScene: View {
             Text("🚆").font(.system(size: 100))
             Text("Maglev (magnetic levitation) trains float on powerful electromagnets. No wheels, no friction with the track. Japan's L0 hit 603 km/h. China's Shanghai Maglev does 431 km/h on a daily commute. India's Vande Bharat is conventional but Maglev is the future.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -287,10 +287,10 @@ private struct SolenoidRightHandScene: View {
             Text("✋").font(.system(size: 100))
             Text("Wrap your right hand around the coil so fingers curl in the direction of current flow. Your THUMB points to the north pole of the resulting electromagnet. Reverse the current → poles swap.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -311,13 +311,13 @@ private struct ElectricityBillScene: View {
             Text("≈ ₹\(String(format: "%.0f", rupees * 30)) / month").font(.title.monospacedDigit())
                 .foregroundColor(DesignTokens.BrandColor.primaryAction)
             Text("Watts").font(.caption).foregroundColor(.secondary)
-            Slider(value: $watts, in: 100...3000).frame(maxWidth: 340).padding(.horizontal, 24)
+            Slider(value: $watts, in: 100...3000).frame(maxWidth: 340).padding(.horizontal, DesignTokens.Spacing.xl)
             Text("Hours/day").font(.caption).foregroundColor(.secondary)
-            Slider(value: $hours, in: 1...24).frame(maxWidth: 340).padding(.horizontal, 24)
+            Slider(value: $hours, in: 1...24).frame(maxWidth: 340).padding(.horizontal, DesignTokens.Spacing.xl)
             Text("1 unit (kWh) = ₹6–10 typical Indian residential rate.")
                 .font(.caption).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -339,10 +339,10 @@ private struct DCvsACScene: View {
                  ? "Direct Current: electrons flow in ONE direction. From batteries, solar cells, USB. 1.5V dry cell, 3.7V phone battery."
                  : "Alternating Current: electrons swing back and forth 50 times per second (50 Hz in India). From wall sockets. 230V mains.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                .multilineTextAlignment(.center).padding(.horizontal, 24)
+                .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
     private func pickChip(_ label: String, on: Bool, tap: @escaping () -> Void) -> some View {
         Button(action: tap) {
@@ -375,19 +375,19 @@ private struct LiveNeutralEarthScene: View {
                         Text(p.color).font(.headline).foregroundColor(DesignTokens.BrandColor.canvasText)
                         Spacer()
                     }
-                    .padding(12).frame(maxWidth: DesignTokens.contentMaxWidth)
+                    .padding(DesignTokens.Spacing.md).frame(maxWidth: DesignTokens.contentMaxWidth)
                     .background(RoundedRectangle(cornerRadius: 12)
                         .fill(pin == p.id ? Color.compatIndigo.opacity(0.12) : Color.white.opacity(0.85)))
                     .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, 24)
+                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, DesignTokens.Spacing.xl)
             }
             if let s = pin, let p = pins.first(where: { $0.id == s }) {
                 Text(p.role).font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
-                    .multilineTextAlignment(.center).padding(.horizontal, 24)
+                    .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)
                     .frame(maxWidth: DesignTokens.contentMaxWidth)
             }
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 
@@ -407,7 +407,7 @@ private struct PowerGenerationAtlasScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             ForEach(gens) { g in
                 Button { tapped.insert(g.id) } label: {
-                    VStack(alignment: .leading, spacing: 4) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                         HStack { Text(g.emoji).font(.title2)
                             Text(g.name).font(.headline).foregroundColor(DesignTokens.BrandColor.canvasText) }
                         if tapped.contains(g.id) {
@@ -417,13 +417,13 @@ private struct PowerGenerationAtlasScene: View {
                             Text("Tap to reveal").font(.caption.italic())
                                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         }
-                    }.padding(12).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
+                    }.padding(DesignTokens.Spacing.md).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
                     .background(RoundedRectangle(cornerRadius: 12).fill(Color.white.opacity(0.85)))
                     .overlay(RoundedRectangle(cornerRadius: 12).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
-                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, 24)
+                }.buttonStyle(.plain).pointingCursor().padding(.horizontal, DesignTokens.Spacing.xl)
             }
-            GotItButton(action: onComplete).padding(.bottom, 12)
-        }.frame(maxWidth: .infinity).padding(.bottom, 12) }
+            GotItButton(action: onComplete).padding(.bottom, DesignTokens.Spacing.md)
+        }.frame(maxWidth: .infinity).padding(.bottom, DesignTokens.Spacing.md) }
     }
 }
 

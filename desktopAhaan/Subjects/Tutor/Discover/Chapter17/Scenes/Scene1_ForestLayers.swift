@@ -29,7 +29,7 @@ struct Scene1_ForestLayers: View {
                 Text("A forest is built like a 4-storey building. Tap each floor.")
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
-                VStack(spacing: 2) {
+                VStack(spacing: DesignTokens.Spacing.xxs) {
                     ForEach(Layer.allCases) { l in
                         Button { pick = l } label: {
                             HStack { Text(l.rawValue).foregroundColor(.white); Spacer() }
@@ -49,26 +49,26 @@ struct Scene1_ForestLayers: View {
                         Text(pick.blurb).font(.body).lineSpacing(4)
                     }
                 }
-                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, 24)
+                .frame(maxWidth: DesignTokens.contentMaxWidth).padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 12 Bio → NEET",
                     detail: "Class 12 'Ecosystem' turns this into ecological pyramids. One is the pyramid of biomass. The pyramid of energy is always upright, by the 10% rule. The pyramid of numbers can be upside-down in parasite chains. NEET tests these every year. Class 12 also adds India's forest types and biodiversity hotspots."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Park stratification walk",
                     detail: "In your nearest park, look UP at three heights: tall tree-tops (canopy), 3-metre shrubs (understory), and the ground (floor). Note which birds and insects you see at each level. Most species stick to one layer for their entire lives."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
     }
 

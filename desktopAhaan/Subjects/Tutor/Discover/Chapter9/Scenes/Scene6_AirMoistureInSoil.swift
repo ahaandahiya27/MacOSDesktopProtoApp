@@ -30,19 +30,19 @@ struct Scene6_AirMoistureInSoil: View {
                 ZStack {
                     RoundedRectangle(cornerRadius: 18).fill(Color.compatCyan.opacity(0.12))
                         .frame(width: 320, height: 260)
-                    VStack(spacing: 8) {
+                    VStack(spacing: DesignTokens.Spacing.sm) {
                         Text(demo == .air ? "🧪💧" : "🔥🧪")
                             .font(.system(size: 72))
                         Text(demo == .air ? "Bubbles rise from soil → soil contained air!"
                                            : "Droplets form on cool glass → soil had water!")
                             .multilineTextAlignment(.center)
                             .font(.callout)
-                            .padding(.horizontal, 16)
+                            .padding(.horizontal, DesignTokens.Spacing.lg)
                     }
                 }
 
                 SoftShadowCard(padding: 18) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Soil is not just solid", systemImage: SFSymbolCompat.name("bubbles.and.sparkles"))
                             .font(.title2.bold())
                         Text("Pour dry soil into water → tiny bubbles escape. Heat moist soil in a test tube → water vapour condenses on the cool top. Soil is a mix of solids, water, and air — that's why roots can breathe through it.")
@@ -50,27 +50,27 @@ struct Scene6_AirMoistureInSoil: View {
                     }
                 }
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 LookingAheadCallout(
                     title: "Class 11 Bio → NEET",
                     detail: "Class 11 'Mineral Nutrition' treats soil as a chemical store. Plants take in 17 essential elements through their root hairs. NEET asks about the soil microbiome every cycle — nitrogen-fixing Rhizobium and mycorrhizae."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
                 TryAtHomeCallout(
                     title: "Bubbles from soil",
                     detail: "Drop a fistful of dry garden soil into a glass of water. Watch the bubbles rise — that's air that was hiding between the soil grains."
                 )
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
 
-                GotItButton { onComplete() }.padding(.bottom, 12)
+                GotItButton { onComplete() }.padding(.bottom, DesignTokens.Spacing.md)
                 Spacer(minLength: 0)
             }
             .frame(maxWidth: .infinity)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
         }
 
         .frame(maxWidth: .infinity, maxHeight: .infinity)
