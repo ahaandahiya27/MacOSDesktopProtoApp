@@ -90,7 +90,7 @@ struct DailyPhraseCard: View {
         }
         .padding()
         .background(Color(NSColor.controlBackgroundColor))
-        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .clipShape(RoundedRectangle(cornerRadius: DesignTokens.Radius.lg))
         .shadow(color: .black.opacity(0.06), radius: 8, y: 2)
         .padding(.horizontal)
     }
@@ -169,7 +169,7 @@ struct CategoryCard: View {
             .frame(maxWidth: .infinity)
             .padding(.vertical, 20)
             .background(Color.gray.opacity(0.15))
-            .clipShape(RoundedRectangle(cornerRadius: 14))
+            .clipShape(RoundedRectangle(cornerRadius: DesignTokens.Radius.card))
         }
     }
 }

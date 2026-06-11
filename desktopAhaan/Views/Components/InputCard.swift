@@ -25,7 +25,7 @@ struct InputCard: View {
                 .font(.body)
                 .padding(DesignTokens.Spacing.sm)
                 .background(Color.gray.opacity(0.12))
-                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .clipShape(RoundedRectangle(cornerRadius: DesignTokens.Radius.md))
                 .onChange(of: text) { newValue in
                     if newValue.count > maxCharacters {
                         text = String(newValue.prefix(maxCharacters))
@@ -53,7 +53,7 @@ struct InputCard: View {
         }
         .padding()
         .background(Color(NSColor.controlBackgroundColor))
-        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .clipShape(RoundedRectangle(cornerRadius: DesignTokens.Radius.lg))
         .shadow(color: .black.opacity(0.05), radius: 8, y: 2)
         .padding(.horizontal)
     }

@@ -40,11 +40,11 @@ struct AchievementBadgeView: View {
         .padding(DesignTokens.Spacing.md)
         .frame(maxWidth: .infinity, minHeight: 150)
         .background(
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(Color(NSColor.controlBackgroundColor))
         )
         .overlay(
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .stroke(isUnlocked ? achievement.tier.tint.opacity(0.55)
                                    : Color.gray.opacity(0.25),
                         lineWidth: isUnlocked ? 1.5 : 1)

@@ -141,7 +141,7 @@ struct TranslationResultCard: View {
         }
         .padding()
         .background(Color(NSColor.controlBackgroundColor))
-        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .clipShape(RoundedRectangle(cornerRadius: DesignTokens.Radius.lg))
         .shadow(color: .black.opacity(0.06), radius: 10, y: 3)
         .padding(.horizontal)
     }

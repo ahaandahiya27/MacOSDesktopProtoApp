@@ -42,12 +42,12 @@ struct AchievementToastView: View {
         .padding(DesignTokens.Spacing.md)
         .frame(width: 300, alignment: .leading)
         .background(
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(Color(NSColor.windowBackgroundColor))
                 .shadow(color: Color.black.opacity(0.18), radius: 10, x: 0, y: 4)
         )
         .overlay(
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .stroke(achievement.tier.tint.opacity(0.4), lineWidth: 1.5)
         )
         .offset(x: offsetX)

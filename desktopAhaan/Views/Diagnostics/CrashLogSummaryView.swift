@@ -185,7 +185,7 @@ private struct CrashRow: View {
         }
         .padding(10)
         .background(
-            RoundedRectangle(cornerRadius: 8)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                 .fill(Color(NSColor.controlBackgroundColor))
         )
     }

@@ -122,7 +122,7 @@ struct WeeklyProgressView: View {
         }
         .padding(DesignTokens.Spacing.lg)
         .background(
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(DesignTokens.BrandColor.tryAtHome.opacity(0.08))
         )
         .accessibilityElement(children: .combine)
@@ -188,7 +188,7 @@ struct WeeklyProgressView: View {
         .padding(DesignTokens.Spacing.sm)
         .frame(maxWidth: .infinity, minHeight: 112, alignment: .top)
         .background(
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                 .fill(day.isEmpty
                       ? Color.gray.opacity(0.06)
                       : DesignTokens.BrandColor.success.opacity(0.08))

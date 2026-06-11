@@ -153,7 +153,7 @@ private struct DailyPracticeContent: View {
         }
         .padding(DesignTokens.Spacing.lg)
         .background(
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(Color.orange.opacity(0.08))
         )
     }
@@ -472,11 +472,11 @@ private struct ReviewSessionSheet: View {
             .frame(maxWidth: .infinity)
             .padding(.vertical, DesignTokens.Spacing.sm)
             .background(
-                RoundedRectangle(cornerRadius: 10)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                     .fill(color.opacity(0.15))
             )
             .overlay(
-                RoundedRectangle(cornerRadius: 10)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                     .strokeBorder(color.opacity(0.45), lineWidth: 1)
             )
             .foregroundColor(color)

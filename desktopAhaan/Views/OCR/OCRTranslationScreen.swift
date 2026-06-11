@@ -107,13 +107,13 @@ struct OCRTranslationScreen: View {
         .overlay(
             // Drop-zone hover state: dashed purple border appears when the
             // user is dragging a valid file over the area (EM5).
-            RoundedRectangle(cornerRadius: 16)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.lg)
                 .strokeBorder(
                     Color.purple.opacity(isDropTargeted ? 0.85 : 0),
                     style: StrokeStyle(lineWidth: 2, dash: [6, 4])
                 )
         )
-        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .clipShape(RoundedRectangle(cornerRadius: DesignTokens.Radius.lg))
         .padding(.horizontal)
         .onDrop(of: ["public.file-url"], isTargeted: $isDropTargeted) { handleDrop(providers: $0) }
     }
@@ -155,7 +155,7 @@ struct OCRTranslationScreen: View {
                 .font(.body)
                 .padding(DesignTokens.Spacing.sm)
                 .background(Color.gray.opacity(0.15))
-                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .clipShape(RoundedRectangle(cornerRadius: DesignTokens.Radius.md))
                 // Soft cap matched to a typical textbook page after OCR;
                 // anything longer is almost certainly accidental paste.
                 .onChange(of: editedText) { newValue in
@@ -166,7 +166,7 @@ struct OCRTranslationScreen: View {
         }
         .padding()
         .background(Color(NSColor.controlBackgroundColor))
-        .clipShape(RoundedRectangle(cornerRadius: 16))
+        .clipShape(RoundedRectangle(cornerRadius: DesignTokens.Radius.lg))
         .padding(.horizontal)
     }
 

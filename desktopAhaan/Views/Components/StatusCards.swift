@@ -11,7 +11,7 @@ struct OfflineBanner: View {
         .padding(10)
         .frame(maxWidth: .infinity)
         .background(Color.orange.opacity(0.1))
-        .clipShape(RoundedRectangle(cornerRadius: 10))
+        .clipShape(RoundedRectangle(cornerRadius: DesignTokens.Radius.md))
         .padding(.horizontal)
     }
 }

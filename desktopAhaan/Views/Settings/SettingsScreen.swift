@@ -44,7 +44,7 @@ struct SettingsScreen: View {
         .padding(10)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(
-            RoundedRectangle(cornerRadius: 8)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                 .fill(Color.gray.opacity(0.1))
         )
     }
