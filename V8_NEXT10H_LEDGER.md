@@ -17,9 +17,31 @@ this file. Phase sentinels printed to the run log: `V8_PHASE<N>_COMPLETE_v1`.
 | 1 | Triplet-completeness lint (`check_testpaper_triplet.py`) | ✅ done |
 | 2 | Coverage ledger + issue row Y5 | ✅ done |
 | 3 | Extend the Advanced tier (the bulk) | ✅ done — 69/69 |
-| 4 | Bespoke Discover depth (Swift; guarded) | ⏳ pending |
-| 5 | Visual library + a11y (Swift; guarded) | ⏳ pending |
-| 6 | Document (`V8_NEXT10H_CHECKPOINT.md`) | ⏳ pending |
+| 4 | Bespoke Discover depth (Swift; guarded) | ✅ done — SS Discover gated interactive |
+| 5 | Visual library + a11y (Swift; guarded) | ✅ library (76/76, 0 unreg) · ⏸ H7 deferred |
+| 6 | Document (`V8_NEXT10H_CHECKPOINT.md`) | ✅ done |
+
+### Phase 4 (✅ — Social Science Discover gated interactive)
+
+Audit found SS + Sanskrit already carry bespoke per-chapter interactives in the
+chapter **detail** surface (16 SS widgets + Sanskrit word-match). The genuine gap
+was the Discover **scene flow**: SS was the only subject with no gated Discover
+interactive. Added `SocialScienceDiscoverInteractiveScenes.swift` — a
+chronology-ordering scene for the 6 History chapters + a glossary word-match for
+the other 14 — slotted as scene 5 in `DiscoverChapterSocialScienceView`. All four
+subjects now reach Discover parity. +4 tests (`SocialScienceDiscoverInteractiveTests`).
+Lints clean, build GREEN; pushed `43d957c`. Big-Sur build confirmation = iMac rebuild.
+
+### Phase 5 (✅ library / ⏸ H7)
+
+`ShapeDiagramRegistry` is verifiably complete: 76 pure-SwiftUI diagrams, and an
+audit of all four packs confirms **every `kind: "shapeDiagram"` ref (76, all
+Science) is registered — 0 unregistered keys**, so the placeholder fallback is
+never reached. Other subjects don't use `shapeDiagram` media. No diagram work
+remained. **H7 keyboard-nav deferred:** the app already has broad shortcut coverage
++ a `KeyboardShortcutsSheet`; a genuine close needs an XCUITest with an AX grant on
+the runner (not available headlessly on this dev Mac) — recorded, not skipped
+silently.
 
 ## Phase 0 — baseline (✅)
 
