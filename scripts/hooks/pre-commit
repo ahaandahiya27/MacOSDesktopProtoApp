@@ -426,7 +426,24 @@ if [ -n "$LABEL_COVERAGE_TOUCHED" ] && [ -f "scripts/check_uitest_label_coverage
     fi
 fi
 
-# 15) Test-paper triplet completeness (v8 phase 1). Runs when any test-paper
+# 15) Design-tokens spacing/radius ratchets (J8-regression-prevention).
+#     Sibling pair to the T2 ratchets above: where #13/#14 pin UI-test
+#     presence + label coverage, these pin DesignTokens.Spacing.* /
+#     DesignTokens.Radius.* usage. Run on every commit (full-tree scan is
+#     fast and the canonical guarantee is repo-wide). Deterministic, no
+#     build. Hard gate.
+echo "pre-commit: check_designtokens_spacing"
+if ! python3 scripts/check_designtokens_spacing.py; then
+    echo "pre-commit: check_designtokens_spacing failed — use DesignTokens.Spacing.* (J8). See J8_DESIGN_TOKENS_LEDGER.md." >&2
+    exit 1
+fi
+echo "pre-commit: check_designtokens_radius"
+if ! python3 scripts/check_designtokens_radius.py; then
+    echo "pre-commit: check_designtokens_radius failed — use DesignTokens.Radius.* (J8). See J8_DESIGN_TOKENS_LEDGER.md." >&2
+    exit 1
+fi
+
+# 16) Test-paper triplet completeness (v8 phase 1). Runs when any test-paper
 #     file is staged (either stream). Asserts every *_QuestionPaper.md has a
 #     non-empty *_Solutions.md, and — in the bundled Resources stream — a
 #     non-empty *_SolvedGuide.html. Stops a half-shipped Advanced-tier paper
