@@ -129,7 +129,7 @@ struct MilestoneAssessmentView: View {
     // MARK: - Header
 
     private var header: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
             HStack(spacing: 10) {
                 Text("🏁").font(.system(size: 34)).accessibilityHidden(true)
                 Text("Milestone Checkpoint")
@@ -171,7 +171,7 @@ struct MilestoneAssessmentView: View {
             .buttonStyle(.plain)
             .accessibilityLabel("Begin checkpoint")
         }
-        .padding(16)
+        .padding(DesignTokens.Spacing.lg)
         .background(
             RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusCard)
                 .fill(DesignTokens.BrandColor.primaryAction.opacity(0.07))
@@ -203,7 +203,7 @@ struct MilestoneAssessmentView: View {
                     if revealed { feedbackBlock(q) }
                     actionRow(assessment, question: q)
                 }
-                .padding(16)
+                .padding(DesignTokens.Spacing.lg)
                 .background(
                     RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusCard)
                         .fill(DesignTokens.BrandColor.primaryAction.opacity(0.05))
@@ -217,7 +217,7 @@ struct MilestoneAssessmentView: View {
     }
 
     private func questionMeta(_ q: AssessmentQuestion, total: Int) -> some View {
-        HStack(spacing: 8) {
+        HStack(spacing: DesignTokens.Spacing.sm) {
             Text(emoji(for: q.packId)).font(.system(size: 18)).accessibilityHidden(true)
             Text("\(q.subjectTitle) · \(q.chapterTitle)")
                 .font(.caption.weight(.semibold))
@@ -234,7 +234,7 @@ struct MilestoneAssessmentView: View {
     }
 
     private func optionsList(_ q: AssessmentQuestion) -> some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             // Index-keyed identity: `ForEach(Array(x.enumerated()), id: \.offset)`
             // rebuilds the (offset, element) tuple every render → unstable view
             // identity on Swift 5.5 / Big Sur → EXC_BAD_ACCESS in objc_release
@@ -280,7 +280,7 @@ struct MilestoneAssessmentView: View {
         // total in the (defensive) case it's reached without one.
         let r = result ?? MilestoneCheckpointResult.from(
             assessment: assessment, correctById: correctById, takenAt: Date())
-        return VStack(alignment: .leading, spacing: 16) {
+        return VStack(alignment: .leading, spacing: DesignTokens.Spacing.lg) {
             scoreCard(r)
             breakdownSection(r)
             resultActions()
@@ -289,10 +289,10 @@ struct MilestoneAssessmentView: View {
 
     private func scoreCard(_ r: MilestoneCheckpointResult) -> some View {
         let fraction = r.scoreFraction
-        return VStack(alignment: .leading, spacing: 12) {
-            HStack(spacing: 12) {
+        return VStack(alignment: .leading, spacing: DesignTokens.Spacing.md) {
+            HStack(spacing: DesignTokens.Spacing.md) {
                 Text(resultEmoji(fraction)).font(.system(size: 34)).accessibilityHidden(true)
-                VStack(alignment: .leading, spacing: 2) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                     Text("You got \(r.correctCount) of \(r.totalQuestions)")
                         .font(.title2.weight(.bold))
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -305,7 +305,7 @@ struct MilestoneAssessmentView: View {
             }
             ScoreBar(fraction: fraction, tint: DesignTokens.BrandColor.primaryAction)
         }
-        .padding(16)
+        .padding(DesignTokens.Spacing.lg)
         .background(
             RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusCard)
                 .fill(DesignTokens.BrandColor.primaryAction.opacity(0.08))
@@ -326,7 +326,7 @@ struct MilestoneAssessmentView: View {
     }
 
     private func breakdownRow(_ row: MilestoneSubjectScore) -> some View {
-        HStack(spacing: 8) {
+        HStack(spacing: DesignTokens.Spacing.sm) {
             Text(emoji(for: row.packId)).font(.system(size: 20)).accessibilityHidden(true)
             Text(row.subjectTitle)
                 .font(.callout.weight(.semibold))
@@ -351,7 +351,7 @@ struct MilestoneAssessmentView: View {
     }
 
     private func resultActions() -> some View {
-        HStack(spacing: 12) {
+        HStack(spacing: DesignTokens.Spacing.md) {
             primaryButton("Take another") { retake() }
             secondaryButton("Done") { NSApp.keyWindow?.performClose(nil) }
             Spacer(minLength: 0)
@@ -361,7 +361,7 @@ struct MilestoneAssessmentView: View {
     // MARK: - Empty state
 
     private var emptyState: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: DesignTokens.Spacing.md) {
             Text("🌱").font(.system(size: 48)).accessibilityHidden(true)
             Text("A little practice first")
                 .font(.title2.weight(.bold))

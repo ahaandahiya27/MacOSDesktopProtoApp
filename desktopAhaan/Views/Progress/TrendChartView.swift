@@ -143,7 +143,7 @@ struct TrendChartView: View {
 
     private func plot(_ series: TrendSeries) -> some View {
         let pts = normalized(series.points)
-        return VStack(alignment: .leading, spacing: 4) {
+        return VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
             GeometryReader { _ in
                 ZStack {
                     // Gridlines (faint) + axes (heavier) in two strokes.

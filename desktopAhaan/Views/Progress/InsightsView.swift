@@ -64,7 +64,7 @@ struct InsightsView: View {
     // MARK: - Header
 
     private var header: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
             HStack(spacing: 10) {
                 Text("🔍").font(.system(size: 34)).accessibilityHidden(true)
                 Text("Insights")
@@ -83,7 +83,7 @@ struct InsightsView: View {
     // MARK: - Trend chart
 
     private var trendCard: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             Text("Mastery over time")
                 .font(.headline)
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -107,7 +107,7 @@ struct InsightsView: View {
 
     @ViewBuilder
     private var weekOverWeekCard: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             Text("Compared with last week")
                 .font(.headline)
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -140,7 +140,7 @@ struct InsightsView: View {
 
     @ViewBuilder
     private var standingsCard: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             Text("Where each subject stands today")
                 .font(.headline)
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -163,7 +163,7 @@ struct InsightsView: View {
     }
 
     private func standingRow(_ point: SubjectProgressPoint) -> some View {
-        HStack(spacing: 8) {
+        HStack(spacing: DesignTokens.Spacing.sm) {
             Circle().fill(tint(for: point.packId))
                 .frame(width: 9, height: 9).accessibilityHidden(true)
             Text(subjectName(point.packId))

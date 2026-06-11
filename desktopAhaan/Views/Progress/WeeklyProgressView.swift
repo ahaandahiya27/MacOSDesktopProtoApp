@@ -79,7 +79,7 @@ struct WeeklyProgressView: View {
     // MARK: - Header
 
     private var header: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
             HStack(spacing: 10) {
                 Text("📈").font(.system(size: 34)).accessibilityHidden(true)
                 Text("Weekly Progress")
@@ -104,12 +104,12 @@ struct WeeklyProgressView: View {
     // MARK: - Streak card
 
     private func streakCard(_ activity: WeeklyActivity) -> some View {
-        HStack(spacing: 16) {
+        HStack(spacing: DesignTokens.Spacing.lg) {
             Image(systemName: SFSymbolCompat.name("flame.fill"))
                 .font(.system(size: 36))
                 .foregroundColor(DesignTokens.BrandColor.tryAtHome)
                 .accessibilityHidden(true)
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                 Text(streakHeadline(activity.streakDays))
                     .font(.title2.weight(.bold))
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -120,7 +120,7 @@ struct WeeklyProgressView: View {
             Spacer(minLength: 0)
             weekTotalsBadge(activity)
         }
-        .padding(16)
+        .padding(DesignTokens.Spacing.lg)
         .background(
             RoundedRectangle(cornerRadius: 14)
                 .fill(DesignTokens.BrandColor.tryAtHome.opacity(0.08))
@@ -134,7 +134,7 @@ struct WeeklyProgressView: View {
     }
 
     private func weekTotalsBadge(_ activity: WeeklyActivity) -> some View {
-        VStack(alignment: .trailing, spacing: 2) {
+        VStack(alignment: .trailing, spacing: DesignTokens.Spacing.xxs) {
             Text("~\(activity.totalMinutesEstimate) min")
                 .font(.title3.weight(.semibold).monospacedDigit())
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -149,11 +149,11 @@ struct WeeklyProgressView: View {
     // MARK: - Week grid
 
     private func weekGrid(_ activity: WeeklyActivity) -> some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             Text("Day by day")
                 .font(.headline)
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
-            HStack(alignment: .top, spacing: 8) {
+            HStack(alignment: .top, spacing: DesignTokens.Spacing.sm) {
                 ForEach(activity.days, id: \.date) { day in
                     dayCard(day)
                 }
@@ -165,7 +165,7 @@ struct WeeklyProgressView: View {
     }
 
     private func dayCard(_ day: DayActivity) -> some View {
-        VStack(spacing: 4) {
+        VStack(spacing: DesignTokens.Spacing.xs) {
             Text(Self.weekdayFormatter.string(from: day.date))
                 .font(.caption.weight(.semibold))
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
@@ -185,7 +185,7 @@ struct WeeklyProgressView: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
             }
         }
-        .padding(8)
+        .padding(DesignTokens.Spacing.sm)
         .frame(maxWidth: .infinity, minHeight: 112, alignment: .top)
         .background(
             RoundedRectangle(cornerRadius: 10)
@@ -217,7 +217,7 @@ struct WeeklyProgressView: View {
     // MARK: - Mastery delta card
 
     private func masteryDeltaCard(_ delta: MasteryDelta) -> some View {
-        HStack(spacing: 12) {
+        HStack(spacing: DesignTokens.Spacing.md) {
             Text(delta.isEmpty ? "🌱" : "🎉")
                 .font(.system(size: 30))
                 .accessibilityHidden(true)
@@ -260,7 +260,7 @@ struct WeeklyProgressView: View {
 
     @ViewBuilder
     private var weekOverWeekCard: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             Text("Compared with last week")
                 .font(.headline)
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -284,7 +284,7 @@ struct WeeklyProgressView: View {
     }
 
     private func wowBody(_ wow: ProgressDelta) -> some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             HStack(spacing: 10) {
                 Text(deltaArrow(wow.overallMasteryDelta))
                     .font(.system(size: 26))

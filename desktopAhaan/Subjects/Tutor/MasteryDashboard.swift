@@ -131,11 +131,11 @@ private struct MasteryDashboardContent: View {
     // MARK: - Header
 
     private var header: some View {
-        HStack(alignment: .firstTextBaseline, spacing: 12) {
+        HStack(alignment: .firstTextBaseline, spacing: DesignTokens.Spacing.md) {
             Text("📊")
                 .font(.system(size: 36))
                 .accessibilityHidden(true)
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                 Text("My Progress")
                     .font(.largeTitle.bold())
                 Text(subtitle)
@@ -147,7 +147,7 @@ private struct MasteryDashboardContent: View {
                 streakChip
             }
         }
-        .padding(16)
+        .padding(DesignTokens.Spacing.lg)
         .background(
             RoundedRectangle(cornerRadius: 14)
                 .fill(Color.compatIndigo.opacity(0.08))
@@ -190,7 +190,7 @@ private struct MasteryDashboardContent: View {
     // MARK: - Subject tabs
 
     private var subjectTabs: some View {
-        HStack(spacing: 8) {
+        HStack(spacing: DesignTokens.Spacing.sm) {
             ForEach(packs) { pack in
                 let isSelected = pack.id == selectedPackId
                 Button {
@@ -269,7 +269,7 @@ private struct MasteryDashboardContent: View {
                 .font(.title2)
                 .foregroundColor(.orange)
                 .accessibilityHidden(true)
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                 Text(reviewQueueTitle)
                     .font(.title3.weight(.semibold))
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -357,7 +357,7 @@ private struct MasteryDashboardContent: View {
             // D6 — per-topic drill-down. Renders only when the chapter
             // card is expanded AND the aggregator gave us topic data.
             if isExpanded {
-                VStack(alignment: .leading, spacing: 8) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                     ForEach(row.topicSummaries) { topic in
                         topicRow(topic)
                     }
@@ -371,7 +371,7 @@ private struct MasteryDashboardContent: View {
     }
 
     private func topicRow(_ topic: TopicMasterySummary) -> some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
             HStack {
                 Text(topic.topicTitle)
                     .font(.callout.weight(.medium))
@@ -427,11 +427,11 @@ private struct MasteryDashboardContent: View {
     }
 
     private func levelChips(for row: ChapterMasterySummary) -> some View {
-        HStack(spacing: 8) {
+        HStack(spacing: DesignTokens.Spacing.sm) {
             ForEach(MasteryLevel.allCases.reversed()) { level in
                 let count = row.counts[level] ?? 0
                 if count > 0 {
-                    HStack(spacing: 4) {
+                    HStack(spacing: DesignTokens.Spacing.xs) {
                         Circle()
                             .fill(level.tint)
                             .frame(width: 8, height: 8)
@@ -463,7 +463,7 @@ private struct MasteryDashboardContent: View {
                 .font(.caption.weight(.semibold))
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
             ForEach(MasteryLevel.allCases) { level in
-                HStack(spacing: 8) {
+                HStack(spacing: DesignTokens.Spacing.sm) {
                     Circle()
                         .fill(level.tint)
                         .frame(width: 10, height: 10)
@@ -473,7 +473,7 @@ private struct MasteryDashboardContent: View {
                 }
             }
         }
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .background(
             RoundedRectangle(cornerRadius: 10)
                 .fill(Color.gray.opacity(0.05))

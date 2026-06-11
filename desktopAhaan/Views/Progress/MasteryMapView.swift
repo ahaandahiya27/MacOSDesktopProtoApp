@@ -66,7 +66,7 @@ struct MasteryMapView: View {
     // MARK: - Header
 
     private var header: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
             HStack(spacing: 10) {
                 Text("🗺️").font(.system(size: 34)).accessibilityHidden(true)
                 Text("Mastery Map")
@@ -84,10 +84,10 @@ struct MasteryMapView: View {
     // MARK: - Overall card
 
     private func overallCard(_ snap: OverallMasterySnapshot) -> some View {
-        VStack(alignment: .leading, spacing: 12) {
-            HStack(spacing: 12) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.md) {
+            HStack(spacing: DesignTokens.Spacing.md) {
                 Text("🌟").font(.system(size: 30)).accessibilityHidden(true)
-                VStack(alignment: .leading, spacing: 2) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                     Text("Overall")
                         .font(.title2.weight(.bold))
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -112,7 +112,7 @@ struct MasteryMapView: View {
                     .foregroundColor(DesignTokens.BrandColor.warning)
             }
         }
-        .padding(16)
+        .padding(DesignTokens.Spacing.lg)
         .background(
             RoundedRectangle(cornerRadius: DesignTokens.cornerRadiusCard)
                 .fill(DesignTokens.BrandColor.primaryAction.opacity(0.07))
@@ -132,11 +132,11 @@ struct MasteryMapView: View {
     // MARK: - Focus-next nudge
 
     private func focusCard(_ subject: SubjectMasterySnapshot) -> some View {
-        HStack(spacing: 12) {
+        HStack(spacing: DesignTokens.Spacing.md) {
             Text("🎯")
                 .font(.system(size: 28))
                 .accessibilityHidden(true)
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                 Text("Focus next")
                     .font(.headline)
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -170,8 +170,8 @@ struct MasteryMapView: View {
     }
 
     private func subjectRow(_ subject: SubjectMasterySnapshot) -> some View {
-        VStack(alignment: .leading, spacing: 8) {
-            HStack(spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
+            HStack(spacing: DesignTokens.Spacing.sm) {
                 Text(emoji(for: subject.packId))
                     .font(.system(size: 22))
                     .accessibilityHidden(true)
@@ -241,7 +241,7 @@ struct MasteryMapView: View {
                 .font(.subheadline.weight(.semibold))
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
             ForEach(MasteryLevel.allCases) { level in
-                HStack(spacing: 8) {
+                HStack(spacing: DesignTokens.Spacing.sm) {
                     Circle()
                         .fill(level.tint)
                         .frame(width: 11, height: 11)
@@ -264,7 +264,7 @@ struct MasteryMapView: View {
     // MARK: - Empty state
 
     private var emptyState: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: DesignTokens.Spacing.md) {
             Text("🚀").font(.system(size: 48)).accessibilityHidden(true)
             Text("Your journey starts here")
                 .font(.title2.weight(.bold))
