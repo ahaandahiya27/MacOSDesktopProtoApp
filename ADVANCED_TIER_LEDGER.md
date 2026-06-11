@@ -30,7 +30,7 @@ and tracked under `docs/ISSUE_CATEGORIES.md` row **Y5**.
 
 ---
 
-## Coverage grid (run start: 2 / 69)
+## Coverage grid (run start: 2 / 69 → COMPLETE: 69 / 69)
 
 Legend: ✅ Advanced triplet complete · ❌ missing · 🟡 in progress
 
@@ -67,14 +67,14 @@ Legend: ✅ Advanced triplet complete · ❌ missing · 🟡 in progress
 | Ch09 | Soil | ✅ |
 | Ch10 | Respiration in Organisms | ✅ |
 | Ch11 | Transportation in Animals and Plants | ✅ |
-| Ch12 | Reproduction in Plants | ❌ |
+| Ch12 | Reproduction in Plants | ✅ |
 | Ch13 | Motion and Time | ✅ (prototype) |
 | Ch14 | Electric Current and Its Effects | ✅ |
 | Ch15 | Light | ✅ |
-| Ch16 | Water: A Precious Resource | ❌ |
-| Ch17 | Forests: Our Lifeline | ❌ |
-| Ch18 | Wastewater Story | ❌ |
-| Ch19 | Earth, Moon and the Sun | ❌ |
+| Ch16 | Water: A Precious Resource | ✅ |
+| Ch17 | Forests: Our Lifeline | ✅ |
+| Ch18 | Wastewater Story | ✅ |
+| Ch19 | Earth, Moon and the Sun | ✅ |
 
 ### Social Science (20 chapters)
 | Ch | Title | Advanced |
@@ -85,30 +85,30 @@ Legend: ✅ Advanced triplet complete · ❌ missing · 🟡 in progress
 | Ssch04 | New Beginnings: Cities and States | ✅ |
 | Ssch05 | The Rise of Empires | ✅ |
 | Ssch06 | The Age of Reorganisation | ✅ |
-| Ssch07 | The Gupta Era | ❌ |
-| Ssch08 | How the Land Becomes Sacred | ❌ |
-| Ssch09 | Types of Governments | ❌ |
-| Ssch10 | The Constitution of India | ❌ |
-| Ssch11 | From Barter to Money | ❌ |
-| Ssch12 | Understanding Markets | ❌ |
-| Ssch13 | The Story of Indian Farming | ❌ |
-| Ssch14 | India and Her Neighbours | ❌ |
-| Ssch15 | Empires and Kingdoms (6th–10th c.) | ❌ |
-| Ssch16 | Turning Tides (11th–12th c.) | ❌ |
-| Ssch17 | India: A Home to Many | ❌ |
-| Ssch18 | The State, the Government and You | ❌ |
-| Ssch19 | Infrastructure | ❌ |
-| Ssch20 | Banks and the Magic of Finance | ❌ |
+| Ssch07 | The Gupta Era | ✅ |
+| Ssch08 | How the Land Becomes Sacred | ✅ |
+| Ssch09 | Types of Governments | ✅ |
+| Ssch10 | The Constitution of India | ✅ |
+| Ssch11 | From Barter to Money | ✅ |
+| Ssch12 | Understanding Markets | ✅ |
+| Ssch13 | The Story of Indian Farming | ✅ |
+| Ssch14 | India and Her Neighbours | ✅ |
+| Ssch15 | Empires and Kingdoms (6th–10th c.) | ✅ |
+| Ssch16 | Turning Tides (11th–12th c.) | ✅ |
+| Ssch17 | India: A Home to Many | ✅ |
+| Ssch18 | The State, the Government and You | ✅ |
+| Ssch19 | Infrastructure | ✅ |
+| Ssch20 | Banks and the Magic of Finance | ✅ |
 
 ### Sanskrit (15 chapters)
 | Ch | Title | Advanced |
 |----|-------|:--------:|
-| Sch01 | Vande Bhāratamātaram | ❌ |
-| Sch02 | Nityaṁ Pibāmaḥ Subhāṣitarasam | ❌ |
-| Sch03 | Mitrāya Namaḥ | ❌ |
-| Sch04 | The Fox and the Grapes | ❌ |
-| Sch05 | Sevā Hi Paramo Dharmaḥ | ❌ |
-| Sch06 | Krīḍāma Vayam (Shlokāntyākṣarī) | ❌ |
+| Sch01 | Vande Bhāratamātaram | ✅ |
+| Sch02 | Nityaṁ Pibāmaḥ Subhāṣitarasam | ✅ |
+| Sch03 | Mitrāya Namaḥ | ✅ |
+| Sch04 | The Fox and the Grapes | ✅ |
+| Sch05 | Sevā Hi Paramo Dharmaḥ | ✅ |
+| Sch06 | Krīḍāma Vayam (Shlokāntyākṣarī) | ✅ |
 | Sch07 | Īśāvāsyam Idaṁ Sarvam | ✅ |
 | Sch08 | Hitaṁ Manohāri Cha Durlabhaṁ Vachaḥ | ✅ |
 | Sch09 | Annād Bhavanti Bhūtāni | ✅ |
@@ -205,5 +205,17 @@ Legend: ✅ Advanced triplet complete · ❌ missing · 🟡 in progress
   `OlympiadExamHallTests` → 113 papers / 69 foundation + 44 advanced); exam-hall
   suite GREEN. Coverage: Maths 15/15, Science 15/19, Social Science 6/20,
   Sanskrit 9/15.
-- Flip each cell to ✅ as its commit lands; update the headline count here and in
-  `V8_NEXT10H_LEDGER.md`.
+- **2026-06-11 (Waves 12–15):** wired the remaining Sanskrit Sch01–Sch06 →
+  Sanskrit 15/15; Science Ch12/Ch16/Ch17/Ch18/Ch19 → Science 19/19; Social
+  Science Ssch07/Ssch08/Ssch09/Ssch10/Ssch20 → Social Science 11/20. Total
+  reached 60 advanced / 129 papers.
+- **2026-06-11 (Wave 16 — FINAL):** **69 / 69** chapters — wired the last nine
+  Social Science Advanced triplets **Ssch11–Ssch19** (From Barter to Money,
+  Understanding Markets, The Story of Indian Farming, India and Her Neighbours,
+  Empires and Kingdoms 6th–10th c., Turning Tides 11th–12th c., India a Home to
+  Many, The State the Government and You, Infrastructure). Each: 60 MCQs, balanced
+  15/15/15/15 key, complete triplet. Wired (registry `tier: .advanced`, pbxproj
+  regenerated objectVersion 55, `OlympiadExamHallTests` → **138 papers / 69
+  foundation + 69 advanced**); all lints clean, `ci-build-test.sh` GREEN; pushed
+  `7dbf9bb`. **Coverage: Maths 15/15, Science 19/19, Social Science 20/20,
+  Sanskrit 15/15 — the Advanced tier is COMPLETE for every base chapter.**

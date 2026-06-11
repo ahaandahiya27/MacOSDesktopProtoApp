@@ -16,7 +16,7 @@ this file. Phase sentinels printed to the run log: `V8_PHASE<N>_COMPLETE_v1`.
 | 0 | Back up + green baseline + coverage audit | ✅ done |
 | 1 | Triplet-completeness lint (`check_testpaper_triplet.py`) | ✅ done |
 | 2 | Coverage ledger + issue row Y5 | ✅ done |
-| 3 | Extend the Advanced tier (the bulk) | 🟡 in progress |
+| 3 | Extend the Advanced tier (the bulk) | ✅ done — 69/69 |
 | 4 | Bespoke Discover depth (Swift; guarded) | ⏳ pending |
 | 5 | Visual library + a11y (Swift; guarded) | ⏳ pending |
 | 6 | Document (`V8_NEXT10H_CHECKPOINT.md`) | ⏳ pending |
@@ -128,6 +128,21 @@ Integration waves (registry + tests + pbxproj):
   were scattered with the rebalance tool). Wired all four →
   **106 papers / 69 foundation + 37 advanced**. GREEN; pushed (`baeebca`).
   Coverage: Maths 15/15, Science 15/19, Social Science 5/20, Sanskrit 3/15.
+- **Waves 11–15 (2026-06-11):** the fleet authored + integrated the remaining
+  Sanskrit (Sch01–Sch12), Science (Ch12/Ch16–Ch19) and Social Science
+  (Ssch06–Ssch10, Ssch20) Advanced papers → **60 advanced / 129 papers**.
+- **Wave 16 (2026-06-11, FINAL — Phase 3 complete):** sole-agent integrator pass
+  wired the last nine Social Science Advanced triplets **Ssch11–Ssch19** (authored
+  content-only by the now-wound-down fleet; this agent verified each is 60 MCQs
+  with a balanced 15/15/15/15 key, then wired registry + bumped
+  `OlympiadExamHallTests` to **138 papers / 69 foundation + 69 advanced** + regen
+  pbxproj + bundled the untracked Ssch19 triplet). All lints clean,
+  `ci-build-test.sh` GREEN; pushed `7dbf9bb`. **The Advanced tier is COMPLETE:
+  Maths 15/15, Science 19/19, Social Science 20/20, Sanskrit 15/15.**
+  `ADVANCED_TIER_LEDGER.md` grid all ✅; `docs/ISSUE_CATEGORIES.md` row **Y5 ✅**.
+
+> **Fleet status (2026-06-11):** the two sibling v8 agents have wound down — `ps`
+> now shows a single `claude` process. This agent proceeds solo for Phases 4–6.
 
 > **Fleet note (2026-06-11):** this run executes alongside **two other identical
 > v8 agents** in the same working tree (the documented parallel shared-tree
