@@ -220,9 +220,9 @@ struct QuestionDetailView: View {
 
     @ViewBuilder
     private var navigationFooter: some View {
-        HStack(spacing: 12) {
+        HStack(spacing: DesignTokens.Spacing.md) {
             Button(action: { gotoPrevious() }) {
-                HStack(spacing: 4) {
+                HStack(spacing: DesignTokens.Spacing.xs) {
                     Image(systemName: "chevron.left")
                     Text("Previous")
                 }
@@ -242,7 +242,7 @@ struct QuestionDetailView: View {
             Spacer()
 
             Button(action: { gotoNext() }) {
-                HStack(spacing: 4) {
+                HStack(spacing: DesignTokens.Spacing.xs) {
                     Text("Next")
                     Image(systemName: "chevron.right")
                 }
@@ -492,7 +492,7 @@ struct QuestionDetailView: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
             Spacer(minLength: 0)
         }
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .background(
             RoundedRectangle(cornerRadius: 10)
                 .fill(Color.green.opacity(0.08))
@@ -517,7 +517,7 @@ struct QuestionDetailView: View {
     @ViewBuilder
     private var breadcrumb: some View {
         if let loc = location {
-            HStack(spacing: 4) {
+            HStack(spacing: DesignTokens.Spacing.xs) {
                 Text(pack.coverEmoji)
                 Text(pack.title).font(.caption.weight(.medium))
                 Text("›").foregroundColor(.secondary)
@@ -533,7 +533,7 @@ struct QuestionDetailView: View {
     }
 
     private var header: some View {
-        HStack(spacing: 12) {
+        HStack(spacing: DesignTokens.Spacing.md) {
             Label(question.questionType.displayName, systemImage: "questionmark.circle.fill")
                 .font(.caption.bold())
                 .padding(.horizontal, 8).padding(.vertical, 4)
@@ -553,7 +553,7 @@ struct QuestionDetailView: View {
             .font(.title3)
             .devanagariAwareLocale(packId: pack.id)
             .lineSpacing(4)
-            .padding(16)
+            .padding(DesignTokens.Spacing.lg)
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(
                 RoundedRectangle(cornerRadius: 14)
@@ -827,7 +827,7 @@ struct QuestionDetailView: View {
         if question.questionType != .mcq && question.questionType != .matchTheFollowing {
             VStack(alignment: .leading, spacing: 6) {
                 Text("Try it yourself").font(.caption).foregroundColor(.secondary).textCase(.uppercase)
-                HStack(spacing: 8) {
+                HStack(spacing: DesignTokens.Spacing.sm) {
                     TextField("Type your answer", text: $typedAnswer, onCommit: { recordAttempt() })
                         .textFieldStyle(.roundedBorder)
                     DictationButton(transcript: $typedAnswer)
@@ -896,7 +896,7 @@ struct QuestionDetailView: View {
                 .lineSpacing(3)
                 .frame(maxWidth: .infinity, alignment: .leading)
         }
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .background(
             RoundedRectangle(cornerRadius: 10).fill(Color.compatIndigo.opacity(0.08))
         )
@@ -948,7 +948,7 @@ struct QuestionDetailView: View {
                     }
                 }
             }
-            .padding(16)
+            .padding(DesignTokens.Spacing.lg)
             .background(RoundedRectangle(cornerRadius: 14).fill(Color.red.opacity(0.08)))
         }
     }
@@ -986,7 +986,7 @@ struct QuestionDetailView: View {
                 }
                 Spacer()
             }
-            .padding(12)
+            .padding(DesignTokens.Spacing.md)
             .background(RoundedRectangle(cornerRadius: 10).fill(Color.green.opacity(0.12)))
             .overlay(
                 RoundedRectangle(cornerRadius: 10)
@@ -1010,7 +1010,7 @@ struct QuestionDetailView: View {
                 }
                 Spacer()
             }
-            .padding(12)
+            .padding(DesignTokens.Spacing.md)
             .background(RoundedRectangle(cornerRadius: 10).fill(Color.red.opacity(0.10)))
             .overlay(
                 RoundedRectangle(cornerRadius: 10)

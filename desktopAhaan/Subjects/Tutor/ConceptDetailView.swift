@@ -161,7 +161,7 @@ struct ConceptDetailView: View {
     private var inquiryGate: some View {
         if let question = concept.predictQuestion {
             VStack(alignment: .leading, spacing: 12) {
-                HStack(spacing: 8) {
+                HStack(spacing: DesignTokens.Spacing.sm) {
                     Image(systemName: SFSymbolCompat.name("lightbulb.fill"))
                         .font(.body)
                         .foregroundColor(Color.compatIndigo)
@@ -295,7 +295,7 @@ struct ConceptDetailView: View {
     @ViewBuilder
     private var breadcrumb: some View {
         if let loc = location {
-            HStack(spacing: 4) {
+            HStack(spacing: DesignTokens.Spacing.xs) {
                 Text(pack.coverEmoji)
                 Text(pack.title).font(.caption.weight(.medium))
                 Text("›").foregroundColor(.secondary)
@@ -329,7 +329,7 @@ struct ConceptDetailView: View {
     }
 
     private var depthPicker: some View {
-        HStack(spacing: 12) {
+        HStack(spacing: DesignTokens.Spacing.md) {
             Picker("Explanation depth", selection: $depth) {
                 ForEach(ExplanationDepth.allCases) { d in
                     Label(d.shortLabel, systemImage: d.systemImage).tag(d)
@@ -401,7 +401,7 @@ struct ConceptDetailView: View {
                     .foregroundColor(.secondary)
                     .lineSpacing(4)
             }
-            .padding(16)
+            .padding(DesignTokens.Spacing.lg)
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(
                 RoundedRectangle(cornerRadius: 14)
@@ -416,7 +416,7 @@ struct ConceptDetailView: View {
                     .lineSpacing(4)
                     .devanagariAwareLocale(packId: pack.id)
             }
-            .padding(16)
+            .padding(DesignTokens.Spacing.lg)
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(
                 RoundedRectangle(cornerRadius: 14)
@@ -492,7 +492,7 @@ struct ConceptDetailView: View {
                 Image(systemName: "chevron.right")
                     .foregroundColor(.secondary)
             }
-            .padding(16)
+            .padding(DesignTokens.Spacing.lg)
             .frame(maxWidth: .infinity)
             .background(RoundedRectangle(cornerRadius: 14).fill(Color.purple.opacity(0.10)))
             .contentShape(Rectangle())
@@ -552,7 +552,7 @@ struct ConceptDetailView: View {
                     }
                 }
             }
-            .padding(16)
+            .padding(DesignTokens.Spacing.lg)
             .background(
                 RoundedRectangle(cornerRadius: 14)
                     .fill(Color.gray.opacity(0.1))

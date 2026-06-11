@@ -162,7 +162,7 @@ struct ChapterDetailView: View {
                         .foregroundColor(.secondary)
                         .accessibilityHidden(true)
                 }
-                .padding(12)
+                .padding(DesignTokens.Spacing.md)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .background(
                     RoundedRectangle(cornerRadius: 12)
@@ -258,11 +258,11 @@ struct ChapterDetailView: View {
                 // (hands-on experiments), and "Notebook" sheet (free-form
                 // per-chapter writing). Beyond/Mistakes/Home are
                 // content-gated; Notebook is always shown.
-                VStack(spacing: 12) {
+                VStack(spacing: DesignTokens.Spacing.md) {
                     if beyondTheBookEntry != nil
                         || commonMistakesEntry != nil
                         || HomeExperimentLibrary.hasExperiments(forPackId: pack.id, chapterId: chapter.id) {
-                        HStack(spacing: 12) {
+                        HStack(spacing: DesignTokens.Spacing.md) {
                             if let entry = beyondTheBookEntry {
                                 BeyondTheBookCard(entry: entry) {
                                     DispatchQueue.main.async {
@@ -493,7 +493,7 @@ private struct TopicCard: View {
                     .font(.callout)
                     .foregroundColor(.secondary)
                     .lineSpacing(3)
-                HStack(spacing: 12) {
+                HStack(spacing: DesignTokens.Spacing.md) {
                     Label("\(topic.concepts.count) concepts", systemImage: "lightbulb")
                     Label("\(topic.questions.count) questions", systemImage: "questionmark.circle")
                 }
@@ -505,7 +505,7 @@ private struct TopicCard: View {
             Image(systemName: "chevron.right")
                 .foregroundColor(.secondary)
         }
-        .padding(16)
+        .padding(DesignTokens.Spacing.lg)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(
             RoundedRectangle(cornerRadius: 14)
