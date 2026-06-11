@@ -21,7 +21,7 @@ struct ScientistsSectionView: View {
     var body: some View {
         if !profiles.isEmpty {
             VStack(alignment: .leading, spacing: 10) {
-                HStack(spacing: 8) {
+                HStack(spacing: DesignTokens.Spacing.sm) {
                     Image(systemName: SFSymbolCompat.name("person.crop.circle.badge.checkmark"))
                         .font(.title3)
                         .foregroundColor(Color.compatPurple)
@@ -39,7 +39,7 @@ struct ScientistsSectionView: View {
                     }
                 }
             }
-            .padding(16)
+            .padding(DesignTokens.Spacing.lg)
             .background(
                 RoundedRectangle(cornerRadius: 14)
                     .fill(Color.compatPurple.opacity(0.06))
@@ -60,7 +60,7 @@ private struct ScientistCard: View {
 
     var body: some View {
         Button(action: onTap) {
-            HStack(alignment: .center, spacing: 12) {
+            HStack(alignment: .center, spacing: DesignTokens.Spacing.md) {
                 avatarCircle
                     .frame(width: 44, height: 44)
                 VStack(alignment: .leading, spacing: 3) {
@@ -136,7 +136,7 @@ private struct ScientistDetailSheet: View {
                     .fixedSize(horizontal: false, vertical: true)
                     .frame(maxWidth: 640, alignment: .leading)
                     .frame(maxWidth: .infinity, alignment: .center)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                     .padding(.vertical, 18)
             }
             Divider()
@@ -156,7 +156,7 @@ private struct ScientistDetailSheet: View {
 
     private var header: some View {
         HStack(alignment: .top, spacing: 14) {
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                 Text("Featured scientist")
                     .font(.caption.weight(.semibold))
                     .foregroundColor(.secondary)
@@ -165,7 +165,7 @@ private struct ScientistDetailSheet: View {
                     .font(.title2.bold())
                     .lineLimit(2)
                     .fixedSize(horizontal: false, vertical: true)
-                HStack(spacing: 8) {
+                HStack(spacing: DesignTokens.Spacing.sm) {
                     if let lifespan = profile.lifespan, !lifespan.isEmpty {
                         Label(lifespan, systemImage: SFSymbolCompat.name("calendar"))
                             .font(.caption)
@@ -182,7 +182,7 @@ private struct ScientistDetailSheet: View {
                     .foregroundColor(Color.compatPurple)
                     .italic()
                     .lineSpacing(3)
-                    .padding(.top, 4)
+                    .padding(.top, DesignTokens.Spacing.xs)
                     .fixedSize(horizontal: false, vertical: true)
             }
             Spacer(minLength: 0)
@@ -195,7 +195,7 @@ private struct ScientistDetailSheet: View {
             .pointingCursor()
             .accessibilityLabel("Close")
         }
-        .padding(.horizontal, 24)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
         .padding(.top, 20)
         .padding(.bottom, 14)
     }
@@ -206,7 +206,7 @@ private struct ScientistDetailSheet: View {
             Button("Done", action: onDismiss)
                 .keyboardShortcut(.defaultAction)
         }
-        .padding(.horizontal, 24)
-        .padding(.vertical, 12)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
+        .padding(.vertical, DesignTokens.Spacing.md)
     }
 }

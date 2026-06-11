@@ -90,7 +90,7 @@ struct SacredGeographyExplorer: View {
     }
 
     private var header: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
             Text("India's sacred geography")
                 .font(.headline)
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -128,7 +128,7 @@ struct SacredGeographyExplorer: View {
                     .font(.caption.weight(.semibold))
             }
             .foregroundColor(on ? .white : DesignTokens.BrandColor.canvasText)
-            .padding(.horizontal, 12).padding(.vertical, 7)
+            .padding(.horizontal, DesignTokens.Spacing.md).padding(.vertical, 7)
             .background(Capsule().fill(on ? ochre : ochre.opacity(0.10)))
         }
         .buttonStyle(.plain)
@@ -138,8 +138,8 @@ struct SacredGeographyExplorer: View {
     }
 
     private var detailPanel: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            HStack(spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
+            HStack(spacing: DesignTokens.Spacing.sm) {
                 Image(systemName: SFSymbolCompat.name(current.symbol))
                     .font(.title3)
                     .foregroundColor(ochre)
@@ -164,7 +164,7 @@ struct SacredGeographyExplorer: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 .fixedSize(horizontal: false, vertical: true)
         }
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(RoundedRectangle(cornerRadius: 8).fill(ochre.opacity(0.12)))
         .accessibilityElement(children: .combine)

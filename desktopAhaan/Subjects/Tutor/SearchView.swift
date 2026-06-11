@@ -43,25 +43,25 @@ private struct SearchContent: View {
                     .accessibilityLabel("Clear search")
                 }
             }
-            .padding(12)
+            .padding(DesignTokens.Spacing.md)
             .background(
                 RoundedRectangle(cornerRadius: 10)
                     .fill(Color.gray.opacity(0.1))
             )
-            .padding(.horizontal, 16)
-            .padding(.top, 16)
+            .padding(.horizontal, DesignTokens.Spacing.lg)
+            .padding(.top, DesignTokens.Spacing.lg)
 
             if subjectRegistry.packs.count > 1 {
                 subjectScopeFilter
-                    .padding(.horizontal, 16)
-                    .padding(.top, 8)
+                    .padding(.horizontal, DesignTokens.Spacing.lg)
+                    .padding(.top, DesignTokens.Spacing.sm)
             }
 
             Divider()
-                .padding(.top, 12)
+                .padding(.top, DesignTokens.Spacing.md)
 
             if query.trimmingCharacters(in: .whitespaces).isEmpty {
-                VStack(spacing: 12) {
+                VStack(spacing: DesignTokens.Spacing.md) {
                     Image(systemName: "magnifyingglass")
                         .font(.system(size: 48))
                         .foregroundColor(.secondary)
@@ -120,7 +120,7 @@ private struct SearchContent: View {
                 Text("All")
                     .font(.caption.weight(packFilter == nil ? .semibold : .regular))
                     .padding(.horizontal, 10)
-                    .padding(.vertical, 4)
+                    .padding(.vertical, DesignTokens.Spacing.xs)
                     .background(
                         Capsule().fill(packFilter == nil
                                        ? Color.compatIndigo.opacity(0.18)
@@ -135,7 +135,7 @@ private struct SearchContent: View {
                     Text(pack.title)
                         .font(.caption.weight(packFilter == pack.id ? .semibold : .regular))
                         .padding(.horizontal, 10)
-                        .padding(.vertical, 4)
+                        .padding(.vertical, DesignTokens.Spacing.xs)
                         .background(
                             Capsule().fill(packFilter == pack.id
                                            ? Color.compatIndigo.opacity(0.18)
@@ -197,7 +197,7 @@ private struct SearchContent: View {
     private var resultsList: some View {
         let trimmed = debouncedQuery.trimmingCharacters(in: .whitespaces)
         if matches.isEmpty {
-            VStack(spacing: 12) {
+            VStack(spacing: DesignTokens.Spacing.md) {
                 Image(systemName: "magnifyingglass")
                     .font(.system(size: 48))
                     .foregroundColor(.secondary)
@@ -226,13 +226,13 @@ private struct SearchContent: View {
                             HStack(alignment: .top, spacing: 10) {
                                 Image(systemName: "lightbulb.fill")
                                     .foregroundColor(Color.compatIndigo)
-                                VStack(alignment: .leading, spacing: 2) {
+                                VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                                     Text(c.title).font(.headline)
                                     Text(c.explanation(at: .oneLine))
                                         .font(.caption).foregroundColor(.secondary).lineLimit(2)
                                 }
                             }
-                            .padding(.vertical, 4)
+                            .padding(.vertical, DesignTokens.Spacing.xs)
                             .contentShape(Rectangle())
                         }
                         .buttonStyle(.plain)
@@ -247,13 +247,13 @@ private struct SearchContent: View {
                             HStack(alignment: .top, spacing: 10) {
                                 Image(systemName: "questionmark.circle.fill")
                                     .foregroundColor(.orange)
-                                VStack(alignment: .leading, spacing: 2) {
+                                VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                                     Text(q.prompt).font(.body).lineLimit(2)
                                     Text("Answer: \(q.answer)")
                                         .font(.caption).foregroundColor(.secondary).lineLimit(2)
                                 }
                             }
-                            .padding(.vertical, 4)
+                            .padding(.vertical, DesignTokens.Spacing.xs)
                             .contentShape(Rectangle())
                         }
                         .buttonStyle(.plain)

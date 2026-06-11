@@ -175,7 +175,7 @@ struct BloodCellsDiagram: View {
         SDFigure(tint: .red) {
             VStack(spacing: 10) {
                 SDLabel(text: "Plasma (liquid) carries…", color: Color.compatBlue)
-                HStack(spacing: 16) {
+                HStack(spacing: DesignTokens.Spacing.lg) {
                     cell("RBC", "carries O₂", .red) {
                         AnyView(Circle().fill(.red.opacity(0.55))
                             .overlay(Circle().fill(.red.opacity(0.25)).frame(width: 10, height: 10)))
@@ -193,7 +193,7 @@ struct BloodCellsDiagram: View {
     }
 
     private func cell(_ name: String, _ note: String, _ c: Color, glyph: () -> AnyView) -> some View {
-        VStack(spacing: 4) {
+        VStack(spacing: DesignTokens.Spacing.xs) {
             glyph().frame(width: 26, height: 26)
             Text(name).font(.system(size: 10, weight: .bold)).foregroundColor(DesignTokens.BrandColor.canvasText)
             SDLabel(text: note, color: c)

@@ -24,7 +24,7 @@ struct BeyondTheBookCard: View {
     var body: some View {
         Button(action: onTap) {
             VStack(alignment: .leading, spacing: 6) {
-                HStack(spacing: 8) {
+                HStack(spacing: DesignTokens.Spacing.sm) {
                     Text("📖")
                         .font(.system(size: 26))
                     Text("Beyond the Book")
@@ -84,7 +84,7 @@ struct TryAtHomeCard: View {
     var body: some View {
         Button(action: onTap) {
             VStack(alignment: .leading, spacing: 6) {
-                HStack(spacing: 8) {
+                HStack(spacing: DesignTokens.Spacing.sm) {
                     Text("🧪")
                         .font(.system(size: 26))
                     Text("Try at Home")

@@ -84,7 +84,7 @@ struct BuildAWaterCycleSandbox: View {
                 explainerBody
             }
         }
-        .padding(16)
+        .padding(DesignTokens.Spacing.lg)
         .background(
             RoundedRectangle(cornerRadius: 14, style: .continuous)
                 .fill(Color.compatCyan.opacity(0.10))
@@ -101,7 +101,7 @@ struct BuildAWaterCycleSandbox: View {
                 .font(.title3)
                 .foregroundColor(Color.compatCyan)
                 .accessibilityHidden(true)
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                 Text("Build-a-Water-Cycle sandbox")
                     .font(.headline)
                 Text("Can you keep the well from running dry over a year?")
@@ -131,7 +131,7 @@ struct BuildAWaterCycleSandbox: View {
         GeometryReader { geo in
             let levels = monthlyLevels
             let barWidth: CGFloat = (geo.size.width - 44) / 12
-            HStack(alignment: .bottom, spacing: 4) {
+            HStack(alignment: .bottom, spacing: DesignTokens.Spacing.xs) {
                 ForEach(levels.indices, id: \.self) { idx in
                     let value = levels[idx]
                     let barHeight: CGFloat = max(2, geo.size.height * CGFloat(value))
@@ -151,7 +151,7 @@ struct BuildAWaterCycleSandbox: View {
     }
 
     private var outputBlock: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
             HStack {
                 Text("Year-end level")
                     .font(.caption.weight(.semibold))
@@ -210,7 +210,7 @@ struct BuildAWaterCycleSandbox: View {
             .foregroundColor(.primary)
             .lineSpacing(3)
             .fixedSize(horizontal: false, vertical: true)
-            .padding(.top, 4)
+            .padding(.top, DesignTokens.Spacing.xs)
             .transition(.opacity)
             .accessibilityHint("Plain-language explanation of why groundwater levels drop.")
     }

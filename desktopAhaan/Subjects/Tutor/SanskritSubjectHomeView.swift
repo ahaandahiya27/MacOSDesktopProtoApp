@@ -19,8 +19,8 @@ struct SanskritSubjectHomeView: View {
                 }
             }
             .pickerStyle(.segmented)
-            .padding(.horizontal, 12)
-            .padding(.vertical, 8)
+            .padding(.horizontal, DesignTokens.Spacing.md)
+            .padding(.vertical, DesignTokens.Spacing.sm)
             .background(Color.gray.opacity(0.15))
 
             Divider()
@@ -54,7 +54,7 @@ struct SanskritSubjectHomeView: View {
         if let pack = subjectRegistry.pack(withId: "sanskrit_class7") {
             SubjectHomeView(pack: pack)
         } else {
-            VStack(spacing: 12) {
+            VStack(spacing: DesignTokens.Spacing.md) {
                 Image(systemName: SFSymbolCompat.name("books.vertical"))
                     .font(.system(size: 48))
                     .foregroundColor(.secondary)

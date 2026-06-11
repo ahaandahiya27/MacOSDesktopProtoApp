@@ -82,14 +82,14 @@ struct RelatedChaptersStrip: View {
     var body: some View {
         let targets = groupedTargets
         if !targets.isEmpty {
-            VStack(alignment: .leading, spacing: 8) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                 Text("Related chapters")
                     .font(.caption.weight(.bold))
                     .foregroundColor(.secondary)
                     .textCase(.uppercase)
                     .accessibilityAddTraits(.isHeader)
                 ScrollView(.horizontal, showsIndicators: false) {
-                    HStack(spacing: 8) {
+                    HStack(spacing: DesignTokens.Spacing.sm) {
                         ForEach(targets, id: \.targetId) { target in
                             chip(for: target.targetId, count: target.count)
                         }

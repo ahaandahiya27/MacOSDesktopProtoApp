@@ -59,14 +59,14 @@ struct KeyboardShortcutsSheet: View {
             }
             .padding(.horizontal, 20)
             .padding(.top, 20)
-            .padding(.bottom, 12)
+            .padding(.bottom, DesignTokens.Spacing.md)
 
             Divider()
 
             ScrollView {
                 VStack(alignment: .leading, spacing: 18) {
                     ForEach(groups) { group in
-                        VStack(alignment: .leading, spacing: 8) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                             Text(group.title)
                                 .font(.caption.weight(.semibold))
                                 .foregroundColor(.secondary)
@@ -98,7 +98,7 @@ struct KeyboardShortcutsSheet: View {
                     }
                 }
                 .padding(.horizontal, 20)
-                .padding(.vertical, 16)
+                .padding(.vertical, DesignTokens.Spacing.lg)
             }
         }
         .frame(minWidth: 460, idealWidth: 520, maxWidth: 600,

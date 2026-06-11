@@ -65,7 +65,7 @@ struct CompoundingGrowth: View {
     }
 
     private var header: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
             Text("The snowball of compounding")
                 .font(.headline)
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -121,7 +121,7 @@ struct CompoundingGrowth: View {
     }
 
     private var sliders: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             sliderRow(label: "Money you save", value: $principal, range: 100...2000, step: 100,
                       display: rupees(principal), a11y: "Amount saved")
             sliderRow(label: "Interest rate per year", value: $rate, range: 2...12, step: 1,
@@ -134,7 +134,7 @@ struct CompoundingGrowth: View {
     private func sliderRow(label: String, value: Binding<Double>,
                            range: ClosedRange<Double>, step: Double,
                            display: String, a11y: String) -> some View {
-        VStack(alignment: .leading, spacing: 2) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
             HStack {
                 Text(label)
                     .font(.caption.weight(.medium))
@@ -151,11 +151,11 @@ struct CompoundingGrowth: View {
     }
 
     private var insightBanner: some View {
-        HStack(alignment: .top, spacing: 8) {
+        HStack(alignment: .top, spacing: DesignTokens.Spacing.sm) {
             Image(systemName: SFSymbolCompat.name("sparkles"))
                 .foregroundColor(moneyGreen)
                 .accessibilityHidden(true)
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                 Text("Compounding earns \(rupees(compoundExtra)) more than plain interest (which would give \(rupees(simpleTotal))).")
                     .font(.caption.weight(.medium))
                     .foregroundColor(DesignTokens.BrandColor.canvasText)

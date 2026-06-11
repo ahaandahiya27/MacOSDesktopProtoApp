@@ -63,7 +63,7 @@ struct WhyChainView: View {
                     .font(.callout.weight(.semibold))
             }
             .foregroundColor(.white)
-            .padding(.horizontal, 12)
+            .padding(.horizontal, DesignTokens.Spacing.md)
             .padding(.vertical, 6)
             .background(
                 Capsule().fill(Color.compatIndigo)
@@ -76,7 +76,7 @@ struct WhyChainView: View {
     }
 
     private func layersStack(chain: [String]) -> some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             ForEach(0..<safeLayerShown, id: \.self) { idx in
                 whyLayerCard(layer: idx + 1, text: chain[idx])
             }
@@ -96,7 +96,7 @@ struct WhyChainView: View {
                 .lineSpacing(3)
                 .fixedSize(horizontal: false, vertical: true)
         }
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(
             RoundedRectangle(cornerRadius: 10)

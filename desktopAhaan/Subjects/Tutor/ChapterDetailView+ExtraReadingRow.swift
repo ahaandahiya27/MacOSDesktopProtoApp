@@ -146,7 +146,7 @@ struct ExtraReadingRow: View {
             return (entry, row.label, row.systemImage, row.accentColor, row.hint)
         }
         if !resolved.isEmpty {
-            VStack(alignment: .leading, spacing: 8) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                 Text("Extra reading")
                     .font(.subheadline.weight(.semibold))
                     .foregroundColor(.secondary)
@@ -162,7 +162,7 @@ struct ExtraReadingRow: View {
                     }
                 }
             }
-            .padding(.top, 4)
+            .padding(.top, DesignTokens.Spacing.xs)
         }
     }
 
@@ -180,7 +180,7 @@ struct ExtraReadingRow: View {
                     .font(.body)
                     .foregroundColor(accent)
                     .accessibilityHidden(true)
-                VStack(alignment: .leading, spacing: 2) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                     Text(label)
                         .font(.callout.weight(.semibold))
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -203,7 +203,7 @@ struct ExtraReadingRow: View {
                     .accessibilityHidden(true)
             }
             .padding(.vertical, 10)
-            .padding(.horizontal, 12)
+            .padding(.horizontal, DesignTokens.Spacing.md)
             .background(
                 RoundedRectangle(cornerRadius: 10, style: .continuous)
                     .fill(Color(NSColor.controlBackgroundColor))

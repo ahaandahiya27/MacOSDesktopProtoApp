@@ -30,7 +30,7 @@ struct MediaAssetGallerySectionView: View {
                 tint: .compatTeal,
                 storageKey: "\(chapter.id).visualLibrary"
             ) {
-                VStack(alignment: .leading, spacing: 12) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.md) {
                     ForEach(assets) { asset in
                         MediaAssetView(
                             asset: asset,

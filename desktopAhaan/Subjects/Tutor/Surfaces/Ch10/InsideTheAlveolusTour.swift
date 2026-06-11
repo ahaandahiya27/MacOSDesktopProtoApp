@@ -78,9 +78,9 @@ struct InsideTheAlveolusTour: View {
             .pointingCursor()
             .accessibilityLabel("Close alveolus tour")
         }
-        .padding(.horizontal, 24)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
         .padding(.top, 18)
-        .padding(.bottom, 12)
+        .padding(.bottom, DesignTokens.Spacing.md)
     }
 
     private var sceneBody: some View {
@@ -88,11 +88,11 @@ struct InsideTheAlveolusTour: View {
             VStack(alignment: .leading, spacing: 18) {
                 stopVisualization
                     .frame(maxWidth: .infinity)
-                    .padding(.vertical, 8)
+                    .padding(.vertical, DesignTokens.Spacing.sm)
                     .id("alveolus-stop-\(stopIndex)")
                 narrationCard
             }
-            .padding(.horizontal, 24)
+            .padding(.horizontal, DesignTokens.Spacing.xl)
             .padding(.vertical, 18)
             .frame(maxWidth: 720, alignment: .leading)
             .frame(maxWidth: .infinity, alignment: .center)
@@ -156,8 +156,8 @@ struct InsideTheAlveolusTour: View {
             .keyboardShortcut(.defaultAction)
             .accessibilityHint(isLast ? "Closes the tour." : "Go to the next stop on the journey.")
         }
-        .padding(.horizontal, 24)
-        .padding(.vertical, 12)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
+        .padding(.vertical, DesignTokens.Spacing.md)
     }
 
     private var progressDots: some View {
@@ -246,7 +246,7 @@ private struct AlveolusNostrilView: View {
                     .font(.system(size: 56))
                     .foregroundColor(Color.compatTeal)
                     .accessibilityHidden(true)
-                VStack(alignment: .leading, spacing: 8) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                     HStack(spacing: 6) {
                         Image(systemName: SFSymbolCompat.name("wind"))
                             .foregroundColor(Color.compatCyan)
@@ -292,7 +292,7 @@ private struct AlveolusBronchiView: View {
             RoundedRectangle(cornerRadius: 14)
                 .fill(Color.compatTeal.opacity(0.10))
             // Schematic bronchi tree (stacked Vs widening downward)
-            VStack(spacing: 8) {
+            VStack(spacing: DesignTokens.Spacing.sm) {
                 Capsule()
                     .fill(Color.compatTeal.opacity(0.85))
                     .frame(width: 14, height: 30)
@@ -311,7 +311,7 @@ private struct AlveolusBronchiView: View {
                             .frame(width: 6, height: 18)
                     }
                 }
-                HStack(spacing: 8) {
+                HStack(spacing: DesignTokens.Spacing.sm) {
                     ForEach(0..<8, id: \.self) { _ in
                         Capsule()
                             .fill(Color.compatTeal.opacity(0.40))
@@ -363,7 +363,7 @@ private struct AlveolusRedCellView: View {
         ZStack {
             RoundedRectangle(cornerRadius: 14)
                 .fill(Color.red.opacity(0.10))
-            HStack(spacing: 24) {
+            HStack(spacing: DesignTokens.Spacing.xl) {
                 // A red blood cell (biconcave disc)
                 ZStack {
                     Ellipse()
@@ -377,7 +377,7 @@ private struct AlveolusRedCellView: View {
                     Text("Carrying:")
                         .font(.caption.weight(.semibold))
                         .foregroundColor(.secondary)
-                    HStack(spacing: 4) {
+                    HStack(spacing: DesignTokens.Spacing.xs) {
                         ForEach(0..<4, id: \.self) { _ in
                             Circle()
                                 .fill(Color.compatBlue)

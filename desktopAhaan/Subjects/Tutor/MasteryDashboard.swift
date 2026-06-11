@@ -113,7 +113,7 @@ private struct MasteryDashboardContent: View {
                     reviewQueueCTA
                     Text("Chapter mastery")
                         .font(.headline)
-                        .padding(.top, 4)
+                        .padding(.top, DesignTokens.Spacing.xs)
                     ForEach(summary.chapters) { row in
                         chapterCard(row)
                     }
@@ -171,7 +171,7 @@ private struct MasteryDashboardContent: View {
                 .font(.callout.monospacedDigit().weight(.semibold))
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
         }
-        .padding(.horizontal, 12)
+        .padding(.horizontal, DesignTokens.Spacing.md)
         .padding(.vertical, 6)
         .background(Capsule().fill(Color.white))
         .overlay(
@@ -363,7 +363,7 @@ private struct MasteryDashboardContent: View {
                     }
                     Button("Open chapter") { openChapter(row) }
                         .font(.caption)
-                        .padding(.top, 4)
+                        .padding(.top, DesignTokens.Spacing.xs)
                 }
                 .padding(.leading, 18)
             }
@@ -478,7 +478,7 @@ private struct MasteryDashboardContent: View {
             RoundedRectangle(cornerRadius: 10)
                 .fill(Color.gray.opacity(0.05))
         )
-        .padding(.top, 8)
+        .padding(.top, DesignTokens.Spacing.sm)
     }
 
     // MARK: - Empty state
@@ -489,7 +489,7 @@ private struct MasteryDashboardContent: View {
             title: "No mastery to show yet",
             subtitle: "Answer a few practice questions and your per-chapter mastery will appear here. The spaced-review scheduler kicks in as soon as you've answered your first question."
         )
-        .padding(.top, 8)
+        .padding(.top, DesignTokens.Spacing.sm)
     }
 
     // MARK: - Helpers

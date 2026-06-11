@@ -80,7 +80,7 @@ struct BuildAWindSandbox: View {
                 explainerBody
             }
         }
-        .padding(16)
+        .padding(DesignTokens.Spacing.lg)
         .background(
             RoundedRectangle(cornerRadius: 14, style: .continuous)
                 .fill(Color.compatBlue.opacity(0.10))
@@ -97,7 +97,7 @@ struct BuildAWindSandbox: View {
                 .font(.title3)
                 .foregroundColor(Color.compatBlue)
                 .accessibilityHidden(true)
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                 Text("Build-a-Wind sandbox")
                     .font(.headline)
                 Text("At the equator, winds blow straight. At the pole, they curve. Why?")
@@ -165,7 +165,7 @@ struct BuildAWindSandbox: View {
                     .foregroundColor(DesignTokens.BrandColor.relatedConcepts)
             }
             speedBar
-            HStack(spacing: 4) {
+            HStack(spacing: DesignTokens.Spacing.xs) {
                 Text("Direction:")
                     .font(.caption)
                     .foregroundColor(.secondary)
@@ -225,7 +225,7 @@ struct BuildAWindSandbox: View {
             .foregroundColor(.primary)
             .lineSpacing(3)
             .fixedSize(horizontal: false, vertical: true)
-            .padding(.top, 4)
+            .padding(.top, DesignTokens.Spacing.xs)
             .transition(.opacity)
             .accessibilityHint("Plain-language explanation of how pressure gradient, Coriolis, and friction combine.")
     }

@@ -97,7 +97,7 @@ struct IndiaNeighboursExplorer: View {
     }
 
     private var header: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
             Text("Meet India's neighbours")
                 .font(.headline)
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -147,7 +147,7 @@ struct IndiaNeighboursExplorer: View {
             Text(neighbour.name)
                 .font(.caption.weight(.semibold))
                 .foregroundColor(on ? .white : DesignTokens.BrandColor.canvasText)
-                .padding(.horizontal, 12).padding(.vertical, 7)
+                .padding(.horizontal, DesignTokens.Spacing.md).padding(.vertical, 7)
                 .background(Capsule().fill(on ? leafGreen : leafGreen.opacity(0.10)))
         }
         .buttonStyle(.plain)
@@ -164,7 +164,7 @@ struct IndiaNeighboursExplorer: View {
             detailRow(symbol: "mappin.circle.fill", text: current.where_)
             detailRow(symbol: "link", text: current.link)
         }
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(RoundedRectangle(cornerRadius: 8).fill(leafGreen.opacity(0.12)))
         .accessibilityElement(children: .combine)

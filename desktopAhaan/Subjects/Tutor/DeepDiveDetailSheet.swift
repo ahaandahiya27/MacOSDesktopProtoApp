@@ -27,7 +27,7 @@ struct DeepDiveDetailSheet: View {
             Divider()
             ScrollView {
                 contentBody
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                     .padding(.vertical, 18)
                     .frame(maxWidth: 720, alignment: .leading)
                     .frame(maxWidth: .infinity, alignment: .center)
@@ -63,7 +63,7 @@ struct DeepDiveDetailSheet: View {
                     .font(.title2.bold())
                     .lineLimit(3)
                     .fixedSize(horizontal: false, vertical: true)
-                HStack(spacing: 8) {
+                HStack(spacing: DesignTokens.Spacing.sm) {
                     GradeBadge(level: topic.gradeLevel)
                     if let prereq = topic.prerequisite, !prereq.isEmpty {
                         Text(prereq)
@@ -85,7 +85,7 @@ struct DeepDiveDetailSheet: View {
             .accessibilityLabel("Close stretch topic")
             .accessibilityHint("Returns to the chapter detail page.")
         }
-        .padding(.horizontal, 24)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
         .padding(.top, 20)
         .padding(.bottom, 14)
     }
@@ -117,7 +117,7 @@ struct DeepDiveDetailSheet: View {
                     BonusQuestionCard(question: q)
                 }
             }
-            .padding(.top, 4)
+            .padding(.top, DesignTokens.Spacing.xs)
         }
     }
 
@@ -135,13 +135,13 @@ struct DeepDiveDetailSheet: View {
                     .foregroundColor(.secondary)
                     .fixedSize(horizontal: false, vertical: true)
             }
-            .padding(12)
+            .padding(DesignTokens.Spacing.md)
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(
                 RoundedRectangle(cornerRadius: 10)
                     .fill(Color.compatIndigo.opacity(0.08))
             )
-            .padding(.top, 4)
+            .padding(.top, DesignTokens.Spacing.xs)
             .accessibilityElement(children: .combine)
             .accessibilityLabel("Where this goes next: \(hint)")
         }
@@ -158,8 +158,8 @@ struct DeepDiveDetailSheet: View {
                 .accessibilityLabel("Back to chapter")
                 .accessibilityHint("Closes the stretch topic and returns to the chapter detail page.")
         }
-        .padding(.horizontal, 24)
-        .padding(.vertical, 12)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
+        .padding(.vertical, DesignTokens.Spacing.md)
     }
 }
 
@@ -176,13 +176,13 @@ private struct BonusQuestionCard: View {
     @State private var showAnswer = false
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             Text(question.prompt)
                 .font(.body.weight(.semibold))
                 .fixedSize(horizontal: false, vertical: true)
             answerSection
         }
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(
             RoundedRectangle(cornerRadius: 10)
@@ -205,7 +205,7 @@ private struct BonusQuestionCard: View {
                         .fixedSize(horizontal: false, vertical: true)
                 }
             }
-            .padding(.top, 2)
+            .padding(.top, DesignTokens.Spacing.xxs)
             .transition(.opacity)
         } else {
             Button("Show answer") {

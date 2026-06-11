@@ -88,9 +88,9 @@ struct InsideTheLeafTour: View {
             .pointingCursor()
             .accessibilityLabel("Close leaf tour")
         }
-        .padding(.horizontal, 24)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
         .padding(.top, 18)
-        .padding(.bottom, 12)
+        .padding(.bottom, DesignTokens.Spacing.md)
     }
 
     /// The big visual + narration card. Each stop swaps via .id() so
@@ -102,11 +102,11 @@ struct InsideTheLeafTour: View {
             VStack(alignment: .leading, spacing: 18) {
                 stopVisualization
                     .frame(maxWidth: .infinity)
-                    .padding(.vertical, 8)
+                    .padding(.vertical, DesignTokens.Spacing.sm)
                     .id("stop-\(stopIndex)")
                 narrationCard
             }
-            .padding(.horizontal, 24)
+            .padding(.horizontal, DesignTokens.Spacing.xl)
             .padding(.vertical, 18)
             .frame(maxWidth: 720, alignment: .leading)
             .frame(maxWidth: .infinity, alignment: .center)
@@ -172,8 +172,8 @@ struct InsideTheLeafTour: View {
             .keyboardShortcut(.defaultAction)
             .accessibilityHint(isLast ? "Closes the tour." : "Go to the next stop on the journey.")
         }
-        .padding(.horizontal, 24)
-        .padding(.vertical, 12)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
+        .padding(.vertical, DesignTokens.Spacing.md)
     }
 
     private var progressDots: some View {
@@ -286,7 +286,7 @@ private struct StomaView: View {
 
     var body: some View {
         let guardCellSpacing: CGFloat = max(4, openness * 60)
-        return VStack(alignment: .leading, spacing: 8) {
+        return VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             ZStack {
                 RoundedRectangle(cornerRadius: 14)
                     .fill(Color.compatTeal.opacity(0.12))
@@ -304,7 +304,7 @@ private struct StomaView: View {
             }
             .frame(height: 200)
 
-            HStack(spacing: 8) {
+            HStack(spacing: DesignTokens.Spacing.sm) {
                 Text("Slide:")
                     .font(.caption.weight(.semibold))
                     .foregroundColor(.secondary)
@@ -329,7 +329,7 @@ private struct MesophyllView: View {
             // A grid of "cells" — circles with little dots inside.
             VStack(spacing: 6) {
                 ForEach(0..<3, id: \.self) { row in
-                    HStack(spacing: 8) {
+                    HStack(spacing: DesignTokens.Spacing.sm) {
                         ForEach(0..<5, id: \.self) { col in
                             MesophyllCell(seed: row * 5 + col)
                         }
@@ -422,7 +422,7 @@ private struct ThylakoidView: View {
             }
             // Incoming photon (yellow streak) + reflected green ray.
             VStack(spacing: 10) {
-                HStack(spacing: 4) {
+                HStack(spacing: DesignTokens.Spacing.xs) {
                     Image(systemName: SFSymbolCompat.name("sun.max.fill"))
                         .font(.title3)
                         .foregroundColor(.yellow)
@@ -433,7 +433,7 @@ private struct ThylakoidView: View {
                         .accessibilityHidden(true)
                 }
                 .offset(x: -90, y: -30)
-                HStack(spacing: 4) {
+                HStack(spacing: DesignTokens.Spacing.xs) {
                     Image(systemName: SFSymbolCompat.name("arrow.up.right"))
                         .font(.caption)
                         .foregroundColor(Color.compatTeal)

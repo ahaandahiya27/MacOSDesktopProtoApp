@@ -102,7 +102,7 @@ struct GovernmentFormsExplorer: View {
     }
 
     private var header: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
             Text("Who holds the power?")
                 .font(.headline)
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -152,7 +152,7 @@ struct GovernmentFormsExplorer: View {
             Text(form.name)
                 .font(.caption.weight(.semibold))
                 .foregroundColor(on ? .white : DesignTokens.BrandColor.canvasText)
-                .padding(.horizontal, 12).padding(.vertical, 7)
+                .padding(.horizontal, DesignTokens.Spacing.md).padding(.vertical, 7)
                 .background(Capsule().fill(on ? govMaroon : govMaroon.opacity(0.10)))
         }
         .buttonStyle(.plain)
@@ -173,7 +173,7 @@ struct GovernmentFormsExplorer: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 .fixedSize(horizontal: false, vertical: true)
         }
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(RoundedRectangle(cornerRadius: 8).fill(govMaroon.opacity(0.12)))
         .accessibilityElement(children: .combine)

@@ -188,12 +188,12 @@ struct CommandPalette: View {
     }
 
     private func row(for entry: Entry, isSelected: Bool) -> some View {
-        HStack(spacing: 12) {
+        HStack(spacing: DesignTokens.Spacing.md) {
             Text(kindEmoji(entry.kind))
                 .font(.title3)
                 .frame(width: 28)
                 .accessibilityHidden(true)
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                 Text(entry.title)
                     .font(.body)
                     .lineLimit(1)
@@ -212,13 +212,13 @@ struct CommandPalette: View {
                 .accessibilityHidden(true)
         }
         .padding(.horizontal, 14)
-        .padding(.vertical, 8)
+        .padding(.vertical, DesignTokens.Spacing.sm)
         .background(isSelected ? Color.compatIndigo : Color.clear)
         .contentShape(Rectangle())
     }
 
     private var emptyResults: some View {
-        VStack(spacing: 8) {
+        VStack(spacing: DesignTokens.Spacing.sm) {
             Image(systemName: "magnifyingglass")
                 .font(.system(size: 36))
                 .foregroundColor(.secondary)
@@ -247,7 +247,7 @@ struct CommandPalette: View {
         }
         .foregroundColor(.secondary)
         .padding(.horizontal, 18)
-        .padding(.vertical, 8)
+        .padding(.vertical, DesignTokens.Spacing.sm)
     }
 
     // MARK: - Keyboard

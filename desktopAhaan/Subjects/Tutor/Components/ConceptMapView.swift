@@ -117,11 +117,11 @@ struct ConceptMapView: View {
         }
         .padding(.horizontal, 22)
         .padding(.top, 18)
-        .padding(.bottom, 12)
+        .padding(.bottom, DesignTokens.Spacing.md)
     }
 
     private var zoomControls: some View {
-        HStack(spacing: 4) {
+        HStack(spacing: DesignTokens.Spacing.xs) {
             Button(action: zoomOut) {
                 Image(systemName: "minus.magnifyingglass")
             }
@@ -149,7 +149,7 @@ struct ConceptMapView: View {
                 .keyboardShortcut(.defaultAction)
         }
         .padding(.horizontal, 22)
-        .padding(.vertical, 12)
+        .padding(.vertical, DesignTokens.Spacing.md)
     }
 
     // MARK: - Empty state
@@ -277,7 +277,7 @@ struct ConceptMapView: View {
                 }
             }
             .padding(.horizontal, 22)
-            .padding(.vertical, 12)
+            .padding(.vertical, DesignTokens.Spacing.md)
             .frame(maxWidth: .infinity, alignment: .leading)
         }
         .frame(height: 180)
@@ -357,7 +357,7 @@ private struct NodeChip: View {
             .foregroundColor(.primary)
             .lineLimit(2)
             .multilineTextAlignment(.center)
-            .padding(.horizontal, 8)
+            .padding(.horizontal, DesignTokens.Spacing.sm)
             .padding(.vertical, 5)
             .frame(maxWidth: 130)
             .background(

@@ -12,7 +12,7 @@ import SwiftUI
 struct PHScaleDiagram: View {
     var body: some View {
         SDFigure(tint: .green) {
-            VStack(spacing: 8) {
+            VStack(spacing: DesignTokens.Spacing.sm) {
                 HStack {
                     SDLabel(text: "Acidic", color: .red)
                     Spacer()
@@ -50,7 +50,7 @@ struct NeutralisationDiagram: View {
     var body: some View {
         SDFigure(tint: .green) {
             VStack(spacing: 14) {
-                HStack(spacing: 8) {
+                HStack(spacing: DesignTokens.Spacing.sm) {
                     SDChip(text: "Acid", color: .red)
                     SDPlus()
                     SDChip(text: "Base", color: .purple)
@@ -120,7 +120,7 @@ struct IndicatorsDiagram: View {
 struct ToothDecayDiagram: View {
     var body: some View {
         SDFigure(tint: Color.compatBlue) {
-            HStack(spacing: 16) {
+            HStack(spacing: DesignTokens.Spacing.lg) {
                 VStack(spacing: 6) {
                     ToothBodyShape()
                         .fill(Color.white.opacity(0.92))
@@ -135,7 +135,7 @@ struct ToothDecayDiagram: View {
                         .frame(width: 54, height: 64)
                     SDLabel(text: "Acid from bacteria", color: .red)
                 }
-                VStack(spacing: 8) {
+                VStack(spacing: DesignTokens.Spacing.sm) {
                     Image(systemName: SFSymbolCompat.name("arrow.right"))
                         .font(.system(size: 16, weight: .bold))
                         .foregroundColor(.purple)

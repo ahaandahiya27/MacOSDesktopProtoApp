@@ -46,7 +46,7 @@ struct GlossarySheet: View {
                         }
                     }
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
                 .padding(.vertical, 18)
                 .frame(maxWidth: 700, alignment: .leading)
                 .frame(maxWidth: .infinity, alignment: .center)
@@ -89,7 +89,7 @@ struct GlossarySheet: View {
             .pointingCursor()
             .accessibilityLabel("Close glossary")
         }
-        .padding(.horizontal, 24)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
         .padding(.top, 20)
         .padding(.bottom, 14)
     }
@@ -115,8 +115,8 @@ struct GlossarySheet: View {
             Button("Done", action: onDismiss)
                 .keyboardShortcut(.defaultAction)
         }
-        .padding(.horizontal, 24)
-        .padding(.vertical, 12)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
+        .padding(.vertical, DesignTokens.Spacing.md)
     }
 
     /// True if the chapter's `_glossary` HTML article is bundled.
@@ -139,7 +139,7 @@ struct GlossarySheet: View {
     }
 
     private var emptyState: some View {
-        VStack(spacing: 8) {
+        VStack(spacing: DesignTokens.Spacing.sm) {
             Image(systemName: "book.closed")
                 .font(.system(size: 36))
                 .foregroundColor(.secondary)
@@ -169,7 +169,7 @@ private struct GlossaryTermRow: View {
     var body: some View {
         Button(action: onToggle) {
             VStack(alignment: .leading, spacing: 6) {
-                HStack(alignment: .firstTextBaseline, spacing: 8) {
+                HStack(alignment: .firstTextBaseline, spacing: DesignTokens.Spacing.sm) {
                     Text(term.term)
                         .font(.headline)
                         .foregroundColor(Color.compatIndigo)
@@ -199,10 +199,10 @@ private struct GlossaryTermRow: View {
                             .italic()
                             .fixedSize(horizontal: false, vertical: true)
                     }
-                    .padding(.top, 2)
+                    .padding(.top, DesignTokens.Spacing.xxs)
                 }
             }
-            .padding(12)
+            .padding(DesignTokens.Spacing.md)
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(
                 RoundedRectangle(cornerRadius: 10)

@@ -74,7 +74,7 @@ struct BuildAHeatFlowSandbox: View {
                 explainerBody
             }
         }
-        .padding(16)
+        .padding(DesignTokens.Spacing.lg)
         .background(
             RoundedRectangle(cornerRadius: 14, style: .continuous)
                 .fill(Color.orange.opacity(0.10))
@@ -91,7 +91,7 @@ struct BuildAHeatFlowSandbox: View {
                 .font(.title3)
                 .foregroundColor(.orange)
                 .accessibilityHidden(true)
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                 Text("Build-a-Heat-Flow sandbox")
                     .font(.headline)
                 Text("Which dial cools a tea cup fastest in winter?")
@@ -129,7 +129,7 @@ struct BuildAHeatFlowSandbox: View {
                     .foregroundColor(DesignTokens.BrandColor.tryAtHome)
             }
             flowBar
-            HStack(spacing: 4) {
+            HStack(spacing: DesignTokens.Spacing.xs) {
                 Text("Material:")
                     .font(.caption)
                     .foregroundColor(.secondary)
@@ -189,7 +189,7 @@ struct BuildAHeatFlowSandbox: View {
             .foregroundColor(.primary)
             .lineSpacing(3)
             .fixedSize(horizontal: false, vertical: true)
-            .padding(.top, 4)
+            .padding(.top, DesignTokens.Spacing.xs)
             .transition(.opacity)
             .accessibilityHint("Plain-language explanation of why heat flows faster when ΔT is big or the wall is thin.")
     }

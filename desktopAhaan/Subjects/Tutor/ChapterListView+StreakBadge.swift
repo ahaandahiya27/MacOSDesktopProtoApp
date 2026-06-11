@@ -24,11 +24,11 @@ struct StreakBadge: View {
 
     var body: some View {
         if isVisible {
-            HStack(spacing: 8) {
+            HStack(spacing: DesignTokens.Spacing.sm) {
                 Text("🔥")
                     .font(.title3)
                     .accessibilityHidden(true)
-                VStack(alignment: .leading, spacing: 2) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                     Text("\(streakDays)-day streak")
                         .font(.callout.weight(.semibold))
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -38,8 +38,8 @@ struct StreakBadge: View {
                 }
                 Spacer(minLength: 0)
             }
-            .padding(.vertical, 8)
-            .padding(.horizontal, 12)
+            .padding(.vertical, DesignTokens.Spacing.sm)
+            .padding(.horizontal, DesignTokens.Spacing.md)
             .background(
                 RoundedRectangle(cornerRadius: 10, style: .continuous)
                     .fill(Color.orange.opacity(0.10))

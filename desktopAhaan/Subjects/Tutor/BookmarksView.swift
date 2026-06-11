@@ -177,12 +177,12 @@ private struct BookmarksContent: View {
                                date: Date, kind: String) -> some View {
         HStack {
             Image(systemName: icon).foregroundColor(Color.compatIndigo)
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                 Text(title)
                     .font(.headline)
                     .lineLimit(2)
                     .truncationMode(.tail)
-                HStack(spacing: 8) {
+                HStack(spacing: DesignTokens.Spacing.sm) {
                     Text(kind)
                         .font(.caption2.weight(.semibold))
                         .foregroundColor(Color.compatIndigo)

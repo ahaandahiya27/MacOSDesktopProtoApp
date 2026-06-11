@@ -14,7 +14,7 @@ struct WWTPFlowDiagram: View {
     private let steps = ["Bar screen", "Grit tank", "Aeration", "Settling", "Clean water"]
     var body: some View {
         SDFigure(tint: Color.compatBlue) {
-            VStack(spacing: 8) {
+            VStack(spacing: DesignTokens.Spacing.sm) {
                 SDLabel(text: "Dirty water in → cleaner water out", color: Color.compatBlue)
                 HStack(spacing: 3) {
                     ForEach(0..<steps.count, id: \.self) { i in
@@ -92,7 +92,7 @@ struct SulabhToiletDiagram: View {
 
     private func pit(x: CGFloat, h: CGFloat, label: String, active: Bool) -> some View {
         let pitY: CGFloat = h * 0.7
-        return VStack(spacing: 4) {
+        return VStack(spacing: DesignTokens.Spacing.xs) {
             RoundedRectangle(cornerRadius: 6)
                 .fill(Color.compatBrown.opacity(active ? 0.5 : 0.25))
                 .overlay(RoundedRectangle(cornerRadius: 6).strokeBorder(Color.compatBrown.opacity(0.6), lineWidth: 1.5))

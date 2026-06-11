@@ -13,7 +13,7 @@ import SwiftUI
 struct PhysicalVsChemicalDiagram: View {
     var body: some View {
         SDFigure(tint: Color.compatBlue) {
-            HStack(spacing: 12) {
+            HStack(spacing: DesignTokens.Spacing.md) {
                 column(title: "Physical", tint: Color.compatBlue,
                        note: "no new substance · reversible",
                        items: ["Ice melting", "Tearing paper", "Boiling water"])
@@ -44,7 +44,7 @@ struct RustFormationDiagram: View {
     var body: some View {
         SDFigure(tint: Color.compatBrown) {
             VStack(spacing: 14) {
-                HStack(spacing: 8) {
+                HStack(spacing: DesignTokens.Spacing.sm) {
                     SDChip(text: "Iron", color: DesignTokens.BrandColor.canvasTextSecondary)
                     SDPlus()
                     SDChip(text: "Oxygen", color: Color.compatBlue)
@@ -154,7 +154,7 @@ private struct DiamondShape: Shape {
 struct BalancedEquationDiagram: View {
     var body: some View {
         SDFigure(tint: .green) {
-            VStack(spacing: 12) {
+            VStack(spacing: DesignTokens.Spacing.md) {
                 HStack(spacing: 6) {
                     SDChip(text: "2 H₂", color: Color.compatBlue)
                     SDPlus()
@@ -176,7 +176,7 @@ struct BalancedEquationDiagram: View {
             Text("\(symbol):  \(left) = \(right)")
                 .font(.system(size: 11, weight: .semibold))
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
-            HStack(spacing: 2) {
+            HStack(spacing: DesignTokens.Spacing.xxs) {
                 ForEach(0..<left, id: \.self) { _ in
                     Circle().fill(color.opacity(0.6)).frame(width: 7, height: 7)
                 }

@@ -83,7 +83,7 @@ struct SSChronologyChallenge: View {
     }
 
     private var header: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
             Text("Put history in order")
                 .font(.headline)
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -96,7 +96,7 @@ struct SSChronologyChallenge: View {
 
     /// The scrambled, still-unplaced milestones to choose from.
     private var chipRow: some View {
-        VStack(spacing: 8) {
+        VStack(spacing: DesignTokens.Spacing.sm) {
             ForEach(scrambled, id: \.self) { idx in
                 if !placed.contains(idx) {
                     Button { tap(idx) } label: {
@@ -132,8 +132,8 @@ struct SSChronologyChallenge: View {
         VStack(alignment: .leading, spacing: 6) {
             ForEach(placed.indices, id: \.self) { pos in
                 let idx = placed[pos]
-                VStack(alignment: .leading, spacing: 2) {
-                    HStack(spacing: 8) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
+                    HStack(spacing: DesignTokens.Spacing.sm) {
                         Text("\(pos + 1).")
                             .font(.caption.weight(.bold))
                             .foregroundColor(Color.compatIndigo)
@@ -154,7 +154,7 @@ struct SSChronologyChallenge: View {
     }
 
     private var solvedBanner: some View {
-        HStack(spacing: 8) {
+        HStack(spacing: DesignTokens.Spacing.sm) {
             Image(systemName: SFSymbolCompat.name("checkmark.seal.fill"))
                 .foregroundColor(.green)
                 .accessibilityHidden(true)

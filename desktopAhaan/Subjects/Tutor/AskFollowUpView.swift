@@ -16,7 +16,7 @@ struct AskFollowUpView: View {
     @State private var error: String?
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 16) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.lg) {
                 // Status banner
                 statusBanner
 
@@ -27,7 +27,7 @@ struct AskFollowUpView: View {
                     TextEditor(text: $question)
                         .frame(minHeight: 50, maxHeight: 100)
                         .font(.body)
-                        .padding(4)
+                        .padding(DesignTokens.Spacing.xs)
                         .background(Color.gray.opacity(0.1))
                         .clipShape(RoundedRectangle(cornerRadius: 6))
                         // Soft cap: a Class-7 follow-up is a sentence
@@ -79,7 +79,7 @@ struct AskFollowUpView: View {
                                 .lineSpacing(4)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                         }
-                        .padding(12)
+                        .padding(DesignTokens.Spacing.md)
                         .background(RoundedRectangle(cornerRadius: 10).fill(Color.compatIndigo.opacity(0.08)))
                     }
                 }
@@ -96,7 +96,7 @@ struct AskFollowUpView: View {
                     Spacer()
                     VStack {
                         Button("Close") { presentationMode.wrappedValue.dismiss() }
-                            .padding(12)
+                            .padding(DesignTokens.Spacing.md)
                             .keyboardShortcut(.cancelAction)
                         Spacer()
                     }
@@ -111,7 +111,7 @@ struct AskFollowUpView: View {
         HStack(spacing: 10) {
             Image(systemName: tutor.isAvailable ? "checkmark.seal.fill" : "wifi.slash")
                 .foregroundColor(tutor.isAvailable ? .green : .secondary)
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                 Text(tutor.isAvailable ? "On-device tutor ready" : "On-device tutor unavailable")
                     .font(.callout.weight(.semibold))
                 Text(tutor.availability.userMessage)

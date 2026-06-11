@@ -155,7 +155,7 @@ struct WelcomeTourSheet: View {
             .accessibilityHint(isLastPanel ? "Closes the welcome tour. You can replay it from Help → Show Welcome Tour." : "Goes to the next step in the welcome tour.")
         }
         .padding(.horizontal, 22)
-        .padding(.vertical, 12)
+        .padding(.vertical, DesignTokens.Spacing.md)
     }
 
     private var progressDots: some View {
@@ -230,7 +230,7 @@ private struct WelcomeTourPanel: View {
                 .font(.caption.weight(.bold))
                 .foregroundColor(.white)
                 .padding(.horizontal, 10)
-                .padding(.vertical, 4)
+                .padding(.vertical, DesignTokens.Spacing.xs)
                 .background(
                     Capsule().fill(heroTint)
                 )

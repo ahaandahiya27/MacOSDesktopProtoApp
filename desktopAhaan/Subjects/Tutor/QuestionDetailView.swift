@@ -250,7 +250,7 @@ struct QuestionDetailView: View {
             .disabled(!hasNext)
             .accessibilityLabel("Next question")
         }
-        .padding(.top, 8)
+        .padding(.top, DesignTokens.Spacing.sm)
     }
 
     /// Two zero-size buttons that exist purely to register the arrow-key
@@ -536,7 +536,7 @@ struct QuestionDetailView: View {
         HStack(spacing: DesignTokens.Spacing.md) {
             Label(question.questionType.displayName, systemImage: "questionmark.circle.fill")
                 .font(.caption.bold())
-                .padding(.horizontal, 8).padding(.vertical, 4)
+                .padding(.horizontal, DesignTokens.Spacing.sm).padding(.vertical, DesignTokens.Spacing.xs)
                 .background(Capsule().fill(Color.compatIndigo.opacity(0.15)))
             QuestionDifficultyBadge(level: question.difficulty)
             Spacer()
@@ -573,7 +573,7 @@ struct QuestionDetailView: View {
     private func optionsList(_ options: [String]) -> some View {
         let isMCQ = question.questionType == .mcq
         let correctIdx = isMCQ ? correctOptionIndex(options) : nil
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             Text("Options").font(.caption).foregroundColor(.secondary).textCase(.uppercase)
             ForEach(options.indices, id: \.self) { idx in let opt = options[idx];
                 if isMCQ {
@@ -594,7 +594,7 @@ struct QuestionDetailView: View {
                     Button("Check") { recordMCQAttempt(options: options) }
                         .disabled(selectedOptionIndex == nil || attemptOutcome != .unchecked)
                 }
-                .padding(.top, 4)
+                .padding(.top, DesignTokens.Spacing.xs)
             }
         }
     }
@@ -703,7 +703,7 @@ struct QuestionDetailView: View {
                     .accessibilityLabel("Check matches")
                     .accessibilityHint("Validates your pairings. Enabled once every left item has a chosen right.")
             }
-            .padding(.top, 4)
+            .padding(.top, DesignTokens.Spacing.xs)
         }
     }
 
@@ -716,7 +716,7 @@ struct QuestionDetailView: View {
             return .wrongChoice
         }()
 
-        HStack(alignment: .center, spacing: 12) {
+        HStack(alignment: .center, spacing: DesignTokens.Spacing.md) {
             Text(pair.left)
                 .font(.body.weight(.semibold))
                 .frame(minWidth: 110, alignment: .leading)
@@ -849,7 +849,7 @@ struct QuestionDetailView: View {
     /// have to replicate.
     private var solutionDisclosure: some View {
         let hints = question.derivedHints
-        return VStack(alignment: .leading, spacing: 8) {
+        return VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             // Tier 1
             if hintTier >= 1, hints.indices.contains(0) {
                 hintBlock(label: "First hint", body: hints[0])
@@ -886,7 +886,7 @@ struct QuestionDetailView: View {
     }
 
     private func hintBlock(label: String, body: String) -> some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
             Text(label)
                 .font(.caption.weight(.semibold))
                 .foregroundColor(.secondary)
@@ -937,11 +937,11 @@ struct QuestionDetailView: View {
             return false
         }()
         if shouldShow && !question.commonMistakes.isEmpty {
-            VStack(alignment: .leading, spacing: 8) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                 Label("Common mistakes", systemImage: "exclamationmark.triangle.fill")
                     .font(.headline)
                 ForEach(question.commonMistakes.indices, id: \.self) { idx in let m = question.commonMistakes[idx];
-                    HStack(alignment: .top, spacing: 8) {
+                    HStack(alignment: .top, spacing: DesignTokens.Spacing.sm) {
                         Image(systemName: "xmark.circle.fill")
                             .foregroundColor(.red)
                         Text(m).font(.callout).lineSpacing(3)
@@ -956,7 +956,7 @@ struct QuestionDetailView: View {
     @ViewBuilder
     private var variationsSection: some View {
         if !question.variations.isEmpty {
-            VStack(alignment: .leading, spacing: 12) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.md) {
                 Label("Now try these variations", systemImage: SFSymbolCompat.name("arrow.triangle.branch"))
                     .font(.headline)
                 ForEach(question.variations) { v in
@@ -978,7 +978,7 @@ struct QuestionDetailView: View {
                 Image(systemName: "checkmark.circle.fill")
                     .font(.title2)
                     .foregroundColor(.green)
-                VStack(alignment: .leading, spacing: 4) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                     Text("Correct").font(.headline).foregroundColor(.green)
                     Text("Nice work — the worked solution below explains why.")
                         .font(.callout)
@@ -997,7 +997,7 @@ struct QuestionDetailView: View {
                 Image(systemName: "xmark.circle.fill")
                     .font(.title2)
                     .foregroundColor(.red)
-                VStack(alignment: .leading, spacing: 4) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                     Text("Not quite").font(.headline).foregroundColor(.red)
                     if !userInput.isEmpty {
                         Text("You answered: \(userInput)")

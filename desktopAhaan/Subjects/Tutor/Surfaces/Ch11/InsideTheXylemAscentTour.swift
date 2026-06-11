@@ -80,9 +80,9 @@ struct InsideTheXylemAscentTour: View {
             .pointingCursor()
             .accessibilityLabel("Close xylem tour")
         }
-        .padding(.horizontal, 24)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
         .padding(.top, 18)
-        .padding(.bottom, 12)
+        .padding(.bottom, DesignTokens.Spacing.md)
     }
 
     private var sceneBody: some View {
@@ -90,11 +90,11 @@ struct InsideTheXylemAscentTour: View {
             VStack(alignment: .leading, spacing: 18) {
                 stopVisualization
                     .frame(maxWidth: .infinity)
-                    .padding(.vertical, 8)
+                    .padding(.vertical, DesignTokens.Spacing.sm)
                     .id("xylem-stop-\(stopIndex)")
                 narrationCard
             }
-            .padding(.horizontal, 24)
+            .padding(.horizontal, DesignTokens.Spacing.xl)
             .padding(.vertical, 18)
             .frame(maxWidth: 720, alignment: .leading)
             .frame(maxWidth: .infinity, alignment: .center)
@@ -158,8 +158,8 @@ struct InsideTheXylemAscentTour: View {
             .keyboardShortcut(.defaultAction)
             .accessibilityHint(isLast ? "Closes the tour." : "Go to the next stop on the journey.")
         }
-        .padding(.horizontal, 24)
-        .padding(.vertical, 12)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
+        .padding(.vertical, DesignTokens.Spacing.md)
     }
 
     private var progressDots: some View {
@@ -278,7 +278,7 @@ private struct XylemEntryView: View {
             RoundedRectangle(cornerRadius: 14)
                 .fill(Color.compatTeal.opacity(0.10))
             // Stack of xylem tubes (hollow vertical capsules)
-            HStack(spacing: 12) {
+            HStack(spacing: DesignTokens.Spacing.md) {
                 ForEach(0..<5, id: \.self) { _ in
                     Capsule()
                         .stroke(Color.compatTeal, lineWidth: 2)
@@ -286,7 +286,7 @@ private struct XylemEntryView: View {
                 }
             }
             // Water in tubes (blue fills)
-            HStack(spacing: 12) {
+            HStack(spacing: DesignTokens.Spacing.md) {
                 ForEach(0..<5, id: \.self) { _ in
                     Capsule()
                         .fill(Color.compatBlue.opacity(0.55))
@@ -376,7 +376,7 @@ private struct XylemStomaView: View {
             // Water vapour droplets escaping upward
             VStack(spacing: 10) {
                 ForEach(0..<3, id: \.self) { _ in
-                    HStack(spacing: 8) {
+                    HStack(spacing: DesignTokens.Spacing.sm) {
                         Image(systemName: SFSymbolCompat.name("drop.fill"))
                             .foregroundColor(Color.compatBlue.opacity(0.70))
                         Image(systemName: SFSymbolCompat.name("drop.fill"))

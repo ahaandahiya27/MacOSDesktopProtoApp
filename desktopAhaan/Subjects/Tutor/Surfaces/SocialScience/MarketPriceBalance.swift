@@ -74,7 +74,7 @@ struct MarketPriceBalance: View {
     }
 
     private var header: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
             Text("Find the 'just right' price")
                 .font(.headline)
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -101,7 +101,7 @@ struct MarketPriceBalance: View {
                 Text("just right")
                     .font(.caption.weight(.bold))
                     .foregroundColor(.white)
-                    .padding(.horizontal, 10).padding(.vertical, 4)
+                    .padding(.horizontal, 10).padding(.vertical, DesignTokens.Spacing.xs)
                     .background(Capsule().fill(Color.green.opacity(0.85)))
             }
         }
@@ -148,11 +148,11 @@ struct MarketPriceBalance: View {
 
     private func sliderRow(label: String, value: Binding<Double>,
                            lowWord: String, highWord: String, a11y: String) -> some View {
-        VStack(alignment: .leading, spacing: 2) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
             Text(label)
                 .font(.caption.weight(.medium))
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
-            HStack(spacing: 8) {
+            HStack(spacing: DesignTokens.Spacing.sm) {
                 Text(lowWord)
                     .font(.caption2)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
@@ -167,7 +167,7 @@ struct MarketPriceBalance: View {
     }
 
     private var statusBanner: some View {
-        HStack(alignment: .top, spacing: 8) {
+        HStack(alignment: .top, spacing: DesignTokens.Spacing.sm) {
             Image(systemName: SFSymbolCompat.name(statusSymbol))
                 .foregroundColor(statusTint)
                 .accessibilityHidden(true)

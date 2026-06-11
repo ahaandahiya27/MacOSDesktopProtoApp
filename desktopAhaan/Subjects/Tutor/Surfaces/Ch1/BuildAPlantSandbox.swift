@@ -90,7 +90,7 @@ struct BuildAPlantSandbox: View {
                 explainerBody
             }
         }
-        .padding(16)
+        .padding(DesignTokens.Spacing.lg)
         .background(
             RoundedRectangle(cornerRadius: 14, style: .continuous)
                 .fill(Color.compatTeal.opacity(0.10))
@@ -107,7 +107,7 @@ struct BuildAPlantSandbox: View {
                 .font(.title3)
                 .foregroundColor(Color.compatTeal)
                 .accessibilityHidden(true)
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                 Text("Build-a-Plant sandbox")
                     .font(.headline)
                 Text("Try setting one slider to zero — what happens?")
@@ -151,7 +151,7 @@ struct BuildAPlantSandbox: View {
                     .foregroundColor(Color.compatTeal)
             }
             rateBar
-            HStack(spacing: 4) {
+            HStack(spacing: DesignTokens.Spacing.xs) {
                 Text("Slowest input:")
                     .font(.caption)
                     .foregroundColor(.secondary)
@@ -214,7 +214,7 @@ struct BuildAPlantSandbox: View {
             .foregroundColor(.primary)
             .lineSpacing(3)
             .fixedSize(horizontal: false, vertical: true)
-            .padding(.top, 4)
+            .padding(.top, DesignTokens.Spacing.xs)
             .transition(.opacity)
             .accessibilityHint("Plain-language explanation of the limiting-factor idea.")
     }

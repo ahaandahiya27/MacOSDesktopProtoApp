@@ -13,14 +13,14 @@ struct QuestionVariationCard: View {
             title: variation.prompt,
             tint: Color.compatIndigo
         ) {
-            VStack(alignment: .leading, spacing: 8) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                 Text(variation.answer)
                     .font(.body.bold())
-                    .padding(8)
+                    .padding(DesignTokens.Spacing.sm)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .background(RoundedRectangle(cornerRadius: 6).fill(Color.green.opacity(0.12)))
                 ForEach(variation.solutionSteps.indices, id: \.self) { idx in let step = variation.solutionSteps[idx];
-                    HStack(alignment: .top, spacing: 8) {
+                    HStack(alignment: .top, spacing: DesignTokens.Spacing.sm) {
                         Text("\(idx + 1).").font(.callout.bold()).foregroundColor(Color.compatIndigo)
                         Text(step).font(.callout).lineSpacing(3)
                     }

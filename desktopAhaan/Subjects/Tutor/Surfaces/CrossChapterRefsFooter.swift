@@ -20,7 +20,7 @@ struct CrossChapterRefsFooter: View {
     var body: some View {
         if !refs.isEmpty {
             VStack(alignment: .leading, spacing: 10) {
-                HStack(spacing: 8) {
+                HStack(spacing: DesignTokens.Spacing.sm) {
                     Image(systemName: SFSymbolCompat.name("link.circle.fill"))
                         .font(.title3)
                         .foregroundColor(Color.compatTeal)
@@ -30,7 +30,7 @@ struct CrossChapterRefsFooter: View {
                         .accessibilityAddTraits(.isHeader)
                     Spacer()
                 }
-                VStack(alignment: .leading, spacing: 8) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                     ForEach(refs) { ref in
                         CrossChapterRefRow(ref: ref, onJump: {
                             // Defer nav.push to the next runloop tick —
@@ -45,7 +45,7 @@ struct CrossChapterRefsFooter: View {
                     }
                 }
             }
-            .padding(16)
+            .padding(DesignTokens.Spacing.lg)
             .background(
                 RoundedRectangle(cornerRadius: 14)
                     .fill(Color.compatTeal.opacity(0.06))

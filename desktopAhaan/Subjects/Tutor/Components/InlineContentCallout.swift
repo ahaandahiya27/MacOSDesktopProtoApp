@@ -28,14 +28,14 @@ struct InlineContentCallout: View {
     var action: (() -> Void)? = nil
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             HStack(alignment: .top, spacing: 10) {
                 Image(systemName: SFSymbolCompat.name(symbol))
                     .font(.body)
                     .foregroundColor(tint)
                     .frame(width: 22, alignment: .center)
                     .accessibilityHidden(true)
-                VStack(alignment: .leading, spacing: 4) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                     Text(title)
                         .font(.caption.weight(.bold))
                         .foregroundColor(tint)
@@ -54,7 +54,7 @@ struct InlineContentCallout: View {
                     .accessibilityHint("Performs the callout's follow-up action.")
             }
         }
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(
             RoundedRectangle(cornerRadius: 10)

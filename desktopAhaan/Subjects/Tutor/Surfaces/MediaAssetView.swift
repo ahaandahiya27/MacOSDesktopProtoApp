@@ -25,14 +25,14 @@ struct MediaAssetView: View {
     var onOpenDiscover: (() -> Void)? = nil
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             renderBackend
             Text(asset.caption)
                 .font(.caption)
                 .foregroundColor(.primary)
                 .fixedSize(horizontal: false, vertical: true)
         }
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(
             RoundedRectangle(cornerRadius: 12)
@@ -96,11 +96,11 @@ struct MediaAssetView: View {
 
     @ViewBuilder
     private var animatedSceneBackend: some View {
-        HStack(spacing: 12) {
+        HStack(spacing: DesignTokens.Spacing.md) {
             Image(systemName: SFSymbolCompat.name("play.rectangle.fill"))
                 .font(.title)
                 .foregroundColor(Color.compatIndigo)
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                 Text("See it animated")
                     .font(.callout.weight(.semibold))
                 Text("Open the Discover Mode scene that brings this idea to life.")
@@ -146,7 +146,7 @@ struct MediaAssetView: View {
 
     @ViewBuilder
     private func placeholderCard(systemImage: String, label: String) -> some View {
-        HStack(spacing: 12) {
+        HStack(spacing: DesignTokens.Spacing.md) {
             Image(systemName: SFSymbolCompat.name(systemImage))
                 .font(.title)
                 .foregroundColor(.secondary)
@@ -206,11 +206,11 @@ private struct NarratedWalkthroughRow: View {
     @State private var isMine = false
 
     var body: some View {
-        HStack(spacing: 12) {
+        HStack(spacing: DesignTokens.Spacing.md) {
             Image(systemName: SFSymbolCompat.name("speaker.wave.2.fill"))
                 .font(.title)
                 .foregroundColor(Color.compatCyan)
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                 Text("Listen to the walkthrough")
                     .font(.callout.weight(.semibold))
                 Text("Tap to hear this caption read aloud.")

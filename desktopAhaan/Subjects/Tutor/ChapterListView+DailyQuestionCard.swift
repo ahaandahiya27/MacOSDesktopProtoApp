@@ -39,7 +39,7 @@ struct DailyQuestionCard: View {
                             .font(.title3)
                             .foregroundColor(Color.compatPurple)
                     }
-                    VStack(alignment: .leading, spacing: 4) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                         Text("Today's question")
                             .font(.caption.weight(.semibold))
                             .foregroundColor(.secondary)

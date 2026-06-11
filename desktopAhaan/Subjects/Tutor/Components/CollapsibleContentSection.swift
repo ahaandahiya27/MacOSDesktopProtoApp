@@ -56,7 +56,7 @@ struct CollapsibleContentSection<Content: View>: View {
         } label: {
             header
         }
-        .padding(16)
+        .padding(DesignTokens.Spacing.lg)
         .background(
             RoundedRectangle(cornerRadius: 14, style: .continuous)
                 .fill(tint.opacity(0.08))
@@ -80,7 +80,7 @@ struct CollapsibleContentSection<Content: View>: View {
                     .font(.system(size: 11, weight: .bold))
                     .foregroundColor(.white)
                     .padding(.horizontal, 7)
-                    .padding(.vertical, 2)
+                    .padding(.vertical, DesignTokens.Spacing.xxs)
                     .background(Capsule().fill(tint))
                     .accessibilityHidden(true)
             }

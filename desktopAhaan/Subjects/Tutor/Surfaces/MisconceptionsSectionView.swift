@@ -25,7 +25,7 @@ struct MisconceptionsSectionView: View {
                 tint: .compatBrown,
                 storageKey: "\(chapter.id).misconceptions"
             ) {
-                VStack(alignment: .leading, spacing: 12) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.md) {
                     ForEach(entries) { entry in
                         MisconceptionCard(entry: entry)
                     }
@@ -41,10 +41,10 @@ private struct MisconceptionCard: View {
     let entry: Misconception
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             // "Kids often think:" line — the wrong belief, marked
             // with a strikethrough hint via secondary color.
-            HStack(alignment: .top, spacing: 8) {
+            HStack(alignment: .top, spacing: DesignTokens.Spacing.sm) {
                 Text("Kids often think:")
                     .font(.caption.weight(.bold))
                     .foregroundColor(Color.compatBrown)
@@ -58,10 +58,10 @@ private struct MisconceptionCard: View {
                 .fixedSize(horizontal: false, vertical: true)
 
             Divider()
-                .padding(.vertical, 2)
+                .padding(.vertical, DesignTokens.Spacing.xxs)
 
             // "Actually:" line — the correction.
-            HStack(alignment: .top, spacing: 8) {
+            HStack(alignment: .top, spacing: DesignTokens.Spacing.sm) {
                 Text("Actually:")
                     .font(.caption.weight(.bold))
                     .foregroundColor(Color.compatTeal)
@@ -73,7 +73,7 @@ private struct MisconceptionCard: View {
                 .foregroundColor(.primary)
                 .fixedSize(horizontal: false, vertical: true)
         }
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(
             RoundedRectangle(cornerRadius: 10)

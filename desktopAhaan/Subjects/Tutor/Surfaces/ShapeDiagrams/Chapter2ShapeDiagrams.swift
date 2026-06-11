@@ -190,7 +190,7 @@ struct VilliDiagram: View {
                 Capsule()
                     .stroke(Color.red.opacity(0.7), lineWidth: 1.5)
                     .padding(.horizontal, 5)
-                    .padding(.top, 8)
+                    .padding(.top, DesignTokens.Spacing.sm)
             )
             .frame(width: 20, height: tall ? 70 : 56)
     }
@@ -209,7 +209,7 @@ struct ToothTypesDiagram: View {
     ]
     var body: some View {
         SDFigure(tint: Color.compatBlue) {
-            VStack(spacing: 8) {
+            VStack(spacing: DesignTokens.Spacing.sm) {
                 HStack(alignment: .bottom, spacing: 5) {
                     ForEach(0..<teeth.count, id: \.self) { i in
                         toothColumn(label: teeth[i].0, kind: teeth[i].1)

@@ -17,7 +17,7 @@ struct TopicDetailView: View {
         List {
             Section {
                 ArticleEntryButton(entry: ArticleIndex.entry(forTopicId: topic.id))
-                    .padding(.bottom, 12)
+                    .padding(.bottom, DesignTokens.Spacing.md)
             }
             .listRowInsets(EdgeInsets())
             .listRowBackground(Color.clear)
@@ -30,11 +30,11 @@ struct TopicDetailView: View {
             // horizontal ScrollView internally).
             if let chapter = owningChapter {
                 Section {
-                    VStack(alignment: .leading, spacing: 12) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.md) {
                         RealWorldExamplesStripView(chapter: chapter)
                         MnemonicsStripView(chapter: chapter)
                     }
-                    .padding(.vertical, 4)
+                    .padding(.vertical, DesignTokens.Spacing.xs)
                 }
                 .listRowInsets(EdgeInsets())
                 .listRowBackground(Color.clear)
@@ -84,7 +84,7 @@ struct TopicDetailView: View {
                     Text("No concepts or questions in this topic yet \u{2014} open the article above to learn the basics.")
                         .font(.callout)
                         .foregroundColor(.secondary)
-                        .padding(.vertical, 8)
+                        .padding(.vertical, DesignTokens.Spacing.sm)
                 }
                 .listRowBackground(Color.clear)
             }
@@ -102,11 +102,11 @@ struct TopicDetailView: View {
 private struct ConceptRow: View {
     let concept: Concept
     var body: some View {
-        HStack(alignment: .top, spacing: 12) {
+        HStack(alignment: .top, spacing: DesignTokens.Spacing.md) {
             Image(systemName: "lightbulb.fill")
                 .foregroundColor(Color.compatIndigo)
                 .font(.title3)
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                 Text(concept.title).font(.headline)
                 Text(concept.explanation(at: .oneLine))
                     .font(.caption)
@@ -118,25 +118,25 @@ private struct ConceptRow: View {
                 }
             }
         }
-        .padding(.vertical, 4)
+        .padding(.vertical, DesignTokens.Spacing.xs)
     }
 }
 
 private struct QuestionRow: View {
     let question: Question
     var body: some View {
-        HStack(alignment: .top, spacing: 12) {
+        HStack(alignment: .top, spacing: DesignTokens.Spacing.md) {
             Image(systemName: "questionmark.circle.fill")
                 .foregroundColor(.orange)
                 .font(.title3)
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                 Text(question.prompt)
                     .font(.body)
                     .lineLimit(2)
                 HStack(spacing: 10) {
                     Text(question.questionType.displayName)
                         .font(.caption2.bold())
-                        .padding(.horizontal, 6).padding(.vertical, 2)
+                        .padding(.horizontal, 6).padding(.vertical, DesignTokens.Spacing.xxs)
                         .background(Capsule().fill(Color.compatIndigo.opacity(0.15)))
                     Text(String(repeating: "●", count: question.difficulty))
                         .font(.caption2)
@@ -144,6 +144,6 @@ private struct QuestionRow: View {
                 }
             }
         }
-        .padding(.vertical, 4)
+        .padding(.vertical, DesignTokens.Spacing.xs)
     }
 }

@@ -93,7 +93,7 @@ struct ThermometerDiagram: View {
 struct ThreeModesDiagram: View {
     var body: some View {
         SDFigure(tint: .orange) {
-            HStack(spacing: 8) {
+            HStack(spacing: DesignTokens.Spacing.sm) {
                 conduction
                 convection
                 radiation
@@ -106,7 +106,7 @@ struct ThreeModesDiagram: View {
             Text("Conduction").font(.system(size: 10, weight: .bold)).foregroundColor(DesignTokens.BrandColor.canvasText)
             ZStack {
                 Capsule().fill(Color.compatBrown.opacity(0.4)).frame(width: 60, height: 16)
-                HStack(spacing: 4) {
+                HStack(spacing: DesignTokens.Spacing.xs) {
                     ForEach(0..<3, id: \.self) { i in
                         let dotAlpha: Double = 0.7 - Double(i) * 0.18
                         Circle().fill(Color.red.opacity(dotAlpha)).frame(width: 8, height: 8)
@@ -168,7 +168,7 @@ struct ThermosFlaskDiagram: View {
                     RoundedRectangle(cornerRadius: 4).fill(Color.compatBrown.opacity(0.6))
                         .frame(width: 60, height: 18).offset(y: -76) // stopper
                 }
-                VStack(alignment: .leading, spacing: 8) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                     SDLabel(text: "Stopper — stops convection", color: Color.compatBrown)
                     SDLabel(text: "Vacuum gap — stops conduction")
                     SDLabel(text: "Silvered walls — stop radiation")

@@ -53,7 +53,7 @@ private struct MiniProjectCard: View {
 
     var body: some View {
         Button(action: onTap) {
-            HStack(alignment: .center, spacing: 12) {
+            HStack(alignment: .center, spacing: DesignTokens.Spacing.md) {
                 Text(project.emoji)
                     .font(.system(size: 30))
                     .accessibilityHidden(true)
@@ -76,7 +76,7 @@ private struct MiniProjectCard: View {
                     .foregroundColor(.secondary)
                     .accessibilityHidden(true)
             }
-            .padding(12)
+            .padding(DesignTokens.Spacing.md)
             .frame(maxWidth: .infinity, alignment: .leading)
             .background(
                 RoundedRectangle(cornerRadius: 10)
@@ -103,7 +103,7 @@ private struct MiniProjectDetailSheet: View {
             Divider()
             ScrollView {
                 content
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                     .padding(.vertical, 18)
                     .frame(maxWidth: 700, alignment: .leading)
                     .frame(maxWidth: .infinity, alignment: .center)
@@ -128,7 +128,7 @@ private struct MiniProjectDetailSheet: View {
             Text(project.emoji)
                 .font(.system(size: 44))
                 .accessibilityHidden(true)
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                 Text("Mini-project")
                     .font(.caption.weight(.semibold))
                     .foregroundColor(.secondary)
@@ -143,9 +143,9 @@ private struct MiniProjectDetailSheet: View {
             }
             Spacer(minLength: 0)
         }
-        .padding(.horizontal, 24)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
         .padding(.top, 20)
-        .padding(.bottom, 12)
+        .padding(.bottom, DesignTokens.Spacing.md)
     }
 
     private var content: some View {
@@ -158,11 +158,11 @@ private struct MiniProjectDetailSheet: View {
     }
 
     private var materialsBlock: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             Text("You'll need")
                 .font(.headline)
                 .accessibilityAddTraits(.isHeader)
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                 ForEach(project.needs, id: \.self) { item in
                     HStack(alignment: .top, spacing: 6) {
                         Text("•").font(.body.weight(.bold)).foregroundColor(.secondary)
@@ -174,13 +174,13 @@ private struct MiniProjectDetailSheet: View {
     }
 
     private var stepsBlock: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             Text("Steps")
                 .font(.headline)
                 .accessibilityAddTraits(.isHeader)
-            VStack(alignment: .leading, spacing: 8) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                 ForEach(project.steps.indices, id: \.self) { idx in
-                    HStack(alignment: .top, spacing: 8) {
+                    HStack(alignment: .top, spacing: DesignTokens.Spacing.sm) {
                         Text("\(idx + 1).")
                             .font(.callout.weight(.bold))
                             .foregroundColor(Color.compatBrown)
@@ -195,7 +195,7 @@ private struct MiniProjectDetailSheet: View {
     }
 
     private var observationBlock: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             Text("Expect to see")
                 .font(.headline)
                 .accessibilityAddTraits(.isHeader)
@@ -204,7 +204,7 @@ private struct MiniProjectDetailSheet: View {
                 .foregroundColor(.primary)
                 .fixedSize(horizontal: false, vertical: true)
         }
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(
             RoundedRectangle(cornerRadius: 10)
@@ -213,7 +213,7 @@ private struct MiniProjectDetailSheet: View {
     }
 
     private var whyItWorksBlock: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             Text("Why it works")
                 .font(.headline)
                 .accessibilityAddTraits(.isHeader)
@@ -231,7 +231,7 @@ private struct MiniProjectDetailSheet: View {
             Button("Done", action: onDismiss)
                 .keyboardShortcut(.defaultAction)
         }
-        .padding(.horizontal, 24)
-        .padding(.vertical, 12)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
+        .padding(.vertical, DesignTokens.Spacing.md)
     }
 }

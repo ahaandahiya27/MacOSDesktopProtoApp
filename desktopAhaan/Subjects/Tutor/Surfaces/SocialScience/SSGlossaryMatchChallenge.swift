@@ -69,7 +69,7 @@ struct SSGlossaryMatchChallenge: View {
     }
 
     private var header: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
             Text("Match the key words")
                 .font(.headline)
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -87,7 +87,7 @@ struct SSGlossaryMatchChallenge: View {
             ForEach(terms.indices, id: \.self) { i in
                 let done = matched.contains(i)
                 Button { selectTerm(i) } label: {
-                    HStack(spacing: 8) {
+                    HStack(spacing: DesignTokens.Spacing.sm) {
                         if done {
                             Image(systemName: SFSymbolCompat.name("checkmark.circle.fill"))
                                 .foregroundColor(.green).accessibilityHidden(true)
@@ -97,7 +97,7 @@ struct SSGlossaryMatchChallenge: View {
                             .foregroundColor(DesignTokens.BrandColor.canvasText)
                         Spacer(minLength: 0)
                     }
-                    .padding(.horizontal, 12).padding(.vertical, 9)
+                    .padding(.horizontal, DesignTokens.Spacing.md).padding(.vertical, 9)
                     .frame(maxWidth: .infinity)
                     .background(RoundedRectangle(cornerRadius: 8).fill(termFill(i)))
                     .overlay(RoundedRectangle(cornerRadius: 8)
@@ -128,7 +128,7 @@ struct SSGlossaryMatchChallenge: View {
                             .foregroundColor(DesignTokens.BrandColor.canvasText)
                             .multilineTextAlignment(.leading)
                             .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.horizontal, 12).padding(.vertical, 9)
+                            .padding(.horizontal, DesignTokens.Spacing.md).padding(.vertical, 9)
                             .background(RoundedRectangle(cornerRadius: 8).fill(meaningFill(termIdx)))
                             .overlay(RoundedRectangle(cornerRadius: 8)
                                 .strokeBorder(Color.compatIndigo.opacity(0.18), lineWidth: 1))
@@ -147,7 +147,7 @@ struct SSGlossaryMatchChallenge: View {
     }
 
     private var solvedBanner: some View {
-        HStack(spacing: 8) {
+        HStack(spacing: DesignTokens.Spacing.sm) {
             Image(systemName: SFSymbolCompat.name("checkmark.seal.fill"))
                 .foregroundColor(.green).accessibilityHidden(true)
             Text("All matched! You linked every key word to its meaning.")

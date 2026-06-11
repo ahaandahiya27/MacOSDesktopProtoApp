@@ -61,7 +61,7 @@ struct ChapterGlossaryCTA: View {
                         .font(.body)
                         .foregroundColor(Color.compatIndigo)
                         .accessibilityHidden(true)
-                    VStack(alignment: .leading, spacing: 2) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                         Text("Look up vocabulary for Ch. \(chapter.number)")
                             .font(.callout.weight(.semibold))
                             .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -77,7 +77,7 @@ struct ChapterGlossaryCTA: View {
                         .accessibilityHidden(true)
                 }
                 .padding(.vertical, 10)
-                .padding(.horizontal, 12)
+                .padding(.horizontal, DesignTokens.Spacing.md)
                 .background(
                     RoundedRectangle(cornerRadius: 10, style: .continuous)
                         .fill(Color(NSColor.controlBackgroundColor))

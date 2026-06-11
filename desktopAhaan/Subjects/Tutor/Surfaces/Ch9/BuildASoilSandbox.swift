@@ -87,7 +87,7 @@ struct BuildASoilSandbox: View {
                 explainerBody
             }
         }
-        .padding(16)
+        .padding(DesignTokens.Spacing.lg)
         .background(
             RoundedRectangle(cornerRadius: 14, style: .continuous)
                 .fill(Color.compatBrown.opacity(0.10))
@@ -104,7 +104,7 @@ struct BuildASoilSandbox: View {
                 .font(.title3)
                 .foregroundColor(Color.compatBrown)
                 .accessibilityHidden(true)
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                 Text("Build-a-Soil sandbox")
                     .font(.headline)
                 Text("Mix sand, clay, and silt — which combination is best for farming?")
@@ -165,7 +165,7 @@ struct BuildASoilSandbox: View {
     }
 
     private var outputBlock: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
             HStack {
                 Text("Soil type")
                     .font(.caption.weight(.semibold))
@@ -233,7 +233,7 @@ struct BuildASoilSandbox: View {
             .foregroundColor(.primary)
             .lineSpacing(3)
             .fixedSize(horizontal: false, vertical: true)
-            .padding(.top, 4)
+            .padding(.top, DesignTokens.Spacing.xs)
             .transition(.opacity)
             .accessibilityHint("Plain-language explanation of why loam soils are agriculturally ideal.")
     }

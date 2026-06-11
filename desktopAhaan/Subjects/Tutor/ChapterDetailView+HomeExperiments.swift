@@ -261,7 +261,7 @@ struct HomeExperimentsSheet: View {
     var body: some View {
         VStack(spacing: 0) {
             HStack(alignment: .center) {
-                VStack(alignment: .leading, spacing: 4) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                     Text("Try at Home")
                         .font(.title2.bold())
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -316,9 +316,9 @@ struct HomeExperimentCard: View {
             Button {
                 withAnimationRespectingReduceMotion(.easeInOut(duration: 0.2)) { expanded.toggle() }
             } label: {
-                HStack(spacing: 12) {
+                HStack(spacing: DesignTokens.Spacing.md) {
                     Text(experiment.emoji).font(.system(size: 28))
-                    VStack(alignment: .leading, spacing: 2) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                         Text(experiment.title)
                             .font(.headline)
                             .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -346,7 +346,7 @@ struct HomeExperimentCard: View {
                             .font(.subheadline.bold())
                             .foregroundColor(DesignTokens.BrandColor.canvasText)
                         ForEach(experiment.needs.indices, id: \.self) { idx in let item = experiment.needs[idx];
-                            HStack(alignment: .top, spacing: 8) {
+                            HStack(alignment: .top, spacing: DesignTokens.Spacing.sm) {
                                 Text("•")
                                 Text(item).multilineTextAlignment(.leading)
                             }
@@ -360,7 +360,7 @@ struct HomeExperimentCard: View {
                             .font(.subheadline.bold())
                             .foregroundColor(DesignTokens.BrandColor.canvasText)
                         ForEach(experiment.steps.indices, id: \.self) { idx in let step = experiment.steps[idx];
-                            HStack(alignment: .top, spacing: 8) {
+                            HStack(alignment: .top, spacing: DesignTokens.Spacing.sm) {
                                 Text("\(idx + 1).")
                                     .frame(width: 22, alignment: .trailing)
                                 Text(step).multilineTextAlignment(.leading)

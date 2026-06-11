@@ -26,7 +26,7 @@ struct ChapterListView: View {
     var body: some View {
         Group {
             if pack.chapters.isEmpty {
-                VStack(spacing: 12) {
+                VStack(spacing: DesignTokens.Spacing.md) {
                     Image(systemName: "book.closed")
                         .font(.system(size: 48))
                         .foregroundColor(.secondary)
@@ -121,7 +121,7 @@ private struct ChapterRow: View {
                     .font(.headline)
                     .foregroundColor(Color.compatIndigo)
             }
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                 Text(chapter.title)
                     .font(.headline)
                     .lineLimit(2)
@@ -130,7 +130,7 @@ private struct ChapterRow: View {
                     .font(.caption)
                     .foregroundColor(.secondary)
                     .lineLimit(2)
-                HStack(spacing: 12) {
+                HStack(spacing: DesignTokens.Spacing.md) {
                     Label("\(chapter.topics.count) topics", systemImage: "list.bullet")
                     if understoodCount > 0 {
                         Label("\(understoodCount)/\(totalConcepts) understood",
@@ -144,10 +144,10 @@ private struct ChapterRow: View {
                 }
                 .font(.caption)
                 .foregroundColor(.secondary)
-                .padding(.top, 2)
+                .padding(.top, DesignTokens.Spacing.xxs)
             }
         }
-        .padding(.vertical, 4)
+        .padding(.vertical, DesignTokens.Spacing.xs)
     }
 }
 

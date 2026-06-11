@@ -33,8 +33,8 @@ private struct TimelineRow: View {
     let timeline: ContentTimeline
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            HStack(spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
+            HStack(spacing: DesignTokens.Spacing.sm) {
                 Image(systemName: SFSymbolCompat.name("arrow.triangle.branch"))
                     .font(.title3)
                     .foregroundColor(Color.compatCyan)
@@ -60,7 +60,7 @@ private struct TimelineRow: View {
                     }
                 }
                 .padding(.vertical, 6)
-                .padding(.horizontal, 2)
+                .padding(.horizontal, DesignTokens.Spacing.xxs)
             }
         }
         .padding(14)

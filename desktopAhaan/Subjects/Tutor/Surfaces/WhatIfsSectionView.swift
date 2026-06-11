@@ -23,7 +23,7 @@ struct WhatIfsSectionView: View {
                 tint: .compatPurple,
                 storageKey: "\(chapter.id).whatIfs"
             ) {
-                VStack(alignment: .leading, spacing: 12) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.md) {
                     ForEach(entries) { entry in
                         WhatIfCard(entry: entry)
                     }
@@ -38,8 +38,8 @@ private struct WhatIfCard: View {
     @State private var showAnswer = false
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            HStack(alignment: .top, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
+            HStack(alignment: .top, spacing: DesignTokens.Spacing.sm) {
                 Image(systemName: SFSymbolCompat.name("sparkle"))
                     .font(.body)
                     .foregroundColor(Color.compatPurple)
@@ -69,7 +69,7 @@ private struct WhatIfCard: View {
                 .accessibilityHint(showAnswer ? "Hides the answer." : "Reveals the guided answer for this what-if.")
             }
         }
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(
             RoundedRectangle(cornerRadius: 10)

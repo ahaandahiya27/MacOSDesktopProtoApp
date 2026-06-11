@@ -47,7 +47,7 @@ struct SoilProfileDiagram: View {
 struct SoilTypesDiagram: View {
     var body: some View {
         SDFigure(tint: Color.compatBrown) {
-            HStack(spacing: 12) {
+            HStack(spacing: DesignTokens.Spacing.md) {
                 jar("Sandy", "drains fast", grains: 4, size: 11)
                 jar("Clayey", "holds water", grains: 18, size: 4)
                 jar("Loamy", "best for crops", grains: 9, size: 7)
@@ -72,9 +72,9 @@ struct SoilTypesDiagram: View {
         // A simple fixed grid of grains scaled to size.
         let columns = 4
         let rows = (count + columns - 1) / columns
-        return VStack(spacing: 2) {
+        return VStack(spacing: DesignTokens.Spacing.xxs) {
             ForEach(0..<rows, id: \.self) { r in
-                HStack(spacing: 2) {
+                HStack(spacing: DesignTokens.Spacing.xxs) {
                     ForEach(0..<columns, id: \.self) { c in
                         let visible: Bool = (r * columns + c) < count
                         Circle()

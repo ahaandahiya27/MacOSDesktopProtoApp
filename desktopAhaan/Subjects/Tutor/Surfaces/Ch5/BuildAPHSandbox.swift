@@ -90,7 +90,7 @@ struct BuildAPHSandbox: View {
                 explainerBody
             }
         }
-        .padding(16)
+        .padding(DesignTokens.Spacing.lg)
         .background(
             RoundedRectangle(cornerRadius: 14, style: .continuous)
                 .fill(indicatorColor.opacity(0.12))
@@ -107,7 +107,7 @@ struct BuildAPHSandbox: View {
                 .font(.title3)
                 .foregroundColor(indicatorColor)
                 .accessibilityHidden(true)
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                 Text("Build-a-pH sandbox")
                     .font(.headline)
                 Text("Equalise the two volumes — what pH do you get?")
@@ -168,7 +168,7 @@ struct BuildAPHSandbox: View {
     }
 
     private var outputBlock: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
             HStack {
                 Text("pH")
                     .font(.caption.weight(.semibold))
@@ -236,7 +236,7 @@ struct BuildAPHSandbox: View {
             .foregroundColor(.primary)
             .lineSpacing(3)
             .fixedSize(horizontal: false, vertical: true)
-            .padding(.top, 4)
+            .padding(.top, DesignTokens.Spacing.xs)
             .transition(.opacity)
             .accessibilityHint("Plain-language explanation of pH and neutralisation.")
     }

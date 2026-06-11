@@ -169,9 +169,9 @@ struct ClockHistoryDiagram: View {
     ]
     var body: some View {
         SDFigure(tint: Color.compatBrown) {
-            VStack(spacing: 8) {
+            VStack(spacing: DesignTokens.Spacing.sm) {
                 SDLabel(text: "Older → more accurate →", color: Color.compatBrown)
-                HStack(spacing: 4) {
+                HStack(spacing: DesignTokens.Spacing.xs) {
                     ForEach(0..<clocks.count, id: \.self) { i in
                         clockNode(clocks[i].0, clocks[i].1, last: i == clocks.count - 1)
                     }

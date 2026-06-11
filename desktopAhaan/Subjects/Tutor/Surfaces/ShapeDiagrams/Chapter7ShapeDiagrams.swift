@@ -18,7 +18,7 @@ struct AtmosphereLayersDiagram: View {
     ]
     var body: some View {
         SDFigure(tint: Color.compatBlue) {
-            VStack(spacing: 4) {
+            VStack(spacing: DesignTokens.Spacing.xs) {
                 ForEach(0..<layers.count, id: \.self) { i in
                     band(layers[i].0, layers[i].1, layers[i].2, ground: i == layers.count - 1)
                 }
@@ -153,7 +153,7 @@ struct PolarAdaptDiagram: View {
                         .frame(width: 110, height: 90)
                     Circle().fill(DesignTokens.BrandColor.canvasText).frame(width: 4, height: 4).offset(x: 30, y: -16)
                 }
-                VStack(alignment: .leading, spacing: 8) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                     SDLabel(text: "White fur — camouflage")
                     SDLabel(text: "Thick fur + blubber — warmth", color: Color.compatBlue)
                     SDLabel(text: "Small ears — less heat lost")

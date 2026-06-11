@@ -102,7 +102,7 @@ struct ChapterStuckHereStrip: View {
         ids: [String],
         kind: ChipKind
     ) -> some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
             HStack(spacing: 6) {
                 Text(emoji).accessibilityHidden(true)
                 Text(label)
@@ -111,7 +111,7 @@ struct ChapterStuckHereStrip: View {
                 Spacer(minLength: 0)
             }
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 8) {
+                HStack(spacing: DesignTokens.Spacing.sm) {
                     ForEach(ids, id: \.self) { id in
                         Button {
                             switch kind {
@@ -123,7 +123,7 @@ struct ChapterStuckHereStrip: View {
                                 .font(.callout)
                                 .foregroundColor(DesignTokens.BrandColor.canvasText)
                                 .lineLimit(1)
-                                .padding(.horizontal, 12)
+                                .padding(.horizontal, DesignTokens.Spacing.md)
                                 .padding(.vertical, 6)
                                 .background(
                                     Capsule().fill(Color.white)

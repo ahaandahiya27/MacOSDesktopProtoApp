@@ -90,7 +90,7 @@ struct ThreeOrgansSorter: View {
     }
 
     private var header: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
             Text("Which organ does this?")
                 .font(.headline)
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -123,13 +123,13 @@ struct ThreeOrgansSorter: View {
             .foregroundColor(DesignTokens.BrandColor.canvasText)
             .fixedSize(horizontal: false, vertical: true)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(16)
+            .padding(DesignTokens.Spacing.lg)
             .background(RoundedRectangle(cornerRadius: 10).fill(Color.compatPurple.opacity(0.08)))
             .accessibilityLabel("Government job: \(current.text)")
     }
 
     private var organButtons: some View {
-        HStack(spacing: 8) {
+        HStack(spacing: DesignTokens.Spacing.sm) {
             ForEach(organs.indices, id: \.self) { i in organButton(i) }
         }
     }
@@ -150,7 +150,7 @@ struct ThreeOrgansSorter: View {
             }
             .foregroundColor(answered ? (showAsAnswer || isPick ? .white : DesignTokens.BrandColor.canvasText) : .white)
             .frame(maxWidth: .infinity)
-            .padding(.vertical, 12).padding(.horizontal, 6)
+            .padding(.vertical, DesignTokens.Spacing.md).padding(.horizontal, 6)
             .background(RoundedRectangle(cornerRadius: 10)
                 .fill(answered ? tint.opacity(showAsAnswer || isPick ? 0.9 : 0.12) : Color.compatPurple))
         }
@@ -162,11 +162,11 @@ struct ThreeOrgansSorter: View {
     }
 
     private var feedbackBanner: some View {
-        HStack(alignment: .top, spacing: 8) {
+        HStack(alignment: .top, spacing: DesignTokens.Spacing.sm) {
             Image(systemName: SFSymbolCompat.name(wasCorrect ? "checkmark.circle.fill" : "xmark.circle.fill"))
                 .foregroundColor(wasCorrect ? .green : .red)
                 .accessibilityHidden(true)
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                 Text(wasCorrect ? "Correct — that's the \(organs[current.organ].name)." : "Not quite — it's the \(organs[current.organ].name).")
                     .font(.caption.weight(.bold))
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -188,7 +188,7 @@ struct ThreeOrgansSorter: View {
             Text(index + 1 < tasks.count ? "Next job →" : "Start over")
                 .font(.caption.weight(.semibold))
                 .foregroundColor(.white)
-                .padding(.horizontal, 16).padding(.vertical, 8)
+                .padding(.horizontal, DesignTokens.Spacing.lg).padding(.vertical, DesignTokens.Spacing.sm)
                 .background(Capsule().fill(Color.compatPurple))
         }
         .buttonStyle(.plain)

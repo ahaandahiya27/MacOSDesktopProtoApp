@@ -149,7 +149,7 @@ struct ChapterDetailView: View {
                         .font(.body)
                         .foregroundColor(Color.compatIndigo)
                         .accessibilityHidden(true)
-                    VStack(alignment: .leading, spacing: 2) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                         Text("Glossary")
                             .font(.callout.weight(.semibold))
                         Text("\(chapter.glossaryList.count) term\(chapter.glossaryList.count == 1 ? "" : "s") for this chapter")
@@ -194,11 +194,11 @@ struct ChapterDetailView: View {
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 16) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.lg) {
                 Text(chapter.summary)
                     .font(.callout)
                     .foregroundColor(.secondary)
-                    .padding(.horizontal, 4)
+                    .padding(.horizontal, DesignTokens.Spacing.xs)
 
                 // "Stuck here?" — auto-hides on empty signal set.
                 ChapterStuckHereStrip(
@@ -437,7 +437,7 @@ private struct DiscoverEntryBanner: View {
         HStack(alignment: .center, spacing: 14) {
             Text("✨")
                 .font(.system(size: 38))
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                 Text("Try Discover Mode")
                     .font(.title3.bold())
                     .foregroundColor(.white)
@@ -499,7 +499,7 @@ private struct TopicCard: View {
                 }
                 .font(.caption)
                 .foregroundColor(.secondary)
-                .padding(.top, 4)
+                .padding(.top, DesignTokens.Spacing.xs)
             }
             Spacer()
             Image(systemName: "chevron.right")

@@ -29,7 +29,7 @@ struct NcertQASectionView: View {
                 tint: .compatCyan,
                 storageKey: "\(chapter.id).ncertQA"
             ) {
-                VStack(alignment: .leading, spacing: 12) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.md) {
                     ForEach(entries) { entry in
                         NcertQARow(entry: entry)
                     }
@@ -46,8 +46,8 @@ private struct NcertQARow: View {
     @State private var isShowingAnswer = false
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            HStack(alignment: .top, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
+            HStack(alignment: .top, spacing: DesignTokens.Spacing.sm) {
                 Text("Q.")
                     .font(.callout.weight(.bold))
                     .foregroundColor(Color.compatCyan)
@@ -58,7 +58,7 @@ private struct NcertQARow: View {
             }
             answerSection
         }
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(
             RoundedRectangle(cornerRadius: 10)
@@ -75,7 +75,7 @@ private struct NcertQARow: View {
     private var answerSection: some View {
         if isShowingAnswer {
             VStack(alignment: .leading, spacing: 6) {
-                HStack(alignment: .top, spacing: 8) {
+                HStack(alignment: .top, spacing: DesignTokens.Spacing.sm) {
                     Text("A.")
                         .font(.callout.weight(.bold))
                         .foregroundColor(Color.compatCyan)
@@ -84,7 +84,7 @@ private struct NcertQARow: View {
                         .fixedSize(horizontal: false, vertical: true)
                 }
                 if let page = entry.textbookPage {
-                    HStack(spacing: 4) {
+                    HStack(spacing: DesignTokens.Spacing.xs) {
                         Image(systemName: SFSymbolCompat.name("book.closed"))
                             .font(.caption2)
                             .foregroundColor(.secondary)
@@ -105,7 +105,7 @@ private struct NcertQARow: View {
                 .accentColor(Color.compatCyan)
                 .accessibilityHint("Collapses the model answer.")
             }
-            .padding(.leading, 4)
+            .padding(.leading, DesignTokens.Spacing.xs)
             .transition(.opacity)
         } else {
             Button("Show model answer") {

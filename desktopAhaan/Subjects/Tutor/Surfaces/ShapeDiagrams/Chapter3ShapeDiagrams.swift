@@ -16,7 +16,7 @@ struct WoolProcessDiagram: View {
         SDFigure(tint: Color.compatBrown) {
             VStack(spacing: 10) {
                 SDLabel(text: "Fleece → yarn", color: Color.compatBrown)
-                HStack(spacing: 4) {
+                HStack(spacing: DesignTokens.Spacing.xs) {
                     ForEach(0..<steps.count, id: \.self) { i in
                         stepNode(steps[i], last: i == steps.count - 1)
                     }
@@ -27,8 +27,8 @@ struct WoolProcessDiagram: View {
     }
 
     private func stepNode(_ title: String, last: Bool) -> some View {
-        HStack(spacing: 4) {
-            VStack(spacing: 4) {
+        HStack(spacing: DesignTokens.Spacing.xs) {
+            VStack(spacing: DesignTokens.Spacing.xs) {
                 Circle()
                     .fill(Color.compatBrown.opacity(0.22))
                     .overlay(Circle().stroke(Color.compatBrown.opacity(0.6), lineWidth: 1.5))
@@ -83,7 +83,7 @@ struct SilkwormLifecycleDiagram: View {
     }
 
     private func stageNode(_ title: String, x: CGFloat, y: CGFloat) -> some View {
-        VStack(spacing: 2) {
+        VStack(spacing: DesignTokens.Spacing.xxs) {
             Circle()
                 .fill(Color.green.opacity(0.25))
                 .overlay(Circle().stroke(Color.green.opacity(0.6), lineWidth: 1.5))
@@ -101,7 +101,7 @@ struct SilkwormLifecycleDiagram: View {
 struct PolymerChainDiagram: View {
     var body: some View {
         SDFigure(tint: Color.compatBlue) {
-            VStack(spacing: 12) {
+            VStack(spacing: DesignTokens.Spacing.md) {
                 SDLabel(text: "Monomer", color: Color.compatBlue)
                 Circle()
                     .fill(Color.compatBlue.opacity(0.3))
@@ -139,7 +139,7 @@ struct PolymerChainDiagram: View {
 struct FibreCompareDiagram: View {
     var body: some View {
         SDFigure(tint: .green) {
-            HStack(spacing: 12) {
+            HStack(spacing: DesignTokens.Spacing.md) {
                 column(title: "Natural", tint: .green,
                        items: ["Wool", "Silk", "Cotton", "Jute"])
                 Rectangle().fill(DesignTokens.BrandColor.canvasTextSecondary.opacity(0.25)).frame(width: 1)

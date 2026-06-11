@@ -29,7 +29,7 @@ struct WhatsNewSheet: View {
             Divider()
             ScrollView {
                 content
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                     .padding(.vertical, 18)
                     .frame(maxWidth: 700, alignment: .leading)
                     .frame(maxWidth: .infinity, alignment: .center)
@@ -55,7 +55,7 @@ struct WhatsNewSheet: View {
                 .font(.title)
                 .foregroundColor(Color.compatIndigo)
                 .accessibilityHidden(true)
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                 Text("What's New")
                     .font(.title2.bold())
                 Text("Version \(Self.currentVersion)")
@@ -73,13 +73,13 @@ struct WhatsNewSheet: View {
             .accessibilityLabel("Close What's New")
             .accessibilityHint("Closes the sheet and marks this version as seen.")
         }
-        .padding(.horizontal, 24)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
         .padding(.top, 20)
         .padding(.bottom, 14)
     }
 
     private var content: some View {
-        VStack(alignment: .leading, spacing: 24) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xl) {
             ForEach(Self.entries) { entry in
                 WhatsNewEntryView(entry: entry)
             }
@@ -95,8 +95,8 @@ struct WhatsNewSheet: View {
                 .accessibilityLabel("Done")
                 .accessibilityHint("Closes the sheet. You can replay it from Help → What's New.")
         }
-        .padding(.horizontal, 24)
-        .padding(.vertical, 12)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
+        .padding(.vertical, DesignTokens.Spacing.md)
     }
 
     // MARK: - Release notes table

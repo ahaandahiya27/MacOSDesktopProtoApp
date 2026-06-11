@@ -78,9 +78,9 @@ struct InsideTheDigestiveTour: View {
             .pointingCursor()
             .accessibilityLabel("Close digestive tour")
         }
-        .padding(.horizontal, 24)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
         .padding(.top, 18)
-        .padding(.bottom, 12)
+        .padding(.bottom, DesignTokens.Spacing.md)
     }
 
     private var sceneBody: some View {
@@ -88,11 +88,11 @@ struct InsideTheDigestiveTour: View {
             VStack(alignment: .leading, spacing: 18) {
                 stopVisualization
                     .frame(maxWidth: .infinity)
-                    .padding(.vertical, 8)
+                    .padding(.vertical, DesignTokens.Spacing.sm)
                     .id("digestive-stop-\(stopIndex)")
                 narrationCard
             }
-            .padding(.horizontal, 24)
+            .padding(.horizontal, DesignTokens.Spacing.xl)
             .padding(.vertical, 18)
             .frame(maxWidth: 720, alignment: .leading)
             .frame(maxWidth: .infinity, alignment: .center)
@@ -156,8 +156,8 @@ struct InsideTheDigestiveTour: View {
             .keyboardShortcut(.defaultAction)
             .accessibilityHint(isLast ? "Closes the tour." : "Go to the next stop on the journey.")
         }
-        .padding(.horizontal, 24)
-        .padding(.vertical, 12)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
+        .padding(.vertical, DesignTokens.Spacing.md)
     }
 
     private var progressDots: some View {
@@ -246,7 +246,7 @@ private struct DigestiveMouthView: View {
                     .font(.system(size: 60))
                     .foregroundColor(DesignTokens.BrandColor.tryAtHome)
                     .accessibilityHidden(true)
-                VStack(alignment: .leading, spacing: 8) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                     HStack(spacing: 6) {
                         Image(systemName: SFSymbolCompat.name("scissors"))
                             .foregroundColor(.gray)
@@ -280,7 +280,7 @@ private struct DigestiveStomachView: View {
             }
             .fill(Color.red.opacity(0.65))
             .frame(width: 240, height: 220)
-            VStack(spacing: 4) {
+            VStack(spacing: DesignTokens.Spacing.xs) {
                 Text("HCl + pepsin")
                     .font(.caption.weight(.bold))
                     .foregroundColor(.white)
@@ -288,7 +288,7 @@ private struct DigestiveStomachView: View {
                     .font(.caption2.monospacedDigit())
                     .foregroundColor(.white.opacity(0.90))
             }
-            .padding(8)
+            .padding(DesignTokens.Spacing.sm)
             .background(
                 RoundedRectangle(cornerRadius: 8)
                     .fill(Color.black.opacity(0.40))
@@ -330,14 +330,14 @@ private struct DigestiveLiverPancreasView: View {
             RoundedRectangle(cornerRadius: 14)
                 .fill(DesignTokens.BrandColor.mnemonic.opacity(0.10))
             HStack(spacing: 18) {
-                VStack(spacing: 4) {
+                VStack(spacing: DesignTokens.Spacing.xs) {
                     Ellipse()
                         .fill(DesignTokens.BrandColor.danger)
                         .frame(width: 120, height: 80)
                     Text("Liver → bile")
                         .font(.caption.weight(.semibold))
                 }
-                VStack(spacing: 4) {
+                VStack(spacing: DesignTokens.Spacing.xs) {
                     Ellipse()
                         .fill(DesignTokens.BrandColor.mnemonic)
                         .frame(width: 100, height: 50)

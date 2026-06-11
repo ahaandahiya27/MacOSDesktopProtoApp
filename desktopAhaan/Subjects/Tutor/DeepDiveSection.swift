@@ -58,7 +58,7 @@ struct DeepDiveSection: View {
             } label: {
                 disclosureHeader
             }
-            .padding(16)
+            .padding(DesignTokens.Spacing.lg)
             .background(
                 RoundedRectangle(cornerRadius: 14, style: .continuous)
                     .fill(Color.compatIndigo.opacity(0.08))
@@ -87,8 +87,8 @@ struct DeepDiveSection: View {
                 .font(.title3)
                 .foregroundColor(Color.compatIndigo)
                 .accessibilityHidden(true)
-            VStack(alignment: .leading, spacing: 2) {
-                HStack(spacing: 8) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
+                HStack(spacing: DesignTokens.Spacing.sm) {
                     Text("Go deeper")
                         .font(.headline)
                     if showsNewBadge {
@@ -96,7 +96,7 @@ struct DeepDiveSection: View {
                             .font(.system(size: 10, weight: .bold))
                             .foregroundColor(.white)
                             .padding(.horizontal, 6)
-                            .padding(.vertical, 2)
+                            .padding(.vertical, DesignTokens.Spacing.xxs)
                             .background(
                                 Capsule().fill(Color.compatIndigo)
                             )
@@ -168,9 +168,9 @@ private struct StretchTopicRow: View {
     }
 
     private var rowBody: some View {
-        HStack(alignment: .top, spacing: 12) {
+        HStack(alignment: .top, spacing: DesignTokens.Spacing.md) {
             GradeBadge(level: topic.gradeLevel)
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                 Text(topic.title)
                     .font(.body.weight(.semibold))
                     .foregroundColor(.primary)
@@ -190,7 +190,7 @@ private struct StretchTopicRow: View {
                 .foregroundColor(.secondary)
                 .accessibilityHidden(true)
         }
-        .padding(.vertical, 8)
+        .padding(.vertical, DesignTokens.Spacing.sm)
         .padding(.horizontal, 10)
         .background(
             RoundedRectangle(cornerRadius: 10)
@@ -226,7 +226,7 @@ struct GradeBadge: View {
         Text(level.displayName)
             .font(.system(size: 11, weight: .bold))
             .foregroundColor(.white)
-            .padding(.horizontal, 8)
+            .padding(.horizontal, DesignTokens.Spacing.sm)
             .padding(.vertical, 3)
             .background(
                 Capsule().fill(tint)

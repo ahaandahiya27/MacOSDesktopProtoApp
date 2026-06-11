@@ -44,7 +44,7 @@ private struct PartLabel: View {
         Text(text)
             .font(.system(size: 10, weight: .semibold))
             .foregroundColor(color)
-            .padding(.horizontal, 6).padding(.vertical, 2)
+            .padding(.horizontal, 6).padding(.vertical, DesignTokens.Spacing.xxs)
             .background(RoundedRectangle(cornerRadius: 4).fill(Color.white.opacity(0.82)))
             .fixedSize()
     }
@@ -121,7 +121,7 @@ struct ChloroplastDiagram: View {
     }
 
     private var granum: some View {
-        VStack(spacing: 2) {
+        VStack(spacing: DesignTokens.Spacing.xxs) {
             ForEach(0..<5, id: \.self) { _ in
                 Ellipse()
                     .fill(Color.green.opacity(0.55))
@@ -160,7 +160,7 @@ struct StomataDiagram: View {
         let centerX: CGFloat = w / 2
         let poreY: CGFloat = cellH / 2
         let outerH: CGFloat = cellH + 6
-        return VStack(spacing: 8) {
+        return VStack(spacing: DesignTokens.Spacing.sm) {
             ZStack {
                 HStack(spacing: gap) {
                     GuardCell(flip: false).frame(width: cellW, height: cellH)
@@ -218,7 +218,7 @@ struct PhotosynthesisEquationDiagram: View {
     var body: some View {
         DiagramCanvas(tint: .green) {
             VStack(spacing: 10) {
-                HStack(spacing: 8) {
+                HStack(spacing: DesignTokens.Spacing.sm) {
                     Group {
                         reactantChip("CO₂", Color.compatBrown)
                         plus
@@ -252,7 +252,7 @@ struct PhotosynthesisEquationDiagram: View {
         Text(t)
             .font(.system(size: 12, weight: .semibold))
             .foregroundColor(DesignTokens.BrandColor.canvasText)
-            .padding(.horizontal, 8).padding(.vertical, 5)
+            .padding(.horizontal, DesignTokens.Spacing.sm).padding(.vertical, 5)
             .background(RoundedRectangle(cornerRadius: 7).fill(c.opacity(0.18)))
             .overlay(RoundedRectangle(cornerRadius: 7).strokeBorder(c.opacity(0.55), lineWidth: 1))
             .fixedSize()
@@ -330,11 +330,11 @@ struct LeafAnatomyDiagram: View {
                 }
             }
             // Vascular bundle: a small xylem/phloem pair
-            HStack(spacing: 2) {
+            HStack(spacing: DesignTokens.Spacing.xxs) {
                 Circle().fill(Color.compatBrown.opacity(0.6)).frame(width: 12, height: 12)
                 Circle().fill(Color.compatBlue.opacity(0.55)).frame(width: 12, height: 12)
             }
-            .padding(4)
+            .padding(DesignTokens.Spacing.xs)
             .background(RoundedRectangle(cornerRadius: 6).fill(Color.white.opacity(0.7)))
             .overlay(PartLabel(text: "Vein").offset(y: 16))
         }

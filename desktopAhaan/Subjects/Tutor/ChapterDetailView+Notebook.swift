@@ -32,10 +32,10 @@ struct NotebookCard: View {
 
     var body: some View {
         Button(action: onTap) {
-            HStack(spacing: 12) {
+            HStack(spacing: DesignTokens.Spacing.md) {
                 Text("📓")
                     .font(.system(size: 26))
-                VStack(alignment: .leading, spacing: 2) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                     Text("My Notebook")
                         .font(.headline)
                         .foregroundColor(.white)
@@ -104,7 +104,7 @@ struct ChapterNotebookSheet: View {
     var body: some View {
         VStack(spacing: 0) {
             HStack(alignment: .center) {
-                VStack(alignment: .leading, spacing: 4) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                     Text("My Notebook")
                         .font(.title2.bold())
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -145,7 +145,7 @@ struct ChapterNotebookSheet: View {
                 Text("Anything you noticed, wondered, or want to remember about this chapter goes here. The notebook saves automatically.")
                     .font(.caption)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
-                    .padding(.horizontal, 4)
+                    .padding(.horizontal, DesignTokens.Spacing.xs)
 
                 TextEditor(text: $draft)
                     .font(.body)

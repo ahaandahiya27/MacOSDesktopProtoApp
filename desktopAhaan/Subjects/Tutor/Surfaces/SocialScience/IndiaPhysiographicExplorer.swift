@@ -108,7 +108,7 @@ struct IndiaPhysiographicExplorer: View {
     }
 
     private var header: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
             Text("Explore India's five physiographic regions")
                 .font(.headline)
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -120,7 +120,7 @@ struct IndiaPhysiographicExplorer: View {
     }
 
     private var reliefStack: some View {
-        VStack(spacing: 4) {
+        VStack(spacing: DesignTokens.Spacing.xs) {
             ForEach(regions.indices, id: \.self) { i in
                 regionBand(i)
             }
@@ -200,10 +200,10 @@ struct IndiaPhysiographicExplorer: View {
     }
 
     private var detailPanel: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            HStack(spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
+            HStack(spacing: DesignTokens.Spacing.sm) {
                 Text(selected.glyph).font(.title2).accessibilityHidden(true)
-                VStack(alignment: .leading, spacing: 2) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                     Text(selected.name)
                         .font(.headline)
                         .foregroundColor(DesignTokens.BrandColor.canvasText)

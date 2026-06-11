@@ -20,7 +20,7 @@ struct CurriculumBridgeChip: View {
     var body: some View {
         if let bridge = bridge {
             Button(action: { isShowingDetail = true }) {
-                HStack(spacing: 8) {
+                HStack(spacing: DesignTokens.Spacing.sm) {
                     Image(systemName: SFSymbolCompat.name("arrow.up.forward.circle.fill"))
                         .font(.body)
                         .foregroundColor(Color.compatIndigo)
@@ -83,7 +83,7 @@ private struct CurriculumBridgeSheet: View {
                         symbol: "graduationcap.fill"
                     )
                 }
-                .padding(.horizontal, 24)
+                .padding(.horizontal, DesignTokens.Spacing.xl)
                 .padding(.vertical, 18)
                 .frame(maxWidth: 640, alignment: .leading)
                 .frame(maxWidth: .infinity, alignment: .center)
@@ -125,9 +125,9 @@ private struct CurriculumBridgeSheet: View {
             .pointingCursor()
             .accessibilityLabel("Close curriculum bridge")
         }
-        .padding(.horizontal, 24)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
         .padding(.top, 20)
-        .padding(.bottom, 12)
+        .padding(.bottom, DesignTokens.Spacing.md)
     }
 
     private var footer: some View {
@@ -136,8 +136,8 @@ private struct CurriculumBridgeSheet: View {
             Button("Done", action: onDismiss)
                 .keyboardShortcut(.defaultAction)
         }
-        .padding(.horizontal, 24)
-        .padding(.vertical, 12)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
+        .padding(.vertical, DesignTokens.Spacing.md)
     }
 }
 
@@ -148,8 +148,8 @@ private struct BridgeBlock: View {
     let symbol: String
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            HStack(spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
+            HStack(spacing: DesignTokens.Spacing.sm) {
                 Image(systemName: SFSymbolCompat.name(symbol))
                     .font(.title3)
                     .foregroundColor(tint)

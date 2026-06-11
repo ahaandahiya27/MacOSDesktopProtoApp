@@ -65,7 +65,7 @@ struct BuildAMotionSandbox: View {
                 explainerBody
             }
         }
-        .padding(16)
+        .padding(DesignTokens.Spacing.lg)
         .background(
             RoundedRectangle(cornerRadius: 14, style: .continuous)
                 .fill(Color.compatPurple.opacity(0.10))
@@ -82,7 +82,7 @@ struct BuildAMotionSandbox: View {
                 .font(.title3)
                 .foregroundColor(Color.compatPurple)
                 .accessibilityHidden(true)
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                 Text("Build-a-Motion sandbox")
                     .font(.headline)
                 Text("Set u, a, t — predict how far the runner goes.")
@@ -137,7 +137,7 @@ struct BuildAMotionSandbox: View {
     }
 
     private var outputBlock: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
             HStack {
                 Text("Final velocity v")
                     .font(.caption.weight(.semibold))
@@ -200,7 +200,7 @@ struct BuildAMotionSandbox: View {
     }
 
     private var explainerBody: some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             Text("Two formulas describe motion at constant acceleration:")
                 .font(.callout)
             Text("v = u + a·t")
@@ -214,7 +214,7 @@ struct BuildAMotionSandbox: View {
                 .lineSpacing(3)
                 .fixedSize(horizontal: false, vertical: true)
         }
-        .padding(.top, 4)
+        .padding(.top, DesignTokens.Spacing.xs)
         .transition(.opacity)
         .accessibilityHint("Kinematics formulas in plain notation.")
     }

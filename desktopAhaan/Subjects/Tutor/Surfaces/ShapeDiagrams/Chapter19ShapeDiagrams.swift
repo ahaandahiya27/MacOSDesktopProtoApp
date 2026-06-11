@@ -158,7 +158,7 @@ struct SolarSystemDiagram: View {
         let step: CGFloat = span / CGFloat(planets.count)
         let x: CGFloat = cx + 28 + CGFloat(i) * step
         let size: CGFloat = (i == 4 || i == 5) ? 18 : (i >= 6 ? 13 : 9)
-        return VStack(spacing: 2) {
+        return VStack(spacing: DesignTokens.Spacing.xxs) {
             Circle().fill(planets[i].1.opacity(0.7)).frame(width: size, height: size)
             Text(planets[i].0).font(.system(size: 7, weight: .semibold)).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
         }
@@ -186,11 +186,11 @@ struct EclipseDiagram: View {
     }
 
     private func row(title: String, order: [String], colors: [Color], note: String) -> some View {
-        VStack(spacing: 4) {
+        VStack(spacing: DesignTokens.Spacing.xs) {
             HStack(spacing: 10) {
                 Text(title).font(.system(size: 11, weight: .bold)).foregroundColor(DesignTokens.BrandColor.canvasText)
                 ForEach(0..<order.count, id: \.self) { i in
-                    HStack(spacing: 4) {
+                    HStack(spacing: DesignTokens.Spacing.xs) {
                         Circle().fill(colors[i].opacity(0.7)).frame(width: 16, height: 16)
                         Text(order[i]).font(.system(size: 8)).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         if i < order.count - 1 {

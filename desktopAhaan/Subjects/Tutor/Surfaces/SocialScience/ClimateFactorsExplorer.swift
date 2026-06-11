@@ -116,7 +116,7 @@ struct ClimateFactorsExplorer: View {
     }
 
     private var header: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
             Text("What shapes a place's climate?")
                 .font(.headline)
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -154,7 +154,7 @@ struct ClimateFactorsExplorer: View {
                     .font(.caption.weight(.semibold))
             }
             .foregroundColor(on ? .white : DesignTokens.BrandColor.canvasText)
-            .padding(.horizontal, 12).padding(.vertical, 7)
+            .padding(.horizontal, DesignTokens.Spacing.md).padding(.vertical, 7)
             .background(Capsule().fill(on ? skyTeal : skyTeal.opacity(0.10)))
         }
         .buttonStyle(.plain)
@@ -178,7 +178,7 @@ struct ClimateFactorsExplorer: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 .fixedSize(horizontal: false, vertical: true)
         }
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(RoundedRectangle(cornerRadius: 8).fill(skyTeal.opacity(0.12)))
         .accessibilityElement(children: .combine)

@@ -75,7 +75,7 @@ struct BarterToMoneySim: View {
     }
 
     private var header: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
             Text("Trade in the village")
                 .font(.headline)
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -113,7 +113,7 @@ struct BarterToMoneySim: View {
     }
 
     private var heldRow: some View {
-        HStack(spacing: 8) {
+        HStack(spacing: DesignTokens.Spacing.sm) {
             Text("You hold:")
                 .font(.subheadline)
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
@@ -122,11 +122,11 @@ struct BarterToMoneySim: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
             Spacer(minLength: 0)
         }
-        .padding(.vertical, 2)
+        .padding(.vertical, DesignTokens.Spacing.xxs)
     }
 
     private var villagerList: some View {
-        VStack(spacing: 8) {
+        VStack(spacing: DesignTokens.Spacing.sm) {
             ForEach(villagers.indices, id: \.self) { i in
                 let v = villagers[i]
                 Button { trade(with: i) } label: {
@@ -153,7 +153,7 @@ struct BarterToMoneySim: View {
     }
 
     private func feedbackBanner(_ text: String) -> some View {
-        HStack(spacing: 8) {
+        HStack(spacing: DesignTokens.Spacing.sm) {
             Image(systemName: SFSymbolCompat.name(lastSuccess ? "checkmark.circle.fill" : "xmark.circle.fill"))
                 .foregroundColor(lastSuccess ? .green : .red)
                 .accessibilityHidden(true)

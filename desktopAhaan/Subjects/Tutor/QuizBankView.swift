@@ -123,7 +123,7 @@ private struct QuizBankContent: View {
 
         return VStack(spacing: 0) {
             filterBar
-                .padding(.horizontal, 16)
+                .padding(.horizontal, DesignTokens.Spacing.lg)
                 .padding(.vertical, 10)
                 .background(Color(NSColor.controlBackgroundColor))
 
@@ -166,7 +166,7 @@ private struct QuizBankContent: View {
 
     private var filterBar: some View {
         HStack(spacing: 10) {
-            HStack(spacing: 4) {
+            HStack(spacing: DesignTokens.Spacing.xs) {
                 Image(systemName: "magnifyingglass")
                     .foregroundColor(.secondary)
                 TextField("Search questions...", text: $searchText)
@@ -250,7 +250,7 @@ private struct QuizBankRow: View {
     @EnvironmentObject private var dataStore: DataStore
 
     var body: some View {
-        HStack(spacing: 12) {
+        HStack(spacing: DesignTokens.Spacing.md) {
             Text(question.questionType.displayName)
                 .font(.caption2.bold())
                 .padding(.horizontal, 7)
@@ -263,11 +263,11 @@ private struct QuizBankRow: View {
                     .font(.body)
                     .lineLimit(2)
                     .devanagariAwareLocale(packId: pack.id)
-                HStack(spacing: 8) {
+                HStack(spacing: DesignTokens.Spacing.sm) {
                     Text("\(pack.coverEmoji) Ch. \(chapter.number)")
                         .font(.caption2)
                         .padding(.horizontal, 6)
-                        .padding(.vertical, 2)
+                        .padding(.vertical, DesignTokens.Spacing.xxs)
                         .background(Capsule().fill(Color.compatIndigo.opacity(0.12)))
                         .foregroundColor(Color.compatIndigo)
                         .accessibilityLabel("\(pack.title), Chapter \(chapter.number)")
@@ -290,7 +290,7 @@ private struct QuizBankRow: View {
 
             Spacer()
         }
-        .padding(.vertical, 4)
+        .padding(.vertical, DesignTokens.Spacing.xs)
     }
 
     private var badgeColor: Color {

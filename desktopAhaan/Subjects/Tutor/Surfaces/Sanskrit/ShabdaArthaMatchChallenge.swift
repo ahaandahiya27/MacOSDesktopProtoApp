@@ -85,7 +85,7 @@ struct ShabdaArthaMatchChallenge: View {
     }
 
     private var header: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
             Text("शब्द–अर्थ — Match the word to its meaning")
                 .font(.headline)
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -103,7 +103,7 @@ struct ShabdaArthaMatchChallenge: View {
             ForEach(terms.indices, id: \.self) { i in
                 let done = matched.contains(i)
                 Button { selectTerm(i) } label: {
-                    HStack(spacing: 8) {
+                    HStack(spacing: DesignTokens.Spacing.sm) {
                         if done {
                             Image(systemName: SFSymbolCompat.name("checkmark.circle.fill"))
                                 .foregroundColor(.green).accessibilityHidden(true)
@@ -118,7 +118,7 @@ struct ShabdaArthaMatchChallenge: View {
                             .multilineTextAlignment(.leading)
                         Spacer(minLength: 0)
                     }
-                    .padding(.horizontal, 12).padding(.vertical, 11)
+                    .padding(.horizontal, DesignTokens.Spacing.md).padding(.vertical, 11)
                     .frame(maxWidth: .infinity)
                     .background(RoundedRectangle(cornerRadius: 8).fill(wordFill(i)))
                     .overlay(RoundedRectangle(cornerRadius: 8)
@@ -150,7 +150,7 @@ struct ShabdaArthaMatchChallenge: View {
                             .multilineTextAlignment(.leading)
                             .fixedSize(horizontal: false, vertical: true)
                             .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.horizontal, 12).padding(.vertical, 9)
+                            .padding(.horizontal, DesignTokens.Spacing.md).padding(.vertical, 9)
                             .background(RoundedRectangle(cornerRadius: 8).fill(meaningFill(termIdx)))
                             .overlay(RoundedRectangle(cornerRadius: 8)
                                 .strokeBorder(Color.compatIndigo.opacity(0.18), lineWidth: 1))
@@ -169,7 +169,7 @@ struct ShabdaArthaMatchChallenge: View {
     }
 
     private var solvedBanner: some View {
-        HStack(spacing: 8) {
+        HStack(spacing: DesignTokens.Spacing.sm) {
             Image(systemName: SFSymbolCompat.name("checkmark.seal.fill"))
                 .foregroundColor(.green).accessibilityHidden(true)
             Text("अति उत्तमम्! You linked every word to its meaning.")

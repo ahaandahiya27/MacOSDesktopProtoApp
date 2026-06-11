@@ -35,7 +35,7 @@ struct GallerySectionView: View {
                 tint: .compatMint,
                 storageKey: "\(chapter.id).gallery"
             ) {
-                VStack(alignment: .leading, spacing: 12) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.md) {
                     ForEach(items) { item in
                         GalleryItemCard(item: item)
                     }
@@ -58,7 +58,7 @@ private struct GalleryItemCard: View {
                     RoundedRectangle(cornerRadius: 10)
                         .fill(Color.compatMint.opacity(0.12))
                 )
-            VStack(alignment: .leading, spacing: 4) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                 Text(item.caption)
                     .font(.callout.weight(.semibold))
                     .foregroundColor(.primary)
@@ -71,7 +71,7 @@ private struct GalleryItemCard: View {
             }
             Spacer(minLength: 0)
         }
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(
             RoundedRectangle(cornerRadius: 10)
@@ -96,7 +96,7 @@ private struct GalleryItemCard: View {
                     Image(nsImage: nsImage)
                         .resizable()
                         .scaledToFit()
-                        .padding(8)
+                        .padding(DesignTokens.Spacing.sm)
                 } else {
                     placeholderGlyph
                 }

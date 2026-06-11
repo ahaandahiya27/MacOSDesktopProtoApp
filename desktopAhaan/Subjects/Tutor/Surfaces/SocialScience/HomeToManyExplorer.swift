@@ -98,7 +98,7 @@ struct HomeToManyExplorer: View {
     }
 
     private var header: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
             Text("India, a home to many")
                 .font(.headline)
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -148,7 +148,7 @@ struct HomeToManyExplorer: View {
             Text(community.name)
                 .font(.caption.weight(.semibold))
                 .foregroundColor(on ? .white : DesignTokens.BrandColor.canvasText)
-                .padding(.horizontal, 12).padding(.vertical, 7)
+                .padding(.horizontal, DesignTokens.Spacing.md).padding(.vertical, 7)
                 .background(Capsule().fill(on ? terracotta : terracotta.opacity(0.10)))
         }
         .buttonStyle(.plain)
@@ -165,7 +165,7 @@ struct HomeToManyExplorer: View {
             detailRow(symbol: "mappin.circle.fill", text: current.from)
             detailRow(symbol: "book.fill", text: current.story)
         }
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(RoundedRectangle(cornerRadius: 8).fill(terracotta.opacity(0.12)))
         .accessibilityElement(children: .combine)

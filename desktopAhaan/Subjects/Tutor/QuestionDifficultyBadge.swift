@@ -10,13 +10,13 @@ struct QuestionDifficultyBadge: View {
     var showLabel: Bool = true
 
     var body: some View {
-        HStack(spacing: 4) {
+        HStack(spacing: DesignTokens.Spacing.xs) {
             if showLabel {
                 Text(label)
                     .font(.caption2.weight(.semibold))
                     .foregroundColor(color)
             }
-            HStack(spacing: 2) {
+            HStack(spacing: DesignTokens.Spacing.xxs) {
                 ForEach(1...5, id: \.self) { i in
                     Image(systemName: i <= level ? "circle.fill" : "circle")
                         .font(.system(size: 6))

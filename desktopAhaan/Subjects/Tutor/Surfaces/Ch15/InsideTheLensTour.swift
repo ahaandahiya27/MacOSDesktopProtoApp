@@ -87,9 +87,9 @@ struct InsideTheLensTour: View {
             .pointingCursor()
             .accessibilityLabel("Close lens tour")
         }
-        .padding(.horizontal, 24)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
         .padding(.top, 18)
-        .padding(.bottom, 12)
+        .padding(.bottom, DesignTokens.Spacing.md)
     }
 
     private var sceneBody: some View {
@@ -97,11 +97,11 @@ struct InsideTheLensTour: View {
             VStack(alignment: .leading, spacing: 18) {
                 stopVisualization
                     .frame(maxWidth: .infinity)
-                    .padding(.vertical, 8)
+                    .padding(.vertical, DesignTokens.Spacing.sm)
                     .id("lens-stop-\(stopIndex)")
                 narrationCard
             }
-            .padding(.horizontal, 24)
+            .padding(.horizontal, DesignTokens.Spacing.xl)
             .padding(.vertical, 18)
             .frame(maxWidth: 720, alignment: .leading)
             .frame(maxWidth: .infinity, alignment: .center)
@@ -165,8 +165,8 @@ struct InsideTheLensTour: View {
             .keyboardShortcut(.defaultAction)
             .accessibilityHint(isLast ? "Closes the tour." : "Go to the next stop on the journey.")
         }
-        .padding(.horizontal, 24)
-        .padding(.vertical, 12)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
+        .padding(.vertical, DesignTokens.Spacing.md)
     }
 
     private var progressDots: some View {
@@ -279,7 +279,7 @@ private struct LensSourceView: View {
                 }
                 Spacer()
                 // Parallel rays
-                VStack(spacing: 12) {
+                VStack(spacing: DesignTokens.Spacing.md) {
                     ForEach(0..<5, id: \.self) { _ in
                         Rectangle()
                             .fill(Color.yellow.opacity(0.6))
@@ -288,7 +288,7 @@ private struct LensSourceView: View {
                 }
                 Spacer()
             }
-            .padding(.horizontal, 24)
+            .padding(.horizontal, DesignTokens.Spacing.xl)
         }
         .frame(height: 220)
         .accessibilityElement(children: .ignore)
@@ -420,7 +420,7 @@ private struct LensImageFormationView: View {
             }
             .frame(height: 200)
 
-            HStack(spacing: 8) {
+            HStack(spacing: DesignTokens.Spacing.sm) {
                 Text("Object distance:")
                     .font(.caption.weight(.semibold))
                     .foregroundColor(.secondary)

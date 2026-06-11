@@ -133,12 +133,12 @@ struct TutorNavigationContainer<Root: View>: View {
     /// visibility) without changing the VStack's child count — see the
     /// state-persistence bug fix in `body`.
     private var backBar: some View {
-        HStack(spacing: 12) {
+        HStack(spacing: DesignTokens.Spacing.md) {
             // No local `.keyboardShortcut("[")` here — the app-level
             // Edit menu's "Go Back" already owns ⌘[ and posts
             // `navigateBackCommand`, observed via `.onReceive` below.
             Button { nav.pop() } label: {
-                HStack(spacing: 4) {
+                HStack(spacing: DesignTokens.Spacing.xs) {
                     Image(systemName: "chevron.left")
                     Text("Back")
                 }
@@ -147,7 +147,7 @@ struct TutorNavigationContainer<Root: View>: View {
 
             if nav.path.count > 1 {
                 Button { nav.popToRoot() } label: {
-                    HStack(spacing: 4) {
+                    HStack(spacing: DesignTokens.Spacing.xs) {
                         Image(systemName: "house")
                         Text("Subject home")
                     }
@@ -158,8 +158,8 @@ struct TutorNavigationContainer<Root: View>: View {
 
             Spacer()
         }
-        .padding(.horizontal, 16)
-        .padding(.vertical, 8)
+        .padding(.horizontal, DesignTokens.Spacing.lg)
+        .padding(.vertical, DesignTokens.Spacing.sm)
         .background(Color(NSColor.controlBackgroundColor))
         .overlay(Divider(), alignment: .bottom)
     }
@@ -276,7 +276,7 @@ private struct RouteNotFoundView: View {
                 .accessibilityHint("Returns to the previous screen")
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
-        .padding(24)
+        .padding(DesignTokens.Spacing.xl)
         .onAppear {
             CrashReporter.shared.logDataIssue(
                 "route lookup failed: \(kind) '\(itemId)' in pack '\(packId)'"

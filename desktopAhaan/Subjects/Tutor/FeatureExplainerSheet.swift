@@ -31,7 +31,7 @@ struct FeatureExplainerSheet: View {
             Divider()
             ScrollView {
                 content
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                     .padding(.vertical, 18)
                     .frame(maxWidth: 640, alignment: .leading)
                     .frame(maxWidth: .infinity, alignment: .center)
@@ -72,13 +72,13 @@ struct FeatureExplainerSheet: View {
             }
             Spacer()
         }
-        .padding(.horizontal, 24)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
         .padding(.top, 20)
         .padding(.bottom, 14)
     }
 
     private var content: some View {
-        VStack(alignment: .leading, spacing: 16) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.lg) {
             ForEach(paragraphs.indices, id: \.self) { idx in
                 Text(paragraphs[idx])
                     .font(.body)
@@ -99,7 +99,7 @@ struct FeatureExplainerSheet: View {
                 .font(.callout.weight(.semibold))
                 .fixedSize(horizontal: false, vertical: true)
         }
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(
             RoundedRectangle(cornerRadius: 10)
@@ -117,8 +117,8 @@ struct FeatureExplainerSheet: View {
                 .keyboardShortcut(.defaultAction)
                 .accessibilityIdentifier("feature-explainer-done")
         }
-        .padding(.horizontal, 24)
-        .padding(.vertical, 12)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
+        .padding(.vertical, DesignTokens.Spacing.md)
     }
 }
 

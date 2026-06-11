@@ -90,9 +90,9 @@ struct InsideTheWireTour: View {
             .pointingCursor()
             .accessibilityLabel("Close wire tour")
         }
-        .padding(.horizontal, 24)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
         .padding(.top, 18)
-        .padding(.bottom, 12)
+        .padding(.bottom, DesignTokens.Spacing.md)
     }
 
     private var sceneBody: some View {
@@ -100,11 +100,11 @@ struct InsideTheWireTour: View {
             VStack(alignment: .leading, spacing: 18) {
                 stopVisualization
                     .frame(maxWidth: .infinity)
-                    .padding(.vertical, 8)
+                    .padding(.vertical, DesignTokens.Spacing.sm)
                     .id("wire-stop-\(stopIndex)")
                 narrationCard
             }
-            .padding(.horizontal, 24)
+            .padding(.horizontal, DesignTokens.Spacing.xl)
             .padding(.vertical, 18)
             .frame(maxWidth: 720, alignment: .leading)
             .frame(maxWidth: .infinity, alignment: .center)
@@ -168,8 +168,8 @@ struct InsideTheWireTour: View {
             .keyboardShortcut(.defaultAction)
             .accessibilityHint(isLast ? "Closes the tour." : "Go to the next stop on the journey.")
         }
-        .padding(.horizontal, 24)
-        .padding(.vertical, 12)
+        .padding(.horizontal, DesignTokens.Spacing.xl)
+        .padding(.vertical, DesignTokens.Spacing.md)
     }
 
     private var progressDots: some View {
@@ -259,7 +259,7 @@ private struct WireBatteryView: View {
                     RoundedRectangle(cornerRadius: 8)
                         .fill(Color.gray.opacity(0.20))
                         .frame(width: 120, height: 180)
-                    VStack(spacing: 8) {
+                    VStack(spacing: DesignTokens.Spacing.sm) {
                         Text("+").font(.title.bold()).foregroundColor(.red)
                         Spacer()
                         Text("−").font(.title.bold()).foregroundColor(.blue)
@@ -267,7 +267,7 @@ private struct WireBatteryView: View {
                     .frame(width: 80, height: 150)
                 }
                 // Crowd of electrons at the negative terminal
-                VStack(alignment: .leading, spacing: 4) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                     Text("Electrons crowded:")
                         .font(.caption.weight(.semibold))
                         .foregroundColor(.secondary)
@@ -330,7 +330,7 @@ private struct WireElectronDriftView: View {
                 Capsule()
                     .stroke(Color.compatBrown, lineWidth: 2)
                     .frame(height: 60)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                 // The electron — moves with offset
                 GeometryReader { geo in
                     let posX: CGFloat = 30 + CGFloat(offset) * max(0, geo.size.width - 60)
@@ -346,7 +346,7 @@ private struct WireElectronDriftView: View {
                 }
             }
             .frame(height: 160)
-            HStack(spacing: 8) {
+            HStack(spacing: DesignTokens.Spacing.sm) {
                 Text("Drift:")
                     .font(.caption.weight(.semibold))
                     .foregroundColor(.secondary)
@@ -368,7 +368,7 @@ private struct WireResistorView: View {
         ZStack {
             RoundedRectangle(cornerRadius: 14)
                 .fill(Color.red.opacity(0.10))
-            HStack(spacing: 4) {
+            HStack(spacing: DesignTokens.Spacing.xs) {
                 // Wide entrance
                 Rectangle()
                     .fill(Color.compatBrown.opacity(0.55))

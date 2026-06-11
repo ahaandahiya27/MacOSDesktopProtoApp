@@ -105,7 +105,7 @@ struct PreambleExplorer: View {
     }
 
     private var header: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
             Text("Explore the Preamble")
                 .font(.headline)
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -151,7 +151,7 @@ struct PreambleExplorer: View {
     // MARK: - Tappable sections (mirror t05_c02 / t05_c03)
 
     private func section(title: String, indices: [Int]) -> some View {
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             Text(title)
                 .font(.subheadline.weight(.semibold))
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
@@ -166,9 +166,9 @@ struct PreambleExplorer: View {
         let rows = stride(from: 0, to: indices.count, by: 3).map { start -> [Int] in
             Array(indices[start..<min(start + 3, indices.count)])
         }
-        return VStack(alignment: .leading, spacing: 8) {
+        return VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             ForEach(rows.indices, id: \.self) { r in
-                HStack(spacing: 8) {
+                HStack(spacing: DesignTokens.Spacing.sm) {
                     ForEach(rows[r], id: \.self) { idx in chip(idx) }
                     Spacer(minLength: 0)
                 }
@@ -229,7 +229,7 @@ struct PreambleExplorer: View {
                 }
             }
         }
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(RoundedRectangle(cornerRadius: 8).fill(Color.compatBlue.opacity(0.12)))
         .accessibilityElement(children: .combine)

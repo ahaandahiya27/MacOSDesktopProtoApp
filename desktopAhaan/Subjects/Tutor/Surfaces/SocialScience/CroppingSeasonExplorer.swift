@@ -87,7 +87,7 @@ struct CroppingSeasonExplorer: View {
     }
 
     private var header: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
             Text("The monsoon's farming calendar")
                 .font(.headline)
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -107,7 +107,7 @@ struct CroppingSeasonExplorer: View {
                     .font(.caption2.weight(.bold))
                     .foregroundColor(inSeason ? .white : DesignTokens.BrandColor.canvasTextSecondary)
                     .frame(maxWidth: .infinity)
-                    .padding(.vertical, 8)
+                    .padding(.vertical, DesignTokens.Spacing.sm)
                     .background(RoundedRectangle(cornerRadius: 5)
                         .fill(inSeason ? current.tint : current.tint.opacity(0.08)))
             }
@@ -117,7 +117,7 @@ struct CroppingSeasonExplorer: View {
     }
 
     private var seasonChips: some View {
-        HStack(spacing: 8) {
+        HStack(spacing: DesignTokens.Spacing.sm) {
             ForEach(seasons.indices, id: \.self) { i in seasonChip(i) }
         }
     }
@@ -169,7 +169,7 @@ struct CroppingSeasonExplorer: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 .fixedSize(horizontal: false, vertical: true)
         }
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(RoundedRectangle(cornerRadius: 8).fill(current.tint.opacity(0.12)))
         .accessibilityElement(children: .combine)

@@ -58,14 +58,14 @@ struct ContentChipStrip: View {
                     .accessibilityAddTraits(.isHeader)
             }
             ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 8) {
+                HStack(spacing: DesignTokens.Spacing.sm) {
                     ForEach(items) { item in
                         ChipButton(item: item, tint: tint) {
                             presentedItem = item
                         }
                     }
                 }
-                .padding(.vertical, 4)
+                .padding(.vertical, DesignTokens.Spacing.xs)
             }
         }
         .sheet(item: $presentedItem) { item in
@@ -94,7 +94,7 @@ private struct ChipButton: View {
                 .foregroundColor(.primary)
                 .lineLimit(1)
                 .truncationMode(.tail)
-                .padding(.horizontal, 12)
+                .padding(.horizontal, DesignTokens.Spacing.md)
                 .padding(.vertical, 6)
                 .background(
                     Capsule().fill(tint.opacity(isHovered ? 0.30 : 0.20))
@@ -134,7 +134,7 @@ private struct ChipDetailSheet: View {
                     .fixedSize(horizontal: false, vertical: true)
                     .frame(maxWidth: 560, alignment: .leading)
                     .frame(maxWidth: .infinity, alignment: .center)
-                    .padding(.horizontal, 24)
+                    .padding(.horizontal, DesignTokens.Spacing.xl)
                     .padding(.vertical, 18)
             }
             Divider()
@@ -170,7 +170,7 @@ private struct ChipDetailSheet: View {
         }
         .padding(.horizontal, 20)
         .padding(.top, 18)
-        .padding(.bottom, 12)
+        .padding(.bottom, DesignTokens.Spacing.md)
     }
 
     private var footer: some View {

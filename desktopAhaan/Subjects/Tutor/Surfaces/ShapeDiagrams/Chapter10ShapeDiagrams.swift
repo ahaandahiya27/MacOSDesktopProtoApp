@@ -182,7 +182,7 @@ struct AlveolusDiagram: View {
 struct MitochondrionDiagram: View {
     var body: some View {
         SDFigure(tint: .orange) {
-            VStack(spacing: 8) {
+            VStack(spacing: DesignTokens.Spacing.sm) {
                 ZStack {
                     Capsule().fill(.orange.opacity(0.2))
                         .overlay(Capsule().strokeBorder(.orange.opacity(0.65), lineWidth: 2))
@@ -221,7 +221,7 @@ private struct CristaeShape: Shape {
 struct GasExchangeDiagram: View {
     var body: some View {
         SDFigure(tint: .green) {
-            VStack(spacing: 12) {
+            VStack(spacing: DesignTokens.Spacing.md) {
                 HStack(spacing: 6) {
                     SDChip(text: "Glucose", color: .green)
                     SDPlus()

@@ -42,7 +42,7 @@ struct SDLabel: View {
         Text(text)
             .font(.system(size: 10, weight: .semibold))
             .foregroundColor(color)
-            .padding(.horizontal, 6).padding(.vertical, 2)
+            .padding(.horizontal, 6).padding(.vertical, DesignTokens.Spacing.xxs)
             .background(RoundedRectangle(cornerRadius: 4).fill(Color.white.opacity(0.82)))
             .fixedSize()
     }
@@ -58,7 +58,7 @@ struct SDChip: View {
         Text(text)
             .font(.system(size: 12, weight: .semibold))
             .foregroundColor(DesignTokens.BrandColor.canvasText)
-            .padding(.horizontal, 8).padding(.vertical, 5)
+            .padding(.horizontal, DesignTokens.Spacing.sm).padding(.vertical, 5)
             .background(RoundedRectangle(cornerRadius: 7).fill(color.opacity(0.18)))
             .overlay(RoundedRectangle(cornerRadius: 7).strokeBorder(color.opacity(0.55), lineWidth: 1))
             .fixedSize()

@@ -13,10 +13,10 @@ import SwiftUI
 struct HighLowPressureDiagram: View {
     var body: some View {
         SDFigure(tint: Color.compatBlue) {
-            VStack(spacing: 12) {
-                HStack(spacing: 16) {
+            VStack(spacing: DesignTokens.Spacing.md) {
+                HStack(spacing: DesignTokens.Spacing.lg) {
                     pressureNode("H", "High pressure", .red)
-                    VStack(spacing: 2) {
+                    VStack(spacing: DesignTokens.Spacing.xxs) {
                         SDArrow(color: .green)
                         SDLabel(text: "WIND", color: .green)
                     }

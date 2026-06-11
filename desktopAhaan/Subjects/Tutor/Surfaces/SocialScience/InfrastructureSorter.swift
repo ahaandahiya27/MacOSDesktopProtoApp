@@ -95,7 +95,7 @@ struct InfrastructureSorter: View {
     }
 
     private var header: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
             Text("Physical or social?")
                 .font(.headline)
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -128,13 +128,13 @@ struct InfrastructureSorter: View {
             .foregroundColor(DesignTokens.BrandColor.canvasText)
             .fixedSize(horizontal: false, vertical: true)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .padding(16)
+            .padding(DesignTokens.Spacing.lg)
             .background(RoundedRectangle(cornerRadius: 10).fill(steel.opacity(0.08)))
             .accessibilityLabel("Example: \(current.text)")
     }
 
     private var kindButtons: some View {
-        HStack(spacing: 8) {
+        HStack(spacing: DesignTokens.Spacing.sm) {
             ForEach(kinds.indices, id: \.self) { i in kindButton(i) }
         }
     }
@@ -155,7 +155,7 @@ struct InfrastructureSorter: View {
             }
             .foregroundColor(answered ? (showAsAnswer || isPick ? .white : DesignTokens.BrandColor.canvasText) : .white)
             .frame(maxWidth: .infinity)
-            .padding(.vertical, 12).padding(.horizontal, 6)
+            .padding(.vertical, DesignTokens.Spacing.md).padding(.horizontal, 6)
             .background(RoundedRectangle(cornerRadius: 10)
                 .fill(answered ? tint.opacity(showAsAnswer || isPick ? 0.9 : 0.12) : steel))
         }
@@ -167,11 +167,11 @@ struct InfrastructureSorter: View {
     }
 
     private var feedbackBanner: some View {
-        HStack(alignment: .top, spacing: 8) {
+        HStack(alignment: .top, spacing: DesignTokens.Spacing.sm) {
             Image(systemName: SFSymbolCompat.name(wasCorrect ? "checkmark.circle.fill" : "xmark.circle.fill"))
                 .foregroundColor(wasCorrect ? .green : .red)
                 .accessibilityHidden(true)
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                 Text(wasCorrect ? "Correct — that's \(kinds[current.kind].name.lowercased()) infrastructure." : "Not quite — it's \(kinds[current.kind].name.lowercased()) infrastructure.")
                     .font(.caption.weight(.bold))
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -193,7 +193,7 @@ struct InfrastructureSorter: View {
             Text(index + 1 < items.count ? "Next example →" : "Start over")
                 .font(.caption.weight(.semibold))
                 .foregroundColor(.white)
-                .padding(.horizontal, 16).padding(.vertical, 8)
+                .padding(.horizontal, DesignTokens.Spacing.lg).padding(.vertical, DesignTokens.Spacing.sm)
                 .background(Capsule().fill(steel))
         }
         .buttonStyle(.plain)

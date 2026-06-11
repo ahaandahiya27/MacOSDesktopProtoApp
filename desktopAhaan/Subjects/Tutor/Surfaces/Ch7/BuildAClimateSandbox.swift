@@ -92,7 +92,7 @@ struct BuildAClimateSandbox: View {
                 explainerBody
             }
         }
-        .padding(16)
+        .padding(DesignTokens.Spacing.lg)
         .background(
             RoundedRectangle(cornerRadius: 14, style: .continuous)
                 .fill(climateColor.opacity(0.10))
@@ -109,7 +109,7 @@ struct BuildAClimateSandbox: View {
                 .font(.title3)
                 .foregroundColor(climateColor)
                 .accessibilityHidden(true)
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                 Text("Build-a-Climate sandbox")
                     .font(.headline)
                 Text("Where in the world would you create this combination?")
@@ -206,7 +206,7 @@ struct BuildAClimateSandbox: View {
             .foregroundColor(.primary)
             .lineSpacing(3)
             .fixedSize(horizontal: false, vertical: true)
-            .padding(.top, 4)
+            .padding(.top, DesignTokens.Spacing.xs)
             .transition(.opacity)
             .accessibilityHint("Plain-language summary of how the four sliders shape climate type.")
     }

@@ -172,9 +172,9 @@ struct SeedDispersalDiagram: View {
     ]
     var body: some View {
         SDFigure(tint: .green) {
-            VStack(spacing: 8) {
+            VStack(spacing: DesignTokens.Spacing.sm) {
                 ForEach(0..<modes.count, id: \.self) { i in
-                    HStack(spacing: 8) {
+                    HStack(spacing: DesignTokens.Spacing.sm) {
                         Image(systemName: SFSymbolCompat.name(modes[i].0))
                             .font(.system(size: 16)).foregroundColor(.green)
                             .frame(width: 24)
@@ -202,7 +202,7 @@ struct VegetativeDiagram: View {
         SDFigure(tint: .green) {
             VStack(spacing: 6) {
                 SDLabel(text: "One parent → identical new plants", color: .green)
-                HStack(spacing: 8) {
+                HStack(spacing: DesignTokens.Spacing.sm) {
                     ForEach(0..<ways.count, id: \.self) { i in
                         VStack(spacing: 3) {
                             Circle().fill(ways[i].2.opacity(0.25))

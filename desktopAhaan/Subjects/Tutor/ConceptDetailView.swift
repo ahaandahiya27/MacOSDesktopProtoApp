@@ -160,7 +160,7 @@ struct ConceptDetailView: View {
     @ViewBuilder
     private var inquiryGate: some View {
         if let question = concept.predictQuestion {
-            VStack(alignment: .leading, spacing: 12) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.md) {
                 HStack(spacing: DesignTokens.Spacing.sm) {
                     Image(systemName: SFSymbolCompat.name("lightbulb.fill"))
                         .font(.body)
@@ -214,12 +214,12 @@ struct ConceptDetailView: View {
         if inquiryFirstMode,
            predictRevealed,
            let guess = nonEmpty(predictGuess) {
-            HStack(alignment: .top, spacing: 8) {
+            HStack(alignment: .top, spacing: DesignTokens.Spacing.sm) {
                 Image(systemName: SFSymbolCompat.name("quote.bubble.fill"))
                     .font(.caption)
                     .foregroundColor(Color.compatIndigo)
                     .accessibilityHidden(true)
-                VStack(alignment: .leading, spacing: 2) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                     Text("Your guess")
                         .font(.caption2.weight(.bold))
                         .foregroundColor(Color.compatIndigo)
@@ -232,7 +232,7 @@ struct ConceptDetailView: View {
                     Text("Here's the actual idea. Notice where it overlaps with what you guessed.")
                         .font(.caption2)
                         .foregroundColor(.secondary)
-                        .padding(.top, 2)
+                        .padding(.top, DesignTokens.Spacing.xxs)
                 }
                 Spacer(minLength: 0)
             }
@@ -381,7 +381,7 @@ struct ConceptDetailView: View {
 
     private var articleButton: some View {
         ArticleEntryButton(entry: ArticleIndex.entry(forConceptId: concept.id))
-            .padding(.top, 8)
+            .padding(.top, DesignTokens.Spacing.sm)
     }
 
     @ViewBuilder
@@ -408,7 +408,7 @@ struct ConceptDetailView: View {
                     .fill(Color.gray.opacity(0.07))
             )
         } else {
-            VStack(alignment: .leading, spacing: 8) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                 Text(depth.displayName)
                     .font(.caption).foregroundColor(.secondary).textCase(.uppercase)
                 Text(text)
@@ -450,12 +450,12 @@ struct ConceptDetailView: View {
                 }
             }
             ScrollView(.horizontal, showsIndicators: true) {
-                HStack(alignment: .top, spacing: 12) {
+                HStack(alignment: .top, spacing: DesignTokens.Spacing.md) {
                     ForEach(concept.useCases) { useCase in
                         UseCaseCard(useCase: useCase)
                     }
                 }
-                .padding(.bottom, 4)
+                .padding(.bottom, DesignTokens.Spacing.xs)
             }
             .accessibilityLabel("Real-life examples, \(concept.useCases.count) items")
         }
@@ -481,7 +481,7 @@ struct ConceptDetailView: View {
         } label: {
             HStack(spacing: 10) {
                 Image(systemName: "sparkles")
-                VStack(alignment: .leading, spacing: 2) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                     Text("Ask a follow-up question")
                         .font(.headline)
                     Text("Have a doubt about this concept? The on-device tutor can help.")
@@ -506,7 +506,7 @@ struct ConceptDetailView: View {
         let relatedConcepts = concept.relatedConceptIds.compactMap { conceptIndex[$0] }
         let relatedQuestions = concept.relatedQuestionIds.compactMap { questionIndex[$0] }
         if !relatedConcepts.isEmpty || !relatedQuestions.isEmpty {
-            VStack(alignment: .leading, spacing: 8) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                 Label("Related", systemImage: "link")
                     .font(.headline)
                 if !relatedConcepts.isEmpty {
@@ -530,7 +530,7 @@ struct ConceptDetailView: View {
                                 dataStore.toggleBookmark(subjectPackId: pack.id, conceptId: c.id, conceptTitle: c.title)
                             }
                         }
-                        .padding(.vertical, 4)
+                        .padding(.vertical, DesignTokens.Spacing.xs)
                     }
                 }
                 if !relatedQuestions.isEmpty {
@@ -548,7 +548,7 @@ struct ConceptDetailView: View {
                         }
                         .buttonStyle(.plain)
                         .pointingCursor()
-                        .padding(.vertical, 4)
+                        .padding(.vertical, DesignTokens.Spacing.xs)
                     }
                 }
             }
