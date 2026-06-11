@@ -38,7 +38,7 @@ struct PlainTextArticleFallback: View {
                 }
                 .padding(10)
                 .background(
-                    RoundedRectangle(cornerRadius: 8)
+                    RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                         .fill(Color.orange.opacity(0.12))
                 )
 
