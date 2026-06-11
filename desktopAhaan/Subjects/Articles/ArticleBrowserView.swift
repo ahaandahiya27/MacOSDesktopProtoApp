@@ -116,7 +116,7 @@ struct ArticleBrowserView: View {
                         .help("Stop reading")
                     }
                 }
-                .padding(.horizontal, 12)
+                .padding(.horizontal, DesignTokens.Spacing.md)
                 .padding(.vertical, 10)
                 .background(Color(NSColor.controlBackgroundColor))
                 .border(Color(NSColor.separatorColor), width: 0.5)
