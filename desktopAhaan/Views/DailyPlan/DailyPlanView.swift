@@ -242,6 +242,7 @@ struct DailyPlanRow: View {
         .onTapGesture { if item.isActionable { onOpen() } }
         .accessibilityElement(children: .combine)
         .accessibilityLabel("\(item.kind.sectionLabel): \(item.title). \(statusWord)")
+        .accessibilityHint(item.isActionable ? "Opens this plan item in the main window" : "")
     }
 
     private var textColumn: some View {
@@ -285,6 +286,7 @@ struct DailyPlanRow: View {
                 .buttonStyle(.borderless)
                 .help("Mark done")
                 .accessibilityLabel("Mark done")
+                .accessibilityHint("Marks this plan item as completed")
             }
         }
     }

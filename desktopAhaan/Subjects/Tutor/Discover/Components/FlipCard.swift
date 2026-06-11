@@ -61,6 +61,7 @@ struct FlipCard<Front: View, Back: View>: View {
         }
         .buttonStyle(.plain)
         .accessibilityLabel("\(frontTitle). \(frontSubtitle). Activate to flip.")
+        .accessibilityHint("Flips the card to reveal the back side")
     }
 
     private var frontFace: some View {

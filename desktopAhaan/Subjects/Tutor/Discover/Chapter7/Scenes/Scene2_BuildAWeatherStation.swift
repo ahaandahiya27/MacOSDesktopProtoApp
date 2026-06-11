@@ -86,6 +86,7 @@ struct Scene2_BuildAWeatherStation: View {
                             .buttonStyle(.plain)
                             .disabled(!isRevealed)
                             .accessibilityLabel("\(inst.name) measures \(inst.measures). \(isRevealed ? "Tap to learn more" : "Not yet revealed")")
+                            .accessibilityHint("Shows details about this weather instrument")
                         }
                     }
 

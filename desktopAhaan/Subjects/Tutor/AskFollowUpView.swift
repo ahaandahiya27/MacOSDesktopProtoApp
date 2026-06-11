@@ -53,8 +53,9 @@ struct AskFollowUpView: View {
                             Label("Ask the tutor", systemImage: "sparkles")
                         }
                     }
-                    
+
                     .disabled(!tutor.isAvailable || question.trimmingCharacters(in: .whitespaces).isEmpty || tutor.isThinking)
+                    .accessibilityHint("Sends your question to the on-device tutor for an answer")
                 }
 
                 // Error
@@ -126,6 +127,7 @@ struct AskFollowUpView: View {
             }
             .buttonStyle(.borderless)
             .accessibilityLabel("Check tutor availability again")
+            .accessibilityHint("Re-checks whether the on-device tutor model is ready")
             .help("Check tutor availability again")
         }
         .padding(10)

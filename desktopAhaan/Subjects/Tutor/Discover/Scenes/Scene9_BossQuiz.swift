@@ -274,6 +274,7 @@ private struct Ch1AnswerButton: View {
         )
         .accessibilityLabel(label)
         .accessibilityValue(state == .correct ? "Correct" : state == .wrong ? "Incorrect" : "Not answered")
+        .accessibilityHint("Picks this quiz answer")
     }
 
     private var background: Color {

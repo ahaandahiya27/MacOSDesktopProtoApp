@@ -100,6 +100,7 @@ struct Scene5_TropicalRainforestLife: View {
         }
         .buttonStyle(.plain)
         .accessibilityLabel("\(layer.name) layer. \(isExplored ? "Explored" : "Tap to explore")")
+        .accessibilityHint("Selects this rainforest layer to see its inhabitants")
     }
 
     @ViewBuilder

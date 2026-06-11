@@ -78,6 +78,7 @@ struct Scene1_HotOrCold: View {
                             }
                             .buttonStyle(.plain)
                             .accessibilityLabel("\(obj.label), \(obj.tempC) degrees Celsius")
+                            .accessibilityHint("Selects this object to compare its temperature")
                         }
                     }
                     .frame(maxWidth: 400)

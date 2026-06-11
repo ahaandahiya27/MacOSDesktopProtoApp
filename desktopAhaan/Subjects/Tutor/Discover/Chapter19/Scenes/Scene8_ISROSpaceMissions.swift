@@ -173,6 +173,7 @@ struct Scene8_ISROSpaceMissions: View {
                             }
                             .buttonStyle(.plain)
                             .accessibilityLabel("\(mission.name) \(mission.year). \(isExplored ? "Explored" : "Tap to explore")")
+                            .accessibilityHint("Opens details about this ISRO space mission")
                         }
                     }
 

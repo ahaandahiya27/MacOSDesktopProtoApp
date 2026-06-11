@@ -206,6 +206,7 @@ private struct FuelButton: View {
         .accentColor(tint)
         .opacity(on ? 0.5 : 1)
         .accessibilityLabel("Add \(label)")
+        .accessibilityHint("Adds this ingredient to the photosynthesis lab")
     }
 }
 

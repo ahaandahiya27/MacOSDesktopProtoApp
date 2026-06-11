@@ -370,6 +370,7 @@ struct WeeklyProgressView: View {
                 .frame(minHeight: 44)
             }
             .accessibilityLabel("Export a PDF report card — this week's progress plus mastery by subject and the latest checkpoint — to save or share.")
+            .accessibilityHint("Opens a save dialog to write the weekly report as a PDF")
             if let status = exportStatus {
                 Text(status)
                     .font(.caption)

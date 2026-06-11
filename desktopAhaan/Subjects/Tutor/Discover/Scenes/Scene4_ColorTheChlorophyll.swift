@@ -73,6 +73,7 @@ struct Scene4_ColorTheChlorophyll: View {
                     }
                     .buttonStyle(.plain)
                     .accessibilityLabel("\(bands[i].1) light")
+                    .accessibilityHint("Shines this color of light on the chloroplast")
                 }
             }
             .frame(maxWidth: 560)

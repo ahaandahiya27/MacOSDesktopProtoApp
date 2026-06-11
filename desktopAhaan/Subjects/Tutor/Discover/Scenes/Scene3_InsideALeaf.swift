@@ -155,6 +155,7 @@ struct Scene3_InsideALeaf: View {
         .buttonStyle(.plain)
         .position(position)
         .accessibilityLabel("Show information about \(part.title)")
+        .accessibilityHint("Highlights this leaf part and shows its description")
     }
 
     private func explanation(for part: LeafPart) -> String {

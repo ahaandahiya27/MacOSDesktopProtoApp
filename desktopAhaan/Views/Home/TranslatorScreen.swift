@@ -47,6 +47,7 @@ struct TranslatorScreen: View {
                         }
                         .keyboardShortcut(.return, modifiers: .command)
                         .disabled(vm.inputText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || vm.isTranslating)
+                        .accessibilityHint("Sends the text to the translation engine")
                     }
                     .padding(.horizontal)
 

@@ -38,6 +38,7 @@ struct PracticeScreen: View {
                             Text("Topics")
                         }
                     }
+                    .accessibilityHint("Returns to the topic chooser screen")
                 }
             }
         }
@@ -64,6 +65,7 @@ struct DailyPhraseCard: View {
                         .foregroundColor(Color.compatIndigo)
                 }
                 .accessibilityLabel("Listen to phrase")
+                .accessibilityHint("Plays the spoken pronunciation of today's phrase")
             }
 
             Text(item.sanskrit)
@@ -143,6 +145,7 @@ struct CategoriesGrid: View {
                                     .foregroundColor(Color.compatIndigo)
                                     .clipShape(Capsule())
                             }
+                            .accessibilityHint("Starts a quick quiz for this category")
                         }
                     }
                     .padding(.horizontal)
@@ -171,6 +174,7 @@ struct CategoryCard: View {
             .background(Color.gray.opacity(0.15))
             .clipShape(RoundedRectangle(cornerRadius: DesignTokens.Radius.card))
         }
+        .accessibilityHint("Opens flashcards for this practice topic")
     }
 }
 
@@ -223,6 +227,7 @@ struct FlashcardView: View {
                             Label("Listen", systemImage: "speaker.wave.2")
                                 .font(.caption)
                         }
+                        .accessibilityHint("Plays the Sanskrit pronunciation aloud")
                     }
                 }
                 .padding(DesignTokens.Spacing.xl)
@@ -236,6 +241,7 @@ struct FlashcardView: View {
                         vm.showFlashcardAnswer.toggle()
                     }
                 }
+                .accessibilityHint("Tap to flip the flashcard and toggle the answer")
 
                 // A real Button (not just the card's tap gesture) so the
                 // answer can be revealed by keyboard (Tab + Space/Return) and
@@ -262,6 +268,7 @@ struct FlashcardView: View {
                     }
                     .disabled(vm.currentItems.count <= 1)
                     .accessibilityLabel("Previous flashcard")
+                    .accessibilityHint("Goes back to the previous card in this deck")
 
                     Text("\(safeIndex + 1) / \(vm.currentItems.count)")
                         .font(.subheadline.weight(.medium))
@@ -273,6 +280,7 @@ struct FlashcardView: View {
                     }
                     .disabled(vm.currentItems.count <= 1)
                     .accessibilityLabel("Next flashcard")
+                    .accessibilityHint("Moves to the next card in this deck")
                 }
                 .foregroundColor(Color.compatIndigo)
             } else {
@@ -315,6 +323,7 @@ struct QuizView: View {
                     vm.checkAnswer(dataStore: dataStore)
                 }
                 .disabled(vm.quizAnswer.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
+                .accessibilityHint("Grades your typed answer and shows whether you were correct")
 
                 if let result = vm.quizResult {
                     switch result {
@@ -346,6 +355,7 @@ struct QuizView: View {
                     Button("Next Question") {
                         vm.nextQuizQuestion()
                     }
+                    .accessibilityHint("Loads the next quiz question for this category")
                 }
             } else {
                 EmptyStateView(

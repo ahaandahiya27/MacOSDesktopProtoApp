@@ -140,6 +140,7 @@ struct PrintableWorksheetView: View {
             Button("Print…") { printWorksheet() }
                 .keyboardShortcut(.defaultAction)
                 .disabled(availableCount == 0)
+                .accessibilityHint("Opens the system print dialog with your worksheet ready to print")
         }
     }
 

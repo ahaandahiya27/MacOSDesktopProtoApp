@@ -157,6 +157,7 @@ struct QuestionDetailView: View {
             .help(isQuestionBookmarked
                   ? "Remove bookmark"
                   : "Bookmark this question to revisit it later")
+            .accessibilityHint(isQuestionBookmarked ? "Removes this question from your bookmarks" : "Saves this question for quick review later")
         }
     }
 
@@ -178,6 +179,7 @@ struct QuestionDetailView: View {
             .help(dataStore.isToughQuestion(question.id)
                   ? "Remove from Daily Practice"
                   : "Mark this question as tough — review later in Daily Practice")
+            .accessibilityHint(dataStore.isToughQuestion(question.id) ? "Removes this question from the Daily Practice review queue" : "Flags this question as tough so Daily Practice will resurface it")
         }
     }
 
@@ -211,6 +213,7 @@ struct QuestionDetailView: View {
             .help(isReviewed
                   ? "This question has been triaged. Click to send it back to the Needs Review queue."
                   : "Mark this question as triaged. It will drop out of the Needs Review filter in Quiz Bank.")
+            .accessibilityHint(isReviewed ? "Sends this question back to the Needs Review queue" : "Marks this question as triaged and drops it from Needs Review")
         } else {
             EmptyView()
         }
@@ -593,6 +596,7 @@ struct QuestionDetailView: View {
                     Spacer()
                     Button("Check") { recordMCQAttempt(options: options) }
                         .disabled(selectedOptionIndex == nil || attemptOutcome != .unchecked)
+                        .accessibilityHint("Checks whether your selected option is correct")
                 }
                 .padding(.top, DesignTokens.Spacing.xs)
             }
@@ -649,6 +653,7 @@ struct QuestionDetailView: View {
         .pointingCursor()
         .contentShape(Rectangle())
         .accessibilityLabel("\(["A","B","C","D","E","F"][safe: idx] ?? "?"). \(opt)")
+        .accessibilityHint("Selects this option as your answer")
     }
 
     private func mcqRowBackground(idx: Int, correctIdx: Int?) -> Color {
@@ -834,6 +839,7 @@ struct QuestionDetailView: View {
                     Button("Check") { recordAttempt() }
                         .disabled(typedAnswer.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
                                   || attemptOutcome != .unchecked)
+                        .accessibilityHint("Checks whether your typed answer is correct")
                 }
             }
         }
@@ -859,6 +865,7 @@ struct QuestionDetailView: View {
                 }
                 .controlSize(.large)
                 .frame(maxWidth: .infinity, alignment: .leading)
+                .accessibilityHint("Reveals the first hint for this question")
             }
             // Tier 2
             if hintTier >= 2, hints.indices.contains(1) {
@@ -869,6 +876,7 @@ struct QuestionDetailView: View {
                 }
                 .controlSize(.large)
                 .frame(maxWidth: .infinity, alignment: .leading)
+                .accessibilityHint("Reveals the second clue for this question")
             }
             // Tier 3 — full worked solution
             if hintTier >= 3 || revealSolution {
@@ -881,6 +889,7 @@ struct QuestionDetailView: View {
                 .controlSize(.large)
                 .keyboardShortcut(.defaultAction)
                 .frame(maxWidth: .infinity, alignment: .leading)
+                .accessibilityHint("Reveals the worked answer and step-by-step explanation")
             }
         }
     }

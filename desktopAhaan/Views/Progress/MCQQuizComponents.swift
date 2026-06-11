@@ -47,6 +47,7 @@ struct MCQOptionRow: View {
         .buttonStyle(.plain)
         .disabled(revealed)
         .accessibilityLabel(accessibilityLabel)
+        .accessibilityHint(revealed ? "" : "Picks this option as your answer")
         .accessibilityAddTraits(isSelected ? .isSelected : [])
     }
 

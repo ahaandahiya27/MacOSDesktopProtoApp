@@ -136,6 +136,7 @@ struct DiscoveryStepper: View {
                 // to ~10 seconds/day" — they learn what each choice means
                 // before committing.
                 .accessibilityValue(outputAt(i))
+                .accessibilityHint("Selects this option to update the result")
                 .accessibilityAddTraits(selection == i ? [.isSelected, .isButton] : .isButton)
             }
         }

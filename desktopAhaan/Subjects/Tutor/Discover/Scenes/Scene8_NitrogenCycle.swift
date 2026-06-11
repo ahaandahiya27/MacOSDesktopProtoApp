@@ -206,6 +206,7 @@ struct Scene8_NitrogenCycle: View {
             .buttonStyle(.plain)
             .position(mid)
             .accessibilityLabel("Show information about \(kind.label)")
+            .accessibilityHint("Highlights this step of the nitrogen cycle")
         }
     }
 

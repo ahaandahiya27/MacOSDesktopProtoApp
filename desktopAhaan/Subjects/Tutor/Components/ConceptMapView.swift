@@ -114,6 +114,7 @@ struct ConceptMapView: View {
             .buttonStyle(.plain)
             .pointingCursor()
             .accessibilityLabel("Close concept map")
+            .accessibilityHint("Closes the concept map sheet")
         }
         .padding(.horizontal, 22)
         .padding(.top, 18)
@@ -127,15 +128,18 @@ struct ConceptMapView: View {
             }
             .buttonStyle(.borderless)
             .accessibilityLabel("Zoom out")
+            .accessibilityHint("Shrinks the concept map view")
             Button("Reset") { resetView() }
                 .buttonStyle(.borderless)
                 .font(.caption.weight(.semibold))
                 .accessibilityLabel("Reset zoom and pan")
+                .accessibilityHint("Restores the concept map to its default zoom and position")
             Button(action: zoomIn) {
                 Image(systemName: "plus.magnifyingglass")
             }
             .buttonStyle(.borderless)
             .accessibilityLabel("Zoom in")
+            .accessibilityHint("Enlarges the concept map view")
         }
     }
 
@@ -254,6 +258,7 @@ struct ConceptMapView: View {
                 }
                 .buttonStyle(.plain)
                 .pointingCursor()
+                .accessibilityHint(node.kind == .crossChapter ? "Opens the related chapter" : "Opens the concept page")
                 .position(
                     x: nodeX,
                     y: nodeY

@@ -172,6 +172,7 @@ struct SymbiosisPartnershipsLabScene: View {
                 .buttonStyle(.plain)
                 .pointingCursor()
                 .accessibilityLabel("Reveal the give-and-take inside the \(p.title) partnership")
+                .accessibilityHint("Reveals what each partner gives and takes")
             }
         }
         .padding(14)

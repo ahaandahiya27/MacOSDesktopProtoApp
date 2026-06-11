@@ -175,6 +175,7 @@ struct ChapterNotebookSheet: View {
                         }
                         .buttonStyle(.plain)
                         .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                        .accessibilityHint("Erases the chapter notebook contents")
                     }
                 }
             }

@@ -121,6 +121,7 @@ struct CrashLogSummaryView: View {
             } label: {
                 Label("Refresh", systemImage: "arrow.clockwise")
             }
+            .accessibilityHint("Reloads the crash report list from disk")
         }
     }
 

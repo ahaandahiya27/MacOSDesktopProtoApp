@@ -336,6 +336,7 @@ struct HomeExperimentCard: View {
                 .contentShape(Rectangle())
             }
             .buttonStyle(.plain)
+            .accessibilityHint(expanded ? "Collapses the experiment details" : "Expands materials, steps, and the explanation")
 
             if expanded {
                 VStack(alignment: .leading, spacing: 14) {

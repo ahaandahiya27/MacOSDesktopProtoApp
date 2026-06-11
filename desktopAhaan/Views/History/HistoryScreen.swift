@@ -87,6 +87,7 @@ struct HistoryScreen: View {
                                 .contentShape(Rectangle())
                         }
                         .buttonStyle(.plain)
+                        .accessibilityHint("Opens the full translation detail view")
                         .contextMenu {
                             Button {
                                 dataStore.toggleRecordFavorite(record)
@@ -94,6 +95,7 @@ struct HistoryScreen: View {
                                 Text(record.isFavorite ? "Unfavorite" : "Favorite")
                                 Image(systemName: record.isFavorite ? "heart.slash" : "heart")
                             }
+                            .accessibilityHint("Toggles this translation as a saved favorite")
                             Button {
                                 NSPasteboard.general.clearContents()
                                 NSPasteboard.general.setString(record.translatedText, forType: .string)
@@ -101,6 +103,7 @@ struct HistoryScreen: View {
                                 Text("Copy translation")
                                 Image(systemName: "doc.on.doc")
                             }
+                            .accessibilityHint("Copies the translation text to the clipboard")
                             Divider()
                             Button {
                                 dataStore.delete(record)

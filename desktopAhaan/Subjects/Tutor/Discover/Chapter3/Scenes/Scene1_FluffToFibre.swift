@@ -206,6 +206,7 @@ private struct DriftingIcon: View {
             .onTapGesture { onTap() }
             .accessibilityAddTraits(.isButton)
             .accessibilityLabel("Tap \(emoji) to weave a fibre")
+            .accessibilityHint("Weaves another thread into the cloth")
     }
 }
 

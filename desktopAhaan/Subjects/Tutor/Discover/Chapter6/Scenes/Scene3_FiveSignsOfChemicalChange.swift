@@ -209,5 +209,6 @@ struct Scene3_FiveSignsOfChemicalChange: View {
         }
         .buttonStyle(.plain)
         .accessibilityLabel("\(sign.title). \(isTapped ? "Explored." : "Tap to explore.")")
+        .accessibilityHint("Shows this sign of chemical change in detail")
     }
 }

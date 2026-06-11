@@ -65,6 +65,7 @@ struct StudyTimerView: View {
             .buttonStyle(.borderless)
             .help(pomodoro.isRunning ? "Pause" : "Start")
             .accessibilityLabel(pomodoro.isRunning ? "Pause" : "Start")
+            .accessibilityHint(pomodoro.isRunning ? "Pauses the focus timer" : "Starts the focus timer counting down")
 
             Button(action: { pomodoro.reset() }) {
                 Image(systemName: SFSymbolCompat.name("arrow.counterclockwise"))
@@ -73,6 +74,7 @@ struct StudyTimerView: View {
             .buttonStyle(.borderless)
             .help("Reset")
             .accessibilityLabel("Reset")
+            .accessibilityHint("Resets the timer back to a fresh focus phase")
         }
     }
 

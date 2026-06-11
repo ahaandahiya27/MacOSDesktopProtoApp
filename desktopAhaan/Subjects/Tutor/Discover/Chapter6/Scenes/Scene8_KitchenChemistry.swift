@@ -198,5 +198,6 @@ struct Scene8_KitchenChemistry: View {
         }
         .buttonStyle(.plain)
         .accessibilityLabel("\(exp.title). \(isDone ? "Completed" : "Not yet done")")
+        .accessibilityHint("Opens this kitchen chemistry experiment")
     }
 }

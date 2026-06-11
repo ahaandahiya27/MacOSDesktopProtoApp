@@ -199,6 +199,7 @@ struct Scene2_WhySeasonsHappen: View {
         }
         .buttonStyle(.plain)
         .accessibilityLabel("\(pos.label) position. \(isExplored ? "Explored" : "Not yet explored"). North hemisphere: \(pos.northSeason)")
+        .accessibilityHint("Selects this orbital position to see its season")
     }
 
     private func tiltExplanation(_ v: Double) -> String {

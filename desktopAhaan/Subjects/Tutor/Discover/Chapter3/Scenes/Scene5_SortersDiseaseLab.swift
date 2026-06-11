@@ -148,6 +148,7 @@ struct Scene5_SortersDiseaseLab: View {
         .buttonStyle(.plain)
         .frame(maxWidth: .infinity)
         .accessibilityLabel(label)
+        .accessibilityHint("Selects this slide for viewing under the microscope")
     }
 
     private func slideColor(_ index: Int) -> Color {

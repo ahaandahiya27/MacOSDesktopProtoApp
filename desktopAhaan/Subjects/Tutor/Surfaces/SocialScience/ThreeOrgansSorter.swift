@@ -194,6 +194,7 @@ struct ThreeOrgansSorter: View {
         .buttonStyle(.plain)
         .pointingCursor()
         .accessibilityLabel(index + 1 < tasks.count ? "Next job" : "Start over")
+        .accessibilityHint(index + 1 < tasks.count ? "Moves to the next government-organ task" : "Restarts the sorter from the first job")
     }
 
     // MARK: - Actions

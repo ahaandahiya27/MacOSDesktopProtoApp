@@ -31,6 +31,7 @@ struct DailyPlanEmptyStateView: View {
             Button("Open Science Chapter 1") { onStart?() }
                 .keyboardShortcut(.defaultAction)
                 .accessibilityLabel("Open Science Chapter 1")
+                .accessibilityHint("Starts your first Science chapter to begin building a daily plan")
         }
         .frame(maxWidth: .infinity)
         .padding(.vertical, 28)

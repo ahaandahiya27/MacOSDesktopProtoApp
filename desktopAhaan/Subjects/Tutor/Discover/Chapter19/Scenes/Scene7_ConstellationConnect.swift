@@ -164,6 +164,7 @@ struct Scene7_ConstellationConnect: View {
                             }
                             .buttonStyle(.plain)
                             .accessibilityLabel("\(constellation.name). \(isExplored ? "Explored" : "Tap to explore")")
+                            .accessibilityHint("Reveals this constellation's stars and story")
                         }
                     }
                     .frame(maxWidth: 440)

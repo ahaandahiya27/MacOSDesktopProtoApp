@@ -164,6 +164,7 @@ struct Scene7_MigrationSuperhero: View {
         }
         .buttonStyle(.plain)
         .accessibilityLabel("\(fact.bird). \(fact.stat). \(isExplored ? "Explored" : "Tap to learn more")")
+        .accessibilityHint("Opens details about this migrating bird")
     }
 
     // MARK: - Globe (Shape-based; Big Sur compatible)

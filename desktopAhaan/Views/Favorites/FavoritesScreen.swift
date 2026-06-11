@@ -69,6 +69,7 @@ struct FavoritesScreen: View {
                             .contentShape(Rectangle())
                     }
                     .buttonStyle(.plain)
+                    .accessibilityHint("Opens the full translation detail view")
                     .contextMenu {
                         Button {
                             NSPasteboard.general.clearContents()
@@ -77,6 +78,7 @@ struct FavoritesScreen: View {
                             Text("Copy translation")
                             Image(systemName: "doc.on.doc")
                         }
+                        .accessibilityHint("Copies the translation text to the clipboard")
                         Divider()
                         Button {
                             dataStore.setFavorite(recordId: record.id, isFavorite: false)
@@ -84,6 +86,7 @@ struct FavoritesScreen: View {
                             Text("Remove from favorites")
                             Image(systemName: "heart.slash")
                         }
+                        .accessibilityHint("Removes this item from your saved favorites")
                     }
                 }
                 .onDelete(perform: removeFavorites)
@@ -129,6 +132,7 @@ struct FavoriteRowView: View {
                 .buttonStyle(.plain)
                 .help("Play pronunciation")
                 .accessibilityLabel("Play pronunciation")
+                .accessibilityHint("Plays the spoken pronunciation of the translation")
             }
 
             if let translit = record.transliteration, !translit.isEmpty {

@@ -81,6 +81,7 @@ struct OCRTranslationScreen: View {
                 .font(.caption)
                 .foregroundColor(.secondary)
                 .pointingCursor()
+                .accessibilityHint("Opens the file picker to swap in a different image to scan")
             } else {
                 VStack(spacing: DesignTokens.Spacing.lg) {
                     Image(systemName: SFSymbolCompat.name("doc.text.viewfinder"))
@@ -99,6 +100,7 @@ struct OCRTranslationScreen: View {
                             .frame(maxWidth: .infinity)
                     }
                     .pointingCursor()
+                    .accessibilityHint("Opens the file picker to choose an image to scan for text")
                 }
             }
         }
@@ -248,6 +250,7 @@ struct OCRTranslationScreen: View {
                     .frame(maxWidth: .infinity)
             }
             .disabled(editedText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || vm.isTranslating)
+            .accessibilityHint("Sends the extracted text to the translation engine")
             .padding(.horizontal)
         }
     }

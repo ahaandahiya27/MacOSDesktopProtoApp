@@ -221,6 +221,7 @@ private struct DiscoverProgressContent: View {
         .pointingCursor()
         .accessibilityLabel("Chapter \(chapter.number), \(chapter.title)")
         .accessibilityValue("\(done) of \(total) scenes completed")
+        .accessibilityHint("Opens this chapter's Discover Mode")
     }
 
     /// Uses `dataStore.discoverRowCount(for:)` which is backed by a cached

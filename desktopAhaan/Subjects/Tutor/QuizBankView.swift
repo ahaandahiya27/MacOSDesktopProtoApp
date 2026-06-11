@@ -145,6 +145,7 @@ private struct QuizBankContent: View {
                     }
                     .buttonStyle(.plain)
                     .pointingCursor()
+                    .accessibilityHint("Opens this question for practice")
                     .contextMenu {
                         Button("Open") { openQuestion(entry, siblings: siblingRefs) }
                     }
@@ -178,6 +179,7 @@ private struct QuizBankContent: View {
                     }
                     .buttonStyle(.plain)
                     .accessibilityLabel("Clear search")
+                    .accessibilityHint("Empties the search field and shows all questions")
                 }
             }
             .padding(6)

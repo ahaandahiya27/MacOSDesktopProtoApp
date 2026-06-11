@@ -63,6 +63,7 @@ struct Scene1_PlantKitchen: View {
                             .onTapGesture { tappedLeaf() }
                             .accessibilityAddTraits(.isButton)
                             .accessibilityLabel("Tap the leaf to make it cook food.")
+                            .accessibilityHint("Plays the photosynthesis animation")
 
                         // Glucose molecule that emerges on tap
                         if showGlucose {

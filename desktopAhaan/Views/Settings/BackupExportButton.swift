@@ -29,6 +29,7 @@ struct BackupExportButton: View {
                 }
             }
             .accessibilityLabel("Back up progress — saves all your data to a single JSON file you can keep or restore on another Mac")
+            .accessibilityHint("Opens a save dialog to export your progress as a backup file")
 
             if let status = lastStatus {
                 Text(status)

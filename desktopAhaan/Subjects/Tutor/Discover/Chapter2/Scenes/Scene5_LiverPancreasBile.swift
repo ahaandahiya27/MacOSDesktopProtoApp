@@ -54,6 +54,7 @@ struct Scene5_LiverPancreasBile: View {
                         }
                         .buttonStyle(.plain)
                         .accessibilityLabel("Liver — produces bile")
+                        .accessibilityHint("Animates bile flowing from the liver")
 
                         if bileFlowing {
                             VStack(spacing: DesignTokens.Spacing.xxs) {
@@ -83,6 +84,7 @@ struct Scene5_LiverPancreasBile: View {
                         }
                         .buttonStyle(.plain)
                         .accessibilityLabel("Pancreas — makes enzymes")
+                        .accessibilityHint("Animates enzyme juice flowing from the pancreas")
 
                         if juiceFlowing {
                             VStack(spacing: DesignTokens.Spacing.xxs) {

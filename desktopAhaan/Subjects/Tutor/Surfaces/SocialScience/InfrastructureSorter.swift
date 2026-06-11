@@ -199,6 +199,7 @@ struct InfrastructureSorter: View {
         .buttonStyle(.plain)
         .pointingCursor()
         .accessibilityLabel(index + 1 < items.count ? "Next example" : "Start over")
+        .accessibilityHint(index + 1 < items.count ? "Moves to the next infrastructure example to sort" : "Restarts the sorter from the first example")
     }
 
     // MARK: - Actions

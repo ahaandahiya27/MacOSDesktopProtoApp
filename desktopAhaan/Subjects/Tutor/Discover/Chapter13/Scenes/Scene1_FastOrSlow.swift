@@ -52,8 +52,11 @@ struct Scene1_FastOrSlow: View {
                 .frame(maxWidth: 480)
 
                 HStack(spacing: DesignTokens.Spacing.lg) {
-                    Button("Check") { done = true }.accentColor(Color.compatIndigo)
+                    Button("Check") { done = true }
+                        .accentColor(Color.compatIndigo)
+                        .accessibilityHint("Checks your ordering and shows the score")
                     Button("Shuffle") { current.shuffle(); done = false }
+                        .accessibilityHint("Randomizes the order so you can try again")
                 }
 
                 if done {

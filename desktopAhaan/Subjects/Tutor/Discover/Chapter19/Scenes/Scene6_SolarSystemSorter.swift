@@ -94,6 +94,7 @@ struct Scene6_SolarSystemSorter: View {
                                 }
                                 .buttonStyle(.plain)
                                 .accessibilityLabel("\(planet). \(isSelected ? "Selected" : "Tap to select")")
+                                .accessibilityHint("Picks this planet so you can place it in a slot")
                             }
                         }
                         .padding(.horizontal, DesignTokens.Spacing.sm)
@@ -251,6 +252,7 @@ struct Scene6_SolarSystemSorter: View {
         }
         .buttonStyle(.plain)
         .accessibilityLabel("Slot \(index + 1). \(planet ?? "Empty"). \(isCorrect == true ? "Correct" : isCorrect == false ? "Incorrect" : "")")
+        .accessibilityHint("Places the selected planet into this slot")
     }
 
     // MARK: - Submit

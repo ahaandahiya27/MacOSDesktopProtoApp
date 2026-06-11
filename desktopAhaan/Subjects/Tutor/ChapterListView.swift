@@ -50,6 +50,7 @@ struct ChapterListView: View {
                             }
                             .buttonStyle(.plain)
                             .pointingCursor()
+                            .accessibilityHint("Resumes Discover Mode for this chapter")
                         }
                         .listRowBackground(Color.clear)
                     }
@@ -75,6 +76,7 @@ struct ChapterListView: View {
                             .buttonStyle(.plain)
                             .pointingCursor()
                             .accessibilityIdentifier("chapter-\(chapter.number)")
+                            .accessibilityHint("Opens this chapter")
                             .contextMenu {
                                 Button("Open") { nav.push(.chapter(packId: pack.id, chapterId: chapter.id)) }
                                 Button("Copy title") {

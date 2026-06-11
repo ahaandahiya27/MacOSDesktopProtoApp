@@ -35,6 +35,7 @@ struct Scene2_PulseCounter: View {
                     .font(.system(size: 96))
                     .onTapGesture { if counting { taps += 1 } }
                     .accessibilityLabel("Tap with every pulse")
+                    .accessibilityHint("Records one pulse beat while counting")
 
                 Text(counting ? "Taps so far: \(taps)" : " ")
                     .font(.headline.monospacedDigit())

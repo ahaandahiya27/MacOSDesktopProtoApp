@@ -122,6 +122,7 @@ struct Scene8_DesertSurvivalTricks: View {
                             }
                             .buttonStyle(.plain)
                             .accessibilityLabel("\(animal.name). \(isExplored ? "Explored" : "Tap to explore")")
+                            .accessibilityHint("Shows this desert animal's survival tricks")
                         }
                     }
 

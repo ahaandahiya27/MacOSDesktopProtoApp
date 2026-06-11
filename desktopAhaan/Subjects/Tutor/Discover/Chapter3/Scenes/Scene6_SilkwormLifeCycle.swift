@@ -164,6 +164,7 @@ struct Scene6_SilkwormLifeCycle: View {
         .buttonStyle(.plain)
         .position(stageNodePosition(index: index))
         .accessibilityLabel(stage.name)
+        .accessibilityHint("Jumps to this stage of the silkworm life cycle")
     }
 
     private func advanceStage() {

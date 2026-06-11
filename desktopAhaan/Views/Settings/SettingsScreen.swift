@@ -292,6 +292,7 @@ struct SettingsScreen: View {
                     Text("Clear All History")
                         .foregroundColor(.red)
                 }
+                .accessibilityHint("Deletes every saved translation and resets practice progress")
                 .alert(isPresented: $showClearConfirm) {
                     Alert(
                         title: Text("Clear all translation history?"),
@@ -400,6 +401,7 @@ struct PINEntryView: View {
 
             Button("Unlock") { onSubmit() }
                 .disabled(pinInput.count < 4)
+                .accessibilityHint("Checks your PIN and opens the Settings screen")
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)

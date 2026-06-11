@@ -152,6 +152,7 @@ struct Scene4_TheWoolPipeline: View {
             }
             .buttonStyle(.plain)
             .accessibilityLabel(step.label)
+            .accessibilityHint("Opens this stage of the wool pipeline")
         }
     }
 }

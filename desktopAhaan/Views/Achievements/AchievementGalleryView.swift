@@ -86,6 +86,7 @@ struct AchievementGalleryView: View {
                         .buttonStyle(.plain)
                         .accessibilityLabel(badge.title)
                         .accessibilityValue(engine.isUnlocked(badge.id) ? "Unlocked" : "Locked")
+                        .accessibilityHint("Opens the badge details with how to earn it")
                     }
                 }
             }

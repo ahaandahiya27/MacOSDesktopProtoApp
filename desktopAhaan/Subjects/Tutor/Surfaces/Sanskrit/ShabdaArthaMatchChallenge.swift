@@ -128,6 +128,7 @@ struct ShabdaArthaMatchChallenge: View {
                 .buttonStyle(.plain).pointingCursor()
                 .disabled(done)
                 .accessibilityLabel("Word: \(terms[i].term)\(done ? ", matched" : "")")
+                .accessibilityHint(done ? "Already matched." : "Selects this word, then tap a meaning to pair them.")
             }
         }
     }
@@ -181,6 +182,7 @@ struct ShabdaArthaMatchChallenge: View {
                 Text("पुनः (Again)").font(.caption.weight(.semibold)).foregroundColor(Color.compatIndigo)
             }
             .buttonStyle(.plain).pointingCursor()
+            .accessibilityHint("Resets the challenge so you can play it again")
         }
         .padding(10)
         .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm).fill(Color.green.opacity(0.14)))

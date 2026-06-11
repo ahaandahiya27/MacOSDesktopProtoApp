@@ -34,6 +34,7 @@ struct PlainTextArticleFallback: View {
                             }
                         }
                         .controlSize(.small)
+                        .accessibilityHint("Opens this article in the Safari browser")
                     }
                 }
                 .padding(10)

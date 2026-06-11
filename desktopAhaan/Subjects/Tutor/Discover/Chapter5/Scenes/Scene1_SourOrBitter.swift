@@ -186,6 +186,7 @@ struct Scene1_SourOrBitter: View {
         
         .accentColor(color)
         .accessibilityLabel("Classify as \(label)")
+        .accessibilityHint("Submits your answer for the current item")
     }
 
     private func pillColor(for index: Int) -> Color {

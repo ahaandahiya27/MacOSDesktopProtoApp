@@ -188,6 +188,7 @@ struct Scene3_ThreeHighwaysOfHeat: View {
         }
         .buttonStyle(.plain)
         .accessibilityLabel("\(d.title) lane. \(isTapped ? "Explored." : "Tap to explore.")")
+        .accessibilityHint("Animates this heat transfer lane and reveals its description")
     }
 
     @ViewBuilder

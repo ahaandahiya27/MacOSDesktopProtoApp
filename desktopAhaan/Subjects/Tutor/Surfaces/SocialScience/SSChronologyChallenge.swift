@@ -70,6 +70,7 @@ struct SSChronologyChallenge: View {
                 }
                 .buttonStyle(.plain)
                 .pointingCursor()
+                .accessibilityHint("Clears the sequence and lets you try ordering the events again")
             }
         }
         .padding(18)
@@ -169,6 +170,7 @@ struct SSChronologyChallenge: View {
             }
             .buttonStyle(.plain)
             .pointingCursor()
+            .accessibilityHint("Resets the challenge so you can play it again")
         }
         .padding(10)
         .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm).fill(Color.green.opacity(0.14)))

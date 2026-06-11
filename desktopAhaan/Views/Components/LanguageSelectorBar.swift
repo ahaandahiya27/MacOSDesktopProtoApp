@@ -30,6 +30,7 @@ struct LanguageSelectorBar: View {
             }
             .disabled(!TranslationPair(source: target, target: source).isValid)
             .accessibilityLabel("Swap language direction")
+            .accessibilityHint("Switches the source and target languages")
 
             // Target picker
             Menu {

@@ -51,6 +51,7 @@ struct TopicDetailView: View {
                         }
                         .buttonStyle(.plain)
                         .pointingCursor()
+                        .accessibilityHint("Opens this concept")
                         .contextMenu {
                             Button("Open") { nav.push(.concept(packId: pack.id, conceptId: c.id)) }
                             Button("Copy title") {
@@ -72,6 +73,7 @@ struct TopicDetailView: View {
                         }
                         .buttonStyle(.plain)
                         .pointingCursor()
+                        .accessibilityHint("Opens this practice question")
                         .contextMenu {
                             Button("Open") { nav.push(.question(packId: pack.id, questionId: q.id)) }
                         }

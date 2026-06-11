@@ -49,6 +49,7 @@ struct InputCard: View {
                     .clipShape(Capsule())
                 }
                 .accessibilityLabel(isListening ? "Stop listening" : "Speak to translate")
+                .accessibilityHint(isListening ? "Stops voice recording" : "Uses your microphone to capture text for translation")
             }
         }
         .padding()

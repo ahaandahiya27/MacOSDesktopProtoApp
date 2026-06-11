@@ -303,6 +303,7 @@ struct DiscoverShell<SceneBody: View>: View {
                     modifiers: .command
                 )
                 .accessibilityLabel("Jump to scene \(i + 1)")
+                .accessibilityHint("Skips directly to the chosen Discover scene")
             }
         }
         .frame(width: 0, height: 0)

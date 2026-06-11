@@ -31,6 +31,7 @@ struct ArticleBrowserView: View {
                         }
                         .keyboardShortcut("w", modifiers: .command)
                         .accessibilityLabel("Close article")
+                        .accessibilityHint("Closes the article and returns to the chapter")
                         .help("Close article")
 
                         Button(action: { coordinator.goBack() }) {
@@ -39,6 +40,7 @@ struct ArticleBrowserView: View {
                         }
                         .disabled(!coordinator.canGoBack)
                         .accessibilityLabel("Back")
+                        .accessibilityHint("Goes back to the previous article page")
                         .help("Back")
 
                         Button(action: { coordinator.goForward() }) {
@@ -47,6 +49,7 @@ struct ArticleBrowserView: View {
                         }
                         .disabled(!coordinator.canGoForward)
                         .accessibilityLabel("Forward")
+                        .accessibilityHint("Goes forward to the next article page")
                         .help("Forward")
 
                         Button(action: { coordinator.reload() }) {
@@ -54,6 +57,7 @@ struct ArticleBrowserView: View {
                                 .font(.body)
                         }
                         .accessibilityLabel("Reload")
+                        .accessibilityHint("Reloads the current article from disk")
                         .help("Reload")
 
                         Button(action: { coordinator.openCurrentURL() }) {
@@ -61,6 +65,7 @@ struct ArticleBrowserView: View {
                                 .font(.body)
                         }
                         .accessibilityLabel("Open in Safari")
+                        .accessibilityHint("Opens this article in the Safari browser")
                         .help("Open in Safari")
                     }
                     Spacer()

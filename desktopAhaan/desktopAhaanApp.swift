@@ -225,6 +225,7 @@ struct SanskritKoshApp: App {
                     NotificationCenter.default.post(name: .openImageCommand, object: nil)
                 }
                 .keyboardShortcut("o", modifiers: .command)
+                .accessibilityHint("Picks a Sanskrit image to scan with OCR")
             }
 
             CommandGroup(after: .pasteboard) {
@@ -232,6 +233,7 @@ struct SanskritKoshApp: App {
                     NotificationCenter.default.post(name: .copyTranslationCommand, object: nil)
                 }
                 .keyboardShortcut("c", modifiers: [.command, .shift])
+                .accessibilityHint("Copies the current translation to the clipboard")
             }
 
             SidebarCommands()
@@ -241,6 +243,7 @@ struct SanskritKoshApp: App {
                     NotificationCenter.default.post(name: .speakResultCommand, object: nil)
                 }
                 .keyboardShortcut("s", modifiers: [.command, .shift])
+                .accessibilityHint("Reads the translation result aloud")
             }
 
             CommandMenu("Translate") {
@@ -248,6 +251,7 @@ struct SanskritKoshApp: App {
                     NotificationCenter.default.post(name: .translateCommand, object: nil)
                 }
                 .keyboardShortcut(.return, modifiers: .command)
+                .accessibilityHint("Translates the text in the input field")
             }
 
             CommandGroup(after: .textEditing) {
@@ -255,16 +259,19 @@ struct SanskritKoshApp: App {
                     appState.sidebarSelection = .tool(.search)
                 }
                 .keyboardShortcut("f", modifiers: .command)
+                .accessibilityHint("Opens search across all subject content")
 
                 Button("Go Back") {
                     NotificationCenter.default.post(name: .navigateBackCommand, object: nil)
                 }
                 .keyboardShortcut("[", modifiers: .command)
+                .accessibilityHint("Returns to the previous view")
 
                 Button("Show Bookmarks") {
                     appState.sidebarSelection = .tool(.bookmarks)
                 }
                 .keyboardShortcut("b", modifiers: .command)
+                .accessibilityHint("Switches to the saved bookmarks list")
 
                 // ⌘⇧P is reassigned to the new Printable Worksheet (Help →
                 // "Printable Worksheet…"), per the feature brief. Daily
@@ -273,6 +280,7 @@ struct SanskritKoshApp: App {
                     appState.sidebarSelection = .tool(.dailyPractice)
                 }
                 .keyboardShortcut("p", modifiers: [.command, .option])
+                .accessibilityHint("Opens today's spaced repetition practice")
 
                 // ⌘⇧D is reassigned to the new Daily Plan (Help → Today's
                 // Plan), per the feature brief. Discover Progress moves to
@@ -283,11 +291,13 @@ struct SanskritKoshApp: App {
                     appState.sidebarSelection = .tool(.discover)
                 }
                 .keyboardShortcut("d", modifiers: [.command, .control])
+                .accessibilityHint("Opens the Discover Mode progress dashboard")
 
                 Button("Show Settings") {
                     appState.sidebarSelection = .tool(.settings)
                 }
                 .keyboardShortcut(",", modifiers: [.command, .shift])
+                .accessibilityHint("Opens the app settings screen")
             }
 
             // Help menu additions:
@@ -306,6 +316,7 @@ struct SanskritKoshApp: App {
                     NotificationCenter.default.post(name: .openInAppHelp, object: nil)
                 }
                 .keyboardShortcut("?", modifiers: .command)
+                .accessibilityHint("Opens the in-app help and keyboard shortcuts list")
 
                 Divider()
 
@@ -313,6 +324,7 @@ struct SanskritKoshApp: App {
                     let url = CrashReporter.shared.logDirectoryURL
                     NSWorkspace.shared.activateFileViewerSelecting([url])
                 }
+                .accessibilityHint("Shows the crash log folder in Finder")
 
                 Button("Clear Crash Logs") {
                     let n = CrashReporter.shared.clearAllLogs()
@@ -323,6 +335,7 @@ struct SanskritKoshApp: App {
                     alert.addButton(withTitle: "OK")
                     alert.runModal()
                 }
+                .accessibilityHint("Deletes all saved crash log files")
 
                 // Parent-facing crash summary. Opens its own AppKit window
                 // (CrashLogSummaryWindowPresenter) showing the plain-English
@@ -333,6 +346,7 @@ struct SanskritKoshApp: App {
                     CrashLogSummaryWindowPresenter.shared.present()
                 }
                 .keyboardShortcut("x", modifiers: [.command, .shift])
+                .accessibilityHint("Opens a plain-English summary of recent crashes")
                 }
 
                 Divider()
@@ -344,22 +358,27 @@ struct SanskritKoshApp: App {
                 Button("Show Welcome Tour") {
                     NotificationCenter.default.post(name: .showWelcomeTour, object: nil)
                 }
+                .accessibilityHint("Replays the three-panel welcome tour")
 
                 Button("What's New") {
                     NotificationCenter.default.post(name: .showWhatsNew, object: nil)
                 }
+                .accessibilityHint("Shows the latest release notes")
 
                 Button("About Daily Practice") {
                     NotificationCenter.default.post(name: .showAboutDailyPractice, object: nil)
                 }
+                .accessibilityHint("Explains how Daily Practice works")
 
                 Button("About Deep Dive Mode") {
                     NotificationCenter.default.post(name: .showAboutDeepDive, object: nil)
                 }
+                .accessibilityHint("Explains how Deep Dive Mode works")
 
                 Button("About Audio Narration") {
                     NotificationCenter.default.post(name: .showAboutAudio, object: nil)
                 }
+                .accessibilityHint("Explains how article read aloud works")
                 }
 
                 Divider()
@@ -375,6 +394,7 @@ struct SanskritKoshApp: App {
                     )
                 }
                 .keyboardShortcut("w", modifiers: [.command, .shift])
+                .accessibilityHint("Opens the weekly progress dashboard window")
 
                 Divider()
 
@@ -390,6 +410,7 @@ struct SanskritKoshApp: App {
                     )
                 }
                 .keyboardShortcut("d", modifiers: [.command, .shift])
+                .accessibilityHint("Opens today's recommended study plan window")
 
                 Button("Achievements") {
                     AchievementGalleryWindowPresenter.shared.present(
@@ -397,6 +418,7 @@ struct SanskritKoshApp: App {
                     )
                 }
                 .keyboardShortcut("a", modifiers: [.command, .shift])
+                .accessibilityHint("Opens the badge and achievement gallery window")
 
                 // Mastery Map — cross-subject "where am I on the whole
                 // journey?" view (v6 Phase 2). Own AppKit window, same pattern
@@ -408,6 +430,7 @@ struct SanskritKoshApp: App {
                     )
                 }
                 .keyboardShortcut("m", modifiers: [.command, .shift])
+                .accessibilityHint("Opens the cross-subject mastery map window")
 
                 // Insights — longitudinal mastery trend chart + week-over-week
                 // delta + per-subject standings (v8). Own AppKit window, same
@@ -418,6 +441,7 @@ struct SanskritKoshApp: App {
                     )
                 }
                 .keyboardShortcut("i", modifiers: [.command, .shift])
+                .accessibilityHint("Opens the long-term mastery trend chart")
 
                 // Milestone Checkpoint — a short mixed quiz sampled by mastery
                 // gaps (v6 Phase 4). Own AppKit window, same pattern. ⌘⇧K is
@@ -428,6 +452,7 @@ struct SanskritKoshApp: App {
                     )
                 }
                 .keyboardShortcut("k", modifiers: [.command, .shift])
+                .accessibilityHint("Starts a short mixed quiz across subjects")
 
                 // Expert Challenges — mastery-gated tiered challenge ladder
                 // (v6 Phase 5). Own AppKit window, same pattern. ⌘⇧E is free.
@@ -437,6 +462,7 @@ struct SanskritKoshApp: App {
                     )
                 }
                 .keyboardShortcut("e", modifiers: [.command, .shift])
+                .accessibilityHint("Opens the expert challenge ladder window")
                 }
 
                 Divider()
@@ -450,6 +476,7 @@ struct SanskritKoshApp: App {
                         registry: subjectRegistry)
                 }
                 .keyboardShortcut("p", modifiers: [.command, .shift])
+                .accessibilityHint("Builds a printable practice worksheet")
 
                 // Study Timer — Pomodoro focus companion in its own window.
                 // ⌘⇧T is free in AppKit defaults.
@@ -457,12 +484,14 @@ struct SanskritKoshApp: App {
                     StudyTimerWindowPresenter.shared.present()
                 }
                 .keyboardShortcut("t", modifiers: [.command, .shift])
+                .accessibilityHint("Opens the study focus timer window")
 
                 // Adaptive Practice Settings — adaptive on/off, timer chime,
                 // worksheet default length.
                 Button("Adaptive Practice Settings") {
                     PracticeSettingsWindowPresenter.shared.present()
                 }
+                .accessibilityHint("Opens adaptive practice preferences")
                 }
             }
         }

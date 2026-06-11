@@ -215,6 +215,7 @@ struct ContentView: View {
                 .font(.caption.weight(.semibold))
                 .foregroundColor(Color.compatIndigo)
                 .help("Clear recent items")
+                .accessibilityHint("Removes all items from the Recent list")
         }
     }
 
@@ -258,6 +259,7 @@ struct ContentView: View {
         .buttonStyle(.plain)
         .pointingCursor()
         .help("Jump to \(item.title)")
+        .accessibilityHint("Reopens this recent item in the detail pane")
     }
 
     // MARK: - Sidebar
@@ -402,6 +404,7 @@ struct ContentView: View {
                     Button("Retry") {
                         Task { await subjectRegistry.reload() }
                     }
+                    .accessibilityHint("Reloads the subject pack from disk")
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             }

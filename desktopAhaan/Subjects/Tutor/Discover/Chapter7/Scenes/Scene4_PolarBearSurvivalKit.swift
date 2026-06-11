@@ -191,6 +191,7 @@ struct Scene4_PolarBearSurvivalKit: View {
         .buttonStyle(.plain)
         .position(x: posX, y: posY)
         .accessibilityLabel("\(adapt.name). \(isTapped ? "Already explored" : "Tap to explore")")
+        .accessibilityHint("Shows how this polar bear adaptation helps it survive")
     }
 
     @ViewBuilder

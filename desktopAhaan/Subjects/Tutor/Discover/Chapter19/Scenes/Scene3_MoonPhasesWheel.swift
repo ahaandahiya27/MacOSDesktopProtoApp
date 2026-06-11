@@ -181,6 +181,7 @@ struct Scene3_MoonPhasesWheel: View {
         }
         .buttonStyle(.plain)
         .accessibilityLabel("\(phase.name). \(isExplored ? "Explored" : "Not yet explored")")
+        .accessibilityHint("Selects this moon phase to see its details")
     }
 
 }

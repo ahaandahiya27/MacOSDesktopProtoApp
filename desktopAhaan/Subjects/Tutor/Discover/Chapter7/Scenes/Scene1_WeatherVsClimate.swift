@@ -222,5 +222,6 @@ struct Scene1_WeatherVsClimate: View {
         }
         .buttonStyle(.plain)
         .accessibilityLabel("\(title): \(subtitle). Tap to learn more.")
+        .accessibilityHint("Shows more details about this side")
     }
 }

@@ -49,6 +49,7 @@ struct Scene2_BuildYourThermometer: View {
                         
                         .accentColor(.orange)
                         .accessibilityLabel("Heat the thermometer")
+                        .accessibilityHint("Raises the thermometer reading")
 
                         Button {
                             adjustFraction(by: -0.08)
@@ -59,6 +60,7 @@ struct Scene2_BuildYourThermometer: View {
                         
                         .accentColor(Color.compatCyan)
                         .accessibilityLabel("Cool the thermometer")
+                        .accessibilityHint("Lowers the thermometer reading")
 
                         HStack(spacing: DesignTokens.Spacing.xl) {
                             VStack {

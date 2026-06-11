@@ -212,6 +212,7 @@ private struct DailyPracticeContent: View {
                 reviewSessionVisible = true
             }
             .keyboardShortcut(.defaultAction)
+            .accessibilityHint("Begins a timed review of all questions due today")
         }
         .padding(14)
         .background(
@@ -312,6 +313,7 @@ private struct DailyPracticeContent: View {
                 .buttonStyle(.plain)
                 .help("Remove from Daily Practice")
                 .accessibilityLabel("Remove \(entry.question.id) from daily practice list")
+                .accessibilityHint("Takes this question out of your review queue")
                 Image(systemName: "chevron.right")
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .accessibilityHidden(true)
@@ -330,6 +332,7 @@ private struct DailyPracticeContent: View {
         .buttonStyle(.plain)
         .pointingCursor()
         .accessibilityLabel("Review tough question: \(entry.question.prompt)")
+        .accessibilityHint("Opens this flagged question to practice again")
     }
 }
 
@@ -419,6 +422,7 @@ private struct ReviewSessionSheet: View {
                     .keyboardShortcut(.space, modifiers: [])
                     .controlSize(.large)
                     .frame(maxWidth: .infinity)
+                    .accessibilityHint("Reveals the correct answer for self-grading")
             }
             // Skip card — bottom-right escape hatch. The kid hits this if
             // the prompt is confusing, a typo slipped in, or they want to
@@ -485,6 +489,7 @@ private struct ReviewSessionSheet: View {
         .pointingCursor()
         .keyboardShortcut(shortcut, modifiers: .command)
         .accessibilityLabel("Mark answer as \(label) (⌘\(String(shortcut.character)))")
+        .accessibilityHint("Scores this card and moves to the next review question")
     }
 
     private func advance() {

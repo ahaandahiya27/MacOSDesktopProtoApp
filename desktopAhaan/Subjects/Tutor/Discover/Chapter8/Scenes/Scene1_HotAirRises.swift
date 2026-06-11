@@ -45,6 +45,7 @@ struct Scene1_HotAirRises: View {
                     balloonY = flameOn ? -110 : 0
                 }
                 .accessibilityLabel(flameOn ? "Flame on, balloon rising" : "Flame off")
+                .accessibilityHint("Toggles the flame to lift or lower the balloon")
 
                 Button(flameOn ? "Turn flame off" : "Light the flame") {
                     flameOn.toggle()

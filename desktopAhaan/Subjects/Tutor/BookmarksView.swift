@@ -112,6 +112,7 @@ private struct BookmarksContent: View {
             }
             .buttonStyle(.plain)
             .pointingCursor()
+            .accessibilityHint("Opens this bookmarked concept")
             .contextMenu {
                 Button("Open") { nav.push(.concept(packId: pack.id, conceptId: concept.id)) }
                 Button("Remove bookmark") { dataStore.deleteBookmark(b) }
@@ -128,6 +129,7 @@ private struct BookmarksContent: View {
             }
             .buttonStyle(.plain)
             .pointingCursor()
+            .accessibilityHint("Opens this subject — the original concept could not be found")
             .contextMenu {
                 Button("Remove bookmark") { dataStore.deleteBookmark(b) }
             }
@@ -151,6 +153,7 @@ private struct BookmarksContent: View {
             }
             .buttonStyle(.plain)
             .pointingCursor()
+            .accessibilityHint("Opens this bookmarked question")
             .contextMenu {
                 Button("Open") { nav.push(.question(packId: pack.id, questionId: b.questionId)) }
                 Button("Remove bookmark") { dataStore.deleteQuestionBookmark(b) }
@@ -167,6 +170,7 @@ private struct BookmarksContent: View {
             }
             .buttonStyle(.plain)
             .pointingCursor()
+            .accessibilityHint("Opens this subject — the original question could not be found")
             .contextMenu {
                 Button("Remove bookmark") { dataStore.deleteQuestionBookmark(b) }
             }

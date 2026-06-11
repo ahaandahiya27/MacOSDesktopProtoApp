@@ -172,6 +172,7 @@ struct ExpertChallengeLadderView: View {
         }
         .buttonStyle(.plain)
         .accessibilityLabel("Start the \(set.tier.title) challenge for \(subjectTitle)")
+        .accessibilityHint("Begins this expert challenge tier with multiple choice questions")
     }
 
     // MARK: - Flow control
