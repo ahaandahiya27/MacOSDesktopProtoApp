@@ -43,14 +43,14 @@ struct Scene2_PhotosynthesisLab: View {
                     .padding(.top, 18)
 
             // Fuel buttons
-            HStack(spacing: 16) {
+            HStack(spacing: DesignTokens.Spacing.lg) {
                 FuelButton(label: "Water", emoji: "💧", tint: .blue, on: $hasWater)
                 FuelButton(label: "Air",   emoji: "💨", tint: .gray, on: $hasCO2)
                 FuelButton(label: "Sunlight", emoji: "☀️", tint: .orange, on: $hasSun)
             }
 
             // Equation row
-            HStack(spacing: 12) {
+            HStack(spacing: DesignTokens.Spacing.md) {
                 IngredientTile(emoji: "💧", label: "6 H₂O", filled: hasWater)
                 Text("+").font(.title.bold()).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 IngredientTile(emoji: "☁️", label: "6 CO₂", filled: hasCO2)
@@ -133,11 +133,11 @@ struct Scene2_PhotosynthesisLab: View {
                 .frame(maxWidth: DesignTokens.contentMaxWidth)
                 .padding(.horizontal, 24)
 
-                HStack(spacing: 12) {
+                HStack(spacing: DesignTokens.Spacing.md) {
                     Button("🔁 Try again") { resetEverything() }
                         .buttonStyle(.bordered)
                         .disabled(!produced)
-                    VStack(spacing: 4) {
+                    VStack(spacing: DesignTokens.Spacing.xs) {
                         GotItButton(action: onComplete)
                             .disabled(!produced)
                             .opacity(produced ? 1 : 0.5)
@@ -196,7 +196,7 @@ private struct FuelButton: View {
         Button {
             withAnimationRespectingReduceMotion(.spring(response: 0.4, dampingFraction: 0.7)) { on = true }
         } label: {
-            VStack(spacing: 4) {
+            VStack(spacing: DesignTokens.Spacing.xs) {
                 Text(emoji).font(.system(size: 28))
                 Text(label).font(.callout.weight(.medium))
             }
@@ -216,7 +216,7 @@ private struct IngredientTile: View {
     var color: Color = .blue
 
     var body: some View {
-        VStack(spacing: 4) {
+        VStack(spacing: DesignTokens.Spacing.xs) {
             Text(emoji)
                 .font(.system(size: 28))
                 .opacity(filled ? 1 : 0.25)

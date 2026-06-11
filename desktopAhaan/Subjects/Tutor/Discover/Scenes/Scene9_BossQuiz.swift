@@ -83,7 +83,7 @@ struct Scene9_BossQuiz: View {
 
                     if revealed[currentQ] {
                         SoftShadowCard(padding: 12) {
-                            HStack(alignment: .top, spacing: 8) {
+                            HStack(alignment: .top, spacing: DesignTokens.Spacing.sm) {
                                 Image(systemName: "lightbulb.fill")
                                     .foregroundColor(.yellow)
                                 Text(item.bossExplanation)
@@ -187,7 +187,7 @@ struct Scene9_BossQuiz: View {
                 .padding(.vertical, 8)
                 .background(Capsule().fill(Color.compatIndigo.opacity(0.12)))
 
-            HStack(spacing: 12) {
+            HStack(spacing: DesignTokens.Spacing.md) {
                 Button {
                     saveCertificate()
                 } label: {

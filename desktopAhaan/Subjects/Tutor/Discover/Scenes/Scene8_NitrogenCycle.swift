@@ -96,7 +96,7 @@ struct Scene8_NitrogenCycle: View {
             // Selected explanation
             SoftShadowCard(padding: 14) {
                 if let sel = selected {
-                    HStack(alignment: .top, spacing: 12) {
+                    HStack(alignment: .top, spacing: DesignTokens.Spacing.md) {
                         Text(sel.label).font(.title3.bold()).foregroundColor(Color.compatIndigo)
                         Spacer(minLength: 0)
                     }
@@ -110,7 +110,7 @@ struct Scene8_NitrogenCycle: View {
 
             if allTapped {
                 SoftShadowCard(padding: 16) {
-                    VStack(alignment: .leading, spacing: 8) {
+                    VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                         Label("Quick check", systemImage: "questionmark.circle.fill")
                             .font(.headline).foregroundColor(.green)
                         Text(question).font(.body)
@@ -147,7 +147,7 @@ struct Scene8_NitrogenCycle: View {
             .frame(maxWidth: DesignTokens.contentMaxWidth)
             .padding(.horizontal, 24)
 
-                VStack(spacing: 4) {
+                VStack(spacing: DesignTokens.Spacing.xs) {
                     GotItButton(action: onComplete)
                         .disabled(!allTapped)
                         .opacity(allTapped ? 1 : 0.55)
@@ -222,7 +222,7 @@ struct Scene8_NitrogenCycle: View {
 
     @ViewBuilder
     private func node(at p: CGPoint, emoji: String, label: String) -> some View {
-        VStack(spacing: 2) {
+        VStack(spacing: DesignTokens.Spacing.xxs) {
             Circle()
                 .fill(Color.white)
                 .frame(width: 64, height: 64)

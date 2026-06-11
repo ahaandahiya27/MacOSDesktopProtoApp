@@ -105,7 +105,7 @@ struct Scene4_ColorTheChlorophyll: View {
                     HStack(alignment: .top, spacing: 10) {
                         Text(isAbsorbed(i) ? "🥢" : "🪞")
                             .font(.system(size: 22))
-                        VStack(alignment: .leading, spacing: 4) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                             if isAbsorbed(i) {
                                 Text("\(bands[i].1) light: ABSORBED")
                                     .font(.headline)

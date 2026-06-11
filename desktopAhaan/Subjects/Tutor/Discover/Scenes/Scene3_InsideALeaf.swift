@@ -49,7 +49,7 @@ struct Scene3_InsideALeaf: View {
         // shell's scene slot, pushing the shell's footer (Previous / Next)
         // off-canvas on shorter windows.
         ScrollView {
-            LazyVStack(spacing: 12) {
+            LazyVStack(spacing: DesignTokens.Spacing.md) {
                 Text("Inside a Leaf")
                     .font(.largeTitle.bold())
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -80,7 +80,7 @@ struct Scene3_InsideALeaf: View {
             .frame(maxWidth: 560, maxHeight: 320)
             .clipped()
 
-            HStack(spacing: 12) {
+            HStack(spacing: DesignTokens.Spacing.md) {
                 Button {
                     withAnimation(reduceMotion ? nil : .spring()) { zoomed.toggle() }
                 } label: {
@@ -93,9 +93,9 @@ struct Scene3_InsideALeaf: View {
             // Callout for the selected part
             SoftShadowCard(padding: 16) {
                 if let part = selectedPart {
-                    HStack(alignment: .top, spacing: 12) {
+                    HStack(alignment: .top, spacing: DesignTokens.Spacing.md) {
                         Text(part.emoji).font(.system(size: 28))
-                        VStack(alignment: .leading, spacing: 4) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                             Text(part.title)
                                 .font(.title3.bold())
                             Text(explanation(for: part))

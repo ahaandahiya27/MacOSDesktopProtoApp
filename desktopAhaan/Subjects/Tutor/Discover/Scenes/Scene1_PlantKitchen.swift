@@ -85,7 +85,7 @@ struct Scene1_PlantKitchen: View {
 
                 Group {
                     SoftShadowCard(padding: 18) {
-                        VStack(alignment: .leading, spacing: 8) {
+                        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
                             Label("The Plant Kitchen", systemImage: "leaf.circle.fill")
                                 .font(.title2.bold())
                                 .foregroundColor(.green)

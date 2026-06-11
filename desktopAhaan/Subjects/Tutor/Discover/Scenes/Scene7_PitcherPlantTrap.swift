@@ -94,7 +94,7 @@ struct Scene7_PitcherPlantTrap: View {
                     .transition(.opacity)  // Big Sur: combined-with-.scale can render-loop
             }
 
-            HStack(spacing: 12) {
+            HStack(spacing: DesignTokens.Spacing.md) {
                 Button("🔁 Watch again") { restart() }
                     .buttonStyle(.bordered)
                 Toggle("Run faster ⏩", isOn: $fast)

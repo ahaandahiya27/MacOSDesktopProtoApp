@@ -63,7 +63,7 @@ struct Scene5_AutotrophHeterotroph: View {
         // gestures on the cards still take priority over the ScrollView's
         // scroll (DragGesture wins by minimumDistance + .gesture priority).
         ScrollView {
-            LazyVStack(spacing: 12) {
+            LazyVStack(spacing: DesignTokens.Spacing.md) {
                 headerSection
                 instructionLine
                 floatingCardsGrid
@@ -142,7 +142,7 @@ struct Scene5_AutotrophHeterotroph: View {
     @ViewBuilder
     private var floatingCardsGrid: some View {
         ZStack {
-            VStack(spacing: 8) {
+            VStack(spacing: DesignTokens.Spacing.sm) {
                 ForEach(0..<3, id: \.self) { row in
                     HStack(spacing: 10) {
                         ForEach(0..<4, id: \.self) { col in
@@ -158,7 +158,7 @@ struct Scene5_AutotrophHeterotroph: View {
 
     @ViewBuilder
     private var dropZonesRow: some View {
-        HStack(spacing: 16) {
+        HStack(spacing: DesignTokens.Spacing.lg) {
             DropZone(
                 title: "🌱 Autotrophs",
                 subtitle: "make own food",
@@ -213,7 +213,7 @@ struct Scene5_AutotrophHeterotroph: View {
                 skipAndShow()
             }
 
-            VStack(spacing: 4) {
+            VStack(spacing: DesignTokens.Spacing.xs) {
                 GotItButton(action: { onComplete(correctCount) })
                     .disabled(!allPlaced && correctCount == 0)
                     .opacity((allPlaced || correctCount > 0) ? 1 : 0.55)

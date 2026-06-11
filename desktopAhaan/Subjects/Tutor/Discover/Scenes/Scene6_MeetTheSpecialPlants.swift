@@ -120,7 +120,7 @@ struct Scene6_MeetTheSpecialPlants: View {
             return fallback
         }()
 
-        VStack(alignment: .leading, spacing: 8) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
             ForEach(bullets, id: \.self) { b in
                 HStack(alignment: .top, spacing: 6) {
                     Text("•").foregroundColor(.green)
