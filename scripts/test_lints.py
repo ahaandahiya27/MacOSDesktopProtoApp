@@ -160,6 +160,16 @@ def main() -> int:
     if mc.run_selftest() != 0:
         failures.append("check_mainactor_closure_refs selftest")
 
+    print("== check_designtokens_spacing — embedded --selftest ==")
+    dts = _import_lint_module("check_designtokens_spacing")
+    if dts.run_selftest() != 0:
+        failures.append("check_designtokens_spacing selftest")
+
+    print("== check_designtokens_radius — embedded --selftest ==")
+    dtr = _import_lint_module("check_designtokens_radius")
+    if dtr.run_selftest() != 0:
+        failures.append("check_designtokens_radius selftest")
+
     # The two T2 UI-test ratchets carry their own fixture-driven selftests
     # (no external fixture files). Drive them here so a regex edit that
     # silently neuters either ratchet fails the suite loudly.

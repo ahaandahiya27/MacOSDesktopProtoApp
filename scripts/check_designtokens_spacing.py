@@ -35,8 +35,8 @@ Skip list (intentionally allowed raw literals):
   - Test bundles — `desktopAhaanTests/`, `desktopAhaanUITests/`.
 
 Also skipped within a file:
-  - Comment lines (`// ...`) and block comments (`/* ... */`).
-  - String literals (`"..."`, `"""..."""`).
+  - Comment lines (// ...) and block comments (/* ... */).
+  - String literals (single and triple-quoted Swift string forms).
   - `Path { ... }`, `Shape.path(in:) { ... }`, and `Canvas { ... }`
     closures — drawing math frequently uses literal pixel offsets
     that don't belong in the spacing canon.
@@ -320,7 +320,7 @@ def run_selftest() -> int:
     ok = True
 
     d = scan_text(_DANGER_FIXTURE)
-    expected_danger = 9
+    expected_danger = 10
     if len(d) != expected_danger:
         print(
             f"SELFTEST FAIL: danger fixture flagged {len(d)} sites, "
