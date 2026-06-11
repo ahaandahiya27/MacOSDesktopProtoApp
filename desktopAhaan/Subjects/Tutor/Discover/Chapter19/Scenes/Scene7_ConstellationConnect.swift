@@ -124,7 +124,7 @@ struct Scene7_ConstellationConnect: View {
                     )
 
                     // Constellation cards in 2x2 grid
-                    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: 12) {
+                    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())], spacing: DesignTokens.Spacing.md) {
                         ForEach(constellations) { constellation in
                             let isSelected = selectedConstellation == constellation.id
                             let isExplored = explored.contains(constellation.id)

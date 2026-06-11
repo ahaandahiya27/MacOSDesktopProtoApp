@@ -72,7 +72,7 @@ struct AchievementGalleryView: View {
                 Text(family.displayName)
                     .font(.title3.weight(.semibold))
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
-                LazyVGrid(columns: columns, spacing: 16) {
+                LazyVGrid(columns: columns, spacing: DesignTokens.Spacing.lg) {
                     ForEach(badges) { badge in
                         Button {
                             selected = badge

@@ -48,7 +48,7 @@ struct Scene1_HotOrCold: View {
                         .accessibilityLabel("Thermometer showing \(displayTemp) degrees Celsius")
 
                     // Object grid
-                    LazyVGrid(columns: [GridItem(.adaptive(minimum: 100), spacing: 16)], spacing: 16) {
+                    LazyVGrid(columns: [GridItem(.adaptive(minimum: 100), spacing: 16)], spacing: DesignTokens.Spacing.lg) {
                         ForEach(objects.indices, id: \.self) { idx in let obj = objects[idx];
                             Button {
                                 selectObject(idx)

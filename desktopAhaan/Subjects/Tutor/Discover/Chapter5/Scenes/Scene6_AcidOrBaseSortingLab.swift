@@ -200,7 +200,7 @@ struct Scene6_AcidOrBaseSortingLab: View {
                 .foregroundColor(color)
 
             let cols = [GridItem(.adaptive(minimum: 70), spacing: 4)]
-            LazyVGrid(columns: cols, spacing: 4) {
+            LazyVGrid(columns: cols, spacing: DesignTokens.Spacing.xs) {
                 ForEach(items) { s in
                     Text("\(s.emoji) \(s.name)")
                         .font(.caption2)

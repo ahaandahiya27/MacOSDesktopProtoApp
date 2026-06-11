@@ -167,7 +167,7 @@ struct Scene2_BuildYourpHStrip: View {
     // MARK: - Substance pins
 
     private var substancePinView: some View {
-        LazyVGrid(columns: [GridItem(.adaptive(minimum: 80), spacing: 6)], spacing: 8) {
+        LazyVGrid(columns: [GridItem(.adaptive(minimum: 80), spacing: 6)], spacing: DesignTokens.Spacing.sm) {
             ForEach(substances) { sub in
                 let isNear = abs(sub.pH - pH) < 1.0
                 VStack(spacing: DesignTokens.Spacing.xxs) {

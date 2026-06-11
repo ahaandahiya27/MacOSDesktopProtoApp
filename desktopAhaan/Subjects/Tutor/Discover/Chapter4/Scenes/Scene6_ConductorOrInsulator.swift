@@ -212,7 +212,7 @@ struct Scene6_ConductorOrInsulator: View {
                 .foregroundColor(color)
 
             let cols = [GridItem(.adaptive(minimum: 60), spacing: 4)]
-            LazyVGrid(columns: cols, spacing: 4) {
+            LazyVGrid(columns: cols, spacing: DesignTokens.Spacing.xs) {
                 ForEach(items) { m in
                     Text("\(m.emoji) \(m.name)")
                         .font(.caption2)

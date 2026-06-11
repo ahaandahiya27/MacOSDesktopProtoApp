@@ -111,7 +111,7 @@ struct CategoriesGrid: View {
                 .font(.headline)
                 .padding(.horizontal)
 
-            LazyVGrid(columns: columns, spacing: 12) {
+            LazyVGrid(columns: columns, spacing: DesignTokens.Spacing.md) {
                 ForEach(PracticeCategory.allCases) { category in
                     CategoryCard(category: category) {
                         vm.loadCategory(category)

@@ -31,7 +31,7 @@ struct AchievementGalleryEmptyStateView: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 .multilineTextAlignment(.center)
                 .frame(maxWidth: 420)
-            LazyVGrid(columns: columns, spacing: 16) {
+            LazyVGrid(columns: columns, spacing: DesignTokens.Spacing.lg) {
                 ForEach(Self.starterBadges) { badge in
                     AchievementBadgeView(
                         achievement: badge,

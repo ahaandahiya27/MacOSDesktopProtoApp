@@ -70,7 +70,7 @@ struct Scene6_PhysicalOrChemicalSorting: View {
 
                     // Items to drag
                     if !isDone {
-                        LazyVGrid(columns: [GridItem(.adaptive(minimum: 95), spacing: 8)], spacing: 8) {
+                        LazyVGrid(columns: [GridItem(.adaptive(minimum: 95), spacing: 8)], spacing: DesignTokens.Spacing.sm) {
                             ForEach(remaining) { item in
                                 itemChip(item)
                             }
@@ -214,7 +214,7 @@ struct Scene6_PhysicalOrChemicalSorting: View {
                 .foregroundColor(color)
 
             let cols = [GridItem(.adaptive(minimum: 60), spacing: 4)]
-            LazyVGrid(columns: cols, spacing: 4) {
+            LazyVGrid(columns: cols, spacing: DesignTokens.Spacing.xs) {
                 ForEach(items) { m in
                     Text("\(m.emoji) \(m.label)")
                         .font(.caption2)
