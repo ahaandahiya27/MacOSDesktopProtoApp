@@ -147,6 +147,7 @@
 		A49EA37FDC55ABE1C7B2087E /* SanskritDiscoverComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B23A86F155BECB73818134B /* SanskritDiscoverComponents.swift */; };
 		3DE0F1879909D49AEB0866FD /* SanskritWordMatchScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699295170C6F0D1785771272 /* SanskritWordMatchScene.swift */; };
 		72A6AEF2E8C4CAFEEDD3675D /* SocialScienceDiscoverComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DD4F6B4A3DE6A7B815C9E72 /* SocialScienceDiscoverComponents.swift */; };
+		6D3D92D99C6FB7461E2CB298 /* SocialScienceDiscoverInteractiveScenes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 301796358D60786014F8EE0A /* SocialScienceDiscoverInteractiveScenes.swift */; };
 		5DC40722558F833D6BC54E14 /* Scene1_PlantKitchen.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52B0AEAE218A5E5B3FC9606 /* Scene1_PlantKitchen.swift */; };
 		0BD7C49E878485A6371C870D /* Scene2_PhotosynthesisLab.swift in Sources */ = {isa = PBXBuildFile; fileRef = D658DD85C76EB9D49609945A /* Scene2_PhotosynthesisLab.swift */; };
 		C872FBBE4EAFA1E1C1A876CA /* Scene3_InsideALeaf.swift in Sources */ = {isa = PBXBuildFile; fileRef = 426583C9DE360A014661C7F9 /* Scene3_InsideALeaf.swift */; };
@@ -2157,6 +2158,7 @@
 		AE1A9418310B9993F207305A /* ShapeDiagramRegistryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8D50007343670D4C8E3EB8 /* ShapeDiagramRegistryTests.swift */; };
 		C8ADEF119BC541625E56B57C /* SocialScienceArticleRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108AC54929248AA058607155 /* SocialScienceArticleRoutingTests.swift */; };
 		7ADF9B3CD7738E792BD12C0A /* SocialScienceContentDepthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099E1F28D6D1B177EEA75DB9 /* SocialScienceContentDepthTests.swift */; };
+		7BFB1AA45FA158C50B562114 /* SocialScienceDiscoverInteractiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5356FAF170B912361342634E /* SocialScienceDiscoverInteractiveTests.swift */; };
 		D7DD564DB535A730957845B8 /* SocialScienceDiscoverModeRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 678377A34E68EE55DBACF757 /* SocialScienceDiscoverModeRoutingTests.swift */; };
 		409A93145AEB55275F838098 /* SocialScienceEnrichmentParityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1352F860709B1D4C2644A6A0 /* SocialScienceEnrichmentParityTests.swift */; };
 		8507CB8146D311BCA9560280 /* SocialScienceInteractiveGateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C51DBDA81236D0F1D4F5F1 /* SocialScienceInteractiveGateTests.swift */; };
@@ -3887,6 +3889,7 @@
 		4B23A86F155BECB73818134B /* SanskritDiscoverComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SanskritDiscoverComponents.swift"; sourceTree = "<group>"; };
 		699295170C6F0D1785771272 /* SanskritWordMatchScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SanskritWordMatchScene.swift"; sourceTree = "<group>"; };
 		1DD4F6B4A3DE6A7B815C9E72 /* SocialScienceDiscoverComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SocialScienceDiscoverComponents.swift"; sourceTree = "<group>"; };
+		301796358D60786014F8EE0A /* SocialScienceDiscoverInteractiveScenes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SocialScienceDiscoverInteractiveScenes.swift"; sourceTree = "<group>"; };
 		D52B0AEAE218A5E5B3FC9606 /* Scene1_PlantKitchen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene1_PlantKitchen.swift"; sourceTree = "<group>"; };
 		D658DD85C76EB9D49609945A /* Scene2_PhotosynthesisLab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene2_PhotosynthesisLab.swift"; sourceTree = "<group>"; };
 		426583C9DE360A014661C7F9 /* Scene3_InsideALeaf.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Scene3_InsideALeaf.swift"; sourceTree = "<group>"; };
@@ -4363,6 +4366,7 @@
 		4D8D50007343670D4C8E3EB8 /* ShapeDiagramRegistryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShapeDiagramRegistryTests.swift"; sourceTree = "<group>"; };
 		108AC54929248AA058607155 /* SocialScienceArticleRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SocialScienceArticleRoutingTests.swift"; sourceTree = "<group>"; };
 		099E1F28D6D1B177EEA75DB9 /* SocialScienceContentDepthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SocialScienceContentDepthTests.swift"; sourceTree = "<group>"; };
+		5356FAF170B912361342634E /* SocialScienceDiscoverInteractiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SocialScienceDiscoverInteractiveTests.swift"; sourceTree = "<group>"; };
 		678377A34E68EE55DBACF757 /* SocialScienceDiscoverModeRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SocialScienceDiscoverModeRoutingTests.swift"; sourceTree = "<group>"; };
 		1352F860709B1D4C2644A6A0 /* SocialScienceEnrichmentParityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SocialScienceEnrichmentParityTests.swift"; sourceTree = "<group>"; };
 		B2C51DBDA81236D0F1D4F5F1 /* SocialScienceInteractiveGateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SocialScienceInteractiveGateTests.swift"; sourceTree = "<group>"; };
@@ -6926,6 +6930,7 @@
 				4B23A86F155BECB73818134B,
 				699295170C6F0D1785771272,
 				1DD4F6B4A3DE6A7B815C9E72,
+				301796358D60786014F8EE0A,
 				DFE37917933D06DACC4E5013,
 				8878C8C2EDF6B9CCCF221F72,
 				CA3D4BF156458958C4D077E7,
@@ -7925,6 +7930,7 @@
 				4D8D50007343670D4C8E3EB8,
 				108AC54929248AA058607155,
 				099E1F28D6D1B177EEA75DB9,
+				5356FAF170B912361342634E,
 				678377A34E68EE55DBACF757,
 				1352F860709B1D4C2644A6A0,
 				B2C51DBDA81236D0F1D4F5F1,
@@ -9786,6 +9792,7 @@
 				A49EA37FDC55ABE1C7B2087E /* SanskritDiscoverComponents.swift in Sources */,
 				3DE0F1879909D49AEB0866FD /* SanskritWordMatchScene.swift in Sources */,
 				72A6AEF2E8C4CAFEEDD3675D /* SocialScienceDiscoverComponents.swift in Sources */,
+				6D3D92D99C6FB7461E2CB298 /* SocialScienceDiscoverInteractiveScenes.swift in Sources */,
 				5DC40722558F833D6BC54E14 /* Scene1_PlantKitchen.swift in Sources */,
 				0BD7C49E878485A6371C870D /* Scene2_PhotosynthesisLab.swift in Sources */,
 				C872FBBE4EAFA1E1C1A876CA /* Scene3_InsideALeaf.swift in Sources */,
@@ -10268,6 +10275,7 @@
 				AE1A9418310B9993F207305A /* ShapeDiagramRegistryTests.swift in Sources */,
 				C8ADEF119BC541625E56B57C /* SocialScienceArticleRoutingTests.swift in Sources */,
 				7ADF9B3CD7738E792BD12C0A /* SocialScienceContentDepthTests.swift in Sources */,
+				7BFB1AA45FA158C50B562114 /* SocialScienceDiscoverInteractiveTests.swift in Sources */,
 				D7DD564DB535A730957845B8 /* SocialScienceDiscoverModeRoutingTests.swift in Sources */,
 				409A93145AEB55275F838098 /* SocialScienceEnrichmentParityTests.swift in Sources */,
 				8507CB8146D311BCA9560280 /* SocialScienceInteractiveGateTests.swift in Sources */,
