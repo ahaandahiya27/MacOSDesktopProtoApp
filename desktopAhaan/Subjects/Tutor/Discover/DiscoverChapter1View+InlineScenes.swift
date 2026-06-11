@@ -160,11 +160,11 @@ struct SymbiosisPartnershipsLabScene: View {
                         .frame(maxWidth: .infinity)
                         .padding(.vertical, 9)
                         .background(
-                            RoundedRectangle(cornerRadius: 10)
+                            RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                                 .fill(Color.compatIndigo.opacity(0.12))
                         )
                         .overlay(
-                            RoundedRectangle(cornerRadius: 10)
+                            RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                                 .strokeBorder(Color.compatIndigo.opacity(0.45), lineWidth: 1)
                         )
                         .foregroundColor(Color.compatIndigo)
@@ -176,11 +176,11 @@ struct SymbiosisPartnershipsLabScene: View {
         }
         .padding(14)
         .background(
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(Color.white.opacity(0.85))
         )
         .overlay(
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .strokeBorder(Color.gray.opacity(0.18), lineWidth: 1)
         )
     }
@@ -243,11 +243,11 @@ struct SymbiosisPartnershipsLabScene: View {
         }
         .padding(14)
         .background(
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(DesignTokens.BrandColor.primaryAction.opacity(0.10))
         )
         .overlay(
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .strokeBorder(DesignTokens.BrandColor.primaryAction.opacity(0.45), lineWidth: 1)
         )
         .accessibilityElement(children: .combine)
@@ -392,8 +392,8 @@ struct LightAndRateScene: View {
         let barH: CGFloat = 180 * CGFloat(rate)
         return VStack {
             ZStack(alignment: .bottom) {
-                RoundedRectangle(cornerRadius: 10).fill(Color.gray.opacity(0.1))
-                RoundedRectangle(cornerRadius: 10)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.md).fill(Color.gray.opacity(0.1))
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                     .fill(DesignTokens.BrandColor.primaryAction.opacity(0.6))
                     .frame(height: barH)
             }

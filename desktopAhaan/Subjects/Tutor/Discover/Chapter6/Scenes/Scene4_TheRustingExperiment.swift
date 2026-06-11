@@ -163,7 +163,7 @@ struct Scene4_TheRustingExperiment: View {
 
                 // Water fill
                 if tube.hasWater {
-                    RoundedRectangle(cornerRadius: 8)
+                    RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                         .fill(Color.compatCyan.opacity(0.2))
                         .frame(width: 70, height: waterH)
                         .padding(.bottom, DesignTokens.Spacing.xs)

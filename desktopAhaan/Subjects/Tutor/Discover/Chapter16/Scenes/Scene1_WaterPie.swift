@@ -23,7 +23,7 @@ struct Scene1_WaterPie: View {
                     Rectangle().fill(Color.green).frame(width: 4, height: 50)
                 }
                 .frame(width: 400)
-                .clipShape(RoundedRectangle(cornerRadius: 8))
+                .clipShape(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm))
 
                 HStack {
                     Rectangle().fill(Color.blue).frame(width: 14, height: 14); Text("Salty oceans 97%").font(.caption)

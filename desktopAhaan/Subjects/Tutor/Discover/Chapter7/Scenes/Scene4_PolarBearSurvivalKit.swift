@@ -152,12 +152,12 @@ struct Scene4_PolarBearSurvivalKit: View {
     }
 
     private var bearDiagramBackground: some View {
-        RoundedRectangle(cornerRadius: 14)
+        RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
             .fill(LinearGradient(colors: [Color.compatCyan.opacity(0.15), .blue.opacity(0.08)], startPoint: .top, endPoint: .bottom))
     }
 
     private var bearDiagramBorder: some View {
-        RoundedRectangle(cornerRadius: 14)
+        RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
             .strokeBorder(.gray.opacity(0.2), lineWidth: 1)
     }
 

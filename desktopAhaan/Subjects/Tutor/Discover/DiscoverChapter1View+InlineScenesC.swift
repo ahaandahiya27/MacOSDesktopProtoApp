@@ -168,18 +168,18 @@ struct FoodChainBuilderScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
         }
         .padding(DesignTokens.Spacing.sm)
-        .background(RoundedRectangle(cornerRadius: 8)
+        .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                     .fill(filled
                           ? DesignTokens.BrandColor.primaryAction.opacity(0.15)
                           : Color.gray.opacity(0.08)))
-        .overlay(RoundedRectangle(cornerRadius: 8)
+        .overlay(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                  .strokeBorder(Color.gray.opacity(0.3), lineWidth: 1))
     }
 
     private var placeholderCard: some View {
-        RoundedRectangle(cornerRadius: 8).fill(Color.gray.opacity(0.05))
+        RoundedRectangle(cornerRadius: DesignTokens.Radius.sm).fill(Color.gray.opacity(0.05))
             .frame(width: 64, height: 64)
-            .overlay(RoundedRectangle(cornerRadius: 8)
+            .overlay(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                      .strokeBorder(Color.gray.opacity(0.2),
                                    style: StrokeStyle(lineWidth: 1, dash: [4])))
     }

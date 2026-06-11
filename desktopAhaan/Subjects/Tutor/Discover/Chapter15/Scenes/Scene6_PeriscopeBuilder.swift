@@ -18,7 +18,7 @@ struct Scene6_PeriscopeBuilder: View {
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
                 ZStack {
-                    RoundedRectangle(cornerRadius: 16).fill(Color.gray.opacity(0.1))
+                    RoundedRectangle(cornerRadius: DesignTokens.Radius.lg).fill(Color.gray.opacity(0.1))
                         .frame(width: 280, height: 280)
 
                     VStack(spacing: 6) {

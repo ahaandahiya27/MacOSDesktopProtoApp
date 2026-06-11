@@ -23,7 +23,7 @@ struct Scene5_CompostPitBuilder: View {
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
                 ZStack {
-                    RoundedRectangle(cornerRadius: 16).fill(Color.compatBrown.opacity(0.3))
+                    RoundedRectangle(cornerRadius: DesignTokens.Radius.lg).fill(Color.compatBrown.opacity(0.3))
                         .frame(width: 240, height: 180)
                     VStack(spacing: DesignTokens.Spacing.xs) {
                         if greens   { Text("🥬").font(.system(size: 30)) }

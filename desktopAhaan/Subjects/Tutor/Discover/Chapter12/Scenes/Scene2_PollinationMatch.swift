@@ -44,7 +44,7 @@ struct Scene2_PollinationMatch: View {
                             }
                         }
                         .padding(10)
-                        .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
+                        .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.md).fill(Color.white.opacity(0.95)))
                     }
                 }
                 .frame(maxWidth: 640).padding(.horizontal, DesignTokens.Spacing.xl)

@@ -59,7 +59,7 @@ struct Scene8_TemperatureVsHeat: View {
                             Text("500 ml  ·  80°C").font(.caption.weight(.medium)).foregroundColor(DesignTokens.BrandColor.tryAtHome)
 
                             ZStack {
-                                RoundedRectangle(cornerRadius: 8)
+                                RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                                     .fill(Color.gray.opacity(0.1))
                                     .frame(width: 80, height: 110)
                                 RoundedRectangle(cornerRadius: 6)
@@ -146,10 +146,10 @@ struct Scene8_TemperatureVsHeat: View {
         VStack(spacing: 6) {
             Text(label).font(.caption.bold())
             ZStack {
-                RoundedRectangle(cornerRadius: 10)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                     .fill(color)
                     .frame(width: 120, height: 60)
-                RoundedRectangle(cornerRadius: 10)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                     .strokeBorder(.gray.opacity(0.4), lineWidth: 2)
                     .frame(width: 120, height: 60)
                 Text(tempLabel)

@@ -140,9 +140,9 @@ struct SSDiscoverWordMatchScene: View {
             }
             .padding(.horizontal, DesignTokens.Spacing.md).padding(.vertical, 10)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .background(RoundedRectangle(cornerRadius: 10).fill(termFill(isMatched: isMatched, isSelected: isSelected)))
+            .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.md).fill(termFill(isMatched: isMatched, isSelected: isSelected)))
             .overlay(
-                RoundedRectangle(cornerRadius: 10)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                     .strokeBorder(isSelected ? ssAccent : ssAccent.opacity(0.30),
                                   lineWidth: isSelected ? 2 : 1)
             )
@@ -166,9 +166,9 @@ struct SSDiscoverWordMatchScene: View {
                 .multilineTextAlignment(.leading)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal, DesignTokens.Spacing.md).padding(.vertical, 10)
-                .background(RoundedRectangle(cornerRadius: 10).fill(meaningFill(isMatched: isMatched, isWrong: isWrong)))
+                .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.md).fill(meaningFill(isMatched: isMatched, isWrong: isWrong)))
                 .overlay(
-                    RoundedRectangle(cornerRadius: 10)
+                    RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                         .strokeBorder(isWrong ? Color.red.opacity(0.6) : ssAccent.opacity(0.30), lineWidth: 1)
                 )
         }
@@ -341,7 +341,7 @@ struct SSDiscoverChronologyScene: View {
         }
         .padding(.horizontal, 10).padding(.vertical, DesignTokens.Spacing.sm)
         .frame(maxWidth: .infinity, alignment: .leading)
-        .background(RoundedRectangle(cornerRadius: 10).fill(Color.green.opacity(0.12)))
+        .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.md).fill(Color.green.opacity(0.12)))
         .accessibilityElement(children: .combine)
         .accessibilityLabel("Position \(slot + 1): \(step.label)")
     }
@@ -389,9 +389,9 @@ struct SSDiscoverChronologyScene: View {
             }
             .padding(.horizontal, 10).padding(.vertical, 9)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .background(RoundedRectangle(cornerRadius: 10).fill(isWrong ? Color.red.opacity(0.15) : ssAccent.opacity(0.06)))
+            .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.md).fill(isWrong ? Color.red.opacity(0.15) : ssAccent.opacity(0.06)))
             .overlay(
-                RoundedRectangle(cornerRadius: 10)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                     .strokeBorder(isWrong ? Color.red.opacity(0.6) : ssAccent.opacity(0.30), lineWidth: 1)
             )
         }

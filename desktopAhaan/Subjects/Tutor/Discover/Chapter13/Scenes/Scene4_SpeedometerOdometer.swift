@@ -34,7 +34,7 @@ struct Scene4_SpeedometerOdometer: View {
                         Text(String(format: "%07.0f", odometer))
                             .font(.system(size: 32, weight: .bold, design: .monospaced))
                             .padding(DesignTokens.Spacing.sm)
-                            .background(RoundedRectangle(cornerRadius: 8).fill(Color.black))
+                            .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm).fill(Color.black))
                             .foregroundColor(.green)
                         Text("km").font(.caption)
                     }

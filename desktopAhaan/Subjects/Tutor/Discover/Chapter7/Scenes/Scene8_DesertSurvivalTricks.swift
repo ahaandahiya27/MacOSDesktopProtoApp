@@ -79,9 +79,9 @@ struct Scene8_DesertSurvivalTricks: View {
                             .allowsHitTesting(false)
                     }
                     .frame(maxWidth: 500, maxHeight: 160)
-                    .clipShape(RoundedRectangle(cornerRadius: 14))
+                    .clipShape(RoundedRectangle(cornerRadius: DesignTokens.Radius.card))
                     .overlay(
-                        RoundedRectangle(cornerRadius: 14)
+                        RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                             .strokeBorder(.gray.opacity(0.2), lineWidth: 1)
                     )
 

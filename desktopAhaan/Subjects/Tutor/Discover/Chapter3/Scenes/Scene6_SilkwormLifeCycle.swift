@@ -145,9 +145,9 @@ struct Scene6_SilkwormLifeCycle: View {
         }
         .frame(width: 70, height: 70)
         .background(bgColor)
-        .cornerRadius(10)
+        .cornerRadius(DesignTokens.Radius.md)
         .overlay(
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                 .strokeBorder(borderColor, lineWidth: 2)
         )
     }

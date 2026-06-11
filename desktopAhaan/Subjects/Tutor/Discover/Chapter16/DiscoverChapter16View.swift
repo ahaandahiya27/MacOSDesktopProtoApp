@@ -293,7 +293,7 @@ private struct GlacierMeltdownScene: View {
         ScrollView { LazyVStack(spacing: 14) {
             Text("Glaciers Are Shrinking").font(.largeTitle.bold())
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
-            RoundedRectangle(cornerRadius: 16).fill(Color.compatIndigo.opacity(0.45))
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.lg).fill(Color.compatIndigo.opacity(0.45))
                 .frame(width: glacierWidth, height: 120)
             Text("Year: \(Int(year))").font(.title2.monospacedDigit())
                 .foregroundColor(DesignTokens.BrandColor.canvasText)

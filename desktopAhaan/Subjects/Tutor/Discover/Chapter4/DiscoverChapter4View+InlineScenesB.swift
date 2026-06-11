@@ -88,9 +88,9 @@ struct SpecificHeatRaceScene: View {
         let fillH: CGFloat = CGFloat((temp - 20) / 80) * 120
         return VStack(spacing: 6) {
             ZStack(alignment: .bottom) {
-                RoundedRectangle(cornerRadius: 8).fill(Color.gray.opacity(0.1))
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.sm).fill(Color.gray.opacity(0.1))
                     .frame(width: 60, height: 120)
-                RoundedRectangle(cornerRadius: 8).fill(color.opacity(0.7))
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.sm).fill(color.opacity(0.7))
                     .frame(width: 60, height: fillH)
             }
             Text(label).font(.caption.weight(.semibold))

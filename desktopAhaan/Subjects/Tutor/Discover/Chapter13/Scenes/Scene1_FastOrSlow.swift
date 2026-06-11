@@ -46,7 +46,7 @@ struct Scene1_FastOrSlow: View {
                             Button("↓") { swapDown(i) }.disabled(i == current.count - 1)
                         }
                         .padding(10)
-                        .background(RoundedRectangle(cornerRadius: 8).fill(Color.white.opacity(0.95)))
+                        .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm).fill(Color.white.opacity(0.95)))
                     }
                 }
                 .frame(maxWidth: 480)

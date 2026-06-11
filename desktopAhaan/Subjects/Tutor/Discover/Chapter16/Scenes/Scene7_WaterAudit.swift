@@ -43,7 +43,7 @@ struct Scene7_WaterAudit: View {
                             if checked.contains(item.id) { checked.remove(item.id) }
                             else { checked.insert(item.id) }
                         }
-                        .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
+                        .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.md).fill(Color.white.opacity(0.95)))
                     }
                 }
                 .frame(maxWidth: 540)

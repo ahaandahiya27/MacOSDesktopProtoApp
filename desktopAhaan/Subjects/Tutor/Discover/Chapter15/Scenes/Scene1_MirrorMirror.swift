@@ -22,7 +22,7 @@ struct Scene1_MirrorMirror: View {
                 // Diagram canvas. Mirror is the horizontal line at the bottom;
                 // hit point is the centre of that line. Normal goes straight up.
                 ZStack {
-                    RoundedRectangle(cornerRadius: 16).fill(Color.white.opacity(0.95))
+                    RoundedRectangle(cornerRadius: DesignTokens.Radius.lg).fill(Color.white.opacity(0.95))
                         .frame(width: 360, height: 240)
 
                     MirrorDiagram(angle: angle)

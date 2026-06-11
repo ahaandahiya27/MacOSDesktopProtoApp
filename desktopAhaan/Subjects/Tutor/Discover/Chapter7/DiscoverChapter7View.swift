@@ -400,8 +400,8 @@ private struct AnimalHabitatMatcherScene: View {
             VStack { Text(a.emoji).font(.title3); Text(a.name).font(.caption2) }
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
                 .padding(DesignTokens.Spacing.sm)
-                .background(RoundedRectangle(cornerRadius: 8).fill(tint.opacity(isSelected ? 0.18 : 0.06)))
-                .overlay(RoundedRectangle(cornerRadius: 8).strokeBorder(tint.opacity(0.4), lineWidth: 1))
+                .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm).fill(tint.opacity(isSelected ? 0.18 : 0.06)))
+                .overlay(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm).strokeBorder(tint.opacity(0.4), lineWidth: 1))
         }.buttonStyle(.plain).pointingCursor()
     }
     private func chipHab(_ h: Hab) -> some View {

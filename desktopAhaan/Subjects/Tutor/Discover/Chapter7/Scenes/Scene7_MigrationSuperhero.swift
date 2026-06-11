@@ -54,9 +54,9 @@ struct Scene7_MigrationSuperhero: View {
                     globeView
                         .frame(maxWidth: 500)
                         .frame(height: 240)
-                        .clipShape(RoundedRectangle(cornerRadius: 14))
+                        .clipShape(RoundedRectangle(cornerRadius: DesignTokens.Radius.card))
                         .overlay(
-                            RoundedRectangle(cornerRadius: 14)
+                            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                                 .strokeBorder(Color.gray.opacity(0.3), lineWidth: 1)
                         )
 

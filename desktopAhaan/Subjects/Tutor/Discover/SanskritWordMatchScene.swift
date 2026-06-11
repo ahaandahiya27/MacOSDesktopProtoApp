@@ -147,9 +147,9 @@ struct SanskritWordMatchScene: View {
             }
             .padding(.horizontal, DesignTokens.Spacing.md).padding(.vertical, 10)
             .frame(maxWidth: .infinity, alignment: .leading)
-            .background(RoundedRectangle(cornerRadius: 10).fill(termFill(isMatched: isMatched, isSelected: isSelected)))
+            .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.md).fill(termFill(isMatched: isMatched, isSelected: isSelected)))
             .overlay(
-                RoundedRectangle(cornerRadius: 10)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                     .strokeBorder(isSelected ? Color.orange : Color.orange.opacity(0.30),
                                   lineWidth: isSelected ? 2 : 1)
             )
@@ -173,9 +173,9 @@ struct SanskritWordMatchScene: View {
                 .multilineTextAlignment(.leading)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding(.horizontal, DesignTokens.Spacing.md).padding(.vertical, 10)
-                .background(RoundedRectangle(cornerRadius: 10).fill(meaningFill(isMatched: isMatched, isWrong: isWrong)))
+                .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.md).fill(meaningFill(isMatched: isMatched, isWrong: isWrong)))
                 .overlay(
-                    RoundedRectangle(cornerRadius: 10)
+                    RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                         .strokeBorder(isWrong ? Color.red.opacity(0.6) : Color.orange.opacity(0.30), lineWidth: 1)
                 )
         }

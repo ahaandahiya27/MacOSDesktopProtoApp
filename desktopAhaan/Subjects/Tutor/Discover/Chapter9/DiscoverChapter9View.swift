@@ -234,8 +234,8 @@ private struct CompostPitRecipeScene: View {
             }
             .padding(10)
             .frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)
-            .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.85)))
-            .overlay(RoundedRectangle(cornerRadius: 10).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
+            .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.md).fill(Color.white.opacity(0.85)))
+            .overlay(RoundedRectangle(cornerRadius: DesignTokens.Radius.md).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
         }.buttonStyle(.plain).pointingCursor()
     }
 }
@@ -455,8 +455,8 @@ private struct WaterHoldingCapacityScene: View {
         let fillH: CGFloat = 140 * level
         return VStack {
             ZStack(alignment: .bottom) {
-                RoundedRectangle(cornerRadius: 8).fill(Color.gray.opacity(0.1)).frame(width: 60, height: 140)
-                RoundedRectangle(cornerRadius: 8).fill(color.opacity(0.7)).frame(width: 60, height: fillH)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.sm).fill(Color.gray.opacity(0.1)).frame(width: 60, height: 140)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.sm).fill(color.opacity(0.7)).frame(width: 60, height: fillH)
             }
             Text(label).font(.caption.weight(.semibold))
                 .foregroundColor(DesignTokens.BrandColor.canvasText)

@@ -119,7 +119,7 @@ struct HotspotDiagram: View {
         }
         .frame(width: size, height: size)
         .background(
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                 .fill(Color.white.opacity(0.95))
         )
     }
@@ -166,7 +166,7 @@ struct HotspotDiagram: View {
         .padding(10)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(
-            RoundedRectangle(cornerRadius: 8)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                 .fill(Color.white.opacity(0.6))
         )
     }

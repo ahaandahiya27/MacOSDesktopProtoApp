@@ -100,7 +100,7 @@ struct Scene9_BossQuiz_Ch2: View {
                                 .font(.title2.bold())
                                 .padding(DesignTokens.Spacing.md)
                                 .background(Color.yellow.opacity(0.2))
-                                .cornerRadius(8)
+                                .cornerRadius(DesignTokens.Radius.sm)
 
                             Text(badgeEmoji())
                                 .font(.system(size: 40))
@@ -297,7 +297,7 @@ struct AnswerButton: View {
         .foregroundColor(color(for: state))
         .background(backgroundColor(for: state))
         .overlay(
-            RoundedRectangle(cornerRadius: 8)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                 .stroke(borderColor(for: state), lineWidth: 2)
         )
         .disabled(state != .neutral)

@@ -222,8 +222,8 @@ private struct CellularRespirationEquationScene: View {
                 Text("6 CO₂ + 6 H₂O + ⚡ energy").font(.title2.weight(.bold)).foregroundColor(DesignTokens.BrandColor.canvasText)
             }
             .padding(20).frame(maxWidth: DesignTokens.contentMaxWidth)
-            .background(RoundedRectangle(cornerRadius: 14).fill(Color.white.opacity(0.85)))
-            .overlay(RoundedRectangle(cornerRadius: 14).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
+            .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.card).fill(Color.white.opacity(0.85)))
+            .overlay(RoundedRectangle(cornerRadius: DesignTokens.Radius.card).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
             .padding(.horizontal, DesignTokens.Spacing.xl)
             Text("EXACT reverse of photosynthesis. Sugar + oxygen → CO₂ + water + ENERGY for the cell. Powers every heartbeat, every neuron.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)

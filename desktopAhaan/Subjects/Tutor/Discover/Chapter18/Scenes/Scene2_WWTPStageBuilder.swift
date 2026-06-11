@@ -38,7 +38,7 @@ struct Scene2_WWTPStageBuilder: View {
                             }
                             .padding(6)
                             .frame(width: 90)
-                            .background(RoundedRectangle(cornerRadius: 8).fill(pick == s ? Color.compatIndigo.opacity(0.15) : Color.white.opacity(0.95)))
+                            .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm).fill(pick == s ? Color.compatIndigo.opacity(0.15) : Color.white.opacity(0.95)))
                         }
                         .buttonStyle(.plain)
                     }

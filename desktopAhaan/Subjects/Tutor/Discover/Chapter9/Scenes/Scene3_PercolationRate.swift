@@ -46,13 +46,13 @@ struct Scene3_PercolationRate: View {
                 }.pickerStyle(.segmented).discoverControlChrome().frame(maxWidth: 360)
 
                 ZStack(alignment: .bottom) {
-                    RoundedRectangle(cornerRadius: 14).fill(Color.gray.opacity(0.15))
+                    RoundedRectangle(cornerRadius: DesignTokens.Radius.card).fill(Color.gray.opacity(0.15))
                         .frame(width: 200, height: 260)
                     Rectangle().fill(soil.color.opacity(0.55))
                         .frame(width: 200, height: fillH)
                         .animation(reduceMotion ? .none : .easeInOut(duration: animationDuration))
                 }
-                .clipShape(RoundedRectangle(cornerRadius: 14))
+                .clipShape(RoundedRectangle(cornerRadius: DesignTokens.Radius.card))
 
                 Button(pouring ? "Pouring…" : "Pour 200 ml") {
                     pouring = true

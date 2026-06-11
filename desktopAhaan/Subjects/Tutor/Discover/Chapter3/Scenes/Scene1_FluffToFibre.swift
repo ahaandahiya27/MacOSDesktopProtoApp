@@ -126,10 +126,10 @@ struct Scene1_FluffToFibre: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
             ZStack {
-                RoundedRectangle(cornerRadius: 8)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                     .fill(Color.gray.opacity(0.1))
                     .frame(width: 140, height: 100)
-                RoundedRectangle(cornerRadius: 8)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                     .stroke(Color.gray.opacity(0.3), lineWidth: 1.5)
                     .frame(width: 140, height: 100)
                 FabricWeaveShape(threads: threadsWoven)

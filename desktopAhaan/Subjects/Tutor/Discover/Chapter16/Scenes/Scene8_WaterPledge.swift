@@ -30,7 +30,7 @@ struct Scene8_WaterPledge: View {
                     ForEach(0..<pledges.count, id: \.self) { i in
                         Toggle(texts[i], isOn: $pledges[i])
                             .padding(10)
-                            .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
+                            .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.md).fill(Color.white.opacity(0.95)))
                     }
                 }
                 .frame(maxWidth: 560).padding(.horizontal, DesignTokens.Spacing.xl)

@@ -19,7 +19,7 @@ struct Scene4_LimeWaterTest: View {
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
                 ZStack(alignment: .bottom) {
-                    RoundedRectangle(cornerRadius: 14).strokeBorder(Color.gray.opacity(0.4), lineWidth: 2)
+                    RoundedRectangle(cornerRadius: DesignTokens.Radius.card).strokeBorder(Color.gray.opacity(0.4), lineWidth: 2)
                         .frame(width: 140, height: 220)
                     RoundedRectangle(cornerRadius: 12)
                         .fill(milky ? Color.white.opacity(0.95) : Color.compatCyan.opacity(0.25))

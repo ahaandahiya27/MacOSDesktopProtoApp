@@ -325,7 +325,7 @@ private struct PressureBeltScene: View {
                             .fixedSize(horizontal: false, vertical: true)
                     }
                     .padding(DesignTokens.Spacing.sm)
-                    .background(RoundedRectangle(cornerRadius: 8)
+                    .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                         .fill(i == step ? Color.compatIndigo.opacity(0.10) : .clear))
                 }
             }.padding(.horizontal, DesignTokens.Spacing.xl).frame(maxWidth: DesignTokens.contentMaxWidth, alignment: .leading)

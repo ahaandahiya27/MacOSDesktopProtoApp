@@ -115,9 +115,9 @@ struct Scene5_SeaBreezeLandBreeze: View {
                         }
                     }
                     .frame(maxWidth: 500, maxHeight: 260)
-                    .clipShape(RoundedRectangle(cornerRadius: 16))
+                    .clipShape(RoundedRectangle(cornerRadius: DesignTokens.Radius.lg))
                     .overlay(
-                        RoundedRectangle(cornerRadius: 16)
+                        RoundedRectangle(cornerRadius: DesignTokens.Radius.lg)
                             .strokeBorder(.gray.opacity(0.3), lineWidth: 1)
                     )
 

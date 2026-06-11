@@ -75,11 +75,11 @@ struct MnemonicCallout: View {
         }
         .padding(DesignTokens.Spacing.md)
         .background(
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                 .fill(Color.yellow.opacity(0.18))
         )
         .overlay(
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                 .strokeBorder(Color.orange.opacity(0.50), lineWidth: 1)
         )
         .accessibilityElement(children: .combine)

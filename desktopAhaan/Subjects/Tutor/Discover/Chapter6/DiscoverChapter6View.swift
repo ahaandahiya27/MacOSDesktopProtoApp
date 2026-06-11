@@ -183,8 +183,8 @@ private struct PhotosynthesisChemicalScene: View {
                 Text("C₆H₁₂O₆ + 6 O₂").font(.title2.weight(.bold)).foregroundColor(DesignTokens.BrandColor.canvasText)
             }
             .padding(20).frame(maxWidth: DesignTokens.contentMaxWidth)
-            .background(RoundedRectangle(cornerRadius: 14).fill(Color.white.opacity(0.85)))
-            .overlay(RoundedRectangle(cornerRadius: 14).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
+            .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.card).fill(Color.white.opacity(0.85)))
+            .overlay(RoundedRectangle(cornerRadius: DesignTokens.Radius.card).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
             .padding(.horizontal, DesignTokens.Spacing.xl)
             Text("Water + carbon dioxide become sugar + oxygen. Completely new substances → chemical change. Reverses in respiration, where sugar + O₂ → CO₂ + water + energy.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)

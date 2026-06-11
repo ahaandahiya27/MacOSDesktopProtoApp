@@ -39,11 +39,11 @@ struct LookingAheadCallout: View {
         }
         .padding(DesignTokens.Spacing.md)
         .background(
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                 .fill(Color.purple.opacity(0.14))
         )
         .overlay(
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                 .strokeBorder(Color.purple.opacity(0.45), lineWidth: 1)
         )
         .accessibilityElement(children: .combine)

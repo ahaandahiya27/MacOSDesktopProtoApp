@@ -40,11 +40,11 @@ struct RelatedConceptsCallout: View {
         }
         .padding(DesignTokens.Spacing.md)
         .background(
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                 .fill(Color.compatTeal.opacity(0.14))
         )
         .overlay(
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                 .strokeBorder(Color.compatTeal.opacity(0.45), lineWidth: 1)
         )
         .accessibilityElement(children: .combine)

@@ -126,9 +126,9 @@ struct Scene8_ISROSpaceMissions: View {
                             .foregroundColor(.white.opacity(0.15))
                     }
                     .frame(maxWidth: 540, maxHeight: 100)
-                    .clipShape(RoundedRectangle(cornerRadius: 14))
+                    .clipShape(RoundedRectangle(cornerRadius: DesignTokens.Radius.card))
                     .overlay(
-                        RoundedRectangle(cornerRadius: 14)
+                        RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                             .strokeBorder(.gray.opacity(0.2), lineWidth: 1)
                     )
 

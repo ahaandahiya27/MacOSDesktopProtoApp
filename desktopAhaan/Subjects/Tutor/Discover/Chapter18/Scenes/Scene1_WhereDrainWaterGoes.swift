@@ -30,7 +30,7 @@ struct Scene1_WhereDrainWaterGoes: View {
                             }
                         }
                         .padding(10)
-                        .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
+                        .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.md).fill(Color.white.opacity(0.95)))
                     }
                 }
                 .frame(maxWidth: 480)

@@ -56,7 +56,7 @@ struct Scene7_CycloneWarningCodes: View {
                             }
                         }
                         .padding(DesignTokens.Spacing.sm)
-                        .background(RoundedRectangle(cornerRadius: 8).fill(Color.white.opacity(0.95)))
+                        .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm).fill(Color.white.opacity(0.95)))
                     }
                 }
                 .frame(maxWidth: 620)

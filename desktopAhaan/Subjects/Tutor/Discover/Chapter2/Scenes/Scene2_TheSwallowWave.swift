@@ -40,7 +40,7 @@ struct Scene2_TheSwallowWave: View {
                         // Brown food bolus marker (was Canvas) — positioned by
                         // bolusPosition (0...1) inside the 100x300 oesophagus.
                         let bolusY: CGFloat = 50 + bolusPosition * 200
-                        RoundedRectangle(cornerRadius: 8)
+                        RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                             .fill(Color.compatBrown.opacity(0.8))
                             .frame(width: 40, height: 30)
                             .position(x: 50, y: bolusY)

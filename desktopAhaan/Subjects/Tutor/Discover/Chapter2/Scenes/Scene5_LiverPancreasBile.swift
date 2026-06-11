@@ -50,7 +50,7 @@ struct Scene5_LiverPancreasBile: View {
                             }
                             .padding(DesignTokens.Spacing.md)
                             .background(Color.green.opacity(liverTapped ? 0.3 : 0.1))
-                            .cornerRadius(8)
+                            .cornerRadius(DesignTokens.Radius.sm)
                         }
                         .buttonStyle(.plain)
                         .accessibilityLabel("Liver — produces bile")
@@ -79,7 +79,7 @@ struct Scene5_LiverPancreasBile: View {
                             }
                             .padding(DesignTokens.Spacing.md)
                             .background(Color.orange.opacity(pancreasTapped ? 0.3 : 0.1))
-                            .cornerRadius(8)
+                            .cornerRadius(DesignTokens.Radius.sm)
                         }
                         .buttonStyle(.plain)
                         .accessibilityLabel("Pancreas — makes enzymes")
@@ -113,7 +113,7 @@ struct Scene5_LiverPancreasBile: View {
                     .position(x: 130, y: 160)
 
                     // Small intestine (bottom)
-                    RoundedRectangle(cornerRadius: 8)
+                    RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                         .stroke(lineWidth: 2)
                         .foregroundColor(Color.blue.opacity(0.5))
                         .frame(width: 180, height: 40)

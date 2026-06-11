@@ -183,7 +183,7 @@ struct PseudopodCatchScene: View {
 
     private var catchVisual: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 14).fill(Color.gray.opacity(0.08))
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card).fill(Color.gray.opacity(0.08))
                 .frame(width: 280, height: 140)
             Circle().fill(DesignTokens.BrandColor.relatedConcepts.opacity(0.35))
                 .frame(width: 80, height: 80)
@@ -196,7 +196,7 @@ struct PseudopodCatchScene: View {
             Rectangle().strokeBorder(DesignTokens.BrandColor.primaryAction.opacity(0.35), lineWidth: 1)
                 .frame(width: 50, height: 100)
         }
-        .clipShape(RoundedRectangle(cornerRadius: 14))
+        .clipShape(RoundedRectangle(cornerRadius: DesignTokens.Radius.card))
     }
 
     private func startRound() {

@@ -97,7 +97,7 @@ private struct DistanceTimePlot: View {
     private func plotContent(size: CGSize) -> some View {
         let layout = PlotLayout(size: size)
         ZStack {
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                 .fill(Color.white.opacity(0.95))
 
             GridShape(layout: layout)

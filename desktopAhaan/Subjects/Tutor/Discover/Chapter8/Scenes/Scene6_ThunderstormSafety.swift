@@ -50,7 +50,7 @@ struct Scene6_ThunderstormSafety: View {
                             }
                         }
                         .padding(10)
-                        .background(RoundedRectangle(cornerRadius: 8).fill(Color.white.opacity(0.95)))
+                        .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm).fill(Color.white.opacity(0.95)))
                     }
                 }
                 .frame(maxWidth: 620)

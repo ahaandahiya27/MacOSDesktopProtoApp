@@ -59,7 +59,7 @@ struct Scene9_BossQuiz_Ch10: View {
                                     }
                                 }
                                 .padding(DesignTokens.Spacing.md)
-                                .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
+                                .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.md).fill(Color.white.opacity(0.95)))
                             }
                             .buttonStyle(.plain)
                         }

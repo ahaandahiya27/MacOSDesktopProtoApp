@@ -78,9 +78,9 @@ struct Scene5_TropicalRainforestLife: View {
             }
         }
         .frame(maxWidth: 500)
-        .clipShape(RoundedRectangle(cornerRadius: 14))
+        .clipShape(RoundedRectangle(cornerRadius: DesignTokens.Radius.card))
         .overlay(
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .strokeBorder(.gray.opacity(0.3), lineWidth: 1)
         )
     }

@@ -133,11 +133,11 @@ struct Scene5_SortersDiseaseLab: View {
             }
         } label: {
             VStack(spacing: DesignTokens.Spacing.sm) {
-                RoundedRectangle(cornerRadius: 8)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                     .fill(slideColor(index))
                     .frame(height: 60)
                     .overlay(
-                        RoundedRectangle(cornerRadius: 8)
+                        RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                             .strokeBorder(selectedSlide == index ? Color.compatIndigo : Color.clear, lineWidth: 2.5)
                     )
                 Text(label)

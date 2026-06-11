@@ -82,7 +82,7 @@ struct Scene1_IceToWaterToSteam: View {
                         } else {
                             particleCanvas
                                 .frame(width: 280, height: 220)
-                                .clipShape(RoundedRectangle(cornerRadius: 16))
+                                .clipShape(RoundedRectangle(cornerRadius: DesignTokens.Radius.lg))
                         }
                     }
                     .accessibilityLabel("\(phase.rawValue) at \(Int(temperature)) degrees Celsius")

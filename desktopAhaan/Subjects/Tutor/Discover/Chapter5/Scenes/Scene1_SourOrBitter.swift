@@ -69,7 +69,7 @@ struct Scene1_SourOrBitter: View {
                         .frame(maxWidth: 340)
                         .offset(x: shakeOffset)
                         .background(
-                            RoundedRectangle(cornerRadius: 16)
+                            RoundedRectangle(cornerRadius: DesignTokens.Radius.lg)
                                 .fill((flashColor ?? .clear).opacity(0.2))
                         )
 

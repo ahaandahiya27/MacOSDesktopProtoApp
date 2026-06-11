@@ -138,7 +138,7 @@ private struct DiscoverProgressContent: View {
         }
         .padding(DesignTokens.Spacing.lg)
         .background(
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(Color.compatIndigo.opacity(0.08))
         )
     }

@@ -117,7 +117,7 @@ private struct PHLadderSliderScene: View {
                 Text("The pH Ladder").font(.largeTitle.bold())
                     .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 ZStack(alignment: .leading) {
-                    RoundedRectangle(cornerRadius: 10)
+                    RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                         .fill(LinearGradient(
                             colors: [DesignTokens.BrandColor.danger,
                                      DesignTokens.BrandColor.mnemonicAccent,
@@ -211,8 +211,8 @@ private struct HouseholdAcidBaseSorterScene: View {
         }
         .padding(.horizontal, 14).padding(.vertical, DesignTokens.Spacing.sm)
         .frame(maxWidth: DesignTokens.contentMaxWidth)
-        .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.85)))
-        .overlay(RoundedRectangle(cornerRadius: 10).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
+        .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.md).fill(Color.white.opacity(0.85)))
+        .overlay(RoundedRectangle(cornerRadius: DesignTokens.Radius.md).strokeBorder(Color.gray.opacity(0.18), lineWidth: 1))
         .padding(.horizontal, DesignTokens.Spacing.xl)
     }
 }

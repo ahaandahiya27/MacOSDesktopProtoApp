@@ -118,8 +118,8 @@ struct SSDiscoverQuickCheckScene: View {
                     }
                     .padding(.horizontal, DesignTokens.Spacing.lg).padding(.vertical, DesignTokens.Spacing.md)
                     .frame(maxWidth: 360)
-                    .background(RoundedRectangle(cornerRadius: 10).fill(optionFill(opt)))
-                    .overlay(RoundedRectangle(cornerRadius: 10).strokeBorder(Color.compatIndigo.opacity(0.3), lineWidth: 1))
+                    .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.md).fill(optionFill(opt)))
+                    .overlay(RoundedRectangle(cornerRadius: DesignTokens.Radius.md).strokeBorder(Color.compatIndigo.opacity(0.3), lineWidth: 1))
                 }
                 .buttonStyle(.plain)
                 .pointingCursor()
@@ -238,8 +238,8 @@ struct SSDiscoverBossQuizScene: View {
                     }
                     .padding(.horizontal, DesignTokens.Spacing.lg).padding(.vertical, DesignTokens.Spacing.md)
                     .frame(maxWidth: 360)
-                    .background(RoundedRectangle(cornerRadius: 10).fill(optionFill(opt, q)))
-                    .overlay(RoundedRectangle(cornerRadius: 10).strokeBorder(Color.compatIndigo.opacity(0.3), lineWidth: 1))
+                    .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.md).fill(optionFill(opt, q)))
+                    .overlay(RoundedRectangle(cornerRadius: DesignTokens.Radius.md).strokeBorder(Color.compatIndigo.opacity(0.3), lineWidth: 1))
                 }
                 .buttonStyle(.plain)
                 .pointingCursor()

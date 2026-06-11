@@ -365,12 +365,12 @@ private struct VacuumFlaskScene: View {
                 Text("Why Vacuum Flask Keeps Tea Hot").font(.largeTitle.bold())
                     .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
                 ZStack {
-                    RoundedRectangle(cornerRadius: 22).fill(Color.gray.opacity(0.2))
+                    RoundedRectangle(cornerRadius: DesignTokens.Radius.xl).fill(Color.gray.opacity(0.2))
                         .frame(width: 140, height: 240)
                     if open {
-                        RoundedRectangle(cornerRadius: 16).fill(Color.white)
+                        RoundedRectangle(cornerRadius: DesignTokens.Radius.lg).fill(Color.white)
                             .frame(width: 100, height: 200)
-                            .overlay(RoundedRectangle(cornerRadius: 16).strokeBorder(Color.gray, lineWidth: 1))
+                            .overlay(RoundedRectangle(cornerRadius: DesignTokens.Radius.lg).strokeBorder(Color.gray, lineWidth: 1))
                         Image(systemName: "cup.and.saucer.fill")
                             .font(.system(size: 40))
                             .foregroundColor(DesignTokens.BrandColor.tryAtHome)

@@ -160,8 +160,8 @@ private struct MathQuickCheck: View {
                     }
                     .padding(.horizontal, DesignTokens.Spacing.lg).padding(.vertical, DesignTokens.Spacing.md)
                     .frame(maxWidth: 320)
-                    .background(RoundedRectangle(cornerRadius: 10).fill(optionFill(i)))
-                    .overlay(RoundedRectangle(cornerRadius: 10).strokeBorder(Color.compatIndigo.opacity(0.3), lineWidth: 1))
+                    .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.md).fill(optionFill(i)))
+                    .overlay(RoundedRectangle(cornerRadius: DesignTokens.Radius.md).strokeBorder(Color.compatIndigo.opacity(0.3), lineWidth: 1))
                 }
                 .buttonStyle(.plain)
                 .pointingCursor()
@@ -263,7 +263,7 @@ private struct MathSignRulesScene: View {
                 }
                 .padding(.horizontal, 18).padding(.vertical, DesignTokens.Spacing.sm)
                 .frame(maxWidth: 300)
-                .background(RoundedRectangle(cornerRadius: 10).fill(Color.compatIndigo.opacity(0.06)))
+                .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.md).fill(Color.compatIndigo.opacity(0.06)))
             }
         }
     }
@@ -324,8 +324,8 @@ private struct MathIntegerBossQuizScene: View {
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
                         .padding(.horizontal, DesignTokens.Spacing.lg).padding(.vertical, DesignTokens.Spacing.md)
                         .frame(maxWidth: 300)
-                        .background(RoundedRectangle(cornerRadius: 10).fill(optionFill(i, q)))
-                        .overlay(RoundedRectangle(cornerRadius: 10).strokeBorder(Color.compatIndigo.opacity(0.3), lineWidth: 1))
+                        .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.md).fill(optionFill(i, q)))
+                        .overlay(RoundedRectangle(cornerRadius: DesignTokens.Radius.md).strokeBorder(Color.compatIndigo.opacity(0.3), lineWidth: 1))
                 }
                 .buttonStyle(.plain)
                 .pointingCursor()

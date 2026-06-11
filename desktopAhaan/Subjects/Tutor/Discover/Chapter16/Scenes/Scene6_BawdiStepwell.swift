@@ -20,7 +20,7 @@ struct Scene6_BawdiStepwell: View {
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary).multilineTextAlignment(.center)
 
                 ZStack(alignment: .top) {
-                    RoundedRectangle(cornerRadius: 16).fill(Color.compatBrown.opacity(0.4))
+                    RoundedRectangle(cornerRadius: DesignTokens.Radius.lg).fill(Color.compatBrown.opacity(0.4))
                         .frame(width: 220, height: 260)
                     VStack(spacing: DesignTokens.Spacing.sm) {
                         Text("☀️").font(.system(size: 24))

@@ -75,7 +75,7 @@ struct Scene8_FibreVsFibreGame: View {
                 .frame(maxWidth: .infinity)
                 .padding(.horizontal, DesignTokens.Spacing.xl)
                 .background(Color.white.opacity(0.95))
-                .cornerRadius(8)
+                .cornerRadius(DesignTokens.Radius.sm)
 
                 // Drop zones
                 HStack(spacing: DesignTokens.Spacing.lg) {
@@ -139,7 +139,7 @@ struct Scene8_FibreVsFibreGame: View {
             }
             .frame(width: 70, height: 70)
             .background(Color(NSColor.controlBackgroundColor))
-            .cornerRadius(8)
+            .cornerRadius(DesignTokens.Radius.sm)
             .shadow(color: .black.opacity(draggingId == fibre.id ? 0.25 : 0.1), radius: draggingId == fibre.id ? 12 : 4, x: 0, y: draggingId == fibre.id ? 6 : 2)
             .scaleEffect(draggingId == fibre.id ? 1.08 : 1.0)
             .offset(x: shakeMap[fibre.id] ?? 0)
@@ -153,9 +153,9 @@ struct Scene8_FibreVsFibreGame: View {
                 .font(.caption.weight(.semibold))
                 .foregroundColor(Color.compatIndigo)
             ZStack {
-                RoundedRectangle(cornerRadius: 8)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                     .foregroundColor(Color.compatIndigo.opacity(0.05))
-                RoundedRectangle(cornerRadius: 8)
+                RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                     .stroke(lineWidth: 1.5)
                     .foregroundColor(Color.compatIndigo.opacity(0.3))
             }

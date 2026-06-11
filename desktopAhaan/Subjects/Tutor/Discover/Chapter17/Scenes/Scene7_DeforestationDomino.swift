@@ -35,7 +35,7 @@ struct Scene7_DeforestationDomino: View {
                             if i < fallen { Image(systemName: "arrow.down").foregroundColor(.red) }
                         }
                         .padding(10)
-                        .background(RoundedRectangle(cornerRadius: 10).fill(Color.white.opacity(0.95)))
+                        .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.md).fill(Color.white.opacity(0.95)))
                         .offset(x: i < fallen ? 0 : -20)
                         .opacity(i < fallen ? 1 : 0.55)
                         .respectReduceMotion(animation: .easeOut(duration: 0.35))

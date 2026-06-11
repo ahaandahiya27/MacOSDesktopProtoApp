@@ -23,7 +23,7 @@ struct Scene3_RefractionPool: View {
                         Rectangle().fill(Color.white).frame(width: 280, height: 100)
                         Rectangle().fill(Color.blue.opacity(0.35)).frame(width: 280, height: 100)
                     }
-                    .clipShape(RoundedRectangle(cornerRadius: 8))
+                    .clipShape(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm))
 
                     if inWater {
                         VStack(spacing: -8) {

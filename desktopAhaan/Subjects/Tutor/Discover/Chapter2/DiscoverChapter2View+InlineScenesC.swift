@@ -56,7 +56,7 @@ struct VilliSurfaceAreaScene: View {
     @ViewBuilder
     private var zoomVisual: some View {
         ZStack {
-            RoundedRectangle(cornerRadius: 14).fill(Color.pink.opacity(0.18))
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card).fill(Color.pink.opacity(0.18))
                 .frame(width: 280, height: 160)
             if zoom == 0 {
                 Capsule().fill(Color.pink.opacity(0.45)).frame(width: 220, height: 30)

@@ -290,7 +290,7 @@ private struct SalivaLabScene: View {
     private var breadVisual: some View {
         let breadAlpha: Double = 0.5 + 0.4 * sugar
         return ZStack {
-            RoundedRectangle(cornerRadius: 16)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.lg)
                 .fill(Color.compatBrown.opacity(breadAlpha))
                 .frame(width: 200, height: 80)
             ForEach(0..<8, id: \.self) { i in
@@ -351,7 +351,7 @@ private struct CardiacSphincterScene: View {
     private var gateVisual: some View {
         ZStack {
             // Tube
-            RoundedRectangle(cornerRadius: 14)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .stroke(Color.gray.opacity(0.4), lineWidth: 2)
                 .frame(width: 70, height: 200)
             // Ring (sphincter)
@@ -410,7 +410,7 @@ private struct StomachPHSliderScene: View {
     private var phMeter: some View {
         let knobX: CGFloat = CGFloat(ph / 14) * 238 + 4
         return ZStack(alignment: .leading) {
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                 .fill(LinearGradient(
                     colors: [DesignTokens.BrandColor.danger,
                              DesignTokens.BrandColor.mnemonicAccent,

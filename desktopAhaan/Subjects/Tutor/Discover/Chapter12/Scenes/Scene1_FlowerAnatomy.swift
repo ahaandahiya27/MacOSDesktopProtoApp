@@ -46,7 +46,7 @@ struct Scene1_FlowerAnatomy: View {
                                 Text(p.rawValue).font(.caption)
                             }
                             .padding(DesignTokens.Spacing.sm)
-                            .background(RoundedRectangle(cornerRadius: 8).fill(pick == p ? Color.compatIndigo.opacity(0.15) : Color.white.opacity(0.95)))
+                            .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm).fill(pick == p ? Color.compatIndigo.opacity(0.15) : Color.white.opacity(0.95)))
                         }
                         .buttonStyle(.plain)
                     }

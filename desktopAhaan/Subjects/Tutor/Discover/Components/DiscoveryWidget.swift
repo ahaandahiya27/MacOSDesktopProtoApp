@@ -77,11 +77,11 @@ struct DiscoveryWidget: View {
         }
         .padding(14)
         .background(
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                 .fill(Color.green.opacity(0.08))
         )
         .overlay(
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                 .strokeBorder(Color.green.opacity(0.35), lineWidth: 1)
         )
         .accessibilityElement(children: .contain)

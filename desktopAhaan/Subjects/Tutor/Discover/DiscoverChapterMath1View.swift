@@ -115,9 +115,9 @@ private struct MathLakhPlaceValueScene: View {
                         .font(.title.weight(.bold).monospacedDigit())
                         .foregroundColor(i == 0 ? Color.compatIndigo : DesignTokens.BrandColor.canvasText)
                         .frame(width: 40, height: 48)
-                        .background(RoundedRectangle(cornerRadius: 8)
+                        .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                             .fill(i == 0 ? Color.compatIndigo.opacity(0.14) : Color.compatIndigo.opacity(0.05)))
-                        .overlay(RoundedRectangle(cornerRadius: 8)
+                        .overlay(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                             .strokeBorder(Color.compatIndigo.opacity(0.3), lineWidth: 1))
                     Text(columns[i].label)
                         .font(.caption2)
@@ -167,8 +167,8 @@ private struct MathQuickCheck: View {
                     }
                     .padding(.horizontal, DesignTokens.Spacing.lg).padding(.vertical, DesignTokens.Spacing.md)
                     .frame(maxWidth: 320)
-                    .background(RoundedRectangle(cornerRadius: 10).fill(optionFill(i)))
-                    .overlay(RoundedRectangle(cornerRadius: 10).strokeBorder(Color.compatIndigo.opacity(0.3), lineWidth: 1))
+                    .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.md).fill(optionFill(i)))
+                    .overlay(RoundedRectangle(cornerRadius: DesignTokens.Radius.md).strokeBorder(Color.compatIndigo.opacity(0.3), lineWidth: 1))
                 }
                 .buttonStyle(.plain)
                 .pointingCursor()
@@ -342,8 +342,8 @@ private struct MathLargeNumbersBossQuizScene: View {
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
                         .padding(.horizontal, DesignTokens.Spacing.lg).padding(.vertical, DesignTokens.Spacing.md)
                         .frame(maxWidth: 300)
-                        .background(RoundedRectangle(cornerRadius: 10).fill(optionFill(i, q)))
-                        .overlay(RoundedRectangle(cornerRadius: 10).strokeBorder(Color.compatIndigo.opacity(0.3), lineWidth: 1))
+                        .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.md).fill(optionFill(i, q)))
+                        .overlay(RoundedRectangle(cornerRadius: DesignTokens.Radius.md).strokeBorder(Color.compatIndigo.opacity(0.3), lineWidth: 1))
                 }
                 .buttonStyle(.plain)
                 .pointingCursor()

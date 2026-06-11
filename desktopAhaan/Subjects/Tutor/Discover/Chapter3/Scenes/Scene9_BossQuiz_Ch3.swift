@@ -258,9 +258,9 @@ private struct Ch3AnswerButton: View {
                 .padding(14)
                 .background(backgroundColor())
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
-                .cornerRadius(8)
+                .cornerRadius(DesignTokens.Radius.sm)
                 .overlay(
-                    RoundedRectangle(cornerRadius: 8)
+                    RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                         .strokeBorder(borderColor(), lineWidth: 2)
                 )
         }

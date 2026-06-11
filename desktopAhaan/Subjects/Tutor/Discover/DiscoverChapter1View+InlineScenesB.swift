@@ -356,8 +356,8 @@ struct SortTheFeedersScene: View {
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
             }
             .padding(DesignTokens.Spacing.sm)
-            .background(RoundedRectangle(cornerRadius: 8).fill(tint.opacity(isSelected ? 0.2 : 0.08)))
-            .overlay(RoundedRectangle(cornerRadius: 8).strokeBorder(tint.opacity(0.45), lineWidth: 1))
+            .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm).fill(tint.opacity(isSelected ? 0.2 : 0.08)))
+            .overlay(RoundedRectangle(cornerRadius: DesignTokens.Radius.sm).strokeBorder(tint.opacity(0.45), lineWidth: 1))
         }
         .buttonStyle(.plain).pointingCursor()
     }

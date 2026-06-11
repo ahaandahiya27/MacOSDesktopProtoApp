@@ -23,7 +23,7 @@ struct Scene7_WormEngineer: View {
                     .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
 
                 ZStack {
-                    RoundedRectangle(cornerRadius: 14)
+                    RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                         .fill(Color(red: 0.45, green: 0.30, blue: 0.18))
                         .frame(width: 320, height: 320)
 

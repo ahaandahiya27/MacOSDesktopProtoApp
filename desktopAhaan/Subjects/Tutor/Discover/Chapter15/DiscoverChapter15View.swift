@@ -244,7 +244,7 @@ private struct WhySkyBlueScene: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText).padding(.top, 18)
             LinearGradient(colors: [Color.compatIndigo.opacity(0.5), Color.compatIndigo.opacity(0.9)],
                           startPoint: .top, endPoint: .bottom)
-                .frame(width: 220, height: 140).cornerRadius(14)
+                .frame(width: 220, height: 140).cornerRadius(DesignTokens.Radius.card)
             Text("Sunlight is white = all colours mixed. When it hits Earth's atmosphere, blue light scatters in all directions more than red does (because blue's shorter wavelength). Whichever direction you look, blue light is bouncing toward you.")
                 .font(.callout).foregroundColor(DesignTokens.BrandColor.canvasText)
                 .multilineTextAlignment(.center).padding(.horizontal, DesignTokens.Spacing.xl)

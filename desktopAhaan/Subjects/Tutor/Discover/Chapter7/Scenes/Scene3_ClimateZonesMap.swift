@@ -104,9 +104,9 @@ struct Scene3_ClimateZonesMap: View {
                     }
                     .frame(maxWidth: 600)
                     .frame(height: 260)
-                    .clipShape(RoundedRectangle(cornerRadius: 14))
+                    .clipShape(RoundedRectangle(cornerRadius: DesignTokens.Radius.card))
                     .overlay(
-                        RoundedRectangle(cornerRadius: 14)
+                        RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                             .stroke(lineWidth: 1)
                             .foregroundColor(Color.gray.opacity(0.3))
                     )

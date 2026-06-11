@@ -85,11 +85,11 @@ struct DiscoveryStepper: View {
         }
         .padding(14)
         .background(
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                 .fill(Color.green.opacity(0.08))
         )
         .overlay(
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                 .strokeBorder(Color.green.opacity(0.35), lineWidth: 1)
         )
         .accessibilityElement(children: .contain)
@@ -123,7 +123,7 @@ struct DiscoveryStepper: View {
                         .padding(.vertical, 6)
                         .padding(.horizontal, 10)
                         .background(
-                            RoundedRectangle(cornerRadius: 8)
+                            RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                                 .fill(selection == i ? Color.green : Color.green.opacity(0.18))
                         )
                 }
