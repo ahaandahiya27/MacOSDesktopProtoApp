@@ -163,7 +163,7 @@ struct TrendChartView: View {
                         endpointDot(at: last, tint: series.tint)
                     }
                 }
-                .padding(.vertical, 2)
+                .padding(.vertical, DesignTokens.Spacing.xxs)
             }
             .frame(height: 150)
             axisLabels(series)

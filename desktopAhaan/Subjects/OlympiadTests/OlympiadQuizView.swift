@@ -108,7 +108,7 @@ struct OlympiadQuizView: View {
 
     private var header: some View {
         HStack(spacing: 14) {
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                 Text("\(paper.subjectName) — Chapter \(paper.chapterNumber)")
                     .font(.caption)
                     .foregroundColor(.secondary)
@@ -118,7 +118,7 @@ struct OlympiadQuizView: View {
             }
             Spacer()
             countdownBadge
-            VStack(alignment: .trailing, spacing: 2) {
+            VStack(alignment: .trailing, spacing: DesignTokens.Spacing.xxs) {
                 let attempted = selectedByQuestionId.count
                 let marked = markedForReview.count
                 Text("Attempted \(attempted) / \(paper.questionCount)")
@@ -132,7 +132,7 @@ struct OlympiadQuizView: View {
             }
         }
         .padding(.horizontal, 18)
-        .padding(.vertical, 12)
+        .padding(.vertical, DesignTokens.Spacing.md)
         .background(Color(NSColor.controlBackgroundColor))
     }
 
@@ -156,7 +156,7 @@ struct OlympiadQuizView: View {
                     .font(.callout.weight(.semibold).monospacedDigit())
             }
             .foregroundColor(tint)
-            .padding(.horizontal, 10).padding(.vertical, 4)
+            .padding(.horizontal, 10).padding(.vertical, DesignTokens.Spacing.xs)
             .background(Capsule().fill(tint.opacity(0.12)))
             .accessibilityLabel("Time remaining: \(mins) minutes, \(secs) seconds")
         }
@@ -167,7 +167,7 @@ struct OlympiadQuizView: View {
     /// is just a "what happened" cue for the kid so it doesn't feel
     /// like the app jumped randomly to results.
     private var timeUpRibbon: some View {
-        HStack(spacing: 8) {
+        HStack(spacing: DesignTokens.Spacing.sm) {
             Image(systemName: SFSymbolCompat.name("clock.badge.exclamationmark"))
                 .foregroundColor(.red)
             Text("Time's up — submitting paper.")
@@ -175,7 +175,7 @@ struct OlympiadQuizView: View {
                 .foregroundColor(.red)
             Spacer()
         }
-        .padding(.horizontal, 18).padding(.vertical, 8)
+        .padding(.horizontal, 18).padding(.vertical, DesignTokens.Spacing.sm)
         .background(Color.red.opacity(0.08))
     }
 
@@ -183,7 +183,7 @@ struct OlympiadQuizView: View {
     /// with at least one answer on the paper. Resume keeps the
     /// in-progress record alive; Discard clears it.
     private var exitConfirmSheet: some View {
-        VStack(spacing: 16) {
+        VStack(spacing: DesignTokens.Spacing.lg) {
             Image(systemName: SFSymbolCompat.name("exclamationmark.triangle.fill"))
                 .font(.system(size: 36))
                 .foregroundColor(.orange)
@@ -194,7 +194,7 @@ struct OlympiadQuizView: View {
                 .foregroundColor(.secondary)
                 .multilineTextAlignment(.center)
                 .fixedSize(horizontal: false, vertical: true)
-            HStack(spacing: 12) {
+            HStack(spacing: DesignTokens.Spacing.md) {
                 Button("Discard Quiz") {
                     showingExitConfirm = false
                     DataStore.shared.clearOlympiadInProgress(forPaperId: paper.id)
@@ -314,7 +314,7 @@ struct OlympiadQuizView: View {
                 Text("Q \(q.number)")
                     .font(.subheadline.weight(.semibold).monospacedDigit())
                     .foregroundColor(.white)
-                    .padding(.horizontal, 8).padding(.vertical, 3)
+                    .padding(.horizontal, DesignTokens.Spacing.sm).padding(.vertical, 3)
                     .background(Capsule().fill(DesignTokens.BrandColor.primaryAction))
                 Text(q.stem)
                     .font(.body)
@@ -329,7 +329,7 @@ struct OlympiadQuizView: View {
                 optionRow(q: q, optionIndex: idx, optionText: q.options[idx])
             }
         }
-        .padding(16)
+        .padding(DesignTokens.Spacing.lg)
         .background(
             RoundedRectangle(cornerRadius: DesignTokens.Radius.card)
                 .fill(Color.white.opacity(0.65))
@@ -357,7 +357,7 @@ struct OlympiadQuizView: View {
             }
             saveInProgressNow()
         } label: {
-            HStack(alignment: .top, spacing: 12) {
+            HStack(alignment: .top, spacing: DesignTokens.Spacing.md) {
                 ZStack {
                     Circle()
                         .strokeBorder(
@@ -449,14 +449,14 @@ struct OlympiadQuizView: View {
                 showingResult = true
             } label: {
                 Label("Submit Paper", systemImage: SFSymbolCompat.name("paperplane.fill"))
-                    .padding(.horizontal, 8)
+                    .padding(.horizontal, DesignTokens.Spacing.sm)
             }
             .keyboardShortcut("s", modifiers: [.command, .shift])
             .accessibilityLabel("Submit paper")
             .help("Submit and view your score (⌘⇧S).")
         }
         .padding(.horizontal, 18)
-        .padding(.vertical, 12)
+        .padding(.vertical, DesignTokens.Spacing.md)
         .background(Color(NSColor.controlBackgroundColor))
     }
 

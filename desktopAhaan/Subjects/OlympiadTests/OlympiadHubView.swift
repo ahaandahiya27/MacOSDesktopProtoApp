@@ -51,7 +51,7 @@ struct OlympiadHubView: View {
 
     var body: some View {
         ScrollView {
-            VStack(alignment: .leading, spacing: 24) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xl) {
                 header
                 if let url = savedToURL {
                     savedBanner(url: url)
@@ -60,7 +60,7 @@ struct OlympiadHubView: View {
                     subjectSection(name: group.subject, papers: group.papers)
                 }
             }
-            .padding(24)
+            .padding(DesignTokens.Spacing.xl)
             .frame(maxWidth: 880, alignment: .leading)
             .frame(maxWidth: .infinity, alignment: .center)
         }
@@ -98,10 +98,10 @@ struct OlympiadHubView: View {
     // MARK: - Header
 
     private var header: some View {
-        VStack(alignment: .leading, spacing: 8) {
-            HStack(spacing: 12) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
+            HStack(spacing: DesignTokens.Spacing.md) {
                 Text("🏆").font(.system(size: 40)).accessibilityHidden(true)
-                VStack(alignment: .leading, spacing: 2) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                     Text("Olympiad Tests")
                         .font(.largeTitle.bold())
                         .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -119,14 +119,14 @@ struct OlympiadHubView: View {
                 .font(.callout)
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                 .fixedSize(horizontal: false, vertical: true)
-                .padding(.top, 4)
+                .padding(.top, DesignTokens.Spacing.xs)
             HStack(spacing: 14) {
                 schemeChip(icon: "plus", text: "+4 correct", tint: .green)
                 schemeChip(icon: "minus", text: "−1 wrong", tint: .red)
                 schemeChip(icon: "circle", text: "0 skipped", tint: .gray)
                 schemeChip(icon: "star.circle", text: "Max 240", tint: DesignTokens.BrandColor.primaryAction)
             }
-            .padding(.top, 4)
+            .padding(.top, DesignTokens.Spacing.xs)
         }
         .accessibilityElement(children: .combine)
     }
@@ -139,7 +139,7 @@ struct OlympiadHubView: View {
                 .font(.caption.monospacedDigit())
         }
         .foregroundColor(tint)
-        .padding(.horizontal, 8).padding(.vertical, 3)
+        .padding(.horizontal, DesignTokens.Spacing.sm).padding(.vertical, 3)
         .background(
             Capsule().fill(tint.opacity(0.12))
         )
@@ -152,7 +152,7 @@ struct OlympiadHubView: View {
             Image(systemName: SFSymbolCompat.name("checkmark.circle.fill"))
                 .font(.title3)
                 .foregroundColor(.green)
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                 Text("Saved PDF")
                     .font(.callout.weight(.semibold))
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -173,13 +173,13 @@ struct OlympiadHubView: View {
             }
             .controlSize(.small)
         }
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .background(
-            RoundedRectangle(cornerRadius: 8)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                 .fill(Color.green.opacity(0.10))
         )
         .overlay(
-            RoundedRectangle(cornerRadius: 8)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                 .strokeBorder(Color.green.opacity(0.30), lineWidth: 1)
         )
     }
@@ -188,7 +188,7 @@ struct OlympiadHubView: View {
 
     private func subjectSection(name: String, papers: [OlympiadPaper]) -> some View {
         VStack(alignment: .leading, spacing: 14) {
-            HStack(spacing: 8) {
+            HStack(spacing: DesignTokens.Spacing.sm) {
                 Text(name)
                     .font(.title2.weight(.bold))
                     .foregroundColor(DesignTokens.BrandColor.canvasText)
@@ -210,7 +210,7 @@ struct OlympiadHubView: View {
                 Text("Ch \(paper.chapterNumber)")
                     .font(.caption.weight(.semibold).monospacedDigit())
                     .foregroundColor(.white)
-                    .padding(.horizontal, 8).padding(.vertical, 3)
+                    .padding(.horizontal, DesignTokens.Spacing.sm).padding(.vertical, 3)
                     .background(Capsule().fill(DesignTokens.BrandColor.primaryAction))
                 Text(paper.chapterTitle)
                     .font(.title3.weight(.semibold))
@@ -224,7 +224,7 @@ struct OlympiadHubView: View {
                 statChip(icon: "star.circle", text: "\(paper.maxMarks) max")
             }
             attemptHistoryRow(for: paper)
-            HStack(spacing: 12) {
+            HStack(spacing: DesignTokens.Spacing.md) {
                 NavigationLink(destination: OlympiadQuizView(paper: paper)) {
                     if let inProgress = DataStore.shared.inProgressOlympiad(forPaperId: paper.id) {
                         // Quiz is mid-flight — kid quit without
@@ -317,7 +317,7 @@ struct OlympiadHubView: View {
             Text("Advanced")
                 .font(.caption.weight(.semibold))
                 .foregroundColor(.white)
-                .padding(.horizontal, 7).padding(.vertical, 2)
+                .padding(.horizontal, 7).padding(.vertical, DesignTokens.Spacing.xxs)
                 .background(Capsule().fill(DesignTokens.BrandColor.mnemonicAccent))
                 .accessibilityLabel("Advanced tier paper")
         }
@@ -387,7 +387,7 @@ struct OlympiadHubView: View {
                 .font(.caption.weight(.semibold).monospacedDigit())
                 .foregroundColor(tint)
         }
-        .padding(.horizontal, 8).padding(.vertical, 3)
+        .padding(.horizontal, DesignTokens.Spacing.sm).padding(.vertical, 3)
         .background(
             Capsule().fill(tint.opacity(0.10))
         )
@@ -402,7 +402,7 @@ struct OlympiadHubView: View {
                 .font(.caption.monospacedDigit())
                 .foregroundColor(.secondary)
         }
-        .padding(.horizontal, 8).padding(.vertical, 3)
+        .padding(.horizontal, DesignTokens.Spacing.sm).padding(.vertical, 3)
         .background(
             Capsule().fill(Color.gray.opacity(0.10))
         )
@@ -424,7 +424,7 @@ struct OlympiadHubView: View {
         .foregroundColor(filled ? .white : tint)
         .fixedSize()
         .padding(.horizontal, 14)
-        .padding(.vertical, 8)
+        .padding(.vertical, DesignTokens.Spacing.sm)
         .frame(minHeight: 36)
         .background(
             Group {

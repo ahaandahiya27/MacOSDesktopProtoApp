@@ -73,7 +73,7 @@ struct ExpertChallengeLadderView: View {
     // MARK: - Header
 
     private var header: some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
             HStack(spacing: 10) {
                 Text("🏆").font(.system(size: 34)).accessibilityHidden(true)
                 Text("Expert Challenges")

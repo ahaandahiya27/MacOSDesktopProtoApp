@@ -147,7 +147,7 @@ struct OlympiadQuizResultView: View {
     // MARK: - Chrome
 
     private var chrome: some View {
-        HStack(spacing: 12) {
+        HStack(spacing: DesignTokens.Spacing.md) {
             // Defer the dismiss one runloop tick: this result view is a .sheet
             // over a pushed QuizView, and tearing down a sheet in the same
             // commit as any nav change is the Big-Sur "entangling fence"
@@ -170,7 +170,7 @@ struct OlympiadQuizResultView: View {
             .help("Save a printable HTML score report. Open in Preview or Safari to print or save as PDF.")
             .accessibilityLabel("Save score report")
         }
-        .padding(.horizontal, 12).padding(.vertical, 10)
+        .padding(.horizontal, DesignTokens.Spacing.md).padding(.vertical, 10)
         .background(Color(NSColor.controlBackgroundColor))
     }
 
@@ -179,9 +179,9 @@ struct OlympiadQuizResultView: View {
     private var scoreCard: some View {
         let t = tally
         return VStack(alignment: .leading, spacing: 14) {
-            HStack(spacing: 12) {
+            HStack(spacing: DesignTokens.Spacing.md) {
                 Text("🏆").font(.system(size: 32))
-                VStack(alignment: .leading, spacing: 2) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                     Text("Your score")
                         .font(.caption)
                         .foregroundColor(.secondary)
@@ -212,7 +212,7 @@ struct OlympiadQuizResultView: View {
     }
 
     private func scoreChip(emoji: String, label: String, value: Int, tint: Color) -> some View {
-        VStack(spacing: 4) {
+        VStack(spacing: DesignTokens.Spacing.xs) {
             Text(emoji).font(.title2)
             Text("\(value)")
                 .font(.title2.weight(.bold).monospacedDigit())
@@ -224,7 +224,7 @@ struct OlympiadQuizResultView: View {
         .frame(maxWidth: .infinity)
         .padding(10)
         .background(
-            RoundedRectangle(cornerRadius: 8)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                 .fill(Color.white.opacity(0.7))
         )
     }
@@ -249,8 +249,8 @@ struct OlympiadQuizResultView: View {
         let statusEmoji: String = isSkipped ? "⏭" : (isCorrect ? "✅" : "❌")
         let statusTint: Color = isSkipped ? .gray : (isCorrect ? .green : .red)
 
-        return VStack(alignment: .leading, spacing: 8) {
-            HStack(alignment: .firstTextBaseline, spacing: 8) {
+        return VStack(alignment: .leading, spacing: DesignTokens.Spacing.sm) {
+            HStack(alignment: .firstTextBaseline, spacing: DesignTokens.Spacing.sm) {
                 Text(statusEmoji)
                 Text("Q \(q.number)")
                     .font(.subheadline.weight(.semibold).monospacedDigit())
@@ -277,26 +277,26 @@ struct OlympiadQuizResultView: View {
                     .font(.callout)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .fixedSize(horizontal: false, vertical: true)
-                    .padding(8)
+                    .padding(DesignTokens.Spacing.sm)
                     .background(
                         RoundedRectangle(cornerRadius: 6)
                             .fill(Color.yellow.opacity(0.10))
                     )
             }
         }
-        .padding(12)
+        .padding(DesignTokens.Spacing.md)
         .background(
-            RoundedRectangle(cornerRadius: 8)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                 .fill(Color.white.opacity(0.55))
         )
         .overlay(
-            RoundedRectangle(cornerRadius: 8)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                 .strokeBorder(statusTint.opacity(0.20), lineWidth: 1)
         )
     }
 
     private func answerLabel(prefix: String, letter: String?, text: String, tint: Color) -> some View {
-        HStack(spacing: 4) {
+        HStack(spacing: DesignTokens.Spacing.xs) {
             Text(prefix)
                 .font(.caption)
                 .foregroundColor(.secondary)

@@ -46,7 +46,7 @@ struct OlympiadPaperReaderView: View {
     // MARK: - Chrome
 
     private var chrome: some View {
-        HStack(spacing: 12) {
+        HStack(spacing: DesignTokens.Spacing.md) {
             Button {
                 // Deferred dismiss — same Big-Sur entangling-fence guard
                 // used in OlympiadQuizResultView's chrome.
@@ -65,12 +65,12 @@ struct OlympiadPaperReaderView: View {
             // Spacer balance with leading button width.
             Color.clear.frame(width: 28, height: 1)
         }
-        .padding(.horizontal, 12).padding(.vertical, 10)
+        .padding(.horizontal, DesignTokens.Spacing.md).padding(.vertical, 10)
         .background(Color(NSColor.controlBackgroundColor))
     }
 
     private var placeholder: some View {
-        VStack(spacing: 12) {
+        VStack(spacing: DesignTokens.Spacing.md) {
             Spacer()
             if let err = hydrateError {
                 Image(systemName: SFSymbolCompat.name("exclamationmark.triangle.fill"))
@@ -91,14 +91,14 @@ struct OlympiadPaperReaderView: View {
 
     private var body_: some View {
         ScrollView {
-            LazyVStack(alignment: .leading, spacing: 16) {
+            LazyVStack(alignment: .leading, spacing: DesignTokens.Spacing.lg) {
                 hero
                 ForEach(questions) { q in
                     questionCard(q)
                 }
                 footer
             }
-            .padding(.horizontal, 24).padding(.vertical, 20)
+            .padding(.horizontal, DesignTokens.Spacing.xl).padding(.vertical, 20)
             .frame(maxWidth: 760, alignment: .leading)
             .frame(maxWidth: .infinity, alignment: .center)
         }
@@ -135,7 +135,7 @@ struct OlympiadPaperReaderView: View {
         Text(text)
             .font(.caption.weight(.semibold).monospacedDigit())
             .foregroundColor(tint)
-            .padding(.horizontal, 8).padding(.vertical, 3)
+            .padding(.horizontal, DesignTokens.Spacing.sm).padding(.vertical, 3)
             .background(Capsule().fill(tint.opacity(0.12)))
     }
 
@@ -143,11 +143,11 @@ struct OlympiadPaperReaderView: View {
 
     private func questionCard(_ q: OlympiadQuestion) -> some View {
         VStack(alignment: .leading, spacing: 10) {
-            HStack(alignment: .firstTextBaseline, spacing: 8) {
+            HStack(alignment: .firstTextBaseline, spacing: DesignTokens.Spacing.sm) {
                 Text("Q \(q.number)")
                     .font(.subheadline.weight(.semibold).monospacedDigit())
                     .foregroundColor(.white)
-                    .padding(.horizontal, 8).padding(.vertical, 3)
+                    .padding(.horizontal, DesignTokens.Spacing.sm).padding(.vertical, 3)
                     .background(Capsule().fill(DesignTokens.BrandColor.primaryAction))
                 Text(q.stem)
                     .font(.body)
@@ -170,11 +170,11 @@ struct OlympiadPaperReaderView: View {
         }
         .padding(14)
         .background(
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                 .fill(Color.white.opacity(0.65))
         )
         .overlay(
-            RoundedRectangle(cornerRadius: 10)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.md)
                 .strokeBorder(DesignTokens.BrandColor.primaryAction.opacity(0.15), lineWidth: 1)
         )
     }
@@ -203,7 +203,7 @@ struct OlympiadPaperReaderView: View {
     }
 
     private func workedSolution(_ explanation: String) -> some View {
-        VStack(alignment: .leading, spacing: 4) {
+        VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
             Text("Working")
                 .font(.caption.weight(.semibold))
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
@@ -215,7 +215,7 @@ struct OlympiadPaperReaderView: View {
         .padding(10)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(
-            RoundedRectangle(cornerRadius: 8)
+            RoundedRectangle(cornerRadius: DesignTokens.Radius.sm)
                 .fill(Color.yellow.opacity(0.08))
         )
     }
@@ -227,8 +227,8 @@ struct OlympiadPaperReaderView: View {
             .font(.caption)
             .foregroundColor(.secondary)
             .frame(maxWidth: .infinity, alignment: .center)
-            .padding(.top, 12)
-            .padding(.bottom, 24)
+            .padding(.top, DesignTokens.Spacing.md)
+            .padding(.bottom, DesignTokens.Spacing.xl)
     }
 
     // MARK: - Hydrate

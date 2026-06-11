@@ -33,8 +33,8 @@ struct ExpandableCard<Content: View>: View {
 
                     Spacer(minLength: 0)
                 }
-                .padding(.vertical, 12)
-                .padding(.horizontal, 16)
+                .padding(.vertical, DesignTokens.Spacing.md)
+                .padding(.horizontal, DesignTokens.Spacing.lg)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .contentShape(Rectangle())
                 .background(
@@ -50,8 +50,8 @@ struct ExpandableCard<Content: View>: View {
 
             if isExpanded {
                 content()
-                    .padding(.vertical, 12)
-                    .padding(.horizontal, 16)
+                    .padding(.vertical, DesignTokens.Spacing.md)
+                    .padding(.horizontal, DesignTokens.Spacing.lg)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .transition(.opacity)  // Big Sur: combined-with-.move can render-loop
             }

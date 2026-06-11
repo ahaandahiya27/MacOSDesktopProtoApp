@@ -138,7 +138,7 @@ private struct DailyPracticeContent: View {
                 Image(systemName: "flame.fill")
                     .foregroundColor(.orange)
                     .font(.title)
-                VStack(alignment: .leading, spacing: 2) {
+                VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                     Text("Daily Practice")
                         .font(.largeTitle.bold())
                     Text(headerSubtitle)
@@ -373,7 +373,7 @@ private struct ReviewSessionSheet: View {
 
     private var sessionHeader: some View {
         HStack(alignment: .firstTextBaseline) {
-            VStack(alignment: .leading, spacing: 2) {
+            VStack(alignment: .leading, spacing: DesignTokens.Spacing.xxs) {
                 Text("Review session")
                     .font(.headline)
                 Text(progressSubtitle)
