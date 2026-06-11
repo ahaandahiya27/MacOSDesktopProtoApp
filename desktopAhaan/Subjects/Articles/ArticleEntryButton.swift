@@ -11,7 +11,7 @@ struct ArticleEntryButton: View {
                     presentedArticle = e
                 }
             } label: {
-                HStack(spacing: 12) {
+                HStack(spacing: DesignTokens.Spacing.md) {
                     Image(systemName: "book.closed.fill")
                         .font(.title3)
 

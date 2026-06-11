@@ -42,7 +42,7 @@ struct ContentView: View {
     var body: some View {
         VStack(spacing: 0) {
             if let error = dataStore.lastSaveError {
-                HStack(spacing: 8) {
+                HStack(spacing: DesignTokens.Spacing.sm) {
                     Image(systemName: "exclamationmark.triangle.fill")
                         .foregroundColor(.orange)
                         .accessibilityHidden(true)
@@ -52,7 +52,7 @@ struct ContentView: View {
                     Button("Dismiss") { dataStore.lastSaveError = nil }
                         .font(.caption)
                 }
-                .padding(8)
+                .padding(DesignTokens.Spacing.sm)
                 .background(Color.orange.opacity(0.1))
             }
             NavigationView {
@@ -273,7 +273,7 @@ struct ContentView: View {
         )) {
             Section(header: Text("Subjects")) {
                 if subjectRegistry.isLoading {
-                    HStack(spacing: 8) {
+                    HStack(spacing: DesignTokens.Spacing.sm) {
                         ProgressView().controlSize(.small)
                         Text("Loading subjects…")
                             .font(.caption)
@@ -388,7 +388,7 @@ struct ContentView: View {
                     SubjectHomeView(pack: pack)
                 }
             } else {
-                VStack(spacing: 12) {
+                VStack(spacing: DesignTokens.Spacing.md) {
                     Image(systemName: "books.vertical")
                         .font(.system(size: 48))
                         .foregroundColor(.secondary)

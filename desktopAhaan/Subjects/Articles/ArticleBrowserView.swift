@@ -22,7 +22,7 @@ struct ArticleBrowserView: View {
 
     var body: some View {
         VStack(spacing: 0) {
-                HStack(spacing: 12) {
+                HStack(spacing: DesignTokens.Spacing.md) {
                     // Group keeps the outer HStack ≤10 direct children (Swift 5.5 @ViewBuilder cap; CLAUDE.md).
                     Group {
                         Button(action: { presentationMode.wrappedValue.dismiss() }) {
@@ -123,7 +123,7 @@ struct ArticleBrowserView: View {
 
                 // Article renderer
                 if articleNotFound {
-                    VStack(spacing: 12) {
+                    VStack(spacing: DesignTokens.Spacing.md) {
                         Image(systemName: "doc.text.magnifyingglass")
                             .font(.system(size: 48))
                             .foregroundColor(.secondary)

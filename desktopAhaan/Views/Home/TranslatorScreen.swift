@@ -30,7 +30,7 @@ struct TranslatorScreen: View {
                         }
                     )
 
-                    HStack(spacing: 16) {
+                    HStack(spacing: DesignTokens.Spacing.lg) {
                         Button(action: {
                             vm.clear()
                         }) {
@@ -80,7 +80,7 @@ struct TranslatorScreen: View {
                         .id("resultCard")
 
                         if !vm.translationSource.isEmpty {
-                            HStack(spacing: 4) {
+                            HStack(spacing: DesignTokens.Spacing.xs) {
                                 Image(systemName: SFSymbolCompat.name(vm.translationSource.contains("Online") ? "globe" : "internaldrive"))
                                     .font(.caption2)
                                 Text("via \(vm.translationSource)")
