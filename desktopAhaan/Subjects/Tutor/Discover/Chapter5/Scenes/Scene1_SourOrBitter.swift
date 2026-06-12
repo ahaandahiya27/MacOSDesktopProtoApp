@@ -140,53 +140,54 @@ struct Scene1_SourOrBitter: View {
     // MARK: - Subviews
 
     private func choiceButton(label: String, color: Color, isSourChoice: Bool) -> some View {
-        Button {
-            guard let item = currentItem else { return }
-            let correct = item.isSour == isSourChoice
-            results.append(correct)
-
-            if correct {
-                flashColor = .green
-                withAnimation(reduceMotion ? .none : .easeOut(duration: 0.3)) {
-                    flashColor = .green
-                }
-            } else {
-                flashColor = .red
-                if !reduceMotion {
-                    withAnimation(.spring(response: 0.15, dampingFraction: 0.3)) { shakeOffset = 12 }
-                    Task { @MainActor in
-                        try? await Task.sleep(nanoseconds: 150_000_000)
-                        withAnimation(.spring(response: 0.15, dampingFraction: 0.3)) { shakeOffset = -10 }
-                        try? await Task.sleep(nanoseconds: 150_000_000)
-                        withAnimation(.spring(response: 0.2, dampingFraction: 0.5)) { shakeOffset = 0 }
-                    }
-                }
-            }
-
-            Task { @MainActor in
-                try? await Task.sleep(nanoseconds: 600_000_000)
-                flashColor = nil
-                shakeOffset = 0
-                if currentIndex < items.count - 1 {
-                    withAnimation(reduceMotion ? .none : .easeInOut(duration: 0.25)) {
-                        currentIndex += 1
-                    }
-                } else {
-                    withAnimation(reduceMotion ? .none : .easeInOut(duration: 0.3)) {
-                        allDone = true
-                    }
-                }
-            }
-        } label: {
+        Button { handleChoice(isSourChoice: isSourChoice) } label: {
             Text(label)
                 .font(.headline)
                 .frame(maxWidth: .infinity)
                 .padding(.vertical, 14)
         }
-        
         .accentColor(color)
         .accessibilityLabel("Classify as \(label)")
         .accessibilityHint("Submits your answer for the current item")
+    }
+
+    private func handleChoice(isSourChoice: Bool) {
+        guard let item = currentItem else { return }
+        let correct = item.isSour == isSourChoice
+        results.append(correct)
+
+        if correct {
+            flashColor = .green
+            withAnimation(reduceMotion ? .none : .easeOut(duration: 0.3)) {
+                flashColor = .green
+            }
+        } else {
+            flashColor = .red
+            if !reduceMotion {
+                withAnimation(.spring(response: 0.15, dampingFraction: 0.3)) { shakeOffset = 12 }
+                Task { @MainActor in
+                    try? await Task.sleep(nanoseconds: 150_000_000)
+                    withAnimation(.spring(response: 0.15, dampingFraction: 0.3)) { shakeOffset = -10 }
+                    try? await Task.sleep(nanoseconds: 150_000_000)
+                    withAnimation(.spring(response: 0.2, dampingFraction: 0.5)) { shakeOffset = 0 }
+                }
+            }
+        }
+
+        Task { @MainActor in
+            try? await Task.sleep(nanoseconds: 600_000_000)
+            flashColor = nil
+            shakeOffset = 0
+            if currentIndex < items.count - 1 {
+                withAnimation(reduceMotion ? .none : .easeInOut(duration: 0.25)) {
+                    currentIndex += 1
+                }
+            } else {
+                withAnimation(reduceMotion ? .none : .easeInOut(duration: 0.3)) {
+                    allDone = true
+                }
+            }
+        }
     }
 
     private func pillColor(for index: Int) -> Color {
