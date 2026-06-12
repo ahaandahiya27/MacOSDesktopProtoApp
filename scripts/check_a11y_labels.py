@@ -112,6 +112,15 @@ def find_button_chunks(src: str):
     sit hundreds of chars past the `Button` token. 1500 chars covers
     every Button-with-trailing-closures-and-modifiers structure in the
     current codebase.
+
+    Note (2026-06-12): if a Button's action closure grows so long that
+    the chained `.accessibilityLabel` falls past this window, DON'T just
+    widen the window — a larger window risks falsely crediting a sibling
+    View's Text(...) to the Button. Instead, hoist the action body to
+    a named helper method (the existing convention; e.g.
+    Scene1_SourOrBitter.choiceButton was refactored this way in commit
+    afa10ee). The compact Button is easier to read AND the lint sees
+    the label.
     """
     for m in re.finditer(r"\bButton\b", src):
         # Skip matches inside a `//` / `///` line comment — doc comments that
