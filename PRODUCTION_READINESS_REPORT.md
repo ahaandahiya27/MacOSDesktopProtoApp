@@ -9,7 +9,7 @@
 | Criterion | Status | Evidence |
 |---|:--:|---|
 | Build clean (Debug + Release) | ✅ | `scripts/ci-build-test.sh` exits 0 every push |
-| All unit tests green | ✅ | 835+ XCTest methods + 66 swift-testing + 43 XCUITest (incl. new `NavigationSmokeUITests`); full suite + 38 lints + 3-pack canonical-JSON round-trip gates every push |
+| All unit tests green | ✅ | 835+ XCTest methods + 66 swift-testing + 42 XCUITest in the target (NavigationSmokeUITests source landed at `desktopAhaanUITests/NavigationSmokeUITests.swift` 2026-06-11 but pending Xcode "Add Files…" wire-up before it enters the target — see T3 row in ISSUE_CATEGORIES.md); full suite + 38 lints + 3-pack canonical-JSON round-trip gates every push |
 | 38 lints clean | ✅ | `scripts/check_*.py` exit 0 (was 17, grew to 38 via continuous additions; latest: `check_designtokens_spacing` + `check_designtokens_radius` for J8 regression prevention); allowlist count unchanged (3) |
 | 3-pack data integrity | ✅ | `scripts/check_pack_schema.py` clean; cross-pack id audit clean; `verify_pack_roundtrip.py` clean |
 | iMac (Big Sur 11.7.11) compatibility | ✅ | `MACOSX_DEPLOYMENT_TARGET=11.5`; no macOS 12+ APIs; SF Symbols 3+ routed through `SFSymbolCompat`; no Swift 5.7+ shorthand bindings |
@@ -40,7 +40,7 @@
 | `b264eda` | PP2.2 | `DynamicTypeAtXLargeTests` — chapter + topic title length ratchets across all 3 packs |
 | `2728f52` | PP4 | `BackupExportButton` in Settings → Data + `BackupExportTests` pinning the v1 envelope format |
 | (this commit) | PP6 | `ProductionReadinessRatchetTests` cross-cutting ratchet + this report |
-| `9650c99` | T3 | `NavigationSmokeUITests` walks home → chapter → topic → concept → question end-to-end (122 lines, Big-Sur safe XCUITest) |
+| `9650c99` | T3 | `NavigationSmokeUITests` source written (122 lines, Big-Sur safe XCUITest, walks home → chapter → topic → concept → question end-to-end). **Still 🟡 — pending Xcode "Add Files…" to wire into the UITests target's pbxproj.** |
 | `3700f6a` ... `317b5a8` | J8 W1–5 | DesignTokens migration sweep — ~3,150 padding/spacing + ~340 corner-radius literals routed through `DesignTokens.{Spacing,Radius}` across the app (15 commits) |
 | `6a1386b` | H2 | `.accessibilityHint(...)` added to ~169 actionable controls across ~89 files |
 | `7355eff` | J8 W6 | Mop-up of OlympiadTests + ExpandableCard + DailyPractice residuals surfaced by the new J8 lints |
@@ -72,7 +72,7 @@ Every commit goes through the 38-lint + `xcodebuild` build + full test suite + 3
 - `ProductionReadinessRatchetTests` — `CrashReporter` log directory namespace, `BackupExportButton.defaultDataDir()` namespace, all 3 packs bundled + decodable.
 - `CrossSubjectEnrichmentParityTests` — per-pack enrichment field counts + Sanskrit content-quality + Sanskrit concept-map edge integrity (shipped in the prior Sanskrit sweep, complements this sweep's ratchets).
 - `check_designtokens_spacing` / `check_designtokens_radius` (J8 ratchets, added 2026-06-12) — no raw padding/spacing/radius integer literals in the canon set; the only way to spec these values is through `DesignTokens.{Spacing,Radius}.*`. Scans 2,442 spacing + 389 radius sites across 516 .swift files on every commit + push.
-- `NavigationSmokeUITests` (T3 ratchet, added 2026-06-11) — single end-to-end walk home → chapter → topic → concept → question, AX-grant-required to run; commit-time presence pinned by `check_critical_uitest_presence`.
+- `NavigationSmokeUITests` (T3 ratchet, source added 2026-06-11) — single end-to-end walk home → chapter → topic → concept → question, AX-grant-required to run. **Still pending pbxproj add** — the file is on disk but not yet in the UITests target; T3 row stays 🟡 until the user opens Xcode → File → Add Files…  selects this file, ensures the UITests target checkbox is on, and re-pushes. Then a follow-up commit adds the test method to `check_critical_uitest_presence.py`'s manifest.
 
 A future commit that breaches any of these fails CI before push.
 
