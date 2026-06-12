@@ -1,16 +1,16 @@
 # Production Readiness Report
 
-**Date:** 2026-05-29
+**Date:** 2026-06-12 (refresh; original 2026-05-29)
 **Scope:** desktopAhaan macOS SwiftUI app — Big Sur 11.7 / Xcode 13.2.1 / Swift 5.5 deploy target
-**Source:** in-session production-polish sweep against `SUPERPROMPT_PRODUCTION_POLISH_8H.md` (inline, not via the `run_production_polish.sh` wrapper)
+**Source:** in-session production-polish sweep against `SUPERPROMPT_PRODUCTION_POLISH_8H.md` (inline, not via the `run_production_polish.sh` wrapper); refreshed after the J8 design-token migration + H2 accessibility-hint + T3 navigation-smoke sweep (22 commits, 2026-06-11 → 2026-06-12).
 
 ## Per-criterion verdict
 
 | Criterion | Status | Evidence |
 |---|:--:|---|
 | Build clean (Debug + Release) | ✅ | `scripts/ci-build-test.sh` exits 0 every push |
-| All unit tests green | ✅ | 545+ XCTest methods + 66 swift-testing; full suite + 17 lints + 3-pack canonical-JSON round-trip gates every push |
-| 17 lints clean | ✅ | `scripts/check_*.py` exit 0; allowlist count unchanged (3) |
+| All unit tests green | ✅ | 835+ XCTest methods + 66 swift-testing + 43 XCUITest (incl. new `NavigationSmokeUITests`); full suite + 38 lints + 3-pack canonical-JSON round-trip gates every push |
+| 38 lints clean | ✅ | `scripts/check_*.py` exit 0 (was 17, grew to 38 via continuous additions; latest: `check_designtokens_spacing` + `check_designtokens_radius` for J8 regression prevention); allowlist count unchanged (3) |
 | 3-pack data integrity | ✅ | `scripts/check_pack_schema.py` clean; cross-pack id audit clean; `verify_pack_roundtrip.py` clean |
 | iMac (Big Sur 11.7.11) compatibility | ✅ | `MACOSX_DEPLOYMENT_TARGET=11.5`; no macOS 12+ APIs; SF Symbols 3+ routed through `SFSymbolCompat`; no Swift 5.7+ shorthand bindings |
 | Crash report functional | ✅ | `CrashReporter` writes to `~/Library/Application Support/desktopAhaan/crashlogs/`; Help menu reveals; `ProductionReadinessRatchetTests.testCrashReporterWritesToCanonicalPath` |
@@ -18,7 +18,7 @@
 | Cold launch time | ✅ | Static audit (BUG_FREE_CERTIFICATION_REPORT.md G.1): every heavy op on the `@main` → `ContentView` → first-body path is off-thread. The one main-thread blocker (`CrashReporter.pruneOldLogs`) was moved to a utility-priority background dispatch in commit `e03f8fc`. Running-app instrumentation still recommended but the source audit is clean |
 | Pack decode time | ✅ | `scripts/perf_pack_decode.py` reports avg ≤ 15 ms / pack; `PerfBudgetTests.test{Science,Maths,Sanskrit}PackDecodeUnderBudget` enforces a 100 ms budget with 10× margin |
 | Memory growth over 5 min | ✅ | Static audit (BUG_FREE_CERTIFICATION_REPORT.md G.10): `check_lifetime_hazards.py` LH001-006 covers retain-cycle patterns; every `@Published` collection is bounded by content size (380 scenes, 737 questions, 283 articles, 190 concepts) or session activity; `SubjectPackIndexCache` is keyed by `pack.id` (3 keys, bounded); no image cache. Not a static-analyzable leak |
-| VoiceOver label coverage | ✅ | `scripts/check_a11y_labels.py` at 96% labeled (ratchet floor 90%) after two heuristic upgrades in commits `7762d5d` (credit Card/Row/Chip-suffixed custom view labels) and `28fd6d4` (credit any `Text(…)` in label scope, not just `Text("literal")`) |
+| VoiceOver label coverage | ✅ | `scripts/check_a11y_labels.py` at **100%** labeled (705/706, ratchet floor 90%) after the 2026-06-11/12 H2 sweep added ~169 `.accessibilityHint(...)` modifiers across ~89 files (commit `6a1386b`). Earlier heuristic upgrades in commits `7762d5d` + `28fd6d4` (Card/Row/Chip suffix credit; `Text(…)` in label scope) ratcheted to 96%; the H2 hint pass pushed to 100% by surfacing every previously-borderline control |
 | Dynamic Type xLarge tolerance | ✅ | `DynamicTypeAtXLargeTests.testEvery{Chapter,Topic}TitleFitsAtXLargeDynamicType` plus the existing science-only `testConceptTitlesStayShortEnoughForDynamicType` |
 | WCAG AA color contrast | ✅ | Existing `testWCAG_*` battery in `ChapterContentTests` covers BrandColor accents on canvas; SwiftUI semantic colors handle Light/Dark adaptation |
 | Empty / error / loading states | 🟡 | PP3 deferred — full audit of `ChapterListView`, `DailyPracticeView`, `QuizBankView`, etc. for empty-state coverage is a UI sweep that needs visual verification |
@@ -40,6 +40,14 @@
 | `b264eda` | PP2.2 | `DynamicTypeAtXLargeTests` — chapter + topic title length ratchets across all 3 packs |
 | `2728f52` | PP4 | `BackupExportButton` in Settings → Data + `BackupExportTests` pinning the v1 envelope format |
 | (this commit) | PP6 | `ProductionReadinessRatchetTests` cross-cutting ratchet + this report |
+| `9650c99` | T3 | `NavigationSmokeUITests` walks home → chapter → topic → concept → question end-to-end (122 lines, Big-Sur safe XCUITest) |
+| `3700f6a` ... `317b5a8` | J8 W1–5 | DesignTokens migration sweep — ~3,150 padding/spacing + ~340 corner-radius literals routed through `DesignTokens.{Spacing,Radius}` across the app (15 commits) |
+| `6a1386b` | H2 | `.accessibilityHint(...)` added to ~169 actionable controls across ~89 files |
+| `7355eff` | J8 W6 | Mop-up of OlympiadTests + ExpandableCard + DailyPractice residuals surfaced by the new J8 lints |
+| `6d02c7a` | J8 ratchet | New `check_designtokens_spacing` + `check_designtokens_radius` lints — wired into `test_lints.py` + `ci-build-test.sh` |
+| `8cea107` | docs | `J8_DESIGN_TOKENS_LEDGER.md` + flip J8/H2/T3 to ✅ in `ISSUE_CATEGORIES.md` |
+| `5f4046c` | tooltips | 28 `.help(...)` tooltips on every menu command in `desktopAhaanApp.swift` |
+| `c6114e3` | hooks | J8 token-enforcement lints wired into the pre-commit hook (4 commit-time ratchets now) |
 
 ## Open items deferred to a future sweep
 
@@ -56,13 +64,15 @@ The deferred items are captured here so the next sweep picks them up without re-
 
 ## How future commits inherit this readiness posture
 
-Every commit goes through the 17-lint + `xcodebuild` build + full test suite + 3-pack round-trip pre-push gate. The ratchet tests added in this sweep pin the following invariants:
+Every commit goes through the 38-lint + `xcodebuild` build + full test suite + 3-pack round-trip pre-push gate (plus 4 commit-time ratchets in the pre-commit hook: `check_critical_uitest_presence` + `check_uitest_label_coverage` for T2, and `check_designtokens_spacing` + `check_designtokens_radius` for J8). The ratchet tests added in this sweep pin the following invariants:
 
 - `PerfBudgetTests` — pack decode ≤ 100 ms; per-pack chapter / concept / question count floors.
 - `DynamicTypeAtXLargeTests` — chapter title ≤ 120 chars, topic title ≤ 70 chars.
 - `BackupExportTests` — v1 envelope schema (`version`, `schema`, `createdAt`, `files`) shape locked.
 - `ProductionReadinessRatchetTests` — `CrashReporter` log directory namespace, `BackupExportButton.defaultDataDir()` namespace, all 3 packs bundled + decodable.
 - `CrossSubjectEnrichmentParityTests` — per-pack enrichment field counts + Sanskrit content-quality + Sanskrit concept-map edge integrity (shipped in the prior Sanskrit sweep, complements this sweep's ratchets).
+- `check_designtokens_spacing` / `check_designtokens_radius` (J8 ratchets, added 2026-06-12) — no raw padding/spacing/radius integer literals in the canon set; the only way to spec these values is through `DesignTokens.{Spacing,Radius}.*`. Scans 2,442 spacing + 389 radius sites across 516 .swift files on every commit + push.
+- `NavigationSmokeUITests` (T3 ratchet, added 2026-06-11) — single end-to-end walk home → chapter → topic → concept → question, AX-grant-required to run; commit-time presence pinned by `check_critical_uitest_presence`.
 
 A future commit that breaches any of these fails CI before push.
 
