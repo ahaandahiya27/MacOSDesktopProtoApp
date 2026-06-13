@@ -72,21 +72,6 @@ final class SpeechRecognitionManager: ObservableObject {
         SFSpeechRecognizer.requestAuthorization { [weak self] status in
             Task { @MainActor [weak self] in
                 self?.authorizationStatus = status
-                if status == .authorized {
-                    #if os(iOS) && !targetEnvironment(simulator)
-                    // Only request mic permission on real device
-                    if #available(iOS 17.0, *) {
-                        let micGranted = await AVAudioApplication.requestRecordPermission()
-                        self?.permissionsReady = micGranted
-                    } else {
-                        AVAudioSession.sharedInstance().requestRecordPermission { granted in
-                            Task { @MainActor [weak self] in
-                                self?.permissionsReady = granted
-                            }
-                        }
-                    }
-                    #endif
-                }
             }
         }
     }
@@ -98,165 +83,9 @@ final class SpeechRecognitionManager: ObservableObject {
         clearError()
         recognizedText = ""
 
-        #if os(iOS) && targetEnvironment(simulator)
-        showTemporaryError("Voice input is not available in the Simulator. Please type your text, or test on a real iPhone.")
-        return
-        #elseif os(iOS)
-        startListeningOniOS(language: language)
-        #elseif os(macOS)
         startListeningOnMac(language: language)
-        #else
-        showTemporaryError("Voice input is not supported on this platform.")
-        #endif
     }
 
-    #if os(iOS) && !targetEnvironment(simulator)
-    /// Actual mic recording logic — only runs on real device hardware
-    private func startListeningOniOS(language: SupportedLanguage) {
-        // Check speech authorization
-        guard authorizationStatus == .authorized else {
-            if authorizationStatus == .notDetermined {
-                requestPermissions()
-                showTemporaryError("Microphone permission is needed. Please tap the mic button again after allowing access.")
-            } else if authorizationStatus == .denied {
-                showTemporaryError("Speech recognition is turned off. Go to Settings > Privacy > Speech Recognition to enable it.")
-            } else {
-                showTemporaryError("Speech recognition is not available. Please type your text instead.")
-            }
-            return
-        }
-
-        // Check microphone permission
-        let audioSession = AVAudioSession.sharedInstance()
-        guard audioSession.recordPermission == .granted else {
-            showTemporaryError("Microphone access is needed. Go to Settings > Privacy > Microphone to enable it.")
-            return
-        }
-
-        // Find a working speech recognizer
-        var recognizerToUse: SFSpeechRecognizer?
-        let locale = Locale(identifier: language.speechLocale)
-        let primaryRecognizer = SFSpeechRecognizer(locale: locale)
-
-        if primaryRecognizer?.isAvailable == true {
-            recognizerToUse = primaryRecognizer
-        } else if language == .sanskrit {
-            // Sanskrit is rarely supported — try Hindi as fallback
-            let hindiRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "hi-IN"))
-            if hindiRecognizer?.isAvailable == true {
-                recognizerToUse = hindiRecognizer
-                showTemporaryError("Using Hindi voice mode for Sanskrit. Speak clearly in Devanagari.")
-            }
-        }
-
-        // Try default locale as last resort
-        if recognizerToUse == nil {
-            let defaultRecognizer = SFSpeechRecognizer()
-            if defaultRecognizer?.isAvailable == true {
-                recognizerToUse = defaultRecognizer
-                if language != .english {
-                    showTemporaryError("Voice input for \(language.displayName) is not available. Using default language.")
-                }
-            }
-        }
-
-        guard let finalRecognizer = recognizerToUse else {
-            showTemporaryError("Voice input is not available on this device right now. Please type your text instead.")
-            return
-        }
-
-        speechRecognizer = finalRecognizer
-
-        // Set up audio session for recording
-        do {
-            try audioSession.setCategory(.record, mode: .measurement, options: .duckOthers)
-            try audioSession.setActive(true, options: .notifyOthersOnDeactivation)
-        } catch {
-            showTemporaryError("Could not set up the microphone. Please close other apps using it and try again.")
-            return
-        }
-
-        recognitionRequest = SFSpeechAudioBufferRecognitionRequest()
-        guard let recognitionRequest = recognitionRequest else {
-            deactivateAudioSession()
-            return
-        }
-
-        recognitionRequest.shouldReportPartialResults = true
-
-        // Access the audio input node — this is safe on real device but we wrap it anyway
-        let inputNode: AVAudioInputNode
-        let recordingFormat: AVAudioFormat
-        do {
-            inputNode = audioEngine.inputNode
-            recordingFormat = inputNode.outputFormat(forBus: 0)
-
-            // Validate format is usable
-            guard recordingFormat.sampleRate > 0, recordingFormat.channelCount > 0 else {
-                showTemporaryError("Microphone returned invalid audio format. Please restart the app and try again.")
-                deactivateAudioSession()
-                return
-            }
-        } catch {
-            showTemporaryError("Could not access the microphone. Please try again.")
-            deactivateAudioSession()
-            return
-        }
-
-        inputNode.installTap(onBus: 0, bufferSize: 1024, format: recordingFormat) { buffer, _ in
-            recognitionRequest.append(buffer)
-        }
-        hasTapInstalled = true
-
-        recognitionTask = finalRecognizer.recognitionTask(with: recognitionRequest) { [weak self] result, error in
-            Task { @MainActor [weak self] in
-                guard let self = self else { return }
-
-                if let result = result {
-                    self.recognizedText = result.bestTranscription.formattedString
-                }
-
-                if let error = error {
-                    // Don't show cancellation errors (normal when user stops)
-                    let nsError = error as NSError
-                    if nsError.domain != "kAFAssistantErrorDomain" || nsError.code != 216 {
-                        if self.recognizedText.isEmpty {
-                            self.showTemporaryError("Could not understand speech. Please try again or type your text.")
-                        }
-                    }
-                    self.stopListening()
-                } else if result?.isFinal == true {
-                    self.stopListening()
-                }
-            }
-        }
-
-        audioEngine.prepare()
-        do {
-            try audioEngine.start()
-            isListening = true
-
-            // Auto-stop after 30 seconds to prevent indefinite recording.
-            // Stored + cancelled in stopListening so a quick restart within
-            // the window doesn't race two stops.
-            autoStopTask?.cancel()
-            autoStopTask = Task { [weak self] in
-                try? await Task.sleep(nanoseconds: 30_000_000_000)
-                if Task.isCancelled { return }
-                await MainActor.run { [weak self] in
-                    if let self = self, self.isListening {
-                        self.stopListening()
-                    }
-                }
-            }
-        } catch {
-            showTemporaryError("Could not start listening. Please try again.")
-            stopListening()
-        }
-    }
-    #endif
-
-    #if os(macOS)
     private func startListeningOnMac(language: SupportedLanguage) {
         guard authorizationStatus == .authorized else {
             if authorizationStatus == .notDetermined {
@@ -332,7 +161,6 @@ final class SpeechRecognitionManager: ObservableObject {
             stopListening()
         }
     }
-    #endif
 
     /// Stop listening and clean up all resources
     func stopListening() {
@@ -376,14 +204,10 @@ final class SpeechRecognitionManager: ObservableObject {
         }
     }
 
-    /// Safely deactivate the audio session so TTS and other audio can work
+    /// Safely deactivate the audio session so TTS and other audio can work.
+    /// macOS doesn't require an explicit audio-session teardown — the
+    /// AVAudioEngine stop in `stopListening()` is enough. Kept as a no-op
+    /// hook in case a future macOS-specific deactivation step is needed.
     private func deactivateAudioSession() {
-        #if os(iOS) && !targetEnvironment(simulator)
-        do {
-            try AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
-        } catch {
-            // Non-fatal
-        }
-        #endif
     }
 }
