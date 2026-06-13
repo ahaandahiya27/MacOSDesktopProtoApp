@@ -47,9 +47,13 @@ path. Reuses the v6 mastery-gap sampler (`MilestoneAssessmentPlanner`,
 - [x] **Phase 3** — persistence + ephemeral-review recording wired into the
   coordinator's submit; latest mock test surfaced in the parent Report Card PDF;
   mastery-map reflection via recording. +3 tests. `V9_PHASE3_COMPLETE_v1`.
-- [ ] **Phase 4** — Help-menu entry + keyboard shortcut + full a11y +
-  reduce-motion + HardwareTier gating + empty/edge states. `V9_PHASE4_COMPLETE_v1`.
-- [ ] **Phase 5** — full test surface + XCUITest happy path + checkpoint doc.
+- [x] **Phase 4** — Help-menu entry + ⌘⌥M (Phase 2) + ⌥←/⌥→ runner nav; full
+  a11y labels/identifiers/hints; reduce-motion via withAnimationRespectingReduceMotion;
+  static-only visuals (no legacy-GPU cost → no explicit HardwareTier gate needed);
+  empty (not-enough-questions) + time-up auto-submit edge states. `V9_PHASE4_COMPLETE_v1`.
+- [x] **Phase 5** — `MockTestRunStateTests` (13) + `MockTestRunnerUITests`
+  (happy-path, --ui opt-in, compiled by default ci-build-test); `V9_EXAM_SIM_CHECKPOINT.md`
+  written. Full surface: 4 unit suites (41) + 3 PDF/integration additions + 1 XCUITest.
   `V9_EXAM_SIM_COMPLETE_v1`.
 
 ## Decisions / notes
@@ -97,3 +101,13 @@ path. Reuses the v6 mastery-gap sampler (`MilestoneAssessmentPlanner`,
   at the 600-LOC ceiling by drawing the section only when a result exists. +2
   PDF tests, +1 mastery-reflection integration test. 40 lints + ci-build-test
   green. `V9_PHASE3_COMPLETE_v1`.
+- 2026-06-13: Phase 4 — added ⌥←/⌥→ Prev/Next keyboard shortcuts to the runner
+  (menu entry ⌘⌥M already in Phase 2). Confirmed a11y/reduce-motion/edge-states
+  in place. No HardwareTier gate needed (static visuals only). `V9_PHASE4_COMPLETE_v1`.
+- 2026-06-13: Phase 5 — added `MockTestRunStateTests` (13: clock/charge,
+  auto-submit, low-time, select/mark, nav clamp, status, idempotent submit +
+  injected clock, post-finish no-ops, format, leak-safety) and
+  `desktopAhaanUITests/MockTestRunnerUITests` (happy-path: ⌘⌥M → Start →
+  mark/grid → Submit → confirm → report; --ui opt-in, compiled-not-run by
+  default). Wrote `V9_EXAM_SIM_CHECKPOINT.md`. 40 lints + ci-build-test green.
+  `V9_EXAM_SIM_COMPLETE_v1`.

@@ -2134,6 +2134,7 @@
 		1A14D222CEF3728B184686E2 /* MockTestBuildTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E91B74CEECA3D39B496BD6 /* MockTestBuildTests.swift */; };
 		9D9CAE855C06FD6D5591A126 /* MockTestEngineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5B8F435C7B8BBC1B19F03EB /* MockTestEngineTests.swift */; };
 		63C785E340CB7251B49715F0 /* MockTestModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9363472A2250283F0FEC442F /* MockTestModelTests.swift */; };
+		DAA74F7745880BD1998325C0 /* MockTestRunStateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9133CC46974DF81E3E995E2C /* MockTestRunStateTests.swift */; };
 		50B3D7C45665C436CC809973 /* NcertQaArticleRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83AF5019561D3AFAD7B1183A /* NcertQaArticleRoutingTests.swift */; };
 		69A9B02E40D76F570820DB8B /* NotebookEditedAtTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8834AA8CC1E469097EF7E9CF /* NotebookEditedAtTests.swift */; };
 		692F71266CCA4E8FDFB120FF /* OCRServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A9E76C7A79EA22389275391 /* OCRServiceTests.swift */; };
@@ -2200,6 +2201,7 @@
 		8F2CD0212A87EF158CA6B557 /* GoldenPathUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB156BF5302D75DBA4A0B186 /* GoldenPathUITests.swift */; };
 		F52E1FEB7A71C81945D50E58 /* HomeExperimentsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B9CD5E573E830970232CF2A /* HomeExperimentsUITests.swift */; };
 		889E5F0DA83CB495E5D181AE /* MathsDiscoverWalkUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 569146173864AE8FFB7F0F6C /* MathsDiscoverWalkUITests.swift */; };
+		B394076A85137235A1C3C216 /* MockTestRunnerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7169BAFC7E19F74E29C00951 /* MockTestRunnerUITests.swift */; };
 		6632A6A61894A1271F1625E4 /* NavigationSmokeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0203E9955DFCEF20CCD69C4E /* NavigationSmokeUITests.swift */; };
 		8E9369C9285CB7EF9C726B9B /* PropagatedSandboxesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF0AC7D4A6F6CF6330552C6C /* PropagatedSandboxesUITests.swift */; };
 		1BC16957C8D131B6D704F522 /* PropagatedToursUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3ED29D7D476A296170FF50E /* PropagatedToursUITests.swift */; };
@@ -4355,6 +4357,7 @@
 		18E91B74CEECA3D39B496BD6 /* MockTestBuildTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MockTestBuildTests.swift"; sourceTree = "<group>"; };
 		E5B8F435C7B8BBC1B19F03EB /* MockTestEngineTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MockTestEngineTests.swift"; sourceTree = "<group>"; };
 		9363472A2250283F0FEC442F /* MockTestModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MockTestModelTests.swift"; sourceTree = "<group>"; };
+		9133CC46974DF81E3E995E2C /* MockTestRunStateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MockTestRunStateTests.swift"; sourceTree = "<group>"; };
 		83AF5019561D3AFAD7B1183A /* NcertQaArticleRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NcertQaArticleRoutingTests.swift"; sourceTree = "<group>"; };
 		8834AA8CC1E469097EF7E9CF /* NotebookEditedAtTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NotebookEditedAtTests.swift"; sourceTree = "<group>"; };
 		6A9E76C7A79EA22389275391 /* OCRServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "OCRServiceTests.swift"; sourceTree = "<group>"; };
@@ -4422,6 +4425,7 @@
 		EB156BF5302D75DBA4A0B186 /* GoldenPathUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "GoldenPathUITests.swift"; sourceTree = "<group>"; };
 		8B9CD5E573E830970232CF2A /* HomeExperimentsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HomeExperimentsUITests.swift"; sourceTree = "<group>"; };
 		569146173864AE8FFB7F0F6C /* MathsDiscoverWalkUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MathsDiscoverWalkUITests.swift"; sourceTree = "<group>"; };
+		7169BAFC7E19F74E29C00951 /* MockTestRunnerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MockTestRunnerUITests.swift"; sourceTree = "<group>"; };
 		0203E9955DFCEF20CCD69C4E /* NavigationSmokeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NavigationSmokeUITests.swift"; sourceTree = "<group>"; };
 		BF0AC7D4A6F6CF6330552C6C /* PropagatedSandboxesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PropagatedSandboxesUITests.swift"; sourceTree = "<group>"; };
 		C3ED29D7D476A296170FF50E /* PropagatedToursUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PropagatedToursUITests.swift"; sourceTree = "<group>"; };
@@ -7940,6 +7944,7 @@
 				18E91B74CEECA3D39B496BD6,
 				E5B8F435C7B8BBC1B19F03EB,
 				9363472A2250283F0FEC442F,
+				9133CC46974DF81E3E995E2C,
 				83AF5019561D3AFAD7B1183A,
 				8834AA8CC1E469097EF7E9CF,
 				6A9E76C7A79EA22389275391,
@@ -8021,6 +8026,7 @@
 				EB156BF5302D75DBA4A0B186,
 				8B9CD5E573E830970232CF2A,
 				569146173864AE8FFB7F0F6C,
+				7169BAFC7E19F74E29C00951,
 				0203E9955DFCEF20CCD69C4E,
 				BF0AC7D4A6F6CF6330552C6C,
 				C3ED29D7D476A296170FF50E,
@@ -10298,6 +10304,7 @@
 				1A14D222CEF3728B184686E2 /* MockTestBuildTests.swift in Sources */,
 				9D9CAE855C06FD6D5591A126 /* MockTestEngineTests.swift in Sources */,
 				63C785E340CB7251B49715F0 /* MockTestModelTests.swift in Sources */,
+				DAA74F7745880BD1998325C0 /* MockTestRunStateTests.swift in Sources */,
 				50B3D7C45665C436CC809973 /* NcertQaArticleRoutingTests.swift in Sources */,
 				69A9B02E40D76F570820DB8B /* NotebookEditedAtTests.swift in Sources */,
 				692F71266CCA4E8FDFB120FF /* OCRServiceTests.swift in Sources */,
@@ -10371,6 +10378,7 @@
 				8F2CD0212A87EF158CA6B557 /* GoldenPathUITests.swift in Sources */,
 				F52E1FEB7A71C81945D50E58 /* HomeExperimentsUITests.swift in Sources */,
 				889E5F0DA83CB495E5D181AE /* MathsDiscoverWalkUITests.swift in Sources */,
+				B394076A85137235A1C3C216 /* MockTestRunnerUITests.swift in Sources */,
 				6632A6A61894A1271F1625E4 /* NavigationSmokeUITests.swift in Sources */,
 				8E9369C9285CB7EF9C726B9B /* PropagatedSandboxesUITests.swift in Sources */,
 				1BC16957C8D131B6D704F522 /* PropagatedToursUITests.swift in Sources */,

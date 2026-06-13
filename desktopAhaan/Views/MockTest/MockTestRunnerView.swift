@@ -249,8 +249,10 @@ struct MockTestRunnerView: View {
         HStack(spacing: DesignTokens.Spacing.md) {
             navButton("‹ Prev", enabled: run.canGoPrevious,
                       identifier: "mocktest-prev") { run.goPrevious() }
+                .keyboardShortcut(.leftArrow, modifiers: .option)
             navButton("Next ›", enabled: run.canGoNext,
                       identifier: "mocktest-next") { run.goNext() }
+                .keyboardShortcut(.rightArrow, modifiers: .option)
             Spacer(minLength: 0)
             submitButton
         }
