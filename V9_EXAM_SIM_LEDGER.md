@@ -41,7 +41,8 @@ path. Reuses the v6 mastery-gap sampler (`MilestoneAssessmentPlanner`,
   baseline `ci-build-test.sh` green. Ledger created.
 - [x] **Phase 1** — `MockTestEngine` + models + `DataStore+MockTest` build half +
   thorough pure unit tests (27 new XCTest, all green). `V9_PHASE1_COMPLETE_v1`.
-- [ ] **Phase 2** — Mock Test setup + timed runner UI (own window).
+- [x] **Phase 2** — Mock Test setup + timed runner UI (own window) + full report
+  view + coordinator + presenter + Help-menu entry (⌘⌥M). UI complete, in-memory.
   `V9_PHASE2_COMPLETE_v1`.
 - [ ] **Phase 3** — score report + persistence + Report-Card / Mastery-Map
   integration + ephemeral-review recording. `V9_PHASE3_COMPLETE_v1`.
@@ -76,3 +77,13 @@ path. Reuses the v6 mastery-gap sampler (`MilestoneAssessmentPlanner`,
   `MilestoneAssessmentPlanner.compose`, capped persistence, ephemeral-path SRS
   recording). Added `mockTestResults` storage to DataStore. 3 test suites / 27
   tests, all green; 40 lints + full ci-build-test green. `V9_PHASE1_COMPLETE_v1`.
+- 2026-06-13: Phase 2 — added `Views/MockTest/`: `MockTestRunState` (timer state
+  machine, testable `tick()`), `MockTestSetupView` (subject + difficulty +
+  preset), `MockTestRunnerView` (countdown header, MCQ card reusing
+  `MCQOptionRow`, mark-for-review, tappable question grid, Prev/Next/Submit with
+  unanswered-confirm alert), `MockTestReportView` (marks score + stats +
+  per-subject + weak topics + collapsible per-answer review), `MockTestWindow`
+  (coordinator + AppKit presenter). Wired Help → "Mock Test" / ⌘⌥M. All
+  @MainActor action methods wrapped in closures (mainactor-closure lint). 40
+  lints + full ci-build-test green. Persistence + SRS recording + report-card
+  surfacing deferred to Phase 3. `V9_PHASE2_COMPLETE_v1`.

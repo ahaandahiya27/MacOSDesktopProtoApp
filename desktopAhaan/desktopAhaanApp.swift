@@ -515,6 +515,19 @@ struct SanskritKoshApp: App {
                 .help("Open expert challenges")
                 .accessibilityHint("Opens the expert challenge ladder window")
                 .accessibilityIdentifier("menu-expert-challenges")
+
+                // Mock Test — a timed, auto-graded practice paper assembled from
+                // the question banks (v9 Exam Simulation). Own AppKit window,
+                // same pattern. ⌘⌥M is free (only ⌘⌥P is used in that modifier set).
+                Button("Mock Test") {
+                    MockTestWindowPresenter.shared.present(
+                        dataStore: dataStore, registry: subjectRegistry
+                    )
+                }
+                .keyboardShortcut("m", modifiers: [.command, .option])
+                .help("Start a timed mock test")
+                .accessibilityHint("Opens the timed mock-test window")
+                .accessibilityIdentifier("menu-mock-test")
                 }
 
                 Divider()

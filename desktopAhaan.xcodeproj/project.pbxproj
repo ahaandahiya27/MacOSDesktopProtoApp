@@ -488,6 +488,11 @@
 		2FCCE5B9BA611A926D0B5636 /* CrashLogSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6AF4CB683F2F6E539BBDEB /* CrashLogSummaryView.swift */; };
 		5DF000C802B386425E6DF252 /* PomodoroState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B967041D4856BD89936B3FB6 /* PomodoroState.swift */; };
 		A41F851D58E711568E79576C /* StudyTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9551456EA88A856A625EB5B /* StudyTimerView.swift */; };
+		FBA61AE89D81494188EBFDEF /* MockTestReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BCD10752FE0F6A46EE282E /* MockTestReportView.swift */; };
+		E34634862BE9473C2C91F332 /* MockTestRunState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F65DCCD8A32A4EF8B010E /* MockTestRunState.swift */; };
+		248515529280A3F59C47AA7F /* MockTestRunnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C8ED5AC554879B086D718 /* MockTestRunnerView.swift */; };
+		9451573B6FD24DAB47B234B5 /* MockTestSetupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C986F9CF0811872CB8E6FB9 /* MockTestSetupView.swift */; };
+		523DD16DB441819EDD514F64 /* MockTestWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D86B69DCCC4892A7D84C56E4 /* MockTestWindow.swift */; };
 		7B14DE6F6DF2DE908D8DD923 /* DailyPracticeViewSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858ADCB78661B007DC8F0D67 /* DailyPracticeViewSheet.swift */; };
 		61A479A6DDA7413FEAE5F80F /* PracticeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199371C91C2B1D7B95F2F472 /* PracticeScreen.swift */; };
 		35396EB8D2E5338598C36E97 /* FirstLaunchTourView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B24D1EF6194EA8670145176 /* FirstLaunchTourView.swift */; };
@@ -4238,6 +4243,11 @@
 		CB6AF4CB683F2F6E539BBDEB /* CrashLogSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CrashLogSummaryView.swift"; sourceTree = "<group>"; };
 		B967041D4856BD89936B3FB6 /* PomodoroState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PomodoroState.swift"; sourceTree = "<group>"; };
 		D9551456EA88A856A625EB5B /* StudyTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudyTimerView.swift"; sourceTree = "<group>"; };
+		C9BCD10752FE0F6A46EE282E /* MockTestReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MockTestReportView.swift"; sourceTree = "<group>"; };
+		FF0F65DCCD8A32A4EF8B010E /* MockTestRunState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MockTestRunState.swift"; sourceTree = "<group>"; };
+		B69C8ED5AC554879B086D718 /* MockTestRunnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MockTestRunnerView.swift"; sourceTree = "<group>"; };
+		5C986F9CF0811872CB8E6FB9 /* MockTestSetupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MockTestSetupView.swift"; sourceTree = "<group>"; };
+		D86B69DCCC4892A7D84C56E4 /* MockTestWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MockTestWindow.swift"; sourceTree = "<group>"; };
 		858ADCB78661B007DC8F0D67 /* DailyPracticeViewSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyPracticeViewSheet.swift"; sourceTree = "<group>"; };
 		199371C91C2B1D7B95F2F472 /* PracticeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PracticeScreen.swift"; sourceTree = "<group>"; };
 		4B24D1EF6194EA8670145176 /* FirstLaunchTourView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FirstLaunchTourView.swift"; sourceTree = "<group>"; };
@@ -7704,6 +7714,7 @@
 				37BFDFE1B7072E8646429E37,
 				A363EAC6C78897B370A46A92,
 				9C195ABEF661C838B05201F1,
+				B51F7409F3241FA00AF99ADC,
 				62D550CBF4082CCE5D9C37B6,
 				4C283EA74E060AF115476C06,
 			);
@@ -7775,6 +7786,18 @@
 				090B5EB533A87E17B20AFFBE,
 			);
 			path = "Home";
+			sourceTree = "<group>";
+		};
+		B51F7409F3241FA00AF99ADC /* MockTest */ = {
+			isa = PBXGroup;
+			children = (
+				C9BCD10752FE0F6A46EE282E,
+				FF0F65DCCD8A32A4EF8B010E,
+				B69C8ED5AC554879B086D718,
+				5C986F9CF0811872CB8E6FB9,
+				D86B69DCCC4892A7D84C56E4,
+			);
+			path = "MockTest";
 			sourceTree = "<group>";
 		};
 		A518ECAE58705444C271A4A1 /* OCR */ = {
@@ -10157,6 +10180,11 @@
 				2FCCE5B9BA611A926D0B5636 /* CrashLogSummaryView.swift in Sources */,
 				5DF000C802B386425E6DF252 /* PomodoroState.swift in Sources */,
 				A41F851D58E711568E79576C /* StudyTimerView.swift in Sources */,
+				FBA61AE89D81494188EBFDEF /* MockTestReportView.swift in Sources */,
+				E34634862BE9473C2C91F332 /* MockTestRunState.swift in Sources */,
+				248515529280A3F59C47AA7F /* MockTestRunnerView.swift in Sources */,
+				9451573B6FD24DAB47B234B5 /* MockTestSetupView.swift in Sources */,
+				523DD16DB441819EDD514F64 /* MockTestWindow.swift in Sources */,
 				7B14DE6F6DF2DE908D8DD923 /* DailyPracticeViewSheet.swift in Sources */,
 				61A479A6DDA7413FEAE5F80F /* PracticeScreen.swift in Sources */,
 				35396EB8D2E5338598C36E97 /* FirstLaunchTourView.swift in Sources */,
