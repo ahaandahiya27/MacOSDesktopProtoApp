@@ -120,6 +120,7 @@ struct Scene9_BossQuiz_Ch5: View {
                 advance()
             }
             .accentColor(Color.compatIndigo)
+            .accessibilityIdentifier("boss-quiz-advance")
         }
     }
     // MARK: - Quiz mechanics
@@ -189,13 +190,15 @@ struct Scene9_BossQuiz_Ch5: View {
                 } label: {
                     Label("\u{1F393} Print my certificate", systemImage: "doc.richtext")
                 }
-                
+
                 .accentColor(Color.compatIndigo)
+                .accessibilityIdentifier("boss-quiz-print-certificate")
 
                 Button("Back to chapter") {
                     onComplete(score)
                 }
-                
+                .accessibilityIdentifier("boss-quiz-back-to-chapter")
+
             }
 
             if let s = pdfStatus {
@@ -270,6 +273,7 @@ private struct Ch5AnswerButton: View {
         .accessibilityLabel(label)
         .accessibilityValue(state == .correct ? "Correct" : state == .wrong ? "Incorrect" : "Not answered")
         .accessibilityHint("Picks this quiz answer")
+        .accessibilityIdentifier("boss-quiz-option-\(label)")
     }
 
     private var background: Color {

@@ -304,6 +304,7 @@ struct DiscoverShell<SceneBody: View>: View {
                 )
                 .accessibilityLabel("Jump to scene \(i + 1)")
                 .accessibilityHint("Skips directly to the chosen Discover scene")
+                .accessibilityIdentifier("discover-jump-\(i + 1)")
             }
         }
         .frame(width: 0, height: 0)
@@ -414,6 +415,7 @@ struct DiscoverShell<SceneBody: View>: View {
                     .pointingCursor()
                     .accessibilityLabel("Scene \(i + 1) of \(totalScenes), \(done ? "completed" : "not yet completed")")
                     .accessibilityHint("Jumps to scene \(i + 1)")
+                    .accessibilityIdentifier("discover-scene-dot-\(i + 1)")
                 }
                 Spacer(minLength: 0)
             }
@@ -479,6 +481,7 @@ struct DiscoverShell<SceneBody: View>: View {
         .opacity(disabled ? 0.4 : 1.0)
         .disabled(disabled)
         .pointingCursor()
+        .accessibilityIdentifier("discover-\(title.lowercased())")
     }
 
     private func goNext() {

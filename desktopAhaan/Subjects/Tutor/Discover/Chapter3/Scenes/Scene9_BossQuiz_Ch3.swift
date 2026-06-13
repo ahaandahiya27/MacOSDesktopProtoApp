@@ -98,6 +98,7 @@ struct Scene9_BossQuiz_Ch3: View {
                         }
 
                         .accentColor(.green)
+                        .accessibilityIdentifier("boss-quiz-print-certificate")
 
                         if let status = pdfStatus {
                             Text(status)
@@ -266,6 +267,7 @@ private struct Ch3AnswerButton: View {
         }
         .buttonStyle(.plain)
         .disabled(state != .normal)
+        .accessibilityIdentifier("boss-quiz-option-\(label)")
     }
 
     private func backgroundColor() -> Color {

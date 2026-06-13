@@ -105,6 +105,7 @@ private struct DiscoverProgressContent: View {
                 }
                 .buttonStyle(.plain)
                 .pointingCursor()
+                .accessibilityIdentifier("discover-almost-row-\(ch.id)")
             }
         }
         .padding(14)
@@ -222,6 +223,7 @@ private struct DiscoverProgressContent: View {
         .accessibilityLabel("Chapter \(chapter.number), \(chapter.title)")
         .accessibilityValue("\(done) of \(total) scenes completed")
         .accessibilityHint("Opens this chapter's Discover Mode")
+        .accessibilityIdentifier("discover-chapter-card-\(chapter.id)")
     }
 
     /// Uses `dataStore.discoverRowCount(for:)` which is backed by a cached

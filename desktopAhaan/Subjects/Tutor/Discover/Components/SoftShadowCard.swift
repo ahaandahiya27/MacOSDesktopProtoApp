@@ -100,6 +100,7 @@ struct GotItButton: View {
         .keyboardShortcut(.space, modifiers: [])
         .pointingCursor()
         .accessibilityHint("Marks this scene as complete and moves on.")
+        .accessibilityIdentifier("got-it-button")
     }
 
     private func handleTap() {

@@ -108,6 +108,7 @@ struct QuickCheckQuizScene: View {
                 .buttonStyle(.plain)
                 .pointingCursor()
                 .disabled(pick != nil)
+                .accessibilityIdentifier("quickcheck-option-\(q.id)-\(i)")
             }
         }
         .padding(DesignTokens.Spacing.md)

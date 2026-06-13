@@ -62,6 +62,7 @@ struct Scene9_BossQuiz_Ch9: View {
                                 .background(RoundedRectangle(cornerRadius: DesignTokens.Radius.md).fill(Color.white.opacity(0.95)))
                             }
                             .buttonStyle(.plain)
+                            .accessibilityIdentifier("boss-quiz-option-\(opt)")
                         }
                     }
                     .frame(maxWidth: 600)
@@ -76,6 +77,7 @@ struct Scene9_BossQuiz_Ch9: View {
                             else { done = true }
                         }
                         .accentColor(Color.compatIndigo)
+                        .accessibilityIdentifier("boss-quiz-advance")
                     }
                 } else {
                     VStack(spacing: DesignTokens.Spacing.md) {
