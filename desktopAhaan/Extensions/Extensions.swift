@@ -2,11 +2,25 @@ import SwiftUI
 import AppKit
 
 extension Notification.Name {
+    // Translator / OCR command bus
     static let openImageCommand = Notification.Name("openImageCommand")
     static let copyTranslationCommand = Notification.Name("copyTranslationCommand")
     static let speakResultCommand = Notification.Name("speakResultCommand")
     static let translateCommand = Notification.Name("translateCommand")
     static let navigateBackCommand = Notification.Name("navigateBackCommand")
+
+    // Help / In-app sheets (moved from desktopAhaanApp.swift 2026-06-13)
+    static let openInAppHelp = Notification.Name("desktopAhaan.openInAppHelp")
+    /// Help → Show Welcome Tour (the 3-panel WelcomeTourSheet).
+    static let showWelcomeTour = Notification.Name("desktopAhaan.showWelcomeTour")
+    /// Help → What's New (WhatsNewSheet).
+    static let showWhatsNew = Notification.Name("desktopAhaan.showWhatsNew")
+    /// Help → About Deep Dive Mode (FeatureExplainerSheet.aboutDeepDive).
+    static let showAboutDeepDive = Notification.Name("desktopAhaan.showAboutDeepDive")
+    /// Help → About Audio Narration (FeatureExplainerSheet.aboutAudio).
+    static let showAboutAudio = Notification.Name("desktopAhaan.showAboutAudio")
+    /// Help → About Daily Practice (FeatureExplainerSheet.aboutDailyPractice).
+    static let showAboutDailyPractice = Notification.Name("desktopAhaan.showAboutDailyPractice")
 }
 
 // MARK: - Color extensions for Devanagari-friendly theming

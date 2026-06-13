@@ -41,7 +41,7 @@ import AppKit
 // The function only reads NSWorkspace.shared (thread-safe accessor)
 // and forwards to `withAnimation` (no actor enforcement on Big Sur).
 // All call sites are SwiftUI view code that runs on main at runtime.
-public func withAnimationRespectingReduceMotion<Result>(
+internal func withAnimationRespectingReduceMotion<Result>(
     _ animation: Animation? = .default,
     _ body: () throws -> Result
 ) rethrows -> Result {

@@ -18,13 +18,13 @@ import Foundation
 /// easiest → hardest so `rawValue` doubles as a sort key. Raw values are the
 /// persistence contract for any future serialization — never renumber a
 /// shipped case.
-public enum DifficultyBand: Int, Codable, CaseIterable, Hashable {
+internal enum DifficultyBand: Int, Codable, CaseIterable, Hashable {
     case easy = 0
     case core = 1
     case stretch = 2
     case challenge = 3
 
-    public var displayName: String {
+    var displayName: String {
         switch self {
         case .easy:      return "Easy"
         case .core:      return "Core"
@@ -47,32 +47,32 @@ public enum DifficultyBand: Int, Codable, CaseIterable, Hashable {
 /// chapter) bias to `.core` — we don't yank a kid up to `.challenge` or down
 /// to `.easy` off one or two answers — except a clearly-struggling partial
 /// run (≤40% correct) which nudges to `.easy` early.
-public struct PracticeWindow: Codable, Hashable {
+internal struct PracticeWindow: Codable, Hashable {
     /// Most-recent outcomes, oldest first, newest last. Capped at `capacity`.
-    public private(set) var outcomes: [Bool]
+    private(set) var outcomes: [Bool]
 
     /// The brief's "rolling 5-question" window size.
-    public static let capacity = 5
+    static let capacity = 5
 
-    public init(outcomes: [Bool] = []) {
+    init(outcomes: [Bool] = []) {
         self.outcomes = Array(outcomes.suffix(Self.capacity))
     }
 
     /// Record one outcome, evicting the oldest if the window is full.
-    public mutating func record(_ correct: Bool) {
+    mutating func record(_ correct: Bool) {
         outcomes.append(correct)
         if outcomes.count > Self.capacity {
             outcomes.removeFirst(outcomes.count - Self.capacity)
         }
     }
 
-    public var sampleCount: Int { outcomes.count }
-    public var correctCount: Int { outcomes.lazy.filter { $0 }.count }
+    var sampleCount: Int { outcomes.count }
+    var correctCount: Int { outcomes.lazy.filter { $0 }.count }
 
     /// Preference-ordered bands for the next pull. The first element is the
     /// primary `band`; later elements are the fallbacks the engine reaches
     /// for when the primary band has no candidate question.
-    public var preferredBands: [DifficultyBand] {
+    var preferredBands: [DifficultyBand] {
         // Until the window is full we stay neutral, with one exception: a
         // clearly-struggling partial run drops to `.easy` to rebuild
         // confidence rather than waiting for the full 5.
@@ -90,7 +90,7 @@ public struct PracticeWindow: Codable, Hashable {
     }
 
     /// The primary recommended band for the next pull.
-    public var band: DifficultyBand { preferredBands.first ?? .core }
+    var band: DifficultyBand { preferredBands.first ?? .core }
 
     /// Fallback orderings, hoisted so the partial-window branch and the
     /// full-window table read off the same lists.
@@ -104,18 +104,18 @@ public struct PracticeWindow: Codable, Hashable {
 /// keyed by `"<packId>::<chapterId>"`. Persisted as a single-element array
 /// (`[AdaptivePracticeState]`) so the shared `DataStore.readFile` /
 /// `performAtomicWrite` array plumbing applies unchanged.
-public struct AdaptivePracticeState: Codable, Hashable {
+internal struct AdaptivePracticeState: Codable, Hashable {
     /// `windowKey(packId:chapterId:)` → window.
-    public var windows: [String: PracticeWindow]
+    var windows: [String: PracticeWindow]
 
-    public init(windows: [String: PracticeWindow] = [:]) {
+    init(windows: [String: PracticeWindow] = [:]) {
         self.windows = windows
     }
 
     /// Stable composite key. Bare chapter ids (`ch01`) collide across packs
     /// (Science/Maths/Sanskrit share the scheme), so the pack id is part of
     /// the key — mirrors the `QuestionReview.packId` disambiguation.
-    public static func windowKey(packId: String, chapterId: String) -> String {
+    static func windowKey(packId: String, chapterId: String) -> String {
         "\(packId)::\(chapterId)"
     }
 }
@@ -125,19 +125,19 @@ public struct AdaptivePracticeState: Codable, Hashable {
 /// `UserDefaults` keys for the adaptive-practice feature. Kept here (not in
 /// the shared `AppStorageKeys`) so the whole feature stays inside this run's
 /// files — same precedent as `DailyPlanStorage`.
-public enum AdaptiveDifficultyStorage {
+internal enum AdaptiveDifficultyStorage {
     /// Master on/off for adaptive question ordering. Default ON. When off,
     /// the engine becomes a pass-through (SRS due order is preserved).
-    public static let engineEnabledKey = "adaptiveDifficultyEngineEnabled"
+    static let engineEnabledKey = "adaptiveDifficultyEngineEnabled"
 
     /// `true` when the engine has never been configured — read so a fresh
     /// install defaults to enabled without writing the key eagerly.
-    public static func isEngineEnabled(_ defaults: UserDefaults = .standard) -> Bool {
+    static func isEngineEnabled(_ defaults: UserDefaults = .standard) -> Bool {
         if defaults.object(forKey: engineEnabledKey) == nil { return true }
         return defaults.bool(forKey: engineEnabledKey)
     }
 
-    public static func setEngineEnabled(_ on: Bool, _ defaults: UserDefaults = .standard) {
+    static func setEngineEnabled(_ on: Bool, _ defaults: UserDefaults = .standard) {
         defaults.set(on, forKey: engineEnabledKey)
     }
 }

@@ -626,16 +626,7 @@ struct QuestionDetailView: View {
 
     @ViewBuilder
     private func mcqOptionRow(idx: Int, opt: String, correctIdx: Int?) -> some View {
-        Button(action: {
-            // Once an attempt is checked, lock the selection — Prev/Next
-            // resets and lets the user retry on a fresh question.
-            guard attemptOutcome == .unchecked else { return }
-            if selectedOptionIndex == idx {
-                selectedOptionIndex = nil
-            } else {
-                selectedOptionIndex = idx
-            }
-        }) {
+        Button(action: { toggleMCQSelection(idx: idx) }) {
             HStack {
                 optionRow(idx: idx, opt: opt)
                 if attemptOutcome != .unchecked && idx == correctIdx {
@@ -661,6 +652,17 @@ struct QuestionDetailView: View {
         .accessibilityLabel("\(["A","B","C","D","E","F"][safe: idx] ?? "?"). \(opt)")
         .accessibilityHint("Selects this option as your answer")
         .accessibilityIdentifier("question-mcq-option-\(idx)")
+    }
+
+    private func toggleMCQSelection(idx: Int) {
+        // Once an attempt is checked, lock the selection — Prev/Next
+        // resets and lets the user retry on a fresh question.
+        guard attemptOutcome == .unchecked else { return }
+        if selectedOptionIndex == idx {
+            selectedOptionIndex = nil
+        } else {
+            selectedOptionIndex = idx
+        }
     }
 
     private func mcqRowBackground(idx: Int, correctIdx: Int?) -> Color {
