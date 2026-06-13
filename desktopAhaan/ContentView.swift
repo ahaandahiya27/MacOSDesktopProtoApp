@@ -51,6 +51,7 @@ struct ContentView: View {
                     Spacer()
                     Button("Dismiss") { dataStore.lastSaveError = nil }
                         .font(.caption)
+                        .accessibilityIdentifier("content-dismiss-save-error")
                 }
                 .padding(DesignTokens.Spacing.sm)
                 .background(Color.orange.opacity(0.1))
@@ -134,11 +135,13 @@ struct ContentView: View {
                     if noOtherSheetOpen { presentedSheet = .shortcuts }
                 }
                 .keyboardShortcut("/", modifiers: .command)
+                .accessibilityIdentifier("content-shortcut-show-keyboard-shortcuts")
 
                 Button("Open command palette") {
                     if noOtherSheetOpen { presentedSheet = .commandPalette }
                 }
                 .keyboardShortcut("k", modifiers: .command)
+                .accessibilityIdentifier("content-shortcut-open-command-palette")
             }
             .opacity(0)
             .frame(width: 0, height: 0)
@@ -216,6 +219,7 @@ struct ContentView: View {
                 .foregroundColor(Color.compatIndigo)
                 .help("Clear recent items")
                 .accessibilityHint("Removes all items from the Recent list")
+                .accessibilityIdentifier("sidebar-recent-clear")
         }
     }
 
@@ -260,6 +264,7 @@ struct ContentView: View {
         .pointingCursor()
         .help("Jump to \(item.title)")
         .accessibilityHint("Reopens this recent item in the detail pane")
+        .accessibilityIdentifier("sidebar-recent-row-\(item.id)")
     }
 
     // MARK: - Sidebar
@@ -405,6 +410,7 @@ struct ContentView: View {
                         Task { await subjectRegistry.reload() }
                     }
                     .accessibilityHint("Reloads the subject pack from disk")
+                    .accessibilityIdentifier("content-subject-not-loaded-retry")
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
             }

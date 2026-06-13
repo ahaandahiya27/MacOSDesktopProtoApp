@@ -32,6 +32,7 @@ struct ArticleEntryButton: View {
             }
             .accentColor(Color.compatIndigo)
             .accessibilityHint("Opens the full article in the reader")
+            .accessibilityIdentifier("article-entry-\(e.id)")
             .sheet(item: $presentedArticle) { article in
                 // P7: pass the article title through so the read-aloud
                 // button's a11y label says "Read <Title> aloud" instead

@@ -35,6 +35,7 @@ struct PlainTextArticleFallback: View {
                         }
                         .controlSize(.small)
                         .accessibilityHint("Opens this article in the Safari browser")
+                        .accessibilityIdentifier("article-fallback-open-in-safari")
                     }
                 }
                 .padding(10)

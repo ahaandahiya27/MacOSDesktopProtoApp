@@ -32,6 +32,7 @@ struct ArticleBrowserView: View {
                         .keyboardShortcut("w", modifiers: .command)
                         .accessibilityLabel("Close article")
                         .accessibilityHint("Closes the article and returns to the chapter")
+                        .accessibilityIdentifier("article-toolbar-close")
                         .help("Close article")
 
                         Button(action: { coordinator.goBack() }) {
@@ -41,6 +42,7 @@ struct ArticleBrowserView: View {
                         .disabled(!coordinator.canGoBack)
                         .accessibilityLabel("Back")
                         .accessibilityHint("Goes back to the previous article page")
+                        .accessibilityIdentifier("article-toolbar-back")
                         .help("Back")
 
                         Button(action: { coordinator.goForward() }) {
@@ -50,6 +52,7 @@ struct ArticleBrowserView: View {
                         .disabled(!coordinator.canGoForward)
                         .accessibilityLabel("Forward")
                         .accessibilityHint("Goes forward to the next article page")
+                        .accessibilityIdentifier("article-toolbar-forward")
                         .help("Forward")
 
                         Button(action: { coordinator.reload() }) {
@@ -58,6 +61,7 @@ struct ArticleBrowserView: View {
                         }
                         .accessibilityLabel("Reload")
                         .accessibilityHint("Reloads the current article from disk")
+                        .accessibilityIdentifier("article-toolbar-reload")
                         .help("Reload")
 
                         Button(action: { coordinator.openCurrentURL() }) {
@@ -66,6 +70,7 @@ struct ArticleBrowserView: View {
                         }
                         .accessibilityLabel("Open in Safari")
                         .accessibilityHint("Opens this article in the Safari browser")
+                        .accessibilityIdentifier("article-toolbar-open-in-safari")
                         .help("Open in Safari")
                     }
                     Spacer()
@@ -88,6 +93,7 @@ struct ArticleBrowserView: View {
                         .disabled(speech.paragraphIndex == 0)
                         .accessibilityLabel("Previous paragraph")
                         .accessibilityHint("Restarts reading from the previous paragraph.")
+                        .accessibilityIdentifier("article-toolbar-previous-paragraph")
                         .help("Previous paragraph")
 
                         Button(action: { speech.skipParagraph(forward: true) }) {
@@ -97,6 +103,7 @@ struct ArticleBrowserView: View {
                         .disabled(speech.paragraphIndex >= speech.paragraphCount - 1)
                         .accessibilityLabel("Next paragraph")
                         .accessibilityHint("Skips ahead to the next paragraph.")
+                        .accessibilityIdentifier("article-toolbar-next-paragraph")
                         .help("Next paragraph")
 
                         Text("¶ \(speech.paragraphIndex + 1) / \(speech.paragraphCount)")
@@ -118,6 +125,7 @@ struct ArticleBrowserView: View {
                         }
                         .accessibilityLabel("Stop reading")
                         .accessibilityHint("Stops narration and returns the article to the start.")
+                        .accessibilityIdentifier("article-toolbar-stop")
                         .help("Stop reading")
                     }
                 }
@@ -214,6 +222,7 @@ struct ArticleBrowserView: View {
                     ? "Resumes narration from where it was paused."
                     : "Starts reading paragraph-by-paragraph. Use the previous and next buttons to step.")
         )
+        .accessibilityIdentifier("article-toolbar-read-aloud")
         .help(speech.isSpeaking ? "Pause reading" : (speech.isPaused ? "Resume reading" : readAloudLabel))
     }
 
