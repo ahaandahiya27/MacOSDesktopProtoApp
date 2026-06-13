@@ -7,7 +7,7 @@ recursive deep audit (commits `ccd011a` → `5cb8cbd` → `524ab62` → `3c8f6e2
 → `aff559d` → `cb15cf6` → `9da64ed`, plus several intermediate) closed
 the long tail of latent risk classes:
 
-### Lints added (3 new, 22 total)
+### Lints added (3 new, 22 total at time of 2026-06-05 sign-off; current total: **38** as of 2026-06-13)
 
   - `check_inline_modifier_math.py` (2026-06-04) — gates ANY view-modifier
     or shape-constructor arg list containing inline `*`/`+`/`-`/`/`

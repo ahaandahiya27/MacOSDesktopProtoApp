@@ -9,7 +9,7 @@ navigation index, `CLAUDE.md` is the working agreement.
 | Question | Answer source |
 |---|---|
 | What's the working agreement? Hard platform constraints? | `CLAUDE.md` (top of repo) |
-| Is everything green? | Run `bash scripts/ci-build-test.sh` — 17 lints + build + tests + 3-pack round-trip |
+| Is everything green? | Run `bash scripts/ci-build-test.sh` — 38 lints + build + tests + 3-pack round-trip |
 | What categories of bug / risk are tracked? | `docs/ISSUE_CATEGORIES.md` (A–Y) — flip rows ✅ when you close them |
 | What's the bug-free certification status? | `BUG_FREE_CERTIFICATION_REPORT.md` (110 categories, current: 110/110 ✅) |
 | What's the production-readiness status? | `PRODUCTION_READINESS_REPORT.md` (per-criterion table) |
@@ -28,34 +28,33 @@ bash scripts/ci-build-test.sh
 Expect: `==> ci-build-test PASSED`. The script also runs as the pre-push
 hook, so every commit on `origin/main` is already gated through it.
 
-## The 17 lints (current set)
+## The 38 lints (canonical list lives at `scripts/check_*.py`)
 
-Each lives at `scripts/check_*.py`. Wired into `scripts/ci-build-test.sh`.
+Each lives at `scripts/check_*.py`. Wired into `scripts/ci-build-test.sh` for
+push, and 4 of them also run as a pre-commit ratchet
+(`check_critical_uitest_presence` + `check_uitest_label_coverage` for T2,
+`check_designtokens_spacing` + `check_designtokens_radius` for J8).
 
-| Lint | Catches |
-|---|---|
-| `check_macos12_apis.py` | `@Observable`, `.foregroundStyle`, NavigationStack, etc. |
-| `check_swift55_syntax.py` | Swift 5.7+ shorthand bindings (`if let foo {`) |
-| `check_sf_symbols_compat.py` | SF Symbols 3+/4+ names not routed through `SFSymbolCompat` |
-| `check_viewbuilder_limit.py` | `@ViewBuilder` closures >10 direct children |
-| `check_color_literals.py` | Raw `Color.brown/.mint/.indigo/.teal/.cyan` |
-| `check_lifetime_hazards.py` | LH001–006 (delegate weak, `unowned`, `.sink`, Timer, `.assign`, animation RM gate) |
-| `check_view_mainactor.py` | View → `DataStore.shared.*` sync access without `@MainActor` |
-| `check_file_size.py` | Files >600 LOC not on the allowlist |
-| `check_pack_schema.py` | Pack JSON schema integrity |
-| `check_wcag_contrast.py` | WCAG AA pair coverage (14 pairs) |
-| `check_callout_reading_level.py` | Pack content reading-level band |
-| `check_a11y_labels.py` | Button accessibility-label coverage (ratchet floor 90%) |
-| `check_atomic_writes.py` | `Data.write(to:)` without `options: .atomic` |
-| `check_kvo_observer_leak.py` | Imperative `addObserver(_:forKeyPath:)` — empty surface ratchet |
-| `check_notificationcenter_leak.py` | Imperative `NotificationCenter.addObserver` — empty surface ratchet |
-| `check_race_and_deadlock.py` | `DispatchQueue.main.sync` — zero-tolerance |
-| `check_dead_swift_types.py` | Top-level types declared but never referenced (allowlist supported) |
+To list them all (rather than embedding a brittle table here that drifts every
+time a lint is added):
+
+```bash
+ls scripts/check_*.py | xargs -n1 basename
+```
+
+Broad categories the lints cover today:
+- **Big-Sur compat:** `check_macos12_apis`, `check_swift55_syntax`, `check_sf_symbols_compat`, `check_test_target_compat`
+- **SwiftUI safety:** `check_viewbuilder_limit`, `check_viewbuilder_depth`, `check_inline_modifier_math`, `check_return_in_viewbuilder`, `check_view_mainactor`, `check_mainactor_closure_refs`
+- **Lifetime / concurrency:** `check_lifetime_hazards` (LH001-006), `check_combine_sink_weakself`, `check_kvo_observer_leak`, `check_notificationcenter_leak`, `check_race_and_deadlock`
+- **Content / pack integrity:** `check_pack_schema`, `check_cross_pack_ids`, `check_orphan_refs`, `check_orphan_html`, `check_article_entry_bundled`, `check_quiz_id_format`, `check_page_ref_bounds`, `check_callout_reading_level`, `check_appstorage_keys_routing`, `check_testpaper_triplet`
+- **Design tokens (J8):** `check_designtokens_spacing`, `check_designtokens_radius`
+- **A11y / UI tests:** `check_a11y_labels`, `check_color_literals`, `check_wcag_contrast`, `check_critical_uitest_presence`, `check_uitest_label_coverage`
+- **Persistence / process:** `check_atomic_writes`, `check_network_egress`, `check_file_size`, `check_dead_swift_types`, `check_particle_budget`, `check_app_icon_completeness`
 
 ## Three quick wins for a fresh session
 
-1. **Check the test count.** `find desktopAhaanTests -name "*.swift" | xargs grep -cE "^\\s*(@MainActor\\s+)?func test"` — should report 545+. If lower, a test was deleted somewhere.
-2. **Check the lint count.** `ls scripts/check_*.py | wc -l` should report 17. If different, a lint was added/removed since this doc.
+1. **Check the test count.** `find desktopAhaanTests -name "*.swift" | xargs grep -cE "^\\s*(@MainActor\\s+)?func test"` — should report 835+. If lower, a test was deleted somewhere.
+2. **Check the lint count.** `ls scripts/check_*.py | wc -l` should report 38. If different, a lint was added/removed since this doc.
 3. **Check pack-decode performance.** `python3 scripts/perf_pack_decode.py` — each pack should report <50 ms. If higher, content bloat snuck through.
 
 ## What's worth tackling next

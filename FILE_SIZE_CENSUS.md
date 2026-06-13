@@ -1,4 +1,12 @@
-# File-size census — 2026-05-24
+# File-size census — 2026-05-24 (HISTORICAL SNAPSHOT)
+
+> **2026-06-13 update:** Snapshot represents the 2026-05-24 state. The
+> live grandfathered list at `scripts/file_size_allowlist.txt` shows
+> **2 entries today** (QuestionDetailView at 949 LOC, DataStore at 698 LOC)
+> — not 8. The intermediate Discover surfaces that were over the line
+> in May have since been split or stayed under via the J8 token
+> migration's net deletions. Treat the "8 over the line" claim below
+> as historical; the allowlist file is the live source of truth.
 
 Snapshot of Swift source files exceeding the 600-LOC ceiling enforced by
 `scripts/check_file_size.py`. All entries below are present in
