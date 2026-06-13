@@ -9,8 +9,8 @@
 | Criterion | Status | Evidence |
 |---|:--:|---|
 | Build clean (Debug + Release) | ✅ | `scripts/ci-build-test.sh` exits 0 every push |
-| All unit tests green | ✅ | 835+ XCTest methods + 66 swift-testing + 42 XCUITest in the target (NavigationSmokeUITests source landed at `desktopAhaanUITests/NavigationSmokeUITests.swift` 2026-06-11 but pending Xcode "Add Files…" wire-up before it enters the target — see T3 row in ISSUE_CATEGORIES.md); full suite + 38 lints + 3-pack canonical-JSON round-trip gates every push |
-| 38 lints clean | ✅ | `scripts/check_*.py` exit 0 (was 17, grew to 38 via continuous additions; latest: `check_designtokens_spacing` + `check_designtokens_radius` for J8 regression prevention); allowlist count unchanged (3) |
+| All unit tests green | ✅ | 835+ XCTest methods + 66 swift-testing + 42 XCUITest in the target (NavigationSmokeUITests source landed at `desktopAhaanUITests/NavigationSmokeUITests.swift` 2026-06-11 but pending Xcode "Add Files…" wire-up before it enters the target — see T3 row in ISSUE_CATEGORIES.md); full suite + 39 lints + 3-pack canonical-JSON round-trip gates every push |
+| 39 lints clean | ✅ | `scripts/check_*.py` exit 0 (was 17, grew to 38 via continuous additions; latest: `check_designtokens_spacing` + `check_designtokens_radius` for J8 regression prevention); allowlist count unchanged (3) |
 | 3-pack data integrity | ✅ | `scripts/check_pack_schema.py` clean; cross-pack id audit clean; `verify_pack_roundtrip.py` clean |
 | iMac (Big Sur 11.7.11) compatibility | ✅ | `MACOSX_DEPLOYMENT_TARGET = 11.5` in `project.pbxproj` (the ship target); `scripts/ci-build-test.sh` deliberately pins `MACOSX_DEPLOYMENT_TARGET=11.0` for the pre-push build so any availability error against 11.0 surfaces as a compile error rather than a Big-Sur-only runtime crash. No macOS 12+ APIs; SF Symbols 3+ routed through `SFSymbolCompat`; no Swift 5.7+ shorthand bindings |
 | Crash report functional | ✅ | `CrashReporter` writes to `~/Library/Application Support/desktopAhaan/crashlogs/`; Help menu reveals; `ProductionReadinessRatchetTests.testCrashReporterWritesToCanonicalPath` |

@@ -9,7 +9,7 @@ navigation index, `CLAUDE.md` is the working agreement.
 | Question | Answer source |
 |---|---|
 | What's the working agreement? Hard platform constraints? | `CLAUDE.md` (top of repo) |
-| Is everything green? | Run `bash scripts/ci-build-test.sh` — 38 lints + build + tests + 3-pack round-trip |
+| Is everything green? | Run `bash scripts/ci-build-test.sh` — 39 lints + build + tests + 3-pack round-trip |
 | What categories of bug / risk are tracked? | `docs/ISSUE_CATEGORIES.md` (A–Y) — flip rows ✅ when you close them |
 | What's the bug-free certification status? | `BUG_FREE_CERTIFICATION_REPORT.md` (110 categories, current: 110/110 ✅) |
 | What's the production-readiness status? | `PRODUCTION_READINESS_REPORT.md` (per-criterion table) |
@@ -28,7 +28,7 @@ bash scripts/ci-build-test.sh
 Expect: `==> ci-build-test PASSED`. The script also runs as the pre-push
 hook, so every commit on `origin/main` is already gated through it.
 
-## The 38 lints (canonical list lives at `scripts/check_*.py`)
+## The 39 lints (canonical list lives at `scripts/check_*.py`)
 
 Each lives at `scripts/check_*.py`. Wired into `scripts/ci-build-test.sh` for
 push, and 4 of them also run as a pre-commit ratchet
@@ -54,7 +54,7 @@ Broad categories the lints cover today:
 ## Three quick wins for a fresh session
 
 1. **Check the test count.** `find desktopAhaanTests -name "*.swift" | xargs grep -cE "^\\s*(@MainActor\\s+)?func test"` — should report 835+. If lower, a test was deleted somewhere.
-2. **Check the lint count.** `ls scripts/check_*.py | wc -l` should report 38. If different, a lint was added/removed since this doc.
+2. **Check the lint count.** `ls scripts/check_*.py | wc -l` should report 39. If different, a lint was added/removed since this doc.
 3. **Check pack-decode performance.** `python3 scripts/perf_pack_decode.py` — each pack should report <50 ms. If higher, content bloat snuck through.
 
 ## What's worth tackling next

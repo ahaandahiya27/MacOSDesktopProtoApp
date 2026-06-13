@@ -170,6 +170,11 @@ def main() -> int:
     if dtr.run_selftest() != 0:
         failures.append("check_designtokens_radius selftest")
 
+    print("== check_a11y_identifier_uniqueness — embedded --selftest ==")
+    aiu = _import_lint_module("check_a11y_identifier_uniqueness")
+    if aiu.run_selftest() != 0:
+        failures.append("check_a11y_identifier_uniqueness selftest")
+
     # The three Big-Sur deploy-target lints (added 2026-06-13). Each carries
     # its own embedded fixtures and a `run_selftest()` entrypoint, so a regex
     # edit that silently neuters the rule fails this suite loudly.
