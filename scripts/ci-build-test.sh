@@ -256,7 +256,7 @@ for L in check_macos12_apis check_sf_symbols_compat check_swift55_syntax \
          check_viewbuilder_limit check_viewbuilder_depth check_inline_modifier_math \
          check_mainactor_closure_refs check_combine_sink_weakself \
          check_designtokens_spacing check_designtokens_radius \
-         check_a11y_identifier_uniqueness; do
+         check_a11y_identifier_uniqueness check_color_rgb_centralized; do
     [ -f "scripts/$L.py" ] || continue
     if ! python3 "scripts/$L.py" >/dev/null 2>&1; then
         echo "ci-build-test: $L failed — Big Sur compat violation (compiles on the dev Mac, fails or crashes on the iMac). Re-running with output:" >&2

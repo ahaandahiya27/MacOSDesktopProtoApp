@@ -175,6 +175,11 @@ def main() -> int:
     if aiu.run_selftest() != 0:
         failures.append("check_a11y_identifier_uniqueness selftest")
 
+    print("== check_color_rgb_centralized — embedded --selftest ==")
+    crc = _import_lint_module("check_color_rgb_centralized")
+    if crc.run_selftest() != 0:
+        failures.append("check_color_rgb_centralized selftest")
+
     # The three Big-Sur deploy-target lints (added 2026-06-13). Each carries
     # its own embedded fixtures and a `run_selftest()` entrypoint, so a regex
     # edit that silently neuters the rule fails this suite loudly.
