@@ -289,6 +289,15 @@ final class DataStore: ObservableObject {
     /// `milestone_checkpoints.json` at most once per process.
     var didHydrateMilestoneCheckpoints = false
 
+    /// In-memory history of completed Mock Tests, oldest → newest. Hydrated
+    /// lazily from `mock_test_results.json` on first access/write (see
+    /// `DataStore+MockTest.swift`). Held in memory so a read-modify-write isn't
+    /// racing the asynchronous `save`. v9 Exam Simulation.
+    var mockTestResults: [MockTestResult] = []
+    /// One-shot guard so the lazy hydrate of `mockTestResults` reads
+    /// `mock_test_results.json` at most once per process.
+    var didHydrateMockTestResults = false
+
     /// In-memory longitudinal progress history, keyed by start-of-day so a
     /// re-capture of the same day overwrites that day's row (idempotent, never
     /// a duplicate). Hydrated lazily from `progress_history.json` on first

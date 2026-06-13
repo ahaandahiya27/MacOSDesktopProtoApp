@@ -39,8 +39,8 @@ path. Reuses the v6 mastery-gap sampler (`MilestoneAssessmentPlanner`,
 
 - [x] **Phase 0** — sync origin, regen pbxproj, 40 lints + `test_lints.py` green,
   baseline `ci-build-test.sh` green. Ledger created.
-- [ ] **Phase 1** — `MockTestEngine` + models + `DataStore+MockTest` build half +
-  thorough pure unit tests. `V9_PHASE1_COMPLETE_v1`.
+- [x] **Phase 1** — `MockTestEngine` + models + `DataStore+MockTest` build half +
+  thorough pure unit tests (27 new XCTest, all green). `V9_PHASE1_COMPLETE_v1`.
 - [ ] **Phase 2** — Mock Test setup + timed runner UI (own window).
   `V9_PHASE2_COMPLETE_v1`.
 - [ ] **Phase 3** — score report + persistence + Report-Card / Mastery-Map
@@ -68,3 +68,11 @@ path. Reuses the v6 mastery-gap sampler (`MilestoneAssessmentPlanner`,
 - 2026-06-13: Phase 0 — clean tree, origin up to date, pbxproj regen, 40 lints +
   test_lints green, baseline build/test running. Studied milestone/mastery/journey
   infra. Ledger written.
+- 2026-06-13: Phase 1 — added `Models/MockTest.swift` (config/preset/band/
+  selection/marking/MockTestQuestion/MockTestPaper), `Models/MockTestResult.swift`
+  (result + per-subject/per-topic/weak-area + outcomes, Codable),
+  `Services/MockTestEngine.swift` (pure `topicBalancedOrder` + `grade`),
+  `Services/Persistence/DataStore+MockTest.swift` (live `buildMockTest` reusing
+  `MilestoneAssessmentPlanner.compose`, capped persistence, ephemeral-path SRS
+  recording). Added `mockTestResults` storage to DataStore. 3 test suites / 27
+  tests, all green; 40 lints + full ci-build-test green. `V9_PHASE1_COMPLETE_v1`.
