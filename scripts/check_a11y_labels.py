@@ -41,7 +41,7 @@ SOURCE_GLOB = os.path.join(REPO_ROOT, "desktopAhaan", "**", "*.swift")
 # slot (not just Text("literal"), which missed the common Boss-Quiz
 # pattern `label: { HStack { Text(variable) } }`). Floor sits at 90
 # with a 6-point cushion.
-COVERAGE_FLOOR = 90
+COVERAGE_FLOOR = 99  # bumped 90 → 99 on 2026-06-13 after H2 sweep + afa10ee hoist locked exact 706/706 (100% rounded)
 
 LABEL_MARKERS = (
     ".accessibilityLabel(",

@@ -74,8 +74,9 @@ def scrub(src: str) -> str:
     return src
 
 
-def scan_file(path: Path) -> list[tuple[str, int, str, str, str]]:
-    text = path.read_text(encoding="utf-8", errors="replace")
+def scan_text(text: str) -> list[tuple[str, int, str, str, str]]:
+    """Scan a Swift source string for Swift-5.7+ binder shorthand. Returns
+    (rule_id, line_no, original_line, what, hint) for each hit."""
     scrubbed = scrub(text)
     raw_lines = text.splitlines()
     scrubbed_lines = scrubbed.splitlines()
@@ -90,7 +91,93 @@ def scan_file(path: Path) -> list[tuple[str, int, str, str, str]]:
     return hits
 
 
+def scan_file(path: Path) -> list[tuple[str, int, str, str, str]]:
+    return scan_text(path.read_text(encoding="utf-8", errors="replace"))
+
+
+# --------------------------------------------------------------------------
+# Self-test fixtures. SS001 / SS002 / SS003 cover the three binder forms.
+# --------------------------------------------------------------------------
+
+_DANGER_FIXTURE = """\
+import Foundation
+
+func demo(_ maybe: Int?, _ other: Int?) {
+    if let maybe {                          // SS001
+        print(maybe)
+    }
+    if let maybe, let other = other {       // SS001
+        print(maybe, other)
+    }
+    guard let maybe else { return }         // SS002
+    while let maybe {                       // SS003
+        break
+    }
+}
+"""
+
+_CLEAN_FIXTURE = """\
+import Foundation
+
+// if let foo { } — commented out, must be ignored
+/* guard let bar else { } */
+
+func demo(_ maybe: Int?, _ other: Int?) {
+    let s = "if let maybe { do_not_flag_inside_string }"
+    _ = s
+    if let maybe = maybe {
+        print(maybe)
+    }
+    if let maybe = maybe, let other = other {
+        print(maybe, other)
+    }
+    guard let maybe = maybe else { return }
+    while let maybe = makeOptional() {
+        break
+    }
+}
+"""
+
+
+def run_selftest() -> int:
+    failures: list[str] = []
+
+    d_hits = scan_text(_DANGER_FIXTURE)
+    # Expected: 2 SS001 (two `if let` shorthand lines), 1 SS002, 1 SS003.
+    counts = {"SS001": 0, "SS002": 0, "SS003": 0}
+    for (rid, _ln, _src, _what, _hint) in d_hits:
+        counts[rid] = counts.get(rid, 0) + 1
+    expected = {"SS001": 2, "SS002": 1, "SS003": 1}
+    if counts != expected:
+        print(f"SELFTEST FAIL: danger fixture counts {counts}, expected {expected}")
+        for h in d_hits:
+            print("  ", h)
+        failures.append("danger fixture")
+    else:
+        total = sum(counts.values())
+        print(f"  [PASS] danger fixture flags {total} hit(s): "
+              f"SS001={counts['SS001']}, SS002={counts['SS002']}, SS003={counts['SS003']}")
+
+    c_hits = scan_text(_CLEAN_FIXTURE)
+    if c_hits:
+        print(f"SELFTEST FAIL: clean fixture flagged {len(c_hits)} hit(s), expected 0:")
+        for h in c_hits:
+            print("  ", h)
+        failures.append("clean fixture")
+    else:
+        print("  [PASS] clean fixture flags 0 hits")
+
+    print()
+    if failures:
+        print(f"check_swift55_syntax --selftest: FAIL — {len(failures)} case(s) misclassified.")
+        return 1
+    print("check_swift55_syntax --selftest: PASS — every fixture classifies correctly.")
+    return 0
+
+
 def main() -> int:
+    if "--selftest" in sys.argv:
+        return run_selftest()
     swift_files = list((REPO_ROOT / "desktopAhaan").rglob("*.swift"))
     swift_files += list((REPO_ROOT / "desktopAhaanTests").rglob("*.swift"))
     swift_files += list((REPO_ROOT / "desktopAhaanUITests").rglob("*.swift"))

@@ -69,13 +69,9 @@ SYSTEM_SYMBOL_LITERAL = re.compile(
 )
 
 
-def scan_file(path: Path, compat_keys: set[str]) -> list[tuple[int, str]]:
-    """Return list of (line_no, symbol_name) violations in this file."""
+def scan_text(text: str, compat_keys: set[str]) -> list[tuple[int, str]]:
+    """Return [(line_no, symbol_name), ...] violations in `text`."""
     violations: list[tuple[int, str]] = []
-    try:
-        text = path.read_text(encoding="utf-8")
-    except (UnicodeDecodeError, OSError):
-        return violations
     for line_no, line in enumerate(text.splitlines(), start=1):
         if ALREADY_ROUTED.search(line):
             # Whole line is routed through the shim; skip.
@@ -87,7 +83,94 @@ def scan_file(path: Path, compat_keys: set[str]) -> list[tuple[int, str]]:
     return violations
 
 
+def scan_file(path: Path, compat_keys: set[str]) -> list[tuple[int, str]]:
+    """Return list of (line_no, symbol_name) violations in this file."""
+    try:
+        text = path.read_text(encoding="utf-8")
+    except (UnicodeDecodeError, OSError):
+        return []
+    return scan_text(text, compat_keys)
+
+
+# --------------------------------------------------------------------------
+# Self-test fixtures. Hermetic compat-key set — does NOT depend on whatever
+# Extensions.swift currently ships, so the selftest stays stable when
+# new SF Symbols 3+/4+ entries are added to the live compat map.
+# --------------------------------------------------------------------------
+
+_SELFTEST_COMPAT_KEYS = {
+    "humidity.fill",
+    "thermometer.medium",
+    "person.crop.circle.badge.checkmark",
+}
+
+_DANGER_FIXTURE = """\
+import SwiftUI
+
+struct DangerIcons: View {
+    let inst = (symbol: "humidity.fill")
+    var body: some View {
+        VStack {
+            // Bare literal — bypasses the shim.
+            Image(systemName: "humidity.fill")
+            Label("warmth", systemImage: "thermometer.medium")
+            Image(systemName: "person.crop.circle.badge.checkmark")
+        }
+    }
+}
+"""
+
+_CLEAN_FIXTURE = """\
+import SwiftUI
+
+struct CleanIcons: View {
+    var body: some View {
+        VStack {
+            // Routed through the compat shim — no flag.
+            Image(systemName: SFSymbolCompat.name("humidity.fill"))
+            Label("warmth", systemImage: SFSymbolCompat.name("thermometer.medium"))
+            // Unknown / SF-Symbols-2 symbol — not in the compat map.
+            Image(systemName: "star.fill")
+        }
+    }
+}
+"""
+
+
+def run_selftest() -> int:
+    failures: list[str] = []
+
+    d_hits = scan_text(_DANGER_FIXTURE, _SELFTEST_COMPAT_KEYS)
+    expected_danger = 3
+    if len(d_hits) != expected_danger:
+        print(f"SELFTEST FAIL: danger fixture flagged {len(d_hits)} hit(s), "
+              f"expected {expected_danger}")
+        for h in d_hits:
+            print("  ", h)
+        failures.append("danger fixture")
+    else:
+        print(f"  [PASS] danger fixture flags {expected_danger} hit(s)")
+
+    c_hits = scan_text(_CLEAN_FIXTURE, _SELFTEST_COMPAT_KEYS)
+    if c_hits:
+        print(f"SELFTEST FAIL: clean fixture flagged {len(c_hits)} hit(s), expected 0:")
+        for h in c_hits:
+            print("  ", h)
+        failures.append("clean fixture")
+    else:
+        print("  [PASS] clean fixture flags 0 hits")
+
+    print()
+    if failures:
+        print(f"check_sf_symbols_compat --selftest: FAIL — {len(failures)} case(s) misclassified.")
+        return 1
+    print("check_sf_symbols_compat --selftest: PASS — every fixture classifies correctly.")
+    return 0
+
+
 def main() -> int:
+    if "--selftest" in sys.argv:
+        return run_selftest()
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--paths",

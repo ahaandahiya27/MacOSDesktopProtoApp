@@ -170,6 +170,24 @@ def main() -> int:
     if dtr.run_selftest() != 0:
         failures.append("check_designtokens_radius selftest")
 
+    # The three Big-Sur deploy-target lints (added 2026-06-13). Each carries
+    # its own embedded fixtures and a `run_selftest()` entrypoint, so a regex
+    # edit that silently neuters the rule fails this suite loudly.
+    print("== check_macos12_apis — embedded --selftest ==")
+    m12 = _import_lint_module("check_macos12_apis")
+    if m12.run_selftest() != 0:
+        failures.append("check_macos12_apis selftest")
+
+    print("== check_swift55_syntax — embedded --selftest ==")
+    s55 = _import_lint_module("check_swift55_syntax")
+    if s55.run_selftest() != 0:
+        failures.append("check_swift55_syntax selftest")
+
+    print("== check_sf_symbols_compat — embedded --selftest ==")
+    sfc = _import_lint_module("check_sf_symbols_compat")
+    if sfc.run_selftest() != 0:
+        failures.append("check_sf_symbols_compat selftest")
+
     # The two T2 UI-test ratchets carry their own fixture-driven selftests
     # (no external fixture files). Drive them here so a regex edit that
     # silently neuters either ratchet fails the suite loudly.

@@ -227,8 +227,8 @@ def strip_line_comments(line: str) -> str:
     return "".join(out_chars)
 
 
-def scan_file(path: Path) -> list[tuple[int, str, str, str]]:
-    """Returns (line_no, rule_name, why, line) for each match.
+def scan_text(text: str) -> list[tuple[int, str, str, str]]:
+    """Returns (line_no, rule_name, why, line) for each match in `text`.
 
     Two-pass scan:
     1. Per-line scan strips line comments and runs each rule against the
@@ -241,10 +241,6 @@ def scan_file(path: Path) -> list[tuple[int, str, str, str]]:
        class slipped through the per-line regex.
     """
     hits: list[tuple[int, str, str, str]] = []
-    try:
-        text = path.read_text()
-    except Exception:
-        return hits
 
     # Pass 1: per-line
     matched_rules_perline: set[str] = set()
@@ -305,7 +301,220 @@ def scan_file(path: Path) -> list[tuple[int, str, str, str]]:
     return hits
 
 
+def scan_file(path: Path) -> list[tuple[int, str, str, str]]:
+    """Read the file and delegate to `scan_text`. Returns [] on read errors."""
+    try:
+        text = path.read_text()
+    except Exception:
+        return []
+    return scan_text(text)
+
+
+# --------------------------------------------------------------------------
+# Self-test fixtures. Each is a small Swift snippet that contains banned
+# macOS 12+ API surface (or, for the clean fixture, Big-Sur-safe forms).
+# --------------------------------------------------------------------------
+
+_DANGER_FIXTURE = """\
+import SwiftUI
+import Charts
+
+struct DangerView: View {
+    @State private var x = 0
+    var body: some View {
+        NavigationStack {
+            VStack {
+                AsyncImage(url: nil)
+                Text("hello")
+                    .foregroundStyle(.red)
+                    .symbolRenderingMode(.hierarchical)
+                    .symbolEffect(.bounce)
+                    .scrollPosition(id: .constant(nil))
+                    .scrollTargetLayout()
+                    .scrollTargetBehavior(.paging)
+                    .scrollIndicatorsFlash(trigger: x)
+                    .contentTransition(.opacity)
+                    .scrollDismissesKeyboard(.interactively)
+                    .scrollContentBackground(.hidden)
+                    .formStyle(.grouped)
+                    .dynamicTypeSize(.medium)
+                    .refreshable(action: { })
+                    .toolbarRole(.editor)
+                    .searchable(text: .constant(""))
+                    .fontWidth(.condensed)
+                    .fontDesign(.serif)
+                    .tint(.red)
+                    .focused($flag)
+                    .task { await load() }
+                    .animation(.easeOut, value: x)
+                    .transition(.scale.combined(with: .opacity))
+                    .onChange(of: x) { old, new in print(old, new) }
+                Image(systemName: "x").font(.body.monospaced())
+                Color.brown
+                Color.mint
+                Color.cyan
+                Color.indigo
+                Color.teal
+                Chart { LineMark(x: .value("a", 1), y: .value("b", 2)) }
+                let _ = ImageRenderer(content: Text("x"))
+                ForEach(Array(items.enumerated()), id: \\.offset) { i, item in Text("a") }
+                ForEach(Array(items.enumerated()), id: \\.element.id) { i, item in Text("b") }
+            }
+        }
+        .task(id: x) { }
+    }
+
+    @FocusState private var flag: Bool
+}
+
+@Observable
+final class DangerModel {
+    var foo: Int = 0
+}
+
+final class StrongDelegateHolder: NSObject {
+    var delegate: SomeProtocol?
+}
+
+final class UnsafeBox: @unchecked Sendable {
+    unowned let owner: AnyObject
+    init(_ o: AnyObject) { self.owner = o }
+}
+
+struct BindableUser: View {
+    @Bindable var model: DangerModel
+    var body: some View { Text("x") }
+}
+
+struct SplitDemo: View {
+    var body: some View {
+        NavigationSplitView { Text("sidebar") } detail: { Text("detail") }
+    }
+}
+"""
+
+_CLEAN_FIXTURE = """\
+import SwiftUI
+
+struct CleanView: View {
+    @State private var x = 0
+    var body: some View {
+        NavigationView {
+            VStack {
+                // .foregroundStyle(.red)   <- commented, must be ignored
+                /* .task { } */
+                Text("hello")
+                    .foregroundColor(.red)
+                    .accentColor(.blue)
+                    .animation(.easeOut)
+                    .transition(.opacity)
+                    .onChange(of: x) { newValue in print(newValue) }
+                    .onAppear { Task { await load() } }
+                Color.compatBrown
+                Color.compatIndigo
+                Color.compatTeal
+                ForEach(items.indices, id: \\.self) { i in
+                    let item = items[i]
+                    Text(item.title)
+                }
+            }
+        }
+    }
+}
+
+final class SafeHolder: NSObject {
+    weak var delegate: SomeProtocol?
+}
+
+final class SafeBox {
+    weak var owner: AnyObject?
+}
+"""
+
+
+def run_selftest() -> int:
+    failures: list[str] = []
+
+    d_hits = scan_text(_DANGER_FIXTURE)
+    # Distinct rule_name kinds caught in the danger fixture. Use a set so
+    # the assertion stays stable if the per-line scan double-counts a
+    # single banned call (it does that for .animation(_:value:) when the
+    # multi-line pass also fires).
+    d_names = {name for (_lineno, name, _why, _line) in d_hits}
+    expected_names = {
+        ".animation(_:value:)",
+        ".transition(...combined(with: ...))",
+        ".foregroundStyle(...)",
+        ".symbolEffect(...)",
+        ".symbolRenderingMode(...)",
+        ".scrollPosition(...)",
+        ".scrollTargetLayout(...)",
+        ".scrollTargetBehavior(...)",
+        ".scrollIndicatorsFlash(...)",
+        ".contentTransition(...)",
+        "ImageRenderer(...)",
+        ".onChange(of:) { _, _ in } (two-argument)",
+        ".fontWidth(...)",
+        ".fontDesign(...)",
+        "unowned reference",
+        "var delegate: (must be weak var)",
+        "@unchecked Sendable",
+        ".scrollDismissesKeyboard(...)",
+        ".scrollContentBackground(...)",
+        ".formStyle(...)",
+        ".dynamicTypeSize(...)",
+        ".refreshable(...)",
+        ".toolbarRole(...)",
+        ".searchable(...)",
+        "Color.brown",
+        "Color.mint",
+        "Color.cyan",
+        "Color.indigo",
+        "Color.teal",
+        "@Observable macro",
+        "@Bindable",
+        "NavigationStack",
+        "NavigationSplitView",
+        "Font.monospaced()",
+        "AsyncImage",
+        ".task(...) / .task {",
+        ".task { ... }",
+        "@FocusState",
+        ".focused(...)",
+        ".tint(...)",
+        "Chart { ... }",
+        "import Charts",
+        "ForEach with tuple-keypath id: \\.offset",
+        "ForEach with tuple-keypath id: \\.element.<...>",
+    }
+    missing = expected_names - d_names
+    if missing:
+        print(f"SELFTEST FAIL: danger fixture missing rule_name(s): {sorted(missing)}")
+        failures.append("danger fixture missing rules")
+    else:
+        print(f"  [PASS] danger fixture flags {len(d_hits)} hit(s) covering {len(expected_names)} distinct rule(s)")
+
+    c_hits = scan_text(_CLEAN_FIXTURE)
+    if c_hits:
+        print(f"SELFTEST FAIL: clean fixture flagged {len(c_hits)} hit(s), expected 0:")
+        for h in c_hits:
+            print("  ", h)
+        failures.append("clean fixture flagged")
+    else:
+        print("  [PASS] clean fixture flags 0 hits")
+
+    print()
+    if failures:
+        print(f"check_macos12_apis --selftest: FAIL — {len(failures)} case(s) misclassified.")
+        return 1
+    print("check_macos12_apis --selftest: PASS — every fixture classifies correctly.")
+    return 0
+
+
 def main() -> int:
+    if "--selftest" in sys.argv:
+        return run_selftest()
+
     sources = list((REPO_ROOT / "desktopAhaan").rglob("*.swift"))
     # Skip test target — XCTest is allowed to use anything modern; tests
     # don't ship to the iMac.

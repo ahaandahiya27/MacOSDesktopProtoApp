@@ -9,6 +9,7 @@ enum AttemptOutcome: Equatable {
     case incorrect(userInput: String)
 }
 
+@MainActor
 struct QuestionDetailView: View {
     let pack: SubjectPack
     let question: Question

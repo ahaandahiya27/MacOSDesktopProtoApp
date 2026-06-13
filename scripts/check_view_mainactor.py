@@ -43,8 +43,45 @@ SKIP_PATTERN = re.compile(r"/(Resources|Packs)/")
 # Sync @MainActor singletons whose methods would trip the
 # "synchronous nonisolated context" error if called from a
 # nonisolated SwiftUI View context.
+#
+# Discovery method: every entry below was confirmed to be (a) annotated
+# `@MainActor` on the class declaration AND (b) exposing a
+# `static let shared` (or `static var shared`) entry point. A class that
+# satisfies only one half of that pair is NOT included — e.g., a
+# `@MainActor` helper accessed via DI rather than `.shared` cannot trip
+# this error class from a View body.
+#
+# Original entry (2026-05-26): DataStore. Extended (2026-06-13) after
+# the audit found 18 additional @MainActor singletons in Services/ and
+# Views/<window-presenters>/ that would re-introduce the same
+# Boss-Quiz-scene build failure if a View body called them sync.
 MAIN_ACTOR_SINGLETONS = [
+    # Persistence + settings.
     "DataStore.shared.",
+    "SettingsManager.shared.",
+    # Speech / AV.
+    "SpeechReader.shared.",
+    # Adaptive / achievement / translation services.
+    "AchievementEngine.shared.",
+    "AdaptiveDifficultyEngine.shared.",
+    "TranslationService.shared.",
+    # Window-presenter singletons. These are typically driven from the
+    # App scene's command block, but a View that wires a "Open X" button
+    # directly to <Presenter>.shared.present(...) would hit the same
+    # @MainActor sync-call failure under Swift 5.5.
+    "ExpertChallengeLadderWindowPresenter.shared.",
+    "MasteryMapWindowPresenter.shared.",
+    "WeeklyProgressWindowPresenter.shared.",
+    "MilestoneAssessmentWindowPresenter.shared.",
+    "InsightsWindowPresenter.shared.",
+    "AchievementToastPresenter.shared.",
+    "AchievementGalleryWindowPresenter.shared.",
+    "PrintableWorksheetWindowPresenter.shared.",
+    "DailyPlanNotifications.shared.",
+    "DailyPlanWindowPresenter.shared.",
+    "CrashLogSummaryWindowPresenter.shared.",
+    "StudyTimerWindowPresenter.shared.",
+    "PracticeSettingsWindowPresenter.shared.",
 ]
 
 # We only flag files that declare a View struct. (Helpers,
@@ -117,7 +154,7 @@ def main() -> int:
     if findings:
         print("check_view_mainactor: new violations:")
         for rel in findings:
-            print(f"  {rel}: SwiftUI View calls DataStore.shared.* synchronously without `@MainActor` on the struct.")
+            print(f"  {rel}: SwiftUI View calls a @MainActor singleton (DataStore / SpeechReader / SettingsManager / WindowPresenter / …) synchronously without `@MainActor` on the struct.")
         print()
         print(
             "Fix: annotate the View struct with `@MainActor`. Under Swift 5.5\n"
@@ -128,7 +165,7 @@ def main() -> int:
             "commits 2c694a4 / ac3944b for the lineage."
         )
         return 1
-    print("check_view_mainactor: clean — every SwiftUI View calling DataStore.shared.* sync is `@MainActor`-annotated.")
+    print("check_view_mainactor: clean — every SwiftUI View calling a @MainActor singleton sync is `@MainActor`-annotated.")
     return 0
 
 
