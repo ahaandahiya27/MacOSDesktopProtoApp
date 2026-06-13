@@ -22,7 +22,7 @@ struct Scene1_IceToWaterToSteam: View {
         return .steam
     }
 
-    private enum MatterPhase: String {
+    fileprivate enum MatterPhase: String {
         case ice = "Ice (solid)"
         case water = "Water (liquid)"
         case steam = "Steam (gas)"
