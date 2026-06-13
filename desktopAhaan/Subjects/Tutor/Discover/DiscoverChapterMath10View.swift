@@ -59,7 +59,7 @@ struct DiscoverChapterMath10View: View {
         dataStore.markSceneComplete(chapterId: "m\(chapter.id)", sceneId: "scene\(index + 1)", score: score, maxScore: max)
         if index < sceneTitles.count - 1 {
             Task { @MainActor in
-                try? await Task.sleep(nanoseconds: 400_000_000)
+                try? await Task.sleep(nanoseconds: DiscoverTiming.settleDelayNs)
                 advanceDiscoverScene($currentScene, total: sceneTitles.count, reduceMotion: reduceMotion)
             }
         }

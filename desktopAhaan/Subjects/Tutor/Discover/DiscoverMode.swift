@@ -1,5 +1,14 @@
 import SwiftUI
 
+/// Timing constants shared by Discover chapter dispatchers.
+/// Centralised so the "settle after tab switch" delay can be tuned in one place
+/// instead of hunting through ~40 raw `Task.sleep(nanoseconds: 400_000_000)` literals.
+enum DiscoverTiming {
+    /// Short delay (0.4s) after a chapter dispatcher swaps its active scene/tab,
+    /// giving SwiftUI's layout pass time to settle before the next view appears.
+    static let settleDelayNs: UInt64 = 400_000_000
+}
+
 /// Chapter-specific dispatch for "Discover Mode" — the illustrated, interactive
 /// alternative to plain text concept cards. Today, only Chapter 1 of the
 /// Class 7 Science pack has a hand-built Discover experience. Other chapters
