@@ -121,9 +121,9 @@ struct Scene9_BossQuiz: View {
     }
     // MARK: - Quiz mechanics
 
-    fileprivate enum AnswerState { case neutral, picked, correct, wrong }
+    private enum AnswerState { case neutral, picked, correct, wrong }
 
-    fileprivate func state(for option: String, in item: Question) -> AnswerState {
+    private func state(for option: String, in item: Question) -> AnswerState {
         guard let p = picks[currentQ] else { return .neutral }
         if option == item.answer { return .correct }
         if option == p { return .wrong }

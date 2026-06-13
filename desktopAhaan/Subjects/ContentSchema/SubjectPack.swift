@@ -51,11 +51,11 @@ struct SubjectPack: Codable, Hashable, Identifiable {
         SubjectPackIndexCache.shared.allQuestions(for: self)
     }
 
-    fileprivate func buildAllConcepts() -> [Concept] {
+    private func buildAllConcepts() -> [Concept] {
         chapters.flatMap { $0.topics.flatMap { $0.concepts } }
     }
 
-    fileprivate func buildAllQuestions() -> [Question] {
+    private func buildAllQuestions() -> [Question] {
         chapters.flatMap { $0.topics.flatMap { $0.questions } }
     }
 
@@ -107,7 +107,7 @@ struct SubjectPack: Codable, Hashable, Identifiable {
         SubjectPackIndexCache.shared.chapterIndex(for: self)
     }
 
-    fileprivate func buildChapterIndex() -> [String: Chapter] {
+    private func buildChapterIndex() -> [String: Chapter] {
         // uniquingKeysWith over uniqueKeysWithValues — a duplicate chapter
         // id in a hand-edited pack would fatally crash here otherwise.
         // Test coverage exists (`testNoDuplicateChapterIdsInPack`), but the
@@ -131,7 +131,7 @@ struct SubjectPack: Codable, Hashable, Identifiable {
     // from `buildAllNeedsHumanReviewIds`). DO NOT replace these with
     // `allConcepts` / `allQuestions` calls — keep them self-contained.
 
-    fileprivate func buildNeedsHumanReviewIds() -> Set<String> {
+    private func buildNeedsHumanReviewIds() -> Set<String> {
         var ids: Set<String> = []
         for chapter in chapters {
             for topic in chapter.topics {
@@ -145,7 +145,7 @@ struct SubjectPack: Codable, Hashable, Identifiable {
 
     /// Builds the underlying concept dictionary. Only called by the cache
     /// on first access for a given pack.id.
-    fileprivate func buildConceptIndex() -> [String: Concept] {
+    private func buildConceptIndex() -> [String: Concept] {
         var index: [String: Concept] = [:]
         for chapter in chapters {
             for topic in chapter.topics {
@@ -165,7 +165,7 @@ struct SubjectPack: Codable, Hashable, Identifiable {
 
     /// Builds the underlying question dictionary. Only called by the cache
     /// on first access for a given pack.id.
-    fileprivate func buildQuestionIndex() -> [String: Question] {
+    private func buildQuestionIndex() -> [String: Question] {
         var index: [String: Question] = [:]
         for chapter in chapters {
             for topic in chapter.topics {

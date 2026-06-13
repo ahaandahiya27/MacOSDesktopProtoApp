@@ -78,7 +78,7 @@ struct ParticleEmitter: View {
         animationTimer = nil
     }
 
-    fileprivate struct Particle: Identifiable {
+    private struct Particle: Identifiable {
         let id: Int
         let startX: CGFloat
         let driftX: CGFloat

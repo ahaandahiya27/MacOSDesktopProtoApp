@@ -239,7 +239,7 @@ private struct DiscoverProgressContent: View {
     /// nil if the student hasn't completed the Boss Quiz yet. Read once
     /// per chapterCard render; uses the same discoverProgress data the
     /// other counts derive from.
-    fileprivate func bossQuizScore(for chapter: Chapter) -> (score: Int, max: Int)? {
+    private func bossQuizScore(for chapter: Chapter) -> (score: Int, max: Int)? {
         for row in dataStore.discoverRows(for: chapter.id) where row.sceneId == "scene9" {
             if let s = row.score, let m = row.maxScore, m > 0 {
                 return (s, m)
@@ -248,7 +248,7 @@ private struct DiscoverProgressContent: View {
         return nil
     }
 
-    fileprivate func openChapter(_ chapter: Chapter) {
+    private func openChapter(_ chapter: Chapter) {
         guard let pack = pack else { return }
         nav.push(.discover(packId: pack.id, chapterId: chapter.id))
     }
