@@ -88,6 +88,7 @@ struct GlossarySheet: View {
             .buttonStyle(.plain)
             .pointingCursor()
             .accessibilityLabel("Close glossary")
+            .accessibilityIdentifier("glossary-sheet-close-x")
         }
         .padding(.horizontal, DesignTokens.Spacing.xl)
         .padding(.top, 20)
@@ -111,9 +112,11 @@ struct GlossarySheet: View {
                 .pointingCursor()
                 .accessibilityLabel("Read full vocabulary deck article")
                 .accessibilityHint("Closes this sheet and opens the chapter's long-form vocabulary deck article.")
+                .accessibilityIdentifier("glossary-sheet-open-article")
             }
             Button("Done", action: onDismiss)
                 .keyboardShortcut(.defaultAction)
+                .accessibilityIdentifier("glossary-sheet-done")
         }
         .padding(.horizontal, DesignTokens.Spacing.xl)
         .padding(.vertical, DesignTokens.Spacing.md)

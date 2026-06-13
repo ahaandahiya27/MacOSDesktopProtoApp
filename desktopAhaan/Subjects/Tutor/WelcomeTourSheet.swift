@@ -141,6 +141,7 @@ struct WelcomeTourSheet: View {
             }
             .disabled(panelIndex == 0)
             .accessibilityHint(panelIndex == 0 ? "First step — no previous step." : "Goes back one step in the welcome tour.")
+            .accessibilityIdentifier("welcome-tour-previous")
 
             Button(isLastPanel ? "Done" : "Next") {
                 if isLastPanel {

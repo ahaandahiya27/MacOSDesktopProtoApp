@@ -56,6 +56,7 @@ struct KeyboardShortcutsSheet: View {
                 Spacer()
                 Button("Done", action: onDismiss)
                     .keyboardShortcut(.cancelAction)
+                    .accessibilityIdentifier("keyboard-shortcuts-done")
             }
             .padding(.horizontal, 20)
             .padding(.top, 20)

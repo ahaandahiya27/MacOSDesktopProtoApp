@@ -46,6 +46,7 @@ struct CurriculumBridgeChip: View {
             .pointingCursor()
             .accessibilityLabel("Curriculum bridge")
             .accessibilityHint("Shows how this chapter's ideas reappear in Class 8 and at NEET / JEE level.")
+            .accessibilityIdentifier("curriculum-bridge-chip")
             .sheet(isPresented: $isShowingDetail) {
                 CurriculumBridgeSheet(
                     chapter: chapter,
@@ -124,6 +125,7 @@ private struct CurriculumBridgeSheet: View {
             .buttonStyle(.plain)
             .pointingCursor()
             .accessibilityLabel("Close curriculum bridge")
+            .accessibilityIdentifier("curriculum-bridge-close-x")
         }
         .padding(.horizontal, DesignTokens.Spacing.xl)
         .padding(.top, 20)
@@ -135,6 +137,7 @@ private struct CurriculumBridgeSheet: View {
             Spacer()
             Button("Done", action: onDismiss)
                 .keyboardShortcut(.defaultAction)
+                .accessibilityIdentifier("curriculum-bridge-done")
         }
         .padding(.horizontal, DesignTokens.Spacing.xl)
         .padding(.vertical, DesignTokens.Spacing.md)

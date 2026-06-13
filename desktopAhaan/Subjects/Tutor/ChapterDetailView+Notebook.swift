@@ -135,6 +135,7 @@ struct ChapterNotebookSheet: View {
                     }
                 }
                 .keyboardShortcut(.defaultAction)
+                .accessibilityIdentifier("notebook-sheet-done")
             }
             .padding(20)
             .background(Color.white.opacity(0.5))
@@ -176,6 +177,7 @@ struct ChapterNotebookSheet: View {
                         .buttonStyle(.plain)
                         .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                         .accessibilityHint("Erases the chapter notebook contents")
+                        .accessibilityIdentifier("notebook-sheet-clear")
                     }
                 }
             }

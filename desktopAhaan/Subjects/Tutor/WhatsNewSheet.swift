@@ -72,6 +72,7 @@ struct WhatsNewSheet: View {
             .pointingCursor()
             .accessibilityLabel("Close What's New")
             .accessibilityHint("Closes the sheet and marks this version as seen.")
+            .accessibilityIdentifier("whats-new-close-x")
         }
         .padding(.horizontal, DesignTokens.Spacing.xl)
         .padding(.top, 20)

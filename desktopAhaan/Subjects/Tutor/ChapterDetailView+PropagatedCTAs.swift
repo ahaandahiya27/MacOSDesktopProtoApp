@@ -275,6 +275,7 @@ func conceptMapCTA(
         .pointingCursor()
         .accessibilityLabel("See the connections — concept map for this chapter")
         .accessibilityHint("Opens a sheet showing how the chapter's concepts link to each other and to other chapters.")
+        .accessibilityIdentifier("chapter-concept-map-cta")
     }
 }
 
@@ -300,6 +301,7 @@ func insideTheLeafTourCTA(coordinator: PilotInteractiveSheetCoordinator) -> some
     .pointingCursor()
     .accessibilityLabel("Inside the Leaf — five-stop guided tour")
     .accessibilityHint("Opens a sheet that walks you through a leaf from outside to inside a chloroplast.")
+    .accessibilityIdentifier("chapter-inside-the-leaf-cta")
 }
 
 func insideTheDigestiveTourCTA(coordinator: PilotInteractiveSheetCoordinator) -> some View {
@@ -320,6 +322,7 @@ func insideTheDigestiveTourCTA(coordinator: PilotInteractiveSheetCoordinator) ->
     .pointingCursor()
     .accessibilityLabel("Inside the digestive system — five-stop tour")
     .accessibilityHint("Opens a sheet that walks a piece of food from mouth through stomach, small intestine, liver, and large intestine.")
+    .accessibilityIdentifier("chapter-inside-the-digestive-cta")
 }
 
 func insideTheAlveolusTourCTA(coordinator: PilotInteractiveSheetCoordinator) -> some View {
@@ -340,6 +343,7 @@ func insideTheAlveolusTourCTA(coordinator: PilotInteractiveSheetCoordinator) -> 
     .pointingCursor()
     .accessibilityLabel("Inside an alveolus — five-stop respiratory tour")
     .accessibilityHint("Opens a sheet that walks you from the nostril through the trachea, bronchi, and into an alveolus where oxygen loads onto a red blood cell.")
+    .accessibilityIdentifier("chapter-inside-the-alveolus-cta")
 }
 
 func insideTheXylemTourCTA(coordinator: PilotInteractiveSheetCoordinator) -> some View {
@@ -360,6 +364,7 @@ func insideTheXylemTourCTA(coordinator: PilotInteractiveSheetCoordinator) -> som
     .pointingCursor()
     .accessibilityLabel("The xylem ascent — five-stop tour of water rising up a plant")
     .accessibilityHint("Opens a sheet that walks one water molecule from a root hair, up the xylem, through a stem, into leaf veins, and out a stoma.")
+    .accessibilityIdentifier("chapter-xylem-ascent-cta")
 }
 
 func insideTheWireTourCTA(coordinator: PilotInteractiveSheetCoordinator) -> some View {
@@ -380,6 +385,7 @@ func insideTheWireTourCTA(coordinator: PilotInteractiveSheetCoordinator) -> some
     .pointingCursor()
     .accessibilityLabel("Inside the wire — five-stop electron-flow tour")
     .accessibilityHint("Opens a sheet that walks you from a battery's negative terminal through a copper lattice to a glowing bulb filament.")
+    .accessibilityIdentifier("chapter-inside-the-wire-cta")
 }
 
 func insideTheLensTourCTA(coordinator: PilotInteractiveSheetCoordinator) -> some View {
@@ -400,4 +406,5 @@ func insideTheLensTourCTA(coordinator: PilotInteractiveSheetCoordinator) -> some
     .pointingCursor()
     .accessibilityLabel("Inside the lens — five-stop refraction tour")
     .accessibilityHint("Opens a sheet that walks you through how a convex lens refracts light, forms a real inverted image, and acts as a magnifying glass.")
+    .accessibilityIdentifier("chapter-inside-the-lens-cta")
 }

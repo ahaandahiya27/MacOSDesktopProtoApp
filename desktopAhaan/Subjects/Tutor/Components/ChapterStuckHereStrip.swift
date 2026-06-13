@@ -139,6 +139,7 @@ struct ChapterStuckHereStrip: View {
                         .pointingCursor()
                         .accessibilityLabel("\(label): \(chipLabel(for: id, kind: kind))")
                         .accessibilityHint(kind == .question ? "Opens this question for practice" : "Opens this bookmarked concept")
+                        .accessibilityIdentifier("stuck-here-\(kind == .question ? "question" : "concept")-row-\(id)")
                     }
                 }
                 .padding(.horizontal, 1)

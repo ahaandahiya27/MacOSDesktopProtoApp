@@ -217,6 +217,7 @@ struct ExtraReadingRow: View {
         .pointingCursor()
         .accessibilityLabel(label)
         .accessibilityHint(hint)
+        .accessibilityIdentifier("extra-reading-row-\(entry.id)")
         .contextMenu {
             Button(dataStore.isArticleRead(entry.id) ? "Mark as unread" : "Mark as read") {
                 dataStore.toggleArticleRead(entry.id)

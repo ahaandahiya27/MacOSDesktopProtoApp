@@ -51,6 +51,7 @@ struct ChapterListView: View {
                             .buttonStyle(.plain)
                             .pointingCursor()
                             .accessibilityHint("Resumes Discover Mode for this chapter")
+                            .accessibilityIdentifier("chapter-list-continue")
                         }
                         .listRowBackground(Color.clear)
                     }

@@ -77,6 +77,7 @@ struct DailyQuestionCard: View {
             .pointingCursor()
             .accessibilityLabel("Today's question: \(question.prompt)")
             .accessibilityHint("Opens this question in the usual question detail view.")
+            .accessibilityIdentifier("chapter-list-daily-question")
         }
     }
 }

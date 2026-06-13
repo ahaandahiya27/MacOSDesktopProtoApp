@@ -121,6 +121,7 @@ struct RelatedChaptersStrip: View {
         .pointingCursor()
         .accessibilityLabel("Open Chapter \(number): \(title) — \(count) concept link\(count == 1 ? "" : "s")")
         .accessibilityHint("Navigates to the related chapter.")
+        .accessibilityIdentifier("related-chapter-row-\(targetId)")
     }
 }
 

@@ -227,6 +227,7 @@ private struct MasteryDashboardContent: View {
                 .accessibilityLabel("\(pack.title) filter")
                 .accessibilityHint("Filters the mastery dashboard to \(pack.title)")
                 .accessibilityAddTraits(isSelected ? .isSelected : [])
+                .accessibilityIdentifier("mastery-subject-filter-\(pack.id)")
             }
             Spacer(minLength: 0)
         }
@@ -284,6 +285,7 @@ private struct MasteryDashboardContent: View {
             }
             .keyboardShortcut(.defaultAction)
             .accessibilityHint("Opens the spaced-review queue with questions due today")
+            .accessibilityIdentifier("mastery-start-daily-practice")
         }
         .padding(14)
         .background(
@@ -356,6 +358,7 @@ private struct MasteryDashboardContent: View {
             .pointingCursor()
             .accessibilityLabel(a11yLabel(for: row))
             .accessibilityHint(row.topicSummaries.isEmpty ? "Opens this chapter" : "Toggles the per-topic mastery breakdown for this chapter")
+            .accessibilityIdentifier("mastery-chapter-row-\(row.chapterId)")
 
             // D6 — per-topic drill-down. Renders only when the chapter
             // card is expanded AND the aggregator gave us topic data.
@@ -368,6 +371,7 @@ private struct MasteryDashboardContent: View {
                         .font(.caption)
                         .padding(.top, DesignTokens.Spacing.xs)
                         .accessibilityHint("Opens this chapter's detail page")
+                        .accessibilityIdentifier("mastery-open-chapter-\(row.chapterId)")
                 }
                 .padding(.leading, 18)
             }

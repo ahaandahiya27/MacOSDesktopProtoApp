@@ -56,6 +56,7 @@ struct AskFollowUpView: View {
 
                     .disabled(!tutor.isAvailable || question.trimmingCharacters(in: .whitespaces).isEmpty || tutor.isThinking)
                     .accessibilityHint("Sends your question to the on-device tutor for an answer")
+                    .accessibilityIdentifier("ask-followup-submit")
                 }
 
                 // Error
@@ -99,6 +100,7 @@ struct AskFollowUpView: View {
                         Button("Close") { presentationMode.wrappedValue.dismiss() }
                             .padding(DesignTokens.Spacing.md)
                             .keyboardShortcut(.cancelAction)
+                            .accessibilityIdentifier("ask-followup-close")
                         Spacer()
                     }
                 }

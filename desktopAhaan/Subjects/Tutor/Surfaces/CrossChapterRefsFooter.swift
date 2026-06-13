@@ -95,5 +95,6 @@ private struct CrossChapterRefRow: View {
         .pointingCursor()
         .accessibilityLabel("\(ref.topic). \(ref.pointer)")
         .accessibilityHint("Jumps to the linked chapter.")
+        .accessibilityIdentifier("cross-chapter-ref-row-\(ref.id)")
     }
 }

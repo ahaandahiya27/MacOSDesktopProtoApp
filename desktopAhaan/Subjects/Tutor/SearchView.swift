@@ -42,6 +42,7 @@ private struct SearchContent: View {
                     .help("Clear search")
                     .accessibilityLabel("Clear search")
                     .accessibilityHint("Empties the search field")
+                    .accessibilityIdentifier("search-clear")
                 }
             }
             .padding(DesignTokens.Spacing.md)
@@ -130,6 +131,7 @@ private struct SearchContent: View {
             }
             .buttonStyle(.plain)
             .accessibilityHint("Searches across every subject pack")
+            .accessibilityIdentifier("search-filter-all")
             ForEach(subjectRegistry.packs, id: \.id) { pack in
                 Button {
                     packFilter = pack.id
@@ -146,6 +148,7 @@ private struct SearchContent: View {
                 }
                 .buttonStyle(.plain)
                 .accessibilityHint("Limits search to the \(pack.title) pack")
+                .accessibilityIdentifier("search-filter-\(pack.id)")
             }
             Spacer()
         }
@@ -240,6 +243,7 @@ private struct SearchContent: View {
                         }
                         .buttonStyle(.plain)
                         .accessibilityHint("Opens this concept")
+                        .accessibilityIdentifier("search-concept-row-\(c.id)")
                         .contextMenu {
                             Button("Open") { nav.push(.concept(packId: pack.id, conceptId: c.id)) }
                         }
@@ -262,6 +266,7 @@ private struct SearchContent: View {
                         }
                         .buttonStyle(.plain)
                         .accessibilityHint("Opens this practice question")
+                        .accessibilityIdentifier("search-question-row-\(q.id)")
                         .contextMenu {
                             Button("Open") { nav.push(.question(packId: pack.id, questionId: q.id)) }
                         }

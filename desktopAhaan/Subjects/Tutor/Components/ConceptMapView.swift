@@ -115,6 +115,7 @@ struct ConceptMapView: View {
             .pointingCursor()
             .accessibilityLabel("Close concept map")
             .accessibilityHint("Closes the concept map sheet")
+            .accessibilityIdentifier("concept-map-close-x")
         }
         .padding(.horizontal, 22)
         .padding(.top, 18)
@@ -129,17 +130,20 @@ struct ConceptMapView: View {
             .buttonStyle(.borderless)
             .accessibilityLabel("Zoom out")
             .accessibilityHint("Shrinks the concept map view")
+            .accessibilityIdentifier("concept-map-zoom-out")
             Button("Reset") { resetView() }
                 .buttonStyle(.borderless)
                 .font(.caption.weight(.semibold))
                 .accessibilityLabel("Reset zoom and pan")
                 .accessibilityHint("Restores the concept map to its default zoom and position")
+                .accessibilityIdentifier("concept-map-reset")
             Button(action: zoomIn) {
                 Image(systemName: "plus.magnifyingglass")
             }
             .buttonStyle(.borderless)
             .accessibilityLabel("Zoom in")
             .accessibilityHint("Enlarges the concept map view")
+            .accessibilityIdentifier("concept-map-zoom-in")
         }
     }
 
@@ -151,6 +155,7 @@ struct ConceptMapView: View {
             Spacer()
             Button("Done", action: onDismiss)
                 .keyboardShortcut(.defaultAction)
+                .accessibilityIdentifier("concept-map-done")
         }
         .padding(.horizontal, 22)
         .padding(.vertical, DesignTokens.Spacing.md)

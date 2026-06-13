@@ -82,7 +82,7 @@ struct ConceptDetailView: View {
                 }
                 // ⌘⇧B (not ⌘B) — ⌘B is the app-level "Show Bookmarks" command.
                 .keyboardShortcut("b", modifiers: [.command, .shift])
-                .help(isBookmarked ? "Remove bookmark" : "Bookmark this concept").accessibilityHint(isBookmarked ? "Removes this concept from your bookmarks" : "Saves this concept for quick review later")
+                .help(isBookmarked ? "Remove bookmark" : "Bookmark this concept").accessibilityHint(isBookmarked ? "Removes this concept from your bookmarks" : "Saves this concept for quick review later").accessibilityIdentifier("concept-toolbar-bookmark")
             }
             ToolbarItem(placement: .automatic) {
                 Button {
@@ -94,7 +94,7 @@ struct ConceptDetailView: View {
                     )
                 }
                 .keyboardShortcut("u", modifiers: .command)
-                .help(dataStore.isConceptUnderstood(concept.id) ? "Unmark as understood" : "Mark this concept as understood").accessibilityHint(dataStore.isConceptUnderstood(concept.id) ? "Clears the understood flag on this concept" : "Records that you have understood this concept")
+                .help(dataStore.isConceptUnderstood(concept.id) ? "Unmark as understood" : "Mark this concept as understood").accessibilityHint(dataStore.isConceptUnderstood(concept.id) ? "Clears the understood flag on this concept" : "Records that you have understood this concept").accessibilityIdentifier("concept-toolbar-understood")
             }
             ToolbarItem(placement: .automatic) {
                 Button {
@@ -108,7 +108,7 @@ struct ConceptDetailView: View {
                 // ⌘← (not ⌘[) — ⌘[ is the app-level "Go Back" command;
                 // matches QuestionDetailView's ⌘-arrow prev/next convention.
                 .keyboardShortcut(.leftArrow, modifiers: .command)
-                .help(siblingHelpText(direction: "Previous")).accessibilityHint("Opens the previous concept in this topic")
+                .help(siblingHelpText(direction: "Previous")).accessibilityHint("Opens the previous concept in this topic").accessibilityIdentifier("concept-toolbar-previous")
             }
             ToolbarItem(placement: .automatic) {
                 Button {
@@ -120,7 +120,7 @@ struct ConceptDetailView: View {
                 }
                 .disabled(siblings?.nextId == nil)
                 .keyboardShortcut(.rightArrow, modifiers: .command)
-                .help(siblingHelpText(direction: "Next")).accessibilityHint("Opens the next concept in this topic")
+                .help(siblingHelpText(direction: "Next")).accessibilityHint("Opens the next concept in this topic").accessibilityIdentifier("concept-toolbar-next")
             }
         }
         .onDisappear {
@@ -192,7 +192,7 @@ struct ConceptDetailView: View {
                         }
                     }
                     .keyboardShortcut(.defaultAction)
-                    .accessibilityHint("Reveals the concept explanation alongside a brief comparison to your guess.")
+                    .accessibilityHint("Reveals the concept explanation alongside a brief comparison to your guess.").accessibilityIdentifier("concept-inquiry-reveal")
                 }
             }
             .padding(14)
@@ -499,7 +499,7 @@ struct ConceptDetailView: View {
         }
         .buttonStyle(.plain)
         .pointingCursor()
-        .accessibilityHint("Opens a sheet where you can ask the on-device tutor about this concept")
+        .accessibilityHint("Opens a sheet where you can ask the on-device tutor about this concept").accessibilityIdentifier("concept-ask-followup")
     }
 
     @ViewBuilder
@@ -525,7 +525,7 @@ struct ConceptDetailView: View {
                         }
                         .buttonStyle(.plain)
                         .pointingCursor()
-                        .accessibilityHint("Opens the related concept")
+                        .accessibilityHint("Opens the related concept").accessibilityIdentifier("concept-related-concept-row-\(c.id)")
                         .contextMenu {
                             Button("Open") { nav.push(.concept(packId: pack.id, conceptId: c.id)) }
                             Button("Bookmark") {
@@ -550,7 +550,7 @@ struct ConceptDetailView: View {
                         }
                         .buttonStyle(.plain)
                         .pointingCursor()
-                        .accessibilityHint("Opens this related practice question")
+                        .accessibilityHint("Opens this related practice question").accessibilityIdentifier("concept-related-question-row-\(q.id)")
                         .padding(.vertical, DesignTokens.Spacing.xs)
                     }
                 }

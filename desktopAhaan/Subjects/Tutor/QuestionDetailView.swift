@@ -158,6 +158,7 @@ struct QuestionDetailView: View {
                   ? "Remove bookmark"
                   : "Bookmark this question to revisit it later")
             .accessibilityHint(isQuestionBookmarked ? "Removes this question from your bookmarks" : "Saves this question for quick review later")
+            .accessibilityIdentifier("question-toolbar-bookmark")
         }
     }
 
@@ -180,6 +181,7 @@ struct QuestionDetailView: View {
                   ? "Remove from Daily Practice"
                   : "Mark this question as tough — review later in Daily Practice")
             .accessibilityHint(dataStore.isToughQuestion(question.id) ? "Removes this question from the Daily Practice review queue" : "Flags this question as tough so Daily Practice will resurface it")
+            .accessibilityIdentifier("question-toolbar-tough")
         }
     }
 
@@ -214,6 +216,7 @@ struct QuestionDetailView: View {
                   ? "This question has been triaged. Click to send it back to the Needs Review queue."
                   : "Mark this question as triaged. It will drop out of the Needs Review filter in Quiz Bank.")
             .accessibilityHint(isReviewed ? "Sends this question back to the Needs Review queue" : "Marks this question as triaged and drops it from Needs Review")
+            .accessibilityIdentifier("question-toolbar-review")
         } else {
             EmptyView()
         }
@@ -235,6 +238,7 @@ struct QuestionDetailView: View {
             // duplicate binding here made two enabled buttons claim ←, which
             // is ambiguous in SwiftUI and could no-op.
             .accessibilityLabel("Previous question")
+            .accessibilityIdentifier("question-nav-previous")
 
             Spacer()
             if let label = siblingPositionLabel {
@@ -252,6 +256,7 @@ struct QuestionDetailView: View {
             }
             .disabled(!hasNext)
             .accessibilityLabel("Next question")
+            .accessibilityIdentifier("question-nav-next")
         }
         .padding(.top, DesignTokens.Spacing.sm)
     }
@@ -597,6 +602,7 @@ struct QuestionDetailView: View {
                     Button("Check") { recordMCQAttempt(options: options) }
                         .disabled(selectedOptionIndex == nil || attemptOutcome != .unchecked)
                         .accessibilityHint("Checks whether your selected option is correct")
+                        .accessibilityIdentifier("question-mcq-check")
                 }
                 .padding(.top, DesignTokens.Spacing.xs)
             }
@@ -654,6 +660,7 @@ struct QuestionDetailView: View {
         .contentShape(Rectangle())
         .accessibilityLabel("\(["A","B","C","D","E","F"][safe: idx] ?? "?"). \(opt)")
         .accessibilityHint("Selects this option as your answer")
+        .accessibilityIdentifier("question-mcq-option-\(idx)")
     }
 
     private func mcqRowBackground(idx: Int, correctIdx: Int?) -> Color {
@@ -707,6 +714,7 @@ struct QuestionDetailView: View {
                               || attemptOutcome != .unchecked)
                     .accessibilityLabel("Check matches")
                     .accessibilityHint("Validates your pairings. Enabled once every left item has a chosen right.")
+                    .accessibilityIdentifier("question-match-check")
             }
             .padding(.top, DesignTokens.Spacing.xs)
         }
@@ -840,6 +848,7 @@ struct QuestionDetailView: View {
                         .disabled(typedAnswer.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
                                   || attemptOutcome != .unchecked)
                         .accessibilityHint("Checks whether your typed answer is correct")
+                        .accessibilityIdentifier("question-text-check")
                 }
             }
         }
@@ -866,6 +875,7 @@ struct QuestionDetailView: View {
                 .controlSize(.large)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .accessibilityHint("Reveals the first hint for this question")
+                .accessibilityIdentifier("question-show-first-hint")
             }
             // Tier 2
             if hintTier >= 2, hints.indices.contains(1) {
@@ -877,6 +887,7 @@ struct QuestionDetailView: View {
                 .controlSize(.large)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .accessibilityHint("Reveals the second clue for this question")
+                .accessibilityIdentifier("question-show-next-clue")
             }
             // Tier 3 — full worked solution
             if hintTier >= 3 || revealSolution {
@@ -890,6 +901,7 @@ struct QuestionDetailView: View {
                 .keyboardShortcut(.defaultAction)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .accessibilityHint("Reveals the worked answer and step-by-step explanation")
+                .accessibilityIdentifier("question-show-full-solution")
             }
         }
     }

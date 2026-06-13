@@ -156,6 +156,7 @@ struct CommandPalette: View {
                 .help("Clear search")
                 .accessibilityLabel("Clear search")
                 .accessibilityHint("Empties the search field")
+                .accessibilityIdentifier("command-palette-search-clear")
             }
         }
         .padding(.horizontal, 18)
@@ -177,6 +178,7 @@ struct CommandPalette: View {
                             .onTapGesture { open(entry) }
                             .pointingCursor()
                             .accessibilityHint("Opens this result and closes the command palette")
+                            .accessibilityIdentifier("command-palette-row-\(entry.id)")
                     }
                 }
                 .padding(.vertical, 6)

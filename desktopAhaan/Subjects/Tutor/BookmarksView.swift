@@ -113,6 +113,7 @@ private struct BookmarksContent: View {
             .buttonStyle(.plain)
             .pointingCursor()
             .accessibilityHint("Opens this bookmarked concept")
+            .accessibilityIdentifier("bookmarks-concept-row-\(b.conceptId)")
             .contextMenu {
                 Button("Open") { nav.push(.concept(packId: pack.id, conceptId: concept.id)) }
                 Button("Remove bookmark") { dataStore.deleteBookmark(b) }
@@ -154,6 +155,7 @@ private struct BookmarksContent: View {
             .buttonStyle(.plain)
             .pointingCursor()
             .accessibilityHint("Opens this bookmarked question")
+            .accessibilityIdentifier("bookmarks-question-row-\(b.questionId)")
             .contextMenu {
                 Button("Open") { nav.push(.question(packId: pack.id, questionId: b.questionId)) }
                 Button("Remove bookmark") { dataStore.deleteQuestionBookmark(b) }

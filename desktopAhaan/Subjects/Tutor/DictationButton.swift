@@ -38,6 +38,7 @@ struct DictationButton: View {
                 ? "Stops listening and inserts what was recognised into the text field."
                 : "Starts on-device speech recognition. No audio leaves this Mac. Tap again to stop."
         )
+        .accessibilityIdentifier("dictation-toggle")
         .onChange(of: speech.recognizedText) { newValue in
             // Only overwrite the field if the recognizer is actively
             // producing text. Append on top of whatever was already typed

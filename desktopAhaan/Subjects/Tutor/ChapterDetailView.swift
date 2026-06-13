@@ -174,6 +174,7 @@ struct ChapterDetailView: View {
             .pointingCursor()
             .accessibilityLabel("Glossary — \(chapter.glossaryList.count) terms")
             .accessibilityHint("Opens the chapter's glossary in a sheet.")
+            .accessibilityIdentifier("chapter-open-glossary")
         }
     }
 
@@ -315,6 +316,7 @@ struct ChapterDetailView: View {
                     // behind it (concept / question counts).
                     .accessibilityLabel(topic.title)
                     .accessibilityHint("Opens topic — \(topic.concepts.count) concepts, \(topic.questions.count) questions.")
+                    .accessibilityIdentifier("chapter-topic-row-\(topic.id)")
                     .contextMenu {
                         Button("Open") { nav.push(.topic(packId: pack.id, topicId: topic.id)) }
                         Button("Copy title") {

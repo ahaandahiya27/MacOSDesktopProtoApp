@@ -272,6 +272,7 @@ struct HomeExperimentsSheet: View {
                 Spacer()
                 Button("Close") { presentationMode.wrappedValue.dismiss() }
                     .keyboardShortcut(.cancelAction)
+                    .accessibilityIdentifier("home-experiments-close")
             }
             .padding(20)
             .background(Color.white.opacity(0.5))
@@ -337,6 +338,7 @@ struct HomeExperimentCard: View {
             }
             .buttonStyle(.plain)
             .accessibilityHint(expanded ? "Collapses the experiment details" : "Expands materials, steps, and the explanation")
+            .accessibilityIdentifier("home-experiment-row-\(experiment.id)")
 
             if expanded {
                 VStack(alignment: .leading, spacing: 14) {

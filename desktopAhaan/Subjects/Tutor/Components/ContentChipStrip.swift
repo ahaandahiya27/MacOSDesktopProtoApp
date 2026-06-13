@@ -167,6 +167,7 @@ private struct ChipDetailSheet: View {
             .buttonStyle(.plain)
             .pointingCursor()
             .accessibilityLabel("Close detail")
+            .accessibilityIdentifier("content-chip-detail-close-x")
         }
         .padding(.horizontal, 20)
         .padding(.top, 18)
@@ -184,9 +185,11 @@ private struct ChipDetailSheet: View {
                 .buttonStyle(.bordered)
                 .accentColor(tint)
                 .accessibilityHint("Performs the chip's follow-up action and closes this sheet.")
+                .accessibilityIdentifier("content-chip-detail-action")
             }
             Button("Done", action: onDismiss)
                 .keyboardShortcut(.defaultAction)
+                .accessibilityIdentifier("content-chip-detail-done")
         }
         .padding(.horizontal, 20)
         .padding(.vertical, 10)

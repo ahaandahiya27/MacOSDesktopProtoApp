@@ -91,6 +91,7 @@ struct ChapterGlossaryCTA: View {
             .pointingCursor()
             .accessibilityLabel("Look up vocabulary for Chapter \(chapter.number)")
             .accessibilityHint("Opens the chapter's full vocabulary deck article.")
+            .accessibilityIdentifier("concept-chapter-glossary-cta")
             .sheet(item: $presented) { article in
                 ArticleBrowserView(
                     initialFile: article.filename,

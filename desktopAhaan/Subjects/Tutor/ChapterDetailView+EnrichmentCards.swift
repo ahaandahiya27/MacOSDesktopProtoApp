@@ -128,5 +128,6 @@ struct TryAtHomeCard: View {
         }
         .accessibilityLabel("Try at Home")
         .accessibilityHint("Opens hands-on home experiments for this chapter.")
+        .accessibilityIdentifier("try-at-home")
     }
 }

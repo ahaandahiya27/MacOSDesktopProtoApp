@@ -165,6 +165,7 @@ private struct StretchTopicRow: View {
         }
         .accessibilityLabel("Open stretch topic: \(topic.title), tagged \(topic.gradeLevel.displayName).")
         .accessibilityHint(topic.prerequisite ?? "Reveals a deeper take on this concept.")
+        .accessibilityIdentifier("deep-dive-row-\(topic.id)")
     }
 
     private var rowBody: some View {

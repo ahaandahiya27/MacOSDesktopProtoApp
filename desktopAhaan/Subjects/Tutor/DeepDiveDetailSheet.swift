@@ -84,6 +84,7 @@ struct DeepDiveDetailSheet: View {
             .pointingCursor()
             .accessibilityLabel("Close stretch topic")
             .accessibilityHint("Returns to the chapter detail page.")
+            .accessibilityIdentifier("deep-dive-detail-close-x")
         }
         .padding(.horizontal, DesignTokens.Spacing.xl)
         .padding(.top, 20)
@@ -216,6 +217,7 @@ private struct BonusQuestionCard: View {
             .buttonStyle(.bordered)
             .accessibilityLabel("Show answer")
             .accessibilityHint("Reveals the worked answer for this bonus question.")
+            .accessibilityIdentifier("deep-dive-bonus-show-answer")
         }
     }
 }
