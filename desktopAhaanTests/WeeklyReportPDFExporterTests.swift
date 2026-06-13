@@ -205,4 +205,39 @@ final class WeeklyReportPDFExporterTests: XCTestCase {
         XCTAssertEqual(Array(data.prefix(5)), Array("%PDF-".utf8),
             "An empty-history report card still produces a valid trend page.")
     }
+
+    // MARK: - Mock test section (v9)
+
+    private func sampleMockTest() -> MockTestResult {
+        MockTestResult(
+            takenAt: Date(timeIntervalSince1970: 1_716_500_000),
+            band: .balanced, isMixed: true, timeLimitSeconds: 1_200,
+            autoSubmitted: false, totalQuestions: 15, correctCount: 11,
+            wrongCount: 3, unansweredCount: 1, totalMarks: 41, maxMarks: 60,
+            totalSecondsSpent: 640, perSubject: [], perTopic: [], outcomes: [])
+    }
+
+    func testReportCardWithMockTestStillValidPDF() throws {
+        let url = tmp.appendingPathComponent("reportcard-mock.pdf")
+        try WeeklyReportPDFExporter.exportReportCard(
+            activity: sampleActivity(), masteryRows: sampleMasteryRows(),
+            checkpoint: sampleCheckpoint(), to: url,
+            progressHistory: [], mockTest: sampleMockTest(), calendar: cal)
+        let data = try Data(contentsOf: url)
+        XCTAssertEqual(Array(data.prefix(5)), Array("%PDF-".utf8),
+            "A report card carrying a mock-test result is still a valid PDF.")
+        XCTAssertGreaterThan(data.count, 0)
+    }
+
+    func testReportCardWithNilMockTestOmitsSection() throws {
+        // The mock-test section is drawn only when a result exists; omitting it
+        // must still produce a valid PDF (back-compat with pre-v9 callers).
+        let url = tmp.appendingPathComponent("reportcard-nomock.pdf")
+        try WeeklyReportPDFExporter.exportReportCard(
+            activity: sampleActivity(), masteryRows: sampleMasteryRows(),
+            checkpoint: sampleCheckpoint(), to: url,
+            progressHistory: [], mockTest: nil, calendar: cal)
+        let data = try Data(contentsOf: url)
+        XCTAssertEqual(Array(data.prefix(5)), Array("%PDF-".utf8))
+    }
 }

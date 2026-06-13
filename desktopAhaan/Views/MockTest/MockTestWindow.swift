@@ -68,8 +68,12 @@ struct MockTestView: View {
     }
 
     private func handleFinish(_ finished: MockTestResult) {
-        // Phase 3 wires persistence (`recordMockTestResult`) + the deliberate SRS
-        // recording (`recordMockTestReviews`) here. Phase 2 shows the report.
+        // Persist the result (NEW app state — folds into the parent Report Card)
+        // and record each answered question through the sanctioned ephemeral
+        // review path so the test reflects into the Mastery Map. Both are
+        // idempotent for one completion; the runner finishes exactly once.
+        dataStore.recordMockTestResult(finished)
+        dataStore.recordMockTestReviews(finished)
         result = finished
         withAnimationRespectingReduceMotion(.easeInOut(duration: 0.2)) { phase = .report }
     }

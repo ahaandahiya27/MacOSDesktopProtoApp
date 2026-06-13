@@ -153,6 +153,40 @@ final class MockTestBuildTests: XCTestCase {
         XCTAssertGreaterThanOrEqual(store.questionReviews["mt_correct"]?.bucket ?? 0, 1)
     }
 
+    // MARK: - Mastery-map reflection (Phase 3 integration)
+
+    func testRecordingReflectsIntoMasteryMap() async throws {
+        let registry = try await loadedRegistry()
+        let store = tempStore()
+        let cfg = config(.single(packId: "science_class7"), .balanced, count: 8)
+        let paper = store.buildMockTest(registry: registry, config: cfg)
+        try XCTSkipIf(paper.isEmpty, "Science pack produced no eligible MCQs.")
+
+        // Answer every question correctly.
+        var answers: [String: String] = [:]
+        for q in paper.questions { answers[q.id] = q.question.answer }
+        let result = MockTestEngine.grade(
+            paper: paper, answers: answers, secondsByPaperId: [:],
+            now: Date(), autoSubmitted: false)
+
+        let before = MasteryEngine.snapshot(registry: registry, dataStore: store).totalReviewed
+        XCTAssertTrue(store.questionReviews.isEmpty)
+
+        store.recordMockTestReviews(result)
+
+        XCTAssertEqual(store.questionReviews.count,
+                       result.outcomes.filter { $0.isAnswered }.count,
+                       "Every answered question recorded exactly one review.")
+        // Topic-bank questions resolve into the mastery snapshot's coverage, so
+        // the recorded answers must lift the reviewed count.
+        let topicAnswered = result.outcomes.filter { $0.isAnswered && $0.bank == .topic }.count
+        if topicAnswered > 0 {
+            let after = MasteryEngine.snapshot(registry: registry, dataStore: store).totalReviewed
+            XCTAssertGreaterThan(after, before,
+                "Recorded mock-test answers reflect into the Mastery Map.")
+        }
+    }
+
     // MARK: - Fixtures
 
     private func makeResult(takenAt: Date) -> MockTestResult {

@@ -57,6 +57,7 @@ final class WeeklyReportPDFExporter {
         checkpoint: MilestoneCheckpointResult?,
         to url: URL,
         progressHistory: [ProgressSnapshot] = [],
+        mockTest: MockTestResult? = nil,
         calendar: Calendar = .current,
         now: Date = Date()
     ) throws {
@@ -64,7 +65,7 @@ final class WeeklyReportPDFExporter {
             drawPage(ctx) { draw(activity, calendar: calendar, now: now) }
             drawPage(ctx) {
                 drawReportCardPage(masteryRows: masteryRows, checkpoint: checkpoint,
-                                   calendar: calendar, now: now)
+                                   mockTest: mockTest, calendar: calendar, now: now)
             }
             drawPage(ctx) {
                 drawTrendPage(history: progressHistory, calendar: calendar, now: now)
@@ -235,6 +236,7 @@ final class WeeklyReportPDFExporter {
     private static func drawReportCardPage(
         masteryRows: [ReportCardMasteryRow],
         checkpoint: MilestoneCheckpointResult?,
+        mockTest: MockTestResult? = nil,
         calendar: Calendar, now: Date
     ) {
         let contentWidth = pageSize.width - margin * 2
@@ -313,6 +315,24 @@ final class WeeklyReportPDFExporter {
                                width: contentWidth,
                                font: .systemFont(ofSize: 12.5, weight: .regular),
                                color: NSColor.darkGray)
+        }
+        // Latest mock test (v9). Drawn only when one has been taken.
+        if let mock = mockTest, mock.totalQuestions > 0 {
+            cursorY += 14
+            cursorY = drawText("Latest mock test",
+                               at: CGPoint(x: margin, y: cursorY), width: contentWidth,
+                               font: .systemFont(ofSize: 15, weight: .bold), color: NSColor.black)
+            cursorY += 6
+            let dateFmt = DateFormatter()
+            dateFmt.calendar = calendar
+            dateFmt.locale = Locale(identifier: "en_US_POSIX")
+            dateFmt.dateFormat = "MMMM d, yyyy"
+            let scope = mock.isMixed ? "Mixed" : "Single-subject"
+            let line = "\(scope) · \(mock.band.displayName): \(mock.totalMarks)/\(mock.maxMarks) marks, "
+                + "\(mock.correctCount) of \(mock.totalQuestions) correct (\(pct(mock.accuracyFraction))) "
+                + "on \(dateFmt.string(from: mock.takenAt))."
+            cursorY = drawText(line, at: CGPoint(x: margin, y: cursorY), width: contentWidth,
+                               font: .systemFont(ofSize: 13, weight: .semibold), color: NSColor.black)
         }
 
         // Footer.

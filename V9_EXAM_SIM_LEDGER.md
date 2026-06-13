@@ -44,8 +44,9 @@ path. Reuses the v6 mastery-gap sampler (`MilestoneAssessmentPlanner`,
 - [x] **Phase 2** — Mock Test setup + timed runner UI (own window) + full report
   view + coordinator + presenter + Help-menu entry (⌘⌥M). UI complete, in-memory.
   `V9_PHASE2_COMPLETE_v1`.
-- [ ] **Phase 3** — score report + persistence + Report-Card / Mastery-Map
-  integration + ephemeral-review recording. `V9_PHASE3_COMPLETE_v1`.
+- [x] **Phase 3** — persistence + ephemeral-review recording wired into the
+  coordinator's submit; latest mock test surfaced in the parent Report Card PDF;
+  mastery-map reflection via recording. +3 tests. `V9_PHASE3_COMPLETE_v1`.
 - [ ] **Phase 4** — Help-menu entry + keyboard shortcut + full a11y +
   reduce-motion + HardwareTier gating + empty/edge states. `V9_PHASE4_COMPLETE_v1`.
 - [ ] **Phase 5** — full test surface + XCUITest happy path + checkpoint doc.
@@ -87,3 +88,12 @@ path. Reuses the v6 mastery-gap sampler (`MilestoneAssessmentPlanner`,
   @MainActor action methods wrapped in closures (mainactor-closure lint). 40
   lints + full ci-build-test green. Persistence + SRS recording + report-card
   surfacing deferred to Phase 3. `V9_PHASE2_COMPLETE_v1`.
+- 2026-06-13: Phase 3 — `MockTestView.handleFinish` now persists the result
+  (`recordMockTestResult`) and records each answered question through the
+  ephemeral path (`recordMockTestReviews`), so a finished test reflects into the
+  Mastery Map. Added a compact "Latest mock test" section to the report-card PDF
+  (`WeeklyReportPDFExporter.exportReportCard` gained a defaulted `mockTest:`
+  param; `WeeklyProgressView` passes `latestMockTestResult()`); kept the exporter
+  at the 600-LOC ceiling by drawing the section only when a result exists. +2
+  PDF tests, +1 mastery-reflection integration test. 40 lints + ci-build-test
+  green. `V9_PHASE3_COMPLETE_v1`.

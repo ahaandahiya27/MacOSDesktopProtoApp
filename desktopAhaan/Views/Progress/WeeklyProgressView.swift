@@ -391,11 +391,13 @@ struct WeeklyProgressView: View {
         let snapshot = MasteryEngine.snapshot(registry: registry, dataStore: dataStore)
         let masteryRows = ReportCardMasteryRow.rows(from: snapshot)
         let checkpoint = dataStore.latestCheckpointResult()
+        let mockTest = dataStore.latestMockTestResult()
         do {
             try WeeklyReportPDFExporter.exportReportCard(
                 activity: activity, masteryRows: masteryRows,
                 checkpoint: checkpoint, to: url,
-                progressHistory: dataStore.progressHistorySorted())
+                progressHistory: dataStore.progressHistorySorted(),
+                mockTest: mockTest)
             exportStatus = "Saved to \(url.lastPathComponent)."
             exportIsError = false
         } catch {
