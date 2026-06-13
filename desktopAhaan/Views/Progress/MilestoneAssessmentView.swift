@@ -171,6 +171,7 @@ struct MilestoneAssessmentView: View {
             .buttonStyle(.plain)
             .accessibilityLabel("Begin checkpoint")
             .accessibilityHint("Starts the mixed-subject checkpoint quiz")
+            .accessibilityIdentifier("milestone-take-checkpoint")
         }
         .padding(DesignTokens.Spacing.lg)
         .background(

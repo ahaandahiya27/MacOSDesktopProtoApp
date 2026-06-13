@@ -79,6 +79,7 @@ struct PrintableWorksheetView: View {
                 // Reset the chapter to the new subject's first chapter.
                 selectedChapterId = selectedPack?.chapters.first?.id ?? ""
             }
+            .accessibilityIdentifier("worksheet-subject-picker")
         }
     }
 
@@ -91,6 +92,7 @@ struct PrintableWorksheetView: View {
                 }
             }
             .labelsHidden()
+            .accessibilityIdentifier("worksheet-chapter-picker")
         }
     }
 
@@ -104,6 +106,7 @@ struct PrintableWorksheetView: View {
             }
             .pickerStyle(.segmented)
             .labelsHidden()
+            .accessibilityIdentifier("worksheet-count-picker")
         }
     }
 
@@ -112,6 +115,7 @@ struct PrintableWorksheetView: View {
             Text("Include answer key on the last page").font(.headline)
         }
         .toggleStyle(.switch)
+        .accessibilityIdentifier("worksheet-answer-key-toggle")
     }
 
     @ViewBuilder
@@ -137,10 +141,12 @@ struct PrintableWorksheetView: View {
         HStack {
             Spacer()
             Button("Close") { onClose?() }
+                .accessibilityIdentifier("worksheet-close")
             Button("Print…") { printWorksheet() }
                 .keyboardShortcut(.defaultAction)
                 .disabled(availableCount == 0)
                 .accessibilityHint("Opens the system print dialog with your worksheet ready to print")
+                .accessibilityIdentifier("worksheet-print")
         }
     }
 

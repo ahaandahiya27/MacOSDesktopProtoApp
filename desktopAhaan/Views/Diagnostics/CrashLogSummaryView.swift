@@ -106,6 +106,7 @@ struct CrashLogSummaryView: View {
                 Label("Reveal Crash Logs in Finder", systemImage: "folder")
             }
             .accessibilityHint("Opens the macOS DiagnosticReports folder in Finder.")
+            .accessibilityIdentifier("crashlog-reveal-finder")
 
             Button {
                 copyDiagnostics()
@@ -113,6 +114,7 @@ struct CrashLogSummaryView: View {
                 Label(copied ? "Copied!" : "Copy Diagnostics", systemImage: "doc.on.doc")
             }
             .accessibilityHint("Copies the crash summary JSON to the clipboard.")
+            .accessibilityIdentifier("crashlog-copy-diagnostics")
 
             Spacer()
 
@@ -122,6 +124,7 @@ struct CrashLogSummaryView: View {
                 Label("Refresh", systemImage: "arrow.clockwise")
             }
             .accessibilityHint("Reloads the crash report list from disk")
+            .accessibilityIdentifier("crashlog-refresh")
         }
     }
 

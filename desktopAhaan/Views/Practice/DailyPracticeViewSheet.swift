@@ -213,6 +213,7 @@ private struct DailyPracticeContent: View {
             }
             .keyboardShortcut(.defaultAction)
             .accessibilityHint("Begins a timed review of all questions due today")
+            .accessibilityIdentifier("daily-practice-start-review")
         }
         .padding(14)
         .background(
@@ -314,6 +315,7 @@ private struct DailyPracticeContent: View {
                 .help("Remove from Daily Practice")
                 .accessibilityLabel("Remove \(entry.question.id) from daily practice list")
                 .accessibilityHint("Takes this question out of your review queue")
+                .accessibilityIdentifier("daily-practice-row-remove-\(entry.question.id)")
                 Image(systemName: "chevron.right")
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
                     .accessibilityHidden(true)
@@ -333,6 +335,7 @@ private struct DailyPracticeContent: View {
         .pointingCursor()
         .accessibilityLabel("Review tough question: \(entry.question.prompt)")
         .accessibilityHint("Opens this flagged question to practice again")
+        .accessibilityIdentifier("daily-practice-row-\(entry.question.id)")
     }
 }
 
@@ -383,6 +386,7 @@ private struct ReviewSessionSheet: View {
             Spacer()
             Button("Close") { isPresented = false }
                 .keyboardShortcut(.cancelAction)
+                .accessibilityIdentifier("review-session-close")
         }
         .padding(.horizontal, 20)
         .padding(.vertical, 14)
@@ -423,6 +427,7 @@ private struct ReviewSessionSheet: View {
                     .controlSize(.large)
                     .frame(maxWidth: .infinity)
                     .accessibilityHint("Reveals the correct answer for self-grading")
+                    .accessibilityIdentifier("review-session-show-answer")
             }
             // Skip card — bottom-right escape hatch. The kid hits this if
             // the prompt is confusing, a typo slipped in, or they want to
@@ -435,6 +440,7 @@ private struct ReviewSessionSheet: View {
                     .foregroundColor(.secondary)
                     .keyboardShortcut("s", modifiers: [])
                     .accessibilityLabel("Skip this card without scoring (press S)")
+                    .accessibilityIdentifier("review-session-skip")
             }
         }
         .padding(DesignTokens.Spacing.xl)
@@ -490,6 +496,7 @@ private struct ReviewSessionSheet: View {
         .keyboardShortcut(shortcut, modifiers: .command)
         .accessibilityLabel("Mark answer as \(label) (⌘\(String(shortcut.character)))")
         .accessibilityHint("Scores this card and moves to the next review question")
+        .accessibilityIdentifier("review-session-quality-\(label.lowercased())")
     }
 
     private func advance() {
@@ -509,6 +516,7 @@ private struct ReviewSessionSheet: View {
             Button("Close") { isPresented = false }
                 .keyboardShortcut(.defaultAction)
                 .padding(.top, DesignTokens.Spacing.sm)
+                .accessibilityIdentifier("review-session-complete-close")
         }
         .padding(40)
         .frame(maxWidth: .infinity, maxHeight: .infinity)

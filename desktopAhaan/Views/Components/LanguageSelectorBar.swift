@@ -21,6 +21,7 @@ struct LanguageSelectorBar: View {
             }
             .accessibilityLabel("Source language: \(source.displayName)")
             .accessibilityHint("Double tap to change the source language")
+            .accessibilityIdentifier("language-source-picker")
 
             // Swap button
             Button(action: onSwap) {
@@ -31,6 +32,7 @@ struct LanguageSelectorBar: View {
             .disabled(!TranslationPair(source: target, target: source).isValid)
             .accessibilityLabel("Swap language direction")
             .accessibilityHint("Switches the source and target languages")
+            .accessibilityIdentifier("language-swap")
 
             // Target picker
             Menu {
@@ -44,6 +46,7 @@ struct LanguageSelectorBar: View {
             }
             .accessibilityLabel("Target language: \(target.displayName)")
             .accessibilityHint("Double tap to change the target language")
+            .accessibilityIdentifier("language-target-picker")
         }
         .padding(.horizontal)
     }

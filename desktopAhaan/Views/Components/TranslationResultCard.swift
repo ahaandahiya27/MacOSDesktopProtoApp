@@ -27,6 +27,7 @@ struct TranslationResultCard: View {
                         .help("Play pronunciation")
                         .accessibilityLabel("Play audio pronunciation")
                         .accessibilityHint("Hear the translated text spoken aloud")
+                        .accessibilityIdentifier("translation-result-speak")
 
                         Button(action: onFavorite) {
                             Image(systemName: SFSymbolCompat.name(isFavorited ? "heart.fill" : "heart"))
@@ -36,6 +37,7 @@ struct TranslationResultCard: View {
                         .help(isFavorited ? "Remove from favorites" : "Add to favorites")
                         .accessibilityLabel(isFavorited ? "Remove from favorites" : "Add to favorites")
                         .accessibilityHint("Save or remove this translation from your favorites")
+                        .accessibilityIdentifier("translation-result-favorite")
 
                         Button(action: {
                             NSPasteboard.general.clearContents()
@@ -53,6 +55,7 @@ struct TranslationResultCard: View {
                         .help(showCopied ? "Copied!" : "Copy translation")
                         .accessibilityLabel(showCopied ? "Copied to clipboard" : "Copy translation")
                         .accessibilityHint("Copy the translated text to your clipboard")
+                        .accessibilityIdentifier("translation-result-copy")
                     }
                     .font(.title3)
                 }

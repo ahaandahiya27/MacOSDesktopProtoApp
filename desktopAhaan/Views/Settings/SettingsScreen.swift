@@ -116,6 +116,7 @@ struct SettingsScreen: View {
                     }
                 }
                 Toggle("Dictionary Only (Offline Mode)", isOn: $settings.preferOffline)
+                    .accessibilityIdentifier("settings-prefer-offline-toggle")
                 Text("When on, the app only uses the built-in dictionary — no internet requests at all. History, favorites, flashcards, and quizzes always work offline.")
                     .font(.caption)
                     .foregroundColor(.secondary)
@@ -124,6 +125,7 @@ struct SettingsScreen: View {
 
             Section(header: Text("Learning")) {
                 Toggle("Inquiry-first mode (predict before reading)", isOn: $inquiryFirstMode)
+                    .accessibilityIdentifier("settings-inquiry-first-toggle")
                 Text("When on, every concept card in a chapter that has authored a prediction question shows the question BEFORE the explanation — your kid hypothesises first, then reads. The guess isn't graded or saved; the goal is to engage active recall before exposure. Off by default. Today only Chapter 1 (Nutrition in Plants) has prediction questions; more chapters will follow.")
                     .font(.caption)
                     .foregroundColor(.secondary)
@@ -187,6 +189,7 @@ struct SettingsScreen: View {
                                     settings.parentPINEnabled = true
                                     pinSaved = true
                                 }
+                                .accessibilityIdentifier("settings-pin-save")
                             }
                         }
                     }
@@ -279,6 +282,7 @@ struct SettingsScreen: View {
             Section(header: Text("Quiz Flow")) {
                 Toggle("Auto-advance after correct answer",
                        isOn: $settings.autoAdvanceOnCorrect)
+                    .accessibilityIdentifier("settings-auto-advance-toggle")
                 Text("When on, the next question is shown automatically about a second after you get one right. Useful for fast flashcard-style drilling.")
                     .font(.caption)
                     .foregroundColor(.secondary)
@@ -293,6 +297,7 @@ struct SettingsScreen: View {
                         .foregroundColor(.red)
                 }
                 .accessibilityHint("Deletes every saved translation and resets practice progress")
+                .accessibilityIdentifier("settings-clear-history")
                 .alert(isPresented: $showClearConfirm) {
                     Alert(
                         title: Text("Clear all translation history?"),
@@ -402,6 +407,7 @@ struct PINEntryView: View {
             Button("Unlock") { onSubmit() }
                 .disabled(pinInput.count < 4)
                 .accessibilityHint("Checks your PIN and opens the Settings screen")
+                .accessibilityIdentifier("settings-pin-unlock")
         }
         .padding()
         .frame(maxWidth: .infinity, maxHeight: .infinity)

@@ -62,6 +62,7 @@ struct InfoCard: View {
                 }
                 .buttonStyle(.plain)
                 .accessibilityLabel("Dismiss")
+                .accessibilityIdentifier("info-card-dismiss")
             }
         }
         .padding()

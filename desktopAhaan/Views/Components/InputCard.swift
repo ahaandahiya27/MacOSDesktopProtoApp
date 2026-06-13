@@ -32,6 +32,7 @@ struct InputCard: View {
                     }
                 }
                 .accessibilityLabel("Text input for translation")
+                .accessibilityIdentifier("translator-input-field")
 
             HStack {
                 Spacer()
@@ -50,6 +51,7 @@ struct InputCard: View {
                 }
                 .accessibilityLabel(isListening ? "Stop listening" : "Speak to translate")
                 .accessibilityHint(isListening ? "Stops voice recording" : "Uses your microphone to capture text for translation")
+                .accessibilityIdentifier("translator-mic")
             }
         }
         .padding()

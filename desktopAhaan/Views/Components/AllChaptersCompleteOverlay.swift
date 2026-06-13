@@ -113,6 +113,7 @@ struct AllChaptersCompleteOverlay: View {
             .keyboardShortcut(.cancelAction)
             .padding(.top, DesignTokens.Spacing.md)
             .accessibilityLabel("Dismiss celebration")
+            .accessibilityIdentifier("all-chapters-complete-continue")
         }
     }
 

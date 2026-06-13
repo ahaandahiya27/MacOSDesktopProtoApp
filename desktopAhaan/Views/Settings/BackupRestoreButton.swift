@@ -39,6 +39,7 @@ struct BackupRestoreButton: View {
             }
             .accessibilityLabel("Restore from backup — replace current progress with a previously-saved JSON backup file")
             .accessibilityHint("Opens a file picker to load and restore a backup file")
+            .accessibilityIdentifier("settings-backup-restore")
 
             if let status = lastStatus {
                 Text(status)

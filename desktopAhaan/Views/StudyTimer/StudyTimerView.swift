@@ -66,6 +66,7 @@ struct StudyTimerView: View {
             .help(pomodoro.isRunning ? "Pause" : "Start")
             .accessibilityLabel(pomodoro.isRunning ? "Pause" : "Start")
             .accessibilityHint(pomodoro.isRunning ? "Pauses the focus timer" : "Starts the focus timer counting down")
+            .accessibilityIdentifier("study-timer-toggle")
 
             Button(action: { pomodoro.reset() }) {
                 Image(systemName: SFSymbolCompat.name("arrow.counterclockwise"))
@@ -75,6 +76,7 @@ struct StudyTimerView: View {
             .help("Reset")
             .accessibilityLabel("Reset")
             .accessibilityHint("Resets the timer back to a fresh focus phase")
+            .accessibilityIdentifier("study-timer-reset")
         }
     }
 
@@ -85,6 +87,7 @@ struct StudyTimerView: View {
                 .foregroundColor(DesignTokens.BrandColor.canvasText)
         }
         .toggleStyle(.switch)
+        .accessibilityIdentifier("study-timer-sound-toggle")
     }
 
     private var phaseTint: Color {
@@ -169,6 +172,7 @@ struct PracticeSettingsView: View {
             }
             .toggleStyle(.switch)
             .onChange(of: adaptiveOn) { AdaptiveDifficultyStorage.setEngineEnabled($0) }
+            .accessibilityIdentifier("practice-settings-adaptive-toggle")
 
             Toggle(isOn: $timerChime) {
                 settingLabel("Study-timer chime",
@@ -176,6 +180,7 @@ struct PracticeSettingsView: View {
             }
             .toggleStyle(.switch)
             .onChange(of: timerChime) { PomodoroStorage.setSoundEnabled($0) }
+            .accessibilityIdentifier("practice-settings-chime-toggle")
 
             VStack(alignment: .leading, spacing: DesignTokens.Spacing.xs) {
                 settingLabel("Default worksheet length",
@@ -188,6 +193,7 @@ struct PracticeSettingsView: View {
                 .pickerStyle(.segmented)
                 .labelsHidden()
                 .onChange(of: worksheetCount) { WorksheetStorage.setDefaultCount($0) }
+                .accessibilityIdentifier("practice-settings-worksheet-count")
             }
 
             Spacer(minLength: DesignTokens.Spacing.xs)
@@ -195,6 +201,7 @@ struct PracticeSettingsView: View {
                 Spacer()
                 Button("Done") { onClose?() }
                     .keyboardShortcut(.defaultAction)
+                    .accessibilityIdentifier("practice-settings-done")
             }
         }
         .padding(DesignTokens.Spacing.xl)

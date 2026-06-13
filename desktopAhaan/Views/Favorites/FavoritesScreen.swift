@@ -24,6 +24,7 @@ struct FavoritesScreen: View {
                             Text("Back")
                         }
                     }
+                    .accessibilityIdentifier("favorites-detail-back")
                     Spacer()
                 }
                 .padding(.horizontal, DesignTokens.Spacing.lg)
@@ -70,6 +71,7 @@ struct FavoritesScreen: View {
                     }
                     .buttonStyle(.plain)
                     .accessibilityHint("Opens the full translation detail view")
+                    .accessibilityIdentifier("favorites-row-\(record.id)")
                     .contextMenu {
                         Button {
                             NSPasteboard.general.clearContents()
@@ -133,6 +135,7 @@ struct FavoriteRowView: View {
                 .help("Play pronunciation")
                 .accessibilityLabel("Play pronunciation")
                 .accessibilityHint("Plays the spoken pronunciation of the translation")
+                .accessibilityIdentifier("favorites-row-speak-\(record.id)")
             }
 
             if let translit = record.transliteration, !translit.isEmpty {

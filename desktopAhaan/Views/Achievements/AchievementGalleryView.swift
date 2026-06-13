@@ -87,6 +87,7 @@ struct AchievementGalleryView: View {
                         .accessibilityLabel(badge.title)
                         .accessibilityValue(engine.isUnlocked(badge.id) ? "Unlocked" : "Locked")
                         .accessibilityHint("Opens the badge details with how to earn it")
+                        .accessibilityIdentifier("achievement-badge-\(badge.id)")
                     }
                 }
             }
@@ -152,6 +153,7 @@ struct AchievementDetailSheet: View {
             statusLine
             Button("Done", action: onClose)
                 .keyboardShortcut(.defaultAction)
+                .accessibilityIdentifier("achievement-detail-done")
         }
         .padding(28)
         .frame(width: 420)

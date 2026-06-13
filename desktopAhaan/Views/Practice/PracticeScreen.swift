@@ -39,6 +39,7 @@ struct PracticeScreen: View {
                         }
                     }
                     .accessibilityHint("Returns to the topic chooser screen")
+                    .accessibilityIdentifier("practice-toolbar-topics")
                 }
             }
         }
@@ -66,6 +67,7 @@ struct DailyPhraseCard: View {
                 }
                 .accessibilityLabel("Listen to phrase")
                 .accessibilityHint("Plays the spoken pronunciation of today's phrase")
+                .accessibilityIdentifier("practice-daily-phrase-speak")
             }
 
             Text(item.sanskrit)
@@ -146,6 +148,7 @@ struct CategoriesGrid: View {
                                     .clipShape(Capsule())
                             }
                             .accessibilityHint("Starts a quick quiz for this category")
+                            .accessibilityIdentifier("practice-quiz-\(category.rawValue.lowercased().replacingOccurrences(of: " ", with: "-"))")
                         }
                     }
                     .padding(.horizontal)
@@ -175,6 +178,7 @@ struct CategoryCard: View {
             .clipShape(RoundedRectangle(cornerRadius: DesignTokens.Radius.card))
         }
         .accessibilityHint("Opens flashcards for this practice topic")
+        .accessibilityIdentifier("practice-category-\(category.rawValue.lowercased().replacingOccurrences(of: " ", with: "-"))")
     }
 }
 
@@ -228,6 +232,7 @@ struct FlashcardView: View {
                                 .font(.caption)
                         }
                         .accessibilityHint("Plays the Sanskrit pronunciation aloud")
+                        .accessibilityIdentifier("practice-flashcard-listen")
                     }
                 }
                 .padding(DesignTokens.Spacing.xl)
@@ -260,6 +265,7 @@ struct FlashcardView: View {
                 .buttonStyle(.plain)
                 .pointingCursor()
                 .accessibilityHint("Shows or hides the answer on the flashcard.")
+                .accessibilityIdentifier("practice-flashcard-reveal")
 
                 HStack(spacing: 20) {
                     Button(action: { vm.previousFlashcard() }) {
@@ -269,6 +275,7 @@ struct FlashcardView: View {
                     .disabled(vm.currentItems.count <= 1)
                     .accessibilityLabel("Previous flashcard")
                     .accessibilityHint("Goes back to the previous card in this deck")
+                    .accessibilityIdentifier("practice-flashcard-previous")
 
                     Text("\(safeIndex + 1) / \(vm.currentItems.count)")
                         .font(.subheadline.weight(.medium))
@@ -281,6 +288,7 @@ struct FlashcardView: View {
                     .disabled(vm.currentItems.count <= 1)
                     .accessibilityLabel("Next flashcard")
                     .accessibilityHint("Moves to the next card in this deck")
+                    .accessibilityIdentifier("practice-flashcard-next")
                 }
                 .foregroundColor(Color.compatIndigo)
             } else {
@@ -324,6 +332,7 @@ struct QuizView: View {
                 }
                 .disabled(vm.quizAnswer.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty)
                 .accessibilityHint("Grades your typed answer and shows whether you were correct")
+                .accessibilityIdentifier("practice-quiz-check-answer")
 
                 if let result = vm.quizResult {
                     switch result {
@@ -356,6 +365,7 @@ struct QuizView: View {
                         vm.nextQuizQuestion()
                     }
                     .accessibilityHint("Loads the next quiz question for this category")
+                    .accessibilityIdentifier("practice-quiz-next-question")
                 }
             } else {
                 EmptyStateView(

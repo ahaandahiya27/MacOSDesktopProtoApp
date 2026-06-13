@@ -82,6 +82,7 @@ struct OCRTranslationScreen: View {
                 .foregroundColor(.secondary)
                 .pointingCursor()
                 .accessibilityHint("Opens the file picker to swap in a different image to scan")
+                .accessibilityIdentifier("ocr-choose-different-image")
             } else {
                 VStack(spacing: DesignTokens.Spacing.lg) {
                     Image(systemName: SFSymbolCompat.name("doc.text.viewfinder"))
@@ -101,6 +102,7 @@ struct OCRTranslationScreen: View {
                     }
                     .pointingCursor()
                     .accessibilityHint("Opens the file picker to choose an image to scan for text")
+                    .accessibilityIdentifier("ocr-open-image")
                 }
             }
         }
@@ -138,6 +140,7 @@ struct OCRTranslationScreen: View {
                 .help(showCopied ? "Copied!" : "Copy extracted text")
                 .accessibilityLabel(showCopied ? "Copied to clipboard" : "Copy extracted text")
                 .accessibilityHint("Copy the extracted text to your clipboard")
+                .accessibilityIdentifier("ocr-copy-extracted-text")
                 Button("Clear") {
                     editedText = ""
                     hasExtractedText = false
@@ -148,6 +151,7 @@ struct OCRTranslationScreen: View {
                 }
                 .font(.caption)
                 .foregroundColor(.red)
+                .accessibilityIdentifier("ocr-clear")
             }
 
             scanQualityIndicator
@@ -251,6 +255,7 @@ struct OCRTranslationScreen: View {
             }
             .disabled(editedText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty || vm.isTranslating)
             .accessibilityHint("Sends the extracted text to the translation engine")
+            .accessibilityIdentifier("ocr-translate")
             .padding(.horizontal)
         }
     }

@@ -32,6 +32,7 @@ struct HistoryScreen: View {
                             Text("Back")
                         }
                     }
+                    .accessibilityIdentifier("history-detail-back")
                     Spacer()
                 }
                 .padding(.horizontal, DesignTokens.Spacing.lg)
@@ -72,6 +73,7 @@ struct HistoryScreen: View {
                         .foregroundColor(.secondary)
                     TextField("Search translations", text: $searchText)
                         .textFieldStyle(.roundedBorder)
+                        .accessibilityIdentifier("history-search-field")
                 }
                 .padding(.horizontal)
                 .padding(.vertical, DesignTokens.Spacing.sm)
@@ -88,6 +90,7 @@ struct HistoryScreen: View {
                         }
                         .buttonStyle(.plain)
                         .accessibilityHint("Opens the full translation detail view")
+                        .accessibilityIdentifier("history-row-\(record.id)")
                         .contextMenu {
                             Button {
                                 dataStore.toggleRecordFavorite(record)

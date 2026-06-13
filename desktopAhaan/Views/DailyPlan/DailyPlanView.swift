@@ -104,6 +104,7 @@ struct DailyPlanView: View {
                 reload()
             }
             .accessibilityLabel("Plan mode")
+            .accessibilityIdentifier("daily-plan-mode-picker")
             Text(journeyMode.subtitle)
                 .font(.caption)
                 .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
@@ -243,6 +244,7 @@ struct DailyPlanRow: View {
         .accessibilityElement(children: .combine)
         .accessibilityLabel("\(item.kind.sectionLabel): \(item.title). \(statusWord)")
         .accessibilityHint(item.isActionable ? "Opens this plan item in the main window" : "")
+        .accessibilityIdentifier("daily-plan-row-\(item.id)")
     }
 
     private var textColumn: some View {
@@ -279,6 +281,7 @@ struct DailyPlanRow: View {
                 Button("Skip", action: onSkip)
                     .buttonStyle(.borderless)
                     .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                    .accessibilityIdentifier("daily-plan-row-skip-\(item.id)")
                 Button(action: onDone) {
                     Image(systemName: SFSymbolCompat.name("checkmark.circle"))
                         .font(.system(size: 24))
@@ -287,6 +290,7 @@ struct DailyPlanRow: View {
                 .help("Mark done")
                 .accessibilityLabel("Mark done")
                 .accessibilityHint("Marks this plan item as completed")
+                .accessibilityIdentifier("daily-plan-row-done-\(item.id)")
             }
         }
     }
