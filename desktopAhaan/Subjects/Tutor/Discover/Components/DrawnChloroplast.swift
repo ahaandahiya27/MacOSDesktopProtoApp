@@ -85,7 +85,12 @@ struct HexagonShape: Shape {
         let cy = rect.midY
         let r = min(rect.width, rect.height) / 2
         for i in 0..<6 {
-            let angle = Double(i) * .pi / 3 - .pi / 2
+            // angle annotated `CGFloat` (not the default `Double`) because
+            // Big-Sur's MacOSX 12.1 SDK exposes BOTH `Darwin.cos(_ x: Double)`
+            // and `CoreGraphics.cos(_ x: CGFloat)`; with a `Double` angle the
+            // Swift 5.5 compiler emits "ambiguous use of 'cos'" and the build
+            // fails on the iMac (modern Xcode dedupes these via SDK overlay).
+            let angle: CGFloat = CGFloat(i) * .pi / 3 - .pi / 2
             let pt = CGPoint(x: cx + r * cos(angle), y: cy + r * sin(angle))
             if i == 0 { p.move(to: pt) } else { p.addLine(to: pt) }
         }
