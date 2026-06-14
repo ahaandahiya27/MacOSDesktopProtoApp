@@ -76,7 +76,16 @@ struct MilestoneAssessmentView: View {
 
     private func buildIfNeeded() {
         guard assessment == nil else { return }
-        assessment = dataStore.buildMilestoneAssessment(registry: registry)
+        // Defer the heavy build by one runloop turn so SwiftUI commits the
+        // ProgressView("Preparing your checkpoint…") frame BEFORE MainActor
+        // blocks on `buildMilestoneAssessment` (walks ~500–1500 questions +
+        // MasteryEngine.snapshot + JourneyPlanner.subjectFocusOrder +
+        // MilestoneAssessmentPlanner.compose). Without this yield, the
+        // window opens visually frozen on the AMD R9 M290X iMac for 1–2s.
+        Task { @MainActor in
+            try? await Task.sleep(nanoseconds: 30_000_000)
+            assessment = dataStore.buildMilestoneAssessment(registry: registry)
+        }
     }
 
     private func begin() {
@@ -111,13 +120,20 @@ struct MilestoneAssessmentView: View {
     }
 
     private func retake() {
-        assessment = dataStore.buildMilestoneAssessment(registry: registry)
+        // Same deferred-build pattern as buildIfNeeded — flip back to nil so
+        // the ProgressView shows during the rebuild, then do the heavy work
+        // in a Task so the loading view paints first.
+        assessment = nil
         index = 0
         selected = nil
         revealed = false
         correctById = [:]
         result = nil
         withAnimationRespectingReduceMotion(.easeInOut(duration: 0.2)) { phase = .intro }
+        Task { @MainActor in
+            try? await Task.sleep(nanoseconds: 30_000_000)
+            assessment = dataStore.buildMilestoneAssessment(registry: registry)
+        }
     }
 
     private var currentQuestion: AssessmentQuestion? {

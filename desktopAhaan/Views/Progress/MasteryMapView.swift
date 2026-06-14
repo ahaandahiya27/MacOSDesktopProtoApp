@@ -60,7 +60,16 @@ struct MasteryMapView: View {
     }
 
     private func reload() {
-        snapshot = MasteryEngine.snapshot(registry: registry, dataStore: dataStore)
+        // Defer the heavy snapshot by one runloop turn so SwiftUI commits
+        // the ProgressView("Mapping your progress…") frame BEFORE MainActor
+        // blocks on MasteryEngine.snapshot (walks ~3,500 reviewed questions
+        // across all 4 packs, builds per-subject mastery tallies). Without
+        // this yield, the window opens visually frozen on the AMD R9 M290X
+        // iMac for 1–2s — same pattern that fixed MockTest Start CTA.
+        Task { @MainActor in
+            try? await Task.sleep(nanoseconds: 30_000_000)
+            snapshot = MasteryEngine.snapshot(registry: registry, dataStore: dataStore)
+        }
     }
 
     // MARK: - Header
