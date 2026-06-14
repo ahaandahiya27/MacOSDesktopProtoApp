@@ -159,7 +159,6 @@ struct QuestionDetailView: View {
                   ? "Remove bookmark"
                   : "Bookmark this question to revisit it later")
             .accessibilityHint(isQuestionBookmarked ? "Removes this question from your bookmarks" : "Saves this question for quick review later")
-            .accessibilityIdentifier("question-toolbar-bookmark")
         }
     }
 
@@ -182,7 +181,6 @@ struct QuestionDetailView: View {
                   ? "Remove from Daily Practice"
                   : "Mark this question as tough — review later in Daily Practice")
             .accessibilityHint(dataStore.isToughQuestion(question.id) ? "Removes this question from the Daily Practice review queue" : "Flags this question as tough so Daily Practice will resurface it")
-            .accessibilityIdentifier("question-toolbar-tough")
         }
     }
 
@@ -217,7 +215,6 @@ struct QuestionDetailView: View {
                   ? "This question has been triaged. Click to send it back to the Needs Review queue."
                   : "Mark this question as triaged. It will drop out of the Needs Review filter in Quiz Bank.")
             .accessibilityHint(isReviewed ? "Sends this question back to the Needs Review queue" : "Marks this question as triaged and drops it from Needs Review")
-            .accessibilityIdentifier("question-toolbar-review")
         } else {
             EmptyView()
         }

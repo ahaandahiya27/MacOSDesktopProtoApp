@@ -82,7 +82,7 @@ struct ConceptDetailView: View {
                 }
                 // ⌘⇧B (not ⌘B) — ⌘B is the app-level "Show Bookmarks" command.
                 .keyboardShortcut("b", modifiers: [.command, .shift])
-                .help(isBookmarked ? "Remove bookmark" : "Bookmark this concept").accessibilityHint(isBookmarked ? "Removes this concept from your bookmarks" : "Saves this concept for quick review later").accessibilityIdentifier("concept-toolbar-bookmark")
+                .help(isBookmarked ? "Remove bookmark" : "Bookmark this concept").accessibilityHint(isBookmarked ? "Removes this concept from your bookmarks" : "Saves this concept for quick review later")
             }
             ToolbarItem(placement: .automatic) {
                 Button {
@@ -94,7 +94,7 @@ struct ConceptDetailView: View {
                     )
                 }
                 .keyboardShortcut("u", modifiers: .command)
-                .help(dataStore.isConceptUnderstood(concept.id) ? "Unmark as understood" : "Mark this concept as understood").accessibilityHint(dataStore.isConceptUnderstood(concept.id) ? "Clears the understood flag on this concept" : "Records that you have understood this concept").accessibilityIdentifier("concept-toolbar-understood")
+                .help(dataStore.isConceptUnderstood(concept.id) ? "Unmark as understood" : "Mark this concept as understood").accessibilityHint(dataStore.isConceptUnderstood(concept.id) ? "Clears the understood flag on this concept" : "Records that you have understood this concept")
             }
             ToolbarItem(placement: .automatic) {
                 Button {
@@ -108,7 +108,7 @@ struct ConceptDetailView: View {
                 // ⌘← (not ⌘[) — ⌘[ is the app-level "Go Back" command;
                 // matches QuestionDetailView's ⌘-arrow prev/next convention.
                 .keyboardShortcut(.leftArrow, modifiers: .command)
-                .help(siblingHelpText(direction: "Previous")).accessibilityHint("Opens the previous concept in this topic").accessibilityIdentifier("concept-toolbar-previous")
+                .help(siblingHelpText(direction: "Previous")).accessibilityHint("Opens the previous concept in this topic")
             }
             ToolbarItem(placement: .automatic) {
                 Button {
@@ -120,7 +120,7 @@ struct ConceptDetailView: View {
                 }
                 .disabled(siblings?.nextId == nil)
                 .keyboardShortcut(.rightArrow, modifiers: .command)
-                .help(siblingHelpText(direction: "Next")).accessibilityHint("Opens the next concept in this topic").accessibilityIdentifier("concept-toolbar-next")
+                .help(siblingHelpText(direction: "Next")).accessibilityHint("Opens the next concept in this topic")
             }
         }
         .onDisappear {
