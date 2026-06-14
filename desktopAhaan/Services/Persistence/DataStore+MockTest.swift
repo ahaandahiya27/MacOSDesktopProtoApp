@@ -87,6 +87,18 @@ extension DataStore {
             var seq = 0
 
             // One walker for every bank so eligibility + ranking are identical.
+            //
+            // `@MainActor` on this local function is REQUIRED on Swift 5.5 /
+            // Big Sur. The enclosing `buildMockTest(...)` lives in an
+            // `extension DataStore` where DataStore is `@MainActor`-isolated,
+            // and `Self.isAssessableMCQ` (called below) is `@MainActor`
+            // static. Swift 5.5 does NOT propagate the enclosing actor
+            // isolation to nested local functions — without this annotation
+            // the call to `isAssessableMCQ` is "from outside its actor
+            // context [and] implicitly asynchronous", which fails to compile
+            // on the deploy iMac (this is exactly the Big-Sur regression
+            // class `check_view_mainactor.py` was extended to catch).
+            @MainActor
             func consider(_ question: Question, topicKey: String,
                           topicTitle: String, chapter: Chapter, bank: MockTestBank) {
                 seq += 1
