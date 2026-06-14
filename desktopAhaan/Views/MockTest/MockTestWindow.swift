@@ -20,7 +20,15 @@ struct MockTestView: View {
     @EnvironmentObject var dataStore: DataStore
     @EnvironmentObject var registry: SubjectRegistry
 
-    private enum Phase: Equatable { case setup, notEnough, running, report }
+    // `building` was added 2026-06-14 after the iMac reported the Start CTA
+    // appearing dead: tapping Start synchronously called `buildMockTest`,
+    // which walks ~3,500 questions across 4 packs + runs MasteryEngine.snapshot
+    // + JourneyPlanner.compose, all on @MainActor. On the AMD R9 M290X iMac
+    // that takes ~1–3 seconds — the UI froze from tap to phase change.
+    // The fix flips an immediate `building` flag, lets the runloop draw the
+    // loading view via Task.yield(), THEN runs the heavy build. UI shows
+    // "Building your paper…" right away so the user knows the click landed.
+    private enum Phase: Equatable { case setup, building, notEnough, running, report }
 
     @State private var phase: Phase = .setup
     @State private var paper: MockTestPaper?
@@ -36,6 +44,8 @@ struct MockTestView: View {
         switch phase {
         case .setup:
             MockTestSetupView(onStart: { handleStart($0) })
+        case .building:
+            buildingState
         case .notEnough:
             notEnoughState
         case .running:
@@ -56,14 +66,26 @@ struct MockTestView: View {
     // MARK: - Flow
 
     private func handleStart(_ config: MockTestConfig) {
-        let built = dataStore.buildMockTest(registry: registry, config: config)
-        if built.isEmpty {
-            paper = nil
-            withAnimationRespectingReduceMotion(.easeInOut(duration: 0.2)) { phase = .notEnough }
-        } else {
-            paper = built
-            result = nil
-            withAnimationRespectingReduceMotion(.easeInOut(duration: 0.2)) { phase = .running }
+        // Immediate visual feedback BEFORE the heavy build. Setting phase
+        // synchronously then yielding to the runloop in the Task body
+        // guarantees SwiftUI gets one paint cycle for the "Building…"
+        // view before MainActor blocks on the build. Otherwise tap →
+        // build → phase change all happen in one frame and the user
+        // sees nothing for the duration of the build.
+        phase = .building
+        Task { @MainActor in
+            // One frame ≈ 16ms on a 60Hz display; legacy iMac runs at
+            // 60Hz so 30ms gives the loading view two frames of headroom.
+            try? await Task.sleep(nanoseconds: 30_000_000)
+            let built = dataStore.buildMockTest(registry: registry, config: config)
+            if built.isEmpty {
+                paper = nil
+                withAnimationRespectingReduceMotion(.easeInOut(duration: 0.2)) { phase = .notEnough }
+            } else {
+                paper = built
+                result = nil
+                withAnimationRespectingReduceMotion(.easeInOut(duration: 0.2)) { phase = .running }
+            }
         }
     }
 
@@ -86,6 +108,30 @@ struct MockTestView: View {
 
     private func done() {
         NSApp.keyWindow?.performClose(nil)
+    }
+
+    // MARK: - Building state
+
+    /// Loading view rendered between tap-Start and the paper being ready.
+    /// Without this state the UI froze for the duration of `buildMockTest`
+    /// (~1–3s on the AMD R9 M290X iMac) and the tap looked unresponsive.
+    private var buildingState: some View {
+        VStack(spacing: DesignTokens.Spacing.md) {
+            ProgressView().controlSize(.large)
+            Text("Building your paper…")
+                .font(.headline)
+                .foregroundColor(DesignTokens.BrandColor.canvasText)
+            Text("Picking questions across subjects and matching your mastery gaps. This takes a second or two.")
+                .font(.callout)
+                .multilineTextAlignment(.center)
+                .foregroundColor(DesignTokens.BrandColor.canvasTextSecondary)
+                .fixedSize(horizontal: false, vertical: true)
+        }
+        .frame(maxWidth: 380)
+        .frame(maxWidth: .infinity, maxHeight: .infinity)
+        .padding(DesignTokens.Spacing.xl)
+        .accessibilityElement(children: .combine)
+        .accessibilityLabel("Building your mock test paper. This takes a second or two.")
     }
 
     // MARK: - Empty state
