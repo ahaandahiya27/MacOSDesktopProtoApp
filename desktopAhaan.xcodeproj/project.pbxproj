@@ -2155,6 +2155,10 @@
 		B703E422AC7C24EB489551C3 /* Paper_23_Light_LinesAngles_Respiration_Integers_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 12E74847F36031DA183E61BA /* Paper_23_Light_LinesAngles_Respiration_Integers_QuestionPaper.pdf */; };
 		81897BB414DCB9477301D5D2 /* Paper_23_Light_LinesAngles_Respiration_Integers_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 5FF1AA7F7C7BBBCFD995F1F2 /* Paper_23_Light_LinesAngles_Respiration_Integers_Questions.md */; };
 		137F0D4A71411E233FFA1E9D /* Paper_23_Light_LinesAngles_Respiration_Integers_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 3CBDE5506449554CE066CB9B /* Paper_23_Light_LinesAngles_Respiration_Integers_Solutions.html */; };
+		8E3B6200D1BE9AA8C627D767 /* Paper_24_NutritionAnimals_PhysChem_Fractions_Comparing_QuestionPaper.html in Resources */ = {isa = PBXBuildFile; fileRef = C700F8475B5BB9C1CE4DC504 /* Paper_24_NutritionAnimals_PhysChem_Fractions_Comparing_QuestionPaper.html */; };
+		2003CA8EFC97A859B36AECFD /* Paper_24_NutritionAnimals_PhysChem_Fractions_Comparing_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1045AA39270794E09449802D /* Paper_24_NutritionAnimals_PhysChem_Fractions_Comparing_QuestionPaper.pdf */; };
+		FB602DCBBD8F3AE9F971E9FE /* Paper_24_NutritionAnimals_PhysChem_Fractions_Comparing_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 1835B955C2F37898D8318D34 /* Paper_24_NutritionAnimals_PhysChem_Fractions_Comparing_Questions.md */; };
+		59F621D7C933C15E62941000 /* Paper_24_NutritionAnimals_PhysChem_Fractions_Comparing_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = D1DA2D03D505E01EF70E3638 /* Paper_24_NutritionAnimals_PhysChem_Fractions_Comparing_Solutions.html */; };
 		4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */ = {isa = PBXBuildFile; fileRef = ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */; };
 		CF6289FBCF676858C99ED670 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F17B590EF6DA751E23E41 /* Contents.json */; };
 		9AE05997509D9842F29172EB /* maths_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E448E6E8BEEB87620A8C798 /* maths_class7.json */; };
@@ -3950,6 +3954,10 @@
 		12E74847F36031DA183E61BA /* Paper_23_Light_LinesAngles_Respiration_Integers_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_23_Light_LinesAngles_Respiration_Integers_QuestionPaper.pdf"; sourceTree = "<group>"; };
 		5FF1AA7F7C7BBBCFD995F1F2 /* Paper_23_Light_LinesAngles_Respiration_Integers_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_23_Light_LinesAngles_Respiration_Integers_Questions.md"; sourceTree = "<group>"; };
 		3CBDE5506449554CE066CB9B /* Paper_23_Light_LinesAngles_Respiration_Integers_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_23_Light_LinesAngles_Respiration_Integers_Solutions.html"; sourceTree = "<group>"; };
+		C700F8475B5BB9C1CE4DC504 /* Paper_24_NutritionAnimals_PhysChem_Fractions_Comparing_QuestionPaper.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_24_NutritionAnimals_PhysChem_Fractions_Comparing_QuestionPaper.html"; sourceTree = "<group>"; };
+		1045AA39270794E09449802D /* Paper_24_NutritionAnimals_PhysChem_Fractions_Comparing_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_24_NutritionAnimals_PhysChem_Fractions_Comparing_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		1835B955C2F37898D8318D34 /* Paper_24_NutritionAnimals_PhysChem_Fractions_Comparing_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_24_NutritionAnimals_PhysChem_Fractions_Comparing_Questions.md"; sourceTree = "<group>"; };
+		D1DA2D03D505E01EF70E3638 /* Paper_24_NutritionAnimals_PhysChem_Fractions_Comparing_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_24_NutritionAnimals_PhysChem_Fractions_Comparing_Solutions.html"; sourceTree = "<group>"; };
 		ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "QUESTION_INDEX.json"; sourceTree = "<group>"; };
 		5C7F17B590EF6DA751E23E41 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Contents.json"; sourceTree = "<group>"; };
 		69191026B2F9F250C1D2E9BD /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement.swift"; sourceTree = "<group>"; };
@@ -6377,6 +6385,10 @@
 				12E74847F36031DA183E61BA,
 				5FF1AA7F7C7BBBCFD995F1F2,
 				3CBDE5506449554CE066CB9B,
+				C700F8475B5BB9C1CE4DC504,
+				1045AA39270794E09449802D,
+				1835B955C2F37898D8318D34,
+				D1DA2D03D505E01EF70E3638,
 				ECD0916CC0210824B2615292,
 			);
 			path = "BossChallengePapers";
@@ -10059,6 +10071,10 @@
 				B703E422AC7C24EB489551C3 /* Paper_23_Light_LinesAngles_Respiration_Integers_QuestionPaper.pdf in Resources */,
 				81897BB414DCB9477301D5D2 /* Paper_23_Light_LinesAngles_Respiration_Integers_Questions.md in Resources */,
 				137F0D4A71411E233FFA1E9D /* Paper_23_Light_LinesAngles_Respiration_Integers_Solutions.html in Resources */,
+				8E3B6200D1BE9AA8C627D767 /* Paper_24_NutritionAnimals_PhysChem_Fractions_Comparing_QuestionPaper.html in Resources */,
+				2003CA8EFC97A859B36AECFD /* Paper_24_NutritionAnimals_PhysChem_Fractions_Comparing_QuestionPaper.pdf in Resources */,
+				FB602DCBBD8F3AE9F971E9FE /* Paper_24_NutritionAnimals_PhysChem_Fractions_Comparing_Questions.md in Resources */,
+				59F621D7C933C15E62941000 /* Paper_24_NutritionAnimals_PhysChem_Fractions_Comparing_Solutions.html in Resources */,
 				4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */,
 				CF6289FBCF676858C99ED670 /* Contents.json in Resources */,
 				9AE05997509D9842F29172EB /* maths_class7.json in Resources */,

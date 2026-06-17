@@ -25,3 +25,4 @@
 | 21 | 2026-06-18 | Nutrition in Plants · Lines & Angles · Winds, Storms & Cyclones · Rational Numbers | 25/25/25/25 | ✓ |
 | 22 | 2026-06-18 | Transportation in Animals & Plants · Acids, Bases & Salts · Comparing Quantities · Perimeter & Area | 25/25/25/25 | ✓ |
 | 23 | 2026-06-18 | Light · Lines & Angles · Respiration in Organisms · Integers | 25/25/25/25 | ✓ |
+| 24 | 2026-06-18 | Nutrition in Animals · Physical & Chemical Changes · Fractions & Decimals · Comparing Quantities | 25/25/25/25 | ✓ |
