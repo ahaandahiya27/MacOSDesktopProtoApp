@@ -13,3 +13,4 @@
 | 09 | 2026-06-18 | Rational Numbers · Motion & Time · Data Handling · Heat | 25/25/25/25 | ✓ |
 | 10 | 2026-06-18 | Symmetry · Light · Arithmetic Expressions · Physical & Chemical Changes | 25/25/25/25 | ✓ |
 | 11 | 2026-06-18 | Motion & Time · Comparing Quantities · Electric Current & its Effects · Algebraic Expressions | 25/25/25/25 | ✓ |
+| 12 | 2026-06-18 | Nutrition in Animals · Soil · Data Handling · Exponents & Powers | 25/25/25/25 | ✓ |

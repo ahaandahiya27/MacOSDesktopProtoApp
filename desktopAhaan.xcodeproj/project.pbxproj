@@ -2107,6 +2107,10 @@
 		20F2C598ECC936B5462B1277 /* Paper_11_MotionTime_ComparingQuantities_ElectricCurrent_AlgExpr_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 76C8A982563E09544BFB5D75 /* Paper_11_MotionTime_ComparingQuantities_ElectricCurrent_AlgExpr_QuestionPaper.pdf */; };
 		4C306A2C0FF3CE6555E1FD91 /* Paper_11_MotionTime_ComparingQuantities_ElectricCurrent_AlgExpr_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 4070881555F46628ED327A9A /* Paper_11_MotionTime_ComparingQuantities_ElectricCurrent_AlgExpr_Questions.md */; };
 		0725E9F0F8E942348F5E1BC5 /* Paper_11_MotionTime_ComparingQuantities_ElectricCurrent_AlgExpr_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 99BBC4C4A05FC226DE320A2E /* Paper_11_MotionTime_ComparingQuantities_ElectricCurrent_AlgExpr_Solutions.html */; };
+		8AE764CB16981D9B5162DEC8 /* Paper_12_NutritionAnimals_Soil_DataHandling_Exponents_QuestionPaper.html in Resources */ = {isa = PBXBuildFile; fileRef = 286767CC328B39916EC17EF4 /* Paper_12_NutritionAnimals_Soil_DataHandling_Exponents_QuestionPaper.html */; };
+		55FEB43474D51A5FFA849AF5 /* Paper_12_NutritionAnimals_Soil_DataHandling_Exponents_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF6F1125B945761D71F65C60 /* Paper_12_NutritionAnimals_Soil_DataHandling_Exponents_QuestionPaper.pdf */; };
+		4811FB968CDE0251EC0F9BC6 /* Paper_12_NutritionAnimals_Soil_DataHandling_Exponents_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 92AA3BAD0B98F31FBFB42685 /* Paper_12_NutritionAnimals_Soil_DataHandling_Exponents_Questions.md */; };
+		B6ABDEE623C7A65E41552133 /* Paper_12_NutritionAnimals_Soil_DataHandling_Exponents_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = E5D47C224FD8D27B65B59E29 /* Paper_12_NutritionAnimals_Soil_DataHandling_Exponents_Solutions.html */; };
 		4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */ = {isa = PBXBuildFile; fileRef = ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */; };
 		CF6289FBCF676858C99ED670 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F17B590EF6DA751E23E41 /* Contents.json */; };
 		9AE05997509D9842F29172EB /* maths_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E448E6E8BEEB87620A8C798 /* maths_class7.json */; };
@@ -3854,6 +3858,10 @@
 		76C8A982563E09544BFB5D75 /* Paper_11_MotionTime_ComparingQuantities_ElectricCurrent_AlgExpr_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_11_MotionTime_ComparingQuantities_ElectricCurrent_AlgExpr_QuestionPaper.pdf"; sourceTree = "<group>"; };
 		4070881555F46628ED327A9A /* Paper_11_MotionTime_ComparingQuantities_ElectricCurrent_AlgExpr_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_11_MotionTime_ComparingQuantities_ElectricCurrent_AlgExpr_Questions.md"; sourceTree = "<group>"; };
 		99BBC4C4A05FC226DE320A2E /* Paper_11_MotionTime_ComparingQuantities_ElectricCurrent_AlgExpr_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_11_MotionTime_ComparingQuantities_ElectricCurrent_AlgExpr_Solutions.html"; sourceTree = "<group>"; };
+		286767CC328B39916EC17EF4 /* Paper_12_NutritionAnimals_Soil_DataHandling_Exponents_QuestionPaper.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_12_NutritionAnimals_Soil_DataHandling_Exponents_QuestionPaper.html"; sourceTree = "<group>"; };
+		FF6F1125B945761D71F65C60 /* Paper_12_NutritionAnimals_Soil_DataHandling_Exponents_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_12_NutritionAnimals_Soil_DataHandling_Exponents_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		92AA3BAD0B98F31FBFB42685 /* Paper_12_NutritionAnimals_Soil_DataHandling_Exponents_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_12_NutritionAnimals_Soil_DataHandling_Exponents_Questions.md"; sourceTree = "<group>"; };
+		E5D47C224FD8D27B65B59E29 /* Paper_12_NutritionAnimals_Soil_DataHandling_Exponents_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_12_NutritionAnimals_Soil_DataHandling_Exponents_Solutions.html"; sourceTree = "<group>"; };
 		ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "QUESTION_INDEX.json"; sourceTree = "<group>"; };
 		5C7F17B590EF6DA751E23E41 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Contents.json"; sourceTree = "<group>"; };
 		69191026B2F9F250C1D2E9BD /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement.swift"; sourceTree = "<group>"; };
@@ -6233,6 +6241,10 @@
 				76C8A982563E09544BFB5D75,
 				4070881555F46628ED327A9A,
 				99BBC4C4A05FC226DE320A2E,
+				286767CC328B39916EC17EF4,
+				FF6F1125B945761D71F65C60,
+				92AA3BAD0B98F31FBFB42685,
+				E5D47C224FD8D27B65B59E29,
 				ECD0916CC0210824B2615292,
 			);
 			path = "BossChallengePapers";
@@ -9867,6 +9879,10 @@
 				20F2C598ECC936B5462B1277 /* Paper_11_MotionTime_ComparingQuantities_ElectricCurrent_AlgExpr_QuestionPaper.pdf in Resources */,
 				4C306A2C0FF3CE6555E1FD91 /* Paper_11_MotionTime_ComparingQuantities_ElectricCurrent_AlgExpr_Questions.md in Resources */,
 				0725E9F0F8E942348F5E1BC5 /* Paper_11_MotionTime_ComparingQuantities_ElectricCurrent_AlgExpr_Solutions.html in Resources */,
+				8AE764CB16981D9B5162DEC8 /* Paper_12_NutritionAnimals_Soil_DataHandling_Exponents_QuestionPaper.html in Resources */,
+				55FEB43474D51A5FFA849AF5 /* Paper_12_NutritionAnimals_Soil_DataHandling_Exponents_QuestionPaper.pdf in Resources */,
+				4811FB968CDE0251EC0F9BC6 /* Paper_12_NutritionAnimals_Soil_DataHandling_Exponents_Questions.md in Resources */,
+				B6ABDEE623C7A65E41552133 /* Paper_12_NutritionAnimals_Soil_DataHandling_Exponents_Solutions.html in Resources */,
 				4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */,
 				CF6289FBCF676858C99ED670 /* Contents.json in Resources */,
 				9AE05997509D9842F29172EB /* maths_class7.json in Resources */,
