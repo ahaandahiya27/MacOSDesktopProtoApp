@@ -2127,6 +2127,10 @@
 		846F5C06689A5324C7EB5580 /* Paper_16_Light_Triangle_Wastewater_ComparingQuantities_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 06C95723395F17F38AD28843 /* Paper_16_Light_Triangle_Wastewater_ComparingQuantities_QuestionPaper.pdf */; };
 		2AEB118D19D7F4E2B0F2DC80 /* Paper_16_Light_Triangle_Wastewater_ComparingQuantities_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = D6375823B42E61AB1F8FEF31 /* Paper_16_Light_Triangle_Wastewater_ComparingQuantities_Questions.md */; };
 		6283098AF2E339DD96B891CA /* Paper_16_Light_Triangle_Wastewater_ComparingQuantities_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 44CD0B000519C5A56DE80AC2 /* Paper_16_Light_Triangle_Wastewater_ComparingQuantities_Solutions.html */; };
+		9B56D20EBFCE2647C0158E43 /* Paper_17_Respiration_LinesAngles_ElectricCurrent_Exponents_QuestionPaper.html in Resources */ = {isa = PBXBuildFile; fileRef = A61C1D45D81CECE8EF265587 /* Paper_17_Respiration_LinesAngles_ElectricCurrent_Exponents_QuestionPaper.html */; };
+		ABE85CEB85C4CEBAAFBC2ACC /* Paper_17_Respiration_LinesAngles_ElectricCurrent_Exponents_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F3BE62EEA3A4B383585BA24B /* Paper_17_Respiration_LinesAngles_ElectricCurrent_Exponents_QuestionPaper.pdf */; };
+		08D1A99A1AD6CC2D57E0F342 /* Paper_17_Respiration_LinesAngles_ElectricCurrent_Exponents_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = D9ADA4E30D8A95C4C6867E81 /* Paper_17_Respiration_LinesAngles_ElectricCurrent_Exponents_Questions.md */; };
+		7A532BFF9C155B5CFD38DE46 /* Paper_17_Respiration_LinesAngles_ElectricCurrent_Exponents_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 3E8D2FEDB6C444FC7AC5658D /* Paper_17_Respiration_LinesAngles_ElectricCurrent_Exponents_Solutions.html */; };
 		4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */ = {isa = PBXBuildFile; fileRef = ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */; };
 		CF6289FBCF676858C99ED670 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F17B590EF6DA751E23E41 /* Contents.json */; };
 		9AE05997509D9842F29172EB /* maths_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E448E6E8BEEB87620A8C798 /* maths_class7.json */; };
@@ -3894,6 +3898,10 @@
 		06C95723395F17F38AD28843 /* Paper_16_Light_Triangle_Wastewater_ComparingQuantities_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_16_Light_Triangle_Wastewater_ComparingQuantities_QuestionPaper.pdf"; sourceTree = "<group>"; };
 		D6375823B42E61AB1F8FEF31 /* Paper_16_Light_Triangle_Wastewater_ComparingQuantities_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_16_Light_Triangle_Wastewater_ComparingQuantities_Questions.md"; sourceTree = "<group>"; };
 		44CD0B000519C5A56DE80AC2 /* Paper_16_Light_Triangle_Wastewater_ComparingQuantities_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_16_Light_Triangle_Wastewater_ComparingQuantities_Solutions.html"; sourceTree = "<group>"; };
+		A61C1D45D81CECE8EF265587 /* Paper_17_Respiration_LinesAngles_ElectricCurrent_Exponents_QuestionPaper.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_17_Respiration_LinesAngles_ElectricCurrent_Exponents_QuestionPaper.html"; sourceTree = "<group>"; };
+		F3BE62EEA3A4B383585BA24B /* Paper_17_Respiration_LinesAngles_ElectricCurrent_Exponents_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_17_Respiration_LinesAngles_ElectricCurrent_Exponents_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		D9ADA4E30D8A95C4C6867E81 /* Paper_17_Respiration_LinesAngles_ElectricCurrent_Exponents_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_17_Respiration_LinesAngles_ElectricCurrent_Exponents_Questions.md"; sourceTree = "<group>"; };
+		3E8D2FEDB6C444FC7AC5658D /* Paper_17_Respiration_LinesAngles_ElectricCurrent_Exponents_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_17_Respiration_LinesAngles_ElectricCurrent_Exponents_Solutions.html"; sourceTree = "<group>"; };
 		ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "QUESTION_INDEX.json"; sourceTree = "<group>"; };
 		5C7F17B590EF6DA751E23E41 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Contents.json"; sourceTree = "<group>"; };
 		69191026B2F9F250C1D2E9BD /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement.swift"; sourceTree = "<group>"; };
@@ -6293,6 +6301,10 @@
 				06C95723395F17F38AD28843,
 				D6375823B42E61AB1F8FEF31,
 				44CD0B000519C5A56DE80AC2,
+				A61C1D45D81CECE8EF265587,
+				F3BE62EEA3A4B383585BA24B,
+				D9ADA4E30D8A95C4C6867E81,
+				3E8D2FEDB6C444FC7AC5658D,
 				ECD0916CC0210824B2615292,
 			);
 			path = "BossChallengePapers";
@@ -9947,6 +9959,10 @@
 				846F5C06689A5324C7EB5580 /* Paper_16_Light_Triangle_Wastewater_ComparingQuantities_QuestionPaper.pdf in Resources */,
 				2AEB118D19D7F4E2B0F2DC80 /* Paper_16_Light_Triangle_Wastewater_ComparingQuantities_Questions.md in Resources */,
 				6283098AF2E339DD96B891CA /* Paper_16_Light_Triangle_Wastewater_ComparingQuantities_Solutions.html in Resources */,
+				9B56D20EBFCE2647C0158E43 /* Paper_17_Respiration_LinesAngles_ElectricCurrent_Exponents_QuestionPaper.html in Resources */,
+				ABE85CEB85C4CEBAAFBC2ACC /* Paper_17_Respiration_LinesAngles_ElectricCurrent_Exponents_QuestionPaper.pdf in Resources */,
+				08D1A99A1AD6CC2D57E0F342 /* Paper_17_Respiration_LinesAngles_ElectricCurrent_Exponents_Questions.md in Resources */,
+				7A532BFF9C155B5CFD38DE46 /* Paper_17_Respiration_LinesAngles_ElectricCurrent_Exponents_Solutions.html in Resources */,
 				4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */,
 				CF6289FBCF676858C99ED670 /* Contents.json in Resources */,
 				9AE05997509D9842F29172EB /* maths_class7.json in Resources */,
