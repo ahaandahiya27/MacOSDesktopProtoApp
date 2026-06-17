@@ -2147,6 +2147,10 @@
 		D5D8DDB53E5E986302735A6B /* Paper_21_NutritionPlants_LinesAngles_WindsStormsCyclones_RationalNumbers_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6C17A67766111C9359B10169 /* Paper_21_NutritionPlants_LinesAngles_WindsStormsCyclones_RationalNumbers_QuestionPaper.pdf */; };
 		51DCDD7EBC29A9F5AD8DD05F /* Paper_21_NutritionPlants_LinesAngles_WindsStormsCyclones_RationalNumbers_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 5A0F44FF10180D48E2BF2E81 /* Paper_21_NutritionPlants_LinesAngles_WindsStormsCyclones_RationalNumbers_Questions.md */; };
 		427E5D8044D16244709729D8 /* Paper_21_NutritionPlants_LinesAngles_WindsStormsCyclones_RationalNumbers_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 309F0C7E1BD3387F63EF80C5 /* Paper_21_NutritionPlants_LinesAngles_WindsStormsCyclones_RationalNumbers_Solutions.html */; };
+		2A0900259CDF41C10C64E70A /* Paper_22_Transportation_AcidsBases_ComparingQuantities_PerimeterArea_QuestionPaper.html in Resources */ = {isa = PBXBuildFile; fileRef = D4EF32AA9DB5DD824E26FC05 /* Paper_22_Transportation_AcidsBases_ComparingQuantities_PerimeterArea_QuestionPaper.html */; };
+		3342052F0BA075AB7DED99DB /* Paper_22_Transportation_AcidsBases_ComparingQuantities_PerimeterArea_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 59AE51BEED38895D400B110E /* Paper_22_Transportation_AcidsBases_ComparingQuantities_PerimeterArea_QuestionPaper.pdf */; };
+		CB89530E40D31A36842BB4E7 /* Paper_22_Transportation_AcidsBases_ComparingQuantities_PerimeterArea_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 019614E7184D84A7287DF0B3 /* Paper_22_Transportation_AcidsBases_ComparingQuantities_PerimeterArea_Questions.md */; };
+		CEF5C848AB6932695A473A1D /* Paper_22_Transportation_AcidsBases_ComparingQuantities_PerimeterArea_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 42A82B98EE4B30CEA616DE31 /* Paper_22_Transportation_AcidsBases_ComparingQuantities_PerimeterArea_Solutions.html */; };
 		4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */ = {isa = PBXBuildFile; fileRef = ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */; };
 		CF6289FBCF676858C99ED670 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F17B590EF6DA751E23E41 /* Contents.json */; };
 		9AE05997509D9842F29172EB /* maths_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E448E6E8BEEB87620A8C798 /* maths_class7.json */; };
@@ -3934,6 +3938,10 @@
 		6C17A67766111C9359B10169 /* Paper_21_NutritionPlants_LinesAngles_WindsStormsCyclones_RationalNumbers_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_21_NutritionPlants_LinesAngles_WindsStormsCyclones_RationalNumbers_QuestionPaper.pdf"; sourceTree = "<group>"; };
 		5A0F44FF10180D48E2BF2E81 /* Paper_21_NutritionPlants_LinesAngles_WindsStormsCyclones_RationalNumbers_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_21_NutritionPlants_LinesAngles_WindsStormsCyclones_RationalNumbers_Questions.md"; sourceTree = "<group>"; };
 		309F0C7E1BD3387F63EF80C5 /* Paper_21_NutritionPlants_LinesAngles_WindsStormsCyclones_RationalNumbers_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_21_NutritionPlants_LinesAngles_WindsStormsCyclones_RationalNumbers_Solutions.html"; sourceTree = "<group>"; };
+		D4EF32AA9DB5DD824E26FC05 /* Paper_22_Transportation_AcidsBases_ComparingQuantities_PerimeterArea_QuestionPaper.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_22_Transportation_AcidsBases_ComparingQuantities_PerimeterArea_QuestionPaper.html"; sourceTree = "<group>"; };
+		59AE51BEED38895D400B110E /* Paper_22_Transportation_AcidsBases_ComparingQuantities_PerimeterArea_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_22_Transportation_AcidsBases_ComparingQuantities_PerimeterArea_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		019614E7184D84A7287DF0B3 /* Paper_22_Transportation_AcidsBases_ComparingQuantities_PerimeterArea_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_22_Transportation_AcidsBases_ComparingQuantities_PerimeterArea_Questions.md"; sourceTree = "<group>"; };
+		42A82B98EE4B30CEA616DE31 /* Paper_22_Transportation_AcidsBases_ComparingQuantities_PerimeterArea_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_22_Transportation_AcidsBases_ComparingQuantities_PerimeterArea_Solutions.html"; sourceTree = "<group>"; };
 		ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "QUESTION_INDEX.json"; sourceTree = "<group>"; };
 		5C7F17B590EF6DA751E23E41 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Contents.json"; sourceTree = "<group>"; };
 		69191026B2F9F250C1D2E9BD /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement.swift"; sourceTree = "<group>"; };
@@ -6353,6 +6361,10 @@
 				6C17A67766111C9359B10169,
 				5A0F44FF10180D48E2BF2E81,
 				309F0C7E1BD3387F63EF80C5,
+				D4EF32AA9DB5DD824E26FC05,
+				59AE51BEED38895D400B110E,
+				019614E7184D84A7287DF0B3,
+				42A82B98EE4B30CEA616DE31,
 				ECD0916CC0210824B2615292,
 			);
 			path = "BossChallengePapers";
@@ -10027,6 +10039,10 @@
 				D5D8DDB53E5E986302735A6B /* Paper_21_NutritionPlants_LinesAngles_WindsStormsCyclones_RationalNumbers_QuestionPaper.pdf in Resources */,
 				51DCDD7EBC29A9F5AD8DD05F /* Paper_21_NutritionPlants_LinesAngles_WindsStormsCyclones_RationalNumbers_Questions.md in Resources */,
 				427E5D8044D16244709729D8 /* Paper_21_NutritionPlants_LinesAngles_WindsStormsCyclones_RationalNumbers_Solutions.html in Resources */,
+				2A0900259CDF41C10C64E70A /* Paper_22_Transportation_AcidsBases_ComparingQuantities_PerimeterArea_QuestionPaper.html in Resources */,
+				3342052F0BA075AB7DED99DB /* Paper_22_Transportation_AcidsBases_ComparingQuantities_PerimeterArea_QuestionPaper.pdf in Resources */,
+				CB89530E40D31A36842BB4E7 /* Paper_22_Transportation_AcidsBases_ComparingQuantities_PerimeterArea_Questions.md in Resources */,
+				CEF5C848AB6932695A473A1D /* Paper_22_Transportation_AcidsBases_ComparingQuantities_PerimeterArea_Solutions.html in Resources */,
 				4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */,
 				CF6289FBCF676858C99ED670 /* Contents.json in Resources */,
 				9AE05997509D9842F29172EB /* maths_class7.json in Resources */,
