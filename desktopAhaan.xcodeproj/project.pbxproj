@@ -2123,6 +2123,10 @@
 		670C2552C1BECFE8D93F9517 /* Paper_15_Heat_WindsStormsCyclones_Integers_DataHandling_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A3F4AEFA05A625D93CD2D812 /* Paper_15_Heat_WindsStormsCyclones_Integers_DataHandling_QuestionPaper.pdf */; };
 		B916E87B455C1491A68DD38D /* Paper_15_Heat_WindsStormsCyclones_Integers_DataHandling_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = AF91F7F5BD357BD6B3147161 /* Paper_15_Heat_WindsStormsCyclones_Integers_DataHandling_Questions.md */; };
 		43DCA0CD5125F238B831DD9B /* Paper_15_Heat_WindsStormsCyclones_Integers_DataHandling_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 83DDFA331869B92A97C534BC /* Paper_15_Heat_WindsStormsCyclones_Integers_DataHandling_Solutions.html */; };
+		F04893899FBADBC5FF56F253 /* Paper_16_Light_Triangle_Wastewater_ComparingQuantities_QuestionPaper.html in Resources */ = {isa = PBXBuildFile; fileRef = 2DB36438F5C450D39B35BD56 /* Paper_16_Light_Triangle_Wastewater_ComparingQuantities_QuestionPaper.html */; };
+		846F5C06689A5324C7EB5580 /* Paper_16_Light_Triangle_Wastewater_ComparingQuantities_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 06C95723395F17F38AD28843 /* Paper_16_Light_Triangle_Wastewater_ComparingQuantities_QuestionPaper.pdf */; };
+		2AEB118D19D7F4E2B0F2DC80 /* Paper_16_Light_Triangle_Wastewater_ComparingQuantities_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = D6375823B42E61AB1F8FEF31 /* Paper_16_Light_Triangle_Wastewater_ComparingQuantities_Questions.md */; };
+		6283098AF2E339DD96B891CA /* Paper_16_Light_Triangle_Wastewater_ComparingQuantities_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 44CD0B000519C5A56DE80AC2 /* Paper_16_Light_Triangle_Wastewater_ComparingQuantities_Solutions.html */; };
 		4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */ = {isa = PBXBuildFile; fileRef = ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */; };
 		CF6289FBCF676858C99ED670 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F17B590EF6DA751E23E41 /* Contents.json */; };
 		9AE05997509D9842F29172EB /* maths_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E448E6E8BEEB87620A8C798 /* maths_class7.json */; };
@@ -3886,6 +3890,10 @@
 		A3F4AEFA05A625D93CD2D812 /* Paper_15_Heat_WindsStormsCyclones_Integers_DataHandling_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_15_Heat_WindsStormsCyclones_Integers_DataHandling_QuestionPaper.pdf"; sourceTree = "<group>"; };
 		AF91F7F5BD357BD6B3147161 /* Paper_15_Heat_WindsStormsCyclones_Integers_DataHandling_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_15_Heat_WindsStormsCyclones_Integers_DataHandling_Questions.md"; sourceTree = "<group>"; };
 		83DDFA331869B92A97C534BC /* Paper_15_Heat_WindsStormsCyclones_Integers_DataHandling_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_15_Heat_WindsStormsCyclones_Integers_DataHandling_Solutions.html"; sourceTree = "<group>"; };
+		2DB36438F5C450D39B35BD56 /* Paper_16_Light_Triangle_Wastewater_ComparingQuantities_QuestionPaper.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_16_Light_Triangle_Wastewater_ComparingQuantities_QuestionPaper.html"; sourceTree = "<group>"; };
+		06C95723395F17F38AD28843 /* Paper_16_Light_Triangle_Wastewater_ComparingQuantities_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_16_Light_Triangle_Wastewater_ComparingQuantities_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		D6375823B42E61AB1F8FEF31 /* Paper_16_Light_Triangle_Wastewater_ComparingQuantities_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_16_Light_Triangle_Wastewater_ComparingQuantities_Questions.md"; sourceTree = "<group>"; };
+		44CD0B000519C5A56DE80AC2 /* Paper_16_Light_Triangle_Wastewater_ComparingQuantities_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_16_Light_Triangle_Wastewater_ComparingQuantities_Solutions.html"; sourceTree = "<group>"; };
 		ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "QUESTION_INDEX.json"; sourceTree = "<group>"; };
 		5C7F17B590EF6DA751E23E41 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Contents.json"; sourceTree = "<group>"; };
 		69191026B2F9F250C1D2E9BD /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement.swift"; sourceTree = "<group>"; };
@@ -6281,6 +6289,10 @@
 				A3F4AEFA05A625D93CD2D812,
 				AF91F7F5BD357BD6B3147161,
 				83DDFA331869B92A97C534BC,
+				2DB36438F5C450D39B35BD56,
+				06C95723395F17F38AD28843,
+				D6375823B42E61AB1F8FEF31,
+				44CD0B000519C5A56DE80AC2,
 				ECD0916CC0210824B2615292,
 			);
 			path = "BossChallengePapers";
@@ -9931,6 +9943,10 @@
 				670C2552C1BECFE8D93F9517 /* Paper_15_Heat_WindsStormsCyclones_Integers_DataHandling_QuestionPaper.pdf in Resources */,
 				B916E87B455C1491A68DD38D /* Paper_15_Heat_WindsStormsCyclones_Integers_DataHandling_Questions.md in Resources */,
 				43DCA0CD5125F238B831DD9B /* Paper_15_Heat_WindsStormsCyclones_Integers_DataHandling_Solutions.html in Resources */,
+				F04893899FBADBC5FF56F253 /* Paper_16_Light_Triangle_Wastewater_ComparingQuantities_QuestionPaper.html in Resources */,
+				846F5C06689A5324C7EB5580 /* Paper_16_Light_Triangle_Wastewater_ComparingQuantities_QuestionPaper.pdf in Resources */,
+				2AEB118D19D7F4E2B0F2DC80 /* Paper_16_Light_Triangle_Wastewater_ComparingQuantities_Questions.md in Resources */,
+				6283098AF2E339DD96B891CA /* Paper_16_Light_Triangle_Wastewater_ComparingQuantities_Solutions.html in Resources */,
 				4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */,
 				CF6289FBCF676858C99ED670 /* Contents.json in Resources */,
 				9AE05997509D9842F29172EB /* maths_class7.json in Resources */,
