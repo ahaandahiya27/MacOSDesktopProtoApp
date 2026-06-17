@@ -9,3 +9,4 @@
 | 05 | 2026-06-17 | Transportation in Animals & Plants · Reproduction in Plants · Perimeter & Area | 25/25/25/25 | ✓ |
 | 06 | 2026-06-17 | Soil · Forests: Our Lifeline · Comparing Quantities | 25/25/25/25 | ✓ |
 | 07 | 2026-06-17 | Winds, Storms & Cyclones · Wastewater Story · The Triangle & its Properties | 25/25/25/25 | ✓ |
+| 08 | 2026-06-18 | Acids, Bases & Salts · Electric Current & its Effects · Algebraic Expressions · Exponents & Powers | 25/25/25/25 | ✓ |
