@@ -2099,6 +2099,10 @@
 		9775597F56F29AA41EA2521F /* Paper_09_RationalNumbers_MotionTime_DataHandling_Heat_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = AAAC8691BC365EFDAEF3CDAC /* Paper_09_RationalNumbers_MotionTime_DataHandling_Heat_QuestionPaper.pdf */; };
 		DA7C8792FA167940F40A9B60 /* Paper_09_RationalNumbers_MotionTime_DataHandling_Heat_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 6BE06E18A0E69E9463868909 /* Paper_09_RationalNumbers_MotionTime_DataHandling_Heat_Questions.md */; };
 		1A5B83B6F3D282DAFEFBC2D4 /* Paper_09_RationalNumbers_MotionTime_DataHandling_Heat_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 7F1A12862E5D5301986F3B7E /* Paper_09_RationalNumbers_MotionTime_DataHandling_Heat_Solutions.html */; };
+		164A60368AB948F73F80DACF /* Paper_10_Symmetry_Light_ArithExpr_PhysChem_QuestionPaper.html in Resources */ = {isa = PBXBuildFile; fileRef = 49256BC34BB599046BD57988 /* Paper_10_Symmetry_Light_ArithExpr_PhysChem_QuestionPaper.html */; };
+		6E90BCCF03F2790BE266B73A /* Paper_10_Symmetry_Light_ArithExpr_PhysChem_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A19DAF68E06C150404BA252C /* Paper_10_Symmetry_Light_ArithExpr_PhysChem_QuestionPaper.pdf */; };
+		4AFCE3AEB05B37220DB7F0EC /* Paper_10_Symmetry_Light_ArithExpr_PhysChem_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = F17FB1300CE02DE7DA93B0D5 /* Paper_10_Symmetry_Light_ArithExpr_PhysChem_Questions.md */; };
+		8C71393D812057E731E07BC9 /* Paper_10_Symmetry_Light_ArithExpr_PhysChem_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 9032052B0556EF97B1A9CDA7 /* Paper_10_Symmetry_Light_ArithExpr_PhysChem_Solutions.html */; };
 		4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */ = {isa = PBXBuildFile; fileRef = ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */; };
 		CF6289FBCF676858C99ED670 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F17B590EF6DA751E23E41 /* Contents.json */; };
 		9AE05997509D9842F29172EB /* maths_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E448E6E8BEEB87620A8C798 /* maths_class7.json */; };
@@ -3838,6 +3842,10 @@
 		AAAC8691BC365EFDAEF3CDAC /* Paper_09_RationalNumbers_MotionTime_DataHandling_Heat_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_09_RationalNumbers_MotionTime_DataHandling_Heat_QuestionPaper.pdf"; sourceTree = "<group>"; };
 		6BE06E18A0E69E9463868909 /* Paper_09_RationalNumbers_MotionTime_DataHandling_Heat_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_09_RationalNumbers_MotionTime_DataHandling_Heat_Questions.md"; sourceTree = "<group>"; };
 		7F1A12862E5D5301986F3B7E /* Paper_09_RationalNumbers_MotionTime_DataHandling_Heat_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_09_RationalNumbers_MotionTime_DataHandling_Heat_Solutions.html"; sourceTree = "<group>"; };
+		49256BC34BB599046BD57988 /* Paper_10_Symmetry_Light_ArithExpr_PhysChem_QuestionPaper.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_10_Symmetry_Light_ArithExpr_PhysChem_QuestionPaper.html"; sourceTree = "<group>"; };
+		A19DAF68E06C150404BA252C /* Paper_10_Symmetry_Light_ArithExpr_PhysChem_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_10_Symmetry_Light_ArithExpr_PhysChem_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		F17FB1300CE02DE7DA93B0D5 /* Paper_10_Symmetry_Light_ArithExpr_PhysChem_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_10_Symmetry_Light_ArithExpr_PhysChem_Questions.md"; sourceTree = "<group>"; };
+		9032052B0556EF97B1A9CDA7 /* Paper_10_Symmetry_Light_ArithExpr_PhysChem_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_10_Symmetry_Light_ArithExpr_PhysChem_Solutions.html"; sourceTree = "<group>"; };
 		ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "QUESTION_INDEX.json"; sourceTree = "<group>"; };
 		5C7F17B590EF6DA751E23E41 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Contents.json"; sourceTree = "<group>"; };
 		69191026B2F9F250C1D2E9BD /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement.swift"; sourceTree = "<group>"; };
@@ -6209,6 +6217,10 @@
 				AAAC8691BC365EFDAEF3CDAC,
 				6BE06E18A0E69E9463868909,
 				7F1A12862E5D5301986F3B7E,
+				49256BC34BB599046BD57988,
+				A19DAF68E06C150404BA252C,
+				F17FB1300CE02DE7DA93B0D5,
+				9032052B0556EF97B1A9CDA7,
 				ECD0916CC0210824B2615292,
 			);
 			path = "BossChallengePapers";
@@ -9835,6 +9847,10 @@
 				9775597F56F29AA41EA2521F /* Paper_09_RationalNumbers_MotionTime_DataHandling_Heat_QuestionPaper.pdf in Resources */,
 				DA7C8792FA167940F40A9B60 /* Paper_09_RationalNumbers_MotionTime_DataHandling_Heat_Questions.md in Resources */,
 				1A5B83B6F3D282DAFEFBC2D4 /* Paper_09_RationalNumbers_MotionTime_DataHandling_Heat_Solutions.html in Resources */,
+				164A60368AB948F73F80DACF /* Paper_10_Symmetry_Light_ArithExpr_PhysChem_QuestionPaper.html in Resources */,
+				6E90BCCF03F2790BE266B73A /* Paper_10_Symmetry_Light_ArithExpr_PhysChem_QuestionPaper.pdf in Resources */,
+				4AFCE3AEB05B37220DB7F0EC /* Paper_10_Symmetry_Light_ArithExpr_PhysChem_Questions.md in Resources */,
+				8C71393D812057E731E07BC9 /* Paper_10_Symmetry_Light_ArithExpr_PhysChem_Solutions.html in Resources */,
 				4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */,
 				CF6289FBCF676858C99ED670 /* Contents.json in Resources */,
 				9AE05997509D9842F29172EB /* maths_class7.json in Resources */,

@@ -11,3 +11,4 @@
 | 07 | 2026-06-17 | Winds, Storms & Cyclones · Wastewater Story · The Triangle & its Properties | 25/25/25/25 | ✓ |
 | 08 | 2026-06-18 | Acids, Bases & Salts · Electric Current & its Effects · Algebraic Expressions · Exponents & Powers | 25/25/25/25 | ✓ |
 | 09 | 2026-06-18 | Rational Numbers · Motion & Time · Data Handling · Heat | 25/25/25/25 | ✓ |
+| 10 | 2026-06-18 | Symmetry · Light · Arithmetic Expressions · Physical & Chemical Changes | 25/25/25/25 | ✓ |
