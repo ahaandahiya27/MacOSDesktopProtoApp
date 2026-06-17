@@ -13,6 +13,7 @@
 		62A22C2A07D4F6EEE0CB030A /* TranslatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEB7C3435FEE34D62EC4C4DE /* TranslatorViewModel.swift */; };
 		00DCA742E478215AFA4A4D3B /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC71A19BFA8EA90753C75167 /* AppState.swift */; };
 		5B0DFD2BF97DDCDEF9853221 /* CrashReporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBE57CADA2335913DB0824BC /* CrashReporter.swift */; };
+		B70F033D599B8B883972C43B /* WindowClampHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFB63C53F469DFC99FF210AF /* WindowClampHelper.swift */; };
 		9A4E6B5370E2165DE8D0585D /* BuiltInContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61BFAF28FF4D8022748D87B6 /* BuiltInContent.swift */; };
 		5069F44BBE59E7E8529295D2 /* SanskritDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 588FB6307A4EA783D176525D /* SanskritDictionary.swift */; };
 		9E18896D243FB1D751B94E51 /* Achievement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69191026B2F9F250C1D2E9BD /* Achievement.swift */; };
@@ -454,6 +455,7 @@
 		4A3CE77A95626D918E8241F5 /* BackupRestoreButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFAEE5826286F54387B3ACB3 /* BackupRestoreButton.swift */; };
 		1C0F5C54AF3C2D0AAF5F0D8B /* SettingsScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE786113C28B37AB6FCE44D /* SettingsScreen.swift */; };
 		11EDCB88F2999EF00670308B /* TranslatorScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090B5EB533A87E17B20AFFBE /* TranslatorScreen.swift */; };
+		ED363A5E98CDF68375235292 /* BossChallengePapersWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 962A10D20F7AF93421EBA9D1 /* BossChallengePapersWindow.swift */; };
 		D7D46302319B76795C27F695 /* ExpertChallengeLadderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF59B7CEF78589B1199C3A5 /* ExpertChallengeLadderView.swift */; };
 		99271421A5CD0F95BDE407C0 /* ExpertChallengeLadderWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4FE8CA4A2401D74766B0DDB /* ExpertChallengeLadderWindow.swift */; };
 		BE78603A1523C4AAD1DB680C /* InsightsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBDEA2BC42C7A6FFDCA56781 /* InsightsView.swift */; };
@@ -2064,6 +2066,32 @@
 		C3ED5F75C224D6CB45C74886 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance_QuestionPaper.md in Resources */ = {isa = PBXBuildFile; fileRef = 7E9E76D6BD203C1DB151EC4E /* SocialScience_Ssch20_BanksAndTheMagicOfFinance_QuestionPaper.md */; };
 		8E27A204D469E7924D386CA3 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance_Solutions.md in Resources */ = {isa = PBXBuildFile; fileRef = 38F9BADB44FE218FC4A8DB98 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance_Solutions.md */; };
 		9645A2DCFEC6E3F143BF1E38 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance_SolvedGuide.html in Resources */ = {isa = PBXBuildFile; fileRef = 08A558C7C948F637461107D4 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance_SolvedGuide.html */; };
+		3D9BB3F879B6F4853F5FCD2B /* Boss_Paper_00_MCQ_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 008EF57964FEE9B538438622 /* Boss_Paper_00_MCQ_Questions.pdf */; };
+		EC2F483B62977A6858B2892F /* Boss_Paper_00_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 352C10C3F6948A03384645AC /* Boss_Paper_00_Questions.md */; };
+		B5D7D00D2B5E9A2F4F106CE9 /* Boss_Paper_00_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 32D7E687C68F115FA8F1AAD3 /* Boss_Paper_00_Solutions.html */; };
+		5113DCCA20DD38DD4A2C1177 /* PAPERS_MANIFEST.md in Resources */ = {isa = PBXBuildFile; fileRef = E7E999646C5488476F4D4F8B /* PAPERS_MANIFEST.md */; };
+		168E3FEDFA84C10C9011869A /* Paper_01_Heat_NutritionPlants_Integers_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EC83738B136EE69ABD27B197 /* Paper_01_Heat_NutritionPlants_Integers_QuestionPaper.pdf */; };
+		29A8B62786D3AE512390D019 /* Paper_01_Heat_NutritionPlants_Integers_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 9960692D8FD1E3442FD50408 /* Paper_01_Heat_NutritionPlants_Integers_Questions.md */; };
+		1243A46B28C2D65D6CF9FA47 /* Paper_01_Heat_NutritionPlants_Integers_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = BBE2006FFFEFA57AAB0EADD5 /* Paper_01_Heat_NutritionPlants_Integers_Solutions.html */; };
+		269233B9BA7E4FB825127BDC /* Paper_02_Light_NutritionAnimals_FractionsDecimals_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 391C2CFF1A30769DDA4E6ED8 /* Paper_02_Light_NutritionAnimals_FractionsDecimals_QuestionPaper.pdf */; };
+		DF4F2757A226E4D3A78430FC /* Paper_02_Light_NutritionAnimals_FractionsDecimals_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = CE15BE7CB26CD7D07D9E0602 /* Paper_02_Light_NutritionAnimals_FractionsDecimals_Questions.md */; };
+		24F3834B6CDD4A351A94097A /* Paper_02_Light_NutritionAnimals_FractionsDecimals_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 596D3280962247A74B277832 /* Paper_02_Light_NutritionAnimals_FractionsDecimals_Solutions.html */; };
+		4C9D38FEFE49ACAED7F5EE95 /* Paper_03_MotionTime_Respiration_SimpleEquations_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C876A4E8982FAE27A26394A7 /* Paper_03_MotionTime_Respiration_SimpleEquations_QuestionPaper.pdf */; };
+		020E8E59356C5F77726AF431 /* Paper_03_MotionTime_Respiration_SimpleEquations_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 6C17412508469884C9E1AA53 /* Paper_03_MotionTime_Respiration_SimpleEquations_Questions.md */; };
+		37B110B173C9604FBDF646FF /* Paper_03_MotionTime_Respiration_SimpleEquations_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = AB4F7B3FEBFE4B617BF393D8 /* Paper_03_MotionTime_Respiration_SimpleEquations_Solutions.html */; };
+		AB695FD8F564558C1A0B0C3B /* Paper_04_PhysChemChanges_Weather_LinesAngles_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9F7219598F57ABBCD47D2A43 /* Paper_04_PhysChemChanges_Weather_LinesAngles_QuestionPaper.pdf */; };
+		C485D316D9F2AC4683C691DD /* Paper_04_PhysChemChanges_Weather_LinesAngles_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 82E6CDA5B83020952AC8D75E /* Paper_04_PhysChemChanges_Weather_LinesAngles_Questions.md */; };
+		2E423C8E2B0574BD5555F6B0 /* Paper_04_PhysChemChanges_Weather_LinesAngles_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = C6DA26CE4BF5543A0FFFFA56 /* Paper_04_PhysChemChanges_Weather_LinesAngles_Solutions.html */; };
+		DA28646A775D5A50D4C8D393 /* Paper_05_Transportation_ReproductionPlants_PerimeterArea_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 37FFAC479F9FE3C6690B5760 /* Paper_05_Transportation_ReproductionPlants_PerimeterArea_QuestionPaper.pdf */; };
+		CA256CD55074BDECC476F922 /* Paper_05_Transportation_ReproductionPlants_PerimeterArea_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 94ADD510C3CA9D87DB8AA671 /* Paper_05_Transportation_ReproductionPlants_PerimeterArea_Questions.md */; };
+		6AC9D8526BB8BF1994A88B91 /* Paper_05_Transportation_ReproductionPlants_PerimeterArea_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 9F7CD3300525FF2C96131B38 /* Paper_05_Transportation_ReproductionPlants_PerimeterArea_Solutions.html */; };
+		2A6994798954992D241FE3AC /* Paper_06_Soil_Forests_ComparingQuantities_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D245E7D35EA678CC3B8C8063 /* Paper_06_Soil_Forests_ComparingQuantities_QuestionPaper.pdf */; };
+		795EC96EB3C5BA76299B09BA /* Paper_06_Soil_Forests_ComparingQuantities_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = FABB2C800D268F7A07E01E71 /* Paper_06_Soil_Forests_ComparingQuantities_Questions.md */; };
+		BF524554DB6D9B47D69BD149 /* Paper_06_Soil_Forests_ComparingQuantities_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = CAC3936DECF36F3A3A3CF5A4 /* Paper_06_Soil_Forests_ComparingQuantities_Solutions.html */; };
+		A1D50EDB98ED409A7DB344CF /* Paper_07_WindsStormsCyclones_Wastewater_Triangle_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FDE9DBE57B9EC909F20859FC /* Paper_07_WindsStormsCyclones_Wastewater_Triangle_QuestionPaper.pdf */; };
+		B3B098A0F678430877A35AF9 /* Paper_07_WindsStormsCyclones_Wastewater_Triangle_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 113866EDFC7D13C9A037D1F7 /* Paper_07_WindsStormsCyclones_Wastewater_Triangle_Questions.md */; };
+		E45FDC7D6BC76B8899984B78 /* Paper_07_WindsStormsCyclones_Wastewater_Triangle_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 853838ACDDBE67B86D68241E /* Paper_07_WindsStormsCyclones_Wastewater_Triangle_Solutions.html */; };
+		4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */ = {isa = PBXBuildFile; fileRef = ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */; };
 		CF6289FBCF676858C99ED670 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F17B590EF6DA751E23E41 /* Contents.json */; };
 		9AE05997509D9842F29172EB /* maths_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E448E6E8BEEB87620A8C798 /* maths_class7.json */; };
 		9103989C181D8156191FD30D /* sanskrit_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 307FB7481238DF1F6D61235B /* sanskrit_class7.json */; };
@@ -2083,6 +2111,7 @@
 		A6B083A8EA1B4FE4101997DF /* BackupExportTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD20FAA9C56FA8D2394B3555 /* BackupExportTests.swift */; };
 		C06609714AB4A67FD6B8F216 /* BackupRestoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB52BA73A22F01E468B5481 /* BackupRestoreTests.swift */; };
 		E1EE0A0CF0779A369058F235 /* BeyondTheBookRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23702DB489EBA8F50A88BC82 /* BeyondTheBookRoutingTests.swift */; };
+		593C321630B59A6FD5E6E6EF /* BossChallengePapersCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D376E0A1D05CF16554308C84 /* BossChallengePapersCatalogTests.swift */; };
 		2BF10A6D5F3503DDB2E401B4 /* BossQuestionsSchemaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 801739AD37E69D3822F90D88 /* BossQuestionsSchemaTests.swift */; };
 		F76E46FCDF00F37C66AF6174 /* BossQuizMigrationRatchetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6436FB277692897E8A5E725 /* BossQuizMigrationRatchetTests.swift */; };
 		96E7ABACD0327903687FCDFF /* BossQuizPickMainActorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07479424B05C83E357662480 /* BossQuizPickMainActorTests.swift */; };
@@ -2236,6 +2265,7 @@
 		BEB7C3435FEE34D62EC4C4DE /* TranslatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TranslatorViewModel.swift"; sourceTree = "<group>"; };
 		AC71A19BFA8EA90753C75167 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AppState.swift"; sourceTree = "<group>"; };
 		FBE57CADA2335913DB0824BC /* CrashReporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CrashReporter.swift"; sourceTree = "<group>"; };
+		DFB63C53F469DFC99FF210AF /* WindowClampHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "WindowClampHelper.swift"; sourceTree = "<group>"; };
 		61BFAF28FF4D8022748D87B6 /* BuiltInContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BuiltInContent.swift"; sourceTree = "<group>"; };
 		588FB6307A4EA783D176525D /* SanskritDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SanskritDictionary.swift"; sourceTree = "<group>"; };
 		461F748B303E8D498676D4F3 /* sanskrit_class7_dictionary.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "sanskrit_class7_dictionary.json"; sourceTree = "<group>"; };
@@ -3767,6 +3797,32 @@
 		7E9E76D6BD203C1DB151EC4E /* SocialScience_Ssch20_BanksAndTheMagicOfFinance_QuestionPaper.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SocialScience_Ssch20_BanksAndTheMagicOfFinance_QuestionPaper.md"; sourceTree = "<group>"; };
 		38F9BADB44FE218FC4A8DB98 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance_Solutions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "SocialScience_Ssch20_BanksAndTheMagicOfFinance_Solutions.md"; sourceTree = "<group>"; };
 		08A558C7C948F637461107D4 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance_SolvedGuide.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "SocialScience_Ssch20_BanksAndTheMagicOfFinance_SolvedGuide.html"; sourceTree = "<group>"; };
+		008EF57964FEE9B538438622 /* Boss_Paper_00_MCQ_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Boss_Paper_00_MCQ_Questions.pdf"; sourceTree = "<group>"; };
+		352C10C3F6948A03384645AC /* Boss_Paper_00_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Boss_Paper_00_Questions.md"; sourceTree = "<group>"; };
+		32D7E687C68F115FA8F1AAD3 /* Boss_Paper_00_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Boss_Paper_00_Solutions.html"; sourceTree = "<group>"; };
+		E7E999646C5488476F4D4F8B /* PAPERS_MANIFEST.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "PAPERS_MANIFEST.md"; sourceTree = "<group>"; };
+		EC83738B136EE69ABD27B197 /* Paper_01_Heat_NutritionPlants_Integers_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_01_Heat_NutritionPlants_Integers_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		9960692D8FD1E3442FD50408 /* Paper_01_Heat_NutritionPlants_Integers_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_01_Heat_NutritionPlants_Integers_Questions.md"; sourceTree = "<group>"; };
+		BBE2006FFFEFA57AAB0EADD5 /* Paper_01_Heat_NutritionPlants_Integers_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_01_Heat_NutritionPlants_Integers_Solutions.html"; sourceTree = "<group>"; };
+		391C2CFF1A30769DDA4E6ED8 /* Paper_02_Light_NutritionAnimals_FractionsDecimals_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_02_Light_NutritionAnimals_FractionsDecimals_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		CE15BE7CB26CD7D07D9E0602 /* Paper_02_Light_NutritionAnimals_FractionsDecimals_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_02_Light_NutritionAnimals_FractionsDecimals_Questions.md"; sourceTree = "<group>"; };
+		596D3280962247A74B277832 /* Paper_02_Light_NutritionAnimals_FractionsDecimals_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_02_Light_NutritionAnimals_FractionsDecimals_Solutions.html"; sourceTree = "<group>"; };
+		C876A4E8982FAE27A26394A7 /* Paper_03_MotionTime_Respiration_SimpleEquations_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_03_MotionTime_Respiration_SimpleEquations_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		6C17412508469884C9E1AA53 /* Paper_03_MotionTime_Respiration_SimpleEquations_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_03_MotionTime_Respiration_SimpleEquations_Questions.md"; sourceTree = "<group>"; };
+		AB4F7B3FEBFE4B617BF393D8 /* Paper_03_MotionTime_Respiration_SimpleEquations_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_03_MotionTime_Respiration_SimpleEquations_Solutions.html"; sourceTree = "<group>"; };
+		9F7219598F57ABBCD47D2A43 /* Paper_04_PhysChemChanges_Weather_LinesAngles_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_04_PhysChemChanges_Weather_LinesAngles_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		82E6CDA5B83020952AC8D75E /* Paper_04_PhysChemChanges_Weather_LinesAngles_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_04_PhysChemChanges_Weather_LinesAngles_Questions.md"; sourceTree = "<group>"; };
+		C6DA26CE4BF5543A0FFFFA56 /* Paper_04_PhysChemChanges_Weather_LinesAngles_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_04_PhysChemChanges_Weather_LinesAngles_Solutions.html"; sourceTree = "<group>"; };
+		37FFAC479F9FE3C6690B5760 /* Paper_05_Transportation_ReproductionPlants_PerimeterArea_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_05_Transportation_ReproductionPlants_PerimeterArea_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		94ADD510C3CA9D87DB8AA671 /* Paper_05_Transportation_ReproductionPlants_PerimeterArea_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_05_Transportation_ReproductionPlants_PerimeterArea_Questions.md"; sourceTree = "<group>"; };
+		9F7CD3300525FF2C96131B38 /* Paper_05_Transportation_ReproductionPlants_PerimeterArea_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_05_Transportation_ReproductionPlants_PerimeterArea_Solutions.html"; sourceTree = "<group>"; };
+		D245E7D35EA678CC3B8C8063 /* Paper_06_Soil_Forests_ComparingQuantities_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_06_Soil_Forests_ComparingQuantities_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		FABB2C800D268F7A07E01E71 /* Paper_06_Soil_Forests_ComparingQuantities_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_06_Soil_Forests_ComparingQuantities_Questions.md"; sourceTree = "<group>"; };
+		CAC3936DECF36F3A3A3CF5A4 /* Paper_06_Soil_Forests_ComparingQuantities_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_06_Soil_Forests_ComparingQuantities_Solutions.html"; sourceTree = "<group>"; };
+		FDE9DBE57B9EC909F20859FC /* Paper_07_WindsStormsCyclones_Wastewater_Triangle_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_07_WindsStormsCyclones_Wastewater_Triangle_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		113866EDFC7D13C9A037D1F7 /* Paper_07_WindsStormsCyclones_Wastewater_Triangle_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_07_WindsStormsCyclones_Wastewater_Triangle_Questions.md"; sourceTree = "<group>"; };
+		853838ACDDBE67B86D68241E /* Paper_07_WindsStormsCyclones_Wastewater_Triangle_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_07_WindsStormsCyclones_Wastewater_Triangle_Solutions.html"; sourceTree = "<group>"; };
+		ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "QUESTION_INDEX.json"; sourceTree = "<group>"; };
 		5C7F17B590EF6DA751E23E41 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Contents.json"; sourceTree = "<group>"; };
 		69191026B2F9F250C1D2E9BD /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement.swift"; sourceTree = "<group>"; };
 		1398C27EBDAD6CF236DDB502 /* AdaptiveDifficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AdaptiveDifficulty.swift"; sourceTree = "<group>"; };
@@ -4211,6 +4267,7 @@
 		EFAEE5826286F54387B3ACB3 /* BackupRestoreButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BackupRestoreButton.swift"; sourceTree = "<group>"; };
 		7CE786113C28B37AB6FCE44D /* SettingsScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsScreen.swift"; sourceTree = "<group>"; };
 		090B5EB533A87E17B20AFFBE /* TranslatorScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TranslatorScreen.swift"; sourceTree = "<group>"; };
+		962A10D20F7AF93421EBA9D1 /* BossChallengePapersWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BossChallengePapersWindow.swift"; sourceTree = "<group>"; };
 		5EF59B7CEF78589B1199C3A5 /* ExpertChallengeLadderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExpertChallengeLadderView.swift"; sourceTree = "<group>"; };
 		A4FE8CA4A2401D74766B0DDB /* ExpertChallengeLadderWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ExpertChallengeLadderWindow.swift"; sourceTree = "<group>"; };
 		DBDEA2BC42C7A6FFDCA56781 /* InsightsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "InsightsView.swift"; sourceTree = "<group>"; };
@@ -4306,6 +4363,7 @@
 		AD20FAA9C56FA8D2394B3555 /* BackupExportTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BackupExportTests.swift"; sourceTree = "<group>"; };
 		DDB52BA73A22F01E468B5481 /* BackupRestoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BackupRestoreTests.swift"; sourceTree = "<group>"; };
 		23702DB489EBA8F50A88BC82 /* BeyondTheBookRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BeyondTheBookRoutingTests.swift"; sourceTree = "<group>"; };
+		D376E0A1D05CF16554308C84 /* BossChallengePapersCatalogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BossChallengePapersCatalogTests.swift"; sourceTree = "<group>"; };
 		801739AD37E69D3822F90D88 /* BossQuestionsSchemaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BossQuestionsSchemaTests.swift"; sourceTree = "<group>"; };
 		B6436FB277692897E8A5E725 /* BossQuizMigrationRatchetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BossQuizMigrationRatchetTests.swift"; sourceTree = "<group>"; };
 		07479424B05C83E357662480 /* BossQuizPickMainActorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BossQuizPickMainActorTests.swift"; sourceTree = "<group>"; };
@@ -4503,6 +4561,7 @@
 			children = (
 				AC71A19BFA8EA90753C75167,
 				FBE57CADA2335913DB0824BC,
+				DFB63C53F469DFC99FF210AF,
 			);
 			path = "App";
 			sourceTree = "<group>";
@@ -4558,6 +4617,7 @@
 				461F748B303E8D498676D4F3,
 				EE0FA492323D590AFB011A9E,
 				2F31DD827D985B619D20CD18,
+				F190155F8AE7B340F2B8B1CC,
 			);
 			path = "Resources";
 			sourceTree = "<group>";
@@ -6095,6 +6155,39 @@
 				D1CED2717CCC06C370270460,
 			);
 			path = "SocialScienceChapter9";
+			sourceTree = "<group>";
+		};
+		F190155F8AE7B340F2B8B1CC /* BossChallengePapers */ = {
+			isa = PBXGroup;
+			children = (
+				008EF57964FEE9B538438622,
+				352C10C3F6948A03384645AC,
+				32D7E687C68F115FA8F1AAD3,
+				E7E999646C5488476F4D4F8B,
+				EC83738B136EE69ABD27B197,
+				9960692D8FD1E3442FD50408,
+				BBE2006FFFEFA57AAB0EADD5,
+				391C2CFF1A30769DDA4E6ED8,
+				CE15BE7CB26CD7D07D9E0602,
+				596D3280962247A74B277832,
+				C876A4E8982FAE27A26394A7,
+				6C17412508469884C9E1AA53,
+				AB4F7B3FEBFE4B617BF393D8,
+				9F7219598F57ABBCD47D2A43,
+				82E6CDA5B83020952AC8D75E,
+				C6DA26CE4BF5543A0FFFFA56,
+				37FFAC479F9FE3C6690B5760,
+				94ADD510C3CA9D87DB8AA671,
+				9F7CD3300525FF2C96131B38,
+				D245E7D35EA678CC3B8C8063,
+				FABB2C800D268F7A07E01E71,
+				CAC3936DECF36F3A3A3CF5A4,
+				FDE9DBE57B9EC909F20859FC,
+				113866EDFC7D13C9A037D1F7,
+				853838ACDDBE67B86D68241E,
+				ECD0916CC0210824B2615292,
+			);
+			path = "BossChallengePapers";
 			sourceTree = "<group>";
 		};
 		2F31DD827D985B619D20CD18 /* TestPapers */ = {
@@ -7708,6 +7801,7 @@
 			children = (
 				EFF2D17584BA9437D2856FE3,
 				249CE94A3E4BC38DACC1C90B,
+				A09F22A6C8EC4B80959F940E,
 				055DFF040BBE16834D7BE15C,
 				CE74F2A944B11804E458DE8A,
 				33D5D6737AD2DA1B9717AC1C,
@@ -7735,6 +7829,14 @@
 				32B6900FA9E88E5FF555C474,
 			);
 			path = "Achievements";
+			sourceTree = "<group>";
+		};
+		A09F22A6C8EC4B80959F940E /* BossChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				962A10D20F7AF93421EBA9D1,
+			);
+			path = "BossChallenge";
 			sourceTree = "<group>";
 		};
 		09DDCB9C63DEDCB2542299A1 /* Components */ = {
@@ -7893,6 +7995,7 @@
 				AD20FAA9C56FA8D2394B3555,
 				DDB52BA73A22F01E468B5481,
 				23702DB489EBA8F50A88BC82,
+				D376E0A1D05CF16554308C84,
 				801739AD37E69D3822F90D88,
 				B6436FB277692897E8A5E725,
 				07479424B05C83E357662480,
@@ -9675,6 +9778,32 @@
 				C3ED5F75C224D6CB45C74886 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance_QuestionPaper.md in Resources */,
 				8E27A204D469E7924D386CA3 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance_Solutions.md in Resources */,
 				9645A2DCFEC6E3F143BF1E38 /* SocialScience_Ssch20_BanksAndTheMagicOfFinance_SolvedGuide.html in Resources */,
+				3D9BB3F879B6F4853F5FCD2B /* Boss_Paper_00_MCQ_Questions.pdf in Resources */,
+				EC2F483B62977A6858B2892F /* Boss_Paper_00_Questions.md in Resources */,
+				B5D7D00D2B5E9A2F4F106CE9 /* Boss_Paper_00_Solutions.html in Resources */,
+				5113DCCA20DD38DD4A2C1177 /* PAPERS_MANIFEST.md in Resources */,
+				168E3FEDFA84C10C9011869A /* Paper_01_Heat_NutritionPlants_Integers_QuestionPaper.pdf in Resources */,
+				29A8B62786D3AE512390D019 /* Paper_01_Heat_NutritionPlants_Integers_Questions.md in Resources */,
+				1243A46B28C2D65D6CF9FA47 /* Paper_01_Heat_NutritionPlants_Integers_Solutions.html in Resources */,
+				269233B9BA7E4FB825127BDC /* Paper_02_Light_NutritionAnimals_FractionsDecimals_QuestionPaper.pdf in Resources */,
+				DF4F2757A226E4D3A78430FC /* Paper_02_Light_NutritionAnimals_FractionsDecimals_Questions.md in Resources */,
+				24F3834B6CDD4A351A94097A /* Paper_02_Light_NutritionAnimals_FractionsDecimals_Solutions.html in Resources */,
+				4C9D38FEFE49ACAED7F5EE95 /* Paper_03_MotionTime_Respiration_SimpleEquations_QuestionPaper.pdf in Resources */,
+				020E8E59356C5F77726AF431 /* Paper_03_MotionTime_Respiration_SimpleEquations_Questions.md in Resources */,
+				37B110B173C9604FBDF646FF /* Paper_03_MotionTime_Respiration_SimpleEquations_Solutions.html in Resources */,
+				AB695FD8F564558C1A0B0C3B /* Paper_04_PhysChemChanges_Weather_LinesAngles_QuestionPaper.pdf in Resources */,
+				C485D316D9F2AC4683C691DD /* Paper_04_PhysChemChanges_Weather_LinesAngles_Questions.md in Resources */,
+				2E423C8E2B0574BD5555F6B0 /* Paper_04_PhysChemChanges_Weather_LinesAngles_Solutions.html in Resources */,
+				DA28646A775D5A50D4C8D393 /* Paper_05_Transportation_ReproductionPlants_PerimeterArea_QuestionPaper.pdf in Resources */,
+				CA256CD55074BDECC476F922 /* Paper_05_Transportation_ReproductionPlants_PerimeterArea_Questions.md in Resources */,
+				6AC9D8526BB8BF1994A88B91 /* Paper_05_Transportation_ReproductionPlants_PerimeterArea_Solutions.html in Resources */,
+				2A6994798954992D241FE3AC /* Paper_06_Soil_Forests_ComparingQuantities_QuestionPaper.pdf in Resources */,
+				795EC96EB3C5BA76299B09BA /* Paper_06_Soil_Forests_ComparingQuantities_Questions.md in Resources */,
+				BF524554DB6D9B47D69BD149 /* Paper_06_Soil_Forests_ComparingQuantities_Solutions.html in Resources */,
+				A1D50EDB98ED409A7DB344CF /* Paper_07_WindsStormsCyclones_Wastewater_Triangle_QuestionPaper.pdf in Resources */,
+				B3B098A0F678430877A35AF9 /* Paper_07_WindsStormsCyclones_Wastewater_Triangle_Questions.md in Resources */,
+				E45FDC7D6BC76B8899984B78 /* Paper_07_WindsStormsCyclones_Wastewater_Triangle_Solutions.html in Resources */,
+				4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */,
 				CF6289FBCF676858C99ED670 /* Contents.json in Resources */,
 				9AE05997509D9842F29172EB /* maths_class7.json in Resources */,
 				9103989C181D8156191FD30D /* sanskrit_class7.json in Resources */,
@@ -9711,6 +9840,7 @@
 				62A22C2A07D4F6EEE0CB030A /* TranslatorViewModel.swift in Sources */,
 				00DCA742E478215AFA4A4D3B /* AppState.swift in Sources */,
 				5B0DFD2BF97DDCDEF9853221 /* CrashReporter.swift in Sources */,
+				B70F033D599B8B883972C43B /* WindowClampHelper.swift in Sources */,
 				9A4E6B5370E2165DE8D0585D /* BuiltInContent.swift in Sources */,
 				5069F44BBE59E7E8529295D2 /* SanskritDictionary.swift in Sources */,
 				9E18896D243FB1D751B94E51 /* Achievement.swift in Sources */,
@@ -10152,6 +10282,7 @@
 				4A3CE77A95626D918E8241F5 /* BackupRestoreButton.swift in Sources */,
 				1C0F5C54AF3C2D0AAF5F0D8B /* SettingsScreen.swift in Sources */,
 				11EDCB88F2999EF00670308B /* TranslatorScreen.swift in Sources */,
+				ED363A5E98CDF68375235292 /* BossChallengePapersWindow.swift in Sources */,
 				D7D46302319B76795C27F695 /* ExpertChallengeLadderView.swift in Sources */,
 				99271421A5CD0F95BDE407C0 /* ExpertChallengeLadderWindow.swift in Sources */,
 				BE78603A1523C4AAD1DB680C /* InsightsView.swift in Sources */,
@@ -10253,6 +10384,7 @@
 				A6B083A8EA1B4FE4101997DF /* BackupExportTests.swift in Sources */,
 				C06609714AB4A67FD6B8F216 /* BackupRestoreTests.swift in Sources */,
 				E1EE0A0CF0779A369058F235 /* BeyondTheBookRoutingTests.swift in Sources */,
+				593C321630B59A6FD5E6E6EF /* BossChallengePapersCatalogTests.swift in Sources */,
 				2BF10A6D5F3503DDB2E401B4 /* BossQuestionsSchemaTests.swift in Sources */,
 				F76E46FCDF00F37C66AF6174 /* BossQuizMigrationRatchetTests.swift in Sources */,
 				96E7ABACD0327903687FCDFF /* BossQuizPickMainActorTests.swift in Sources */,
