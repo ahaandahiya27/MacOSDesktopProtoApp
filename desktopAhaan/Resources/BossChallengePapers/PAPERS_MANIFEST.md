@@ -27,3 +27,4 @@
 | 23 | 2026-06-18 | Light · Lines & Angles · Respiration in Organisms · Integers | 25/25/25/25 | ✓ |
 | 24 | 2026-06-18 | Nutrition in Animals · Physical & Chemical Changes · Fractions & Decimals · Comparing Quantities | 25/25/25/25 | ✓ |
 | 25 | 2026-06-18 | Forests · Wastewater Story · The Triangle & its Properties · Exponents & Powers | 25/25/25/25 | ✓ |
+| 26 | 2026-06-18 | Electric Current & its Effects · Simple Equations · Reproduction in Plants · Data Handling | 25/25/25/25 | ✓ |

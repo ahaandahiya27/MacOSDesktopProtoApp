@@ -2163,6 +2163,10 @@
 		234E26343247037F2400FE8D /* Paper_25_Forests_Wastewater_Triangle_Exponents_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0A984F30832D5CE94B239BD8 /* Paper_25_Forests_Wastewater_Triangle_Exponents_QuestionPaper.pdf */; };
 		A754C13A68D14163B1914DA9 /* Paper_25_Forests_Wastewater_Triangle_Exponents_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 64E893A24BB1F12E0F5E9DB0 /* Paper_25_Forests_Wastewater_Triangle_Exponents_Questions.md */; };
 		AEC5DC1954CE2617F329BAC2 /* Paper_25_Forests_Wastewater_Triangle_Exponents_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = E2AC58095890C6D3AE6D05E1 /* Paper_25_Forests_Wastewater_Triangle_Exponents_Solutions.html */; };
+		6BB8B28008CF8D4D795E25B0 /* Paper_26_ElectricCurrent_SimpleEquations_ReproductionPlants_DataHandling_QuestionPaper.html in Resources */ = {isa = PBXBuildFile; fileRef = DE62B7BBE48ADBF8A98C6916 /* Paper_26_ElectricCurrent_SimpleEquations_ReproductionPlants_DataHandling_QuestionPaper.html */; };
+		B68A8CF4C4712D05B74A9345 /* Paper_26_ElectricCurrent_SimpleEquations_ReproductionPlants_DataHandling_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 12C93C1F92EEFA1AD317832B /* Paper_26_ElectricCurrent_SimpleEquations_ReproductionPlants_DataHandling_QuestionPaper.pdf */; };
+		F442347CF7DBC20E70FDD7CC /* Paper_26_ElectricCurrent_SimpleEquations_ReproductionPlants_DataHandling_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 8D9170034AA3D62790CF315E /* Paper_26_ElectricCurrent_SimpleEquations_ReproductionPlants_DataHandling_Questions.md */; };
+		B8D6EE2E436CC421F860F2FF /* Paper_26_ElectricCurrent_SimpleEquations_ReproductionPlants_DataHandling_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 37991B2B7EA5BBFE122C6B6F /* Paper_26_ElectricCurrent_SimpleEquations_ReproductionPlants_DataHandling_Solutions.html */; };
 		4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */ = {isa = PBXBuildFile; fileRef = ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */; };
 		CF6289FBCF676858C99ED670 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F17B590EF6DA751E23E41 /* Contents.json */; };
 		9AE05997509D9842F29172EB /* maths_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E448E6E8BEEB87620A8C798 /* maths_class7.json */; };
@@ -3966,6 +3970,10 @@
 		0A984F30832D5CE94B239BD8 /* Paper_25_Forests_Wastewater_Triangle_Exponents_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_25_Forests_Wastewater_Triangle_Exponents_QuestionPaper.pdf"; sourceTree = "<group>"; };
 		64E893A24BB1F12E0F5E9DB0 /* Paper_25_Forests_Wastewater_Triangle_Exponents_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_25_Forests_Wastewater_Triangle_Exponents_Questions.md"; sourceTree = "<group>"; };
 		E2AC58095890C6D3AE6D05E1 /* Paper_25_Forests_Wastewater_Triangle_Exponents_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_25_Forests_Wastewater_Triangle_Exponents_Solutions.html"; sourceTree = "<group>"; };
+		DE62B7BBE48ADBF8A98C6916 /* Paper_26_ElectricCurrent_SimpleEquations_ReproductionPlants_DataHandling_QuestionPaper.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_26_ElectricCurrent_SimpleEquations_ReproductionPlants_DataHandling_QuestionPaper.html"; sourceTree = "<group>"; };
+		12C93C1F92EEFA1AD317832B /* Paper_26_ElectricCurrent_SimpleEquations_ReproductionPlants_DataHandling_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_26_ElectricCurrent_SimpleEquations_ReproductionPlants_DataHandling_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		8D9170034AA3D62790CF315E /* Paper_26_ElectricCurrent_SimpleEquations_ReproductionPlants_DataHandling_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_26_ElectricCurrent_SimpleEquations_ReproductionPlants_DataHandling_Questions.md"; sourceTree = "<group>"; };
+		37991B2B7EA5BBFE122C6B6F /* Paper_26_ElectricCurrent_SimpleEquations_ReproductionPlants_DataHandling_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_26_ElectricCurrent_SimpleEquations_ReproductionPlants_DataHandling_Solutions.html"; sourceTree = "<group>"; };
 		ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "QUESTION_INDEX.json"; sourceTree = "<group>"; };
 		5C7F17B590EF6DA751E23E41 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Contents.json"; sourceTree = "<group>"; };
 		69191026B2F9F250C1D2E9BD /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement.swift"; sourceTree = "<group>"; };
@@ -6401,6 +6409,10 @@
 				0A984F30832D5CE94B239BD8,
 				64E893A24BB1F12E0F5E9DB0,
 				E2AC58095890C6D3AE6D05E1,
+				DE62B7BBE48ADBF8A98C6916,
+				12C93C1F92EEFA1AD317832B,
+				8D9170034AA3D62790CF315E,
+				37991B2B7EA5BBFE122C6B6F,
 				ECD0916CC0210824B2615292,
 			);
 			path = "BossChallengePapers";
@@ -10091,6 +10103,10 @@
 				234E26343247037F2400FE8D /* Paper_25_Forests_Wastewater_Triangle_Exponents_QuestionPaper.pdf in Resources */,
 				A754C13A68D14163B1914DA9 /* Paper_25_Forests_Wastewater_Triangle_Exponents_Questions.md in Resources */,
 				AEC5DC1954CE2617F329BAC2 /* Paper_25_Forests_Wastewater_Triangle_Exponents_Solutions.html in Resources */,
+				6BB8B28008CF8D4D795E25B0 /* Paper_26_ElectricCurrent_SimpleEquations_ReproductionPlants_DataHandling_QuestionPaper.html in Resources */,
+				B68A8CF4C4712D05B74A9345 /* Paper_26_ElectricCurrent_SimpleEquations_ReproductionPlants_DataHandling_QuestionPaper.pdf in Resources */,
+				F442347CF7DBC20E70FDD7CC /* Paper_26_ElectricCurrent_SimpleEquations_ReproductionPlants_DataHandling_Questions.md in Resources */,
+				B8D6EE2E436CC421F860F2FF /* Paper_26_ElectricCurrent_SimpleEquations_ReproductionPlants_DataHandling_Solutions.html in Resources */,
 				4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */,
 				CF6289FBCF676858C99ED670 /* Contents.json in Resources */,
 				9AE05997509D9842F29172EB /* maths_class7.json in Resources */,
