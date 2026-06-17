@@ -2135,6 +2135,10 @@
 		02FF8A017C0511CEDE9A5660 /* Paper_18_ReproductionPlants_Forests_Symmetry_AlgebraicExpr_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 036D8938D9BF8812BC7C405A /* Paper_18_ReproductionPlants_Forests_Symmetry_AlgebraicExpr_QuestionPaper.pdf */; };
 		CE7519128E6179E66DA61D12 /* Paper_18_ReproductionPlants_Forests_Symmetry_AlgebraicExpr_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 50767C1E71C3E6129309FF6A /* Paper_18_ReproductionPlants_Forests_Symmetry_AlgebraicExpr_Questions.md */; };
 		E8161559513E441497CECDD6 /* Paper_18_ReproductionPlants_Forests_Symmetry_AlgebraicExpr_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 99F3E03AAAFC9CEC27973902 /* Paper_18_ReproductionPlants_Forests_Symmetry_AlgebraicExpr_Solutions.html */; };
+		B5A79A540BCB16C26EFDD4C3 /* Paper_19_MotionTime_Heat_FractionsDecimals_PerimeterArea_QuestionPaper.html in Resources */ = {isa = PBXBuildFile; fileRef = 0F7861084A0319489EB16EF2 /* Paper_19_MotionTime_Heat_FractionsDecimals_PerimeterArea_QuestionPaper.html */; };
+		18BD07B05E9BCAAE398DA0E8 /* Paper_19_MotionTime_Heat_FractionsDecimals_PerimeterArea_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2A8BC1FD276FF85097CB10DD /* Paper_19_MotionTime_Heat_FractionsDecimals_PerimeterArea_QuestionPaper.pdf */; };
+		676E4B3EF0B8752E95FB6C33 /* Paper_19_MotionTime_Heat_FractionsDecimals_PerimeterArea_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 8970AE4B7FB62BDF139C8F88 /* Paper_19_MotionTime_Heat_FractionsDecimals_PerimeterArea_Questions.md */; };
+		784E0ECF46202676931BF4B7 /* Paper_19_MotionTime_Heat_FractionsDecimals_PerimeterArea_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 91642D6E85CB7408809780E2 /* Paper_19_MotionTime_Heat_FractionsDecimals_PerimeterArea_Solutions.html */; };
 		4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */ = {isa = PBXBuildFile; fileRef = ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */; };
 		CF6289FBCF676858C99ED670 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F17B590EF6DA751E23E41 /* Contents.json */; };
 		9AE05997509D9842F29172EB /* maths_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E448E6E8BEEB87620A8C798 /* maths_class7.json */; };
@@ -3910,6 +3914,10 @@
 		036D8938D9BF8812BC7C405A /* Paper_18_ReproductionPlants_Forests_Symmetry_AlgebraicExpr_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_18_ReproductionPlants_Forests_Symmetry_AlgebraicExpr_QuestionPaper.pdf"; sourceTree = "<group>"; };
 		50767C1E71C3E6129309FF6A /* Paper_18_ReproductionPlants_Forests_Symmetry_AlgebraicExpr_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_18_ReproductionPlants_Forests_Symmetry_AlgebraicExpr_Questions.md"; sourceTree = "<group>"; };
 		99F3E03AAAFC9CEC27973902 /* Paper_18_ReproductionPlants_Forests_Symmetry_AlgebraicExpr_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_18_ReproductionPlants_Forests_Symmetry_AlgebraicExpr_Solutions.html"; sourceTree = "<group>"; };
+		0F7861084A0319489EB16EF2 /* Paper_19_MotionTime_Heat_FractionsDecimals_PerimeterArea_QuestionPaper.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_19_MotionTime_Heat_FractionsDecimals_PerimeterArea_QuestionPaper.html"; sourceTree = "<group>"; };
+		2A8BC1FD276FF85097CB10DD /* Paper_19_MotionTime_Heat_FractionsDecimals_PerimeterArea_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_19_MotionTime_Heat_FractionsDecimals_PerimeterArea_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		8970AE4B7FB62BDF139C8F88 /* Paper_19_MotionTime_Heat_FractionsDecimals_PerimeterArea_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_19_MotionTime_Heat_FractionsDecimals_PerimeterArea_Questions.md"; sourceTree = "<group>"; };
+		91642D6E85CB7408809780E2 /* Paper_19_MotionTime_Heat_FractionsDecimals_PerimeterArea_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_19_MotionTime_Heat_FractionsDecimals_PerimeterArea_Solutions.html"; sourceTree = "<group>"; };
 		ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "QUESTION_INDEX.json"; sourceTree = "<group>"; };
 		5C7F17B590EF6DA751E23E41 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Contents.json"; sourceTree = "<group>"; };
 		69191026B2F9F250C1D2E9BD /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement.swift"; sourceTree = "<group>"; };
@@ -6317,6 +6325,10 @@
 				036D8938D9BF8812BC7C405A,
 				50767C1E71C3E6129309FF6A,
 				99F3E03AAAFC9CEC27973902,
+				0F7861084A0319489EB16EF2,
+				2A8BC1FD276FF85097CB10DD,
+				8970AE4B7FB62BDF139C8F88,
+				91642D6E85CB7408809780E2,
 				ECD0916CC0210824B2615292,
 			);
 			path = "BossChallengePapers";
@@ -9979,6 +9991,10 @@
 				02FF8A017C0511CEDE9A5660 /* Paper_18_ReproductionPlants_Forests_Symmetry_AlgebraicExpr_QuestionPaper.pdf in Resources */,
 				CE7519128E6179E66DA61D12 /* Paper_18_ReproductionPlants_Forests_Symmetry_AlgebraicExpr_Questions.md in Resources */,
 				E8161559513E441497CECDD6 /* Paper_18_ReproductionPlants_Forests_Symmetry_AlgebraicExpr_Solutions.html in Resources */,
+				B5A79A540BCB16C26EFDD4C3 /* Paper_19_MotionTime_Heat_FractionsDecimals_PerimeterArea_QuestionPaper.html in Resources */,
+				18BD07B05E9BCAAE398DA0E8 /* Paper_19_MotionTime_Heat_FractionsDecimals_PerimeterArea_QuestionPaper.pdf in Resources */,
+				676E4B3EF0B8752E95FB6C33 /* Paper_19_MotionTime_Heat_FractionsDecimals_PerimeterArea_Questions.md in Resources */,
+				784E0ECF46202676931BF4B7 /* Paper_19_MotionTime_Heat_FractionsDecimals_PerimeterArea_Solutions.html in Resources */,
 				4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */,
 				CF6289FBCF676858C99ED670 /* Contents.json in Resources */,
 				9AE05997509D9842F29172EB /* maths_class7.json in Resources */,
