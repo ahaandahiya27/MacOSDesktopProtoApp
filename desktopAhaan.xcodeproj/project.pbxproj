@@ -2119,6 +2119,10 @@
 		E74E9FD2767D2B77F70358A4 /* Paper_14_NutritionPlants_AcidsBases_SimpleEquations_RationalNumbers_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = EEC4FA5E5C046CD6AC7EF5BD /* Paper_14_NutritionPlants_AcidsBases_SimpleEquations_RationalNumbers_QuestionPaper.pdf */; };
 		1B3D604C73D48127CB59645C /* Paper_14_NutritionPlants_AcidsBases_SimpleEquations_RationalNumbers_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 13A82A56891FBF142FD11E60 /* Paper_14_NutritionPlants_AcidsBases_SimpleEquations_RationalNumbers_Questions.md */; };
 		44C3B7A4CF5C3BB0EE1CCC69 /* Paper_14_NutritionPlants_AcidsBases_SimpleEquations_RationalNumbers_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 811205F5609DC7FC80187E11 /* Paper_14_NutritionPlants_AcidsBases_SimpleEquations_RationalNumbers_Solutions.html */; };
+		5167757B1102187ABC132F29 /* Paper_15_Heat_WindsStormsCyclones_Integers_DataHandling_QuestionPaper.html in Resources */ = {isa = PBXBuildFile; fileRef = 3C2F567ADE29400598CD8297 /* Paper_15_Heat_WindsStormsCyclones_Integers_DataHandling_QuestionPaper.html */; };
+		670C2552C1BECFE8D93F9517 /* Paper_15_Heat_WindsStormsCyclones_Integers_DataHandling_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A3F4AEFA05A625D93CD2D812 /* Paper_15_Heat_WindsStormsCyclones_Integers_DataHandling_QuestionPaper.pdf */; };
+		B916E87B455C1491A68DD38D /* Paper_15_Heat_WindsStormsCyclones_Integers_DataHandling_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = AF91F7F5BD357BD6B3147161 /* Paper_15_Heat_WindsStormsCyclones_Integers_DataHandling_Questions.md */; };
+		43DCA0CD5125F238B831DD9B /* Paper_15_Heat_WindsStormsCyclones_Integers_DataHandling_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 83DDFA331869B92A97C534BC /* Paper_15_Heat_WindsStormsCyclones_Integers_DataHandling_Solutions.html */; };
 		4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */ = {isa = PBXBuildFile; fileRef = ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */; };
 		CF6289FBCF676858C99ED670 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F17B590EF6DA751E23E41 /* Contents.json */; };
 		9AE05997509D9842F29172EB /* maths_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E448E6E8BEEB87620A8C798 /* maths_class7.json */; };
@@ -3878,6 +3882,10 @@
 		EEC4FA5E5C046CD6AC7EF5BD /* Paper_14_NutritionPlants_AcidsBases_SimpleEquations_RationalNumbers_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_14_NutritionPlants_AcidsBases_SimpleEquations_RationalNumbers_QuestionPaper.pdf"; sourceTree = "<group>"; };
 		13A82A56891FBF142FD11E60 /* Paper_14_NutritionPlants_AcidsBases_SimpleEquations_RationalNumbers_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_14_NutritionPlants_AcidsBases_SimpleEquations_RationalNumbers_Questions.md"; sourceTree = "<group>"; };
 		811205F5609DC7FC80187E11 /* Paper_14_NutritionPlants_AcidsBases_SimpleEquations_RationalNumbers_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_14_NutritionPlants_AcidsBases_SimpleEquations_RationalNumbers_Solutions.html"; sourceTree = "<group>"; };
+		3C2F567ADE29400598CD8297 /* Paper_15_Heat_WindsStormsCyclones_Integers_DataHandling_QuestionPaper.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_15_Heat_WindsStormsCyclones_Integers_DataHandling_QuestionPaper.html"; sourceTree = "<group>"; };
+		A3F4AEFA05A625D93CD2D812 /* Paper_15_Heat_WindsStormsCyclones_Integers_DataHandling_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_15_Heat_WindsStormsCyclones_Integers_DataHandling_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		AF91F7F5BD357BD6B3147161 /* Paper_15_Heat_WindsStormsCyclones_Integers_DataHandling_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_15_Heat_WindsStormsCyclones_Integers_DataHandling_Questions.md"; sourceTree = "<group>"; };
+		83DDFA331869B92A97C534BC /* Paper_15_Heat_WindsStormsCyclones_Integers_DataHandling_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_15_Heat_WindsStormsCyclones_Integers_DataHandling_Solutions.html"; sourceTree = "<group>"; };
 		ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "QUESTION_INDEX.json"; sourceTree = "<group>"; };
 		5C7F17B590EF6DA751E23E41 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Contents.json"; sourceTree = "<group>"; };
 		69191026B2F9F250C1D2E9BD /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement.swift"; sourceTree = "<group>"; };
@@ -6269,6 +6277,10 @@
 				EEC4FA5E5C046CD6AC7EF5BD,
 				13A82A56891FBF142FD11E60,
 				811205F5609DC7FC80187E11,
+				3C2F567ADE29400598CD8297,
+				A3F4AEFA05A625D93CD2D812,
+				AF91F7F5BD357BD6B3147161,
+				83DDFA331869B92A97C534BC,
 				ECD0916CC0210824B2615292,
 			);
 			path = "BossChallengePapers";
@@ -9915,6 +9927,10 @@
 				E74E9FD2767D2B77F70358A4 /* Paper_14_NutritionPlants_AcidsBases_SimpleEquations_RationalNumbers_QuestionPaper.pdf in Resources */,
 				1B3D604C73D48127CB59645C /* Paper_14_NutritionPlants_AcidsBases_SimpleEquations_RationalNumbers_Questions.md in Resources */,
 				44C3B7A4CF5C3BB0EE1CCC69 /* Paper_14_NutritionPlants_AcidsBases_SimpleEquations_RationalNumbers_Solutions.html in Resources */,
+				5167757B1102187ABC132F29 /* Paper_15_Heat_WindsStormsCyclones_Integers_DataHandling_QuestionPaper.html in Resources */,
+				670C2552C1BECFE8D93F9517 /* Paper_15_Heat_WindsStormsCyclones_Integers_DataHandling_QuestionPaper.pdf in Resources */,
+				B916E87B455C1491A68DD38D /* Paper_15_Heat_WindsStormsCyclones_Integers_DataHandling_Questions.md in Resources */,
+				43DCA0CD5125F238B831DD9B /* Paper_15_Heat_WindsStormsCyclones_Integers_DataHandling_Solutions.html in Resources */,
 				4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */,
 				CF6289FBCF676858C99ED670 /* Contents.json in Resources */,
 				9AE05997509D9842F29172EB /* maths_class7.json in Resources */,
