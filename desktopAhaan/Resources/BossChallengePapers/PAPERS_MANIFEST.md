@@ -19,3 +19,4 @@
 | 15 | 2026-06-18 | Heat · Winds, Storms & Cyclones · Integers · Data Handling | 25/25/25/25 | ✓ |
 | 16 | 2026-06-18 | Light · The Triangle & its Properties · Wastewater Story · Comparing Quantities | 25/25/25/25 | ✓ |
 | 17 | 2026-06-18 | Respiration in Organisms · Lines & Angles · Electric Current & its Effects · Exponents & Powers | 25/25/25/25 | ✓ |
+| 18 | 2026-06-18 | Reproduction in Plants · Forests · Symmetry · Algebraic Expressions | 25/25/25/25 | ✓ |
