@@ -2159,6 +2159,10 @@
 		2003CA8EFC97A859B36AECFD /* Paper_24_NutritionAnimals_PhysChem_Fractions_Comparing_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 1045AA39270794E09449802D /* Paper_24_NutritionAnimals_PhysChem_Fractions_Comparing_QuestionPaper.pdf */; };
 		FB602DCBBD8F3AE9F971E9FE /* Paper_24_NutritionAnimals_PhysChem_Fractions_Comparing_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 1835B955C2F37898D8318D34 /* Paper_24_NutritionAnimals_PhysChem_Fractions_Comparing_Questions.md */; };
 		59F621D7C933C15E62941000 /* Paper_24_NutritionAnimals_PhysChem_Fractions_Comparing_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = D1DA2D03D505E01EF70E3638 /* Paper_24_NutritionAnimals_PhysChem_Fractions_Comparing_Solutions.html */; };
+		7C072869B02F07B8B0473DC7 /* Paper_25_Forests_Wastewater_Triangle_Exponents_QuestionPaper.html in Resources */ = {isa = PBXBuildFile; fileRef = C5378AC18BC72CD6C455E436 /* Paper_25_Forests_Wastewater_Triangle_Exponents_QuestionPaper.html */; };
+		234E26343247037F2400FE8D /* Paper_25_Forests_Wastewater_Triangle_Exponents_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0A984F30832D5CE94B239BD8 /* Paper_25_Forests_Wastewater_Triangle_Exponents_QuestionPaper.pdf */; };
+		A754C13A68D14163B1914DA9 /* Paper_25_Forests_Wastewater_Triangle_Exponents_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 64E893A24BB1F12E0F5E9DB0 /* Paper_25_Forests_Wastewater_Triangle_Exponents_Questions.md */; };
+		AEC5DC1954CE2617F329BAC2 /* Paper_25_Forests_Wastewater_Triangle_Exponents_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = E2AC58095890C6D3AE6D05E1 /* Paper_25_Forests_Wastewater_Triangle_Exponents_Solutions.html */; };
 		4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */ = {isa = PBXBuildFile; fileRef = ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */; };
 		CF6289FBCF676858C99ED670 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F17B590EF6DA751E23E41 /* Contents.json */; };
 		9AE05997509D9842F29172EB /* maths_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E448E6E8BEEB87620A8C798 /* maths_class7.json */; };
@@ -3958,6 +3962,10 @@
 		1045AA39270794E09449802D /* Paper_24_NutritionAnimals_PhysChem_Fractions_Comparing_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_24_NutritionAnimals_PhysChem_Fractions_Comparing_QuestionPaper.pdf"; sourceTree = "<group>"; };
 		1835B955C2F37898D8318D34 /* Paper_24_NutritionAnimals_PhysChem_Fractions_Comparing_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_24_NutritionAnimals_PhysChem_Fractions_Comparing_Questions.md"; sourceTree = "<group>"; };
 		D1DA2D03D505E01EF70E3638 /* Paper_24_NutritionAnimals_PhysChem_Fractions_Comparing_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_24_NutritionAnimals_PhysChem_Fractions_Comparing_Solutions.html"; sourceTree = "<group>"; };
+		C5378AC18BC72CD6C455E436 /* Paper_25_Forests_Wastewater_Triangle_Exponents_QuestionPaper.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_25_Forests_Wastewater_Triangle_Exponents_QuestionPaper.html"; sourceTree = "<group>"; };
+		0A984F30832D5CE94B239BD8 /* Paper_25_Forests_Wastewater_Triangle_Exponents_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_25_Forests_Wastewater_Triangle_Exponents_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		64E893A24BB1F12E0F5E9DB0 /* Paper_25_Forests_Wastewater_Triangle_Exponents_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_25_Forests_Wastewater_Triangle_Exponents_Questions.md"; sourceTree = "<group>"; };
+		E2AC58095890C6D3AE6D05E1 /* Paper_25_Forests_Wastewater_Triangle_Exponents_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_25_Forests_Wastewater_Triangle_Exponents_Solutions.html"; sourceTree = "<group>"; };
 		ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "QUESTION_INDEX.json"; sourceTree = "<group>"; };
 		5C7F17B590EF6DA751E23E41 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Contents.json"; sourceTree = "<group>"; };
 		69191026B2F9F250C1D2E9BD /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement.swift"; sourceTree = "<group>"; };
@@ -6389,6 +6397,10 @@
 				1045AA39270794E09449802D,
 				1835B955C2F37898D8318D34,
 				D1DA2D03D505E01EF70E3638,
+				C5378AC18BC72CD6C455E436,
+				0A984F30832D5CE94B239BD8,
+				64E893A24BB1F12E0F5E9DB0,
+				E2AC58095890C6D3AE6D05E1,
 				ECD0916CC0210824B2615292,
 			);
 			path = "BossChallengePapers";
@@ -10075,6 +10087,10 @@
 				2003CA8EFC97A859B36AECFD /* Paper_24_NutritionAnimals_PhysChem_Fractions_Comparing_QuestionPaper.pdf in Resources */,
 				FB602DCBBD8F3AE9F971E9FE /* Paper_24_NutritionAnimals_PhysChem_Fractions_Comparing_Questions.md in Resources */,
 				59F621D7C933C15E62941000 /* Paper_24_NutritionAnimals_PhysChem_Fractions_Comparing_Solutions.html in Resources */,
+				7C072869B02F07B8B0473DC7 /* Paper_25_Forests_Wastewater_Triangle_Exponents_QuestionPaper.html in Resources */,
+				234E26343247037F2400FE8D /* Paper_25_Forests_Wastewater_Triangle_Exponents_QuestionPaper.pdf in Resources */,
+				A754C13A68D14163B1914DA9 /* Paper_25_Forests_Wastewater_Triangle_Exponents_Questions.md in Resources */,
+				AEC5DC1954CE2617F329BAC2 /* Paper_25_Forests_Wastewater_Triangle_Exponents_Solutions.html in Resources */,
 				4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */,
 				CF6289FBCF676858C99ED670 /* Contents.json in Resources */,
 				9AE05997509D9842F29172EB /* maths_class7.json in Resources */,
