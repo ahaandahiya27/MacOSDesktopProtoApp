@@ -101,11 +101,11 @@
    (C) The worker is wrong, but only because burr-picking must be done before shearing the sheep
    (D) Scouring removes grease, dust and dirt by washing, but embedded woody burrs are solid plant fragments that water does not dissolve or float away, so they remain caught in the fibre and a separate manual burr-picking step is still needed
 
-15. Order this full wool chain so each step meets its prerequisite, given the constraint that grading and colouring both need clean fibre and yarn-making comes last: spinning, scouring, shearing, dyeing, sorting, picking burrs.
-   (A) shearing, sorting, scouring, picking burrs, dyeing, spinning
-   (B) shearing, scouring, sorting, picking burrs, dyeing, spinning
-   (C) shearing, scouring, dyeing, sorting, picking burrs, spinning
-   (D) scouring, shearing, sorting, picking burrs, dyeing, spinning
+15. In the wool chain shearing, scouring, sorting, picking burrs, dyeing, spinning, a manager wants to swap one adjacent pair of steps to suit the factory layout. Which swap would do the LEAST harm to the finished yarn, and why?
+   (A) Swap scouring and shearing, because the fleece can be washed equally well on or off the live sheep
+   (B) Swap sorting and picking burrs, because both act only on already-scoured clean fibre and neither depends on the other's output, so their order between scouring and dyeing is flexible
+   (C) Swap dyeing and spinning, because colour takes equally well on loose fibre or on finished yarn
+   (D) Swap scouring and sorting, because greasy fleece can be graded just as reliably as clean fleece
 
 16. An auditor finds a yarn batch is both prickly with embedded plant fragments and uneven in thickness, mixing coarse and fine hairs, yet it is clean and evenly coloured. Which two steps were performed and which two were skipped?
    (A) Sorting and burr-picking were performed, while scouring and dyeing were skipped, which is why the yarn is prickly and uneven
@@ -197,11 +197,11 @@
    (C) The only error is the reeling; the moth does spin the cocoon, but reeling needs cold water, not the emerged cocoon
    (D) There is no error; the emerged moth's empty cocoon gives the longest unbroken thread
 
-31. Exactly one of these statements about the silk-moth life cycle is FALSE. Identify it.
-   (A) The egg hatches into a larva (silkworm) that feeds on mulberry leaves
-   (B) The pupa hatches straight from the egg, and the larva develops afterwards once the cocoon has been spun
-   (C) The larva spins a cocoon around itself as it changes into a pupa
-   (D) The adult moth emerges from the cocoon and lays eggs to begin the next cycle
+31. A sericulture farmer doubles the mulberry leaves fed to each silkworm, expecting roughly double the silk thread per cocoon. Reasoning from what the leaves are actually used for, what really happens?
+   (A) The thread length roughly doubles, because the silk is made directly out of the leaves eaten, so twice the food gives twice the silk
+   (B) The thread length does not simply double: the larva eats leaves to grow to its normal size and then spins one cocoon whose filament length is set by the larva itself, so feeding it past what it needs is wasted and does not lengthen the single filament
+   (C) The worm spins two cocoons instead of one, because surplus food is stored and later released as a second cocoon
+   (D) The worm turns the extra leaves into a wool-like fibre that it spins alongside the silk
 
 32. A farmer must decide the exact day to harvest cocoons. Reasoning from the life cycle, the harvest window opens and closes at definite events. When should harvesting happen, and why is the window narrow?
    (A) As soon as the egg is laid, because the egg already contains the wound silk thread ready to harvest
@@ -233,17 +233,17 @@
    (C) Both reeling and weaving only unwind cocoons, so neither makes the fabric
    (D) Weaving boils the cocoon and reeling boils it again, and the heat itself forms the cloth
 
-37. A worker claims sericin is washed off the silk thread 'because it is poisonous to wear.' Give the accurate reason for its removal and refute the toxicity claim.
-   (A) The worker is right; sericin is a toxin that would harm anyone wearing the silk
-   (B) Sericin is removed because it is a stiff gum that sticks the filament to itself and to the cocoon, so the thread cannot unwind or weave smoothly while it remains; it is not removed for toxicity, since it is not a poison
-   (C) Sericin is removed because it is the only coloured part and silk must be pure white
-   (D) Sericin is removed because it makes the filament too thin to weave
+37. Raw silk still coated in sericin feels stiff and dull, while the same thread after degumming feels soft and lustrous. Which single change explains BOTH the new softness and the new shine?
+   (A) Degumming dyes the thread, and the dye is what adds both the softness and the shine
+   (B) Removing the stiff sericin gum uncovers the smooth fibroin filament beneath: with the hard coating gone the thread bends softly, and the bare smooth fibroin reflects light to give the lustre
+   (C) Degumming chemically converts the fibroin into a softer protein, which also happens to reflect more light
+   (D) Degumming forces air pockets inside the filament, and those pockets make it both soft and shiny
 
-38. A market list reads: 'mulberry, tasar, eri, muga, nylon — all silks.' Identify which entry does NOT belong, what kind of thing it actually is, and what the rest share.
-   (A) Mulberry does not belong, because mulberry is a tree, not a silk, while tasar, eri, muga and nylon are all silks
-   (B) Muga does not belong, because muga is a golden goat wool from Assam while the rest are silks
-   (C) Nylon does not belong: it is a man-made petroleum-based synthetic, whereas mulberry, tasar, eri and muga are all natural silks spun by silkworms
-   (D) Eri does not belong, because eri is a synthetic like nylon while mulberry, tasar and muga are silks
+38. A chart lists fibre sources: sheep, silk-moth larva, Pashmina goat, and the mulberry plant. Three give an animal fibre directly; one gives no fibre at all. Which is the odd one, and why?
+   (A) Sheep is the odd one, because sheep are reared for meat and milk, not for any fibre
+   (B) The silk-moth larva is the odd one, because it is the adult moth, not the larva, that makes the silk
+   (C) The mulberry plant is the odd one: it gives no fibre itself — it only supplies the leaves that feed the silk-moth larva — whereas the sheep gives wool, the silk-moth larva gives silk, and the Pashmina goat gives fine wool
+   (D) The Pashmina goat is the odd one, because goats give only milk and never any fibre
 
 39. A guide says muga silk is golden 'because the cocoons are boiled in a golden dye, and all silk would be golden if we dyed it so.' Correct the two false ideas in one accurate statement linking colour, silkworm and region.
    (A) The guide is right; boiling cocoons in golden dye is exactly how muga gets its colour
@@ -299,17 +299,17 @@
    (C) It must be sorter's disease, because dye on finished wool breeds fresh anthrax spores
    (D) It cannot be any illness at all, because scoured wool is completely harmless to everyone
 
-48. A health officer has budget for ONE intervention to cut sorter's disease in a wool unit. Reasoning strictly from the route by which the disease spreads, which single measure is most effective, and why do the others miss the route?
-   (A) Dye all wool in bright colours so infected batches can be spotted and removed
-   (B) Disinfect the raw fleece and give sorters masks, gloves and good ventilation, because the disease spreads by inhaling spores from raw fleece, so blocking that inhalation route directly cuts the risk
-   (C) Shear the sheep more frequently so each animal carries less fleece at a time
-   (D) Sell only finished sweaters and stop the unit from processing raw wool
+48. To protect wool workers from sorter's disease, a unit can afford only ONE piece of personal protective equipment. Reasoning strictly from how the disease enters the body, which item gives the MOST direct protection, and why are the others misdirected?
+   (A) Rubber gloves, because the spores enter mainly through small cuts on the hands
+   (B) A well-fitted face mask (respirator), because sorter's disease is caught by inhaling anthrax spores carried in the dust of raw fleece, so filtering the air the worker breathes blocks the actual entry route
+   (C) Steel-toed boots, because the spores settle on the floor and enter through the feet
+   (D) Safety goggles, because the spores infect chiefly through the surface of the eyes
 
-49. Spell out, in correct cause-and-effect order, the chain by which a wool sorter develops sorter's disease, and reject the chains that misplace the agent or route.
-   (A) A finished sweater carries spores, the buyer wears it, body heat activates the spores, and anthrax develops
-   (B) Raw fleece carries Bacillus anthracis spores, sorting raises dust, the worker inhales the spores, and the spores cause anthrax (sorter's disease) in the lungs
-   (C) Dye contains a virus, fumes are inhaled during dyeing, the virus causes a cold that worsens into anthrax
-   (D) Scouring water breeds a parasite, the worker drinks it, and the parasite causes anthrax in the blood
+49. Silk comes off the cocoon as one continuous filament hundreds of metres long, while wool comes off the sheep as a mass of short, separate hairs. Reasoning from this difference, why must wool be SPUN (twisted) into yarn while a reeled silk strand needs far less twisting to hold together?
+   (A) Wool hairs are much heavier than silk, so they need twisting to stop them falling under their own weight
+   (B) Wool's short separate hairs would slide apart if simply laid side by side, so they must be twisted together to grip one another into a continuous yarn, whereas silk is already one long unbroken filament that holds its length without the fibres being locked by twist
+   (C) Silk needs no twisting because it is really a plant fibre and plant fibres are naturally sticky
+   (D) Both need exactly the same amount of twisting, because every yarn is made by the identical process
 
 50. A poster matches four jobs to occupational risks. Exactly one line is correct. Which is it?
    (A) Silk reeler — anthrax from breathing dye fumes during reeling
@@ -341,11 +341,11 @@
    (C) The reasoning is sound: a fine fibre produced in only small amounts per animal each year is genuinely scarce, and a fibre that is both scarce and desirable does command a higher price
    (D) The reasoning is wrong, because scarcity lowers price, since rare goods are harder to sell
 
-55. A student writes: 'Boiling the cocoon has exactly one purpose — to wash dust off it.' Give the most complete correction, naming every real purpose and ranking cleaning correctly.
-   (A) Boiling chiefly softens the sericin gum so the filament can be reeled, and it kills the pupa so the emerging moth cannot break the long thread; any cleaning of dust is only incidental, not the main purpose
-   (B) The student is fully correct; washing off dust is the single purpose of boiling
-   (C) Boiling is done mainly to dye the silk a permanent golden colour like muga's
-   (D) Cocoons are never boiled in commercial silk production, so the question is moot
+55. A sericulture farm splits its cocoons into Batch S (for silk thread) and Batch B (to breed next season's moths). Which difference in handling is essential, and why can the two batches NOT be treated alike?
+   (A) Batch S must be boiled or steamed to kill the pupa before the moth emerges, keeping the filament unbroken for reeling, while Batch B must be left UNBOILED so its moths can emerge, mate and lay eggs; boiling Batch B would destroy the breeding stock, and letting Batch S emerge would break every thread
+   (B) Both batches must be boiled, because boiling is needed for breeding moths just as much as for thread
+   (C) Batch B must be boiled harder than Batch S, because breeding moths need extra heat before they can hatch
+   (D) Neither batch is boiled, because boiling is never a part of silk farming
 
 56. A spool sold as 'pure animal-fibre yarn' is tested: it flares with a papery smell, leaves grey ash, loses much of its strength when wet, and never mats in hot agitated washing. Reasoning from every clue together, the honest conclusion is:
    (A) Every clue points to cotton, a plant cellulose fibre: papery flare, grey ash, wet weakness and no felting are all cotton traits, so the 'animal-fibre' label is false
