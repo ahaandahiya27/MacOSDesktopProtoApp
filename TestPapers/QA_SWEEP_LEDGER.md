@@ -9,7 +9,7 @@ Status: PENDING | CLEAN | FIXED | FLAGGED. One row per ladder paper (P3–P5), 2
 | Science_Ch01_NutritionInPlants_P5 | FIXED |
 | Science_Ch02_NutritionInAnimals_P3 | FIXED |
 | Science_Ch02_NutritionInAnimals_P4 | FIXED |
-| Science_Ch02_NutritionInAnimals_P5 | PENDING |
+| Science_Ch02_NutritionInAnimals_P5 | FIXED |
 | Science_Ch03_FibreToFabric_P3 | PENDING |
 | Science_Ch03_FibreToFabric_P4 | PENDING |
 | Science_Ch03_FibreToFabric_P5 | PENDING |
