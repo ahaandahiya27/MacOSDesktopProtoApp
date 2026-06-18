@@ -2171,6 +2171,10 @@
 		C752AB071500435B56748163 /* Paper_27_MotionTime_Forests_AlgExpr_ComparingQuantities_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7D5CC61BB2F3A8D07AA14898 /* Paper_27_MotionTime_Forests_AlgExpr_ComparingQuantities_QuestionPaper.pdf */; };
 		7A8802BAA5F6E99E8AE531DC /* Paper_27_MotionTime_Forests_AlgExpr_ComparingQuantities_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 47809883B4FACA5549EE297C /* Paper_27_MotionTime_Forests_AlgExpr_ComparingQuantities_Questions.md */; };
 		E9391E22B2ED4B34AFD3B649 /* Paper_27_MotionTime_Forests_AlgExpr_ComparingQuantities_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 725E243E9212D89D101F6B38 /* Paper_27_MotionTime_Forests_AlgExpr_ComparingQuantities_Solutions.html */; };
+		1190FA2BD20D849242F522CA /* Paper_28_Heat_ReproductionPlants_Integers_Symmetry_QuestionPaper.html in Resources */ = {isa = PBXBuildFile; fileRef = 9F53C9C5A098689C8FAB7DDB /* Paper_28_Heat_ReproductionPlants_Integers_Symmetry_QuestionPaper.html */; };
+		D351F8EB334029774CF67CBB /* Paper_28_Heat_ReproductionPlants_Integers_Symmetry_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4BD8927B42E3D6F649C06F87 /* Paper_28_Heat_ReproductionPlants_Integers_Symmetry_QuestionPaper.pdf */; };
+		78FB0EF434027EC7EC2C6DA2 /* Paper_28_Heat_ReproductionPlants_Integers_Symmetry_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 40C95D69CBA726FD8015125D /* Paper_28_Heat_ReproductionPlants_Integers_Symmetry_Questions.md */; };
+		293B7E78459BBF57DA270552 /* Paper_28_Heat_ReproductionPlants_Integers_Symmetry_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 506880A9AEC1A782997924F5 /* Paper_28_Heat_ReproductionPlants_Integers_Symmetry_Solutions.html */; };
 		4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */ = {isa = PBXBuildFile; fileRef = ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */; };
 		CF6289FBCF676858C99ED670 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F17B590EF6DA751E23E41 /* Contents.json */; };
 		9AE05997509D9842F29172EB /* maths_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E448E6E8BEEB87620A8C798 /* maths_class7.json */; };
@@ -3982,6 +3986,10 @@
 		7D5CC61BB2F3A8D07AA14898 /* Paper_27_MotionTime_Forests_AlgExpr_ComparingQuantities_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_27_MotionTime_Forests_AlgExpr_ComparingQuantities_QuestionPaper.pdf"; sourceTree = "<group>"; };
 		47809883B4FACA5549EE297C /* Paper_27_MotionTime_Forests_AlgExpr_ComparingQuantities_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_27_MotionTime_Forests_AlgExpr_ComparingQuantities_Questions.md"; sourceTree = "<group>"; };
 		725E243E9212D89D101F6B38 /* Paper_27_MotionTime_Forests_AlgExpr_ComparingQuantities_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_27_MotionTime_Forests_AlgExpr_ComparingQuantities_Solutions.html"; sourceTree = "<group>"; };
+		9F53C9C5A098689C8FAB7DDB /* Paper_28_Heat_ReproductionPlants_Integers_Symmetry_QuestionPaper.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_28_Heat_ReproductionPlants_Integers_Symmetry_QuestionPaper.html"; sourceTree = "<group>"; };
+		4BD8927B42E3D6F649C06F87 /* Paper_28_Heat_ReproductionPlants_Integers_Symmetry_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_28_Heat_ReproductionPlants_Integers_Symmetry_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		40C95D69CBA726FD8015125D /* Paper_28_Heat_ReproductionPlants_Integers_Symmetry_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_28_Heat_ReproductionPlants_Integers_Symmetry_Questions.md"; sourceTree = "<group>"; };
+		506880A9AEC1A782997924F5 /* Paper_28_Heat_ReproductionPlants_Integers_Symmetry_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_28_Heat_ReproductionPlants_Integers_Symmetry_Solutions.html"; sourceTree = "<group>"; };
 		ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "QUESTION_INDEX.json"; sourceTree = "<group>"; };
 		5C7F17B590EF6DA751E23E41 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Contents.json"; sourceTree = "<group>"; };
 		69191026B2F9F250C1D2E9BD /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement.swift"; sourceTree = "<group>"; };
@@ -6425,6 +6433,10 @@
 				7D5CC61BB2F3A8D07AA14898,
 				47809883B4FACA5549EE297C,
 				725E243E9212D89D101F6B38,
+				9F53C9C5A098689C8FAB7DDB,
+				4BD8927B42E3D6F649C06F87,
+				40C95D69CBA726FD8015125D,
+				506880A9AEC1A782997924F5,
 				ECD0916CC0210824B2615292,
 			);
 			path = "BossChallengePapers";
@@ -10123,6 +10135,10 @@
 				C752AB071500435B56748163 /* Paper_27_MotionTime_Forests_AlgExpr_ComparingQuantities_QuestionPaper.pdf in Resources */,
 				7A8802BAA5F6E99E8AE531DC /* Paper_27_MotionTime_Forests_AlgExpr_ComparingQuantities_Questions.md in Resources */,
 				E9391E22B2ED4B34AFD3B649 /* Paper_27_MotionTime_Forests_AlgExpr_ComparingQuantities_Solutions.html in Resources */,
+				1190FA2BD20D849242F522CA /* Paper_28_Heat_ReproductionPlants_Integers_Symmetry_QuestionPaper.html in Resources */,
+				D351F8EB334029774CF67CBB /* Paper_28_Heat_ReproductionPlants_Integers_Symmetry_QuestionPaper.pdf in Resources */,
+				78FB0EF434027EC7EC2C6DA2 /* Paper_28_Heat_ReproductionPlants_Integers_Symmetry_Questions.md in Resources */,
+				293B7E78459BBF57DA270552 /* Paper_28_Heat_ReproductionPlants_Integers_Symmetry_Solutions.html in Resources */,
 				4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */,
 				CF6289FBCF676858C99ED670 /* Contents.json in Resources */,
 				9AE05997509D9842F29172EB /* maths_class7.json in Resources */,
