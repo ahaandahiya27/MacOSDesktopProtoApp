@@ -173,11 +173,11 @@
    (C) A radiation beam from the heater to the wall
    (D) Random motion unrelated to the heater's warmth
 
-27. Why is an electric room heater placed low near the floor while a cooling unit is mounted high on a wall, for best effect in the same room?
-   (A) Because warm air sinks and cool air rises, so the positions are simply for convenience
-   (B) Because heat only moves by conduction through the walls, so position is irrelevant
-   (C) Because radiation from each device only travels downward
-   (D) Warm air rises and cool air sinks, so heating from low and cooling from high lets convection currents distribute the conditioned air throughout the room
+27. A stove stands on the floor of a tall room. After a while, a thermometer held near the ceiling reads several degrees higher than one held near the floor. Why does the warmth gather near the ceiling?
+   (A) Conduction carries the stove's heat straight up through the still air to the ceiling
+   (B) Radiation from the stove travels only upward and strikes the ceiling
+   (C) The ceiling is naturally warmer than the floor in any room, heated or not
+   (D) Air warmed by the stove expands, becomes lighter and rises to collect near the ceiling, while cooler denser air sinks to the floor — a convection current
 
 28. A student argues that convection can carry heat through a solid iron block just as it does through water. Why is this wrong?
    (A) Convection works in iron, but only when the iron is painted black
