@@ -2267,6 +2267,10 @@
 		492EABA7177C4F704C52D685 /* Paper_51_Heat_NutritionInPlants_FractionsDecimals_DataHandling_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = DB5713553FCB6E9F86C68AA1 /* Paper_51_Heat_NutritionInPlants_FractionsDecimals_DataHandling_QuestionPaper.pdf */; };
 		F2A76CE7413619AB40859D39 /* Paper_51_Heat_NutritionInPlants_FractionsDecimals_DataHandling_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = B535417B16B20E3DBB470B79 /* Paper_51_Heat_NutritionInPlants_FractionsDecimals_DataHandling_Questions.md */; };
 		0B9AC29AE9CDE7BCC6DC4F84 /* Paper_51_Heat_NutritionInPlants_FractionsDecimals_DataHandling_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = CC033F01BB89EE7CBA716E91 /* Paper_51_Heat_NutritionInPlants_FractionsDecimals_DataHandling_Solutions.html */; };
+		35BA8F577F01C96C80F8723F /* Paper_52_Light_Soil_Integers_ComparingQuantities_QuestionPaper.html in Resources */ = {isa = PBXBuildFile; fileRef = 49A2B45781C529B07755B945 /* Paper_52_Light_Soil_Integers_ComparingQuantities_QuestionPaper.html */; };
+		3A1D5360107E36F7D13E95AD /* Paper_52_Light_Soil_Integers_ComparingQuantities_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D3395EEB7ACD8C38EB3E0501 /* Paper_52_Light_Soil_Integers_ComparingQuantities_QuestionPaper.pdf */; };
+		1E325610EB7EEAB1D6C8028D /* Paper_52_Light_Soil_Integers_ComparingQuantities_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = F53FD4BDDD3118A0A138C671 /* Paper_52_Light_Soil_Integers_ComparingQuantities_Questions.md */; };
+		945D8DBB5B38C310A10459C2 /* Paper_52_Light_Soil_Integers_ComparingQuantities_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 2A4EA0E557C19B4CC47C11D9 /* Paper_52_Light_Soil_Integers_ComparingQuantities_Solutions.html */; };
 		4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */ = {isa = PBXBuildFile; fileRef = ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */; };
 		CF6289FBCF676858C99ED670 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F17B590EF6DA751E23E41 /* Contents.json */; };
 		9AE05997509D9842F29172EB /* maths_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E448E6E8BEEB87620A8C798 /* maths_class7.json */; };
@@ -4174,6 +4178,10 @@
 		DB5713553FCB6E9F86C68AA1 /* Paper_51_Heat_NutritionInPlants_FractionsDecimals_DataHandling_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_51_Heat_NutritionInPlants_FractionsDecimals_DataHandling_QuestionPaper.pdf"; sourceTree = "<group>"; };
 		B535417B16B20E3DBB470B79 /* Paper_51_Heat_NutritionInPlants_FractionsDecimals_DataHandling_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_51_Heat_NutritionInPlants_FractionsDecimals_DataHandling_Questions.md"; sourceTree = "<group>"; };
 		CC033F01BB89EE7CBA716E91 /* Paper_51_Heat_NutritionInPlants_FractionsDecimals_DataHandling_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_51_Heat_NutritionInPlants_FractionsDecimals_DataHandling_Solutions.html"; sourceTree = "<group>"; };
+		49A2B45781C529B07755B945 /* Paper_52_Light_Soil_Integers_ComparingQuantities_QuestionPaper.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_52_Light_Soil_Integers_ComparingQuantities_QuestionPaper.html"; sourceTree = "<group>"; };
+		D3395EEB7ACD8C38EB3E0501 /* Paper_52_Light_Soil_Integers_ComparingQuantities_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_52_Light_Soil_Integers_ComparingQuantities_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		F53FD4BDDD3118A0A138C671 /* Paper_52_Light_Soil_Integers_ComparingQuantities_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_52_Light_Soil_Integers_ComparingQuantities_Questions.md"; sourceTree = "<group>"; };
+		2A4EA0E557C19B4CC47C11D9 /* Paper_52_Light_Soil_Integers_ComparingQuantities_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_52_Light_Soil_Integers_ComparingQuantities_Solutions.html"; sourceTree = "<group>"; };
 		ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "QUESTION_INDEX.json"; sourceTree = "<group>"; };
 		5C7F17B590EF6DA751E23E41 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Contents.json"; sourceTree = "<group>"; };
 		69191026B2F9F250C1D2E9BD /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement.swift"; sourceTree = "<group>"; };
@@ -6713,6 +6721,10 @@
 				DB5713553FCB6E9F86C68AA1,
 				B535417B16B20E3DBB470B79,
 				CC033F01BB89EE7CBA716E91,
+				49A2B45781C529B07755B945,
+				D3395EEB7ACD8C38EB3E0501,
+				F53FD4BDDD3118A0A138C671,
+				2A4EA0E557C19B4CC47C11D9,
 				ECD0916CC0210824B2615292,
 			);
 			path = "BossChallengePapers";
@@ -10507,6 +10519,10 @@
 				492EABA7177C4F704C52D685 /* Paper_51_Heat_NutritionInPlants_FractionsDecimals_DataHandling_QuestionPaper.pdf in Resources */,
 				F2A76CE7413619AB40859D39 /* Paper_51_Heat_NutritionInPlants_FractionsDecimals_DataHandling_Questions.md in Resources */,
 				0B9AC29AE9CDE7BCC6DC4F84 /* Paper_51_Heat_NutritionInPlants_FractionsDecimals_DataHandling_Solutions.html in Resources */,
+				35BA8F577F01C96C80F8723F /* Paper_52_Light_Soil_Integers_ComparingQuantities_QuestionPaper.html in Resources */,
+				3A1D5360107E36F7D13E95AD /* Paper_52_Light_Soil_Integers_ComparingQuantities_QuestionPaper.pdf in Resources */,
+				1E325610EB7EEAB1D6C8028D /* Paper_52_Light_Soil_Integers_ComparingQuantities_Questions.md in Resources */,
+				945D8DBB5B38C310A10459C2 /* Paper_52_Light_Soil_Integers_ComparingQuantities_Solutions.html in Resources */,
 				4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */,
 				CF6289FBCF676858C99ED670 /* Contents.json in Resources */,
 				9AE05997509D9842F29172EB /* maths_class7.json in Resources */,
