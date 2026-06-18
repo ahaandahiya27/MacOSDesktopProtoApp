@@ -2223,6 +2223,10 @@
 		7F0925BD10D09B002CB5DDCF /* Paper_40_Weather_Transportation_DataHandling_RationalNumbers_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3F51BD5DB9E4A25010EEF238 /* Paper_40_Weather_Transportation_DataHandling_RationalNumbers_QuestionPaper.pdf */; };
 		734035DDE73BFAF55F701C58 /* Paper_40_Weather_Transportation_DataHandling_RationalNumbers_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 7480ACE6F17E8A10045A4885 /* Paper_40_Weather_Transportation_DataHandling_RationalNumbers_Questions.md */; };
 		B28212F6F5B3BCA91C8DF81D /* Paper_40_Weather_Transportation_DataHandling_RationalNumbers_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 68A134A93550CFDF4C5313F6 /* Paper_40_Weather_Transportation_DataHandling_RationalNumbers_Solutions.html */; };
+		BCFE6CD8498765E7EF96EAFB /* Paper_41_MotionTime_Respiration_ComparingQuantities_SimpleEquations_QuestionPaper.html in Resources */ = {isa = PBXBuildFile; fileRef = 2B098F65433552CEDCDF0DE1 /* Paper_41_MotionTime_Respiration_ComparingQuantities_SimpleEquations_QuestionPaper.html */; };
+		71A191A5C87DFAC884AAD238 /* Paper_41_MotionTime_Respiration_ComparingQuantities_SimpleEquations_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A37386FF5D5BEE40277C78FA /* Paper_41_MotionTime_Respiration_ComparingQuantities_SimpleEquations_QuestionPaper.pdf */; };
+		474F8D62C8D98361B4880362 /* Paper_41_MotionTime_Respiration_ComparingQuantities_SimpleEquations_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 8C626C2CE8DBAF0A8BA25592 /* Paper_41_MotionTime_Respiration_ComparingQuantities_SimpleEquations_Questions.md */; };
+		ECB6CE5F04A07B2C98444495 /* Paper_41_MotionTime_Respiration_ComparingQuantities_SimpleEquations_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = F43DF46BCE3E4BA0C0FB645E /* Paper_41_MotionTime_Respiration_ComparingQuantities_SimpleEquations_Solutions.html */; };
 		4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */ = {isa = PBXBuildFile; fileRef = ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */; };
 		CF6289FBCF676858C99ED670 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F17B590EF6DA751E23E41 /* Contents.json */; };
 		9AE05997509D9842F29172EB /* maths_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E448E6E8BEEB87620A8C798 /* maths_class7.json */; };
@@ -4086,6 +4090,10 @@
 		3F51BD5DB9E4A25010EEF238 /* Paper_40_Weather_Transportation_DataHandling_RationalNumbers_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_40_Weather_Transportation_DataHandling_RationalNumbers_QuestionPaper.pdf"; sourceTree = "<group>"; };
 		7480ACE6F17E8A10045A4885 /* Paper_40_Weather_Transportation_DataHandling_RationalNumbers_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_40_Weather_Transportation_DataHandling_RationalNumbers_Questions.md"; sourceTree = "<group>"; };
 		68A134A93550CFDF4C5313F6 /* Paper_40_Weather_Transportation_DataHandling_RationalNumbers_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_40_Weather_Transportation_DataHandling_RationalNumbers_Solutions.html"; sourceTree = "<group>"; };
+		2B098F65433552CEDCDF0DE1 /* Paper_41_MotionTime_Respiration_ComparingQuantities_SimpleEquations_QuestionPaper.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_41_MotionTime_Respiration_ComparingQuantities_SimpleEquations_QuestionPaper.html"; sourceTree = "<group>"; };
+		A37386FF5D5BEE40277C78FA /* Paper_41_MotionTime_Respiration_ComparingQuantities_SimpleEquations_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_41_MotionTime_Respiration_ComparingQuantities_SimpleEquations_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		8C626C2CE8DBAF0A8BA25592 /* Paper_41_MotionTime_Respiration_ComparingQuantities_SimpleEquations_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_41_MotionTime_Respiration_ComparingQuantities_SimpleEquations_Questions.md"; sourceTree = "<group>"; };
+		F43DF46BCE3E4BA0C0FB645E /* Paper_41_MotionTime_Respiration_ComparingQuantities_SimpleEquations_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_41_MotionTime_Respiration_ComparingQuantities_SimpleEquations_Solutions.html"; sourceTree = "<group>"; };
 		ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "QUESTION_INDEX.json"; sourceTree = "<group>"; };
 		5C7F17B590EF6DA751E23E41 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Contents.json"; sourceTree = "<group>"; };
 		69191026B2F9F250C1D2E9BD /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement.swift"; sourceTree = "<group>"; };
@@ -6581,6 +6589,10 @@
 				3F51BD5DB9E4A25010EEF238,
 				7480ACE6F17E8A10045A4885,
 				68A134A93550CFDF4C5313F6,
+				2B098F65433552CEDCDF0DE1,
+				A37386FF5D5BEE40277C78FA,
+				8C626C2CE8DBAF0A8BA25592,
+				F43DF46BCE3E4BA0C0FB645E,
 				ECD0916CC0210824B2615292,
 			);
 			path = "BossChallengePapers";
@@ -10331,6 +10343,10 @@
 				7F0925BD10D09B002CB5DDCF /* Paper_40_Weather_Transportation_DataHandling_RationalNumbers_QuestionPaper.pdf in Resources */,
 				734035DDE73BFAF55F701C58 /* Paper_40_Weather_Transportation_DataHandling_RationalNumbers_Questions.md in Resources */,
 				B28212F6F5B3BCA91C8DF81D /* Paper_40_Weather_Transportation_DataHandling_RationalNumbers_Solutions.html in Resources */,
+				BCFE6CD8498765E7EF96EAFB /* Paper_41_MotionTime_Respiration_ComparingQuantities_SimpleEquations_QuestionPaper.html in Resources */,
+				71A191A5C87DFAC884AAD238 /* Paper_41_MotionTime_Respiration_ComparingQuantities_SimpleEquations_QuestionPaper.pdf in Resources */,
+				474F8D62C8D98361B4880362 /* Paper_41_MotionTime_Respiration_ComparingQuantities_SimpleEquations_Questions.md in Resources */,
+				ECB6CE5F04A07B2C98444495 /* Paper_41_MotionTime_Respiration_ComparingQuantities_SimpleEquations_Solutions.html in Resources */,
 				4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */,
 				CF6289FBCF676858C99ED670 /* Contents.json in Resources */,
 				9AE05997509D9842F29172EB /* maths_class7.json in Resources */,
