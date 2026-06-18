@@ -2243,6 +2243,10 @@
 		0AC7B0EE723CE4B17E52585F /* Paper_45_NutritionInPlants_WastewaterStory_PerimeterArea_ExponentsPowers_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 30C8E490EE4AB5D044DCD124 /* Paper_45_NutritionInPlants_WastewaterStory_PerimeterArea_ExponentsPowers_QuestionPaper.pdf */; };
 		EDAF358918A457CDE5FCC2D8 /* Paper_45_NutritionInPlants_WastewaterStory_PerimeterArea_ExponentsPowers_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = C3C612707EAF8F8B92CB7ABC /* Paper_45_NutritionInPlants_WastewaterStory_PerimeterArea_ExponentsPowers_Questions.md */; };
 		C081896A06EB3D2A1401BDE5 /* Paper_45_NutritionInPlants_WastewaterStory_PerimeterArea_ExponentsPowers_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 1D4B6D86CDD0B416660156A6 /* Paper_45_NutritionInPlants_WastewaterStory_PerimeterArea_ExponentsPowers_Solutions.html */; };
+		E1D8D9370E1FCA9071D6CC56 /* Paper_46_Light_MotionTime_LinesAngles_ComparingQuantities_QuestionPaper.html in Resources */ = {isa = PBXBuildFile; fileRef = 6DF468866F4A57D12CE58A07 /* Paper_46_Light_MotionTime_LinesAngles_ComparingQuantities_QuestionPaper.html */; };
+		0D891D3121AFE8C8B33A0FEE /* Paper_46_Light_MotionTime_LinesAngles_ComparingQuantities_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 5108DC4F6C3765D4314901E1 /* Paper_46_Light_MotionTime_LinesAngles_ComparingQuantities_QuestionPaper.pdf */; };
+		FDD0B2D12688331FE69D2308 /* Paper_46_Light_MotionTime_LinesAngles_ComparingQuantities_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 228AB81483D6DA1C612A7195 /* Paper_46_Light_MotionTime_LinesAngles_ComparingQuantities_Questions.md */; };
+		9BC75E23DF5FA06BD54BB0B6 /* Paper_46_Light_MotionTime_LinesAngles_ComparingQuantities_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = B423C47E5E4C4EEA22CA3494 /* Paper_46_Light_MotionTime_LinesAngles_ComparingQuantities_Solutions.html */; };
 		4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */ = {isa = PBXBuildFile; fileRef = ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */; };
 		CF6289FBCF676858C99ED670 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F17B590EF6DA751E23E41 /* Contents.json */; };
 		9AE05997509D9842F29172EB /* maths_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E448E6E8BEEB87620A8C798 /* maths_class7.json */; };
@@ -4126,6 +4130,10 @@
 		30C8E490EE4AB5D044DCD124 /* Paper_45_NutritionInPlants_WastewaterStory_PerimeterArea_ExponentsPowers_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_45_NutritionInPlants_WastewaterStory_PerimeterArea_ExponentsPowers_QuestionPaper.pdf"; sourceTree = "<group>"; };
 		C3C612707EAF8F8B92CB7ABC /* Paper_45_NutritionInPlants_WastewaterStory_PerimeterArea_ExponentsPowers_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_45_NutritionInPlants_WastewaterStory_PerimeterArea_ExponentsPowers_Questions.md"; sourceTree = "<group>"; };
 		1D4B6D86CDD0B416660156A6 /* Paper_45_NutritionInPlants_WastewaterStory_PerimeterArea_ExponentsPowers_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_45_NutritionInPlants_WastewaterStory_PerimeterArea_ExponentsPowers_Solutions.html"; sourceTree = "<group>"; };
+		6DF468866F4A57D12CE58A07 /* Paper_46_Light_MotionTime_LinesAngles_ComparingQuantities_QuestionPaper.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_46_Light_MotionTime_LinesAngles_ComparingQuantities_QuestionPaper.html"; sourceTree = "<group>"; };
+		5108DC4F6C3765D4314901E1 /* Paper_46_Light_MotionTime_LinesAngles_ComparingQuantities_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_46_Light_MotionTime_LinesAngles_ComparingQuantities_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		228AB81483D6DA1C612A7195 /* Paper_46_Light_MotionTime_LinesAngles_ComparingQuantities_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_46_Light_MotionTime_LinesAngles_ComparingQuantities_Questions.md"; sourceTree = "<group>"; };
+		B423C47E5E4C4EEA22CA3494 /* Paper_46_Light_MotionTime_LinesAngles_ComparingQuantities_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_46_Light_MotionTime_LinesAngles_ComparingQuantities_Solutions.html"; sourceTree = "<group>"; };
 		ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "QUESTION_INDEX.json"; sourceTree = "<group>"; };
 		5C7F17B590EF6DA751E23E41 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Contents.json"; sourceTree = "<group>"; };
 		69191026B2F9F250C1D2E9BD /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement.swift"; sourceTree = "<group>"; };
@@ -6641,6 +6649,10 @@
 				30C8E490EE4AB5D044DCD124,
 				C3C612707EAF8F8B92CB7ABC,
 				1D4B6D86CDD0B416660156A6,
+				6DF468866F4A57D12CE58A07,
+				5108DC4F6C3765D4314901E1,
+				228AB81483D6DA1C612A7195,
+				B423C47E5E4C4EEA22CA3494,
 				ECD0916CC0210824B2615292,
 			);
 			path = "BossChallengePapers";
@@ -10411,6 +10423,10 @@
 				0AC7B0EE723CE4B17E52585F /* Paper_45_NutritionInPlants_WastewaterStory_PerimeterArea_ExponentsPowers_QuestionPaper.pdf in Resources */,
 				EDAF358918A457CDE5FCC2D8 /* Paper_45_NutritionInPlants_WastewaterStory_PerimeterArea_ExponentsPowers_Questions.md in Resources */,
 				C081896A06EB3D2A1401BDE5 /* Paper_45_NutritionInPlants_WastewaterStory_PerimeterArea_ExponentsPowers_Solutions.html in Resources */,
+				E1D8D9370E1FCA9071D6CC56 /* Paper_46_Light_MotionTime_LinesAngles_ComparingQuantities_QuestionPaper.html in Resources */,
+				0D891D3121AFE8C8B33A0FEE /* Paper_46_Light_MotionTime_LinesAngles_ComparingQuantities_QuestionPaper.pdf in Resources */,
+				FDD0B2D12688331FE69D2308 /* Paper_46_Light_MotionTime_LinesAngles_ComparingQuantities_Questions.md in Resources */,
+				9BC75E23DF5FA06BD54BB0B6 /* Paper_46_Light_MotionTime_LinesAngles_ComparingQuantities_Solutions.html in Resources */,
 				4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */,
 				CF6289FBCF676858C99ED670 /* Contents.json in Resources */,
 				9AE05997509D9842F29172EB /* maths_class7.json in Resources */,

@@ -47,3 +47,4 @@
 | 43 | 2026-06-18 | Physical & Chemical Changes · Reproduction in Plants · Fractions & Decimals · The Triangle & its Properties | 25/25/25/25 | ✓ |
 | 44 | 2026-06-18 | Acids, Bases & Salts · Transportation in Animals & Plants · Rational Numbers · Lines & Angles | 25/25/25/25 | ✓ |
 | 45 | 2026-06-18 | Nutrition in Plants · Wastewater Story · Perimeter & Area · Exponents & Powers | 25/25/25/25 | ✓ |
+| 46 | 2026-06-18 | Light · Motion & Time · Lines & Angles · Comparing Quantities | 25/25/25/25 | ✓ |
