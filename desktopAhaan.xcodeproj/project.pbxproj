@@ -2263,6 +2263,10 @@
 		E5DD1394FFCD3658C104A524 /* Paper_50_WeatherClimate_NutritionAnimals_Integers_Triangle_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A6ED9E9401F6927AB84C8E4E /* Paper_50_WeatherClimate_NutritionAnimals_Integers_Triangle_QuestionPaper.pdf */; };
 		6199F0F2F1FEC009B63A13D6 /* Paper_50_WeatherClimate_NutritionAnimals_Integers_Triangle_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 814EB4EA6BD659FBE4E4813B /* Paper_50_WeatherClimate_NutritionAnimals_Integers_Triangle_Questions.md */; };
 		0487E9EEAE65C1863B4F8C45 /* Paper_50_WeatherClimate_NutritionAnimals_Integers_Triangle_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = CE431D055180CB2A41180BBC /* Paper_50_WeatherClimate_NutritionAnimals_Integers_Triangle_Solutions.html */; };
+		CA5AF9ED2330E2FF2DA0C034 /* Paper_51_Heat_NutritionInPlants_FractionsDecimals_DataHandling_QuestionPaper.html in Resources */ = {isa = PBXBuildFile; fileRef = 5CB9187905E2C726A3A4C368 /* Paper_51_Heat_NutritionInPlants_FractionsDecimals_DataHandling_QuestionPaper.html */; };
+		492EABA7177C4F704C52D685 /* Paper_51_Heat_NutritionInPlants_FractionsDecimals_DataHandling_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = DB5713553FCB6E9F86C68AA1 /* Paper_51_Heat_NutritionInPlants_FractionsDecimals_DataHandling_QuestionPaper.pdf */; };
+		F2A76CE7413619AB40859D39 /* Paper_51_Heat_NutritionInPlants_FractionsDecimals_DataHandling_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = B535417B16B20E3DBB470B79 /* Paper_51_Heat_NutritionInPlants_FractionsDecimals_DataHandling_Questions.md */; };
+		0B9AC29AE9CDE7BCC6DC4F84 /* Paper_51_Heat_NutritionInPlants_FractionsDecimals_DataHandling_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = CC033F01BB89EE7CBA716E91 /* Paper_51_Heat_NutritionInPlants_FractionsDecimals_DataHandling_Solutions.html */; };
 		4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */ = {isa = PBXBuildFile; fileRef = ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */; };
 		CF6289FBCF676858C99ED670 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F17B590EF6DA751E23E41 /* Contents.json */; };
 		9AE05997509D9842F29172EB /* maths_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E448E6E8BEEB87620A8C798 /* maths_class7.json */; };
@@ -4166,6 +4170,10 @@
 		A6ED9E9401F6927AB84C8E4E /* Paper_50_WeatherClimate_NutritionAnimals_Integers_Triangle_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_50_WeatherClimate_NutritionAnimals_Integers_Triangle_QuestionPaper.pdf"; sourceTree = "<group>"; };
 		814EB4EA6BD659FBE4E4813B /* Paper_50_WeatherClimate_NutritionAnimals_Integers_Triangle_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_50_WeatherClimate_NutritionAnimals_Integers_Triangle_Questions.md"; sourceTree = "<group>"; };
 		CE431D055180CB2A41180BBC /* Paper_50_WeatherClimate_NutritionAnimals_Integers_Triangle_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_50_WeatherClimate_NutritionAnimals_Integers_Triangle_Solutions.html"; sourceTree = "<group>"; };
+		5CB9187905E2C726A3A4C368 /* Paper_51_Heat_NutritionInPlants_FractionsDecimals_DataHandling_QuestionPaper.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_51_Heat_NutritionInPlants_FractionsDecimals_DataHandling_QuestionPaper.html"; sourceTree = "<group>"; };
+		DB5713553FCB6E9F86C68AA1 /* Paper_51_Heat_NutritionInPlants_FractionsDecimals_DataHandling_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_51_Heat_NutritionInPlants_FractionsDecimals_DataHandling_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		B535417B16B20E3DBB470B79 /* Paper_51_Heat_NutritionInPlants_FractionsDecimals_DataHandling_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_51_Heat_NutritionInPlants_FractionsDecimals_DataHandling_Questions.md"; sourceTree = "<group>"; };
+		CC033F01BB89EE7CBA716E91 /* Paper_51_Heat_NutritionInPlants_FractionsDecimals_DataHandling_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_51_Heat_NutritionInPlants_FractionsDecimals_DataHandling_Solutions.html"; sourceTree = "<group>"; };
 		ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "QUESTION_INDEX.json"; sourceTree = "<group>"; };
 		5C7F17B590EF6DA751E23E41 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Contents.json"; sourceTree = "<group>"; };
 		69191026B2F9F250C1D2E9BD /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement.swift"; sourceTree = "<group>"; };
@@ -6701,6 +6709,10 @@
 				A6ED9E9401F6927AB84C8E4E,
 				814EB4EA6BD659FBE4E4813B,
 				CE431D055180CB2A41180BBC,
+				5CB9187905E2C726A3A4C368,
+				DB5713553FCB6E9F86C68AA1,
+				B535417B16B20E3DBB470B79,
+				CC033F01BB89EE7CBA716E91,
 				ECD0916CC0210824B2615292,
 			);
 			path = "BossChallengePapers";
@@ -10491,6 +10503,10 @@
 				E5DD1394FFCD3658C104A524 /* Paper_50_WeatherClimate_NutritionAnimals_Integers_Triangle_QuestionPaper.pdf in Resources */,
 				6199F0F2F1FEC009B63A13D6 /* Paper_50_WeatherClimate_NutritionAnimals_Integers_Triangle_Questions.md in Resources */,
 				0487E9EEAE65C1863B4F8C45 /* Paper_50_WeatherClimate_NutritionAnimals_Integers_Triangle_Solutions.html in Resources */,
+				CA5AF9ED2330E2FF2DA0C034 /* Paper_51_Heat_NutritionInPlants_FractionsDecimals_DataHandling_QuestionPaper.html in Resources */,
+				492EABA7177C4F704C52D685 /* Paper_51_Heat_NutritionInPlants_FractionsDecimals_DataHandling_QuestionPaper.pdf in Resources */,
+				F2A76CE7413619AB40859D39 /* Paper_51_Heat_NutritionInPlants_FractionsDecimals_DataHandling_Questions.md in Resources */,
+				0B9AC29AE9CDE7BCC6DC4F84 /* Paper_51_Heat_NutritionInPlants_FractionsDecimals_DataHandling_Solutions.html in Resources */,
 				4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */,
 				CF6289FBCF676858C99ED670 /* Contents.json in Resources */,
 				9AE05997509D9842F29172EB /* maths_class7.json in Resources */,
