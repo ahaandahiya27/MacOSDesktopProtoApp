@@ -13,7 +13,7 @@
 
 **Marking scheme:** **+4** for each correct answer · **−1** for each wrong answer · **0** if unattempted.
 
-**Instructions:** Each question has four options (A), (B), (C), (D); exactly one is correct. Classic traps: treating respiration as switched off in daylight; reading a net gas measurement as if only one process were running; confusing the role (chlorophyll vs light vs CO2 vs water) that a single controlled set-up actually isolates; assuming soil nitrogen is a raw material of the day's photosynthesis or that air nitrogen is directly usable; calling a parasite a saprotroph/symbiont; assuming a positive starch test proves the tissue is green; and mixing up xylem (water, up) with phloem (food, out from leaves). Do not write on this paper — mark answers on your answer sheet.
+**Instructions:** Each question has four options (A), (B), (C), (D); exactly one is correct. Classic traps: treating respiration as switched off in daylight; reading a net gas measurement as if only one process were running; confusing which factor (chlorophyll vs light vs CO2 vs water) a single controlled set-up actually isolates; assuming soil nitrogen is a raw material of the day's photosynthesis or that air nitrogen is directly usable; calling a parasite a saprotroph/symbiont; assuming a positive starch test proves the tissue is green; and mixing up xylem (water, up) with phloem (food, out from leaves). Do not write on this paper — mark answers on your answer sheet.
 
 ---
 
@@ -41,11 +41,11 @@
    (C) The student is right: green plants build their bodies mainly from minerals taken in by their roots.
    (D) Most of the new dry mass is carbon and built from carbon dioxide captured during photosynthesis, not from soil minerals.
 
-5. A destarched plant has three leaves set up for one sunny day, all on the same plant: Leaf 1 is enclosed with a dish of potassium hydroxide (which absorbs carbon dioxide); Leaf 2 has its lower surface coated thickly with grease; Leaf 3 is left untouched. After the day all three are tested with iodine. Which leaves are expected to turn blue-black?
-   (A) All three leaves, because they were attached to the same well-lit plant.
-   (B) Leaves 1 and 3, because grease cannot stop a leaf from making starch.
-   (C) Only Leaf 3, because both Leaf 1 (no carbon dioxide) and Leaf 2 (stomata blocked, so little carbon dioxide enters) were starved of carbon dioxide.
-   (D) Only Leaf 1, because potassium hydroxide actually supplies extra carbon dioxide for food-making.
+5. A student wants to prove that CARBON DIOXIDE specifically (not light, water or warmth) is the factor a leaf needs to form starch. Both leaves are on the same destarched plant, equally lit, watered and warmed for one sunny day. Which single difference between the two set-ups isolates carbon dioxide as the variable being tested?
+   (A) One leaf's air has its carbon dioxide absorbed by potassium hydroxide while the other leaf, on the same plant, is left in ordinary air; everything else is identical.
+   (B) One leaf is wrapped in foil while the other is left in the light.
+   (C) One leaf is taken from a plant kept two days in the dark while the other is freshly destarched.
+   (D) One leaf is variegated (part green, part white) while the other is fully green.
 
 6. A teacher claims a single experiment can prove that BOTH light and chlorophyll are needed for photosynthesis. She takes ONE variegated leaf (green at the edges, white in the centre), covers half of its area — crossing both the green and white zones — with foil, exposes the destarched plant to a sunny day, then does the starch test. Which region turns blue-black, and does the claim hold?
    (A) The entire green border turns blue-black regardless of the foil, showing only chlorophyll matters.
@@ -77,23 +77,23 @@
    (C) is the gas the plant breathes out, so converting glucose helps it respire.
    (D) is the green pigment, so converting glucose to starch greens the leaf.
 
-11. Two leaf discs are taken from the same plant after a sunny day, both genuinely full of starch. Disc P is boiled in water, then in alcohol, then dipped in iodine and turns deep blue-black. Disc Q is dipped straight into iodine with no boiling and barely changes colour. Which single statement best explains BOTH results together?
-   (A) Boiling in water created the starch that disc P shows, while disc Q simply never had any.
-   (B) Boiling softens the disc and removes its waxy green coat so iodine can reach the starch; the unboiled disc kept iodine out, hiding the starch that was really there.
-   (C) Alcohol added starch to disc P, which is why only it reacted with iodine.
-   (D) Iodine destroys starch in living tissue, so the boiled, killed disc P was the only one able to react.
+11. In the starch test a student boils the leaf in water, then dips it straight into iodine, skipping the alcohol step entirely. The leaf is genuinely full of starch, yet the blue-black colour is very hard to see against the leaf. The single best explanation is:
+   (A) Skipping alcohol destroyed the starch, so no real colour formed.
+   (B) Skipping alcohol left the green chlorophyll in the leaf, and its colour masks the blue-black starch reaction so it is hard to see.
+   (C) Boiling in water alone removes all the starch, so nothing is left to detect.
+   (D) Iodine cannot react at all unless alcohol is present to trigger it.
 
-12. A child's experiment: destarch a plant, seal one leaf in carbon-dioxide-free air and another in normal air, give a sunny day, and only the normal-air leaf turns blue-black. The child concludes 'carbon dioxide is needed to make starch.' Why was the destarching step at the very start essential for this conclusion to be sound?
-   (A) So the leaves would turn green again before the iodine test.
-   (B) So that any starch found at the end must have been made during the experiment, not stored from before.
-   (C) So carbon dioxide could enter the leaf more easily during the sunny day.
-   (D) So iodine would stick to the leaf surface more strongly during testing.
+12. Before a photosynthesis experiment that ends in a starch test, the plant is kept in the dark for two days. A student proposes skipping this step to save time, arguing 'the iodine test will still detect whatever starch the experiment makes.' The flaw in skipping it is that:
+   (A) without the dark period the leaf cannot absorb iodine during the test.
+   (B) the dark period is what supplies the carbon dioxide the leaf will later use.
+   (C) starch already stored in the leaf would also turn blue-black, so a positive result could no longer be credited to the experiment.
+   (D) skipping it turns the leaf white and unable to photosynthesise.
 
-13. A bean seed germinates on damp cotton inside a dark drawer and grows a pale shoot for several days, then stops, yellows and dies. Which statement both EXPLAINS the early growth and correctly PREDICTS the death?
-   (A) The seed lived on food stored inside it; once that ran out, with no light it could not photosynthesise more food, so it died.
-   (B) It photosynthesised in the dark using stored chlorophyll, so it should have kept growing forever.
-   (C) The damp cotton supplied it with ready-made food, so its death must be due to the cotton drying out.
-   (D) It became a parasite on the cotton wool, drawing food until the cotton was used up.
+13. A germinating pea seedling in a dark cupboard grows a pale, spindly shoot for several days, then yellows and dies. A second identical pea is moved into bright light on day 3 and instead grows sturdy and green. The pair together best show that:
+   (A) light makes seeds germinate, which is why the dark seed eventually died.
+   (B) seedlings photosynthesise faster in the dark, then switch off in the light.
+   (C) the dark seedling died only because the cupboard lacked water.
+   (D) the seed's own stored food powers early growth in the dark, but only light lets the seedling make new food and survive once that store is used up.
 
 14. Cuscuta (a pale, leafless vine) and a mushroom on a dead log are both heterotrophs that lack chlorophyll, yet they are placed in different nutrition groups. A pale Cuscuta on a wire fence withers within days, while one on a living shrub thrives; the mushroom flourishes on dead wood and harms nothing living. The classification that fits both facts is:
    (A) Cuscuta is a saprotroph living off dead matter such as the wire; the mushroom is a parasite on the log.
@@ -107,23 +107,23 @@
    (C) Both partners benefit from the arrangement, so it is symbiosis, not parasitism in which one is harmed.
    (D) The fungus makes the food and the alga merely stores it, so neither feeds off the other.
 
-16. Four sealed transparent jars sit in bright light for a day, each with one organism, then the carbon dioxide level inside each is measured: Jar 1 a green fern, Jar 2 a mushroom, Jar 3 a Cuscuta vine with no host, Jar 4 a snail. In which jar has the carbon dioxide most likely FALLEN?
-   (A) Jar 1, the green fern, because it photosynthesises in the light and uses up carbon dioxide faster than it respires.
-   (B) Jar 3, the Cuscuta vine, because it photosynthesises strongly using the host it carries.
-   (C) Jar 2, the mushroom, because fungi absorb carbon dioxide to make food in the light.
-   (D) Jar 4, the snail, because animals take in carbon dioxide when they breathe.
+16. Four identical sealed transparent jars stand in bright light for a day, each holding one living thing kept moist: jar 1 a sprouting green pea seedling, jar 2 a germinating seed wrapped in foil so no light reaches it, jar 3 a fresh-cut but still-living green leaf, jar 4 an earthworm. In which ONE of the labelled jars is the carbon dioxide most likely to have RISEN by the end?
+   (A) Jar 2, the foil-wrapped germinating seed, because with no light it cannot photosynthesise and only respires, giving out carbon dioxide.
+   (B) Jar 1, the green pea seedling in light, because a lit green seedling gives out more carbon dioxide than it takes in.
+   (C) Jar 3, the cut but living green leaf in light, because it releases carbon dioxide and absorbs none.
+   (D) None of them, because every jar holds a living thing that uses up carbon dioxide.
 
-17. A green pea plant with Rhizobium root-nodules, an insectivorous pitcher plant, and a leafless Cuscuta vine all have a connection to NITROGEN. Which single statement correctly describes how EACH obtains nitrogen?
-   (A) All three fix nitrogen straight from the air through their green leaves.
-   (B) All three obtain nitrogen by photosynthesising it from sunlight and water.
-   (C) The pea gets usable nitrogen via nitrogen-fixing bacteria in its nodules, the pitcher plant gets nitrogen by trapping and digesting insects, and Cuscuta gets nitrogen (with all its food) from its living host.
-   (D) None of the three needs nitrogen, since plants require only carbon dioxide and water.
+17. A bean plant with Rhizobium root-nodules and a Venus flytrap growing in poor, boggy soil both end up with the nitrogen they need, but by different routes. Which statement correctly pairs each with its nitrogen source?
+   (A) Both pull nitrogen gas straight from the air through their leaves.
+   (B) The bean gets usable nitrogen from bacteria that fix air nitrogen in its root nodules; the flytrap gets nitrogen by digesting the insects it traps.
+   (C) The bean digests insects in its nodules; the flytrap fixes nitrogen gas in its traps.
+   (D) Both make their own nitrogen during photosynthesis from sunlight.
 
-18. Air is about 78% nitrogen gas, yet a tomato plant grown in nitrogen-poor SOIL but surrounded by ordinary nitrogen-rich AIR still grows pale and stunted. The reason is that:
-   (A) the nitrogen in air is a different element from the nitrogen plants need for growth.
-   (B) leaf stomata are too small to allow any nitrogen gas to pass into the plant.
-   (C) plants cannot absorb nitrogen gas from the air directly; it must first be fixed into the soil in a usable form.
-   (D) tomato plants, unlike other plants, do not need nitrogen at all.
+18. Two pots of the same plant are grown side by side outdoors in nitrogen-poor soil; both sit in the same nitrogen-rich air. Pot A is given a soil dressing of nitrogen-fixing bacteria; pot B is given none. Pot A greens up and grows well, while pot B stays pale and stunted. The single best conclusion is:
+   (A) Air nitrogen became usable in pot A only because that plant opened larger stomata.
+   (B) The bacteria in pot A removed the plant's need for nitrogen altogether.
+   (C) The two pots prove nitrogen gas in air is a direct raw material of photosynthesis.
+   (D) Plants cannot use nitrogen gas from the air directly; pot A thrived because the added bacteria fixed that nitrogen into a soil form the plant could absorb.
 
 19. Two destarched plants are grown for several weeks: plant A in normal soil, plant B in soil sterilised free of nitrogen-fixing bacteria and given no fertiliser. Plant B grows pale and stunted. On one ordinary sunny day a still-greenish leaf from each is tested with iodine. What is observed, and what does it prove about nitrogen?
    (A) Only plant A turns blue-black, because nitrogen is one of the raw materials of photosynthesis.
@@ -131,65 +131,65 @@
    (C) Neither turns blue-black, because without nitrogen no plant can carry out photosynthesis at all.
    (D) Only plant B turns blue-black, because a nitrogen shortage forces the leaf to make extra starch.
 
-20. A teacher claims a plant is an autotroph. Which single observation would most strongly DISPROVE that claim?
-   (A) It loses water vapour from its leaves on a hot afternoon.
-   (B) It grows taller and faster when given more sunlight.
-   (C) It releases streams of oxygen bubbles when brightly lit underwater.
-   (D) Its tissues contain no chlorophyll and it is seen drawing all of its food from another living plant.
+20. A botanist insists a particular climbing plant is an autotroph. Four facts about it are gathered. Which ONE, on its own, would most strongly OVERTURN the autotroph claim?
+   (A) Its tissues contain no chlorophyll at all, and threads from it pierce a host plant's stem to draw off ready-made food.
+   (B) Its stems are bright green and it grows faster in stronger light.
+   (C) It releases bubbles of oxygen when a piece of it is lit underwater.
+   (D) It loses water vapour from its surface on warm afternoons.
 
-21. A student lists these as autotrophs: (i) a mango tree, (ii) a green pond alga, (iii) a cactus with green stems and no leaves, (iv) a leafless Cuscuta vine, (v) blue-green photosynthetic microbes. Exactly ONE entry is wrong. Which, and why?
-   (A) (iii) the cactus, because stems can never carry out photosynthesis.
-   (B) (ii) the green alga, because algae are too small to make their own food.
-   (C) (i) the mango tree, because large trees draw their energy up from the soil.
-   (D) (iv) Cuscuta, because it lacks chlorophyll and takes ready-made food from a living host, making it a heterotroph.
+21. A worksheet lists five living things and labels them all 'food-makers (autotrophs)': (i) a leafless Cuscuta vine, (ii) a green-stemmed cactus, (iii) a mushroom on a log, (iv) a floating green duckweed, (v) blue-green photosynthetic microbes. Exactly TWO labels are wrong. Which two, and why?
+   (A) (ii) and (iv), because cactus stems and floating plants cannot photosynthesise.
+   (B) (iii) and (v), because neither a mushroom nor a microbe can make food.
+   (C) (i) and (iii) — the leafless Cuscuta has no chlorophyll and steals food from a living host, and the mushroom has no chlorophyll and feeds on dead matter; neither makes its own food.
+   (D) (i) and (ii), because only large leafy trees are true autotrophs.
 
-22. In a food chain rice plant → grasshopper → frog → snake, all the energy flowing through every animal can be traced back to a single original source. That source is:
-   (A) the soil minerals absorbed by the rice plant's roots.
-   (B) sunlight, captured by the rice plant during photosynthesis.
-   (C) the bodies of the animals as they eat one another along the chain.
-   (D) the oxygen the animals breathe in as they move along the chain.
+22. Trace the energy in a snake that ate a frog that ate a grasshopper that ate grass. One student claims the snake's energy 'comes mainly from the grass and ultimately from the sun.' Another claims it 'comes from the oxygen the snake breathes.' Who is right, and why?
+   (A) The second student, because oxygen is the fuel that powers animals.
+   (B) Both are equally right, since energy has two separate sources.
+   (C) Neither, because each animal makes its own energy from nothing.
+   (D) The first student: the grass captured sunlight as food and that energy passed up the chain, while oxygen only helps release energy already stored in food.
 
-23. A student draws snake → frog → grasshopper → green plant with arrows meaning 'is eaten by'. Is the diagram correct for energy flow, and if not, how should it read?
-   (A) It is reversed; for 'is eaten by'/energy flow it should read green plant → grasshopper → frog → snake.
-   (B) It is already correct, because the top predator should come first in a food chain.
-   (C) It should read frog → green plant → snake → grasshopper to balance the chain.
-   (D) Food chains have no direction, so either way of drawing it is equally correct.
+23. A student draws a food chain with arrows written as 'eagle → frog → insect → plant', explaining each arrow as 'feeds on'. A teacher says the arrows are fine for 'feeds on' but would point the OTHER way to show ENERGY FLOW. Which statement is correct?
+   (A) For energy flow the arrows must start at the plant: plant → insect → frog → eagle.
+   (B) Energy flow and 'feeds on' always point the same way, so nothing needs to change.
+   (C) Energy flows from the eagle downward, so the drawing already shows energy flow.
+   (D) Food chains carry no energy, so the arrow direction is meaningless.
 
-24. A pond holds green algae, tadpoles that eat the algae, and small fish that eat the tadpoles. A disease suddenly wipes out almost all the green algae. The MOST immediate and direct consequence is:
-   (A) the fish increase, because there are now fewer algae competing with the fish for space.
-   (B) the tadpoles lose their food supply, so their numbers fall.
-   (C) the tadpoles begin making their own food from sunlight to survive.
-   (D) the fish die first, before any effect reaches the tadpoles.
+24. A lake holds green phytoplankton, tiny shrimp that eat them, and herring that eat the shrimp. A pollutant kills almost all the phytoplankton over one week. Listing the events in the order they happen, which sequence is correct?
+   (A) Herring fall first → shrimp fall next → phytoplankton recover last.
+   (B) The phytoplankton (the producers) are gone → the shrimp soon starve and fall → the herring then run short and fall.
+   (C) The shrimp start photosynthesising to replace the lost phytoplankton, so nothing declines.
+   (D) The herring increase, because the water is now clearer for hunting.
 
-25. A balanced sealed terrarium with a green plant survives for weeks in good light. It is then moved into a dark cupboard for two weeks. The most likely outcome is:
-   (A) carbon dioxide builds up and oxygen falls, because in the dark the plant only respires, so the plant weakens and may die.
-   (B) nothing changes, because the plant simply pauses all its activity in the dark.
-   (C) oxygen builds up, because the plant respires faster in the dark than in the light.
-   (D) the plant becomes a saprotroph and lives off the soil in the terrarium.
+25. A sealed glass globe holding a small green plant and moist soil has thrived in a sunny window for a month, its gases staying balanced. A child wraps it completely in black cloth for two weeks. Predicting the gas change inside and the plant's fate:
+   (A) Oxygen rises and the plant grows faster, because plants store oxygen in the dark.
+   (B) Nothing changes, because a sealed globe keeps its gases fixed regardless of light.
+   (C) Oxygen falls and carbon dioxide rises, because without light photosynthesis stops while respiration keeps using oxygen, so the plant weakens.
+   (D) The plant becomes a saprotroph and feeds on the soil, keeping the gases balanced.
 
-26. A green plant and a small lit candle are sealed together in a jar in BRIGHT LIGHT, and the flame burns noticeably longer than in an identical jar with a candle alone. The same plant-and-candle jar is then set up in the DARK. Compared with a candle-alone jar in the dark, the flame in the plant-and-candle jar most likely:
-   (A) burns even longer, because the plant releases oxygen in the dark just as it does in light.
-   (B) burns for exactly the same time, because plants do nothing at all in the dark.
-   (C) burns with a green flame, because the plant's chlorophyll colours the smoke.
-   (D) goes out sooner, because in the dark the plant stops photosynthesising and instead competes with the flame for oxygen by respiring.
+26. A small mouse sealed alone in a jar soon becomes distressed as the air spoils, but a mouse sealed in a jar together with a green plant in BRIGHT LIGHT stays comfortable far longer, because the plant adds oxygen. If the mouse-and-plant jar is instead kept in the DARK, then compared with the bright-light case the mouse will most likely become distressed:
+   (A) sooner, because in the dark the plant makes no oxygen and, like the mouse, respires and uses up oxygen too.
+   (B) later, because plants release extra oxygen in the dark.
+   (C) never, because the plant alone keeps the air fresh whatever the light.
+   (D) at exactly the same time, because plants have no effect on the air inside a jar.
 
-27. A leaf disc kept in the dark for 48 hours, then boiled in water, then in alcohol, then tested with iodine shows NO blue-black colour. A second disc from the same plant after 6 hours of sunlight does turn blue-black. The 48-hour dark step is best described as:
-   (A) killing the chlorophyll permanently so the leaf can never make starch again.
-   (B) destarching — emptying the leaf of stored starch so that a later test shows only newly made starch.
-   (C) slowly adding starch, so the dark disc should actually have tested positive.
-   (D) a control proving that iodine simply does not work on leaves kept in the dark.
+27. A leaf disc from a plant kept 48 hours in the dark shows NO blue-black with iodine; a disc from the same plant taken after 6 hours of sunlight turns deep blue-black. What role does the dark-kept disc play in this experiment?
+   (A) It proves that iodine simply fails to work on any leaf kept in the dark.
+   (B) It is the negative control showing the destarched (starch-empty) baseline, against which the lit disc's newly made starch is judged.
+   (C) It shows that two days of darkness permanently destroy the leaf's chlorophyll.
+   (D) It is the source of the starch later found in the lit disc.
 
-28. Stomata on a leaf tend to close on a very hot, dry, windy afternoon to save water. A direct consequence for photosynthesis during that afternoon is that it slows because:
-   (A) carbon dioxide can no longer enter the leaf in sufficient amounts through the closed pores.
-   (B) sunlight can no longer pass through the closed stomata to reach the chlorophyll.
-   (C) the chlorophyll inside the leaf is destroyed whenever the stomata close.
-   (D) water stops being absorbed by the roots the moment the stomata close.
+28. On a scorching, dry, windy afternoon a leaf's guard cells shut its stomata to limit water loss. Which of the following is the CORRECT chain of consequences for that leaf during the afternoon?
+   (A) Stomata shut → sunlight is blocked from the chlorophyll → photosynthesis slows.
+   (B) Stomata shut → chlorophyll is destroyed → photosynthesis stops for good.
+   (C) Stomata shut → the roots stop taking up water → the leaf dies that afternoon.
+   (D) Stomata shut → less water vapour escapes AND less carbon dioxide enters → photosynthesis slows for want of carbon dioxide.
 
-29. Three leaves from one well-watered plant are tested after a sunny day: leaf 1 normal, leaf 2 has its lower surface coated with a thick layer of grease, leaf 3 normal. Leaf 2 turns far less blue-black than leaves 1 and 3. The best explanation is:
-   (A) the grease blocked sunlight from reaching the chlorophyll inside leaf 2.
-   (B) the grease dissolved leaf 2's starch before the iodine test could detect it.
-   (C) the grease blocked the stomata, cutting off the carbon dioxide supply so leaf 2 made much less starch.
-   (D) the grease left an oily film that simply stopped iodine from ever reacting.
+29. A potted plant is weighed, then sealed at the soil so only its leaves are exposed, and left in a warm breeze; over hours its total weight steadily drops. When the same plant's leaf surfaces are all coated in petroleum jelly, the weight barely changes. The best explanation for the weight loss in the first case is:
+   (A) the plant is burning its own mass into gas as it photosynthesises.
+   (B) the soil is leaking water from the bottom of the pot.
+   (C) water vapour is escaping from the leaves through the stomata (transpiration), and coating the leaf surfaces stops it.
+   (D) the leaves are converting their stored starch directly into the lost weight.
 
 30. A leaf on a well-watered plant in still, humid SHADE loses very little water vapour, yet it still makes starch whenever light reaches it. A nearby leaf on a hot, dry, windy day loses water vapour fast. Taken together these observations show that:
    (A) transpiration is required for photosynthesis, so both should always rise and fall together.
@@ -203,137 +203,137 @@
    (C) the living leaf's xylem tubes squirt water directly out of the leaf surface.
    (D) the dead leaf actively makes water inside the bag, which is why it has fewer droplets.
 
-32. A student states: 'Xylem and phloem both carry water in the same direction, just at different speeds.' What is wrong with this?
-   (A) Nothing is wrong; both tubes really do carry water upward.
-   (B) Both tubes actually carry food rather than water, so only the substance named is wrong.
-   (C) Phloem carries food (mostly outward and downward from the leaves), not water; only xylem carries water, and it moves upward.
-   (D) Xylem carries food upward while phloem carries water downward.
+32. A student writes two claims: claim 1 — 'Xylem carries water and dissolved minerals upward from the roots'; claim 2 — 'Phloem also carries water upward, just more slowly.' How many of the two claims are correct, and which?
+   (A) Both claims are correct.
+   (B) Only claim 1 is correct; phloem carries food made in the leaves outward and largely downward, not water upward.
+   (C) Only claim 2 is correct; xylem actually carries the food.
+   (D) Neither claim is correct; both tissues carry food.
 
-33. A teacher writes the photosynthesis word equation with ONE deliberate error: 'carbon dioxide + oxygen → (sunlight, chlorophyll) → glucose + water.' Which single correction fixes it?
-   (A) Replace 'chlorophyll' with 'soil minerals' as the condition above the arrow.
-   (B) Replace 'glucose' on the right with 'starch' as the immediate product.
-   (C) Swap the left-hand 'oxygen' for 'water', and the right-hand 'water' for 'oxygen'.
-   (D) Replace 'sunlight' above the arrow with 'darkness'.
+33. A pupil writes the photosynthesis word equation as 'carbon dioxide + water → (sunlight, chlorophyll) → glucose + carbon dioxide.' It contains exactly ONE mistake. The correction is:
+   (A) Change 'water' on the left to 'oxygen'.
+   (B) Remove 'chlorophyll' from above the arrow.
+   (C) Change 'glucose' to 'starch'.
+   (D) Change the right-hand 'carbon dioxide' to 'oxygen', since oxygen is the gas released.
 
-34. A student writes four statements about photosynthesis; exactly one is INCORRECT. Which?
-   (A) Oxygen is one of the raw materials taken in for photosynthesis.
-   (B) Chlorophyll captures the light energy used in photosynthesis.
-   (C) Glucose is the food made, and some of it is stored as starch.
-   (D) Carbon dioxide and water are the raw materials used up.
+34. Across the whole planet, animals breathing and fuels burning constantly remove oxygen from the air and add carbon dioxide to it, yet the proportions of these two gases in the atmosphere stay roughly steady over the years. Which process is mainly responsible for keeping that balance, and how?
+   (A) Photosynthesis in green plants, which takes in carbon dioxide and releases oxygen, replacing what breathing and burning use up.
+   (B) Respiration in green plants, which removes the extra carbon dioxide from the air.
+   (C) Transpiration, because the water vapour plants release washes carbon dioxide out of the air.
+   (D) The soil, which soaks up the extra carbon dioxide directly through plant roots.
 
-35. A plant is supplied with carbon dioxide, water, intact chlorophyll and gentle warmth, but kept in TOTAL darkness for a full day; a destarched leaf is then tested with iodine. The result and reason are:
-   (A) blue-black, because chlorophyll on its own can make starch even in the dark.
-   (B) no blue-black colour, because without light the energy needed for photosynthesis is missing.
-   (C) blue-black, because the warmth supplied can replace sunlight as the energy source.
-   (D) a red colour, because darkness changes the way iodine reacts with the leaf.
+35. Two destarched, well-watered green plants are given ample carbon dioxide and warmth for one day. Plant A sits under a bright lamp; plant B is sealed in a dark box. A leaf from each is then tested with iodine. The result, and what it isolates, is:
+   (A) Both turn blue-black, proving light is not needed.
+   (B) Only plant B (the dark box) turns blue-black, because darkness concentrates starch.
+   (C) Only plant A (under the lamp) turns blue-black, isolating LIGHT as the factor plant B lacked for making starch.
+   (D) Neither turns blue-black, because one day is too short for any plant to make starch.
 
-36. A bean plant grows in a sealed clear chamber where carbon dioxide, water and warmth are kept plentiful, but the LIGHT is dimmed week by week. Over the weeks the plant slows and finally weakens. The single best explanation is:
-   (A) the plentiful carbon dioxide gradually poisons the plant.
-   (B) the plant has used up its chlorophyll because carbon dioxide was kept topped up.
-   (C) the plant has turned into a saprotroph that feeds on the chamber walls.
-   (D) with too little light the plant cannot photosynthesise enough food to sustain its growth.
+36. In a greenhouse trial a crop is given identical water, warmth and carbon dioxide but four different light levels. Average new growth per week is: full sun 40 g, half-shade 22 g, deep shade 6 g, near-dark 0 g. The single best conclusion is:
+   (A) Light has no clear effect on growth, since every plot grew something.
+   (B) Darkness grows plants fastest, since the near-dark plot used the least energy.
+   (C) Growth rises with the amount of light, because more light drives more photosynthesis and so more food.
+   (D) The carbon dioxide, not the light, must have caused the differences.
 
-37. Two pots of the same plant grow for three weeks: pot 1 in normal soil, pot 2 in soil kept very low in nitrogen. Pot 2's leaves turn pale yellowish and stunted, yet on any single sunny day a still-greenish leaf from pot 2 STILL turns blue-black in the starch test. The combined results show nitrogen is needed for:
-   (A) photosynthesis directly, since pot 2 must have made less starch that very day.
-   (B) healthy growth and the green colour, but it is NOT a raw material in the day's photosynthesis itself.
-   (C) nothing at all, since pot 2 still managed to turn blue-black.
-   (D) making the carbon dioxide that the leaf uses inside itself for photosynthesis.
+37. A gardener notices her spinach is pale-yellow and stunted, though it gets full sun, ample water and air. Adding a nitrogen-rich manure turns the new leaves deep green and vigorous. This is best explained by the fact that nitrogen is needed to:
+   (A) act as the direct raw material the leaf turns into starch each sunny day.
+   (B) supply the carbon that photosynthesis builds into glucose.
+   (C) replace the sunlight the plant would otherwise lack.
+   (D) build proteins and the green pigment for healthy growth — though it is not itself a raw material of the day's photosynthesis.
 
-38. Rhizobium living in a legume's root nodules and the legume form a partnership. From the PLANT'S side, what does it GAIN and what does it GIVE?
-   (A) It gains usable nitrogen compounds and gives the bacteria food and shelter.
-   (B) It gains food (sugars) and gives the bacteria usable nitrogen.
-   (C) It gains carbon dioxide and gives the bacteria oxygen.
-   (D) It gains water and gives the bacteria chlorophyll.
+38. In a legume–Rhizobium partnership each side both gives and gets. Which pairing correctly states what the BACTERIA receive from the plant?
+   (A) Sugary food and a protected home in the root nodules.
+   (B) Usable nitrogen compounds taken from the plant.
+   (C) Chlorophyll, so the bacteria can photosynthesise.
+   (D) Carbon dioxide, to build their own glucose.
 
-39. A farmer grows only wheat in the same field every year and yields steadily drop as one mineral is progressively drained. To restore that mineral WITHOUT chemical fertiliser, the best single action is:
-   (A) sow more wheat seeds per square metre to make the soil richer in the mineral.
-   (B) spray the field with extra water all through the dry months.
-   (C) remove every weed, since weeds are the only thing draining the mineral.
-   (D) grow a legume crop one season and plough it back, letting Rhizobium in its root nodules fix nitrogen into the soil.
+39. A field cropped with maize year after year yields less as its nitrogen drains. Four remedies are proposed; which single one restores nitrogen NATURALLY, without manufactured fertiliser?
+   (A) Water the field more heavily each season.
+   (B) Plant the maize closer together to use the soil fully.
+   (C) For one season grow a leguminous crop such as beans, whose root-nodule bacteria fix air nitrogen, then plough it back in.
+   (D) Leave the field bare for a year so the nitrogen returns by itself.
 
-40. Which organism MAKES ITS OWN FOOD, yet is most often studied as part of a partnership with the food-maker rather than on its own?
-   (A) The alga in a lichen.
-   (B) The fungus in a lichen.
-   (C) Rhizobium living in a root nodule.
-   (D) Cuscuta growing on a host plant.
+40. In a lichen the fungus and the alga live together. If you wanted to point to the partner that actually MAKES the food the pair lives on, you would point to the:
+   (A) fungus, because its threads photosynthesise even in the dark.
+   (B) alga, because it has chlorophyll and photosynthesises, making the food for both partners.
+   (C) fungus, because it absorbs ready-made food from the air for both.
+   (D) neither, because a lichen lives only on minerals and needs no food-maker.
 
-41. A potato tuber, a slice of wheat bread and a piece of egg white are each tested with iodine. The potato and bread turn deep blue-black; the egg white barely changes. The best conclusion is:
-   (A) the egg white is the richest source of starch among the three.
-   (B) iodine only detects starch in plant cells that are still living.
-   (C) the potato and bread are rich in starch, while the egg white is not.
-   (D) the blue-black colour shows the potato and bread contain chlorophyll.
+41. A pupil tests four foods with iodine: boiled rice, a slice of apple, raw potato, and a piece of boiled egg yolk. The rice and potato turn deep blue-black; the apple and egg yolk barely change. The safest conclusion is:
+   (A) Only living, uncooked foods can turn blue-black with iodine.
+   (B) The blue-black colour shows the rice and potato contain chlorophyll.
+   (C) Iodine turns blue-black only with foods that taste sweet.
+   (D) Rice and potato are rich in starch, while the apple and egg yolk contain little or none.
 
-42. A leaf's broad, flat, thin shape and the dense packing of green cells near its upper surface together serve one overall purpose. That purpose is to:
-   (A) store as much water as possible inside the leaf.
-   (B) make the leaf heavy enough to resist being blown by wind.
-   (C) keep insects from being able to land on the leaf.
-   (D) maximise the capture of sunlight for photosynthesis.
+42. A leaf's broad, flat shape (rather than thick and rod-like) and the crowding of its chlorophyll-rich cells just beneath the sunlit upper skin together serve one design principle. That principle is that the leaf is built to:
+   (A) present the largest possible surface to sunlight and place the chlorophyll where the light is strongest, for efficient photosynthesis.
+   (B) store the maximum amount of water for dry spells.
+   (C) be too tough for any insect to chew.
+   (D) stay heavy so the wind cannot move it.
 
-43. An experimenter wants to show that CHLOROPHYLL specifically (not just any leaf tissue) is required for photosynthesis, with the fewest extra variables. Which single set-up does this most directly?
-   (A) Keep a whole green plant in the dark for two days, then test a leaf.
-   (B) Do the starch test on a variegated leaf and compare its green and white parts after a sunny day.
-   (C) Cover half of a green leaf with foil, expose it to sun, then do the starch test.
-   (D) Seal a green plant in a jar in light and measure the gas inside.
+43. Seen under a microscope, a leaf's lower surface is dotted with tiny pores, each able to open and close between a pair of bean-shaped guard cells, while its upper surface has very few. These pores are the leaf's main gateway for exchanging gases with the air. What are they called, and what is their chief role in nutrition?
+   (A) Veins; they carry the food made in the leaf out to the rest of the plant.
+   (B) Root hairs; they take in the water that photosynthesis needs.
+   (C) Stomata; they let carbon dioxide enter for photosynthesis (and let oxygen and water vapour pass out).
+   (D) Stomata; they absorb mineral nutrients straight from the air for the plant.
 
-44. On a variegated leaf (green border, white centre) left in full sun all day, the iodine starch test will turn blue-black:
-   (A) only in the green border, where chlorophyll allowed photosynthesis.
-   (B) only in the white centre, because pale tissue stores the most starch.
-   (C) over the whole leaf equally, because the leaf shared light evenly.
-   (D) nowhere on the leaf, because variegated leaves cannot photosynthesise at all.
+44. Carrots store food in their roots, potatoes in underground stems and wheat grains in their seeds — yet in every case the food was first made in the green leaves. Which statement correctly describes how that food reaches these very different storage parts?
+   (A) Each storage part makes its own food directly, since food can be made anywhere in a plant.
+   (B) Food made in the leaves travels through the phloem to the storage parts, where the surplus is stored as starch.
+   (C) The roots absorb ready-made food from the soil and pass it up to the other parts.
+   (D) Water drawn up through the xylem is turned into stored food inside each part.
 
-45. Pick the statement that is FALSE about using the starch test to study photosynthesis.
-   (A) A positive starch test on a leaf proves the leaf also contains chlorophyll, since only green parts can ever contain starch.
-   (B) Iodine turning blue-black indicates the presence of starch.
-   (C) Destarching the plant first lets you attribute any new starch to the experiment.
-   (D) Boiling the leaf in alcohol removes chlorophyll so the colour change is easy to see.
+45. Which single statement about the starch test is FALSE?
+   (A) A blue-black colour with iodine indicates that starch is present.
+   (B) A brown (no-colour) result always means the tissue never contained any chlorophyll.
+   (C) Destarching the plant beforehand lets any new starch be credited to the experiment.
+   (D) Boiling the leaf in alcohol removes chlorophyll so the colour change is easy to read.
 
-46. Why is boiling a leaf in WATER included as a separate step in the starch test, distinct from boiling in alcohol?
-   (A) To dissolve out the green chlorophyll, which is the water step's main job.
-   (B) To add starch to the leaf before the iodine is applied.
-   (C) To release the oxygen trapped inside the leaf so the test can work.
-   (D) To soften the leaf and break open its cells so iodine and alcohol can act on it properly later.
+46. In the starch test the leaf is boiled in alcohol by standing the alcohol tube in a beaker of hot water, rather than heating the alcohol directly over a flame. The main reason is that:
+   (A) water added to the alcohol is what dissolves the chlorophyll.
+   (B) direct heating would turn the alcohol into starch.
+   (C) it is the flame's light, not its heat, that the alcohol step needs.
+   (D) alcohol is highly flammable, so heating it directly over a flame is dangerous; standing the tube in hot water heats it safely.
 
-47. Comparing nutrition in a green mango tree and a cow, the most FUNDAMENTAL difference is that:
-   (A) the cow makes its own food from the grass it eats using sunlight.
-   (B) the tree eats tiny soil organisms while the cow eats grass.
-   (C) the tree synthesises its food from simple inorganic substances using sunlight, while the cow must take in ready-made organic food.
-   (D) both obtain their food ready-made from their surroundings.
+47. Both a banyan tree and a goat need food, but they obtain it in fundamentally different ways. The essential difference is that the banyan:
+   (A) eats small soil creatures, whereas the goat eats leaves.
+   (B) makes food from sunlight inside its roots, whereas the goat makes food in its stomach.
+   (C) builds its own food from carbon dioxide and water using sunlight (autotroph), whereas the goat must consume ready-made food (heterotroph).
+   (D) and the goat both take ready-made food from their surroundings.
 
-48. Four sentences describe modes of nutrition; exactly one is INCORRECT. Which?
-   (A) An autotroph builds its food from inorganic raw materials using light.
-   (B) A parasite takes food from a living host and harms it.
-   (C) A saprotroph attaches to a living host and slowly draws food from it.
-   (D) An insectivorous plant photosynthesises and traps insects mainly for nitrogen.
+48. Left damp and warm for a few days, a slice of bread grows a furry mould — a fungus that has no chlorophyll of its own. How does this fungus obtain its food from the bread?
+   (A) It photosynthesises using the light in the kitchen.
+   (B) It secretes digestive juices onto the bread that break the food down, then absorbs the dissolved food — feeding as a saprotroph.
+   (C) It traps and digests tiny insects that land on the bread.
+   (D) It makes its own food from the warmth and moisture around it.
 
-49. A pale, leafless Cuscuta vine is found growing over a metal wire fence rather than on a plant, and within days it withers and dies; a Cuscuta on a living shrub thrives. This observation best supports the idea that Cuscuta is:
-   (A) a saprotroph that needs dead matter such as the wire to feed on.
-   (B) an autotroph that has only briefly lost its green colour.
-   (C) a symbiont that benefits whatever object it grows on.
-   (D) a parasite that cannot survive without taking food from a living host.
+49. A leafless, pale-yellow Cuscuta is transplanted onto a plastic garden stake; within a week it shrivels and dies, but a cutting placed on a living hibiscus bush spreads and thrives. The behaviour proves Cuscuta is:
+   (A) a saprotroph that needs dead matter such as the plastic to feed on.
+   (B) a green autotroph that has only briefly lost its colour.
+   (C) a symbiont that helps whatever object it climbs upon.
+   (D) a parasite that can survive only by drawing food from a living host.
 
-50. A pitcher plant grows in a boggy, nitrogen-poor place, clearly has bright green leaves, yet still traps and digests insects. A correct conclusion combining BOTH facts is:
-   (A) the green colour is merely decorative; it gets all of its food from the insects.
-   (B) it photosynthesises in its green leaves for energy-rich food but traps insects to obtain the nitrogen its poor soil lacks.
-   (C) it is a parasite, because it feeds on the living insects it traps.
-   (D) it is a saprotroph that happens to have evolved green leaves by accident.
+50. A sundew is a small green plant of nitrogen-poor bogs whose sticky leaves trap and digest insects. Which single statement correctly accounts for BOTH its green leaves and its insect-trapping?
+   (A) The green leaves are merely ornamental; all of its food comes from the insects.
+   (B) It photosynthesises with its green leaves to make energy-rich food, and traps insects mainly to obtain the scarce nitrogen its boggy soil lacks.
+   (C) It is a parasite, living on the insects it traps.
+   (D) It is a saprotroph that feeds only on dead, decaying matter in the bog.
 
-51. A sealed transparent box holds a green plant in steady bright light for many hours. The level of which gas would a careful experiment most likely find SLIGHTLY HIGHER at the end than at the start?
-   (A) Carbon dioxide.
-   (B) Nitrogen.
-   (C) Water vapour, which the plant manufactures from sugar.
-   (D) Oxygen.
+51. A green plant is sealed in a transparent box and kept in steady bright light for several hours, with photosynthesis clearly outpacing respiration. Comparing the air at the end with the air at the start, which change is expected?
+   (A) Oxygen has fallen and carbon dioxide has risen.
+   (B) Both oxygen and carbon dioxide have risen.
+   (C) Nitrogen has fallen sharply while oxygen is unchanged.
+   (D) Oxygen has risen and carbon dioxide has fallen.
 
-52. Why is a green plant correctly placed at the START of essentially every food chain, while a saprotroph like a mushroom is usually NOT shown as a starting point?
-   (A) The mushroom cannot take part in any food chain at all.
-   (B) The mushroom makes more food than the plant but releases it only slowly.
-   (C) The green plant eats the mushroom to begin the chain.
-   (D) The green plant produces new food from sunlight, whereas the saprotroph only breaks down food that already existed.
+52. Food chains are drawn starting with a green plant, never with a mushroom, even though both are alive. The reason a green plant — and not the mushroom — belongs at the start is that the green plant:
+   (A) is the only living thing in the chain that respires.
+   (B) is eaten by the mushroom to begin the chain.
+   (C) captures sunlight to create brand-new food, introducing fresh energy, while the mushroom only breaks down food that already existed.
+   (D) is larger than the mushroom and so comes first.
 
-53. Which statement best explains why nearly ALL animals — even those that eat only other animals — ultimately depend on green plants?
-   (A) Green plants directly feed every animal by being eaten by all of them.
-   (B) Green plants release most of their oxygen at night, when animals need it most.
-   (C) Green plants are the producers that first capture sunlight as food and release the oxygen animals breathe.
-   (D) Green plants supply animals with minerals taken straight from the soil.
+53. Tigers eat only meat, never plants, yet biologists say even a tiger ultimately depends on green plants. The strongest reason is that:
+   (A) tigers occasionally nibble grass when they are ill.
+   (B) green plants give the tiger its minerals directly from the soil.
+   (C) plants release most of their oxygen at night, when the tiger hunts.
+   (D) the deer a tiger eats fed on plants, so the energy in the tiger's food was first captured from sunlight by plants, which also supply the oxygen it breathes.
 
 54. A pond's green algae double in mass over summer while a snail population in the same pond also grows by eating those algae. If, instead, a cloud of fine silt permanently shades the pond so almost no light reaches the algae, the chain of consequences over the following weeks is best described as:
    (A) the snails thrive because shaded algae become softer and easier to eat.
@@ -341,11 +341,11 @@
    (C) the algae photosynthesise little, so they decline; the snails that feed on them then run short of food and also decline.
    (D) nothing changes, because algae do not actually need light to make food.
 
-55. In a classroom debate a student says: 'Because autotrophs make their own food, they need nothing at all from their surroundings.' The single best correction is:
-   (A) Correct — autotrophs are completely independent of their surroundings.
-   (B) They actually need to eat small animals to get started each day.
-   (C) They take ready-made food from the soil just like heterotrophs do.
-   (D) They still need raw materials from their surroundings — carbon dioxide, water and light — to make that food.
+55. A pupil argues: 'Autotrophs make their own food, so a green plant locked in a sealed lightless cupboard would feed itself indefinitely.' The single best correction is:
+   (A) Wrong — even autotrophs need raw materials and energy from outside (carbon dioxide, water and especially light); in the dark it cannot make food and will starve.
+   (B) Correct — autotrophs need nothing from outside once they are grown.
+   (C) Wrong — the plant would survive by eating the cupboard's wood.
+   (D) Wrong — the plant would switch to taking ready-made food from the air.
 
 56. A destarched plant has one leaf sealed in CO2-free air (using potassium hydroxide) and another leaf left in normal air; both are on the same plant in bright light for six hours, then tested with iodine. A student writes that 'the leaf in CO2-free air turned blue-black because removing a gas speeds up food-making.' What is the correct result, and what error did the student make?
    (A) Both leaves turn blue-black, because light alone is enough to make starch.
@@ -353,17 +353,17 @@
    (C) Neither leaf turns blue-black, because destarching destroyed their ability to ever make starch.
    (D) Only the CO2-free leaf turns blue-black, exactly as the student predicted, because KOH feeds the leaf.
 
-57. A scientist records a single leaf's net oxygen exchange over 24 hours: net oxygen is released from about 7 a.m. to 6 p.m. and net oxygen is taken IN the rest of the time, with exactly two instants of zero net exchange. What is happening at those two zero-crossing instants?
+57. A scientist records a single leaf's net oxygen exchange over 24 hours: net oxygen is released from about 7 a.m. to 6 p.m. and net oxygen is taken IN the rest of the time, crossing zero at exactly two instants around dawn and dusk. What is happening at each of those two zero-crossing instants?
    (A) The leaf has briefly stopped both photosynthesis and respiration.
-   (B) Photosynthesis and respiration are running at exactly equal rates, so the oxygen made equals the oxygen used.
-   (C) The leaf is only respiring and is using up all of its own oxygen internally.
-   (D) Photosynthesis has completely stopped while respiration carries on at full speed.
+   (B) The leaf is only respiring and is using up all of its own oxygen internally.
+   (C) Photosynthesis has completely stopped while respiration carries on at full speed.
+   (D) The rate of oxygen made by photosynthesis exactly equals the rate of oxygen used by respiration.
 
-58. Which single sentence most completely and correctly summarises nutrition in plants as covered in this chapter?
-   (A) All plants make food only at night, and none ever depend on other organisms.
-   (B) Plants and animals both make their own food from sunlight in exactly the same way.
-   (C) Plants take all of their food ready-made from the soil through their roots.
-   (D) Green plants make their own food by photosynthesis, while some plants and organisms feed in special ways — parasitic, insectivorous, saprotrophic or symbiotic — and soil nitrogen is replenished by nitrogen-fixing bacteria.
+58. Fungi and bacteria that feed on fallen leaves, dead wood and animal remains are often called 'nature's decomposers,' even though they make no food of their own. Why are these saprotrophs important for nutrition in the living world?
+   (A) They break down dead matter and return its locked-up nutrients to the soil, where plants can absorb and reuse them.
+   (B) They make food from sunlight and pass it on to the plants around them.
+   (C) They are the source of the oxygen that green plants need for photosynthesis.
+   (D) They have no real importance, since only the food-makers in a habitat matter.
 
 59. A girl reasons: 'When a tree grows from a tiny seed into a heavy trunk, all that extra solid wood must have been lifted up by the roots from the soil as solid material.' Using what this chapter teaches about how plants make food, the best correction is:
    (A) Most of the added solid material is built from carbon dioxide taken from the air during photosynthesis, not lifted as solid matter from the soil.
@@ -371,8 +371,8 @@
    (C) Most of the added wood comes from oxygen the tree absorbed and turned into solid matter.
    (D) The girl is right: a tree's whole body is solid soil carried up by the roots over the years.
 
-60. A scientist injects a harmless dye into the water at the base of a plant's stem and, separately, places a labelled sugar at a brightly lit leaf. Hours later the dye is found high in the upper leaves while the labelled sugar is found moving down toward the roots. The two tissues responsible, named in the order (dye, sugar), are:
-   (A) xylem for the dye, because it carries water upward, and phloem for the sugar, because it carries food away from the leaves.
-   (B) phloem for the dye and xylem for the sugar, since phloem carries water up and xylem carries food down.
-   (C) xylem for both, since one set of tubes carries everything up and down the plant.
-   (D) stomata for the dye and chlorophyll for the sugar, since those are the plant's transport channels.
+60. Which single row correctly matches each transport job to its tissue and direction?
+   (A) Water: phloem, upward — and — food: xylem, downward.
+   (B) Water and minerals: xylem, upward from the roots — and — food (sugars): phloem, away from the leaves and largely downward.
+   (C) Both water and food travel in the xylem only, in both directions.
+   (D) Water: xylem, downward to the roots — and — food: phloem, upward to the leaves.
