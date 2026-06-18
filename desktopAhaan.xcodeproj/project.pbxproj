@@ -2203,6 +2203,10 @@
 		4F25C7274F43E3584B0B2185 /* Paper_35_NutritionPlants_Respiration_LinesAngles_PerimeterArea_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C24C8A49F92550E8A763CA57 /* Paper_35_NutritionPlants_Respiration_LinesAngles_PerimeterArea_QuestionPaper.pdf */; };
 		3C0AE7C887B918832B8320DE /* Paper_35_NutritionPlants_Respiration_LinesAngles_PerimeterArea_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 39D000212109445F6BDC06C1 /* Paper_35_NutritionPlants_Respiration_LinesAngles_PerimeterArea_Questions.md */; };
 		DB405706D5BC4D4B235732B0 /* Paper_35_NutritionPlants_Respiration_LinesAngles_PerimeterArea_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 0ED97DE75A64F4445D10187B /* Paper_35_NutritionPlants_Respiration_LinesAngles_PerimeterArea_Solutions.html */; };
+		9ED3E9AD7577E2D321A26269 /* Paper_36_NutritionAnimals_Heat_AlgExpr_Triangle_QuestionPaper.html in Resources */ = {isa = PBXBuildFile; fileRef = 4CE7ABC88429E5925AED1F42 /* Paper_36_NutritionAnimals_Heat_AlgExpr_Triangle_QuestionPaper.html */; };
+		A7C5B8C183DB62A0A131B937 /* Paper_36_NutritionAnimals_Heat_AlgExpr_Triangle_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4EFB9FB08B33A3E7E492E95C /* Paper_36_NutritionAnimals_Heat_AlgExpr_Triangle_QuestionPaper.pdf */; };
+		4DA4998D9F8BBD9C938BA57D /* Paper_36_NutritionAnimals_Heat_AlgExpr_Triangle_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 2701714EC15B52ED5C987F9F /* Paper_36_NutritionAnimals_Heat_AlgExpr_Triangle_Questions.md */; };
+		7ABFE60780977501768656DB /* Paper_36_NutritionAnimals_Heat_AlgExpr_Triangle_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 23821C3D40F0DB95EB4896CD /* Paper_36_NutritionAnimals_Heat_AlgExpr_Triangle_Solutions.html */; };
 		4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */ = {isa = PBXBuildFile; fileRef = ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */; };
 		CF6289FBCF676858C99ED670 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F17B590EF6DA751E23E41 /* Contents.json */; };
 		9AE05997509D9842F29172EB /* maths_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E448E6E8BEEB87620A8C798 /* maths_class7.json */; };
@@ -4046,6 +4050,10 @@
 		C24C8A49F92550E8A763CA57 /* Paper_35_NutritionPlants_Respiration_LinesAngles_PerimeterArea_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_35_NutritionPlants_Respiration_LinesAngles_PerimeterArea_QuestionPaper.pdf"; sourceTree = "<group>"; };
 		39D000212109445F6BDC06C1 /* Paper_35_NutritionPlants_Respiration_LinesAngles_PerimeterArea_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_35_NutritionPlants_Respiration_LinesAngles_PerimeterArea_Questions.md"; sourceTree = "<group>"; };
 		0ED97DE75A64F4445D10187B /* Paper_35_NutritionPlants_Respiration_LinesAngles_PerimeterArea_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_35_NutritionPlants_Respiration_LinesAngles_PerimeterArea_Solutions.html"; sourceTree = "<group>"; };
+		4CE7ABC88429E5925AED1F42 /* Paper_36_NutritionAnimals_Heat_AlgExpr_Triangle_QuestionPaper.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_36_NutritionAnimals_Heat_AlgExpr_Triangle_QuestionPaper.html"; sourceTree = "<group>"; };
+		4EFB9FB08B33A3E7E492E95C /* Paper_36_NutritionAnimals_Heat_AlgExpr_Triangle_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_36_NutritionAnimals_Heat_AlgExpr_Triangle_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		2701714EC15B52ED5C987F9F /* Paper_36_NutritionAnimals_Heat_AlgExpr_Triangle_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_36_NutritionAnimals_Heat_AlgExpr_Triangle_Questions.md"; sourceTree = "<group>"; };
+		23821C3D40F0DB95EB4896CD /* Paper_36_NutritionAnimals_Heat_AlgExpr_Triangle_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_36_NutritionAnimals_Heat_AlgExpr_Triangle_Solutions.html"; sourceTree = "<group>"; };
 		ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "QUESTION_INDEX.json"; sourceTree = "<group>"; };
 		5C7F17B590EF6DA751E23E41 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Contents.json"; sourceTree = "<group>"; };
 		69191026B2F9F250C1D2E9BD /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement.swift"; sourceTree = "<group>"; };
@@ -6521,6 +6529,10 @@
 				C24C8A49F92550E8A763CA57,
 				39D000212109445F6BDC06C1,
 				0ED97DE75A64F4445D10187B,
+				4CE7ABC88429E5925AED1F42,
+				4EFB9FB08B33A3E7E492E95C,
+				2701714EC15B52ED5C987F9F,
+				23821C3D40F0DB95EB4896CD,
 				ECD0916CC0210824B2615292,
 			);
 			path = "BossChallengePapers";
@@ -10251,6 +10263,10 @@
 				4F25C7274F43E3584B0B2185 /* Paper_35_NutritionPlants_Respiration_LinesAngles_PerimeterArea_QuestionPaper.pdf in Resources */,
 				3C0AE7C887B918832B8320DE /* Paper_35_NutritionPlants_Respiration_LinesAngles_PerimeterArea_Questions.md in Resources */,
 				DB405706D5BC4D4B235732B0 /* Paper_35_NutritionPlants_Respiration_LinesAngles_PerimeterArea_Solutions.html in Resources */,
+				9ED3E9AD7577E2D321A26269 /* Paper_36_NutritionAnimals_Heat_AlgExpr_Triangle_QuestionPaper.html in Resources */,
+				A7C5B8C183DB62A0A131B937 /* Paper_36_NutritionAnimals_Heat_AlgExpr_Triangle_QuestionPaper.pdf in Resources */,
+				4DA4998D9F8BBD9C938BA57D /* Paper_36_NutritionAnimals_Heat_AlgExpr_Triangle_Questions.md in Resources */,
+				7ABFE60780977501768656DB /* Paper_36_NutritionAnimals_Heat_AlgExpr_Triangle_Solutions.html in Resources */,
 				4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */,
 				CF6289FBCF676858C99ED670 /* Contents.json in Resources */,
 				9AE05997509D9842F29172EB /* maths_class7.json in Resources */,
