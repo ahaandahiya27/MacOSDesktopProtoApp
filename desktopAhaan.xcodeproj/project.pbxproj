@@ -2195,6 +2195,10 @@
 		0E4DF7DD6FAD086D9C39ACBF /* Paper_33_MotionTime_Electricity_SimpleEquations_FracDecimals_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9A61193DC304D77A9E26D5CB /* Paper_33_MotionTime_Electricity_SimpleEquations_FracDecimals_QuestionPaper.pdf */; };
 		0A4FDAEBFDFA6A19BD97C227 /* Paper_33_MotionTime_Electricity_SimpleEquations_FracDecimals_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = D2C13BB70860ADE6C9099A4A /* Paper_33_MotionTime_Electricity_SimpleEquations_FracDecimals_Questions.md */; };
 		8C0A083D61B95AC1BB8EC392 /* Paper_33_MotionTime_Electricity_SimpleEquations_FracDecimals_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = E50A6ED63D461F181004FC76 /* Paper_33_MotionTime_Electricity_SimpleEquations_FracDecimals_Solutions.html */; };
+		59C6503E644EA94B7687A8BA /* Paper_34_Weather_PhysChem_ArithmeticExpr_RationalNumbers_QuestionPaper.html in Resources */ = {isa = PBXBuildFile; fileRef = 2213BAC3BB2BBE79B6F55BE7 /* Paper_34_Weather_PhysChem_ArithmeticExpr_RationalNumbers_QuestionPaper.html */; };
+		B2F16436B1AC8E99BB05F341 /* Paper_34_Weather_PhysChem_ArithmeticExpr_RationalNumbers_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 5D9A8D3B6870ABE005DC78D0 /* Paper_34_Weather_PhysChem_ArithmeticExpr_RationalNumbers_QuestionPaper.pdf */; };
+		C854CC033964559F79883281 /* Paper_34_Weather_PhysChem_ArithmeticExpr_RationalNumbers_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = CDC28A1F094F40190026F2A7 /* Paper_34_Weather_PhysChem_ArithmeticExpr_RationalNumbers_Questions.md */; };
+		B8E8AF2855293FC5E7A83308 /* Paper_34_Weather_PhysChem_ArithmeticExpr_RationalNumbers_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 3052298ACDF4A91D8E83AB5B /* Paper_34_Weather_PhysChem_ArithmeticExpr_RationalNumbers_Solutions.html */; };
 		4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */ = {isa = PBXBuildFile; fileRef = ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */; };
 		CF6289FBCF676858C99ED670 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F17B590EF6DA751E23E41 /* Contents.json */; };
 		9AE05997509D9842F29172EB /* maths_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E448E6E8BEEB87620A8C798 /* maths_class7.json */; };
@@ -4030,6 +4034,10 @@
 		9A61193DC304D77A9E26D5CB /* Paper_33_MotionTime_Electricity_SimpleEquations_FracDecimals_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_33_MotionTime_Electricity_SimpleEquations_FracDecimals_QuestionPaper.pdf"; sourceTree = "<group>"; };
 		D2C13BB70860ADE6C9099A4A /* Paper_33_MotionTime_Electricity_SimpleEquations_FracDecimals_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_33_MotionTime_Electricity_SimpleEquations_FracDecimals_Questions.md"; sourceTree = "<group>"; };
 		E50A6ED63D461F181004FC76 /* Paper_33_MotionTime_Electricity_SimpleEquations_FracDecimals_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_33_MotionTime_Electricity_SimpleEquations_FracDecimals_Solutions.html"; sourceTree = "<group>"; };
+		2213BAC3BB2BBE79B6F55BE7 /* Paper_34_Weather_PhysChem_ArithmeticExpr_RationalNumbers_QuestionPaper.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_34_Weather_PhysChem_ArithmeticExpr_RationalNumbers_QuestionPaper.html"; sourceTree = "<group>"; };
+		5D9A8D3B6870ABE005DC78D0 /* Paper_34_Weather_PhysChem_ArithmeticExpr_RationalNumbers_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_34_Weather_PhysChem_ArithmeticExpr_RationalNumbers_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		CDC28A1F094F40190026F2A7 /* Paper_34_Weather_PhysChem_ArithmeticExpr_RationalNumbers_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_34_Weather_PhysChem_ArithmeticExpr_RationalNumbers_Questions.md"; sourceTree = "<group>"; };
+		3052298ACDF4A91D8E83AB5B /* Paper_34_Weather_PhysChem_ArithmeticExpr_RationalNumbers_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_34_Weather_PhysChem_ArithmeticExpr_RationalNumbers_Solutions.html"; sourceTree = "<group>"; };
 		ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "QUESTION_INDEX.json"; sourceTree = "<group>"; };
 		5C7F17B590EF6DA751E23E41 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Contents.json"; sourceTree = "<group>"; };
 		69191026B2F9F250C1D2E9BD /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement.swift"; sourceTree = "<group>"; };
@@ -6497,6 +6505,10 @@
 				9A61193DC304D77A9E26D5CB,
 				D2C13BB70860ADE6C9099A4A,
 				E50A6ED63D461F181004FC76,
+				2213BAC3BB2BBE79B6F55BE7,
+				5D9A8D3B6870ABE005DC78D0,
+				CDC28A1F094F40190026F2A7,
+				3052298ACDF4A91D8E83AB5B,
 				ECD0916CC0210824B2615292,
 			);
 			path = "BossChallengePapers";
@@ -10219,6 +10231,10 @@
 				0E4DF7DD6FAD086D9C39ACBF /* Paper_33_MotionTime_Electricity_SimpleEquations_FracDecimals_QuestionPaper.pdf in Resources */,
 				0A4FDAEBFDFA6A19BD97C227 /* Paper_33_MotionTime_Electricity_SimpleEquations_FracDecimals_Questions.md in Resources */,
 				8C0A083D61B95AC1BB8EC392 /* Paper_33_MotionTime_Electricity_SimpleEquations_FracDecimals_Solutions.html in Resources */,
+				59C6503E644EA94B7687A8BA /* Paper_34_Weather_PhysChem_ArithmeticExpr_RationalNumbers_QuestionPaper.html in Resources */,
+				B2F16436B1AC8E99BB05F341 /* Paper_34_Weather_PhysChem_ArithmeticExpr_RationalNumbers_QuestionPaper.pdf in Resources */,
+				C854CC033964559F79883281 /* Paper_34_Weather_PhysChem_ArithmeticExpr_RationalNumbers_Questions.md in Resources */,
+				B8E8AF2855293FC5E7A83308 /* Paper_34_Weather_PhysChem_ArithmeticExpr_RationalNumbers_Solutions.html in Resources */,
 				4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */,
 				CF6289FBCF676858C99ED670 /* Contents.json in Resources */,
 				9AE05997509D9842F29172EB /* maths_class7.json in Resources */,

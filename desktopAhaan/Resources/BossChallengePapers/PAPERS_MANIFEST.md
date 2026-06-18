@@ -35,3 +35,4 @@
 | 31 | 2026-06-18 | Light · Transportation in Animals & Plants · Lines & Angles · Exponents & Powers | 25/25/25/25 | ✓ |
 | 32 | 2026-06-18 | Soil · Wastewater Story · Comparing Quantities · Algebraic Expressions | 25/25/25/25 | ✓ |
 | 33 | 2026-06-18 | Motion & Time · Electric Current & its Effects · Simple Equations · Fractions & Decimals | 25/25/25/25 | ✓ |
+| 34 | 2026-06-18 | Weather, Climate & Adaptations · Physical & Chemical Changes · Arithmetic Expressions · Rational Numbers | 25/25/25/25 | ✓ |
