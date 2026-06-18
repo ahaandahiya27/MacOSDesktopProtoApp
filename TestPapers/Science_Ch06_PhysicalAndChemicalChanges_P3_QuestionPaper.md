@@ -47,11 +47,11 @@
    (C) a white insoluble substance (calcium carbonate) forming as a precipitate, signalling a chemical change
    (D) dust from the air settling on the surface of the liquid
 
-6. An iron nail is dropped into blue copper sulphate solution. After an hour, a reddish-brown coating clings to the nail and the solution looks pale green. The reddish-brown coating is:
-   (A) rust, because the nail has begun to corrode in the liquid
-   (B) a film of paint that was already on the nail
-   (C) copper metal, displaced from the solution by the more reactive iron
-   (D) iron sulphate that has stuck to the nail's surface
+6. A clean iron nail and a clean copper coin are each left in separate beakers of blue copper sulphate solution. After an hour the iron nail carries a reddish-brown coat and the liquid around it looks greener, while the copper coin is unchanged. The best reason is:
+   (A) the coin was too clean to react, while the nail was slightly dirty
+   (B) copper sulphate reacts with any metal placed in it, so the coin would also change given more time
+   (C) iron is more reactive than copper and displaces it, whereas copper cannot displace itself from copper sulphate, so only the nail reacts
+   (D) both metals reacted equally, but the change on the copper coin is simply invisible
 
 7. Three identical bare iron nails sit in three tubes: Tube A, boiled water sealed under a layer of oil; Tube B, ordinary tap water open to air; Tube C, a tube of dry air kept with a drying agent. After a week, which nail(s) rust?
    (A) Only the nail in Tube B, because it alone has both air (oxygen) and water present
@@ -71,17 +71,17 @@
    (C) It is neither physical nor chemical, because only the water moved
    (D) It is a physical change (crystallisation); the same copper sulphate simply comes out of solution as pure crystals
 
-10. Which everyday process is physical even though it looks energetic or permanent?
-   (A) A sparkler showering coloured sparks as it burns
-   (B) Solid carbon dioxide (dry ice) turning straight into a gas as it 'smokes'
-   (C) Milk slowly turning into thick curd overnight
-   (D) An iron railing developing a brown flaky coating outdoors
+10. Which everyday event looks violent or permanent yet is only a physical change?
+   (A) a strip of magnesium flaring with blinding light as it burns
+   (B) an inflated balloon bursting with a loud bang, leaving the same rubber in torn pieces
+   (C) milk slowly turning into thick sour curd overnight
+   (D) a lump of coal glowing red and turning to ash in a stove
 
-11. A nail kept in tube X (water boiled to drive off dissolved air, then sealed under oil) does not rust, while a nail in tube Y (plain tap water open to air) does. Together these two tubes are designed to prove that rusting needs:
-   (A) dissolved air (oxygen), since the only factor tube X removed while keeping water present was the air
-   (B) water, since tube X clearly had no water at all
-   (C) heat, since tube X's water had been boiled
-   (D) salt, since tube Y must have contained dissolved salt
+11. A lit candle is covered with an inverted glass jar; after a short while the flame dies out. Which conclusion is best supported?
+   (A) burning is a chemical change that needs a continuous supply of air (oxygen); once the trapped oxygen is used up, the flame dies
+   (B) the candle melted the glass, smothering the flame
+   (C) the wax suddenly turned into a physical change the moment it was covered
+   (D) the jar cooled the flame below its melting point, a purely physical effect
 
 12. Which list is correctly ordered as physical, chemical, chemical?
    (A) Burning of a candle wick; melting candle wax; milk souring
@@ -95,17 +95,17 @@
    (C) letting wood burn in a fire and feeling it radiate heat
    (D) watching quicklime react with water to form a new substance with heat
 
-14. A change shows ALL of: a new colour, a gas bubbling off, AND it cannot be reversed by any simple physical step. The safest classification is:
-   (A) a physical change, because colour changes are always physical
-   (B) a chemical change, since several independent clues point to a new substance forming
-   (C) merely a change of state, because a gas appeared
-   (D) crystallisation, because something new became visible
+14. When water is added to quicklime (used in whitewashing), the mixture hisses, grows very hot, and a new powdery substance forms that no longer behaves like the original quicklime. This change is:
+   (A) physical, because only water was added
+   (B) a chemical change, because a new substance with different properties forms while heat is released
+   (C) crystallisation of the lime
+   (D) merely the lime dissolving, fully recoverable by evaporation
 
-15. When green leaves carry out photosynthesis, sunlight drives the making of glucose and oxygen from carbon dioxide and water. This is classed as chemical, NOT physical, chiefly because:
-   (A) the leaf changes to a deeper shade of green during the day
-   (B) it can be reversed simply by placing the plant in the dark
-   (C) water merely changes from liquid to vapour inside the leaf
-   (D) new substances (glucose and oxygen) with different properties are produced from the starting materials
+15. The burning of natural cooking gas (LPG) at a kitchen stove is classed as a chemical change mainly because:
+   (A) the gas simply changes from a liquid in the cylinder to a gas at the burner
+   (B) the blue flame shows the gas is only changing colour
+   (C) the change can be reversed by cooling the kitchen
+   (D) new substances (carbon dioxide and water vapour) with properties unlike the original gas are formed, and the change cannot be undone by simple physical means
 
 16. An object is found to rust faster than an identical one. Which single difference would speed up rusting the MOST?
    (A) keeping it splashed with salty water in open air
@@ -125,11 +125,11 @@
    (C) crystallisation, because the metal forms a new ordered shape
    (D) a physical change, because only the shape alters while the substance remains gold
 
-19. To get pure copper sulphate crystals from a sample mixed with insoluble sand, the correct sequence is:
-   (A) heat the sample strongly to burn off the sand, then collect what is left
-   (B) leave the sample in damp air until crystals rust out of it
-   (C) dissolve in hot water, filter out the sand, then cool the clear solution slowly so crystals grow
-   (D) grind the sample finely and pick the blue grains out by hand
+19. Blue copper sulphate crystals begin to appear only after a hot saturated solution is allowed to cool. The best reason is that:
+   (A) cooling chemically converts the water into crystals
+   (B) cooling adds fresh copper sulphate to the solution
+   (C) a hot solution can hold more dissolved solid than a cold one, so on cooling the excess separates out as crystals
+   (D) crystals form only because the blue colour darkens as it cools
 
 20. Magnesium ribbon is often cleaned with sandpaper before it is burnt. The cleaning step is a physical change, but the burning step is chemical. The KEY difference is that during burning:
    (A) the ribbon merely melts and then re-solidifies as the same magnesium
@@ -143,23 +143,23 @@
    (C) two
    (D) one
 
-22. Compared with the shiny magnesium ribbon, the white magnesium oxide ash left after burning:
-   (A) has exactly the same properties as the original metal
-   (B) will turn back into shiny ribbon if left to cool overnight
-   (C) is still pure magnesium, just powdered
-   (D) has new, different properties and cannot be turned back into the ribbon by simply cooling it
+22. Burning a magnesium ribbon cannot be undone by simply cooling the white ash, yet freezing water can be undone by gently warming the ice. The KEY reason for this difference is that:
+   (A) the ash is colder than the ribbon, so it stays solid
+   (B) cooling always reverses burning but never reverses freezing
+   (C) magnesium oxide is just powdered magnesium that needs reshaping
+   (D) burning is a chemical change that forms a new substance (magnesium oxide), while freezing is only a physical change of state of the same water
 
-23. Which change would BOTH give off a gas AND be a chemical change?
-   (A) baking soda reacting with vinegar to fizz
-   (B) boiling water until it turns to steam
-   (C) opening a fizzy drink so the bubbles escape
-   (D) solid camphor subliming directly into vapour
+23. In which case does the gas appear because a chemical reaction is taking place, rather than because a dissolved or boiled-off gas is simply escaping?
+   (A) marble chips (calcium carbonate) reacting with dilute acid to bubble off a gas
+   (B) a warm fizzy drink losing its bubbles as it goes flat
+   (C) water being boiled into steam
+   (D) a bottle of soda releasing gas the moment its cap is opened
 
-24. Two clear solutions are mixed and a solid suddenly appears, settling at the bottom. This solid is called a precipitate, and its appearance tells us that:
-   (A) the liquids simply got too cold and one froze
-   (B) a chemical reaction has formed a new insoluble substance
-   (C) dust from the air happened to settle in the beaker
-   (D) one liquid evaporated, leaving its crystals behind
+24. A precipitate that forms when two solutions are mixed differs from sand stirred into water and then settling to the bottom. The key difference is that:
+   (A) the precipitate and the sand are both unchanged solids that simply sank
+   (B) the precipitate is a brand-new insoluble substance made by a chemical reaction, whereas the sand was an existing solid that only settled physically
+   (C) both form only because the liquid was cooled
+   (D) the precipitate can always be stirred back into solution, but the sand cannot
 
 25. Galvanising and painting both fight rust, but in DIFFERENT ways. Which statement is correct?
    (A) Both protect only by forming a barrier, so a scratch ruins both equally
@@ -179,11 +179,11 @@
    (C) both chemical changes, because the shirt's fibres react each time
    (D) a chemical change (drying) and a physical change (souring)
 
-28. Why do snack makers seal chips in moisture-free, airtight pouches, sometimes with a tiny 'do not eat' sachet inside?
-   (A) to keep out oxygen and moisture, slowing the chemical changes that spoil the food
-   (B) to add extra oxygen so the food stays fresher for longer
-   (C) to make the food rust, which keeps it crunchy
-   (D) to physically squash the chips so fewer fit, saving money
+28. Freshly cut apple slices turn brown in air, but slices brushed with lemon juice or kept under water stay pale far longer. The browning is slowed because:
+   (A) browning is a chemical change caused by contact with air; keeping air away (a lemon coating or water) slows that chemistry
+   (B) lemon juice freezes the apple, a physical change that stops browning
+   (C) the apple browns because of light, which water and lemon block out
+   (D) browning is purely physical drying, and wetting simply hides it
 
 29. Which set lists ONLY physical changes?
    (A) Burning of wood, melting of wax, dissolving of sugar
@@ -191,65 +191,65 @@
    (C) Rusting of iron, breaking of glass, tearing of cloth
    (D) Melting of ice, dissolving of salt, cutting of paper
 
-30. A pure sample of common salt is dissolved in water and the water is then fully evaporated. The white solid left behind is:
-   (A) a brand-new compound made by mixing salt with water
-   (B) the same common salt, recovered unchanged — showing the whole process was physical
-   (C) a fresh batch of crystals chemically different from the salt put in
-   (D) rust formed while the water sat in the dish
+30. One student dissolves sugar in water; another drops a fizzing vitamin tablet into water, which bubbles vigorously. Which statement is correct?
+   (A) both are physical changes, because both substances disappear into the water
+   (B) dissolving the sugar is physical (the sugar can be recovered), but the fizzing tablet undergoes a chemical change because a new gas is produced
+   (C) both are chemical changes, because both solutions look or taste different
+   (D) dissolving the sugar is chemical and the fizzing tablet is physical
 
-31. An iron nail reacts in copper sulphate solution. After the reaction the liquid is pale green. The green colour is due to:
-   (A) copper metal that dissolved and coloured the liquid green
-   (B) iron sulphate, a new substance formed as iron went into solution
-   (C) rust particles floating in the solution
-   (D) the original copper sulphate simply fading in the light
+31. A blacksmith's helper files a rough iron bar smooth, collecting a pile of fine iron filings. The filing is best described as:
+   (A) a chemical change, because the iron is broken down into a new substance
+   (B) a physical change, because the filings are still iron and only the size has changed, with no new substance formed
+   (C) rusting, because filing exposes fresh iron to the air
+   (D) crystallisation, because the dust forms tiny grains
 
-32. Which is the odd one out — the ONLY physical change in the list?
-   (A) Curdling of milk into yoghurt
-   (B) Burning of a candle's wick
-   (C) Ripening of a green tomato to red
-   (D) Condensation of water vapour into dew on a cold morning
+32. Three of the following are physical changes; exactly one is a chemical change. Which is the chemical change?
+   (A) chopping a vegetable into pieces
+   (B) dissolving honey in warm water
+   (C) melting chocolate in the sun
+   (D) the digestion of food inside the body
 
-33. A 'displacement' chemical change is best illustrated by:
-   (A) candle wax melting on a hot afternoon
-   (B) salt crystals dissolving in warm tea
-   (C) water vapour condensing on a cold glass
-   (D) an iron nail pushing copper out of copper sulphate solution
+33. When an iron nail reacts in copper sulphate solution, which TWO new substances are formed?
+   (A) rust and zinc
+   (B) more copper sulphate and pure water
+   (C) iron oxide and copper oxide
+   (D) copper metal (deposited on the nail) and iron sulphate (dissolved in the solution)
 
-34. Why is freshly made rust especially damaging to an iron railing over the years?
-   (A) Rust forms a hard, shiny shield that protects the iron from further attack
-   (B) Rust makes the iron stronger and heavier, so the railing improves
-   (C) Rust is flaky and crumbles away, exposing fresh iron underneath so the rusting keeps spreading
-   (D) Rust conducts heat away, cooling the iron and stopping any further change
+34. If an already-rusty iron railing is simply painted over without first removing the rust, rusting often continues beneath the paint. The best reason is that:
+   (A) paint chemically turns the rust back into iron
+   (B) the paint adds oxygen that speeds up the rusting
+   (C) the loose, flaky rust still traps moisture and air against the iron, so the chemical change goes on beneath the paint
+   (D) painting over rust always stops every further change permanently
 
-35. Which everyday cooking step is a chemical change?
-   (A) Slicing a loaf of bread into pieces
-   (B) Bread dough baking and browning into a loaf
-   (C) Grinding wheat grains into flour
-   (D) Chilling cooked soup in the refrigerator
+35. Which kitchen change is chemical, because new substances form rather than just a change of shape or state?
+   (A) grating a block of cheese into shreds
+   (B) frying an egg until the runny white turns firm and opaque
+   (C) melting butter in a warm pan
+   (D) freezing leftover curry into a solid block
 
-36. Solar salt pans use the Sun to obtain salt from seawater. The Sun's role is to:
-   (A) chemically change the salt into a brand-new compound
-   (B) melt the salt so it can be poured off
-   (C) evaporate the water so that the dissolved salt is left behind as crystals
-   (D) make the salt react with oxygen in the air
+36. Iodine crystals, when gently warmed, turn into a purple vapour and then re-form as crystals on a cool surface above. This change is classed as physical because:
+   (A) the purple colour proves a new substance is being made
+   (B) the warming chemically splits the iodine into new substances
+   (C) the iodine only changes state (solid → vapour → solid) and stays the same substance, so no new substance forms
+   (D) the crystals that re-form are chemically different from the first crystals
 
-37. A magnet picks up a heap of iron filings; when the magnet is removed, the filings drop and look exactly as before. Magnetising and then de-magnetising the iron is:
-   (A) a physical change, because the iron forms no new substance and is unchanged afterwards
-   (B) a chemical change, because the iron gains magnetic 'energy'
-   (C) rusting, because the iron has been disturbed in air
-   (D) crystallisation, because the filings line up in neat rows
+37. A rubber band is stretched out and then released, snapping back to its original length. This stretching and releasing is best described as:
+   (A) a physical change, because the rubber returns to its original shape and no new substance forms
+   (B) a chemical change, because the rubber gets slightly warm when stretched
+   (C) crystallisation of the rubber as it relaxes
+   (D) an irreversible chemical change
 
-38. A blacksmith heats an iron bar red-hot, bends it into a hook, and lets it cool. Ignoring any thin surface scale, the bending is:
-   (A) a chemical change, because the iron was heated until it glowed
-   (B) rusting, because hot iron always rusts as it cools
-   (C) a physical change, because the bar is still iron, only its shape is different
-   (D) crystallisation, because the cooling metal forms crystals
+38. Glass is heated until it softens, then blown and shaped into a bottle; on cooling it is still glass. The shaping of the hot glass is:
+   (A) a chemical change, because the glass was made very hot
+   (B) crystallisation, because the glass hardens as it cools
+   (C) a physical change, because the glass is only softened and reshaped, staying the same substance
+   (D) rusting, because very hot materials always corrode
 
-39. At night, leaves respire: they take in oxygen and break down sugar, releasing carbon dioxide and energy. Respiration is a chemical change because it:
-   (A) breaks down sugar into new substances (carbon dioxide and water) and releases energy
-   (B) is only a change of state of the sugar inside the leaf
-   (C) can be reversed simply by watering the plant
-   (D) produces no new substance, only warmth
+39. The setting of milk into curd is classed as a chemical change because:
+   (A) new substances form, giving the curd a different taste and texture, and the curd cannot be turned back into milk
+   (B) the milk only changes from a thin liquid to a thicker liquid, a mere change of state
+   (C) cooling the curd will readily turn it back into milk
+   (D) no new substance forms; only the colour of the milk changes
 
 40. A student says, 'A change that releases light and great heat, like a burning sparkler, must be chemical.' Is the reasoning sound?
    (A) Yes, because any release of light or heat by itself always proves a chemical change
@@ -257,17 +257,17 @@
    (C) Yes here, because the sparkler forms new substances; but light and heat alone are not always proof, so the real test is whether a new substance forms
    (D) No, because burning a sparkler is actually a physical change of state
 
-41. Four jars each hold an identical iron nail: (P) dry air with a drying agent; (Q) boiled water sealed under oil; (R) ordinary tap water open to air; (S) salty water open to air. Which nail rusts the MOST?
-   (A) Nail P, because dry air is full of oxygen
-   (B) Nail S, because salty water plus open air gives oxygen, plenty of moisture, and salt that speeds corrosion
-   (C) Nail Q, because the oil traps heat that drives rusting
-   (D) Nail R, because tap water rusts iron faster than salt water
+41. Air is squeezed into a bicycle tyre with a pump; letting the valve open again releases the same air. Compressing and then releasing the air is:
+   (A) a chemical change, because the air becomes warm when compressed
+   (B) a physical change, because only the volume and pressure of the same air change, with no new substance formed
+   (C) crystallisation of the air inside the tyre
+   (D) rusting of the tyre valve
 
-42. Which statement about physical and chemical changes is TRUE?
-   (A) A new substance forms in a chemical change but not in a physical change
-   (B) Every physical change is reversible and every chemical change is irreversible
-   (C) Only chemical changes can ever give out heat
-   (D) Physical changes always produce a precipitate
+42. A burning incense stick gives off scented smoke, leaves a little ash, and cannot be turned back into a whole stick. This is:
+   (A) a chemical change, because new substances (smoke gases and ash) form and the stick cannot be restored
+   (B) a physical change, because the stick only changes shape as it slowly shortens
+   (C) crystallisation, because the ash collects in a small heap
+   (D) merely a change of state, from solid stick to smoke
 
 43. Chrome plating on a steel cycle handle and a sheet of stainless steel both resist rust. The shared reason they resist rusting is that:
    (A) both turn the underlying iron into pure gold
@@ -275,11 +275,11 @@
    (C) both make the iron react faster with oxygen, using it up
    (D) both work only because they are always kept under water
 
-44. Which observation, taken ON ITS OWN, is the WEAKEST evidence that a chemical change has occurred?
-   (A) a gas with a sharp new smell was released
-   (B) a white insoluble precipitate suddenly settled out
-   (C) the substance simply changed from a solid to a liquid
-   (D) the mixture glowed and gave out strong heat and light
+44. The coil of an electric heater glows orange when switched on and returns to dull grey when switched off, staying the same metal throughout. The change in colour is:
+   (A) a chemical change, because the coil reacts with the electricity
+   (B) a chemical change, because heat always makes new substances
+   (C) a physical effect: the hot metal merely glows and returns to the same metal, so no new substance forms
+   (D) crystallisation, because the metal coil changes colour
 
 45. Sublimation of camphor, melting of ice, and bending of a metal spoon are grouped together by a student. What do all three share?
    (A) In each, a new substance forms, so all three are chemical changes
@@ -287,23 +287,23 @@
    (C) Each gives off a gas, so all three are chemical changes
    (D) Each forms a precipitate, so all three are chemical changes
 
-46. The word equation that correctly describes rusting is:
-   (A) iron + carbon dioxide → rust
-   (B) iron + nitrogen → rust
-   (C) iron + salt → rust, with no air or water needed
-   (D) iron + oxygen + water → hydrated iron oxide (rust)
+46. Which statement about rust is correct?
+   (A) rust is just dried mud stuck onto the iron's surface
+   (B) rust is the same iron, only a different colour
+   (C) rust is harder and stronger than the original iron
+   (D) rust is a new substance (a reddish-brown oxide of iron) formed from iron, oxygen and moisture, and it is flaky and weaker than iron
 
-47. Painting an iron tank inside and greasing it outside both prevent rust. The shared mechanism is that paint and grease both:
-   (A) chemically turn the surface iron into zinc
-   (B) dry the iron out so completely that it can never react
-   (C) add a coat of rust that then protects the metal
-   (D) form a barrier that keeps air and moisture from reaching the iron surface
+47. A simple way to slow the rusting of stored steel tools, without applying any coating at all, is to:
+   (A) store them in a damp cellar
+   (B) sprinkle a little salt water on them each week
+   (C) wrap them in a wet cloth
+   (D) keep them in a dry place, for example a box with a moisture-absorbing (silica-gel) sachet, so the moisture needed for rusting is kept away
 
-48. Which change is reversible by a simple physical means?
-   (A) burning a matchstick to ash
-   (B) baking a cake from raw batter
+48. Which change can be reversed, giving back the original material?
+   (A) burning the wick and wax of a candle
+   (B) cooking rice grains until they turn soft
    (C) the souring of milk into curd
-   (D) boiling water to steam and then condensing it back to water
+   (D) melting solid wax and letting it cool and set into solid wax again
 
 49. A teacher demonstrates that limewater turns milky with CO₂. A student suggests blowing exhaled breath through a straw into fresh limewater. The expected result and reason are:
    (A) the limewater turns milky, because exhaled breath contains carbon dioxide that reacts to form a white solid
@@ -323,11 +323,11 @@
    (C) one nail in salty water versus one in plain water — both wet
    (D) one nail painted versus one greased — both sealed from air
 
-52. Which statement about crystallisation is CORRECT?
-   (A) It is a physical change used to obtain pure crystals of a substance from its solution
-   (B) It is a chemical change because new crystals are a new substance
-   (C) It works only by burning the solution to dryness
-   (D) It always releases a gas as the crystals form
+52. Crystallisation is used to obtain pure, well-shaped crystals of a substance. Which of these is a real-life example of crystallisation?
+   (A) obtaining clean sugar-candy (mishri) crystals from a concentrated sugar solution
+   (B) burning wood to get a heap of ash
+   (C) rusting an iron nail to get a brown powder
+   (D) cutting a fruit into neat slices
 
 53. Cooking a raw egg until it sets is irreversible, yet the change of milk into curd is also irreversible. A student concludes 'both are chemical because both are irreversible.' The conclusion happens to be right, but the REASONING is flawed because:
    (A) irreversibility alone does not prove a change is chemical; the real proof is that new substances form, which they do here
@@ -341,11 +341,11 @@
    (C) rusting needs only moisture, since tube B had water yet did not rust
    (D) iron cannot rust under any laboratory conditions
 
-55. A laboratory note lists four observations from one experiment: 'a white precipitate appeared, a gas bubbled off, a sharp new smell arose, and a lot of heat was released.' How many of these are recognised clues of a chemical change?
-   (A) four
-   (B) three
-   (C) two
-   (D) one
+55. Why can a chemical change usually NOT be reversed by a simple physical method such as cooling or filtering, while many physical changes can?
+   (A) because a chemical change forms new substances with new properties, so the originals cannot be restored by a mere physical step, whereas a physical change keeps the same substance
+   (B) because physical changes always involve heating and chemical changes always involve cooling
+   (C) because chemical changes never give out any visible clue
+   (D) because physical changes always form a precipitate
 
 56. Which comparison of dissolving common salt versus burning a candle is CORRECT?
    (A) Both are chemical changes because both make the substance disappear
@@ -359,11 +359,11 @@
    (C) Check only whether the colour change was bright enough to see
    (D) Smell the gas and decide based on whether it is pleasant or unpleasant
 
-58. A thin iron sheet is dipped into molten zinc to galvanise it. The dipping step itself, before any later corrosion, is best described as:
-   (A) a chemical change that turns the iron into a brand-new metal
-   (B) rusting, because hot metal always corrodes during dipping
-   (C) a physical coating process — a layer of zinc is laid over the iron without changing the iron's identity
-   (D) crystallisation of the iron out of the molten zinc
+58. Writing with a piece of chalk on a board leaves white chalk marks; the chalk on the board is still chalk. This is:
+   (A) a chemical change, because a new white substance appears on the board
+   (B) crystallisation of the chalk onto the board
+   (C) a physical change, because the chalk is only ground off onto the board and remains the same chalk
+   (D) a chemical change, because the chalk reacts with the surface of the board
 
 59. Which single observation, by itself, would MOST strongly suggest that a chemical change has happened rather than a physical one?
    (A) A solid block is sawn into several smaller blocks
