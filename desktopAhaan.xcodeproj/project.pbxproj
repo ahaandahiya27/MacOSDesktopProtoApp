@@ -2219,6 +2219,10 @@
 		D61B8C581D41FF8AEC7A8701 /* Paper_39_Light_Electricity_Symmetry_PerimeterArea_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = B097E0AE07248FBEBFF9F4D9 /* Paper_39_Light_Electricity_Symmetry_PerimeterArea_QuestionPaper.pdf */; };
 		856A4DEFD6D45261DFE951A9 /* Paper_39_Light_Electricity_Symmetry_PerimeterArea_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 4E84F38AF34F834644520F7E /* Paper_39_Light_Electricity_Symmetry_PerimeterArea_Questions.md */; };
 		188312A61A13D1B8B7607C63 /* Paper_39_Light_Electricity_Symmetry_PerimeterArea_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = CE5FBF4F8B7E3F1D088B17A3 /* Paper_39_Light_Electricity_Symmetry_PerimeterArea_Solutions.html */; };
+		D97B0EFE131004D173A0FB67 /* Paper_40_Weather_Transportation_DataHandling_RationalNumbers_QuestionPaper.html in Resources */ = {isa = PBXBuildFile; fileRef = EE1B8827C5BF9F75A7383624 /* Paper_40_Weather_Transportation_DataHandling_RationalNumbers_QuestionPaper.html */; };
+		7F0925BD10D09B002CB5DDCF /* Paper_40_Weather_Transportation_DataHandling_RationalNumbers_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3F51BD5DB9E4A25010EEF238 /* Paper_40_Weather_Transportation_DataHandling_RationalNumbers_QuestionPaper.pdf */; };
+		734035DDE73BFAF55F701C58 /* Paper_40_Weather_Transportation_DataHandling_RationalNumbers_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 7480ACE6F17E8A10045A4885 /* Paper_40_Weather_Transportation_DataHandling_RationalNumbers_Questions.md */; };
+		B28212F6F5B3BCA91C8DF81D /* Paper_40_Weather_Transportation_DataHandling_RationalNumbers_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 68A134A93550CFDF4C5313F6 /* Paper_40_Weather_Transportation_DataHandling_RationalNumbers_Solutions.html */; };
 		4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */ = {isa = PBXBuildFile; fileRef = ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */; };
 		CF6289FBCF676858C99ED670 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F17B590EF6DA751E23E41 /* Contents.json */; };
 		9AE05997509D9842F29172EB /* maths_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E448E6E8BEEB87620A8C798 /* maths_class7.json */; };
@@ -4078,6 +4082,10 @@
 		B097E0AE07248FBEBFF9F4D9 /* Paper_39_Light_Electricity_Symmetry_PerimeterArea_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_39_Light_Electricity_Symmetry_PerimeterArea_QuestionPaper.pdf"; sourceTree = "<group>"; };
 		4E84F38AF34F834644520F7E /* Paper_39_Light_Electricity_Symmetry_PerimeterArea_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_39_Light_Electricity_Symmetry_PerimeterArea_Questions.md"; sourceTree = "<group>"; };
 		CE5FBF4F8B7E3F1D088B17A3 /* Paper_39_Light_Electricity_Symmetry_PerimeterArea_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_39_Light_Electricity_Symmetry_PerimeterArea_Solutions.html"; sourceTree = "<group>"; };
+		EE1B8827C5BF9F75A7383624 /* Paper_40_Weather_Transportation_DataHandling_RationalNumbers_QuestionPaper.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_40_Weather_Transportation_DataHandling_RationalNumbers_QuestionPaper.html"; sourceTree = "<group>"; };
+		3F51BD5DB9E4A25010EEF238 /* Paper_40_Weather_Transportation_DataHandling_RationalNumbers_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_40_Weather_Transportation_DataHandling_RationalNumbers_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		7480ACE6F17E8A10045A4885 /* Paper_40_Weather_Transportation_DataHandling_RationalNumbers_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_40_Weather_Transportation_DataHandling_RationalNumbers_Questions.md"; sourceTree = "<group>"; };
+		68A134A93550CFDF4C5313F6 /* Paper_40_Weather_Transportation_DataHandling_RationalNumbers_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_40_Weather_Transportation_DataHandling_RationalNumbers_Solutions.html"; sourceTree = "<group>"; };
 		ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "QUESTION_INDEX.json"; sourceTree = "<group>"; };
 		5C7F17B590EF6DA751E23E41 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Contents.json"; sourceTree = "<group>"; };
 		69191026B2F9F250C1D2E9BD /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement.swift"; sourceTree = "<group>"; };
@@ -6569,6 +6577,10 @@
 				B097E0AE07248FBEBFF9F4D9,
 				4E84F38AF34F834644520F7E,
 				CE5FBF4F8B7E3F1D088B17A3,
+				EE1B8827C5BF9F75A7383624,
+				3F51BD5DB9E4A25010EEF238,
+				7480ACE6F17E8A10045A4885,
+				68A134A93550CFDF4C5313F6,
 				ECD0916CC0210824B2615292,
 			);
 			path = "BossChallengePapers";
@@ -10315,6 +10327,10 @@
 				D61B8C581D41FF8AEC7A8701 /* Paper_39_Light_Electricity_Symmetry_PerimeterArea_QuestionPaper.pdf in Resources */,
 				856A4DEFD6D45261DFE951A9 /* Paper_39_Light_Electricity_Symmetry_PerimeterArea_Questions.md in Resources */,
 				188312A61A13D1B8B7607C63 /* Paper_39_Light_Electricity_Symmetry_PerimeterArea_Solutions.html in Resources */,
+				D97B0EFE131004D173A0FB67 /* Paper_40_Weather_Transportation_DataHandling_RationalNumbers_QuestionPaper.html in Resources */,
+				7F0925BD10D09B002CB5DDCF /* Paper_40_Weather_Transportation_DataHandling_RationalNumbers_QuestionPaper.pdf in Resources */,
+				734035DDE73BFAF55F701C58 /* Paper_40_Weather_Transportation_DataHandling_RationalNumbers_Questions.md in Resources */,
+				B28212F6F5B3BCA91C8DF81D /* Paper_40_Weather_Transportation_DataHandling_RationalNumbers_Solutions.html in Resources */,
 				4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */,
 				CF6289FBCF676858C99ED670 /* Contents.json in Resources */,
 				9AE05997509D9842F29172EB /* maths_class7.json in Resources */,
