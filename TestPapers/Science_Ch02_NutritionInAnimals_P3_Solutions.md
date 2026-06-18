@@ -94,7 +94,7 @@ Answer-key distribution: A = 15, B = 15, C = 15, D = 15.
 
 **30. (A)** Cells release energy from glucose mainly in their mitochondria, and using absorbed nutrients this way is part of assimilation. 'Villi / absorption' is wrong; villi absorb nutrients, they do not burn them, and absorption is the prior step. 'Food vacuoles / digestion' is wrong; food vacuoles are Amoeba structures, and burning glucose is not digestion. 'Salivary glands / ingestion' is unrelated to releasing energy in cells.
 
-**31. (D)** Protein digestion starts in the stomach (pepsin and acid) and is completed in the small intestine, where the building blocks are then absorbed. 'Only in the mouth' is wrong; saliva does not digest protein. 'Broken down in the large intestine, absorbed in the stomach' misplaces both processes. 'Not broken down at all' is wrong; protein must be digested before its parts can be absorbed.
+**31. (D)** Humans have just two sets of teeth in a lifetime: the milk teeth (about 20) appear in early childhood and begin to fall out around age 6–8, and are replaced by a permanent set of up to 32. So the child's lost front tooth is a milk tooth giving way to a permanent one, and the parent's larger count is the completed permanent set. (A) is wrong because teeth are replaced only once, not continuously year on year. (B) is wrong because the baby's teeth are milk teeth and do change. (C) is wrong because teeth do not grow from chewed food; the extra adult teeth come with the permanent set.
 
 **32. (D)** The food pipe's muscular walls squeeze in waves (peristalsis), moving food along even when gravity cannot help. 'Rigid like a bone' is wrong; it is muscular and flexible. 'Absorbs food into blood' is wrong; the food pipe does not absorb nutrients. 'Filled with bile' is wrong; bile is in the small intestine, not the food pipe.
 
@@ -102,7 +102,7 @@ Answer-key distribution: A = 15, B = 15, C = 15, D = 15.
 
 **34. (B)** Tooth shape matches diet — sharp pointed teeth tear meat, broad flat teeth grind plant food. 'Larger animals always flatter' is false; shape tracks diet, not size. 'Identical teeth' contradicts the stated difference. 'Random and unrelated' ignores the clear food-to-tooth match.
 
-**35. (B)** Salivary amylase begins starch digestion in the mouth, and the resulting sugar is mainly absorbed across the villi of the small intestine. 'Started in the stomach' is wrong; the mouth starts starch digestion. 'Absorbed in the stomach/large intestine' is wrong; sugars are absorbed in the small intestine. 'Started in the liver, absorbed in the mouth' is wrong on both organs.
+**35. (B)** Salivary amylase starts breaking starch into sugar in the mouth, but the food is swallowed within seconds — long before the change is complete — and the stomach's acid then halts the amylase. Starch digestion is finished only in the small intestine, where the pancreatic juice and the intestinal juice act on it. (A) is wrong: the stomach's acid and pepsin act on protein, not starch, and the acid in fact stops amylase. (C) is wrong: the mouth only begins starch digestion; food is swallowed before it can finish there. (D) is wrong: the large intestine absorbs water and does not complete digestion.
 
 **36. (D)** Saliva's amylase acts on starch, gastric pepsin on protein, and bile emulsifies fat — the correct matching. The two 'rotated' options misassign each secretion to the wrong food type. 'All act on starch' is wrong; only saliva acts on starch, while gastric juice handles protein and bile handles fat.
 

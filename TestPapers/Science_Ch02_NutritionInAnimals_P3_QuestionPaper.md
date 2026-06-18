@@ -197,11 +197,11 @@
    (C) Food vacuoles; and this falls under digestion
    (D) Salivary glands; and this falls under ingestion
 
-31. A meal of paneer (protein-rich) is followed from mouth to absorption. Where is its protein chiefly broken down, and where are the resulting building blocks mainly absorbed?
-   (A) Protein is broken down only in the mouth; absorbed in the large intestine
-   (B) Protein is broken down in the large intestine; absorbed in the stomach
-   (C) Protein is not broken down at all; absorbed whole in the mouth
-   (D) Protein is broken down mainly in the stomach and small intestine; its building blocks are absorbed in the small intestine
+31. A six-year-old loses a front tooth and a new one grows in its place; a baby has only 20 teeth while its parent has 32. A student asks why teeth are 'replaced'. The best explanation is:
+   (A) Teeth are replaced continuously throughout life, a new one growing every year
+   (B) The baby's 20 teeth are permanent and will never change
+   (C) Adults grow extra teeth from the food they chew, which is why they have more than babies
+   (D) The first set are milk teeth that fall out around age 6–8 and are replaced by a permanent set of up to 32; humans get only these two sets
 
 32. A student claims, 'Because the food pipe just carries food, no muscle is involved — food falls down by gravity.' Two facts disprove this. Which option states them correctly?
    (A) The food pipe is rigid like a bone, so food slides down without muscle
@@ -221,11 +221,11 @@
    (C) All mammals have identical teeth; the dog's only look different
    (D) Teeth shape is random and unrelated to what an animal eats
 
-35. Trace one mouthful of rice. In which organ is its starch digestion first STARTED, and in which is the resulting sugar mainly ABSORBED?
-   (A) Started in the stomach; absorbed in the large intestine
-   (B) Started in the mouth; absorbed in the small intestine
-   (C) Started in the small intestine; absorbed in the stomach
-   (D) Started in the liver; absorbed in the mouth
+35. Starch digestion begins in the mouth, yet a student is puzzled that it does not finish there, since food is swallowed long before it has all turned to sugar. In which region is starch digestion finally COMPLETED, and which juices act on it there?
+   (A) In the stomach, completed by hydrochloric acid and pepsin
+   (B) In the small intestine, completed by the juices of the pancreas and the intestine
+   (C) In the mouth itself, completed by saliva just before swallowing
+   (D) In the large intestine, completed as water is absorbed
 
 36. Three secretions are matched to their food target: saliva, gastric juice, and bile. Which matching is fully correct?
    (A) Saliva starts protein; gastric juice starts fat; bile starts starch
