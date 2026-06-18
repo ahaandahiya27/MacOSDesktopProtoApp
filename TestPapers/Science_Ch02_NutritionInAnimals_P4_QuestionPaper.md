@@ -29,11 +29,11 @@
    (C) Digestion is failing; the simple molecules in the blood prove ingestion worked but nothing was broken down
    (D) Egestion is failing; the wasting away proves the body is keeping undigested waste inside
 
-3. Two pipes carry waste out of the body. Pipe 1 removes fibre and dead gut-lining cells mixed in the food residue; Pipe 2 removes carbon dioxide and other substances formed when cells release energy. A student labels both 'egestion'. Identify the one true error and the correct labels.
-   (A) Pipe 2 is wrongly labelled; Pipe 1 is egestion (undigested residue) while Pipe 2 is excretion (cell-made waste)
-   (B) Pipe 1 is wrongly labelled; Pipe 1 is excretion (it removes dead cells) while Pipe 2 is egestion
-   (C) Both labels are correct; egestion covers any waste leaving the body whatever its source
-   (D) Both labels are wrong; both pipes carry out excretion because both remove waste
+3. A student is told that faeces contain not only undigested fibre but also dead cells shed from the gut lining. She reasons: 'Since dead body cells are leaving, passing faeces must be excretion, not egestion.' Why is she wrong?
+   (A) Passing faeces is still egestion: the fibre and shed lining cells leave the food canal without ever having been taken into the body's living cells and used, whereas excretion removes waste the cells themselves made by their own chemistry, such as carbon dioxide
+   (B) She is right; because dead cells are present, the process must be excretion
+   (C) It is excretion, because the dead cells were once part of living body tissue
+   (D) It is neither egestion nor excretion, since a mix of food residue and cells fits no single term
 
 4. A teacher says: 'Egestion and excretion both get rid of unwanted matter, yet only one of them ever involved the digestive enzymes.' Which is which, and why?
    (A) Excretion involved the enzymes, since cell waste is made by enzymes; egestion never met any enzyme
@@ -167,23 +167,23 @@
    (C) Fat is no longer emulsified, and water absorption in the large intestine stops
    (D) Saliva stops being made, and the food pipe loses its peristalsis
 
-26. The stomach wall is itself mostly protein and is bathed in protein-digesting pepsin and acid, yet it is not digested. A student says 'the wall must contain no protein, so pepsin finds nothing to attack.' Why is this reasoning wrong, and what is the real protection?
-   (A) The student is right; the stomach wall genuinely contains no protein
-   (B) The wall is protected because bile from the liver constantly neutralises the stomach acid
-   (C) The wall is protected because it is made of bone, which pepsin cannot digest
-   (D) The wall IS made of protein; it is protected because a layer of mucus coats the lining and shields it from the acid and pepsin
+26. Surgeons note that if the protective lining of the stomach is stripped away in just one spot, an ulcer (a self-digested sore) forms there, even though the rest of the wall — equally made of protein — stays intact. What does the ulcer appearing only at the stripped spot prove about how the stomach normally avoids digesting itself?
+   (A) It proves the stomach wall contains no protein except at the stripped spot
+   (B) It proves bile from the liver normally coats and protects the whole wall
+   (C) It proves the acid and pepsin are dangerous only where the wall is thickest
+   (D) It proves the wall IS digestible protein, and the normal protection is the mucus layer coating the lining — remove that layer and the exposed protein is attacked
 
-27. Pepsin needs strongly acidic surroundings, but the enzymes waiting in the small intestine do not. Tracing the half-digested protein paste as it leaves the stomach for the small intestine, what must happen to it for digestion to continue smoothly?
-   (A) It must be made even more acidic, since all digestive enzymes prefer strong acid
-   (B) It must be kept exactly as acidic as the stomach so pepsin keeps working forever
-   (C) It must be dried out completely before the intestinal enzymes can act on it
-   (D) Its strong acidity must be reduced (neutralised) in the small intestine, because the intestinal enzymes work in non-acidic conditions
+27. In a patient, the fluid that normally neutralises stomach acid fails to reach the first part of the small intestine, so the chyme there stays as strongly acidic as it was in the stomach. Pancreatic enzymes are present in normal amounts. Predict the effect on digestion in that region, and why.
+   (A) Digestion speeds up there, because more acid always means faster enzyme action
+   (B) Only protein digestion improves there, because pepsin keeps working in the acid
+   (C) Nothing changes, because intestinal enzymes work equally well at any acidity
+   (D) Digestion there is impaired, because the pancreatic enzymes need non-acidic (neutralised) surroundings and cannot work well while the chyme stays strongly acidic
 
-28. A label is needed for two semi-processed materials: (i) the thick semi-liquid paste the human stomach pushes into the small intestine, and (ii) the partly digested grass a cow brings back up to chew. A student labels (i) 'cud' and (ii) 'chyme'. Correct the labels.
-   (A) Both should be called chyme, since both are partly digested food
-   (B) (i) is cud and (ii) is bile, since bile is what a cow re-chews
-   (C) Both should be called cud, since 'cud' covers any partly digested mass
-   (D) (i) is chyme and (ii) is cud; the student swapped the two names
+28. A quiz gives two clues: Material 1 is made inside an animal with a single-chambered stomach and is never chewed again; Material 2 is brought back up to the mouth and chewed a second time. A student must name each. Which naming is correct?
+   (A) Material 1 is cud and Material 2 is chyme
+   (B) Both are chyme, since both are partly digested food
+   (C) Both are cud, since 'cud' covers any partly digested mass
+   (D) Material 1 is chyme (the single-stomach paste, never re-chewed) and Material 2 is cud (regurgitated and chewed again)
 
 29. Three organs are described only by what they do to food: Organ X churns and mixes food with acid, Organ Y completes digestion and absorbs most nutrients, Organ Z recovers water from the leftover. Place them in the order food actually meets them.
    (A) Y (small intestine) first, then X (stomach), then Z (large intestine)
@@ -197,23 +197,23 @@
    (C) The stomach's role is to churn and start digestion, while absorption of nutrients is mainly the small intestine's job, thanks to its villi
    (D) The stomach absorbs nothing because it has no blood supply at all
 
-31. Two model guts have equal length and equal time for food to pass. Gut A has a smooth lining; Gut B's lining is densely folded into millions of tiny finger-like projections. Gut B absorbs far more nutrients. The single best reason is that the projections:
-   (A) Speed the food up so it spends less time being wasted in the gut
-   (B) Greatly increase the inner surface area, so far more nutrient-absorbing contact is packed into the same length
-   (C) Make Gut B more acidic, which dissolves the nutrients faster
-   (D) Produce extra bile inside Gut B to break down the fats
+31. An engineer is told that if the small intestine's millions of finger-like projections were flattened smooth, the wall would keep only a tiny fraction of its present absorbing surface. Using only this fact, what is the single best explanation for why the projections matter to nutrition?
+   (A) The projections make food travel faster, leaving less waste behind
+   (B) The projections pack a very large absorbing surface into a limited length of gut, so far more digested nutrients can be taken up
+   (C) The projections make the intestine more acidic, dissolving nutrients faster
+   (D) The projections manufacture extra bile to finish digesting fats
 
-32. A disease flattens the villi of the small intestine so the lining becomes smooth, although the person keeps eating and digesting normally. Trace the consequence to the person's body weight over months.
-   (A) Digestion in the mouth speeds up to compensate, so the person gains weight
-   (B) The stomach churns harder to push nutrients through, so weight stays the same
-   (C) Absorption drops sharply because the surface area is lost, so the person grows undernourished and loses weight despite eating
-   (D) The liver makes extra bile to absorb the nutrients instead, so nothing changes
+32. A child with flattened intestinal villi is undernourished despite eating well. After a year on a special diet the villi regrow and become finger-like again, and the child's weight returns to normal even though the amount eaten does not change. What does the recovery demonstrate?
+   (A) Eating more food, not the villi, controls nourishment
+   (B) The stomach, not the villi, absorbs the nutrients once it churns harder
+   (C) Nourishment depended on the villi providing absorbing surface: lose them and absorption falls, regrow them and absorption — and weight — recover
+   (D) Bile production rose with the new diet and absorbed the nutrients directly
 
-33. Inside each villus run tiny blood vessels. A meal of rice is digested to glucose, which then crosses the villus wall into those vessels and is carried to a working muscle. Name, in order, the step happening AT the villus and the step happening AT the muscle.
-   (A) Digestion at the villus, then absorption at the muscle
-   (B) Absorption at the villus, then assimilation at the muscle
-   (C) Assimilation at the villus, then absorption at the muscle
-   (D) Absorption at the villus, then egestion at the muscle
+33. After a protein meal, an amino acid crosses the wall of a villus into the blood; weeks later that same amino acid is found built into a brand-new muscle fibre the child has grown. Name the nutrition step at the villus and the nutrition step in the growing muscle.
+   (A) Digestion at the villus, then absorption in the muscle
+   (B) Absorption at the villus, then assimilation in the muscle
+   (C) Assimilation at the villus, then absorption in the muscle
+   (D) Absorption at the villus, then egestion in the muscle
 
 34. A student claims 'the villi must be where digestion is completed, because that is where the simple molecules finally appear.' Correct the reasoning precisely.
    (A) The student is right; villi are the main digesting organs of the body
@@ -233,29 +233,29 @@
    (C) It is wrong only about length; the large intestine does absorb most nutrients despite being short
    (D) It is wrong only about importance; the large intestine still absorbs most nutrients
 
-37. A patient's large intestine reabsorbs far too LITTLE water from the residue. Predict the symptom, and contrast it with reabsorbing too much.
-   (A) Too little water gives hard dry stools; too much gives watery stools
-   (B) Too little water causes vomiting of stomach acid; too much speeds fat digestion
-   (C) Either way the stool is unchanged, because the large intestine does not handle water
-   (D) Too little water gives loose, watery stools; too much water gives hard, dry stools (constipation)
+37. After an infection rushes food through the gut so fast that the large intestine has almost no time to take water back from the residue, the person passes very loose, watery stools. Using this, predict what passing hard, dry stools (constipation) would instead indicate about water in the large intestine.
+   (A) Constipation would mean the large intestine took back too little water, the same as the watery case
+   (B) Constipation would mean the large intestine stopped handling water altogether
+   (C) Constipation would mean stomach acid was being vomited up
+   (D) Constipation would mean the large intestine took back too MUCH water from the residue, the opposite of the watery-stool case
 
-38. A child accidentally swallows a small, smooth, indigestible plastic bead. Following the five steps, predict its fate and name the only two steps it can take part in.
-   (A) It is digested by stomach acid into harmless nutrients and absorbed
-   (B) It is assimilated into the child's bones along with calcium
-   (C) It is excreted as a chemical waste made inside the child's cells
-   (D) It is taken in (ingestion) and later passed out with the residue (egestion); it cannot be digested, absorbed or assimilated
+38. A doctor follows a swallowed metal coin on X-rays. It travels through the stomach and intestines unchanged and finally leaves with the faeces. Naming the five steps, which steps did the coin take part in, and which could it never take part in?
+   (A) It was digested and absorbed, then egested as nutrients
+   (B) It was assimilated into the child's bones along with the meal's calcium
+   (C) It was excreted as a chemical waste made inside the body's cells
+   (D) It took part only in ingestion (it was swallowed) and egestion (it left with the residue); being unbreakable, it could never be digested, absorbed or assimilated
 
-39. The liver is the body's largest gland and makes bile, yet bile contains NO digestive enzyme. A student concludes 'therefore bile cannot help digestion at all.' Refute this and state bile's real action and where it occurs.
-   (A) The student is right; with no enzyme, bile is useless for digestion
-   (B) Bile chemically cuts fat into amino acids in the stomach without any enzyme
-   (C) Bile, made by the liver and acting in the small intestine, breaks large fat globules into tiny droplets so that fat-digesting enzymes can work on them more easily
-   (D) Bile turns fat into starch in the small intestine so that starch enzymes can finish it
+39. In a tube, a large blob of oil sits in water; adding a drop of bile breaks the blob into a cloud of tiny droplets, yet a chemical test shows the oil's molecules are still whole, not cut into smaller ones. A student says this proves bile 'digests' the fat. Correct the statement and name what bile actually did and where it does so in the body.
+   (A) The student is right; breaking the blob apart is chemical digestion of the fat
+   (B) Bile chemically cut the oil into amino acids, which the test missed
+   (C) Bile did NOT digest the fat (the molecules are unchanged); it emulsified it — physically breaking large fat globules into tiny droplets — which in the body happens in the small intestine and lets fat-digesting enzymes work faster
+   (D) Bile turned the oil into starch, which the test cannot detect
 
-40. A patient's gall bladder is removed. Over the next year, fatty meals trouble them most while starchy and protein meals are handled almost normally. What does this pattern reveal about what the gall bladder stored and what that fluid mainly assists?
-   (A) The gall bladder made pepsin, which mainly digests fats, so fatty meals suffer
-   (B) The gall bladder stored bile, and bile mainly assists the digestion of fats, so only fatty meals are affected
-   (C) The gall bladder stored amylase, so its loss should have harmed starchy meals instead
-   (D) The gall bladder produced acid for the stomach, so all three meal types should suffer equally
+40. A person whose bile-storing sac was removed is advised to avoid large fatty meals, but is told starchy and protein meals need no special caution. From this advice alone, what can be concluded about the fluid that sac stored and the food it chiefly helps with?
+   (A) The sac stored pepsin, the stomach's fat-digesting enzyme
+   (B) The sac stored bile, and bile chiefly helps with fats — which is why only large fatty meals need caution
+   (C) The sac stored amylase, so starchy meals should have needed the caution instead
+   (D) The sac made stomach acid, so all three food types should need equal caution
 
 41. A bile-duct blockage stops bile from reaching the small intestine, while saliva, gastric juice and pancreatic enzymes all still arrive. Of starch, protein and fat, which is MOST hampered, and what subtle effect remains on the others?
    (A) Fat is most hampered because, without bile, it stays in large globules that enzymes struggle to act on; starch and protein digestion continue almost normally
@@ -263,17 +263,17 @@
    (C) Protein is most hampered, because bile activates the protein enzymes; fat is unaffected
    (D) All three are hampered equally, because bile is required to digest every food type
 
-42. Three secretions are matched to one food type each: saliva, gastric juice (pepsin), and bile. Which matching is fully correct in both the food acted on AND the nature of the action?
-   (A) Saliva chemically starts protein; gastric pepsin starts fat; bile chemically breaks starch
-   (B) Saliva emulsifies fat; gastric pepsin starts starch; bile chemically breaks protein
-   (C) All three chemically break the same food, starch, in different organs
-   (D) Saliva chemically starts starch; gastric pepsin chemically starts protein; bile physically emulsifies fat (no chemical breakdown)
+42. A table claims, for one secretion, both the food it acts on and the nature of its action. Which single row is correct in BOTH columns?
+   (A) Gastric pepsin — acts on starch — by chemical breakdown
+   (B) Saliva — acts on fat — by emulsification
+   (C) Bile — acts on protein — by chemical breakdown
+   (D) Bile — acts on fat — by emulsification (a physical change, with no enzyme)
 
-43. The pancreatic juice acts on carbohydrates, proteins AND fats. If a tube carrying ONLY pancreatic juice were blocked while saliva and gastric juice still flowed, which broad outcome best fits?
-   (A) Only starch digestion in the mouth fails, since the pancreas makes salivary amylase
-   (B) Only protein digestion in the stomach fails, since the pancreas makes pepsin
-   (C) Only water absorption in the large intestine fails, since the pancreas absorbs water
-   (D) Digestion of carbohydrates, proteins and fats in the small intestine is all impaired together, since the pancreas supplies enzymes for all three there
+43. Three students each predict the result of blocking ONLY the pancreatic juice while saliva and gastric juice still flow. Pancreatic juice carries enzymes for carbohydrates, proteins and fats, all acting in the small intestine. Which prediction is correct?
+   (A) Only mouth starch digestion fails, since the pancreas makes salivary amylase
+   (B) Only stomach protein digestion fails, since the pancreas makes pepsin
+   (C) Only large-intestine water absorption fails, since the pancreas absorbs water
+   (D) Carbohydrate, protein and fat digestion in the small intestine are all impaired together, since the pancreas supplies the small intestine's enzymes for all three
 
 44. Why must the strongly acidic chyme leaving the stomach be neutralised before the pancreatic enzymes act on it in the small intestine?
    (A) Because the pancreatic enzymes work in non-acidic conditions, so the acid from the stomach must first be neutralised for them to function
@@ -281,17 +281,17 @@
    (C) Because neutralising the acid is what actually digests the carbohydrates and fats
    (D) Because the small intestine cannot hold any liquid that is not perfectly dry
 
-45. A cow and a person are each fed nothing but fresh grass for a month. The cow thrives; the person grows weak. A student says 'the cow simply has a bigger stomach.' What is the deeper, correct reason?
-   (A) The cow's stomach is merely larger, so it holds more grass and gets more nutrients from the same food
-   (B) The person has no stomach, so cannot hold the grass long enough to digest it
-   (C) The cow has rumen microbes plus cud re-chewing that together break down the cellulose in grass; the person has neither and cannot digest cellulose
-   (D) Grass needs no digestion, so the cow simply eats more of it than the person does
+45. A scientist jokes that a human could 'live like a cow on grass' only if given two things the cow's body provides for itself. Grass is mostly cellulose, which no mammal's own enzymes break down. What are the two things, and why is each needed?
+   (A) A bigger stomach and more teeth, to hold and grind more grass
+   (B) More saliva and more stomach acid, to dissolve the cellulose chemically
+   (C) Cellulose-digesting microbes (as live in a cow's rumen) and the cud-re-chewing that grinds grass finer for those microbes, because the human's own enzymes cannot break cellulose
+   (D) A longer food pipe and a gall bladder, to push and emulsify the grass
 
-46. A ruminant's four-chambered stomach is examined. Microbes first attack cellulose in the largest chamber; later, acid-and-enzyme digestion like a human stomach occurs in a different chamber. Name these two chambers in that order, and beware the common swap.
-   (A) Microbial cellulose breakdown in the abomasum; acid-and-enzyme digestion in the rumen
-   (B) Microbial cellulose breakdown in the rumen; human-like acid-and-enzyme digestion in the abomasum
-   (C) Microbial cellulose breakdown in the rumen; acid-and-enzyme digestion in the reticulum
-   (D) Microbial cellulose breakdown in the omasum; acid-and-enzyme digestion in the rumen
+46. In a ruminant, Chamber 1 is the large fermentation vat where microbes break down cellulose; Chamber 2 works like a human stomach, using acid and enzymes. A student must name them, avoiding the usual mix-up. Which naming is right?
+   (A) Chamber 1 is the abomasum; Chamber 2 is the rumen
+   (B) Chamber 1 is the rumen; Chamber 2 is the abomasum
+   (C) Chamber 1 is the rumen; Chamber 2 is the reticulum
+   (D) Chamber 1 is the omasum; Chamber 2 is the rumen
 
 47. A cow eats grass quickly in the morning, then rests in the afternoon chewing material brought back up from its stomach. A student says 'the cow is eating fresh grass again.' What is actually happening, and what is this re-chewed material called?
    (A) The cow is eating fresh grass a second time, which is why it chews twice a day
@@ -299,17 +299,17 @@
    (C) The cow is chewing grass that grew inside its stomach during the morning
    (D) The cow is re-chewing the cud — partly digested grass brought back up from the stomach — not eating new grass from outside
 
-48. Re-chewing the cud is said to help a cow get more energy from grass. By what chain of cause and effect does finer grinding lead to more energy released?
-   (A) Finer grinding turns the cellulose directly into sugar in the mouth, which the cow absorbs there
-   (B) Finer grinding exposes more surface of the grass, so rumen microbes and enzymes can break the cellulose down more completely, freeing more usable nutrients
-   (C) Finer grinding heats the grass, and the heat alone releases the energy stored in cellulose
-   (D) Finer grinding turns the cellulose into protein, which carries more energy than cellulose
+48. A cow with an injury can no longer bring food back up to re-chew, though its rumen microbes stay healthy. Fed the same grass, it now extracts noticeably LESS energy from it than before. What chain of cause and effect explains the drop?
+   (A) Without re-chewing, the grass is heated less, and heat is what releases the energy
+   (B) Without re-chewing, the grass stays in coarser pieces with less exposed surface, so the rumen microbes break down less of its cellulose and free fewer usable nutrients
+   (C) Without re-chewing, the grass turns to protein in the mouth instead of to energy
+   (D) Without re-chewing, the cellulose is absorbed whole in the mouth and wasted
 
-49. A goat regurgitates grass, chews it, and re-swallows it. A student concludes the goat 'digests its grass entirely in the mouth, since that is where the long chewing happens.' What is the correct view of where cellulose is actually broken down?
-   (A) The student is right; the long chewing fully digests the cellulose in the mouth
-   (B) The mouth only grinds the cud finer; the cellulose itself is broken down by microbes in the rumen, not in the mouth
-   (C) Cellulose is broken down in the food pipe as the cud is re-swallowed
-   (D) Cellulose is never digested at all; the goat merely stores the cud forever
+49. A goat chews cud for long minutes, yet measurements show the breakdown of cellulose into usable substances keeps rising for hours AFTER the chewing stops, while the cud sits in the largest stomach chamber. What does this timing reveal about where cellulose is really broken down?
+   (A) It is broken down in the mouth; the long chewing does all the work
+   (B) The mouth only grinds the cud finer; the cellulose itself is broken down later by microbes in the rumen, which is why breakdown continues for hours after chewing stops
+   (C) It is broken down in the food pipe as the cud is re-swallowed
+   (D) It is never broken down; the goat merely stores the cud unchanged forever
 
 50. A cow is grouped with deer and buffalo as a ruminant, while a human is not. A student lists four reasons; three are false. Which is the ONE true defining reason?
    (A) Ruminants swallow plant food quickly and later return it to the mouth to chew again as cud
@@ -317,23 +317,23 @@
    (C) Ruminants digest all their food inside a single cell, unlike humans
    (D) Ruminants have only one stomach chamber, the same as a human
 
-51. An Amoeba captures a food particle with pseudopodia, traps it in a structure, digests it there, absorbs the useful part, and later throws out the rest. Name the trapping structure and the step by which the leftover is thrown out.
-   (A) The trapping structure is a gall bladder; the throwing-out is excretion of cell-made waste
-   (B) The trapping structure is a villus; the throwing-out is absorption of the leftover
-   (C) The trapping structure is a rumen; the throwing-out is assimilation of the leftover
-   (D) The trapping structure is a food vacuole; the throwing-out of leftover is egestion, when the vacuole reaches the cell surface
+51. An Amoeba traps food in a bubble-like pocket, digests and absorbs inside it, then moves the pocket to the cell edge and dumps the leftover outside. A student maps these onto human terms and must pick the right pair for 'the pocket' and 'the dumping.'
+   (A) The pocket is a gall bladder; the dumping is excretion of cell-made waste
+   (B) The pocket is a villus; the dumping is absorption of the leftover
+   (C) The pocket is a rumen; the dumping is assimilation of the leftover
+   (D) The pocket is a food vacuole; the dumping of leftover is egestion, as the vacuole fuses with the cell surface
 
-52. In an Amoeba, digestive enzymes are released INTO the food vacuole, a closed pocket inside the cell. The closest human parallel for WHERE digestive enzymes act is:
-   (A) Inside the cavity (space) of the stomach and intestine, which are enclosed spaces, not inside the body's own cells or the blood
-   (B) Inside the blood, where enzymes act on absorbed nutrients after they enter the blood
-   (C) Inside the body's muscle cells, where the nutrients are finally burnt for energy
-   (D) On the outer skin surface, before the food is even swallowed into the body
+52. A biologist stresses that in BOTH an Amoeba and a human, digestive enzymes never act inside the body's own working cells nor in the blood, but in an enclosed pocket or tube. For the human, the place that matches the Amoeba's food vacuole is:
+   (A) The hollow cavity of the stomach and intestine — enclosed spaces, but still outside the body's own cells and outside the blood
+   (B) Inside the blood, where enzymes act on nutrients once they are absorbed
+   (C) Inside the muscle cells, where the nutrients are finally burnt for energy
+   (D) On the outer skin surface, before the food is even swallowed
 
-53. A pseudopodium is temporary, formed only when needed, while a human stomach is permanent. A student says this 'proves the Amoeba is more advanced because it never wastes energy keeping organs.' Set aside the value judgement and state the key body-plan fact this difference shows.
-   (A) The Amoeba has a permanent organ for each of the five steps, just much smaller than a human's
-   (B) The Amoeba digests all its food outside its body, so it needs no internal organs
-   (C) Being a single cell, the Amoeba improvises temporary structures as needed rather than maintaining fixed organs for each step the way a multi-organ human does
-   (D) The Amoeba cannot move, so it forms pseudopodia only to feel its surroundings
+53. An Amoeba forms a pseudopodium only when it needs to move or feed, then withdraws it; a human keeps a permanent stomach, intestine and so on at all times. Setting aside which is 'better,' what core body-plan fact does this contrast show?
+   (A) The Amoeba keeps a separate permanent organ for each step, only smaller than a human's
+   (B) The Amoeba digests entirely outside its body, so it needs no internal space at all
+   (C) Being a single cell, the Amoeba makes temporary structures on demand for different jobs, instead of maintaining the fixed, specialised organs a multi-organ human relies on
+   (D) The Amoeba cannot move, so the pseudopodium is only for sensing its surroundings
 
 54. A teacher claims: 'An Amoeba and a human both complete all five steps of nutrition; the difference is only in the body plan that carries them out.' Choose the statement that both supports the claim AND correctly states the difference.
    (A) Both ingest, digest, absorb, assimilate and egest; but the Amoeba does all five within one cell while the human spreads them across many specialised organs
@@ -341,11 +341,11 @@
    (C) The Amoeba absorbs nutrients but never egests, so it completes only four of the five steps
    (D) The human ingests and digests but never assimilates, so neither truly completes all five
 
-55. Glucose absorbed from a meal is finally 'burnt' inside body cells to release energy. Name the tiny structures where this energy release mainly happens, and the nutrition step this energy use belongs to.
-   (A) The mitochondria, and this energy use is part of assimilation (cells using absorbed nutrients)
-   (B) The villi, and this energy use is part of absorption
-   (C) The food vacuoles, and this energy use is part of digestion
-   (D) The salivary glands, and this energy use is part of ingestion
+55. A poison stops the tiny cell structures where glucose is 'burnt' to release energy from working, even though glucose still reaches the cells normally. Name those structures, and name the nutrition step that this energy-releasing USE of glucose belongs to.
+   (A) The mitochondria; and the use of absorbed glucose this way is part of assimilation
+   (B) The villi; and this energy use is part of absorption
+   (C) The food vacuoles; and this energy use is part of digestion
+   (D) The salivary glands; and this energy use is part of ingestion
 
 56. Put the whole pathway together for a meal of paneer (protein-rich): name where its protein digestion BEGINS, where that digestion is COMPLETED, and where its building blocks are ABSORBED.
    (A) Begins in the mouth, completed in the stomach, absorbed in the large intestine
@@ -359,11 +359,11 @@
    (C) Starch digestion first begins in the small intestine; the fat is digested in the mouth
    (D) Both the starch and the fat are digested only in the large intestine
 
-58. A meal of sweet, watery fruit is eaten. Comparing where its dissolved SUGAR is mainly absorbed with where its WATER is mainly absorbed, the correct pairing is:
-   (A) Both sugar and water are mainly absorbed in the stomach
-   (B) Sugar is mainly absorbed in the large intestine; water in the small intestine
-   (C) Sugar is mainly absorbed in the small intestine; water is mainly absorbed in the large intestine
-   (D) Both sugar and water are mainly absorbed in the mouth
+58. An athlete gulps a sugary sports drink (dissolved sugar in water). Track where the dissolved SUGAR is mainly taken into the blood versus where most of the remaining WATER is finally reabsorbed. The correct pairing is:
+   (A) Both the sugar and the water are mainly taken up in the stomach
+   (B) Sugar is mainly taken up in the large intestine; water in the small intestine
+   (C) Sugar is mainly taken up in the small intestine (across the villi); most remaining water is reabsorbed in the large intestine
+   (D) Both the sugar and the water are mainly taken up in the mouth
 
 59. An Amoeba wraps a particle in pseudopodia, a butterfly draws nectar through a coiled tube, and a python swallows prey whole. A student insists these three differ in their METHOD of digestion. Pinpoint the conceptual mistake.
    (A) They differ in absorption, since each passes nutrients into its body fluids by a different route

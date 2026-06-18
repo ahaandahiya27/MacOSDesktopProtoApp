@@ -57,3 +57,35 @@ Per-paper audit findings. Appended one section per paper.
   - **Q30** reuses the opening of P1 Q56 ("Glucose absorbed from food is finally 'burnt' inside the cells to release energy…") nearly verbatim, but adds a second required inference — naming the nutrition step (assimilation) — which raises it above P1 Q56's single-answer recall. Kept as a legitimate harder synthesis variant; flagged only for transparency. (Note: the "mitochondria" site of energy release is slightly beyond strict Class-7 Ch2 text but is already used by the in-app P1 paper, so treated as in-bounds for this chapter's depth.)
   - General note: P3/P4/P5 for this chapter share heavy scenario templating with each other. P3 is the senior paper (authored first); that cross-sibling dedup burden falls on P4/P5 when they are audited, so no P3 edits were made on that basis.
 - **Assets:** `.html` regenerated via `make_html.py` (66 KB, new content verified present, old stems absent); `.pdf` regenerated via Chrome headless (8 pp, 297 KB, "milk teeth" text confirmed via pdftotext). Both current and in sync with the `.md` files.
+
+### Science_Ch02_NutritionInAnimals_P4 — FIXED
+- **Validator:** GREEN before and after edits (60 Qs, 4 options each, 60-entry key, no dup stems, key matches solutions).
+- **Blind re-solve:** all 60 original keys independently confirmed correct on first pass — **zero key errors**. Each question has exactly one defensible correct option. Structure, header, marking scheme (+4/−1/0, 240 max, 90 min) and the 15/15/15/15 answer distribution are all correct.
+- **Uniqueness defects found & FIXED (22 questions):** P4 was, for ~37% of its items, a lightly-reworded clone of P3 — same scenario, same correct answer, and usually the same distractor set (e.g. P4 Q58 was *verbatim* P3 Q54 / P5 Q47, "sweet, watery fruit… sugar vs water"). The per-paper validator only checks dup stems *within* one file, so it never caught this. Each of the following P4 questions was rewritten to a fresh, harder scenario that does not appear in P1, P3 or P5 (or elsewhere in P4); the correct-answer letter was kept identical to the original so the answer key and 15/15/15/15 distribution are unchanged:
+  - Q3 (A) egestion-vs-excretion: was "two waste pipes" (≈P3 Q3/P5 Q3) → now the shed-gut-lining-cells trap ("dead cells leaving = excretion?").
+  - Q26 (D) stomach self-protection: was "wall has no protein?" (≈P3 Q13/P5 Q21) → now the ulcer-at-the-stripped-spot evidence for the mucus layer.
+  - Q27 (D) neutralisation: was generic "what must happen to the paste" (≈P3 Q48/P5 Q22) → now predict-from-failure (neutralising fluid never arrives, chyme stays acidic).
+  - Q28 (D) chyme vs cud: was "student labels (i)/(ii)" (≈P3 Q15/P5 Q23) → now identify each from defining properties (single-chamber, never re-chewed vs regurgitated).
+  - Q31 (B) villi surface area: was "two model guts A/B" (≈P3 Q43/P5 Q24) → now "flatten → only a tiny fraction of surface remains" reasoning.
+  - Q32 (C) villi flattening: was the flatten-villi consequence (≈P3 Q17/P5 Q25) → now a recovery experiment (villi regrow, weight returns at constant intake).
+  - Q33 (B) absorption vs assimilation: was rice-glucose-to-muscle (≈P3 Q23/P5 Q26) → now an amino acid built into a *new muscle fibre* (growth, not energy).
+  - Q37 (D) large-intestine water: was generic too-little-water (≈P3 Q22/P5 Q30) → now infer constipation from the watery-stool case (infection rushing transit).
+  - Q38 (D) indigestible object: was a plastic bead (≈P3 Q44/P5 Q31) → now a swallowed metal coin followed on X-ray.
+  - Q39 (C) bile emulsifies: was generic "refute bile is useless" (≈P3 Q18/P5 Q32) → now a test-tube oil-blob experiment with "molecules still whole" evidence.
+  - Q40 (B) gall bladder: was "gall bladder removed, fatty meals trouble" (≈P3 Q19/P5 Q33) → now a dietary-advice framing (avoid large fatty meals only).
+  - Q42 (D) three secretions: was the saliva/pepsin/bile triple-match (≈P3 Q36/P5 Q35) → now "pick the ONE table row correct in both columns" (bile = fat = emulsification, physical).
+  - Q43 (D) pancreatic block: was generic blockage (≈P3 Q56/P5 Q36) → now a three-students-predict framing.
+  - Q45 (C) cow vs human grass: was "fed grass a month" (≈P3 Q24/P5 Q39) → now "what two things would a human need to live on grass" (microbes + cud-re-chewing).
+  - Q46 (B) rumen/abomasum: was "name the two chambers in order" (≈P3 Q25/P5 Q38) → now assign Chamber 1/2 from their described functions.
+  - Q48 (B) cud → energy: was generic "why re-chewing helps" (≈P3 Q26/P5 Q41) → now an injured cow that can no longer re-chew gets less energy (reason the deficit).
+  - Q49 (B) goat cellulose site: was generic "digests in mouth?" (≈P3 Q46/P5 Q40) → now timing evidence (breakdown continues for hours after chewing, in the rumen).
+  - Q51 (D) food vacuole + egestion: was generic Amoeba trap-and-discard (≈P3 Q27/P5 Q42) → now a map-Amoeba-onto-human-terms framing.
+  - Q52 (A) enzymes act in cavity: was generic food-vacuole parallel (≈P3 Q28/P5 Q43) → now "outside the body's own working cells and the blood" framing.
+  - Q53 (C) pseudopodium temporary: was "set aside the value judgement" (≈P3 Q29) → now "forms only when needed, then withdraws" body-plan framing.
+  - Q55 (A) mitochondria + assimilation: was generic glucose-burnt (≈P3 Q30) → now a poison that disables the energy-release structures.
+  - Q58 (C) sugar vs water absorption: was *verbatim* "sweet, watery fruit" (≈P3 Q54/P5 Q47) → now an athlete's sugary sports drink.
+- **Independent verification:** all 22 rewrites were blind-solved by a separate examiner pass with no access to the key; every answer matched the intended letter and each was confirmed to have exactly one defensible correct option (none ambiguous/zero-answer). Validator re-run GREEN; key distribution still 15/15/15/15.
+- **Difficulty:** the rewrites preserve or raise the P4 rung (predict-from-failure, evidence-interpretation, identify-from-defining-properties, recovery/timing reasoning) and remove the prior accidental "lateral clone of P3" that broke the P3 < P4 ramp for those items. The 38 non-duplicated P4 questions were already legitimately harder, scenario-based versions of the P1/P3 topics and were left unchanged. Ramp P4 > P3 now holds across the paper.
+- **FLAGGED for human (no edit):**
+  - **Systemic ladder issue:** P3, P4 and P5 for this chapter were all generated from the same scenario seed and remain heavily templated against each other. P3 is already marked FIXED (its audit deferred cross-sibling dedup to P4/P5); P4 is now de-duplicated against P3 **and the current P5**. When **P5** is audited (still PENDING) it must be de-duplicated against P1, P3 and this *new* P4 — expect a similarly large rewrite, since P5 currently clones the same ~20+ scenarios. Recommend the human confirm the P3↔P5 residual overlap is acceptable or schedule a P5 rewrite, since P3 is now locked.
+- **Assets:** `.html` regenerated via `make_html.py` (76 KB, new content verified present); `.pdf` regenerated via Chrome headless (~297 KB). Both current and in sync with the `.md` files.
