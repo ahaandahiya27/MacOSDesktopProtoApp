@@ -2259,6 +2259,10 @@
 		AE46EFA56235BD5BB56B526B /* Paper_49_AcidsBases_ReproductionPlants_ComparingQuantities_Symmetry_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6C8660756A5EE62E3CD15C75 /* Paper_49_AcidsBases_ReproductionPlants_ComparingQuantities_Symmetry_QuestionPaper.pdf */; };
 		95FBF5842B1082FD1FE640BE /* Paper_49_AcidsBases_ReproductionPlants_ComparingQuantities_Symmetry_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 57610139EEE67E993A175FE9 /* Paper_49_AcidsBases_ReproductionPlants_ComparingQuantities_Symmetry_Questions.md */; };
 		B1892997DE6351A38C011445 /* Paper_49_AcidsBases_ReproductionPlants_ComparingQuantities_Symmetry_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 73E2E55F4DC79CF4284CAC7D /* Paper_49_AcidsBases_ReproductionPlants_ComparingQuantities_Symmetry_Solutions.html */; };
+		493A4C6505BF552ECF499EDD /* Paper_50_WeatherClimate_NutritionAnimals_Integers_Triangle_QuestionPaper.html in Resources */ = {isa = PBXBuildFile; fileRef = 0F2D99B12DC6EB2FAF1B5791 /* Paper_50_WeatherClimate_NutritionAnimals_Integers_Triangle_QuestionPaper.html */; };
+		E5DD1394FFCD3658C104A524 /* Paper_50_WeatherClimate_NutritionAnimals_Integers_Triangle_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A6ED9E9401F6927AB84C8E4E /* Paper_50_WeatherClimate_NutritionAnimals_Integers_Triangle_QuestionPaper.pdf */; };
+		6199F0F2F1FEC009B63A13D6 /* Paper_50_WeatherClimate_NutritionAnimals_Integers_Triangle_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 814EB4EA6BD659FBE4E4813B /* Paper_50_WeatherClimate_NutritionAnimals_Integers_Triangle_Questions.md */; };
+		0487E9EEAE65C1863B4F8C45 /* Paper_50_WeatherClimate_NutritionAnimals_Integers_Triangle_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = CE431D055180CB2A41180BBC /* Paper_50_WeatherClimate_NutritionAnimals_Integers_Triangle_Solutions.html */; };
 		4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */ = {isa = PBXBuildFile; fileRef = ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */; };
 		CF6289FBCF676858C99ED670 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F17B590EF6DA751E23E41 /* Contents.json */; };
 		9AE05997509D9842F29172EB /* maths_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E448E6E8BEEB87620A8C798 /* maths_class7.json */; };
@@ -4158,6 +4162,10 @@
 		6C8660756A5EE62E3CD15C75 /* Paper_49_AcidsBases_ReproductionPlants_ComparingQuantities_Symmetry_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_49_AcidsBases_ReproductionPlants_ComparingQuantities_Symmetry_QuestionPaper.pdf"; sourceTree = "<group>"; };
 		57610139EEE67E993A175FE9 /* Paper_49_AcidsBases_ReproductionPlants_ComparingQuantities_Symmetry_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_49_AcidsBases_ReproductionPlants_ComparingQuantities_Symmetry_Questions.md"; sourceTree = "<group>"; };
 		73E2E55F4DC79CF4284CAC7D /* Paper_49_AcidsBases_ReproductionPlants_ComparingQuantities_Symmetry_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_49_AcidsBases_ReproductionPlants_ComparingQuantities_Symmetry_Solutions.html"; sourceTree = "<group>"; };
+		0F2D99B12DC6EB2FAF1B5791 /* Paper_50_WeatherClimate_NutritionAnimals_Integers_Triangle_QuestionPaper.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_50_WeatherClimate_NutritionAnimals_Integers_Triangle_QuestionPaper.html"; sourceTree = "<group>"; };
+		A6ED9E9401F6927AB84C8E4E /* Paper_50_WeatherClimate_NutritionAnimals_Integers_Triangle_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_50_WeatherClimate_NutritionAnimals_Integers_Triangle_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		814EB4EA6BD659FBE4E4813B /* Paper_50_WeatherClimate_NutritionAnimals_Integers_Triangle_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_50_WeatherClimate_NutritionAnimals_Integers_Triangle_Questions.md"; sourceTree = "<group>"; };
+		CE431D055180CB2A41180BBC /* Paper_50_WeatherClimate_NutritionAnimals_Integers_Triangle_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_50_WeatherClimate_NutritionAnimals_Integers_Triangle_Solutions.html"; sourceTree = "<group>"; };
 		ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "QUESTION_INDEX.json"; sourceTree = "<group>"; };
 		5C7F17B590EF6DA751E23E41 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Contents.json"; sourceTree = "<group>"; };
 		69191026B2F9F250C1D2E9BD /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement.swift"; sourceTree = "<group>"; };
@@ -6689,6 +6697,10 @@
 				6C8660756A5EE62E3CD15C75,
 				57610139EEE67E993A175FE9,
 				73E2E55F4DC79CF4284CAC7D,
+				0F2D99B12DC6EB2FAF1B5791,
+				A6ED9E9401F6927AB84C8E4E,
+				814EB4EA6BD659FBE4E4813B,
+				CE431D055180CB2A41180BBC,
 				ECD0916CC0210824B2615292,
 			);
 			path = "BossChallengePapers";
@@ -10475,6 +10487,10 @@
 				AE46EFA56235BD5BB56B526B /* Paper_49_AcidsBases_ReproductionPlants_ComparingQuantities_Symmetry_QuestionPaper.pdf in Resources */,
 				95FBF5842B1082FD1FE640BE /* Paper_49_AcidsBases_ReproductionPlants_ComparingQuantities_Symmetry_Questions.md in Resources */,
 				B1892997DE6351A38C011445 /* Paper_49_AcidsBases_ReproductionPlants_ComparingQuantities_Symmetry_Solutions.html in Resources */,
+				493A4C6505BF552ECF499EDD /* Paper_50_WeatherClimate_NutritionAnimals_Integers_Triangle_QuestionPaper.html in Resources */,
+				E5DD1394FFCD3658C104A524 /* Paper_50_WeatherClimate_NutritionAnimals_Integers_Triangle_QuestionPaper.pdf in Resources */,
+				6199F0F2F1FEC009B63A13D6 /* Paper_50_WeatherClimate_NutritionAnimals_Integers_Triangle_Questions.md in Resources */,
+				0487E9EEAE65C1863B4F8C45 /* Paper_50_WeatherClimate_NutritionAnimals_Integers_Triangle_Solutions.html in Resources */,
 				4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */,
 				CF6289FBCF676858C99ED670 /* Contents.json in Resources */,
 				9AE05997509D9842F29172EB /* maths_class7.json in Resources */,
