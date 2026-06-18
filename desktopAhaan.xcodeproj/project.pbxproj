@@ -2211,6 +2211,10 @@
 		F743A8013E1F5F63AC5DD95C /* Paper_37_Forests_Soil_Integers_ArithExpr_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = B9AD2E8915CBE04CD1B3260C /* Paper_37_Forests_Soil_Integers_ArithExpr_QuestionPaper.pdf */; };
 		62EB757F20346FB0BB1DC8C5 /* Paper_37_Forests_Soil_Integers_ArithExpr_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = AC5CCDCC13C84A5D4F074DC0 /* Paper_37_Forests_Soil_Integers_ArithExpr_Questions.md */; };
 		62AE93384A2C765F8150B702 /* Paper_37_Forests_Soil_Integers_ArithExpr_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = A7DA32A6EF98926092091A4E /* Paper_37_Forests_Soil_Integers_ArithExpr_Solutions.html */; };
+		B48FA529EFFA0D2980A82A67 /* Paper_38_WindsStorms_Wastewater_Exponents_LinesAngles_QuestionPaper.html in Resources */ = {isa = PBXBuildFile; fileRef = 0FB3DCA89BF27A4B190A5A6D /* Paper_38_WindsStorms_Wastewater_Exponents_LinesAngles_QuestionPaper.html */; };
+		9E333B62E86796A7F7B8B3C6 /* Paper_38_WindsStorms_Wastewater_Exponents_LinesAngles_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = AF6A7B8FB9C7056DCD8D7B53 /* Paper_38_WindsStorms_Wastewater_Exponents_LinesAngles_QuestionPaper.pdf */; };
+		4B6AAE0D621B93D00EAD797B /* Paper_38_WindsStorms_Wastewater_Exponents_LinesAngles_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 0A608D388BB88892BFB0CD4F /* Paper_38_WindsStorms_Wastewater_Exponents_LinesAngles_Questions.md */; };
+		31D2179A587C80F73BA17C60 /* Paper_38_WindsStorms_Wastewater_Exponents_LinesAngles_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 64488608C66328EBDA37DC7B /* Paper_38_WindsStorms_Wastewater_Exponents_LinesAngles_Solutions.html */; };
 		4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */ = {isa = PBXBuildFile; fileRef = ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */; };
 		CF6289FBCF676858C99ED670 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F17B590EF6DA751E23E41 /* Contents.json */; };
 		9AE05997509D9842F29172EB /* maths_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E448E6E8BEEB87620A8C798 /* maths_class7.json */; };
@@ -4062,6 +4066,10 @@
 		B9AD2E8915CBE04CD1B3260C /* Paper_37_Forests_Soil_Integers_ArithExpr_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_37_Forests_Soil_Integers_ArithExpr_QuestionPaper.pdf"; sourceTree = "<group>"; };
 		AC5CCDCC13C84A5D4F074DC0 /* Paper_37_Forests_Soil_Integers_ArithExpr_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_37_Forests_Soil_Integers_ArithExpr_Questions.md"; sourceTree = "<group>"; };
 		A7DA32A6EF98926092091A4E /* Paper_37_Forests_Soil_Integers_ArithExpr_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_37_Forests_Soil_Integers_ArithExpr_Solutions.html"; sourceTree = "<group>"; };
+		0FB3DCA89BF27A4B190A5A6D /* Paper_38_WindsStorms_Wastewater_Exponents_LinesAngles_QuestionPaper.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_38_WindsStorms_Wastewater_Exponents_LinesAngles_QuestionPaper.html"; sourceTree = "<group>"; };
+		AF6A7B8FB9C7056DCD8D7B53 /* Paper_38_WindsStorms_Wastewater_Exponents_LinesAngles_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_38_WindsStorms_Wastewater_Exponents_LinesAngles_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		0A608D388BB88892BFB0CD4F /* Paper_38_WindsStorms_Wastewater_Exponents_LinesAngles_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_38_WindsStorms_Wastewater_Exponents_LinesAngles_Questions.md"; sourceTree = "<group>"; };
+		64488608C66328EBDA37DC7B /* Paper_38_WindsStorms_Wastewater_Exponents_LinesAngles_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_38_WindsStorms_Wastewater_Exponents_LinesAngles_Solutions.html"; sourceTree = "<group>"; };
 		ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "QUESTION_INDEX.json"; sourceTree = "<group>"; };
 		5C7F17B590EF6DA751E23E41 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Contents.json"; sourceTree = "<group>"; };
 		69191026B2F9F250C1D2E9BD /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement.swift"; sourceTree = "<group>"; };
@@ -6545,6 +6553,10 @@
 				B9AD2E8915CBE04CD1B3260C,
 				AC5CCDCC13C84A5D4F074DC0,
 				A7DA32A6EF98926092091A4E,
+				0FB3DCA89BF27A4B190A5A6D,
+				AF6A7B8FB9C7056DCD8D7B53,
+				0A608D388BB88892BFB0CD4F,
+				64488608C66328EBDA37DC7B,
 				ECD0916CC0210824B2615292,
 			);
 			path = "BossChallengePapers";
@@ -10283,6 +10295,10 @@
 				F743A8013E1F5F63AC5DD95C /* Paper_37_Forests_Soil_Integers_ArithExpr_QuestionPaper.pdf in Resources */,
 				62EB757F20346FB0BB1DC8C5 /* Paper_37_Forests_Soil_Integers_ArithExpr_Questions.md in Resources */,
 				62AE93384A2C765F8150B702 /* Paper_37_Forests_Soil_Integers_ArithExpr_Solutions.html in Resources */,
+				B48FA529EFFA0D2980A82A67 /* Paper_38_WindsStorms_Wastewater_Exponents_LinesAngles_QuestionPaper.html in Resources */,
+				9E333B62E86796A7F7B8B3C6 /* Paper_38_WindsStorms_Wastewater_Exponents_LinesAngles_QuestionPaper.pdf in Resources */,
+				4B6AAE0D621B93D00EAD797B /* Paper_38_WindsStorms_Wastewater_Exponents_LinesAngles_Questions.md in Resources */,
+				31D2179A587C80F73BA17C60 /* Paper_38_WindsStorms_Wastewater_Exponents_LinesAngles_Solutions.html in Resources */,
 				4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */,
 				CF6289FBCF676858C99ED670 /* Contents.json in Resources */,
 				9AE05997509D9842F29172EB /* maths_class7.json in Resources */,
