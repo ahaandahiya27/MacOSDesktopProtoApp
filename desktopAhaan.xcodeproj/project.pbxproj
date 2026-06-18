@@ -2251,6 +2251,10 @@
 		8FC19CF4610D268B0A5A58BF /* Paper_47_Heat_ElectricCurrent_SimpleEquations_Symmetry_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 721C4BD3F6565A64901A529E /* Paper_47_Heat_ElectricCurrent_SimpleEquations_Symmetry_QuestionPaper.pdf */; };
 		425AC310B4CE7566286E3986 /* Paper_47_Heat_ElectricCurrent_SimpleEquations_Symmetry_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = D4D1015634054B969B31518D /* Paper_47_Heat_ElectricCurrent_SimpleEquations_Symmetry_Questions.md */; };
 		07249715D7046F240FCEFEB9 /* Paper_47_Heat_ElectricCurrent_SimpleEquations_Symmetry_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 9657DDE09F65CCEA854348D8 /* Paper_47_Heat_ElectricCurrent_SimpleEquations_Symmetry_Solutions.html */; };
+		3808B0AC657177C74E029A89 /* Paper_48_MotionTime_Soil_PerimeterArea_AlgebraicExpressions_QuestionPaper.html in Resources */ = {isa = PBXBuildFile; fileRef = 498F43B86B656426E3F7CED8 /* Paper_48_MotionTime_Soil_PerimeterArea_AlgebraicExpressions_QuestionPaper.html */; };
+		7592970208DB52F1CFAC1643 /* Paper_48_MotionTime_Soil_PerimeterArea_AlgebraicExpressions_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9B92D74B19A3D39B3B797159 /* Paper_48_MotionTime_Soil_PerimeterArea_AlgebraicExpressions_QuestionPaper.pdf */; };
+		B625C76DFAAD41A46EBDF754 /* Paper_48_MotionTime_Soil_PerimeterArea_AlgebraicExpressions_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 274F44B30700FEC6E800C930 /* Paper_48_MotionTime_Soil_PerimeterArea_AlgebraicExpressions_Questions.md */; };
+		95649A446D1A2C09A224B49E /* Paper_48_MotionTime_Soil_PerimeterArea_AlgebraicExpressions_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = D8B048C822884146FCDA455A /* Paper_48_MotionTime_Soil_PerimeterArea_AlgebraicExpressions_Solutions.html */; };
 		4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */ = {isa = PBXBuildFile; fileRef = ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */; };
 		CF6289FBCF676858C99ED670 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F17B590EF6DA751E23E41 /* Contents.json */; };
 		9AE05997509D9842F29172EB /* maths_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E448E6E8BEEB87620A8C798 /* maths_class7.json */; };
@@ -4142,6 +4146,10 @@
 		721C4BD3F6565A64901A529E /* Paper_47_Heat_ElectricCurrent_SimpleEquations_Symmetry_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_47_Heat_ElectricCurrent_SimpleEquations_Symmetry_QuestionPaper.pdf"; sourceTree = "<group>"; };
 		D4D1015634054B969B31518D /* Paper_47_Heat_ElectricCurrent_SimpleEquations_Symmetry_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_47_Heat_ElectricCurrent_SimpleEquations_Symmetry_Questions.md"; sourceTree = "<group>"; };
 		9657DDE09F65CCEA854348D8 /* Paper_47_Heat_ElectricCurrent_SimpleEquations_Symmetry_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_47_Heat_ElectricCurrent_SimpleEquations_Symmetry_Solutions.html"; sourceTree = "<group>"; };
+		498F43B86B656426E3F7CED8 /* Paper_48_MotionTime_Soil_PerimeterArea_AlgebraicExpressions_QuestionPaper.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_48_MotionTime_Soil_PerimeterArea_AlgebraicExpressions_QuestionPaper.html"; sourceTree = "<group>"; };
+		9B92D74B19A3D39B3B797159 /* Paper_48_MotionTime_Soil_PerimeterArea_AlgebraicExpressions_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_48_MotionTime_Soil_PerimeterArea_AlgebraicExpressions_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		274F44B30700FEC6E800C930 /* Paper_48_MotionTime_Soil_PerimeterArea_AlgebraicExpressions_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_48_MotionTime_Soil_PerimeterArea_AlgebraicExpressions_Questions.md"; sourceTree = "<group>"; };
+		D8B048C822884146FCDA455A /* Paper_48_MotionTime_Soil_PerimeterArea_AlgebraicExpressions_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_48_MotionTime_Soil_PerimeterArea_AlgebraicExpressions_Solutions.html"; sourceTree = "<group>"; };
 		ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "QUESTION_INDEX.json"; sourceTree = "<group>"; };
 		5C7F17B590EF6DA751E23E41 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Contents.json"; sourceTree = "<group>"; };
 		69191026B2F9F250C1D2E9BD /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement.swift"; sourceTree = "<group>"; };
@@ -6665,6 +6673,10 @@
 				721C4BD3F6565A64901A529E,
 				D4D1015634054B969B31518D,
 				9657DDE09F65CCEA854348D8,
+				498F43B86B656426E3F7CED8,
+				9B92D74B19A3D39B3B797159,
+				274F44B30700FEC6E800C930,
+				D8B048C822884146FCDA455A,
 				ECD0916CC0210824B2615292,
 			);
 			path = "BossChallengePapers";
@@ -10443,6 +10455,10 @@
 				8FC19CF4610D268B0A5A58BF /* Paper_47_Heat_ElectricCurrent_SimpleEquations_Symmetry_QuestionPaper.pdf in Resources */,
 				425AC310B4CE7566286E3986 /* Paper_47_Heat_ElectricCurrent_SimpleEquations_Symmetry_Questions.md in Resources */,
 				07249715D7046F240FCEFEB9 /* Paper_47_Heat_ElectricCurrent_SimpleEquations_Symmetry_Solutions.html in Resources */,
+				3808B0AC657177C74E029A89 /* Paper_48_MotionTime_Soil_PerimeterArea_AlgebraicExpressions_QuestionPaper.html in Resources */,
+				7592970208DB52F1CFAC1643 /* Paper_48_MotionTime_Soil_PerimeterArea_AlgebraicExpressions_QuestionPaper.pdf in Resources */,
+				B625C76DFAAD41A46EBDF754 /* Paper_48_MotionTime_Soil_PerimeterArea_AlgebraicExpressions_Questions.md in Resources */,
+				95649A446D1A2C09A224B49E /* Paper_48_MotionTime_Soil_PerimeterArea_AlgebraicExpressions_Solutions.html in Resources */,
 				4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */,
 				CF6289FBCF676858C99ED670 /* Contents.json in Resources */,
 				9AE05997509D9842F29172EB /* maths_class7.json in Resources */,
