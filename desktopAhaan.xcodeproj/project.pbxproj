@@ -2255,6 +2255,10 @@
 		7592970208DB52F1CFAC1643 /* Paper_48_MotionTime_Soil_PerimeterArea_AlgebraicExpressions_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9B92D74B19A3D39B3B797159 /* Paper_48_MotionTime_Soil_PerimeterArea_AlgebraicExpressions_QuestionPaper.pdf */; };
 		B625C76DFAAD41A46EBDF754 /* Paper_48_MotionTime_Soil_PerimeterArea_AlgebraicExpressions_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 274F44B30700FEC6E800C930 /* Paper_48_MotionTime_Soil_PerimeterArea_AlgebraicExpressions_Questions.md */; };
 		95649A446D1A2C09A224B49E /* Paper_48_MotionTime_Soil_PerimeterArea_AlgebraicExpressions_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = D8B048C822884146FCDA455A /* Paper_48_MotionTime_Soil_PerimeterArea_AlgebraicExpressions_Solutions.html */; };
+		33596CB6E4B8624C1675EF39 /* Paper_49_AcidsBases_ReproductionPlants_ComparingQuantities_Symmetry_QuestionPaper.html in Resources */ = {isa = PBXBuildFile; fileRef = 8B9174E27DAD7EB29726E916 /* Paper_49_AcidsBases_ReproductionPlants_ComparingQuantities_Symmetry_QuestionPaper.html */; };
+		AE46EFA56235BD5BB56B526B /* Paper_49_AcidsBases_ReproductionPlants_ComparingQuantities_Symmetry_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6C8660756A5EE62E3CD15C75 /* Paper_49_AcidsBases_ReproductionPlants_ComparingQuantities_Symmetry_QuestionPaper.pdf */; };
+		95FBF5842B1082FD1FE640BE /* Paper_49_AcidsBases_ReproductionPlants_ComparingQuantities_Symmetry_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 57610139EEE67E993A175FE9 /* Paper_49_AcidsBases_ReproductionPlants_ComparingQuantities_Symmetry_Questions.md */; };
+		B1892997DE6351A38C011445 /* Paper_49_AcidsBases_ReproductionPlants_ComparingQuantities_Symmetry_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 73E2E55F4DC79CF4284CAC7D /* Paper_49_AcidsBases_ReproductionPlants_ComparingQuantities_Symmetry_Solutions.html */; };
 		4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */ = {isa = PBXBuildFile; fileRef = ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */; };
 		CF6289FBCF676858C99ED670 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F17B590EF6DA751E23E41 /* Contents.json */; };
 		9AE05997509D9842F29172EB /* maths_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E448E6E8BEEB87620A8C798 /* maths_class7.json */; };
@@ -4150,6 +4154,10 @@
 		9B92D74B19A3D39B3B797159 /* Paper_48_MotionTime_Soil_PerimeterArea_AlgebraicExpressions_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_48_MotionTime_Soil_PerimeterArea_AlgebraicExpressions_QuestionPaper.pdf"; sourceTree = "<group>"; };
 		274F44B30700FEC6E800C930 /* Paper_48_MotionTime_Soil_PerimeterArea_AlgebraicExpressions_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_48_MotionTime_Soil_PerimeterArea_AlgebraicExpressions_Questions.md"; sourceTree = "<group>"; };
 		D8B048C822884146FCDA455A /* Paper_48_MotionTime_Soil_PerimeterArea_AlgebraicExpressions_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_48_MotionTime_Soil_PerimeterArea_AlgebraicExpressions_Solutions.html"; sourceTree = "<group>"; };
+		8B9174E27DAD7EB29726E916 /* Paper_49_AcidsBases_ReproductionPlants_ComparingQuantities_Symmetry_QuestionPaper.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_49_AcidsBases_ReproductionPlants_ComparingQuantities_Symmetry_QuestionPaper.html"; sourceTree = "<group>"; };
+		6C8660756A5EE62E3CD15C75 /* Paper_49_AcidsBases_ReproductionPlants_ComparingQuantities_Symmetry_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_49_AcidsBases_ReproductionPlants_ComparingQuantities_Symmetry_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		57610139EEE67E993A175FE9 /* Paper_49_AcidsBases_ReproductionPlants_ComparingQuantities_Symmetry_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_49_AcidsBases_ReproductionPlants_ComparingQuantities_Symmetry_Questions.md"; sourceTree = "<group>"; };
+		73E2E55F4DC79CF4284CAC7D /* Paper_49_AcidsBases_ReproductionPlants_ComparingQuantities_Symmetry_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_49_AcidsBases_ReproductionPlants_ComparingQuantities_Symmetry_Solutions.html"; sourceTree = "<group>"; };
 		ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "QUESTION_INDEX.json"; sourceTree = "<group>"; };
 		5C7F17B590EF6DA751E23E41 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Contents.json"; sourceTree = "<group>"; };
 		69191026B2F9F250C1D2E9BD /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement.swift"; sourceTree = "<group>"; };
@@ -6677,6 +6685,10 @@
 				9B92D74B19A3D39B3B797159,
 				274F44B30700FEC6E800C930,
 				D8B048C822884146FCDA455A,
+				8B9174E27DAD7EB29726E916,
+				6C8660756A5EE62E3CD15C75,
+				57610139EEE67E993A175FE9,
+				73E2E55F4DC79CF4284CAC7D,
 				ECD0916CC0210824B2615292,
 			);
 			path = "BossChallengePapers";
@@ -10459,6 +10471,10 @@
 				7592970208DB52F1CFAC1643 /* Paper_48_MotionTime_Soil_PerimeterArea_AlgebraicExpressions_QuestionPaper.pdf in Resources */,
 				B625C76DFAAD41A46EBDF754 /* Paper_48_MotionTime_Soil_PerimeterArea_AlgebraicExpressions_Questions.md in Resources */,
 				95649A446D1A2C09A224B49E /* Paper_48_MotionTime_Soil_PerimeterArea_AlgebraicExpressions_Solutions.html in Resources */,
+				33596CB6E4B8624C1675EF39 /* Paper_49_AcidsBases_ReproductionPlants_ComparingQuantities_Symmetry_QuestionPaper.html in Resources */,
+				AE46EFA56235BD5BB56B526B /* Paper_49_AcidsBases_ReproductionPlants_ComparingQuantities_Symmetry_QuestionPaper.pdf in Resources */,
+				95FBF5842B1082FD1FE640BE /* Paper_49_AcidsBases_ReproductionPlants_ComparingQuantities_Symmetry_Questions.md in Resources */,
+				B1892997DE6351A38C011445 /* Paper_49_AcidsBases_ReproductionPlants_ComparingQuantities_Symmetry_Solutions.html in Resources */,
 				4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */,
 				CF6289FBCF676858C99ED670 /* Contents.json in Resources */,
 				9AE05997509D9842F29172EB /* maths_class7.json in Resources */,

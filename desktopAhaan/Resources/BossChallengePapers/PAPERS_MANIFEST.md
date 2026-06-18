@@ -50,3 +50,4 @@
 | 46 | 2026-06-18 | Light · Motion & Time · Lines & Angles · Comparing Quantities | 25/25/25/25 | ✓ |
 | 47 | 2026-06-18 | Heat · Electric Current & its Effects · Simple Equations · Symmetry | 25/25/25/25 | ✓ |
 | 48 | 2026-06-18 | Motion & Time · Soil · Perimeter & Area · Algebraic Expressions | 25/25/25/25 | ✓ |
+| 49 | 2026-06-18 | Acids, Bases & Salts · Reproduction in Plants · Comparing Quantities · Symmetry | 25/25/25/25 | ✓ |
