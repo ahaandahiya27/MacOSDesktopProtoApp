@@ -23,11 +23,11 @@
    (C) Both threads are animal fibres because both burn
    (D) Thread Y is silk because silk leaves a papery ash
 
-2. Wool and silk are both classed as animal fibres, yet a wool jumper feels bulky and warm while a silk scarf feels thin and smooth. The deepest reason for this difference is that:
-   (A) wool is a protein but silk is actually a plant cellulose fibre
-   (B) silk is man-made from petroleum while wool is natural
-   (C) wool fibres are crimped keratin that traps air, while silk is a smooth, straight fibroin filament that traps little air
-   (D) the two fibres are chemically identical, so the difference is only in dyeing
+2. Although wool and silk are both animal fibres, they reach us by completely different biological routes. Which contrast is correct?
+   (A) wool is a fluid the sheep secretes that hardens, while silk is the silkworm's body hair
+   (B) both are spun by insects that feed on mulberry leaves
+   (C) wool is hair that grows as a sheep's body covering and is sheared off, while silk is a fluid the silkworm secretes that hardens into a long filament
+   (D) wool is taken from a plant and silk from an animal
 
 3. Two woollen blankets of equal mass are compared. Blanket P is loosely woven from highly crimped fibres; Blanket Q is tightly compressed felt. On a cold night, blanket P keeps a person warmer. The best explanation is that:
    (A) blanket P is heavier, and heavier blankets are always warmer
@@ -95,11 +95,11 @@
    (C) grades of sheep's wool sorted by fineness
    (D) the three life-cycle stages of the silk moth
 
-14. A label reads '100% silk.' Traced to its true biological origin, this fabric began as:
-   (A) the fine inner undercoat sheared from a Pashmina goat
-   (B) the seed hairs picked from the bolls of a plant
-   (C) the gum (sericin) scraped from boiled cocoons
-   (D) the continuous filament spun by the larva of the silk moth to form its cocoon
+14. A student asks WHY the silkworm larva spins a cocoon at all. Biologically, the cocoon's purpose is to:
+   (A) store food for the adult moth to eat after it emerges
+   (B) attract a mate while the insect is still a larva
+   (C) trap mulberry leaves so the pupa can keep feeding
+   (D) form a protective silk case around the larva while it changes into a pupa
 
 15. In commercial silk production, cocoons are exposed to steam or boiling water BEFORE the adult moth emerges. The chief reason is that:
    (A) the heat makes the pupa grow into a larger moth that spins more silk
@@ -119,11 +119,11 @@
    (C) sweaters are made of cotton, so shoppers face no risk
    (D) the dye used on finished wool actively cures the disease in the body
 
-18. A health officer must cut anthrax risk in a wool unit using ONE measure. The single most effective choice is to:
-   (A) dye all the wool in brighter colours to mark infected batches
-   (B) disinfect the raw fleece and give sorters masks, gloves and good ventilation so they do not inhale spores
-   (C) shear the sheep more frequently so there is less fleece per animal
-   (D) sell only finished sweaters and stop processing raw wool entirely
+18. Sorter's disease spreads mainly by one route into the body. Reasoning from that route, why does a dust mask protect a sorter more than rubber gloves alone?
+   (A) the spores enter only through cuts in the skin, so gloves alone fully protect a sorter
+   (B) the spores are mostly inhaled in raw-fleece dust, so a mask blocks the main entry route while gloves alone leave breathing unguarded
+   (C) the disease is caught by drinking sheep's milk, so neither a mask nor gloves helps
+   (D) the spores enter through the eyes, so only goggles would help
 
 19. Match each animal to the fibre it provides. Which single pairing is correct?
    (A) sheep → silk; silk moth → wool
@@ -137,17 +137,17 @@
    (C) the eggs are boiled before they ever hatch into larvae
    (D) the pupa inside the cocoon is killed when the cocoon is boiled before the moth can emerge
 
-21. A factory wants the finest, softest woollen yarn possible. Which combined strategy is most sound?
-   (A) choose a fine-wool breed with few coarse guard hairs and sort the fleece carefully before spinning
-   (B) choose a coarse-haired breed and skip sorting to save time
-   (C) skip scouring so the natural grease keeps the fibres soft
-   (D) feed the sheep mulberry leaves so it grows silk-like fibres
+21. A breeder records that after ten generations of breeding only the finest-fleeced rams and ewes, the flock's average fibre is markedly finer. The mechanism that best explains this gradual change is:
+   (A) fine-fleece parents tend to pass fine-fleece traits to their offspring, so selecting them each generation shifts the whole flock toward finer wool
+   (B) the act of shearing the fine sheep forces the remaining sheep to grow finer wool
+   (C) the climate slowly converted the coarse wool protein into a finer one
+   (D) the lambs learned to grow finer wool by copying the finest sheep
 
-22. Which step in the wool sequence improves the wool's APPEARANCE but neither cleans it nor aligns the fibres into yarn?
+22. In the wool sequence, exactly one step takes loose cleaned, sorted fibres and twists them into a continuous strand strong enough to weave. That step is:
    (A) scouring
-   (B) sorting
-   (C) shearing
-   (D) dyeing
+   (B) shearing
+   (C) sorting
+   (D) spinning
 
 23. Sericin is removed during silk reeling rather than left on the finished thread because sericin:
    (A) is a poison that would harm anyone wearing the silk

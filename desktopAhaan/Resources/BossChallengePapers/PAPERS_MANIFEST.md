@@ -55,3 +55,4 @@
 | 51 | 2026-06-18 | Heat · Nutrition in Plants · Fractions & Decimals · Data Handling | 25/25/25/25 | ✓ |
 | 52 | 2026-06-18 | Light · Soil · Integers · Comparing Quantities | 25/25/25/25 | ✓ |
 | 53 | 2026-06-18 | Motion & Time · Acids, Bases & Salts · Data Handling · Comparing Quantities | 25/25/25/25 | ✓ |
+| 54 | 2026-06-18 | Reproduction in Plants · Winds, Storms & Cyclones · Algebraic Expressions · Fractions & Decimals | 25/25/25/25 | ✓ |
