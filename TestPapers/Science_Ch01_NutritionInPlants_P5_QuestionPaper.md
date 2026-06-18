@@ -203,11 +203,11 @@
    (C) Carbon dioxide falls, because in the dark the plant switches entirely to absorbing it for night-time food.
    (D) Oxygen falls and carbon dioxide rises, because in the dark photosynthesis stops while respiration keeps consuming oxygen and releasing carbon dioxide with nothing to recycle them.
 
-32. A green plant with a small lit candle is sealed in a jar; in BRIGHT LIGHT the flame burns markedly longer than a candle-alone jar. The same plant-and-candle jar is then sealed in the DARK and compared with a candle-alone jar in the dark. The flame in the plant-and-candle dark jar most likely:
-   (A) Burns even longer than in the light, because a plant releases the most oxygen when it is dark.
-   (B) Burns exactly as long as the candle-alone jar, because a plant has no effect in the dark.
-   (C) Burns longer than the candle-alone jar, because the plant supplies carbon dioxide that feeds the flame.
-   (D) Goes out sooner than the candle-alone jar, because in the dark the plant adds no oxygen and instead competes for it by respiring.
+32. Three destarched plants are given one bright sunny day, differing only as follows: plant 1 has both moist soil and normal air; plant 2 has moist soil but sits in carbon-dioxide-free air; plant 3 has normal air but bone-dry soil. Their leaves are then iodine-tested. Which plants test blue-black, and why?
+   (A) All three, because bright light on its own is enough to make starch in any leaf.
+   (B) Plants 1 and 2, because removing carbon dioxide does not stop food-making as long as the soil is moist.
+   (C) Plants 1 and 3, because dry soil forces a leaf to make extra starch to survive.
+   (D) Only plant 1, because starch needs light PLUS both raw materials — carbon dioxide and water — so removing either one (the gas from plant 2, the water from plant 3) stops it.
 
 33. A leaf's net oxygen exchange is tracked over 24 hours: oxygen is released net from about 7 a.m. to 6 p.m. and taken in net otherwise, crossing zero at exactly two instants. At one of those instants the experimenter quickly DIMS the light. In the next moment the meter most likely shows:
    (A) A continued zero reading, because the zero-crossing is a fixed balance that dimming cannot disturb.
@@ -215,11 +215,11 @@
    (C) No reading at all, because dimming the light stops both photosynthesis and respiration together.
    (D) A net oxygen INTAKE, because dimming drops photosynthesis below the steady respiration rate, so oxygen used now exceeds oxygen made.
 
-34. A disc kept 48 hours in the dark, then boiled in water, then in alcohol, then tested with iodine, shows NO blue-black; a disc from the same plant after 6 hours of sun does turn blue-black. A student concludes 'the 48-hour dark permanently destroyed the chlorophyll.' Why is this conclusion unsound?
-   (A) It is sound: a leaf that tests negative for starch must have lost its chlorophyll for good.
-   (B) The same plant's leaves make starch again after 6 hours of light, proving the chlorophyll is intact; the dark step merely emptied the stored starch (destarching).
-   (C) It is unsound only because iodine never works on any leaf that has been kept in the dark.
-   (D) It is unsound because the 48-hour dark actually added starch, so the dark disc should have tested positive.
+34. In the starch test, after the leaf is boiled in alcohol it comes out stiff, brittle and almost white. The next instruction is to dip it in warm water before adding the iodine. What is the purpose of this warm-water dip?
+   (A) It adds back the chlorophyll the alcohol removed, turning the leaf green again.
+   (B) It softens the brittle, decolourised leaf so the iodine can spread evenly over it and react with any starch present.
+   (C) It washes the starch out of the leaf so that only the leaf's surface is left to be tested.
+   (D) It kills bacteria that would otherwise eat the leaf's starch before the iodine could act.
 
 35. A student writes four claims about the starch test; exactly ONE is correct. Which?
    (A) Boiling the leaf in water first softens it and breaks its cells so iodine and alcohol can act properly later.
@@ -245,11 +245,11 @@
    (C) No blue-black colour forms, because photosynthesis needs LIGHT as its energy source and warmth cannot replace it.
    (D) A red colour forms, because darkness changes the way iodine reacts with leaf tissue.
 
-39. A potato tuber, a slice of wheat bread, a piece of boiled egg white and a drop of cooking oil are each given the iodine test. The potato and bread turn deep blue-black; the egg white and oil barely change. The soundest conclusion is:
-   (A) The egg white and oil are the richest starch sources, since they resisted turning blue-black.
-   (B) The potato and bread are starch-rich plant foods, while the egg white (a protein food) and the oil (a fat) are not, since iodine detects starch.
-   (C) Iodine detects starch only in living plant cells, so the cooked, dead potato should not have reacted.
-   (D) The blue-black colour shows the potato and bread contain chlorophyll, unlike the egg and oil.
+39. A student claims 'only leaves can ever photosynthesise, because food-making is a leaf's special job.' Considering a green cactus stem, a potato (which is an underground stem) and an ordinary root, the most accurate correction is:
+   (A) The student is right: no part of a plant except a true leaf can ever photosynthesise.
+   (B) Any part with chlorophyll that receives light can photosynthesise — so a green cactus stem does, while the buried potato stem and the root, lacking light and chlorophyll, do not; leaves are the main but not the only food-making site.
+   (C) Underground parts photosynthesise fastest, because the soil shields their chlorophyll from being bleached by strong sun.
+   (D) Roots photosynthesise using soil minerals in place of light, which is why roots do not need to be green.
 
 40. Comparing how a mango tree, a cow and a mushroom obtain food, which single statement correctly places all THREE in their nutrition modes?
    (A) The mango tree is an autotroph making food from inorganic raw materials in light; the cow is a heterotroph eating ready-made plant food; the mushroom is a heterotroph (saprotroph) feeding on dead, decaying matter.
@@ -257,11 +257,11 @@
    (C) The mango tree and the mushroom are autotrophs, since both grow without eating other animals; only the cow is a heterotroph.
    (D) The cow is the autotroph, since it turns the grass it eats into its own food using sunlight.
 
-41. Four sentences describe nutrition modes; exactly ONE is incorrect. Which is the false one?
-   (A) An autotroph builds its food from inorganic raw materials using light energy.
-   (B) A parasite takes food from a living host and harms it.
-   (C) An insectivorous plant photosynthesises and traps insects mainly to obtain nitrogen.
-   (D) A saprotroph attaches to a living host and slowly draws food from it.
+41. Imagine every green plant on Earth suddenly vanished, while all animals, fungi and bacteria remained for a time. According to this chapter's ideas, which consequence would follow most directly?
+   (A) The air would gain oxygen and lose carbon dioxide, since only animals would be left to release oxygen.
+   (B) Almost nothing would change, because animals and fungi can build their own food once the plants are gone.
+   (C) Fungi would begin to photosynthesise in the plants' place, keeping the food chains supplied.
+   (D) Food chains would collapse for want of producers, and the air's oxygen would no longer be renewed, because photosynthesis is what makes new food and releases oxygen.
 
 42. A gardener finds a pale, leafless vine that withered on a metal trellis but flourishes on a living rose, and a soft growth on a rotting log that harms nothing alive. A friend labels them 'two saprotrophs.' The single best correction is:
    (A) Only the log-dweller is a saprotroph; the vine is a parasite, because it needs a LIVING host and dies on lifeless metal.
@@ -269,11 +269,11 @@
    (C) Only the vine is a saprotroph; the log-dweller is a parasite harming the dead wood.
    (D) Both are autotrophs that have only briefly lost their green colour.
 
-43. A sealed transparent box holds a green plant in steady bright light for many hours. Considering BOTH photosynthesis and respiration running together, which gas is most likely SLIGHTLY higher at the end, and which slightly lower?
-   (A) Carbon dioxide is higher and oxygen lower, because respiration always outpaces photosynthesis in a sealed box.
-   (B) Oxygen is slightly higher and carbon dioxide slightly lower, because in bright light net photosynthesis releases oxygen and consumes carbon dioxide.
-   (C) Nitrogen is higher and oxygen lower, because the plant slowly converts oxygen into nitrogen for growth.
-   (D) Both oxygen and carbon dioxide are higher, because photosynthesis makes oxygen while respiration makes carbon dioxide and neither is used up.
+43. For a leaf actively making food in bright light, each substance is either taken IN as a raw material, given OUT as a product, or is the food made and kept. Which row classifies carbon dioxide, oxygen, water and glucose entirely correctly?
+   (A) Carbon dioxide OUT, oxygen IN, water OUT, glucose IN.
+   (B) Carbon dioxide IN, oxygen OUT, water IN, and glucose is the food made and kept in the leaf — neither a raw material taken in nor a gas given out.
+   (C) All four are taken in as raw materials, since a leaf absorbs everything it needs from outside.
+   (D) Carbon dioxide and oxygen are both given out, while water and glucose are both taken in.
 
 44. Why is a green plant placed at the START of a food chain while a saprotrophic mushroom usually is NOT, even though both are alive and both respire?
    (A) The mushroom cannot take part in any food chain at all, so it can never appear.
@@ -293,17 +293,17 @@
    (C) One — only the Rhizobium is not an autotroph; the rest, including the green pitcher plant and the green cactus stem, make their own food.
    (D) None — all six are autotrophs, since each is involved with photosynthesis in some way.
 
-47. A sealed jar with a green water plant in light shows rising oxygen; the lamp is then moved progressively farther until, in near-darkness, the rising stops and the oxygen begins to FALL slightly. The best single explanation for the final FALL is:
-   (A) The plant has used up all its chlorophyll, so it can never affect the oxygen level again.
-   (B) The water in the jar has run out, so the plant can no longer release oxygen.
-   (C) In near-darkness photosynthesis nearly stops while the plant keeps respiring, so it now uses more oxygen than it makes, and the level falls.
-   (D) Carbon dioxide is leaking out of the sealed jar, dragging the oxygen down with it.
+47. A leaf blade is threaded with a fine, branching network of veins that reaches almost every cell. Within this chapter, the best account of what these veins do is:
+   (A) They stiffen the leaf so it can snap shut on insects for food, like a pitcher plant.
+   (B) They are tiny light-pipes that carry sunlight from the leaf edge inward to the shaded cells.
+   (C) They carry water up to all the food-making cells through the xylem and carry the food those cells make away through the phloem.
+   (D) They store the leaf's starch overnight so the green cells need not hold any themselves.
 
-48. A teacher claims a particular vine is an autotroph. Which single observation would most strongly DISPROVE that claim?
-   (A) The vine loses water vapour from its surface on a hot afternoon.
-   (B) The vine has no chlorophyll anywhere and is seen drawing all its food through suckers sunk into a living host plant.
-   (C) The vine grows noticeably faster when given more hours of sunlight.
-   (D) The vine releases a few oxygen bubbles when a green-stemmed piece is lit underwater.
+48. A gardener says 'the fertiliser I add to the soil is the plant's food, just as the meals I eat are mine.' Using this chapter, the most accurate correction is:
+   (A) The gardener is right: fertiliser is exactly the plant's food, absorbed ready-made through the roots.
+   (B) Fertiliser supplies minerals such as nitrogen that keep the plant healthy, but it is not the plant's food — a green plant makes its own food by photosynthesis and takes only minerals and water from the soil.
+   (C) Fertiliser is the plant's energy source, fully replacing sunlight.
+   (D) Fertiliser is broken down in the roots into ready-made glucose, which the plant then uses as its food.
 
 49. On a variegated leaf with a green border and white centre, a thin strip running from the green border INTO the white centre is also covered by foil for the sunny day. After destarch-checking and the iodine test, the blue-black region is:
    (A) The whole green border plus the foil-covered strip, because chlorophyll alone makes starch.
@@ -341,11 +341,11 @@
    (C) It still draws raw materials from its surroundings — carbon dioxide and water — plus light energy, to build that food; an autotroph is not independent of its surroundings.
    (D) It needs to trap small insects each day to get the energy to start photosynthesis.
 
-55. Which single sentence most completely and correctly summarises 'Nutrition in Plants' as covered in this chapter?
-   (A) All plants take their food ready-made from the soil through their roots, just as animals take in food.
-   (B) Plants and animals both manufacture their own food from sunlight in exactly the same way.
-   (C) Plants make food only at night and never depend on, or are depended on by, any other organism.
-   (D) Green plants are autotrophs making food by photosynthesis, while some organisms feed in special ways — parasitic, insectivorous, saprotrophic or symbiotic — and soil nitrogen is replenished by nitrogen-fixing bacteria.
+55. Considering both food and gases together, which single statement best captures how green plants and animals depend on each other?
+   (A) Animals depend on plants for food, but plants depend on animals for nothing at all.
+   (B) Plants depend on animals for their food, while animals depend on plants only for shade.
+   (C) Neither depends on the other; each lives entirely on its own resources.
+   (D) Animals get food and oxygen that trace back to plant photosynthesis, while plants take in the carbon dioxide that animals (and the plants' own respiration) release — a two-way dependence.
 
 56. A scientist follows ONE carbon atom from a starch grain stored in a potato all the way back to where it entered the plant. Reading the path in BACKWARD order (from starch to entry point), the correct sequence is:
    (A) Starch in the potato ← food carried in the phloem ← glucose built in a lit leaf ← carbon dioxide entering through a stomatal pore.
