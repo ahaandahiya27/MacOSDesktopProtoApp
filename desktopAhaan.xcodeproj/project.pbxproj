@@ -2191,6 +2191,10 @@
 		96A92B4C244325B9DF009065 /* Paper_32_Soil_Wastewater_ComparingQuantities_AlgExpr_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 699B21D69E2992DC659A87E1 /* Paper_32_Soil_Wastewater_ComparingQuantities_AlgExpr_QuestionPaper.pdf */; };
 		D9B838668EA31B6644E39260 /* Paper_32_Soil_Wastewater_ComparingQuantities_AlgExpr_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 8A17DE16435367A4C4D21C4A /* Paper_32_Soil_Wastewater_ComparingQuantities_AlgExpr_Questions.md */; };
 		7FF009EA690E7C67053537BD /* Paper_32_Soil_Wastewater_ComparingQuantities_AlgExpr_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = FDFB0745967AEAF6F95A7A5E /* Paper_32_Soil_Wastewater_ComparingQuantities_AlgExpr_Solutions.html */; };
+		0DE78B8D2D7F055153327029 /* Paper_33_MotionTime_Electricity_SimpleEquations_FracDecimals_QuestionPaper.html in Resources */ = {isa = PBXBuildFile; fileRef = 0486132DA8591D5BA317C1EA /* Paper_33_MotionTime_Electricity_SimpleEquations_FracDecimals_QuestionPaper.html */; };
+		0E4DF7DD6FAD086D9C39ACBF /* Paper_33_MotionTime_Electricity_SimpleEquations_FracDecimals_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9A61193DC304D77A9E26D5CB /* Paper_33_MotionTime_Electricity_SimpleEquations_FracDecimals_QuestionPaper.pdf */; };
+		0A4FDAEBFDFA6A19BD97C227 /* Paper_33_MotionTime_Electricity_SimpleEquations_FracDecimals_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = D2C13BB70860ADE6C9099A4A /* Paper_33_MotionTime_Electricity_SimpleEquations_FracDecimals_Questions.md */; };
+		8C0A083D61B95AC1BB8EC392 /* Paper_33_MotionTime_Electricity_SimpleEquations_FracDecimals_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = E50A6ED63D461F181004FC76 /* Paper_33_MotionTime_Electricity_SimpleEquations_FracDecimals_Solutions.html */; };
 		4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */ = {isa = PBXBuildFile; fileRef = ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */; };
 		CF6289FBCF676858C99ED670 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F17B590EF6DA751E23E41 /* Contents.json */; };
 		9AE05997509D9842F29172EB /* maths_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E448E6E8BEEB87620A8C798 /* maths_class7.json */; };
@@ -4022,6 +4026,10 @@
 		699B21D69E2992DC659A87E1 /* Paper_32_Soil_Wastewater_ComparingQuantities_AlgExpr_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_32_Soil_Wastewater_ComparingQuantities_AlgExpr_QuestionPaper.pdf"; sourceTree = "<group>"; };
 		8A17DE16435367A4C4D21C4A /* Paper_32_Soil_Wastewater_ComparingQuantities_AlgExpr_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_32_Soil_Wastewater_ComparingQuantities_AlgExpr_Questions.md"; sourceTree = "<group>"; };
 		FDFB0745967AEAF6F95A7A5E /* Paper_32_Soil_Wastewater_ComparingQuantities_AlgExpr_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_32_Soil_Wastewater_ComparingQuantities_AlgExpr_Solutions.html"; sourceTree = "<group>"; };
+		0486132DA8591D5BA317C1EA /* Paper_33_MotionTime_Electricity_SimpleEquations_FracDecimals_QuestionPaper.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_33_MotionTime_Electricity_SimpleEquations_FracDecimals_QuestionPaper.html"; sourceTree = "<group>"; };
+		9A61193DC304D77A9E26D5CB /* Paper_33_MotionTime_Electricity_SimpleEquations_FracDecimals_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_33_MotionTime_Electricity_SimpleEquations_FracDecimals_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		D2C13BB70860ADE6C9099A4A /* Paper_33_MotionTime_Electricity_SimpleEquations_FracDecimals_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_33_MotionTime_Electricity_SimpleEquations_FracDecimals_Questions.md"; sourceTree = "<group>"; };
+		E50A6ED63D461F181004FC76 /* Paper_33_MotionTime_Electricity_SimpleEquations_FracDecimals_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_33_MotionTime_Electricity_SimpleEquations_FracDecimals_Solutions.html"; sourceTree = "<group>"; };
 		ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "QUESTION_INDEX.json"; sourceTree = "<group>"; };
 		5C7F17B590EF6DA751E23E41 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Contents.json"; sourceTree = "<group>"; };
 		69191026B2F9F250C1D2E9BD /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement.swift"; sourceTree = "<group>"; };
@@ -6485,6 +6493,10 @@
 				699B21D69E2992DC659A87E1,
 				8A17DE16435367A4C4D21C4A,
 				FDFB0745967AEAF6F95A7A5E,
+				0486132DA8591D5BA317C1EA,
+				9A61193DC304D77A9E26D5CB,
+				D2C13BB70860ADE6C9099A4A,
+				E50A6ED63D461F181004FC76,
 				ECD0916CC0210824B2615292,
 			);
 			path = "BossChallengePapers";
@@ -10203,6 +10215,10 @@
 				96A92B4C244325B9DF009065 /* Paper_32_Soil_Wastewater_ComparingQuantities_AlgExpr_QuestionPaper.pdf in Resources */,
 				D9B838668EA31B6644E39260 /* Paper_32_Soil_Wastewater_ComparingQuantities_AlgExpr_Questions.md in Resources */,
 				7FF009EA690E7C67053537BD /* Paper_32_Soil_Wastewater_ComparingQuantities_AlgExpr_Solutions.html in Resources */,
+				0DE78B8D2D7F055153327029 /* Paper_33_MotionTime_Electricity_SimpleEquations_FracDecimals_QuestionPaper.html in Resources */,
+				0E4DF7DD6FAD086D9C39ACBF /* Paper_33_MotionTime_Electricity_SimpleEquations_FracDecimals_QuestionPaper.pdf in Resources */,
+				0A4FDAEBFDFA6A19BD97C227 /* Paper_33_MotionTime_Electricity_SimpleEquations_FracDecimals_Questions.md in Resources */,
+				8C0A083D61B95AC1BB8EC392 /* Paper_33_MotionTime_Electricity_SimpleEquations_FracDecimals_Solutions.html in Resources */,
 				4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */,
 				CF6289FBCF676858C99ED670 /* Contents.json in Resources */,
 				9AE05997509D9842F29172EB /* maths_class7.json in Resources */,
