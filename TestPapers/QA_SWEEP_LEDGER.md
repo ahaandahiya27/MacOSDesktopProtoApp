@@ -15,7 +15,7 @@ Status: PENDING | CLEAN | FIXED | FLAGGED. One row per ladder paper (P3–P5), 2
 | Science_Ch03_FibreToFabric_P5 | FIXED |
 | Science_Ch04_Heat_P3 | FIXED |
 | Science_Ch04_Heat_P4 | FIXED |
-| Science_Ch04_Heat_P5 | PENDING |
+| Science_Ch04_Heat_P5 | FLAGGED |
 | Science_Ch05_AcidsBasesAndSalts_P3 | PENDING |
 | Science_Ch05_AcidsBasesAndSalts_P4 | PENDING |
 | Science_Ch05_AcidsBasesAndSalts_P5 | PENDING |
