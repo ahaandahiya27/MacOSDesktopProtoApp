@@ -2279,6 +2279,10 @@
 		5EEB7B78F498ED48D2B209F7 /* Paper_54_ReproductionPlants_WindsStorms_AlgExpr_FractionsDecimals_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 5259D81676CCC45760972355 /* Paper_54_ReproductionPlants_WindsStorms_AlgExpr_FractionsDecimals_QuestionPaper.pdf */; };
 		07B1D9CFF84CE82751C27F77 /* Paper_54_ReproductionPlants_WindsStorms_AlgExpr_FractionsDecimals_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = B456DD391207703FA542E0AC /* Paper_54_ReproductionPlants_WindsStorms_AlgExpr_FractionsDecimals_Questions.md */; };
 		D54EA9D89399D03D562C2571 /* Paper_54_ReproductionPlants_WindsStorms_AlgExpr_FractionsDecimals_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 774BE78400C4CD62605F5054 /* Paper_54_ReproductionPlants_WindsStorms_AlgExpr_FractionsDecimals_Solutions.html */; };
+		F8D9CEF9307B7A5D5A084E42 /* Paper_55_Heat_Respiration_AlgExpr_DataHandling_QuestionPaper.html in Resources */ = {isa = PBXBuildFile; fileRef = 1E992BF76A01C19B50A8982D /* Paper_55_Heat_Respiration_AlgExpr_DataHandling_QuestionPaper.html */; };
+		0F6FE473CDF04F0FFFDCA545 /* Paper_55_Heat_Respiration_AlgExpr_DataHandling_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 94F9BF419708DE103D786194 /* Paper_55_Heat_Respiration_AlgExpr_DataHandling_QuestionPaper.pdf */; };
+		95C44E5DACA6CCE6B11AEE8F /* Paper_55_Heat_Respiration_AlgExpr_DataHandling_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 60B6EF882CDD8F0816E82C15 /* Paper_55_Heat_Respiration_AlgExpr_DataHandling_Questions.md */; };
+		FA4B2E576BF98C3C0F70FD42 /* Paper_55_Heat_Respiration_AlgExpr_DataHandling_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = BE12FED128984296FB4F631E /* Paper_55_Heat_Respiration_AlgExpr_DataHandling_Solutions.html */; };
 		4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */ = {isa = PBXBuildFile; fileRef = ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */; };
 		CF6289FBCF676858C99ED670 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F17B590EF6DA751E23E41 /* Contents.json */; };
 		9AE05997509D9842F29172EB /* maths_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E448E6E8BEEB87620A8C798 /* maths_class7.json */; };
@@ -4198,6 +4202,10 @@
 		5259D81676CCC45760972355 /* Paper_54_ReproductionPlants_WindsStorms_AlgExpr_FractionsDecimals_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_54_ReproductionPlants_WindsStorms_AlgExpr_FractionsDecimals_QuestionPaper.pdf"; sourceTree = "<group>"; };
 		B456DD391207703FA542E0AC /* Paper_54_ReproductionPlants_WindsStorms_AlgExpr_FractionsDecimals_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_54_ReproductionPlants_WindsStorms_AlgExpr_FractionsDecimals_Questions.md"; sourceTree = "<group>"; };
 		774BE78400C4CD62605F5054 /* Paper_54_ReproductionPlants_WindsStorms_AlgExpr_FractionsDecimals_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_54_ReproductionPlants_WindsStorms_AlgExpr_FractionsDecimals_Solutions.html"; sourceTree = "<group>"; };
+		1E992BF76A01C19B50A8982D /* Paper_55_Heat_Respiration_AlgExpr_DataHandling_QuestionPaper.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_55_Heat_Respiration_AlgExpr_DataHandling_QuestionPaper.html"; sourceTree = "<group>"; };
+		94F9BF419708DE103D786194 /* Paper_55_Heat_Respiration_AlgExpr_DataHandling_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_55_Heat_Respiration_AlgExpr_DataHandling_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		60B6EF882CDD8F0816E82C15 /* Paper_55_Heat_Respiration_AlgExpr_DataHandling_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_55_Heat_Respiration_AlgExpr_DataHandling_Questions.md"; sourceTree = "<group>"; };
+		BE12FED128984296FB4F631E /* Paper_55_Heat_Respiration_AlgExpr_DataHandling_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_55_Heat_Respiration_AlgExpr_DataHandling_Solutions.html"; sourceTree = "<group>"; };
 		ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "QUESTION_INDEX.json"; sourceTree = "<group>"; };
 		5C7F17B590EF6DA751E23E41 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Contents.json"; sourceTree = "<group>"; };
 		69191026B2F9F250C1D2E9BD /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement.swift"; sourceTree = "<group>"; };
@@ -6749,6 +6757,10 @@
 				5259D81676CCC45760972355,
 				B456DD391207703FA542E0AC,
 				774BE78400C4CD62605F5054,
+				1E992BF76A01C19B50A8982D,
+				94F9BF419708DE103D786194,
+				60B6EF882CDD8F0816E82C15,
+				BE12FED128984296FB4F631E,
 				ECD0916CC0210824B2615292,
 			);
 			path = "BossChallengePapers";
@@ -10555,6 +10567,10 @@
 				5EEB7B78F498ED48D2B209F7 /* Paper_54_ReproductionPlants_WindsStorms_AlgExpr_FractionsDecimals_QuestionPaper.pdf in Resources */,
 				07B1D9CFF84CE82751C27F77 /* Paper_54_ReproductionPlants_WindsStorms_AlgExpr_FractionsDecimals_Questions.md in Resources */,
 				D54EA9D89399D03D562C2571 /* Paper_54_ReproductionPlants_WindsStorms_AlgExpr_FractionsDecimals_Solutions.html in Resources */,
+				F8D9CEF9307B7A5D5A084E42 /* Paper_55_Heat_Respiration_AlgExpr_DataHandling_QuestionPaper.html in Resources */,
+				0F6FE473CDF04F0FFFDCA545 /* Paper_55_Heat_Respiration_AlgExpr_DataHandling_QuestionPaper.pdf in Resources */,
+				95C44E5DACA6CCE6B11AEE8F /* Paper_55_Heat_Respiration_AlgExpr_DataHandling_Questions.md in Resources */,
+				FA4B2E576BF98C3C0F70FD42 /* Paper_55_Heat_Respiration_AlgExpr_DataHandling_Solutions.html in Resources */,
 				4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */,
 				CF6289FBCF676858C99ED670 /* Contents.json in Resources */,
 				9AE05997509D9842F29172EB /* maths_class7.json in Resources */,
