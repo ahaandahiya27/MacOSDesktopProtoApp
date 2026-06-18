@@ -32,3 +32,4 @@
 | 28 | 2026-06-18 | Heat · Reproduction in Plants · Integers · Symmetry | 25/25/25/25 | ✓ |
 | 29 | 2026-06-18 | Soil · The Triangle & its Properties · Respiration in Organisms · Arithmetic Expressions | 25/25/25/25 | ✓ |
 | 30 | 2026-06-18 | Winds, Storms & Cyclones · Nutrition in Animals · Data Handling · Perimeter & Area | 25/25/25/25 | ✓ |
+| 31 | 2026-06-18 | Light · Transportation in Animals & Plants · Lines & Angles · Exponents & Powers | 25/25/25/25 | ✓ |

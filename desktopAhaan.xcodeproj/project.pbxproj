@@ -2183,6 +2183,10 @@
 		0E32209FF5E36EC4F1407732 /* Paper_30_WindsStorms_NutritionAnimals_DataHandling_PerimeterArea_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 026807DF4149587CC84EE46D /* Paper_30_WindsStorms_NutritionAnimals_DataHandling_PerimeterArea_QuestionPaper.pdf */; };
 		183FA65D9B2837587048A327 /* Paper_30_WindsStorms_NutritionAnimals_DataHandling_PerimeterArea_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 942FB32CE5940DF7D5A703C7 /* Paper_30_WindsStorms_NutritionAnimals_DataHandling_PerimeterArea_Questions.md */; };
 		419D11A00A05B20298BDD0CD /* Paper_30_WindsStorms_NutritionAnimals_DataHandling_PerimeterArea_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 0D1C2C79995D437288048A16 /* Paper_30_WindsStorms_NutritionAnimals_DataHandling_PerimeterArea_Solutions.html */; };
+		553C33C38065E3EB28719009 /* Paper_31_Light_Transportation_LinesAngles_Exponents_QuestionPaper.html in Resources */ = {isa = PBXBuildFile; fileRef = 7C2E9C46D93528B02AD65BE0 /* Paper_31_Light_Transportation_LinesAngles_Exponents_QuestionPaper.html */; };
+		7EB93DA2230CA8DAF8254051 /* Paper_31_Light_Transportation_LinesAngles_Exponents_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6C12493D5DB70677EF9BBFFA /* Paper_31_Light_Transportation_LinesAngles_Exponents_QuestionPaper.pdf */; };
+		383C37E7B196E1085C3FCDCF /* Paper_31_Light_Transportation_LinesAngles_Exponents_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 9BA47F1F6EA5A4D5904247AC /* Paper_31_Light_Transportation_LinesAngles_Exponents_Questions.md */; };
+		82A1CAE45A9EBA3F54C7D9B9 /* Paper_31_Light_Transportation_LinesAngles_Exponents_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 242A71D3F477204E4B08E4AA /* Paper_31_Light_Transportation_LinesAngles_Exponents_Solutions.html */; };
 		4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */ = {isa = PBXBuildFile; fileRef = ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */; };
 		CF6289FBCF676858C99ED670 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F17B590EF6DA751E23E41 /* Contents.json */; };
 		9AE05997509D9842F29172EB /* maths_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E448E6E8BEEB87620A8C798 /* maths_class7.json */; };
@@ -4006,6 +4010,10 @@
 		026807DF4149587CC84EE46D /* Paper_30_WindsStorms_NutritionAnimals_DataHandling_PerimeterArea_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_30_WindsStorms_NutritionAnimals_DataHandling_PerimeterArea_QuestionPaper.pdf"; sourceTree = "<group>"; };
 		942FB32CE5940DF7D5A703C7 /* Paper_30_WindsStorms_NutritionAnimals_DataHandling_PerimeterArea_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_30_WindsStorms_NutritionAnimals_DataHandling_PerimeterArea_Questions.md"; sourceTree = "<group>"; };
 		0D1C2C79995D437288048A16 /* Paper_30_WindsStorms_NutritionAnimals_DataHandling_PerimeterArea_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_30_WindsStorms_NutritionAnimals_DataHandling_PerimeterArea_Solutions.html"; sourceTree = "<group>"; };
+		7C2E9C46D93528B02AD65BE0 /* Paper_31_Light_Transportation_LinesAngles_Exponents_QuestionPaper.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_31_Light_Transportation_LinesAngles_Exponents_QuestionPaper.html"; sourceTree = "<group>"; };
+		6C12493D5DB70677EF9BBFFA /* Paper_31_Light_Transportation_LinesAngles_Exponents_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_31_Light_Transportation_LinesAngles_Exponents_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		9BA47F1F6EA5A4D5904247AC /* Paper_31_Light_Transportation_LinesAngles_Exponents_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_31_Light_Transportation_LinesAngles_Exponents_Questions.md"; sourceTree = "<group>"; };
+		242A71D3F477204E4B08E4AA /* Paper_31_Light_Transportation_LinesAngles_Exponents_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_31_Light_Transportation_LinesAngles_Exponents_Solutions.html"; sourceTree = "<group>"; };
 		ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "QUESTION_INDEX.json"; sourceTree = "<group>"; };
 		5C7F17B590EF6DA751E23E41 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Contents.json"; sourceTree = "<group>"; };
 		69191026B2F9F250C1D2E9BD /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement.swift"; sourceTree = "<group>"; };
@@ -6461,6 +6469,10 @@
 				026807DF4149587CC84EE46D,
 				942FB32CE5940DF7D5A703C7,
 				0D1C2C79995D437288048A16,
+				7C2E9C46D93528B02AD65BE0,
+				6C12493D5DB70677EF9BBFFA,
+				9BA47F1F6EA5A4D5904247AC,
+				242A71D3F477204E4B08E4AA,
 				ECD0916CC0210824B2615292,
 			);
 			path = "BossChallengePapers";
@@ -10171,6 +10183,10 @@
 				0E32209FF5E36EC4F1407732 /* Paper_30_WindsStorms_NutritionAnimals_DataHandling_PerimeterArea_QuestionPaper.pdf in Resources */,
 				183FA65D9B2837587048A327 /* Paper_30_WindsStorms_NutritionAnimals_DataHandling_PerimeterArea_Questions.md in Resources */,
 				419D11A00A05B20298BDD0CD /* Paper_30_WindsStorms_NutritionAnimals_DataHandling_PerimeterArea_Solutions.html in Resources */,
+				553C33C38065E3EB28719009 /* Paper_31_Light_Transportation_LinesAngles_Exponents_QuestionPaper.html in Resources */,
+				7EB93DA2230CA8DAF8254051 /* Paper_31_Light_Transportation_LinesAngles_Exponents_QuestionPaper.pdf in Resources */,
+				383C37E7B196E1085C3FCDCF /* Paper_31_Light_Transportation_LinesAngles_Exponents_Questions.md in Resources */,
+				82A1CAE45A9EBA3F54C7D9B9 /* Paper_31_Light_Transportation_LinesAngles_Exponents_Solutions.html in Resources */,
 				4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */,
 				CF6289FBCF676858C99ED670 /* Contents.json in Resources */,
 				9AE05997509D9842F29172EB /* maths_class7.json in Resources */,
