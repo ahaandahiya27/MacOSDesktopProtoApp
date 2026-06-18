@@ -359,11 +359,11 @@
    (C) the copper merely becoming hot, so the black is just the colour of hot copper
    (D) the copper melting and re-freezing as a black solid, a physical change of state
 
-58. A pure sample of salt is dissolved in water; half is dried in the sun and gives white salt, while the other half is dried over a strong flame and also gives white solid that is checked and behaves exactly like ordinary salt. A student says the flame-dried solid 'must be chemically new because it took fierce heat.' The correct verdict is:
-   (A) the flame-dried half is chemically new, because fierce heat applied to a solution always creates a new substance
-   (B) the sun-dried half is physical but the flame-dried half is chemical, since the strength of the heat decides the type
-   (C) both halves are chemical, because driving water off a dissolved salt always builds a fresh compound
-   (D) both halves recover the same salt; evaporating water with fierce heat is still a physical change because no new substance forms
+58. Two white powders look identical. Powder 1 is gently warmed and slowly melts to a clear liquid that sets back to the same white solid on cooling. Powder 2 is warmed and instead gives off a gas that turns limewater milky, leaving behind a different white solid that no longer melts the same way. A student says, 'Both were only warmed, so both must be physical changes.' The correct verdict is:
+   (A) both are physical, because warming a white powder can only melt it or dry it and never makes anything new
+   (B) both are chemical, because applying heat to any powder always builds a new substance
+   (C) Powder 1 is chemical because it changed into a liquid, while Powder 2 is physical because it only released some trapped gas
+   (D) Powder 1 is physical (it melts and re-sets as the same solid), but Powder 2 is chemical — it gives off carbon dioxide and leaves a different solid, so new substances formed
 
 59. Which single statement comparing crystallisation and rusting is correct?
    (A) both are chemical changes, because each produces a solid that was not there before

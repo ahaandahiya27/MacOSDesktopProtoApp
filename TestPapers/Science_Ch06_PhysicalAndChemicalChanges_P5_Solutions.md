@@ -151,7 +151,7 @@ Answer-key distribution: A = 15, B = 15, C = 15, D = 15.
 
 **57. (B)** The black layer is a new copper-oxygen compound formed where copper combined with oxygen from the air, a chemical surface change, shown by the fresh copper beneath when scraped. It is not soot merely sitting on top, not just the colour of hot copper, and not melted-and-refrozen copper. So a new copper-oxygen compound is the correct explanation.
 
-**58. (D)** Both halves recover the same salt, which the flame-dried solid is confirmed to be, so evaporating the water is physical regardless of how fierce the heat was; the strength of heating does not by itself create a new substance. So calling the flame-dried half chemical is wrong, the heat strength does not decide the type, and evaporation does not build a fresh compound. Both are physical.
+**58. (D)** Powder 1 melts to a liquid of the same material and sets back unchanged on cooling — a state change with no new substance, so it is physical. Powder 2 gives off a gas that turns limewater milky (carbon dioxide) and leaves behind a different solid that no longer melts the same way, so new substances have formed and it is a chemical change. It is therefore wrong to call both physical, wrong to call both chemical, and wrong to reverse the two: melting is the physical one and the gas-releasing decomposition is the chemical one.
 
 **59. (D)** Crystallisation gives back the same substance as pure crystals with no new substance, so it is physical, while rusting forms a new substance from iron, oxygen, and water, so it is chemical. They are therefore not both chemical and not both physical, and the roles are not reversed — crystallisation is the physical one and rusting the chemical one. So the contrast as stated is correct.
 
