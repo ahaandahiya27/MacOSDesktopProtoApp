@@ -95,11 +95,11 @@
    (C) it leaves phenolphthalein colourless
    (D) it turns china rose dark pink
 
-14. ENO and similar fizzy antacids contain both citric acid and sodium bicarbonate in dry powder form. They fizz when added to water mainly because:
-   (A) the citric acid boils the water
-   (B) dissolved in water the acid and the base react and release a gas
-   (C) the powder simply dissolves with no reaction at all
-   (D) the base alone explodes in water
+14. Baking powder is a dry mix of sodium bicarbonate (a base) and a powdered edible acid. It keeps for months in a sealed tin without fizzing, yet makes a cake batter rise as soon as it is stirred in. The reason it stays inert while dry is that:
+   (A) the acid in the powder loses its sourness while stored dry
+   (B) the acid and base can only react and release their gas once water lets them meet
+   (C) water is a base that switches the powder on
+   (D) the rising gas is merely air that was beaten into the dry powder
 
 15. Phenolphthalein-pink soap solution is titrated by adding lemon juice drop by drop. The moment the pink colour just vanishes tells you that:
    (A) the solution has become strongly basic
@@ -113,11 +113,11 @@
    (C) china rose
    (D) phenolphthalein
 
-17. A spoon of baking soda is dropped into a glass of vinegar and it bubbles vigorously. The best explanation is:
-   (A) two acids are reacting, since both are kitchen items
-   (B) the vinegar is a base attacking the acidic baking soda
-   (C) the bubbling is only air escaping, with no reaction
-   (D) a base (baking soda) is reacting with an acid (vinegar), a neutralisation that releases gas
+17. Baking soda and vinegar are mixed inside a sealed sandwich bag, which quickly swells tight and could burst. The swelling is best explained by:
+   (A) the vinegar evaporating into vapour because the bag is warm
+   (B) air leaking into the bag from outside
+   (C) the baking soda merely dissolving and taking up room
+   (D) a gas being produced as the base (baking soda) neutralises the acid in vinegar
 
 18. Acid rain slowly eats away marble statues. This happens because:
    (A) marble is acidic and reacts with a base in the rain
@@ -155,11 +155,11 @@
    (C) turns phenolphthalein pink
    (D) leaves both red and blue litmus papers unchanged
 
-24. A pinch of chalk powder (calcium carbonate) is added to a beaker of dilute hydrochloric acid. The expected observation is:
-   (A) fizzing as the acid is partly neutralised by the chalk
-   (B) the acid becomes stronger and more sour
-   (C) nothing happens because chalk is neutral
-   (D) the mixture turns into a metal
+24. An eggshell, which is mostly calcium carbonate, is left overnight in a cup of vinegar; bubbles stream off it and the hard shell gradually disappears. The best explanation is:
+   (A) the carbonate shell reacts with the acid, releasing a gas as the shell is eaten away
+   (B) the vinegar dries the shell out until it crumbles
+   (C) the shell dissolves unchanged, just as sugar dissolves in water
+   (D) the egg inside warms the shell until it flakes apart
 
 25. Methyl orange is red in acids and yellow in bases. A drop is added to soap solution. The colour seen is:
    (A) red, because soap solution is acidic

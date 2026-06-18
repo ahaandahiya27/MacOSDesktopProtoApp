@@ -65,13 +65,13 @@ Answer-key distribution: A = 15, B = 15, C = 15, D = 15.
 
 **13. (A)** Red litmus to blue means the solution is basic; bases turn turmeric red, so that result must follow. A base does not turn blue litmus red, since that is an acid reaction. A base turns phenolphthalein pink, not colourless. China rose turns green in bases, not dark pink, so that option is wrong.
 
-**14. (B)** Water lets the citric acid and sodium bicarbonate (a base) meet and neutralise, and that reaction releases a gas, which is the fizz. The acid does not boil water. Plain dissolving with no reaction would not fizz. The base does not explode by itself; the fizz needs both the acid and the base reacting together.
+**14. (B)** While dry, the acid and the base in baking powder sit side by side without reacting; only when water is added to the batter can they meet, react and release the gas that makes the cake rise. The acid does not lose its sourness in storage. Water is neutral, not a base that "switches on" the powder. The gas comes from the reaction, not from air beaten into the dry powder.
 
 **15. (C)** Phenolphthalein is pink in base and colourless when not basic, so the pink vanishing means the added acid has neutralised the base, leaving the solution roughly neutral. It is not now strongly basic, since the indicator would still be pink. Lemon juice stays an acid. The soap solution is being neutralised, not made more basic.
 
 **16. (D)** Phenolphthalein is a synthetic, lab-made indicator, so it is the one not from a living source. Litmus comes from lichens, turmeric from the turmeric plant, and china rose from hibiscus flowers, so all three are natural indicators.
 
-**17. (D)** Vinegar is an acid and baking soda is a base, so their reaction is a neutralisation that releases a gas, seen as bubbles. Both being kitchen items does not make them acids. The roles are not reversed: vinegar is the acid and baking soda the base. Real chemical bubbling of a gas means a reaction is happening, not just escaping air.
+**17. (D)** Vinegar is an acid and baking soda is a base; mixed in the sealed bag they neutralise and release a gas, and that trapped gas inflates the bag until it is taut. The bag does not swell from vinegar vapour, since there is no strong heating. No air enters a sealed bag from outside. Plain dissolving would not generate the gas needed to inflate the bag.
 
 **18. (C)** Marble is calcium carbonate, which behaves as a base, so it reacts with the acidic rain and is gradually corroded. Marble is not acidic, so the first wrong option reverses the chemistry. Acid rain is acidic, not neutral, and it does more than wash dust off. Heating and cracking is not the cause of acid-rain damage.
 
@@ -85,7 +85,7 @@ Answer-key distribution: A = 15, B = 15, C = 15, D = 15.
 
 **23. (D)** A neutral substance changes neither litmus paper, and water does exactly that, which is the evidence of neutrality. Turning blue litmus red is acid behaviour, which water does not show. Turning red litmus blue is base behaviour, also not shown by water. Phenolphthalein turning pink would mean a base, so that too would contradict neutrality.
 
-**24. (A)** Calcium carbonate behaves as a base, so it reacts with the acid, neutralising part of it and releasing gas seen as fizzing. The acid does not become stronger; some of it is used up. Chalk is not neutral; it is a carbonate that reacts with acid. No metal forms in this acid-carbonate reaction.
+**24. (A)** Calcium carbonate behaves as a base, so the eggshell reacts with the acid in vinegar, releasing a gas (the bubbles) while the shell is gradually eaten away. The vinegar does not dry the shell out — it is a liquid that reacts with it. The shell does not dissolve unchanged like sugar; a chemical reaction consumes it. There is no warming source to make the egg heat and flake the shell.
 
 **25. (C)** Soap solution is basic, and methyl orange is yellow in bases, so the colour is yellow. Red would mean acid, but soap is not acidic. Saying red for a basic solution mismatches the rule, since red goes with acids. Soap is not neutral, and methyl orange is not colourless, so that option fails too.
 
