@@ -2187,6 +2187,10 @@
 		7EB93DA2230CA8DAF8254051 /* Paper_31_Light_Transportation_LinesAngles_Exponents_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6C12493D5DB70677EF9BBFFA /* Paper_31_Light_Transportation_LinesAngles_Exponents_QuestionPaper.pdf */; };
 		383C37E7B196E1085C3FCDCF /* Paper_31_Light_Transportation_LinesAngles_Exponents_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 9BA47F1F6EA5A4D5904247AC /* Paper_31_Light_Transportation_LinesAngles_Exponents_Questions.md */; };
 		82A1CAE45A9EBA3F54C7D9B9 /* Paper_31_Light_Transportation_LinesAngles_Exponents_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 242A71D3F477204E4B08E4AA /* Paper_31_Light_Transportation_LinesAngles_Exponents_Solutions.html */; };
+		8D1FEB2D60766C0D12F54811 /* Paper_32_Soil_Wastewater_ComparingQuantities_AlgExpr_QuestionPaper.html in Resources */ = {isa = PBXBuildFile; fileRef = BE92884C073151E9A65ACA8A /* Paper_32_Soil_Wastewater_ComparingQuantities_AlgExpr_QuestionPaper.html */; };
+		96A92B4C244325B9DF009065 /* Paper_32_Soil_Wastewater_ComparingQuantities_AlgExpr_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 699B21D69E2992DC659A87E1 /* Paper_32_Soil_Wastewater_ComparingQuantities_AlgExpr_QuestionPaper.pdf */; };
+		D9B838668EA31B6644E39260 /* Paper_32_Soil_Wastewater_ComparingQuantities_AlgExpr_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 8A17DE16435367A4C4D21C4A /* Paper_32_Soil_Wastewater_ComparingQuantities_AlgExpr_Questions.md */; };
+		7FF009EA690E7C67053537BD /* Paper_32_Soil_Wastewater_ComparingQuantities_AlgExpr_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = FDFB0745967AEAF6F95A7A5E /* Paper_32_Soil_Wastewater_ComparingQuantities_AlgExpr_Solutions.html */; };
 		4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */ = {isa = PBXBuildFile; fileRef = ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */; };
 		CF6289FBCF676858C99ED670 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F17B590EF6DA751E23E41 /* Contents.json */; };
 		9AE05997509D9842F29172EB /* maths_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E448E6E8BEEB87620A8C798 /* maths_class7.json */; };
@@ -4014,6 +4018,10 @@
 		6C12493D5DB70677EF9BBFFA /* Paper_31_Light_Transportation_LinesAngles_Exponents_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_31_Light_Transportation_LinesAngles_Exponents_QuestionPaper.pdf"; sourceTree = "<group>"; };
 		9BA47F1F6EA5A4D5904247AC /* Paper_31_Light_Transportation_LinesAngles_Exponents_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_31_Light_Transportation_LinesAngles_Exponents_Questions.md"; sourceTree = "<group>"; };
 		242A71D3F477204E4B08E4AA /* Paper_31_Light_Transportation_LinesAngles_Exponents_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_31_Light_Transportation_LinesAngles_Exponents_Solutions.html"; sourceTree = "<group>"; };
+		BE92884C073151E9A65ACA8A /* Paper_32_Soil_Wastewater_ComparingQuantities_AlgExpr_QuestionPaper.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_32_Soil_Wastewater_ComparingQuantities_AlgExpr_QuestionPaper.html"; sourceTree = "<group>"; };
+		699B21D69E2992DC659A87E1 /* Paper_32_Soil_Wastewater_ComparingQuantities_AlgExpr_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_32_Soil_Wastewater_ComparingQuantities_AlgExpr_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		8A17DE16435367A4C4D21C4A /* Paper_32_Soil_Wastewater_ComparingQuantities_AlgExpr_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_32_Soil_Wastewater_ComparingQuantities_AlgExpr_Questions.md"; sourceTree = "<group>"; };
+		FDFB0745967AEAF6F95A7A5E /* Paper_32_Soil_Wastewater_ComparingQuantities_AlgExpr_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_32_Soil_Wastewater_ComparingQuantities_AlgExpr_Solutions.html"; sourceTree = "<group>"; };
 		ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "QUESTION_INDEX.json"; sourceTree = "<group>"; };
 		5C7F17B590EF6DA751E23E41 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Contents.json"; sourceTree = "<group>"; };
 		69191026B2F9F250C1D2E9BD /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement.swift"; sourceTree = "<group>"; };
@@ -6473,6 +6481,10 @@
 				6C12493D5DB70677EF9BBFFA,
 				9BA47F1F6EA5A4D5904247AC,
 				242A71D3F477204E4B08E4AA,
+				BE92884C073151E9A65ACA8A,
+				699B21D69E2992DC659A87E1,
+				8A17DE16435367A4C4D21C4A,
+				FDFB0745967AEAF6F95A7A5E,
 				ECD0916CC0210824B2615292,
 			);
 			path = "BossChallengePapers";
@@ -10187,6 +10199,10 @@
 				7EB93DA2230CA8DAF8254051 /* Paper_31_Light_Transportation_LinesAngles_Exponents_QuestionPaper.pdf in Resources */,
 				383C37E7B196E1085C3FCDCF /* Paper_31_Light_Transportation_LinesAngles_Exponents_Questions.md in Resources */,
 				82A1CAE45A9EBA3F54C7D9B9 /* Paper_31_Light_Transportation_LinesAngles_Exponents_Solutions.html in Resources */,
+				8D1FEB2D60766C0D12F54811 /* Paper_32_Soil_Wastewater_ComparingQuantities_AlgExpr_QuestionPaper.html in Resources */,
+				96A92B4C244325B9DF009065 /* Paper_32_Soil_Wastewater_ComparingQuantities_AlgExpr_QuestionPaper.pdf in Resources */,
+				D9B838668EA31B6644E39260 /* Paper_32_Soil_Wastewater_ComparingQuantities_AlgExpr_Questions.md in Resources */,
+				7FF009EA690E7C67053537BD /* Paper_32_Soil_Wastewater_ComparingQuantities_AlgExpr_Solutions.html in Resources */,
 				4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */,
 				CF6289FBCF676858C99ED670 /* Contents.json in Resources */,
 				9AE05997509D9842F29172EB /* maths_class7.json in Resources */,
