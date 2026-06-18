@@ -22,7 +22,7 @@ Status: PENDING | CLEAN | FIXED | FLAGGED. One row per ladder paper (P3–P5), 2
 | Science_Ch06_PhysicalAndChemicalChanges_P3 | FIXED |
 | Science_Ch06_PhysicalAndChemicalChanges_P4 | FIXED |
 | Science_Ch06_PhysicalAndChemicalChanges_P5 | FIXED |
-| Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_P3 | PENDING |
+| Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_P3 | FIXED |
 | Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_P4 | PENDING |
 | Science_Ch07_WeatherClimateAndAdaptationsOfAnimalsToClimate_P5 | PENDING |
 | Science_Ch08_WindsStormsAndCyclones_P3 | PENDING |

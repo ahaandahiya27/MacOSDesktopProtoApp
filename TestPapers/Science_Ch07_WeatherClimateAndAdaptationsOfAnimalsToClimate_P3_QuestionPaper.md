@@ -227,11 +227,11 @@ On which day was the daily temperature range the largest?
    (C) grow a thicker fur coat than animals that stay put
    (D) stop needing to eat until the harsh season ends
 
-35. Siberian cranes are seen at Indian wetlands such as Bharatpur in winter and are absent in the Indian summer. The best explanation is that the cranes:
-   (A) die out every Indian summer and new ones appear each winter
-   (B) leave India before its hot summer and spend that time back in their cooler northern breeding grounds
-   (C) are Indian birds that simply hide somewhere during summer
-   (D) arrive in India only because Indian summers are colder than Siberian winters
+35. Two birds face the same harsh northern winter. Bird P flies far south each autumn and returns each spring, while Bird Q stays put and grows a much denser coat of feathers. The most accurate conclusion is that:
+   (A) only Bird P is responding to the climate, while Bird Q's change has nothing to do with the seasons
+   (B) both birds are responding to the same seasonal climate, one by relocating and the other by changing its body
+   (C) Bird Q will gradually turn into Bird P's species simply by staying behind
+   (D) neither bird's behaviour has any connection to the climate of the region
 
 36. Migratory birds often set off before the worst weather actually arrives. The most likely trigger that prompts this early departure is a change in:
    (A) day length and dropping food supply, which signal the harsh season ahead
