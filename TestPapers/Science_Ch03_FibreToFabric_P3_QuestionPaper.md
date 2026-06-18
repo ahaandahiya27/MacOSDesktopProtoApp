@@ -149,17 +149,17 @@
    (C) sorting
    (D) spinning
 
-23. Sericin is removed during silk reeling rather than left on the finished thread because sericin:
-   (A) is a poison that would harm anyone wearing the silk
-   (B) is the only coloured part, and silk must be pure white
-   (C) makes the single filament too thin to weave
-   (D) is a stiff natural gum that sticks the filament to itself, so the thread cannot be unwound or woven smoothly while it remains
+23. Cotton and wool reach the spinner as many short fibres that must be twisted together, but reeled silk comes off the cocoon as one very long unbroken strand. This difference means silk is best described as a:
+   (A) short staple fibre, just like cotton
+   (B) man-made fibre that is extruded only in short lengths
+   (C) fibre built from many tiny scales locked end to end
+   (D) continuous filament fibre, which is why it can be reeled off as a single long thread
 
-24. A merchant says vicuña/pashmina fibre is rare and costly because each animal yields only a tiny amount of very fine fibre each year. This reasoning is:
-   (A) wrong, because these are plant fibres that are mass-produced
-   (B) reasonable — a fibre that an animal produces in only small amounts is naturally scarce and therefore expensive
-   (C) wrong, because all animal fibres cost exactly the same
-   (D) wrong, because these fibres are synthetic and made cheaply in factories
+24. Besides sheep, several animals yield wool. Which group lists ONLY wool-yielding animals (and no silk producer)?
+   (A) sheep, mulberry silkworm, goat
+   (B) sheep, goat, yak, camel
+   (C) silk moth, sheep, tasar worm
+   (D) goat, eri silkworm, sheep
 
 25. Order this full silk journey correctly: weaving, cocoon, reeling, mulberry-leaf feeding. The correct sequence from start to fabric is:
    (A) cocoon → mulberry-leaf feeding → weaving → reeling
@@ -227,11 +227,11 @@
    (C) feed the moths more mulberry leaves to make them stop chewing
    (D) boil the cocoons after the moths leave to recover the whole thread
 
-36. Which everyday observation most directly shows that wool is an ANIMAL fibre rather than a plant fibre?
-   (A) it can be dyed in many bright colours
-   (B) it is woven into warm cloth on a loom
-   (C) it floats gently when dropped in air
-   (D) it is sheared as a fleece from the body of a living sheep
+36. A burn test is used to tell a natural ANIMAL fibre from a synthetic like nylon. Which single result most directly marks a sample as an animal fibre rather than nylon?
+   (A) it melts and draws into a hard, plastic-like bead
+   (B) it does not catch fire at all
+   (C) it dissolves instantly in cold water
+   (D) it chars and smells of burnt hair, leaving a crushable ash rather than a hard melted bead
 
 37. In a wool mill, which single step carries the HIGHEST risk of sorter's disease, and why?
    (A) rolling the finished, dyed yarn, because dye fumes carry the spores
@@ -239,23 +239,23 @@
    (C) sorting raw, unwashed fleece, because the worker handles dusty fleece that may carry anthrax spores
    (D) buying wool from a shop, because shop air is full of spores
 
-38. A child argues, 'Boiling the cocoon is done only to clean the dust off it.' The most accurate correction is:
-   (A) boiling chiefly softens the sericin gum for reeling and kills the pupa so the long thread stays whole; cleaning is not its main purpose
-   (B) the child is fully correct — cleaning is the only purpose
-   (C) boiling is done to dye the silk a deep golden colour
-   (D) the cocoon is never boiled in any silk process
+38. A silk farmer deliberately lets the moths emerge from a few selected cocoons instead of reeling those cocoons. The most sensible reason is that:
+   (A) those moths lay the eggs needed to start the next generation of silkworms
+   (B) the moths themselves are spun into extra silk thread
+   (C) the moths eat the leftover mulberry leaves so none is wasted
+   (D) the moths' wings are the source of the very finest silk
 
-39. An 80% wool / 20% polyester blend is chosen for school sweaters. The polyester is added mainly because it:
-   (A) turns the wool protein into a plant fibre
-   (B) adds strength and helps the garment keep its shape and resist wrinkling
-   (C) makes the sweater smell of burnt hair
-   (D) is spun by silkworms, adding natural silk to the wool
+39. A care label says 'machine wash warm' for an 80% polyester / 20% cotton shirt but 'cool wash, do not wring' for a 100% wool jumper. The best reason the two labels differ is:
+   (A) the cotton-polyester shirt contains protein scales that mat, so it needs the gentler care
+   (B) wool's scaly protein fibres felt and shrink with heat and agitation, while the polyester-cotton blend resists felting, so it tolerates warm machine washing
+   (C) polyester is an animal fibre and so must always be washed cool
+   (D) the labels are swapped — wool actually tolerates hot water better than synthetics do
 
-40. Place the FOURTH wool step in this chain: shearing → scouring → sorting → ____ → dyeing → spinning into yarn.
-   (A) reeling the silk thread from the cocoon
-   (B) feeding the sheep mulberry leaves
-   (C) boiling the fleece to kill the pupa
-   (D) picking out the burrs (removing bits of plant material caught in the fleece)
+40. Shearing, the FIRST step of wool processing, involves:
+   (A) washing the grease and dirt out of the fleece
+   (B) separating the fine inner hairs from the coarse guard hairs
+   (C) twisting the cleaned fibres into a yarn
+   (D) cutting off the sheep's fleece — the hair together with a thin layer of skin — usually without hurting the animal
 
 41. Muga silk's natural golden colour and its strong link to Assam best illustrate that:
    (A) all silk is naturally golden until it is bleached white
@@ -281,11 +281,11 @@
    (C) both are gums removed before reeling, leaving no thread behind
    (D) fibroin is a plant cellulose and sericin is an animal protein
 
-45. A diagram shows a sheep's fleece with two hair types. The coarse outer hairs and the fine inner hairs are called, respectively:
-   (A) guard hairs and the undercoat
-   (B) cocoons and burrs
-   (C) sericin and fibroin
-   (D) warp and weft
+45. A sheep is sheared in early summer. By the time the next winter arrives, the same sheep has:
+   (A) grown a fresh fleece again, which is why a sheep can be sheared year after year
+   (B) lost the ability to grow wool and become useless for fleece
+   (C) begun to grow silk in place of wool
+   (D) developed a skin that turns into cotton fibre
 
 46. If reeling were attempted on a cocoon WITHOUT first softening it in hot water, the most likely problem would be that:
    (A) the thread would unwind too fast and tangle into yarn by itself
@@ -317,11 +317,11 @@
    (C) you sort cleaned wool (so scouring comes first), and you must separate fine from coarse hairs before spinning a fine yarn
    (D) sorting twists the fibres into yarn, so spinning is unnecessary
 
-51. A single mulberry cocoon, when fully reeled, can yield one continuous thread that is roughly:
-   (A) only a few centimetres long
-   (B) exactly one metre, always
-   (C) shorter than a single human hair
-   (D) hundreds to over a thousand metres long
+51. Making a single silk saree uses the thread of many thousands of cocoons. This fact best explains why:
+   (A) silk is normally cheaper than cotton
+   (B) silk sarees are really wool blended with cocoons
+   (C) one cocoon alone can supply several sarees
+   (D) silk is relatively expensive and prized, since each garment uses the output of a great many silkworms
 
 52. A student lists wool steps as: shearing → scouring → dyeing → sorting → picking burrs → spinning. Identify the error.
    (A) shearing should come last, after the wool is spun
@@ -329,11 +329,11 @@
    (C) dyeing is placed too early — it should come after sorting and picking burrs, not before them
    (D) spinning should come first, before shearing
 
-53. Compared with natural fibres, synthetic fibres like nylon and polyester are best described as:
-   (A) harvested from plants and animals like wool and silk
-   (B) man-made from petroleum, durable and wrinkle-resistant, but not biodegradable
-   (C) always warmer and softer than wool
-   (D) spun by silkworms feeding on mulberry leaves
+53. A waste-sorting project separates fibres that rot away in soil from those that do not. Into the 'does NOT rot / not biodegradable' bin should go:
+   (A) cotton and wool
+   (B) nylon and polyester
+   (C) silk and cotton
+   (D) wool and jute
 
 54. A documentary shows cocoons being dropped into boiling water while the larva-spun thread is unwound onto a reel. The two things the boiling water is achieving at once are:
    (A) softening the sericin so the thread unwinds, and killing the pupa so the single thread is not broken
