@@ -2247,6 +2247,10 @@
 		0D891D3121AFE8C8B33A0FEE /* Paper_46_Light_MotionTime_LinesAngles_ComparingQuantities_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 5108DC4F6C3765D4314901E1 /* Paper_46_Light_MotionTime_LinesAngles_ComparingQuantities_QuestionPaper.pdf */; };
 		FDD0B2D12688331FE69D2308 /* Paper_46_Light_MotionTime_LinesAngles_ComparingQuantities_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 228AB81483D6DA1C612A7195 /* Paper_46_Light_MotionTime_LinesAngles_ComparingQuantities_Questions.md */; };
 		9BC75E23DF5FA06BD54BB0B6 /* Paper_46_Light_MotionTime_LinesAngles_ComparingQuantities_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = B423C47E5E4C4EEA22CA3494 /* Paper_46_Light_MotionTime_LinesAngles_ComparingQuantities_Solutions.html */; };
+		9BC6CFE3E56B045AAC4B6899 /* Paper_47_Heat_ElectricCurrent_SimpleEquations_Symmetry_QuestionPaper.html in Resources */ = {isa = PBXBuildFile; fileRef = 7C3FD978D40D980B9998D928 /* Paper_47_Heat_ElectricCurrent_SimpleEquations_Symmetry_QuestionPaper.html */; };
+		8FC19CF4610D268B0A5A58BF /* Paper_47_Heat_ElectricCurrent_SimpleEquations_Symmetry_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 721C4BD3F6565A64901A529E /* Paper_47_Heat_ElectricCurrent_SimpleEquations_Symmetry_QuestionPaper.pdf */; };
+		425AC310B4CE7566286E3986 /* Paper_47_Heat_ElectricCurrent_SimpleEquations_Symmetry_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = D4D1015634054B969B31518D /* Paper_47_Heat_ElectricCurrent_SimpleEquations_Symmetry_Questions.md */; };
+		07249715D7046F240FCEFEB9 /* Paper_47_Heat_ElectricCurrent_SimpleEquations_Symmetry_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 9657DDE09F65CCEA854348D8 /* Paper_47_Heat_ElectricCurrent_SimpleEquations_Symmetry_Solutions.html */; };
 		4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */ = {isa = PBXBuildFile; fileRef = ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */; };
 		CF6289FBCF676858C99ED670 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F17B590EF6DA751E23E41 /* Contents.json */; };
 		9AE05997509D9842F29172EB /* maths_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E448E6E8BEEB87620A8C798 /* maths_class7.json */; };
@@ -4134,6 +4138,10 @@
 		5108DC4F6C3765D4314901E1 /* Paper_46_Light_MotionTime_LinesAngles_ComparingQuantities_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_46_Light_MotionTime_LinesAngles_ComparingQuantities_QuestionPaper.pdf"; sourceTree = "<group>"; };
 		228AB81483D6DA1C612A7195 /* Paper_46_Light_MotionTime_LinesAngles_ComparingQuantities_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_46_Light_MotionTime_LinesAngles_ComparingQuantities_Questions.md"; sourceTree = "<group>"; };
 		B423C47E5E4C4EEA22CA3494 /* Paper_46_Light_MotionTime_LinesAngles_ComparingQuantities_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_46_Light_MotionTime_LinesAngles_ComparingQuantities_Solutions.html"; sourceTree = "<group>"; };
+		7C3FD978D40D980B9998D928 /* Paper_47_Heat_ElectricCurrent_SimpleEquations_Symmetry_QuestionPaper.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_47_Heat_ElectricCurrent_SimpleEquations_Symmetry_QuestionPaper.html"; sourceTree = "<group>"; };
+		721C4BD3F6565A64901A529E /* Paper_47_Heat_ElectricCurrent_SimpleEquations_Symmetry_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_47_Heat_ElectricCurrent_SimpleEquations_Symmetry_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		D4D1015634054B969B31518D /* Paper_47_Heat_ElectricCurrent_SimpleEquations_Symmetry_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_47_Heat_ElectricCurrent_SimpleEquations_Symmetry_Questions.md"; sourceTree = "<group>"; };
+		9657DDE09F65CCEA854348D8 /* Paper_47_Heat_ElectricCurrent_SimpleEquations_Symmetry_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_47_Heat_ElectricCurrent_SimpleEquations_Symmetry_Solutions.html"; sourceTree = "<group>"; };
 		ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "QUESTION_INDEX.json"; sourceTree = "<group>"; };
 		5C7F17B590EF6DA751E23E41 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Contents.json"; sourceTree = "<group>"; };
 		69191026B2F9F250C1D2E9BD /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement.swift"; sourceTree = "<group>"; };
@@ -6653,6 +6661,10 @@
 				5108DC4F6C3765D4314901E1,
 				228AB81483D6DA1C612A7195,
 				B423C47E5E4C4EEA22CA3494,
+				7C3FD978D40D980B9998D928,
+				721C4BD3F6565A64901A529E,
+				D4D1015634054B969B31518D,
+				9657DDE09F65CCEA854348D8,
 				ECD0916CC0210824B2615292,
 			);
 			path = "BossChallengePapers";
@@ -10427,6 +10439,10 @@
 				0D891D3121AFE8C8B33A0FEE /* Paper_46_Light_MotionTime_LinesAngles_ComparingQuantities_QuestionPaper.pdf in Resources */,
 				FDD0B2D12688331FE69D2308 /* Paper_46_Light_MotionTime_LinesAngles_ComparingQuantities_Questions.md in Resources */,
 				9BC75E23DF5FA06BD54BB0B6 /* Paper_46_Light_MotionTime_LinesAngles_ComparingQuantities_Solutions.html in Resources */,
+				9BC6CFE3E56B045AAC4B6899 /* Paper_47_Heat_ElectricCurrent_SimpleEquations_Symmetry_QuestionPaper.html in Resources */,
+				8FC19CF4610D268B0A5A58BF /* Paper_47_Heat_ElectricCurrent_SimpleEquations_Symmetry_QuestionPaper.pdf in Resources */,
+				425AC310B4CE7566286E3986 /* Paper_47_Heat_ElectricCurrent_SimpleEquations_Symmetry_Questions.md in Resources */,
+				07249715D7046F240FCEFEB9 /* Paper_47_Heat_ElectricCurrent_SimpleEquations_Symmetry_Solutions.html in Resources */,
 				4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */,
 				CF6289FBCF676858C99ED670 /* Contents.json in Resources */,
 				9AE05997509D9842F29172EB /* maths_class7.json in Resources */,
