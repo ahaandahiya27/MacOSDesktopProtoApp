@@ -40,3 +40,4 @@
 | 36 | 2026-06-18 | Nutrition in Animals · Heat · Algebraic Expressions · The Triangle & its Properties | 25/25/25/25 | ✓ |
 | 37 | 2026-06-18 | Forests · Soil · Integers · Arithmetic Expressions | 25/25/25/25 | ✓ |
 | 38 | 2026-06-18 | Winds, Storms & Cyclones · Wastewater Story · Exponents & Powers · Lines & Angles | 25/25/25/25 | ✓ |
+| 39 | 2026-06-18 | Light · Electric Current & its Effects · Symmetry · Perimeter & Area | 25/25/25/25 | ✓ |
