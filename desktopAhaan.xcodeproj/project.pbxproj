@@ -2239,6 +2239,10 @@
 		17163B70AE83F43E6C492FA7 /* Paper_44_AcidsBasesSalts_Transportation_RationalNumbers_LinesAngles_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0273CCA419983B31A902E813 /* Paper_44_AcidsBasesSalts_Transportation_RationalNumbers_LinesAngles_QuestionPaper.pdf */; };
 		03DCB360A9A85826F2D70BA3 /* Paper_44_AcidsBasesSalts_Transportation_RationalNumbers_LinesAngles_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = DF2854E19350FB132755454E /* Paper_44_AcidsBasesSalts_Transportation_RationalNumbers_LinesAngles_Questions.md */; };
 		C758B8FE081048B5CF7354EC /* Paper_44_AcidsBasesSalts_Transportation_RationalNumbers_LinesAngles_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = C8932190C3434D17D54F512C /* Paper_44_AcidsBasesSalts_Transportation_RationalNumbers_LinesAngles_Solutions.html */; };
+		934E33319FB2386DC44B1775 /* Paper_45_NutritionInPlants_WastewaterStory_PerimeterArea_ExponentsPowers_QuestionPaper.html in Resources */ = {isa = PBXBuildFile; fileRef = 27B4DFB39241C0E58A49FA48 /* Paper_45_NutritionInPlants_WastewaterStory_PerimeterArea_ExponentsPowers_QuestionPaper.html */; };
+		0AC7B0EE723CE4B17E52585F /* Paper_45_NutritionInPlants_WastewaterStory_PerimeterArea_ExponentsPowers_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 30C8E490EE4AB5D044DCD124 /* Paper_45_NutritionInPlants_WastewaterStory_PerimeterArea_ExponentsPowers_QuestionPaper.pdf */; };
+		EDAF358918A457CDE5FCC2D8 /* Paper_45_NutritionInPlants_WastewaterStory_PerimeterArea_ExponentsPowers_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = C3C612707EAF8F8B92CB7ABC /* Paper_45_NutritionInPlants_WastewaterStory_PerimeterArea_ExponentsPowers_Questions.md */; };
+		C081896A06EB3D2A1401BDE5 /* Paper_45_NutritionInPlants_WastewaterStory_PerimeterArea_ExponentsPowers_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 1D4B6D86CDD0B416660156A6 /* Paper_45_NutritionInPlants_WastewaterStory_PerimeterArea_ExponentsPowers_Solutions.html */; };
 		4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */ = {isa = PBXBuildFile; fileRef = ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */; };
 		CF6289FBCF676858C99ED670 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F17B590EF6DA751E23E41 /* Contents.json */; };
 		9AE05997509D9842F29172EB /* maths_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E448E6E8BEEB87620A8C798 /* maths_class7.json */; };
@@ -4118,6 +4122,10 @@
 		0273CCA419983B31A902E813 /* Paper_44_AcidsBasesSalts_Transportation_RationalNumbers_LinesAngles_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_44_AcidsBasesSalts_Transportation_RationalNumbers_LinesAngles_QuestionPaper.pdf"; sourceTree = "<group>"; };
 		DF2854E19350FB132755454E /* Paper_44_AcidsBasesSalts_Transportation_RationalNumbers_LinesAngles_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_44_AcidsBasesSalts_Transportation_RationalNumbers_LinesAngles_Questions.md"; sourceTree = "<group>"; };
 		C8932190C3434D17D54F512C /* Paper_44_AcidsBasesSalts_Transportation_RationalNumbers_LinesAngles_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_44_AcidsBasesSalts_Transportation_RationalNumbers_LinesAngles_Solutions.html"; sourceTree = "<group>"; };
+		27B4DFB39241C0E58A49FA48 /* Paper_45_NutritionInPlants_WastewaterStory_PerimeterArea_ExponentsPowers_QuestionPaper.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_45_NutritionInPlants_WastewaterStory_PerimeterArea_ExponentsPowers_QuestionPaper.html"; sourceTree = "<group>"; };
+		30C8E490EE4AB5D044DCD124 /* Paper_45_NutritionInPlants_WastewaterStory_PerimeterArea_ExponentsPowers_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_45_NutritionInPlants_WastewaterStory_PerimeterArea_ExponentsPowers_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		C3C612707EAF8F8B92CB7ABC /* Paper_45_NutritionInPlants_WastewaterStory_PerimeterArea_ExponentsPowers_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_45_NutritionInPlants_WastewaterStory_PerimeterArea_ExponentsPowers_Questions.md"; sourceTree = "<group>"; };
+		1D4B6D86CDD0B416660156A6 /* Paper_45_NutritionInPlants_WastewaterStory_PerimeterArea_ExponentsPowers_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_45_NutritionInPlants_WastewaterStory_PerimeterArea_ExponentsPowers_Solutions.html"; sourceTree = "<group>"; };
 		ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "QUESTION_INDEX.json"; sourceTree = "<group>"; };
 		5C7F17B590EF6DA751E23E41 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Contents.json"; sourceTree = "<group>"; };
 		69191026B2F9F250C1D2E9BD /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement.swift"; sourceTree = "<group>"; };
@@ -6629,6 +6637,10 @@
 				0273CCA419983B31A902E813,
 				DF2854E19350FB132755454E,
 				C8932190C3434D17D54F512C,
+				27B4DFB39241C0E58A49FA48,
+				30C8E490EE4AB5D044DCD124,
+				C3C612707EAF8F8B92CB7ABC,
+				1D4B6D86CDD0B416660156A6,
 				ECD0916CC0210824B2615292,
 			);
 			path = "BossChallengePapers";
@@ -10395,6 +10407,10 @@
 				17163B70AE83F43E6C492FA7 /* Paper_44_AcidsBasesSalts_Transportation_RationalNumbers_LinesAngles_QuestionPaper.pdf in Resources */,
 				03DCB360A9A85826F2D70BA3 /* Paper_44_AcidsBasesSalts_Transportation_RationalNumbers_LinesAngles_Questions.md in Resources */,
 				C758B8FE081048B5CF7354EC /* Paper_44_AcidsBasesSalts_Transportation_RationalNumbers_LinesAngles_Solutions.html in Resources */,
+				934E33319FB2386DC44B1775 /* Paper_45_NutritionInPlants_WastewaterStory_PerimeterArea_ExponentsPowers_QuestionPaper.html in Resources */,
+				0AC7B0EE723CE4B17E52585F /* Paper_45_NutritionInPlants_WastewaterStory_PerimeterArea_ExponentsPowers_QuestionPaper.pdf in Resources */,
+				EDAF358918A457CDE5FCC2D8 /* Paper_45_NutritionInPlants_WastewaterStory_PerimeterArea_ExponentsPowers_Questions.md in Resources */,
+				C081896A06EB3D2A1401BDE5 /* Paper_45_NutritionInPlants_WastewaterStory_PerimeterArea_ExponentsPowers_Solutions.html in Resources */,
 				4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */,
 				CF6289FBCF676858C99ED670 /* Contents.json in Resources */,
 				9AE05997509D9842F29172EB /* maths_class7.json in Resources */,
