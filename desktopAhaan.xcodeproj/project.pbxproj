@@ -2175,6 +2175,10 @@
 		D351F8EB334029774CF67CBB /* Paper_28_Heat_ReproductionPlants_Integers_Symmetry_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4BD8927B42E3D6F649C06F87 /* Paper_28_Heat_ReproductionPlants_Integers_Symmetry_QuestionPaper.pdf */; };
 		78FB0EF434027EC7EC2C6DA2 /* Paper_28_Heat_ReproductionPlants_Integers_Symmetry_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 40C95D69CBA726FD8015125D /* Paper_28_Heat_ReproductionPlants_Integers_Symmetry_Questions.md */; };
 		293B7E78459BBF57DA270552 /* Paper_28_Heat_ReproductionPlants_Integers_Symmetry_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 506880A9AEC1A782997924F5 /* Paper_28_Heat_ReproductionPlants_Integers_Symmetry_Solutions.html */; };
+		9157C575857D483C04ADEB78 /* Paper_29_Soil_Triangle_Respiration_ArithmeticExpressions_QuestionPaper.html in Resources */ = {isa = PBXBuildFile; fileRef = 332C7E6DCF820CEE51BE9A09 /* Paper_29_Soil_Triangle_Respiration_ArithmeticExpressions_QuestionPaper.html */; };
+		51BD4A3A099FDD48A123A594 /* Paper_29_Soil_Triangle_Respiration_ArithmeticExpressions_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 30644D796DE653D9F29AF86B /* Paper_29_Soil_Triangle_Respiration_ArithmeticExpressions_QuestionPaper.pdf */; };
+		8C03FFE8B51F35705557E465 /* Paper_29_Soil_Triangle_Respiration_ArithmeticExpressions_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = E76EDFDD97EE4C8E46D42B5F /* Paper_29_Soil_Triangle_Respiration_ArithmeticExpressions_Questions.md */; };
+		D35B596602AE31A14AB1536C /* Paper_29_Soil_Triangle_Respiration_ArithmeticExpressions_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 203DC323D3390A27F7F8269E /* Paper_29_Soil_Triangle_Respiration_ArithmeticExpressions_Solutions.html */; };
 		4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */ = {isa = PBXBuildFile; fileRef = ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */; };
 		CF6289FBCF676858C99ED670 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F17B590EF6DA751E23E41 /* Contents.json */; };
 		9AE05997509D9842F29172EB /* maths_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E448E6E8BEEB87620A8C798 /* maths_class7.json */; };
@@ -3990,6 +3994,10 @@
 		4BD8927B42E3D6F649C06F87 /* Paper_28_Heat_ReproductionPlants_Integers_Symmetry_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_28_Heat_ReproductionPlants_Integers_Symmetry_QuestionPaper.pdf"; sourceTree = "<group>"; };
 		40C95D69CBA726FD8015125D /* Paper_28_Heat_ReproductionPlants_Integers_Symmetry_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_28_Heat_ReproductionPlants_Integers_Symmetry_Questions.md"; sourceTree = "<group>"; };
 		506880A9AEC1A782997924F5 /* Paper_28_Heat_ReproductionPlants_Integers_Symmetry_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_28_Heat_ReproductionPlants_Integers_Symmetry_Solutions.html"; sourceTree = "<group>"; };
+		332C7E6DCF820CEE51BE9A09 /* Paper_29_Soil_Triangle_Respiration_ArithmeticExpressions_QuestionPaper.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_29_Soil_Triangle_Respiration_ArithmeticExpressions_QuestionPaper.html"; sourceTree = "<group>"; };
+		30644D796DE653D9F29AF86B /* Paper_29_Soil_Triangle_Respiration_ArithmeticExpressions_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_29_Soil_Triangle_Respiration_ArithmeticExpressions_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		E76EDFDD97EE4C8E46D42B5F /* Paper_29_Soil_Triangle_Respiration_ArithmeticExpressions_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_29_Soil_Triangle_Respiration_ArithmeticExpressions_Questions.md"; sourceTree = "<group>"; };
+		203DC323D3390A27F7F8269E /* Paper_29_Soil_Triangle_Respiration_ArithmeticExpressions_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_29_Soil_Triangle_Respiration_ArithmeticExpressions_Solutions.html"; sourceTree = "<group>"; };
 		ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "QUESTION_INDEX.json"; sourceTree = "<group>"; };
 		5C7F17B590EF6DA751E23E41 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Contents.json"; sourceTree = "<group>"; };
 		69191026B2F9F250C1D2E9BD /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement.swift"; sourceTree = "<group>"; };
@@ -6437,6 +6445,10 @@
 				4BD8927B42E3D6F649C06F87,
 				40C95D69CBA726FD8015125D,
 				506880A9AEC1A782997924F5,
+				332C7E6DCF820CEE51BE9A09,
+				30644D796DE653D9F29AF86B,
+				E76EDFDD97EE4C8E46D42B5F,
+				203DC323D3390A27F7F8269E,
 				ECD0916CC0210824B2615292,
 			);
 			path = "BossChallengePapers";
@@ -10139,6 +10151,10 @@
 				D351F8EB334029774CF67CBB /* Paper_28_Heat_ReproductionPlants_Integers_Symmetry_QuestionPaper.pdf in Resources */,
 				78FB0EF434027EC7EC2C6DA2 /* Paper_28_Heat_ReproductionPlants_Integers_Symmetry_Questions.md in Resources */,
 				293B7E78459BBF57DA270552 /* Paper_28_Heat_ReproductionPlants_Integers_Symmetry_Solutions.html in Resources */,
+				9157C575857D483C04ADEB78 /* Paper_29_Soil_Triangle_Respiration_ArithmeticExpressions_QuestionPaper.html in Resources */,
+				51BD4A3A099FDD48A123A594 /* Paper_29_Soil_Triangle_Respiration_ArithmeticExpressions_QuestionPaper.pdf in Resources */,
+				8C03FFE8B51F35705557E465 /* Paper_29_Soil_Triangle_Respiration_ArithmeticExpressions_Questions.md in Resources */,
+				D35B596602AE31A14AB1536C /* Paper_29_Soil_Triangle_Respiration_ArithmeticExpressions_Solutions.html in Resources */,
 				4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */,
 				CF6289FBCF676858C99ED670 /* Contents.json in Resources */,
 				9AE05997509D9842F29172EB /* maths_class7.json in Resources */,

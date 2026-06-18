@@ -30,3 +30,4 @@
 | 26 | 2026-06-18 | Electric Current & its Effects · Simple Equations · Reproduction in Plants · Data Handling | 25/25/25/25 | ✓ |
 | 27 | 2026-06-18 | Motion & Time · Forests · Algebraic Expressions · Comparing Quantities | 25/25/25/25 | ✓ |
 | 28 | 2026-06-18 | Heat · Reproduction in Plants · Integers · Symmetry | 25/25/25/25 | ✓ |
+| 29 | 2026-06-18 | Soil · The Triangle & its Properties · Respiration in Organisms · Arithmetic Expressions | 25/25/25/25 | ✓ |
