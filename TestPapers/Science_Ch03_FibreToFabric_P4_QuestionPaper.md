@@ -77,11 +77,11 @@
    (C) Both features only affect colour, so a smooth straight wool fibre would warm you just as well
    (D) The scales make wool a plant fibre and the crimp makes it an animal fibre
 
-11. Yak wool, camel wool and Pashmina (from a Himalayan goat) are grouped together in a question. The single feature that best explains why all three are warm fibres from cold-region animals is:
-   (A) All three are spun as cocoons by larvae living in cold mountains
-   (B) All three are plant fibres that grow only in cold-climate fields
-   (C) All three come from animals adapted to cold climates whose thick coats trap insulating air, and that same air-trapping fibre is what makes the wool warm for humans
-   (D) All three are synthetic fibres engineered to imitate the warmth of mountain animals
+11. The same Pashmina goat breed is reared in two places: high in cold Ladakh and on a warm lowland farm. The Ladakh goats grow a much finer, denser undercoat. The statement that best links climate, animal and fibre warmth is:
+   (A) The lowland goats grow the finer undercoat, because heat makes an animal thicken its coat to shed warmth
+   (B) Climate cannot affect the undercoat at all; fineness depends only on the dye and scouring used later
+   (C) Cold prompts the Ladakh goats to grow a thick, fine undercoat that traps insulating air for the animal, and that same air-trapping fine fibre is exactly what makes Pashmina warm for humans
+   (D) The lowland goats begin to grow silk instead of wool, because warmth converts keratin into fibroin
 
 12. A wool mill lists its steps but two are swapped: shearing → SORTING → SCOURING → picking burrs → dyeing → spinning. Identify the swap and why it breaks the process.
    (A) Sorting and scouring are swapped — you must scour (wash out grease and dirt) before sorting, because grades and fine-vs-coarse hairs can only be judged cleanly on washed wool, not on greasy fleece
@@ -119,11 +119,11 @@
    (C) Scouring must come first only for sorting; dye actually soaks better into greasy, unwashed wool
    (D) Scouring removes grease and dirt, and clean wool is required both to judge the fibres correctly during sorting and to absorb dye evenly during dyeing — so both later steps depend on scouring being done first
 
-18. A worker does picking burrs FIRST (on raw greasy fleece) and scouring SECOND. Compared with the correct order, the most likely outcome is:
-   (A) The wool comes out cleaner than usual, because removing burrs first lets the scouring water reach more fibre
-   (B) Many burrs are missed, because grease and dirt hide them on raw fleece, so the wool ends up still containing burrs after both steps
-   (C) The order makes no difference, because each step works independently of the other
-   (D) The grease is removed twice as fast, because the burrs act as scrubbing agents during scouring
+18. Batch 1 is processed in the correct order (scour, then pick burrs); Batch 2 has burrs picked first on greasy raw fleece, then is scoured. After both are spun into yarn, which batch's yarn is more likely to stay prickly with embedded plant bits, and why?
+   (A) Batch 1, because scouring before burr-picking glues the burrs permanently into the fibre
+   (B) Batch 2, because grease and dirt hide the burrs on raw fleece so many are missed, and the later scouring washes out grease but cannot pull out embedded burrs
+   (C) Neither — the order cannot affect how many burrs remain, since the two steps act independently
+   (D) Batch 1, because burrs left on during scouring scrub the fibre smooth and remove themselves
 
 19. A sheep yields 4 kg of raw fleece. Scouring removes grease and dirt amounting to 30% of the raw mass. Sorting then discards 10% of the SCOURED wool as too coarse. Approximately how much sorted fine wool remains?
    (A) About 2.5 kg
@@ -137,17 +137,17 @@
    (C) Both dyeing and scouring fit equally, so the question has two correct answers
    (D) Scouring changes appearance only as a side effect of CLEANING; the question asks for the step whose PURPOSE is appearance without cleaning/grading/spinning, which is dyeing (adding colour)
 
-21. Shearing is timed for spring/early summer. A student offers four reasons; one is NOT a valid biological/practical justification. Which is the INVALID reason?
-   (A) Shears are blunted by cold weather and physically cannot cut a winter fleece
-   (B) Removing the fleece in winter would leave the sheep exposed to dangerous cold
-   (C) Shearing in spring gives the new fleece time to regrow before the next winter
-   (D) In the warm months the sheep does not need its fleece for warmth, so removal causes no heat-loss harm
+21. A herder shears Flock X at the onset of winter and identical Flock Y in early summer. Predict which flock suffers and which is unharmed, with the reason.
+   (A) Flock X suffers — stripped of its fleece just as the cold arrives, it loses body heat with no insulating coat; Flock Y is unharmed because it does not need the fleece in warm months and regrows it before the next winter
+   (B) Flock Y suffers, because summer shearing sunburns the skin and permanently stops wool regrowth
+   (C) Neither is affected, because the timing of shearing has no bearing on the sheep's warmth
+   (D) Flock X thrives, because removing the fleece in winter makes the sheep grow it back thicker and warmer
 
-22. Scouring (a wool step) and reeling (a silk step) both involve hot water, yet their purposes are opposite in a key way. The pairing that states each purpose correctly is:
-   (A) Scouring uses hot water to unwind silk thread; reeling uses water to wash grease from fleece
-   (B) Both use hot water to add the final colour, scouring to wool and reeling to silk
-   (C) Scouring uses water to wash grease and dirt OUT of raw fleece; reeling uses hot water to soften the sericin gum so the silk thread can be unwound from the cocoon
-   (D) Both use hot water only to add the twist that turns fibre into finished yarn
+22. A student sees that scouring (wool) and reeling (silk) both use HOT water and concludes 'the heat must do the same job in both.' Refute this by naming the different job the heat does in each step.
+   (A) The student is right — in both, heat simply sets the dye colour into the fibre
+   (B) Heat in both steps only adds the twist that turns loose fibre into finished yarn
+   (C) The student is wrong: in scouring the hot water loosens and washes grease and dirt OUT of the raw fleece, whereas in reeling the hot water softens the sericin gum so the single cocoon filament can be unwound — same agent, opposite jobs
+   (D) The student is wrong because reeling uses cold water and only scouring uses hot water
 
 23. A care label on a pure-wool blanket reads 'cool wash, do not wring, dry flat.' Explain, in cause-and-effect terms, why these three instructions all guard against the SAME underlying problem.
    (A) All three keep the wool from dissolving, because wool dissolves in hot, moving water
@@ -203,11 +203,11 @@
    (C) The larva spins a cocoon around itself as it changes into a pupa
    (D) The adult moth emerges from the cocoon and lays eggs, beginning the cycle again
 
-32. A sericulturist notices a batch of cocoons beginning to crack as moths chew their way out. To rescue the maximum length of usable silk, the BEST action is:
-   (A) Let all the moths finish emerging, then collect the empty cocoons, since the empty cocoon is the silk
-   (B) Immediately treat the still-intact cocoons with heat/steam before more moths emerge, so the single long filament stays unbroken for reeling
-   (C) Feed the emerging moths extra mulberry leaves so they stop chewing through the silk
-   (D) Wait until every moth has left, then boil the empty cocoons to recover the whole continuous thread
+32. A sericulturist has 1000 cocoons: a few already show exit holes where moths have emerged, while the rest are intact but moths are due within hours. To salvage the most reelable silk overall, the best plan is:
+   (A) Wait for every moth to emerge, then reel all 1000 cocoons equally, since emergence does not affect the thread
+   (B) At once heat/steam the still-intact cocoons to stop further emergence and keep their filaments unbroken, accepting that the few already-holed cocoons now yield only short broken lengths
+   (C) Reel the already-holed cocoons first, because an opened cocoon unwinds into one longer thread than an intact one
+   (D) Place mulberry leaves beside the cocoons so the pupae feed and delay emerging
 
 33. A claim states: 'Feeding silkworms more and fresher mulberry leaves and feeding sheep mulberry leaves will both improve the fibre.' Judge each half of the claim.
    (A) Both halves are true, because mulberry leaves improve every animal fibre
@@ -227,17 +227,17 @@
    (C) Weaving fails — fibroin is the actual silk filament that becomes cloth, while sericin is only the gummy coating meant to be removed during reeling, so discarding the fibroin discards the usable thread
    (D) Weaving fails because both fibroin and sericin are gums and neither can be woven
 
-36. A reeler is given a single dry cocoon and told to unwind it without any hot water. What happens, and why?
-   (A) It unwinds even faster, because dry thread slides off more easily than wet thread
-   (B) It unwinds perfectly, because hot water is only used to dye the silk, not to free the thread
-   (C) The sericin gum still binds the filament tightly, so attempts to pull it off snap the thread into short pieces instead of unwinding one long strand
-   (D) Nothing can be unwound because a dry cocoon contains no thread at all, only gum
+36. Reeler 1 soaks each cocoon in hot water before unwinding; Reeler 2 skips the soak and pulls the thread off dry. Compare the LENGTH and CONTINUITY of silk each recovers, with the reason.
+   (A) Reeler 2 recovers a longer thread, because dry silk slides off the cocoon faster than softened silk
+   (B) Both recover the same single long thread, because hot water is used only to dye silk, not to free it
+   (C) Reeler 1 recovers one long continuous filament because the hot water softens the sericin gum and releases the thread, while Reeler 2 gets only short broken fragments because the un-softened gum holds the filament fast and snaps it
+   (D) Neither recovers any thread, because a cocoon is solid gum containing no filament
 
-37. During reeling, the filaments of several cocoons are combined into one strand. A student argues this is done 'to mix different colours into white.' Correct this and give the real reason.
-   (A) Combining is done for strength and usable thickness — a single fibroin filament is far too thin and weak to use alone; mulberry silk is already whitish, so colour-mixing is not the reason
-   (B) The student is right; each cocoon is a different colour and several are blended to get white
-   (C) Combining is done because a single filament is far too thick, so several thin it down
-   (D) Combining is done to mix wool with silk, giving a warmer thread
+37. A weaver tries to weave cloth using one single unreeled cocoon filament instead of a reeled multi-filament thread. Predict the result and explain why reeling combines several filaments.
+   (A) The single fibroin filament is far too fine and weak, so it snaps under the loom's tension and makes no usable cloth; reeling combines several filaments to build a thread strong and thick enough to weave
+   (B) The cloth weaves perfectly, because one cocoon's filament is already strong enough on its own
+   (C) It fails because a single filament is far too thick to pass through the loom, so several are combined to thin it
+   (D) It fails because one cocoon's filament is actually wool and must be blended with silk to weave
 
 38. Reeling and weaving are both silk steps, but only one of them produces fabric. Match each step to what it does:
    (A) Reeling interlaces warp and weft threads, while weaving unwinds the cocoon
@@ -263,29 +263,29 @@
    (C) All silk is naturally golden and only becomes white after bleaching, so muga is just unbleached silk
    (D) Muga is golden because the Assam goat that spins it eats golden mulberry leaves
 
-42. Order this complete silk journey so that each step follows its prerequisite: weaving, reeling, larva feeding on mulberry leaves, cocoon spinning. The correct sequence is:
-   (A) cocoon spinning → larva feeding on mulberry leaves → reeling → weaving
-   (B) reeling → weaving → larva feeding on mulberry leaves → cocoon spinning
-   (C) weaving → reeling → cocoon spinning → larva feeding on mulberry leaves
-   (D) larva feeding on mulberry leaves → cocoon spinning → reeling → weaving
+42. A poster shows the silk journey as: larva feeding on mulberry leaves → reeling → cocoon spinning → weaving. Exactly one step is out of place. Which step, and where does it belong?
+   (A) Reeling is misplaced — it belongs last, after weaving the cloth
+   (B) Weaving is misplaced — it belongs first, before the larva feeds
+   (C) Nothing is misplaced — reeling correctly comes before cocoon spinning
+   (D) Cocoon spinning is misplaced — you can only reel a cocoon that already exists, so spinning must come before reeling: feeding → cocoon spinning → reeling → weaving
 
-43. A label reads '100% silk.' Tracing the fibre to its true biological origin, the fabric began as:
-   (A) the fine inner undercoat sheared from a Himalayan Pashmina goat
-   (B) the sericin gum scraped off the cocoons and woven directly
-   (C) the seed hairs picked from the bolls of a flowering plant
-   (D) the continuous fibroin filament that a silk-moth larva spun to build its cocoon, later reeled into thread
+43. A '100% silk' scarf and a '100% cotton' shirt are traced back to their true biological origins. Which single statement is correct for BOTH fibres?
+   (A) Both began as the fluffy seed hairs from the boll of a plant
+   (B) Both began as the cocoon filament spun by a silk-moth larva
+   (C) The silk began as cotton seed hairs and the cotton began as a silk-moth cocoon
+   (D) The silk began as the continuous fibroin filament a silk-moth larva spun into its cocoon (later reeled), while the cotton began as the seed hairs from a cotton plant's boll — one animal, one plant
 
-44. Classify cotton, wool, silk and jute into plant versus animal fibres, then pick the statement that is correct on BOTH counts.
+44. Four fibres — cotton, wool, silk, jute — are each burnt. Wool and silk smell of burnt hair; cotton and jute smell of burning paper. Using ONLY this burn evidence, the correct grouping is:
    (A) Cotton and wool are animal fibres; silk and jute are plant fibres
-   (B) All four are animal fibres because all come from living things
-   (C) Wool and silk are animal (protein) fibres; cotton and jute are plant (cellulose) fibres
+   (B) All four are animal fibres, since the burn test cannot tell plant from animal
+   (C) Wool and silk are animal (protein) fibres — the burnt-hair smell marks protein — while cotton and jute are plant (cellulose) fibres, marked by the papery smell
    (D) Silk and jute are animal fibres; cotton and wool are plant fibres
 
-45. A museum exhibit pairs each fibre with its source. Which single pairing is correct on BOTH the animal and the fibre?
-   (A) Sheep → silk; silk moth → wool
-   (B) Silk moth (its larva) → silk; Pashmina goat → wool
-   (C) Mulberry plant → silk; sheep → cotton
-   (D) Yak → silk; camel → cotton
+45. A museum card lists four 'source → fibre → fibre-type' triples. Which single triple is correct on ALL THREE counts?
+   (A) Sheep → silk → animal fibre
+   (B) Silk-moth larva → silk → animal fibre
+   (C) Cotton plant → wool → plant fibre
+   (D) Pashmina goat → silk → animal fibre
 
 46. Tracing a sweater labelled 'pure Pashmina' to its source, then a saree labelled 'pure muga,' the two true origins are:
    (A) Pashmina comes from the fine undercoat of a Himalayan goat (a wool); muga comes from a non-mulberry silkworm in Assam (a silk)
@@ -305,29 +305,29 @@
    (C) The spinner, because spinning finished yarn releases the most spores into the air
    (D) The shepherd, because drinking the sheep's milk transmits the disease
 
-49. A worker in a wool unit develops a severe lung illness. Investigators trace it to inhaled spores from raw fleece. Name the disease and its cause precisely.
-   (A) The common cold, caused by a virus living in the wool dye
-   (B) Malaria, caused by a parasite breeding in the scouring water
-   (C) Tooth decay, caused by bacteria in the wool fibres
-   (D) Sorter's disease, a form of anthrax, caused by spores of the bacterium Bacillus anthracis carried in raw fleece
+49. A doctor must name the illness of a raw-fleece wool sorter who has a severe lung infection, and identify its exact causative agent, ruling out look-alike conditions. The precise identification is:
+   (A) A fungal lung infection, caught from spores living in the wool dye
+   (B) Food poisoning, caused by swallowing grease from the raw fleece
+   (C) A common cold, caused by the cold air of the sorting shed
+   (D) Sorter's disease — a form of anthrax — caused by inhaled spores of the bacterium Bacillus anthracis present in raw fleece
 
-50. A health officer can fund only ONE intervention to cut sorter's disease in a wool unit. Reasoning from how the disease actually spreads, the most effective single choice is:
-   (A) Dye all the wool in bright colours so infected batches can be spotted and removed
-   (B) Shear the sheep more often so each animal carries less fleece at a time
-   (C) Disinfect the raw fleece and equip sorters with masks, gloves and good ventilation, blocking the inhalation route of the spores
-   (D) Sell only finished sweaters and stop the unit's processing of raw wool
+50. The spores that cause sorter's disease are present in raw-fleece dust but gone after scouring. To protect the most workers, a manager must place a single safety 'control point' in the workflow. Where should it go, and why?
+   (A) At the finished-sweater packing bench, since the most workers stand there
+   (B) At the dyeing vats, because dye fumes are what carry the spores
+   (C) At the raw-fleece sorting stage — disinfect the incoming fleece and give those sorters masks and ventilation, because that is the one stage where spore-laden dust is present and inhaled
+   (D) At the shop counter, to protect the customers who buy the wool
 
-51. Why is a finished, scoured and dyed woollen sweater essentially safe from sorter's disease, even though the disease originates in sheep's wool?
-   (A) Because anthrax can infect only sheep and never humans
-   (B) Because the dye on the sweater acts as an antibiotic that cures any infection
-   (C) Because finished sweaters are actually made of cotton, not wool
-   (D) Scouring and full processing wash the anthrax spores out of the fleece before it becomes a sweater, so the finished garment carries essentially none
+51. Raw fleece in a sorting shed and a finished sweater in a shop are each tested for anthrax spores. Which carries spores, which does not, and why?
+   (A) Both carry spores equally, because both are made of the same wool
+   (B) The sweater carries more, because spores become concentrated as the wool is processed
+   (C) Neither carries spores, because anthrax can infect only sheep, never wool
+   (D) The raw fleece carries spores (it is unwashed) but the finished sweater does not, because scouring and full processing wash the spores out before the wool becomes a sweater
 
-52. A poster matches jobs to occupational risks. Which single line is correct?
-   (A) Silk reeler → anthrax from breathing dye fumes during reeling
-   (B) Wool sorter → anthrax (sorter's disease) from inhaling spores in raw fleece
-   (C) Sweater shopper → anthrax from wearing finished, processed wool
-   (D) Shepherd → anthrax only from drinking the sheep's milk, never from fleece
+52. A safety poster claims 'everyone who handles wool or silk faces an equal anthrax risk.' Correct it by naming the ONE job at genuine risk and saying why the others are not.
+   (A) The silk reeler is the one at risk, from breathing dye fumes while reeling boiled cocoons
+   (B) Only the raw-fleece wool sorter is at real risk, because they inhale spores from unwashed fleece; the silk reeler (boiled cocoons), the sweater shopper (scoured goods) and the weaver (processed yarn) all handle spore-free material
+   (C) The sweater shopper is the one at risk, because body heat from wearing wool activates dormant spores
+   (D) The claim is right — all four jobs face exactly the same anthrax risk because all touch fibre
 
 53. Spell out the full cause-and-effect chain by which a wool sorter can fall ill, in correct order:
    (A) Finished sweater carries spores → the buyer wears it → body heat activates spores → anthrax develops
@@ -335,11 +335,11 @@
    (C) Dye contains a virus → fumes are inhaled during dyeing → the virus causes a cold that worsens into anthrax
    (D) Scouring water breeds a parasite → the worker drinks it → the parasite causes anthrax in the blood
 
-54. An 80% wool / 20% polyester blend is chosen for school sweaters. Reasoning about what each component contributes, the polyester is added mainly to:
-   (A) convert the wool's protein into a plant fibre so it stops shrinking
-   (B) make the sweater smell of burnt hair so it is recognisably 'natural'
-   (C) supply the warmth, since polyester traps far more air than wool
-   (D) add strength and help the garment keep its shape and resist wrinkling, while the wool still provides warmth
+54. A school sweater is 80% wool / 20% polyester. Mapping each property of the finished sweater to the component that supplies it — warmth, soft feel, added strength, shape-and-wrinkle resistance — the correct mapping is:
+   (A) Polyester supplies the warmth and the soft feel; the wool merely supplies the colour
+   (B) Wool supplies the strength and wrinkle-resistance; polyester supplies the warmth
+   (C) Polyester supplies all four properties; the wool is only there as cheap filler
+   (D) Wool supplies the warmth and soft feel (its crimp traps air), while polyester supplies the added strength, shape-retention and wrinkle-resistance
 
 55. Compared with natural animal fibres like wool and silk, synthetic fibres such as nylon and polyester are best described as:
    (A) man-made from petroleum — durable and wrinkle-resistant, but not biodegradable, and not produced by any plant or animal
@@ -347,23 +347,23 @@
    (C) spun by silkworms that feed on petroleum instead of mulberry leaves
    (D) always warmer and softer than wool because they are newer materials
 
-56. An ethical objection to traditional mulberry silk-making concerns the killing of a living insect. Identify exactly WHICH stage is killed and HOW, then say why this is unavoidable in standard reeling.
-   (A) The adult moths are crushed while laying eggs, to stop overpopulation in the farm
-   (B) The eggs are boiled before hatching, so no larvae are ever produced
-   (C) The larvae are starved of mulberry leaves until they spin out of hunger
-   (D) The pupa inside the cocoon is killed by boiling/steaming the cocoon before the moth can emerge, because letting the moth chew out would break the single long thread that reeling depends on
+56. An advertiser claims its ordinary mulberry silk is 'cruelty-free — no insect is harmed in normal reeling.' A biologist rejects this. Which correction is accurate?
+   (A) The claim is true, because the moth always flies out safely before the cocoon is boiled
+   (B) The claim is false, but because the larvae are starved to death, not boiled
+   (C) The claim is false, but because the adult moths are killed while laying their eggs
+   (D) The claim is false: standard reeling boils the cocoon with the pupa still inside, killing it, precisely so the moth cannot emerge and cut the single continuous thread
 
-57. A trader prices vicuña and Pashmina fibre very high, arguing 'each animal yields only a tiny amount of very fine fibre per year, so it is naturally scarce.' Evaluate the economic reasoning.
-   (A) The reasoning is wrong, because these are mass-produced plant fibres that are never scarce
-   (B) The reasoning is wrong, because all animal fibres cost exactly the same regardless of quantity
-   (C) The reasoning is sound — a fine fibre that an animal produces only in small amounts each year is genuinely scarce, and scarcity of a desirable fibre raises its price
-   (D) The reasoning is wrong, because these are cheap factory-made synthetics
+57. Pashmina sells for far more per kilogram than ordinary sheep wool. Of the reasons a student lists, the economically sound one is:
+   (A) Pashmina costs more because it is dyed gold, like muga silk
+   (B) Pashmina costs more because it is a synthetic, and synthetics always cost more than natural fibres
+   (C) Each Pashmina goat yields only a little very fine undercoat per year, so the fine fibre is scarce; a scarce and highly desirable fibre commands a high price
+   (D) Pashmina and ordinary wool actually cost the same, since all animal fibres are priced equally by weight
 
-58. A factory manager wants to maximise BOTH wool softness AND sorter safety with the fewest sensible changes. Which combined plan best achieves both goals?
-   (A) Use a coarse breed and skip sorting to save time, and let sorters work without masks to save money
-   (B) Rear a fine-wool breed and sort the fleece carefully for softness, while disinfecting raw fleece and giving sorters masks, gloves and good ventilation for safety
-   (C) Skip scouring so the natural grease keeps fibres soft, and dye the wool brightly to hide any spores
-   (D) Feed the sheep mulberry leaves for silkiness and boil the fleece to kill any pupae before sorting
+58. A manager proposes: 'Rear a fine-wool breed and sort the fleece carefully for softness, and to save time skip scouring so sorters work the greasy raw fleece straight through.' Which goal does this plan secretly fail, and how would you fix it?
+   (A) It fails softness, because fine-wool breeds actually grow the coarsest wool
+   (B) It fails safety — routing sorters onto unscoured raw fleece leaves them inhaling anthrax spores; fix it by disinfecting the fleece and giving sorters masks and ventilation (clean fibre is softer too)
+   (C) It serves both softness and safety perfectly; there is no flaw in the plan
+   (D) It fails both goals, because the very act of sorting always spreads spores no matter what
 
 59. A student writes: 'Boiling the cocoon is done only to clean dust off it.' Give the most complete correction, naming all the real purposes.
    (A) The student is fully correct; cleaning the dust is the only reason cocoons are boiled
@@ -371,8 +371,8 @@
    (C) Cocoons are never actually boiled in commercial silk-making
    (D) Boiling chiefly softens the sericin gum so the filament can be reeled, and it kills the pupa so the emerging moth cannot break the long thread; any cleaning is incidental, not the main purpose
 
-60. A mislabelled spool sold as 'animal-fibre yarn' weakens sharply when wet, burns with a papery smell, leaves grey ash, and never felts in hot water. Reasoning from each clue, the honest conclusion is:
-   (A) It is genuine wool, because wool weakens when wet and burns with a papery smell
-   (B) It is genuine silk, because silk leaves grey ash and never felts
-   (C) It behaves like cotton, a plant cellulose fibre — every clue (wet weakness, papery burn, grey ash, no felting) points to cotton, so the 'animal-fibre' label is false
-   (D) It is genuine Pashmina, because Pashmina is the one animal fibre that never shrinks
+60. Two yarns are both sold as 'pure wool.' Yarn 1 weakens when wet, burns papery with grey ash, and never felts. Yarn 2 keeps its strength when wet, chars with a burnt-hair smell, and felts in hot water. Which label is false, and what is each yarn really?
+   (A) Yarn 2's label is false — its clues mark it as the cotton one, while Yarn 1 is genuine wool
+   (B) Both labels are correct — both sets of clues are normal for wool
+   (C) Yarn 1's label is false — every clue (wet-weak, papery burn, grey ash, no felting) marks it as cotton (a plant fibre), while Yarn 2's clues (wet-strong, burnt-hair char, felts) genuinely fit wool, so only Yarn 1 is mislabelled
+   (D) Both labels are false — both yarns are really cotton
