@@ -2227,6 +2227,10 @@
 		71A191A5C87DFAC884AAD238 /* Paper_41_MotionTime_Respiration_ComparingQuantities_SimpleEquations_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A37386FF5D5BEE40277C78FA /* Paper_41_MotionTime_Respiration_ComparingQuantities_SimpleEquations_QuestionPaper.pdf */; };
 		474F8D62C8D98361B4880362 /* Paper_41_MotionTime_Respiration_ComparingQuantities_SimpleEquations_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 8C626C2CE8DBAF0A8BA25592 /* Paper_41_MotionTime_Respiration_ComparingQuantities_SimpleEquations_Questions.md */; };
 		ECB6CE5F04A07B2C98444495 /* Paper_41_MotionTime_Respiration_ComparingQuantities_SimpleEquations_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = F43DF46BCE3E4BA0C0FB645E /* Paper_41_MotionTime_Respiration_ComparingQuantities_SimpleEquations_Solutions.html */; };
+		CED1399DE2487344B747AD11 /* Paper_42_WindsStormsCyclones_ElectricCurrent_AlgebraicExpressions_DataHandling_QuestionPaper.html in Resources */ = {isa = PBXBuildFile; fileRef = C2C121363D4D07B663073FFF /* Paper_42_WindsStormsCyclones_ElectricCurrent_AlgebraicExpressions_DataHandling_QuestionPaper.html */; };
+		F72DF83623DFF39ADDD8AA8D /* Paper_42_WindsStormsCyclones_ElectricCurrent_AlgebraicExpressions_DataHandling_QuestionPaper.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E209EC2A367BEBEE92544134 /* Paper_42_WindsStormsCyclones_ElectricCurrent_AlgebraicExpressions_DataHandling_QuestionPaper.pdf */; };
+		F8BCE2062D3F011A538B0BFC /* Paper_42_WindsStormsCyclones_ElectricCurrent_AlgebraicExpressions_DataHandling_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = DC75CEA79A0E27C32372CFDF /* Paper_42_WindsStormsCyclones_ElectricCurrent_AlgebraicExpressions_DataHandling_Questions.md */; };
+		CFBEC539EBEE6CCFC2D1558D /* Paper_42_WindsStormsCyclones_ElectricCurrent_AlgebraicExpressions_DataHandling_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 4D7E0D1B0993D13F245318A1 /* Paper_42_WindsStormsCyclones_ElectricCurrent_AlgebraicExpressions_DataHandling_Solutions.html */; };
 		4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */ = {isa = PBXBuildFile; fileRef = ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */; };
 		CF6289FBCF676858C99ED670 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F17B590EF6DA751E23E41 /* Contents.json */; };
 		9AE05997509D9842F29172EB /* maths_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E448E6E8BEEB87620A8C798 /* maths_class7.json */; };
@@ -4094,6 +4098,10 @@
 		A37386FF5D5BEE40277C78FA /* Paper_41_MotionTime_Respiration_ComparingQuantities_SimpleEquations_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_41_MotionTime_Respiration_ComparingQuantities_SimpleEquations_QuestionPaper.pdf"; sourceTree = "<group>"; };
 		8C626C2CE8DBAF0A8BA25592 /* Paper_41_MotionTime_Respiration_ComparingQuantities_SimpleEquations_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_41_MotionTime_Respiration_ComparingQuantities_SimpleEquations_Questions.md"; sourceTree = "<group>"; };
 		F43DF46BCE3E4BA0C0FB645E /* Paper_41_MotionTime_Respiration_ComparingQuantities_SimpleEquations_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_41_MotionTime_Respiration_ComparingQuantities_SimpleEquations_Solutions.html"; sourceTree = "<group>"; };
+		C2C121363D4D07B663073FFF /* Paper_42_WindsStormsCyclones_ElectricCurrent_AlgebraicExpressions_DataHandling_QuestionPaper.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_42_WindsStormsCyclones_ElectricCurrent_AlgebraicExpressions_DataHandling_QuestionPaper.html"; sourceTree = "<group>"; };
+		E209EC2A367BEBEE92544134 /* Paper_42_WindsStormsCyclones_ElectricCurrent_AlgebraicExpressions_DataHandling_QuestionPaper.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_42_WindsStormsCyclones_ElectricCurrent_AlgebraicExpressions_DataHandling_QuestionPaper.pdf"; sourceTree = "<group>"; };
+		DC75CEA79A0E27C32372CFDF /* Paper_42_WindsStormsCyclones_ElectricCurrent_AlgebraicExpressions_DataHandling_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_42_WindsStormsCyclones_ElectricCurrent_AlgebraicExpressions_DataHandling_Questions.md"; sourceTree = "<group>"; };
+		4D7E0D1B0993D13F245318A1 /* Paper_42_WindsStormsCyclones_ElectricCurrent_AlgebraicExpressions_DataHandling_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_42_WindsStormsCyclones_ElectricCurrent_AlgebraicExpressions_DataHandling_Solutions.html"; sourceTree = "<group>"; };
 		ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "QUESTION_INDEX.json"; sourceTree = "<group>"; };
 		5C7F17B590EF6DA751E23E41 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Contents.json"; sourceTree = "<group>"; };
 		69191026B2F9F250C1D2E9BD /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement.swift"; sourceTree = "<group>"; };
@@ -6593,6 +6601,10 @@
 				A37386FF5D5BEE40277C78FA,
 				8C626C2CE8DBAF0A8BA25592,
 				F43DF46BCE3E4BA0C0FB645E,
+				C2C121363D4D07B663073FFF,
+				E209EC2A367BEBEE92544134,
+				DC75CEA79A0E27C32372CFDF,
+				4D7E0D1B0993D13F245318A1,
 				ECD0916CC0210824B2615292,
 			);
 			path = "BossChallengePapers";
@@ -10347,6 +10359,10 @@
 				71A191A5C87DFAC884AAD238 /* Paper_41_MotionTime_Respiration_ComparingQuantities_SimpleEquations_QuestionPaper.pdf in Resources */,
 				474F8D62C8D98361B4880362 /* Paper_41_MotionTime_Respiration_ComparingQuantities_SimpleEquations_Questions.md in Resources */,
 				ECB6CE5F04A07B2C98444495 /* Paper_41_MotionTime_Respiration_ComparingQuantities_SimpleEquations_Solutions.html in Resources */,
+				CED1399DE2487344B747AD11 /* Paper_42_WindsStormsCyclones_ElectricCurrent_AlgebraicExpressions_DataHandling_QuestionPaper.html in Resources */,
+				F72DF83623DFF39ADDD8AA8D /* Paper_42_WindsStormsCyclones_ElectricCurrent_AlgebraicExpressions_DataHandling_QuestionPaper.pdf in Resources */,
+				F8BCE2062D3F011A538B0BFC /* Paper_42_WindsStormsCyclones_ElectricCurrent_AlgebraicExpressions_DataHandling_Questions.md in Resources */,
+				CFBEC539EBEE6CCFC2D1558D /* Paper_42_WindsStormsCyclones_ElectricCurrent_AlgebraicExpressions_DataHandling_Solutions.html in Resources */,
 				4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */,
 				CF6289FBCF676858C99ED670 /* Contents.json in Resources */,
 				9AE05997509D9842F29172EB /* maths_class7.json in Resources */,
