@@ -169,7 +169,13 @@ struct Scene4_HotSoupColdSpoon: View {
         if !isWooden {
             Task { @MainActor in
                 try? await Task.sleep(nanoseconds: 2_000_000_000)
-                withAnimation(.spring()) { showOuch = true }
+                // `withAnimation` inside a Task block needs its own
+                // reduce-motion gate — the outer `withAnimation` at line
+                // 166 reads the env var, but `withAnimationRespectingReduceMotion`
+                // reads NSWorkspace.accessibilityDisplayShouldReduceMotion
+                // directly so the Task-scoped call stays gated even though
+                // the @Environment var didn't thread through.
+                withAnimationRespectingReduceMotion(.spring()) { showOuch = true }
             }
         }
     }

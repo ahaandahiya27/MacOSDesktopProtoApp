@@ -165,6 +165,19 @@ if [ -f "scripts/check_lifetime_hazards.py" ]; then
     fi
 fi
 
+# LH005b — imperative `withAnimation { ... }` calls must respect Reduce
+# Motion. The lifetime-hazards lint LH005 catches `.animation(...)`
+# modifiers; this companion catches the imperative-call gap that surfaced
+# in the 2026-06-23 deep-audit pass (Scene1_PlantKitchen +
+# Scene4_HotSoupColdSpoon had unguarded calls inside Task blocks).
+if [ -f "scripts/check_withanimation_motion.py" ]; then
+    echo "==> withAnimation reduce-motion lint (LH005b)"
+    if ! python3 scripts/check_withanimation_motion.py; then
+        echo "ci-build-test: withAnimation lint failed — see findings above." >&2
+        exit 1
+    fi
+fi
+
 if [ -f "scripts/check_file_size.py" ]; then
     echo "==> file-size lint"
     if ! python3 scripts/check_file_size.py; then

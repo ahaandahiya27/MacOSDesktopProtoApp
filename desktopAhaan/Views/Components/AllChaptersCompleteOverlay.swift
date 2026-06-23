@@ -56,12 +56,10 @@ struct AllChaptersCompleteOverlay: View {
             }
         }
         .onAppear {
-            if reduceMotion {
+            withAnimationRespectingReduceMotion(
+                .spring(response: 0.6, dampingFraction: 0.7).delay(0.1)
+            ) {
                 celebrate = true
-            } else {
-                withAnimation(.spring(response: 0.6, dampingFraction: 0.7).delay(0.1)) {
-                    celebrate = true
-                }
             }
         }
     }
@@ -118,12 +116,8 @@ struct AllChaptersCompleteOverlay: View {
     }
 
     private func dismiss() {
-        if reduceMotion {
+        withAnimation(reduceMotion ? .none : .easeOut(duration: 0.25)) {
             isVisible = false
-        } else {
-            withAnimation(.easeOut(duration: 0.25)) {
-                isVisible = false
-            }
         }
     }
 }

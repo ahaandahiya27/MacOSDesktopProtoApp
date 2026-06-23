@@ -151,7 +151,11 @@ struct Scene1_PlantKitchen: View {
         }
         Task { @MainActor in
             try? await Task.sleep(nanoseconds: 1_200_000_000)
-            withAnimation(.easeOut(duration: 0.6)) {
+            // Gate the pulse-down animation explicitly — the outer call
+            // at line 147 honours `reduceMotion`, but this one fires
+            // 1.2s later inside a Task and would animate on a
+            // Reduce-Motion user without its own check.
+            withAnimationRespectingReduceMotion(.easeOut(duration: 0.6)) {
                 pulse = 0
             }
         }

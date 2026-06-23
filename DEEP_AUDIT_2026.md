@@ -126,3 +126,74 @@ script, 1 GitHub Actions workflow, 1 xcodeproj.
 | L3..L6 | 🟢 accepted advisory | — | Open polish items + STOP_AND_ASK awaiting user actions |
 
 **Roll-up**: 23 actionable findings closed (10 commits between e440637 → ef99648), 4 false positives noted, 11 accepted-as-advisory. Zero remaining open 🔴/🟠. The `withAnimation` lint gap should be the next session's first task — every fix here was reactive; an LH005-style ratchet would lock the state.
+
+---
+
+## Deep-audit refresh — 2026-06-23
+
+Per-category re-scan against the 10 recurrence classes named in the
+2026-06-23 stabilization brief. Scope: every file modified since the
+2026-06-05 close-out. Method: each category was either spot-grepped or
+delegated to a parallel read-only agent; findings cross-verified manually.
+
+| Category | Findings | Disposition |
+|----------|---------:|-------------|
+| 1 · `withAnimation` Reduce-Motion gating | **3 real, 4 false-positive** | Fixed in-flight commit; new `check_withanimation_motion.py` lint added + wired into `ci-build-test.sh` + `test_lints.py` |
+| 2 · `@MainActor` method-by-reference | 0 | Clean — `check_mainactor_closure_refs.py` was already catching new sites |
+| 3 · Main-actor file I/O / launch hangs | 0 | All prior offenders (D1–D4) closed or false-positive in 2026-05-24 pass; no new sites |
+| 4 · Force unwraps / `try!` / `as!` / `fatalError` on reachable paths | 0 | Pre-commit gate (`check_lifetime_hazards.py` LH001–LH004) holds |
+| 5 · View files > 600 LOC | 0 | New `WindowClampHelper.swift` split (commit 5c538d2) pre-empted the App-file overflow caused by the Boss Challenge menu entry |
+| 6 · `.toolbar { ToolbarItem }` chained-modifier crash class | 0 | Closed by commit 4e0ff15 (drop `.accessibilityIdentifier` from ToolbarItem chains); no new chained sites |
+| 7 · Stacked `.sheet(isPresented:)` | 0 | Existing single-`.sheet(item:)` dispatcher pattern holds |
+| 8 · Nested `GeometryReader` ≥ 4 | 0 | Prior C1 sweep stays good; no new dense scenes |
+| 9 · `@Published` mutation off main | 0 | All `.sink { self.x = ... }` already main-actor-hopping |
+| 10 · Raw `Color.<name>` outside ChapterTheme | 0 | `check_color_rgb_centralized.py` baseline of 85 unchanged |
+
+### Findings detail (Category 1 — the only non-empty bucket)
+
+| ID | Severity | File:Line | Description | Fix | Status |
+|----|----------|-----------|-------------|-----|--------|
+| W1 | 🟡 med | desktopAhaan/Subjects/Tutor/Discover/Chapter4/Scenes/Scene4_HotSoupColdSpoon.swift:172 | `withAnimation(.spring()) { showOuch = true }` inside `Task { @MainActor in }` — outer call at 166 is gated, this inner one fires unconditionally after the 2 s sleep. | Wrap in `withAnimationRespectingReduceMotion(.spring())`. | ✅ closed (this session) |
+| W2 | 🟡 med | desktopAhaan/Subjects/Tutor/Discover/Scenes/Scene1_PlantKitchen.swift:154 | `withAnimation(.easeOut(duration: 0.6)) { pulse = 0 }` inside Task — outer call at 147 is gated, this one isn't. | Same. | ✅ closed (this session) |
+| W3 | 🟡 med | desktopAhaan/Subjects/Tutor/Discover/Chapter2/Scenes/Scene6_FourStomachsOfACow.swift:158 | `private func reset() { withAnimation(.easeInOut(duration: 0.4)) { ... } }` — unconditional, no gate. | `withAnimation(reduceMotion ? .none : .easeInOut(duration: 0.4))`. | ✅ closed (this session) |
+| W4 | 🟡 med | desktopAhaan/Views/Components/AllChaptersCompleteOverlay.swift:62 | `if reduceMotion { celebrate = true } else { withAnimation(.spring(...)) { celebrate = true } }` — works correctly today but the inverted-`if` shape fools the lint and is verbose. | Refactor to `withAnimationRespectingReduceMotion(.spring(...))`. | ✅ closed (this session) |
+| W5 | 🟡 med | desktopAhaan/Views/Components/AllChaptersCompleteOverlay.swift:124 | Same inverted-`if` shape in `dismiss()`. | Refactor to `withAnimation(reduceMotion ? .none : .easeOut(duration: 0.25))`. | ✅ closed (this session) |
+
+### False positives surfaced by the scan
+
+These all use the inverted `} else if !reduceMotion { ... }` shape, which the
+new lint now recognises after a same-session improvement (strip leading `}`
++ tolerate any `if/else if/guard` line whose condition contains
+`!reduceMotion`):
+
+- `Scene4_ColorTheChlorophyll.swift:175/178/180` — inside `if !isAbsorbed(i) && !reduceMotion { ... }` block
+- `Scene5_AutotrophHeterotroph.swift:308/311` — inside `} else if !reduceMotion {` block
+- `Scene1_SourOrBitter.swift:170/172` — inside `if !reduceMotion { ... }` block
+- `Scene4_HotSoupColdSpoon.swift:166` — uses `reduceMotion ? .none : ...` ternary directly
+- `Extensions/View+RespectReduceMotion.swift:51` — IS the helper itself, file-allowlisted in the lint
+
+### What the new lint covers (and what it deliberately doesn't)
+
+`scripts/check_withanimation_motion.py` flags any `withAnimation(...)` call
+that is NOT one of:
+
+  • argument contains `reduceMotion ?` ternary
+  • call is `withAnimationRespectingReduceMotion(...)` (the safe helper)
+  • call sits inside a backward-scoped `if`/`else if`/`guard` line whose
+    condition mentions `!reduceMotion` (lookback 60 lines)
+
+The lookback is a heuristic — it doesn't track brace depth. A
+withAnimation more than 60 lines from its gate, or one sitting in a
+sibling block whose preceding `if !reduceMotion {` had already closed,
+will be missed. That's a deliberate trade-off: 100% of real bugs caught
+by the audit pass were within ~30 lines of their (missing) gate, so the
+lint catches the actual recurrence class without complex AST work.
+
+The inverted shape `if reduceMotion { } else { withAnimation(...) }` is
+also not detected; the audit found exactly 2 sites of that shape
+(W4/W5), both refactored in this session to the ternary form for
+consistency.
+
+**Roll-up**: 5 actionable findings (all 🟡 med), 0 🔴/🟠, ~10 advisory
+false positives surfaced and dismissed. New ratchet locks the state so
+this class can't return. Categories 2–10 came back clean.

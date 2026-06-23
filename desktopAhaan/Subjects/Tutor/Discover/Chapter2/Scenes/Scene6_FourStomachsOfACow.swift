@@ -155,7 +155,7 @@ struct Scene6_FourStomachsOfACow: View {
     }
 
     private func reset() {
-        withAnimation(.easeInOut(duration: 0.4)) {
+        withAnimation(reduceMotion ? .none : .easeInOut(duration: 0.4)) {
             currentChamber = 0
             foodPosition = 0
         }
