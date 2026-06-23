@@ -95,9 +95,33 @@ After `scripts/imac-pull.sh`:
 
 Also: the prompt's `log stream … --signpost …` invocation fails on modern macOS (`--signpost` was replaced by `--type signpost`). If you copy/paste it again on the iMac (Big Sur, older log CLI), it should work; just noting the dev-Mac syntax mismatch.
 
-## Resolved (archived from REMEDIATION_LOG.md)
+## Resolved (archived from the open list)
 
-(none yet)
+### 2026-05-27 — Article system not subject-aware (archived 2026-06-24)
+The "Open question" entry near the top carries an inline **Fixed this
+iteration** resolution: `ChapterDetailView.resolvedArticleEntry` and
+`ExtraReadingRow.resolvedEntry` now prepend `"m"` to the lookup key when
+`pack.id == "maths_class7"`, with Maths articles namespaced under
+`mch01`–`mch15`. The two deeper resolvers (`GlossarySheet`,
+`ChapterGlossaryCTA`) stay Science-gated; minor follow-up tracked in
+`POLISH_TODOS.md`. **Status: RESOLVED for the in-scope leak.**
+
+### 2026-05-27 — Maths curriculum: NEP-2020 "Ganita Prakash" (archived 2026-06-24)
+The autonomous prompt assumed legacy 2007 NCERT; actual PDFs are
+NEP-2020 "Ganita Prakash" Grade 7. Per autonomy contract §10 trigger #1
+the conservative call was made: build from actual PDFs. 15-chapter
+mapping in `MATHS_BUILD_CHECKPOINT.md`. **Status: RESOLVED — no owner
+action unless legacy 2007 syllabus was intended.**
+
+### 2026-05-22 — Beyond→Discover crash iMac re-repro (still queued, owner-owned)
+**Status: PENDING IMAC WALK.** Not silently archived — the defensive
+dismantle-ordering fix is shipped, the `Crash_BeyondThenDiscover`
+XCUITest is in the UITests target locking the fix, and `CRASH_LEDGER.md`
+row C2 tracks the closure. The remaining step is owner-side: run the
+sanitizer scheme on the iMac to confirm the crash is gone. This is
+now folded into `IMAC_VERIFY_CHECKLIST.md` section (ii) as a
+companion to row T3 (Navigation smoke UITest), since the AX grant
+needed for one covers the other.
 
 ---
 

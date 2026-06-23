@@ -1,122 +1,144 @@
 # iMac Visual-Verification Checklist
 
 This file is the bridge between dev-Mac logic-closure and Big-Sur-iMac
-perception-closure. Every row below is a `docs/ISSUE_CATEGORIES.md` 🟡
-row whose code is believed correct but cannot be verified headlessly on
-the dev Mac (macOS 26.x) — only a fresh-install eyeball on Ahaan's
-**Late-2014 5K iMac, Big Sur 11.7.11, AMD R9 M290X, Xcode 13.2.1**
-flips them ✅.
+perception-closure. Every taxonomy ID below is a `docs/ISSUE_CATEGORIES.md`
+🟡 or ❌ row whose final state can only be set by running the deploy
+machine: **Late-2014 5K iMac, Big Sur 11.7.11, AMD R9 M290X 2 GB,
+Xcode 13.2.1, Swift 5.5**.
 
-**How to use**: walk top-to-bottom on the iMac. Each row has an exact
-menu/shortcut path, what "correct" looks like, and the taxonomy ID to
-flip in `docs/ISSUE_CATEGORIES.md` if it passes. Report back via paste
-of "row X passed / failed because Y" and the dev-Mac side will close
-the rows.
+**Split into two sections, because they're different kinds of work:**
 
-> Generated 2026-06-23 from the bug-free super-prompt pass. Refresh
-> when new 🟡 rows surface that need an iMac eyeball.
+- **(i) Visual pass/fail** — passive checks. Look at the screen, decide
+  if it's right. A failure here surfaces a tweak, not a re-architecture.
+- **(ii) Action / run** — running Instruments or AX-granted UI tests
+  produces *data* (a profile, a leak report, a UI-test pass/fail). A
+  failure or unexpected finding here **may surface new fixes** that
+  weren't on the dev-Mac radar. These are explicitly not "just look at
+  it" rows.
+
+Coverage: this file accounts for **31 of the 102 open ledger rows** —
+the 22 (i) and 9 (ii) IDs enumerated below. The remaining 71 rows are
+deliberate non-bugs and are listed in `REMAINING_WORK.md` (bucket C).
 
 ---
 
 ## How to run
 
-Open Xcode 13.2.1 on the iMac with the project at
-`/Users/ahaandahiya/Downloads/DesktopAhaan 4/desktopAhaan/`. Use
-`scripts/imac-pull.sh` to bring `origin/main` down (it auto-stashes
-pbxproj churn, wipes DerivedData, and re-opens the project). Then:
-
 ```
-⇧⌘K  (clean)
-⌘B   (build Debug — zero warnings expected)
-⌘R   (run)
+# On the iMac:
+bash scripts/imac-pull.sh    # auto-stash, wipe DerivedData, re-open Xcode
+# Xcode: ⇧⌘K  ⌘B  ⌘R    (zero warnings expected)
 ```
 
-For UI-test rows, the runner needs an AX grant:
+For UI-test rows (section ii), grant Accessibility:
 **System Settings → Privacy & Security → Accessibility →
-`desktopAhaanUITests-Runner.app` (toggle ON)**. Then in Terminal:
+`desktopAhaanUITests-Runner.app` ON**. Then:
 
 ```
 export CI_BUILD_TEST_FLAGS=--ui
 bash scripts/ci-build-test.sh
 ```
 
-For each row that passes, paste back "row {ID} ✅" and the taxonomy
-gets flipped on the dev Mac.
+After each row: paste back `"row N (ID) ✅"` / `"row N (ID) ❌ because Y"`
+/ `"row N (ID) defer because Y"`. Dev-Mac side closes in batch.
 
 ---
 
-## Rows to verify
+## Section (i) — Pure visual pass/fail (22 IDs)
 
-### Display / Layout
+These rows fail or pass at the screen. No data captured; no follow-up
+fix expected unless an outright defect is visible. If anything looks
+clearly wrong, the dev Mac opens a `fix(ui):` commit with a repro test.
 
-| # | ID | What to do | What "correct" looks like | Flip on pass |
-|---|----|------------|---------------------------|---------------|
-| 1 | **J4 / LY6** | Drag the main window down to its minimum (the OS will hard-stop at 1024×640). Walk every sidebar entry: Welcome / each subject pack / Daily Practice / Bookmarks / Settings / Search. | No content overflows the bottom edge; no horizontal scroll on any panel; chrome (header, sidebar, status row) stays readable; the canvas reading panel respects `contentMaxWidth = 1100pt`. | J4 + LY6 |
-| 2 | **TY1** | Open Discover Mode for any chapter (e.g. Science Ch.1). Read the chapter-accent header at 5K @ 2×. | Header title is large enough to anchor the canvas — not lost in whitespace. `.title2.bold` (~22pt) feels appropriate for the 5K design canvas. | TY1 (or comment-bump if too small) |
-| 3 | **LY2** | Maximize the window on the 5K iMac. Open any reading article (Help → desktopAhaan Help, or a chapter's Beyond / Mistakes article). | The reading column letterboxes to ~1100pt, with comfortable margin on each side. Not so narrow it feels cramped, not so wide that lines exceed ~80 characters. | LY2 (or bump `contentMaxWidth`) |
+### Display / layout
+
+| # | IDs | What to do | What "correct" looks like |
+|---|-----|------------|---------------------------|
+| 1 | **J4 + LY6** | Drag the main window to its minimum (OS caps at 1024×640). Walk every sidebar entry: Welcome / each subject pack / Daily Practice / Bookmarks / Settings / Search / Olympiad Tests / Boss Challenge / Brutal Series. | No content overflows; no horizontal scroll on any panel; chrome stays readable; reading panels respect `contentMaxWidth = 1100pt`. |
+| 2 | **TY1** | Maximize on 5K. Open Discover Mode for any chapter. | Header `.title2.bold` (~22pt) anchors the canvas — not lost in whitespace. |
+| 3 | **LY2** | Maximize on 5K. Open any reading article (Help → desktopAhaan Help, or a chapter's Beyond / Mistakes). | Reading column letterboxes to ~1100pt with comfortable margins; lines ≤ 80 chars; not cramped, not stretched. |
+| 4 | **LY5** | Look at the sidebar/canvas boundary on any screen. | macOS NavigationView 1pt separator (NSSplitView divider) is visible. |
 
 ### Dynamic Type
 
-| # | ID | What to do | What "correct" looks like | Flip on pass |
-|---|----|------------|---------------------------|---------------|
-| 4 | **H4 / TY4** | System Settings → Displays → Larger Text → bump to **Larger** then **Largest**. Re-open the app. Walk a chapter's concept cards, question detail, Mock Test runner, Mastery Map, Daily Plan. | No card title gets truncated mid-word; no body text gets clipped to a single line; fixed-width `Text` blocks use `.minimumScaleFactor(0.8)`. The pre-existing test pins concept titles at ≤90 chars, which is the proxy. | H4 + TY4 |
+| # | IDs | What to do | What "correct" looks like |
+|---|-----|------------|---------------------------|
+| 5 | **H4 + TY4** | System Settings → Displays → Larger Text → bump to **Larger** then **Largest**. Re-open the app. Walk a chapter's concept cards, question detail, Mock Test runner, Mastery Map, Daily Plan. | No card title gets truncated mid-word; no body text gets clipped to a single line; fixed-width `Text` blocks use `.minimumScaleFactor(0.8)`. |
 
-### Dark Mode + Theming
+### Dark Mode + theming
 
-| # | ID | What to do | What "correct" looks like | Flip on pass |
-|---|----|------------|---------------------------|---------------|
-| 5 | **J1 / TH1** | System Settings → Appearance → Dark. Walk: home / sidebar / chapter list / Discover canvas / article browser / OCR translator / Settings. | Chrome (sidebar, navigation chrome) adapts to Dark mode automatically (NSColor semantic colours). Discover canvas stays fixed-light (sunshine theme — intentional per CN1/CL1). Body text on the canvas stays ~#212121 (BrandColor.canvasText) and remains legible against the gradient. | J1 + TH1 |
-| 6 | **CL3 / TH2** | Same dark-mode walk. Look at the sidebar / canvas boundary. | The sidebar's NSVisualEffectView is darker than the canvas — this is the macOS NavigationView convention (Mail, Notes, Reminders). Should NOT feel like a bug. | CL3 + TH2 |
-| 7 | **TH5** | If you actually use Dark Mode in daily use: open a chapter article (e.g. Science Ch.1 Overview). Compare Light vs Dark. | Articles for Ch.1–7 + Ch.19 adapt via CSS variables. Ch.8–18 use direct hex (legacy) — they will look identical Light/Dark. If Dark Mode is in scope, those need migration. If you never use Dark Mode → leave 🟡 as deferred. | TH5 (decide in scope or defer) |
+| # | IDs | What to do | What "correct" looks like |
+|---|-----|------------|---------------------------|
+| 6 | **J1 + TH1** | System Settings → Appearance → Dark. Walk: home / sidebar / chapter list / Discover canvas / article browser / OCR translator / Settings. | Chrome adapts to Dark (NSColor semantic). Discover canvas stays fixed-light (intentional CN1/CL1). Body text stays `BrandColor.canvasText` and legible against the gradient. |
+| 7 | **CL3 + TH2** | Same Dark Mode walk; look at the sidebar/canvas boundary. | macOS NavigationView convention: vibrant sidebar + lighter content area (Mail/Notes/Reminders pattern). Should not feel like a bug. |
+| 8 | **TH5** | If Dark Mode is in scope: open a chapter article for Ch.1–7 + Ch.19 (CSS-variable-driven) then for Ch.8–18 (legacy hex). | Ch.1–7 + 19 adapt; Ch.8–18 stay light. If Dark Mode is never used → defer. |
+| 9 | **SB6** | In the sidebar, click each top-level row (subjects, tools). | macOS system-blue selection fill appears on the selected row, consistent across Subject / QuizBank / Tool rows. Recent rows don't show the blue fill (by design — they're transient). |
 
 ### Accessibility
 
-| # | ID | What to do | What "correct" looks like | Flip on pass |
-|---|----|------------|---------------------------|---------------|
-| 8 | **H6** | Stay in Dark mode. Walk the same surfaces. | Every text-on-background combination clears WCAG AA 4.5:1 contrast (rough check: text should never feel "ghosted" against the background). | H6 |
-| 9 | **TH7** | System Settings → Accessibility → Display → Increase Contrast ON. Re-open the app. | Buttons get heavier borders; text contrast bumps slightly. Nothing breaks. App still readable. | TH7 |
-| 10 | **TH8** | System Settings → Accessibility → Display → Reduce Transparency ON. Re-open the app. | Sidebar's vibrancy falls back to a solid window background. No transparency-layered visual glitches. | TH8 |
-| 11 | **H7** | With keyboard only: Tab from the sidebar through any chapter to a question. Use ⌘[ / ⌘] / arrow keys per the menu shortcuts. | Every interactive surface can be reached and activated via keyboard. No widget is unreachable. | H7 (or list any blocked widgets) |
-| 12 | **H8 / CN5** | Same keyboard walk. Watch the focus ring. | System-blue focus ring is visible against pale-blue / pale-green Discover gradients (system-blue ≠ pale-blue at full saturation). On chrome surfaces, the ring sits clearly on every focused control. | H8 + CN5 |
+| # | IDs | What to do | What "correct" looks like |
+|---|-----|------------|---------------------------|
+| 10 | **H6** | Stay in Dark Mode. Walk the same surfaces. | Every text-on-background combination clears WCAG AA 4.5:1 contrast (rough check: text should never feel ghosted). |
+| 11 | **TH7 + AC5** | System Settings → Accessibility → Display → Increase Contrast ON. Re-open the app. | Buttons get heavier borders; text contrast bumps. Bold-text-friendly text styles auto-apply. |
+| 12 | **TH8** | System Settings → Accessibility → Display → Reduce Transparency ON. Re-open the app. | Sidebar's vibrancy falls back to solid window background. No transparency-layered glitches. |
+| 13 | **CN5 + AC1** | Stay on default Appearance. Tab through chrome (Search box, sidebar, chapter detail). | System-blue focus ring is visible on the pale-blue/green Discover gradient. Every focused control shows the ring clearly. |
 
-### First-launch + Behavior
+### Discover & sidebar feel
 
-| # | ID | What to do | What "correct" looks like | Flip on pass |
-|---|----|------------|---------------------------|---------------|
-| 13 | **EM3** | If you can afford it: trash the app's `~/Library/Application Support/desktopAhaan/` then open the app. (Or skip if not safe.) | The 4-page `FirstLaunchTourView` sheet presents once. Skip / Get Started both work. The kid lands on a sensible default pack. | EM3 |
-| 14 | **LC8** | Open the app. Put the iMac to sleep (close lid / Apple menu → Sleep). Wake 10+ minutes later. | App resumes in <2s. No frozen UI. No crashlog written. Timers and audio recovered cleanly. | LC8 |
+| # | IDs | What to do | What "correct" looks like |
+|---|-----|------------|---------------------------|
+| 14 | **EM3** | If safe: trash `~/Library/Application Support/desktopAhaan/` then open the app. | The 4-page `FirstLaunchTourView` sheet presents once. Skip + Get Started both work. Lands on a sensible default pack. |
+| 15 | **DM8** | Open Science Ch.1 → Boss Quiz scene. | Title (`.largeTitle.bold`) anchors as an event; `ProgressView`, per-question MCQ rows, completion screen all feel "event-like" not "just-another-card". Screenshot-level judgment. |
+| 16 | **IF6** | From any subject pack, switch to another (e.g. Maths → Sanskrit) via the sidebar rows. | Sidebar's Subjects section is the standard switching surface (no separate "Switch Subject" button needed). Switch feels obvious. |
 
-### UI Tests (need AX grant)
+---
 
-| # | ID | What to do | What "correct" looks like | Flip on pass |
-|---|----|------------|---------------------------|---------------|
-| 15 | **T3** | After AX grant, run `export CI_BUILD_TEST_FLAGS=--ui; bash scripts/ci-build-test.sh`. Watch for `NavigationSmokeUITests/test_homeToQuestionDetail_endToEnd`. | Test passes (end-to-end home → chapter → topic → concept → question walk). pbxproj wiring confirmed on dev Mac; this iMac run is the final gate. | T3 |
-| 16 | **T2 (Social Science walks)** | After AX grant, run the `--ui` suite. SocialScience bespoke interactives currently have no smoke walk — flag any specific scene where the kid's tap doesn't reach a meaningful state. | If you have AX grant + want to flip this: add stable container IDs to each `socialScienceInteractives` scene and a walk per scene. Otherwise leave 🟡 — it's "gravy" per the taxonomy. | T2 (or note Social Science gap) |
+## Section (ii) — Action / run rows (9 IDs)
 
-### Instruments / Diagnostics (real-iMac only)
+These rows **run** something on the iMac. The output is data: a UITest
+pass/fail, an Instruments profile, a sleep/wake recovery log. A
+finding here may surface new fixes. **Don't treat these as "just look
+at it" rows — they can generate code work.**
 
-| # | ID | What to do | What "correct" looks like | Flip on pass |
-|---|----|------------|---------------------------|---------------|
-| 17 | **DG3** | Xcode → Product → Profile → Time Profiler. Drive a 30-second session: open 2 chapters, take a quiz, view Mastery Map. | Top-of-stack samples are SwiftUI compositing + dispatch source ticks (expected). No hot Swift function blowing >10% of main-thread time on the launch + browse path. | DG3 |
-| 18 | **DG4** | Xcode → Product → Profile → Leaks. Same 30-second drive. | No leaks reported. No retained ObservableObject sub-trees ballooning over the session. | DG4 |
-| 19 | **DG8** | Xcode → Product → Profile → Energy Log. Same drive. | Energy stays Low while idle on a chapter; bumps briefly during transition; comes back down. No sustained Medium/High. | DG8 |
+### UI tests (need AX grant on the runner)
+
+| # | ID | What to do | What "correct" looks like | If it fails |
+|---|----|------------|---------------------------|-------------|
+| 17 | **T3** | After AX grant, run `--ui` suite. Watch for `NavigationSmokeUITests/test_homeToQuestionDetail_endToEnd`. | Passes end-to-end (home → chapter → topic → concept → question). pbxproj wiring confirmed on dev Mac; this is the final gate. | Paste the assertion log. Likely fix: missing `.accessibilityIdentifier` on a step in the chain. Dev-Mac opens `fix(test):`. |
+| 18 | **T2** | After AX grant, run `--ui`. SocialScience bespoke interactives currently have no smoke walk. | If you want this row ✅ requires adding stable container IDs to each `socialScienceInteractives` scene + per-scene walks. Otherwise leave 🟡 — "gravy" per the taxonomy. | n/a — opt-in extension work, not a regression. |
+| 19 | **H7 + H8** | Keyboard-only walk: Tab through sidebar → chapter detail → question. Use ⌘[ / ⌘] / arrows per menu shortcuts. | Every interactive surface reachable and activatable via keyboard. Focus traversal moves in expected reading order. | List any blocked widgets. Dev-Mac adds `.focusable()` / explicit `.focused` to the gap site. |
+
+### Sleep / wake
+
+| # | ID | What to do | What "correct" looks like | If it fails |
+|---|----|------------|---------------------------|-------------|
+| 20 | **LC8** | Open the app. Apple menu → Sleep (or close lid). Wake 10+ minutes later. | App resumes in <2s. No frozen UI. No crashlog written. Timers + audio recovered cleanly. | Paste the crashlog from `~/Library/Application Support/desktopAhaan/crashlogs/`. Dev-Mac opens `fix(crash):` with the diagnosed cause. |
+
+### Instruments runs (real-iMac only — dev Mac can't profile the AMD R9 M290X)
+
+| # | ID | What to do | What "correct" looks like | If it fails |
+|---|----|------------|---------------------------|-------------|
+| 21 | **DG3** | Xcode → Product → Profile → Time Profiler. Drive 30s: open 2 chapters, take a quiz, view Mastery Map. | Top samples are SwiftUI compositing + dispatch source ticks (expected). No hot Swift function >10% of main-thread time on launch + browse. | Paste the top function. Dev-Mac diagnoses + optimises. |
+| 22 | **DG4** | Xcode → Product → Profile → Leaks. Same 30s drive. | No leaks. No retained ObservableObject sub-trees ballooning. | Paste the leaked-object class. Dev-Mac adds `[weak self]` or teardown. |
+| 23 | **DG7** | Xcode → Product → Profile → Core Animation. Look at FPS during scene animations + particle bursts. | On the legacy iMac, frame rate stays ≥ the `HardwareTier` cap (20 fps target). No dips below. | Note the dipping scene. Dev-Mac caps particle counts further via `HardwareTier.particleBudget`. |
+| 24 | **DG8** | Xcode → Product → Profile → Energy Log. Same 30s drive. | Energy Low while idle on a chapter; brief bumps during transitions; comes back down. No sustained Medium/High. | Note the sustained-high surface. Dev-Mac investigates per-frame work. |
 
 ---
 
 ## Reporting back
 
-When you finish a row, paste one line like:
-
 ```
 row 3 (LY2) ✅
-row 7 (TH5) defer — Dark Mode not in scope on the iMac
-row 11 (H7) ❌ — Cmd-Opt-arrow doesn't reach the article browser CTAs
+row 8 (TH5) defer — Dark Mode not in scope
+row 17 (T3) ❌ — test_homeToQuestionDetail_endToEnd fails on the topic-list tap; expected button "topic-row-…" not found
+row 21 (DG3) — top sample is `ConceptDetailView.body` at 14% of main; flagging
 ```
 
-The dev-Mac side will:
-- Flip ✅ rows in `docs/ISSUE_CATEGORIES.md`
-- Open a fresh `fix(<surface>):` commit for ❌ rows with a repro test
-- Leave `defer` rows 🟡 with the deferral reason appended
+For `defer` rows, dev-Mac leaves 🟡 with the deferral reason appended.
+For `❌` rows, dev-Mac opens a `fix(crash):` / `fix(ui):` / `polish(<surface>):`
+commit. For `✅` rows, dev-Mac flips the taxonomy ID in
+`docs/ISSUE_CATEGORIES.md` and confirms back.
 
-This is how the app actually reaches **pure / issue-less**: dev-Mac
-closes logic, iMac closes perception.
+This is how the app reaches **pure / issue-less**: dev-Mac closes logic
+(done — see `REMAINING_WORK.md`), this checklist closes perception, and
+the Instruments + UI-test section catches anything the lints couldn't.
