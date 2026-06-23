@@ -1,0 +1,1832 @@
+<!doctype html><html><head><meta charset='utf-8'><title>Brutal Challenge - Full Solutions</title><style>
+body{font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:880px;margin:0 auto;padding:26px;color:#222;line-height:1.55;background:#fff}
+h1{color:#7a1f1f;margin-bottom:2px;font-size:25px}
+.sub{color:#666;margin:0 0 14px}
+.q{border:1px solid #e7e7e7;border-radius:12px;padding:16px 18px;margin:16px 0;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.qn{font-weight:700;font-size:16px;margin:0 0 8px}
+.tag{font-size:11px;color:#fff;background:#7a1f1f;border-radius:10px;padding:2px 8px;margin-left:6px;vertical-align:middle}
+.opt{padding:3px 10px;margin:3px 0;border-radius:7px;background:#f6f6f6}
+.opt.correct{background:#e3f5e3;border:1px solid #56a957;font-weight:700}
+.idea{background:#fff7e6;border-left:4px solid #e0a106;padding:8px 12px;border-radius:6px;margin:10px 0}
+.steps{background:#eef4ff;border-left:4px solid #3b6fd6;padding:8px 12px 8px 30px;border-radius:6px;margin:10px 0}
+.steps li{margin:3px 0}
+.ans{background:#e3f5e3;border-left:4px solid #56a957;padding:8px 12px;border-radius:6px;margin:10px 0;font-weight:700}
+.trap{background:#fdecec;border-left:4px solid #d24a4a;padding:8px 12px;border-radius:6px;margin:10px 0}
+.use{background:#eef9f1;border-left:4px solid #2f9e6f;padding:8px 12px;border-radius:6px;margin:10px 0}
+.lbl{font-weight:700;font-size:12px;letter-spacing:.4px;text-transform:uppercase;color:#555;display:block;margin-bottom:2px}
+</style></head><body>
+<h1>BRUTAL Challenge &mdash; Full Worked Solutions</h1>
+<p class='sub'>Motion &amp; Time &nbsp;|&nbsp; Large Numbers &nbsp;|&nbsp; A Peek Beyond the Point (Decimals). Every step is shown in full. Each solution gives the idea, the working, the answer, the trap to avoid, and a real-life use.</p>
+<div class='q'>
+<p class='qn'>1. A rover moves at a steady 12.5 m/s. How far does it travel in 4 minutes? <span class='tag'>Motion &amp; Time</span></p>
+<div class='opt'>(A) 50 m</div>
+<div class='opt'>(B) 300 m</div>
+<div class='opt'>(C) 3000 km</div>
+<div class='opt'>(D) 30 km</div>
+<div class='opt'>(E) 750 m</div>
+<div class='opt correct'>(F) 3 km &#10004;</div>
+<div class='opt'>(G) 1.5 km</div>
+<div class='opt'>(H) 0.05 km</div>
+<div class='idea'><span class='lbl'>The idea</span>Distance = speed x time, but the units must match — change minutes to seconds first.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Speed = 12.5 m/s, time = 4 minutes.</li>
+<li>Change time to seconds: 4 x 60 = 240 s.</li>
+<li>Distance = speed x time = 12.5 x 240 = 3000 m.</li>
+<li>Change to km: 3000 / 1000 = 3 km.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (F) &mdash; 3 km</div>
+<div class='trap'><span class='lbl'>Watch out</span>50 m comes from 12.5 x 4 (forgot to turn minutes into seconds).</div>
+<div class='use'><span class='lbl'>Where you would use it</span>The same maths tells you how far a car travels in a few minutes on a highway.</div>
+</div>
+<div class='q'>
+<p class='qn'>2. The population of a city is 24,57,800 and that of a town is 9,80,500. Rounded to the nearest lakh, how much larger is the city&#x27;s population? <span class='tag'>Large Numbers</span></p>
+<div class='opt'>(A) 14 lakh</div>
+<div class='opt'>(B) 10 lakh</div>
+<div class='opt'>(C) 1.5 lakh</div>
+<div class='opt'>(D) 147 lakh</div>
+<div class='opt'>(E) 34 lakh</div>
+<div class='opt correct'>(F) 15 lakh &#10004;</div>
+<div class='opt'>(G) 5 lakh</div>
+<div class='idea'><span class='lbl'>The idea</span>Subtract, then round to the nearest lakh (look at whether the leftover is above or below 50,000).</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Difference = 24,57,800 - 9,80,500 = 14,77,300.</li>
+<li>77,300 is more than 50,000, so round UP.</li>
+<li>About 15 lakh.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (F) &mdash; 15 lakh</div>
+<div class='trap'><span class='lbl'>Watch out</span>14 lakh rounds the wrong way.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Comparing populations or budgets in news reports.</div>
+</div>
+<div class='q'>
+<p class='qn'>3. Evaluate (3.6 + 0.4) × 0.25. <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 4.1</div>
+<div class='opt'>(B) 0.4</div>
+<div class='opt'>(C) 1.1</div>
+<div class='opt'>(D) 3.7</div>
+<div class='opt'>(E) 16</div>
+<div class='opt correct'>(F) 1 &#10004;</div>
+<div class='opt'>(G) 2</div>
+<div class='idea'><span class='lbl'>The idea</span>Brackets first, then multiply. 0.25 means one quarter.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>3.6 + 0.4 = 4.</li>
+<li>4 x 0.25 = 1 (a quarter of 4).</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (F) &mdash; 1</div>
+<div class='trap'><span class='lbl'>Watch out</span>3.7 multiplies before adding.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Splitting a bill into quarters.</div>
+</div>
+<div class='q'>
+<p class='qn'>4. Light travels about 3,00,000 km each second. How far does it travel in one minute? <span class='tag'>Motion &amp; Time</span></p>
+<div class='opt'>(A) 1,80,00,00,000 km</div>
+<div class='opt'>(B) 1,80,000 km</div>
+<div class='opt'>(C) 3,60,000 km</div>
+<div class='opt'>(D) 18,00,000 km</div>
+<div class='opt'>(E) 18,00,00,000 km</div>
+<div class='opt'>(F) 5,000 km</div>
+<div class='opt correct'>(G) 1,80,00,000 km &#10004;</div>
+<div class='idea'><span class='lbl'>The idea</span>Distance = speed x time; the numbers are huge, so keep track of place value (lakh/crore).</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Speed = 3,00,000 km every second.</li>
+<li>1 minute = 60 seconds.</li>
+<li>Distance = 3,00,000 x 60 = 1,80,00,000 km.</li>
+<li>That reads as 1 crore 80 lakh km.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (G) &mdash; 1,80,00,000 km</div>
+<div class='trap'><span class='lbl'>Watch out</span>18,00,000 km uses only 6 seconds worth; extra zeros give 1,80,00,00,000.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Scientists measure space distances in light-seconds and light-minutes this way.</div>
+</div>
+<div class='q'>
+<p class='qn'>5. In the number 8,07,64,021, what is the sum of the digits in the crores place and the lakhs place? <span class='tag'>Large Numbers</span></p>
+<div class='opt'>(A) 87</div>
+<div class='opt'>(B) 13</div>
+<div class='opt correct'>(C) 15 &#10004;</div>
+<div class='opt'>(D) 7</div>
+<div class='opt'>(E) 78</div>
+<div class='opt'>(F) 1</div>
+<div class='opt'>(G) 8</div>
+<div class='opt'>(H) 2</div>
+<div class='idea'><span class='lbl'>The idea</span>In the Indian system the groups from the right are: thousands, lakhs, crores.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>8,07,64,021 = 8 crore, 07 lakh, 64 thousand, 021.</li>
+<li>Crores digit = 8; lakhs digit = 7.</li>
+<li>Sum = 8 + 7 = 15.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; 15</div>
+<div class='trap'><span class='lbl'>Watch out</span>87 just sticks the two digits together.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Reading large money figures place by place.</div>
+</div>
+<div class='q'>
+<p class='qn'>6. Add 0.125 and 0.0625. <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 1.875</div>
+<div class='opt'>(B) 0.1255</div>
+<div class='opt'>(C) 0.13125</div>
+<div class='opt'>(D) 0.075</div>
+<div class='opt correct'>(E) 0.1875 &#10004;</div>
+<div class='opt'>(F) 0.18</div>
+<div class='idea'><span class='lbl'>The idea</span>Line the decimals up by place value, then add.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>0.1250 + 0.0625.</li>
+<li>Add column by column = 0.1875.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (E) &mdash; 0.1875</div>
+<div class='trap'><span class='lbl'>Watch out</span>Misaligning the decimal places.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Adding fractions of an inch (1/8 + 1/16).</div>
+</div>
+<div class='q'>
+<p class='qn'>7. A 250 m long train moving at 25 m/s must completely cross a 1.25 km long bridge. How long does it take? <span class='tag'>Motion &amp; Time</span></p>
+<div class='opt'>(A) 600 s</div>
+<div class='opt'>(B) 50 s</div>
+<div class='opt'>(C) 60 min</div>
+<div class='opt'>(D) 10 s</div>
+<div class='opt'>(E) 6 s</div>
+<div class='opt'>(F) 40 s</div>
+<div class='opt correct'>(G) 60 s &#10004;</div>
+<div class='opt'>(H) 0.6 s</div>
+<div class='idea'><span class='lbl'>The idea</span>To FULLY cross, the train travels its own length PLUS the bridge length.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Bridge = 1.25 km = 1250 m.</li>
+<li>Total distance = train + bridge = 250 + 1250 = 1500 m.</li>
+<li>Time = distance / speed = 1500 / 25 = 60 s.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (G) &mdash; 60 s</div>
+<div class='trap'><span class='lbl'>Watch out</span>50 s forgets the train&#x27;s own length; 10 s uses only the train length.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Railway engineers use this to time how long a train blocks a level crossing.</div>
+</div>
+<div class='q'>
+<p class='qn'>8. Estimate 6,18,000 × 9 by first rounding 6,18,000 to the nearest lakh: <span class='tag'>Large Numbers</span></p>
+<div class='opt'>(A) 54,000</div>
+<div class='opt correct'>(B) 54,00,000 &#10004;</div>
+<div class='opt'>(C) 5,400</div>
+<div class='opt'>(D) 56,00,000</div>
+<div class='opt'>(E) 5,40,00,000</div>
+<div class='opt'>(F) 55,62,000</div>
+<div class='opt'>(G) 60,00,000</div>
+<div class='opt'>(H) 5,40,000</div>
+<div class='idea'><span class='lbl'>The idea</span>Estimate by rounding the big number to the nearest lakh first.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Round 6,18,000 to 6,00,000.</li>
+<li>6,00,000 x 9 = 54,00,000.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; 54,00,000</div>
+<div class='trap'><span class='lbl'>Watch out</span>Keeping 5,40,000 drops a zero.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Quick mental estimates before doing the exact sum.</div>
+</div>
+<div class='q'>
+<p class='qn'>9. What is (0.2) × (0.2) × (0.2)? <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 0.06</div>
+<div class='opt'>(B) 0.6</div>
+<div class='opt'>(C) 0.0008</div>
+<div class='opt correct'>(D) 0.008 &#10004;</div>
+<div class='opt'>(E) 0.2</div>
+<div class='opt'>(F) 0.04</div>
+<div class='opt'>(G) 8</div>
+<div class='idea'><span class='lbl'>The idea</span>Multiply step by step; count the decimal places (1+1+1 = 3).</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>0.2 x 0.2 = 0.04.</li>
+<li>0.04 x 0.2 = 0.008.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (D) &mdash; 0.008</div>
+<div class='trap'><span class='lbl'>Watch out</span>0.06 adds instead of multiplying.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Volume of a small cube of side 0.2 m.</div>
+</div>
+<div class='q'>
+<p class='qn'>10. Two cyclists start from the same point going the same way at 6.5 m/s and 4 m/s. How far apart are they after 2 minutes? <span class='tag'>Motion &amp; Time</span></p>
+<div class='opt'>(A) 1,260 m</div>
+<div class='opt'>(B) 21 m</div>
+<div class='opt'>(C) 2.5 m</div>
+<div class='opt'>(D) 5 m</div>
+<div class='opt'>(E) 780 m</div>
+<div class='opt'>(F) 150 m</div>
+<div class='opt correct'>(G) 300 m &#10004;</div>
+<div class='opt'>(H) 600 m</div>
+<div class='idea'><span class='lbl'>The idea</span>Moving the SAME way, the gap grows at the DIFFERENCE of the speeds (relative speed).</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Relative speed = 6.5 - 4 = 2.5 m/s.</li>
+<li>Time = 2 min = 120 s.</li>
+<li>Gap = 2.5 x 120 = 300 m.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (G) &mdash; 300 m</div>
+<div class='trap'><span class='lbl'>Watch out</span>1260 m adds the speeds — that is only for opposite directions.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Race commentators use this to say how far ahead the leader is.</div>
+</div>
+<div class='q'>
+<p class='qn'>11. The difference between the largest 7-digit number and the smallest 7-digit number is: <span class='tag'>Large Numbers</span></p>
+<div class='opt correct'>(A) 89,99,999 &#10004;</div>
+<div class='opt'>(B) 9,00,000</div>
+<div class='opt'>(C) 1,00,00,000</div>
+<div class='opt'>(D) 9,99,999</div>
+<div class='opt'>(E) 80,00,000</div>
+<div class='opt'>(F) 90,00,000</div>
+<div class='opt'>(G) 99,00,000</div>
+<div class='idea'><span class='lbl'>The idea</span>Largest 7-digit = all 9s; smallest 7-digit = 1 followed by six 0s.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Largest = 99,99,999.</li>
+<li>Smallest = 10,00,000.</li>
+<li>Difference = 99,99,999 - 10,00,000 = 89,99,999.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (A) &mdash; 89,99,999</div>
+<div class='trap'><span class='lbl'>Watch out</span>Using 1,00,000 (only 6 digits) as the smallest.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Understanding the range a 7-digit code can hold.</div>
+</div>
+<div class='q'>
+<p class='qn'>12. Divide 7 by 0.25. <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 0.28</div>
+<div class='opt'>(B) 1.75</div>
+<div class='opt'>(C) 0.035</div>
+<div class='opt'>(D) 14</div>
+<div class='opt correct'>(E) 28 &#10004;</div>
+<div class='opt'>(F) 56</div>
+<div class='opt'>(G) 280</div>
+<div class='idea'><span class='lbl'>The idea</span>Dividing by 0.25 is the same as multiplying by 4.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>0.25 = 1/4.</li>
+<li>7 / (1/4) = 7 x 4 = 28.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (E) &mdash; 28</div>
+<div class='trap'><span class='lbl'>Watch out</span>1.75 multiplies by 0.25 instead of dividing.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>How many quarter-litre glasses you can fill from 7 litres.</div>
+</div>
+<div class='q'>
+<p class='qn'>13. A car covers the first half of a trip at 60 km/h and the second half (equal distance) at 40 km/h. Its average speed for the whole trip is: <span class='tag'>Motion &amp; Time</span></p>
+<div class='opt'>(A) 50 km/h</div>
+<div class='opt'>(B) 24 km/h</div>
+<div class='opt'>(C) 45 km/h</div>
+<div class='opt'>(D) 20 km/h</div>
+<div class='opt correct'>(E) 48 km/h &#10004;</div>
+<div class='opt'>(F) 100 km/h</div>
+<div class='opt'>(G) 52 km/h</div>
+<div class='idea'><span class='lbl'>The idea</span>Average speed = total distance / total time — NOT the average of the two speeds (more time is spent on the slow half).</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Take each half = 120 km (any number works).</li>
+<li>First half time = 120 / 60 = 2 h.</li>
+<li>Second half time = 120 / 40 = 3 h.</li>
+<li>Total = 240 km in 5 h.</li>
+<li>Average = 240 / 5 = 48 km/h.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (E) &mdash; 48 km/h</div>
+<div class='trap'><span class='lbl'>Watch out</span>50 km/h is the tempting but wrong simple average of 60 and 40.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Drivers estimate trip time over slow and fast stretches with this.</div>
+</div>
+<div class='q'>
+<p class='qn'>14. A number, when rounded to the nearest thousand, becomes 47,000. The largest whole number it could have been is: <span class='tag'>Large Numbers</span></p>
+<div class='opt'>(A) 47,549</div>
+<div class='opt correct'>(B) 47,499 &#10004;</div>
+<div class='opt'>(C) 48,000</div>
+<div class='opt'>(D) 47,500</div>
+<div class='opt'>(E) 47,999</div>
+<div class='opt'>(F) 46,999</div>
+<div class='idea'><span class='lbl'>The idea</span>Rounding to the nearest thousand, 47,000 covers 46,500 up to 47,499.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>The biggest value that still rounds to 47,000 is 47,499.</li>
+<li>(47,500 would round up to 48,000.)</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; 47,499</div>
+<div class='trap'><span class='lbl'>Watch out</span>47,500 rounds UP, so it is too big.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Knowing the real range hidden behind a rounded figure.</div>
+</div>
+<div class='q'>
+<p class='qn'>15. Arrange from greatest to least: 0.808, 0.88, 0.088, 0.8, 0.8009. <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt correct'>(A) 0.88 &gt; 0.808 &gt; 0.8009 &gt; 0.8 &gt; 0.088 &#10004;</div>
+<div class='opt'>(B) 0.088 &gt; 0.8 &gt; 0.8009 &gt; 0.808 &gt; 0.88</div>
+<div class='opt'>(C) 0.88 &gt; 0.8 &gt; 0.808 &gt; 0.8009 &gt; 0.088</div>
+<div class='opt'>(D) 0.8009 &gt; 0.808 &gt; 0.8 &gt; 0.88 &gt; 0.088</div>
+<div class='opt'>(E) 0.88 &gt; 0.808 &gt; 0.8 &gt; 0.8009 &gt; 0.088</div>
+<div class='opt'>(F) 0.88 &gt; 0.8009 &gt; 0.808 &gt; 0.8 &gt; 0.088</div>
+<div class='opt'>(G) 0.808 &gt; 0.88 &gt; 0.8 &gt; 0.8009 &gt; 0.088</div>
+<div class='idea'><span class='lbl'>The idea</span>Compare digit by digit after the point; more digits does NOT mean bigger.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>0.88, then 0.808, then 0.8009, then 0.8, then 0.088.</li>
+<li>So 0.88 &gt; 0.808 &gt; 0.8009 &gt; 0.8 &gt; 0.088.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (A) &mdash; 0.88 &gt; 0.808 &gt; 0.8009 &gt; 0.8 &gt; 0.088</div>
+<div class='trap'><span class='lbl'>Watch out</span>Thinking 0.8009 (longer) beats 0.808 — it does not.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Ranking measurements or prices accurately.</div>
+</div>
+<div class='q'>
+<p class='qn'>16. A pendulum completes 45 full swings in 1.5 minutes. Its time period is: <span class='tag'>Motion &amp; Time</span></p>
+<div class='opt'>(A) 1.5 s</div>
+<div class='opt'>(B) 3 s</div>
+<div class='opt'>(C) 30 s</div>
+<div class='opt'>(D) 67.5 s</div>
+<div class='opt'>(E) 0.5 s</div>
+<div class='opt'>(F) 90 s</div>
+<div class='opt'>(G) 0.75 s</div>
+<div class='opt correct'>(H) 2 s &#10004;</div>
+<div class='idea'><span class='lbl'>The idea</span>Time period = time for ONE swing = total time / number of swings.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>1.5 min = 90 s.</li>
+<li>Period = 90 / 45 = 2 s.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (H) &mdash; 2 s</div>
+<div class='trap'><span class='lbl'>Watch out</span>30 s divides the wrong way round (45 / 1.5).</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Clockmakers set a pendulum&#x27;s length to make it tick once per second or two.</div>
+</div>
+<div class='q'>
+<p class='qn'>17. One crore divided by one thousand equals: <span class='tag'>Large Numbers</span></p>
+<div class='opt correct'>(A) 10,000 &#10004;</div>
+<div class='opt'>(B) 10</div>
+<div class='opt'>(C) 1,000</div>
+<div class='opt'>(D) 1,00,000</div>
+<div class='opt'>(E) 1,00,00,000</div>
+<div class='opt'>(F) 1</div>
+<div class='idea'><span class='lbl'>The idea</span>1 crore has 7 zeros; dividing by 1000 removes 3 of them.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>1 crore = 1,00,00,000.</li>
+<li>/ 1000 = 10,000.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (A) &mdash; 10,000</div>
+<div class='trap'><span class='lbl'>Watch out</span>Miscounting zeros gives 1,000 or 1,00,000.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Splitting a large total into thousands.</div>
+</div>
+<div class='q'>
+<p class='qn'>18. A 3.5 m ribbon is cut into pieces each 0.25 m long. How many pieces are obtained? <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 0.875</div>
+<div class='opt'>(B) 12</div>
+<div class='opt correct'>(C) 14 &#10004;</div>
+<div class='opt'>(D) 28</div>
+<div class='opt'>(E) 3.75</div>
+<div class='opt'>(F) 16</div>
+<div class='idea'><span class='lbl'>The idea</span>Number of pieces = total length / piece length.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>3.5 / 0.25 = 3.5 x 4 = 14.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; 14</div>
+<div class='trap'><span class='lbl'>Watch out</span>7 wrongly divides by 0.5.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Cutting a ribbon into fixed-length pieces.</div>
+</div>
+<div class='q'>
+<p class='qn'>19. Sound travels about 0.34 km every second. How far does it travel in 2.5 minutes? <span class='tag'>Motion &amp; Time</span></p>
+<div class='opt'>(A) 0.85 km</div>
+<div class='opt'>(B) 0.51 km</div>
+<div class='opt'>(C) 5.1 km</div>
+<div class='opt'>(D) 85 km</div>
+<div class='opt correct'>(E) 51 km &#10004;</div>
+<div class='opt'>(F) 510 km</div>
+<div class='opt'>(G) 8.5 km</div>
+<div class='idea'><span class='lbl'>The idea</span>Distance = speed x time, with time in seconds to match km/s.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>2.5 min = 150 s.</li>
+<li>Distance = 0.34 x 150 = 51 km.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (E) &mdash; 51 km</div>
+<div class='trap'><span class='lbl'>Watch out</span>0.85 km uses only 2.5 seconds instead of 150.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Counting seconds between lightning and thunder tells how far a storm is.</div>
+</div>
+<div class='q'>
+<p class='qn'>20. Which is the correct Indian-system reading of 30,40,05,006? <span class='tag'>Large Numbers</span></p>
+<div class='opt'>(A) Thirty crore forty-five thousand six</div>
+<div class='opt'>(B) Three hundred four million</div>
+<div class='opt'>(C) Three crore four lakh five thousand six</div>
+<div class='opt'>(D) Thirty crore four lakh five hundred six</div>
+<div class='opt'>(E) Thirty crore forty lakh five hundred six</div>
+<div class='opt correct'>(F) Thirty crore forty lakh five thousand six &#10004;</div>
+<div class='opt'>(G) Thirty crore four lakh fifty thousand six</div>
+<div class='idea'><span class='lbl'>The idea</span>Group the digits, then read group by group.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>30 | 40 | 05 | 006 -&gt; 30 crore, 40 lakh, 05 thousand, 006.</li>
+<li>&#x27;Thirty crore forty lakh five thousand six.&#x27;</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (F) &mdash; Thirty crore forty lakh five thousand six</div>
+<div class='trap'><span class='lbl'>Watch out</span>Misreading a group as &#x27;four lakh&#x27; or &#x27;five hundred&#x27;.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Saying big numbers aloud correctly.</div>
+</div>
+<div class='q'>
+<p class='qn'>21. Find 12.5% of 4,000. <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 320</div>
+<div class='opt'>(B) 50</div>
+<div class='opt correct'>(C) 500 &#10004;</div>
+<div class='opt'>(D) 250</div>
+<div class='opt'>(E) 125</div>
+<div class='opt'>(F) 800</div>
+<div class='idea'><span class='lbl'>The idea</span>12.5% = 0.125 = 1/8; take one-eighth.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>12.5/100 = 1/8.</li>
+<li>1/8 of 4000 = 500.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; 500</div>
+<div class='trap'><span class='lbl'>Watch out</span>50 or 5000 are place-value slips.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Working out a discount or a tip.</div>
+</div>
+<div class='q'>
+<p class='qn'>22. A car covers 144 km in 1 hour 48 minutes. Its average speed is: <span class='tag'>Motion &amp; Time</span></p>
+<div class='opt'>(A) 72 km/h</div>
+<div class='opt'>(B) 79.6 km/h</div>
+<div class='opt'>(C) 2.6 km/h</div>
+<div class='opt'>(D) 90 km/h</div>
+<div class='opt'>(E) 144 km/h</div>
+<div class='opt correct'>(F) 80 km/h &#10004;</div>
+<div class='idea'><span class='lbl'>The idea</span>Turn the time fully into hours BEFORE dividing.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>48 min = 48 / 60 = 0.8 h.</li>
+<li>Total time = 1 + 0.8 = 1.8 h.</li>
+<li>Speed = 144 / 1.8 = 80 km/h.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (F) &mdash; 80 km/h</div>
+<div class='trap'><span class='lbl'>Watch out</span>Writing the time as 1.48 h (instead of 1.8 h) gives a wrong ~97.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Finding average speed from a journey&#x27;s start and end clock times.</div>
+</div>
+<div class='q'>
+<p class='qn'>23. In 56,84,239, subtract the face value of the digit 6 from its place value. The result is: <span class='tag'>Large Numbers</span></p>
+<div class='opt'>(A) 60,00,000</div>
+<div class='opt'>(B) 5,99,996</div>
+<div class='opt'>(C) 5,99,000</div>
+<div class='opt'>(D) 5,99,940</div>
+<div class='opt'>(E) 6,00,006</div>
+<div class='opt'>(F) 6,00,000</div>
+<div class='opt correct'>(G) 5,99,994 &#10004;</div>
+<div class='idea'><span class='lbl'>The idea</span>Place value uses the digit&#x27;s position; face value is just the digit itself.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>The 6 sits in the lakhs place -&gt; place value = 6,00,000.</li>
+<li>Face value of 6 = 6.</li>
+<li>6,00,000 - 6 = 5,99,994.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (G) &mdash; 5,99,994</div>
+<div class='trap'><span class='lbl'>Watch out</span>Using the wrong place for the 6.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Understanding what each digit actually contributes.</div>
+</div>
+<div class='q'>
+<p class='qn'>24. Multiply 0.45 by 0.45. <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 0.0025</div>
+<div class='opt correct'>(B) 0.2025 &#10004;</div>
+<div class='opt'>(C) 2.025</div>
+<div class='opt'>(D) 0.90</div>
+<div class='opt'>(E) 0.205</div>
+<div class='opt'>(F) 0.9</div>
+<div class='idea'><span class='lbl'>The idea</span>Multiply as whole numbers, then place the decimal (4 places).</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>45 x 45 = 2025.</li>
+<li>Four decimal places -&gt; 0.2025.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; 0.2025</div>
+<div class='trap'><span class='lbl'>Watch out</span>0.81 is 0.9 x 0.9; 0.205 mis-places the point.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Area of a square of side 0.45 m.</div>
+</div>
+<div class='q'>
+<p class='qn'>25. A motorbike runs at 54 km/h. How far does it travel in 25 seconds? <span class='tag'>Motion &amp; Time</span></p>
+<div class='opt'>(A) 3,750 m</div>
+<div class='opt'>(B) 135 m</div>
+<div class='opt'>(C) 75 m</div>
+<div class='opt'>(D) 225 m</div>
+<div class='opt'>(E) 15 m</div>
+<div class='opt correct'>(F) 375 m &#10004;</div>
+<div class='idea'><span class='lbl'>The idea</span>Convert km/h to m/s (x 5/18), then multiply by the seconds.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>54 x 5/18 = 15 m/s.</li>
+<li>Distance = 15 x 25 = 375 m.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (F) &mdash; 375 m</div>
+<div class='trap'><span class='lbl'>Watch out</span>1350 m forgets the conversion and does 54 x 25.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Knowing how far a car rolls in the seconds it takes to react and brake.</div>
+</div>
+<div class='q'>
+<p class='qn'>26. Add: 8 crore + 45 lakh + 3 thousand. The result is: <span class='tag'>Large Numbers</span></p>
+<div class='opt'>(A) 8,45,300</div>
+<div class='opt correct'>(B) 8,45,03,000 &#10004;</div>
+<div class='opt'>(C) 8,45,30,000</div>
+<div class='opt'>(D) 8,45,000</div>
+<div class='opt'>(E) 8,40,53,000</div>
+<div class='opt'>(F) 53,03,000</div>
+<div class='opt'>(G) 8,04,53,000</div>
+<div class='opt'>(H) 8,53,000</div>
+<div class='idea'><span class='lbl'>The idea</span>Add the pieces in order: crore, then lakh, then thousand.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>8 crore = 8,00,00,000.</li>
+<li>+ 45 lakh = 8,45,00,000.</li>
+<li>+ 3 thousand = 8,45,03,000.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; 8,45,03,000</div>
+<div class='trap'><span class='lbl'>Watch out</span>Misplacing the thousand gives 8,45,30,000.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Adding amounts given in mixed units (crore, lakh, thousand).</div>
+</div>
+<div class='q'>
+<p class='qn'>27. Evaluate 2.5 − (0.5) × (0.5). <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 2.45</div>
+<div class='opt correct'>(B) 2.25 &#10004;</div>
+<div class='opt'>(C) 6.25</div>
+<div class='opt'>(D) 2.5</div>
+<div class='opt'>(E) 2.0</div>
+<div class='opt'>(F) 4</div>
+<div class='idea'><span class='lbl'>The idea</span>Order of operations: multiply BEFORE you subtract.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>0.5 x 0.5 = 0.25.</li>
+<li>2.5 - 0.25 = 2.25.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; 2.25</div>
+<div class='trap'><span class='lbl'>Watch out</span>4 subtracts first (wrong order).</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Getting the order of operations right in any bill.</div>
+</div>
+<div class='q'>
+<p class='qn'>28. A racing car completes 5 laps of a 2.5 km track in 12.5 minutes. Its average speed is: <span class='tag'>Motion &amp; Time</span></p>
+<div class='opt'>(A) 50 km/h</div>
+<div class='opt'>(B) 1 km/h</div>
+<div class='opt'>(C) 100 km/h</div>
+<div class='opt'>(D) 120 km/h</div>
+<div class='opt'>(E) 25 km/h</div>
+<div class='opt'>(F) 12.5 km/h</div>
+<div class='opt correct'>(G) 60 km/h &#10004;</div>
+<div class='opt'>(H) 30 km/h</div>
+<div class='idea'><span class='lbl'>The idea</span>Average speed = total distance / total time.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Distance = 5 laps x 2.5 km = 12.5 km.</li>
+<li>Time = 12.5 min = 12.5/60 h.</li>
+<li>Speed = 12.5 / (12.5/60) = 60 km/h.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (G) &mdash; 60 km/h</div>
+<div class='trap'><span class='lbl'>Watch out</span>1 km/h comes from mixing up minutes and hours.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Lap timing in motor racing.</div>
+</div>
+<div class='q'>
+<p class='qn'>29. How many lakhs are there in 25 million? <span class='tag'>Large Numbers</span></p>
+<div class='opt'>(A) 25 lakh</div>
+<div class='opt'>(B) 2,50,000 lakh</div>
+<div class='opt'>(C) 25,000 lakh</div>
+<div class='opt correct'>(D) 250 lakh &#10004;</div>
+<div class='opt'>(E) 2.5 lakh</div>
+<div class='opt'>(F) 2,500 lakh</div>
+<div class='opt'>(G) 125 lakh</div>
+<div class='opt'>(H) 5 lakh</div>
+<div class='idea'><span class='lbl'>The idea</span>1 million = 10 lakh, so multiply by 10.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>25 million = 25 x 10 lakh = 250 lakh.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (D) &mdash; 250 lakh</div>
+<div class='trap'><span class='lbl'>Watch out</span>25 lakh forgets the x 10.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Converting between Indian and international reporting.</div>
+</div>
+<div class='q'>
+<p class='qn'>30. Write 0.6 as a fraction in its lowest terms. <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt correct'>(A) 3/5 &#10004;</div>
+<div class='opt'>(B) 3/50</div>
+<div class='opt'>(C) 6/100</div>
+<div class='opt'>(D) 1/60</div>
+<div class='opt'>(E) 6/10</div>
+<div class='opt'>(F) 2/3</div>
+<div class='opt'>(G) 5/3</div>
+<div class='opt'>(H) 1/6</div>
+<div class='idea'><span class='lbl'>The idea</span>Write as a fraction over 10, then reduce.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>0.6 = 6/10.</li>
+<li>Divide top and bottom by 2 -&gt; 3/5.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (A) &mdash; 3/5</div>
+<div class='trap'><span class='lbl'>Watch out</span>Leaving 6/10 (not in lowest terms).</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Turning a decimal score into a simple fraction.</div>
+</div>
+<div class='q'>
+<p class='qn'>31. A satellite orbits Earth at 7.8 km/s. How far does it travel in one hour? <span class='tag'>Motion &amp; Time</span></p>
+<div class='opt'>(A) 2,808 km</div>
+<div class='opt'>(B) 28,800 km</div>
+<div class='opt correct'>(C) 28,080 km &#10004;</div>
+<div class='opt'>(D) 468 km</div>
+<div class='opt'>(E) 280 km</div>
+<div class='opt'>(F) 7,800 km</div>
+<div class='opt'>(G) 4,680 km</div>
+<div class='idea'><span class='lbl'>The idea</span>Distance = speed x time; 1 hour = 3600 seconds.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>1 hour = 3600 s.</li>
+<li>Distance = 7.8 x 3600 = 28,080 km.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; 28,080 km</div>
+<div class='trap'><span class='lbl'>Watch out</span>2808 km uses 360 s; 468 km uses 60 s.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Tracking how fast satellites and the space station circle Earth.</div>
+</div>
+<div class='q'>
+<p class='qn'>32. A printer prints 1,250 pages every hour. Running non-stop for a full day (24 hours), the number of pages printed is: <span class='tag'>Large Numbers</span></p>
+<div class='opt'>(A) 12,500</div>
+<div class='opt'>(B) 30,00,000</div>
+<div class='opt'>(C) 36,000</div>
+<div class='opt correct'>(D) 30,000 &#10004;</div>
+<div class='opt'>(E) 52,500</div>
+<div class='opt'>(F) 3,00,000</div>
+<div class='idea'><span class='lbl'>The idea</span>Multiply the hourly rate by 24 hours.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>1250 x 24 = 30,000 pages.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (D) &mdash; 30,000</div>
+<div class='trap'><span class='lbl'>Watch out</span>3,000 uses only a few hours.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Estimating a machine&#x27;s output over a full day.</div>
+</div>
+<div class='q'>
+<p class='qn'>33. Evaluate (4.2 ÷ 0.7) + 1.5. <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 0.6</div>
+<div class='opt'>(B) 2.1</div>
+<div class='opt'>(C) 8</div>
+<div class='opt correct'>(D) 7.5 &#10004;</div>
+<div class='opt'>(E) 6</div>
+<div class='opt'>(F) 9</div>
+<div class='opt'>(G) 7.05</div>
+<div class='idea'><span class='lbl'>The idea</span>Do the division first, then add.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>4.2 / 0.7 = 6.</li>
+<li>6 + 1.5 = 7.5.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (D) &mdash; 7.5</div>
+<div class='trap'><span class='lbl'>Watch out</span>Dividing the whole sum, or stopping at 0.6.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Two-step money or measurement problems.</div>
+</div>
+<div class='q'>
+<p class='qn'>34. A bus leaves at 6:45 a.m. and reaches its stop at 9:15 a.m., covering 175 km. Its average speed is: <span class='tag'>Motion &amp; Time</span></p>
+<div class='opt'>(A) 75.4 km/h</div>
+<div class='opt'>(B) 175 km/h</div>
+<div class='opt'>(C) 87.5 km/h</div>
+<div class='opt'>(D) 35 km/h</div>
+<div class='opt correct'>(E) 70 km/h &#10004;</div>
+<div class='opt'>(F) 50 km/h</div>
+<div class='opt'>(G) 7 km/h</div>
+<div class='opt'>(H) 700 km/h</div>
+<div class='idea'><span class='lbl'>The idea</span>Find the exact time gap, change it to hours, then divide.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>6:45 to 9:15 = 2 h 30 min = 2.5 h.</li>
+<li>Speed = 175 / 2.5 = 70 km/h.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (E) &mdash; 70 km/h</div>
+<div class='trap'><span class='lbl'>Watch out</span>Treating the gap as 3 h gives a wrong ~58.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Bus and train timetables quote average speeds exactly like this.</div>
+</div>
+<div class='q'>
+<p class='qn'>35. Round 8,49,962 to the nearest ten thousand: <span class='tag'>Large Numbers</span></p>
+<div class='opt'>(A) 8,00,000</div>
+<div class='opt'>(B) 8,60,000</div>
+<div class='opt'>(C) 8,40,000</div>
+<div class='opt'>(D) 9,00,000</div>
+<div class='opt'>(E) 8,49,000</div>
+<div class='opt'>(F) 8,50,962</div>
+<div class='opt'>(G) 8,45,000</div>
+<div class='opt correct'>(H) 8,50,000 &#10004;</div>
+<div class='idea'><span class='lbl'>The idea</span>Round to the nearest ten-thousand: look at the thousands digit.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Thousands digit is 9 (&gt;= 5), so round up.</li>
+<li>8,49,962 -&gt; 8,50,000.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (H) &mdash; 8,50,000</div>
+<div class='trap'><span class='lbl'>Watch out</span>8,40,000 rounds down by mistake.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Rounding numbers for charts and summaries.</div>
+</div>
+<div class='q'>
+<p class='qn'>36. Find the value of 1 − 0.1 − 0.01 − 0.001. <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 0.911</div>
+<div class='opt'>(B) 0.888</div>
+<div class='opt'>(C) 0.111</div>
+<div class='opt correct'>(D) 0.889 &#10004;</div>
+<div class='opt'>(E) 0.8</div>
+<div class='opt'>(F) 0.79</div>
+<div class='opt'>(G) 0.99</div>
+<div class='idea'><span class='lbl'>The idea</span>Subtract one piece at a time, keeping decimals lined up.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>1 - 0.1 = 0.9.</li>
+<li>0.9 - 0.01 = 0.89.</li>
+<li>0.89 - 0.001 = 0.889.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (D) &mdash; 0.889</div>
+<div class='trap'><span class='lbl'>Watch out</span>0.111 subtracts in the wrong direction.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Tracking what is left after small deductions.</div>
+</div>
+<div class='q'>
+<p class='qn'>37. A snail crawls at 0.5 cm/s. How far does it move in one hour? <span class='tag'>Motion &amp; Time</span></p>
+<div class='opt correct'>(A) 18 m &#10004;</div>
+<div class='opt'>(B) 30 m</div>
+<div class='opt'>(C) 180 m</div>
+<div class='opt'>(D) 0.3 m</div>
+<div class='opt'>(E) 1,800 m</div>
+<div class='opt'>(F) 1.8 m</div>
+<div class='idea'><span class='lbl'>The idea</span>Match units: 1 hour = 3600 s, and 100 cm = 1 m.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>1 h = 3600 s.</li>
+<li>Distance = 0.5 x 3600 = 1800 cm.</li>
+<li>1800 / 100 = 18 m.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (A) &mdash; 18 m</div>
+<div class='trap'><span class='lbl'>Watch out</span>1800 m forgets to change cm into m.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Measuring very slow movement, like a glacier or a snail.</div>
+</div>
+<div class='q'>
+<p class='qn'>38. The successor of the largest six-digit number is: <span class='tag'>Large Numbers</span></p>
+<div class='opt'>(A) 9,99,999</div>
+<div class='opt'>(B) 10,00,001</div>
+<div class='opt'>(C) 11,00,000</div>
+<div class='opt'>(D) 1,00,00,000</div>
+<div class='opt correct'>(E) 10,00,000 &#10004;</div>
+<div class='opt'>(F) 9,99,998</div>
+<div class='opt'>(G) 1,00,000</div>
+<div class='idea'><span class='lbl'>The idea</span>Largest 6-digit number is 9,99,999; add one.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>9,99,999 + 1 = 10,00,000.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (E) &mdash; 10,00,000</div>
+<div class='trap'><span class='lbl'>Watch out</span>Confusing it with the smallest 8-digit number (1 crore).</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Seeing how adding 1 can change how many digits a number has.</div>
+</div>
+<div class='q'>
+<p class='qn'>39. A wire is 0.05 m thick. How many such wires must be stacked to reach a height of 2 m? <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 20</div>
+<div class='opt correct'>(B) 40 &#10004;</div>
+<div class='opt'>(C) 100</div>
+<div class='opt'>(D) 0.1</div>
+<div class='opt'>(E) 400</div>
+<div class='opt'>(F) 10</div>
+<div class='opt'>(G) 0.025</div>
+<div class='idea'><span class='lbl'>The idea</span>How many thicknesses fit = total height / one thickness.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>2 / 0.05 = 40.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; 40</div>
+<div class='trap'><span class='lbl'>Watch out</span>4 or 400 are place-value slips.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>How many sheets or coins stack up to a height.</div>
+</div>
+<div class='q'>
+<p class='qn'>40. A pendulum has a time period of 0.8 s. How many complete oscillations does it make in 2 minutes? <span class='tag'>Motion &amp; Time</span></p>
+<div class='opt'>(A) 75</div>
+<div class='opt'>(B) 96</div>
+<div class='opt'>(C) 240</div>
+<div class='opt correct'>(D) 150 &#10004;</div>
+<div class='opt'>(E) 1,500</div>
+<div class='opt'>(F) 1.5</div>
+<div class='idea'><span class='lbl'>The idea</span>Number of oscillations = total time / time period.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>2 min = 120 s.</li>
+<li>Number = 120 / 0.8 = 150.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (D) &mdash; 150</div>
+<div class='trap'><span class='lbl'>Watch out</span>96 multiplies (120 x 0.8) instead of dividing.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Counting heartbeats or ticks over a fixed time.</div>
+</div>
+<div class='q'>
+<p class='qn'>41. In the international system, 7 crore 50 lakh is written as: <span class='tag'>Large Numbers</span></p>
+<div class='opt'>(A) 7,50,000</div>
+<div class='opt'>(B) 75 billion</div>
+<div class='opt'>(C) 75 lakh</div>
+<div class='opt correct'>(D) 75 million &#10004;</div>
+<div class='opt'>(E) 75 thousand</div>
+<div class='opt'>(F) 0.75 million</div>
+<div class='idea'><span class='lbl'>The idea</span>7 crore 50 lakh = 7,50,00,000; group into millions.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>7,50,00,000 = 75 x 10,00,000 = 75 million.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (D) &mdash; 75 million</div>
+<div class='trap'><span class='lbl'>Watch out</span>7.5 million is off by a factor of 10.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Press releases that quote figures in millions.</div>
+</div>
+<div class='q'>
+<p class='qn'>42. What is 0.75 of 0.8? <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 0.55</div>
+<div class='opt correct'>(B) 0.6 &#10004;</div>
+<div class='opt'>(C) 1.55</div>
+<div class='opt'>(D) 6</div>
+<div class='opt'>(E) 0.96</div>
+<div class='opt'>(F) 0.075</div>
+<div class='idea'><span class='lbl'>The idea</span>&#x27;Of&#x27; means multiply.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>0.75 x 0.8 = 0.60 = 0.6 (three-quarters of 0.8).</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; 0.6</div>
+<div class='trap'><span class='lbl'>Watch out</span>0.96 or 0.075 mis-multiply.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Taking a fraction of a measurement.</div>
+</div>
+<div class='q'>
+<p class='qn'>43. Car A leaves at 9:00 going 50 km/h. Car B leaves the same point in the same direction at 10:00 going 70 km/h. How long after B starts does it catch up to A? <span class='tag'>Motion &amp; Time</span></p>
+<div class='opt'>(A) 3.5 h</div>
+<div class='opt'>(B) 0.5 h</div>
+<div class='opt correct'>(C) 2.5 h &#10004;</div>
+<div class='opt'>(D) 0.83 h</div>
+<div class='opt'>(E) 1.5 h</div>
+<div class='opt'>(F) 2 h</div>
+<div class='opt'>(G) 5 h</div>
+<div class='idea'><span class='lbl'>The idea</span>Find the head start first, then close the gap at the relative speed.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>In the 1 h before B starts, A goes 50 km ahead.</li>
+<li>Closing speed = 70 - 50 = 20 km/h.</li>
+<li>Time = 50 / 20 = 2.5 h after B starts.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; 2.5 h</div>
+<div class='trap'><span class='lbl'>Watch out</span>Forgetting the head start, or adding the speeds, breaks it.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Working out when a faster vehicle overtakes a slower one.</div>
+</div>
+<div class='q'>
+<p class='qn'>44. A bank stores 1 lakh notes of ₹500 each. The total value of these notes is: <span class='tag'>Large Numbers</span></p>
+<div class='opt correct'>(A) 5 crore &#10004;</div>
+<div class='opt'>(B) 5,00,000</div>
+<div class='opt'>(C) 50 crore</div>
+<div class='opt'>(D) 50 thousand</div>
+<div class='opt'>(E) 5 lakh</div>
+<div class='opt'>(F) 5 thousand crore</div>
+<div class='idea'><span class='lbl'>The idea</span>Total value = number of notes x value of each note.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>1,00,000 x 500 = 5,00,00,000.</li>
+<li>= 5 crore.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (A) &mdash; 5 crore</div>
+<div class='trap'><span class='lbl'>Watch out</span>50 lakh or 50 crore are zero-counting errors.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Counting cash stacks in banking.</div>
+</div>
+<div class='q'>
+<p class='qn'>45. Round 0.0649 to two decimal places. <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 0.064</div>
+<div class='opt'>(B) 0.1</div>
+<div class='opt'>(C) 0.05</div>
+<div class='opt correct'>(D) 0.06 &#10004;</div>
+<div class='opt'>(E) 0.07</div>
+<div class='opt'>(F) 0.6</div>
+<div class='idea'><span class='lbl'>The idea</span>Round to 2 decimals: check the 3rd decimal (4 &lt; 5, round down).</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>0.0649 -&gt; 0.06.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (D) &mdash; 0.06</div>
+<div class='trap'><span class='lbl'>Watch out</span>0.07 rounds up by mistake.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Rounding money to paise or cents.</div>
+</div>
+<div class='q'>
+<p class='qn'>46. A wheel of circumference 1.5 m turns 200 times without slipping. The distance it rolls is: <span class='tag'>Motion &amp; Time</span></p>
+<div class='opt'>(A) 3,000 m</div>
+<div class='opt correct'>(B) 300 m &#10004;</div>
+<div class='opt'>(C) 150 m</div>
+<div class='opt'>(D) 30 m</div>
+<div class='opt'>(E) 600 m</div>
+<div class='opt'>(F) 3 m</div>
+<div class='opt'>(G) 133.3 m</div>
+<div class='idea'><span class='lbl'>The idea</span>Each turn rolls a distance equal to the wheel&#x27;s circumference.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>One turn = 1.5 m.</li>
+<li>Distance = 1.5 x 200 = 300 m.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; 300 m</div>
+<div class='trap'><span class='lbl'>Watch out</span>133.3 m divides instead of multiplying.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>A bicycle odometer counts wheel turns to measure distance.</div>
+</div>
+<div class='q'>
+<p class='qn'>47. Which of these is the correct expanded form of 5,07,60,084? <span class='tag'>Large Numbers</span></p>
+<div class='opt'>(A) 5,00,00,000 + 7,60,000 + 84</div>
+<div class='opt'>(B) 5,00,00,000 + 7,00,000 + 60,000 + 8 + 4</div>
+<div class='opt'>(C) 5,07,60,000 + 84</div>
+<div class='opt'>(D) 5,00,00,000 + 70,00,000 + 6,000 + 84</div>
+<div class='opt correct'>(E) 5,00,00,000 + 7,00,000 + 60,000 + 80 + 4 &#10004;</div>
+<div class='opt'>(F) 5,00,00,000 + 7,00,000 + 6,000 + 80 + 4</div>
+<div class='opt'>(G) 50,00,000 + 7,00,000 + 60,000 + 84</div>
+<div class='idea'><span class='lbl'>The idea</span>Break the number into the value of each digit&#x27;s place.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>5,07,60,084 = 5 crore + 7 lakh + 6 ten-thousand + 8 ten + 4.</li>
+<li>= 5,00,00,000 + 7,00,000 + 60,000 + 80 + 4.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (E) &mdash; 5,00,00,000 + 7,00,000 + 60,000 + 80 + 4</div>
+<div class='trap'><span class='lbl'>Watch out</span>Giving the 7 or 6 the wrong place value.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Breaking a number into place values to understand it.</div>
+</div>
+<div class='q'>
+<p class='qn'>48. Evaluate 3.25 + 4/5. <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt correct'>(A) 4.05 &#10004;</div>
+<div class='opt'>(B) 3.45</div>
+<div class='opt'>(C) 4.5</div>
+<div class='opt'>(D) 4.8</div>
+<div class='opt'>(E) 3.65</div>
+<div class='opt'>(F) 7.25</div>
+<div class='idea'><span class='lbl'>The idea</span>Turn the fraction into a decimal, then add.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>4/5 = 0.8.</li>
+<li>3.25 + 0.8 = 4.05.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (A) &mdash; 4.05</div>
+<div class='trap'><span class='lbl'>Watch out</span>Treating 4/5 as 0.45.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Adding a fraction and a decimal amount.</div>
+</div>
+<div class='q'>
+<p class='qn'>49. A car uses 8 litres of fuel per 100 km. Driving at 75 km/h, how much fuel does it use in 2 hours? <span class='tag'>Motion &amp; Time</span></p>
+<div class='opt correct'>(A) 12 L &#10004;</div>
+<div class='opt'>(B) 16 L</div>
+<div class='opt'>(C) 9.4 L</div>
+<div class='opt'>(D) 8 L</div>
+<div class='opt'>(E) 120 L</div>
+<div class='opt'>(F) 6 L</div>
+<div class='opt'>(G) 1.2 L</div>
+<div class='idea'><span class='lbl'>The idea</span>First find the distance, then apply the fuel rate.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Distance in 2 h = 75 x 2 = 150 km.</li>
+<li>Fuel = 8 L per 100 km, so 8 x (150/100) = 12 L.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (A) &mdash; 12 L</div>
+<div class='trap'><span class='lbl'>Watch out</span>16 L wrongly assumes 200 km.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Planning how much petrol a trip will cost.</div>
+</div>
+<div class='q'>
+<p class='qn'>50. By how much is 3 crore greater than 27 lakh? <span class='tag'>Large Numbers</span></p>
+<div class='opt'>(A) 73,00,000</div>
+<div class='opt'>(B) 3,27,00,000</div>
+<div class='opt correct'>(C) 2,73,00,000 &#10004;</div>
+<div class='opt'>(D) 27,00,000</div>
+<div class='opt'>(E) 2,73,00,00</div>
+<div class='opt'>(F) 2,97,00,000</div>
+<div class='opt'>(G) 2,70,00,000</div>
+<div class='opt'>(H) 2,73,000</div>
+<div class='idea'><span class='lbl'>The idea</span>Write both in full, then subtract.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>3 crore = 3,00,00,000.</li>
+<li>27 lakh = 27,00,000.</li>
+<li>3,00,00,000 - 27,00,000 = 2,73,00,000.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; 2,73,00,000</div>
+<div class='trap'><span class='lbl'>Watch out</span>2,70,00,000 subtracts carelessly.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Comparing two large amounts.</div>
+</div>
+<div class='q'>
+<p class='qn'>51. ₹100 is shared equally among 8 friends. Each friend gets: <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) ₹12</div>
+<div class='opt'>(B) ₹16</div>
+<div class='opt correct'>(C) ₹12.50 &#10004;</div>
+<div class='opt'>(D) ₹12.80</div>
+<div class='opt'>(E) ₹125</div>
+<div class='opt'>(F) ₹1.25</div>
+<div class='opt'>(G) ₹10</div>
+<div class='opt'>(H) ₹8</div>
+<div class='idea'><span class='lbl'>The idea</span>Equal share = total / number of people.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>100 / 8 = 12.5 = Rs 12.50.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; ₹12.50</div>
+<div class='trap'><span class='lbl'>Watch out</span>Rs 12 ignores the 50 paise remainder.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Splitting a bill among friends.</div>
+</div>
+<div class='q'>
+<p class='qn'>52. A man drives 30 km at 30 km/h, then another 30 km at 60 km/h. His average speed for the whole journey is: <span class='tag'>Motion &amp; Time</span></p>
+<div class='opt'>(A) 30 km/h</div>
+<div class='opt'>(B) 90 km/h</div>
+<div class='opt correct'>(C) 40 km/h &#10004;</div>
+<div class='opt'>(D) 20 km/h</div>
+<div class='opt'>(E) 1.5 km/h</div>
+<div class='opt'>(F) 45 km/h</div>
+<div class='opt'>(G) 50 km/h</div>
+<div class='idea'><span class='lbl'>The idea</span>Average speed = total distance / total time (equal distances, different speeds).</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Time 1 = 30/30 = 1 h.</li>
+<li>Time 2 = 30/60 = 0.5 h.</li>
+<li>Total = 60 km in 1.5 h.</li>
+<li>Average = 60 / 1.5 = 40 km/h.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; 40 km/h</div>
+<div class='trap'><span class='lbl'>Watch out</span>45 km/h is the wrong simple average of 30 and 60.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Trips with a slow city part and a fast highway part.</div>
+</div>
+<div class='q'>
+<p class='qn'>53. A factory makes 3,650 cars each day. In a non-leap year (365 days), the number of cars made is: <span class='tag'>Large Numbers</span></p>
+<div class='opt correct'>(A) 13,32,250 &#10004;</div>
+<div class='opt'>(B) 1,33,225</div>
+<div class='opt'>(C) 1,33,250</div>
+<div class='opt'>(D) 12,32,250</div>
+<div class='opt'>(E) 13,65,000</div>
+<div class='opt'>(F) 1,33,22,500</div>
+<div class='opt'>(G) 43,800</div>
+<div class='opt'>(H) 13,32,000</div>
+<div class='idea'><span class='lbl'>The idea</span>Daily amount x number of days; break the multiplication into easy parts.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>3650 x 365 = 3650x300 + 3650x65</li>
+<li>= 10,95,000 + 2,37,250 = 13,32,250.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (A) &mdash; 13,32,250</div>
+<div class='trap'><span class='lbl'>Watch out</span>Dropping a zero gives 1,33,225.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Finding an annual total from a daily rate.</div>
+</div>
+<div class='q'>
+<p class='qn'>54. Which of these numbers is closest to 1: 0.9, 0.99, 1.1, 1.05, 0.999, 1.02? <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt correct'>(A) 0.999 &#10004;</div>
+<div class='opt'>(B) 1.0</div>
+<div class='opt'>(C) 1.02</div>
+<div class='opt'>(D) 1.1</div>
+<div class='opt'>(E) 0.99</div>
+<div class='opt'>(F) 0.9999</div>
+<div class='opt'>(G) 0.9</div>
+<div class='idea'><span class='lbl'>The idea</span>Closest means smallest gap from 1; measure each distance.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>0.999 is only 0.001 away from 1 — the smallest gap.</li>
+<li>So 0.999 is closest.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (A) &mdash; 0.999</div>
+<div class='trap'><span class='lbl'>Watch out</span>0.99 is 0.01 away, which is farther.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Choosing the most accurate measurement.</div>
+</div>
+<div class='q'>
+<p class='qn'>55. A train covers 54 km in 36 minutes. Its speed in metres per second is: <span class='tag'>Motion &amp; Time</span></p>
+<div class='opt'>(A) 2.5 m/s</div>
+<div class='opt'>(B) 9 m/s</div>
+<div class='opt'>(C) 36 m/s</div>
+<div class='opt'>(D) 90 m/s</div>
+<div class='opt'>(E) 250 m/s</div>
+<div class='opt'>(F) 1.5 m/s</div>
+<div class='opt correct'>(G) 25 m/s &#10004;</div>
+<div class='idea'><span class='lbl'>The idea</span>Convert to a common unit: km-&gt;m and min-&gt;s, then divide.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>54 km = 54000 m; 36 min = 2160 s.</li>
+<li>Speed = 54000 / 2160 = 25 m/s.</li>
+<li>(Check: 54 km in 36 min = 90 km/h = 25 m/s.)</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (G) &mdash; 25 m/s</div>
+<div class='trap'><span class='lbl'>Watch out</span>90 is the km/h value, not the m/s value.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Comparing train speeds that are quoted in different units.</div>
+</div>
+<div class='q'>
+<p class='qn'>56. Consider these four amounts: 4 crore, 40 million, 4,00,00,000, and 400 lakh. Which statement is true? <span class='tag'>Large Numbers</span></p>
+<div class='opt'>(A) No two are equal</div>
+<div class='opt correct'>(B) All four are equal &#10004;</div>
+<div class='opt'>(C) Only 4 crore and 40 million are equal</div>
+<div class='opt'>(D) 4 crore is the greatest</div>
+<div class='opt'>(E) 4,00,00,000 is the greatest</div>
+<div class='opt'>(F) 400 lakh is the smallest</div>
+<div class='idea'><span class='lbl'>The idea</span>Convert every amount to plain numerals and compare.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>4 crore = 4,00,00,000.</li>
+<li>40 million = 4,00,00,000.</li>
+<li>400 lakh = 4,00,00,000.</li>
+<li>All four are the same number.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; All four are equal</div>
+<div class='trap'><span class='lbl'>Watch out</span>Assuming &#x27;million&#x27; always means a bigger amount.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Spotting that different unit systems can name the same value.</div>
+</div>
+<div class='q'>
+<p class='qn'>57. Evaluate 2.4 × 1.5 ÷ 0.2. <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 7.2</div>
+<div class='opt'>(B) 3.6</div>
+<div class='opt'>(C) 36</div>
+<div class='opt'>(D) 8</div>
+<div class='opt'>(E) 1.8</div>
+<div class='opt correct'>(F) 18 &#10004;</div>
+<div class='opt'>(G) 0.18</div>
+<div class='idea'><span class='lbl'>The idea</span>Work left to right for multiply and divide.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>2.4 x 1.5 = 3.6.</li>
+<li>3.6 / 0.2 = 18.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (F) &mdash; 18</div>
+<div class='trap'><span class='lbl'>Watch out</span>7.2 mishandles the divide-by-0.2.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Chained multiply/divide in recipes or scaling.</div>
+</div>
+<div class='q'>
+<p class='qn'>58. A pendulum&#x27;s time period is 1.2 s. The time it takes to make 250 oscillations is: <span class='tag'>Motion &amp; Time</span></p>
+<div class='opt'>(A) 3 min</div>
+<div class='opt'>(B) 208.3 min</div>
+<div class='opt correct'>(C) 5 min &#10004;</div>
+<div class='opt'>(D) 300 min</div>
+<div class='opt'>(E) 12 min</div>
+<div class='opt'>(F) 2.5 min</div>
+<div class='opt'>(G) 0.5 min</div>
+<div class='opt'>(H) 50 min</div>
+<div class='idea'><span class='lbl'>The idea</span>Total time = period x number of oscillations, then change seconds to minutes.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Total = 1.2 x 250 = 300 s.</li>
+<li>300 / 60 = 5 min.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; 5 min</div>
+<div class='trap'><span class='lbl'>Watch out</span>300 min forgets to change seconds into minutes.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Timing how long a swing keeps moving.</div>
+</div>
+<div class='q'>
+<p class='qn'>59. Find the value of (9,99,999 + 1) + (99,99,999 + 1). <span class='tag'>Large Numbers</span></p>
+<div class='opt'>(A) 1,09,99,998</div>
+<div class='opt'>(B) 1,11,00,000</div>
+<div class='opt'>(C) 1,01,00,000</div>
+<div class='opt'>(D) 11,00,000</div>
+<div class='opt correct'>(E) 1,10,00,000 &#10004;</div>
+<div class='opt'>(F) 10,00,00,000</div>
+<div class='idea'><span class='lbl'>The idea</span>Do each bracket first, then add.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>9,99,999 + 1 = 10,00,000.</li>
+<li>99,99,999 + 1 = 1,00,00,000.</li>
+<li>Sum = 10,00,000 + 1,00,00,000 = 1,10,00,000.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (E) &mdash; 1,10,00,000</div>
+<div class='trap'><span class='lbl'>Watch out</span>1,00,00,000 forgets to add the first bracket.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Seeing how &#x27;one more&#x27; rolls a number over to a new place.</div>
+</div>
+<div class='q'>
+<p class='qn'>60. Write the decimal 0.004 as a fraction in lowest terms. <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 1/4</div>
+<div class='opt'>(B) 4/1000</div>
+<div class='opt'>(C) 1/2500</div>
+<div class='opt'>(D) 4/100</div>
+<div class='opt'>(E) 4/10</div>
+<div class='opt correct'>(F) 1/250 &#10004;</div>
+<div class='idea'><span class='lbl'>The idea</span>Write over 1000, then reduce to lowest terms.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>0.004 = 4/1000.</li>
+<li>Divide by 4 -&gt; 1/250.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (F) &mdash; 1/250</div>
+<div class='trap'><span class='lbl'>Watch out</span>1/25 or 4/100 are not fully reduced.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Turning a tiny decimal into an exact fraction.</div>
+</div>
+<div class='q'>
+<p class='qn'>61. A driver covers three-quarters of a 240 km trip at 90 km/h and the rest at 50 km/h. The total time taken is: <span class='tag'>Motion &amp; Time</span></p>
+<div class='opt'>(A) 4 h</div>
+<div class='opt'>(B) 2.8 h</div>
+<div class='opt'>(C) 3.5 h</div>
+<div class='opt'>(D) 6 h</div>
+<div class='opt correct'>(E) 3.2 h &#10004;</div>
+<div class='opt'>(F) 5.2 h</div>
+<div class='opt'>(G) 2.4 h</div>
+<div class='opt'>(H) 3.0 h</div>
+<div class='idea'><span class='lbl'>The idea</span>Split the trip, find each part&#x27;s time, then add.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>3/4 of 240 = 180 km at 90 -&gt; 180/90 = 2 h.</li>
+<li>Remaining 60 km at 50 -&gt; 60/50 = 1.2 h.</li>
+<li>Total = 2 + 1.2 = 3.2 h.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (E) &mdash; 3.2 h</div>
+<div class='trap'><span class='lbl'>Watch out</span>Averaging the speeds gives the wrong total time.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Trip planning when the speed changes partway.</div>
+</div>
+<div class='q'>
+<p class='qn'>62. Estimate 7,92,000 ÷ 396 by rounding each number suitably: <span class='tag'>Large Numbers</span></p>
+<div class='opt'>(A) 20,000</div>
+<div class='opt'>(B) 20</div>
+<div class='opt'>(C) 1,000</div>
+<div class='opt'>(D) 200</div>
+<div class='opt correct'>(E) 2,000 &#10004;</div>
+<div class='opt'>(F) 4,000</div>
+<div class='idea'><span class='lbl'>The idea</span>Round both numbers to easy values, then divide.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>8,00,000 / 400 = 2000.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (E) &mdash; 2,000</div>
+<div class='trap'><span class='lbl'>Watch out</span>200 or 20 are zero-counting slips.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>A fast sanity-check before an exact division.</div>
+</div>
+<div class='q'>
+<p class='qn'>63. Divide 9.6 by 0.12. <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 1.152</div>
+<div class='opt correct'>(B) 80 &#10004;</div>
+<div class='opt'>(C) 0.8</div>
+<div class='opt'>(D) 40</div>
+<div class='opt'>(E) 800</div>
+<div class='opt'>(F) 8</div>
+<div class='opt'>(G) 8.0</div>
+<div class='opt'>(H) 0.0125</div>
+<div class='idea'><span class='lbl'>The idea</span>Multiply both numbers by 100 to clear the decimals, then divide.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>9.6 / 0.12 = 960 / 12 = 80.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; 80</div>
+<div class='trap'><span class='lbl'>Watch out</span>8 or 800 are place-value slips.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Dividing a measurement into many small equal parts.</div>
+</div>
+<div class='q'>
+<p class='qn'>64. A plane flies for 2 hours at 550 km/h, then 1.5 hours at 600 km/h. The total distance is: <span class='tag'>Motion &amp; Time</span></p>
+<div class='opt'>(A) 2,100 km</div>
+<div class='opt correct'>(B) 2,000 km &#10004;</div>
+<div class='opt'>(C) 1,100 km</div>
+<div class='opt'>(D) 200 km</div>
+<div class='opt'>(E) 20,000 km</div>
+<div class='opt'>(F) 2,300 km</div>
+<div class='opt'>(G) 1,950 km</div>
+<div class='idea'><span class='lbl'>The idea</span>Distance of each leg = speed x time, then add the legs.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>550 x 2 = 1100 km.</li>
+<li>600 x 1.5 = 900 km.</li>
+<li>Total = 1100 + 900 = 2000 km.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; 2,000 km</div>
+<div class='trap'><span class='lbl'>Watch out</span>Adding the speeds (1150) is meaningless here.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Flight planning across legs flown at different speeds.</div>
+</div>
+<div class='q'>
+<p class='qn'>65. In the number 4,03,45,070, the digit in the thousands place is: <span class='tag'>Large Numbers</span></p>
+<div class='opt correct'>(A) 5 &#10004;</div>
+<div class='opt'>(B) 7</div>
+<div class='opt'>(C) 3</div>
+<div class='opt'>(D) 9</div>
+<div class='opt'>(E) 0</div>
+<div class='opt'>(F) 2</div>
+<div class='opt'>(G) 4</div>
+<div class='opt'>(H) 6</div>
+<div class='idea'><span class='lbl'>The idea</span>Name the places from the right: units, tens, hundreds, thousands...</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>From the right: 0, 7, 0, then 5 in the thousands place.</li>
+<li>Thousands digit = 5.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (A) &mdash; 5</div>
+<div class='trap'><span class='lbl'>Watch out</span>Reading the wrong column.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Locating a digit&#x27;s value precisely.</div>
+</div>
+<div class='q'>
+<p class='qn'>66. A car covers 0.85 km in 0.5 minute. Its speed is: <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 51 km/h</div>
+<div class='opt'>(B) 1.7 km/h</div>
+<div class='opt'>(C) 10.2 km/h</div>
+<div class='opt correct'>(D) 102 km/h &#10004;</div>
+<div class='opt'>(E) 0.0142 km/h</div>
+<div class='opt'>(F) 17 km/h</div>
+<div class='idea'><span class='lbl'>The idea</span>Speed = distance / time; then change per-minute into per-hour.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>0.85 / 0.5 = 1.7 km per minute.</li>
+<li>1.7 x 60 = 102 km/h.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (D) &mdash; 102 km/h</div>
+<div class='trap'><span class='lbl'>Watch out</span>1.7 stops too soon; 51 mishandles the x 60.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Reading a speed from a short-distance timing.</div>
+</div>
+<div class='q'>
+<p class='qn'>67. A boy runs once around a 400 m track in 80 seconds. His speed in km/h is: <span class='tag'>Motion &amp; Time</span></p>
+<div class='opt'>(A) 9 km/h</div>
+<div class='opt'>(B) 50 km/h</div>
+<div class='opt'>(C) 1.8 km/h</div>
+<div class='opt correct'>(D) 18 km/h &#10004;</div>
+<div class='opt'>(E) 32 km/h</div>
+<div class='opt'>(F) 20 km/h</div>
+<div class='idea'><span class='lbl'>The idea</span>Find m/s first, then multiply by 3.6 to get km/h.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Speed = 400 / 80 = 5 m/s.</li>
+<li>5 x 3.6 = 18 km/h.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (D) &mdash; 18 km/h</div>
+<div class='trap'><span class='lbl'>Watch out</span>5 is the m/s value, not km/h.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Comparing a runner&#x27;s pace with a vehicle&#x27;s speed.</div>
+</div>
+<div class='q'>
+<p class='qn'>68. 12 crore is equal to how many million? <span class='tag'>Large Numbers</span></p>
+<div class='opt'>(A) 12 lakh</div>
+<div class='opt'>(B) 1,20,000 million</div>
+<div class='opt'>(C) 12 million</div>
+<div class='opt'>(D) 1.2 million</div>
+<div class='opt'>(E) 60 million</div>
+<div class='opt correct'>(F) 120 million &#10004;</div>
+<div class='opt'>(G) 1,200 million</div>
+<div class='idea'><span class='lbl'>The idea</span>1 crore = 10 million, so multiply crores by 10.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>12 crore = 12 x 10 = 120 million.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (F) &mdash; 120 million</div>
+<div class='trap'><span class='lbl'>Watch out</span>12 million forgets the x 10.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Converting Indian crores into international millions.</div>
+</div>
+<div class='q'>
+<p class='qn'>69. The sum 0.5 + 0.25 + 0.125 equals what fraction of a whole? <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 1/8</div>
+<div class='opt'>(B) 6/8</div>
+<div class='opt'>(C) 8/7</div>
+<div class='opt'>(D) 1/2</div>
+<div class='opt correct'>(E) 7/8 &#10004;</div>
+<div class='opt'>(F) 5/8</div>
+<div class='idea'><span class='lbl'>The idea</span>Add the decimals, then write the total as a fraction.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>0.5 + 0.25 + 0.125 = 0.875.</li>
+<li>0.875 = 875/1000 = 7/8.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (E) &mdash; 7/8</div>
+<div class='trap'><span class='lbl'>Watch out</span>Guessing 3/8 instead of adding.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Adding halves, quarters and eighths (as in cooking).</div>
+</div>
+<div class='q'>
+<p class='qn'>70. Two trains 120 m and 180 m long move towards each other at 20 m/s and 30 m/s. The time for them to completely pass each other is: <span class='tag'>Motion &amp; Time</span></p>
+<div class='opt'>(A) 12 s</div>
+<div class='opt'>(B) 10 s</div>
+<div class='opt'>(C) 1.2 s</div>
+<div class='opt'>(D) 60 s</div>
+<div class='opt'>(E) 600 s</div>
+<div class='opt'>(F) 3 s</div>
+<div class='opt correct'>(G) 6 s &#10004;</div>
+<div class='idea'><span class='lbl'>The idea</span>Moving TOWARDS each other, add the speeds; the distance is the SUM of both lengths.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Total length = 120 + 180 = 300 m.</li>
+<li>Approach speed = 20 + 30 = 50 m/s.</li>
+<li>Time = 300 / 50 = 6 s.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (G) &mdash; 6 s</div>
+<div class='trap'><span class='lbl'>Watch out</span>Subtracting speeds (giving 30 s) is for the same direction.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Rail safety timing when trains pass on parallel tracks.</div>
+</div>
+<div class='q'>
+<p class='qn'>71. A company earns ₹2.5 crore every month. Its earning in one full year is: <span class='tag'>Large Numbers</span></p>
+<div class='opt'>(A) 3 crore</div>
+<div class='opt'>(B) 300 crore</div>
+<div class='opt'>(C) 36 crore</div>
+<div class='opt'>(D) 12.5 crore</div>
+<div class='opt correct'>(E) 30 crore &#10004;</div>
+<div class='opt'>(F) 2.5 crore</div>
+<div class='opt'>(G) 25 crore</div>
+<div class='idea'><span class='lbl'>The idea</span>Multiply the monthly amount by 12.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>2.5 x 12 = 30.</li>
+<li>So Rs 30 crore in a year.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (E) &mdash; 30 crore</div>
+<div class='trap'><span class='lbl'>Watch out</span>25 crore drops the 0.5 x 12 part.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Scaling monthly revenue up to a yearly figure.</div>
+</div>
+<div class='q'>
+<p class='qn'>72. Find 1.2 × 1.2 × 1.2. <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt correct'>(A) 1.728 &#10004;</div>
+<div class='opt'>(B) 1.272</div>
+<div class='opt'>(C) 1.44</div>
+<div class='opt'>(D) 1.8</div>
+<div class='opt'>(E) 3.6</div>
+<div class='opt'>(F) 2.728</div>
+<div class='idea'><span class='lbl'>The idea</span>Cube means multiply the number by itself three times.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>1.2 x 1.2 = 1.44.</li>
+<li>1.44 x 1.2 = 1.728.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (A) &mdash; 1.728</div>
+<div class='trap'><span class='lbl'>Watch out</span>3.6 adds; 1.44 stops one step early.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Volume of a cube of side 1.2 units.</div>
+</div>
+<div class='q'>
+<p class='qn'>73. A car&#x27;s odometer reads 1,29,860 km at the start and 1,30,250 km at the end of a 6.5-hour drive. Its average speed is: <span class='tag'>Motion &amp; Time</span></p>
+<div class='opt'>(A) 6 km/h</div>
+<div class='opt correct'>(B) 60 km/h &#10004;</div>
+<div class='opt'>(C) 390 km/h</div>
+<div class='opt'>(D) 60.04 km/h</div>
+<div class='opt'>(E) 600 km/h</div>
+<div class='opt'>(F) 50 km/h</div>
+<div class='opt'>(G) 65 km/h</div>
+<div class='opt'>(H) 39 km/h</div>
+<div class='idea'><span class='lbl'>The idea</span>First subtract the odometer readings, then divide by time.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Distance = 1,30,250 - 1,29,860 = 390 km.</li>
+<li>Speed = 390 / 6.5 = 60 km/h.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; 60 km/h</div>
+<div class='trap'><span class='lbl'>Watch out</span>65 km/h divides by 6 instead of 6.5.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Reading start/end odometer values to find trip distance and speed.</div>
+</div>
+<div class='q'>
+<p class='qn'>74. Round 2,45,67,890 to the nearest crore: <span class='tag'>Large Numbers</span></p>
+<div class='opt'>(A) 2,50,00,000</div>
+<div class='opt correct'>(B) 2,00,00,000 &#10004;</div>
+<div class='opt'>(C) 2,00,000</div>
+<div class='opt'>(D) 3,00,00,000</div>
+<div class='opt'>(E) 2,46,00,000</div>
+<div class='opt'>(F) 2,40,00,000</div>
+<div class='opt'>(G) 1,00,00,000</div>
+<div class='opt'>(H) 2,45,00,000</div>
+<div class='idea'><span class='lbl'>The idea</span>Round to the nearest crore: is the leftover above or below 50 lakh?</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>After 2 crore the leftover is 45,67,890, which is LESS than 50,00,000.</li>
+<li>So round down to 2,00,00,000.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; 2,00,00,000</div>
+<div class='trap'><span class='lbl'>Watch out</span>3,00,00,000 rounds up by mistake.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Rounding big budgets to the nearest crore.</div>
+</div>
+<div class='q'>
+<p class='qn'>75. By how much does 0.3 exceed 0.27? <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 0.057</div>
+<div class='opt'>(B) 0.13</div>
+<div class='opt'>(C) 0.33</div>
+<div class='opt'>(D) 0.23</div>
+<div class='opt'>(E) 0.3</div>
+<div class='opt'>(F) 0.003</div>
+<div class='opt correct'>(G) 0.03 &#10004;</div>
+<div class='idea'><span class='lbl'>The idea</span>Write 0.3 as 0.30 so the places line up, then subtract.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>0.30 - 0.27 = 0.03.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (G) &mdash; 0.03</div>
+<div class='trap'><span class='lbl'>Watch out</span>0.057 or 0.003 mis-place the digits.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Finding a small difference between two measurements.</div>
+</div>
+<div class='q'>
+<p class='qn'>76. A metro&#x27;s stations are 1.2 km apart. A train runs from station 1 to station 6 at 36 km/h, halting 0.5 minute at each station in between. The total time taken is: <span class='tag'>Motion &amp; Time</span></p>
+<div class='opt correct'>(A) 12 min &#10004;</div>
+<div class='opt'>(B) 14 min</div>
+<div class='opt'>(C) 15 min</div>
+<div class='opt'>(D) 10 min</div>
+<div class='opt'>(E) 2.5 min</div>
+<div class='opt'>(F) 6 min</div>
+<div class='idea'><span class='lbl'>The idea</span>Add the running time AND the halt time.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Stations 1 to 6 = 5 gaps x 1.2 = 6 km.</li>
+<li>Running time = 6 / 36 h = 1/6 h = 10 min.</li>
+<li>Halts at stations 2,3,4,5 = 4 x 0.5 = 2 min.</li>
+<li>Total = 10 + 2 = 12 min.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (A) &mdash; 12 min</div>
+<div class='trap'><span class='lbl'>Watch out</span>10 min forgets the station halts.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Metro timetables add both running and stopping (dwell) time.</div>
+</div>
+<div class='q'>
+<p class='qn'>77. What is the smallest whole number that becomes 5,00,000 when rounded to the nearest lakh? <span class='tag'>Large Numbers</span></p>
+<div class='opt'>(A) 4,50,001</div>
+<div class='opt'>(B) 4,99,999</div>
+<div class='opt'>(C) 5,50,000</div>
+<div class='opt'>(D) 4,00,000</div>
+<div class='opt'>(E) 4,49,999</div>
+<div class='opt correct'>(F) 4,50,000 &#10004;</div>
+<div class='opt'>(G) 5,49,999</div>
+<div class='idea'><span class='lbl'>The idea</span>Nearest-lakh rounding to 5,00,000 covers 4,50,000 up to 5,49,999.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>The smallest value in that range is 4,50,000.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (F) &mdash; 4,50,000</div>
+<div class='trap'><span class='lbl'>Watch out</span>4,49,999 would round down to 4,00,000.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Knowing the lowest value a rounded figure could hide.</div>
+</div>
+<div class='q'>
+<p class='qn'>78. Express 6.4 as a percentage of 16. <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 4%</div>
+<div class='opt'>(B) 64%</div>
+<div class='opt'>(C) 16%</div>
+<div class='opt'>(D) 10%</div>
+<div class='opt'>(E) 250%</div>
+<div class='opt correct'>(F) 40% &#10004;</div>
+<div class='idea'><span class='lbl'>The idea</span>Percentage = (part / whole) x 100.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>6.4 / 16 = 0.4.</li>
+<li>0.4 x 100 = 40%.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (F) &mdash; 40%</div>
+<div class='trap'><span class='lbl'>Watch out</span>64% or 4% are place-value slips.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Working out what percentage a part is of a whole.</div>
+</div>
+<div class='q'>
+<p class='qn'>79. A car moving at 25 m/s slows down uniformly to rest in 5 seconds. The distance it covers while stopping is: <span class='tag'>Motion &amp; Time</span></p>
+<div class='opt'>(A) 5 m</div>
+<div class='opt'>(B) 31.25 m</div>
+<div class='opt correct'>(C) 62.5 m &#10004;</div>
+<div class='opt'>(D) 50 m</div>
+<div class='opt'>(E) 250 m</div>
+<div class='opt'>(F) 12.5 m</div>
+<div class='idea'><span class='lbl'>The idea</span>Slowing down steadily, the average speed is the mean of the start and end speeds.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Average speed = (25 + 0) / 2 = 12.5 m/s.</li>
+<li>Distance = 12.5 x 5 = 62.5 m.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; 62.5 m</div>
+<div class='trap'><span class='lbl'>Watch out</span>125 m wrongly uses the full 25 m/s for all 5 s.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Braking distance — vital for road safety.</div>
+</div>
+<div class='q'>
+<p class='qn'>80. In 47,07,000, the sum of the place values of the two 7s is: <span class='tag'>Large Numbers</span></p>
+<div class='opt'>(A) 7,07,070</div>
+<div class='opt'>(B) 7,70,000</div>
+<div class='opt'>(C) 1,07,000</div>
+<div class='opt correct'>(D) 7,07,000 &#10004;</div>
+<div class='opt'>(E) 7,007</div>
+<div class='opt'>(F) 70,07,000</div>
+<div class='opt'>(G) 14,000</div>
+<div class='opt'>(H) 77,000</div>
+<div class='idea'><span class='lbl'>The idea</span>Each 7 has a different place value; add them.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>First 7 is in the lakhs place -&gt; 7,00,000.</li>
+<li>Second 7 is in the thousands place -&gt; 7,000.</li>
+<li>Sum = 7,07,000.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (D) &mdash; 7,07,000</div>
+<div class='trap'><span class='lbl'>Watch out</span>14,000 wrongly uses face values.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Understanding a repeated digit at different places.</div>
+</div>
+<div class='q'>
+<p class='qn'>81. Find the sum 0.1 + 0.2 + 0.3 + 0.4 + 0.5 + 0.6 + 0.7 + 0.8 + 0.9. <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 5.4</div>
+<div class='opt'>(B) 4.05</div>
+<div class='opt'>(C) 45</div>
+<div class='opt'>(D) 0.45</div>
+<div class='opt'>(E) 5</div>
+<div class='opt correct'>(F) 4.5 &#10004;</div>
+<div class='idea'><span class='lbl'>The idea</span>Pair the numbers that add to 1 to make it easy.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>(0.1+0.9)+(0.2+0.8)+(0.3+0.7)+(0.4+0.6) = 4, plus the middle 0.5.</li>
+<li>Total = 4.5.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (F) &mdash; 4.5</div>
+<div class='trap'><span class='lbl'>Watch out</span>45 ignores the decimal point.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Quick addition tricks by pairing numbers.</div>
+</div>
+<div class='q'>
+<p class='qn'>82. A wall clock loses 3 minutes every hour. After 5 real hours, the time it shows is behind the true time by: <span class='tag'>Motion &amp; Time</span></p>
+<div class='opt'>(A) 30 min</div>
+<div class='opt'>(B) 8 min</div>
+<div class='opt correct'>(C) 15 min &#10004;</div>
+<div class='opt'>(D) 12 min</div>
+<div class='opt'>(E) 300 min</div>
+<div class='opt'>(F) 3 min</div>
+<div class='opt'>(G) 5 min</div>
+<div class='idea'><span class='lbl'>The idea</span>A steady loss adds up: multiply the loss-per-hour by the hours.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Loss per hour = 3 min.</li>
+<li>Over 5 h: 3 x 5 = 15 min behind.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; 15 min</div>
+<div class='trap'><span class='lbl'>Watch out</span>3 min ignores that 5 hours have passed.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Checking how far a slow watch drifts over a day.</div>
+</div>
+<div class='q'>
+<p class='qn'>83. A water tank holds 2,50,000 litres. A city consumes 75 lakh litres of water each day. The number of full tanks consumed per day is: <span class='tag'>Large Numbers</span></p>
+<div class='opt'>(A) 3</div>
+<div class='opt'>(B) 300</div>
+<div class='opt'>(C) 12</div>
+<div class='opt'>(D) 25</div>
+<div class='opt correct'>(E) 30 &#10004;</div>
+<div class='opt'>(F) 75</div>
+<div class='idea'><span class='lbl'>The idea</span>Convert lakh to plain numerals, then divide.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>75 lakh = 75,00,000 L.</li>
+<li>75,00,000 / 2,50,000 = 30 tanks.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (E) &mdash; 30</div>
+<div class='trap'><span class='lbl'>Watch out</span>3 or 300 are zero-counting errors.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Water-supply planning for a town.</div>
+</div>
+<div class='q'>
+<p class='qn'>84. What percentage of 0.5 is 0.125? <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 250%</div>
+<div class='opt'>(B) 20%</div>
+<div class='opt'>(C) 40%</div>
+<div class='opt correct'>(D) 25% &#10004;</div>
+<div class='opt'>(E) 50%</div>
+<div class='opt'>(F) 6.25%</div>
+<div class='opt'>(G) 2.5%</div>
+<div class='opt'>(H) 12.5%</div>
+<div class='idea'><span class='lbl'>The idea</span>Percentage = (part / whole) x 100, even with decimals.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>0.125 / 0.5 = 0.25.</li>
+<li>0.25 x 100 = 25%.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (D) &mdash; 25%</div>
+<div class='trap'><span class='lbl'>Watch out</span>12.5% forgets to divide by 0.5.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Comparing two decimal amounts as a percentage.</div>
+</div>
+<div class='q'>
+<p class='qn'>85. Covering 210 km at 60 km/h takes how much longer than covering it at 70 km/h? <span class='tag'>Motion &amp; Time</span></p>
+<div class='opt'>(A) 45 min</div>
+<div class='opt correct'>(B) 30 min &#10004;</div>
+<div class='opt'>(C) 20 min</div>
+<div class='opt'>(D) 35 min</div>
+<div class='opt'>(E) 60 min</div>
+<div class='opt'>(F) 1 h</div>
+<div class='opt'>(G) 15 min</div>
+<div class='idea'><span class='lbl'>The idea</span>Find each time separately, then take the difference.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>At 60 km/h: 210 / 60 = 3.5 h.</li>
+<li>At 70 km/h: 210 / 70 = 3 h.</li>
+<li>Difference = 0.5 h = 30 min.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; 30 min</div>
+<div class='trap'><span class='lbl'>Watch out</span>Comparing the speeds (10) instead of the times.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Deciding whether driving faster is worth the small time saved.</div>
+</div>
+<div class='q'>
+<p class='qn'>86. How many millions make one billion? <span class='tag'>Large Numbers</span></p>
+<div class='opt correct'>(A) 1,000 &#10004;</div>
+<div class='opt'>(B) 100</div>
+<div class='opt'>(C) 1</div>
+<div class='opt'>(D) 1,00,00,000</div>
+<div class='opt'>(E) 10,000</div>
+<div class='opt'>(F) 10</div>
+<div class='idea'><span class='lbl'>The idea</span>1 billion = 1,000,000,000; divide by one million.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>1,000,000,000 / 1,000,000 = 1000 million.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (A) &mdash; 1,000</div>
+<div class='trap'><span class='lbl'>Watch out</span>100 miscounts the zeros.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Understanding global financial figures.</div>
+</div>
+<div class='q'>
+<p class='qn'>87. Convert 5/8 to a decimal and add 0.375. <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt correct'>(A) 1.0 &#10004;</div>
+<div class='opt'>(B) 0.625</div>
+<div class='opt'>(C) 1.25</div>
+<div class='opt'>(D) 0.25</div>
+<div class='opt'>(E) 1.375</div>
+<div class='opt'>(F) 0.5</div>
+<div class='idea'><span class='lbl'>The idea</span>Turn the fraction into a decimal first, then add.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>5/8 = 0.625.</li>
+<li>0.625 + 0.375 = 1.0.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (A) &mdash; 1.0</div>
+<div class='trap'><span class='lbl'>Watch out</span>0.875 adds carelessly.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Checking that parts add up to a whole.</div>
+</div>
+<div class='q'>
+<p class='qn'>88. The second hand of a clock sweeps a full circle in 60 seconds. The angle it sweeps in 0.25 minute is: <span class='tag'>Motion &amp; Time</span></p>
+<div class='opt'>(A) 15°</div>
+<div class='opt'>(B) 180°</div>
+<div class='opt'>(C) 6°</div>
+<div class='opt correct'>(D) 90° &#10004;</div>
+<div class='opt'>(E) 30°</div>
+<div class='opt'>(F) 1.5°</div>
+<div class='opt'>(G) 360°</div>
+<div class='opt'>(H) 45°</div>
+<div class='idea'><span class='lbl'>The idea</span>Angle swept is in proportion to time: full circle = 360 deg in 60 s.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>0.25 min = 15 s.</li>
+<li>Angle = 360 x (15/60) = 90 deg.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (D) &mdash; 90°</div>
+<div class='trap'><span class='lbl'>Watch out</span>15 deg confuses seconds with degrees.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Reading clock angles and designing clock faces.</div>
+</div>
+<div class='q'>
+<p class='qn'>89. Round 6,07,000 to the nearest lakh: <span class='tag'>Large Numbers</span></p>
+<div class='opt'>(A) 6,50,000</div>
+<div class='opt'>(B) 6,07,000</div>
+<div class='opt correct'>(C) 6,00,000 &#10004;</div>
+<div class='opt'>(D) 6,10,000</div>
+<div class='opt'>(E) 5,00,000</div>
+<div class='opt'>(F) 6,00,00,000</div>
+<div class='opt'>(G) 7,00,000</div>
+<div class='opt'>(H) 60,00,000</div>
+<div class='idea'><span class='lbl'>The idea</span>Round to the nearest lakh: leftover 7,000 is far below 50,000.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>So 6,07,000 rounds down to 6,00,000.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; 6,00,000</div>
+<div class='trap'><span class='lbl'>Watch out</span>7,00,000 rounds up by mistake.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Rounding for quick reporting.</div>
+</div>
+<div class='q'>
+<p class='qn'>90. A 2.5 kg cake is cut into slices of 0.125 kg each. How many slices are obtained? <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 5</div>
+<div class='opt'>(B) 31.25</div>
+<div class='opt correct'>(C) 20 &#10004;</div>
+<div class='opt'>(D) 200</div>
+<div class='opt'>(E) 0.05</div>
+<div class='opt'>(F) 40</div>
+<div class='idea'><span class='lbl'>The idea</span>Number of slices = total weight / weight per slice.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>0.125 = 1/8.</li>
+<li>2.5 / (1/8) = 2.5 x 8 = 20.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; 20</div>
+<div class='trap'><span class='lbl'>Watch out</span>2 or 200 are place-value slips.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>How many small slices you can cut from a cake.</div>
+</div>
+<div class='q'>
+<p class='qn'>91. A 300 m long train passes a 500 m long platform in 40 seconds. Its speed is: <span class='tag'>Motion &amp; Time</span></p>
+<div class='opt'>(A) 54 km/h</div>
+<div class='opt correct'>(B) 72 km/h &#10004;</div>
+<div class='opt'>(C) 12.5 km/h</div>
+<div class='opt'>(D) 20 km/h</div>
+<div class='opt'>(E) 45 km/h</div>
+<div class='opt'>(F) 800 km/h</div>
+<div class='opt'>(G) 7.5 km/h</div>
+<div class='idea'><span class='lbl'>The idea</span>Distance = train + platform; find m/s, then x 3.6 for km/h.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Total distance = 300 + 500 = 800 m.</li>
+<li>Speed = 800 / 40 = 20 m/s.</li>
+<li>20 x 3.6 = 72 km/h.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; 72 km/h</div>
+<div class='trap'><span class='lbl'>Watch out</span>20 km/h forgets the m/s -&gt; km/h step; 12.5 uses only the platform.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Same idea as bridge-crossing timing for rail planning.</div>
+</div>
+<div class='q'>
+<p class='qn'>92. ₹1 crore is shared equally among 250 people. Each person receives: <span class='tag'>Large Numbers</span></p>
+<div class='opt'>(A) ₹4,00,00,000</div>
+<div class='opt'>(B) ₹4,00,000</div>
+<div class='opt'>(C) ₹4,000</div>
+<div class='opt correct'>(D) ₹40,000 &#10004;</div>
+<div class='opt'>(E) ₹25,000</div>
+<div class='opt'>(F) ₹400</div>
+<div class='opt'>(G) ₹2,500</div>
+<div class='idea'><span class='lbl'>The idea</span>Total / number of people.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>1 crore = 1,00,00,000.</li>
+<li>/ 250 = 40,000.</li>
+<li>Each person gets Rs 40,000.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (D) &mdash; ₹40,000</div>
+<div class='trap'><span class='lbl'>Watch out</span>Rs 4,000 or Rs 4,00,000 are zero slips.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Splitting prize money or a fund equally.</div>
+</div>
+<div class='q'>
+<p class='qn'>93. Evaluate 0.06 × 0.5 × 0.2. <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 0.06</div>
+<div class='opt'>(B) 0.16</div>
+<div class='opt'>(C) 0.6</div>
+<div class='opt correct'>(D) 0.006 &#10004;</div>
+<div class='opt'>(E) 0.0012</div>
+<div class='opt'>(F) 0.066</div>
+<div class='idea'><span class='lbl'>The idea</span>Multiply the small numbers one step at a time.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>0.06 x 0.5 = 0.03.</li>
+<li>0.03 x 0.2 = 0.006.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (D) &mdash; 0.006</div>
+<div class='trap'><span class='lbl'>Watch out</span>0.06 forgets one of the multiplications.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Multiplying several small factors (like chances/probabilities).</div>
+</div>
+<div class='q'>
+<p class='qn'>94. A bus travels three-fifths of a 350 km route at 70 km/h and the remaining distance at 84 km/h. The total time taken is: <span class='tag'>Motion &amp; Time</span></p>
+<div class='opt'>(A) 5 hours</div>
+<div class='opt correct'>(B) 4 hours 40 minutes &#10004;</div>
+<div class='opt'>(C) 4 hours 50 minutes</div>
+<div class='opt'>(D) 4 hours 30 minutes</div>
+<div class='opt'>(E) 4 hours 20 minutes</div>
+<div class='opt'>(F) 3 hours 40 minutes</div>
+<div class='opt'>(G) 4 hours 67 minutes</div>
+<div class='idea'><span class='lbl'>The idea</span>Split the route, find each part&#x27;s time (watch the messy fraction), then add.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>3/5 of 350 = 210 km at 70 -&gt; 3 h.</li>
+<li>Remaining 140 km at 84 -&gt; 140/84 = 1.667 h = 1 h 40 min.</li>
+<li>Total = 4 h 40 min.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; 4 hours 40 minutes</div>
+<div class='trap'><span class='lbl'>Watch out</span>Averaging the speeds, or mishandling 1.667 h, goes wrong.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Timing a long-distance drive with a speed change.</div>
+</div>
+<div class='q'>
+<p class='qn'>95. Using the digits 3, 0, 7 and 5 exactly once each, the difference between the largest and the smallest 4-digit numbers you can form is: <span class='tag'>Large Numbers</span></p>
+<div class='opt correct'>(A) 4,473 &#10004;</div>
+<div class='opt'>(B) 3,057</div>
+<div class='opt'>(C) 4,743</div>
+<div class='opt'>(D) 7,530</div>
+<div class='opt'>(E) 4,374</div>
+<div class='opt'>(F) 5,473</div>
+<div class='opt'>(G) 3,000</div>
+<div class='idea'><span class='lbl'>The idea</span>Largest: digits high-to-low. Smallest: low-to-high, but 0 cannot lead.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Largest = 7530.</li>
+<li>Smallest = 3057 (0 cannot be first, so 3 leads, then 0).</li>
+<li>7530 - 3057 = 4473.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (A) &mdash; 4,473</div>
+<div class='trap'><span class='lbl'>Watch out</span>Using 0357 as the smallest is not allowed.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Puzzles and forming codes from a set of digits.</div>
+</div>
+<div class='q'>
+<p class='qn'>96. The product 0.9 × 0.9 falls short of 1 by: <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 1.8</div>
+<div class='opt'>(B) 0.09</div>
+<div class='opt'>(C) 0.1</div>
+<div class='opt'>(D) 0.81</div>
+<div class='opt correct'>(E) 0.19 &#10004;</div>
+<div class='opt'>(F) 0.019</div>
+<div class='opt'>(G) 0.011</div>
+<div class='opt'>(H) 0.29</div>
+<div class='idea'><span class='lbl'>The idea</span>Square the number, then subtract from 1.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>0.9 x 0.9 = 0.81.</li>
+<li>1 - 0.81 = 0.19.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (E) &mdash; 0.19</div>
+<div class='trap'><span class='lbl'>Watch out</span>0.1 forgets the squaring step.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Seeing how squaring a number below 1 makes it smaller.</div>
+</div>
+<div class='q'>
+<p class='qn'>97. A go-kart moves at 0.6 km per minute. Its speed in km/h is: <span class='tag'>Motion &amp; Time</span></p>
+<div class='opt'>(A) 360 km/h</div>
+<div class='opt correct'>(B) 36 km/h &#10004;</div>
+<div class='opt'>(C) 0.01 km/h</div>
+<div class='opt'>(D) 60 km/h</div>
+<div class='opt'>(E) 3.6 km/h</div>
+<div class='opt'>(F) 6 km/h</div>
+<div class='idea'><span class='lbl'>The idea</span>Per-minute speed x 60 = per-hour speed.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>1 hour = 60 minutes.</li>
+<li>0.6 x 60 = 36 km/h.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; 36 km/h</div>
+<div class='trap'><span class='lbl'>Watch out</span>10 km/h divides 0.6 wrongly; 360 multiplies too much.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Converting a pace (per minute) into a speed (per hour).</div>
+</div>
+<div class='q'>
+<p class='qn'>98. Fifty lakh divided by one thousand equals: <span class='tag'>Large Numbers</span></p>
+<div class='opt correct'>(A) 5,000 &#10004;</div>
+<div class='opt'>(B) 50,00,000</div>
+<div class='opt'>(C) 50,000</div>
+<div class='opt'>(D) 50</div>
+<div class='opt'>(E) 5</div>
+<div class='opt'>(F) 5,00,00,000</div>
+<div class='idea'><span class='lbl'>The idea</span>50 lakh = 50,00,000; dividing by 1000 removes three zeros.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>50,00,000 / 1000 = 5,000.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (A) &mdash; 5,000</div>
+<div class='trap'><span class='lbl'>Watch out</span>500 or 50,000 miscount the zeros.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Dividing a large fund into thousands.</div>
+</div>
+<div class='q'>
+<p class='qn'>99. Three rods measuring 1.25 m, 0.75 m and 2.5 m are joined end to end. The total length is: <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 4.4 m</div>
+<div class='opt'>(B) 4.0 m</div>
+<div class='opt'>(C) 5 m</div>
+<div class='opt'>(D) 4.6 m</div>
+<div class='opt'>(E) 3.5 m</div>
+<div class='opt correct'>(F) 4.5 m &#10004;</div>
+<div class='opt'>(G) 4.55 m</div>
+<div class='opt'>(H) 4.25 m</div>
+<div class='idea'><span class='lbl'>The idea</span>Add the lengths, keeping decimals lined up.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>1.25 + 0.75 = 2.00.</li>
+<li>2.00 + 2.5 = 4.5 m.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (F) &mdash; 4.5 m</div>
+<div class='trap'><span class='lbl'>Watch out</span>4.6 or 4.55 are addition slips.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Adding the lengths of joined pieces (carpentry).</div>
+</div>
+<div class='q'>
+<p class='qn'>100. A drone flies 240 m north in 30 s, then 240 m back to the start in 20 s. Its average speed for the whole flight is: <span class='tag'>Motion &amp; Time</span></p>
+<div class='opt'>(A) 24 m/s</div>
+<div class='opt'>(B) 12 m/s</div>
+<div class='opt correct'>(C) 9.6 m/s &#10004;</div>
+<div class='opt'>(D) 0 m/s</div>
+<div class='opt'>(E) 8 m/s</div>
+<div class='opt'>(F) 19.2 m/s</div>
+<div class='opt'>(G) 6 m/s</div>
+<div class='idea'><span class='lbl'>The idea</span>Average SPEED uses the total PATH length, not the displacement (which is zero here).</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Total distance = 240 + 240 = 480 m.</li>
+<li>Total time = 30 + 20 = 50 s.</li>
+<li>Average speed = 480 / 50 = 9.6 m/s.</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; 9.6 m/s</div>
+<div class='trap'><span class='lbl'>Watch out</span>0 m/s is the average velocity (it ends where it started) — not what is asked.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Fitness trackers report average speed over an out-and-back run.</div>
+</div>
+</body></html>

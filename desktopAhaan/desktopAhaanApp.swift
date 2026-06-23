@@ -576,6 +576,19 @@ struct SanskritKoshApp: App {
                 .help("Open practice settings")
                 .accessibilityHint("Opens adaptive practice preferences")
                 .accessibilityIdentifier("menu-adaptive-practice-settings")
+
+                // Brutal Series Papers — 64 mixed-chapter brutal practice
+                // papers (PDF questions + HTML solutions), bundled under
+                // desktopAhaan/Resources/BrutalSeries/. Same NSWorkspace
+                // hand-off pattern as Boss Challenge. ⌘⌥R is free in
+                // AppKit defaults.
+                Button("Brutal Series Papers") {
+                    BrutalSeriesPapersWindowPresenter.shared.present()
+                }
+                .keyboardShortcut("r", modifiers: [.command, .option])
+                .help("Open Brutal Series papers")
+                .accessibilityHint("Opens the Brutal Series papers browser")
+                .accessibilityIdentifier("menu-brutal-series-papers")
                 }
             }
         }

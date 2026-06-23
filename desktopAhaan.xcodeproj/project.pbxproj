@@ -491,6 +491,7 @@
 		2FCCE5B9BA611A926D0B5636 /* CrashLogSummaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB6AF4CB683F2F6E539BBDEB /* CrashLogSummaryView.swift */; };
 		5DF000C802B386425E6DF252 /* PomodoroState.swift in Sources */ = {isa = PBXBuildFile; fileRef = B967041D4856BD89936B3FB6 /* PomodoroState.swift */; };
 		A41F851D58E711568E79576C /* StudyTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D9551456EA88A856A625EB5B /* StudyTimerView.swift */; };
+		683203208C12DB73FAA1190C /* BrutalSeriesPapersWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5470DFFFE9C63D8BCD6D1D84 /* BrutalSeriesPapersWindow.swift */; };
 		FBA61AE89D81494188EBFDEF /* MockTestReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BCD10752FE0F6A46EE282E /* MockTestReportView.swift */; };
 		E34634862BE9473C2C91F332 /* MockTestRunState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF0F65DCCD8A32A4EF8B010E /* MockTestRunState.swift */; };
 		248515529280A3F59C47AA7F /* MockTestRunnerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B69C8ED5AC554879B086D718 /* MockTestRunnerView.swift */; };
@@ -3113,6 +3114,136 @@
 		95C44E5DACA6CCE6B11AEE8F /* Paper_55_Heat_Respiration_AlgExpr_DataHandling_Questions.md in Resources */ = {isa = PBXBuildFile; fileRef = 60B6EF882CDD8F0816E82C15 /* Paper_55_Heat_Respiration_AlgExpr_DataHandling_Questions.md */; };
 		FA4B2E576BF98C3C0F70FD42 /* Paper_55_Heat_Respiration_AlgExpr_DataHandling_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = BE12FED128984296FB4F631E /* Paper_55_Heat_Respiration_AlgExpr_DataHandling_Solutions.html */; };
 		4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */ = {isa = PBXBuildFile; fileRef = ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */; };
+		8AFC22C039442FAFC5DEAC72 /* BRUTAL_INDEX.json in Resources */ = {isa = PBXBuildFile; fileRef = 9971E68644E4F13C79BFB852 /* BRUTAL_INDEX.json */; };
+		637B9B1379F2BE919AA48348 /* MANIFEST.md in Resources */ = {isa = PBXBuildFile; fileRef = 11ADFAE70C9333E15DF22EA3 /* MANIFEST.md */; };
+		CCDBA9F2940EDC7D45D80B22 /* Paper_B01_Heat_ComparingQuant_ElectricCurren_SimpleEquation_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FFB35F4E5C900B09F6FBE368 /* Paper_B01_Heat_ComparingQuant_ElectricCurren_SimpleEquation_Questions.pdf */; };
+		94994D93C6612B46EAD7D3F4 /* Paper_B01_Heat_ComparingQuant_ElectricCurren_SimpleEquation_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 6824603DA1D238A5E15A0551 /* Paper_B01_Heat_ComparingQuant_ElectricCurren_SimpleEquation_Solutions.html */; };
+		4B7D5E89B4144B5DC94CD81F /* Paper_B02_NutritioninAni_AcidsBasesSalt_FractionsDecim_TheTriangleits_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 71940BBBD1DFFFBFC4CEA2BF /* Paper_B02_NutritioninAni_AcidsBasesSalt_FractionsDecim_TheTriangleits_Questions.pdf */; };
+		6A5C39F0362E540313F7B7A7 /* Paper_B02_NutritioninAni_AcidsBasesSalt_FractionsDecim_TheTriangleits_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 1F8AE556F893121CC9B36217 /* Paper_B02_NutritioninAni_AcidsBasesSalt_FractionsDecim_TheTriangleits_Solutions.html */; };
+		5A6DB4E10E30CA973F64FB50 /* Paper_B03_NutritioninPla_Integers_PhysicalChemic_PerimeterArea_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8BEEBE28484174971A8C4117 /* Paper_B03_NutritioninPla_Integers_PhysicalChemic_PerimeterArea_Questions.pdf */; };
+		D2AB828B14E2C444842DE201 /* Paper_B03_NutritioninPla_Integers_PhysicalChemic_PerimeterArea_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 76B4F8C474A847C929BC1379 /* Paper_B03_NutritioninPla_Integers_PhysicalChemic_PerimeterArea_Solutions.html */; };
+		BF140DD46EDF360923B60666 /* Paper_B04_Light_RespirationinO_AlgebraicExpre_ExponentsPower_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F15895BFF96ADBDB02079C56 /* Paper_B04_Light_RespirationinO_AlgebraicExpre_ExponentsPower_Questions.pdf */; };
+		FE6DBC2E5F3ADD10ACB7A14B /* Paper_B04_Light_RespirationinO_AlgebraicExpre_ExponentsPower_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 4ED821C49319FA945081966B /* Paper_B04_Light_RespirationinO_AlgebraicExpre_ExponentsPower_Solutions.html */; };
+		AA13F6FA51A09248E19A74E7 /* Paper_B05_WeatherClimate_Transportation_DataHandling_LinesAngles_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF9A85769BAB8395923BC961 /* Paper_B05_WeatherClimate_Transportation_DataHandling_LinesAngles_Questions.pdf */; };
+		54EA08B3BF74CE6750C81DFA /* Paper_B05_WeatherClimate_Transportation_DataHandling_LinesAngles_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 76452A6A204EAF6015F0C9E5 /* Paper_B05_WeatherClimate_Transportation_DataHandling_LinesAngles_Solutions.html */; };
+		076C23800841D40E101C5A46 /* Paper_B06_Soil_RationalNumber_WindsStormsCyc_Symmetry_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CFB3CC396411B69B22C24C10 /* Paper_B06_Soil_RationalNumber_WindsStormsCyc_Symmetry_Questions.pdf */; };
+		996B2BDD87F50650CEF5B03A /* Paper_B06_Soil_RationalNumber_WindsStormsCyc_Symmetry_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = E72E7C530B075D9DC472C047 /* Paper_B06_Soil_RationalNumber_WindsStormsCyc_Symmetry_Solutions.html */; };
+		B0455187923F25CBF95DF010 /* Paper_B07_Reproductionin_ComparingQuant_Forests_PerimeterArea_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = B4BE0B0F7A1A3CE9ECA4FEAB /* Paper_B07_Reproductionin_ComparingQuant_Forests_PerimeterArea_Questions.pdf */; };
+		C56E92977F8BE2801A9C5BBD /* Paper_B07_Reproductionin_ComparingQuant_Forests_PerimeterArea_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = A410BD741D70E441393C2E18 /* Paper_B07_Reproductionin_ComparingQuant_Forests_PerimeterArea_Solutions.html */; };
+		8AA36E0A728B856980F8B410 /* Paper_B08_MotionTime_LargeNumbers_WastewaterStor_APeekBeyondthe_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7832C33EDA8DB76137033492 /* Paper_B08_MotionTime_LargeNumbers_WastewaterStor_APeekBeyondthe_Questions.pdf */; };
+		80C99EA47C5A5D03F4D5FCC7 /* Paper_B08_MotionTime_LargeNumbers_WastewaterStor_APeekBeyondthe_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 97D578895DE7B16216AC9A7A /* Paper_B08_MotionTime_LargeNumbers_WastewaterStor_APeekBeyondthe_Solutions.html */; };
+		4F7AA50BD69A9C158BAB8A62 /* Paper_B09_Heat_AcidsBasesSalt_Integers_RationalNumber_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = B6F9A2FF0C6291379E1AC038 /* Paper_B09_Heat_AcidsBasesSalt_Integers_RationalNumber_Questions.pdf */; };
+		EBE5A93F4EFF8E20ABC8880C /* Paper_B09_Heat_AcidsBasesSalt_Integers_RationalNumber_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 892C6383FBE612129A9EA4A4 /* Paper_B09_Heat_AcidsBasesSalt_Integers_RationalNumber_Solutions.html */; };
+		D35D772CA23B4907E4CA4874 /* Paper_B10_NutritioninAni_SimpleEquation_ElectricCurren_FractionsDecim_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 37470D404771A16DD3691A12 /* Paper_B10_NutritioninAni_SimpleEquation_ElectricCurren_FractionsDecim_Questions.pdf */; };
+		4D259C4C1F6ADD0EBDBA2408 /* Paper_B10_NutritioninAni_SimpleEquation_ElectricCurren_FractionsDecim_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 161434DAB8418F1DC69DF01E /* Paper_B10_NutritioninAni_SimpleEquation_ElectricCurren_FractionsDecim_Solutions.html */; };
+		FFDA09C5D3C5AD1F3BEF7FA5 /* Paper_B11_Light_DataHandling_WastewaterStor_TheTriangleits_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 5DE99ADDE161A8AC647C8F0A /* Paper_B11_Light_DataHandling_WastewaterStor_TheTriangleits_Questions.pdf */; };
+		5C8147360F48D076541CB6E2 /* Paper_B11_Light_DataHandling_WastewaterStor_TheTriangleits_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 5A263200FC795E08C821D7EF /* Paper_B11_Light_DataHandling_WastewaterStor_TheTriangleits_Solutions.html */; };
+		064ED2305383CC72D6162596 /* Paper_B12_PhysicalChemic_ExponentsPower_Transportation_Symmetry_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 5CD914C6863039A362A13688 /* Paper_B12_PhysicalChemic_ExponentsPower_Transportation_Symmetry_Questions.pdf */; };
+		3B1C7FE4A783D0C1B380C74B /* Paper_B12_PhysicalChemic_ExponentsPower_Transportation_Symmetry_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 0B93868C60705E52A850959F /* Paper_B12_PhysicalChemic_ExponentsPower_Transportation_Symmetry_Solutions.html */; };
+		0D9E2B8ACF66F25990CD67A6 /* Paper_B13_RespirationinO_LinesAngles_Soil_AlgebraicExpre_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 75435DEC8F9D4A1BEFDA9193 /* Paper_B13_RespirationinO_LinesAngles_Soil_AlgebraicExpre_Questions.pdf */; };
+		8AD3D3F7BFA559276605A2C3 /* Paper_B13_RespirationinO_LinesAngles_Soil_AlgebraicExpre_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = FFBE761144F7D76A0E58145A /* Paper_B13_RespirationinO_LinesAngles_Soil_AlgebraicExpre_Solutions.html */; };
+		2330F3F7B714A0DEC92D5685 /* Paper_B14_WeatherClimate_LargeNumbers_Reproductionin_APeekBeyondthe_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CD55557CDCAAE3F0E53D3E3F /* Paper_B14_WeatherClimate_LargeNumbers_Reproductionin_APeekBeyondthe_Questions.pdf */; };
+		2066572462A176ADBDA59715 /* Paper_B14_WeatherClimate_LargeNumbers_Reproductionin_APeekBeyondthe_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = A64D79F264FC744817D50B64 /* Paper_B14_WeatherClimate_LargeNumbers_Reproductionin_APeekBeyondthe_Solutions.html */; };
+		1EC055B50E5F3D9F5958F87D /* Paper_B15_WindsStormsCyc_Integers_MotionTime_AlgebraicExpre_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 110C93CA8DCDF0950ED253B1 /* Paper_B15_WindsStormsCyc_Integers_MotionTime_AlgebraicExpre_Questions.pdf */; };
+		71207FDBA4221EB888F092E8 /* Paper_B15_WindsStormsCyc_Integers_MotionTime_AlgebraicExpre_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = CB0BE6CCD6428EEB6104CD11 /* Paper_B15_WindsStormsCyc_Integers_MotionTime_AlgebraicExpre_Solutions.html */; };
+		88E06F38EED0A35D1158D389 /* Paper_B16_NutritioninPla_SimpleEquation_Forests_ComparingQuant_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0BA3C2B580E3FB1586F1956A /* Paper_B16_NutritioninPla_SimpleEquation_Forests_ComparingQuant_Questions.pdf */; };
+		640F19D59991CD7CD47366A2 /* Paper_B16_NutritioninPla_SimpleEquation_Forests_ComparingQuant_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 67557D3206610C50DAC2F3CB /* Paper_B16_NutritioninPla_SimpleEquation_Forests_ComparingQuant_Solutions.html */; };
+		9A112A4511A1402485A81F65 /* Paper_B17_NutritioninAni_ExponentsPower_Transportation_PerimeterArea_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 093F8520DA6E8766A356C8C2 /* Paper_B17_NutritioninAni_ExponentsPower_Transportation_PerimeterArea_Questions.pdf */; };
+		9CBF240089D681FB98DD1FA7 /* Paper_B17_NutritioninAni_ExponentsPower_Transportation_PerimeterArea_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = E366FF20F4739865FF4C4395 /* Paper_B17_NutritioninAni_ExponentsPower_Transportation_PerimeterArea_Solutions.html */; };
+		78DFEBE46269BEA64EB5E9A6 /* Paper_B18_ElectricCurren_AcidsBasesSalt_RationalNumber_LinesAngles_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 494992DFCA85469D00300C27 /* Paper_B18_ElectricCurren_AcidsBasesSalt_RationalNumber_LinesAngles_Questions.pdf */; };
+		9F7C9B113B9F5AB3D5F912DF /* Paper_B18_ElectricCurren_AcidsBasesSalt_RationalNumber_LinesAngles_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = B14D5B004A36C2DCBE46771D /* Paper_B18_ElectricCurren_AcidsBasesSalt_RationalNumber_LinesAngles_Solutions.html */; };
+		B67D1349F176E171DDCD285D /* Paper_B19_Heat_WastewaterStor_DataHandling_FractionsDecim_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 078C31E6DB062F90D0FF36C1 /* Paper_B19_Heat_WastewaterStor_DataHandling_FractionsDecim_Questions.pdf */; };
+		3FA05E84A365379E2AF23DA4 /* Paper_B19_Heat_WastewaterStor_DataHandling_FractionsDecim_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 7E19EAE5CD379E3092FE093F /* Paper_B19_Heat_WastewaterStor_DataHandling_FractionsDecim_Solutions.html */; };
+		431915EA691766711FC42B4B /* Paper_B20_Reproductionin_TheTriangleits_Light_Symmetry_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 40FEADD5C8E3BF474740E0E3 /* Paper_B20_Reproductionin_TheTriangleits_Light_Symmetry_Questions.pdf */; };
+		BCDF137ADC0EE7B3DE347281 /* Paper_B20_Reproductionin_TheTriangleits_Light_Symmetry_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = C493D0A3330D7AE37E7F81DC /* Paper_B20_Reproductionin_TheTriangleits_Light_Symmetry_Solutions.html */; };
+		BBA6FD272224E50CDE2685D8 /* Paper_B21_Forests_LargeNumbers_WeatherClimate_APeekBeyondthe_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 5FD8B0BA1782919EAFDB1350 /* Paper_B21_Forests_LargeNumbers_WeatherClimate_APeekBeyondthe_Questions.pdf */; };
+		05DB8A318CEC4BAAA85F5969 /* Paper_B21_Forests_LargeNumbers_WeatherClimate_APeekBeyondthe_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = BC7DF8F284C6A9B4B0BCB221 /* Paper_B21_Forests_LargeNumbers_WeatherClimate_APeekBeyondthe_Solutions.html */; };
+		3FC3B3133C40EACACE2AAA69 /* Paper_B22_Heat_NutritioninPla_RationalNumber_DataHandling_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9AB16340CAE2A007D6099DE4 /* Paper_B22_Heat_NutritioninPla_RationalNumber_DataHandling_Questions.pdf */; };
+		F8AB3FF89BE17F5C5F948B44 /* Paper_B22_Heat_NutritioninPla_RationalNumber_DataHandling_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 6F857C729907A35319754C4D /* Paper_B22_Heat_NutritioninPla_RationalNumber_DataHandling_Solutions.html */; };
+		B4356FA704F3EEBD67B1AAC6 /* Paper_B23_ElectricCurren_Soil_FractionsDecim_TheTriangleits_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = CDE0851A45E9B9A89284E18D /* Paper_B23_ElectricCurren_Soil_FractionsDecim_TheTriangleits_Questions.pdf */; };
+		4D3108EEFDD857C2F48F4786 /* Paper_B23_ElectricCurren_Soil_FractionsDecim_TheTriangleits_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = E9765E426632425F756A5765 /* Paper_B23_ElectricCurren_Soil_FractionsDecim_TheTriangleits_Solutions.html */; };
+		D5129EB5C2BEE3BF49E5BDFF /* Paper_B24_PhysicalChemic_ComparingQuant_RespirationinO_ExponentsPower_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = D5194A72BB664D6071B7F3A7 /* Paper_B24_PhysicalChemic_ComparingQuant_RespirationinO_ExponentsPower_Questions.pdf */; };
+		A6BC630E571EE9CB0C8AD96C /* Paper_B24_PhysicalChemic_ComparingQuant_RespirationinO_ExponentsPower_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = CBC6781033DBFF087FAAC5A4 /* Paper_B24_PhysicalChemic_ComparingQuant_RespirationinO_ExponentsPower_Solutions.html */; };
+		0AD69B9CD3F52065C6835F7A /* Paper_B25_MotionTime_WindsStormsCyc_LargeNumbers_Symmetry_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C7AE237843840BD225D184CA /* Paper_B25_MotionTime_WindsStormsCyc_LargeNumbers_Symmetry_Questions.pdf */; };
+		28E70474328DDD3FEA80A52B /* Paper_B25_MotionTime_WindsStormsCyc_LargeNumbers_Symmetry_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 7F538F9CF46BA1E9483E1648 /* Paper_B25_MotionTime_WindsStormsCyc_LargeNumbers_Symmetry_Solutions.html */; };
+		77E345D0F19F91861C51718D /* Paper_B26_Light_Soil_SimpleEquation_APeekBeyondthe_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9A69BB8E9841C14B13E031E7 /* Paper_B26_Light_Soil_SimpleEquation_APeekBeyondthe_Questions.pdf */; };
+		D773D5E97FDAD8866D1EDB97 /* Paper_B26_Light_Soil_SimpleEquation_APeekBeyondthe_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 6E672A6820AAA4F8BF951ECB /* Paper_B26_Light_Soil_SimpleEquation_APeekBeyondthe_Solutions.html */; };
+		895054CCFD311038692FC716 /* Paper_B27_MotionTime_ComparingQuant_Heat_SimpleEquation_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = BD31AF75454D718AD64A0062 /* Paper_B27_MotionTime_ComparingQuant_Heat_SimpleEquation_Questions.pdf */; };
+		1A15F209ADC2DD148CD53F3F /* Paper_B27_MotionTime_ComparingQuant_Heat_SimpleEquation_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = E5DB4CD6684B717C4B9F0FDB /* Paper_B27_MotionTime_ComparingQuant_Heat_SimpleEquation_Solutions.html */; };
+		12E4BC8F465C620C1DE4B354 /* Paper_B28_WindsStormsCyc_RespirationinO_PerimeterArea_LinesAngles_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 5E4EEBFB40A6FD08C3760DFE /* Paper_B28_WindsStormsCyc_RespirationinO_PerimeterArea_LinesAngles_Questions.pdf */; };
+		9F2FB227ABE05C2E02F2A965 /* Paper_B28_WindsStormsCyc_RespirationinO_PerimeterArea_LinesAngles_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 77869431ECCC68DF9D3769F6 /* Paper_B28_WindsStormsCyc_RespirationinO_PerimeterArea_LinesAngles_Solutions.html */; };
+		6C05167390F0143416388A8D /* Paper_B29_AcidsBasesSalt_AlgebraicExpre_WastewaterStor_Integers_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2A99A6F3167348BBF67EB93F /* Paper_B29_AcidsBasesSalt_AlgebraicExpre_WastewaterStor_Integers_Questions.pdf */; };
+		3009496B1C650B41ACFC246F /* Paper_B29_AcidsBasesSalt_AlgebraicExpre_WastewaterStor_Integers_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 7B3D9BAA259862D6934C9451 /* Paper_B29_AcidsBasesSalt_AlgebraicExpre_WastewaterStor_Integers_Solutions.html */; };
+		02D1D4F354FAD15427A91DC8 /* Paper_B30_WeatherClimate_Reproductionin_RationalNumber_PerimeterArea_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 5C75C471A525DA9F2F1940D0 /* Paper_B30_WeatherClimate_Reproductionin_RationalNumber_PerimeterArea_Questions.pdf */; };
+		7C83F17243B6839E72DFE837 /* Paper_B30_WeatherClimate_Reproductionin_RationalNumber_PerimeterArea_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = D552C3B2902EF46FABB11194 /* Paper_B30_WeatherClimate_Reproductionin_RationalNumber_PerimeterArea_Solutions.html */; };
+		1AEF6114563407C5E7A48708 /* Paper_B31_Transportation_SimpleEquation_AcidsBasesSalt_ExponentsPower_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 5DE7D8EB4C1AB9DC1631272E /* Paper_B31_Transportation_SimpleEquation_AcidsBasesSalt_ExponentsPower_Questions.pdf */; };
+		D4ACDBA63F730E213FB00A57 /* Paper_B31_Transportation_SimpleEquation_AcidsBasesSalt_ExponentsPower_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = B766CD8F4741BAE39B491788 /* Paper_B31_Transportation_SimpleEquation_AcidsBasesSalt_ExponentsPower_Solutions.html */; };
+		D36EA11362184188CDCADFBA /* Paper_B32_WindsStormsCyc_ComparingQuant_Soil_ExponentsPower_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0673A0035A711793E8BFC32A /* Paper_B32_WindsStormsCyc_ComparingQuant_Soil_ExponentsPower_Questions.pdf */; };
+		005FE37056255FFAD69F4645 /* Paper_B32_WindsStormsCyc_ComparingQuant_Soil_ExponentsPower_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 8E85C6B9D3C0A25440BE2446 /* Paper_B32_WindsStormsCyc_ComparingQuant_Soil_ExponentsPower_Solutions.html */; };
+		ACB51A72B47CEFEE4A0A1109 /* Paper_B33_NutritioninAni_Symmetry_Forests_AlgebraicExpre_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2BA4785F0229F31F214BBBC0 /* Paper_B33_NutritioninAni_Symmetry_Forests_AlgebraicExpre_Questions.pdf */; };
+		FB1C51B52950F78F98191474 /* Paper_B33_NutritioninAni_Symmetry_Forests_AlgebraicExpre_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 560C574C1EF1CD6F494FD5CE /* Paper_B33_NutritioninAni_Symmetry_Forests_AlgebraicExpre_Solutions.html */; };
+		CD176168A9000C7298B2CE87 /* Paper_B34_Reproductionin_LinesAngles_WastewaterStor_ComparingQuant_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A457A65CE9AB1E111B05809A /* Paper_B34_Reproductionin_LinesAngles_WastewaterStor_ComparingQuant_Questions.pdf */; };
+		2230451842996DE079C1BDCB /* Paper_B34_Reproductionin_LinesAngles_WastewaterStor_ComparingQuant_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = B63C8538DFAFD2FE85D97D0E /* Paper_B34_Reproductionin_LinesAngles_WastewaterStor_ComparingQuant_Solutions.html */; };
+		810CC73037FB5ADF9AF72B60 /* Paper_B35_NutritioninPla_FractionsDecim_PhysicalChemic_DataHandling_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6FE14E14A62420872A20A082 /* Paper_B35_NutritioninPla_FractionsDecim_PhysicalChemic_DataHandling_Questions.pdf */; };
+		B30057F990DD693646F9914B /* Paper_B35_NutritioninPla_FractionsDecim_PhysicalChemic_DataHandling_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 4D37F76602175C2CF431AD42 /* Paper_B35_NutritioninPla_FractionsDecim_PhysicalChemic_DataHandling_Solutions.html */; };
+		B5D257EB03BFEFB2C0EE19D3 /* Paper_B36_Light_Integers_Transportation_Symmetry_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = BB8CC6A75235AD07FB39B173 /* Paper_B36_Light_Integers_Transportation_Symmetry_Questions.pdf */; };
+		4E8F8211F6AF352DAFFCC063 /* Paper_B36_Light_Integers_Transportation_Symmetry_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = B4F4A7B6AEE62C15CD3CAE20 /* Paper_B36_Light_Integers_Transportation_Symmetry_Solutions.html */; };
+		0E835F16F13C75C1275F11C4 /* Paper_B37_NutritioninPla_LinesAngles_ElectricCurren_LargeNumbers_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 807BAA26D1377319A41976DC /* Paper_B37_NutritioninPla_LinesAngles_ElectricCurren_LargeNumbers_Questions.pdf */; };
+		37C9D15CF3484FF65C4A60CE /* Paper_B37_NutritioninPla_LinesAngles_ElectricCurren_LargeNumbers_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = FE7DA76B9B528B02B6DF14BC /* Paper_B37_NutritioninPla_LinesAngles_ElectricCurren_LargeNumbers_Solutions.html */; };
+		B4BC6D8862F62581399B7DF1 /* Paper_B38_AcidsBasesSalt_DataHandling_MotionTime_AlgebraicExpre_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = C52D0781AC83C849BEF690D4 /* Paper_B38_AcidsBasesSalt_DataHandling_MotionTime_AlgebraicExpre_Questions.pdf */; };
+		4588C22CD54B123D7E49D666 /* Paper_B38_AcidsBasesSalt_DataHandling_MotionTime_AlgebraicExpre_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 6716EC85076E319640A30D60 /* Paper_B38_AcidsBasesSalt_DataHandling_MotionTime_AlgebraicExpre_Solutions.html */; };
+		EDEE1EF0CB42308C9471D9B7 /* Paper_B39_Soil_ComparingQuant_WastewaterStor_PerimeterArea_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = FF8AC5B9190BF4765FADC236 /* Paper_B39_Soil_ComparingQuant_WastewaterStor_PerimeterArea_Questions.pdf */; };
+		66920B5CC4E70C7B76307475 /* Paper_B39_Soil_ComparingQuant_WastewaterStor_PerimeterArea_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 67293F900CD7AD88A323D45B /* Paper_B39_Soil_ComparingQuant_WastewaterStor_PerimeterArea_Solutions.html */; };
+		722C6D41C0C579D8E62052A4 /* Paper_B40_Heat_ComparingQuant_Transportation_FractionsDecim_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E57316E615213F8B7CD3EFEB /* Paper_B40_Heat_ComparingQuant_Transportation_FractionsDecim_Questions.pdf */; };
+		B385F9AA8BDAF8027C2110E0 /* Paper_B40_Heat_ComparingQuant_Transportation_FractionsDecim_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = DCACCE02116821D39682A549 /* Paper_B40_Heat_ComparingQuant_Transportation_FractionsDecim_Solutions.html */; };
+		5792F91204FC201A1DC0963D /* Paper_B41_Forests_RespirationinO_TheTriangleits_RationalNumber_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = F737C869DCCE74DA48BB45D0 /* Paper_B41_Forests_RespirationinO_TheTriangleits_RationalNumber_Questions.pdf */; };
+		75DEA6833127D0B83C5EBA07 /* Paper_B41_Forests_RespirationinO_TheTriangleits_RationalNumber_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 76963DD182159E618E56BD63 /* Paper_B41_Forests_RespirationinO_TheTriangleits_RationalNumber_Solutions.html */; };
+		4CB35D5CE6357FE2F9894582 /* Paper_B42_Integers_APeekBeyondthe_PhysicalChemic_WeatherClimate_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9D3ACD3BB4AEA734CED386FE /* Paper_B42_Integers_APeekBeyondthe_PhysicalChemic_WeatherClimate_Questions.pdf */; };
+		2C4D6A7B3A29518449C6BDA5 /* Paper_B42_Integers_APeekBeyondthe_PhysicalChemic_WeatherClimate_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = A8735C91742E04B339C6DE61 /* Paper_B42_Integers_APeekBeyondthe_PhysicalChemic_WeatherClimate_Solutions.html */; };
+		2D589D8E9A5EBD9D2640F8EC /* Paper_B43_NutritioninAni_TheTriangleits_Light_LargeNumbers_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2BFA0EDE64AA30C1F1D033D0 /* Paper_B43_NutritioninAni_TheTriangleits_Light_LargeNumbers_Questions.pdf */; };
+		1FA63073F8572C938ED03975 /* Paper_B43_NutritioninAni_TheTriangleits_Light_LargeNumbers_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 278A239DCFFE5103887CD779 /* Paper_B43_NutritioninAni_TheTriangleits_Light_LargeNumbers_Solutions.html */; };
+		F67608E37201D02B4611692C /* Paper_B44_ElectricCurren_PerimeterArea_PhysicalChemic_RationalNumber_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E888DB0AC2AE95C55F692D73 /* Paper_B44_ElectricCurren_PerimeterArea_PhysicalChemic_RationalNumber_Questions.pdf */; };
+		39FA6D39BAFF2BDDA596EF0D /* Paper_B44_ElectricCurren_PerimeterArea_PhysicalChemic_RationalNumber_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 3C8EF140F89B8311026E51D0 /* Paper_B44_ElectricCurren_PerimeterArea_PhysicalChemic_RationalNumber_Solutions.html */; };
+		84FC7A3F9BE44866CE1D3078 /* Paper_B45_RespirationinO_Reproductionin_SimpleEquation_DataHandling_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 95ECC3AC488835D71E44E946 /* Paper_B45_RespirationinO_Reproductionin_SimpleEquation_DataHandling_Questions.pdf */; };
+		9A8414B59573952EFCF9CAD7 /* Paper_B45_RespirationinO_Reproductionin_SimpleEquation_DataHandling_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 1B6F3435FCDE566A39C88FB8 /* Paper_B45_RespirationinO_Reproductionin_SimpleEquation_DataHandling_Solutions.html */; };
+		B46E910A74033DD9D4F4BB28 /* Paper_B46_WeatherClimate_APeekBeyondthe_Forests_Symmetry_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = BB908336B49072F216D7D119 /* Paper_B46_WeatherClimate_APeekBeyondthe_Forests_Symmetry_Questions.pdf */; };
+		185074197FB11B8020F29652 /* Paper_B46_WeatherClimate_APeekBeyondthe_Forests_Symmetry_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = E8B2A20768F740E7AFBD9413 /* Paper_B46_WeatherClimate_APeekBeyondthe_Forests_Symmetry_Solutions.html */; };
+		8B9879F903268188A95E0A45 /* Paper_B47_NutritioninPla_ComparingQuant_WindsStormsCyc_LinesAngles_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 836359B54A204909BF0CCDAF /* Paper_B47_NutritioninPla_ComparingQuant_WindsStormsCyc_LinesAngles_Questions.pdf */; };
+		F076C2E9B6002BF96A888F2D /* Paper_B47_NutritioninPla_ComparingQuant_WindsStormsCyc_LinesAngles_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 28C0DFF6633C124021CF86A8 /* Paper_B47_NutritioninPla_ComparingQuant_WindsStormsCyc_LinesAngles_Solutions.html */; };
+		0A75A87867FF48DF2FB1C949 /* Paper_B48_NutritioninAni_MotionTime_FractionsDecim_TheTriangleits_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 232504823EF499ED9FCD5E20 /* Paper_B48_NutritioninAni_MotionTime_FractionsDecim_TheTriangleits_Questions.pdf */; };
+		9C49D0B442161AFACA138DE1 /* Paper_B48_NutritioninAni_MotionTime_FractionsDecim_TheTriangleits_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = AEAD676927E5C170F27657D1 /* Paper_B48_NutritioninAni_MotionTime_FractionsDecim_TheTriangleits_Solutions.html */; };
+		34FBEEFABA3E6EE1FE44C273 /* Paper_B49_ElectricCurren_APeekBeyondthe_WeatherClimate_Symmetry_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0D376E19DA9C8C194AAC3975 /* Paper_B49_ElectricCurren_APeekBeyondthe_WeatherClimate_Symmetry_Questions.pdf */; };
+		4D8ACA1DB5242D659DA46CCD /* Paper_B49_ElectricCurren_APeekBeyondthe_WeatherClimate_Symmetry_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 57580F483B648907FBBE72B9 /* Paper_B49_ElectricCurren_APeekBeyondthe_WeatherClimate_Symmetry_Solutions.html */; };
+		F0EE677CF1F789260BA9A713 /* Paper_B50_NutritioninAni_ExponentsPower_WastewaterStor_LinesAngles_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 45D75F77DDE31D38228DC57B /* Paper_B50_NutritioninAni_ExponentsPower_WastewaterStor_LinesAngles_Questions.pdf */; };
+		E62955A2198027A19551F2C3 /* Paper_B50_NutritioninAni_ExponentsPower_WastewaterStor_LinesAngles_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = E2042C5B6549BB09334BAC9A /* Paper_B50_NutritioninAni_ExponentsPower_WastewaterStor_LinesAngles_Solutions.html */; };
+		8FD5C0C43DD2D183A8C28BCC /* Paper_B51_PhysicalChemic_AlgebraicExpre_Forests_Integers_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 3221C3A8F8A436BC32947776 /* Paper_B51_PhysicalChemic_AlgebraicExpre_Forests_Integers_Questions.pdf */; };
+		2BB65BC195F0F6D82314672C /* Paper_B51_PhysicalChemic_AlgebraicExpre_Forests_Integers_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 2A1807812063BAE1121986AB /* Paper_B51_PhysicalChemic_AlgebraicExpre_Forests_Integers_Solutions.html */; };
+		01E2F703F63E3CD5F0A1F59D /* Paper_B52_Heat_ComparingQuant_RespirationinO_AlgebraicExpre_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 7CDBA0A951010B6B053C6719 /* Paper_B52_Heat_ComparingQuant_RespirationinO_AlgebraicExpre_Questions.pdf */; };
+		598496C5A079D380611F9FC1 /* Paper_B52_Heat_ComparingQuant_RespirationinO_AlgebraicExpre_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 0499A8A865C0466E8E767DE1 /* Paper_B52_Heat_ComparingQuant_RespirationinO_AlgebraicExpre_Solutions.html */; };
+		6789981699C964C9080D0CF2 /* Paper_B53_Transportation_LargeNumbers_WindsStormsCyc_PerimeterArea_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 37A7308920A1BD69A11F6D26 /* Paper_B53_Transportation_LargeNumbers_WindsStormsCyc_PerimeterArea_Questions.pdf */; };
+		75446CD254995C71DE41EB0A /* Paper_B53_Transportation_LargeNumbers_WindsStormsCyc_PerimeterArea_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = F41DD28F326D933D048F8830 /* Paper_B53_Transportation_LargeNumbers_WindsStormsCyc_PerimeterArea_Solutions.html */; };
+		028AEE3F48F697A3E0BD554C /* Paper_B54_AcidsBasesSalt_FractionsDecim_Reproductionin_SimpleEquation_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = ECFF21A1C89C2AB51A07BE68 /* Paper_B54_AcidsBasesSalt_FractionsDecim_Reproductionin_SimpleEquation_Questions.pdf */; };
+		854B428C54ACD2E326E7B7B0 /* Paper_B54_AcidsBasesSalt_FractionsDecim_Reproductionin_SimpleEquation_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 24190114704BF2DAE901628D /* Paper_B54_AcidsBasesSalt_FractionsDecim_Reproductionin_SimpleEquation_Solutions.html */; };
+		F395C7F9143C78ED419D87E8 /* Paper_B55_Soil_ExponentsPower_Heat_LinesAngles_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 2C4AB911A0BB5669E09E50EF /* Paper_B55_Soil_ExponentsPower_Heat_LinesAngles_Questions.pdf */; };
+		6D232A273DDC875C4B6F656B /* Paper_B55_Soil_ExponentsPower_Heat_LinesAngles_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = DCBBAF3E04DE3B8768864EC5 /* Paper_B55_Soil_ExponentsPower_Heat_LinesAngles_Solutions.html */; };
+		9F94DED0C0FFC72E41F1507D /* Paper_B56_ElectricCurren_ComparingQuant_Forests_DataHandling_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = E8CE5599B6CAF346C17EC477 /* Paper_B56_ElectricCurren_ComparingQuant_Forests_DataHandling_Questions.pdf */; };
+		F5E950E62F4F5B9DB472217B /* Paper_B56_ElectricCurren_ComparingQuant_Forests_DataHandling_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 5635A8423AE925C958C60142 /* Paper_B56_ElectricCurren_ComparingQuant_Forests_DataHandling_Solutions.html */; };
+		5A171DC9D751AD728EBAE7DE /* Paper_B57_Light_ComparingQuant_Soil_RationalNumber_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 44ECFD4748108D8CD1942E2A /* Paper_B57_Light_ComparingQuant_Soil_RationalNumber_Questions.pdf */; };
+		918C51F90B1CE4C506292F8F /* Paper_B57_Light_ComparingQuant_Soil_RationalNumber_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 243F1F4626351C0ED3159598 /* Paper_B57_Light_ComparingQuant_Soil_RationalNumber_Solutions.html */; };
+		E6A680B8DB53C7160614A7B8 /* Paper_B58_NutritioninPla_Integers_MotionTime_TheTriangleits_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 4D0552B3CF08788B625FD406 /* Paper_B58_NutritioninPla_Integers_MotionTime_TheTriangleits_Questions.pdf */; };
+		E296DCABF4BC68AA9F1520DC /* Paper_B58_NutritioninPla_Integers_MotionTime_TheTriangleits_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 8B10A2E0C3097889A8E228F4 /* Paper_B58_NutritioninPla_Integers_MotionTime_TheTriangleits_Solutions.html */; };
+		9AAE5A20A4AF867CD7BD8B20 /* Paper_B59_Transportation_Heat_DataHandling_Symmetry_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 50F94008AF14A4E596E32579 /* Paper_B59_Transportation_Heat_DataHandling_Symmetry_Questions.pdf */; };
+		B12E467277E33AD6C38AEA62 /* Paper_B59_Transportation_Heat_DataHandling_Symmetry_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = ABCEAA3FFEA9E06176BC35BB /* Paper_B59_Transportation_Heat_DataHandling_Symmetry_Solutions.html */; };
+		DD9E6C923EF4B8FF2CFA03AD /* Paper_B60_WastewaterStor_PhysicalChemic_LargeNumbers_AlgebraicExpre_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 66EFDEF3D0E405CFE4E3F49F /* Paper_B60_WastewaterStor_PhysicalChemic_LargeNumbers_AlgebraicExpre_Questions.pdf */; };
+		DB18017AEF3EDDB51F98EEF9 /* Paper_B60_WastewaterStor_PhysicalChemic_LargeNumbers_AlgebraicExpre_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 390BFEB79A6411EDCF1BF185 /* Paper_B60_WastewaterStor_PhysicalChemic_LargeNumbers_AlgebraicExpre_Solutions.html */; };
+		E83CD0A20F47B9422CA0F3A3 /* Paper_B61_MotionTime_Heat_ComparingQuant_PerimeterArea_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 0633419192E5CE0202F490B2 /* Paper_B61_MotionTime_Heat_ComparingQuant_PerimeterArea_Questions.pdf */; };
+		18B49563CDE8ACAC75F90B87 /* Paper_B61_MotionTime_Heat_ComparingQuant_PerimeterArea_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 60E98E0C0FAE0DFFFD3861C2 /* Paper_B61_MotionTime_Heat_ComparingQuant_PerimeterArea_Solutions.html */; };
+		8D9E414916FEE8E8C1D66BBA /* Paper_B62_Reproductionin_SimpleEquation_WindsStormsCyc_RationalNumber_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 9D3DFECF943FC2A06C506EA2 /* Paper_B62_Reproductionin_SimpleEquation_WindsStormsCyc_RationalNumber_Questions.pdf */; };
+		1281B42AC28C69BEE5C6AD1B /* Paper_B62_Reproductionin_SimpleEquation_WindsStormsCyc_RationalNumber_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 605EC60C3F0C04212B264CA5 /* Paper_B62_Reproductionin_SimpleEquation_WindsStormsCyc_RationalNumber_Solutions.html */; };
+		AC16248F7B9A7FC2F68539DA /* Paper_B63_RespirationinO_APeekBeyondthe_WeatherClimate_ExponentsPower_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 8160F79ED670EACFA972D1CA /* Paper_B63_RespirationinO_APeekBeyondthe_WeatherClimate_ExponentsPower_Questions.pdf */; };
+		97740DFD2E3FE0AC4361F9EE /* Paper_B63_RespirationinO_APeekBeyondthe_WeatherClimate_ExponentsPower_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 95792520B31442829D7D2582 /* Paper_B63_RespirationinO_APeekBeyondthe_WeatherClimate_ExponentsPower_Solutions.html */; };
+		508339D19A5EACF8B229BBF6 /* REFERENCE_1x_Questions.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 66F10698537B0891B71614CE /* REFERENCE_1x_Questions.pdf */; };
+		8BE69B2BB0057D78F4521A50 /* REFERENCE_1x_Solutions.html in Resources */ = {isa = PBXBuildFile; fileRef = 0EFB750515B89E21B5C6C03C /* REFERENCE_1x_Solutions.html */; };
 		CF6289FBCF676858C99ED670 /* Contents.json in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F17B590EF6DA751E23E41 /* Contents.json */; };
 		9AE05997509D9842F29172EB /* maths_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E448E6E8BEEB87620A8C798 /* maths_class7.json */; };
 		9103989C181D8156191FD30D /* sanskrit_class7.json in Resources */ = {isa = PBXBuildFile; fileRef = 307FB7481238DF1F6D61235B /* sanskrit_class7.json */; };
@@ -3137,6 +3268,7 @@
 		F76E46FCDF00F37C66AF6174 /* BossQuizMigrationRatchetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6436FB277692897E8A5E725 /* BossQuizMigrationRatchetTests.swift */; };
 		96E7ABACD0327903687FCDFF /* BossQuizPickMainActorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07479424B05C83E357662480 /* BossQuizPickMainActorTests.swift */; };
 		1E001F5E3AEC3F39504B5E27 /* BossQuizSRSWiringTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F995D583179480596084E5C9 /* BossQuizSRSWiringTests.swift */; };
+		8DAF0DCE8E9ED8118BF968B6 /* BrutalSeriesPapersCatalogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55080241C2B4E05CCF05FA82 /* BrutalSeriesPapersCatalogTests.swift */; };
 		34AA5C7CB867CF898D51DF06 /* Ch2_19_StructuralRatchetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192F570A0F0B902A0BD9210D /* Ch2_19_StructuralRatchetTests.swift */; };
 		3C390B0BDE7AC1C31792CAB5 /* ChapterContentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AA33BC827B658DD27418AD8 /* ChapterContentTests.swift */; };
 		60ECAC529025888434AC6147 /* ChapterGlossaryCTARoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5619A9A330B9B0AD0D0CF9C7 /* ChapterGlossaryCTARoutingTests.swift */; };
@@ -5865,6 +5997,136 @@
 		60B6EF882CDD8F0816E82C15 /* Paper_55_Heat_Respiration_AlgExpr_DataHandling_Questions.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "Paper_55_Heat_Respiration_AlgExpr_DataHandling_Questions.md"; sourceTree = "<group>"; };
 		BE12FED128984296FB4F631E /* Paper_55_Heat_Respiration_AlgExpr_DataHandling_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_55_Heat_Respiration_AlgExpr_DataHandling_Solutions.html"; sourceTree = "<group>"; };
 		ECD0916CC0210824B2615292 /* QUESTION_INDEX.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "QUESTION_INDEX.json"; sourceTree = "<group>"; };
+		9971E68644E4F13C79BFB852 /* BRUTAL_INDEX.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "BRUTAL_INDEX.json"; sourceTree = "<group>"; };
+		11ADFAE70C9333E15DF22EA3 /* MANIFEST.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "MANIFEST.md"; sourceTree = "<group>"; };
+		FFB35F4E5C900B09F6FBE368 /* Paper_B01_Heat_ComparingQuant_ElectricCurren_SimpleEquation_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B01_Heat_ComparingQuant_ElectricCurren_SimpleEquation_Questions.pdf"; sourceTree = "<group>"; };
+		6824603DA1D238A5E15A0551 /* Paper_B01_Heat_ComparingQuant_ElectricCurren_SimpleEquation_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B01_Heat_ComparingQuant_ElectricCurren_SimpleEquation_Solutions.html"; sourceTree = "<group>"; };
+		71940BBBD1DFFFBFC4CEA2BF /* Paper_B02_NutritioninAni_AcidsBasesSalt_FractionsDecim_TheTriangleits_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B02_NutritioninAni_AcidsBasesSalt_FractionsDecim_TheTriangleits_Questions.pdf"; sourceTree = "<group>"; };
+		1F8AE556F893121CC9B36217 /* Paper_B02_NutritioninAni_AcidsBasesSalt_FractionsDecim_TheTriangleits_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B02_NutritioninAni_AcidsBasesSalt_FractionsDecim_TheTriangleits_Solutions.html"; sourceTree = "<group>"; };
+		8BEEBE28484174971A8C4117 /* Paper_B03_NutritioninPla_Integers_PhysicalChemic_PerimeterArea_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B03_NutritioninPla_Integers_PhysicalChemic_PerimeterArea_Questions.pdf"; sourceTree = "<group>"; };
+		76B4F8C474A847C929BC1379 /* Paper_B03_NutritioninPla_Integers_PhysicalChemic_PerimeterArea_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B03_NutritioninPla_Integers_PhysicalChemic_PerimeterArea_Solutions.html"; sourceTree = "<group>"; };
+		F15895BFF96ADBDB02079C56 /* Paper_B04_Light_RespirationinO_AlgebraicExpre_ExponentsPower_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B04_Light_RespirationinO_AlgebraicExpre_ExponentsPower_Questions.pdf"; sourceTree = "<group>"; };
+		4ED821C49319FA945081966B /* Paper_B04_Light_RespirationinO_AlgebraicExpre_ExponentsPower_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B04_Light_RespirationinO_AlgebraicExpre_ExponentsPower_Solutions.html"; sourceTree = "<group>"; };
+		FF9A85769BAB8395923BC961 /* Paper_B05_WeatherClimate_Transportation_DataHandling_LinesAngles_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B05_WeatherClimate_Transportation_DataHandling_LinesAngles_Questions.pdf"; sourceTree = "<group>"; };
+		76452A6A204EAF6015F0C9E5 /* Paper_B05_WeatherClimate_Transportation_DataHandling_LinesAngles_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B05_WeatherClimate_Transportation_DataHandling_LinesAngles_Solutions.html"; sourceTree = "<group>"; };
+		CFB3CC396411B69B22C24C10 /* Paper_B06_Soil_RationalNumber_WindsStormsCyc_Symmetry_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B06_Soil_RationalNumber_WindsStormsCyc_Symmetry_Questions.pdf"; sourceTree = "<group>"; };
+		E72E7C530B075D9DC472C047 /* Paper_B06_Soil_RationalNumber_WindsStormsCyc_Symmetry_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B06_Soil_RationalNumber_WindsStormsCyc_Symmetry_Solutions.html"; sourceTree = "<group>"; };
+		B4BE0B0F7A1A3CE9ECA4FEAB /* Paper_B07_Reproductionin_ComparingQuant_Forests_PerimeterArea_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B07_Reproductionin_ComparingQuant_Forests_PerimeterArea_Questions.pdf"; sourceTree = "<group>"; };
+		A410BD741D70E441393C2E18 /* Paper_B07_Reproductionin_ComparingQuant_Forests_PerimeterArea_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B07_Reproductionin_ComparingQuant_Forests_PerimeterArea_Solutions.html"; sourceTree = "<group>"; };
+		7832C33EDA8DB76137033492 /* Paper_B08_MotionTime_LargeNumbers_WastewaterStor_APeekBeyondthe_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B08_MotionTime_LargeNumbers_WastewaterStor_APeekBeyondthe_Questions.pdf"; sourceTree = "<group>"; };
+		97D578895DE7B16216AC9A7A /* Paper_B08_MotionTime_LargeNumbers_WastewaterStor_APeekBeyondthe_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B08_MotionTime_LargeNumbers_WastewaterStor_APeekBeyondthe_Solutions.html"; sourceTree = "<group>"; };
+		B6F9A2FF0C6291379E1AC038 /* Paper_B09_Heat_AcidsBasesSalt_Integers_RationalNumber_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B09_Heat_AcidsBasesSalt_Integers_RationalNumber_Questions.pdf"; sourceTree = "<group>"; };
+		892C6383FBE612129A9EA4A4 /* Paper_B09_Heat_AcidsBasesSalt_Integers_RationalNumber_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B09_Heat_AcidsBasesSalt_Integers_RationalNumber_Solutions.html"; sourceTree = "<group>"; };
+		37470D404771A16DD3691A12 /* Paper_B10_NutritioninAni_SimpleEquation_ElectricCurren_FractionsDecim_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B10_NutritioninAni_SimpleEquation_ElectricCurren_FractionsDecim_Questions.pdf"; sourceTree = "<group>"; };
+		161434DAB8418F1DC69DF01E /* Paper_B10_NutritioninAni_SimpleEquation_ElectricCurren_FractionsDecim_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B10_NutritioninAni_SimpleEquation_ElectricCurren_FractionsDecim_Solutions.html"; sourceTree = "<group>"; };
+		5DE99ADDE161A8AC647C8F0A /* Paper_B11_Light_DataHandling_WastewaterStor_TheTriangleits_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B11_Light_DataHandling_WastewaterStor_TheTriangleits_Questions.pdf"; sourceTree = "<group>"; };
+		5A263200FC795E08C821D7EF /* Paper_B11_Light_DataHandling_WastewaterStor_TheTriangleits_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B11_Light_DataHandling_WastewaterStor_TheTriangleits_Solutions.html"; sourceTree = "<group>"; };
+		5CD914C6863039A362A13688 /* Paper_B12_PhysicalChemic_ExponentsPower_Transportation_Symmetry_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B12_PhysicalChemic_ExponentsPower_Transportation_Symmetry_Questions.pdf"; sourceTree = "<group>"; };
+		0B93868C60705E52A850959F /* Paper_B12_PhysicalChemic_ExponentsPower_Transportation_Symmetry_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B12_PhysicalChemic_ExponentsPower_Transportation_Symmetry_Solutions.html"; sourceTree = "<group>"; };
+		75435DEC8F9D4A1BEFDA9193 /* Paper_B13_RespirationinO_LinesAngles_Soil_AlgebraicExpre_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B13_RespirationinO_LinesAngles_Soil_AlgebraicExpre_Questions.pdf"; sourceTree = "<group>"; };
+		FFBE761144F7D76A0E58145A /* Paper_B13_RespirationinO_LinesAngles_Soil_AlgebraicExpre_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B13_RespirationinO_LinesAngles_Soil_AlgebraicExpre_Solutions.html"; sourceTree = "<group>"; };
+		CD55557CDCAAE3F0E53D3E3F /* Paper_B14_WeatherClimate_LargeNumbers_Reproductionin_APeekBeyondthe_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B14_WeatherClimate_LargeNumbers_Reproductionin_APeekBeyondthe_Questions.pdf"; sourceTree = "<group>"; };
+		A64D79F264FC744817D50B64 /* Paper_B14_WeatherClimate_LargeNumbers_Reproductionin_APeekBeyondthe_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B14_WeatherClimate_LargeNumbers_Reproductionin_APeekBeyondthe_Solutions.html"; sourceTree = "<group>"; };
+		110C93CA8DCDF0950ED253B1 /* Paper_B15_WindsStormsCyc_Integers_MotionTime_AlgebraicExpre_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B15_WindsStormsCyc_Integers_MotionTime_AlgebraicExpre_Questions.pdf"; sourceTree = "<group>"; };
+		CB0BE6CCD6428EEB6104CD11 /* Paper_B15_WindsStormsCyc_Integers_MotionTime_AlgebraicExpre_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B15_WindsStormsCyc_Integers_MotionTime_AlgebraicExpre_Solutions.html"; sourceTree = "<group>"; };
+		0BA3C2B580E3FB1586F1956A /* Paper_B16_NutritioninPla_SimpleEquation_Forests_ComparingQuant_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B16_NutritioninPla_SimpleEquation_Forests_ComparingQuant_Questions.pdf"; sourceTree = "<group>"; };
+		67557D3206610C50DAC2F3CB /* Paper_B16_NutritioninPla_SimpleEquation_Forests_ComparingQuant_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B16_NutritioninPla_SimpleEquation_Forests_ComparingQuant_Solutions.html"; sourceTree = "<group>"; };
+		093F8520DA6E8766A356C8C2 /* Paper_B17_NutritioninAni_ExponentsPower_Transportation_PerimeterArea_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B17_NutritioninAni_ExponentsPower_Transportation_PerimeterArea_Questions.pdf"; sourceTree = "<group>"; };
+		E366FF20F4739865FF4C4395 /* Paper_B17_NutritioninAni_ExponentsPower_Transportation_PerimeterArea_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B17_NutritioninAni_ExponentsPower_Transportation_PerimeterArea_Solutions.html"; sourceTree = "<group>"; };
+		494992DFCA85469D00300C27 /* Paper_B18_ElectricCurren_AcidsBasesSalt_RationalNumber_LinesAngles_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B18_ElectricCurren_AcidsBasesSalt_RationalNumber_LinesAngles_Questions.pdf"; sourceTree = "<group>"; };
+		B14D5B004A36C2DCBE46771D /* Paper_B18_ElectricCurren_AcidsBasesSalt_RationalNumber_LinesAngles_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B18_ElectricCurren_AcidsBasesSalt_RationalNumber_LinesAngles_Solutions.html"; sourceTree = "<group>"; };
+		078C31E6DB062F90D0FF36C1 /* Paper_B19_Heat_WastewaterStor_DataHandling_FractionsDecim_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B19_Heat_WastewaterStor_DataHandling_FractionsDecim_Questions.pdf"; sourceTree = "<group>"; };
+		7E19EAE5CD379E3092FE093F /* Paper_B19_Heat_WastewaterStor_DataHandling_FractionsDecim_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B19_Heat_WastewaterStor_DataHandling_FractionsDecim_Solutions.html"; sourceTree = "<group>"; };
+		40FEADD5C8E3BF474740E0E3 /* Paper_B20_Reproductionin_TheTriangleits_Light_Symmetry_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B20_Reproductionin_TheTriangleits_Light_Symmetry_Questions.pdf"; sourceTree = "<group>"; };
+		C493D0A3330D7AE37E7F81DC /* Paper_B20_Reproductionin_TheTriangleits_Light_Symmetry_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B20_Reproductionin_TheTriangleits_Light_Symmetry_Solutions.html"; sourceTree = "<group>"; };
+		5FD8B0BA1782919EAFDB1350 /* Paper_B21_Forests_LargeNumbers_WeatherClimate_APeekBeyondthe_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B21_Forests_LargeNumbers_WeatherClimate_APeekBeyondthe_Questions.pdf"; sourceTree = "<group>"; };
+		BC7DF8F284C6A9B4B0BCB221 /* Paper_B21_Forests_LargeNumbers_WeatherClimate_APeekBeyondthe_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B21_Forests_LargeNumbers_WeatherClimate_APeekBeyondthe_Solutions.html"; sourceTree = "<group>"; };
+		9AB16340CAE2A007D6099DE4 /* Paper_B22_Heat_NutritioninPla_RationalNumber_DataHandling_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B22_Heat_NutritioninPla_RationalNumber_DataHandling_Questions.pdf"; sourceTree = "<group>"; };
+		6F857C729907A35319754C4D /* Paper_B22_Heat_NutritioninPla_RationalNumber_DataHandling_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B22_Heat_NutritioninPla_RationalNumber_DataHandling_Solutions.html"; sourceTree = "<group>"; };
+		CDE0851A45E9B9A89284E18D /* Paper_B23_ElectricCurren_Soil_FractionsDecim_TheTriangleits_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B23_ElectricCurren_Soil_FractionsDecim_TheTriangleits_Questions.pdf"; sourceTree = "<group>"; };
+		E9765E426632425F756A5765 /* Paper_B23_ElectricCurren_Soil_FractionsDecim_TheTriangleits_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B23_ElectricCurren_Soil_FractionsDecim_TheTriangleits_Solutions.html"; sourceTree = "<group>"; };
+		D5194A72BB664D6071B7F3A7 /* Paper_B24_PhysicalChemic_ComparingQuant_RespirationinO_ExponentsPower_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B24_PhysicalChemic_ComparingQuant_RespirationinO_ExponentsPower_Questions.pdf"; sourceTree = "<group>"; };
+		CBC6781033DBFF087FAAC5A4 /* Paper_B24_PhysicalChemic_ComparingQuant_RespirationinO_ExponentsPower_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B24_PhysicalChemic_ComparingQuant_RespirationinO_ExponentsPower_Solutions.html"; sourceTree = "<group>"; };
+		C7AE237843840BD225D184CA /* Paper_B25_MotionTime_WindsStormsCyc_LargeNumbers_Symmetry_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B25_MotionTime_WindsStormsCyc_LargeNumbers_Symmetry_Questions.pdf"; sourceTree = "<group>"; };
+		7F538F9CF46BA1E9483E1648 /* Paper_B25_MotionTime_WindsStormsCyc_LargeNumbers_Symmetry_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B25_MotionTime_WindsStormsCyc_LargeNumbers_Symmetry_Solutions.html"; sourceTree = "<group>"; };
+		9A69BB8E9841C14B13E031E7 /* Paper_B26_Light_Soil_SimpleEquation_APeekBeyondthe_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B26_Light_Soil_SimpleEquation_APeekBeyondthe_Questions.pdf"; sourceTree = "<group>"; };
+		6E672A6820AAA4F8BF951ECB /* Paper_B26_Light_Soil_SimpleEquation_APeekBeyondthe_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B26_Light_Soil_SimpleEquation_APeekBeyondthe_Solutions.html"; sourceTree = "<group>"; };
+		BD31AF75454D718AD64A0062 /* Paper_B27_MotionTime_ComparingQuant_Heat_SimpleEquation_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B27_MotionTime_ComparingQuant_Heat_SimpleEquation_Questions.pdf"; sourceTree = "<group>"; };
+		E5DB4CD6684B717C4B9F0FDB /* Paper_B27_MotionTime_ComparingQuant_Heat_SimpleEquation_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B27_MotionTime_ComparingQuant_Heat_SimpleEquation_Solutions.html"; sourceTree = "<group>"; };
+		5E4EEBFB40A6FD08C3760DFE /* Paper_B28_WindsStormsCyc_RespirationinO_PerimeterArea_LinesAngles_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B28_WindsStormsCyc_RespirationinO_PerimeterArea_LinesAngles_Questions.pdf"; sourceTree = "<group>"; };
+		77869431ECCC68DF9D3769F6 /* Paper_B28_WindsStormsCyc_RespirationinO_PerimeterArea_LinesAngles_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B28_WindsStormsCyc_RespirationinO_PerimeterArea_LinesAngles_Solutions.html"; sourceTree = "<group>"; };
+		2A99A6F3167348BBF67EB93F /* Paper_B29_AcidsBasesSalt_AlgebraicExpre_WastewaterStor_Integers_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B29_AcidsBasesSalt_AlgebraicExpre_WastewaterStor_Integers_Questions.pdf"; sourceTree = "<group>"; };
+		7B3D9BAA259862D6934C9451 /* Paper_B29_AcidsBasesSalt_AlgebraicExpre_WastewaterStor_Integers_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B29_AcidsBasesSalt_AlgebraicExpre_WastewaterStor_Integers_Solutions.html"; sourceTree = "<group>"; };
+		5C75C471A525DA9F2F1940D0 /* Paper_B30_WeatherClimate_Reproductionin_RationalNumber_PerimeterArea_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B30_WeatherClimate_Reproductionin_RationalNumber_PerimeterArea_Questions.pdf"; sourceTree = "<group>"; };
+		D552C3B2902EF46FABB11194 /* Paper_B30_WeatherClimate_Reproductionin_RationalNumber_PerimeterArea_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B30_WeatherClimate_Reproductionin_RationalNumber_PerimeterArea_Solutions.html"; sourceTree = "<group>"; };
+		5DE7D8EB4C1AB9DC1631272E /* Paper_B31_Transportation_SimpleEquation_AcidsBasesSalt_ExponentsPower_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B31_Transportation_SimpleEquation_AcidsBasesSalt_ExponentsPower_Questions.pdf"; sourceTree = "<group>"; };
+		B766CD8F4741BAE39B491788 /* Paper_B31_Transportation_SimpleEquation_AcidsBasesSalt_ExponentsPower_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B31_Transportation_SimpleEquation_AcidsBasesSalt_ExponentsPower_Solutions.html"; sourceTree = "<group>"; };
+		0673A0035A711793E8BFC32A /* Paper_B32_WindsStormsCyc_ComparingQuant_Soil_ExponentsPower_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B32_WindsStormsCyc_ComparingQuant_Soil_ExponentsPower_Questions.pdf"; sourceTree = "<group>"; };
+		8E85C6B9D3C0A25440BE2446 /* Paper_B32_WindsStormsCyc_ComparingQuant_Soil_ExponentsPower_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B32_WindsStormsCyc_ComparingQuant_Soil_ExponentsPower_Solutions.html"; sourceTree = "<group>"; };
+		2BA4785F0229F31F214BBBC0 /* Paper_B33_NutritioninAni_Symmetry_Forests_AlgebraicExpre_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B33_NutritioninAni_Symmetry_Forests_AlgebraicExpre_Questions.pdf"; sourceTree = "<group>"; };
+		560C574C1EF1CD6F494FD5CE /* Paper_B33_NutritioninAni_Symmetry_Forests_AlgebraicExpre_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B33_NutritioninAni_Symmetry_Forests_AlgebraicExpre_Solutions.html"; sourceTree = "<group>"; };
+		A457A65CE9AB1E111B05809A /* Paper_B34_Reproductionin_LinesAngles_WastewaterStor_ComparingQuant_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B34_Reproductionin_LinesAngles_WastewaterStor_ComparingQuant_Questions.pdf"; sourceTree = "<group>"; };
+		B63C8538DFAFD2FE85D97D0E /* Paper_B34_Reproductionin_LinesAngles_WastewaterStor_ComparingQuant_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B34_Reproductionin_LinesAngles_WastewaterStor_ComparingQuant_Solutions.html"; sourceTree = "<group>"; };
+		6FE14E14A62420872A20A082 /* Paper_B35_NutritioninPla_FractionsDecim_PhysicalChemic_DataHandling_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B35_NutritioninPla_FractionsDecim_PhysicalChemic_DataHandling_Questions.pdf"; sourceTree = "<group>"; };
+		4D37F76602175C2CF431AD42 /* Paper_B35_NutritioninPla_FractionsDecim_PhysicalChemic_DataHandling_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B35_NutritioninPla_FractionsDecim_PhysicalChemic_DataHandling_Solutions.html"; sourceTree = "<group>"; };
+		BB8CC6A75235AD07FB39B173 /* Paper_B36_Light_Integers_Transportation_Symmetry_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B36_Light_Integers_Transportation_Symmetry_Questions.pdf"; sourceTree = "<group>"; };
+		B4F4A7B6AEE62C15CD3CAE20 /* Paper_B36_Light_Integers_Transportation_Symmetry_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B36_Light_Integers_Transportation_Symmetry_Solutions.html"; sourceTree = "<group>"; };
+		807BAA26D1377319A41976DC /* Paper_B37_NutritioninPla_LinesAngles_ElectricCurren_LargeNumbers_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B37_NutritioninPla_LinesAngles_ElectricCurren_LargeNumbers_Questions.pdf"; sourceTree = "<group>"; };
+		FE7DA76B9B528B02B6DF14BC /* Paper_B37_NutritioninPla_LinesAngles_ElectricCurren_LargeNumbers_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B37_NutritioninPla_LinesAngles_ElectricCurren_LargeNumbers_Solutions.html"; sourceTree = "<group>"; };
+		C52D0781AC83C849BEF690D4 /* Paper_B38_AcidsBasesSalt_DataHandling_MotionTime_AlgebraicExpre_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B38_AcidsBasesSalt_DataHandling_MotionTime_AlgebraicExpre_Questions.pdf"; sourceTree = "<group>"; };
+		6716EC85076E319640A30D60 /* Paper_B38_AcidsBasesSalt_DataHandling_MotionTime_AlgebraicExpre_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B38_AcidsBasesSalt_DataHandling_MotionTime_AlgebraicExpre_Solutions.html"; sourceTree = "<group>"; };
+		FF8AC5B9190BF4765FADC236 /* Paper_B39_Soil_ComparingQuant_WastewaterStor_PerimeterArea_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B39_Soil_ComparingQuant_WastewaterStor_PerimeterArea_Questions.pdf"; sourceTree = "<group>"; };
+		67293F900CD7AD88A323D45B /* Paper_B39_Soil_ComparingQuant_WastewaterStor_PerimeterArea_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B39_Soil_ComparingQuant_WastewaterStor_PerimeterArea_Solutions.html"; sourceTree = "<group>"; };
+		E57316E615213F8B7CD3EFEB /* Paper_B40_Heat_ComparingQuant_Transportation_FractionsDecim_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B40_Heat_ComparingQuant_Transportation_FractionsDecim_Questions.pdf"; sourceTree = "<group>"; };
+		DCACCE02116821D39682A549 /* Paper_B40_Heat_ComparingQuant_Transportation_FractionsDecim_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B40_Heat_ComparingQuant_Transportation_FractionsDecim_Solutions.html"; sourceTree = "<group>"; };
+		F737C869DCCE74DA48BB45D0 /* Paper_B41_Forests_RespirationinO_TheTriangleits_RationalNumber_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B41_Forests_RespirationinO_TheTriangleits_RationalNumber_Questions.pdf"; sourceTree = "<group>"; };
+		76963DD182159E618E56BD63 /* Paper_B41_Forests_RespirationinO_TheTriangleits_RationalNumber_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B41_Forests_RespirationinO_TheTriangleits_RationalNumber_Solutions.html"; sourceTree = "<group>"; };
+		9D3ACD3BB4AEA734CED386FE /* Paper_B42_Integers_APeekBeyondthe_PhysicalChemic_WeatherClimate_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B42_Integers_APeekBeyondthe_PhysicalChemic_WeatherClimate_Questions.pdf"; sourceTree = "<group>"; };
+		A8735C91742E04B339C6DE61 /* Paper_B42_Integers_APeekBeyondthe_PhysicalChemic_WeatherClimate_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B42_Integers_APeekBeyondthe_PhysicalChemic_WeatherClimate_Solutions.html"; sourceTree = "<group>"; };
+		2BFA0EDE64AA30C1F1D033D0 /* Paper_B43_NutritioninAni_TheTriangleits_Light_LargeNumbers_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B43_NutritioninAni_TheTriangleits_Light_LargeNumbers_Questions.pdf"; sourceTree = "<group>"; };
+		278A239DCFFE5103887CD779 /* Paper_B43_NutritioninAni_TheTriangleits_Light_LargeNumbers_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B43_NutritioninAni_TheTriangleits_Light_LargeNumbers_Solutions.html"; sourceTree = "<group>"; };
+		E888DB0AC2AE95C55F692D73 /* Paper_B44_ElectricCurren_PerimeterArea_PhysicalChemic_RationalNumber_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B44_ElectricCurren_PerimeterArea_PhysicalChemic_RationalNumber_Questions.pdf"; sourceTree = "<group>"; };
+		3C8EF140F89B8311026E51D0 /* Paper_B44_ElectricCurren_PerimeterArea_PhysicalChemic_RationalNumber_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B44_ElectricCurren_PerimeterArea_PhysicalChemic_RationalNumber_Solutions.html"; sourceTree = "<group>"; };
+		95ECC3AC488835D71E44E946 /* Paper_B45_RespirationinO_Reproductionin_SimpleEquation_DataHandling_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B45_RespirationinO_Reproductionin_SimpleEquation_DataHandling_Questions.pdf"; sourceTree = "<group>"; };
+		1B6F3435FCDE566A39C88FB8 /* Paper_B45_RespirationinO_Reproductionin_SimpleEquation_DataHandling_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B45_RespirationinO_Reproductionin_SimpleEquation_DataHandling_Solutions.html"; sourceTree = "<group>"; };
+		BB908336B49072F216D7D119 /* Paper_B46_WeatherClimate_APeekBeyondthe_Forests_Symmetry_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B46_WeatherClimate_APeekBeyondthe_Forests_Symmetry_Questions.pdf"; sourceTree = "<group>"; };
+		E8B2A20768F740E7AFBD9413 /* Paper_B46_WeatherClimate_APeekBeyondthe_Forests_Symmetry_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B46_WeatherClimate_APeekBeyondthe_Forests_Symmetry_Solutions.html"; sourceTree = "<group>"; };
+		836359B54A204909BF0CCDAF /* Paper_B47_NutritioninPla_ComparingQuant_WindsStormsCyc_LinesAngles_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B47_NutritioninPla_ComparingQuant_WindsStormsCyc_LinesAngles_Questions.pdf"; sourceTree = "<group>"; };
+		28C0DFF6633C124021CF86A8 /* Paper_B47_NutritioninPla_ComparingQuant_WindsStormsCyc_LinesAngles_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B47_NutritioninPla_ComparingQuant_WindsStormsCyc_LinesAngles_Solutions.html"; sourceTree = "<group>"; };
+		232504823EF499ED9FCD5E20 /* Paper_B48_NutritioninAni_MotionTime_FractionsDecim_TheTriangleits_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B48_NutritioninAni_MotionTime_FractionsDecim_TheTriangleits_Questions.pdf"; sourceTree = "<group>"; };
+		AEAD676927E5C170F27657D1 /* Paper_B48_NutritioninAni_MotionTime_FractionsDecim_TheTriangleits_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B48_NutritioninAni_MotionTime_FractionsDecim_TheTriangleits_Solutions.html"; sourceTree = "<group>"; };
+		0D376E19DA9C8C194AAC3975 /* Paper_B49_ElectricCurren_APeekBeyondthe_WeatherClimate_Symmetry_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B49_ElectricCurren_APeekBeyondthe_WeatherClimate_Symmetry_Questions.pdf"; sourceTree = "<group>"; };
+		57580F483B648907FBBE72B9 /* Paper_B49_ElectricCurren_APeekBeyondthe_WeatherClimate_Symmetry_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B49_ElectricCurren_APeekBeyondthe_WeatherClimate_Symmetry_Solutions.html"; sourceTree = "<group>"; };
+		45D75F77DDE31D38228DC57B /* Paper_B50_NutritioninAni_ExponentsPower_WastewaterStor_LinesAngles_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B50_NutritioninAni_ExponentsPower_WastewaterStor_LinesAngles_Questions.pdf"; sourceTree = "<group>"; };
+		E2042C5B6549BB09334BAC9A /* Paper_B50_NutritioninAni_ExponentsPower_WastewaterStor_LinesAngles_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B50_NutritioninAni_ExponentsPower_WastewaterStor_LinesAngles_Solutions.html"; sourceTree = "<group>"; };
+		3221C3A8F8A436BC32947776 /* Paper_B51_PhysicalChemic_AlgebraicExpre_Forests_Integers_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B51_PhysicalChemic_AlgebraicExpre_Forests_Integers_Questions.pdf"; sourceTree = "<group>"; };
+		2A1807812063BAE1121986AB /* Paper_B51_PhysicalChemic_AlgebraicExpre_Forests_Integers_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B51_PhysicalChemic_AlgebraicExpre_Forests_Integers_Solutions.html"; sourceTree = "<group>"; };
+		7CDBA0A951010B6B053C6719 /* Paper_B52_Heat_ComparingQuant_RespirationinO_AlgebraicExpre_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B52_Heat_ComparingQuant_RespirationinO_AlgebraicExpre_Questions.pdf"; sourceTree = "<group>"; };
+		0499A8A865C0466E8E767DE1 /* Paper_B52_Heat_ComparingQuant_RespirationinO_AlgebraicExpre_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B52_Heat_ComparingQuant_RespirationinO_AlgebraicExpre_Solutions.html"; sourceTree = "<group>"; };
+		37A7308920A1BD69A11F6D26 /* Paper_B53_Transportation_LargeNumbers_WindsStormsCyc_PerimeterArea_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B53_Transportation_LargeNumbers_WindsStormsCyc_PerimeterArea_Questions.pdf"; sourceTree = "<group>"; };
+		F41DD28F326D933D048F8830 /* Paper_B53_Transportation_LargeNumbers_WindsStormsCyc_PerimeterArea_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B53_Transportation_LargeNumbers_WindsStormsCyc_PerimeterArea_Solutions.html"; sourceTree = "<group>"; };
+		ECFF21A1C89C2AB51A07BE68 /* Paper_B54_AcidsBasesSalt_FractionsDecim_Reproductionin_SimpleEquation_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B54_AcidsBasesSalt_FractionsDecim_Reproductionin_SimpleEquation_Questions.pdf"; sourceTree = "<group>"; };
+		24190114704BF2DAE901628D /* Paper_B54_AcidsBasesSalt_FractionsDecim_Reproductionin_SimpleEquation_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B54_AcidsBasesSalt_FractionsDecim_Reproductionin_SimpleEquation_Solutions.html"; sourceTree = "<group>"; };
+		2C4AB911A0BB5669E09E50EF /* Paper_B55_Soil_ExponentsPower_Heat_LinesAngles_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B55_Soil_ExponentsPower_Heat_LinesAngles_Questions.pdf"; sourceTree = "<group>"; };
+		DCBBAF3E04DE3B8768864EC5 /* Paper_B55_Soil_ExponentsPower_Heat_LinesAngles_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B55_Soil_ExponentsPower_Heat_LinesAngles_Solutions.html"; sourceTree = "<group>"; };
+		E8CE5599B6CAF346C17EC477 /* Paper_B56_ElectricCurren_ComparingQuant_Forests_DataHandling_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B56_ElectricCurren_ComparingQuant_Forests_DataHandling_Questions.pdf"; sourceTree = "<group>"; };
+		5635A8423AE925C958C60142 /* Paper_B56_ElectricCurren_ComparingQuant_Forests_DataHandling_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B56_ElectricCurren_ComparingQuant_Forests_DataHandling_Solutions.html"; sourceTree = "<group>"; };
+		44ECFD4748108D8CD1942E2A /* Paper_B57_Light_ComparingQuant_Soil_RationalNumber_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B57_Light_ComparingQuant_Soil_RationalNumber_Questions.pdf"; sourceTree = "<group>"; };
+		243F1F4626351C0ED3159598 /* Paper_B57_Light_ComparingQuant_Soil_RationalNumber_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B57_Light_ComparingQuant_Soil_RationalNumber_Solutions.html"; sourceTree = "<group>"; };
+		4D0552B3CF08788B625FD406 /* Paper_B58_NutritioninPla_Integers_MotionTime_TheTriangleits_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B58_NutritioninPla_Integers_MotionTime_TheTriangleits_Questions.pdf"; sourceTree = "<group>"; };
+		8B10A2E0C3097889A8E228F4 /* Paper_B58_NutritioninPla_Integers_MotionTime_TheTriangleits_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B58_NutritioninPla_Integers_MotionTime_TheTriangleits_Solutions.html"; sourceTree = "<group>"; };
+		50F94008AF14A4E596E32579 /* Paper_B59_Transportation_Heat_DataHandling_Symmetry_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B59_Transportation_Heat_DataHandling_Symmetry_Questions.pdf"; sourceTree = "<group>"; };
+		ABCEAA3FFEA9E06176BC35BB /* Paper_B59_Transportation_Heat_DataHandling_Symmetry_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B59_Transportation_Heat_DataHandling_Symmetry_Solutions.html"; sourceTree = "<group>"; };
+		66EFDEF3D0E405CFE4E3F49F /* Paper_B60_WastewaterStor_PhysicalChemic_LargeNumbers_AlgebraicExpre_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B60_WastewaterStor_PhysicalChemic_LargeNumbers_AlgebraicExpre_Questions.pdf"; sourceTree = "<group>"; };
+		390BFEB79A6411EDCF1BF185 /* Paper_B60_WastewaterStor_PhysicalChemic_LargeNumbers_AlgebraicExpre_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B60_WastewaterStor_PhysicalChemic_LargeNumbers_AlgebraicExpre_Solutions.html"; sourceTree = "<group>"; };
+		0633419192E5CE0202F490B2 /* Paper_B61_MotionTime_Heat_ComparingQuant_PerimeterArea_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B61_MotionTime_Heat_ComparingQuant_PerimeterArea_Questions.pdf"; sourceTree = "<group>"; };
+		60E98E0C0FAE0DFFFD3861C2 /* Paper_B61_MotionTime_Heat_ComparingQuant_PerimeterArea_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B61_MotionTime_Heat_ComparingQuant_PerimeterArea_Solutions.html"; sourceTree = "<group>"; };
+		9D3DFECF943FC2A06C506EA2 /* Paper_B62_Reproductionin_SimpleEquation_WindsStormsCyc_RationalNumber_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B62_Reproductionin_SimpleEquation_WindsStormsCyc_RationalNumber_Questions.pdf"; sourceTree = "<group>"; };
+		605EC60C3F0C04212B264CA5 /* Paper_B62_Reproductionin_SimpleEquation_WindsStormsCyc_RationalNumber_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B62_Reproductionin_SimpleEquation_WindsStormsCyc_RationalNumber_Solutions.html"; sourceTree = "<group>"; };
+		8160F79ED670EACFA972D1CA /* Paper_B63_RespirationinO_APeekBeyondthe_WeatherClimate_ExponentsPower_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Paper_B63_RespirationinO_APeekBeyondthe_WeatherClimate_ExponentsPower_Questions.pdf"; sourceTree = "<group>"; };
+		95792520B31442829D7D2582 /* Paper_B63_RespirationinO_APeekBeyondthe_WeatherClimate_ExponentsPower_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Paper_B63_RespirationinO_APeekBeyondthe_WeatherClimate_ExponentsPower_Solutions.html"; sourceTree = "<group>"; };
+		66F10698537B0891B71614CE /* REFERENCE_1x_Questions.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "REFERENCE_1x_Questions.pdf"; sourceTree = "<group>"; };
+		0EFB750515B89E21B5C6C03C /* REFERENCE_1x_Solutions.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "REFERENCE_1x_Solutions.html"; sourceTree = "<group>"; };
 		5C7F17B590EF6DA751E23E41 /* Contents.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "Contents.json"; sourceTree = "<group>"; };
 		69191026B2F9F250C1D2E9BD /* Achievement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Achievement.swift"; sourceTree = "<group>"; };
 		1398C27EBDAD6CF236DDB502 /* AdaptiveDifficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AdaptiveDifficulty.swift"; sourceTree = "<group>"; };
@@ -6345,6 +6607,7 @@
 		CB6AF4CB683F2F6E539BBDEB /* CrashLogSummaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CrashLogSummaryView.swift"; sourceTree = "<group>"; };
 		B967041D4856BD89936B3FB6 /* PomodoroState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PomodoroState.swift"; sourceTree = "<group>"; };
 		D9551456EA88A856A625EB5B /* StudyTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StudyTimerView.swift"; sourceTree = "<group>"; };
+		5470DFFFE9C63D8BCD6D1D84 /* BrutalSeriesPapersWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BrutalSeriesPapersWindow.swift"; sourceTree = "<group>"; };
 		C9BCD10752FE0F6A46EE282E /* MockTestReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MockTestReportView.swift"; sourceTree = "<group>"; };
 		FF0F65DCCD8A32A4EF8B010E /* MockTestRunState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MockTestRunState.swift"; sourceTree = "<group>"; };
 		B69C8ED5AC554879B086D718 /* MockTestRunnerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MockTestRunnerView.swift"; sourceTree = "<group>"; };
@@ -6411,6 +6674,7 @@
 		B6436FB277692897E8A5E725 /* BossQuizMigrationRatchetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BossQuizMigrationRatchetTests.swift"; sourceTree = "<group>"; };
 		07479424B05C83E357662480 /* BossQuizPickMainActorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BossQuizPickMainActorTests.swift"; sourceTree = "<group>"; };
 		F995D583179480596084E5C9 /* BossQuizSRSWiringTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BossQuizSRSWiringTests.swift"; sourceTree = "<group>"; };
+		55080241C2B4E05CCF05FA82 /* BrutalSeriesPapersCatalogTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BrutalSeriesPapersCatalogTests.swift"; sourceTree = "<group>"; };
 		192F570A0F0B902A0BD9210D /* Ch2_19_StructuralRatchetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Ch2_19_StructuralRatchetTests.swift"; sourceTree = "<group>"; };
 		9AA33BC827B658DD27418AD8 /* ChapterContentTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChapterContentTests.swift"; sourceTree = "<group>"; };
 		5619A9A330B9B0AD0D0CF9C7 /* ChapterGlossaryCTARoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChapterGlossaryCTARoutingTests.swift"; sourceTree = "<group>"; };
@@ -6662,6 +6926,7 @@
 				EE0FA492323D590AFB011A9E,
 				2F31DD827D985B619D20CD18,
 				F190155F8AE7B340F2B8B1CC,
+				100771AE118EDBB1A56C89CE,
 			);
 			path = "Resources";
 			sourceTree = "<group>";
@@ -8424,6 +8689,143 @@
 				ECD0916CC0210824B2615292,
 			);
 			path = "BossChallengePapers";
+			sourceTree = "<group>";
+		};
+		100771AE118EDBB1A56C89CE /* BrutalSeries */ = {
+			isa = PBXGroup;
+			children = (
+				9971E68644E4F13C79BFB852,
+				11ADFAE70C9333E15DF22EA3,
+				FFB35F4E5C900B09F6FBE368,
+				6824603DA1D238A5E15A0551,
+				71940BBBD1DFFFBFC4CEA2BF,
+				1F8AE556F893121CC9B36217,
+				8BEEBE28484174971A8C4117,
+				76B4F8C474A847C929BC1379,
+				F15895BFF96ADBDB02079C56,
+				4ED821C49319FA945081966B,
+				FF9A85769BAB8395923BC961,
+				76452A6A204EAF6015F0C9E5,
+				CFB3CC396411B69B22C24C10,
+				E72E7C530B075D9DC472C047,
+				B4BE0B0F7A1A3CE9ECA4FEAB,
+				A410BD741D70E441393C2E18,
+				7832C33EDA8DB76137033492,
+				97D578895DE7B16216AC9A7A,
+				B6F9A2FF0C6291379E1AC038,
+				892C6383FBE612129A9EA4A4,
+				37470D404771A16DD3691A12,
+				161434DAB8418F1DC69DF01E,
+				5DE99ADDE161A8AC647C8F0A,
+				5A263200FC795E08C821D7EF,
+				5CD914C6863039A362A13688,
+				0B93868C60705E52A850959F,
+				75435DEC8F9D4A1BEFDA9193,
+				FFBE761144F7D76A0E58145A,
+				CD55557CDCAAE3F0E53D3E3F,
+				A64D79F264FC744817D50B64,
+				110C93CA8DCDF0950ED253B1,
+				CB0BE6CCD6428EEB6104CD11,
+				0BA3C2B580E3FB1586F1956A,
+				67557D3206610C50DAC2F3CB,
+				093F8520DA6E8766A356C8C2,
+				E366FF20F4739865FF4C4395,
+				494992DFCA85469D00300C27,
+				B14D5B004A36C2DCBE46771D,
+				078C31E6DB062F90D0FF36C1,
+				7E19EAE5CD379E3092FE093F,
+				40FEADD5C8E3BF474740E0E3,
+				C493D0A3330D7AE37E7F81DC,
+				5FD8B0BA1782919EAFDB1350,
+				BC7DF8F284C6A9B4B0BCB221,
+				9AB16340CAE2A007D6099DE4,
+				6F857C729907A35319754C4D,
+				CDE0851A45E9B9A89284E18D,
+				E9765E426632425F756A5765,
+				D5194A72BB664D6071B7F3A7,
+				CBC6781033DBFF087FAAC5A4,
+				C7AE237843840BD225D184CA,
+				7F538F9CF46BA1E9483E1648,
+				9A69BB8E9841C14B13E031E7,
+				6E672A6820AAA4F8BF951ECB,
+				BD31AF75454D718AD64A0062,
+				E5DB4CD6684B717C4B9F0FDB,
+				5E4EEBFB40A6FD08C3760DFE,
+				77869431ECCC68DF9D3769F6,
+				2A99A6F3167348BBF67EB93F,
+				7B3D9BAA259862D6934C9451,
+				5C75C471A525DA9F2F1940D0,
+				D552C3B2902EF46FABB11194,
+				5DE7D8EB4C1AB9DC1631272E,
+				B766CD8F4741BAE39B491788,
+				0673A0035A711793E8BFC32A,
+				8E85C6B9D3C0A25440BE2446,
+				2BA4785F0229F31F214BBBC0,
+				560C574C1EF1CD6F494FD5CE,
+				A457A65CE9AB1E111B05809A,
+				B63C8538DFAFD2FE85D97D0E,
+				6FE14E14A62420872A20A082,
+				4D37F76602175C2CF431AD42,
+				BB8CC6A75235AD07FB39B173,
+				B4F4A7B6AEE62C15CD3CAE20,
+				807BAA26D1377319A41976DC,
+				FE7DA76B9B528B02B6DF14BC,
+				C52D0781AC83C849BEF690D4,
+				6716EC85076E319640A30D60,
+				FF8AC5B9190BF4765FADC236,
+				67293F900CD7AD88A323D45B,
+				E57316E615213F8B7CD3EFEB,
+				DCACCE02116821D39682A549,
+				F737C869DCCE74DA48BB45D0,
+				76963DD182159E618E56BD63,
+				9D3ACD3BB4AEA734CED386FE,
+				A8735C91742E04B339C6DE61,
+				2BFA0EDE64AA30C1F1D033D0,
+				278A239DCFFE5103887CD779,
+				E888DB0AC2AE95C55F692D73,
+				3C8EF140F89B8311026E51D0,
+				95ECC3AC488835D71E44E946,
+				1B6F3435FCDE566A39C88FB8,
+				BB908336B49072F216D7D119,
+				E8B2A20768F740E7AFBD9413,
+				836359B54A204909BF0CCDAF,
+				28C0DFF6633C124021CF86A8,
+				232504823EF499ED9FCD5E20,
+				AEAD676927E5C170F27657D1,
+				0D376E19DA9C8C194AAC3975,
+				57580F483B648907FBBE72B9,
+				45D75F77DDE31D38228DC57B,
+				E2042C5B6549BB09334BAC9A,
+				3221C3A8F8A436BC32947776,
+				2A1807812063BAE1121986AB,
+				7CDBA0A951010B6B053C6719,
+				0499A8A865C0466E8E767DE1,
+				37A7308920A1BD69A11F6D26,
+				F41DD28F326D933D048F8830,
+				ECFF21A1C89C2AB51A07BE68,
+				24190114704BF2DAE901628D,
+				2C4AB911A0BB5669E09E50EF,
+				DCBBAF3E04DE3B8768864EC5,
+				E8CE5599B6CAF346C17EC477,
+				5635A8423AE925C958C60142,
+				44ECFD4748108D8CD1942E2A,
+				243F1F4626351C0ED3159598,
+				4D0552B3CF08788B625FD406,
+				8B10A2E0C3097889A8E228F4,
+				50F94008AF14A4E596E32579,
+				ABCEAA3FFEA9E06176BC35BB,
+				66EFDEF3D0E405CFE4E3F49F,
+				390BFEB79A6411EDCF1BF185,
+				0633419192E5CE0202F490B2,
+				60E98E0C0FAE0DFFFD3861C2,
+				9D3DFECF943FC2A06C506EA2,
+				605EC60C3F0C04212B264CA5,
+				8160F79ED670EACFA972D1CA,
+				95792520B31442829D7D2582,
+				66F10698537B0891B71614CE,
+				0EFB750515B89E21B5C6C03C,
+			);
+			path = "BrutalSeries";
 			sourceTree = "<group>";
 		};
 		2F31DD827D985B619D20CD18 /* TestPapers */ = {
@@ -10877,6 +11279,7 @@
 				37BFDFE1B7072E8646429E37,
 				A363EAC6C78897B370A46A92,
 				9C195ABEF661C838B05201F1,
+				907D51DC65274F1AB73A88F3,
 				B51F7409F3241FA00AF99ADC,
 				62D550CBF4082CCE5D9C37B6,
 				4C283EA74E060AF115476C06,
@@ -10902,6 +11305,14 @@
 				962A10D20F7AF93421EBA9D1,
 			);
 			path = "BossChallenge";
+			sourceTree = "<group>";
+		};
+		907D51DC65274F1AB73A88F3 /* BrutalSeries */ = {
+			isa = PBXGroup;
+			children = (
+				5470DFFFE9C63D8BCD6D1D84,
+			);
+			path = "BrutalSeries";
 			sourceTree = "<group>";
 		};
 		09DDCB9C63DEDCB2542299A1 /* Components */ = {
@@ -11065,6 +11476,7 @@
 				B6436FB277692897E8A5E725,
 				07479424B05C83E357662480,
 				F995D583179480596084E5C9,
+				55080241C2B4E05CCF05FA82,
 				192F570A0F0B902A0BD9210D,
 				9AA33BC827B658DD27418AD8,
 				5619A9A330B9B0AD0D0CF9C7,
@@ -13890,6 +14302,136 @@
 				95C44E5DACA6CCE6B11AEE8F /* Paper_55_Heat_Respiration_AlgExpr_DataHandling_Questions.md in Resources */,
 				FA4B2E576BF98C3C0F70FD42 /* Paper_55_Heat_Respiration_AlgExpr_DataHandling_Solutions.html in Resources */,
 				4D1332B55E1E09238CB451CE /* QUESTION_INDEX.json in Resources */,
+				8AFC22C039442FAFC5DEAC72 /* BRUTAL_INDEX.json in Resources */,
+				637B9B1379F2BE919AA48348 /* MANIFEST.md in Resources */,
+				CCDBA9F2940EDC7D45D80B22 /* Paper_B01_Heat_ComparingQuant_ElectricCurren_SimpleEquation_Questions.pdf in Resources */,
+				94994D93C6612B46EAD7D3F4 /* Paper_B01_Heat_ComparingQuant_ElectricCurren_SimpleEquation_Solutions.html in Resources */,
+				4B7D5E89B4144B5DC94CD81F /* Paper_B02_NutritioninAni_AcidsBasesSalt_FractionsDecim_TheTriangleits_Questions.pdf in Resources */,
+				6A5C39F0362E540313F7B7A7 /* Paper_B02_NutritioninAni_AcidsBasesSalt_FractionsDecim_TheTriangleits_Solutions.html in Resources */,
+				5A6DB4E10E30CA973F64FB50 /* Paper_B03_NutritioninPla_Integers_PhysicalChemic_PerimeterArea_Questions.pdf in Resources */,
+				D2AB828B14E2C444842DE201 /* Paper_B03_NutritioninPla_Integers_PhysicalChemic_PerimeterArea_Solutions.html in Resources */,
+				BF140DD46EDF360923B60666 /* Paper_B04_Light_RespirationinO_AlgebraicExpre_ExponentsPower_Questions.pdf in Resources */,
+				FE6DBC2E5F3ADD10ACB7A14B /* Paper_B04_Light_RespirationinO_AlgebraicExpre_ExponentsPower_Solutions.html in Resources */,
+				AA13F6FA51A09248E19A74E7 /* Paper_B05_WeatherClimate_Transportation_DataHandling_LinesAngles_Questions.pdf in Resources */,
+				54EA08B3BF74CE6750C81DFA /* Paper_B05_WeatherClimate_Transportation_DataHandling_LinesAngles_Solutions.html in Resources */,
+				076C23800841D40E101C5A46 /* Paper_B06_Soil_RationalNumber_WindsStormsCyc_Symmetry_Questions.pdf in Resources */,
+				996B2BDD87F50650CEF5B03A /* Paper_B06_Soil_RationalNumber_WindsStormsCyc_Symmetry_Solutions.html in Resources */,
+				B0455187923F25CBF95DF010 /* Paper_B07_Reproductionin_ComparingQuant_Forests_PerimeterArea_Questions.pdf in Resources */,
+				C56E92977F8BE2801A9C5BBD /* Paper_B07_Reproductionin_ComparingQuant_Forests_PerimeterArea_Solutions.html in Resources */,
+				8AA36E0A728B856980F8B410 /* Paper_B08_MotionTime_LargeNumbers_WastewaterStor_APeekBeyondthe_Questions.pdf in Resources */,
+				80C99EA47C5A5D03F4D5FCC7 /* Paper_B08_MotionTime_LargeNumbers_WastewaterStor_APeekBeyondthe_Solutions.html in Resources */,
+				4F7AA50BD69A9C158BAB8A62 /* Paper_B09_Heat_AcidsBasesSalt_Integers_RationalNumber_Questions.pdf in Resources */,
+				EBE5A93F4EFF8E20ABC8880C /* Paper_B09_Heat_AcidsBasesSalt_Integers_RationalNumber_Solutions.html in Resources */,
+				D35D772CA23B4907E4CA4874 /* Paper_B10_NutritioninAni_SimpleEquation_ElectricCurren_FractionsDecim_Questions.pdf in Resources */,
+				4D259C4C1F6ADD0EBDBA2408 /* Paper_B10_NutritioninAni_SimpleEquation_ElectricCurren_FractionsDecim_Solutions.html in Resources */,
+				FFDA09C5D3C5AD1F3BEF7FA5 /* Paper_B11_Light_DataHandling_WastewaterStor_TheTriangleits_Questions.pdf in Resources */,
+				5C8147360F48D076541CB6E2 /* Paper_B11_Light_DataHandling_WastewaterStor_TheTriangleits_Solutions.html in Resources */,
+				064ED2305383CC72D6162596 /* Paper_B12_PhysicalChemic_ExponentsPower_Transportation_Symmetry_Questions.pdf in Resources */,
+				3B1C7FE4A783D0C1B380C74B /* Paper_B12_PhysicalChemic_ExponentsPower_Transportation_Symmetry_Solutions.html in Resources */,
+				0D9E2B8ACF66F25990CD67A6 /* Paper_B13_RespirationinO_LinesAngles_Soil_AlgebraicExpre_Questions.pdf in Resources */,
+				8AD3D3F7BFA559276605A2C3 /* Paper_B13_RespirationinO_LinesAngles_Soil_AlgebraicExpre_Solutions.html in Resources */,
+				2330F3F7B714A0DEC92D5685 /* Paper_B14_WeatherClimate_LargeNumbers_Reproductionin_APeekBeyondthe_Questions.pdf in Resources */,
+				2066572462A176ADBDA59715 /* Paper_B14_WeatherClimate_LargeNumbers_Reproductionin_APeekBeyondthe_Solutions.html in Resources */,
+				1EC055B50E5F3D9F5958F87D /* Paper_B15_WindsStormsCyc_Integers_MotionTime_AlgebraicExpre_Questions.pdf in Resources */,
+				71207FDBA4221EB888F092E8 /* Paper_B15_WindsStormsCyc_Integers_MotionTime_AlgebraicExpre_Solutions.html in Resources */,
+				88E06F38EED0A35D1158D389 /* Paper_B16_NutritioninPla_SimpleEquation_Forests_ComparingQuant_Questions.pdf in Resources */,
+				640F19D59991CD7CD47366A2 /* Paper_B16_NutritioninPla_SimpleEquation_Forests_ComparingQuant_Solutions.html in Resources */,
+				9A112A4511A1402485A81F65 /* Paper_B17_NutritioninAni_ExponentsPower_Transportation_PerimeterArea_Questions.pdf in Resources */,
+				9CBF240089D681FB98DD1FA7 /* Paper_B17_NutritioninAni_ExponentsPower_Transportation_PerimeterArea_Solutions.html in Resources */,
+				78DFEBE46269BEA64EB5E9A6 /* Paper_B18_ElectricCurren_AcidsBasesSalt_RationalNumber_LinesAngles_Questions.pdf in Resources */,
+				9F7C9B113B9F5AB3D5F912DF /* Paper_B18_ElectricCurren_AcidsBasesSalt_RationalNumber_LinesAngles_Solutions.html in Resources */,
+				B67D1349F176E171DDCD285D /* Paper_B19_Heat_WastewaterStor_DataHandling_FractionsDecim_Questions.pdf in Resources */,
+				3FA05E84A365379E2AF23DA4 /* Paper_B19_Heat_WastewaterStor_DataHandling_FractionsDecim_Solutions.html in Resources */,
+				431915EA691766711FC42B4B /* Paper_B20_Reproductionin_TheTriangleits_Light_Symmetry_Questions.pdf in Resources */,
+				BCDF137ADC0EE7B3DE347281 /* Paper_B20_Reproductionin_TheTriangleits_Light_Symmetry_Solutions.html in Resources */,
+				BBA6FD272224E50CDE2685D8 /* Paper_B21_Forests_LargeNumbers_WeatherClimate_APeekBeyondthe_Questions.pdf in Resources */,
+				05DB8A318CEC4BAAA85F5969 /* Paper_B21_Forests_LargeNumbers_WeatherClimate_APeekBeyondthe_Solutions.html in Resources */,
+				3FC3B3133C40EACACE2AAA69 /* Paper_B22_Heat_NutritioninPla_RationalNumber_DataHandling_Questions.pdf in Resources */,
+				F8AB3FF89BE17F5C5F948B44 /* Paper_B22_Heat_NutritioninPla_RationalNumber_DataHandling_Solutions.html in Resources */,
+				B4356FA704F3EEBD67B1AAC6 /* Paper_B23_ElectricCurren_Soil_FractionsDecim_TheTriangleits_Questions.pdf in Resources */,
+				4D3108EEFDD857C2F48F4786 /* Paper_B23_ElectricCurren_Soil_FractionsDecim_TheTriangleits_Solutions.html in Resources */,
+				D5129EB5C2BEE3BF49E5BDFF /* Paper_B24_PhysicalChemic_ComparingQuant_RespirationinO_ExponentsPower_Questions.pdf in Resources */,
+				A6BC630E571EE9CB0C8AD96C /* Paper_B24_PhysicalChemic_ComparingQuant_RespirationinO_ExponentsPower_Solutions.html in Resources */,
+				0AD69B9CD3F52065C6835F7A /* Paper_B25_MotionTime_WindsStormsCyc_LargeNumbers_Symmetry_Questions.pdf in Resources */,
+				28E70474328DDD3FEA80A52B /* Paper_B25_MotionTime_WindsStormsCyc_LargeNumbers_Symmetry_Solutions.html in Resources */,
+				77E345D0F19F91861C51718D /* Paper_B26_Light_Soil_SimpleEquation_APeekBeyondthe_Questions.pdf in Resources */,
+				D773D5E97FDAD8866D1EDB97 /* Paper_B26_Light_Soil_SimpleEquation_APeekBeyondthe_Solutions.html in Resources */,
+				895054CCFD311038692FC716 /* Paper_B27_MotionTime_ComparingQuant_Heat_SimpleEquation_Questions.pdf in Resources */,
+				1A15F209ADC2DD148CD53F3F /* Paper_B27_MotionTime_ComparingQuant_Heat_SimpleEquation_Solutions.html in Resources */,
+				12E4BC8F465C620C1DE4B354 /* Paper_B28_WindsStormsCyc_RespirationinO_PerimeterArea_LinesAngles_Questions.pdf in Resources */,
+				9F2FB227ABE05C2E02F2A965 /* Paper_B28_WindsStormsCyc_RespirationinO_PerimeterArea_LinesAngles_Solutions.html in Resources */,
+				6C05167390F0143416388A8D /* Paper_B29_AcidsBasesSalt_AlgebraicExpre_WastewaterStor_Integers_Questions.pdf in Resources */,
+				3009496B1C650B41ACFC246F /* Paper_B29_AcidsBasesSalt_AlgebraicExpre_WastewaterStor_Integers_Solutions.html in Resources */,
+				02D1D4F354FAD15427A91DC8 /* Paper_B30_WeatherClimate_Reproductionin_RationalNumber_PerimeterArea_Questions.pdf in Resources */,
+				7C83F17243B6839E72DFE837 /* Paper_B30_WeatherClimate_Reproductionin_RationalNumber_PerimeterArea_Solutions.html in Resources */,
+				1AEF6114563407C5E7A48708 /* Paper_B31_Transportation_SimpleEquation_AcidsBasesSalt_ExponentsPower_Questions.pdf in Resources */,
+				D4ACDBA63F730E213FB00A57 /* Paper_B31_Transportation_SimpleEquation_AcidsBasesSalt_ExponentsPower_Solutions.html in Resources */,
+				D36EA11362184188CDCADFBA /* Paper_B32_WindsStormsCyc_ComparingQuant_Soil_ExponentsPower_Questions.pdf in Resources */,
+				005FE37056255FFAD69F4645 /* Paper_B32_WindsStormsCyc_ComparingQuant_Soil_ExponentsPower_Solutions.html in Resources */,
+				ACB51A72B47CEFEE4A0A1109 /* Paper_B33_NutritioninAni_Symmetry_Forests_AlgebraicExpre_Questions.pdf in Resources */,
+				FB1C51B52950F78F98191474 /* Paper_B33_NutritioninAni_Symmetry_Forests_AlgebraicExpre_Solutions.html in Resources */,
+				CD176168A9000C7298B2CE87 /* Paper_B34_Reproductionin_LinesAngles_WastewaterStor_ComparingQuant_Questions.pdf in Resources */,
+				2230451842996DE079C1BDCB /* Paper_B34_Reproductionin_LinesAngles_WastewaterStor_ComparingQuant_Solutions.html in Resources */,
+				810CC73037FB5ADF9AF72B60 /* Paper_B35_NutritioninPla_FractionsDecim_PhysicalChemic_DataHandling_Questions.pdf in Resources */,
+				B30057F990DD693646F9914B /* Paper_B35_NutritioninPla_FractionsDecim_PhysicalChemic_DataHandling_Solutions.html in Resources */,
+				B5D257EB03BFEFB2C0EE19D3 /* Paper_B36_Light_Integers_Transportation_Symmetry_Questions.pdf in Resources */,
+				4E8F8211F6AF352DAFFCC063 /* Paper_B36_Light_Integers_Transportation_Symmetry_Solutions.html in Resources */,
+				0E835F16F13C75C1275F11C4 /* Paper_B37_NutritioninPla_LinesAngles_ElectricCurren_LargeNumbers_Questions.pdf in Resources */,
+				37C9D15CF3484FF65C4A60CE /* Paper_B37_NutritioninPla_LinesAngles_ElectricCurren_LargeNumbers_Solutions.html in Resources */,
+				B4BC6D8862F62581399B7DF1 /* Paper_B38_AcidsBasesSalt_DataHandling_MotionTime_AlgebraicExpre_Questions.pdf in Resources */,
+				4588C22CD54B123D7E49D666 /* Paper_B38_AcidsBasesSalt_DataHandling_MotionTime_AlgebraicExpre_Solutions.html in Resources */,
+				EDEE1EF0CB42308C9471D9B7 /* Paper_B39_Soil_ComparingQuant_WastewaterStor_PerimeterArea_Questions.pdf in Resources */,
+				66920B5CC4E70C7B76307475 /* Paper_B39_Soil_ComparingQuant_WastewaterStor_PerimeterArea_Solutions.html in Resources */,
+				722C6D41C0C579D8E62052A4 /* Paper_B40_Heat_ComparingQuant_Transportation_FractionsDecim_Questions.pdf in Resources */,
+				B385F9AA8BDAF8027C2110E0 /* Paper_B40_Heat_ComparingQuant_Transportation_FractionsDecim_Solutions.html in Resources */,
+				5792F91204FC201A1DC0963D /* Paper_B41_Forests_RespirationinO_TheTriangleits_RationalNumber_Questions.pdf in Resources */,
+				75DEA6833127D0B83C5EBA07 /* Paper_B41_Forests_RespirationinO_TheTriangleits_RationalNumber_Solutions.html in Resources */,
+				4CB35D5CE6357FE2F9894582 /* Paper_B42_Integers_APeekBeyondthe_PhysicalChemic_WeatherClimate_Questions.pdf in Resources */,
+				2C4D6A7B3A29518449C6BDA5 /* Paper_B42_Integers_APeekBeyondthe_PhysicalChemic_WeatherClimate_Solutions.html in Resources */,
+				2D589D8E9A5EBD9D2640F8EC /* Paper_B43_NutritioninAni_TheTriangleits_Light_LargeNumbers_Questions.pdf in Resources */,
+				1FA63073F8572C938ED03975 /* Paper_B43_NutritioninAni_TheTriangleits_Light_LargeNumbers_Solutions.html in Resources */,
+				F67608E37201D02B4611692C /* Paper_B44_ElectricCurren_PerimeterArea_PhysicalChemic_RationalNumber_Questions.pdf in Resources */,
+				39FA6D39BAFF2BDDA596EF0D /* Paper_B44_ElectricCurren_PerimeterArea_PhysicalChemic_RationalNumber_Solutions.html in Resources */,
+				84FC7A3F9BE44866CE1D3078 /* Paper_B45_RespirationinO_Reproductionin_SimpleEquation_DataHandling_Questions.pdf in Resources */,
+				9A8414B59573952EFCF9CAD7 /* Paper_B45_RespirationinO_Reproductionin_SimpleEquation_DataHandling_Solutions.html in Resources */,
+				B46E910A74033DD9D4F4BB28 /* Paper_B46_WeatherClimate_APeekBeyondthe_Forests_Symmetry_Questions.pdf in Resources */,
+				185074197FB11B8020F29652 /* Paper_B46_WeatherClimate_APeekBeyondthe_Forests_Symmetry_Solutions.html in Resources */,
+				8B9879F903268188A95E0A45 /* Paper_B47_NutritioninPla_ComparingQuant_WindsStormsCyc_LinesAngles_Questions.pdf in Resources */,
+				F076C2E9B6002BF96A888F2D /* Paper_B47_NutritioninPla_ComparingQuant_WindsStormsCyc_LinesAngles_Solutions.html in Resources */,
+				0A75A87867FF48DF2FB1C949 /* Paper_B48_NutritioninAni_MotionTime_FractionsDecim_TheTriangleits_Questions.pdf in Resources */,
+				9C49D0B442161AFACA138DE1 /* Paper_B48_NutritioninAni_MotionTime_FractionsDecim_TheTriangleits_Solutions.html in Resources */,
+				34FBEEFABA3E6EE1FE44C273 /* Paper_B49_ElectricCurren_APeekBeyondthe_WeatherClimate_Symmetry_Questions.pdf in Resources */,
+				4D8ACA1DB5242D659DA46CCD /* Paper_B49_ElectricCurren_APeekBeyondthe_WeatherClimate_Symmetry_Solutions.html in Resources */,
+				F0EE677CF1F789260BA9A713 /* Paper_B50_NutritioninAni_ExponentsPower_WastewaterStor_LinesAngles_Questions.pdf in Resources */,
+				E62955A2198027A19551F2C3 /* Paper_B50_NutritioninAni_ExponentsPower_WastewaterStor_LinesAngles_Solutions.html in Resources */,
+				8FD5C0C43DD2D183A8C28BCC /* Paper_B51_PhysicalChemic_AlgebraicExpre_Forests_Integers_Questions.pdf in Resources */,
+				2BB65BC195F0F6D82314672C /* Paper_B51_PhysicalChemic_AlgebraicExpre_Forests_Integers_Solutions.html in Resources */,
+				01E2F703F63E3CD5F0A1F59D /* Paper_B52_Heat_ComparingQuant_RespirationinO_AlgebraicExpre_Questions.pdf in Resources */,
+				598496C5A079D380611F9FC1 /* Paper_B52_Heat_ComparingQuant_RespirationinO_AlgebraicExpre_Solutions.html in Resources */,
+				6789981699C964C9080D0CF2 /* Paper_B53_Transportation_LargeNumbers_WindsStormsCyc_PerimeterArea_Questions.pdf in Resources */,
+				75446CD254995C71DE41EB0A /* Paper_B53_Transportation_LargeNumbers_WindsStormsCyc_PerimeterArea_Solutions.html in Resources */,
+				028AEE3F48F697A3E0BD554C /* Paper_B54_AcidsBasesSalt_FractionsDecim_Reproductionin_SimpleEquation_Questions.pdf in Resources */,
+				854B428C54ACD2E326E7B7B0 /* Paper_B54_AcidsBasesSalt_FractionsDecim_Reproductionin_SimpleEquation_Solutions.html in Resources */,
+				F395C7F9143C78ED419D87E8 /* Paper_B55_Soil_ExponentsPower_Heat_LinesAngles_Questions.pdf in Resources */,
+				6D232A273DDC875C4B6F656B /* Paper_B55_Soil_ExponentsPower_Heat_LinesAngles_Solutions.html in Resources */,
+				9F94DED0C0FFC72E41F1507D /* Paper_B56_ElectricCurren_ComparingQuant_Forests_DataHandling_Questions.pdf in Resources */,
+				F5E950E62F4F5B9DB472217B /* Paper_B56_ElectricCurren_ComparingQuant_Forests_DataHandling_Solutions.html in Resources */,
+				5A171DC9D751AD728EBAE7DE /* Paper_B57_Light_ComparingQuant_Soil_RationalNumber_Questions.pdf in Resources */,
+				918C51F90B1CE4C506292F8F /* Paper_B57_Light_ComparingQuant_Soil_RationalNumber_Solutions.html in Resources */,
+				E6A680B8DB53C7160614A7B8 /* Paper_B58_NutritioninPla_Integers_MotionTime_TheTriangleits_Questions.pdf in Resources */,
+				E296DCABF4BC68AA9F1520DC /* Paper_B58_NutritioninPla_Integers_MotionTime_TheTriangleits_Solutions.html in Resources */,
+				9AAE5A20A4AF867CD7BD8B20 /* Paper_B59_Transportation_Heat_DataHandling_Symmetry_Questions.pdf in Resources */,
+				B12E467277E33AD6C38AEA62 /* Paper_B59_Transportation_Heat_DataHandling_Symmetry_Solutions.html in Resources */,
+				DD9E6C923EF4B8FF2CFA03AD /* Paper_B60_WastewaterStor_PhysicalChemic_LargeNumbers_AlgebraicExpre_Questions.pdf in Resources */,
+				DB18017AEF3EDDB51F98EEF9 /* Paper_B60_WastewaterStor_PhysicalChemic_LargeNumbers_AlgebraicExpre_Solutions.html in Resources */,
+				E83CD0A20F47B9422CA0F3A3 /* Paper_B61_MotionTime_Heat_ComparingQuant_PerimeterArea_Questions.pdf in Resources */,
+				18B49563CDE8ACAC75F90B87 /* Paper_B61_MotionTime_Heat_ComparingQuant_PerimeterArea_Solutions.html in Resources */,
+				8D9E414916FEE8E8C1D66BBA /* Paper_B62_Reproductionin_SimpleEquation_WindsStormsCyc_RationalNumber_Questions.pdf in Resources */,
+				1281B42AC28C69BEE5C6AD1B /* Paper_B62_Reproductionin_SimpleEquation_WindsStormsCyc_RationalNumber_Solutions.html in Resources */,
+				AC16248F7B9A7FC2F68539DA /* Paper_B63_RespirationinO_APeekBeyondthe_WeatherClimate_ExponentsPower_Questions.pdf in Resources */,
+				97740DFD2E3FE0AC4361F9EE /* Paper_B63_RespirationinO_APeekBeyondthe_WeatherClimate_ExponentsPower_Solutions.html in Resources */,
+				508339D19A5EACF8B229BBF6 /* REFERENCE_1x_Questions.pdf in Resources */,
+				8BE69B2BB0057D78F4521A50 /* REFERENCE_1x_Solutions.html in Resources */,
 				CF6289FBCF676858C99ED670 /* Contents.json in Resources */,
 				9AE05997509D9842F29172EB /* maths_class7.json in Resources */,
 				9103989C181D8156191FD30D /* sanskrit_class7.json in Resources */,
@@ -14404,6 +14946,7 @@
 				2FCCE5B9BA611A926D0B5636 /* CrashLogSummaryView.swift in Sources */,
 				5DF000C802B386425E6DF252 /* PomodoroState.swift in Sources */,
 				A41F851D58E711568E79576C /* StudyTimerView.swift in Sources */,
+				683203208C12DB73FAA1190C /* BrutalSeriesPapersWindow.swift in Sources */,
 				FBA61AE89D81494188EBFDEF /* MockTestReportView.swift in Sources */,
 				E34634862BE9473C2C91F332 /* MockTestRunState.swift in Sources */,
 				248515529280A3F59C47AA7F /* MockTestRunnerView.swift in Sources */,
@@ -14476,6 +15019,7 @@
 				F76E46FCDF00F37C66AF6174 /* BossQuizMigrationRatchetTests.swift in Sources */,
 				96E7ABACD0327903687FCDFF /* BossQuizPickMainActorTests.swift in Sources */,
 				1E001F5E3AEC3F39504B5E27 /* BossQuizSRSWiringTests.swift in Sources */,
+				8DAF0DCE8E9ED8118BF968B6 /* BrutalSeriesPapersCatalogTests.swift in Sources */,
 				34AA5C7CB867CF898D51DF06 /* Ch2_19_StructuralRatchetTests.swift in Sources */,
 				3C390B0BDE7AC1C31792CAB5 /* ChapterContentTests.swift in Sources */,
 				60ECAC529025888434AC6147 /* ChapterGlossaryCTARoutingTests.swift in Sources */,

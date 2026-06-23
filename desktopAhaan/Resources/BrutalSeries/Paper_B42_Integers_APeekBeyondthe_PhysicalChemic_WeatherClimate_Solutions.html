@@ -1,0 +1,1874 @@
+<!doctype html><html><head><meta charset='utf-8'><title>Brutal Practice Paper B42</title><style>
+body{font-family:-apple-system,Segoe UI,Roboto,Arial,sans-serif;max-width:880px;margin:0 auto;padding:26px;color:#222;line-height:1.55;background:#fff}
+h1{color:#5a1414;margin-bottom:2px;font-size:24px}.sub{color:#666;margin:0 0 14px}
+.q{border:1px solid #e7e7e7;border-radius:12px;padding:16px 18px;margin:16px 0;box-shadow:0 1px 3px rgba(0,0,0,.05)}
+.qn{font-weight:700;font-size:16px;margin:0 0 8px}.tag{font-size:11px;color:#fff;background:#5a1414;border-radius:10px;padding:2px 8px;margin-left:6px}
+.opt{padding:3px 10px;margin:3px 0;border-radius:7px;background:#f6f6f6}.opt.correct{background:#e3f5e3;border:1px solid #56a957;font-weight:700}
+.idea{background:#fff7e6;border-left:4px solid #e0a106;padding:8px 12px;border-radius:6px;margin:10px 0}
+.steps{background:#eef4ff;border-left:4px solid #3b6fd6;padding:8px 12px 8px 30px;border-radius:6px;margin:10px 0}.steps li{margin:3px 0}
+.ans{background:#e3f5e3;border-left:4px solid #56a957;padding:8px 12px;border-radius:6px;margin:10px 0;font-weight:700}
+.trap{background:#fdecec;border-left:4px solid #d24a4a;padding:8px 12px;border-radius:6px;margin:10px 0}
+.use{background:#eef9f1;border-left:4px solid #2f9e6f;padding:8px 12px;border-radius:6px;margin:10px 0}
+.lbl{font-weight:700;font-size:12px;letter-spacing:.4px;text-transform:uppercase;color:#555;display:block;margin-bottom:2px}
+</style></head><body>
+<h1>Brutal Practice Paper B42 &mdash; Full Worked Solutions</h1>
+<p class='sub'>Every step shown in full. Each solution gives the idea, the working, the answer, the trap to avoid, and a real-life use.</p>
+<div class='q'>
+<p class='qn'>1. A freezer is at -8 C. It is cooled by 3 C each hour for 4 hours, then warmed by 5 C. What is the final temperature? <span class='tag'>Integers</span></p>
+<div class='opt'>(A) 15 C</div>
+<div class='opt'>(B) -3 C</div>
+<div class='opt'>(C) -5 C</div>
+<div class='opt'>(D) -20 C</div>
+<div class='opt'>(E) -25 C</div>
+<div class='opt correct'>(F) -15 C &#10004;</div>
+<div class='opt'>(G) -35 C</div>
+<div class='opt'>(H) -11 C</div>
+<div class='idea'><span class='lbl'>The idea</span>Combine repeated cooling (multiply then subtract) with a single warming step on a negative start.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Start = -8 C</li>
+<li>Cooling for 4 hours = 3 x 4 = 12 C drop, so -8 - 12 = -20 C</li>
+<li>Then warmed by 5 C: -20 + 5 = -15 C</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (F) &mdash; -15 C</div>
+<div class='trap'><span class='lbl'>Watch out</span>-20 C stops after the cooling and forgets the final 5 C warming, so it is one step short.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Cold-storage engineers track such step-by-step temperature changes to keep food safely frozen.</div>
+</div>
+<div class='q'>
+<p class='qn'>2. Multiply 0.6 x 0.05. <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 0.05</div>
+<div class='opt'>(B) 0.30</div>
+<div class='opt'>(C) 0.035</div>
+<div class='opt correct'>(D) 0.03 &#10004;</div>
+<div class='opt'>(E) 0.003</div>
+<div class='opt'>(F) 0.3</div>
+<div class='opt'>(G) 3</div>
+<div class='idea'><span class='lbl'>The idea</span>Multiply the digits, then count total decimal places to place the point.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>6 x 5 = 30</li>
+<li>0.6 has 1 decimal place, 0.05 has 2, so total 3 places</li>
+<li>30 with 3 decimal places = 0.030 = 0.03</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (D) &mdash; 0.03</div>
+<div class='trap'><span class='lbl'>Watch out</span>0.3 counts only one decimal place; the two factors together need three places.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Shopkeepers multiply small decimal rates when pricing tiny quantities.</div>
+</div>
+<div class='q'>
+<p class='qn'>3. The rusting of an iron gate is best described as which kind of change? <span class='tag'>Physical &amp; Chemical Changes</span></p>
+<div class='opt'>(A) Only a change of state</div>
+<div class='opt correct'>(B) A chemical change that cannot be easily reversed &#10004;</div>
+<div class='opt'>(C) Only a change of shape</div>
+<div class='opt'>(D) A chemical change that is easily reversed</div>
+<div class='opt'>(E) A change that forms no new substance</div>
+<div class='opt'>(F) A physical change that cannot be reversed</div>
+<div class='opt'>(G) A physical change that is easily reversed</div>
+<div class='idea'><span class='lbl'>The idea</span>Rusting forms a new substance (rust) with new properties, so it is chemical and not easily undone.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Iron reacts with oxygen and moisture</li>
+<li>A new reddish-brown substance, rust, is formed</li>
+<li>Because a new substance forms and is hard to turn back, it is a chemical change</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; A chemical change that cannot be easily reversed</div>
+<div class='trap'><span class='lbl'>Watch out</span>Calling it an easily reversed physical change is wrong; rust is a new substance you cannot simply turn back into shiny iron.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Understanding rusting as chemical guides how we protect bridges and railings.</div>
+</div>
+<div class='q'>
+<p class='qn'>4. What is the key difference between weather and climate? <span class='tag'>Weather, Climate &amp; Adaptations</span></p>
+<div class='opt'>(A) Weather is the long-term average; climate is the daily change</div>
+<div class='opt'>(B) They mean exactly the same thing</div>
+<div class='opt'>(C) Weather is indoors; climate is outdoors</div>
+<div class='opt correct'>(D) Weather is the day-to-day state of the atmosphere; climate is its average over many years &#10004;</div>
+<div class='opt'>(E) Climate is about one day; weather is about a century</div>
+<div class='opt'>(F) Weather is measured only at night; climate only by day</div>
+<div class='opt'>(G) Weather is only about rain; climate is only about heat</div>
+<div class='idea'><span class='lbl'>The idea</span>Weather is short-term; climate is the long-term pattern averaged over many years.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Weather describes today&#x27;s temperature, rain, wind - it changes daily</li>
+<li>Climate is the average weather of a place over many years</li>
+<li>So weather is day-to-day while climate is the long-term average</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (D) &mdash; Weather is the day-to-day state of the atmosphere; climate is its average over many years</div>
+<div class='trap'><span class='lbl'>Watch out</span>Swapping the two is the classic mistake: climate is the long-term average, not the daily change.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Farmers use climate to choose crops but check the weather to plan each day&#x27;s work.</div>
+</div>
+<div class='q'>
+<p class='qn'>5. The product of two integers is -48 and one of them is 6. What is the SUM of the two integers? <span class='tag'>Integers</span></p>
+<div class='opt'>(A) 2</div>
+<div class='opt'>(B) -42</div>
+<div class='opt correct'>(C) -2 &#10004;</div>
+<div class='opt'>(D) 14</div>
+<div class='opt'>(E) 54</div>
+<div class='opt'>(F) 8</div>
+<div class='opt'>(G) -14</div>
+<div class='idea'><span class='lbl'>The idea</span>First find the missing factor from a product, then add the two integers.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Other integer = -48 / 6 = -8</li>
+<li>The two integers are 6 and -8</li>
+<li>Sum = 6 + (-8) = -2</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; -2</div>
+<div class='trap'><span class='lbl'>Watch out</span>+2 forgets the sign: the missing factor is -8 (negative), so the sum is -2, not +2.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Accountants use such reasoning to find a missing amount when a total product is known.</div>
+</div>
+<div class='q'>
+<p class='qn'>6. Evaluate 0.75 + 1.8 - 0.9. <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt correct'>(A) 1.65 &#10004;</div>
+<div class='opt'>(B) 1.05</div>
+<div class='opt'>(C) 2.55</div>
+<div class='opt'>(D) 0.66</div>
+<div class='opt'>(E) 0.65</div>
+<div class='opt'>(F) 1.55</div>
+<div class='opt'>(G) 1.75</div>
+<div class='idea'><span class='lbl'>The idea</span>Line up decimal points and work left to right.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>0.75 + 1.8 = 2.55</li>
+<li>2.55 - 0.9 = 1.65</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (A) &mdash; 1.65</div>
+<div class='trap'><span class='lbl'>Watch out</span>2.55 stops after the addition and forgets to subtract 0.9.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Cashiers add and subtract decimal amounts to total a bill.</div>
+</div>
+<div class='q'>
+<p class='qn'>7. 12 g of magnesium burns and combines with oxygen to form 20 g of magnesium oxide. What mass of oxygen combined with the magnesium? <span class='tag'>Physical &amp; Chemical Changes</span></p>
+<div class='opt'>(A) 4 g</div>
+<div class='opt correct'>(B) 8 g &#10004;</div>
+<div class='opt'>(C) 12 g</div>
+<div class='opt'>(D) 16 g</div>
+<div class='opt'>(E) 20 g</div>
+<div class='opt'>(F) 32 g</div>
+<div class='idea'><span class='lbl'>The idea</span>Mass is conserved, so the product mass equals the masses of the reactants combined.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Magnesium + oxygen -&gt; magnesium oxide</li>
+<li>Mass of oxygen = mass of product - mass of magnesium</li>
+<li>= 20 - 12 = 8 g</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; 8 g</div>
+<div class='trap'><span class='lbl'>Watch out</span>32 g adds the two known masses; instead, oxygen is the difference 20 - 12 = 8 g.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Chemists use conservation of mass to work out how much of a reactant was used.</div>
+</div>
+<div class='q'>
+<p class='qn'>8. On a day the maximum temperature is 34 C and the minimum is 22 C. What are the daily temperature range and the mean temperature? <span class='tag'>Weather, Climate &amp; Adaptations</span></p>
+<div class='opt correct'>(A) Range 12 C, mean 28 C &#10004;</div>
+<div class='opt'>(B) Range 12 C, mean 24 C</div>
+<div class='opt'>(C) Range 12 C, mean 56 C</div>
+<div class='opt'>(D) Range 56 C, mean 28 C</div>
+<div class='opt'>(E) Range 22 C, mean 34 C</div>
+<div class='opt'>(F) Range 12 C, mean 27 C</div>
+<div class='idea'><span class='lbl'>The idea</span>Range is the difference of the extremes; the mean is their average.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Range = 34 - 22 = 12 C</li>
+<li>Mean = (34 + 22) / 2 = 56 / 2</li>
+<li>= 28 C</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (A) &mdash; Range 12 C, mean 28 C</div>
+<div class='trap'><span class='lbl'>Watch out</span>Mean 27 C miscalculates the average; (34 + 22)/2 is 28, not 27.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Weather reports give both the range and average to summarise a day&#x27;s temperature.</div>
+</div>
+<div class='q'>
+<p class='qn'>9. A bank account starts overdrawn at -250 rupees. Three deposits of 180 rupees each are made, then 95 rupees is withdrawn. What is the final balance? <span class='tag'>Integers</span></p>
+<div class='opt correct'>(A) 195 rupees &#10004;</div>
+<div class='opt'>(B) 200 rupees</div>
+<div class='opt'>(C) 540 rupees</div>
+<div class='opt'>(D) -195 rupees</div>
+<div class='opt'>(E) 635 rupees</div>
+<div class='opt'>(F) 385 rupees</div>
+<div class='opt'>(G) 290 rupees</div>
+<div class='idea'><span class='lbl'>The idea</span>Add repeated deposits to a negative balance, then subtract a withdrawal.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Deposits = 3 x 180 = 540 rupees</li>
+<li>Balance = -250 + 540 = 290 rupees</li>
+<li>After withdrawal = 290 - 95 = 195 rupees</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (A) &mdash; 195 rupees</div>
+<div class='trap'><span class='lbl'>Watch out</span>290 rupees stops before the 95-rupee withdrawal is taken out.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Bank software adds credits and debits to an opening balance exactly this way.</div>
+</div>
+<div class='q'>
+<p class='qn'>10. Apples cost 48 rupees per kg and grapes 120 rupees per kg. Find the cost of 1.5 kg apples and 0.25 kg grapes together. <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 30 rupees</div>
+<div class='opt'>(B) 92 rupees</div>
+<div class='opt'>(C) 168 rupees</div>
+<div class='opt'>(D) 72 rupees</div>
+<div class='opt'>(E) 96 rupees</div>
+<div class='opt'>(F) 132 rupees</div>
+<div class='opt correct'>(G) 102 rupees &#10004;</div>
+<div class='idea'><span class='lbl'>The idea</span>Cost each fruit with a decimal multiplication, then add the two costs.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Apples: 1.5 x 48 = 72 rupees</li>
+<li>Grapes: 0.25 x 120 = 30 rupees</li>
+<li>Total = 72 + 30 = 102 rupees</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (G) &mdash; 102 rupees</div>
+<div class='trap'><span class='lbl'>Watch out</span>72 rupees gives only the apples and forgets the 30 rupees of grapes.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Grocery bills combine several weight-times-rate products like this.</div>
+</div>
+<div class='q'>
+<p class='qn'>11. Why is the melting of wax considered a physical change? <span class='tag'>Physical &amp; Chemical Changes</span></p>
+<div class='opt'>(A) It releases a new gas</div>
+<div class='opt'>(B) A completely new substance is formed</div>
+<div class='opt correct'>(C) The wax is still wax and can be solidified again &#10004;</div>
+<div class='opt'>(D) Energy alone makes it a chemical change</div>
+<div class='opt'>(E) The wax can never be turned back to solid</div>
+<div class='opt'>(F) It changes colour into a new material</div>
+<div class='idea'><span class='lbl'>The idea</span>In a physical change no new substance forms and the change can usually be reversed.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Melting only changes wax from solid to liquid</li>
+<li>It is still the same wax (no new substance)</li>
+<li>Cooling it solidifies it again, so the change is physical</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; The wax is still wax and can be solidified again</div>
+<div class='trap'><span class='lbl'>Watch out</span>Saying a new substance is formed is wrong; melted wax is the same wax in liquid form.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Candle-makers rely on melting and resetting wax, a reversible physical change.</div>
+</div>
+<div class='q'>
+<p class='qn'>12. Which set of features helps a polar bear survive in its very cold habitat? <span class='tag'>Weather, Climate &amp; Adaptations</span></p>
+<div class='opt correct'>(A) Thick fur, a layer of blubber, and white colour for camouflage &#10004;</div>
+<div class='opt'>(B) A naked body like a desert animal</div>
+<div class='opt'>(C) A long bare tail to lose heat</div>
+<div class='opt'>(D) Thin skin and no body fat</div>
+<div class='opt'>(E) Webbed wings for flying</div>
+<div class='opt'>(F) Large ears to stay cool</div>
+<div class='idea'><span class='lbl'>The idea</span>Polar animals are adapted to conserve heat and blend with snow.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Cold habitats need animals to keep warm and hide on snow</li>
+<li>Thick fur and blubber trap body heat</li>
+<li>White colour camouflages the bear in snow</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (A) &mdash; Thick fur, a layer of blubber, and white colour for camouflage</div>
+<div class='trap'><span class='lbl'>Watch out</span>Large ears help desert animals lose heat; a polar bear instead needs to keep heat in.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Studying such adaptations helps scientists predict how animals cope with climate.</div>
+</div>
+<div class='q'>
+<p class='qn'>13. Evaluate (-6) x (-4) + (-5) x 3. <span class='tag'>Integers</span></p>
+<div class='opt'>(A) 39</div>
+<div class='opt correct'>(B) 9 &#10004;</div>
+<div class='opt'>(C) -24</div>
+<div class='opt'>(D) 24</div>
+<div class='opt'>(E) 3</div>
+<div class='opt'>(F) -9</div>
+<div class='idea'><span class='lbl'>The idea</span>Apply order of operations: do both multiplications first, then add.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>(-6) x (-4) = 24</li>
+<li>(-5) x 3 = -15</li>
+<li>24 + (-15) = 9</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; 9</div>
+<div class='trap'><span class='lbl'>Watch out</span>-39 wrongly makes the first product negative; two negatives multiply to a positive 24.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Spreadsheets follow the same multiply-before-add rule when computing formulas.</div>
+</div>
+<div class='q'>
+<p class='qn'>14. Divide 4.5 / 0.9. <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 45</div>
+<div class='opt'>(B) 0.05</div>
+<div class='opt correct'>(C) 5 &#10004;</div>
+<div class='opt'>(D) 4.5</div>
+<div class='opt'>(E) 4.05</div>
+<div class='opt'>(F) 0.5</div>
+<div class='idea'><span class='lbl'>The idea</span>Multiply both numbers by 10 to make the divisor a whole number.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Multiply top and bottom by 10: 45 / 9</li>
+<li>= 5</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; 5</div>
+<div class='trap'><span class='lbl'>Watch out</span>0.5 misplaces the decimal point; dividing by a number less than 1 gives a larger result.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Splitting a cost by a per-unit decimal price uses this kind of division.</div>
+</div>
+<div class='q'>
+<p class='qn'>15. Which of the following is a chemical change? <span class='tag'>Physical &amp; Chemical Changes</span></p>
+<div class='opt'>(A) Folding a sheet of paper</div>
+<div class='opt'>(B) Stacking sheets of paper</div>
+<div class='opt'>(C) Wetting a sheet of paper</div>
+<div class='opt'>(D) Tearing a sheet of paper</div>
+<div class='opt'>(E) Cutting paper into strips</div>
+<div class='opt'>(F) Crumpling paper into a ball</div>
+<div class='opt correct'>(G) Burning a sheet of paper &#10004;</div>
+<div class='idea'><span class='lbl'>The idea</span>A chemical change produces a new substance; only burning does that here.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Tearing, folding, wetting and cutting leave the paper as paper</li>
+<li>Burning turns paper into ash, smoke and gases</li>
+<li>New substances form on burning, so it is the chemical change</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (G) &mdash; Burning a sheet of paper</div>
+<div class='trap'><span class='lbl'>Watch out</span>Tearing paper looks dramatic but it is still paper; burning makes new substances.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Knowing burning is chemical explains why we cannot un-burn fuel.</div>
+</div>
+<div class='q'>
+<p class='qn'>16. Which instrument is used to measure the amount of rainfall? <span class='tag'>Weather, Climate &amp; Adaptations</span></p>
+<div class='opt'>(A) Wind vane</div>
+<div class='opt'>(B) Ruler on a wall</div>
+<div class='opt correct'>(C) Rain gauge &#10004;</div>
+<div class='opt'>(D) Barometer</div>
+<div class='opt'>(E) Anemometer</div>
+<div class='opt'>(F) Hygrometer</div>
+<div class='opt'>(G) Thermometer</div>
+<div class='idea'><span class='lbl'>The idea</span>A rain gauge collects and measures the depth of rain that falls.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Rainfall is the depth of rain collected over an area</li>
+<li>A rain gauge is a container that collects rain</li>
+<li>Its scale shows how much rain has fallen</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; Rain gauge</div>
+<div class='trap'><span class='lbl'>Watch out</span>A thermometer measures temperature, not rainfall; the rain gauge collects rain.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Weather stations use rain gauges to record daily and yearly rainfall.</div>
+</div>
+<div class='q'>
+<p class='qn'>17. A lift starts at floor 0, goes down 7 floors, up 12, down 9, then up 3. Which floor is it on now? <span class='tag'>Integers</span></p>
+<div class='opt'>(A) Floor 1</div>
+<div class='opt'>(B) Floor 31</div>
+<div class='opt'>(C) Floor 3</div>
+<div class='opt'>(D) Floor -7</div>
+<div class='opt correct'>(E) Floor -1 &#10004;</div>
+<div class='opt'>(F) Floor 0</div>
+<div class='opt'>(G) Floor -31</div>
+<div class='idea'><span class='lbl'>The idea</span>Track signed movements up and down from a starting point and total them.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>0 - 7 = -7</li>
+<li>-7 + 12 = 5</li>
+<li>5 - 9 = -4</li>
+<li>-4 + 3 = -1, so floor -1</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (E) &mdash; Floor -1</div>
+<div class='trap'><span class='lbl'>Watch out</span>Floor 1 drops a sign somewhere; adding the moves carefully gives -1 (one basement level).</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Lift control systems add each up/down signal to know the current floor.</div>
+</div>
+<div class='q'>
+<p class='qn'>18. Express 3/8 as a decimal. <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 0.275</div>
+<div class='opt'>(B) 0.125</div>
+<div class='opt correct'>(C) 0.375 &#10004;</div>
+<div class='opt'>(D) 3.8</div>
+<div class='opt'>(E) 0.38</div>
+<div class='opt'>(F) 2.667</div>
+<div class='opt'>(G) 0.83</div>
+<div class='idea'><span class='lbl'>The idea</span>Divide the numerator by the denominator.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>3 / 8 means 3.000 / 8</li>
+<li>8 into 30 is 3 (remainder 6), into 60 is 7 (remainder 4), into 40 is 5</li>
+<li>So 3/8 = 0.375</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; 0.375</div>
+<div class='trap'><span class='lbl'>Watch out</span>0.125 is 1/8, not 3/8; three eighths is three times that, 0.375.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Engineers convert fractions of an inch into decimals for precise measuring.</div>
+</div>
+<div class='q'>
+<p class='qn'>19. A candle of mass 50 g burns, and 35 g of it is used up in 70 minutes. What is the rate at which it burns, in grams per minute? <span class='tag'>Physical &amp; Chemical Changes</span></p>
+<div class='opt'>(A) 0.35 g/min</div>
+<div class='opt correct'>(B) 0.5 g/min &#10004;</div>
+<div class='opt'>(C) 2 g/min</div>
+<div class='opt'>(D) 1.4 g/min</div>
+<div class='opt'>(E) 1 g/min</div>
+<div class='opt'>(F) 5 g/min</div>
+<div class='idea'><span class='lbl'>The idea</span>Divide the mass burned by the time taken.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Mass burned = 35 g</li>
+<li>Time = 70 minutes</li>
+<li>Rate = 35 / 70 = 0.5 g per minute</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; 0.5 g/min</div>
+<div class='trap'><span class='lbl'>Watch out</span>0.7 g/min uses the wrong total or divides the wrong way; 35 g over 70 min is 0.5 g/min.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Engineers measure burn rates to design candles and fuels that last a set time.</div>
+</div>
+<div class='q'>
+<p class='qn'>20. Rainfall over five days was 12, 0, 8, 20 and 10 mm. What was the average daily rainfall? <span class='tag'>Weather, Climate &amp; Adaptations</span></p>
+<div class='opt'>(A) 5 mm</div>
+<div class='opt'>(B) 50 mm</div>
+<div class='opt'>(C) 15 mm</div>
+<div class='opt'>(D) 40 mm</div>
+<div class='opt'>(E) 12.5 mm</div>
+<div class='opt correct'>(F) 10 mm &#10004;</div>
+<div class='opt'>(G) 8 mm</div>
+<div class='idea'><span class='lbl'>The idea</span>Add the daily amounts, then divide by the number of days.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Total = 12 + 0 + 8 + 20 + 10 = 50 mm</li>
+<li>Number of days = 5</li>
+<li>Average = 50 / 5 = 10 mm</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (F) &mdash; 10 mm</div>
+<div class='trap'><span class='lbl'>Watch out</span>50 mm is the total rainfall, not the average; divide by 5 days to get 10 mm.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Climate records average daily rainfall to compare wet and dry seasons.</div>
+</div>
+<div class='q'>
+<p class='qn'>21. Evaluate (-3) x (-3) x (-3) + (-2) x (-2). <span class='tag'>Integers</span></p>
+<div class='opt'>(A) 31</div>
+<div class='opt'>(B) -31</div>
+<div class='opt'>(C) -27</div>
+<div class='opt'>(D) 13</div>
+<div class='opt correct'>(E) -23 &#10004;</div>
+<div class='opt'>(F) -13</div>
+<div class='idea'><span class='lbl'>The idea</span>An odd number of negative factors gives a negative product; an even number gives positive.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>(-3) x (-3) x (-3) = -27 (three negatives -&gt; negative)</li>
+<li>(-2) x (-2) = 4 (two negatives -&gt; positive)</li>
+<li>-27 + 4 = -23</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (E) &mdash; -23</div>
+<div class='trap'><span class='lbl'>Watch out</span>+23 wrongly makes the cube positive; three negative factors give a negative -27.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>This sign rule underlies how calculators handle powers of negative numbers.</div>
+</div>
+<div class='q'>
+<p class='qn'>22. A rectangle measures 2.4 m by 1.35 m. What is its perimeter? <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 6.5 m</div>
+<div class='opt correct'>(B) 7.5 m &#10004;</div>
+<div class='opt'>(C) 8.5 m</div>
+<div class='opt'>(D) 7.05 m</div>
+<div class='opt'>(E) 15 m</div>
+<div class='opt'>(F) 3.24 m</div>
+<div class='idea'><span class='lbl'>The idea</span>Add the length and width, then double for the perimeter.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Length + width = 2.4 + 1.35 = 3.75 m</li>
+<li>Perimeter = 2 x 3.75</li>
+<li>= 7.5 m</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; 7.5 m</div>
+<div class='trap'><span class='lbl'>Watch out</span>3.75 m is just the length-plus-width; the perimeter doubles that to 7.5 m.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Carpenters add up side lengths to know how much edging to buy.</div>
+</div>
+<div class='q'>
+<p class='qn'>23. Why is the souring of milk into curd a chemical change? <span class='tag'>Physical &amp; Chemical Changes</span></p>
+<div class='opt'>(A) The milk can easily be turned back into fresh milk</div>
+<div class='opt'>(B) The milk only changes its temperature</div>
+<div class='opt'>(C) No new substance is ever formed</div>
+<div class='opt correct'>(D) A new substance, curd, is formed and the change cannot be reversed &#10004;</div>
+<div class='opt'>(E) It is just milk in a different shape</div>
+<div class='opt'>(F) It is purely a change of state</div>
+<div class='opt'>(G) Only the colour changes, nothing else</div>
+<div class='idea'><span class='lbl'>The idea</span>Souring produces curd, a new substance, irreversibly, so it is chemical.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Microbes act on the milk</li>
+<li>A new substance, curd, with new taste and texture forms</li>
+<li>You cannot turn curd back into milk, so it is chemical</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (D) &mdash; A new substance, curd, is formed and the change cannot be reversed</div>
+<div class='trap'><span class='lbl'>Watch out</span>Saying it can be turned back into fresh milk is wrong; curd is a new, permanent substance.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Dairies control this chemical change deliberately to make curd and cheese.</div>
+</div>
+<div class='q'>
+<p class='qn'>24. At what time of day is the maximum temperature usually reached? <span class='tag'>Weather, Climate &amp; Adaptations</span></p>
+<div class='opt correct'>(A) In the early afternoon, a little after noon &#10004;</div>
+<div class='opt'>(B) It is the same all day</div>
+<div class='opt'>(C) Late at night</div>
+<div class='opt'>(D) At midnight</div>
+<div class='opt'>(E) Exactly at sunrise</div>
+<div class='opt'>(F) Exactly at noon</div>
+<div class='opt'>(G) Just before dawn</div>
+<div class='idea'><span class='lbl'>The idea</span>The ground keeps warming after noon, so the peak comes in the early afternoon.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>The Sun is highest at noon, but the ground keeps absorbing heat afterwards</li>
+<li>Air temperature lags behind the Sun</li>
+<li>So the maximum is reached a little after noon, in the early afternoon</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (A) &mdash; In the early afternoon, a little after noon</div>
+<div class='trap'><span class='lbl'>Watch out</span>Exactly at noon ignores the lag; the air keeps heating for a while after the Sun&#x27;s peak.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Forecasters predict afternoon highs knowing this delay between sun and heat.</div>
+</div>
+<div class='q'>
+<p class='qn'>25. At dawn the temperature was -6 C, by noon it rose to 11 C, and by midnight it fell to -9 C. Through how many degrees in total did the temperature move during the day? <span class='tag'>Integers</span></p>
+<div class='opt'>(A) 3 degrees</div>
+<div class='opt'>(B) 5 degrees</div>
+<div class='opt'>(C) 17 degrees</div>
+<div class='opt correct'>(D) 37 degrees &#10004;</div>
+<div class='opt'>(E) 20 degrees</div>
+<div class='opt'>(F) 11 degrees</div>
+<div class='opt'>(G) 26 degrees</div>
+<div class='idea'><span class='lbl'>The idea</span>Add the size of the rise and the size of the fall separately.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Rise from dawn to noon = 11 - (-6) = 17 degrees</li>
+<li>Fall from noon to midnight = 11 - (-9) = 20 degrees</li>
+<li>Total movement = 17 + 20 = 37 degrees</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (D) &mdash; 37 degrees</div>
+<div class='trap'><span class='lbl'>Watch out</span>20 degrees gives only the fall; the question wants the total of both the rise and the fall.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Climatologists add daily ups and downs to measure how variable a day&#x27;s weather was.</div>
+</div>
+<div class='q'>
+<p class='qn'>26. Find 0.2 of 0.2 of 50. <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 10</div>
+<div class='opt correct'>(B) 2 &#10004;</div>
+<div class='opt'>(C) 5</div>
+<div class='opt'>(D) 4</div>
+<div class='opt'>(E) 20</div>
+<div class='opt'>(F) 0.2</div>
+<div class='opt'>(G) 2.5</div>
+<div class='idea'><span class='lbl'>The idea</span>Apply the first fraction, then the second to the result.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>0.2 of 50 = 0.2 x 50 = 10</li>
+<li>0.2 of 10 = 0.2 x 10 = 2</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; 2</div>
+<div class='trap'><span class='lbl'>Watch out</span>10 stops after taking the first 0.2 and forgets to take 0.2 again.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Repeated discounts on a price work as one fraction of another.</div>
+</div>
+<div class='q'>
+<p class='qn'>27. Photosynthesis in a leaf is considered a chemical change because: <span class='tag'>Physical &amp; Chemical Changes</span></p>
+<div class='opt'>(A) The leaf simply gets warmer</div>
+<div class='opt'>(B) Water merely evaporates from the leaf</div>
+<div class='opt'>(C) The leaf only changes its shape</div>
+<div class='opt'>(D) It can be easily reversed by cooling</div>
+<div class='opt correct'>(E) New substances such as glucose and oxygen are formed &#10004;</div>
+<div class='opt'>(F) Sunlight only changes the leaf&#x27;s colour</div>
+<div class='opt'>(G) No new substance is produced</div>
+<div class='idea'><span class='lbl'>The idea</span>Photosynthesis builds new substances from carbon dioxide and water, so it is chemical.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Carbon dioxide and water are the raw materials</li>
+<li>Using sunlight, the leaf makes glucose and releases oxygen</li>
+<li>Because new substances form, it is a chemical change</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (E) &mdash; New substances such as glucose and oxygen are formed</div>
+<div class='trap'><span class='lbl'>Watch out</span>Saying no new substance forms is wrong; glucose and oxygen are brand-new products.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Recognising photosynthesis as chemical underpins how plants store energy as food.</div>
+</div>
+<div class='q'>
+<p class='qn'>28. Why are tropical rainforests home to such a huge variety of plants and animals? <span class='tag'>Weather, Climate &amp; Adaptations</span></p>
+<div class='opt'>(A) They are frozen for most of the year</div>
+<div class='opt'>(B) They have no rainfall at all</div>
+<div class='opt correct'>(C) They are warm and receive plenty of rainfall throughout the year &#10004;</div>
+<div class='opt'>(D) They are cold and dry all year</div>
+<div class='opt'>(E) They have salty soil and no water</div>
+<div class='opt'>(F) They are dark and lifeless</div>
+<div class='opt'>(G) They get sunlight only once a year</div>
+<div class='idea'><span class='lbl'>The idea</span>Steady warmth and abundant rain support rich, year-round plant and animal life.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Tropical regions near the equator stay warm all year</li>
+<li>They also get heavy rainfall throughout the year</li>
+<li>Plenty of warmth and water let many species thrive together</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; They are warm and receive plenty of rainfall throughout the year</div>
+<div class='trap'><span class='lbl'>Watch out</span>Cold and dry conditions support few species; rainforests are rich because they are warm and wet.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>This explains why conservation focuses heavily on biodiverse rainforests.</div>
+</div>
+<div class='q'>
+<p class='qn'>29. A diver descends 18 m, rises 7 m, then descends 11 m more. Where is the diver relative to the surface? <span class='tag'>Integers</span></p>
+<div class='opt'>(A) 36 m below the surface</div>
+<div class='opt'>(B) 36 m above the surface</div>
+<div class='opt'>(C) 2 m below the surface</div>
+<div class='opt'>(D) 18 m below the surface</div>
+<div class='opt'>(E) 22 m above the surface</div>
+<div class='opt correct'>(F) 22 m below the surface &#10004;</div>
+<div class='opt'>(G) 14 m below the surface</div>
+<div class='idea'><span class='lbl'>The idea</span>Treat downward as negative and upward as positive, then total the moves.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>0 - 18 = -18 m</li>
+<li>-18 + 7 = -11 m</li>
+<li>-11 - 11 = -22 m, i.e. 22 m below the surface</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (F) &mdash; 22 m below the surface</div>
+<div class='trap'><span class='lbl'>Watch out</span>36 m below adds all three numbers as descents and ignores the 7 m rise.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Divers track signed depth changes to stay within safe limits.</div>
+</div>
+<div class='q'>
+<p class='qn'>30. 73.50 rupees is shared equally among 6 friends. How much does each receive? <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 14.70 rupees</div>
+<div class='opt'>(B) 11.25 rupees</div>
+<div class='opt'>(C) 12.20 rupees</div>
+<div class='opt'>(D) 13.25 rupees</div>
+<div class='opt correct'>(E) 12.25 rupees &#10004;</div>
+<div class='opt'>(F) 12.05 rupees</div>
+<div class='idea'><span class='lbl'>The idea</span>Divide the decimal amount by the number of people.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>73.50 / 6</li>
+<li>6 into 73 is 12 (remainder 1), bring down to 15, 6 into 15 is 2 (remainder 3)...</li>
+<li>= 12.25 rupees</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (E) &mdash; 12.25 rupees</div>
+<div class='trap'><span class='lbl'>Watch out</span>14.70 rupees divides by 5 instead of 6, giving too much per friend.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Friends splitting a restaurant bill divide the decimal total like this.</div>
+</div>
+<div class='q'>
+<p class='qn'>31. Why do we obtain pure copper sulphate crystals by crystallisation rather than by boiling the solution dry? <span class='tag'>Physical &amp; Chemical Changes</span></p>
+<div class='opt'>(A) Boiling dry is the only way to get crystals</div>
+<div class='opt'>(B) Crystallisation adds new chemicals to the salt</div>
+<div class='opt'>(C) Both methods are exactly the same</div>
+<div class='opt'>(D) Crystallisation needs no water at all</div>
+<div class='opt'>(E) Boiling dry keeps the crystals coloured better</div>
+<div class='opt'>(F) Boiling dry always gives bigger pure crystals</div>
+<div class='opt correct'>(G) Slow crystallisation gives large pure crystals, while boiling dry can spoil them and trap impurities &#10004;</div>
+<div class='idea'><span class='lbl'>The idea</span>Crystallisation lets pure crystals form slowly; heating to dryness can decompose the salt and leave impurities behind.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>When a solution is boiled completely dry, impurities are left mixed in and crystals may break down</li>
+<li>In crystallisation the solution is cooled slowly</li>
+<li>Pure, well-formed crystals separate out, leaving impurities in the liquid</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (G) &mdash; Slow crystallisation gives large pure crystals, while boiling dry can spoil them and trap impurities</div>
+<div class='trap'><span class='lbl'>Watch out</span>Boiling dry seems quicker but it spoils the crystals and keeps impurities; crystallisation gives purer crystals.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Crystallisation is used industrially to purify sugar, salt and many chemicals.</div>
+</div>
+<div class='q'>
+<p class='qn'>32. Humidity readings on four days were 60, 65, 70 and 55. A fifth reading makes the five-day average 64. What was the fifth reading? <span class='tag'>Weather, Climate &amp; Adaptations</span></p>
+<div class='opt'>(A) 64</div>
+<div class='opt'>(B) 50</div>
+<div class='opt correct'>(C) 70 &#10004;</div>
+<div class='opt'>(D) 75</div>
+<div class='opt'>(E) 80</div>
+<div class='opt'>(F) 68</div>
+<div class='idea'><span class='lbl'>The idea</span>Use the average to find the required total, then subtract the known readings.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Total needed for average 64 over 5 days = 64 x 5 = 320</li>
+<li>Sum of first four = 60 + 65 + 70 + 55 = 250</li>
+<li>Fifth reading = 320 - 250 = 70</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; 70</div>
+<div class='trap'><span class='lbl'>Watch out</span>64 just repeats the average; the missing value must make the total reach 320, giving 70.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Scientists back-calculate a missing data point from a known average this way.</div>
+</div>
+<div class='q'>
+<p class='qn'>33. Evaluate (-144) / 12 / (-3). <span class='tag'>Integers</span></p>
+<div class='opt correct'>(A) 4 &#10004;</div>
+<div class='opt'>(B) 40</div>
+<div class='opt'>(C) -12</div>
+<div class='opt'>(D) 48</div>
+<div class='opt'>(E) 12</div>
+<div class='opt'>(F) -48</div>
+<div class='opt'>(G) -4</div>
+<div class='idea'><span class='lbl'>The idea</span>Divide from left to right, tracking the sign at each step.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>(-144) / 12 = -12</li>
+<li>-12 / (-3) = 4 (negative divided by negative is positive)</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (A) &mdash; 4</div>
+<div class='trap'><span class='lbl'>Watch out</span>-4 keeps the result negative, but a negative divided by a negative gives a positive 4.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Programmers rely on these sign rules when splitting negative balances evenly.</div>
+</div>
+<div class='q'>
+<p class='qn'>34. Round 7.2845 to two decimal places. <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 7.29</div>
+<div class='opt'>(B) 7.30</div>
+<div class='opt'>(C) 7.284</div>
+<div class='opt'>(D) 7.2</div>
+<div class='opt correct'>(E) 7.28 &#10004;</div>
+<div class='opt'>(F) 7.3</div>
+<div class='idea'><span class='lbl'>The idea</span>Look at the third decimal digit to decide rounding.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Two decimal places keeps up to the hundredths: 7.28</li>
+<li>The next digit is 4, which is less than 5</li>
+<li>So we round down and keep 7.28</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (E) &mdash; 7.28</div>
+<div class='trap'><span class='lbl'>Watch out</span>7.29 rounds up, but the deciding digit is 4 (less than 5), so we keep 7.28.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Money values are rounded to two decimals (paise) in just this way.</div>
+</div>
+<div class='q'>
+<p class='qn'>35. 8 g of hydrogen reacts completely with 64 g of oxygen to form water. By conservation of mass, what mass of water is formed? <span class='tag'>Physical &amp; Chemical Changes</span></p>
+<div class='opt'>(A) 64 g</div>
+<div class='opt'>(B) 36 g</div>
+<div class='opt'>(C) 56 g</div>
+<div class='opt correct'>(D) 72 g &#10004;</div>
+<div class='opt'>(E) 8 g</div>
+<div class='opt'>(F) 80 g</div>
+<div class='idea'><span class='lbl'>The idea</span>In a chemical reaction the total mass of products equals the total mass of reactants.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Reactants: 8 g hydrogen + 64 g oxygen</li>
+<li>Mass is conserved</li>
+<li>Water formed = 8 + 64 = 72 g</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (D) &mdash; 72 g</div>
+<div class='trap'><span class='lbl'>Watch out</span>56 g subtracts the masses; mass is conserved, so the products add up to 72 g.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Conservation of mass lets chemists predict product amounts in industry.</div>
+</div>
+<div class='q'>
+<p class='qn'>36. Penguins often huddle tightly together in large groups. How does this help them? <span class='tag'>Weather, Climate &amp; Adaptations</span></p>
+<div class='opt'>(A) It keeps them apart from danger only</div>
+<div class='opt'>(B) It allows them to dig burrows faster</div>
+<div class='opt'>(C) It helps them catch more sunlight to fly</div>
+<div class='opt'>(D) It helps them lose extra heat in the cold</div>
+<div class='opt'>(E) It increases the surface losing heat</div>
+<div class='opt correct'>(F) It reduces heat loss and keeps them warm in the cold &#10004;</div>
+<div class='opt'>(G) It cools them down in the freezing wind</div>
+<div class='idea'><span class='lbl'>The idea</span>Huddling cuts the surface exposed to cold, conserving body heat.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>In freezing cold, animals must conserve body heat</li>
+<li>Huddling reduces the body surface exposed to the cold air</li>
+<li>So less heat is lost and the group stays warmer</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (F) &mdash; It reduces heat loss and keeps them warm in the cold</div>
+<div class='trap'><span class='lbl'>Watch out</span>Saying it helps them lose heat is backwards; huddling keeps heat in, not out.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Understanding such behaviour helps zoos house cold-climate animals properly.</div>
+</div>
+<div class='q'>
+<p class='qn'>37. Find the sum of all integers from -5 to 6 inclusive. <span class='tag'>Integers</span></p>
+<div class='opt correct'>(A) 6 &#10004;</div>
+<div class='opt'>(B) 0</div>
+<div class='opt'>(C) 1</div>
+<div class='opt'>(D) 5</div>
+<div class='opt'>(E) 11</div>
+<div class='opt'>(F) -6</div>
+<div class='idea'><span class='lbl'>The idea</span>Pairs of opposite integers cancel; only the unpaired ones remain.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Integers -5 to 5 cancel in opposite pairs, giving 0</li>
+<li>The only integer left over is 6</li>
+<li>Sum = 0 + 6 = 6</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (A) &mdash; 6</div>
+<div class='trap'><span class='lbl'>Watch out</span>0 assumes everything cancels, but 6 has no -6 partner, so the sum is 6.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>This cancelling trick speeds up adding long lists of gains and losses.</div>
+</div>
+<div class='q'>
+<p class='qn'>38. Which number is the largest: 0.5, 0.45, 0.405, 0.54, 0.045? <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 0.45</div>
+<div class='opt'>(B) 0.5</div>
+<div class='opt'>(C) 0.405</div>
+<div class='opt correct'>(D) 0.54 &#10004;</div>
+<div class='opt'>(E) 0.054</div>
+<div class='opt'>(F) 0.045</div>
+<div class='opt'>(G) 0.504</div>
+<div class='idea'><span class='lbl'>The idea</span>Compare digit by digit from the left after lining up decimal points.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Compare the tenths digit first: 0.54 and 0.5 have 5, others less</li>
+<li>Then hundredths: 0.54 has 4 versus 0.5&#x27;s 0</li>
+<li>So 0.54 is the largest</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (D) &mdash; 0.54</div>
+<div class='trap'><span class='lbl'>Watch out</span>0.5 looks big but 0.54 has the same tenths and a larger hundredths digit.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Comparing decimal prices helps shoppers find the best deal.</div>
+</div>
+<div class='q'>
+<p class='qn'>39. Galvanisation protects iron from rusting by coating it with a layer of: <span class='tag'>Physical &amp; Chemical Changes</span></p>
+<div class='opt'>(A) Gold</div>
+<div class='opt correct'>(B) Zinc &#10004;</div>
+<div class='opt'>(C) Copper</div>
+<div class='opt'>(D) Aluminium oxide</div>
+<div class='opt'>(E) Rust</div>
+<div class='opt'>(F) Plastic paint only</div>
+<div class='opt'>(G) Carbon</div>
+<div class='idea'><span class='lbl'>The idea</span>Galvanisation means coating iron or steel with zinc to stop rusting.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Rusting needs the iron surface exposed to air and water</li>
+<li>A zinc coating shields the iron</li>
+<li>This zinc coating is called galvanisation</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; Zinc</div>
+<div class='trap'><span class='lbl'>Watch out</span>Copper does not protect iron the way zinc does; galvanisation specifically uses zinc.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Galvanised sheets are used for roofs and buckets to resist rust.</div>
+</div>
+<div class='q'>
+<p class='qn'>40. Which best describes the climate of a hot desert? <span class='tag'>Weather, Climate &amp; Adaptations</span></p>
+<div class='opt'>(A) Snowy all year with little sunshine</div>
+<div class='opt correct'>(B) Very low rainfall, with hot days and a large difference between day and night temperatures &#10004;</div>
+<div class='opt'>(C) Cool days and warm nights with constant rain</div>
+<div class='opt'>(D) Mild and rainy throughout the year</div>
+<div class='opt'>(E) Freezing cold and very wet</div>
+<div class='opt'>(F) Heavy rainfall all year and steady temperatures</div>
+<div class='idea'><span class='lbl'>The idea</span>Deserts are dry, with scorching days and sharply cooler nights.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Deserts receive very little rain</li>
+<li>Days are very hot under the strong Sun</li>
+<li>Without clouds, nights cool sharply, giving a large day-night temperature difference</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; Very low rainfall, with hot days and a large difference between day and night temperatures</div>
+<div class='trap'><span class='lbl'>Watch out</span>Heavy rainfall describes a rainforest, not a desert; deserts are defined by dryness.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Knowing desert climate guides which crops and homes suit such regions.</div>
+</div>
+<div class='q'>
+<p class='qn'>41. In a quiz each correct answer scores +4 and each wrong answer scores -2. Out of 20 questions a student gets 13 correct and the rest wrong. What is the total score? <span class='tag'>Integers</span></p>
+<div class='opt'>(A) 24</div>
+<div class='opt'>(B) 40</div>
+<div class='opt'>(C) -14</div>
+<div class='opt correct'>(D) 38 &#10004;</div>
+<div class='opt'>(E) 66</div>
+<div class='opt'>(F) 52</div>
+<div class='opt'>(G) 26</div>
+<div class='idea'><span class='lbl'>The idea</span>Score the correct and wrong answers separately with their signs, then add.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Correct: 13 x 4 = 52</li>
+<li>Wrong: 20 - 13 = 7 wrong, 7 x (-2) = -14</li>
+<li>Total = 52 + (-14) = 38</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (D) &mdash; 38</div>
+<div class='trap'><span class='lbl'>Watch out</span>52 counts only the correct answers and forgets the -14 penalty for wrong ones.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Exams with negative marking are totalled with exactly this signed scoring.</div>
+</div>
+<div class='q'>
+<p class='qn'>42. A car uses 0.08 litre of fuel per km. How much fuel does it need for 350 km? <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt correct'>(A) 28 litres &#10004;</div>
+<div class='opt'>(B) 0.28 litres</div>
+<div class='opt'>(C) 2.8 litres</div>
+<div class='opt'>(D) 280 litres</div>
+<div class='opt'>(E) 32 litres</div>
+<div class='opt'>(F) 35 litres</div>
+<div class='idea'><span class='lbl'>The idea</span>Multiply the per-km use by the distance.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Fuel = 0.08 x 350</li>
+<li>8 x 350 = 2800</li>
+<li>Place 2 decimals: 28.00 = 28 litres</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (A) &mdash; 28 litres</div>
+<div class='trap'><span class='lbl'>Watch out</span>2.8 litres misplaces the decimal point by one place.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Drivers estimate fuel for a trip from a per-km consumption rate.</div>
+</div>
+<div class='q'>
+<p class='qn'>43. Rusting of iron needs which two things to be present together? <span class='tag'>Physical &amp; Chemical Changes</span></p>
+<div class='opt'>(A) Nitrogen and water</div>
+<div class='opt correct'>(B) Oxygen (air) and water (moisture) &#10004;</div>
+<div class='opt'>(C) Water and salt only</div>
+<div class='opt'>(D) Only dry air</div>
+<div class='opt'>(E) Heat and light only</div>
+<div class='opt'>(F) Oil and air</div>
+<div class='opt'>(G) Oxygen and carbon dioxide</div>
+<div class='idea'><span class='lbl'>The idea</span>Iron rusts when exposed to both oxygen and moisture at the same time.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Iron alone in dry air or in air-free water does not rust quickly</li>
+<li>Rusting needs oxygen from the air</li>
+<li>It also needs moisture (water), so both together cause rust</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; Oxygen (air) and water (moisture)</div>
+<div class='trap'><span class='lbl'>Watch out</span>Dry air alone will not rust iron; moisture must be present along with oxygen.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>This is why we keep tools dry and oiled to prevent rust.</div>
+</div>
+<div class='q'>
+<p class='qn'>44. A region&#x27;s annual rainfall falls from 1200 mm to 900 mm. What is the percentage decrease? <span class='tag'>Weather, Climate &amp; Adaptations</span></p>
+<div class='opt'>(A) 300%</div>
+<div class='opt'>(B) 20%</div>
+<div class='opt'>(C) 30%</div>
+<div class='opt correct'>(D) 25% &#10004;</div>
+<div class='opt'>(E) 33%</div>
+<div class='opt'>(F) 12%</div>
+<div class='idea'><span class='lbl'>The idea</span>Find the drop, then express it as a percentage of the original amount.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Decrease = 1200 - 900 = 300 mm</li>
+<li>As a fraction of the original = 300 / 1200</li>
+<li>= 1/4 = 25%</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (D) &mdash; 25%</div>
+<div class='trap'><span class='lbl'>Watch out</span>300% wrongly uses the raw drop; as a percentage of 1200 mm the decrease is 25%.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Climate scientists report percentage changes in rainfall to track droughts.</div>
+</div>
+<div class='q'>
+<p class='qn'>45. Evaluate (-1) x (-2) x (-3) x (-4) x (-5). <span class='tag'>Integers</span></p>
+<div class='opt'>(A) -15</div>
+<div class='opt correct'>(B) -120 &#10004;</div>
+<div class='opt'>(C) 60</div>
+<div class='opt'>(D) 0</div>
+<div class='opt'>(E) 120</div>
+<div class='opt'>(F) 15</div>
+<div class='opt'>(G) -60</div>
+<div class='idea'><span class='lbl'>The idea</span>Count the negative factors: an odd count makes the product negative.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Multiply the sizes: 1 x 2 x 3 x 4 x 5 = 120</li>
+<li>There are 5 negative signs (odd), so the product is negative</li>
+<li>Result = -120</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; -120</div>
+<div class='trap'><span class='lbl'>Watch out</span>+120 forgets that five negatives (an odd number) make the product negative.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Sign-counting like this lets calculators evaluate long products quickly.</div>
+</div>
+<div class='q'>
+<p class='qn'>46. Divide 9.6 / 0.12. <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 0.8</div>
+<div class='opt'>(B) 8</div>
+<div class='opt correct'>(C) 80 &#10004;</div>
+<div class='opt'>(D) 8.4</div>
+<div class='opt'>(E) 12</div>
+<div class='opt'>(F) 0.08</div>
+<div class='opt'>(G) 800</div>
+<div class='idea'><span class='lbl'>The idea</span>Scale both numbers so the divisor becomes a whole number.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Multiply both by 100: 960 / 12</li>
+<li>= 80</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; 80</div>
+<div class='trap'><span class='lbl'>Watch out</span>8 scales the two numbers unequally; multiplying both by 100 keeps the value and gives 80.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Working out how many small decimal doses fit in a bottle uses this division.</div>
+</div>
+<div class='q'>
+<p class='qn'>47. A burning candle shows both kinds of change. The wax melting is a ___ change and the wax burning is a ___ change. <span class='tag'>Physical &amp; Chemical Changes</span></p>
+<div class='opt'>(A) physical; physical</div>
+<div class='opt'>(B) chemical; chemical</div>
+<div class='opt'>(C) chemical; reversible</div>
+<div class='opt'>(D) neither; neither</div>
+<div class='opt correct'>(E) physical; chemical &#10004;</div>
+<div class='opt'>(F) physical; reversible only</div>
+<div class='opt'>(G) chemical; physical</div>
+<div class='idea'><span class='lbl'>The idea</span>Melting is reversible with no new substance (physical); burning makes new gases (chemical).</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Melted wax can solidify again and is still wax, so melting is physical</li>
+<li>Burning wax produces carbon dioxide, water vapour and heat</li>
+<li>New substances form on burning, so burning is chemical</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (E) &mdash; physical; chemical</div>
+<div class='trap'><span class='lbl'>Watch out</span>Reversing the labels is wrong; melting is physical and burning (new substances) is chemical.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>A candle is a classic example showing two change types happening together.</div>
+</div>
+<div class='q'>
+<p class='qn'>48. Why do many birds migrate to warmer regions during winter? <span class='tag'>Weather, Climate &amp; Adaptations</span></p>
+<div class='opt'>(A) Because warm regions have no food</div>
+<div class='opt'>(B) To find colder places to nest</div>
+<div class='opt'>(C) To avoid the warm summer heat</div>
+<div class='opt'>(D) Because they cannot fly in summer</div>
+<div class='opt'>(E) To escape the rain only</div>
+<div class='opt'>(F) Because they dislike sunlight</div>
+<div class='opt correct'>(G) To escape the cold and find enough food &#10004;</div>
+<div class='idea'><span class='lbl'>The idea</span>Birds move to warmer places where cold is less harsh and food is available.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>In winter the home region becomes very cold and food grows scarce</li>
+<li>Warmer regions stay milder and have more food</li>
+<li>So birds migrate there to survive the winter</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (G) &mdash; To escape the cold and find enough food</div>
+<div class='trap'><span class='lbl'>Watch out</span>Saying warm regions have no food is wrong; birds migrate precisely because food is easier to find there.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Tracking migration helps protect the habitats birds depend on each season.</div>
+</div>
+<div class='q'>
+<p class='qn'>49. The temperatures on three winter nights were -4 C, -7 C and 2 C. What was the average night temperature? <span class='tag'>Integers</span></p>
+<div class='opt correct'>(A) -3 C &#10004;</div>
+<div class='opt'>(B) 3 C</div>
+<div class='opt'>(C) -13 C</div>
+<div class='opt'>(D) -1 C</div>
+<div class='opt'>(E) -9 C</div>
+<div class='opt'>(F) 1 C</div>
+<div class='opt'>(G) 13 C</div>
+<div class='idea'><span class='lbl'>The idea</span>Add the signed values, then divide by how many there are.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Sum = -4 + (-7) + 2 = -9</li>
+<li>Number of nights = 3</li>
+<li>Average = -9 / 3 = -3 C</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (A) &mdash; -3 C</div>
+<div class='trap'><span class='lbl'>Watch out</span>+3 C divides correctly but drops the negative sign of the -9 total.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Meteorologists average daily readings to report a month&#x27;s mean temperature.</div>
+</div>
+<div class='q'>
+<p class='qn'>50. Evaluate 0.125 + 0.0125. <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 0.25</div>
+<div class='opt'>(B) 0.1325</div>
+<div class='opt'>(C) 1.375</div>
+<div class='opt'>(D) 0.2375</div>
+<div class='opt correct'>(E) 0.1375 &#10004;</div>
+<div class='opt'>(F) 0.15</div>
+<div class='idea'><span class='lbl'>The idea</span>Line up the decimal points and add, padding with zeros.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Write 0.1250 + 0.0125</li>
+<li>Add: 0 + 5 = 5, 5 + 2 = 7, 2 + 1 = 3, 1 + 0 = 1</li>
+<li>= 0.1375</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (E) &mdash; 0.1375</div>
+<div class='trap'><span class='lbl'>Watch out</span>0.25 lines the numbers up wrongly; aligning the points gives 0.1375.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Adding tiny decimal measurements is common in scientific data.</div>
+</div>
+<div class='q'>
+<p class='qn'>51. When iron rusts, iron and oxygen combine in a mass ratio of 7 : 3. How much rust forms when 21 g of iron rusts completely? <span class='tag'>Physical &amp; Chemical Changes</span></p>
+<div class='opt'>(A) 9 g</div>
+<div class='opt'>(B) 21 g</div>
+<div class='opt'>(C) 49 g</div>
+<div class='opt'>(D) 24 g</div>
+<div class='opt'>(E) 28 g</div>
+<div class='opt correct'>(F) 30 g &#10004;</div>
+<div class='opt'>(G) 70 g</div>
+<div class='idea'><span class='lbl'>The idea</span>Use the ratio to find the oxygen mass, then add it to the iron by conservation of mass.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Iron : oxygen = 7 : 3, and iron = 21 g, so each part = 21 / 7 = 3 g</li>
+<li>Oxygen = 3 parts x 3 g = 9 g</li>
+<li>Rust = iron + oxygen = 21 + 9 = 30 g</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (F) &mdash; 30 g</div>
+<div class='trap'><span class='lbl'>Watch out</span>21 g forgets the oxygen that combines; rust is heavier than the iron alone.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Conservation of mass with ratios predicts product masses in chemical industries.</div>
+</div>
+<div class='q'>
+<p class='qn'>52. Which features help a camel survive in a hot, dry desert? <span class='tag'>Weather, Climate &amp; Adaptations</span></p>
+<div class='opt'>(A) Short legs that stay close to hot sand</div>
+<div class='opt'>(B) Gills to breathe underwater</div>
+<div class='opt'>(C) Thick blubber and white fur for snow</div>
+<div class='opt correct'>(D) Fat stored in its hump, long legs, and the ability to go long without water &#10004;</div>
+<div class='opt'>(E) A need to drink water every hour</div>
+<div class='opt'>(F) Large ears to keep warm at night</div>
+<div class='idea'><span class='lbl'>The idea</span>Camels store energy as hump fat and conserve water to endure desert dryness.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Deserts are hot and short of water</li>
+<li>The camel&#x27;s hump stores fat for energy, and its body saves water</li>
+<li>Long legs lift it above the hot sand, helping it cope</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (D) &mdash; Fat stored in its hump, long legs, and the ability to go long without water</div>
+<div class='trap'><span class='lbl'>Watch out</span>Blubber and white fur suit polar animals; a camel is adapted to heat and dryness instead.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Studying camel adaptations inspires water-saving designs for dry regions.</div>
+</div>
+<div class='q'>
+<p class='qn'>53. If (-15) + box = -23, what number replaces the box? <span class='tag'>Integers</span></p>
+<div class='opt correct'>(A) -8 &#10004;</div>
+<div class='opt'>(B) -38</div>
+<div class='opt'>(C) -15</div>
+<div class='opt'>(D) 8</div>
+<div class='opt'>(E) 38</div>
+<div class='opt'>(F) -23</div>
+<div class='idea'><span class='lbl'>The idea</span>Undo the addition by subtracting the known integer from the result.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>box = -23 - (-15)</li>
+<li>= -23 + 15</li>
+<li>= -8</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (A) &mdash; -8</div>
+<div class='trap'><span class='lbl'>Watch out</span>+8 ignores that we must go further down (more negative), so the missing number is -8.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Solving for an unknown change is how banks find a missing transaction.</div>
+</div>
+<div class='q'>
+<p class='qn'>54. A plank 3.6 m long is cut into pieces each 0.45 m long. How many pieces are obtained? <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 80</div>
+<div class='opt correct'>(B) 8 &#10004;</div>
+<div class='opt'>(C) 9</div>
+<div class='opt'>(D) 1.62</div>
+<div class='opt'>(E) 7</div>
+<div class='opt'>(F) 0.8</div>
+<div class='opt'>(G) 16</div>
+<div class='idea'><span class='lbl'>The idea</span>Divide the total length by the length of one piece.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Number of pieces = 3.6 / 0.45</li>
+<li>Multiply both by 100: 360 / 45</li>
+<li>= 8</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; 8</div>
+<div class='trap'><span class='lbl'>Watch out</span>1.62 multiplies the lengths instead of dividing; we need how many fit, so divide.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Tailors and carpenters divide a total length to count usable pieces.</div>
+</div>
+<div class='q'>
+<p class='qn'>55. Which observation is the clearest sign that a chemical change has occurred? <span class='tag'>Physical &amp; Chemical Changes</span></p>
+<div class='opt'>(A) It is merely moved to a new place</div>
+<div class='opt correct'>(B) A new substance with new properties is formed &#10004;</div>
+<div class='opt'>(C) Water on it simply dries up</div>
+<div class='opt'>(D) The material only gets colder</div>
+<div class='opt'>(E) It only changes its size</div>
+<div class='opt'>(F) The material is cut into smaller pieces</div>
+<div class='idea'><span class='lbl'>The idea</span>Forming a new substance is the defining feature of a chemical change.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Changes of shape, size or state alone are physical</li>
+<li>A chemical change produces something new</li>
+<li>So a new substance with new properties is the key sign</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; A new substance with new properties is formed</div>
+<div class='trap'><span class='lbl'>Watch out</span>Changing shape is only physical; the hallmark of a chemical change is a brand-new substance.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Scientists watch for new substances, gas, or colour change to detect reactions.</div>
+</div>
+<div class='q'>
+<p class='qn'>56. What does a maximum-minimum thermometer measure? <span class='tag'>Weather, Climate &amp; Adaptations</span></p>
+<div class='opt'>(A) Only the amount of rainfall</div>
+<div class='opt'>(B) Only the wind speed</div>
+<div class='opt'>(C) The direction of the wind</div>
+<div class='opt'>(D) The brightness of sunlight</div>
+<div class='opt'>(E) The air pressure only</div>
+<div class='opt'>(F) The humidity of the air only</div>
+<div class='opt correct'>(G) The highest and lowest temperatures reached during a day &#10004;</div>
+<div class='idea'><span class='lbl'>The idea</span>This thermometer records both temperature extremes over a period.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>A day&#x27;s temperature rises and falls</li>
+<li>A max-min thermometer captures the peak and the lowest point</li>
+<li>So it reports both the highest and lowest temperatures of the day</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (G) &mdash; The highest and lowest temperatures reached during a day</div>
+<div class='trap'><span class='lbl'>Watch out</span>Rainfall is measured by a rain gauge; this thermometer records temperature extremes.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Weather stations log daily highs and lows with such thermometers.</div>
+</div>
+<div class='q'>
+<p class='qn'>57. A submarine at -120 m ascends to -40 m in 4 equal steps. How much does it rise in each step? <span class='tag'>Integers</span></p>
+<div class='opt'>(A) 20 m down</div>
+<div class='opt'>(B) 40 m up</div>
+<div class='opt correct'>(C) 20 m up &#10004;</div>
+<div class='opt'>(D) 30 m up</div>
+<div class='opt'>(E) 80 m up</div>
+<div class='opt'>(F) 160 m up</div>
+<div class='idea'><span class='lbl'>The idea</span>Find the total change first, then divide by the number of equal steps.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Total change = -40 - (-120) = 80 m upward</li>
+<li>Steps = 4</li>
+<li>Each step = 80 / 4 = 20 m up</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; 20 m up</div>
+<div class='trap'><span class='lbl'>Watch out</span>20 m down has the right size but the wrong direction; -40 is higher than -120, so it rises.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Submarine pilots plan equal ascent stages to avoid pressure problems.</div>
+</div>
+<div class='q'>
+<p class='qn'>58. Subtract 5 - 2.376. <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt correct'>(A) 2.624 &#10004;</div>
+<div class='opt'>(B) 7.376</div>
+<div class='opt'>(C) 2.634</div>
+<div class='opt'>(D) 2.724</div>
+<div class='opt'>(E) 2.376</div>
+<div class='opt'>(F) 2.524</div>
+<div class='opt'>(G) 3.376</div>
+<div class='idea'><span class='lbl'>The idea</span>Write 5 as 5.000 and subtract place by place with borrowing.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>5.000 - 2.376</li>
+<li>Borrow through the places: 0.000 - 0.376 needs borrowing</li>
+<li>Result = 2.624</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (A) &mdash; 2.624</div>
+<div class='trap'><span class='lbl'>Watch out</span>3.376 subtracts wrongly; 5.000 - 2.376 leaves 2.624, not over 3.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Giving change from a round note uses this kind of subtraction.</div>
+</div>
+<div class='q'>
+<p class='qn'>59. When carbon dioxide is passed through lime water, the lime water turns milky. Why is this a chemical change? <span class='tag'>Physical &amp; Chemical Changes</span></p>
+<div class='opt'>(A) The lime water only gets warmer</div>
+<div class='opt'>(B) The water simply evaporates</div>
+<div class='opt correct'>(C) A new white substance (calcium carbonate) is formed &#10004;</div>
+<div class='opt'>(D) The gas merely dissolves and can be boiled off</div>
+<div class='opt'>(E) No new substance is produced</div>
+<div class='opt'>(F) It is only a change of state</div>
+<div class='opt'>(G) Only the colour of light changes</div>
+<div class='idea'><span class='lbl'>The idea</span>The milkiness is a new insoluble substance, showing a chemical reaction.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Carbon dioxide reacts with the lime water</li>
+<li>A new white solid, calcium carbonate, forms and makes it milky</li>
+<li>Forming a new substance means it is a chemical change</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; A new white substance (calcium carbonate) is formed</div>
+<div class='trap'><span class='lbl'>Watch out</span>Saying the gas merely dissolves is wrong; a new white solid actually forms.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>This milky test is used in labs to detect carbon dioxide gas.</div>
+</div>
+<div class='q'>
+<p class='qn'>60. The temperature rose steadily from 18 C at 6 am to 30 C at noon. What was the average rate of rise per hour? <span class='tag'>Weather, Climate &amp; Adaptations</span></p>
+<div class='opt'>(A) 3 C per hour</div>
+<div class='opt'>(B) 12 C per hour</div>
+<div class='opt correct'>(C) 2 C per hour &#10004;</div>
+<div class='opt'>(D) 1 C per hour</div>
+<div class='opt'>(E) 0.5 C per hour</div>
+<div class='opt'>(F) 6 C per hour</div>
+<div class='opt'>(G) 4 C per hour</div>
+<div class='idea'><span class='lbl'>The idea</span>Find the total rise and the time taken, then divide.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Total rise = 30 - 18 = 12 C</li>
+<li>Time from 6 am to noon = 6 hours</li>
+<li>Rate = 12 / 6 = 2 C per hour</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; 2 C per hour</div>
+<div class='trap'><span class='lbl'>Watch out</span>12 C per hour mistakes the total rise for the hourly rate; spread over 6 hours it is 2 C per hour.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Meteorologists describe warming trends as a rate of change per hour.</div>
+</div>
+<div class='q'>
+<p class='qn'>61. Evaluate -50 - (-30) + (-15). <span class='tag'>Integers</span></p>
+<div class='opt'>(A) 5</div>
+<div class='opt'>(B) -65</div>
+<div class='opt correct'>(C) -35 &#10004;</div>
+<div class='opt'>(D) 65</div>
+<div class='opt'>(E) 35</div>
+<div class='opt'>(F) -95</div>
+<div class='idea'><span class='lbl'>The idea</span>Rewrite subtraction of a negative as addition, then combine.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>-50 - (-30) = -50 + 30 = -20</li>
+<li>-20 + (-15) = -35</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; -35</div>
+<div class='trap'><span class='lbl'>Watch out</span>-65 treats - (-30) as another subtraction; subtracting a negative actually adds 30.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Engineers simplify signed force calculations using these same rules.</div>
+</div>
+<div class='q'>
+<p class='qn'>62. Evaluate 1.2 x 1.2 x 1.2. <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 2.728</div>
+<div class='opt'>(B) 1.628</div>
+<div class='opt'>(C) 3.6</div>
+<div class='opt'>(D) 1.44</div>
+<div class='opt correct'>(E) 1.728 &#10004;</div>
+<div class='opt'>(F) 1.2</div>
+<div class='opt'>(G) 17.28</div>
+<div class='idea'><span class='lbl'>The idea</span>Multiply step by step, tracking decimal places each time.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>1.2 x 1.2 = 1.44</li>
+<li>1.44 x 1.2 = 1.728</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (E) &mdash; 1.728</div>
+<div class='trap'><span class='lbl'>Watch out</span>3.6 adds the three numbers instead of multiplying them.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Volumes of cube-shaped boxes are found by multiplying a length three times.</div>
+</div>
+<div class='q'>
+<p class='qn'>63. You have a wooden log. Cutting it into pieces versus burning it - which action forms a new substance? <span class='tag'>Physical &amp; Chemical Changes</span></p>
+<div class='opt'>(A) Both are physical changes</div>
+<div class='opt'>(B) Only cutting forms new substances</div>
+<div class='opt'>(C) Cutting forms gas, burning does not</div>
+<div class='opt correct'>(D) Burning the log &#10004;</div>
+<div class='opt'>(E) Cutting the log</div>
+<div class='opt'>(F) Both form new substances</div>
+<div class='idea'><span class='lbl'>The idea</span>Cutting only changes size (physical); burning produces ash and gases (chemical).</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Cutting leaves the pieces as wood, just smaller</li>
+<li>Burning turns wood into ash, smoke and gases</li>
+<li>Only burning makes new substances, so it is the chemical change</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (D) &mdash; Burning the log</div>
+<div class='trap'><span class='lbl'>Watch out</span>Cutting seems to &#x27;change&#x27; the wood, but the pieces are still wood; only burning is chemical.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>It explains why firewood, once burnt, cannot be turned back into wood.</div>
+</div>
+<div class='q'>
+<p class='qn'>64. Besides temperature, which factor is most important in deciding the climate of a place? <span class='tag'>Weather, Climate &amp; Adaptations</span></p>
+<div class='opt'>(A) The brand of houses built there</div>
+<div class='opt correct'>(B) The amount of moisture, such as humidity and rainfall &#10004;</div>
+<div class='opt'>(C) The colour of the local soil</div>
+<div class='opt'>(D) The local language spoken</div>
+<div class='opt'>(E) The shape of the roads</div>
+<div class='opt'>(F) The time zone of the region</div>
+<div class='opt'>(G) The number of people living there</div>
+<div class='idea'><span class='lbl'>The idea</span>Climate depends mainly on long-term temperature and moisture conditions.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Climate is built from long-term weather patterns</li>
+<li>Temperature is one main factor</li>
+<li>The other key factor is moisture - humidity and rainfall</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; The amount of moisture, such as humidity and rainfall</div>
+<div class='trap'><span class='lbl'>Watch out</span>Population does not set climate; long-term moisture and temperature do.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Geographers classify world climates using temperature and rainfall data.</div>
+</div>
+<div class='q'>
+<p class='qn'>65. What is the successor of -1 multiplied by the predecessor of -1? <span class='tag'>Integers</span></p>
+<div class='opt'>(A) -1</div>
+<div class='opt'>(B) 1</div>
+<div class='opt'>(C) 4</div>
+<div class='opt'>(D) 2</div>
+<div class='opt'>(E) -2</div>
+<div class='opt'>(F) 3</div>
+<div class='opt correct'>(G) 0 &#10004;</div>
+<div class='idea'><span class='lbl'>The idea</span>Find the next and previous integers, then multiply.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Successor of -1 = 0</li>
+<li>Predecessor of -1 = -2</li>
+<li>Product = 0 x (-2) = 0</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (G) &mdash; 0</div>
+<div class='trap'><span class='lbl'>Watch out</span>-2 multiplies -2 by 1 instead of by 0; the successor of -1 is 0, and anything times 0 is 0.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>The idea that multiplying by zero gives zero is built into all arithmetic logic.</div>
+</div>
+<div class='q'>
+<p class='qn'>66. A recipe needs 0.35 kg of sugar per cake. How much sugar is needed for 12 cakes? <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 12.35 kg</div>
+<div class='opt'>(B) 42 kg</div>
+<div class='opt correct'>(C) 4.2 kg &#10004;</div>
+<div class='opt'>(D) 0.42 kg</div>
+<div class='opt'>(E) 3.5 kg</div>
+<div class='opt'>(F) 4.8 kg</div>
+<div class='idea'><span class='lbl'>The idea</span>Multiply the per-cake amount by the number of cakes.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Sugar = 0.35 x 12</li>
+<li>35 x 12 = 420</li>
+<li>Place 2 decimals: 4.20 = 4.2 kg</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; 4.2 kg</div>
+<div class='trap'><span class='lbl'>Watch out</span>0.42 kg misplaces the decimal point by one place.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Bakers scale up recipe quantities for large orders this way.</div>
+</div>
+<div class='q'>
+<p class='qn'>67. A fuel releases 5 kJ of energy per gram when it burns. How much energy is released by burning 0.4 kg of this fuel? <span class='tag'>Physical &amp; Chemical Changes</span></p>
+<div class='opt'>(A) 5 kJ</div>
+<div class='opt'>(B) 2 kJ</div>
+<div class='opt correct'>(C) 2000 kJ &#10004;</div>
+<div class='opt'>(D) 20000 kJ</div>
+<div class='opt'>(E) 500 kJ</div>
+<div class='opt'>(F) 200 kJ</div>
+<div class='idea'><span class='lbl'>The idea</span>Convert kilograms to grams, then multiply by the energy per gram.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>0.4 kg = 0.4 x 1000 = 400 g</li>
+<li>Energy = 400 g x 5 kJ/g</li>
+<li>= 2000 kJ</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; 2000 kJ</div>
+<div class='trap'><span class='lbl'>Watch out</span>2 kJ forgets to convert kg to grams; 0.4 kg is 400 g, giving 2000 kJ.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Energy yields of fuels are calculated this way when planning fuel needs.</div>
+</div>
+<div class='q'>
+<p class='qn'>68. Why do many animals living in very cold regions tend to have small ears and short tails? <span class='tag'>Weather, Climate &amp; Adaptations</span></p>
+<div class='opt'>(A) Larger surface area helps them keep warm</div>
+<div class='opt'>(B) It makes them look bigger to enemies</div>
+<div class='opt correct'>(C) Smaller body parts reduce the surface area, so they lose less body heat &#10004;</div>
+<div class='opt'>(D) Small ears help them swim faster</div>
+<div class='opt'>(E) Small parts help them lose heat quickly</div>
+<div class='opt'>(F) Short tails let them fly in the cold</div>
+<div class='idea'><span class='lbl'>The idea</span>Less exposed surface area means less heat is lost to the cold surroundings.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Heat escapes from the body&#x27;s surface</li>
+<li>Small ears and short tails reduce the exposed surface area</li>
+<li>So cold-climate animals lose less heat and stay warmer</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; Smaller body parts reduce the surface area, so they lose less body heat</div>
+<div class='trap'><span class='lbl'>Watch out</span>Saying it helps them lose heat is backwards; small parts help them keep heat in.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>This principle explains body-shape differences between polar and desert animals.</div>
+</div>
+<div class='q'>
+<p class='qn'>69. A shopkeeper records a loss of 120 rupees on each of 6 days, then a profit of 500 rupees. What is the net result? <span class='tag'>Integers</span></p>
+<div class='opt'>(A) -1220 rupees</div>
+<div class='opt'>(B) 380 rupees</div>
+<div class='opt'>(C) -120 rupees</div>
+<div class='opt'>(D) 620 rupees</div>
+<div class='opt correct'>(E) -220 rupees (a loss) &#10004;</div>
+<div class='opt'>(F) 1220 rupees</div>
+<div class='opt'>(G) 220 rupees (a profit)</div>
+<div class='idea'><span class='lbl'>The idea</span>Add the repeated losses as a negative, then add the single profit.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Total loss = 6 x 120 = 720 rupees, i.e. -720</li>
+<li>Add profit: -720 + 500 = -220</li>
+<li>So a net loss of 220 rupees</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (E) &mdash; -220 rupees (a loss)</div>
+<div class='trap'><span class='lbl'>Watch out</span>+220 profit flips the sign; the losses (-720) outweigh the 500 profit, leaving a loss.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Businesses total daily profit and loss this way to find the period&#x27;s net result.</div>
+</div>
+<div class='q'>
+<p class='qn'>70. In the number 24.6573, in which place is the digit 5 and what is its value? <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) Thousandths place, worth 0.005</div>
+<div class='opt correct'>(B) Hundredths place, worth 0.05 &#10004;</div>
+<div class='opt'>(C) Worth 50</div>
+<div class='opt'>(D) Tenths place, worth 0.05</div>
+<div class='opt'>(E) Worth 5</div>
+<div class='opt'>(F) Ten-thousandths place, worth 0.0005</div>
+<div class='opt'>(G) Tenths place, worth 0.5</div>
+<div class='idea'><span class='lbl'>The idea</span>Name the decimal places in order after the point: tenths, hundredths, thousandths.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>After the point: 6 is tenths, 5 is hundredths, 7 is thousandths, 3 is ten-thousandths</li>
+<li>So 5 is in the hundredths place</li>
+<li>Its value = 5 x 0.01 = 0.05</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; Hundredths place, worth 0.05</div>
+<div class='trap'><span class='lbl'>Watch out</span>Tenths/0.5 is the place of the 6, not the 5; the 5 is one place further right.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Reading decimal place value correctly avoids costly errors in measurements.</div>
+</div>
+<div class='q'>
+<p class='qn'>71. Why is the rusting of an iron bridge a serious problem, and how can it be slowed? <span class='tag'>Physical &amp; Chemical Changes</span></p>
+<div class='opt'>(A) Rust is harmless, so nothing needs to be done</div>
+<div class='opt'>(B) Rust adds useful weight, so we leave it</div>
+<div class='opt'>(C) Rust makes the iron stronger, so we add more rust</div>
+<div class='opt'>(D) Rusting can only be stopped by cutting the bridge</div>
+<div class='opt correct'>(E) Rust weakens the iron, so we paint, oil or galvanise it to keep out air and moisture &#10004;</div>
+<div class='opt'>(F) Rust cools the bridge, so we heat it</div>
+<div class='opt'>(G) Rust is good, so we wet the bridge daily</div>
+<div class='idea'><span class='lbl'>The idea</span>Rust eats away iron and weakens structures; barriers against air and moisture slow it.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Rust is brittle and flaky, so it weakens the iron over time</li>
+<li>Rusting needs air and moisture to reach the iron</li>
+<li>Painting, oiling or galvanising blocks air and moisture, slowing rusting</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (E) &mdash; Rust weakens the iron, so we paint, oil or galvanise it to keep out air and moisture</div>
+<div class='trap'><span class='lbl'>Watch out</span>Saying rust strengthens iron is wrong; rust weakens it, which is exactly why we prevent it.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Bridges and railway tracks are painted and galvanised to fight rust.</div>
+</div>
+<div class='q'>
+<p class='qn'>72. In one week the rainfall totalled 84 mm. If this is a typical week, about how much rain would fall in a year (52 weeks)? <span class='tag'>Weather, Climate &amp; Adaptations</span></p>
+<div class='opt'>(A) About 436.8 mm</div>
+<div class='opt'>(B) About 1008 mm</div>
+<div class='opt correct'>(C) About 4368 mm &#10004;</div>
+<div class='opt'>(D) About 52 mm</div>
+<div class='opt'>(E) About 84 mm</div>
+<div class='opt'>(F) About 4360 mm</div>
+<div class='opt'>(G) About 2184 mm</div>
+<div class='idea'><span class='lbl'>The idea</span>Multiply the weekly rainfall by the number of weeks in a year.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Weekly rainfall = 84 mm</li>
+<li>Weeks in a year = 52</li>
+<li>Yearly estimate = 84 x 52 = 4368 mm</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; About 4368 mm</div>
+<div class='trap'><span class='lbl'>Watch out</span>436.8 mm divides instead of multiplying or drops a place; 84 x 52 is 4368 mm.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Climatologists scale short records up to estimate annual rainfall totals.</div>
+</div>
+<div class='q'>
+<p class='qn'>73. The temperature drops 3 C every 2 hours, starting from 10 C. What is the temperature after 8 hours? <span class='tag'>Integers</span></p>
+<div class='opt correct'>(A) -2 C &#10004;</div>
+<div class='opt'>(B) -12 C</div>
+<div class='opt'>(C) -14 C</div>
+<div class='opt'>(D) 4 C</div>
+<div class='opt'>(E) -22 C</div>
+<div class='opt'>(F) 2 C</div>
+<div class='idea'><span class='lbl'>The idea</span>Find how many drops occur, multiply, then subtract from the start.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Number of 2-hour drops in 8 hours = 8 / 2 = 4</li>
+<li>Total drop = 4 x 3 = 12 C</li>
+<li>10 - 12 = -2 C</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (A) &mdash; -2 C</div>
+<div class='trap'><span class='lbl'>Watch out</span>+2 C subtracts only 8 instead of 12, miscounting the number of 2-hour drops.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Weather forecasters extend a cooling trend to predict overnight lows.</div>
+</div>
+<div class='q'>
+<p class='qn'>74. Evaluate 0.9 - 0.09 - 0.009. <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 0.711</div>
+<div class='opt correct'>(B) 0.801 &#10004;</div>
+<div class='opt'>(C) 0.81</div>
+<div class='opt'>(D) 0.8</div>
+<div class='opt'>(E) 0.099</div>
+<div class='opt'>(F) 0.819</div>
+<div class='idea'><span class='lbl'>The idea</span>Subtract one at a time, lining up the decimal points.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>0.9 - 0.09 = 0.81</li>
+<li>0.81 - 0.009 = 0.801</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; 0.801</div>
+<div class='trap'><span class='lbl'>Watch out</span>0.81 stops after the first subtraction and forgets to remove 0.009.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Chaining small decimal deductions appears in fine financial adjustments.</div>
+</div>
+<div class='q'>
+<p class='qn'>75. Why is dissolving sugar in water a physical change? <span class='tag'>Physical &amp; Chemical Changes</span></p>
+<div class='opt'>(A) The sugar changes into salt</div>
+<div class='opt correct'>(B) The sugar can be recovered by evaporating the water, and no new substance forms &#10004;</div>
+<div class='opt'>(C) The water turns into sugar</div>
+<div class='opt'>(D) It produces a new gas</div>
+<div class='opt'>(E) A new substance is created in the water</div>
+<div class='opt'>(F) It can never be separated again</div>
+<div class='idea'><span class='lbl'>The idea</span>Dissolving spreads the sugar out but does not change it; it can be recovered.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>The sugar particles spread between the water particles</li>
+<li>It is still sugar, just mixed in</li>
+<li>Evaporating the water leaves the sugar behind, so the change is physical</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; The sugar can be recovered by evaporating the water, and no new substance forms</div>
+<div class='trap'><span class='lbl'>Watch out</span>Saying a new substance forms is wrong; the sugar is unchanged and can be got back.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Separating dissolved salt or sugar by evaporation relies on this being physical.</div>
+</div>
+<div class='q'>
+<p class='qn'>76. The plants and animals that live in a region depend most strongly on its: <span class='tag'>Weather, Climate &amp; Adaptations</span></p>
+<div class='opt'>(A) Local festival dates</div>
+<div class='opt'>(B) Brand of vehicles</div>
+<div class='opt correct'>(C) Climate &#10004;</div>
+<div class='opt'>(D) Colour of its flag</div>
+<div class='opt'>(E) Type of currency</div>
+<div class='opt'>(F) Style of clothing shops</div>
+<div class='idea'><span class='lbl'>The idea</span>Living things are adapted to the long-term climate of their region.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Plants and animals develop features suited to their surroundings</li>
+<li>These surroundings are set by the long-term climate</li>
+<li>So living things in a region depend chiefly on its climate</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; Climate</div>
+<div class='trap'><span class='lbl'>Watch out</span>Currency and festivals are human matters; living things depend on the natural climate.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>This is why similar climates around the world have similar kinds of wildlife.</div>
+</div>
+<div class='q'>
+<p class='qn'>77. The product of a number and -7 is 91. What is the number? <span class='tag'>Integers</span></p>
+<div class='opt'>(A) 84</div>
+<div class='opt correct'>(B) -13 &#10004;</div>
+<div class='opt'>(C) 13</div>
+<div class='opt'>(D) -7</div>
+<div class='opt'>(E) 98</div>
+<div class='opt'>(F) -98</div>
+<div class='opt'>(G) 7</div>
+<div class='idea'><span class='lbl'>The idea</span>Divide the product by the known factor, keeping track of signs.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Number = 91 / (-7)</li>
+<li>A positive divided by a negative is negative</li>
+<li>= -13</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; -13</div>
+<div class='trap'><span class='lbl'>Watch out</span>+13 ignores the sign; a positive product from a negative factor needs a negative number.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Solving such equations finds an unknown rate from a known total.</div>
+</div>
+<div class='q'>
+<p class='qn'>78. Three rods measure 1.2 m, 0.95 m and 1.45 m. What is their average length? <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 3.6 m</div>
+<div class='opt'>(B) 1.25 m</div>
+<div class='opt correct'>(C) 1.2 m &#10004;</div>
+<div class='opt'>(D) 0.9 m</div>
+<div class='opt'>(E) 1.15 m</div>
+<div class='opt'>(F) 1.0 m</div>
+<div class='opt'>(G) 1.3 m</div>
+<div class='idea'><span class='lbl'>The idea</span>Add the lengths, then divide by how many rods there are.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Sum = 1.2 + 0.95 + 1.45 = 3.6 m</li>
+<li>Number of rods = 3</li>
+<li>Average = 3.6 / 3 = 1.2 m</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; 1.2 m</div>
+<div class='trap'><span class='lbl'>Watch out</span>3.6 m is the total, not the average; divide by 3 to get 1.2 m.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Quality checks average several measurements to report a typical size.</div>
+</div>
+<div class='q'>
+<p class='qn'>79. Setting of curd, ripening of fruit and digestion of food are all examples of which kind of change? <span class='tag'>Physical &amp; Chemical Changes</span></p>
+<div class='opt'>(A) Reversible physical changes</div>
+<div class='opt'>(B) No change at all</div>
+<div class='opt'>(C) Changes of state only</div>
+<div class='opt'>(D) Physical changes</div>
+<div class='opt'>(E) Changes of size only</div>
+<div class='opt correct'>(F) Chemical changes &#10004;</div>
+<div class='opt'>(G) Changes of shape only</div>
+<div class='idea'><span class='lbl'>The idea</span>Each forms new substances and cannot be easily reversed, so all are chemical.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>In each case new substances with new properties form</li>
+<li>None can be simply reversed</li>
+<li>So all three are chemical changes</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (F) &mdash; Chemical changes</div>
+<div class='trap'><span class='lbl'>Watch out</span>Calling them physical is wrong; each produces new substances and cannot be undone.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Knowing these are chemical helps explain food spoilage and preservation.</div>
+</div>
+<div class='q'>
+<p class='qn'>80. A lion&#x27;s dull tawny (yellow-brown) colour is mainly an adaptation that helps it to: <span class='tag'>Weather, Climate &amp; Adaptations</span></p>
+<div class='opt'>(A) Blend into a green forest canopy</div>
+<div class='opt'>(B) Stay warm in icy snow</div>
+<div class='opt'>(C) Glow brightly to scare prey</div>
+<div class='opt correct'>(D) Stay camouflaged in dry grassland while hunting &#10004;</div>
+<div class='opt'>(E) Shine in the dark to see better</div>
+<div class='opt'>(F) Attract rain to its territory</div>
+<div class='idea'><span class='lbl'>The idea</span>Tawny colouring blends with dry grass, helping the lion approach prey unseen.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Lions hunt in dry, yellow-brown grasslands</li>
+<li>Their tawny colour matches this background</li>
+<li>So they stay hidden (camouflaged) while stalking prey</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (D) &mdash; Stay camouflaged in dry grassland while hunting</div>
+<div class='trap'><span class='lbl'>Watch out</span>Snow camouflage needs white, not tawny; the lion&#x27;s colour matches dry grassland.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Camouflage research informs the design of military and wildlife-watching gear.</div>
+</div>
+<div class='q'>
+<p class='qn'>81. Evaluate (-8) x 5 + 8 x 5. <span class='tag'>Integers</span></p>
+<div class='opt'>(A) -40</div>
+<div class='opt'>(B) 80</div>
+<div class='opt correct'>(C) 0 &#10004;</div>
+<div class='opt'>(D) 13</div>
+<div class='opt'>(E) 40</div>
+<div class='opt'>(F) -80</div>
+<div class='idea'><span class='lbl'>The idea</span>Compute each product, then add the opposites.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>(-8) x 5 = -40</li>
+<li>8 x 5 = 40</li>
+<li>-40 + 40 = 0</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; 0</div>
+<div class='trap'><span class='lbl'>Watch out</span>-80 adds the two products as if both were negative; they are opposites and cancel to 0.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>This cancelling shows up when equal and opposite forces balance out.</div>
+</div>
+<div class='q'>
+<p class='qn'>82. Convert 2.05 km into metres. <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 250 m</div>
+<div class='opt correct'>(B) 2050 m &#10004;</div>
+<div class='opt'>(C) 205 m</div>
+<div class='opt'>(D) 2.05 m</div>
+<div class='opt'>(E) 2005 m</div>
+<div class='opt'>(F) 20500 m</div>
+<div class='opt'>(G) 2500 m</div>
+<div class='idea'><span class='lbl'>The idea</span>Multiply kilometres by 1000 to get metres.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>1 km = 1000 m</li>
+<li>2.05 x 1000</li>
+<li>= 2050 m</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; 2050 m</div>
+<div class='trap'><span class='lbl'>Watch out</span>205 m multiplies by 100 instead of 1000.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Race and road distances are converted between km and m using this factor.</div>
+</div>
+<div class='q'>
+<p class='qn'>83. 20 g of iron rusts completely by gaining 8 g of oxygen. What is the mass of rust formed and the percentage increase in mass? <span class='tag'>Physical &amp; Chemical Changes</span></p>
+<div class='opt'>(A) 12 g of rust, a 40% increase</div>
+<div class='opt'>(B) 40 g of rust, a 40% increase</div>
+<div class='opt'>(C) 20 g of rust, a 40% increase</div>
+<div class='opt'>(D) 28 g of rust, a 28% increase</div>
+<div class='opt correct'>(E) 28 g of rust, a 40% increase &#10004;</div>
+<div class='opt'>(F) 28 g of rust, a 60% increase</div>
+<div class='idea'><span class='lbl'>The idea</span>Add masses for the rust, then find the percentage gain relative to the original iron.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Rust = 20 + 8 = 28 g</li>
+<li>Mass gained = 8 g</li>
+<li>Percentage increase = 8 / 20 x 100 = 40%</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (E) &mdash; 28 g of rust, a 40% increase</div>
+<div class='trap'><span class='lbl'>Watch out</span>A 28% increase divides 8 by 28 instead of by the original 20 g; the gain is 40%.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Conservation of mass plus percentage tells engineers how much heavier rusted parts get.</div>
+</div>
+<div class='q'>
+<p class='qn'>84. City A averages 25 C with daily temperatures ranging 20-30 C, while City B averages 25 C but ranges 5-45 C. Which city has the more extreme climate and why? <span class='tag'>Weather, Climate &amp; Adaptations</span></p>
+<div class='opt'>(A) City A, because small ranges are extreme</div>
+<div class='opt correct'>(B) City B, because it has a much larger temperature range &#10004;</div>
+<div class='opt'>(C) City A, because its average is higher</div>
+<div class='opt'>(D) City B, because its average is lower</div>
+<div class='opt'>(E) Both are identical because the averages match</div>
+<div class='opt'>(F) City A, because it has the wider range</div>
+<div class='opt'>(G) Neither, because range does not matter</div>
+<div class='idea'><span class='lbl'>The idea</span>Equal averages can hide very different ranges; a wider range means a more extreme climate.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Both cities share the same average of 25 C</li>
+<li>City A&#x27;s range is 30 - 20 = 10 C; City B&#x27;s is 45 - 5 = 40 C</li>
+<li>The larger range makes City B&#x27;s climate more extreme</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; City B, because it has a much larger temperature range</div>
+<div class='trap'><span class='lbl'>Watch out</span>Equal averages tempt you to call them identical, but City B&#x27;s far wider range is more extreme.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Climate scientists look beyond averages to ranges when comparing places.</div>
+</div>
+<div class='q'>
+<p class='qn'>85. A plane flies at 9000 m, descends 2500 m, and a valley floor lies at -300 m (below sea level). How high is the plane above the valley floor? <span class='tag'>Integers</span></p>
+<div class='opt'>(A) 11500 m</div>
+<div class='opt'>(B) 7100 m</div>
+<div class='opt'>(C) 6200 m</div>
+<div class='opt correct'>(D) 6800 m &#10004;</div>
+<div class='opt'>(E) 6500 m</div>
+<div class='opt'>(F) 11800 m</div>
+<div class='opt'>(G) 5900 m</div>
+<div class='idea'><span class='lbl'>The idea</span>Find the plane&#x27;s height after descending, then measure down to a point below sea level.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Plane height after descent = 9000 - 2500 = 6500 m</li>
+<li>Valley floor is at -300 m</li>
+<li>Height above floor = 6500 - (-300) = 6800 m</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (D) &mdash; 6800 m</div>
+<div class='trap'><span class='lbl'>Watch out</span>6500 m ignores that the valley floor is below sea level, so add the extra 300 m gap.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Pilots compute clearance above terrain that may dip below sea level.</div>
+</div>
+<div class='q'>
+<p class='qn'>86. Find 0.15 x 240 rupees. <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt correct'>(A) 36 rupees &#10004;</div>
+<div class='opt'>(B) 30 rupees</div>
+<div class='opt'>(C) 24 rupees</div>
+<div class='opt'>(D) 3.6 rupees</div>
+<div class='opt'>(E) 16 rupees</div>
+<div class='opt'>(F) 360 rupees</div>
+<div class='opt'>(G) 40 rupees</div>
+<div class='idea'><span class='lbl'>The idea</span>Multiply, then place the decimal point by counting decimal places.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>15 x 240 = 3600</li>
+<li>0.15 has 2 decimal places</li>
+<li>3600 with 2 places = 36.00 = 36 rupees</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (A) &mdash; 36 rupees</div>
+<div class='trap'><span class='lbl'>Watch out</span>3.6 rupees places only one decimal; 0.15 needs two, giving 36.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Finding 15% of a price (a tip or tax) is exactly 0.15 times the amount.</div>
+</div>
+<div class='q'>
+<p class='qn'>87. Crystallisation is a ___ change and it is mainly used to ___. <span class='tag'>Physical &amp; Chemical Changes</span></p>
+<div class='opt correct'>(A) physical; obtain pure crystals of a solid from its solution &#10004;</div>
+<div class='opt'>(B) chemical; make rust on iron</div>
+<div class='opt'>(C) chemical; create a brand-new substance</div>
+<div class='opt'>(D) chemical; burn away impurities</div>
+<div class='opt'>(E) physical; turn a solid into a gas forever</div>
+<div class='opt'>(F) physical; mix two solids together</div>
+<div class='opt'>(G) physical; permanently destroy a solid</div>
+<div class='idea'><span class='lbl'>The idea</span>Crystallisation reshapes a dissolved solid into pure crystals without changing it chemically.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>No new substance forms; the solid is the same, just in crystal form</li>
+<li>So it is a physical change</li>
+<li>It is used to separate and purify a solid from its solution</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (A) &mdash; physical; obtain pure crystals of a solid from its solution</div>
+<div class='trap'><span class='lbl'>Watch out</span>Calling it chemical is wrong; crystallisation forms no new substance, it just purifies.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Salt and sugar industries use crystallisation to make pure crystals.</div>
+</div>
+<div class='q'>
+<p class='qn'>88. Tropical regions, which are warm throughout the year, lie close to the: <span class='tag'>Weather, Climate &amp; Adaptations</span></p>
+<div class='opt'>(A) nearest desert only</div>
+<div class='opt'>(B) South Pole</div>
+<div class='opt'>(C) North Pole</div>
+<div class='opt correct'>(D) Equator &#10004;</div>
+<div class='opt'>(E) deepest ocean trench</div>
+<div class='opt'>(F) edge of the atmosphere</div>
+<div class='idea'><span class='lbl'>The idea</span>Regions near the equator receive strong, direct sunlight all year, staying warm.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>The Sun&#x27;s rays fall most directly near the middle of the Earth</li>
+<li>This middle line is the equator</li>
+<li>So warm tropical regions lie close to the equator</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (D) &mdash; Equator</div>
+<div class='trap'><span class='lbl'>Watch out</span>The poles are the coldest places; warm tropical regions lie near the equator instead.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>This explains why countries near the equator have hot climates year-round.</div>
+</div>
+<div class='q'>
+<p class='qn'>89. Find the sum (-2) + (-4) + (-6) + ... + (-20). <span class='tag'>Integers</span></p>
+<div class='opt'>(A) -120</div>
+<div class='opt'>(B) 200</div>
+<div class='opt correct'>(C) -110 &#10004;</div>
+<div class='opt'>(D) -200</div>
+<div class='opt'>(E) 110</div>
+<div class='opt'>(F) -100</div>
+<div class='opt'>(G) -90</div>
+<div class='idea'><span class='lbl'>The idea</span>Add the even numbers 2 to 20, then attach the negative sign.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>The sizes are 2, 4, 6, ..., 20 (ten numbers)</li>
+<li>Their sum = 2 + 4 + ... + 20 = 110</li>
+<li>All are negative, so total = -110</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; -110</div>
+<div class='trap'><span class='lbl'>Watch out</span>-90 misses one term; there are ten even numbers from 2 to 20, summing to 110.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Summing a steady series of debts gives the total amount owed.</div>
+</div>
+<div class='q'>
+<p class='qn'>90. Which fraction is equal to 0.6? <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 1/6</div>
+<div class='opt'>(B) 5/3</div>
+<div class='opt correct'>(C) 3/5 &#10004;</div>
+<div class='opt'>(D) 2/3</div>
+<div class='opt'>(E) 1/60</div>
+<div class='opt'>(F) 6/1000</div>
+<div class='opt'>(G) 3/50</div>
+<div class='idea'><span class='lbl'>The idea</span>Write the decimal as a fraction and simplify.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>0.6 = 6/10</li>
+<li>Divide top and bottom by 2</li>
+<li>= 3/5</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; 3/5</div>
+<div class='trap'><span class='lbl'>Watch out</span>2/3 is about 0.667, not 0.6; the exact match is 3/5.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Converting decimals to simple fractions helps in quick mental maths.</div>
+</div>
+<div class='q'>
+<p class='qn'>91. When magnesium ribbon is burnt, it gives a bright light and leaves a white powder. This white powder is: <span class='tag'>Physical &amp; Chemical Changes</span></p>
+<div class='opt'>(A) Pure carbon</div>
+<div class='opt'>(B) Magnesium that has only melted</div>
+<div class='opt correct'>(C) Magnesium oxide, a new substance &#10004;</div>
+<div class='opt'>(D) Water vapour</div>
+<div class='opt'>(E) Plain table salt</div>
+<div class='opt'>(F) Unchanged magnesium</div>
+<div class='opt'>(G) Ash from the air</div>
+<div class='idea'><span class='lbl'>The idea</span>Burning magnesium combines it with oxygen to form a new white compound.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Magnesium reacts with oxygen in the air as it burns</li>
+<li>A new white powder, magnesium oxide, is formed</li>
+<li>Because a new substance forms, this is a chemical change</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; Magnesium oxide, a new substance</div>
+<div class='trap'><span class='lbl'>Watch out</span>It is not just melted magnesium; the white powder is a new compound, magnesium oxide.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>This bright reaction was once used in camera flash bulbs and fireworks.</div>
+</div>
+<div class='q'>
+<p class='qn'>92. Over 30 days, a weather log records 15 sunny, 9 cloudy and 6 rainy days. What fraction of the days were rainy? <span class='tag'>Weather, Climate &amp; Adaptations</span></p>
+<div class='opt'>(A) 1/3</div>
+<div class='opt'>(B) 6/24</div>
+<div class='opt correct'>(C) 1/5 &#10004;</div>
+<div class='opt'>(D) 3/10</div>
+<div class='opt'>(E) 1/4</div>
+<div class='opt'>(F) 1/6</div>
+<div class='idea'><span class='lbl'>The idea</span>Write rainy days over total days and simplify the fraction.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Rainy days = 6, total days = 30</li>
+<li>Fraction = 6/30</li>
+<li>Simplify by dividing by 6: = 1/5</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; 1/5</div>
+<div class='trap'><span class='lbl'>Watch out</span>1/6 forgets to use the full 30-day total or mis-simplifies; 6 out of 30 is 1/5.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Weather summaries express how often it rained as a simple fraction or percentage.</div>
+</div>
+<div class='q'>
+<p class='qn'>93. The product of three integers is -30. Two of them are -5 and 3. What is the third integer? <span class='tag'>Integers</span></p>
+<div class='opt'>(A) -10</div>
+<div class='opt'>(B) -2</div>
+<div class='opt'>(C) 6</div>
+<div class='opt correct'>(D) 2 &#10004;</div>
+<div class='opt'>(E) -5</div>
+<div class='opt'>(F) 5</div>
+<div class='opt'>(G) 10</div>
+<div class='idea'><span class='lbl'>The idea</span>Multiply the two known integers, then divide the product into the total.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>-5 x 3 = -15</li>
+<li>Third = -30 / (-15)</li>
+<li>= 2</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (D) &mdash; 2</div>
+<div class='trap'><span class='lbl'>Watch out</span>-2 gets the size right but the sign wrong; dividing -30 by -15 gives a positive 2.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Such reasoning recovers a missing factor in scaling problems.</div>
+</div>
+<div class='q'>
+<p class='qn'>94. Evaluate 0.04 x 0.04. <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 0.08</div>
+<div class='opt'>(B) 16</div>
+<div class='opt'>(C) 0.00016</div>
+<div class='opt'>(D) 0.016</div>
+<div class='opt'>(E) 0.16</div>
+<div class='opt'>(F) 0.0008</div>
+<div class='opt correct'>(G) 0.0016 &#10004;</div>
+<div class='idea'><span class='lbl'>The idea</span>Multiply the digits, then count all decimal places.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>4 x 4 = 16</li>
+<li>Each 0.04 has 2 decimal places, total 4 places</li>
+<li>16 with 4 places = 0.0016</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (G) &mdash; 0.0016</div>
+<div class='trap'><span class='lbl'>Watch out</span>0.16 counts too few decimal places; the two factors need four places in all.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Squaring small decimal rates appears in compound growth calculations.</div>
+</div>
+<div class='q'>
+<p class='qn'>95. Why is it usually impossible to easily get back the original substance after a chemical change? <span class='tag'>Physical &amp; Chemical Changes</span></p>
+<div class='opt'>(A) It just moved to a new container</div>
+<div class='opt correct'>(B) A new substance with different properties has been formed &#10004;</div>
+<div class='opt'>(C) The substance only changed size</div>
+<div class='opt'>(D) Only the temperature changed</div>
+<div class='opt'>(E) Nothing new was made, so it is easy to reverse</div>
+<div class='opt'>(F) The original substance only changed shape</div>
+<div class='opt'>(G) It merely changed its state</div>
+<div class='idea'><span class='lbl'>The idea</span>Chemical changes create new substances, so reversing them is generally difficult.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>In a chemical change the starting materials turn into new substances</li>
+<li>These new substances have different properties</li>
+<li>Turning them back into the originals is usually very hard, so the change is not easily reversed</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; A new substance with different properties has been formed</div>
+<div class='trap'><span class='lbl'>Watch out</span>Saying nothing new was made is wrong; that would be a physical change, which is easy to reverse.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>This is why burnt fuel or cooked food cannot simply be turned back.</div>
+</div>
+<div class='q'>
+<p class='qn'>96. Why do we say weather can change quickly but climate changes only slowly? <span class='tag'>Weather, Climate &amp; Adaptations</span></p>
+<div class='opt'>(A) Weather is fixed for years but climate changes hourly</div>
+<div class='opt'>(B) Climate is indoors and weather outdoors</div>
+<div class='opt'>(C) Climate is measured every minute, weather every century</div>
+<div class='opt'>(D) Weather is only at night and climate only by day</div>
+<div class='opt correct'>(E) Weather is the short-term state of the air, while climate is a long-term average that shifts over decades &#10004;</div>
+<div class='opt'>(F) Both change at exactly the same speed</div>
+<div class='opt'>(G) Neither of them ever changes</div>
+<div class='idea'><span class='lbl'>The idea</span>Weather varies hour to hour, but climate is an average that takes many years to shift.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Weather describes the atmosphere right now, so it can change within hours</li>
+<li>Climate is the average of weather over many years</li>
+<li>Averages move slowly, so climate changes only over decades</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (E) &mdash; Weather is the short-term state of the air, while climate is a long-term average that shifts over decades</div>
+<div class='trap'><span class='lbl'>Watch out</span>Swapping them is wrong; it is weather that changes fast and climate that changes slowly.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>This distinction is central to understanding gradual climate change.</div>
+</div>
+<div class='q'>
+<p class='qn'>97. Which of these has the GREATEST value? <span class='tag'>Integers</span></p>
+<div class='opt correct'>(A) (-3) x (-3) = 9 &#10004;</div>
+<div class='opt'>(B) 4 - 9 = -5</div>
+<div class='opt'>(C) (-2) x 5 = -10</div>
+<div class='opt'>(D) (-12) / 3 = -4</div>
+<div class='opt'>(E) 0 x (-7) = 0</div>
+<div class='opt'>(F) (-1) x (-1) x (-1) = -1</div>
+<div class='opt'>(G) (-6) + (-2) = -8</div>
+<div class='idea'><span class='lbl'>The idea</span>Evaluate each expression and compare, remembering positive beats negative.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>(-3) x (-3) = 9 (positive)</li>
+<li>All the others come out as 0 or negative</li>
+<li>9 is the largest</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (A) &mdash; (-3) x (-3) = 9</div>
+<div class='trap'><span class='lbl'>Watch out</span>0 x (-7) = 0 looks neutral, but 9 is positive and larger than 0 and every negative result.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Comparing signed outcomes is how we pick the best option among gains and losses.</div>
+</div>
+<div class='q'>
+<p class='qn'>98. You pay with a 100-rupee note for items costing 37.85 rupees and 28.40 rupees. How much change do you get? <span class='tag'>A Peek Beyond the Point</span></p>
+<div class='opt'>(A) 34.75 rupees</div>
+<div class='opt'>(B) 32.75 rupees</div>
+<div class='opt'>(C) 33.85 rupees</div>
+<div class='opt'>(D) 43.75 rupees</div>
+<div class='opt'>(E) 66.25 rupees</div>
+<div class='opt correct'>(F) 33.75 rupees &#10004;</div>
+<div class='opt'>(G) 9.75 rupees</div>
+<div class='idea'><span class='lbl'>The idea</span>Add the two costs, then subtract from the amount paid.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Total cost = 37.85 + 28.40 = 66.25 rupees</li>
+<li>Change = 100 - 66.25</li>
+<li>= 33.75 rupees</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (F) &mdash; 33.75 rupees</div>
+<div class='trap'><span class='lbl'>Watch out</span>66.25 rupees is the total spent, not the change; subtract it from 100.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Cashiers compute change by subtracting the bill total from the cash given.</div>
+</div>
+<div class='q'>
+<p class='qn'>99. A 60 g lump of ice is melted to water and then all the water is boiled away to vapour. Ignoring any loss, what mass of water vapour is produced, and what kind of changes are these? <span class='tag'>Physical &amp; Chemical Changes</span></p>
+<div class='opt'>(A) 6 g; most mass is destroyed</div>
+<div class='opt correct'>(B) 60 g of vapour; both are physical changes &#10004;</div>
+<div class='opt'>(C) 60 g; both are chemical changes</div>
+<div class='opt'>(D) 72 g; vapour weighs more</div>
+<div class='opt'>(E) 30 g; half the mass is lost</div>
+<div class='opt'>(F) 120 g; boiling doubles the mass</div>
+<div class='opt'>(G) 0 g; the water disappears chemically</div>
+<div class='idea'><span class='lbl'>The idea</span>Melting and boiling are physical changes of state, and mass is conserved throughout.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Melting ice to water is a physical change of state</li>
+<li>Boiling water to vapour is also a physical change of state</li>
+<li>Mass is conserved, so 60 g of ice gives 60 g of vapour</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (B) &mdash; 60 g of vapour; both are physical changes</div>
+<div class='trap'><span class='lbl'>Watch out</span>Saying the water disappears is wrong; the same 60 g is now vapour, conserving mass.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Distillation uses these reversible physical changes to purify water.</div>
+</div>
+<div class='q'>
+<p class='qn'>100. An elephant&#x27;s very large ears mainly help it to: <span class='tag'>Weather, Climate &amp; Adaptations</span></p>
+<div class='opt'>(A) Dig tunnels underground</div>
+<div class='opt'>(B) Trap heat to keep warm in snow</div>
+<div class='opt correct'>(C) Lose extra body heat and stay cool in hot climates &#10004;</div>
+<div class='opt'>(D) Fly short distances</div>
+<div class='opt'>(E) Shield its eyes from rain</div>
+<div class='opt'>(F) Store food for the winter</div>
+<div class='opt'>(G) Swim across deep rivers</div>
+<div class='idea'><span class='lbl'>The idea</span>Large ears give a big surface area, letting the elephant release heat and cool down.</div>
+<div class='steps'><span class='lbl'>Step by step</span><ol>
+<li>Elephants live in hot climates and must avoid overheating</li>
+<li>Their large ears have a big surface area with many blood vessels</li>
+<li>Blood passing through loses heat to the air, cooling the elephant</li>
+</ol></div>
+<div class='ans'><span class='lbl'>Answer</span>Option (C) &mdash; Lose extra body heat and stay cool in hot climates</div>
+<div class='trap'><span class='lbl'>Watch out</span>Trapping heat suits cold-climate animals; the elephant&#x27;s big ears do the opposite and shed heat.</div>
+<div class='use'><span class='lbl'>Where you would use it</span>Such adaptations show how body shape helps animals manage their temperature.</div>
+</div>
+</body></html>
