@@ -15,9 +15,15 @@ enum OlympiadPaperRegistry {
 
     /// All papers, ordered for display in the sidebar landing view.
     /// Order: by subject (Science → Maths → Sanskrit → Social
-    /// Science) then by chapter number ascending.
+    /// Science) then by chapter number ascending, with the 207
+    /// programmatic P3/P4/P5 practice variants appended last so the
+    /// 138 hand-authored base + Advanced entries keep their stable
+    /// position. `papersBySubject()` buckets by `subjectName` and so
+    /// preserves the per-subject grouping regardless of where in
+    /// `allPapers` an entry sits.
     static let allPapers: [OlympiadPaper] =
         sciencePapers + mathsPapers + sanskritPapers + socialSciencePapers
+        + variantPapers
 
     /// Group the list by subject for the sectioned sidebar landing.
     /// Returns an array of (subjectName, papersInThatSubject) pairs

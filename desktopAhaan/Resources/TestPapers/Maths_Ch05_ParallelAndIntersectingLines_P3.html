@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Maths Ch05 ParallelAndIntersectingLines P3</title>
+<style>
+@page { size: A4; margin: 18mm 16mm; }
+* { box-sizing: border-box; }
+body { font-family: Georgia, 'Times New Roman', serif; font-size: 12pt;
+       line-height: 1.45; color: #111; max-width: 820px; margin: 0 auto;
+       padding: 16px; }
+h1 { font-size: 19pt; margin: 0 0 2px; }
+h2 { font-size: 15pt; margin: 0 0 10px; color: #333; }
+h3 { font-size: 13pt; margin: 18px 0 6px; }
+table { border-collapse: collapse; margin: 8px 0 14px; }
+th, td { border: 1px solid #999; padding: 3px 9px; text-align: left;
+         font-size: 11pt; }
+.markbox { border: 2px solid #222; border-radius: 6px; padding: 8px 12px;
+           margin: 10px 0 16px; background: #f6f6f6; font-size: 11.5pt; }
+.q { margin: 9px 0 2px; }
+.opts { margin: 0 0 6px 22px; }
+.opts span { display: inline-block; min-width: 46%; vertical-align: top;
+             margin: 1px 0; }
+.sol { margin: 5px 0; }
+.pagebreak { page-break-before: always; }
+.note { color: #555; font-style: italic; font-size: 10.5pt; }
+hr { border: none; border-top: 1px solid #ccc; margin: 14px 0; }
+code { background: #eee; padding: 0 2px; }
+</style>
+</head>
+<body>
+<h1>Olympiad Test Paper — Mathematics (Class 7) — Paper 3</h1>
+<h2>Chapter 5: Parallel and Intersecting Lines</h2>
+<p><strong>Paper 3 — (progressively harder)</strong></p>
+<table>
+<tr><th></th><th></th></tr>
+<tr><td><strong>Subject</strong></td><td>Mathematics (NCERT Class 7)</td></tr>
+<tr><td><strong>Chapter</strong></td><td>5 — Parallel and Intersecting Lines</td></tr>
+<tr><td><strong>Total Questions</strong></td><td>60 (Multiple Choice, single correct)</td></tr>
+<tr><td><strong>Maximum Marks</strong></td><td>240</td></tr>
+<tr><td><strong>Suggested Time</strong></td><td>90 minutes</td></tr>
+</table>
+<p><strong>Marking scheme:</strong> <strong>+4</strong> for each correct answer · <strong>−1</strong> for each wrong answer · <strong>0</strong> if unattempted.</p>
+<p><strong>Instructions:</strong> Each question has four options (A), (B), (C), (D); exactly one is correct. Treating corresponding/alternate angles as equal when the lines are NOT parallel; treating co-interior (same-side interior) angles as equal when they are actually supplementary; confusing alternate (equal) with co-interior (sum 180°); skipping a linear-pair step before applying a parallel-line relation; stopping the angle chase one step early; using 360° where 180° applies (and the reverse). Do not write on this paper — mark answers on your answer sheet.</p>
+<hr>
+<div class="q"><strong>1.</strong> Two lines AB and CD cross at O. Angle AOC = (4x)° and the adjacent angle BOC = (5x)° form a linear pair. Find angle AOC.</div>
+<div class="opts"><span>(A) 100°</span><span>(B) 72°</span><span>(C) 20°</span><span>(D) 80°</span></div>
+<div class="q"><strong>2.</strong> Two lines intersect at O. Angle AOC = (3x + 12)° and its vertically opposite angle BOD = (5x − 18)°. Find angle AOC.</div>
+<div class="opts"><span>(A) 57°</span><span>(B) 123°</span><span>(C) 15°</span><span>(D) 78°</span></div>
+<div class="q"><strong>3.</strong> At an intersection of two lines, one angle is (4x − 6)° and its adjacent angle (linear pair) is (2x + 6)°. Find the larger of these two angles.</div>
+<div class="opts"><span>(A) 66°</span><span>(B) 30°</span><span>(C) 114°</span><span>(D) 120°</span></div>
+<div class="q"><strong>4.</strong> A transversal cuts two parallel lines p and q. A corresponding angle at p is (2x + 30)° and the matching corresponding angle at q is (4x − 10)°. Find that common corresponding-angle measure.</div>
+<div class="opts"><span>(A) 70°</span><span>(B) 20°</span><span>(C) 110°</span><span>(D) 50°</span></div>
+<div class="q"><strong>5.</strong> Line a is perpendicular to line b, and line c is parallel to line b. A transversal makes a 35° angle with line a. What acute angle does that transversal make with line c?</div>
+<div class="opts"><span>(A) 35°</span><span>(B) 90°</span><span>(C) 125°</span><span>(D) 55°</span></div>
+<div class="q"><strong>6.</strong> Lines l and m are parallel, cut by a transversal. A pair of alternate interior angles measure (3x − 5)° and (x + 41)°. Find the measure of each of these alternate angles.</div>
+<div class="opts"><span>(A) 23°</span><span>(B) 64°</span><span>(C) 116°</span><span>(D) 46°</span></div>
+<div class="q"><strong>7.</strong> Three rays from a point O divide the full turn so that the angles are (2x)°, (3x + 10)°, and (4x − 10)° going once around. Find the largest of these three angles.</div>
+<div class="opts"><span>(A) 80°</span><span>(B) 150°</span><span>(C) 130°</span><span>(D) 120°</span></div>
+<div class="q"><strong>8.</strong> A transversal cuts two parallel lines. One co-interior (same-side interior) angle is (3x + 20)° and the other is (2x + 10)°. Find the larger co-interior angle.</div>
+<div class="opts"><span>(A) 70°</span><span>(B) 90°</span><span>(C) 110°</span><span>(D) 100°</span></div>
+<div class="q"><strong>9.</strong> Two lines intersect at O. One angle is (x + 15)° and its vertically opposite angle is (2x − 35)°. Find the measure of the linear-pair neighbour of these angles.</div>
+<div class="opts"><span>(A) 65°</span><span>(B) 115°</span><span>(C) 50°</span><span>(D) 130°</span></div>
+<div class="q"><strong>10.</strong> A transversal cuts two parallel lines so that the eight angles take just two distinct values, and one value exceeds the other by 50°. Find the larger of the two values.</div>
+<div class="opts"><span>(A) 65°</span><span>(B) 90°</span><span>(C) 130°</span><span>(D) 115°</span></div>
+<div class="q"><strong>11.</strong> Lines u and v are cut by a transversal. A pair of alternate interior angles measure 70° (at u) and 76° (at v). What can you conclude about u and v?</div>
+<div class="opts"><span>(A) u and v are parallel</span><span>(B) u and v are not parallel</span><span>(C) u and v are perpendicular</span><span>(D) u and v are coincident</span></div>
+<div class="q"><strong>12.</strong> Lines l and m are parallel, cut by a transversal. A pair of alternate exterior angles measure (5x − 30)° and (3x + 10)°. Find each alternate exterior angle.</div>
+<div class="opts"><span>(A) 20°</span><span>(B) 110°</span><span>(C) 70°</span><span>(D) 40°</span></div>
+<div class="q"><strong>13.</strong> A transversal cuts two parallel lines so that one co-interior angle is three times its same-side partner. Find the larger co-interior angle.</div>
+<div class="opts"><span>(A) 45°</span><span>(B) 90°</span><span>(C) 120°</span><span>(D) 135°</span></div>
+<div class="q"><strong>14.</strong> At an intersection of two lines, one angle is (5x − 9)° and its adjacent angle (linear pair) is (x + 9)°. Find the smaller of these two angles.</div>
+<div class="opts"><span>(A) 141°</span><span>(B) 30°</span><span>(C) 51°</span><span>(D) 39°</span></div>
+<div class="q"><strong>15.</strong> Lines p and q are parallel, cut by transversal t. Corresponding angles measure (6x − 8)° at p and (4x + 22)° at q. Find that corresponding-angle measure.</div>
+<div class="opts"><span>(A) 15°</span><span>(B) 82°</span><span>(C) 98°</span><span>(D) 67°</span></div>
+<div class="q"><strong>16.</strong> A transversal cuts two parallel lines u and v. Co-interior angles measure (3x)° at u and (2x)° at v. After finding x, the angle corresponding to the (3x)° angle (located at v) measures:</div>
+<div class="opts"><span>(A) 72°</span><span>(B) 36°</span><span>(C) 108°</span><span>(D) 144°</span></div>
+<div class="q"><strong>17.</strong> Which condition does NOT by itself guarantee that two lines cut by a transversal are parallel?</div>
+<div class="opts"><span>(A) A pair of alternate interior angles are equal</span><span>(B) A pair of corresponding angles are equal</span><span>(C) A pair of co-interior angles sum to 180°</span><span>(D) A pair of co-interior (same-side interior) angles are equal</span></div>
+<div class="q"><strong>18.</strong> A transversal cuts two parallel lines so that one of the eight angles exceeds its linear-pair neighbour by 36°. Find the smaller of the two distinct values among the eight angles.</div>
+<div class="opts"><span>(A) 108°</span><span>(B) 72°</span><span>(C) 90°</span><span>(D) 54°</span></div>
+<div class="q"><strong>19.</strong> Two lines intersect so that one of the four angles equals the sum of the other three minus 180°. Using that the four angles total 360°, find that one angle.</div>
+<div class="opts"><span>(A) 180°</span><span>(B) 120°</span><span>(C) 60°</span><span>(D) 90°</span></div>
+<div class="q"><strong>20.</strong> A transversal cuts lines a and b. Corresponding angles are (4x + 10)° at a and (6x − 30)° at b. The lines are parallel only when these are equal. At x = 25 (not the parallel value), by how much do the two corresponding angles differ?</div>
+<div class="opts"><span>(A) 0°</span><span>(B) 20°</span><span>(C) 5°</span><span>(D) 10°</span></div>
+<div class="q"><strong>21.</strong> A transversal crosses line a at 90° (perpendicular). The same transversal crosses line b, which is parallel to a. One angle at b measures (5x − 5)°. Find x.</div>
+<div class="opts"><span>(A) 18</span><span>(B) 19</span><span>(C) 17</span><span>(D) 95</span></div>
+<div class="q"><strong>22.</strong> Lines l and m are parallel, cut by a transversal. An alternate interior angle is (7x − 4)° and the alternate interior angle on the other line is (5x + 14)°. After finding the angle, its co-interior partner (same-side interior, at the same line) measures:</div>
+<div class="opts"><span>(A) 59°</span><span>(B) 9°</span><span>(C) 121°</span><span>(D) 63°</span></div>
+<div class="q"><strong>23.</strong> In a figure, AB and CD intersect at O. Ray OE lies inside angle BOD. Given angle AOC = 64° and angle BOE = 26°, find angle DOE.</div>
+<div class="opts"><span>(A) 90°</span><span>(B) 38°</span><span>(C) 116°</span><span>(D) 64°</span></div>
+<div class="q"><strong>24.</strong> A transversal cuts two parallel lines. A same-side interior (co-interior) angle is 18° more than its same-side partner. Find the smaller co-interior angle.</div>
+<div class="opts"><span>(A) 99°</span><span>(B) 81°</span><span>(C) 90°</span><span>(D) 72°</span></div>
+<div class="q"><strong>25.</strong> Two perpendicular lines meet at O. A ray OP from O makes 28° with one of the lines, lying inside one of the right angles. Find the angle OP makes with the OTHER of the two perpendicular lines in that same right angle.</div>
+<div class="opts"><span>(A) 28°</span><span>(B) 90°</span><span>(C) 62°</span><span>(D) 118°</span></div>
+<div class="q"><strong>26.</strong> Three angles meeting at a point O, going once around, are (2y)°, (2y + 30)°, and (5y − 30)°. Find the largest of the three angles.</div>
+<div class="opts"><span>(A) 170°</span><span>(B) 80°</span><span>(C) 110°</span><span>(D) 150°</span></div>
+<div class="q"><strong>27.</strong> Lines l and m are parallel, cut by transversal t. Angle 1 (interior, at l) corresponds to angle 2 (at m), and angle 3 is the linear pair of angle 2. If angle 1 = 133°, find angle 3.</div>
+<div class="opts"><span>(A) 133°</span><span>(B) 90°</span><span>(C) 27°</span><span>(D) 47°</span></div>
+<div class="q"><strong>28.</strong> A transversal cuts two parallel lines, and one of the eight angles is a right angle. How many of the eight angles are right angles?</div>
+<div class="opts"><span>(A) 8</span><span>(B) 1</span><span>(C) 2</span><span>(D) 4</span></div>
+<div class="q"><strong>29.</strong> Lines a and b are parallel, cut by transversal t. Corresponding angles are angle P = (8x − 12)° at a and angle Q = (5x + 21)° at b. After finding the angle, the linear-pair neighbour of angle Q measures:</div>
+<div class="opts"><span>(A) 76°</span><span>(B) 11°</span><span>(C) 98°</span><span>(D) 104°</span></div>
+<div class="q"><strong>30.</strong> Two lines intersect at O. The four angles in order are p, q, p, q with p − q = 48°. Find q.</div>
+<div class="opts"><span>(A) 114°</span><span>(B) 66°</span><span>(C) 24°</span><span>(D) 90°</span></div>
+<div class="q"><strong>31.</strong> Lines l and m are parallel, cut by a transversal. An alternate-interior angle and a co-interior angle share the same vertex on one line and form a linear pair there. The alternate-interior angle is 40° more than the co-interior one. Find the alternate-interior angle.</div>
+<div class="opts"><span>(A) 70°</span><span>(B) 90°</span><span>(C) 110°</span><span>(D) 140°</span></div>
+<div class="q"><strong>32.</strong> Two roads cross. The north-east corner angle is (3x + 18)° and the adjacent north-west corner angle is (2x + 12)°; together they form a linear pair. Find the north-east angle.</div>
+<div class="opts"><span>(A) 72°</span><span>(B) 30°</span><span>(C) 108°</span><span>(D) 84°</span></div>
+<div class="q"><strong>33.</strong> A transversal cuts two lines. A pair of corresponding angles measure 102° (at the first line) and 102° (at the second line). What is the correct conclusion?</div>
+<div class="opts"><span>(A) The two lines are parallel</span><span>(B) The two lines are perpendicular</span><span>(C) Nothing can be concluded</span><span>(D) The two lines meet at 102°</span></div>
+<div class="q"><strong>34.</strong> Lines l and m are parallel, cut by transversal t. Angle 1 and angle 2 are co-interior angles, and their bisectors meet at a point. Given angle 1 = 100°, find the angle between the two bisectors.</div>
+<div class="opts"><span>(A) 90°</span><span>(B) 50°</span><span>(C) 40°</span><span>(D) 100°</span></div>
+<div class="q"><strong>35.</strong> A transversal cuts two parallel lines so that one alternate-interior angle and its co-interior partner at the SAME vertex are in ratio 5:4 (they form a linear pair). Find the alternate-interior angle.</div>
+<div class="opts"><span>(A) 80°</span><span>(B) 90°</span><span>(C) 100°</span><span>(D) 108°</span></div>
+<div class="q"><strong>36.</strong> A transversal cuts two lines. Co-interior angles measure 95° and 86°. Decide whether the lines are parallel and by how much the supplementary test fails.</div>
+<div class="opts"><span>(A) Parallel; they sum to 180°</span><span>(B) Not parallel; the angles sum to 181°, which is 1° over 180°</span><span>(C) Perpendicular; one angle is near 90°</span><span>(D) Not parallel; they differ by 9°</span></div>
+<div class="q"><strong>37.</strong> In a figure, line PQ is parallel to line RS. A transversal meets PQ at A and RS at B. Angle QAB = (2x + 25)° and angle ABR = (3x + 5)° are alternate interior angles. Find angle QAB.</div>
+<div class="opts"><span>(A) 20°</span><span>(B) 115°</span><span>(C) 65°</span><span>(D) 85°</span></div>
+<div class="q"><strong>38.</strong> Lines m and n are parallel, cut by a transversal. Corresponding angles measure (x + 40)° at m and (3x − 20)° at n. After finding the angle, its alternate-interior angle on the other line measures:</div>
+<div class="opts"><span>(A) 70°</span><span>(B) 110°</span><span>(C) 30°</span><span>(D) 50°</span></div>
+<div class="q"><strong>39.</strong> A transversal cuts two parallel lines. An exterior angle on the upper line is 142°. Find the alternate interior angle on the lower line.</div>
+<div class="opts"><span>(A) 142°</span><span>(B) 38°</span><span>(C) 52°</span><span>(D) 48°</span></div>
+<div class="q"><strong>40.</strong> Two intersecting lines make four angles; reading around, three of them are (x)°, (2x − 30)°, and (x)°. Find x.</div>
+<div class="opts"><span>(A) 70</span><span>(B) 50</span><span>(C) 60</span><span>(D) 75</span></div>
+<div class="q"><strong>41.</strong> Lines AB and CD intersect at O. Angle AOC = 52°. Ray OE is drawn with angle AOE = 90° (OE on the opposite side of AB from C, same side as D). Find angle EOD.</div>
+<div class="opts"><span>(A) 38°</span><span>(B) 52°</span><span>(C) 128°</span><span>(D) 90°</span></div>
+<div class="q"><strong>42.</strong> A transversal cuts two parallel lines so that an alternate interior angle equals twice its co-interior partner at the same vertex (they form a linear pair). Find the alternate interior angle.</div>
+<div class="opts"><span>(A) 120°</span><span>(B) 60°</span><span>(C) 90°</span><span>(D) 135°</span></div>
+<div class="q"><strong>43.</strong> Which ordered set of four angle measures could be the four angles formed by two intersecting non-perpendicular lines, read around the point?</div>
+<div class="opts"><span>(A) 70°, 110°, 110°, 70°</span><span>(B) 90°, 90°, 90°, 90°</span><span>(C) 70°, 110°, 70°, 110°</span><span>(D) 70°, 70°, 110°, 110°</span></div>
+<div class="q"><strong>44.</strong> A transversal cuts two parallel lines. The eight angles take two values, one being twice the other. Find the smaller value.</div>
+<div class="opts"><span>(A) 120°</span><span>(B) 90°</span><span>(C) 60°</span><span>(D) 45°</span></div>
+<div class="q"><strong>45.</strong> A transversal cuts two parallel lines. The difference between the two co-interior angles is 24°. Find the larger co-interior angle.</div>
+<div class="opts"><span>(A) 78°</span><span>(B) 90°</span><span>(C) 114°</span><span>(D) 102°</span></div>
+<div class="q"><strong>46.</strong> A transversal cuts two parallel lines l and m. Angle A on l and angle B on m are alternate angles with angle A = (2·angle B − 24)°. Find angle A.</div>
+<div class="opts"><span>(A) 48°</span><span>(B) 24°</span><span>(C) 12°</span><span>(D) 156°</span></div>
+<div class="q"><strong>47.</strong> A transversal crosses two parallel lines at exactly 90°. How many distinct angle measures appear among the eight angles, and what are they?</div>
+<div class="opts"><span>(A) Exactly 1 distinct value: 90°</span><span>(B) 2 distinct values: 90° and 90°</span><span>(C) 4 distinct values</span><span>(D) 2 distinct values: 80° and 100°</span></div>
+<div class="q"><strong>48.</strong> Two intersecting lines make four angles; three of them, read around, are (3x)°, (x + 20)°, and (3x)°. Find x.</div>
+<div class="opts"><span>(A) 40</span><span>(B) 20</span><span>(C) 35</span><span>(D) 45</span></div>
+<div class="q"><strong>49.</strong> A transversal cuts two parallel lines so that one alternate-interior angle and its co-interior partner at the same vertex are in ratio 7:2 (they form a linear pair). Find the smaller (co-interior) angle.</div>
+<div class="opts"><span>(A) 140°</span><span>(B) 40°</span><span>(C) 90°</span><span>(D) 20°</span></div>
+<div class="q"><strong>50.</strong> Lines l and m are parallel, cut by transversal t. Angle 1 corresponds to angle 2; angle 2 forms a linear pair with angle 3; angle 3 is vertically opposite angle 4. If angle 1 = 124°, find angle 4.</div>
+<div class="opts"><span>(A) 124°</span><span>(B) 90°</span><span>(C) 34°</span><span>(D) 56°</span></div>
+<div class="q"><strong>51.</strong> A transversal cuts two lines. A pair of corresponding angles measure 88° at the first line and 92° at the second line. What can you conclude?</div>
+<div class="opts"><span>(A) The two lines are not parallel</span><span>(B) The two lines are parallel</span><span>(C) The two lines are perpendicular</span><span>(D) The two lines are coincident</span></div>
+<div class="q"><strong>52.</strong> Lines m and n are parallel, cut by a transversal. Corresponding angles measure (x + 25)° at m and (2x − 15)° at n. After finding the angle, its co-interior partner at the same crossing measures:</div>
+<div class="opts"><span>(A) 115°</span><span>(B) 65°</span><span>(C) 40°</span><span>(D) 130°</span></div>
+<div class="q"><strong>53.</strong> A transversal cuts two parallel lines so that an alternate-interior angle and a co-interior angle at the same vertex are in ratio 3:2 (they form a linear pair). Find the alternate-interior angle.</div>
+<div class="opts"><span>(A) 108°</span><span>(B) 72°</span><span>(C) 90°</span><span>(D) 120°</span></div>
+<div class="q"><strong>54.</strong> Two lines intersect at O. Angle AOC = (4x + 5)° and its vertically opposite angle BOD = (6x − 25)°. After finding the angle, the linear-pair neighbour angle AOD measures:</div>
+<div class="opts"><span>(A) 65°</span><span>(B) 115°</span><span>(C) 15°</span><span>(D) 130°</span></div>
+<div class="q"><strong>55.</strong> Lines a and b are parallel, cut by a transversal. The bisector of an 84° corresponding angle is drawn. Find the acute angle this bisector makes with line b (the arm of the corresponding angle at b).</div>
+<div class="opts"><span>(A) 84°</span><span>(B) 48°</span><span>(C) 42°</span><span>(D) 138°</span></div>
+<div class="q"><strong>56.</strong> A transversal cuts two parallel lines. An alternate interior angle is (2x + 9)° and the alternate interior angle on the other line is (3x − 6)°. Find each of these alternate angles.</div>
+<div class="opts"><span>(A) 15°</span><span>(B) 141°</span><span>(C) 45°</span><span>(D) 39°</span></div>
+<div class="q"><strong>57.</strong> Parallel lines l and m are cut by a transversal. Angle P is an interior angle at l equal to 73°, and angle Q is its co-interior partner at m. The bisector of angle Q is drawn. Find the acute angle this bisector makes with line m.</div>
+<div class="opts"><span>(A) 36.5°</span><span>(B) 73°</span><span>(C) 107°</span><span>(D) 53.5°</span></div>
+<div class="q"><strong>58.</strong> Two lines intersect at O. Angle AOC and angle COB form a linear pair with angle AOC = (7x)° and angle COB = (2x)°. Ray OD bisects angle AOC. Find angle DOC.</div>
+<div class="opts"><span>(A) 140°</span><span>(B) 40°</span><span>(C) 70°</span><span>(D) 20°</span></div>
+<div class="q"><strong>59.</strong> A transversal cuts two parallel lines so that one co-interior angle is four times its same-side partner. Find the larger co-interior angle.</div>
+<div class="opts"><span>(A) 36°</span><span>(B) 90°</span><span>(C) 144°</span><span>(D) 135°</span></div>
+<div class="q"><strong>60.</strong> Lines l and m are parallel, cut by transversal t at P (on l) and Q (on m). At P an angle of 118° is formed above l. Find the angle at Q that is vertically opposite to the corresponding angle of that 118° angle.</div>
+<div class="opts"><span>(A) 62°</span><span>(B) 90°</span><span>(C) 236°</span><span>(D) 118°</span></div>
+<div class="pagebreak"></div>
+<h1>Solutions — Mathematics (Class 7), Chapter 5: Parallel and Intersecting Lines — Paper 3</h1>
+<p><strong>Paper 3 — (progressively harder)</strong></p>
+<p>Marking: <strong>+4</strong> correct, <strong>−1</strong> wrong, <strong>0</strong> unattempted. Maximum marks <strong>240</strong>.</p>
+<h2>Answer Key</h2>
+<table>
+<tr><th>Q</th><th>Ans</th><th>Q</th><th>Ans</th><th>Q</th><th>Ans</th><th>Q</th><th>Ans</th><th>Q</th><th>Ans</th><th>Q</th><th>Ans</th></tr>
+<tr><td>1</td><td>D</td><td>11</td><td>B</td><td>21</td><td>B</td><td>31</td><td>C</td><td>41</td><td>A</td><td>51</td><td>A</td></tr>
+<tr><td>2</td><td>A</td><td>12</td><td>C</td><td>22</td><td>C</td><td>32</td><td>C</td><td>42</td><td>A</td><td>52</td><td>A</td></tr>
+<tr><td>3</td><td>C</td><td>13</td><td>D</td><td>23</td><td>B</td><td>33</td><td>A</td><td>43</td><td>C</td><td>53</td><td>A</td></tr>
+<tr><td>4</td><td>A</td><td>14</td><td>D</td><td>24</td><td>B</td><td>34</td><td>A</td><td>44</td><td>C</td><td>54</td><td>B</td></tr>
+<tr><td>5</td><td>D</td><td>15</td><td>B</td><td>25</td><td>C</td><td>35</td><td>C</td><td>45</td><td>D</td><td>55</td><td>C</td></tr>
+<tr><td>6</td><td>B</td><td>16</td><td>C</td><td>26</td><td>A</td><td>36</td><td>B</td><td>46</td><td>B</td><td>56</td><td>D</td></tr>
+<tr><td>7</td><td>B</td><td>17</td><td>D</td><td>27</td><td>D</td><td>37</td><td>C</td><td>47</td><td>A</td><td>57</td><td>D</td></tr>
+<tr><td>8</td><td>C</td><td>18</td><td>B</td><td>28</td><td>A</td><td>38</td><td>A</td><td>48</td><td>A</td><td>58</td><td>C</td></tr>
+<tr><td>9</td><td>B</td><td>19</td><td>D</td><td>29</td><td>D</td><td>39</td><td>B</td><td>49</td><td>B</td><td>59</td><td>C</td></tr>
+<tr><td>10</td><td>D</td><td>20</td><td>D</td><td>30</td><td>B</td><td>40</td><td>A</td><td>50</td><td>D</td><td>60</td><td>D</td></tr>
+</table>
+<p>Answer-key distribution: A = 15, B = 15, C = 15, D = 15.</p>
+<hr>
+<h2>Worked Solutions</h2>
+<p><strong>1. (D)</strong> Angle AOC and angle BOC are a linear pair on line AB, so 4x + 5x = 180, giving 9x = 180, x = 20. Then angle AOC = 4x = 80°. The 100° is the neighbour BOC, not AOC. The 72° wrongly sets 5x = 180. The 20° is x itself, not the angle.</p>
+<p><strong>2. (A)</strong> Vertically opposite angles are equal, so 3x + 12 = 5x − 18, giving 30 = 2x, x = 15. Hence angle AOC = 3(15) + 12 = 57°. The 123° is the supplementary linear-pair neighbour, not AOC. The 15° is x. The 78° comes from a mis-solve.</p>
+<p><strong>3. (C)</strong> A linear pair sums to 180°: (4x − 6) + (2x + 6) = 180, so 6x = 180, x = 30. The angles are 4(30) − 6 = 114° and 2(30) + 6 = 66°; the larger is 114°. The 66° is the smaller. The 30° is x. The 120° forgets the −6.</p>
+<p><strong>4. (A)</strong> Between parallel lines corresponding angles are equal: 2x + 30 = 4x − 10, so 40 = 2x, x = 20. The angle = 2(20) + 30 = 70°. The 20° is x. The 110° is the supplement (a co-interior partner), the trap of treating these as supplementary. The 50° uses a wrong x in 4x − 10.</p>
+<p><strong>5. (D)</strong> Since c is parallel to b and a is perpendicular to b, line a is also perpendicular to line c. The transversal makes 35° with a, so with c (which is 90° from a) it makes 90 − 35 = 55°. The 35° forgets the 90° turn. The 90° ignores the transversal. The 125° is the obtuse supplement, not the acute angle.</p>
+<p><strong>6. (B)</strong> Alternate interior angles between parallel lines are equal: 3x − 5 = x + 41, so 2x = 46, x = 23. Each angle = 3(23) − 5 = 64°. The 23° is x. The 116° is the supplement, wrong because alternate angles are equal, not supplementary. The 46° is 2x.</p>
+<p><strong>7. (B)</strong> Angles at a point sum to 360°: 2x + (3x + 10) + (4x − 10) = 360, so 9x = 360, x = 40. The angles are 80°, 130°, and 150°; the largest is 4(40) − 10 = 150°. The 80° is the smallest. The 130° is the middle one. The 120° wrongly uses a 180° total.</p>
+<p><strong>8. (C)</strong> Co-interior angles between parallel lines are supplementary: (3x + 20) + (2x + 10) = 180, so 5x + 30 = 180, 5x = 150, x = 30. The angles are 3(30) + 20 = 110° and 2(30) + 10 = 70°; the larger is 110°. The 70° is the smaller. The 90° wrongly assumes equality. The 100° is a setup error.</p>
+<p><strong>9. (B)</strong> Vertically opposite: x + 15 = 2x − 35, so x = 50, and the angle = 50 + 15 = 65°. Its linear-pair neighbour = 180 − 65 = 115°. The 65° is the angle itself, not its neighbour. The 50° is x. The 130° doubles 65 instead of subtracting from 180.</p>
+<p><strong>10. (D)</strong> The two values form linear pairs, so they sum to 180°. Let them be a and a + 50: a + (a + 50) = 180, 2a = 130, a = 65, larger = 115°. The 65° is the smaller. The 90° needs a 0° difference. The 130° is 2a, not the angle.</p>
+<p><strong>11. (B)</strong> If u and v were parallel, alternate interior angles would be equal. Here 70° ≠ 76°, so the lines cannot be parallel. &#x27;Parallel&#x27; applies the equality without checking it holds. &#x27;Perpendicular&#x27; needs a 90° angle, absent here. &#x27;Coincident&#x27; would make the angles meaningless, not the case.</p>
+<p><strong>12. (C)</strong> Alternate exterior angles between parallel lines are equal: 5x − 30 = 3x + 10, so 2x = 40, x = 20. Each angle = 5(20) − 30 = 70°. The 20° is x. The 110° is the supplement, wrong since alternate angles are equal. The 40° is 2x.</p>
+<p><strong>13. (D)</strong> Co-interior angles are supplementary: let the smaller be a and the larger 3a. Then a + 3a = 180, 4a = 180, a = 45, larger = 3(45) = 135°. The 45° is the smaller. The 90° wrongly assumes equality. The 120° would come from a 2:1 ratio, not 3:1.</p>
+<p><strong>14. (D)</strong> Linear pair sums to 180°: (5x − 9) + (x + 9) = 180, so 6x = 180, x = 30. The angles are 5(30) − 9 = 141° and (30) + 9 = 39°; the smaller is 39°. The 141° is the larger. The 30° is x. The 51° is a slip.</p>
+<p><strong>15. (B)</strong> Corresponding angles are equal between parallel lines: 6x − 8 = 4x + 22, so 2x = 30, x = 15. The angle = 6(15) − 8 = 82°. The 15° is x. The 98° is the supplement (a co-interior trap). The 67° is a slip in solving.</p>
+<p><strong>16. (C)</strong> Co-interior angles are supplementary: 3x + 2x = 180, 5x = 180, x = 36. The (3x)° angle is 108°. Its corresponding angle at v equals it (parallel lines): 108°. The 72° is the (2x)° co-interior partner. The 36° is x. The 144° is 4x, unjustified.</p>
+<p><strong>17. (D)</strong> Parallelism requires co-interior angles to SUM to 180°, not to be equal; equal co-interior angles do not in general force the sum to be 180° (only the 90°-90° special case does). Equal alternate interior angles, equal corresponding angles, and co-interior angles summing to 180° each correctly guarantee parallelism. So the equal-co-interior condition is the one that fails as a general guarantee.</p>
+<p><strong>18. (B)</strong> An angle and its linear-pair neighbour sum to 180°. Let smaller = a, larger = a + 36: a + (a + 36) = 180, 2a = 144, a = 72°. The 108° is the larger. The 90° needs a 0° gap. The 54° halves the difference wrongly.</p>
+<p><strong>19. (D)</strong> Let the angle be a; the other three sum to 360 − a. The condition gives a = (360 − a) − 180 = 180 − a, so 2a = 180, a = 90°. The 180° forgets to halve. The 120° and 60° do not satisfy a = 180 − a.</p>
+<p><strong>20. (D)</strong> At x = 25: angle at a = 4(25) + 10 = 110°, angle at b = 6(25) − 30 = 120°. They differ by 120 − 110 = 10°, so the corresponding angles are unequal and the lines are not parallel. The 0° would require x = 20 (the parallel value). The 20° doubles the gap. The 5° halves it.</p>
+<p><strong>21. (B)</strong> Since the transversal is perpendicular to a and b is parallel to a, the transversal is perpendicular to b too, so every angle at b is 90°. Thus 5x − 5 = 90, 5x = 95, x = 19. The 18 comes from 5x = 90. The 17 from 5x − 5 = 80. The 95 is 5x, not x.</p>
+<p><strong>22. (C)</strong> Alternate interior angles are equal: 7x − 4 = 5x + 14, so 2x = 18, x = 9. The angle = 7(9) − 4 = 59°. Its co-interior (same-side) partner is supplementary: 180 − 59 = 121°. The 59° is the alternate angle, not its co-interior partner. The 9° is x. The 63° is 7x, a slip.</p>
+<p><strong>23. (B)</strong> Angle BOD is vertically opposite angle AOC, so angle BOD = 64°. Ray OE lies inside it with angle BOE = 26°, so angle DOE = angle BOD − angle BOE = 64 − 26 = 38°. The 90° wrongly assumes OE is perpendicular. The 116° is 180 − 64, the linear pair of BOD. The 64° forgets to subtract OE&#x27;s 26°.</p>
+<p><strong>24. (B)</strong> Co-interior angles are supplementary. Let the smaller be a, the larger a + 18: a + (a + 18) = 180, 2a = 162, a = 81°. The 99° is the larger angle. The 90° needs a 0° difference. The 72° is a wrong subtraction.</p>
+<p><strong>25. (C)</strong> The two perpendicular lines form a 90° angle. OP lies inside it making 28° with one arm, so it makes 90 − 28 = 62° with the other arm. The 28° repeats the given. The 90° ignores OP. The 118° is 90 + 28, a wrong sum.</p>
+<p><strong>26. (A)</strong> Angles at a point sum to 360°: 2y + (2y + 30) + (5y − 30) = 360, so 9y = 360, y = 40. The angles are 2(40) = 80°, 2(40) + 30 = 110°, and 5(40) − 30 = 170°; the largest is 170°. The 80° and 110° are the two smaller angles. The 150° comes from a slip in evaluating 5y − 30.</p>
+<p><strong>27. (D)</strong> Angle 2 = angle 1 = 133° (corresponding angles, parallel lines). Angle 3 is the linear pair of angle 2: 180 − 133 = 47°. The 133° forgets the linear-pair step. The 90° is unjustified. The 27° comes from 160 − 133, an arithmetic slip.</p>
+<p><strong>28. (A)</strong> If the transversal makes a right angle with one parallel line it is perpendicular to it; since the lines are parallel, it is perpendicular to the other line too. Every one of the eight angles is then 90°, so all 8 are right angles. The 1, 2, and 4 each undercount; only NON-parallel crossings could give fewer right angles.</p>
+<p><strong>29. (D)</strong> Corresponding angles are equal: 8x − 12 = 5x + 21, so 3x = 33, x = 11. Angle Q = 5(11) + 21 = 76°. Its linear-pair neighbour = 180 − 76 = 104°. The 76° forgets the linear-pair step. The 11° is x. The 98° is a wrong subtraction.</p>
+<p><strong>30. (B)</strong> Adjacent angles p and q form a linear pair: p + q = 180. With p − q = 48, adding gives 2p = 228, p = 114, so q = 66°. The 114° is p, not q. The 24° halves the difference incorrectly. The 90° ignores the difference.</p>
+<p><strong>31. (C)</strong> Sharing a vertex as a linear pair, the two sum to 180°. Let co-interior = a, alternate = a + 40: a + (a + 40) = 180, 2a = 140, a = 70, alternate = 110°. The 70° is the co-interior angle. The 90° needs a 0° difference. The 140° is 2a.</p>
+<p><strong>32. (C)</strong> Adjacent corner angles form a linear pair: (3x + 18) + (2x + 12) = 180, so 5x + 30 = 180, 5x = 150, x = 30. North-east = 3(30) + 18 = 108°. The 72° is the north-west angle. The 30° is x. The 84° is a slip.</p>
+<p><strong>33. (A)</strong> Equal corresponding angles guarantee the two lines are parallel (the converse of the corresponding-angles rule). &#x27;Perpendicular&#x27; needs a 90° angle, absent here. &#x27;Nothing&#x27; ignores the valid converse. &#x27;Meet at 102°&#x27; contradicts parallelism, since equal corresponding angles mean the lines do not meet.</p>
+<p><strong>34. (A)</strong> Co-interior angles sum to 180°, so angle 2 = 80°. The bisectors make 50° and 40° with the transversal on the same side; in the triangle they form with the transversal, the angle between the bisectors = 180 − 50 − 40 = 90°. The bisectors of co-interior angles of parallel lines always meet at right angles. The 50° and 40° are the half-angles. The 100° just repeats angle 1.</p>
+<p><strong>35. (C)</strong> Sharing a vertex as a linear pair, they sum to 180°. Parts 5 + 4 = 9, each 20°. Alternate-interior = 5×20 = 100°. The 80° is the co-interior partner (4 parts). The 90° needs a 1:1 ratio. The 108° comes from a 3:2 split, the wrong ratio.</p>
+<p><strong>36. (B)</strong> For parallel lines co-interior angles must sum to exactly 180°. Here 95 + 86 = 181° ≠ 180°, so the lines are NOT parallel, missing by 1°. &#x27;Parallel&#x27; wrongly claims a 180° sum. &#x27;Perpendicular&#x27; misreads a near-90° angle as decisive. &#x27;Differ by 9°&#x27; uses the difference (the wrong test) instead of the sum.</p>
+<p><strong>37. (C)</strong> Alternate interior angles are equal: 2x + 25 = 3x + 5, so x = 20. Angle QAB = 2(20) + 25 = 65°. The 20° is x. The 115° is the supplement (a co-interior trap). The 85° is 3x + 25, a slip.</p>
+<p><strong>38. (A)</strong> Corresponding angles are equal: x + 40 = 3x − 20, so 60 = 2x, x = 30. The angle = 30 + 40 = 70°. Its alternate-interior angle (parallel lines) equals it: 70°. The 110° is the supplement (a co-interior trap). The 30° is x. The 50° is a slip.</p>
+<p><strong>39. (B)</strong> The 142° exterior angle has a linear-pair interior neighbour of 180 − 142 = 38° at the same crossing. By alternate interior angles (parallel lines), the matching interior angle on the lower line equals that 38°. The 142° forgets the linear-pair step. The 52° is 90 − 38, unjustified. The 48° is an arithmetic slip.</p>
+<p><strong>40. (A)</strong> Reading around, the angles alternate a, b, a, b. The two x angles are the vertically opposite pair, and (2x − 30) is adjacent to x, forming a linear pair: x + (2x − 30) = 180, 3x = 210, x = 70. The 50 and 60 fail the linear-pair equation. The 75 comes from 3x = 225, a slip.</p>
+<p><strong>41. (A)</strong> Angle BOD = angle AOC = 52° (vertically opposite). Angle AOE = 90° means OE is perpendicular to AB, so angle EOB = 90°. With D and E on the same side of AB, angle EOD = angle EOB − angle DOB = 90 − 52 = 38°. The 52° forgets the 90° subtraction. The 128° is 90 + 38, wrong. The 90° ignores D.</p>
+<p><strong>42. (A)</strong> Sharing a vertex as a linear pair, they sum to 180°. Let co-interior = a, alternate = 2a: a + 2a = 180, 3a = 180, a = 60, alternate = 120°. The 60° is the co-interior angle. The 90° needs a 1:1 ratio. The 135° comes from a 3:1 ratio, not 2:1.</p>
+<p><strong>43. (C)</strong> Two intersecting lines give vertically opposite equal angles and linear pairs summing to 180°, so going around the pattern must be a, b, a, b with a + b = 180. 70,110,70,110 fits. The 70,110,110,70 ordering puts equal angles adjacent, breaking the alternating pattern. 90,90,90,90 is perpendicular (excluded). 70,70,110,110 also misorders the pattern.</p>
+<p><strong>44. (C)</strong> The two values form linear pairs, so they are supplementary: a + 2a = 180, 3a = 180, a = 60°. The smaller is 60°, the larger 120°. The 120° is the larger. The 90° needs equal values. The 45° comes from 180/4, a wrong split.</p>
+<p><strong>45. (D)</strong> Co-interior angles are supplementary. Let smaller = a, larger = a + 24: a + (a + 24) = 180, 2a = 156, a = 78, larger = 102°. The 78° is the smaller. The 90° needs a 0° difference. The 114° comes from adding 24 to 90 by mistake.</p>
+<p><strong>46. (B)</strong> Alternate angles between parallel lines are equal, so angle A = angle B. Substituting: angle A = 2·angle A − 24, so 24 = angle A, i.e. angle A = 24°. The 48° doubles it. The 12° halves it. The 156° is the supplement, irrelevant for equal alternate angles.</p>
+<p><strong>47. (A)</strong> A perpendicular transversal makes every one of the eight angles 90°, so there is exactly ONE distinct value, 90°. &#x27;2 values: 90 and 90&#x27; lists the same value twice. &#x27;4 distinct values&#x27; arises only for an oblique unequal arrangement, not here. &#x27;80 and 100&#x27; is a generic oblique answer, not the perpendicular case.</p>
+<p><strong>48. (A)</strong> Reading around, the angles alternate a, b, a, b. The two (3x) angles are the vertically opposite pair, and (x + 20) is adjacent to 3x, forming a linear pair: 3x + (x + 20) = 180, 4x = 160, x = 40. The 20 and 35 fail the equation. The 45 comes from 4x = 180, a slip.</p>
+<p><strong>49. (B)</strong> Sharing a vertex as a linear pair, they sum to 180°. Parts 7 + 2 = 9, each 20°. The smaller (co-interior, 2 parts) = 2×20 = 40°. The 140° is the larger alternate-interior angle (7 parts). The 90° needs a 1:1 ratio. The 20° is one part, not two.</p>
+<p><strong>50. (D)</strong> Angle 2 = angle 1 = 124° (corresponding). Angle 3 = 180 − 124 = 56° (linear pair with angle 2). Angle 4 = angle 3 = 56° (vertically opposite). The 124° stops at angle 2. The 90° is unjustified. The 34° is 124 − 90, a wrong step.</p>
+<p><strong>51. (A)</strong> Parallel lines force corresponding angles to be equal. Here 88° ≠ 92°, so the lines are NOT parallel. &#x27;Parallel&#x27; applies the rule without checking the angles match. &#x27;Perpendicular&#x27; needs a 90° angle exactly, absent. &#x27;Coincident&#x27; would make all angles equal, contradicting the data.</p>
+<p><strong>52. (A)</strong> Corresponding angles are equal: x + 25 = 2x − 15, so x = 40. The angle = 40 + 25 = 65°. Its co-interior partner is supplementary: 180 − 65 = 115°. The 65° is the corresponding angle itself, not its co-interior partner. The 40° is x. The 130° doubles 65 instead of subtracting from 180.</p>
+<p><strong>53. (A)</strong> Sharing a vertex as a linear pair, they sum to 180°. Parts 3 + 2 = 5, each 36°. Alternate-interior (3 parts) = 3×36 = 108°. The 72° is the co-interior partner (2 parts). The 90° needs a 1:1 ratio. The 120° comes from a 2:1 ratio.</p>
+<p><strong>54. (B)</strong> Vertically opposite: 4x + 5 = 6x − 25, so 30 = 2x, x = 15. Angle AOC = 4(15) + 5 = 65°. Its linear-pair neighbour AOD = 180 − 65 = 115°. The 65° is angle AOC itself, not its neighbour. The 15° is x. The 130° doubles 65 instead of subtracting from 180.</p>
+<p><strong>55. (C)</strong> The 84° corresponding angle at line a equals the corresponding angle at line b (84°). Its bisector splits it into 42° and 42°, so the bisector makes 42° with line b. The 84° forgets the bisection. The 48° is 90 − 42, unjustified. The 138° is the obtuse supplement, not the acute angle.</p>
+<p><strong>56. (D)</strong> Alternate interior angles are equal: 2x + 9 = 3x − 6, so x = 15. Each angle = 2(15) + 9 = 39°. The 15° is x. The 141° is the supplement, wrong because alternate angles are equal. The 45° is 3x, a slip.</p>
+<p><strong>57. (D)</strong> Angle Q is co-interior to angle P, so angle Q = 180 − 73 = 107°. Its bisector splits it into 53.5° each, so the bisector makes 53.5° with line m. The 36.5° halves angle P instead. The 73° forgets angle Q and the bisection. The 107° is angle Q itself, not the bisected half.</p>
+<p><strong>58. (C)</strong> Linear pair: 7x + 2x = 180, 9x = 180, x = 20. Angle AOC = 7(20) = 140°. OD bisects it, so angle DOC = 140/2 = 70°. The 140° is the whole angle AOC, not its half. The 40° is angle COB (2x), not the bisected half. The 20° is x.</p>
+<p><strong>59. (C)</strong> Co-interior angles are supplementary. Let the smaller be a and the larger 4a: a + 4a = 180, 5a = 180, a = 36, larger = 4(36) = 144°. The 36° is the smaller. The 90° wrongly assumes equality. The 135° would come from a 3:1 ratio, not 4:1.</p>
+<p><strong>60. (D)</strong> The 118° angle at P has a corresponding angle at Q equal to 118° (parallel lines). The angle vertically opposite that corresponding angle is also 118° (vertically opposite angles are equal). So the required angle is 118°. The 62° is the supplement, the trap of inserting a linear-pair step that is not needed. The 90° is unjustified. The 236° is 2×118, a nonsense doubling.</p>
+</body>
+</html>

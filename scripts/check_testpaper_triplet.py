@@ -18,6 +18,17 @@ Two streams, two triplet shapes:
      non-empty `<stem>_Solutions.md` AND a non-empty `<stem>_SolvedGuide.html`
      (the in-app rendered guide, produced by scripts/make_solved_guide.py).
 
+     EXCEPTION — P3/P4/P5 practice variants: stems ending in `_P3`, `_P4`,
+     or `_P5` are the QA-sweep ramp variants (a `qa:` commit lineage). They
+     are bundled so the kid can take them as in-app quizzes via the
+     `OlympiadPaperParser`, but they ship as a Question/Solutions PAIR — no
+     SolvedGuide HTML. `make_solved_guide.py` is hand-tuned for the original
+     Maths Ch15 / Science Ch13 anchors and isn't a generalised generator, so
+     forcing a guide for 207 variants would require either a script rewrite
+     or a stream of empty stubs (which the > 32-byte floor below already
+     rejects anyway). The hub's "Solved Guide" CTA is gated on
+     `solvedGuideHTML != nil`, so a variant card simply hides that affordance.
+
 "Non-empty" means the file exists and has more than a trivial amount of
 content (> 32 bytes) — a zero-byte or stub placeholder counts as missing,
 because an empty Solutions.md passes a bare `os.path.exists` check while
@@ -57,6 +68,17 @@ STREAMS = [
 # set we ship is comfortably above this floor.
 MIN_BYTES = 32
 
+# P3/P4/P5 stem suffixes that exempt the bundled stream from the SolvedGuide
+# requirement (see the docstring). The pair (QP.md + Solutions.md) is still
+# enforced — only the SolvedGuide HTML is treated as not-required.
+_VARIANT_STEM_SUFFIXES = ("_P3", "_P4", "_P5")
+
+
+def _is_practice_variant(stem: str) -> bool:
+    """True iff this stem belongs to the P3/P4/P5 QA-sweep ramp variants,
+    which intentionally ship without a SolvedGuide.html."""
+    return stem.endswith(_VARIANT_STEM_SUFFIXES)
+
 
 def _nonempty(path: str) -> bool:
     """True iff path exists and carries more than a stub of content."""
@@ -86,7 +108,7 @@ def audit_stream(root_abs: str, root_label: str, requires_guide: bool) -> list[s
             errors.append(
                 f"{root_label}/{qp}: missing or empty {stem}_Solutions.md"
             )
-        if requires_guide:
+        if requires_guide and not _is_practice_variant(stem):
             guide = os.path.join(root_abs, f"{stem}_SolvedGuide.html")
             if not _nonempty(guide):
                 errors.append(
@@ -138,7 +160,7 @@ def audit_paths(paths: list[str]) -> list[str]:
         sol = os.path.join(root_abs, f"{stem}_Solutions.md")
         if not _nonempty(sol):
             errors.append(f"{root_label}/{stem}_QuestionPaper.md: missing or empty {stem}_Solutions.md")
-        if requires_guide:
+        if requires_guide and not _is_practice_variant(stem):
             guide = os.path.join(root_abs, f"{stem}_SolvedGuide.html")
             if not _nonempty(guide):
                 errors.append(f"{root_label}/{stem}_QuestionPaper.md: missing or empty {stem}_SolvedGuide.html")
@@ -196,6 +218,18 @@ def selftest() -> int:
         write(os.path.join(s2, "Maths_Ch02_Y_Advanced_QuestionPaper.md"))
         write(os.path.join(s2, "Maths_Ch02_Y_Advanced_Solutions.md"))
 
+        # P3/P4/P5 practice variants in the bundled stream — SHOULD NOT flag
+        # for missing SolvedGuide. They ship as a QP+Solutions pair only.
+        write(os.path.join(s2, "Maths_Ch04_W_P3_QuestionPaper.md"))
+        write(os.path.join(s2, "Maths_Ch04_W_P3_Solutions.md"))
+        write(os.path.join(s2, "Maths_Ch04_W_P4_QuestionPaper.md"))
+        write(os.path.join(s2, "Maths_Ch04_W_P4_Solutions.md"))
+        write(os.path.join(s2, "Maths_Ch04_W_P5_QuestionPaper.md"))
+        write(os.path.join(s2, "Maths_Ch04_W_P5_Solutions.md"))
+        # A P3 variant with NO Solutions — SHOULD still flag (pair contract
+        # holds for variants; only the SolvedGuide is exempt).
+        write(os.path.join(s2, "Maths_Ch05_V_P3_QuestionPaper.md"))
+
         errors, total = audit(d)
         joined = "\n".join(errors)
 
@@ -205,7 +239,7 @@ def selftest() -> int:
                 print(f"SELFTEST FAIL: {msg}\n  errors were:\n   " + "\n   ".join(errors))
                 ok = False
 
-        expect(total == 5, f"expected to count 5 question papers, counted {total}")
+        expect(total == 9, f"expected to count 9 question papers, counted {total}")
         expect("Maths_Ch02_Y_P3_QuestionPaper.md" in joined,
                "missing-Solutions orphan not flagged (stream 1)")
         expect("Maths_Ch03_Z_P3_QuestionPaper.md" in joined,
@@ -217,13 +251,26 @@ def selftest() -> int:
                "complete pair wrongly flagged (stream 1)")
         expect("Maths_Ch01_X_Advanced" not in joined,
                "complete triplet wrongly flagged (stream 2)")
-        # Exactly 3 violations expected: 2 from stream 1, 1 from stream 2.
-        expect(len(errors) == 3, f"expected exactly 3 violations, got {len(errors)}")
+        # Variant pair completeness — no flag because SolvedGuide isn't required.
+        expect("Maths_Ch04_W_P3_QuestionPaper.md" not in joined,
+               "complete P3 variant pair wrongly flagged (stream 2)")
+        expect("Maths_Ch04_W_P4_QuestionPaper.md" not in joined,
+               "complete P4 variant pair wrongly flagged (stream 2)")
+        expect("Maths_Ch04_W_P5_QuestionPaper.md" not in joined,
+               "complete P5 variant pair wrongly flagged (stream 2)")
+        # Variant with no Solutions — SHOULD still flag (the pair contract
+        # holds for variants too).
+        expect("Maths_Ch05_V_P3_QuestionPaper.md" in joined
+               and "Solutions" in joined,
+               "missing-Solutions in P3 variant not flagged (stream 2)")
+        # Exactly 4 violations expected: 2 from stream 1, 2 from stream 2.
+        expect(len(errors) == 4, f"expected exactly 4 violations, got {len(errors)}: {errors}")
 
         # Now heal everything and assert a clean pass.
         write(os.path.join(s1, "Maths_Ch02_Y_P3_Solutions.md"))
         write(os.path.join(s1, "Maths_Ch03_Z_P3_Solutions.md"))
         write(os.path.join(s2, "Maths_Ch02_Y_Advanced_SolvedGuide.html"))
+        write(os.path.join(s2, "Maths_Ch05_V_P3_Solutions.md"))
         healed, _ = audit(d)
         expect(not healed, f"healed tree still flagged: {healed}")
 
