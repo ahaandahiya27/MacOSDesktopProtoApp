@@ -226,31 +226,46 @@ enum SidebarTool: String, Hashable, CaseIterable, Identifiable {
     case mastery
     case discover
     case olympiad
+    /// Boss Challenge mixed-chapter practice papers. The same window the
+    /// Help → Boss Challenge Papers (⌘⌥B) command opens — also reachable
+    /// from the sidebar as a primary in-app surface. The detail pane
+    /// embeds `BossChallengePapersView()` directly so selecting from the
+    /// sidebar keeps the user in the main window.
+    case bossChallenge
+    /// Brutal Series practice papers — 63 mixed-chapter PDFs + HTML
+    /// solutions. Same dual-entry pattern: sidebar embeds the in-app
+    /// view; Help → Brutal Series Papers (⌘⌥R) opens the standalone
+    /// window. Both bindings drive `BrutalSeriesPapersView()`.
+    case brutalSeries
     case settings
 
     var id: String { rawValue }
 
     var title: String {
         switch self {
-        case .search:        return "Search"
-        case .bookmarks:     return "Bookmarks"
-        case .dailyPractice: return "Daily Practice"
-        case .mastery:       return "My Progress"
-        case .discover:      return "Discover Progress"
-        case .olympiad:      return "Olympiad Tests"
-        case .settings:      return "Settings"
+        case .search:         return "Search"
+        case .bookmarks:      return "Bookmarks"
+        case .dailyPractice:  return "Daily Practice"
+        case .mastery:        return "My Progress"
+        case .discover:       return "Discover Progress"
+        case .olympiad:       return "Olympiad Tests"
+        case .bossChallenge:  return "Boss Challenge"
+        case .brutalSeries:   return "Brutal Series"
+        case .settings:       return "Settings"
         }
     }
 
     var systemImage: String {
         switch self {
-        case .search:        return "magnifyingglass"
-        case .bookmarks:     return "bookmark.fill"
-        case .dailyPractice: return "flame.fill"
-        case .mastery:       return SFSymbolCompat.name("chart.bar.xaxis")
-        case .discover:      return "sparkles"
-        case .olympiad:      return SFSymbolCompat.name("trophy.fill")
-        case .settings:      return "gearshape.fill"
+        case .search:         return "magnifyingglass"
+        case .bookmarks:      return "bookmark.fill"
+        case .dailyPractice:  return "flame.fill"
+        case .mastery:        return SFSymbolCompat.name("chart.bar.xaxis")
+        case .discover:       return "sparkles"
+        case .olympiad:       return SFSymbolCompat.name("trophy.fill")
+        case .bossChallenge:  return "crown.fill"
+        case .brutalSeries:   return "bolt.fill"
+        case .settings:       return "gearshape.fill"
         }
     }
 
@@ -261,13 +276,15 @@ enum SidebarTool: String, Hashable, CaseIterable, Identifiable {
     /// just the visible affordance; the actual binding lives in the menu.
     var keyboardShortcut: String? {
         switch self {
-        case .search:        return "\u{2318}F"          // ⌘F
-        case .bookmarks:     return "\u{2318}B"          // ⌘B
-        case .dailyPractice: return "\u{2318}\u{21E7}P"  // ⌘⇧P
-        case .mastery:       return "\u{2318}\u{21E7}M"  // ⌘⇧M
-        case .discover:      return "\u{2318}\u{21E7}D"  // ⌘⇧D
-        case .olympiad:      return nil                  // no menu shortcut yet
-        case .settings:      return "\u{2318}\u{21E7},"  // ⌘⇧,
+        case .search:         return "\u{2318}F"                   // ⌘F
+        case .bookmarks:      return "\u{2318}B"                   // ⌘B
+        case .dailyPractice:  return "\u{2318}\u{21E7}P"           // ⌘⇧P
+        case .mastery:        return "\u{2318}\u{21E7}M"           // ⌘⇧M
+        case .discover:       return "\u{2318}\u{21E7}D"           // ⌘⇧D
+        case .olympiad:       return nil                            // no menu shortcut yet
+        case .bossChallenge:  return "\u{2318}\u{2325}B"           // ⌘⌥B (Help menu)
+        case .brutalSeries:   return "\u{2318}\u{2325}R"           // ⌘⌥R (Help menu)
+        case .settings:       return "\u{2318}\u{21E7},"           // ⌘⇧,
         }
     }
 }

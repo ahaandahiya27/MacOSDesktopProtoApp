@@ -3352,6 +3352,7 @@
 		B6C00AA1E3FC977BF311EE82 /* SelfCheckArticleRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B662F7364184B38EBF6256 /* SelfCheckArticleRoutingTests.swift */; };
 		B6AF9B526AC182454D42C3DB /* SettingsManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC6A95CD9ABF9B8C9017257 /* SettingsManagerTests.swift */; };
 		AE1A9418310B9993F207305A /* ShapeDiagramRegistryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D8D50007343670D4C8E3EB8 /* ShapeDiagramRegistryTests.swift */; };
+		A28C12BB13D15F264E1FE3BB /* SidebarToolPapersRouteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952B35CA128C806B7213A841 /* SidebarToolPapersRouteTests.swift */; };
 		C8ADEF119BC541625E56B57C /* SocialScienceArticleRoutingTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 108AC54929248AA058607155 /* SocialScienceArticleRoutingTests.swift */; };
 		7ADF9B3CD7738E792BD12C0A /* SocialScienceContentDepthTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099E1F28D6D1B177EEA75DB9 /* SocialScienceContentDepthTests.swift */; };
 		7BFB1AA45FA158C50B562114 /* SocialScienceDiscoverInteractiveTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5356FAF170B912361342634E /* SocialScienceDiscoverInteractiveTests.swift */; };
@@ -6758,6 +6759,7 @@
 		E9B662F7364184B38EBF6256 /* SelfCheckArticleRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SelfCheckArticleRoutingTests.swift"; sourceTree = "<group>"; };
 		ECC6A95CD9ABF9B8C9017257 /* SettingsManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SettingsManagerTests.swift"; sourceTree = "<group>"; };
 		4D8D50007343670D4C8E3EB8 /* ShapeDiagramRegistryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ShapeDiagramRegistryTests.swift"; sourceTree = "<group>"; };
+		952B35CA128C806B7213A841 /* SidebarToolPapersRouteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SidebarToolPapersRouteTests.swift"; sourceTree = "<group>"; };
 		108AC54929248AA058607155 /* SocialScienceArticleRoutingTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SocialScienceArticleRoutingTests.swift"; sourceTree = "<group>"; };
 		099E1F28D6D1B177EEA75DB9 /* SocialScienceContentDepthTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SocialScienceContentDepthTests.swift"; sourceTree = "<group>"; };
 		5356FAF170B912361342634E /* SocialScienceDiscoverInteractiveTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SocialScienceDiscoverInteractiveTests.swift"; sourceTree = "<group>"; };
@@ -11560,6 +11562,7 @@
 				E9B662F7364184B38EBF6256,
 				ECC6A95CD9ABF9B8C9017257,
 				4D8D50007343670D4C8E3EB8,
+				952B35CA128C806B7213A841,
 				108AC54929248AA058607155,
 				099E1F28D6D1B177EEA75DB9,
 				5356FAF170B912361342634E,
@@ -15103,6 +15106,7 @@
 				B6C00AA1E3FC977BF311EE82 /* SelfCheckArticleRoutingTests.swift in Sources */,
 				B6AF9B526AC182454D42C3DB /* SettingsManagerTests.swift in Sources */,
 				AE1A9418310B9993F207305A /* ShapeDiagramRegistryTests.swift in Sources */,
+				A28C12BB13D15F264E1FE3BB /* SidebarToolPapersRouteTests.swift in Sources */,
 				C8ADEF119BC541625E56B57C /* SocialScienceArticleRoutingTests.swift in Sources */,
 				7ADF9B3CD7738E792BD12C0A /* SocialScienceContentDepthTests.swift in Sources */,
 				7BFB1AA45FA158C50B562114 /* SocialScienceDiscoverInteractiveTests.swift in Sources */,

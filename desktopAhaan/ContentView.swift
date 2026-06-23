@@ -430,6 +430,16 @@ struct ContentView: View {
             NavigationView {
                 OlympiadHubView()
             }
+        case .tool(.bossChallenge):
+            // In-app embed of the Boss Challenge Papers browser. The same
+            // `BossChallengePapersView` the Help → Boss Challenge Papers
+            // (⌘⌥B) command opens in its own AppKit window — selecting
+            // from the sidebar keeps the user in the main window.
+            BossChallengePapersView()
+        case .tool(.brutalSeries):
+            // In-app embed of the Brutal Series Papers browser; same
+            // dual-entry pattern as Boss Challenge.
+            BrutalSeriesPapersView()
         case .tool(.settings):
             SettingsScreen()
         }
