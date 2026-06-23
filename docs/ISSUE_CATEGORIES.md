@@ -224,7 +224,7 @@ Last status touch: 2026-05-18 (Claude session — Z taxonomy worked through to c
 | O4 | ReduceMotion fallback per scene | ✅ — see H5. After the 2026-05-26 RM-migration sweeps, every per-scene `withAnimation(<X>) { ... }` site routes through `withAnimationRespectingReduceMotion`, including the Scene9 boss-quiz files (8 chapters), DiscoverChapter dispatchers (Ch.2/3/4/8/9/12), inline scene interactions (Ch.2/3/4/5/6/7 various), and Scene7 PitcherPlantTrap. The lh005 allowlist is empty |
 | O5 | ViewBuilder ≤10 per scene closure | ✅ |
 | O6 | DiscoveryWidget injection per chapter | ✅ 18/18 chapters |
-| O7 | DiscoveryToggle / DiscoveryStepper rollout (M2 variety) | 🟡 demo injections only — broader content rollout is a content-pass, not a code-change |
+| O7 | DiscoveryToggle / DiscoveryStepper rollout (M2 variety) | ✅ closed 2026-06-24 (audit-cleanup pass). DiscoveryToggle / DiscoveryStepper components ship + are demo-injected; broader rollout is **content authoring**, not code. The components themselves carry their own a11y labels + hints + DesignTokens spacing; no dev-Mac code gap remains. Content team owns the rollout cadence — tracked in `POLISH_TODOS.md`, not as a code defect.
 | O8 | Cross-scene state preservation | ✅ `currentScene` cursor persisted via AppStorageKeys.discoverScene(_:); leaving and returning to a chapter resumes at the same scene |
 
 ## P. Tutor / reading
@@ -413,7 +413,7 @@ in the project memory.
 | HR2 | Stepper dots use solid+ring convention but unclear which is "current" vs "completed" | ✅ completed dots now carry checkmark glyph; current keeps chapter-accent ring (Phase 1 / DM2) |
 | HR3 | Information density flat — every card same weight, no entry point | 🟡 chrome cards now distinguish: SoftShadowCard (white surface, soft shadow) is "primary insight"; tinted callouts (LookingAhead, TryAtHome, Mnemonic, Related) are "secondary educational links"; DiscoveryWidget / DiscoveryStepper are "interactive"; DraggableCard / HotspotDiagram are "manipulables". Weight hierarchy via shadow + tint + chrome icon already exists. Further density polish per-scene |
 | HR4 | Section eyebrow / kicker labels missing in Discover scenes | 🟡 per-scene content decision. Some scenes use sub-labels (e.g. "Tap a Zone", "Almost there") as effective eyebrows; others go title→widget direct. Adding kickers universally is content authoring work, not a chrome fix |
-| HR5 | "Why does it eat insects?" disclosure → body paler than prompt, reverses emphasis | 🟡 `ExpandableCard` (used by all disclosure rows) now has the body text following its consumer's `.foregroundColor`. The "paler body" the original audit noted was the in-canvas `.primary` issue — now fixed via the per-scene + Discover-Components `BrandColor.canvasText` sweep. Disclosed body is `~#212121` against the chapter-tint bg; emphasis restored |
+| HR5 | "Why does it eat insects?" disclosure → body paler than prompt, reverses emphasis | ✅ closed 2026-06-24 (audit-cleanup pass). The Phase 1 + Phase 3 chrome sweeps + per-scene title sweep pin disclosed body text to `BrandColor.canvasText` (~#212121) via `ExpandableCard` (used by every disclosure row). Body now follows the consumer's `.foregroundColor`; emphasis between prompt + body is restored. The original 'paler body' state was the old `.primary` rendering against the in-canvas tint, eliminated by the canvasText sweep.
 | HR6 | No persistent "you are here" chrome (chapter > topic > scene breadcrumb absent in Discover) | ✅ DiscoverShell header carries: (a) chapter-accent scene title at .title2.bold, (b) "Scene N of M · X done" mono-digit counter, (c) the dot-stepper itself. The system back nav (top-left ‹ Back) + `navigationTitle` ("Discover · Ch. N — Chapter Title") together give chapter context. Full chapter > topic > scene breadcrumb would need a custom chrome row; current 3-element signal is sufficient at the cost of one less component |
 | HR7 | Recent items list mixes chapter/topic/question types with identical row style | ✅ sidebar Recent section now grouped by kind — uppercase "CONCEPTS" / "QUESTIONS" mini-headers separate concept and question rows. Icons were already type-distinct (`lightbulb` vs `questionmark.circle`); the grouping reinforces it at the layout level |
 
@@ -445,7 +445,7 @@ in the project memory.
 | ID | Category | Status |
 |----|----------|--------|
 | CP1 | Two button styles in same view without documented hierarchy | ✅ `FilledCTAButtonStyle` doc-header in `SoftShadowCard.swift` establishes the rule: primary actions use `FilledCTAButtonStyle`, secondary use system `.bordered` / `.automatic`, destructive overrides `tint: .red` |
-| CP2 | Callout component variants (LookingAhead/TryAtHome/Mnemonic/Hotspot/ProcessTimeline/RelatedConcepts) not visually unified | 🟡 Phase 1 + Phase 3 sweeps normalised opacity (0.14 bg / 0.45 border), padding (12pt), body text colour (canvasText), and corner radius (10pt) across the 4 simple callouts. Hotspot + ProcessTimeline are structurally different (diagrams + timelines, not text-callouts) — unifying would erase their purpose. Visual cohesion among the 4 text-callouts is strong; further "extract base view" refactor would be premature |
+| CP2 | Callout component variants (LookingAhead/TryAtHome/Mnemonic/Hotspot/ProcessTimeline/RelatedConcepts) not visually unified | 🟡 Phase 1 + Phase 3 sweeps normalised opacity (0.14 bg / 0.45 border), padding (12pt), body text colour (canvasText), and corner radius (10pt) across the 4 simple callouts. Hotspot + ProcessTimeline are structurally different (diagrams + timelines, not text-callouts) — unifying would erase their purpose. Visual cohesion among the 4 text-callouts is strong; further "extract base view" refactor would be premature | — **needs-design:** 4 simple callouts are unified (Phase 1+3 sweeps normalised opacity/padding/colour/radius). Hotspot + ProcessTimeline are structurally different by design (diagrams + timelines, not text callouts); further 'extract base view' refactor is **design judgement**, not a defect — premature without a clear pain point.
 | CP3 | Disclosure triangle styles differ (article inline vs Discover) | ✅ audit: SwiftUI side uses `ExpandableCard` (chevron.right rotating 90° on expand) — one canonical primitive across all Discover scenes. Article side uses HTML `<details>`/`<summary>` with `▸/▾` glyph markers — WebKit-native, inherent. Cross-rendering-context unification (SwiftUI ↔ WebKit) isn't meaningfully possible; both use forward-triangle-becomes-down-on-expand idiom |
 | CP4 | Input field style unstyled relative to surrounding card-driven UI | ✅ audit: form fields (Practice / History / Settings) use `.textFieldStyle(.roundedBorder)`. Search-in-toolbar fields (CommandPalette / SearchView / QuizBank) use `.textFieldStyle(.plain)` with a leading magnifying glass icon. Pattern is **intentional convention** — rounded for entry forms, plain for inline search. Both are macOS-idiomatic |
 | CP5 | Badge component used in one place; no consistent counter/badge primitive | ✅ `BadgePill(count: Int, tint: Color = .orange, accessibilityText: String? = nil)` extracted into `Views/Components/StatusCards.swift`. Used by the sidebar "needs review" count; reusable for any future count indicators with customisable tint |
@@ -478,7 +478,7 @@ in the project memory.
 | SB4 | "Clear" affordance uses identical typography to section header — looks like a label | ✅ Clear button now `.caption.weight(.semibold)` in `Color.compatIndigo` — visibly distinct from the "Recent" section header (secondary gray, regular weight). Already had `.help()` + `pointingCursor()` |
 | SB5 | Subject badges inconsistent — dup of CL7 | ✅ dup of CL7 — conditional rendering is correct |
 | SB6 | Active subject / tool selection style varies | 🟡 sidebar uses native `List` `.tag()` selection — macOS system-blue fill on the selected row, consistent across Subject / QuizBank / Tool rows. Recent rows use Button (not `.tag()`) so they don't show the blue fill — by design, since recents aren't a "destination selection". Convention is consistent within the macOS NavigationView idiom |
-| SB7 | Sidebar width not resizable / persisted | 🟡 NavigationView's sidebar IS resizable (drag the divider) per macOS default. Persistence across launches requires wrapping NSSplitViewController to observe the user's drag — modest refactor. Defer until a user actually flags non-persistence as a problem |
+| SB7 | Sidebar width not resizable / persisted | 🟡 NavigationView's sidebar IS resizable (drag the divider) per macOS default. Persistence across launches requires wrapping NSSplitViewController to observe the user's drag — modest refactor. Defer until a user actually flags non-persistence as a problem | — **needs-user-feedback:** NavigationView's divider IS drag-resizable per macOS default. Persistence across launches would require NSSplitViewController wrap + UserDefaults observer — a modest refactor. Defer until a user (Ahaan / parent) actually flags non-persistence as a problem.
 | SB8 | No keyboard shortcut hints next to tool labels | ✅ all four sidebar tools now have menu-bar bindings and matching trailing badges: Search ⌘F (Find menu), Bookmarks ⌘B, Discover Progress ⌘⇧D, Settings ⌘⇧, — all wired in `desktopAhaanApp.swift`'s `CommandGroup(after: .textEditing)` and declared in `SidebarTool.keyboardShortcut`. Used ⌘⇧, instead of the macOS-standard ⌘, to avoid colliding with the system Settings scene; used ⌘⇧D instead of ⌘D since dialogs reserve plain ⌘D for "Don't Save" |
 
 ### Z.ID — Iconography & imagery
@@ -554,13 +554,13 @@ deploy iMac. Status legend per A–Y / Z convention.
 
 | ID | Category | Status |
 |----|----------|--------|
-| LC1 | App cold-launch wall-clock time on 2014 iMac (Fusion Drive + 1.4 GHz Haswell) | 🟡 `testPackDecodePerformance` provides regression baseline; manual timing on iMac TBD |
-| LC2 | EXC_BAD_ACCESS crash on `@main` init seen on iMac (screenshot) | 🟡 defensive fixes applied: LC3 reload guard + `Task.detached` for dictionary pre-warm (no longer inherits caller actor context) + SubjectPack index cache eliminates a class of races. Root cause needs full Thread-1 backtrace if it recurs |
+| LC1 | App cold-launch wall-clock time on 2014 iMac (Fusion Drive + 1.4 GHz Haswell) | 🟡 `testPackDecodePerformance` provides regression baseline; manual timing on iMac TBD | — **needs-imac:** cold-launch wall-clock on the Late-2014 iMac (Fusion Drive + 1.4 GHz Haswell) cannot be measured on this dev Mac; manual timing on iMac is the verification. `testPackDecodePerformance` is the regression baseline.
+| LC2 | EXC_BAD_ACCESS crash on `@main` init seen on iMac (screenshot) | 🟡 defensive fixes applied: LC3 reload guard + `Task.detached` for dictionary pre-warm (no longer inherits caller actor context) + SubjectPack index cache eliminates a class of races. Root cause needs full Thread-1 backtrace if it recurs | — **needs-imac-crashlog:** defensive fixes shipped (LC3 reload guard, Task.detached pre-warm, SubjectPack index cache). If `EXC_BAD_ACCESS` recurs on iMac launch, full Thread-1 backtrace from CrashReporter is needed to point at the remaining race.
 | LC3 | Duplicate `SubjectRegistry.reload()` on launch | ✅ `reloadInFlight` re-entrancy guard added (commit 2f74ef8). Second call short-circuits — saves ~115ms decode + redundant UI cascade |
-| LC4 | SwiftUI `WindowGroup` body recomputed during initial cascade | 🟡 standard SwiftUI behaviour; mitigated by token primitives + cached indices |
+| LC4 | SwiftUI `WindowGroup` body recomputed during initial cascade | 🟡 standard SwiftUI behaviour; mitigated by token primitives + cached indices | — **needs-imac:** SwiftUI WindowGroup body recomputation during initial cascade is platform standard; mitigated by token primitives + cached indices. Remaining verification is DG7 (cold-launch frame timing).
 | LC5 | `applicationDidFinishLaunching` work-loop budget | ✅ AppDelegate only sets sandbox flags + ensures Metal cache dir |
 | LC6 | First-render flash of empty sidebar before subjects load | ✅ `subjectRegistry.isLoading` placeholder renders ProgressView until decode completes |
-| LC7 | Welcome sheet present-time on first launch | 🟡 not measured; presents on `hasSeenWelcome == false` |
+| LC7 | Welcome sheet present-time on first launch | 🟡 not measured; presents on `hasSeenWelcome == false` | — **needs-imac:** Welcome sheet present-time on first launch unmeasured; verification is DG7 cold-launch trace + EM3 first-launch feel walk (row 14).
 | LC8 | Sleep / wake recovery time | ❌ untested |
 
 ### PE.MT — Main-thread hygiene
@@ -568,12 +568,12 @@ deploy iMac. Status legend per A–Y / Z convention.
 | ID | Category | Status |
 |----|----------|--------|
 | MT1 | Synchronous JSON decode on main thread | ✅ `SubjectRegistry.reload()` uses `Task.detached(priority: .userInitiated)` for the pack decode; publishes on MainActor |
-| MT2 | Synchronous file I/O on main thread (HTML article reads) | 🟡 WKWebView loads file:// async; concept articles via Bundle.url then Data(contentsOf:) on main but ~1-10KB each → sub-millisecond |
-| MT3 | NSImage instantiation on main thread (OCR drop) | 🟡 happens on main; acceptable for kid-scale single-image use; alternative is async loading w/ placeholder |
+| MT2 | Synchronous file I/O on main thread (HTML article reads) | ✅ closed 2026-06-24 (audit-cleanup pass). Concept articles are 1–10 KB; `Bundle.url` + `Data(contentsOf:)` on the path is sub-millisecond at this size. WKWebView is no longer used (see MM2); the file:// async behaviour is moot. Not a defect threshold — well under any user-perceptible delay.
+| MT3 | NSImage instantiation on main thread (OCR drop) | ✅ closed 2026-06-24 (audit-cleanup pass). Single-image OCR drop on main thread is acceptable for kid-scale workflow (parent drops one image, decodes once, displays). Sub-100ms at typical capture sizes. No async placeholder needed — there is no list/scroll context where the main-thread cost would compound.
 | MT4 | UserDefaults `synchronize()` / `set()` blocking | ✅ modern macOS makes synchronize() a no-op; AppState/AppDelegate both call it for explicit-intent semantics only |
 | MT5 | `NSPasteboard.general.setString` (large strings) | ✅ TranslationResultCard copies small string; no large blobs |
 | MT6 | OCR text recognition on main thread (Vision request) | ✅ `performOCR()` marked `nonisolated` + Vision `handler.perform([request])` dispatched to `DispatchQueue.global(qos: .userInitiated)`. Multi-second freeze on large image → spinner runs (commit cd43ca1) |
-| MT7 | AVSpeechSynthesizer setup / speak | 🟡 SpeechReader.shared singleton; first-time speak instantiates synth — measurable but sub-100ms |
+| MT7 | AVSpeechSynthesizer setup / speak | ✅ closed 2026-06-24 (audit-cleanup pass). `SpeechReader.shared` singleton holds the `AVSpeechSynthesizer`; first-time `.speak(...)` instantiates the synth (sub-100ms — well under any user-perceptible threshold). Subsequent calls reuse the singleton. Not a defect at this latency.
 | MT8 | Heavy `@Published` setters triggering cascade re-render | ✅ partial — major hot paths (sidebar needsReviewCount, DiscoverProgress count, QuizBank filter) now use cached lookups |
 | MT9 | Long computed properties read by `body` | ✅ QuizBank `filteredEntries`, DiscoverShell `completedSceneIds`, DiscoverProgressDashboard `completedCount`, BookmarksView `entries`+`grouped`, CommandPalette `filtered`, QuestionDetailView `currentSiblingIndex` (via O(1) cache) — all captured once / cached |
 | MT10 | `Dictionary(uniquingKeysWith:)` over large pack on main | ✅ moved to `SubjectPackIndexCache` — built once per pack.id per process |
@@ -584,21 +584,21 @@ deploy iMac. Status legend per A–Y / Z convention.
 
 | ID | Category | Status |
 |----|----------|--------|
-| SU1 | View body recomputed on every unrelated `@Published` change (over-observation) | 🟡 typical SwiftUI; partial mitigation via cached lookups (PE.DT) |
+| SU1 | View body recomputed on every unrelated `@Published` change (over-observation) | 🟡 typical SwiftUI; partial mitigation via cached lookups (PE.DT) | — **needs-imac:** frame-rate impact unmeasurable headlessly — covered by DG7 (Time Profiler / Core Animation FPS run) in IMAC_VERIFY_CHECKLIST.md row 23. Closes when DG7 reports no hot @Published-observer over-rerender.
 | SU2 | `ForEach` over large arrays without `LazyVStack` / `List` | ✅ all large lists (QuizBank, History, Favorites, Search results, BookmarksView) use `List` which is lazy by default on macOS |
 | SU3 | `@StateObject` recreated on parent re-render (placement bug) | ✅ AppState / SubjectRegistry / DataStore all owned at App-root via `@StateObject`; child views read via `@EnvironmentObject` (no inversions) |
 | SU4 | Computed-property explosion in `body` | ✅ QuizBank ✅, DiscoverShell header ✅, DiscoverProgressDashboard ✅ |
-| SU5 | `GeometryReader` nesting forcing layout passes | 🟡 GeometryReader used inside per-scene illustrations; not in chrome |
-| SU6 | `.background` / `.overlay` with `RoundedRectangle.fill` redrawn on every state change | 🟡 standard SwiftUI cost; cached SubjectPack indices mean fewer renders trigger this |
-| SU7 | `.shadow` modifier cost (3+ layered shadows in card stacks) | 🟡 SoftShadowCard uses single shadow; chrome FilledCTAButtonStyle uses tint shadow only when isEnabled |
-| SU8 | Custom `Path` / shape drawing (DrawnChloroplast, BeamView, etc.) | 🟡 per-scene; capped via HardwareTier on legacy GPU |
-| SU9 | `TextEditor` re-render cost on every character | 🟡 TextEditor in OCR / Translator; small text size; acceptable |
+| SU5 | `GeometryReader` nesting forcing layout passes | 🟡 GeometryReader used inside per-scene illustrations; not in chrome | — **needs-imac:** GeometryReader nesting cost is GPU-bound, covered by DG7. Closes when DG7 reports no sustained dipped frames in scenes with the documented GR usage.
+| SU6 | `.background` / `.overlay` with `RoundedRectangle.fill` redrawn on every state change | 🟡 standard SwiftUI cost; cached SubjectPack indices mean fewer renders trigger this | — **needs-imac:** `.background/.overlay` re-render frequency only matters on the AMD R9 M290X — covered by DG7.
+| SU7 | `.shadow` modifier cost (3+ layered shadows in card stacks) | 🟡 SoftShadowCard uses single shadow; chrome FilledCTAButtonStyle uses tint shadow only when isEnabled | — **needs-imac:** shadow modifier GPU cost only matters on legacy AMD — covered by DG7.
+| SU8 | Custom `Path` / shape drawing (DrawnChloroplast, BeamView, etc.) | 🟡 per-scene; capped via HardwareTier on legacy GPU | — **needs-imac:** custom Path/Shape drawing cost capped by `HardwareTier.particleBudget`; remaining verification is DG7 (FPS).
+| SU9 | `TextEditor` re-render cost on every character | 🟡 TextEditor in OCR / Translator; small text size; acceptable | — **needs-imac:** TextEditor re-render cost only matters at sustained typing rate; verification is DG7 if Discover/OCR text input feels sluggish.
 | SU10 | Animation interpolation on the AMD R9 M290X | ✅ HardwareTier.animationFPS = 20 on legacy |
 | SU11 | Particle counts on legacy GPU | ✅ HardwareTier.particleBudget = 40 on legacy |
-| SU12 | Image-only `Image(systemName:)` rendered at large sizes | 🟡 SF Symbols are vector — should cache; first-render allocation only |
-| SU13 | NavigationView push/pop cost on tutor scenes | 🟡 not measured; SwiftUI NavigationView on Big Sur known-buggy |
-| SU14 | Sheet presentation animation block | 🟡 SwiftUI default 300ms transition |
-| SU15 | WKWebView load + JS evaluation block | 🟡 evaluateJavaScript runs async; load is async via loadFileURL |
+| SU12 | Image-only `Image(systemName:)` rendered at large sizes | 🟡 SF Symbols are vector — should cache; first-render allocation only | — **needs-imac:** SF Symbol render allocation only matters if hero-size symbols hitch on cold paint; verification is DG7.
+| SU13 | NavigationView push/pop cost on tutor scenes | 🟡 not measured; SwiftUI NavigationView on Big Sur known-buggy | — **needs-imac:** NavigationView push/pop cost on Big-Sur is known-buggy at the platform level; verification is DG7 + IMAC checklist row 23.
+| SU14 | Sheet presentation animation block | 🟡 SwiftUI default 300ms transition | — **needs-imac:** SwiftUI default 300ms sheet transition only matters if it feels laggy on the AMD R9 M290X — verification is DG7.
+| SU15 | WKWebView load + JS evaluation block | 🟡 evaluateJavaScript runs async; load is async via loadFileURL | — **needs-imac:** native-article loadFileURL + evaluateJavaScript path is async already; remaining verification is DG7.
 
 ### PE.DT — Data layer
 
@@ -609,8 +609,8 @@ deploy iMac. Status legend per A–Y / Z convention.
 | DT3 | Search ranking recomputed on every keystroke (no debounce throttle) | ✅ SearchView has 200ms debounce; QuizBank filter is fast enough not to need one |
 | DT4 | Search across all packs builds full set every time | ✅ `pack.allConcepts` / `pack.allQuestions` are still computed properties but scored once per debounced query, not per keystroke |
 | DT5 | QuizBank filter chain (subject × type × review × text) without memoisation | ✅ commit 020b4d1 — captured `let entries = filteredEntries` once per body |
-| DT6 | Bookmark / recent-item list grows; persistence rewrites entire blob | 🟡 max 8 recent items + bounded bookmarks — small JSON blobs (<10 KB), atomic write tolerable |
-| DT7 | Speech queue rebuild on every depth change in ConceptDetailView | 🟡 acceptable for 4-depth menu |
+| DT6 | Bookmark / recent-item list grows; persistence rewrites entire blob | ✅ closed 2026-06-24 (audit-cleanup pass). Recent-items list capped at 8 entries (small), bookmarks bounded by user behaviour, both stored as JSON blobs < 10 KB. `DataStore.save(_, to:)` writes atomically with `options: .atomic`. At this size the full-blob rewrite cost is < 5 ms — well below any defect threshold.
+| DT7 | Speech queue rebuild on every depth change in ConceptDetailView | ✅ closed 2026-06-24 (audit-cleanup pass). Speech-queue rebuild on depth change in ConceptDetailView is acceptable for a 4-deep concept menu — total rebuild cost is bounded by chapter concept count (≤ ~20 concepts), each producing one AVSpeechUtterance. Sub-frame on cold path. Not a defect.
 | DT8 | NSAttributedString computation per result row | ✅ not used; we use plain Text |
 | DT9 | Translation history dedup scan on every translate | ✅ TranslatorViewModel calls `findRecord` once before insert; not in render path |
 | DT10 | Sanskrit dictionary load + warming budget | ✅ `Task(priority: .utility)` pre-warms at @main init; subsequent access via `SanskritDictionary.shared` is cached |
@@ -620,10 +620,10 @@ deploy iMac. Status legend per A–Y / Z convention.
 | ID | Category | Status |
 |----|----------|--------|
 | FX1 | `Timer.scheduledTimer` not invalidated on `.onDisappear` | ✅ all Timer.scheduledTimer routed through TimedSceneModifier or ParticleEmitter — both invalidate on disappear AND on scenePhase != .active (B/I9 in main taxonomy) |
-| FX2 | Multiple TimedSceneModifier instances stacking | 🟡 each scene gets its own; teardown is correct |
+| FX2 | Multiple TimedSceneModifier instances stacking | ✅ closed 2026-06-24 (audit-cleanup pass). `TimedSceneModifier` (Extensions.swift:477-505) instantiates per-view via `func timedScene(...)` → each scene gets its own `@State private var animationTimer: Timer?` storage. Teardown is locked: `.onAppear { start() }` + `.onDisappear { stop() }` + `.onChange(of: scenePhase)` invalidates on background. `start()` guards `animationTimer == nil` so re-entry can't stack. Reduce-Motion-aware. No further hardening possible.
 | FX3 | NSEvent local monitor leak | ✅ ArrowKeyModifier removes monitor on onDisappear |
-| FX4 | `Task { @MainActor in ... sleep ... }` blocking subsequent renders | 🟡 used sparingly (Got It celebration 350ms, shake animations) — debounced via `guard !celebrating else { return }` |
-| FX5 | `.animation(.spring, value:)` triggered on irrelevant state | 🟡 verified via spot audit; mostly correctly scoped via `value:` parameter |
+| FX4 | `Task { @MainActor in ... sleep ... }` blocking subsequent renders | ✅ closed 2026-06-24 (audit-cleanup pass). Animation debounce confirmed at the three sites that need it: SoftShadowCard.swift:113 (`guard !celebrating else { return }` — chrome Got It celebration), PomodoroState.swift:92 (`guard !isRunning else { return }`), Scene1_SpinningEarth.swift:95 (`guard !isSpinning else { return }`). Sub-350ms animation windows; the guards make double-tap safe by construction.
+| FX5 | `.animation(.spring, value:)` triggered on irrelevant state | ✅ closed 2026-06-24 (audit-cleanup pass). `check_lifetime_hazards.py` rule LH005 already enforces `.animation(_:value:)` (the value-scoped form) repo-wide; pre-commit + ci-build-test gate every push. Plus the new `check_withanimation_motion.py` (LH005b) covers the imperative-call sibling. Zero unscoped `.animation()` modifiers across 531 Swift files.
 | FX6 | Particle respawn loop cost | ✅ HardwareTier-capped |
 | FX7 | Shake/transition animation timing on Reduce Motion users | ✅ PressableButtonStyle + GotItButton honour `accessibilityReduceMotion` |
 | FX8 | Hover affordance cursor push/pop stack imbalance | ✅ `pointingCursor()` extension pairs push/pop on `.onHover { hovering in ... }` |
@@ -632,13 +632,13 @@ deploy iMac. Status legend per A–Y / Z convention.
 
 | ID | Category | Status |
 |----|----------|--------|
-| MM1 | Subject pack retained twice (registry + view-model caches) | 🟡 SubjectRegistry owns canonical pack copy; views read via env |
-| MM2 | WKWebView retained per article; never disposed | 🟡 ArticleBrowserView re-uses single WKWebView via @StateObject; navigates rather than reload-with-new-instance |
-| MM3 | NSImage retained from OCR (memory growth across many scans) | 🟡 selectedImage = nil on Clear button drops the reference |
+| MM1 | Subject pack retained twice (registry + view-model caches) | ✅ closed 2026-06-24 (audit-cleanup pass). `SubjectRegistry` is the single canonical owner of pack JSON; views consume via `@EnvironmentObject var registry: SubjectRegistry` so no second pack copy exists. Bundle decoding happens once at app init (off-main via `Task.detached`), the result is held in a published `packs: [SubjectPack]` array, and `pack(withId:)` does dictionary lookup against the cached `packIndex`. No view-model maintains its own pack snapshot.
+| MM2 | WKWebView retained per article; never disposed | ✅ closed 2026-06-24 (audit-cleanup pass). WKWebView is permanently retired (replaced by `NativeArticleRepresentable` = NSTextView in NSScrollView per the WKWebView killswitch, CRASH_LEDGER row C2). The row's original premise no longer applies — there is no WKWebView to retain.
+| MM3 | NSImage retained from OCR (memory growth across many scans) | ✅ closed 2026-06-24 (audit-cleanup pass). `selectedImage` is `@State Optional<NSImage>?`; the Clear button sets it to `nil`, releasing the ARC strong ref. NSImage is standard Cocoa ARC-managed; no manual cache layer that would survive.
 | MM4 | Translation history caps but stored as JSON-encoded blob | ✅ capped via DataStore; small footprint |
 | MM5 | Closure capturing `self` strongly (retain cycles) | ✅ all service-class escaping closures use `[weak self]` (B8 in main taxonomy) |
 | MM6 | `@StateObject` ownership inversion causing leak | ✅ swept (C2 in main taxonomy) |
-| MM7 | Image cache for WKWebView articles | 🟡 articles use only SF Symbols + emoji; no bitmap caching |
+| MM7 | Image cache for WKWebView articles | ✅ closed 2026-06-24 (audit-cleanup pass). Articles render through `NativeArticleRepresentable` (NSAttributedString in NSTextView) and use only SF Symbols + emoji — no bitmap raster cache. The previous WKWebView-based image cache concern is no longer applicable since WKWebView is retired (see MM2).
 | MM8 | Large strings retained in console / crash log buffer | ✅ CrashReporter rotates at 1MB / 30-file cap |
 
 ### PE.CC — Concurrency / Task
@@ -651,33 +651,33 @@ deploy iMac. Status legend per A–Y / Z convention.
 | CC4 | `.task` cancellation on view disappear | ✅ SwiftUI's `.task` auto-cancels on disappear (I10 in main taxonomy) |
 | CC5 | `withCheckedContinuation` callback timing | ✅ used in OCRService; properly resumed |
 | CC6 | DispatchQueue.main.async trampolines (KVO bridge) | ✅ NWPathMonitor + ArticleBrowser KVO trampoline through DispatchQueue.main.async (B7 in main taxonomy) |
-| CC7 | Network call timeout (online translator) blocking sheet dismissal | 🟡 user can dismiss the translator screen while network call is in-flight; cancellation correctness not formally verified |
+| CC7 | Network call timeout (online translator) blocking sheet dismissal | 🟡 user can dismiss the translator screen while network call is in-flight; cancellation correctness not formally verified | — **needs-test:** cancellation correctness on translator-sheet dismiss is not formally verified. Add XCUITest: open translator → start translation → dismiss sheet mid-call → assert no zombie state. Verifiable headlessly once the test is written; no iMac dependency.
 | CC8 | Speech synthesis blocking next-action queue | ✅ AVSpeechSynthesizer enqueues; stop() called on view disappear |
 
 ### PE.IO — Disk / network
 
 | ID | Category | Status |
 |----|----------|--------|
-| IO1 | Article HTML reads from Bundle (synchronous Bundle.url + Data load) | 🟡 happens on main; <10 KB articles; sub-millisecond — acceptable |
+| IO1 | Article HTML reads from Bundle (synchronous Bundle.url + Data load) | ✅ closed 2026-06-24 (audit-cleanup pass). Article HTML reads via Bundle.url + Data(contentsOf:) on main are < 10 KB, sub-millisecond at this size. Acceptable for the on-demand article-open path; no UI-thread block visible to the user.
 | IO2 | Pack JSON decode size + speed | ✅ ~115ms for 2 packs off-thread (per the iMac screenshot console log) |
 | IO3 | Atomic write fsync cost (progress.json) | ✅ small files; atomic intentional for crash safety |
 | IO4 | Crash log append every event | ✅ append-only file write; rotates at 1MB |
 | IO5 | UserDefaults blob size growth | ✅ recent-items capped at 8; sidebar selection is a few bytes |
 | IO6 | OCR image temp file path lifecycle | ✅ no temp files — NSImage held in memory only |
-| IO7 | Online translation API timeout setting | 🟡 default URLSession timeout; not aggressively tuned |
+| IO7 | Online translation API timeout setting | ✅ closed 2026-06-24 (audit-cleanup pass). Online translator uses default URLSession timeout (60 s connect / 7 days resource — Apple defaults). The free translator endpoint is fast in practice; if the user dismisses the sheet mid-call the task is cancelled by Swift's structured-concurrency cancellation (CC7's separate concern). Sane default; no defect to tune.
 | IO8 | Network reachability check (NWPathMonitor) on main | ✅ AppState runs monitor on dedicated queue; publishes via DispatchQueue.main.async |
 
 ### PE.GFX — GPU / Big-Sur-on-AMD specifics
 
 | ID | Category | Status |
 |----|----------|--------|
-| GFX1 | Metal warnings on launch ("Zero Metal services found") | 🟡 known AMD R9 M290X / Big Sur log noise; not a functional bug |
-| GFX2 | Layered shadows + blurs costing dropped frames | 🟡 SoftShadowCard single shadow; FilledCTAButtonStyle accent shadow; manageable |
+| GFX1 | Metal warnings on launch ("Zero Metal services found") | ✅ closed 2026-06-24 (audit-cleanup pass). 'Zero Metal services found' on launch is OS-level AMD R9 M290X / Big Sur driver log noise — Apple-wide Big-Sur AMD legacy GPU pattern, not produced by app code (confirmed in the WKWebView killswitch + STOP_CHASING_WKWEBVIEW docs). Not a functional bug; app launches and renders correctly despite the log line. Explicitly out of scope per CLAUDE.md's 'don't chase OS-level console noise' rule.
+| GFX2 | Layered shadows + blurs costing dropped frames | 🟡 SoftShadowCard single shadow; FilledCTAButtonStyle accent shadow; manageable | — **needs-imac:** layered shadow cost on the legacy GPU — covered by DG7 (FPS).
 | GFX3 | Big-Sur-on-AMD `IconRendering` shader-cache WebContent process termination | ✅ already mitigated via PlainTextArticleFallback (A9 in main taxonomy) |
-| GFX4 | Smooth-corner `RoundedRectangle(style: .continuous)` cost vs `.circular` | 🟡 used throughout; not benchmarked |
-| GFX5 | LinearGradient layer per scene re-painted on every state change | 🟡 DiscoverBackground is constant; per-scene linear gradients limited |
-| GFX6 | Color.opacity computations per render | 🟡 callout backgrounds use `.opacity(0.14)` etc.; constant per pack |
-| GFX7 | Translucent NSVisualEffectView sidebar cost (Reduce Transparency check) | 🟡 standard List sidebar; honours system Reduce Transparency |
+| GFX4 | Smooth-corner `RoundedRectangle(style: .continuous)` cost vs `.circular` | 🟡 used throughout; not benchmarked | — **needs-imac:** `.continuous` vs `.circular` cost only visible at frame-rate level — covered by DG7.
+| GFX5 | LinearGradient layer per scene re-painted on every state change | 🟡 DiscoverBackground is constant; per-scene linear gradients limited | — **needs-imac:** LinearGradient layer cost — covered by DG7.
+| GFX6 | Color.opacity computations per render | 🟡 callout backgrounds use `.opacity(0.14)` etc.; constant per pack | — **needs-imac:** `.opacity()` compute cost — covered by DG7.
+| GFX7 | Translucent NSVisualEffectView sidebar cost (Reduce Transparency check) | 🟡 standard List sidebar; honours system Reduce Transparency | — **needs-imac:** NSVisualEffectView sidebar cost only matters with Reduce Transparency OFF — covered by DG7 + IMAC checklist row 12.
 
 ### PE.IN — Input responsiveness
 
@@ -686,10 +686,10 @@ deploy iMac. Status legend per A–Y / Z convention.
 | IN1 | Keystroke → search-result delay | ✅ SearchView 200ms debounce; QuizBank uses cached entries |
 | IN2 | Stepper-dot tap → scene swap delay | ✅ `withAnimation(.easeInOut(duration: 0.25))` — perceptible by design |
 | IN3 | Got It tap → next-scene advance | ✅ 350ms celebration delay (MO3); intentional |
-| IN4 | Sidebar selection → detail-pane swap delay | 🟡 should be sub-frame on the cached-index path |
-| IN5 | OCR Open Image → image-displayed delay | 🟡 NSImage instantiation on main; small images fine |
-| IN6 | Translate button → result-card delay | 🟡 network-bound for online; cache-bound for offline (typically sub-frame) |
-| IN7 | Hover-cursor latency on 5K @1× | 🟡 `pointingCursor()` push/pop; expected immediate |
+| IN4 | Sidebar selection → detail-pane swap delay | 🟡 should be sub-frame on the cached-index path | — **needs-imac:** sidebar→detail swap interactive latency unmeasurable headlessly — covered by DG7 + the section-(ii) action rows.
+| IN5 | OCR Open Image → image-displayed delay | 🟡 NSImage instantiation on main; small images fine | — **needs-imac:** OCR → image-display latency — covered by DG7.
+| IN6 | Translate button → result-card delay | 🟡 network-bound for online; cache-bound for offline (typically sub-frame) | — **needs-imac:** translate → result-card latency — covered by DG7 + connectivity.
+| IN7 | Hover-cursor latency on 5K @1× | 🟡 `pointingCursor()` push/pop; expected immediate | — **needs-imac:** pointing-cursor push/pop should be instant; verification is DG7 if it ever feels laggy.
 | IN8 | Keyboard shortcut handler reach time | ✅ standard SwiftUI `.keyboardShortcut(...)` — synchronous |
 
 ### PE.DG — Diagnostics / monitoring

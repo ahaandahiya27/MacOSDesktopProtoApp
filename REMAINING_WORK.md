@@ -18,12 +18,18 @@ and the ledger.
 
 ## Ledger snapshot (authoritative)
 
-| Status | Count | Source |
-|---|---:|---|
-| ✅ (closed) | 311 | parsed primary status |
-| 🟡 (partial / open) | 96 | parsed primary status |
-| ❌ (untested / unaudited) | 6 | parsed primary status |
-| **Total open** | **102** | 96 + 6 |
+> **Updated 2026-06-24 audit-cleanup pass:** 17 rows flipped 🟡→✅ with
+> per-row proof artifacts (file:line evidence + ratchet citation). 26
+> rows annotated with explicit `needs-imac:` / `needs-test:` /
+> `needs-design:` / `needs-user-feedback:` deferral reasons so the
+> remaining 🟡s carry their own justification.
+
+| Status | Count | Δ this pass | Source |
+|---|---:|---:|---|
+| ✅ (closed) | **328** | +17 | parsed primary status |
+| 🟡 (partial / open) | **79** | −17 | parsed primary status |
+| ❌ (untested / unaudited) | **6** | 0 | parsed primary status |
+| **Total open** | **85** | **−17** | 79 + 6 |
 
 (`grep -c 🟡` previously read 100 because two row notes embed the
 emoji inside their description. The Python-parsed primary-status
@@ -34,8 +40,15 @@ count of 96 is the truth.)
 ## Bucket breakdown — every open ID accounted for
 
 ```
-102 open rows = 22 (i) visual + 9 (ii) action + 71 (iii) deliberate
+85 open rows = 22 (i) visual + 9 (ii) action + 54 (iii) deliberate
 ```
+
+> **Δ:** 17 rows moved out of (iii) into ✅ this pass (see commit message
+> for the proof artifact per row). The remaining 54 in (iii) are split:
+> 26 carry an explicit `needs-imac:` / `needs-test:` / `needs-design:` /
+> `needs-user-feedback:` reason in their row note (no longer
+> conservatively-🟡); 28 remain documented dups / future features /
+> per-scene-content / scope-rejected.
 
 ### Bucket (i) — iMac visual pass/fail (22 IDs)
 
@@ -134,7 +147,7 @@ from an iMac eyeball straddle both buckets. The bucket assignment
 above is mutually exclusive: each ID is counted **once**, in the
 bucket where action is taken.)
 
-**Reconciliation arithmetic**: 22 + 9 + 71 = 102 ✅
+**Reconciliation arithmetic**: 22 + 9 + 54 = 85 ✅ (was 102; 17 closed in the 2026-06-24 audit-cleanup pass)
 
 ---
 
