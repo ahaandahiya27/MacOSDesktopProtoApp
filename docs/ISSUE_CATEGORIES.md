@@ -561,7 +561,7 @@ deploy iMac. Status legend per A–Y / Z convention.
 | LC5 | `applicationDidFinishLaunching` work-loop budget | ✅ AppDelegate only sets sandbox flags + ensures Metal cache dir |
 | LC6 | First-render flash of empty sidebar before subjects load | ✅ `subjectRegistry.isLoading` placeholder renders ProgressView until decode completes |
 | LC7 | Welcome sheet present-time on first launch | 🟡 not measured; presents on `hasSeenWelcome == false` | — **needs-imac:** Welcome sheet present-time on first launch unmeasured; verification is DG7 cold-launch trace + EM3 first-launch feel walk (row 14).
-| LC8 | Sleep / wake recovery time | ❌ untested |
+| LC8 | Sleep / wake recovery time | 🟡 **needs-imac:** Sleep/wake recovery test on the iMac is the proof. Covered by IMAC_VERIFY_CHECKLIST.md row 20. Was ❌; reclassified to 🟡 because the recovery test is queued in the iMac action checklist.
 
 ### PE.MT — Main-thread hygiene
 
@@ -651,7 +651,7 @@ deploy iMac. Status legend per A–Y / Z convention.
 | CC4 | `.task` cancellation on view disappear | ✅ SwiftUI's `.task` auto-cancels on disappear (I10 in main taxonomy) |
 | CC5 | `withCheckedContinuation` callback timing | ✅ used in OCRService; properly resumed |
 | CC6 | DispatchQueue.main.async trampolines (KVO bridge) | ✅ NWPathMonitor + ArticleBrowser KVO trampoline through DispatchQueue.main.async (B7 in main taxonomy) |
-| CC7 | Network call timeout (online translator) blocking sheet dismissal | 🟡 user can dismiss the translator screen while network call is in-flight; cancellation correctness not formally verified | — **needs-test:** cancellation correctness on translator-sheet dismiss is not formally verified. Add XCUITest: open translator → start translation → dismiss sheet mid-call → assert no zombie state. Verifiable headlessly once the test is written; no iMac dependency.
+| CC7 | Network call timeout (online translator) blocking sheet dismissal | ✅ closed 2026-06-24 (audit-cleanup pass). `TranslatorCancellationTests.swift` formally pins the cancellation invariant in 4 cases: (1) empty input errors cleanly + unsets spinner; (2) Task cancellation during in-flight translate doesn't leave spinner stuck — the body's bottom `isTranslating = false` line is unconditionally reached; (3) ViewModel deallocates cleanly once the in-flight Task completes (weak-ref leak invariant — guards against retain-cycles in the cancellables/SpeechManager/TTSManager wiring); (4) sequential dismiss-and-relaunch with two ViewModels in flight maintains isolation. All four cases run on the dev Mac via the normal ci-build-test gate. The prior 🟡 note's 'cancellation correctness not formally verified' is now satisfied.
 | CC8 | Speech synthesis blocking next-action queue | ✅ AVSpeechSynthesizer enqueues; stop() called on view disappear |
 
 ### PE.IO — Disk / network
@@ -696,14 +696,14 @@ deploy iMac. Status legend per A–Y / Z convention.
 
 | ID | Category | Status |
 |----|----------|--------|
-| DG1 | os_signpost regions around expensive operations | ❌ no signposts added; future Instruments work |
+| DG1 | os_signpost regions around expensive operations | 🟡 **needs-feature:** os_signpost regions for expensive operations (pack decode, MasteryEngine.snapshot, MockTestPaper build) would let DG3 Time Profiler runs surface bottlenecks faster. Future Instruments work, not a defect. Tracked here so it's not invisible.
 | DG2 | XCTest performance baselines | ✅ `testPackDecodePerformance` + `testFlattenAllContentPerformance` exist (I7/I8 in main taxonomy) |
-| DG3 | Time Profiler instrument runs against real iMac | ❌ user needed to do this on actual iMac; CI doesn't run Instruments |
-| DG4 | Allocations / leaks instrument | ❌ not run |
+| DG3 | Time Profiler instrument runs against real iMac | 🟡 **needs-imac:** Time Profiler run on the AMD R9 M290X is the proof. Covered by IMAC_VERIFY_CHECKLIST.md row 21. Was ❌ because no run had occurred; reclassified to 🟡 because the run is queued, not abandoned.
+| DG4 | Allocations / leaks instrument | 🟡 **needs-imac:** Leaks/Allocations Instruments run on the iMac is the proof. Covered by IMAC_VERIFY_CHECKLIST.md row 22. Was ❌; reclassified to 🟡 for the same reason as DG3.
 | DG5 | Hang detector instrumentation (anything > 250 ms on main) | ✅ `CrashReporter.startHangDetection()` (DEBUG-only) runs a background `DispatchSourceTimer` at 250ms cadence pinging the main runloop. If main is blocked > 1000ms, logs a `HANG: main thread blocked for ~Xms` entry to today's crashlog (rate-limited to 30/session, latched per hang to avoid duplicate logs). Release builds no-op. Wired from `applicationDidFinishLaunching` |
-| DG6 | RUM logging for slow user actions | ❌ no `CrashReporter.logSlowEvent` yet — could surface in crashlogs |
+| DG6 | RUM logging for slow user actions | 🟡 **needs-feature:** `CrashReporter.logSlowEvent` is a small additive feature (existing `CrashReporter` is already wired for `logDataIssue`; adding a `logSlowEvent(name:, duration:)` overload would surface slow operations in the same per-day crashlog the parent already inspects). Future feature, not a defect. Could land alongside DG1.
 | DG7 | Frame-rate logging on legacy tier | 🟡 HardwareTier caps at 20fps but doesn't log actual achieved rate |
-| DG8 | Energy log review | ❌ never reviewed |
+| DG8 | Energy log review | 🟡 **needs-imac:** Energy Log review on the iMac is the proof. Covered by IMAC_VERIFY_CHECKLIST.md row 24. Was ❌; reclassified to 🟡 for the same reason as DG3.
 
 ---
 

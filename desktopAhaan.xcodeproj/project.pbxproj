@@ -3369,6 +3369,7 @@
 		5AF82297A80604D85A0285A6 /* TopicMasteryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3309464A84A6E3CF62A1EE49 /* TopicMasteryTests.swift */; };
 		2B06D4873A3896418717B43A /* ToughFlagSymmetryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA020DDC77906010D1D02C1F /* ToughFlagSymmetryTests.swift */; };
 		2367D62D7D9068AA233318FB /* TranslationServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B26F6ED1B552B74EDB1D5E /* TranslationServiceTests.swift */; };
+		9224EF3E976677401B92788A /* TranslatorCancellationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A476578605E7279D9ACBE08 /* TranslatorCancellationTests.swift */; };
 		A491D1C9D7ED040A204E9076 /* TrendChartShapeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 715D670F22C2AE6FB18392E6 /* TrendChartShapeTests.swift */; };
 		2364C7C253FD18DA34012635 /* TutorNavigationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3436224B3C9552AEB42BB80D /* TutorNavigationTests.swift */; };
 		843F030D7CF30DB8AC721F17 /* ViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9E6049C67F2B64BD6D4A51 /* ViewModelTests.swift */; };
@@ -6776,6 +6777,7 @@
 		3309464A84A6E3CF62A1EE49 /* TopicMasteryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TopicMasteryTests.swift"; sourceTree = "<group>"; };
 		CA020DDC77906010D1D02C1F /* ToughFlagSymmetryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ToughFlagSymmetryTests.swift"; sourceTree = "<group>"; };
 		91B26F6ED1B552B74EDB1D5E /* TranslationServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TranslationServiceTests.swift"; sourceTree = "<group>"; };
+		6A476578605E7279D9ACBE08 /* TranslatorCancellationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TranslatorCancellationTests.swift"; sourceTree = "<group>"; };
 		715D670F22C2AE6FB18392E6 /* TrendChartShapeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TrendChartShapeTests.swift"; sourceTree = "<group>"; };
 		3436224B3C9552AEB42BB80D /* TutorNavigationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TutorNavigationTests.swift"; sourceTree = "<group>"; };
 		6E9E6049C67F2B64BD6D4A51 /* ViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewModelTests.swift"; sourceTree = "<group>"; };
@@ -11579,6 +11581,7 @@
 				3309464A84A6E3CF62A1EE49,
 				CA020DDC77906010D1D02C1F,
 				91B26F6ED1B552B74EDB1D5E,
+				6A476578605E7279D9ACBE08,
 				715D670F22C2AE6FB18392E6,
 				3436224B3C9552AEB42BB80D,
 				6E9E6049C67F2B64BD6D4A51,
@@ -15123,6 +15126,7 @@
 				5AF82297A80604D85A0285A6 /* TopicMasteryTests.swift in Sources */,
 				2B06D4873A3896418717B43A /* ToughFlagSymmetryTests.swift in Sources */,
 				2367D62D7D9068AA233318FB /* TranslationServiceTests.swift in Sources */,
+				9224EF3E976677401B92788A /* TranslatorCancellationTests.swift in Sources */,
 				A491D1C9D7ED040A204E9076 /* TrendChartShapeTests.swift in Sources */,
 				2364C7C253FD18DA34012635 /* TutorNavigationTests.swift in Sources */,
 				843F030D7CF30DB8AC721F17 /* ViewModelTests.swift in Sources */,

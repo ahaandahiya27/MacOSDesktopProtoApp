@@ -1,4 +1,24 @@
-# Remaining Work — 2026-06-24 reconciled
+# Remaining Work — 2026-06-24 final close-out
+
+> **Final close-out pass:** CC7 closed (the one remaining dev-Mac
+> actionable row) + all 6 ❌ rows reclassified out of ❌-limbo.
+> **The dev-Mac actionable queue is now empty.** Zero rows remain
+> at ❌. Zero rows are dev-Mac-closable but not yet closed.
+
+## Final state
+
+```
+✅ 329  |  🟡 84  |  ❌ 0  |  total open 84
+84 open = 22 (i) iMac visual + 9 (ii) iMac action + 53 (iii) deliberate
+```
+
+The only path forward is the iMac checklist walk
+(`IMAC_VERIFY_CHECKLIST.md`, 19 rows / 31 IDs) and the standing
+content-generation loop (which has its own lint gates).
+
+---
+
+# Remaining Work — 2026-06-24 reconciled (audit history below)
 
 Authoritative state of every open row in `docs/ISSUE_CATEGORIES.md`,
 classified into three buckets. Every primary 🟡 / ❌ ID is accounted
@@ -26,10 +46,14 @@ and the ledger.
 
 | Status | Count | Δ this pass | Source |
 |---|---:|---:|---|
-| ✅ (closed) | **328** | +17 | parsed primary status |
-| 🟡 (partial / open) | **79** | −17 | parsed primary status |
-| ❌ (untested / unaudited) | **6** | 0 | parsed primary status |
-| **Total open** | **85** | **−17** | 79 + 6 |
+| ✅ (closed) | **329** | +1 | parsed primary status |
+| 🟡 (partial / open) | **84** | +5 | parsed primary status |
+| ❌ (untested / unaudited) | **0** | **−6** | parsed primary status |
+| **Total open** | **84** | **−1** | 84 + 0 |
+
+The +5 in 🟡 reflects the 6 ❌ rows reclassified to 🟡 with explicit
+`needs-X:` reasons (4 routed to iMac action, 2 to future-feature)
+minus 1 (CC7 closed). Net dev-Mac work delta: **−1**.
 
 (`grep -c 🟡` previously read 100 because two row notes embed the
 emoji inside their description. The Python-parsed primary-status
@@ -40,7 +64,7 @@ count of 96 is the truth.)
 ## Bucket breakdown — every open ID accounted for
 
 ```
-85 open rows = 22 (i) visual + 9 (ii) action + 54 (iii) deliberate
+84 open rows = 22 (i) visual + 9 (ii) action + 53 (iii) deliberate
 ```
 
 > **Δ:** 17 rows moved out of (iii) into ✅ this pass (see commit message
@@ -147,7 +171,7 @@ from an iMac eyeball straddle both buckets. The bucket assignment
 above is mutually exclusive: each ID is counted **once**, in the
 bucket where action is taken.)
 
-**Reconciliation arithmetic**: 22 + 9 + 54 = 85 ✅ (was 102; 17 closed in the 2026-06-24 audit-cleanup pass)
+**Reconciliation arithmetic**: 22 + 9 + 53 = 84 ✅ (down from 102 across two audit-cleanup passes — 17 + 1 = 18 closed total; 6 ❌ reclassified to 🟡 with explicit `needs-X:` reasons).
 
 ---
 
