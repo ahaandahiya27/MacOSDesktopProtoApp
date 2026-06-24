@@ -245,6 +245,13 @@ struct BrutalSeriesPapersView: View {
 
 /// Per-paper row. `fileprivate` so it stays an implementation detail of
 /// this surface — there's no other call site.
+///
+/// `@MainActor` annotation is REQUIRED for Big-Sur Swift 5.5 compilation
+/// — same reasoning as `BossChallengePaperCard`. SwiftUI Views are not
+/// auto-`@MainActor` on Swift 5.5, so `openFile`'s call to the
+/// `@MainActor`-isolated `BrutalSeriesPapersCatalog.bundleURL(...)`
+/// fails on the deploy iMac without the explicit annotation.
+@MainActor
 fileprivate struct BrutalSeriesPaperCard: View {
     let paper: BrutalSeriesPaper
 

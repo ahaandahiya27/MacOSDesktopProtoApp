@@ -82,6 +82,17 @@ MAIN_ACTOR_SINGLETONS = [
     "CrashLogSummaryWindowPresenter.shared.",
     "StudyTimerWindowPresenter.shared.",
     "PracticeSettingsWindowPresenter.shared.",
+    # @MainActor enum-based catalogs whose static methods trip the same
+    # isolation-violation error class. Added 2026-06-24 after the iMac
+    # build surfaced the regression in BossChallengePaperCard +
+    # BrutalSeriesPaperCard — both fileprivate SwiftUI Views (NOT auto
+    # @MainActor on Swift 5.5) called `<Catalog>.bundleURL(...)` and
+    # tripped "Calls to static method ... outside of its actor context
+    # are implicitly asynchronous". A future paper-browser added without
+    # @MainActor on its Card would re-trip this; the lint now blocks it
+    # at commit time.
+    "BossChallengePapersCatalog.",
+    "BrutalSeriesPapersCatalog.",
 ]
 
 # We only flag files that declare a View struct. (Helpers,

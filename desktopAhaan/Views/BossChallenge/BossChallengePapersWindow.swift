@@ -268,7 +268,13 @@ enum BossChallengePapersCatalog {
                 stem = String(stem.dropLast(suffix.count))
             }
         }
-        return stem.components(separatedBy: "_").map(spaceCamelCase)
+        // Wrap the function reference in a closure so Swift 5.5 / Big Sur
+        // doesn't try to convert a `@MainActor (String) -> String` to a
+        // non-isolated `(String) throws -> String` map argument — that
+        // conversion is rejected by the deploy compiler ("loses global
+        // actor 'MainActor'"). The closure form keeps the call inside
+        // the enclosing @MainActor context.
+        return stem.components(separatedBy: "_").map { spaceCamelCase($0) }
     }
 
     /// Insert spaces before runs of upper-case letters so
@@ -352,6 +358,16 @@ struct BossChallengePapersView: View {
 
 /// Per-paper row. `fileprivate` so the view stays an implementation detail
 /// of this surface — there's no other call-site.
+///
+/// `@MainActor` annotation is REQUIRED for Big-Sur Swift 5.5 compilation:
+/// SwiftUI Views are NOT automatically `@MainActor` on Swift 5.5 (that's a
+/// 5.7+ change). Without this, the `openFile` method's call to
+/// `BossChallengePapersCatalog.bundleURL(...)` (which IS `@MainActor`-isolated)
+/// fails to compile on the deploy iMac with "Calls to static method
+/// 'bundleURL(...)' from outside of its actor context are implicitly
+/// asynchronous" — the exact iMac compile error that surfaced 2026-06-24
+/// in the post-push verification.
+@MainActor
 fileprivate struct BossChallengePaperCard: View {
     let paper: BossChallengePaper
 
