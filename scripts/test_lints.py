@@ -155,6 +155,11 @@ def main() -> int:
     if wam.run_selftest() != 0:
         failures.append("check_withanimation_motion selftest")
 
+    print("== check_no_wkwebview — embedded --selftest ==")
+    nww = _import_lint_module("check_no_wkwebview")
+    if nww.run_selftest() != 0:
+        failures.append("check_no_wkwebview selftest")
+
     print("== check_return_in_viewbuilder — embedded --selftest ==")
     rvb = _import_lint_module("check_return_in_viewbuilder")
     if rvb.run_selftest() != 0:

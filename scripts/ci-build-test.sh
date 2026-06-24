@@ -178,6 +178,19 @@ if [ -f "scripts/check_withanimation_motion.py" ]; then
     fi
 fi
 
+# WKWebView retirement guard (MM2 / CRASH_LEDGER row C2). WKWebView
+# caused a Big-Sur-only EXC_BAD_ACCESS in dismantle-order on the AMD R9
+# M290X; replaced by NativeArticleRepresentable. This lint blocks any
+# future `import WebKit` / `WKWebView` code-site (comments + strings
+# still OK since the codebase cites the retirement in ~7 doc places).
+if [ -f "scripts/check_no_wkwebview.py" ]; then
+    echo "==> WKWebView retirement guard"
+    if ! python3 scripts/check_no_wkwebview.py; then
+        echo "ci-build-test: WKWebView lint failed — see findings above." >&2
+        exit 1
+    fi
+fi
+
 if [ -f "scripts/check_file_size.py" ]; then
     echo "==> file-size lint"
     if ! python3 scripts/check_file_size.py; then
