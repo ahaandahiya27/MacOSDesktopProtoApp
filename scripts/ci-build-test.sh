@@ -191,6 +191,19 @@ if [ -f "scripts/check_no_wkwebview.py" ]; then
     fi
 fi
 
+# GeometryReader nesting limit (DEEP_AUDIT_2026 row C1). Big-Sur
+# SwiftUI has a layout-collapse risk class when a file carries > 2
+# GeometryReaders without frame-bounded contexts; the existing 99-site
+# sweep verified safe, the lint blocks NEW > 2-GR files from drifting
+# in without explicit verification + allowlist entry.
+if [ -f "scripts/check_geometryreader_nesting.py" ]; then
+    echo "==> GeometryReader nesting limit (DEEP_AUDIT_2026 C1)"
+    if ! python3 scripts/check_geometryreader_nesting.py; then
+        echo "ci-build-test: GeometryReader nesting lint failed — see findings above." >&2
+        exit 1
+    fi
+fi
+
 if [ -f "scripts/check_file_size.py" ]; then
     echo "==> file-size lint"
     if ! python3 scripts/check_file_size.py; then

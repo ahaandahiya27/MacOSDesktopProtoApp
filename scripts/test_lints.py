@@ -160,6 +160,11 @@ def main() -> int:
     if nww.run_selftest() != 0:
         failures.append("check_no_wkwebview selftest")
 
+    print("== check_geometryreader_nesting — embedded --selftest ==")
+    gnr = _import_lint_module("check_geometryreader_nesting")
+    if gnr.run_selftest() != 0:
+        failures.append("check_geometryreader_nesting selftest")
+
     print("== check_return_in_viewbuilder — embedded --selftest ==")
     rvb = _import_lint_module("check_return_in_viewbuilder")
     if rvb.run_selftest() != 0:

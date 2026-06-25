@@ -1,0 +1,36 @@
+# geometryreader_nesting_allowlist.txt
+#
+# Files grandfathered past scripts/check_geometryreader_nesting.py's
+# 2-GR-per-file limit. Each entry was spot-audited (DEEP_AUDIT_2026
+# row C1 sweep, 2026-05-19 + 2026-06-25 follow-up): every inner
+# GeometryReader has an explicit `.frame(maxHeight: ...)` cap on its
+# parent context, so the Big-Sur layout-collapse risk is bounded.
+#
+# Format:  <repo-relative path>: <one-line reason>
+#
+# Adding a NEW entry requires (a) confirming every inner GR is
+# frame-bounded and (b) commit message including the verification.
+
+desktopAhaan/Subjects/Tutor/Discover/Chapter6/Scenes/Scene6_PhysicalOrChemicalSorting.swift: 4 GR; DEEP_AUDIT_2026 C1 verified frame-bounded (2026-05-19)
+desktopAhaan/Subjects/Tutor/Discover/Chapter6/Scenes/Scene1_IceToWaterToSteam.swift: 4 GR; DEEP_AUDIT_2026 C1 verified frame-bounded
+desktopAhaan/Subjects/Tutor/Discover/Chapter5/Scenes/Scene2_BuildYourpHStrip.swift: 4 GR; DEEP_AUDIT_2026 C1 verified frame-bounded
+desktopAhaan/Subjects/Tutor/Discover/Chapter5/Scenes/Scene4_NeutralisationInAction.swift: 4 GR; DEEP_AUDIT_2026 C1 verified frame-bounded
+desktopAhaan/Subjects/Tutor/Discover/Chapter5/Scenes/Scene8_AcidRainStory.swift: 4 GR; DEEP_AUDIT_2026 C1 verified frame-bounded
+desktopAhaan/Subjects/Tutor/Discover/Chapter5/Scenes/Scene6_AcidOrBaseSortingLab.swift: 4 GR; DEEP_AUDIT_2026 C1 verified frame-bounded
+desktopAhaan/Subjects/Tutor/Discover/Chapter3/Scenes/Scene1_FluffToFibre.swift: 4 GR; DEEP_AUDIT_2026 C1 verified frame-bounded
+desktopAhaan/Subjects/Tutor/Discover/Chapter7/Scenes/Scene4_PolarBearSurvivalKit.swift: 3 GR; DEEP_AUDIT_2026 C1 verified frame-bounded
+desktopAhaan/Subjects/Tutor/Discover/Scenes/Scene5_AutotrophHeterotroph.swift: 3 GR; DEEP_AUDIT_2026 C1 verified frame-bounded
+desktopAhaan/Subjects/Tutor/Discover/Scenes/Scene1_PlantKitchen.swift: 3 GR; DEEP_AUDIT_2026 C1 verified frame-bounded
+
+# Per-chapter ShapeDiagrams + MasteryDashboard (added 2026-06-25 after
+# the AUDIT_TOP_1000_REPORT initial grep missed these). All part of the
+# same C1 sweep of 99 GR sites that verified frame-bounded contexts.
+desktopAhaan/Subjects/Tutor/MasteryDashboard.swift: 3 GR; DEEP_AUDIT_2026 C1 verified frame-bounded
+desktopAhaan/Subjects/Tutor/Surfaces/ShapeDiagrams/Chapter1ShapeDiagrams.swift: 3 GR; DEEP_AUDIT_2026 C1 verified frame-bounded
+desktopAhaan/Subjects/Tutor/Surfaces/ShapeDiagrams/Chapter8ShapeDiagrams.swift: 3 GR; DEEP_AUDIT_2026 C1 verified frame-bounded
+desktopAhaan/Subjects/Tutor/Surfaces/ShapeDiagrams/Chapter13ShapeDiagrams.swift: 3 GR; DEEP_AUDIT_2026 C1 verified frame-bounded
+desktopAhaan/Subjects/Tutor/Surfaces/ShapeDiagrams/Chapter14ShapeDiagrams.swift: 3 GR; DEEP_AUDIT_2026 C1 verified frame-bounded
+desktopAhaan/Subjects/Tutor/Surfaces/ShapeDiagrams/Chapter15ShapeDiagrams.swift: 3 GR; DEEP_AUDIT_2026 C1 verified frame-bounded
+desktopAhaan/Subjects/Tutor/Surfaces/ShapeDiagrams/Chapter16ShapeDiagrams.swift: 4 GR; DEEP_AUDIT_2026 C1 verified frame-bounded
+desktopAhaan/Subjects/Tutor/Surfaces/ShapeDiagrams/Chapter18ShapeDiagrams.swift: 3 GR; DEEP_AUDIT_2026 C1 verified frame-bounded
+desktopAhaan/Subjects/Tutor/Surfaces/ShapeDiagrams/Chapter19ShapeDiagrams.swift: 3 GR; DEEP_AUDIT_2026 C1 verified frame-bounded
